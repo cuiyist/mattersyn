@@ -2,13 +2,28 @@
 
 A static, source-linked website for exploring colloidal nanocrystal synthesis.
 
-## Current example: Alivisatos group, 2000
+## Current example: Murray, Norris & Bawendi, 1993
+
+Murray, Norris & Bawendi, *Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites*, JACS 115, 8706–8715 (1993). DOI: https://doi.org/10.1021/ja00072a025
+
+The ten-page original was obtained from the MIT-hosted copy and inspected. A matching supplement has not been located or verified; the website and data explicitly record that limit. No method is attributed to unverified SI.
+
+- `dist/index.html`, `murray-app.js`, `murray-data.mjs`, `murray.css`: CdSe Method 1, its 10-mL aliquot purification, and separate size-selective precipitation sequence. Existing shared styles and lattice generation are reused.
+- `dist/assets/murray1993-recipe.json`: full structured extraction, source locators, alternate methods kept separate, and missing/ambiguous conditions.
+- `dist/assets/murray1993-molecular-structures.json`: source-referenced molecular assets with explicitly labeled representation types. TOP and TOPO use locally computed ETKDGv3/MMFF94s conformers; TOPSe uses unminimized ETKDGv3 geometry, with no energy claim. Methanol and 1-butanol use PubChem conformers. Dimethylcadmium remains a connectivity schematic.
+- Spectrum-based growth feedback is qualitative historical logic, not an AI prediction. Thermal landmarks are not a time trace.
+- The displayed 3.5 × 3.0 nm ellipsoid uses Figure 6 TEM dimensions. Its wurtzite reference omits stacking faults and surface details. Figure 5 optical properties and Figure 1 fractionation results are displayed separately.
+- The approximately 300-mg isolated mass is capped product from a 10-mL reaction aliquot, not a whole-batch yield. The 50-mL syringe description and nominal 51-mL sum are retained without inventing a measured injection volume.
+
+Validation covers source consistency, molecular connectivity, static links and IDs, JavaScript syntax and crystal geometry. The Figure 6 model contains 582 reference atoms and 1,017 Cd–Se bonds, with maximum coordination four and all coordinates within its stated envelope. These atom counts describe only the illustrative model. Browser interaction testing was not performed.
+
+## Preserved example: Alivisatos group, 2000
 
 Peng, Manna, Yang, Wickham, Scher, Kadavanich & Alivisatos, *Shape control of CdSe nanocrystals*, Nature 404, 59–61 (2000). DOI: https://doi.org/10.1038/35003535
 
 The supplied three-page article supports two distinct condition sets: a typical synthesis family and a separate high-aspect-ratio variant. The page preserves their separate stock ratios, temperature statements and missing details. Discrete HPA comparisons show only reported qualitative outcomes. Figure-specific particle dimensions are selectable independently; the article does not map them to complete recipes.
 
-- `dist/index.html`, `shape.css`, `shape-app.js`, `shape-data.mjs`: current page and interactions, with shared `styles.css`. No build step.
+- `dist/alivisatos-2000.html`, `shape.css`, `shape-app.js`, `shape-data.mjs`: current page and interactions, with shared `styles.css`. No build step.
 - `dist/assets/peng2000-recipe.json`: structured extraction with source locators, variants, reported results and missing information.
 - `dist/assets/peng2000-molecular-structures.json`: PubChem 3D conformers for HPA and TBP, a PubChem 2D TOPO depiction, and formula-only dimethylcadmium. The disconnected standardized dimethylcadmium record is not presented as molecular geometry.
 - `dist/assets/peng2000-crystal-reference.json`: independent bulk wurtzite CdSe reference (COD 9016056). Models crop it to envelopes based on dimensions from Figures 2 and 4. They do not reconstruct experimental surfaces, ligands, defects or exact atom counts.
