@@ -1,0 +1,330 @@
+{
+  "schema_version": "0.1",
+  "recipe_id": "nakonechnyi-2017-zb-cdse-core",
+  "scope": "Zinc blende CdSe core QDs only; excludes all subsequent CdS/ZnSe shell growth variants",
+  "source": {
+    "title": "Mechanistic Insights in Seeded Growth Synthesis of Colloidal Core/Shell Quantum Dots",
+    "authors": "Igor Nakonechnyi, Michael Sluydts, Yolanda Justo, Jacek Jasieniak, Zeger Hens",
+    "year": 2017,
+    "doi": "10.1021/acs.chemmater.7b00354",
+    "doi_url": "https://doi.org/10.1021/acs.chemmater.7b00354",
+    "pdf_page": 2,
+    "printed_page": 4720,
+    "section": "Experimental Section > Zinc Blende CdSe Core QDs"
+  },
+  "materials": [
+    {
+      "id": "cadmium_oxide",
+      "name": "Cadmium oxide",
+      "formula": "CdO",
+      "role": "Cadmium precursor",
+      "amount": {
+        "value": 0.5,
+        "unit": "mmol",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "myristic_acid",
+      "name": "Myristic acid",
+      "formula": "C14H28O2",
+      "role": "Precursor ligand; original surface ligand source",
+      "amount": {
+        "value": 1.6,
+        "unit": "mmol",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "ode_reactor",
+      "name": "1-Octadecene",
+      "formula": "C18H36",
+      "role": "Reaction solvent",
+      "amount": {
+        "value": 10,
+        "unit": "mL",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "selenium_dispersion",
+      "name": "Black selenium powder dispersed in 1-octadecene",
+      "role": "Selenium precursor dispersion",
+      "components": [
+        {
+          "name": "Selenium",
+          "formula": "Se",
+          "amount": {
+            "value": 0.24,
+            "unit": "mmol",
+            "status": "reported"
+          }
+        },
+        {
+          "name": "1-Octadecene",
+          "formula": "C18H36",
+          "amount": {
+            "value": null,
+            "unit": "mL",
+            "status": "not_reported"
+          }
+        }
+      ]
+    },
+    {
+      "id": "isopropanol",
+      "name": "2-Propanol (isopropanol)",
+      "formula": "C3H8O",
+      "role": "Precipitation nonsolvent",
+      "amount": {
+        "value": 1,
+        "unit": "volume equivalent relative to reaction mixture",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "toluene_ligand_exchange",
+      "name": "Toluene",
+      "formula": "C7H8",
+      "role": "Redispersion solvent",
+      "amount": {
+        "value": 1,
+        "unit": "mL",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "oleic_acid",
+      "name": "Oleic acid",
+      "formula": "C18H34O2",
+      "role": "Replaces myristate surface ligands with oleate",
+      "amount": {
+        "value": 1,
+        "unit": "mL",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "toluene_wash",
+      "name": "Toluene",
+      "formula": "C7H8",
+      "role": "Purification solvent",
+      "amount": {
+        "value": 1,
+        "unit": "mL per purification cycle",
+        "status": "reported"
+      }
+    },
+    {
+      "id": "methanol_wash",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "Purification nonsolvent",
+      "amount": {
+        "value": 1,
+        "unit": "mL per purification cycle",
+        "status": "reported"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Prepare cadmium mixture",
+      "action": "Mix",
+      "inputs": [
+        "cadmium_oxide",
+        "myristic_acid",
+        "ode_reactor"
+      ],
+      "output": "initial_mixture",
+      "text": "Mix 0.5 mmol CdO, 1.6 mmol myristic acid and 10 mL ODE.",
+      "evidence": "0.5 mmol of CdO was mixed with 1.6 mmol of myristic acid and 10 mL of octadecene (ODE)"
+    },
+    {
+      "id": "s2",
+      "title": "Heat until dissolved",
+      "action": "Heat",
+      "input": "initial_mixture",
+      "output": "clear_cadmium_solution",
+      "temperature": {
+        "value": 260,
+        "unit": "degC",
+        "status": "reported"
+      },
+      "atmosphere": {
+        "raw": "ambient conditions",
+        "status": "reported"
+      },
+      "duration": {
+        "value": null,
+        "status": "not_reported"
+      },
+      "endpoint": "Total dissolution",
+      "text": "Heat under ambient conditions until total dissolution at 260 degrees C.",
+      "evidence": "heated under ambient conditions until total dissolution at 260 °C"
+    },
+    {
+      "id": "s3",
+      "title": "Add selenium dispersion",
+      "action": "Add",
+      "input": "selenium_dispersion",
+      "target": "clear_cadmium_solution",
+      "output": "growth_mixture",
+      "addition_rate": {
+        "raw": "swiftly",
+        "value": null,
+        "unit": null,
+        "status": "qualitative_reported"
+      },
+      "text": "Swiftly add 0.24 mmol black Se dispersed in 1-octadecene. The dispersion volume and numerical injection duration are not reported.",
+      "evidence": "0.24 mmol of black Se, dispersed as a powder in 1-octadecene, was swiftly added to the solution"
+    },
+    {
+      "id": "s4",
+      "title": "Grow for five minutes",
+      "action": "React",
+      "input": "growth_mixture",
+      "duration": {
+        "value": 5,
+        "unit": "min",
+        "status": "reported"
+      },
+      "temperature_note": "260 degrees C is the reported pre-addition synthesis temperature; a measured post-injection temperature trajectory is not reported.",
+      "text": "Allow reaction for 5 min after adding Se.",
+      "evidence": "after 5 min, the reaction was stopped"
+    },
+    {
+      "id": "s5",
+      "title": "Quench and isolate",
+      "action": "QuenchThenPrecipitate",
+      "input": "growth_mixture",
+      "output": "myristate_capped_cdse_pellet",
+      "quench": "Thermal quenching using a water bath; bath temperature and cooling rate not reported",
+      "antisolvent": "isopropanol",
+      "centrifugation": {
+        "force": {
+          "value": 3000,
+          "unit": "g",
+          "status": "reported"
+        },
+        "duration": {
+          "value": null,
+          "status": "not_reported"
+        }
+      },
+      "retained_fraction": "QD pellet",
+      "text": "Quench with a water bath. Add 2-propanol at 1:1 volume relative to the reaction mixture and centrifuge at 3000 g to obtain the pellet.",
+      "evidence": "addition of propanol-2 (1:1 in volume as compared to the reaction mixture) and centrifugation ... at a g-force of 3000 g ... to obtain a QD pellet"
+    },
+    {
+      "id": "s6",
+      "title": "Exchange surface ligands",
+      "action": "Redisperse",
+      "input": "myristate_capped_cdse_pellet",
+      "additional_inputs": [
+        "toluene_ligand_exchange",
+        "oleic_acid"
+      ],
+      "output": "oleate_capped_cdse_dispersion",
+      "duration": {
+        "value": null,
+        "status": "not_reported"
+      },
+      "text": "Redisperse the QDs in 1 mL toluene plus 1 mL oleic acid to replace myristate ligands with oleate.",
+      "evidence": "redispersed in a mixture of 1 mL of toluene and 1 mL of oleic acid (OA) to replace the original myristate ligands by oleate"
+    },
+    {
+      "id": "s7",
+      "title": "Purify three times",
+      "action": "Purify",
+      "input": "oleate_capped_cdse_dispersion",
+      "additional_inputs": [
+        "toluene_wash",
+        "methanol_wash"
+      ],
+      "repeat_count": 3,
+      "output": "purified_oleate_capped_zb_cdse",
+      "text": "For use in seeded growth, purify three times using 1 mL toluene and 1 mL methanol as solvent/nonsolvent. Centrifugation force is 3000 g according to the paragraph-wide condition; cycle duration and final storage solvent/volume are not stated.",
+      "evidence": "further purified thrice using 1 mL of toluene and 1 mL of methanol as the solvent/nonsolvent combination"
+    }
+  ],
+  "product": {
+    "composition": "CdSe",
+    "crystal_phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "source": "Main p2, subsection title"
+    },
+    "material_form": {
+      "value": "colloidal quantum-dot cores",
+      "status": "reported"
+    },
+    "surface": {
+      "value": "oleate-capped after ligand replacement",
+      "status": "reported"
+    },
+    "diameter": {
+      "value": 3,
+      "unit": "nm",
+      "approximate": true,
+      "method": "Inferred by authors from first-exciton absorption using cited sizing relation",
+      "status": "reported",
+      "source": "Main p2 / printed4720"
+    },
+    "first_exciton_absorption_peak": {
+      "value": 537,
+      "unit": "nm",
+      "status": "reported",
+      "source": "Main p2 / printed4720"
+    },
+    "photoluminescence_peak": {
+      "value": null,
+      "status": "not_reported_for_this_core_protocol"
+    },
+    "photoluminescence_quantum_yield": {
+      "value": null,
+      "status": "not_reported_for_this_core_protocol"
+    },
+    "shape": {
+      "value": null,
+      "status": "not_quantified_for_this_core_protocol"
+    },
+    "model_instruction": "If displaying a roughly spherical atomistic particle, label it an illustrative zinc-blende CdSe model at nominal ~3 nm, not measured morphology or a reconstructed experimental particle. Do not use a wurtzite lattice.",
+    "measurement_stage_note": "The 537 nm absorption peak and approximately 3 nm diameter are assigned to the CdSe core product by the selected methods paragraph; the exact purification/measurement state is not explicitly specified."
+  },
+  "critical_missing_fields": [
+    "Volume of ODE in selenium dispersion",
+    "Numerical addition/injection duration",
+    "Heating rate and time to reach dissolution",
+    "Measured temperature recovery after addition",
+    "Water-bath temperature and cooling rate",
+    "Centrifugation duration",
+    "Ligand-exchange duration",
+    "Final storage solvent and volume",
+    "Reagent supplier, purity and batch: not found in the inspected main paper or its Supporting Information for this core protocol"
+  ],
+  "anti_mixing_notes": [
+    "Do not transfer wurtzite recipe values from the adjacent subsection (350 C, TOP-Se, 5 s).",
+    "Do not transfer core/shell dimensions, quantum yields or shell-growth temperatures from Table 1 or later subsections.",
+    "Use ~3 nm/537 nm tied to this exact core-method paragraph. The paper elsewhere identifies 3.1 nm cores for particular shell-growth samples; retain those as separate sample-level observations if needed.",
+    "Oleylamine is not a reagent in this selected recipe. It can remain a separately labeled molecule reference, but must not be shown as an input to this protocol.",
+    "The Supporting Information is available locally but does not fill the listed core-procedure omissions."
+  ],
+  "provenance_review": {
+    "sources_checked": "Complete main paper (9 PDF pages) and complete Supporting Information (7 PDF pages), including main-paper first page and Experimental Section on PDF page 2.",
+    "supplier_purity_finding": "The main paper first page contains abstract/introduction, not a Materials/purchasing section. No supplier names or reagent purity/lot statements were found in the main paper or SI. Missingness label is justified within these inspected sources.",
+    "prior_method_reference": "The selected protocol cites Flamee et al. as an earlier method (reference 21); inherited supplier/grade/lot details are not established by that citation and were not imported.",
+    "remaining_scope": "This is a faithful literature extraction with explicitly missing fields, not a fully specified executable protocol."
+  },
+  "scientific_review_notes": [
+    "Zinc blende and wurtzite are different polymorphs; only zinc blende is supported for this selected recipe.",
+    "260 degrees C is stated for complete CdO dissolution. Do not plot a measured isothermal growth trace or numerical cooling ramp from this source.",
+    "The 5 min duration is time between Se addition and water-bath quenching.",
+    "3000 g denotes relative centrifugal force, not 3000 rpm.",
+    "Se is a powder dispersion in ODE, not dissolved TOP-Se stock. Its carrier volume remains unknown.",
+    "Oleic acid is introduced during post-synthesis ligand replacement, not as the initial growth ligand; myristic acid is the initial ligand source.",
+    "The 3 nm diameter is approximate and inferred from absorption; neither quantitative core morphology nor core PLQY was reported in the selected paragraph.",
+    "The 1:1 precipitation ratio is relative to the reaction mixture, whose total volume cannot be fixed because the Se dispersion volume is missing."
+  ]
+}

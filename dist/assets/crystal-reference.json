@@ -1,0 +1,42 @@
+{
+  "id": "cdse-zinc-blende",
+  "name": "CdSe zinc-blende bulk reference",
+  "formula": "CdSe",
+  "modelType": "Constructed periodic reference geometry from published lattice parameter and zinc-blende basis",
+  "caption": "Illustrative zinc-blende CdSe lattice; not a measured quantum-dot atom arrangement.",
+  "coordinateUnits": "angstrom",
+  "spaceGroup": "F-43m",
+  "spaceGroupNumber": 216,
+  "a": 6.077,
+  "b": 6.077,
+  "c": 6.077,
+  "alpha": 90,
+  "beta": 90,
+  "gamma": 90,
+  "cellType": "conventional cubic",
+  "formulaUnitsPerCell": 4,
+  "latticeVectors": [[6.077, 0, 0], [0, 6.077, 0], [0, 0, 6.077]],
+  "fractionalAtoms": [
+    {"element":"Cd", "x":0, "y":0, "z":0},
+    {"element":"Cd", "x":0, "y":0.5, "z":0.5},
+    {"element":"Cd", "x":0.5, "y":0, "z":0.5},
+    {"element":"Cd", "x":0.5, "y":0.5, "z":0},
+    {"element":"Se", "x":0.25, "y":0.25, "z":0.25},
+    {"element":"Se", "x":0.25, "y":0.75, "z":0.75},
+    {"element":"Se", "x":0.75, "y":0.25, "z":0.75},
+    {"element":"Se", "x":0.75, "y":0.75, "z":0.25}
+  ],
+  "latticeParameterSource": {
+    "citation":"N. Samarth et al., Growth of cubic (zinc blende) CdSe by molecular beam epitaxy, Applied Physics Letters 54 (1989), 2680–2682",
+    "doi":"10.1063/1.101033",
+    "url":"https://researchconnect.buffalo.edu/en/publications/growth-of-cubic-zinc-blende-cdse-by-molecular-beam-epitaxy/",
+    "note":"6.077 angstrom was measured for CdSe epitaxial layers; this prototype uses it as a bulk-scale lattice reference, not as a measured value for the chosen 3 nm quantum dots."
+  },
+  "basisSource":"https://www.atomic-scale-physics.de/lattice/struk/b3.html",
+  "renderingNotes":[
+    "Fractional coordinates multiply by a=6.077 to obtain Cartesian angstrom coordinates.",
+    "Nearest Cd-Se distance is sqrt(3)*a/4, approximately 2.6314 angstrom.",
+    "A 3 nm spherical crop uses radius 15 angstrom and is illustrative; stoichiometry and dangling bonds at the crop are not a physical surface model.",
+    "Do not label surface ligands, defects, strain, reconstructions or electronic wavefunctions as measured by this geometry."
+  ]
+}
