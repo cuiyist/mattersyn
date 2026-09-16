@@ -1,3 +1,4 @@
+import {renderApparatus} from './apparatus-scenes.mjs';
 import {protocols,sampleRecords,moleculeNotes,feedback} from './murray-data.mjs';
 import {buildCrystal} from './shape-data.mjs';
 const $=id=>document.getElementById(id);
@@ -11,11 +12,7 @@ function showStep(index){
  markButtons('[data-step]','step',String(index));
  $('step-kicker').textContent='STAGE '+String(index+1).padStart(2,'0')+' / '+String(steps.length).padStart(2,'0');
  $('step-source').textContent=step.source+' ↗';
- $('flask-art').hidden=protocolKey!=='synthesis';$('fraction-art').hidden=protocolKey==='synthesis';
- $('apparatus-heading').textContent=protocolKey==='synthesis'?'HOT-INJECTION SYNTHESIS':protocolKey==='purification'?'FOLLOW THE PRODUCT FRACTION':'SIZE-SELECTIVE PRECIPITATION';
- const fraction=protocolKey==='purification'?['10-mL reaction aliquot','Keep the nanocrystal flocculate','Keep the clear supernatant','Collect the nanocrystal flocculate','Capped nanocrystal powder'][index]:['Clear nanocrystal dispersion','Precipitate enriched in larger particles','Repeat until absorption stops sharpening'][index];
- $('fraction-label').textContent=fraction||'';$('fraction-art').classList.toggle('keep-liquid',protocolKey==='purification'&&index===2);
- $('path-start').textContent=protocolKey==='synthesis'?'Precursor stocks':'CdSe dispersion';$('path-middle').textContent=protocolKey==='synthesis'?'Hot TOPO':'Separate fractions';$('path-end').textContent=protocolKey==='synthesis'?'Growing CdSe':'Selected product';
+ renderApparatus(protocolKey,index);
  $('step-title').textContent=step.title;$('step-description').textContent=step.description;
  $('step-fields').replaceChildren(...step.fields.map(([label,value])=>{const div=document.createElement('div');div.className='field'+(/Not |inferred/.test(value)?' missing':'');const dt=document.createElement('label'),dd=document.createElement('span');dt.textContent=label;dd.textContent=value;div.append(dt,dd);return div;}));
  $('next-step').textContent=index===steps.length-1?'Start again ↺':'Next stage →';

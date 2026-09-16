@@ -12,6 +12,7 @@ The ten-page original was obtained from the MIT-hosted copy and inspected. A mat
 - `dist/assets/murray1993-recipe.json`: full structured extraction, source locators, alternate methods kept separate, and missing/ambiguous conditions.
 - `dist/assets/murray1993-molecular-structures.json`: source-referenced molecular assets with explicitly labeled representation types. TOP and TOPO use locally computed ETKDGv3/MMFF94s conformers; TOPSe uses unminimized ETKDGv3 geometry, with no energy claim. Methanol and 1-butanol use PubChem conformers. Dimethylcadmium remains a connectivity schematic.
 - Spectrum-based growth feedback is qualitative historical logic, not an AI prediction. Thermal landmarks are not a time trace.
+- `dist/apparatus-scenes.mjs` and `dist/apparatus.css` provide stage-specific illustrations and adjacent condition cards for all 14 stages. The Hot bath stage has independent degassing and argon-stabilization views; reaction temperatures are not labeled as bath setpoints. Equipment geometry, heating bath and vessel colors are schematic.
 - The displayed 3.5 × 3.0 nm ellipsoid uses Figure 6 TEM dimensions. Its wurtzite reference omits stacking faults and surface details. Figure 5 optical properties and Figure 1 fractionation results are displayed separately.
 - The approximately 300-mg isolated mass is capped product from a 10-mL reaction aliquot, not a whole-batch yield. The 50-mL syringe description and nominal 51-mL sum are retained without inventing a measured injection volume.
 
