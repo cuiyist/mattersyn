@@ -18,6 +18,14 @@ The ten-page original was obtained from the MIT-hosted copy and inspected. A mat
 
 Validation covers source consistency, molecular connectivity, static links and IDs, JavaScript syntax and crystal geometry. The Figure 6 model contains 582 reference atoms and 1,017 Cd–Se bonds, with maximum coordination four and all coordinates within its stated envelope. These atom counts describe only the illustrative model. Browser interaction testing was not performed.
 
+## Structural characterization and properties
+
+The featured page has four main sections: Precursors, Protocols, Final structures and Properties, followed by a Sources appendix. `characterization.mjs` and `characterization.css` provide independent structural and optical figure selectors plus an accessible enlarged-figure dialog with zoom and fit controls. The existing crystal viewer remains a separate illustrative model.
+
+Five faithful, visually inspected 300-dpi figure extracts retain the original labels, axes and TEM scale bar: TEM Figure 6, XRD Figure 11, experiment/model comparison Figure 15, absorption Figure 3 and absorption/PL Figure 5. Public provenance is recorded in `dist/assets/murray1993-figures/figure-manifest.json`; the full article and local machine paths are excluded from deployed assets.
+
+`dist/assets/murray1993-characterization.json` records experimental conditions, figure-specific observations, source discrepancies and missing properties. SAED is text-only; cited EXAFS is prior work; EDX describes discarded byproducts. Raman is not reported in the inspected main article, and SI remains unverified. Figure 15’s one-versus-1.3 fault-count discrepancy is preserved. Equal nominal optical/TEM sizes do not establish specimen identity.
+
 ## Preserved example: Alivisatos group, 2000
 
 Peng, Manna, Yang, Wickham, Scher, Kadavanich & Alivisatos, *Shape control of CdSe nanocrystals*, Nature 404, 59–61 (2000). DOI: https://doi.org/10.1038/35003535

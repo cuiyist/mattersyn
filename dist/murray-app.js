@@ -1,3 +1,4 @@
+import {initializeCharacterization} from './characterization.mjs';
 import {renderApparatus} from './apparatus-scenes.mjs';
 import {protocols,sampleRecords,moleculeNotes,feedback} from './murray-data.mjs';
 import {buildCrystal} from './shape-data.mjs';
@@ -114,3 +115,5 @@ async function initialize(){
 }
 initialize();
 
+
+initializeCharacterization();

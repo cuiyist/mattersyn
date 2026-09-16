@@ -40,7 +40,7 @@
     "scope_note": "The method yields a selectable size series by withdrawing portions at different growth stages; it does not prescribe a single fixed-time recipe for one target diameter.",
     "atmosphere": "Standard airless procedures; drybox precursor preparation; argon during bath preparation and growth setup.",
     "initial_cadmium_mmol": 13.35,
-    "initial_selenium_mmol": 10.0,
+    "initial_selenium_mmol": 10,
     "cd_to_se_molar_ratio": {
       "value": 1.335,
       "status": "calculated from the reported mmol, not a separately quoted source ratio"
@@ -97,7 +97,7 @@
       "reported_pretreatment": "Filtration through 0.250 micrometre filter and vacuum transfer.",
       "role": "cadmium precursor",
       "selected_protocol_amount": {
-        "volume_ml": 1.0,
+        "volume_ml": 1,
         "amount_mmol": 13.35
       },
       "source": {
@@ -215,7 +215,7 @@
       "id": "topse_stock",
       "description": "1.0 M TOPSe stock in TOP",
       "preparation": "Dissolve appropriate selenium shot mass directly in sufficient TOP.",
-      "concentration_mol_l": 1.0,
+      "concentration_mol_l": 1,
       "total_prepared_volume_ml": null,
       "selenium_mass_g": null,
       "dissolution_temperature_c": null,
@@ -233,12 +233,12 @@
       "inputs": [
         {
           "reagent": "dimethylcadmium",
-          "volume_ml": 1.0,
+          "volume_ml": 1,
           "amount_mmol": 13.35
         },
         {
           "reagent": "top",
-          "volume_ml": 25.0
+          "volume_ml": 25
         }
       ],
       "preparation_environment": "drybox",
@@ -256,13 +256,13 @@
       "inputs": [
         {
           "solution": "topse_stock",
-          "volume_ml": 10.0,
-          "concentration_mol_l": 1.0,
-          "amount_mmol": 10.0
+          "volume_ml": 10,
+          "concentration_mol_l": 1,
+          "amount_mmol": 10
         },
         {
           "reagent": "top",
-          "volume_ml": 15.0
+          "volume_ml": 15
         }
       ],
       "reported_final_volume_ml": null,
@@ -612,7 +612,7 @@
       "target": "CdTe",
       "parent_method": "Method 1",
       "change": "Use TOPTe as chalcogen source.",
-      "topte_stock_concentration_mol_l": 1.0,
+      "topte_stock_concentration_mol_l": 1,
       "topte_preparation": "Dissolve tellurium shot in TOP; Te shot electronic-grade 99.99+%, Alfa.",
       "injection_temperature_c": 240,
       "injection_temperature_approximate": true,
@@ -717,7 +717,7 @@
         11.5
       ],
       "studied_tem_shape_range_nm": [
-        2.0,
+        2,
         11.5
       ],
       "source": {
@@ -872,10 +872,10 @@
           "section_or_figure": "Figure 6 and TEM discussion"
         },
         "method": "bright-field TEM with lattice contrast",
-        "major_axis_angstrom": 35.0,
+        "major_axis_angstrom": 35,
         "minor_axis_angstrom": 30,
         "major_axis_nm": 3.5,
-        "minor_axis_nm": 3.0,
+        "minor_axis_nm": 3,
         "major_axis_relative_spread_percent": 5,
         "minor_axis_relative_spread_percent": 6,
         "aspect_ratio_derived": 1.1666666666666667,
@@ -895,7 +895,7 @@
           "printed_page": 8710,
           "section_or_figure": "Figure 7"
         },
-        "major_axis_nm": 8.0,
+        "major_axis_nm": 8,
         "observation": "Individual crystal with stacking faults in (002) direction.",
         "minor_axis_nm": null,
         "full_recipe_assignment": null
@@ -992,5 +992,17 @@
       "CdS/CdTe precursor temperatures inserted into the selected CdSe workflow",
       "Optional pyridine exchange shown as a required base-recipe step"
     ]
+  },
+  "characterization_record": {
+    "file": "murray1993-characterization.json",
+    "scope": "Main-article structural characterization and optical properties; record-specific sample links and measurement/model distinctions.",
+    "displayed_figures": [
+      3,
+      5,
+      6,
+      11,
+      15
+    ],
+    "raman": "Not reported in inspected main article; SI unverified."
   }
 }
