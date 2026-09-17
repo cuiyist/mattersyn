@@ -1,0 +1,24 @@
+const dialog=document.getElementById('record-molecule-dialog'),host=document.getElementById('record-molecule-view'),title=document.getElementById('record-molecule-title'),note=document.getElementById('record-molecule-note'),source=document.getElementById('record-molecule-source');
+const responses=await Promise.allSettled(['../assets/cdse-molecular-structures.json','../assets/peng2000-molecular-structures.json'].map(async url=>{const r=await fetch(url);if(!r.ok)throw Error('Optional molecular reference unavailable');return r.json();}));
+const structures=responses.flatMap(x=>x.status==='fulfilled'&&Array.isArray(x.value)?x.value:[]);let viewer=null,trigger=null;
+const plain=value=>(value||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+function findStructure(name,formula){const aliases={trinoctylphosphine:'trioctylphosphine',trinoctylphosphineoxide:'trioctylphosphineoxide',trioctylphosphineselenide:'trinoctylphosphineselenide',bistrimethylsilylselenium:'bistrimethylsilylselenide',hexane:'nhexane'};const key=aliases[plain(name)]||plain(name);return structures.find(x=>plain(x.name)===key||plain(x.id)===key);}
+function atoms(record){const a=record.atoms.map((v,i)=>({index:i,serial:i,elem:v.element??v.elem,x:v.x,y:v.y,z:v.z,bonds:[],bondOrder:[]}));for(const b of record.bonds||[]){a[b.a].bonds.push(b.b);a[b.a].bondOrder.push(b.order);a[b.b].bonds.push(b.a);a[b.b].bondOrder.push(b.order);}return a;}
+function drawConnectivity(record){
+ const canvas=document.createElement('canvas');host.append(canvas);const rect=host.getBoundingClientRect(),ratio=devicePixelRatio||1;canvas.width=rect.width*ratio;canvas.height=rect.height*ratio;canvas.style.width='100%';canvas.style.height='100%';const c=canvas.getContext('2d');c.scale(ratio,ratio);const aa=record.atoms,visible=new Set(aa.map((x,i)=>x.element!=='H'?i:-1).filter(x=>x>=0));
+ for(const b of record.bonds||[])if((aa[b.a].element==='H'&&aa[b.b].element!=='C')||(aa[b.b].element==='H'&&aa[b.a].element!=='C')){visible.add(b.a);visible.add(b.b);}
+ const vv=[...visible].map(i=>aa[i]),xs=vv.map(x=>x.x),ys=vv.map(x=>x.y),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2,scale=Math.min((rect.width-65)/Math.max(1,Math.max(...xs)-Math.min(...xs)),(rect.height-65)/Math.max(1,Math.max(...ys)-Math.min(...ys)));const point=a=>[(a.x-cx)*scale+rect.width/2,-(a.y-cy)*scale+rect.height/2];
+ for(const b of record.bonds||[]){if(!visible.has(b.a)||!visible.has(b.b))continue;c.strokeStyle='#7694aa';c.lineWidth=2;c.beginPath();c.moveTo(...point(aa[b.a]));c.lineTo(...point(aa[b.b]));c.stroke();}
+ for(const i of visible){const a=aa[i];if(a.element==='C')continue;const [x,y]=point(a);c.fillStyle='#f7faff';c.fillRect(x-15,y-13,30,26);c.fillStyle='#23546d';c.font='600 18px Arial';c.textAlign='center';c.textBaseline='middle';const ch=a.formalCharge??a.charge??0;c.fillText(a.element+(ch>0?'+':ch<0?'âˆ’':''),x,y);}
+}
+for(const b of document.querySelectorAll('[data-molecule-name]'))b.addEventListener('click',()=>{
+ trigger=b;viewer?.clear();viewer=null;host.replaceChildren();title.textContent=b.dataset.moleculeName;const record=findStructure(b.dataset.moleculeName,b.dataset.moleculeFormula);dialog.showModal();
+ if(record&&record.representation==='3d'&&record.atoms?.length&&window.$3Dmol){
+  viewer=$3Dmol.createViewer(host,{backgroundColor:'#f7faff'});viewer.addModel().addAtoms(atoms(record));viewer.setStyle({},{stick:{radius:.1},sphere:{scale:.28}});viewer.zoomTo();viewer.zoom(.85);viewer.render();note.textContent=(record.computedBy?'Computed illustrative conformer. ':'Reference conformer. ')+'Drag to rotate; scroll to zoom. This does not establish solution speciation or surface binding.';
+ }else if(record?.representation==='2d'&&record.atoms?.length){drawConnectivity(record);note.textContent='2D connectivity reference; no three-dimensional geometry is asserted.';}
+ else{const formula=document.createElement('div');formula.className='identity-fallback';formula.textContent=record?.id==='dimethylcadmium'?'CHâ‚ƒâ€”Cdâ€”CHâ‚ƒ':b.dataset.moleculeFormula||b.dataset.moleculeName;host.append(formula);note.textContent='Chemical identity is retained. No verified interactive molecular coordinates are attached for this compound.';}
+ source.hidden=!record?.source;if(record?.source)source.href=record.source;
+});
+document.getElementById('record-molecule-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{viewer?.clear();viewer=null;trigger?.focus();});
+host.tabIndex=0;host.addEventListener('keydown',e=>{if(!viewer)return;const r={ArrowLeft:[-12,'y'],ArrowRight:[12,'y'],ArrowUp:[-12,'x'],ArrowDown:[12,'x']}[e.key];if(r)viewer.rotate(...r);else if(['+','='].includes(e.key))viewer.zoom(1.15);else if(e.key==='-')viewer.zoom(1/1.15);else if(e.key==='Home')viewer.zoomTo();else return;e.preventDefault();viewer.render();});
+new ResizeObserver(()=>{if(viewer&&host.clientWidth){viewer.resize();viewer.render();}}).observe(host);

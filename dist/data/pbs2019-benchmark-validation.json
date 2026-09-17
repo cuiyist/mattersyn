@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "sourceDataSha256": "60ae5d942b998258840df3eba8b31f5508f699edf36c5c4564061a119f8977a4",
+  "checks": {
+    "all2552RowsRoundTripExactly": true,
+    "nineInputsAndTwoOutcomes": true,
+    "failureTargetsNullAndRawEncodingPreserved": true,
+    "authorRuleCohortsVerified": true,
+    "selected100MatchCanonicalRows": true,
+    "allReferencedHashesMatch": true,
+    "noAbsoluteLocalPathsInPublicCandidateJson": true
+  },
+  "evaluations": {
+    "grouped_within_study_holdout": {
+      "trainRows": 1927,
+      "testRows": 602,
+      "outerRecipeOverlap": 0,
+      "cvPartitionAndNoTestContamination": true,
+      "trainingOnlyNormalizationVerified": true,
+      "ridgePredictionsReproduced": true,
+      "knnDirectDistancePredictionsReproduced": true,
+      "maeRecomputed": true
+    },
+    "author_rule_cohort_transfer": {
+      "trainRows": 2311,
+      "testRows": 218,
+      "outerRecipeOverlap": 0,
+      "cvPartitionAndNoTestContamination": true,
+      "trainingOnlyNormalizationVerified": true,
+      "ridgePredictionsReproduced": true,
+      "knnDirectDistancePredictionsReproduced": true,
+      "maeRecomputed": true
+    }
+  }
+}

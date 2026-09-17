@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "mattersyn-benchmark-baselines/1",
+  "date": "2026-09-16",
+  "implementation": "Independent NumPy code; author model code inspected only, never imported/executed.",
+  "numpyVersion": "2.3.5",
+  "target": "absorption_peak_wavelength_nm",
+  "featureCount": 9,
+  "inputFeatureOrder": [
+    "ambient_temperature_proxy",
+    "lead_oleate_stock_volume",
+    "ode_reaction_volume",
+    "oleylamine_volume",
+    "injection_temperature",
+    "bis_trimethylsilyl_sulfide_volume",
+    "ode_sulfur_stock_volume",
+    "chloride_high_temperature_concentration",
+    "chloride_60c_concentration"
+  ],
+  "outcomesNeverModelInputs": true,
+  "rows": 2552,
+  "excludedFailureRows": 23,
+  "continuousRegressionRows": 2529,
+  "uniqueNineInputConfigurations": 1545,
+  "uniquePhysicalRecipeGroups": 1154,
+  "source": {
+    "paperDoi": "10.1021/acsnano.9b03864",
+    "datasetDoi": "10.1021/acsnano.9b03864.s002",
+    "datasetUrl": "https://acs.figshare.com/articles/dataset/Machine_Learning_Accelerates_Discovery_of_Optimal_Colloidal_Quantum_Dot_Synthesis/9896762",
+    "downloadUrl": "https://ndownloader.figshare.com/files/17785454",
+    "sourceFile": "nn9b03864_si_002.zip/full.dat",
+    "zipSha256": "fec5ea6877bae3b86ac5eacef45dabcb85a047e856a0f6cbd03289fdde9b5a21",
+    "dataSha256": "60ae5d942b998258840df3eba8b31f5508f699edf36c5c4564061a119f8977a4",
+    "license": {
+      "name": "CC BY-NC 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "attributionRequired": true,
+      "nonCommercialOnly": true
+    },
+    "attribution": "Voznyy, O.; Levina, L.; Fan, J. Z.; et al. (2019). Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis. ACS Nano 13, 11122-11128. Dataset DOI: 10.1021/acsnano.9b03864.s002. CC BY-NC 4.0.",
+    "changes": "Adapted from author full.dat: columns named and units retained; source row identifiers added; author-rule cohorts derived; failure placeholders flagged and continuous outcomes set to null; deterministic coverage subset selected. No synthetic experiments or modeled outcomes added."
+  },
+  "fullDatasetJsonSha256": "dd6491fb0aea80e2a07109fe60bfc7949c8546fcc070438b21afad5d05b676ce",
+  "selectedDatasetJsonSha256": "a01847c9501c1fa5b8e36f1977d91e6cbc52dc49ce9744d1acc2a1ec20186dfa",
+  "splitFileSha256": "09896d21d1b37d1046eca6e102a281f943b523e64b94fea2c8bd94eaedcac4e9",
+  "modelFileSha256": "ebae5b551f6f835474a5f1161c99f97188cd71fd45c1e4c5d5e76593c80a3160",
+  "grouping": "Eight physical recipe columns, omitting ambient proxy; stronger than exact-nine-input grouping.",
+  "evaluations": {
+    "grouped_within_study_holdout": {
+      "trainRows": 1927,
+      "testRows": 602,
+      "trainGroups": 908,
+      "testGroups": 227,
+      "testRange_nm": [
+        629.0,
+        2304.0
+      ],
+      "chosenRidgeAlpha": 0.01,
+      "chosenK": 5,
+      "hyperparameterSelection": "Five-fold grouped CV on training rows only; minimum row-weighted MAE; no test-target tuning.",
+      "ridgeCvMae_nm": {
+        "0.01": 127.73970408720896,
+        "0.1": 127.73971285947805,
+        "1.0": 127.73979764320758,
+        "10.0": 127.7495308161649,
+        "100.0": 128.56903978585044,
+        "1000.0": 151.0129802275558
+      },
+      "knnCvMae_nm": {
+        "1": 89.94828077192528,
+        "3": 81.65038818137525,
+        "5": 77.89107156293436,
+        "9": 78.12655506843693,
+        "15": 80.1456722901536,
+        "25": 82.72755440529434
+      },
+      "metrics": {
+        "training_mean": {
+          "mae_nm": 303.92537691018515,
+          "rmse_nm": 385.9525245630944,
+          "r2": -0.009416822490695642,
+          "recipe_group_balanced_mae_nm": 278.43994043014607
+        },
+        "ridge": {
+          "mae_nm": 140.4439293347414,
+          "rmse_nm": 184.3818618975547,
+          "r2": 0.769622978802084,
+          "recipe_group_balanced_mae_nm": 128.10590481264782
+        },
+        "distance_weighted_knn": {
+          "mae_nm": 70.61114346356078,
+          "rmse_nm": 110.65569017902804,
+          "r2": 0.9170244253702738,
+          "recipe_group_balanced_mae_nm": 84.53203169134436
+        }
+      },
+      "interpretation": "Random held-out physical recipe configurations within one paper and one chemistry; not cross-study or cross-chemistry generalization."
+    },
+    "author_rule_cohort_transfer": {
+      "trainRows": 2311,
+      "testRows": 218,
+      "trainGroups": 953,
+      "testGroups": 182,
+      "testRange_nm": [
+        611.0,
+        2304.0
+      ],
+      "chosenRidgeAlpha": 10.0,
+      "chosenK": 5,
+      "hyperparameterSelection": "Five-fold grouped CV on training rows only; minimum row-weighted MAE; no test-target tuning.",
+      "ridgeCvMae_nm": {
+        "0.01": 120.91886941189856,
+        "0.1": 120.9183876931319,
+        "1.0": 120.91369000892256,
+        "10.0": 120.87279484275692,
+        "100.0": 120.90389232307083,
+        "1000.0": 136.64489756920813
+      },
+      "knnCvMae_nm": {
+        "1": 72.43256373388144,
+        "3": 63.36123307605479,
+        "5": 62.47029331135001,
+        "9": 62.61671798589952,
+        "15": 63.043188431373345,
+        "25": 65.79923270311147
+      },
+      "metrics": {
+        "training_mean": {
+          "mae_nm": 296.47158205398193,
+          "rmse_nm": 346.61002876906974,
+          "r2": -0.3343711007128318,
+          "recipe_group_balanced_mae_nm": 303.40854911341046
+        },
+        "ridge": {
+          "mae_nm": 250.20067312149797,
+          "rmse_nm": 313.8336556518465,
+          "r2": -0.0939397671584783,
+          "recipe_group_balanced_mae_nm": 255.83571722368444
+        },
+        "distance_weighted_knn": {
+          "mae_nm": 191.23382926424682,
+          "rmse_nm": 240.1548574966383,
+          "r2": 0.3594144622881058,
+          "recipe_group_balanced_mae_nm": 187.5741784495001
+        }
+      },
+      "interpretation": "Author-defined cohort transfer; not verified chronological forecasting."
+    }
+  },
+  "sample": {
+    "rows": 100,
+    "successRows": 95,
+    "failureRows": 5,
+    "usedForBaselines": false,
+    "cohortCounts": {
+      "historical_pre_ml": 55,
+      "ml_guided": 45
+    }
+  },
+  "validation": {
+    "allSourceNumericValuesFinite": true,
+    "sourceShape": [
+      2552,
+      11
+    ],
+    "sourceMd5MatchesOfficial": true,
+    "all2552RowsReproducedExactly": true,
+    "failedOutcomesNull": true,
+    "selectedRowsUnique": true,
+    "zeroGroupOverlapBothEvaluations": true,
+    "featureScalingTrainingOnly": true,
+    "hyperparametersTrainingCvOnly": true,
+    "rawAndNormalizedRidgePredictionsAgree": true
+  },
+  "limitations": [
+    "One study and one material family (PbS); 100 selected rows are not 100 papers or 100 chemistries.",
+    "The ambient-temperature field is a seasonal outdoor proxy, not measured lab temperature.",
+    "Chloride identities were pooled and AsCl3 values rescaled by the authors; do not assign exact chloride species to historical rows.",
+    "Historical/ML-guided cohort labels reproduce an author-code rule based on Pb stock volume; they are not verified dates or a chronological row boundary.",
+    "No direct particle diameter, per-run reaction time, crystal phase, or atomic-coordinate targets exist in this table.",
+    "Failure rows use source placeholders 650 nm and peak/valley 0.5; these are not continuous measured targets.",
+    "The coverage-selected sample intentionally overrepresents sparse conditions and failures; it is not a population-frequency sample.",
+    "Nearby but nonidentical conditions remain correlated. Grouped holdout does not establish independent reproducibility across laboratories.",
+    "Source cohort rule is based on lead stock volume and therefore entails a deliberately shifted feature distribution.",
+    "MAE on absorption wavelength is not particle-size error and does not measure synthesis success probabilities.",
+    "Feature importance cannot be inferred causally from ridge coefficients in this correlated observational dataset."
+  ]
+}

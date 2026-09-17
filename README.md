@@ -1,3 +1,9 @@
+# Training-oriented pilot · September 2026
+
+`dist/dataset.html` provides 112 canonical record pages: nine curated recipe variants, three shared procedures and 100 separately attributed published PbS experiment rows. Five material families are represented. The schema, records, exports, source grouping and full PbS regression comparison are documented in [data/README.md](data/README.md).
+
+The existing illustrated paper guides are retained and linked to their canonical records. These guides provide contextual figures and models; they are not separate labeled experiments. New record pages and training exports are generated from the same validated JSON. Browser checks cover the new catalog and molecular viewer; scientific regression tests and static integrity checks cover data and exports. The earlier implementation notes below describe historical stages.
+
 # MatterSyn — interactive synthesis notebook
 
 A static, source-linked website for exploring colloidal nanocrystal synthesis.
