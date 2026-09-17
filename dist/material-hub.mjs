@@ -1,0 +1,29 @@
+const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);let id=params.get('id');
+function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}
+function link(text,url){const a=node('a',text);a.href=url;return a;}
+function q(value){if(value.status==='not_reported'||value.value===null&&value.minimum===null)return 'Not reported';return (value.approximate?'≈':'')+(value.value??`${value.minimum}–${value.maximum}`)+' '+value.unit;}
+async function paperCards(data){const host=$('material-papers');host.replaceChildren();const ordered=[...data.papers].sort((a,b)=>b.reviewedRecordIds.length-a.reviewedRecordIds.length);let shown=0;
+ function batch(){for(const p of ordered.slice(shown,shown+20)){const c=node('article','','paper-contribution');c.append(node('span',p.reviewStatus==='selected_recipes_reviewed'?'Selected recipe contribution reviewed':p.reviewStatus==='published_benchmark'?'Published benchmark · numeric outcomes':'Indexed literature · recipe contribution unverified','atlas-status'));const h=node('h3');h.append(link(p.title||p.doi,'paper.html?id='+p.id));c.append(h,node('p',p.doi+' · '+(p.year||'Year unverified')));const links=node('div','','paper-links');links.append(link('Inspect source and review status →','paper.html?id='+p.id),link('Publisher ↗',p.doiUrl));c.append(links);host.append(c);}shown+=20;$('more-papers').hidden=shown>=ordered.length;}
+ $('more-papers').addEventListener('click',batch);batch();$('paper-contribution-count').textContent=data.papers.length+' indexed source associations; title mentions alone do not establish synthesis recipes.';
+}
+try{
+ const index=await (await fetch('data/materials-index.json')).json();if(document.body.dataset.material==='CdSe')id=index.materials.find(m=>m.formula==='CdSe')?.id;
+ const entry=index.materials.find(m=>m.id===id);if(!entry)throw Error('Material not found. Select a system from the periodic table.');
+ const response=await fetch('data/materials/'+entry.id+'.json');if(!response.ok)throw Error('Material details are unavailable');const data=await response.json();
+ if(document.body.dataset.material!=='CdSe'){
+  document.title=data.formula+' · Synthesis, characterization and properties | MatterSyn';$('material-formula').textContent=data.formula;$('material-name').textContent=data.name;$('material-elements').textContent=data.elements.join(' · ');
+  $('material-scope-note').textContent=data.reviewed_records?`${data.reviewed_records} reviewed synthesis record(s) contribute to this material hub. Sample-specific measurements stay with their own source and recipe.`:data.benchmark_records?`${data.benchmark_records} published benchmark rows. These provide numeric outcomes, not fully reconstructed individual protocols.`:'The local corpus contains candidate literature about this system. Full recipe, figure and property review is pending; no synthesis conditions are inferred from titles.';
+  $('material-dataset').href='dataset.html?material='+encodeURIComponent(data.formula);
+  const methods=$('material-methods');methods.replaceChildren();
+  for(const r of data.records.filter(r=>r.record_type!=='procedure'&&r.collection!=='published_benchmark')){const a=link('',r.page_url);a.className='method-card';a.append(node('span',r.method.toUpperCase(),'mini-label'),node('h3',r.title),node('p',`${r.formula} · ${r.year} · ${r.architecture.replaceAll('_',' ')}`),node('span','Open synthesis record →','method-open'));methods.append(a);}
+  if(!methods.children.length)methods.append(node('p',data.benchmark_records?'Explore the published experimental rows in the synthesis dataset.':'No fully reviewed recipe is assigned yet. The source list below is available for review.','coverage-note'));
+  const ids=data.records.filter(r=>r.collection==='reviewed_literature'&&r.record_type!=='procedure');const details=await Promise.all(ids.map(async r=>(await fetch('data/records/'+r.record_id+'.json')).json()));
+  for(const [hostId,isStructure] of [['material-structures',true],['material-properties',false]]){const host=$(hostId);host.replaceChildren();let count=0;
+   for(const r of details){const measurements=r.measurements.filter(m=>(new Set(['diameter','diameter_spread','particle_size','particle_size_spread','characteristic_size','edge_length','edge_length_spread','length','width','crystal_phase','lattice_parameter','interplanar_spacing']).has(m.property))===isStructure);const products=isStructure?r.products:[];if(!measurements.length&&!products.length)continue;const card=node('article','','paper-contribution');const title=node('h3',r.title);card.append(title);for(const p of products){card.append(node('p',p.source_sample_label||p.sample_id));for(const key of ['composition','phase','morphology','surface']){const f=p[key];if(f?.value!==null&&f?.value!==undefined)card.append(node('p',key+': '+f.value));}card.append(node('small','Recipe link: '+p.recipe_link.replaceAll('_',' ')));}
+    for(const m of measurements){const sample=r.products.find(p=>p.sample_id===m.sample_id);card.append(node('p',(sample?.source_sample_label||m.sample_id)+' · '+m.property.replaceAll('_',' ')+': '+q(m.value)+' · '+m.technique+' · '+m.value.status+(m.value.qualifier?' · '+m.value.qualifier:'')+' · '+(sample?.recipe_link==='explicit'?'Explicit recipe link':'Contextual sample; exact recipe link unresolved')));}
+    card.append(link('Inspect sample, conditions and sources →','records/'+r.record_id+'.html'));host.append(card);count+=measurements.length+products.length;
+   }if(!count)host.append(node('p','No reviewed sample-specific evidence is assigned to this section yet. Consult the source list; indexed titles are not measurement labels.','coverage-note'));
+  }
+ }
+ await paperCards(data);
+}catch(e){const host=$('material-scope-note')||$('paper-contribution-count');if(host)host.textContent=e.message;console.error(e);}

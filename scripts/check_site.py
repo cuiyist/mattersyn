@@ -15,7 +15,7 @@ class Page(HTMLParser):
             if a.get(k):self.links.append(a[k])
 
 def main():
-    dist=ROOT/'dist';errors=[];files=list((dist/'records').glob('*.html'))+[dist/x for x in ['dataset.html','index.html','murray-1993-method-1.html','murray-1993-method-2.html','alivisatos-2000.html','nakonechnyi-2017.html']]
+    dist=ROOT/'dist';errors=[];files=list(dist.rglob('*.html'))
     parsed={p:Page(p.read_text(encoding='utf-8')) for p in files}
     for p,page in parsed.items():
         if len(page.ids)!=len(set(page.ids)):errors.append(str(p)+' duplicate HTML ID')

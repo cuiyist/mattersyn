@@ -1,3 +1,15 @@
+## Current material atlas — 2026-09-17
+
+`dist/index.html` is the periodic-table parent. `cdse.html` preserves the detailed CdSe hub; `material.html?id=…` aggregates other material collections. `library.html` searches local paper groups and `paper.html?id=…` records source coverage. `dataset.html?material=…` filters canonical protocols by material or component system.
+
+The source library contains 4,176 local paper groups linked to 478 candidate/reviewed material collections. The 7,373-document indexing pass is complete: 7,171 text extractions, 154 legacy DOCs, 44 mismatched XLSX/ZIP payloads, and 4 PDFs without extractable text. Full text and candidate windows remain private outside this Site. This is not full-paper scientific curation. Title-level formula associations are candidates and cannot create training labels.
+
+Dataset 0.2.0 contains 115 canonical records: 12 reviewed protocol/variant records, 3 shared procedures and 100 published PbS benchmark rows, across 9 source groups. Three additions cover CdSe/CdS, Ir and phase-unresolved Fe–O. The original pilot queue has 37 remaining papers; the full library is much larger. No exact measured structure-to-complete-recipe pairs are verified.
+
+The CdSe hub gives four historical methods equal cards and adds a separate seeded core/shell route. `murray-1993-characterization.html` exposes all 15 original main-article figures. `nakonechnyi-2017-saed.html` exposes SI Figure S2, whose four panels are core/shell products. Murray's SAED remains text-only. Figure JSON and crop hashes are separate paper-level evidence, not experimentally linked recipe targets.
+
+After changing canonical sources, run `scripts/build_dataset.py`, then `build_reader_views.py`, `build_evidence_views.py`, and `build_atlas.py`. Validate with the dataset unit tests, `check_site.py` and `check_atlas.py`. The public corpus snapshot is `data/corpus/library-source.json`; the resumable extraction implementation remains in the parent project's research-assets/corpus-20260917 directory. Earlier sections below describe historical versions.
+
 # Training-oriented pilot · September 2026
 
 `dist/dataset.html` provides 112 canonical record pages: nine curated recipe variants, three shared procedures and 100 separately attributed published PbS experiment rows. Five material families are represented. The schema, records, exports, source grouping and full PbS regression comparison are documented in [data/README.md](data/README.md).

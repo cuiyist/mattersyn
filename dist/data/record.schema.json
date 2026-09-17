@@ -35,6 +35,28 @@
         },
         "family": {
           "type": "string"
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "architecture": {
+          "enum": [
+            "single_material",
+            "core_shell",
+            "heterostructure",
+            "alloy",
+            "composite",
+            "unresolved"
+          ]
         }
       },
       "required": [
