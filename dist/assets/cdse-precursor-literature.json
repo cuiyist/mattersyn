@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-09-16",
+  "main_conclusion": "Murray's Method 2 explicitly substitutes (TMS)2Se for the Method 1 phosphine-selenide precursor. It is a short modification-by-reference, not an independently quantified complete CdSe protocol. Verified precursor literature must remain separate records.",
+  "documents": [
+    {
+      "id": "murray1993",
+      "doi": "10.1021/ja00072a025",
+      "title": "Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites",
+      "authors": "C. B. Murray, D. J. Norris, M. G. Bawendi",
+      "citation": "J. Am. Chem. Soc. 1993, 115, 8706-8715",
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/9/2055/files/2023/10/ja00072a025.pdf",
+      "access": "full main article verified"
+    },
+    {
+      "id": "steigerwald1988",
+      "doi": "10.1021/ja00218a008",
+      "title": "Surface Derivatization and Isolation of Semiconductor Cluster Molecules",
+      "authors": "M. L. Steigerwald, A. P. Alivisatos, J. M. Gibson, T. D. Harris, R. Kortan, A. J. Muller, A. M. Thayer, T. M. Duncan, D. C. Douglass, L. E. Brus",
+      "citation": "J. Am. Chem. Soc. 1988, 110, 3046-3050",
+      "murray_reference": "3a",
+      "url": "https://escholarship.org/content/qt52r9n79q/qt52r9n79q.pdf",
+      "repository_record": "https://escholarship.org/uc/item/52r9n79q",
+      "access": "full institutional PDF downloaded; methods page visually inspected",
+      "page_numbering_note": "Repository PDF has a cover page. Printed p3047 is PDF page3.",
+      "bibliographic_correction": "Murray's reference prints 1987; ACS and institutional original confirm publication in 1988."
+    },
+    {
+      "id": "detty1982",
+      "doi": "10.1021/jo00346a041",
+      "title": "Bis(trialkylsilyl) chalcogenides. 1. Preparation and reduction of group VIA oxides",
+      "authors": "Michael R. Detty, Mark D. Seidler",
+      "citation": "J. Org. Chem. 1982, 47, 1354-1356",
+      "murray_reference": "4",
+      "url": "https://pubs.acs.org/doi/10.1021/jo00346a041",
+      "access": "bibliographic identity verified from primary publisher record; full procedure not directly verified",
+      "limitation": "No matching local file. Publisher full text/PDF inaccessible during bounded review; no original preparation quantities or timing inferred from secondary summaries."
+    },
+    {
+      "id": "beecher2014",
+      "doi": "10.1021/ja503590h",
+      "title": "Atomic Structures and Gram-Scale Synthesis of Three Tetrahedral Quantum Dots",
+      "authors": "A. N. Beecher, X. Yang, J. H. Palmer, A. L. LaGrassa, P. Juhas, S. J. L. Billinge, J. S. Owen",
+      "citation": "J. Am. Chem. Soc. 2014, 136, 10645-10653",
+      "url": "https://doi.org/10.1021/ja503590h",
+      "access": "local main and SI available; detailed precursor preparation is in MAIN p10650/PDF6, visually verified",
+      "relation": "Later two-step variation explicitly attributed to Detty and Seidler (ref40). Not a source used by Murray in1993."
+    }
+  ],
+  "citation_chain": {
+    "murray_statement": {
+      "source": {
+        "document_id": "murray1993",
+        "pdf_page": 1,
+        "printed_page": 8706,
+        "section": "General and references 3a, 4"
+      },
+      "meaning": "Prepared (TMS)2Se and (BDMS)2Te using literature references3a and4; stored both at -35 C in a drybox.",
+      "citation_scope": "The two references are attached together to the group statement; no explicit one-reference-per-compound mapping is printed."
+    },
+    "verified_mapping": "Reference3a directly provides a TMS2Se solution-preparation example. Its own General section cites Detty1982 and Liotta1978 for silyl-selenium/tellurium reagent methods. Thus do not claim ref3a is exclusively selenium and ref4 exclusively tellurium.",
+    "steigerwald_further_references": [
+      {
+        "number": "6a",
+        "citation": "Detty, M. R.; Seidler, M. D. J. Org. Chem. 1982, 47, 1354-1356",
+        "doi": "10.1021/jo00346a041"
+      },
+      {
+        "number": "6b",
+        "citation_as_printed": "Liotta, D.; Paty, P. B.; Johnston, J.; Zima, G. Tetrahedron Lett. 1978, 5091",
+        "identity_and_procedure_beyond_printed_reference": "not independently checked in this bounded review"
+      }
+    ]
+  },
+  "murray_method2": {
+    "source": {
+      "document_id": "murray1993",
+      "pdf_page": 2,
+      "printed_page": 8707,
+      "section": "Method 2"
+    },
+    "route_id": "cdse_method2_silylselenide",
+    "selenium_precursor": {
+      "id": "tms2se",
+      "explicitly_reported": true
+    },
+    "replaces": {
+      "id": "topse",
+      "method": "Method1"
+    },
+    "cadmium_precursor": {
+      "id": "dimethylcadmium",
+      "status": "inherited from parent Method1 rather than restated"
+    },
+    "coordinating_medium": {
+      "ids": [
+        "top",
+        "topo"
+      ],
+      "status": "parent Method1 context, not a independently quantified Method2 stock prescription"
+    },
+    "all_explicit_method2_conditions": [
+      {
+        "scope": "precursor choice",
+        "statement": "Use (TMS)2S, (TMS)2Se and (BDMS)2Te for CdS, CdSe and CdTe, respectively."
+      },
+      {
+        "scope": "CdS only",
+        "growth_temperature_c_approx": [
+          290,
+          320
+        ],
+        "statement": "This range gave the best CdS samples; do not label it a CdSe temperature."
+      },
+      {
+        "scope": "smallest CdS/CdSe/CdTe species",
+        "size_angstrom_approx": 12,
+        "size_nm_approx": 1.2,
+        "injection_temperature_c_approx": 100,
+        "growth_temperature_c_approx": 100,
+        "statement": "Milder-condition variant; not a universal Method2 setpoint."
+      }
+    ],
+    "storage": {
+      "temperature_c": -35,
+      "environment": "drybox",
+      "applies_to": [
+        "prepared (TMS)2Se",
+        "prepared (BDMS)2Te"
+      ],
+      "source": {
+        "document_id": "murray1993",
+        "pdf_page": 1,
+        "printed_page": 8706,
+        "section": "General and references 3a, 4"
+      },
+      "meaning": "Precursor storage only, not synthesis, injection, crystal growth or final CdSe storage.",
+      "duration": null,
+      "drybox_gas": null
+    },
+    "scope_of_method1_inheritance": {
+      "explicit_reference": "Method2 replaces the phosphine chalcogenide precursors in Method1.",
+      "what_can_be_described": "Shared hot-coordinating-medium/injection/growth outline and the separately reported general nanocrystal workup, clearly marked as linked Method1/common-procedure context.",
+      "what_cannot_be_claimed": "A new exact TMS2Se mass, molarity, stock volume, thermal history or sample-specific yield not stated in Method2.",
+      "parent_numeric_fields": "If 50 g TOPO, Method1 cadmium solution, bath preparation or common workup volumes are displayed, tag them as inherited/reference context, not independently reported CdSe Method2 parameters."
+    },
+    "missing_fields": {
+      "tms2se_mass_g": null,
+      "tms2se_volume_ml": null,
+      "tms2se_amount_mmol": null,
+      "tms2se_stock_molarity": null,
+      "tms2se_stock_solvent_and_dilution_volume": null,
+      "ordinary_cdse_injection_temperature_c": null,
+      "ordinary_cdse_growth_temperature_c": null,
+      "injection_duration_s": null,
+      "exact_growth_time_min": null,
+      "method2_specific_isolated_yield": null,
+      "sample_to_route_mapping": null
+    },
+    "workup": {
+      "source": {
+        "document_id": "murray1993",
+        "pdf_page": 2,
+        "printed_page": 8707,
+        "section": "Isolation and Purification; Size-Selective Precipitation"
+      },
+      "status": "General reported crystallite workup can be linked; no independent Method2 run/yield is documented.",
+      "outline": "10-mL reaction aliquot cooled to about60C;20mL methanol and centrifuge retain flocculate;25mL1-butanol and centrifuge retain clear supernatant/discard gray byproduct;25mL methanol reflocculation;50mL methanol rinse;vacuum dry. Optional endpoint-based size selection.",
+      "yield_note": "Approximately300mg capped CdSe is a reported aliquot-workup outcome, not an independently confirmed Method2 yield."
+    },
+    "do_not_merge": [
+      "Method1 1.0 M TOPSe stock definition",
+      "CdS 290-320 C range",
+      "CdTe (BDMS)2Te chemistry",
+      "1988 THF stock composition",
+      "1988 microemulsion or bulk-powder CdSe preparation",
+      "2014 cadmium-benzoate/amine QD synthesis",
+      "1988 0 C storage",
+      "Later reagent bromide substituted for historical chloride"
+    ]
+  },
+  "precursor_preparation_1988": {
+    "id": "steigerwald1988_tms2se_solution",
+    "source": {
+      "document_id": "steigerwald1988",
+      "pdf_page": 3,
+      "printed_page": 3047,
+      "section": "Experimental Section: General; Preparation of Powders of II-VI Materials with Silylchalcogenide Reagents"
+    },
+    "status": "Verified cited primary preparation of TMS2Se solution; incomplete isolated-reagent protocol",
+    "scope": "The explicit quantitative example precedes a HgSe bulk-powder preparation. Only its precursor-solution preparation is extracted here. It is not Murray's injection-stock composition.",
+    "product": {
+      "name": "Bis(trimethylsilyl)selenide",
+      "id": "tms2se",
+      "form": "solution in THF",
+      "molarity_approx": 0.3
+    },
+    "inputs": [
+      {
+        "id": "selenium",
+        "form": "powder",
+        "mass_g": 0.53,
+        "amount_as_printed": "6.7 mg-atom",
+        "normalized_amount_mmol": 6.7
+      },
+      {
+        "id": "superhydride",
+        "solvent": "THF",
+        "solution_volume_ml": 13,
+        "amount_mmol": 13
+      },
+      {
+        "id": "tmscl",
+        "mass_g": 1.45,
+        "amount_mmol": 13
+      }
+    ],
+    "conditions": {
+      "handling": "standard airless techniques",
+      "reaction_temperature_c": null,
+      "reaction_duration_min": null,
+      "addition_order": "not detailed in this precursor sentence",
+      "total_thf_volume_ml": null,
+      "isolated_product_mass_g": null,
+      "isolated_yield_percent": null,
+      "purification_or_distillation": null
+    },
+    "stock_concentration_caution": "The paper states approximately0.3M but does not give the total THF amount for this formation. Do not calculate a measured preparation volume or transplant the concentration into Murray Method2.",
+    "storage_context": {
+      "temperature_c": 0,
+      "environment": "drybox",
+      "source": {
+        "document_id": "steigerwald1988",
+        "pdf_page": 3,
+        "printed_page": 3047,
+        "section": "General"
+      },
+      "scope": "General storage statement for silylselenium/silyltellurium reagents in the1988 work.",
+      "murray_override": "Murray separately states -35 C; that remains the source-specific value for Murray."
+    },
+    "not_precursor_parameters": "Downstream HgCl2 addition, bulk-product washing/annealing and microemulsion synthesis elsewhere on this page are different experiments. Their temperatures and yields must not fill the missing precursor reaction conditions."
+  },
+  "laterContext": {
+    "doi": "10.1021/ja503590h",
+    "note": "Separately verified later two-step route using isolated Li2Se and TMSBr; not merged into Murray1993."
+  }
+}

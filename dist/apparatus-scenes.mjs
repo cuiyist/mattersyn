@@ -31,7 +31,9 @@ function vial(label,kind='clear',extra=''){return '<div class="scene-vial '+kind
 const centrifuge='<div class="mini-centrifuge" aria-hidden="true"><div class="rotor"><i></i><i></i><i></i><i></i></div><span>CENTRIFUGE</span></div>';
 const dropper='<div class="scene-dropper" aria-hidden="true"><i></i><b></b><span></span></div>';
 const sceneArt={
- materials:'<div class="reagent-kit">'+vial('TOPO','powder')+vial('TOP','clear')+vial('Se','gray')+'</div><div class="stock-note">Se + TOP <b>→</b> TOPSe stock</div>',
+ materials:'<div class="stock-prep-diagram"><span class="mini-label">SEPARATE STOCK PREPARATION</span><h3>Se shot + TOP</h3><span class="preparation-arrow" aria-hidden="true">↓</span><h3>1.0 M TOPSe in TOP</h3><p>Elemental selenium is dissolved to prepare the stock. The injected selenium precursor is TOPSe.</p><a href="#stocks">Precursor and solvent structures ↑</a></div>',
+ silyl:'<div class="stock-prep-diagram"><span class="mini-label">SELENIUM PRECURSOR · METHOD 2</span><h3>Me₃Si—Se—SiMe₃</h3><p>Bis(trimethylsilyl)selenium</p><div class="storage-note"><strong>Storage: −35 °C</strong><span>Drybox · gas and duration not specified</span></div><a href="#precursor-preparation">Cited precursor preparation ↑</a></div>',
+ route2:'<div class="stock-prep-diagram"><span class="mini-label">PRECURSOR SUBSTITUTION</span><h3>Me₂Cd + (TMS)₂Se</h3><p>Coordinating-medium / injection framework referenced to Method 1.</p><div class="storage-note"><strong>CdSe formulation incompletely specified</strong><span>Charge, injection-stock concentration and general growth schedule are not restated.</span></div></div>',
  hot:flask+bath+'<div class="gas-line"><span id="scene-gas">Vacuum / Ar</span><i></i></div>',
  combine:'<div class="drybox-frame"><span class="drybox-label">DRYBOX</span><div class="solution-pair">'+vial('A · Me₂Cd + TOP','clear')+'<b>+</b>'+vial('B · TOPSe + TOP','clear')+'</div><div class="combine-arrow">↓</div><div class="mixture-label">Combined precursor mixture</div></div>',
  inject:flask+syringe+'<div class="stir-indicator" aria-hidden="true">↻</div><div class="heat-off">HEAT REMOVED</div>',
@@ -58,6 +60,8 @@ export function renderApparatus(protocol,index){
  host.dataset.scene=scene.art;host.dataset.phase=hotPhase;
  document.getElementById('apparatus-heading').textContent=scene.title;
  const picture=document.getElementById('apparatus-picture');picture.innerHTML=sceneArt[scene.art];picture.setAttribute('aria-label',scene.caption);
+ for(const [selector,text] of Object.entries(scene.labels||{})){const element=picture.querySelector(selector);if(element)element.textContent=text;}
+ for(const selector of scene.hide||[])picture.querySelectorAll(selector).forEach(element=>element.hidden=true);
  const gas=document.getElementById('scene-gas');if(gas)gas.textContent=hotPhase==='degas'?'Vacuum / Ar':'Argon';
  document.getElementById('apparatus-caption').textContent=scene.caption;
  document.getElementById('apparatus-conditions').replaceChildren(...scene.conditions.map(({label,value})=>{

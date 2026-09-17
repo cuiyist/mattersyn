@@ -2,7 +2,26 @@
 
 A static, source-linked website for exploring colloidal nanocrystal synthesis.
 
-## Current example: Murray, Norris & Bawendi, 1993
+## Material-centered CdSe atlas
+
+The entry page is a CdSe material overview that accommodates contributions from multiple papers. Hot injection is the first method category. Murray et al. (1993) Methods 1 and 2 have separate detail routes; the earlier Alivisatos-group (2000) and Nakonechnyi et al. (2017) pages remain linked.
+
+- `dist/index.html`: material overview, method selection, shared structural and optical evidence, chemical intuition and literature.
+- `dist/murray-1993-method-1.html`: TOPSe route, complete reported CdSe inventory, stock solutions, synthesis, isolation, size selection and optional pyridine exchange.
+- `dist/murray-1993-method-2.html`: bis(trimethylsilyl)selenium route; explicit boundaries around the incompletely specified formulation and the approximately 100 °C small-species variant.
+- `dist/material-data.mjs`, `material-app.mjs`, `academic.css`: shared source-linked records, molecule/stock interactions, stage illustrations and unit-cell/nanocrystal viewers. `dist` is the authored static source; there is no build step.
+
+Method pages use five academic sections: **Precursors**, **Synthesis protocol**, **Final structures**, **Properties** and **Chemical intuition**. Stock panels display both precursor and solvent structures. Approximate concentrations calculated from additive volumes are labeled as calculations, not measured concentrations.
+
+Method 1 dissolves selenium shot in TOP to prepare TOPSe; it does not inject elemental selenium alone. Method 2 instead uses (TMS)2Se, stored at −35 °C in a drybox. The precursor section follows reference 3a to Steigerwald et al. (1988), DOI 10.1021/ja00218a008, and reports its Se / lithium triethylborohydride / trimethylsilyl chloride / THF preparation without importing that approximately 0.3 M THF formulation into the unspecified Murray injection stock. Murray's reference list prints 1987 for this 1988 article. Reference 4, Detty and Seidler (1982), is identified but its full experimental text was not accessed. The Murray SI remains unlocated/unverified.
+
+`dist/assets/cdse-structures/` contains the original COD 9016056 CIF, a four-site expanded P1 CIF, and the displayed illustrative 582-atom nanocrystal as XYZ and CIF in an artificial 80 Å vacuum box. CIF files are compatible with VESTA. The independent Materials Project mp-1070 link is not presented as the source of these experimental bulk coordinates. Ligand positions, faults and relaxed surface structure are not reconstructed.
+
+`cdse-chemical-intuition.json` separates original explanations, later evidence, interpretations, limitations and research outlooks, with claim-level references. Measurements retain figure-specific sample identities and are not automatically assigned to Method 2. Original TEM, XRD, absorption and photoluminescence figures remain accessible.
+
+Validation for this revision includes source review, molecular identity/connectivity and coordinate checks, structure-file hashes and CIF round trips, JavaScript syntax, and static link/ID consistency. Local browser checks exercised both method routes, stock components, the ionic precursor diagram, thermal subphases, optional exchange, unit-cell periodic context and nanocrystal representation controls. No console errors or warnings were observed in these checks. This does not establish chemical reproducibility or complete an unreported SOP.
+
+## Original single-paper implementation: Murray, Norris & Bawendi, 1993
 
 Murray, Norris & Bawendi, *Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites*, JACS 115, 8706–8715 (1993). DOI: https://doi.org/10.1021/ja00072a025
 
@@ -56,4 +75,4 @@ Drag 3D models to rotate; scroll to zoom. TOPO is a pannable and zoomable 2D dia
 
 Validation includes JavaScript syntax, local references and IDs, JSON integrity, molecular bond indices, and all four lattice crops. Crystal checks cover unique positions, envelope bounds, reciprocal Cd–Se bonds and maximum tetrahedral coordination. Browser interaction testing was not performed for this update.
 
-Sites hosting is configured in `.openai/hosting.json`; the publication retains owner-only access.
+Sites hosting is configured in `.openai/hosting.json`; publication retains the existing public audience. Historical validation descriptions above refer to the original implementations; the current revision includes the browser checks described at the top.

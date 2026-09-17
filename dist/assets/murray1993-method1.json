@@ -1,0 +1,608 @@
+{
+  "material": "CdSe",
+  "method": "Hot injection / Method 1 / TOPSe",
+  "source": {
+    "id": "murray1993",
+    "title": "Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites",
+    "authors": "C. B. Murray, D. J. Norris & M. G. Bawendi",
+    "year": 1993,
+    "doi": "10.1021/ja00072a025",
+    "url": "https://doi.org/10.1021/ja00072a025",
+    "pages": "8706–8715",
+    "pdf": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/9/2055/files/2023/10/ja00072a025.pdf",
+    "si": "Not located or verified"
+  },
+  "materials": [
+    {
+      "id": "dimethylcadmium",
+      "name": "Dimethylcadmium",
+      "formula": "Cd(CH₃)₂",
+      "role": "Cadmium precursor",
+      "amount": "1.00 mL · 13.35 mmol",
+      "note": "0.250 μm filtration and vacuum transfer before use.",
+      "group": "Synthesis",
+      "source": "pp. 8706–8707"
+    },
+    {
+      "id": "topse",
+      "name": "Trioctylphosphine selenide",
+      "formula": "C₂₄H₅₁PSe · TOPSe",
+      "role": "Selenium precursor",
+      "amount": "10.0 mL of 1.0 M stock · 10.00 mmol",
+      "note": "Prepared by dissolving Se shot in TOP; subsequently diluted in solution B.",
+      "group": "Synthesis",
+      "source": "pp. 8706–8707"
+    },
+    {
+      "id": "top",
+      "name": "Trioctylphosphine",
+      "formula": "C₂₄H₅₁P · TOP",
+      "role": "Coordinating solvent / stock carrier",
+      "amount": "25.0 mL in A + 15.0 mL in B; also the TOPSe stock carrier",
+      "note": "Used as purchased. The solvent already in the TOPSe stock is additional to these two charges.",
+      "group": "Synthesis",
+      "source": "pp. 8706–8707"
+    },
+    {
+      "id": "topo",
+      "name": "Trioctylphosphine oxide",
+      "formula": "C₂₄H₅₁OP · TOPO",
+      "role": "Heated coordinating medium",
+      "amount": "50 g",
+      "note": "Distilled fraction collected at 260–300 °C and ≈1 Torr. Reactor drying is a separate operation.",
+      "group": "Synthesis",
+      "source": "pp. 8706–8707"
+    },
+    {
+      "id": "selenium",
+      "name": "Selenium shot",
+      "formula": "Se",
+      "role": "Starting material for TOPSe stock",
+      "amount": "Mass not reported; stock adjusted to 1.0 M",
+      "note": "Electronic grade, 99.99+%. Dissolved in TOP before injection; not an elemental-Se injection.",
+      "group": "Synthesis",
+      "source": "pp. 8706–8707"
+    },
+    {
+      "id": "argon",
+      "name": "Argon",
+      "formula": "Ar",
+      "role": "Purge / inert atmosphere",
+      "amount": "Periodic flush; ≈1 atm before injection",
+      "note": "No flow rate or drybox gas composition is specified.",
+      "group": "Synthesis",
+      "source": "p. 8707"
+    }
+  ],
+  "auxiliaryMaterials": [
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH₃OH",
+      "role": "Nonsolvent / wash",
+      "amount": "20 mL + 25 mL + 50 mL rinse per 10-mL reaction aliquot",
+      "note": "Anhydrous. Additional dropwise amount during size selection is not specified.",
+      "group": "Isolation and size selection",
+      "source": "p. 8707"
+    },
+    {
+      "id": "1-butanol",
+      "name": "1-Butanol",
+      "formula": "C₄H₁₀O",
+      "role": "Redispersion solvent",
+      "amount": "25 mL per 10-mL aliquot; size-selection volume unreported",
+      "note": "Anhydrous. Retain clear supernatant after removal of the gray byproduct.",
+      "group": "Isolation and size selection",
+      "source": "p. 8707"
+    },
+    {
+      "id": "pyridine",
+      "name": "Pyridine",
+      "formula": "C₅H₅N",
+      "role": "Optional ligand exchange / TEM dispersion",
+      "amount": "5–10 mL for ≈50 mg capped crystallites in exchange",
+      "note": "Exchange at ≈60 °C. TEM uses a dilute pyridine dispersion; that concentration is unreported.",
+      "group": "Optional exchange and characterization",
+      "source": "p. 8707"
+    },
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": "C₆H₁₄",
+      "role": "Exchange nonsolvent / optical dispersant",
+      "amount": "Excess for exchange; optical sample volume unreported",
+      "note": "Also an alternative size-selection pair with pyridine. Washed CdSe is dispersed in hexane for optical measurements.",
+      "group": "Optional exchange and characterization",
+      "source": "p. 8707"
+    },
+    {
+      "id": "chloroform",
+      "name": "Chloroform",
+      "formula": "CHCl₃",
+      "role": "Alternative size-selection solvent",
+      "amount": "Not reported",
+      "note": "Listed as an alternative chloroform/methanol pair; not an extra mandatory step.",
+      "group": "Optional exchange and characterization",
+      "source": "p. 8707"
+    }
+  ],
+  "stocks": [
+    {
+      "id": "topse-stock",
+      "name": "TOPSe stock",
+      "solute": "topse",
+      "solvent": "top",
+      "amount": "Se shot dissolved in sufficient TOP",
+      "concentration": "1.0 M TOPSe · reported",
+      "description": "The stock-preparation volume and Se mass are not specified. Elemental Se is converted to the named phosphine-selenide precursor before use.",
+      "source": "pp. 8706–8707"
+    },
+    {
+      "id": "solution-a",
+      "name": "Solution A",
+      "solute": "dimethylcadmium",
+      "solvent": "top",
+      "amount": "1.00 mL Me₂Cd (13.35 mmol) + 25.0 mL TOP",
+      "concentration": "≈0.513 M Me₂Cd · nominal calculation",
+      "description": "13.35 mmol / 26.0 mL, assuming additive liquid volumes. Prepared in the drybox; measured final volume is not given.",
+      "source": "p. 8707 · Method 1"
+    },
+    {
+      "id": "solution-b",
+      "name": "Solution B",
+      "solute": "topse",
+      "solvent": "top",
+      "amount": "10.0 mL of 1.0 M TOPSe stock + 15.0 mL TOP",
+      "concentration": "0.400 M TOPSe · nominal calculation",
+      "description": "10.00 mmol / 25.0 mL, assuming additive volumes. This is the diluted injection component, not the original 1.0 M stock.",
+      "source": "p. 8707 · Method 1"
+    },
+    {
+      "id": "combined",
+      "name": "Combined injection mixture",
+      "solute": "dimethylcadmium",
+      "secondSolute": "topse",
+      "solvent": "top",
+      "amount": "Solution A + solution B, combined in the drybox",
+      "concentration": "Nominal Cd 0.262 M; Se 0.196 M · calculated",
+      "description": "Based on the 51 mL sum of component volumes. The paper describes a 50-mL syringe; the discrepancy is unresolved. Molecular panels show components separately and do not imply a measured complex.",
+      "source": "p. 8707 · Method 1"
+    }
+  ],
+  "protocols": {
+    "synthesis": {
+      "note": "Method 1 · CdSe only. This sequence uses the original TOPSe route. CdTe, silyl-precursor Method 2 and pyridine surface exchange are separate procedures.",
+      "steps": [
+        {
+          "tab": "Materials",
+          "title": "Precursor preparation",
+          "description": "Prepare the 1.0 M TOPSe stock by dissolving electronic-grade selenium shot in TOP. The injected selenium reagent is TOPSe in solution, not a separate charge of Se shot. TOPO distillation and dimethylcadmium purification are separate preparative operations.",
+          "fields": [
+            [
+              "TOPSe stock",
+              "1.0 M in trioctylphosphine"
+            ],
+            [
+              "TOPO purification",
+              "Distilled fraction: 260–300 °C at ≈1 Torr"
+            ],
+            [
+              "Dimethylcadmium purification",
+              "0.250 µm filtration + vacuum transfer"
+            ],
+            [
+              "Atmosphere",
+              "Standard airless procedures"
+            ]
+          ],
+          "source": "PP. 8706–8707"
+        },
+        {
+          "tab": "Hot bath",
+          "title": "TOPO drying and thermal stabilization",
+          "description": "Dry and degas the coordinating medium with periodic argon flushing. Then stabilize the bath near 300 °C under argon before injection.",
+          "fields": [
+            [
+              "TOPO charge",
+              "50 g"
+            ],
+            [
+              "Drying / degassing",
+              "≈200 °C · ≈1 Torr · ≈20 min"
+            ],
+            [
+              "Gas treatment",
+              "Periodically flush with argon"
+            ],
+            [
+              "Before injection",
+              "≈300 °C · ≈1 atm argon"
+            ]
+          ],
+          "source": "P. 8707 · METHOD 1"
+        },
+        {
+          "tab": "A + B",
+          "title": "Preparation of solutions A and B",
+          "description": "Combine solutions A and B and load the mixture into the reported 50-mL syringe. The nominal component volumes add to 51 mL; the paper does not resolve that discrepancy. The amounts are preserved as written.",
+          "fields": [
+            [
+              "Solution A",
+              "1.00 mL Me₂Cd (13.35 mmol) + 25.0 mL TOP"
+            ],
+            [
+              "Solution B",
+              "10.0 mL 1.0 M TOPSe (10.00 mmol) + 15.0 mL TOP"
+            ],
+            [
+              "Cd : Se feed ratio",
+              "1.335 : 1 (calculated from mmol)"
+            ],
+            [
+              "Syringe / nominal volume",
+              "50 mL reported / 51 mL arithmetic sum"
+            ]
+          ],
+          "source": "P. 8707 · METHOD 1"
+        },
+        {
+          "tab": "Inject",
+          "title": "Rapid precursor injection",
+          "description": "Remove the heat and deliver the combined precursor mixture in a single rapid injection through a rubber septum into vigorously stirred TOPO. The paper reports a yellow/orange solution and a sudden temperature drop.",
+          "fields": [
+            [
+              "Before → after injection",
+              "≈300 → ≈180 °C"
+            ],
+            [
+              "Addition",
+              "Single rapid injection; duration not specified"
+            ],
+            [
+              "Initial absorption feature",
+              "440–460 nm"
+            ],
+            [
+              "Visible observation",
+              "Deep yellow/orange solution"
+            ]
+          ],
+          "source": "P. 8707 · METHOD 1"
+        },
+        {
+          "tab": "Grow",
+          "title": "Controlled growth and optical monitoring",
+          "description": "Restore heating and gradually raise the temperature. Monitor absorption every 5–10 minutes. Lower the temperature when the size distribution spreads; increase it when growth appears to stop. The authors describe a few hours of steady growth, not a fixed time for each size.",
+          "fields": [
+            [
+              "Initial growth range",
+              "230–260 °C"
+            ],
+            [
+              "Sampling interval",
+              "5–10 min"
+            ],
+            [
+              "Control",
+              "Adjust temperature from absorption spectra"
+            ],
+            [
+              "Duration",
+              "A few hours; no fixed size–time schedule"
+            ]
+          ],
+          "source": "PP. 8707–8708"
+        },
+        {
+          "tab": "Withdraw",
+          "title": "Aliquot withdrawal",
+          "description": "When the desired absorption characteristics appear, transfer a portion by cannula and store it in a vial. Method 1 reports a series of sizes from roughly 15 to 115 Å from one preparation. The purification procedure below begins with a 10-mL portion.",
+          "fields": [
+            [
+              "Endpoint",
+              "Desired absorption characteristics"
+            ],
+            [
+              "Reported size range",
+              "≈1.5–11.5 nm (major axis)"
+            ],
+            [
+              "Sampling operation",
+              "Cannula transfer to a vial"
+            ],
+            [
+              "Next branch",
+              "Purify a 10-mL reaction aliquot"
+            ]
+          ],
+          "source": "P. 8707 · METHOD 1"
+        }
+      ]
+    },
+    "purification": {
+      "note": "Isolation and purification · all amounts below refer to a 10-mL reaction aliquot. Fraction identity matters: first keep the flocculate, then keep the clear liquid after removing gray byproducts.",
+      "steps": [
+        {
+          "tab": "Cool",
+          "title": "Aliquot cooling",
+          "description": "Remove a reaction aliquot by cannula and cool it to slightly above the melting point of TOPO. This is a sample workup, not the entire synthesis batch.",
+          "fields": [
+            [
+              "Reaction aliquot",
+              "10 mL"
+            ],
+            [
+              "Cooling endpoint",
+              "≈60 °C"
+            ],
+            [
+              "Material tracked",
+              "TOP/TOPO-capped CdSe in growth medium"
+            ],
+            [
+              "Cooling time",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · ISOLATION"
+        },
+        {
+          "tab": "Flocculate",
+          "title": "Methanol flocculation",
+          "description": "Add anhydrous methanol to reversibly flocculate the nanocrystals. Separate the flocculate from the supernatant by centrifugation and retain the flocculate for redispersion.",
+          "fields": [
+            [
+              "Methanol addition",
+              "20 mL, anhydrous"
+            ],
+            [
+              "Separation",
+              "Centrifugation"
+            ],
+            [
+              "Keep",
+              "Nanocrystal-containing flocculate"
+            ],
+            [
+              "Centrifuge speed / time",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · ISOLATION"
+        },
+        {
+          "tab": "Clarify",
+          "title": "Byproduct separation",
+          "description": "Disperse the flocculate in anhydrous 1-butanol and centrifuge again. The nanocrystals remain in the optically clear supernatant; the gray precipitate contains mostly elemental Cd and Se byproducts and is discarded.",
+          "fields": [
+            [
+              "1-Butanol addition",
+              "25 mL, anhydrous"
+            ],
+            [
+              "Keep",
+              "Clear nanocrystal supernatant"
+            ],
+            [
+              "Discard",
+              "Gray Cd/Se-rich precipitate"
+            ],
+            [
+              "Centrifuge speed / time",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · ISOLATION"
+        },
+        {
+          "tab": "Reprecipitate",
+          "title": "Nanocrystal reflocculation",
+          "description": "Add anhydrous methanol to the retained clear supernatant to flocculate the nanocrystals again and remove excess TOP and TOPO.",
+          "fields": [
+            [
+              "Methanol addition",
+              "25 mL, anhydrous"
+            ],
+            [
+              "Product fraction",
+              "Nanocrystal flocculate"
+            ],
+            [
+              "Purpose",
+              "Remove excess TOP / TOPO"
+            ],
+            [
+              "Addition rate",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · ISOLATION"
+        },
+        {
+          "tab": "Rinse & dry",
+          "title": "Methanol rinse and vacuum drying",
+          "description": "Rinse the flocculate with methanol and vacuum-dry it. The reported approximate product mass belongs to this 10-mL aliquot and includes the TOP/TOPO cap; it is not a whole-batch yield or a bare-CdSe mass.",
+          "fields": [
+            [
+              "Final methanol rinse",
+              "50 mL"
+            ],
+            [
+              "Drying",
+              "Under vacuum; time / temperature unspecified"
+            ],
+            [
+              "Reported isolated product",
+              "≈300 mg TOP/TOPO-capped CdSe"
+            ],
+            [
+              "Mass basis",
+              "From a 10-mL reaction aliquot"
+            ]
+          ],
+          "source": "P. 8707 · ISOLATION"
+        }
+      ]
+    },
+    "sizeSelection": {
+      "note": "Size-selective precipitation · a separate refinement after purification. The paper gives an observed endpoint, not a fixed methanol volume or a universal number of cycles.",
+      "steps": [
+        {
+          "tab": "Disperse",
+          "title": "Nanocrystal redispersion",
+          "description": "Disperse purified nanocrystals in anhydrous 1-butanol until the dispersion is optically clear.",
+          "fields": [
+            [
+              "Input",
+              "Purified capped nanocrystals"
+            ],
+            [
+              "Solvent",
+              "Anhydrous 1-butanol"
+            ],
+            [
+              "Initial state",
+              "Optically clear"
+            ],
+            [
+              "Concentration / volume",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · SIZE SELECTION"
+        },
+        {
+          "tab": "Select",
+          "title": "Size-selective precipitation",
+          "description": "Add anhydrous methanol dropwise until opalescence persists with stirring or sonication. Centrifugation separates a flocculate enriched in the largest crystallites from the remaining supernatant.",
+          "fields": [
+            [
+              "Nonsolvent",
+              "Anhydrous methanol, dropwise"
+            ],
+            [
+              "Endpoint",
+              "Persistent opalescence"
+            ],
+            [
+              "Keep for this branch",
+              "Large-particle-enriched precipitate"
+            ],
+            [
+              "Methanol volume / centrifugation",
+              "Not reported"
+            ]
+          ],
+          "source": "PP. 8707–8708"
+        },
+        {
+          "tab": "Repeat",
+          "title": "Repeated fractionation",
+          "description": "Redisperse the precipitate in 1-butanol and repeat size-selective precipitation. Figure 1 illustrates a particular sample shifting from about 35 Å ±10% to 37 Å ±5%; it does not define a cycle count for every preparation.",
+          "fields": [
+            [
+              "Stopping criterion",
+              "No further absorption sharpening"
+            ],
+            [
+              "Figure 1 starting sample",
+              "≈3.5 nm ±10%"
+            ],
+            [
+              "Figure 1 selected sample",
+              "≈3.7 nm ±5%"
+            ],
+            [
+              "Scope",
+              "Separate Figure 1 example; not the TEM model"
+            ]
+          ],
+          "source": "P. 8708 · FIGURE 1"
+        }
+      ]
+    },
+    "surfaceExchange": {
+      "note": "Optional surface exchange · a separate post-synthesis branch. It changes dispersibility and surface derivatization; it is not an obligatory step in Method 1 or Method 2.",
+      "steps": [
+        {
+          "tab": "Pyridine",
+          "title": "Pyridine dispersion and ligand exchange",
+          "description": "Heat TOP/TOPO-capped nanocrystals with excess pyridine to gradually disperse them. The paper does not specify an exact exchange duration or a measured bound-ligand composition.",
+          "fields": [
+            [
+              "Capped nanocrystals",
+              "≈50 mg"
+            ],
+            [
+              "Pyridine",
+              "5–10 mL"
+            ],
+            [
+              "Temperature",
+              "≈60 °C"
+            ],
+            [
+              "Duration",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · SURFACE EXCHANGE"
+        },
+        {
+          "tab": "Hexane",
+          "title": "Hexane flocculation and recovery",
+          "description": "Add excess hexane, then isolate the flocculated crystallites by centrifugation. The hexane volume and centrifugation settings are not reported.",
+          "fields": [
+            [
+              "Nonsolvent",
+              "Excess hexane"
+            ],
+            [
+              "Keep",
+              "Crystallite flocculate"
+            ],
+            [
+              "Hexane volume",
+              "Not reported"
+            ],
+            [
+              "Speed / duration",
+              "Not reported"
+            ]
+          ],
+          "source": "P. 8707 · SURFACE EXCHANGE"
+        },
+        {
+          "tab": "Repeat",
+          "title": "Repeated surface exchange",
+          "description": "Repeat dispersion in pyridine and flocculation with hexane. The resulting crystallites disperse readily in pyridine, methanol and aromatic solvents, but no longer in aliphatic solvents.",
+          "fields": [
+            [
+              "Repeat",
+              "Pyridine dispersion / hexane flocculation"
+            ],
+            [
+              "Cycle count",
+              "A number of times; exact count unreported"
+            ],
+            [
+              "Observed outcome",
+              "Changed solvent dispersibility"
+            ],
+            [
+              "Surface composition",
+              "Not quantitatively established"
+            ]
+          ],
+          "source": "P. 8707 · SURFACE EXCHANGE"
+        }
+      ]
+    }
+  },
+  "precursorLiterature": null,
+  "characterization": {
+    "file": "murray1993-characterization.json",
+    "routeAssignment": "Figure-specific specimens; exact route mapping not established."
+  },
+  "intuition": "cdse-chemical-intuition.json"
+}
