@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "record_id": "nakonechnyi-2017-zb-cdse-core",
-  "revision": 2,
+  "revision": 3,
   "record_type": "literature_protocol",
   "title": "Nakonechnyi et al. (2017) · Zinc-blende CdSe cores",
   "material": {
@@ -25,8 +25,8 @@
       "authors": "Igor Nakonechnyi, Michael Sluydts, Yolanda Justo, Jacek Jasieniak, Zeger Hens",
       "year": 2017,
       "url": "https://doi.org/10.1021/acs.chemmater.7b00354",
-      "main_status": "Relevant original text reviewed",
-      "si_status": "Verified main (9 pages) and matching SI (7 pages); listed omissions remain",
+      "main_status": "All 9 main-article pages fully read and visually reviewed, 17 September 2026",
+      "si_status": "All 7 pages of identity-matched SI fully read and visually reviewed, 17 September 2026",
       "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
     }
   ],
@@ -222,48 +222,12 @@
         "smiles": null
       },
       "quantities": {
-        "amount": {
-          "value": null,
-          "minimum": null,
-          "maximum": null,
-          "unit": "",
-          "status": "not_reported",
-          "approximate": false,
-          "qualifier": "",
-          "basis": "",
-          "raw_text": "",
-          "evidence": [
-            {
-              "source_id": "nakonechnyi2017",
-              "locator": "Main p. 4720; Zinc Blende CdSe Core QDs"
-            }
-          ],
-          "derivation": null
-        },
         "selenium": {
           "value": 0.24,
           "minimum": null,
           "maximum": null,
           "unit": "mmol",
           "status": "reported",
-          "approximate": false,
-          "qualifier": "",
-          "basis": "Component of selenium dispersion",
-          "raw_text": "",
-          "evidence": [
-            {
-              "source_id": "nakonechnyi2017",
-              "locator": "Main p. 4720; Zinc Blende CdSe Core QDs"
-            }
-          ],
-          "derivation": null
-        },
-        "1-octadecene": {
-          "value": null,
-          "minimum": null,
-          "maximum": null,
-          "unit": "mL",
-          "status": "not_reported",
           "approximate": false,
           "qualifier": "",
           "basis": "Component of selenium dispersion",
@@ -536,48 +500,12 @@
         {
           "material_id": "selenium_dispersion",
           "quantities": {
-            "amount": {
-              "value": null,
-              "minimum": null,
-              "maximum": null,
-              "unit": "",
-              "status": "not_reported",
-              "approximate": false,
-              "qualifier": "",
-              "basis": "",
-              "raw_text": "",
-              "evidence": [
-                {
-                  "source_id": "nakonechnyi2017",
-                  "locator": "Main p. 4720; Zinc Blende CdSe Core QDs"
-                }
-              ],
-              "derivation": null
-            },
             "selenium": {
               "value": 0.24,
               "minimum": null,
               "maximum": null,
               "unit": "mmol",
               "status": "reported",
-              "approximate": false,
-              "qualifier": "",
-              "basis": "Component of selenium dispersion",
-              "raw_text": "",
-              "evidence": [
-                {
-                  "source_id": "nakonechnyi2017",
-                  "locator": "Main p. 4720; Zinc Blende CdSe Core QDs"
-                }
-              ],
-              "derivation": null
-            },
-            "1-octadecene": {
-              "value": null,
-              "minimum": null,
-              "maximum": null,
-              "unit": "mL",
-              "status": "not_reported",
               "approximate": false,
               "qualifier": "",
               "basis": "Component of selenium dispersion",
@@ -976,7 +904,7 @@
           "value": 3000,
           "minimum": null,
           "maximum": null,
-          "unit": "g",
+          "unit": "g_relative",
           "status": "reported",
           "approximate": false,
           "qualifier": "",
@@ -1044,7 +972,7 @@
       "id": "s6",
       "action": "Redisperse",
       "label": "Exchange surface ligands",
-      "stage": "workup",
+      "stage": "surface_exchange",
       "branch": "main",
       "optional": false,
       "depends_on": [
@@ -1195,6 +1123,107 @@
           "locator": "Main p. 4720; Zinc Blende CdSe Core QDs"
         }
       ]
+    },
+    {
+      "id": "quantify-cores",
+      "action": "measure_absorption",
+      "label": "Determine core concentration",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "s7"
+      ],
+      "inputs": [
+        "purified_oleate_capped_zb_cdse"
+      ],
+      "outputs": [],
+      "parameters": {
+        "absorption_wavelength_300": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nakonechnyi2017",
+              "locator": "Main PDF p.2, printed 4720, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "absorption_wavelength_320": {
+          "value": 320,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nakonechnyi2017",
+              "locator": "Main PDF p.2, printed 4720, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "absorption_wavelength_340": {
+          "value": 340,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nakonechnyi2017",
+              "locator": "Main PDF p.2, printed 4720, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nakonechnyi2017",
+            "locator": "Main PDF p.2, Zinc Blende CdSe Core QDs"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nakonechnyi2017",
+            "locator": "Main PDF p.2, Zinc Blende CdSe Core QDs"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use the average absorbance of a diluted sample at 300, 320 and 340 nm and the cited volume-fraction relation. The resulting concentration and dilution factor are not reported.",
+      "evidence": [
+        {
+          "source_id": "nakonechnyi2017",
+          "locator": "Main PDF p.2, Zinc Blende CdSe Core QDs"
+        }
+      ]
     }
   ],
   "condition_options": [],
@@ -1285,7 +1314,7 @@
         ],
         "derivation": null
       },
-      "conditions": "",
+      "conditions": " UV-vis: PerkinElmer Lambda 950 or Varian Cary 500; specific instrument, path length and dilution not assigned per spectrum.",
       "derives_from": [],
       "evidence": [
         {
@@ -1332,7 +1361,7 @@
   "structure_assets": [],
   "quality": {
     "review_status": "source_reviewed",
-    "review_scope": "Source extraction reviewed for this named literature protocol; not an independent laboratory reproduction. IDs identify records, not author-assigned physical batches.",
+    "review_scope": "All 9 main and 7 SI pages read and visually reviewed. This record preserves its selected route; other routes, controls, all figures and simulation-only values are covered separately in coverage.json. Physical batch identities remain unresolved.",
     "missing_fields": [
       "Volume of ODE in selenium dispersion",
       "Numerical addition/injection duration",
@@ -1342,7 +1371,8 @@
       "Centrifugation duration",
       "Ligand-exchange duration",
       "Final storage solvent and volume",
-      "Reagent supplier, purity and batch: not found in the inspected main paper or its Supporting Information for this core protocol"
+      "Reagent supplier, purity and batch: not found in the inspected main paper or its Supporting Information for this core protocol",
+      "Original Flamee et al. 2013 cited method not reviewed in this bounded paper/SI audit; the reproduced brief protocol is retained."
     ],
     "conflicts": [
       "Do not transfer wurtzite recipe values from the adjacent subsection (350 C, TOP-Se, 5 s).",

@@ -170,6 +170,6 @@ def training_view(r,task):
     return {'record_id':r['record_id'],'task':task,'input':inputs,'output':output,'provenance':[{'doi':s['doi'],'url':s['url'],'reuse_status':s['reuse_status']} for s in r['sources']]}
 
 def fmt(q):
-    if q['status'] in ['not_reported','not_applicable']:return q['status'].replace('_',' ').capitalize()
+    if q['status'] in ['not_reported','not_applicable']:return q['status'].replace('_',' ').capitalize()+(' · '+q['qualifier'] if q['qualifier'] else '')
     value=f"{q['minimum']:g}–{q['maximum']:g}" if q['minimum'] is not None else f"{q['value']:g}"
     return ('≈' if q['approximate'] else '')+value+' '+q['unit']+(' · '+q['qualifier'] if q['qualifier'] else '')

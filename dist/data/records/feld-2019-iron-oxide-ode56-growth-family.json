@@ -1,0 +1,1363 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "feld-2019-iron-oxide-ode56-growth-family",
+  "revision": 1,
+  "record_type": "protocol_variant",
+  "title": "Iron oxide shape-evolution family: 56 vol% ODE, Fe:OA 1:7",
+  "material": {
+    "formula": "Fe–O",
+    "family": "Iron oxides",
+    "elements": [
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "Fe–O"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Thermal decomposition of carbonate-derived iron oleate",
+  "sources": [
+    {
+      "id": "feld2019",
+      "doi": "10.1021/acsnano.8b05032",
+      "title": "Chemistry of Shape-Controlled Iron Oxide Nanocrystal Formation",
+      "authors": "Artur Feld; Agnes Weimer; Andreas Kornowski; Naomi Winckelmans; Jan-Philip Merkl; Hauke Kloust; Robert Zierold; Christian Schmidtke; Theo Schotten; Maria Riedner; Sara Bals; Horst Weller",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/acsnano.8b05032",
+      "main_status": "All 11 pages read in full and visually reviewed, including all figures, methods and references. Online publication 12 December 2018; journal year 2019.",
+      "si_status": "All 19 pages read in full and visually reviewed; title/authors match the 11-page main article and its Associated Content statement.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "feld2019",
+    "recipe_family": "feld2019-iron-carbonate-oleate-thermolysis",
+    "parent_record_id": "feld-2019-iron-oleate-general-thermolysis",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe–O",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main Methods pp.159-160 and SI section 8"
+        }
+      ],
+      "note": "Elemental system only; a unique molecular or nanocrystal stoichiometry is not asserted."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main Methods pp.159-160 and SI section 8"
+        }
+      ],
+      "note": "No uniquely specified final isolated phase."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main Methods pp.159-160 and SI section 8"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main Methods pp.159-160 and SI section 8"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "iron-oleate",
+      "name": "carbonate-derived iron oleate mixture",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Choose an Fe(II)-source or Fe(III)-source upstream preparation; the source does not assign that choice to every figure. Multiple iron complexes are present, not a single molecular species."
+      ],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+        }
+      ]
+    },
+    {
+      "id": "oleic-acid",
+      "name": "oleic acid",
+      "formula": "C18H34O2",
+      "role": "ligand_and_reaction_medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Already present in the precursor mixture; not an additional quantified charge. Technical 90% and pure 99% are listed; specimen-specific grade unresolved."
+      ],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "nitrogen",
+      "formula": "N2",
+      "role": "protective_gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+        }
+      ]
+    },
+    {
+      "id": "ode",
+      "name": "1-octadecene",
+      "formula": "C18H36",
+      "role": "diluent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "90%, Sigma-Aldrich. Optional in generic method; explicitly present in nonzero dilution variants."
+      ],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "iron-oleate-input",
+      "name": "Prepared iron oleate in oleic acid",
+      "components": [
+        {
+          "material_id": "iron-oleate",
+          "quantities": {
+            "mass": {
+              "value": null,
+              "minimum": null,
+              "maximum": null,
+              "unit": "g",
+              "status": "not_reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "feld2019",
+                  "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "oleic-acid",
+          "quantities": {
+            "volume": {
+              "value": null,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "not_reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "feld2019",
+                  "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Prepared upstream using one of the two separately documented precursor procedures; charged fraction and source branch unspecified. This imported stock does not assert both alternatives were mixed.",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "reaction-charge",
+      "name": "Unspecified amount of iron oleate and selected medium",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "iron-oleate-input",
+        "ode"
+      ]
+    },
+    {
+      "id": "heated-reaction",
+      "name": "Heated reaction mixture",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "reaction-charge"
+      ]
+    },
+    {
+      "id": "degassed-ode",
+      "name": "Degassed ODE",
+      "kind": "mixture",
+      "parent_ids": [
+        "ode"
+      ]
+    },
+    {
+      "id": "conditioned-ode",
+      "name": "Nitrogen-saturated ODE",
+      "kind": "mixture",
+      "parent_ids": [
+        "degassed-ode",
+        "nitrogen"
+      ]
+    },
+    {
+      "id": "growth-series",
+      "name": "Growth-condition family; sampling details unspecified",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "heated-reaction"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "condition-apparatus",
+      "action": "evacuate_refill",
+      "label": "Condition apparatus with nitrogen",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nitrogen"
+      ],
+      "outputs": [],
+      "parameters": {
+        "cycles": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mbar",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "nitrogen / Schlenk",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Three-neck flask with Vigreux and distillation columns. Apparatus photo is illustrative of setup, not a calibrated batch volume.",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+        }
+      ]
+    },
+    {
+      "id": "degas-ode",
+      "action": "degas",
+      "label": "Degas ODE before use",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "condition-apparatus"
+      ],
+      "inputs": [
+        "ode"
+      ],
+      "outputs": [
+        "degassed-ode"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mbar",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Applies if ODE is used; precursor OA was conditioned in its upstream preparation.",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+        }
+      ]
+    },
+    {
+      "id": "saturate-ode",
+      "action": "gas_saturate",
+      "label": "Nitrogen-saturate ODE",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "degas-ode"
+      ],
+      "inputs": [
+        "degassed-ode",
+        "nitrogen"
+      ],
+      "outputs": [
+        "conditioned-ode"
+      ],
+      "parameters": {
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "nitrogen / Schlenk",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.8 (printed p.159), Materials and Synthesis of the Iron Sources"
+        }
+      ]
+    },
+    {
+      "id": "charge",
+      "action": "charge",
+      "label": "Charge prepared oleate and selected diluent",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "saturate-ode"
+      ],
+      "inputs": [
+        "iron-oleate-input",
+        "conditioned-ode"
+      ],
+      "outputs": [
+        "reaction-charge"
+      ],
+      "parameters": {
+        "stock_mass": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+            }
+          ],
+          "derivation": null
+        },
+        "stock_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+            }
+          ],
+          "derivation": null
+        },
+        "oleic_acid_to_fe_molar_ratio": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/mol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "OA per Fe atom as reported",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main Methods pp.159–160; SI pp.11–15 section 8"
+            }
+          ],
+          "derivation": null
+        },
+        "ode_volume_fraction": {
+          "value": 56,
+          "minimum": null,
+          "maximum": null,
+          "unit": "vol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI pp.11–14, Figure S14 56 vol% ODE row; Figures S15–S16 corresponding time windows"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "nitrogen / Schlenk",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main Methods pp.159–160; SI pp.11–15 section 8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main Methods pp.159–160; SI pp.11–15 section 8"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Nanocrystal charge is not the entire upstream precursor batch. Selection of Fe(II) or Fe(III) source is unresolved for figure-linked variants.",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main Methods pp.159–160; SI pp.11–15 section 8"
+        }
+      ]
+    },
+    {
+      "id": "heat",
+      "action": "heat",
+      "label": "Heat toward nucleation",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "charge"
+      ],
+      "inputs": [
+        "reaction-charge"
+      ],
+      "outputs": [
+        "heated-reaction"
+      ],
+      "parameters": {
+        "heating_rate": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+            }
+          ],
+          "derivation": null
+        },
+        "nucleation_temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mbar",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "nitrogen / Schlenk",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "nucleation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main Methods pp.159–160; SI pp.11–15 section 8"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "Main PDF p.9 (printed p.160), Nanocrystal Synthesis; SI p.5 Figure S5"
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "action": "grow_and_sample",
+      "label": "Observe morphology across post-nucleation windows",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat"
+      ],
+      "inputs": [
+        "heated-reaction"
+      ],
+      "outputs": [
+        "growth-series"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI pp.11–14, Figure S14 56 vol% ODE row; Figures S15–S16 corresponding time windows"
+            }
+          ],
+          "derivation": null
+        },
+        "sampling_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI pp.11–14, Figure S14 56 vol% ODE row; Figures S15–S16 corresponding time windows"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "nitrogen / Schlenk",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI pp.11–14, Figure S14 56 vol% ODE row; Figures S15–S16 corresponding time windows"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI pp.11–14, Figure S14 56 vol% ODE row; Figures S15–S16 corresponding time windows"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Condition-map windows are observations, not four invented independent batches. Exact sample withdrawal/quench protocol and run identity are not specified.",
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI pp.11–14, Figure S14 56 vol% ODE row; Figures S15–S16 corresponding time windows"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "window-1",
+      "label": "Observed post-nucleation window 2–6 min; related observations, not independent batch claims",
+      "parameters": {
+        "time_after_nucleation": {
+          "value": null,
+          "minimum": 2,
+          "maximum": 6,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+        }
+      ]
+    },
+    {
+      "id": "window-2",
+      "label": "Observed post-nucleation window 3–10 min; related observations, not independent batch claims",
+      "parameters": {
+        "time_after_nucleation": {
+          "value": null,
+          "minimum": 3,
+          "maximum": 10,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+        }
+      ]
+    },
+    {
+      "id": "window-3",
+      "label": "Observed post-nucleation window 5–15 min; related observations, not independent batch claims",
+      "parameters": {
+        "time_after_nucleation": {
+          "value": null,
+          "minimum": 5,
+          "maximum": 15,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+        }
+      ]
+    },
+    {
+      "id": "window-4",
+      "label": "Observed post-nucleation window 40–60 min; related observations, not independent batch claims",
+      "parameters": {
+        "time_after_nucleation": {
+          "value": null,
+          "minimum": 40,
+          "maximum": 60,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "feld2019",
+              "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "condition-window-1",
+      "source_sample_label": "Figure S14: 56 vol% ODE, 2–6 min; Figure S15: 21 nm panel",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe–O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF pp.4-7 (printed pp.155-158), Figures 3c,6,7; SI pp.9-10 Figure S12"
+          }
+        ],
+        "note": "Sample-specific phase unresolved; handling can induce oxidation."
+      },
+      "morphology": {
+        "value": "octapod-star shaped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curator observation key, not an experimental batch ID. Reported condition linkage is explicit, but exact iron-source branch/stock/run identity is unknown.",
+        "S14 is a schematic summary; dimensional definition and measurement count are absent. No phase assignment transferred from other figures."
+      ]
+    },
+    {
+      "sample_id": "condition-window-2",
+      "source_sample_label": "Figure S14: 56 vol% ODE, 3–10 min",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe–O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF pp.4-7 (printed pp.155-158), Figures 3c,6,7; SI pp.9-10 Figure S12"
+          }
+        ],
+        "note": "Sample-specific phase unresolved; handling can induce oxidation."
+      },
+      "morphology": {
+        "value": "evolving star-like (schematic)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curator observation key, not an experimental batch ID. Reported condition linkage is explicit, but exact iron-source branch/stock/run identity is unknown.",
+        "S14 is a schematic summary; dimensional definition and measurement count are absent. No phase assignment transferred from other figures."
+      ]
+    },
+    {
+      "sample_id": "condition-window-3",
+      "source_sample_label": "Figure S14: 56 vol% ODE, 5–15 min",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe–O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF pp.4-7 (printed pp.155-158), Figures 3c,6,7; SI pp.9-10 Figure S12"
+          }
+        ],
+        "note": "Sample-specific phase unresolved; handling can induce oxidation."
+      },
+      "morphology": {
+        "value": "truncated/smoothed star-like (schematic)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curator observation key, not an experimental batch ID. Reported condition linkage is explicit, but exact iron-source branch/stock/run identity is unknown.",
+        "S14 is a schematic summary; dimensional definition and measurement count are absent. No phase assignment transferred from other figures."
+      ]
+    },
+    {
+      "sample_id": "condition-window-4",
+      "source_sample_label": "Figure S14: 56 vol% ODE, 40–60 min; Figure S16: 23 nm panel",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe–O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "Main PDF pp.4-7 (printed pp.155-158), Figures 3c,6,7; SI pp.9-10 Figure S12"
+          }
+        ],
+        "note": "Sample-specific phase unresolved; handling can induce oxidation."
+      },
+      "morphology": {
+        "value": "cubic shaped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curator observation key, not an experimental batch ID. Reported condition linkage is explicit, but exact iron-source branch/stock/run identity is unknown.",
+        "S14 is a schematic summary; dimensional definition and measurement count are absent. No phase assignment transferred from other figures."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "window-1-size",
+      "sample_id": "condition-window-1",
+      "property": "characteristic_size",
+      "technique": "TEM / authors condition-map summary",
+      "value": {
+        "value": 21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source size label; diameter/edge/tip-to-tip definition and spread not supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Fe:OA 1:7; 56 vol% ODE; 2–6 min after nucleation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 2–6 min column; SI p.13 Figure S15"
+        }
+      ]
+    },
+    {
+      "id": "window-2-size",
+      "sample_id": "condition-window-2",
+      "property": "characteristic_size",
+      "technique": "TEM / authors condition-map summary",
+      "value": {
+        "value": 22,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source size label; diameter/edge/tip-to-tip definition and spread not supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Fe:OA 1:7; 56 vol% ODE; 3–10 min after nucleation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 3–10 min column"
+        }
+      ]
+    },
+    {
+      "id": "window-3-size",
+      "sample_id": "condition-window-3",
+      "property": "characteristic_size",
+      "technique": "TEM / authors condition-map summary",
+      "value": {
+        "value": 21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source size label; diameter/edge/tip-to-tip definition and spread not supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Fe:OA 1:7; 56 vol% ODE; 5–15 min after nucleation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 5–15 min column"
+        }
+      ]
+    },
+    {
+      "id": "window-4-size",
+      "sample_id": "condition-window-4",
+      "property": "characteristic_size",
+      "technique": "TEM / authors condition-map summary",
+      "value": {
+        "value": 23,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source size label; diameter/edge/tip-to-tip definition and spread not supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "feld2019",
+            "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Fe:OA 1:7; 56 vol% ODE; 40–60 min after nucleation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "feld2019",
+          "locator": "SI p.12 Figure S14, 56 vol% ODE row, 40–60 min column; SI p.14 Figure S16"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete 11-page main and 19-page matching SI review. Literature protocols/condition families only; no physical batch or independent replication is invented. Numeric image labels retain their original dimensional meaning.",
+    "missing_fields": [
+      "Exact Fe(II)-source versus Fe(III)-source oleate branch for the individual condition/figure specimen.",
+      "Oleate charge amount, final stock concentration, ODE/OA absolute volumes and nanocrystal reactor scale.",
+      "Selected sample quench, withdrawal aliquot amount, purification solvents/amounts/cycles, centrifugation conditions, yield and storage history.",
+      "Bound surface ligand identity/coverage, exact final atomic stoichiometry and quantitative phase fractions.",
+      "No measured sample coordinates/CIF; reported image size is not explicitly a diameter.",
+      "Exact growth temperature for each S14 condition; general range 330–350 C is not a sample-level setpoint."
+    ],
+    "conflicts": [
+      "Pristine inert sealed-capillary XRD supports wustite for Figure 3c samples; this does not establish phase purity of air-dried TEM or stored EELS specimens.",
+      "General Methods gives 330–350 C and a 3–5 h hold; early growth aliquots/condition windows are not automatically followed by that full hold.",
+      "Main Figure 3a uses 34 vol% ODE; SI dilution grid uses 30 vol%. They are distinct source conditions."
+    ],
+    "requested_tasks": [
+      "precursor_selection",
+      "partial_protocol",
+      "size_conditioned_recipe",
+      "exact_structure_recipe"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article and associated SI",
+      "url": "https://doi.org/10.1021/acsnano.8b05032",
+      "relation": "primary_source"
+    }
+  ],
+  "collection": "reviewed_literature"
+}

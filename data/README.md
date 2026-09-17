@@ -1,12 +1,12 @@
 # MatterSyn training data pilot
 
-The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Dataset version 0.1.0 uses record schema 1.0.0.
+The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Dataset version 0.3.0 uses record schema 1.0.0.
 
 ## Current collection
 
-- Nine source-reviewed literature protocols/variants in CdSe, InP, CsPbBr3 and ZnO; three separately scoped shared procedures.
+- 39 source-reviewed literature protocols, variants and controls, plus 12 separately scoped supporting procedures. These are not 51 independent experiments.
 - A separate, attributed 100-row coverage subset of the published Voznyy 2019 PbS dataset: 95 optical-outcome rows and five failure-coded rows. These are experimental rows, not 100 reviewed complete SOPs or 100 independent papers.
-- 39 further papers across 14 candidate families await full curation. The local first-page screen prioritized 42 papers; three were converted into new pilot recipes. Screening alone does not create a training example.
+- Four fully inventoried main–SI sets cover 64 pages: ZnO, CdSe/core–shell, Ir and Fe–O. Their review ledgers expose original graphics, tables, equations, sample links and unresolved claims. Most of the 4,176 local paper groups still await full curation. Screening alone does not create a training example; source-reviewed recipes do not imply whole-paper review.
 - Zero verified sample-resolved exact-CIF-to-complete-recipe pairs. The existing bulk CdSe CIF and finite particle illustration cannot supply those labels.
 
 ## Scientific entities and review
@@ -25,6 +25,7 @@ Use Python 3.12+ with `pip install -r requirements-data.txt` in your own environ
 
 ```text
 python scripts/build_dataset.py
+python scripts/build_paper_reviews.py
 python -m unittest discover -s tests -v
 python scripts/check_site.py
 ```
@@ -47,4 +48,4 @@ See `benchmarks/README.md` for reproducing the saved baseline. Its model artifac
 
 ## Expansion to 5,000–50,000 records
 
-Keep this scientific schema and shared renderer; extend it through explicit migrations, controlled action/property/unit vocabularies and verified chemical identifiers. Pilot records are not yet a fully normalized chemical ontology. Measure extraction agreement and curator throughput before scaling. Add a review queue, database indexing and server-side catalog pagination when the collection outgrows the current static manifest. The current implementation has been tested at 112 records, not load-tested at 50,000. Keep rich paper guides as separate context with reciprocal links to canonical records. Prospectively test proposed recipes with the collaborating lab and retain failures and repeats.
+Keep this scientific schema and shared renderer; extend it through explicit migrations, controlled action/property/unit vocabularies and verified chemical identifiers. Pilot records are not yet a fully normalized chemical ontology. Measure extraction agreement and curator throughput before scaling. Add a review queue, database indexing and server-side catalog pagination when the collection outgrows the current static manifest. The current implementation has been tested at 151 records, not load-tested at 50,000. Keep rich paper guides as separate context with reciprocal links to canonical records. Prospectively test proposed recipes with the collaborating lab and retain failures and repeats.

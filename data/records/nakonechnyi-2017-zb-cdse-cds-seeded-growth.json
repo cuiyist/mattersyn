@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "record_id": "nakonechnyi-2017-zb-cdse-cds-seeded-growth",
-  "revision": 1,
+  "revision": 2,
   "record_type": "literature_protocol",
   "title": "Nakonechnyi et al. (2017) · Zinc-blende CdSe/CdS seeded growth",
   "material": {
@@ -27,8 +27,8 @@
       "authors": "Igor Nakonechnyi, Michael Sluydts, Yolanda Justo, Jacek Jasieniak, Zeger Hens",
       "year": 2017,
       "url": "https://doi.org/10.1021/acs.chemmater.7b00354",
-      "main_status": "Relevant original text reviewed",
-      "si_status": "Matching main (9 pages) and SI (7 pages) reviewed; main pp. 4720–4722 and SI S3 visually verified for this extraction",
+      "main_status": "All 9 main-article pages fully read and visually reviewed, 17 September 2026",
+      "si_status": "All 7 pages of identity-matched SI fully read and visually reviewed, 17 September 2026",
       "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
     }
   ],
@@ -1897,7 +1897,7 @@
           "value": 3000,
           "minimum": null,
           "maximum": null,
-          "unit": "g",
+          "unit": "g_relative",
           "status": "inherited",
           "approximate": false,
           "qualifier": "",
@@ -2236,7 +2236,7 @@
         ],
         "derivation": null
       },
-      "conditions": "Figure 1b specimen after 2 min; OA/Cd described as 20:1; batch unspecified.",
+      "conditions": "Figure 1b specimen after 2 min; OA/Cd described as 20:1; batch unspecified. Carbon-coated copper grid by dropcasting; Cs-corrected JEOL 2200 FS; voltage and particle count not stated.",
       "derives_from": [],
       "evidence": [
         {
@@ -2268,7 +2268,7 @@
         ],
         "derivation": null
       },
-      "conditions": "Co-reported with the mean diameter; not derived from that mean. Do not interpret as a standard error or confidence interval.",
+      "conditions": "Co-reported with the mean diameter; not derived from that mean. Do not interpret as a standard error or confidence interval. Carbon-coated copper grid by dropcasting; Cs-corrected JEOL 2200 FS; voltage and particle count not stated.",
       "derives_from": [],
       "evidence": [
         {
@@ -2300,7 +2300,7 @@
         ],
         "derivation": null
       },
-      "conditions": "Table-level material-system context; body gives a typical approximate range of 30–35%; exact sampled time/batch is not specified here.",
+      "conditions": "Table-level material-system context; body gives a typical approximate range of 30–35%; exact sampled time/batch is not specified here. Absolute PLQY: 152 mm Spectralon-coated integrating sphere, Princeton Instruments ProEM 16002 CCD and Acton SP2358 spectrograph; excitation wavelength and exact optical specimen not stated.",
       "derives_from": [],
       "evidence": [
         {
@@ -2308,12 +2308,44 @@
           "locator": "Main PDF p. 4, printed p. 4722, Table 1, zb-CdSe/CdS row and footnote"
         }
       ]
+    },
+    {
+      "id": "table1-core-diameter",
+      "sample_id": "table1-zb-cdse-cds-context",
+      "property": "core_diameter",
+      "technique": "Table 1; measurement basis not stated for this column",
+      "value": {
+        "value": 3.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nakonechnyi2017",
+            "locator": "Main PDF p.4, Table 1, zb-CdSe/CdS row"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Contextual source sample; exact recipe batch not identified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nakonechnyi2017",
+          "locator": "Main PDF p.4, Table 1, zb-CdSe/CdS row"
+        }
+      ]
     }
   ],
   "structure_assets": [],
   "quality": {
     "review_status": "source_reviewed",
-    "review_scope": "One named seeded-growth literature protocol, not a new independent experiment. Main and matching SI read; main printed pp. 4720–4722 and SI S3 visually checked. Parent record links CdSe-core preparation context, not a verified shared physical batch. Figure 1b, Table 1 and SI Figure S2b remain separate contextual sample records. Low-OA comparison reactions, blank controls, other core/shell compositions and simulation inputs are excluded.",
+    "review_scope": "All 9 main and 7 SI pages read and visually reviewed. This record preserves its selected route; other routes, controls, all figures and simulation-only values are covered separately in coverage.json. Physical batch identities remain unresolved.",
     "missing_fields": [
       "Author-assigned batch identity and exact pairing of the generic charged-quantity protocol with Figure 1b, Table 1 and SI Figure S2b.",
       "Preparation, quantitative carrier-solvent composition and purity of the supplied 2 M TOP-S stock.",
@@ -2322,7 +2354,8 @@
       "Duration to CdO dissolution, numeric injection duration, post-injection temperature trajectory, final bulk hold endpoint and quench.",
       "Aliquot masses/volumes; the generic TEM workup sampling time; initial ethanol precipitation amount.",
       "Individual centrifugation durations, detailed fraction transfers, final bulk isolation/redispersion and storage.",
-      "An independently linked numerical shell thickness, statistical meaning of ±1.5 nm and exact-sample atomic coordinates/CIF."
+      "An independently linked numerical shell thickness, statistical meaning of ±1.5 nm and exact-sample atomic coordinates/CIF.",
+      "Original Cirillo et al. 2014 flash method is cited but not independently reviewed in this bounded audit."
     ],
     "conflicts": [
       "The method charges 5.6 mmol OA and 0.25 mmol CdO (nominal charged OA/Cd = 22.4), whereas Figure 1/high-OA results use 20:1. Free-versus-total acid basis or rounding may differ; the source does not resolve the basis. Original charge values are preserved and characterization is not assumed to be exactly paired.",

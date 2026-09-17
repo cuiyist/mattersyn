@@ -1,9 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.2.0",
-  "record_count": 115,
+  "dataset_version": "0.3.0",
+  "record_count": 151,
   "group_count": 9,
   "families": [
+    "II-VI colloidal nanocrystals",
     "III–V semiconductors",
     "II–VI chalcogenides",
     "II–VI core/shell chalcogenides",
@@ -16,18 +17,402 @@
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
   "records": [
     {
-      "record_id": "feld-2019-iron-oxide-undiluted-cubic-condition",
-      "title": "Phase-unresolved iron oxide: undiluted cubic condition with Fe(II)-derived oleate preparation",
+      "record_id": "feld-2019-fe2-carbonate-to-oleate-preparation",
+      "title": "Fe(II) source: aqueous carbonate precipitation and oleate preparation",
+      "formula": "Fe–C–H–O",
+      "family": "Iron oleate precursor mixtures",
+      "method": "Prepare carbonate-derived Fe(II)-source oleate mixture",
+      "record_type": "procedure",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "dae2522f814ca1274a1f8d187b0ab587c3e02de84c428d44efdd19553c27773d",
+      "recipe_signature": "a55d777ba8c96d5109a52775c9eded4c23a97ec6294847f0800aae81b0274683",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-fe2-carbonate-to-oleate-preparation.json",
+      "page_url": "records/feld-2019-fe2-carbonate-to-oleate-preparation.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–C–H–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-fe3-carbonate-to-oleate-preparation",
+      "title": "Fe(III) source: aqueous carbonate precipitation and oleate preparation",
+      "formula": "Fe–C–H–O",
+      "family": "Iron oleate precursor mixtures",
+      "method": "Prepare carbonate-derived Fe(III)-source oleate mixture",
+      "record_type": "procedure",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "1fc85027027d951565380b6e86ad7544509bf88a686b29eadf519fa5e146250b",
+      "recipe_signature": "3f2614f625c267ab6411e602128ff7388ecba864d8322fb76d205e729622aab8",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-fe3-carbonate-to-oleate-preparation.json",
+      "page_url": "records/feld-2019-fe3-carbonate-to-oleate-preparation.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–C–H–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oleate-general-thermolysis",
+      "title": "General carbonate-derived iron-oleate thermolysis; exact dilution unspecified",
       "formula": "Fe–O",
       "family": "Iron oxides",
-      "method": "Thermal decomposition of carbonate-derived iron oleate; no-ODE, 40-60 min post-nucleation condition",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
+      "record_type": "literature_protocol",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "3130e653c394133986ea2bb69a93cc90e2812fa504e12d1bf1d19a00a0392d2d",
+      "recipe_signature": "4c26e52e164635d4ae1b00f7207a53b9b7b979780175789f354b6c13e452dd69",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-iron-oleate-general-thermolysis.json",
+      "page_url": "records/feld-2019-iron-oleate-general-thermolysis.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oxide-high-dilution-fe-oa-series",
+      "title": "High-ODE cubic iron oxide family: Fe:OA stoichiometry series",
+      "formula": "Fe–O",
+      "family": "Iron oxides",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
       "record_type": "protocol_variant",
       "source_year": 2019,
       "source_doi": "10.1021/acsnano.8b05032",
       "revision": 1,
-      "record_sha256": "211702c2a897b30e3b5df9807cb16fe17cd92d73b6a72937d85250dc6afda626",
-      "recipe_signature": "8ba5c04ae0ccc3986e04666ba5dc611dc251336ebacc478c60584a69110dd735",
-      "group_id": "group-f4fa75b675a3",
+      "record_sha256": "fff29e53855c90a8866c789a930b153f8fff684faab2931a932daca9b6e623ec",
+      "recipe_signature": "4736fb33e1cc7a13a448efe71aad71bae84efc50545c976fc807f3b863117340",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-iron-oxide-high-dilution-fe-oa-series.json",
+      "page_url": "records/feld-2019-iron-oxide-high-dilution-fe-oa-series.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oxide-ode30-growth-family",
+      "title": "Iron oxide shape-evolution family: 30 vol% ODE, Fe:OA 1:7",
+      "formula": "Fe–O",
+      "family": "Iron oxides",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
+      "record_type": "protocol_variant",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "6c60cbeaab90f87e097820f60798c8183ced913fc227e7b72090ecb788a2f82c",
+      "recipe_signature": "cdc4f644b68b6cb5a8343783e482ce5b984ea9d131497185bdd04dc45e94e938",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-iron-oxide-ode30-growth-family.json",
+      "page_url": "records/feld-2019-iron-oxide-ode30-growth-family.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oxide-ode34-star-condition",
+      "title": "Iron oxide star morphology at 34 vol% ODE (Figure 3a)",
+      "formula": "Fe–O",
+      "family": "Iron oxides",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
+      "record_type": "protocol_variant",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "17443bee28c342361a0a9151ecdb0e30daf325db726ccfa46d1633f7512712a0",
+      "recipe_signature": "211d0217cf3019ed7a7090eb6a8b5196aced08db39c1ddde7df90ad7424e3ff4",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-iron-oxide-ode34-star-condition.json",
+      "page_url": "records/feld-2019-iron-oxide-ode34-star-condition.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oxide-ode56-growth-family",
+      "title": "Iron oxide shape-evolution family: 56 vol% ODE, Fe:OA 1:7",
+      "formula": "Fe–O",
+      "family": "Iron oxides",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
+      "record_type": "protocol_variant",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "e93f7285678ff3c88b08779c7cc2caa8eb5b0fb3e5c1345d85303344c545c358",
+      "recipe_signature": "1fc5bedab499adc54cd795b93762296aaa8269b379d64bd609a089680b96850d",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-iron-oxide-ode56-growth-family.json",
+      "page_url": "records/feld-2019-iron-oxide-ode56-growth-family.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oxide-ode8-growth-family",
+      "title": "Iron oxide shape-evolution family: 8 vol% ODE, Fe:OA 1:7",
+      "formula": "Fe–O",
+      "family": "Iron oxides",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
+      "record_type": "protocol_variant",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 1,
+      "record_sha256": "9232d2da7afd9118dda8723a03cd1630cec518403f22a29438fb19c67cf589b2",
+      "recipe_signature": "c12e1c4924ca1cfd6c5269e8026ffa234f2fbed9bfd2efa05ad577f8b99f0c6b",
+      "group_id": "group-87f54681eca6",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/feld-2019-iron-oxide-ode8-growth-family.json",
+      "page_url": "records/feld-2019-iron-oxide-ode8-growth-family.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "Fe–O"
+      ]
+    },
+    {
+      "record_id": "feld-2019-iron-oxide-undiluted-cubic-condition",
+      "title": "Undiluted iron oxide: cubic condition and related growth observations",
+      "formula": "Fe–O",
+      "family": "Iron oxides",
+      "method": "Thermal decomposition of carbonate-derived iron oleate",
+      "record_type": "protocol_variant",
+      "source_year": 2019,
+      "source_doi": "10.1021/acsnano.8b05032",
+      "revision": 2,
+      "record_sha256": "8670d931def9688cb46b671f1fd677e0725f0b270c7fe20da28e2c2c0719ba0f",
+      "recipe_signature": "dfcff741cd8ec719917835e6c5e9b1b30644fd58030626ce6382f1c1e3679dcc",
+      "group_id": "group-87f54681eca6",
       "split": "development",
       "eligibility": {
         "precursor_selection": {
@@ -57,10 +442,58 @@
       },
       "record_url": "data/records/feld-2019-iron-oxide-undiluted-cubic-condition.json",
       "page_url": "records/feld-2019-iron-oxide-undiluted-cubic-condition.html",
-      "missing_field_count": 8,
+      "missing_field_count": 6,
       "collection": "reviewed_literature",
       "components": [
         "Fe–O"
+      ]
+    },
+    {
+      "record_id": "fu-2007-zno-s1-hcl-perturbation",
+      "title": "Dilute-HCl perturbation of S1 ZnO dispersion",
+      "formula": "ZnO",
+      "family": "Metal oxides",
+      "method": "Post-synthesis ligand/interface control",
+      "record_type": "procedure",
+      "source_year": 2007,
+      "source_doi": "10.1021/ja075604i",
+      "revision": 2,
+      "record_sha256": "2021dd733aea40b49d09fb9cc5f47e2e4b48c9d75065e5793fc4d7432b54eb72",
+      "recipe_signature": "941aafde41ebabd4e586233ea38ce4b9dafbbc29e0f16eb52b58a7b20ee5903b",
+      "group_id": "group-eb82980bc6b5",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/fu-2007-zno-s1-hcl-perturbation.json",
+      "page_url": "records/fu-2007-zno-s1-hcl-perturbation.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnO"
       ]
     },
     {
@@ -72,8 +505,8 @@
       "record_type": "literature_protocol",
       "source_year": 2007,
       "source_doi": "10.1021/ja075604i",
-      "revision": 2,
-      "record_sha256": "95f62c365645e3e8053d453099c5796c0766249c72aef14aa3eb6551dbdf9ca0",
+      "revision": 4,
+      "record_sha256": "712eb93632a13f8a2f3003772a0dd455908a457e27e313c844073a15e8ccc997",
       "recipe_signature": "28a6bbf944c4a650163ccc84d718ae57338237babd4e37d3478d1da6b41437e5",
       "group_id": "group-eb82980bc6b5",
       "split": "development",
@@ -105,6 +538,198 @@
       },
       "record_url": "data/records/fu-2007-zno-s1.json",
       "page_url": "records/fu-2007-zno-s1.html",
+      "missing_field_count": 17,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnO"
+      ]
+    },
+    {
+      "record_id": "fu-2007-zno-s2-oa-post-treatment",
+      "title": "OA post-treatment of as-prepared S2 ZnO dispersion",
+      "formula": "ZnO",
+      "family": "Metal oxides",
+      "method": "Post-synthesis ligand/interface control",
+      "record_type": "procedure",
+      "source_year": 2007,
+      "source_doi": "10.1021/ja075604i",
+      "revision": 2,
+      "record_sha256": "d4319fb092a220036b53205c046a222d2b4ffae9aa9d4785a57a909c385d4bef",
+      "recipe_signature": "60ec7c7524da0b2314988f4a918112f7afa948509e1d3df038d779d53db6a822",
+      "group_id": "group-eb82980bc6b5",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/fu-2007-zno-s2-oa-post-treatment.json",
+      "page_url": "records/fu-2007-zno-s2-oa-post-treatment.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnO"
+      ]
+    },
+    {
+      "record_id": "fu-2007-zno-s2",
+      "title": "ZnO aqueous synthesis without oleic acid: Fu et al. (2007), S2",
+      "formula": "ZnO",
+      "family": "Metal oxides",
+      "method": "Aqueous solution synthesis with diethanolamine, without oleic acid",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1021/ja075604i",
+      "revision": 2,
+      "record_sha256": "241927dc20542a56d5b8a8ce32f62d1de52d5ce7e485cfbf769abdc7e1fed7b7",
+      "recipe_signature": "1220518c7d235c41ef865cdf3804f026845ba59ace26e1ab3dec1f0f20529fc1",
+      "group_id": "group-eb82980bc6b5",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": true,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/fu-2007-zno-s2.json",
+      "page_url": "records/fu-2007-zno-s2.html",
+      "missing_field_count": 18,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnO"
+      ]
+    },
+    {
+      "record_id": "fu-2007-zno-s3",
+      "title": "ZnO aqueous synthesis with ammonia replacing DEA: Fu et al. (2007), S3",
+      "formula": "ZnO",
+      "family": "Metal oxides",
+      "method": "Aqueous solution synthesis with ammonia and oleic acid",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1021/ja075604i",
+      "revision": 2,
+      "record_sha256": "6800a97dd6dc9bb5bddba940ccccaf067346bf1029503b530179027ffb9a5dfb",
+      "recipe_signature": "ba54ab73327dd4c11f1a3206b74702960210202082f403050762492a70408a5d",
+      "group_id": "group-eb82980bc6b5",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/fu-2007-zno-s3.json",
+      "page_url": "records/fu-2007-zno-s3.html",
+      "missing_field_count": 18,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnO"
+      ]
+    },
+    {
+      "record_id": "fu-2007-zno-s4",
+      "title": "ZnO aqueous synthesis with 4.0 mM zinc stock: Fu et al. (2007), S4",
+      "formula": "ZnO",
+      "family": "Metal oxides",
+      "method": "Aqueous solution synthesis with diethanolamine and oleic acid",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1021/ja075604i",
+      "revision": 2,
+      "record_sha256": "ed2c8be815f4cabe900fc212a4ca523cf68b93cc92c8f71b538a03c8b2ea2ea2",
+      "recipe_signature": "6a1061896f92b28942b42883e0b16cb5d6969667dcf91d18a9b8483446640325",
+      "group_id": "group-eb82980bc6b5",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/fu-2007-zno-s4.json",
+      "page_url": "records/fu-2007-zno-s4.html",
       "missing_field_count": 17,
       "collection": "reviewed_literature",
       "components": [
@@ -400,6 +1025,489 @@
       ]
     },
     {
+      "record_id": "nakonechnyi-2017-core-stability-cd-oa-1to20",
+      "title": "Nakonechnyi et al. (2017) · CdSe stability control · Cadmium oleate with Cd:OA1:20",
+      "formula": "CdSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Blank seeded-growth stability control",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "a22d0da8d27537d4db71a050feeb2c7e6a2057a137999f551ae13a3a16c11008",
+      "recipe_signature": "2447c59bb6f64f7d803ce28c3ea6f728078f6cae11b82c5d8072dcfb75b17bed",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-core-stability-cd-oa-1to20.json",
+      "page_url": "records/nakonechnyi-2017-core-stability-cd-oa-1to20.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-core-stability-cd-oa-1to3",
+      "title": "Nakonechnyi et al. (2017) · CdSe stability control · Cadmium oleate with Cd:OA1:3",
+      "formula": "CdSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Blank seeded-growth stability control",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "1aa103c65025bcfad420dea81ed7b35115bb3834752ddadbcd8c09070cea3190",
+      "recipe_signature": "2a404eb563b8365ba7f938dcf887f25cb81634c7d4d9f2c0a784ee39a2ba2046",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-core-stability-cd-oa-1to3.json",
+      "page_url": "records/nakonechnyi-2017-core-stability-cd-oa-1to3.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-core-stability-neither",
+      "title": "Nakonechnyi et al. (2017) · CdSe stability control · Neither Cd nor S precursor",
+      "formula": "CdSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Blank seeded-growth stability control",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "3157689b973ac40d8d05e06d9f1b5c9bea2b8122877ea2b0a4b059c206398a81",
+      "recipe_signature": "20ae3c7566c788e342f23929caa9c63915e7b67bd38f3c2af0d601ba6f7b649c",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-core-stability-neither.json",
+      "page_url": "records/nakonechnyi-2017-core-stability-neither.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-core-stability-top-s-only",
+      "title": "Nakonechnyi et al. (2017) · CdSe stability control · TOP-S only",
+      "formula": "CdSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Blank seeded-growth stability control",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "f807cf596c98f54e20c3999dec848dd950c4c37457072455a8ca12dc20694628",
+      "recipe_signature": "15ac4ca88bf8e563025554354781fe7ad9b2c2ff767979775c87b9fe3c44448c",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-core-stability-top-s-only.json",
+      "page_url": "records/nakonechnyi-2017-core-stability-top-s-only.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-wz-cdse-cds-seeded-growth",
+      "title": "Nakonechnyi et al. (2017) · wz-CdSe/CdS",
+      "formula": "CdSe/CdS",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "literature_protocol",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "41500c1a9d07e40e2ab4c0bcc575f6c4908445e181424d1d61c1734ce088fb40",
+      "recipe_signature": "8dd41e600dd135f8b529b7ce87eaf092f59faed608f796d6313d7eb82a7738cc",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-wz-cdse-cds-seeded-growth.json",
+      "page_url": "records/nakonechnyi-2017-wz-cdse-cds-seeded-growth.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "CdS"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-wz-cdse-core",
+      "title": "Nakonechnyi et al. (2017) · Wurtzite CdSe core preparation",
+      "formula": "CdSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection of TOP-Se after TOP pre-injection",
+      "record_type": "literature_protocol",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "54e9de1105e7bd7a73913d45c6f5b9052047c130eb268fa912112d5ff5a185ec",
+      "recipe_signature": "e944f418d6807062fdc6e8cc9af0d507a68448265325d84a8b1f1e1008313a15",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-wz-cdse-core.json",
+      "page_url": "records/nakonechnyi-2017-wz-cdse-core.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-wz-cdse-znse-seeded-growth",
+      "title": "Nakonechnyi et al. (2017) · wz-CdSe/ZnSe",
+      "formula": "CdSe/ZnSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "literature_protocol",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "238e518e5c2bf6b58100934a56b4dec9b93c9e57dd11a293d992490e46b17057",
+      "recipe_signature": "224c26375464497023db961db0f3572e531c4b6524db55df5a45f87c418dd54c",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-wz-cdse-znse-seeded-growth.json",
+      "page_url": "records/nakonechnyi-2017-wz-cdse-znse-seeded-growth.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-wz-route-cds-no-seed-control",
+      "title": "Nakonechnyi et al. (2017) · wz-route CdS no-seed control",
+      "formula": "CdS",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "09ea89760d9d8449475c1ac9d6a65e3373e92c7fceb541d6c30f839515ee4cfe",
+      "recipe_signature": "f623bacc77799c9d5a79acefaad9b6654767d95d735c6b3a75ba36a7cf058bed",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-wz-route-cds-no-seed-control.json",
+      "page_url": "records/nakonechnyi-2017-wz-route-cds-no-seed-control.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-wz-route-znse-no-seed-control",
+      "title": "Nakonechnyi et al. (2017) · wz-route ZnSe no-seed control",
+      "formula": "ZnSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "32ec8bba31b1813139222ef552838334b24f792de97409337f0e46986a080081",
+      "recipe_signature": "d637822da54e5ebfb3c2044564bb7cdd2dd3f3e392cffdbbccbb8d5b3c13ecd2",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-wz-route-znse-no-seed-control.json",
+      "page_url": "records/nakonechnyi-2017-wz-route-znse-no-seed-control.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-zb-cdse-cds-low-oa-control",
+      "title": "Nakonechnyi et al. (2017) · Low-OA CdSe/CdS mixed-nucleation comparison",
+      "formula": "CdSe/CdS",
+      "family": "II–VI core/shell chalcogenides",
+      "method": "Seeded growth by rapid core/sulfur coinjection",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "3c1a7727f67c2ce34cf0a522a1345e6f83373bec5db5d49143bc8da427153d61",
+      "recipe_signature": "7de9aab06eba3a0715c7175660491ac352b7bc52c6aa2bad8d0606a9666ce7e0",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-zb-cdse-cds-low-oa-control.json",
+      "page_url": "records/nakonechnyi-2017-zb-cdse-cds-low-oa-control.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "CdS"
+      ]
+    },
+    {
       "record_id": "nakonechnyi-2017-zb-cdse-cds-seeded-growth",
       "title": "Nakonechnyi et al. (2017) · Zinc-blende CdSe/CdS seeded growth",
       "formula": "CdSe/CdS",
@@ -408,10 +1516,10 @@
       "record_type": "literature_protocol",
       "source_year": 2017,
       "source_doi": "10.1021/acs.chemmater.7b00354",
-      "revision": 1,
-      "record_sha256": "cb2f5392fa65f1fbcd1d01d6ab5a46432704058299a9f82f8de0e9ba8ee79080",
-      "recipe_signature": "3fe680e9affd6fb0f48a1ee2389d045f42392518a261c3a564ddf45a61175f11",
-      "group_id": "group-f54e3166445e",
+      "revision": 2,
+      "record_sha256": "11e2b4f5a4a84ac63ce80e62eda47b58f72956611482f92fabfdca4940f35f73",
+      "recipe_signature": "a66e8dc585ea86d9168324a4602b8c441f7be7742c18b292e980757c627409ec",
+      "group_id": "group-6dc4ef62ddb7",
       "split": "development",
       "eligibility": {
         "precursor_selection": {
@@ -441,7 +1549,7 @@
       },
       "record_url": "data/records/nakonechnyi-2017-zb-cdse-cds-seeded-growth.json",
       "page_url": "records/nakonechnyi-2017-zb-cdse-cds-seeded-growth.html",
-      "missing_field_count": 8,
+      "missing_field_count": 9,
       "collection": "reviewed_literature",
       "components": [
         "CdSe",
@@ -457,10 +1565,10 @@
       "record_type": "literature_protocol",
       "source_year": 2017,
       "source_doi": "10.1021/acs.chemmater.7b00354",
-      "revision": 2,
-      "record_sha256": "a344e9fbf78158a136341aaaf2ff4afef0e8c43b39f551ca82892a8db3f48338",
-      "recipe_signature": "87ebba5e9c666b36f3b6fb0a43dd0c1c1f250ac9e0b4a427fa382155b7763276",
-      "group_id": "group-f54e3166445e",
+      "revision": 3,
+      "record_sha256": "6d75e35334cfcddcf8b384473a92c3490b6f435a2e3a00e4e9c96d5f02edfe2b",
+      "recipe_signature": "a945077190015607e531ab5c6e97f66ff3f02edb3becd25e223cbd64514840e6",
+      "group_id": "group-6dc4ef62ddb7",
       "split": "development",
       "eligibility": {
         "precursor_selection": {
@@ -490,10 +1598,253 @@
       },
       "record_url": "data/records/nakonechnyi-2017-zb-cdse-core.json",
       "page_url": "records/nakonechnyi-2017-zb-cdse-core.html",
-      "missing_field_count": 9,
+      "missing_field_count": 10,
       "collection": "reviewed_literature",
       "components": [
         "CdSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-zb-cdse-znse-100nmol",
+      "title": "Nakonechnyi et al. (2017) · zb-CdSe/ZnSe · 100 nmol seeds",
+      "formula": "CdSe/ZnSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "0981e356349bf6f6d69f19142dc8facca8a8ec4b6471fb0b78acf999c5a6bf83",
+      "recipe_signature": "ba22c2c0ef16b393c53087d12d40f165f0715bf191a531ab06e7fdf346af4445",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-zb-cdse-znse-100nmol.json",
+      "page_url": "records/nakonechnyi-2017-zb-cdse-znse-100nmol.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-zb-cdse-znse-25nmol",
+      "title": "Nakonechnyi et al. (2017) · zb-CdSe/ZnSe · 25 nmol seeds",
+      "formula": "CdSe/ZnSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "b24f6c2c2841445364675ed7fe3e3eafed9fa6142045ce9f1e43f51ad420e26c",
+      "recipe_signature": "63d4036b4baf0de10022d9bfabe087489c683f65a5db49d0b0ce8b83da2697a0",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-zb-cdse-znse-25nmol.json",
+      "page_url": "records/nakonechnyi-2017-zb-cdse-znse-25nmol.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-zb-cdse-znse-50nmol",
+      "title": "Nakonechnyi et al. (2017) · zb-CdSe/ZnSe · 50 nmol seeds",
+      "formula": "CdSe/ZnSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "5205bf5a833843b3e4f78ba036ddf79c3125d2220a5a011ff5584566a31980f5",
+      "recipe_signature": "9aa97c89365dc35fd7b4f425ea6829f779d2de99bc6b86b8dea02137872f294f",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-zb-cdse-znse-50nmol.json",
+      "page_url": "records/nakonechnyi-2017-zb-cdse-znse-50nmol.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-zb-route-cds-no-seed-control",
+      "title": "Nakonechnyi et al. (2017) · zb-route CdS no-seed control",
+      "formula": "CdS",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "6a814b966f4e94caef2de571729a2a7d7dadd6adec8fd8ce91d111968b0d6e14",
+      "recipe_signature": "fd786fd31075a350c312e52fc275db8d1e74d35eda32ae72e9f9ec9237c0e6dd",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-zb-route-cds-no-seed-control.json",
+      "page_url": "records/nakonechnyi-2017-zb-route-cds-no-seed-control.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS"
+      ]
+    },
+    {
+      "record_id": "nakonechnyi-2017-zb-route-znse-no-seed-control",
+      "title": "Nakonechnyi et al. (2017) · zb-route ZnSe no-seed control",
+      "formula": "ZnSe",
+      "family": "II-VI colloidal nanocrystals",
+      "method": "Hot injection / seeded growth",
+      "record_type": "protocol_variant",
+      "source_year": 2017,
+      "source_doi": "10.1021/acs.chemmater.7b00354",
+      "revision": 1,
+      "record_sha256": "edf43de7eab9564289266ed8ed172791d1a7d13500d549e02d7aadbc6be120dc",
+      "recipe_signature": "8a5a0b7292b5fbb16482c7b548b372de9cb49c2d76ed6406048d590aea186df4",
+      "group_id": "group-6dc4ef62ddb7",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/nakonechnyi-2017-zb-route-znse-no-seed-control.json",
+      "page_url": "records/nakonechnyi-2017-zb-route-znse-no-seed-control.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnSe"
       ]
     },
     {
@@ -5393,18 +6744,210 @@
       ]
     },
     {
+      "record_id": "stowell-2005-ir-characterization-methods",
+      "title": "Stowell and Korgel (2005) · Structural characterization procedures",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "TEM/HRTEM, XRD and SAXS specimen preparation and measurement",
+      "record_type": "procedure",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "5de66b808e23db46140283c397e1dd8957df54a3706910897f2f49d23dbd0deb",
+      "recipe_signature": "367574b2586731c40480d1e0083eb549b25927988232eb331c9a1f8148be71ea",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-characterization-methods.json",
+      "page_url": "records/stowell-2005-ir-characterization-methods.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-hydrogenation-assay",
+      "title": "Stowell and Korgel (2005) · Comparative first-use Ir hydrogenation assay",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "1-Decene hydrogenation assay and GC/MS",
+      "record_type": "procedure",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "e2134e528d110a32c1f8aa1deb5d992c8c19ac967f2792fb82fa6aaed0f05eaa",
+      "recipe_signature": "a3c79798976828ebb4bdbcb0b6ad78ba8fc1270ffacc51a8ac087ccbbb6e2434",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-hydrogenation-assay.json",
+      "page_url": "records/stowell-2005-ir-hydrogenation-assay.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-oa-oleylamine-290c",
+      "title": "Stowell and Korgel (2005) · Oleic-acid/oleylamine-capped Ir at 290 °C",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "Hot injection with hexadecanediol reduction",
+      "record_type": "protocol_variant",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "bbcb2361b1ad6d66d99daaa6912ee5ffabbd5be0c3a0c45f824d8fc04814b5e1",
+      "recipe_signature": "2178ccc7dec06a9d3c4295b93f8e52a4aa7b11f6d6560b0c94590190854fc048",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-oa-oleylamine-290c.json",
+      "page_url": "records/stowell-2005-ir-oa-oleylamine-290c.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-oa-size-selection",
+      "title": "Stowell and Korgel (2005) · Optional OA/oleylamine Ir size selection",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "Size-selective precipitation",
+      "record_type": "procedure",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "08bd47925e9fe934729f2531b65eb3037ca93f39450aec393b45aa75c66d5053",
+      "recipe_signature": "5cfa9f14f3a8a887f1dadc867b51f2f44a3909a3e0c324fd730295b265d0b42b",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-oa-size-selection.json",
+      "page_url": "records/stowell-2005-ir-oa-size-selection.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
       "record_id": "stowell-2005-ir-toab-270c",
-      "title": "Stowell and Korgel (2005) · TOAB-capped iridium nanocrystals",
+      "title": "Stowell and Korgel (2005) · TOAB-capped Ir at 270 °C",
       "formula": "Ir",
       "family": "Noble-metal nanocrystals",
       "method": "Single-flask thermal reduction with 1,2-hexadecanediol",
       "record_type": "protocol_variant",
       "source_year": 2005,
       "source_doi": "10.1021/nl050648f",
-      "revision": 1,
-      "record_sha256": "51cddf9166cb5531d308380f8a49ddf5c3c3b72d271927388034912fdac58da8",
-      "recipe_signature": "616bdeb50bf34d78c3e1b7e5c801d6e6867c2c3317544ee3e3a174f1ac7e5529",
-      "group_id": "group-281b34fdca07",
+      "revision": 2,
+      "record_sha256": "4eed95f3ae88921c97146c3f657fbebeaf589643b6828355f5a7b61288a5ec16",
+      "recipe_signature": "4521c9ba33fa99e191aa3bed22408572c42ab3c779a6df2b1cf26a261264b36b",
+      "group_id": "group-0da0362d7f53",
       "split": "development",
       "eligibility": {
         "precursor_selection": {
@@ -5434,6 +6977,198 @@
       },
       "record_url": "data/records/stowell-2005-ir-toab-270c.json",
       "page_url": "records/stowell-2005-ir-toab-270c.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-toab-recycling-assay",
+      "title": "Stowell and Korgel (2005) · TOAB catalyst recycling series",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "1-Decene hydrogenation assay and GC/MS",
+      "record_type": "procedure",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "50e0e3d6b1132c074a5e039839032a1706bb5dc39cb5bcb5dbabdc78315549d2",
+      "recipe_signature": "410a0f43e6941471dcca5d8367526c801b1a5a01b8d3da27f4787c6e8d463a25",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-toab-recycling-assay.json",
+      "page_url": "records/stowell-2005-ir-toab-recycling-assay.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-top-290c",
+      "title": "Stowell and Korgel (2005) · TOP-capped Ir at 290 °C",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "Hot injection with hexadecanediol reduction",
+      "record_type": "protocol_variant",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "fbd054ae0f00dcfb3e99d3ba4d31e147e49aec11f12d26cbf677de9eec5807fe",
+      "recipe_signature": "429cabe585413315cedae59c270cc7fed8c0161323a52e45b151a3503cb01779",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-top-290c.json",
+      "page_url": "records/stowell-2005-ir-top-290c.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-topb-270c",
+      "title": "Stowell and Korgel (2005) · TOPB-capped Ir at 270 °C",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "Single-flask thermal reduction with 1,2-hexadecanediol",
+      "record_type": "protocol_variant",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "198df7a25267afc110f43d81cfe67672580ed6b5c5e40cb7ab43599b2a1b256c",
+      "recipe_signature": "5fa34a2409fa7aed510f6b1359dd2cd58f2aef4adf4c0d7d4ee3f4c03119e188",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-topb-270c.json",
+      "page_url": "records/stowell-2005-ir-topb-270c.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ir"
+      ]
+    },
+    {
+      "record_id": "stowell-2005-ir-topb-recycling-assay",
+      "title": "Stowell and Korgel (2005) · TOPB catalyst recycling series",
+      "formula": "Ir",
+      "family": "Noble-metal nanocrystals",
+      "method": "1-Decene hydrogenation assay and GC/MS",
+      "record_type": "procedure",
+      "source_year": 2005,
+      "source_doi": "10.1021/nl050648f",
+      "revision": 1,
+      "record_sha256": "5287779dfac7d7713e309edb5d59c00350c1c1c9cb362306b406ba12fa935020",
+      "recipe_signature": "ea91d5c1cf75d5a4c6a1ab6b993ee37bb8fa83ca7d1bd14ee7693b2d9e76e064",
+      "group_id": "group-0da0362d7f53",
+      "split": "development",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/stowell-2005-ir-topb-recycling-assay.json",
+      "page_url": "records/stowell-2005-ir-topb-recycling-assay.html",
       "missing_field_count": 5,
       "collection": "reviewed_literature",
       "components": [

@@ -1,0 +1,763 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "fu-2007-zno-s2-oa-post-treatment",
+  "revision": 2,
+  "record_type": "procedure",
+  "title": "OA post-treatment of as-prepared S2 ZnO dispersion",
+  "material": {
+    "formula": "ZnO",
+    "family": "Metal oxides",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Post-synthesis ligand/interface control",
+  "sources": [
+    {
+      "id": "fu2007",
+      "doi": "10.1021/ja075604i",
+      "title": "Stable Aqueous Dispersion of ZnO Quantum Dots with Strong Blue Emission via Simple Solution Route",
+      "authors": "Ying-Song Fu; Xi-Wen Du; Sergei A. Kulinich; Jian-Sheng Qiu; Wen-Jing Qin; Rui Li; Jing Sun; Jim Liu",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/ja075604i",
+      "main_status": "All 5 main pages read in full and visually inspected, including all 7 figures.",
+      "si_status": "Matching SI verified by title/authors and main-text cross-references; all 4 pages read in full and visually inspected, including all 3 figures.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "fu2007",
+    "recipe_family": "fu2007-zno-post-treatment",
+    "parent_record_id": "fu-2007-zno-s2",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "starting-dispersion",
+      "name": "As-prepared S2 ZnO dispersion",
+      "formula": "ZnO",
+      "role": "starting_dispersion",
+      "stage": "post_treatment",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "fu2007",
+              "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Protocol dependency on S2; no physical batch identity or concentration inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    },
+    {
+      "id": "oleic_acid",
+      "name": "oleic acid",
+      "formula": "C18H34O2",
+      "role": "post_treatment_reagent",
+      "stage": "post_treatment",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "fu2007",
+              "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "treated-series",
+      "name": "Treated dispersion aliquot series",
+      "kind": "mixture",
+      "parent_ids": [
+        "starting-dispersion",
+        "oleic_acid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "add-reagent",
+      "action": "add",
+      "label": "Add oleic acid to S2",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "starting-dispersion",
+        "oleic_acid"
+      ],
+      "outputs": [
+        "treated-series"
+      ],
+      "parameters": {
+        "starting_dispersion_volume": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "fu2007",
+              "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+            }
+          ],
+          "derivation": null
+        },
+        "reagent_amount": {
+          "value": 0.35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "fu2007",
+              "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Addition formulation and detailed mixing conditions are not given.",
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    },
+    {
+      "id": "heat-treatment",
+      "action": "heat",
+      "label": "Heat treatment and time-series sampling",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "add-reagent"
+      ],
+      "inputs": [
+        "treated-series"
+      ],
+      "outputs": [
+        "treated-series"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "fu2007",
+              "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+            }
+          ],
+          "derivation": null
+        },
+        "total_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "fu2007",
+              "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure provides discrete sampling times, not independent synthesis runs or a universally specified endpoint.",
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fu2007-s2-oa-post-treatment-0p5h",
+      "source_sample_label": "S2 0.5 h",
+      "batch_id": null,
+      "material_state_id": "treated-series",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "notes": [
+        "Aliquot in a common treatment series; not an independent synthesis experiment."
+      ]
+    },
+    {
+      "sample_id": "fu2007-s2-oa-post-treatment-1p5h",
+      "source_sample_label": "S2 1.5 h",
+      "batch_id": null,
+      "material_state_id": "treated-series",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "notes": [
+        "Aliquot in a common treatment series; not an independent synthesis experiment."
+      ]
+    },
+    {
+      "sample_id": "fu2007-s2-oa-post-treatment-2p5h",
+      "source_sample_label": "S2 2.5 h",
+      "batch_id": null,
+      "material_state_id": "treated-series",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "notes": [
+        "Aliquot in a common treatment series; not an independent synthesis experiment."
+      ]
+    },
+    {
+      "sample_id": "fu2007-s2-oa-post-treatment-3p5h",
+      "source_sample_label": "S2 3.5 h",
+      "batch_id": null,
+      "material_state_id": "treated-series",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ],
+      "notes": [
+        "Aliquot in a common treatment series; not an independent synthesis experiment."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sampling-0",
+      "sample_id": "fu2007-s2-oa-post-treatment-0p5h",
+      "property": "treatment_sampling_time",
+      "technique": "PL/PLE",
+      "value": {
+        "value": 0.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "PL/PLE increase with treatment time; quantitative curves retained as original Fig.6, not digitized.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    },
+    {
+      "id": "sampling-1",
+      "sample_id": "fu2007-s2-oa-post-treatment-1p5h",
+      "property": "treatment_sampling_time",
+      "technique": "PL/PLE",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "PL/PLE increase with treatment time; quantitative curves retained as original Fig.6, not digitized.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    },
+    {
+      "id": "sampling-2",
+      "sample_id": "fu2007-s2-oa-post-treatment-2p5h",
+      "property": "treatment_sampling_time",
+      "technique": "PL/PLE",
+      "value": {
+        "value": 2.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "PL/PLE increase with treatment time; quantitative curves retained as original Fig.6, not digitized.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    },
+    {
+      "id": "sampling-3",
+      "sample_id": "fu2007-s2-oa-post-treatment-3p5h",
+      "property": "treatment_sampling_time",
+      "technique": "PL/PLE",
+      "value": {
+        "value": 3.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "fu2007",
+            "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "PL/PLE increase with treatment time; quantitative curves retained as original Fig.6, not digitized.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "fu2007",
+          "locator": "Main p.16033 treatment discussion; Fig.6b on p.16032"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Full main/SI text and every page visually reviewed; all recipe variants, controls and figures inventoried in paper coverage. Canonical record is a named literature protocol, not an independently reproduced SOP or unique physical batch. Plot curves are preserved as original evidence, not digitized raw data.",
+    "missing_fields": [
+      "starting particle concentration and unique batch identity",
+      "mixing rate, ramp and atmosphere",
+      "final recovery conditions and quantitative product size/phase",
+      "exact processing stage of the as-prepared S2 input",
+      "OA formulation"
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "partial_protocol"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original article and associated supporting information",
+      "url": "https://doi.org/10.1021/ja075604i",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Full-paper coverage and characterization archive",
+      "url": "paper-review.html?id=fu2007",
+      "relation": "source_coverage"
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,38 @@
+"""Publish reviewed coverage ledgers without private source paths or full-text caches."""
+import json, hashlib, re, shutil
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+DATA=ROOT/'data/paper-reviews'
+
+def read(p): return json.loads(p.read_text(encoding='utf-8'))
+def write(p,x):
+    p.parent.mkdir(parents=True,exist_ok=True)
+    p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def validate(c):
+    errors=[]
+    for d in c['documents']:
+        pages=d['pages'];nums=[p['page'] for p in pages]
+        if sorted(nums)!=list(range(1,d['page_count']+1)):errors.append('Incomplete or duplicate page inventory')
+        if not all(p.get('text_read') is True and p.get('visual_review') is True for p in pages):errors.append('Unread or visually unchecked page')
+        if not re.fullmatch('[a-f0-9]{64}',d['sha256']):errors.append('Missing source hash')
+    items=c['figures']+[f for category in ['tables','equations','schemes'] for f in c.get(category,[]) if f.get('public_asset')]
+    for f in items:
+        a=f.get('public_asset')
+        if not a:errors.append('Missing figure asset: '+str(f.get('id')));continue
+        p=ROOT/'dist'/a
+        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=f['public_asset_sha256']:errors.append('Figure hash mismatch: '+a)
+    for item in c['recipe_inventory']:
+        for rid in item.get('record_ids',[]):
+            if not (ROOT/'data/records'/(rid+'.json')).is_file():errors.append('Unresolved recipe link: '+rid)
+    return errors
+
+def main():
+    index=[]
+    for p in sorted(DATA.glob('*.json')):
+        c=read(p);errors=validate(c)
+        if errors:raise ValueError(p.name+': '+repr(errors))
+        write(ROOT/'dist/data/paper-reviews'/p.name,c)
+        index.append({'id':c['paper_id'],'doi':c['doi'],'title':c['title'],'pages_read':sum(d['page_count'] for d in c['documents']),'figures':len(c['figures']),'tables':len(c.get('tables',[])),'record_ids':sorted({rid for x in c['recipe_inventory'] for rid in x.get('record_ids',[])}),'independent_audit':c.get('independent_audit','pending'),'url':'paper-review.html?id='+c['paper_id']})
+    write(ROOT/'dist/data/paper-review-index.json',{'schema_version':'1.0','papers':index,'scope':'Full supplied-document reading and visual coverage; omitted experimental details and raw-data gaps remain explicit. This status is not an exact-structure training eligibility label.'})
+    print('Validated and published coverage ledgers:',len(index))
+if __name__=='__main__':main()

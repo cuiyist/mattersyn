@@ -11,6 +11,7 @@ def main():
     source=ROOT/'data/corpus/library-source.json'
     corpus=read(source) if source.exists() else {'summary':{},'papers':[]}
     records=[read(p) for p in sorted((ROOT/'data/records').glob('*.json'))]
+    full_reviews={c['doi'].lower():c for c in [read(p) for p in (ROOT/'data/paper-reviews').glob('*.json')]}
     papers={p['doi'].lower():p for p in corpus['papers'] if p.get('doi') and p['coverage']['localDocumentCount']>0}
     materials={}
     def ensure(formula,elements):
@@ -43,9 +44,14 @@ def main():
     for doi,p in papers.items():
         p['reviewedRecordIds']=list(dict.fromkeys(p.get('reviewedRecordIds',[])));p['benchmarkRecordIds']=list(dict.fromkeys(p.get('benchmarkRecordIds',[])))
         p['reviewStatus']='selected_recipes_reviewed' if p['reviewedRecordIds'] else 'published_benchmark' if p['benchmarkRecordIds'] else 'indexed_awaiting_review'
+        review=full_reviews.get(doi)
+        p['fullDocumentReview']=None
+        if review:
+            p['reviewStatus']='full_documents_reviewed'
+            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'pages':sum(d['page_count'] for d in review['documents']),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
         p['materials']=sorted({f for f,m in materials.items() if doi in m['paper_dois']})
         write(ROOT/'dist/data/papers'/(p['id']+'.json'),p)
-        library.append({k:p.get(k) for k in ['id','doi','doiUrl','title','year','coverage','materials','reviewStatus','reviewedRecordIds','benchmarkRecordIds','titleMetadata']})
+        library.append({k:p.get(k) for k in ['id','doi','doiUrl','title','year','coverage','materials','reviewStatus','reviewedRecordIds','benchmarkRecordIds','titleMetadata','fullDocumentReview']})
     index=[]
     for f,m in materials.items():
         related=[byid[x] for x in sorted(m['record_ids'])];m['record_ids']=sorted(m['record_ids']);m['direct_record_ids']=sorted(m['direct_record_ids']);m['architectures']=sorted(m['architectures'])
@@ -59,7 +65,7 @@ def main():
             contribution['benchmarkRecordIds']=[rid for rid in p['benchmarkRecordIds'] if rid in m['record_ids']]
             contribution['reviewStatus']='selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
-        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material')} for r in related]
+        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':r['record_type']!='procedure' and 'precursor_selection' in r['quality']['requested_tasks'],'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material')} for r in related]
         m['paper_dois']=sorted(m['paper_dois']);m['mentioned_paper_dois']=sorted(m['mentioned_paper_dois'])
         write(ROOT/'dist/data/materials'/(m['id']+'.json'),m)
         index.append({k:m[k] for k in ['id','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures']})
