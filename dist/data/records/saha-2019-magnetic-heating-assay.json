@@ -1,0 +1,507 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "saha-2019-magnetic-heating-assay",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Alternating-field heating assay of the high-exchange-bias core–shell sample",
+  "material": {
+    "formula": "CoO/CoFe2O4",
+    "family": "magnetic oxide nanocrystals",
+    "elements": [
+      "Co",
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "CoO",
+      "CoFe2O4"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "magnetic heating assay",
+  "sources": [
+    {
+      "id": "saha2019",
+      "doi": "10.1021/acs.jpcc.8b11124",
+      "title": "Interface Modeling Leading to Giant Exchange Bias from the CoO/CoFe2O4 Quantum Dot Heterostructure",
+      "authors": "Avijit Saha; Siddhartha Sohoni; Ranjani Viswanatha",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/acs.jpcc.8b11124",
+      "main_status": "Relevant original text reviewed",
+      "si_status": "Matched title, authors and content; all 3 SI pages read and visually reviewed together with all 7 main pages.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "saha2019",
+    "recipe_family": "saha2019-coo-cofe2o4",
+    "parent_record_id": "saha-2019-coo-cofe2o4-seeded-growth",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoO/CoFe2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main pp.2422–2423, CoO/CoFe2O4 Core Shell Heterostructure"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main pp.2422–2423, CoO/CoFe2O4 Core Shell Heterostructure"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main pp.2422–2423, CoO/CoFe2O4 Core Shell Heterostructure"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main pp.2422–2423, CoO/CoFe2O4 Core Shell Heterostructure"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "core-shell-powder",
+      "name": "Core–shell nanoparticles having maximum exchange bias",
+      "formula": "CoO/CoFe2O4",
+      "role": "assay_sample",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 0.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "total powder, not measured suspended active fraction",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "30 min cohort selected for the remaining measurements on p.2424; actual physical vial identity not supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "formula": "H2O",
+      "role": "assay_medium",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Grade not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "heating-suspension",
+      "name": "Particle suspension in water",
+      "kind": "mixture",
+      "parent_ids": [
+        "core-shell-powder",
+        "water"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "assay-disperse",
+      "action": "disperse",
+      "label": "Form the particle suspension in water",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "core-shell-powder",
+        "water"
+      ],
+      "outputs": [
+        "heating-suspension"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dispersion method, ligand exchange, sonication, drying history and stabilization chemistry not given; authors report subsequent settling.",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+        }
+      ]
+    },
+    {
+      "id": "ac-heating",
+      "action": "magnetic_heating",
+      "label": "Expose the suspension to alternating magnetic field",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "assay-disperse"
+      ],
+      "inputs": [
+        "heating-suspension"
+      ],
+      "outputs": [],
+      "parameters": {
+        "field_frequency": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kHz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+            }
+          ],
+          "derivation": null
+        },
+        "field_amplitude": {
+          "value": 37.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kA/m",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+            }
+          ],
+          "derivation": null
+        },
+        "water_volumetric_heat_capacity": {
+          "value": 4185,
+          "minimum": null,
+          "maximum": null,
+          "unit": "J/L/K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+            }
+          ],
+          "derivation": null
+        },
+        "exposure_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "EASYHEAT induction heating system, Ameritherm Inc.; sample in induction coil with immersed thermometer. Record temperature versus time and fit initial slope. Heat loss correction not reported.",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "saha2019-heating-suspension",
+      "source_sample_label": "core–shell nanoparticles having maximum EB",
+      "batch_id": null,
+      "material_state_id": "heating-suspension",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoO/CoFe2O4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Assay specimen, not newly synthesized product. Linked to the selected 30 min/high-EB cohort by paper context; physical specimen not identifiable.",
+        "Authors state particles are insoluble in water and settle during measurement. No active-mass correction is applied."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "heating-slope",
+      "sample_id": "saha2019-heating-suspension",
+      "property": "initial_heating_rate",
+      "technique": "Linear fit to initial temperature rise",
+      "value": {
+        "value": 0.034,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC/s",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "annotation gives 0.034; unit follows temperature (°C) / time (sec) axes",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "SI p.S3 Figure S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "SI p.S3 Figure S4"
+        }
+      ]
+    },
+    {
+      "id": "heating-slp",
+      "sample_id": "saha2019-heating-suspension",
+      "property": "specific_loss_power",
+      "technique": "Equation 1 and fitted initial temperature rise",
+      "value": {
+        "value": 355,
+        "minimum": null,
+        "maximum": null,
+        "unit": "W/g",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "normalization by all 0.8 mg powder; settling makes active suspended mass uncertain",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Characterization and Equation 1; p.2425 heating discussion; SI p.S3 Figure S4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All 7 main and 3 matched SI pages text-read and visually reviewed; synthesis, characterization, original figures, table, equations and source conflicts inventoried. Literature extraction, not independent reproduction. IDs identify method/timepoint cohorts, not author-assigned physical batches.",
+    "missing_fields": [
+      "Procedure only, not a synthetic recipe.",
+      "Actual water dispersion method, ligand transfer, suspended fraction, thermal losses, powder inorganic fraction and run replication absent.",
+      "Raw temperature-time array and exact fit window absent; original plot retained.",
+      "Not a validated biomedical treatment; reported heating assay only."
+    ],
+    "conflicts": [
+      "Authors describe insoluble particles settling during the assay while the SLP denominator uses the total powder mass. Both facts retained; no guessed active-mass normalization."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and supporting information",
+      "url": "https://doi.org/10.1021/acs.jpcc.8b11124",
+      "relation": "primary_source"
+    }
+  ],
+  "collection": "reviewed_literature"
+}

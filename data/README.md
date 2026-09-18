@@ -1,12 +1,12 @@
 # MatterSyn training data pilot
 
-The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Dataset version 0.3.0 uses record schema 1.0.0.
+The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Dataset version 0.4.0 uses record schema 1.0.0.
 
 ## Current collection
 
-- 39 source-reviewed literature protocols, variants and controls, plus 12 separately scoped supporting procedures. These are not 51 independent experiments.
+- 41 source-reviewed literature protocols, variants and controls, plus 14 separately scoped supporting procedures. These are not 55 independent experiments.
 - A separate, attributed 100-row coverage subset of the published Voznyy 2019 PbS dataset: 95 optical-outcome rows and five failure-coded rows. These are experimental rows, not 100 reviewed complete SOPs or 100 independent papers.
-- Four fully inventoried main–SI sets cover 64 pages: ZnO, CdSe/core–shell, Ir and Fe–O. Their review ledgers expose original graphics, tables, equations, sample links and unresolved claims. Most of the 4,176 local paper groups still await full curation. Screening alone does not create a training example; source-reviewed recipes do not imply whole-paper review.
+- Five fully inventoried main–SI sets cover 74 pages: ZnO, CdSe/core–shell, Ir, Fe–O and CoO/CoFe2O4. Their review ledgers expose original graphics, tables, equations, sample links and unresolved claims. Most of the 4,176 local paper groups still await full curation. Screening alone does not create a training example; source-reviewed recipes do not imply whole-paper review.
 - Zero verified sample-resolved exact-CIF-to-complete-recipe pairs. The existing bulk CdSe CIF and finite particle illustration cannot supply those labels.
 
 ## Scientific entities and review

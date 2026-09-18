@@ -1,0 +1,1314 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "saha-2019-coo-core",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "CoO seed nanocrystals by thermal decomposition of cobalt(II) acetate",
+  "material": {
+    "formula": "CoO",
+    "family": "magnetic oxide nanocrystals",
+    "elements": [
+      "Co",
+      "O"
+    ],
+    "components": [
+      "CoO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "thermal decomposition",
+  "sources": [
+    {
+      "id": "saha2019",
+      "doi": "10.1021/acs.jpcc.8b11124",
+      "title": "Interface Modeling Leading to Giant Exchange Bias from the CoO/CoFe2O4 Quantum Dot Heterostructure",
+      "authors": "Avijit Saha; Siddhartha Sohoni; Ranjani Viswanatha",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/acs.jpcc.8b11124",
+      "main_status": "Relevant original text reviewed",
+      "si_status": "Matched title, authors and content; all 3 SI pages read and visually reviewed together with all 7 main pages.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "saha2019",
+    "recipe_family": "saha2019-coo-cofe2o4",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cobalt-acetate",
+      "name": "Cobalt(II) acetate",
+      "formula": "C4H6CoO4",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": 0.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "purity": {
+          "value": 99.9,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "supplier label; purity basis not specified",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Experimental Methods / Materials"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Nominal acetate formula only; hydration/solvation is not specified. Source Co(ac)2 means acetate, not acetylacetonate.",
+        "Sigma-Aldrich; used without further purification."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "oleic-acid",
+      "name": "Oleic acid",
+      "formula": "C18H34O2",
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "purity": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "supplier label; purity basis not specified",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Experimental Methods / Materials"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Commercial reagent as used; purified molecular speciation and surface binding are not measured.",
+        "Sigma-Aldrich; used without further purification."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "oleylamine",
+      "name": "Oleylamine",
+      "formula": "C18H37N",
+      "role": "ligand_solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "purity": {
+          "value": 70,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "supplier label; purity basis not specified",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Experimental Methods / Materials"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Commercial reagent as used; purified molecular speciation and surface binding are not measured.",
+        "Sigma-Aldrich; used without further purification."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "argon",
+      "name": "Argon",
+      "formula": "Ar",
+      "role": "process_gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Flow rate and purity not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": "C6H14",
+      "role": "workup_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Purity, supplier and isomeric composition not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "role": "antisolvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Purity and supplier not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "core-charge",
+      "name": "Cobalt acetate in OA/OlAm",
+      "kind": "mixture",
+      "parent_ids": [
+        "cobalt-acetate",
+        "oleic-acid",
+        "oleylamine"
+      ]
+    },
+    {
+      "id": "core-degassed",
+      "name": "Degassed core charge",
+      "kind": "mixture",
+      "parent_ids": [
+        "core-charge"
+      ]
+    },
+    {
+      "id": "core-220",
+      "name": "Charge after 220 °C hold",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "core-degassed"
+      ]
+    },
+    {
+      "id": "core-300",
+      "name": "Black CoO reaction solution",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "core-220"
+      ]
+    },
+    {
+      "id": "core-cooled",
+      "name": "Room-temperature CoO solution",
+      "kind": "mixture",
+      "parent_ids": [
+        "core-300"
+      ]
+    },
+    {
+      "id": "core-powder",
+      "name": "Washed CoO powder precipitate",
+      "kind": "product",
+      "parent_ids": [
+        "core-cooled"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "core-mix",
+      "action": "mix",
+      "label": "Charge a three-neck round-bottom flask",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cobalt-acetate",
+        "oleic-acid",
+        "oleylamine"
+      ],
+      "outputs": [
+        "core-charge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Flask connected to a Schlenk line. Vessel volume not reported.",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "core-degas",
+      "action": "degas",
+      "label": "Degas under evacuation with vigorous stirring",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "core-mix"
+      ],
+      "inputs": [
+        "core-charge"
+      ],
+      "outputs": [
+        "core-degassed"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Evacuation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "core-heat220",
+      "action": "heat_hold",
+      "label": "Heat and hold under argon",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "core-degas"
+      ],
+      "inputs": [
+        "core-degassed",
+        "argon"
+      ],
+      "outputs": [
+        "core-220"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "hold_duration": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "ramp_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Argon flow",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "core-heat300",
+      "action": "ramp_hold",
+      "label": "Raise to 300 °C and hold",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "core-heat220"
+      ],
+      "inputs": [
+        "core-220"
+      ],
+      "outputs": [
+        "core-300"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "ramp_rate": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "hold_duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Argon flow continued from preceding stage",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": "Continuation of the explicitly stated argon heating sequence; a second atmosphere instruction is not given."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "core-cool",
+      "action": "cool",
+      "label": "Cool the black solution to room temperature",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "core-heat300"
+      ],
+      "inputs": [
+        "core-300"
+      ],
+      "outputs": [
+        "core-cooled"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "room temperature; numerical value not given",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Room temperature",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "core-wash",
+      "action": "centrifuge_wash",
+      "label": "Wash with hexane–ethanol and retain powder precipitate",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "core-cool"
+      ],
+      "inputs": [
+        "core-cooled",
+        "hexane",
+        "ethanol"
+      ],
+      "outputs": [
+        "core-powder"
+      ],
+      "parameters": {
+        "centrifugation_speed": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g_relative",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "centrifugation_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "wash_count": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "core-powder",
+      "description": "Source calls the retained material powder precipitate. No separate drying operation or solvent ratio is reported.",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "core-store",
+      "action": "store",
+      "label": "Store the powder in a vial for further use",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "core-wash"
+      ],
+      "inputs": [
+        "core-powder"
+      ],
+      "outputs": [],
+      "parameters": {
+        "storage_temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        },
+        "storage_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "saha2019",
+              "locator": "main p.2422, Synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2422, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2422, Synthesis"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "saha2019-coo-core",
+      "source_sample_label": "CoO core QDs",
+      "batch_id": null,
+      "material_state_id": "core-powder",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main pp.2422–2424; Figure 1; Figure 2a,c; Table 1; SI Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Cubic CoO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main pp.2422–2424; Figure 1; Figure 2a,c; Table 1; SI Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Almost spherical",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2424, Figure 2a,c"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main pp.2422–2424; Figure 1; Figure 2a,c; Table 1; SI Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main pp.2422–2424; Figure 1; Figure 2a,c; Table 1; SI Figure S1"
+        }
+      ],
+      "notes": [
+        "The named CoO cohort is linked to the core method; no physical batch identifier or yield is given.",
+        "No measured atomic coordinates or surface ligand coverage."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "core-diameter",
+      "sample_id": "saha2019-coo-core",
+      "property": "diameter",
+      "technique": "TEM size distribution",
+      "value": {
+        "value": 12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2424 and SI p.S2 Figure S1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Average diameter, not a requested target.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2424 and SI p.S2 Figure S1"
+        }
+      ]
+    },
+    {
+      "id": "core-spread",
+      "sample_id": "saha2019-coo-core",
+      "property": "diameter_spread",
+      "technique": "TEM size distribution",
+      "value": {
+        "value": 3.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "reported ±; spread statistic not defined",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2424 and SI p.S2 Figure S1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2424 and SI p.S2 Figure S1"
+        }
+      ]
+    },
+    {
+      "id": "core-xrd-size",
+      "sample_id": "saha2019-coo-core",
+      "property": "crystallite_size",
+      "technique": "XRD / Scherrer analysis",
+      "value": {
+        "value": 14.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "instrumental broadening not corrected",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Table 1 and adjacent discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Table 1 and adjacent discussion"
+        }
+      ]
+    },
+    {
+      "id": "core-lattice-a",
+      "sample_id": "saha2019-coo-core",
+      "property": "lattice_parameter_a",
+      "technique": "XRD",
+      "value": {
+        "value": 4.258,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2423 Table 1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2423 Table 1"
+        }
+      ]
+    },
+    {
+      "id": "core-d111",
+      "sample_id": "saha2019-coo-core",
+      "property": "interplanar_spacing_111",
+      "technique": "HRTEM",
+      "value": {
+        "value": 2.43,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "saha2019",
+            "locator": "main p.2424 Figure 2c,d and text"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "saha2019",
+          "locator": "main p.2424 Figure 2c,d and text"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All 7 main and 3 matched SI pages text-read and visually reviewed; synthesis, characterization, original figures, table, equations and source conflicts inventoried. Literature extraction, not independent reproduction. IDs identify method/timepoint cohorts, not author-assigned physical batches.",
+    "missing_fields": [
+      "Acetate hydration/solvation, vessel capacity and exact pressure/argon flow are unspecified.",
+      "Heating rate to 220 °C and numerical room-temperature endpoint are not given.",
+      "Workup solvent volumes/ratio, centrifugation speed/time and wash count are not reported.",
+      "Drying, storage temperature/atmosphere/duration and isolated yield are not reported.",
+      "Physical batch ID, ± statistic, per-cohort particle count and measured atomic coordinates are unavailable."
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "precursor_selection",
+      "partial_protocol",
+      "size_conditioned_recipe",
+      "exact_structure_recipe"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and supporting information",
+      "url": "https://doi.org/10.1021/acs.jpcc.8b11124",
+      "relation": "primary_source"
+    }
+  ],
+  "collection": "reviewed_literature"
+}
