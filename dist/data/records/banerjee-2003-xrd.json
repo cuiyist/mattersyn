@@ -1,0 +1,451 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "banerjee-2003-xrd",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Banerjee & Wong (2003) · Diffraction of the CdTe–MWNT heterostructure",
+  "material": {
+    "formula": "CdTe/MWNT",
+    "family": "CdTe nanocrystals grown on oxidized multiwalled carbon nanotubes",
+    "elements": [
+      "Cd",
+      "Te",
+      "C",
+      "O"
+    ],
+    "components": [
+      "CdTe",
+      "MWNT"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Powder X-ray diffraction",
+  "sources": [
+    {
+      "id": "banerjee2003",
+      "doi": "10.1021/ja035980c",
+      "title": "In Situ Quantum Dot Growth on Multiwalled Carbon Nanotubes",
+      "authors": "Sarbajit Banerjee; Stanislaus S. Wong",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja035980c",
+      "main_status": "All nine supplied main pages text and visually reviewed; independent source and canonical audits completed. Matched one-page SI also fully read and visually reviewed.",
+      "si_status": "Matched supplied one-page Supporting Information: infrared spectrum of oxidized MWNTs. Identity supported by embedded metadata naming ja035980c, main-paper SI declaration and matching spectrum subject. Fully read and visually inspected; no added synthesis recipe.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "banerjee2003",
+    "recipe_family": "banerjee2003-cdte-mwnt",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/MWNT",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 1, printed p. 10342, Abstract"
+        }
+      ],
+      "note": "Heterostructure descriptor, not a stoichiometric bulk compound or atomically refined junction."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Oxidized multiwalled carbon nanotubes with oxygenated surface sites",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, nanotube processing"
+        }
+      ],
+      "note": "Oxygen content and functional-group coverage vary; no exact molecular formula or site pattern is determined."
+    }
+  },
+  "materials": [
+    {
+      "id": "composite-specimen",
+      "name": "CdTe nanocrystal–oxidized MWNT heterostructure",
+      "formula": "CdTe/MWNT",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, heterostructure synthesis"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xrd-data",
+      "name": "Acquire the composite powder diffraction pattern output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "composite-specimen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "acquire",
+      "action": "powder_xrd_acquisition",
+      "label": "Acquire the composite powder diffraction pattern",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "composite-specimen"
+      ],
+      "outputs": [
+        "xrd-data"
+      ],
+      "parameters": {
+        "radiation_wavelength": {
+          "value": 1.54,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Å",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, X-ray Diffraction"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Diffraction"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Diffraction"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Scintag diffractometer in Bragg configuration with Cu Kα radiation. Scan step/rate, tube voltage/current, specimen holder, standard and refinement are unreported.",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 3, printed p. 10344, X-ray Diffraction"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "composite",
+      "source_sample_label": "Figure 5ii CdTe–MWNT powder",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/MWNT",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Predominantly wurtzite CdTe; possible zinc-blende stacking faults and some zinc-blende crystals; MWNT reflections",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cdte-indices",
+      "sample_id": "composite",
+      "property": "source_cdte_diffraction_indices",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Black labels assign wurtzite CdTe: (100), (002), (101), (110), (103) and (200). The first three overlap in the labeled low-angle group.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii indexed pattern"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii indexed pattern"
+        }
+      ]
+    },
+    {
+      "id": "mwnt-indices",
+      "sample_id": "composite",
+      "property": "source_mwnt_diffraction_indices",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Red labels assign MWNT (002), (101) and (004); the 101/103 label group combines MWNT (red) and CdTe (black) assignments.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii indexed pattern"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii indexed pattern"
+        }
+      ]
+    },
+    {
+      "id": "mixed-phase",
+      "sample_id": "composite",
+      "property": "source_phase_mixture_limit",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Zinc-blende peaks lie close to wurtzite peaks and may overlap; stacking faults and some cubic crystals are likely. No phase-pure assignment or quantitative phase fraction is justified.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XRD interpretation"
+        }
+      ]
+    },
+    {
+      "id": "broadening",
+      "sample_id": "composite",
+      "property": "author_diffraction_broadening_explanation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Peaks broaden relative to bulk because of finite particle size. The paper reports no Scherrer calculation, fitted FWHM list or lattice-constant refinement.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Additional Structural Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Additional Structural Characterization"
+        }
+      ]
+    },
+    {
+      "id": "axis-range",
+      "sample_id": "composite",
+      "property": "figure5ii_displayed_two_theta_range",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 20,
+        "maximum": 70,
+        "unit": "°",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii axis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Displayed plot range, not a separately stated acquisition scan program.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5ii axis"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine main pages and the matched one-page SI text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Nanotube pretreatment, CdTe growth, distinct bound/free/comparison populations, structural/optical analyses and author mechanisms retain their own evidence scopes. Missing reagent doses, Te stock form/concentration, final drying conditions and printed EDS unit discrepancy remain explicit. Cited external works not independently inspected.",
+    "missing_fields": [
+      "No chemical masses, Cd:Te ratio, exact TDPA ratio, Te/TOP stock concentration or injection volume, isolated yield or raw spectral arrays are supplied.",
+      "No measured atom coordinates, unit-cell refinement, quantitative phase fraction, sample-specific complete particle distribution, electronic transport or photovoltaic device data are supplied.",
+      "Main procedures are partial literature descriptions; referenced external protocols do not fill unreported conditions."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=banerjee2003",
+      "relation": "Original figures, supplied SI, specimen distinctions and source limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

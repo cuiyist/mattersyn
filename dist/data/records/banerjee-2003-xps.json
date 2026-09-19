@@ -1,0 +1,997 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "banerjee-2003-xps",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Banerjee & Wong (2003) · Surface chemistry and precursor oxygen-content evidence",
+  "material": {
+    "formula": "CdTe/MWNT",
+    "family": "CdTe nanocrystals grown on oxidized multiwalled carbon nanotubes",
+    "elements": [
+      "Cd",
+      "Te",
+      "C",
+      "O"
+    ],
+    "components": [
+      "CdTe",
+      "MWNT"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "X-ray photoelectron spectroscopy",
+  "sources": [
+    {
+      "id": "banerjee2003",
+      "doi": "10.1021/ja035980c",
+      "title": "In Situ Quantum Dot Growth on Multiwalled Carbon Nanotubes",
+      "authors": "Sarbajit Banerjee; Stanislaus S. Wong",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja035980c",
+      "main_status": "All nine supplied main pages text and visually reviewed; independent source and canonical audits completed. Matched one-page SI also fully read and visually reviewed.",
+      "si_status": "Matched supplied one-page Supporting Information: infrared spectrum of oxidized MWNTs. Identity supported by embedded metadata naming ja035980c, main-paper SI declaration and matching spectrum subject. Fully read and visually inspected; no added synthesis recipe.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "banerjee2003",
+    "recipe_family": "banerjee2003-cdte-mwnt",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/MWNT",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 1, printed p. 10342, Abstract"
+        }
+      ],
+      "note": "Heterostructure descriptor, not a stoichiometric bulk compound or atomically refined junction."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Oxidized multiwalled carbon nanotubes with oxygenated surface sites",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, nanotube processing"
+        }
+      ],
+      "note": "Oxygen content and functional-group coverage vary; no exact molecular formula or site pattern is determined."
+    }
+  },
+  "materials": [
+    {
+      "id": "composite-specimen",
+      "name": "CdTe nanocrystal–oxidized MWNT heterostructure",
+      "formula": "CdTe/MWNT",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, heterostructure synthesis"
+        }
+      ]
+    },
+    {
+      "id": "mwnt-oxidized",
+      "name": "Aggressively oxidized and purified MWNTs; variable oxygenated surface",
+      "formula": null,
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, nanotube processing"
+        }
+      ]
+    },
+    {
+      "id": "mwnt-mild",
+      "name": "Mildly oxidized MWNT comparison; preparation unspecified",
+      "formula": null,
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xps-mounted",
+      "name": "Mount separate specimens on stainless-steel holders output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "composite-specimen",
+        "mwnt-oxidized",
+        "mwnt-mild"
+      ]
+    },
+    {
+      "id": "xps-ready",
+      "name": "Evacuate the XPS analysis chamber output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "xps-mounted"
+      ]
+    },
+    {
+      "id": "xps-survey",
+      "name": "Acquire the survey spectra with Mg Kα radiation output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xps-ready"
+      ]
+    },
+    {
+      "id": "xps-high-resolution",
+      "name": "Acquire high-resolution elemental spectra output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xps-ready"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "mount",
+      "action": "xps_sample_mounting",
+      "label": "Mount separate specimens on stainless-steel holders",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "composite-specimen",
+        "mwnt-oxidized",
+        "mwnt-mild"
+      ],
+      "outputs": [
+        "xps-mounted"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Conductive double-sided tape attaches samples to stainless-steel holders in a Kratos DS800. Specimen loading, film thickness, tape composition and calibration standard are not given.",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+        }
+      ]
+    },
+    {
+      "id": "evacuate",
+      "action": "xps_vacuum_preparation",
+      "label": "Evacuate the XPS analysis chamber",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "mount"
+      ],
+      "inputs": [
+        "xps-mounted"
+      ],
+      "outputs": [
+        "xps-ready"
+      ],
+      "parameters": {
+        "base_pressure": {
+          "value": 5e-09,
+          "minimum": null,
+          "maximum": null,
+          "unit": "torr",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "XPS vacuum chamber",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "This is analytical base pressure, not synthesis or drying pressure. No degassing or sputtering preparation is stated.",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+        }
+      ]
+    },
+    {
+      "id": "survey",
+      "action": "xps_survey_acquisition",
+      "label": "Acquire the survey spectra with Mg Kα radiation",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evacuate"
+      ],
+      "inputs": [
+        "xps-ready"
+      ],
+      "outputs": [
+        "xps-survey"
+      ],
+      "parameters": {
+        "pass_energy": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "energy_step": {
+          "value": 0.75,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hemispherical electron energy analyzer. X-ray photon energy, charge correction, acquisition time, takeoff angle and fitting background are not supplied.",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+        }
+      ]
+    },
+    {
+      "id": "high-resolution",
+      "action": "xps_high_resolution_acquisition",
+      "label": "Acquire high-resolution elemental spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evacuate"
+      ],
+      "inputs": [
+        "xps-ready"
+      ],
+      "outputs": [
+        "xps-high-resolution"
+      ],
+      "parameters": {
+        "pass_energy": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "energy_step": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 5i shows C 1s, O 1s, Te 3d5/2 and Cd 3d5/2. Figure curves are retained rather than fabricating individual fit components or an atomic-percent table.",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 3, printed p. 10344, X-ray Photoelectron Spectroscopy"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "composite",
+      "source_sample_label": "Figure 5i CdTe–MWNT heterostructure",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/MWNT",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "strong",
+      "source_sample_label": "Strongly oxidized MWNT precursor",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "mild",
+      "source_sample_label": "Mildly oxidized MWNT control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cd-binding",
+      "sample_id": "composite",
+      "property": "cd_3d5_2_binding_energy",
+      "technique": "XPS",
+      "value": {
+        "value": 405.22,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source fitted CdTe assignment; no fit uncertainty or reference calibration is stated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+        }
+      ]
+    },
+    {
+      "id": "strong-oxygen",
+      "sample_id": "strong",
+      "property": "oxygen_atomic_fraction",
+      "technique": "XPS",
+      "value": {
+        "value": null,
+        "minimum": 5,
+        "maximum": 6,
+        "unit": "atomic %",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source approximate range for highly oxidized tubes; not composite bulk oxygen stoichiometry.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+        }
+      ]
+    },
+    {
+      "id": "mild-oxygen",
+      "sample_id": "mild",
+      "property": "oxygen_atomic_fraction",
+      "technique": "XPS",
+      "value": {
+        "value": null,
+        "minimum": 1,
+        "maximum": 2,
+        "unit": "atomic %",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Separate partially oxidized control; no exact chemical treatment is reproduced.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Oxidation control experiments"
+        }
+      ]
+    },
+    {
+      "id": "carbon",
+      "sample_id": "composite",
+      "property": "author_c1s_surface_assignment",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Asymmetric C 1s with a pronounced higher-binding-energy contribution is attributed to carboxylic acids and carboxylate-like surface structures.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+        }
+      ]
+    },
+    {
+      "id": "tellurium",
+      "sample_id": "composite",
+      "property": "author_te_surface_oxide_assignment",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "The source assigns Te 3d5/2 oxide features to TeO3, literally. This assignment is retained without substituting TeO2 or treating it as a synthesized, quantitatively identified bulk phase.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+        }
+      ]
+    },
+    {
+      "id": "oxygen-curve",
+      "sample_id": "composite",
+      "property": "figure5_oxygen_signal_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "An O 1s high-resolution curve is displayed. The paper provides no exact O peak fit values, component percentages or current-paper quantitative O-species decomposition.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 5i"
+        }
+      ]
+    },
+    {
+      "id": "passivation",
+      "sample_id": "composite",
+      "property": "author_surface_passivation_limit",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Bulky nanotubes cannot occupy every nanocrystal surface site. Authors attribute oxide formation to incomplete passivation and prolonged ambient exposure; the exposure duration and oxide-growth kinetics are not measured.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+        }
+      ]
+    },
+    {
+      "id": "thermal-decomposition",
+      "sample_id": "composite",
+      "property": "author_temperature_decomposition_statement",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Surface decomposition is expected to accelerate at higher temperatures. No temperature-dependent stability experiment or quantified degradation threshold for this composite is provided.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, XPS interpretation"
+        }
+      ]
+    },
+    {
+      "id": "carboxyl-removal",
+      "sample_id": "strong",
+      "property": "source_carboxyl_removal_temperature_context",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 350,
+        "minimum": null,
+        "maximum": null,
+        "unit": "°C",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Surface stability discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Authors state heating does not completely remove MWNT carboxyl groups until approximately this temperature. This is contextual discussion, not a prescribed extra anneal or measured stability limit for each sample.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Surface stability discussion"
+        }
+      ]
+    },
+    {
+      "id": "integrity",
+      "sample_id": "composite",
+      "property": "author_thermal_integrity_expectation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Nanotube and nanocrystal intrinsic structures are expected to remain intact to such temperatures; this expectation is not an independently demonstrated complete thermal-stability series.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Surface stability discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Surface stability discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine main pages and the matched one-page SI text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Nanotube pretreatment, CdTe growth, distinct bound/free/comparison populations, structural/optical analyses and author mechanisms retain their own evidence scopes. Missing reagent doses, Te stock form/concentration, final drying conditions and printed EDS unit discrepancy remain explicit. Cited external works not independently inspected.",
+    "missing_fields": [
+      "No chemical masses, Cd:Te ratio, exact TDPA ratio, Te/TOP stock concentration or injection volume, isolated yield or raw spectral arrays are supplied.",
+      "No measured atom coordinates, unit-cell refinement, quantitative phase fraction, sample-specific complete particle distribution, electronic transport or photovoltaic device data are supplied.",
+      "Main procedures are partial literature descriptions; referenced external protocols do not fill unreported conditions."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=banerjee2003",
+      "relation": "Original figures, supplied SI, specimen distinctions and source limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

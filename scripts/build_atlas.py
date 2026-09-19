@@ -9,6 +9,11 @@ NAMES['InAs']='Indium arsenide'
 NAMES['Ag/Si']='Silver nanocrystals on silicon'
 NAMES['Ag']='Silver nanocrystals'
 NAMES['Pt']='Platinum nanocrystals'
+NAMES['CdTe/MWNT']='Cadmium telluride quantum dots on multiwalled carbon nanotubes'
+NAMES['CdTe']='Cadmium telluride · heterostructure-component context'
+NAMES['MWNT']='Multiwalled carbon nanotubes · host-component context'
+# Source-reviewed acronym: a carbon nanotube host, not an elemental formula.
+COMPONENT_ELEMENTS={'MWNT':['C']}
 NAMES['La2(MoO4)3:Yb,Er']='Ytterbium/erbium-codoped lanthanum molybdate'
 NAMES['PbS/glass']='PbS quantum dots in multicomponent oxide glass'
 NAMES['CdS/SiO2']='CdS nanocrystals in mesoporous silica'
@@ -51,7 +56,7 @@ def main():
         if m is None:continue
         m['record_ids'].add(r['record_id']);m['direct_record_ids'].add(r['record_id']);m['architectures'].add(r['material'].get('architecture','single_material'));m['paper_dois'].add(doi)
         for component in r['material'].get('components',[f]):
-            c=ensure(component,re.findall('[A-Z][a-z]?',component))
+            c=ensure(component,COMPONENT_ELEMENTS.get(component,re.findall('[A-Z][a-z]?',component)))
             if c:c['record_ids'].add(r['record_id']);c['paper_dois'].add(doi)
     # Title matches remain library search metadata. They cannot create material
     # pages or attach a paper to a synthesis contribution.

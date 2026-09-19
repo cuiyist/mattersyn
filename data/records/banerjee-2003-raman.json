@@ -1,0 +1,884 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "banerjee-2003-raman",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Banerjee & Wong (2003) · Raman response of precursor nanotubes and the composite",
+  "material": {
+    "formula": "CdTe/MWNT",
+    "family": "CdTe nanocrystals grown on oxidized multiwalled carbon nanotubes",
+    "elements": [
+      "Cd",
+      "Te",
+      "C",
+      "O"
+    ],
+    "components": [
+      "CdTe",
+      "MWNT"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "785 nm micro-Raman spectroscopy",
+  "sources": [
+    {
+      "id": "banerjee2003",
+      "doi": "10.1021/ja035980c",
+      "title": "In Situ Quantum Dot Growth on Multiwalled Carbon Nanotubes",
+      "authors": "Sarbajit Banerjee; Stanislaus S. Wong",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja035980c",
+      "main_status": "All nine supplied main pages text and visually reviewed; independent source and canonical audits completed. Matched one-page SI also fully read and visually reviewed.",
+      "si_status": "Matched supplied one-page Supporting Information: infrared spectrum of oxidized MWNTs. Identity supported by embedded metadata naming ja035980c, main-paper SI declaration and matching spectrum subject. Fully read and visually inspected; no added synthesis recipe.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "banerjee2003",
+    "recipe_family": "banerjee2003-cdte-mwnt",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/MWNT",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 1, printed p. 10342, Abstract"
+        }
+      ],
+      "note": "Heterostructure descriptor, not a stoichiometric bulk compound or atomically refined junction."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Complete nine-page main and matched one-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Oxidized multiwalled carbon nanotubes with oxygenated surface sites",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, nanotube processing"
+        }
+      ],
+      "note": "Oxygen content and functional-group coverage vary; no exact molecular formula or site pattern is determined."
+    }
+  },
+  "materials": [
+    {
+      "id": "mwnt-oxidized",
+      "name": "Aggressively oxidized and purified MWNTs; variable oxygenated surface",
+      "formula": null,
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, nanotube processing"
+        }
+      ]
+    },
+    {
+      "id": "composite-specimen",
+      "name": "CdTe nanocrystal–oxidized MWNT heterostructure",
+      "formula": "CdTe/MWNT",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 2, printed p. 10343, Experimental Section, heterostructure synthesis"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "raman-data",
+      "name": "Acquire separate precursor and composite Raman spectra output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "mwnt-oxidized",
+        "composite-specimen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "acquire",
+      "action": "micro_raman_acquisition",
+      "label": "Acquire separate precursor and composite Raman spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "mwnt-oxidized",
+        "composite-specimen"
+      ],
+      "outputs": [
+        "raman-data"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 785,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, Optical Spectroscopy"
+            },
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 4, printed p. 10345, Optical Spectroscopy continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "laser_power": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, Optical Spectroscopy"
+            },
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 4, printed p. 10345, Optical Spectroscopy continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "confocal_aperture": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 3, printed p. 10344, Optical Spectroscopy"
+            },
+            {
+              "source_id": "banerjee2003",
+              "locator": "Main PDF p. 4, printed p. 10345, Optical Spectroscopy continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, Optical Spectroscopy"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 4, printed p. 10345, Optical Spectroscopy continuation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 3, printed p. 10344, Optical Spectroscopy"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 4, printed p. 10345, Optical Spectroscopy continuation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Jasco Ventuno micro-Raman instrument with diode laser. Power is the stated laser setting, not irradiance; spot size, exposure, spectral resolution, calibration and sample temperature are not provided.",
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 3, printed p. 10344, Optical Spectroscopy"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 4, printed p. 10345, Optical Spectroscopy continuation"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "precursor",
+      "source_sample_label": "Figure 6 upper blue: purified oxidized MWNT precursor",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "composite",
+      "source_sample_label": "Figure 6 lower red: CdTe–MWNT product",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/MWNT",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "bulk-reference",
+      "source_sample_label": "Cited bulk CdTe Raman reference",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion and reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion and reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion and reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion and reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "lo",
+      "sample_id": "composite",
+      "property": "cdte_lo_raman_peak",
+      "technique": "Micro-Raman",
+      "value": {
+        "value": 166,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Assigned LO-type confined CdTe band, absent in the precursor spectrum.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation"
+        }
+      ]
+    },
+    {
+      "id": "bulk-lo",
+      "sample_id": "bulk-reference",
+      "property": "cited_bulk_cdte_lo_peak",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 170,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation and reference 41"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cited comparison value, not a separately measured current-paper bulk sample.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman interpretation and reference 41"
+        }
+      ]
+    },
+    {
+      "id": "g-precursor",
+      "sample_id": "precursor",
+      "property": "nanotube_g_mode",
+      "technique": "Micro-Raman",
+      "value": {
+        "value": 1590,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Continuation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Continuation"
+        }
+      ]
+    },
+    {
+      "id": "d-precursor",
+      "sample_id": "precursor",
+      "property": "nanotube_disorder_band_range",
+      "technique": "Micro-Raman",
+      "value": {
+        "value": null,
+        "minimum": 1290,
+        "maximum": 1320,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source band-position range; not an integrated D/G ratio or spectral width.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+        }
+      ]
+    },
+    {
+      "id": "g-composite",
+      "sample_id": "composite",
+      "property": "nanotube_g_mode",
+      "technique": "Micro-Raman",
+      "value": {
+        "value": 1590,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+          },
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Continuation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+        },
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Continuation"
+        }
+      ]
+    },
+    {
+      "id": "d-composite",
+      "sample_id": "composite",
+      "property": "nanotube_disorder_band_range",
+      "technique": "Micro-Raman",
+      "value": {
+        "value": null,
+        "minimum": 1290,
+        "maximum": 1320,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source band-position range; not an integrated D/G ratio or spectral width.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 9, printed p. 10350, Raman continuation"
+        }
+      ]
+    },
+    {
+      "id": "lo-absent",
+      "sample_id": "precursor",
+      "property": "precursor_cdte_band_comparison",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "The product LO-type band is absent from the precursor MWNT spectrum, supporting formation of the CdTe component.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+        }
+      ]
+    },
+    {
+      "id": "confinement",
+      "sample_id": "composite",
+      "property": "author_raman_confinement_interpretation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Downshift and broadening relative to the cited bulk 170 cm^-1 mode are consistent with confined CdTe clusters, citing earlier studies. No Raman size calibration, phonon-confinement fit or exact FWHM is supplied.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 8, printed p. 10349, Raman discussion"
+        }
+      ]
+    },
+    {
+      "id": "plot",
+      "sample_id": "composite",
+      "property": "figure6_display_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Figure 6 uses arbitrary intensities; upper blue precursor and lower red composite curves are vertically separated. No quantitative intensity normalization, D/G ratio or additional overtone assignment is provided.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "banerjee2003",
+            "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "banerjee2003",
+          "locator": "Main PDF p. 7, printed p. 10348, Figure 6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine main pages and the matched one-page SI text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Nanotube pretreatment, CdTe growth, distinct bound/free/comparison populations, structural/optical analyses and author mechanisms retain their own evidence scopes. Missing reagent doses, Te stock form/concentration, final drying conditions and printed EDS unit discrepancy remain explicit. Cited external works not independently inspected.",
+    "missing_fields": [
+      "No chemical masses, Cd:Te ratio, exact TDPA ratio, Te/TOP stock concentration or injection volume, isolated yield or raw spectral arrays are supplied.",
+      "No measured atom coordinates, unit-cell refinement, quantitative phase fraction, sample-specific complete particle distribution, electronic transport or photovoltaic device data are supplied.",
+      "Main procedures are partial literature descriptions; referenced external protocols do not fill unreported conditions."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=banerjee2003",
+      "relation": "Original figures, supplied SI, specimen distinctions and source limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
