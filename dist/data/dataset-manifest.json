@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.6.0",
-  "record_count": 172,
-  "group_count": 12,
+  "dataset_version": "0.7.0",
+  "record_count": 184,
+  "group_count": 13,
   "families": [
     "II-VI colloidal nanocrystals",
     "III–V semiconductors",
     "II–VI chalcogenides",
     "II–VI core/shell chalcogenides",
+    "II–VI quantum-dot heterostructures",
     "Iron oxides",
     "Lead chalcogenides",
     "Lead halide perovskites",
@@ -19,6 +20,591 @@
   ],
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
   "records": [
+    {
+      "record_id": "danek-1996-annealing-control",
+      "title": "Danek et al. (1996) · Annealing of a solution-deposited particle film",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Helium annealing control",
+      "record_type": "procedure",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "7e63e04edf6ef434f485338cf09bdaa387293946fbc7ab5de27f1c9135ffff86",
+      "recipe_signature": "08c2ffadaf3373305e4f60aecec63a1675354291c06bdb430a458f3071571ad3",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-annealing-control.json",
+      "page_url": "records/danek-1996-annealing-control.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-bare-dot-film",
+      "title": "Danek et al. (1996) · Bare CdSe dots in a ZnSe composite film",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Electrospray organometallic chemical vapor deposition (ES-OMCVD)",
+      "record_type": "literature_protocol",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "39de3a1946b651062aa138528fae65e646e783ad7b5f4a74703283d28ca8b2f5",
+      "recipe_signature": "18d11d06e6157483db01b840be0cbd3c82b6a3479390835eddbf1d1ec87cd1c5",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-bare-dot-film.json",
+      "page_url": "records/danek-1996-bare-dot-film.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-characterization",
+      "title": "Danek et al. (1996) · Characterization preparation and acquisition",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Optical, compositional and structural characterization",
+      "record_type": "procedure",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "5b4280ca2250153c86430cf7d75795c7a0ea5c352585b34729ba0c096b5a21a8",
+      "recipe_signature": "c626050999f750cabe8f361dfa8a8aa0a1731a4c12efba356052fbc86b1dfade",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-characterization.json",
+      "page_url": "records/danek-1996-characterization.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-electrospray-dispersion",
+      "title": "Danek et al. (1996) · Nanocrystal dispersion for electrospray",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Pyridine/acetonitrile dispersion preparation",
+      "record_type": "procedure",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "f279931467fc61700d734923ce7c9825c0766a485eb54c6da5d77857c667969a",
+      "recipe_signature": "147137c6bdb7d32a8395973c40dc51f27a5979320c1050ee04340cf157613b67",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-electrospray-dispersion.json",
+      "page_url": "records/danek-1996-electrospray-dispersion.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-film-characterization",
+      "title": "Danek et al. (1996) · Optical cohorts of quantum-dot composite films",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Film photoluminescence and excitation spectroscopy",
+      "record_type": "observation",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "53d5fa31aaa8d3d7741af1469b2d101bf65f0e475281f4ad552c1775ed088f0e",
+      "recipe_signature": "cb3057ef45d3c79047db96ebc6dd3cb81010240103cac9b455affef5fee3fc88",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-film-characterization.json",
+      "page_url": "records/danek-1996-film-characterization.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-high-temperature-overgrowth",
+      "title": "Danek et al. (1996) · Higher-temperature ZnSe overgrowth",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Comparative solution-growth conditions",
+      "record_type": "observation",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "d5f046745b4c6a00b739c4e1eb89da263deac0d9eef898215a9dca5eb994d6c9",
+      "recipe_signature": "6d5f25fc615a446d01e2f06d5c9e6c399ea141cc5430a586ebad0a8b7a1bcbbc",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-high-temperature-overgrowth.json",
+      "page_url": "records/danek-1996-high-temperature-overgrowth.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-no-dezn-control",
+      "title": "Danek et al. (1996) · Comparative reaction without DEZn dosing",
+      "formula": "CdSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Comparative solution-growth conditions",
+      "record_type": "protocol_variant",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "fb42d6b6ff6182b3d22d53dbcdd765b2fa80e59fefc9f8942d383b0a5a7196f3",
+      "recipe_signature": "6c371692a6d30b8dc314b0ada5b6f7374792d125b0a9ed0a0e02e9da01407b2a",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-no-dezn-control.json",
+      "page_url": "records/danek-1996-no-dezn-control.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-no-seed-control",
+      "title": "Danek et al. (1996) · ZnSe precursor reaction without CdSe nuclei",
+      "formula": "ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Comparative solution-growth conditions",
+      "record_type": "protocol_variant",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "04ef495df7862ada46c47928300ffda37f09087106036c97c3527edc62671132",
+      "recipe_signature": "ac69490b48bdee264547462a1cba32bca933e08b8685c38ee33423e0a3fd27b5",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-no-seed-control.json",
+      "page_url": "records/danek-1996-no-seed-control.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-overcoated-dot-film",
+      "title": "Danek et al. (1996) · ZnSe-overcoated CdSe dots in a ZnSe composite film",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Electrospray organometallic chemical vapor deposition (ES-OMCVD)",
+      "record_type": "literature_protocol",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "6d51b973fa19136c3347c7a6400f152cd8503d2d82d3714257c77f2badf8fc21",
+      "recipe_signature": "a986c6ff2ce4371eb33f72d60fb77787ea5e27534abccecb5c4330cc4bfb822b",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-overcoated-dot-film.json",
+      "page_url": "records/danek-1996-overcoated-dot-film.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-seed-preparation",
+      "title": "Danek et al. (1996) · CdSe seed and precursor preparation",
+      "formula": "CdSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Cited CdSe core preparation and purification",
+      "record_type": "procedure",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "7abf2c96b697b00445f56e90dd5a25868b756d443d3f64fe382f938441cd4bfd",
+      "recipe_signature": "fad9ebe83b91cbf4d89da5fe7db59a9ad3958d0d51dfa25f57a443068d01135d",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-seed-preparation.json",
+      "page_url": "records/danek-1996-seed-preparation.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-solution-characterization",
+      "title": "Danek et al. (1996) · Colloidal structure, composition and optical cohorts",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Source-specific characterization cohorts",
+      "record_type": "observation",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "0b1baefc1af081413514403aa849963170360c71d09aba74f27dac026439905d",
+      "recipe_signature": "9e5ef63b8336c7b12f405c3b406fc449c7060444337579aee2eae197268095a6",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-solution-characterization.json",
+      "page_url": "records/danek-1996-solution-characterization.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
+    {
+      "record_id": "danek-1996-znse-overgrowth",
+      "title": "Danek et al. (1996) · Solution overgrowth of ZnSe on CdSe",
+      "formula": "CdSe/ZnSe",
+      "family": "II–VI quantum-dot heterostructures",
+      "method": "Seeded ZnSe overgrowth in TOP",
+      "record_type": "literature_protocol",
+      "source_year": 1996,
+      "source_doi": "10.1021/cm9503137",
+      "revision": 1,
+      "record_sha256": "548f76bcf0877b5b8180ea666889c1794537ff92bd1e1592d062f21222d433df",
+      "recipe_signature": "7348462aaaafed4ac6426e2a296fc98c943fc198c5ff4fd5abb68dfc78d7e1f0",
+      "group_id": "group-7fe166983a48",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/danek-1996-znse-overgrowth.json",
+      "page_url": "records/danek-1996-znse-overgrowth.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "ZnSe"
+      ]
+    },
     {
       "record_id": "feld-2019-fe2-carbonate-to-oleate-preparation",
       "title": "Fe(II) source: aqueous carbonate precipitation and oleate preparation",

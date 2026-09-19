@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "danek-1996-annealing-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Danek et al. (1996) · Annealing of a solution-deposited particle film",
+  "material": {
+    "formula": "CdSe/ZnSe",
+    "family": "II–VI quantum-dot heterostructures",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn"
+    ],
+    "components": [
+      "CdSe",
+      "ZnSe"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Helium annealing control",
+  "sources": [
+    {
+      "id": "danek1996",
+      "doi": "10.1021/cm9503137",
+      "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe",
+      "authors": "Michal Danek; Klavs F. Jensen; Chris B. Murray; Moungi G. Bawendi",
+      "year": 1996,
+      "url": "https://doi.org/10.1021/cm9503137",
+      "main_status": "All eight supplied main pages read and visually inspected; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "danek1996",
+    "recipe_family": "danek1996-passivation-and-film-composites",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Annealed film of CdSe/ZnSe particles; final architecture not established after author-interpreted alloying",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF pp. 1–8, printed pp. 173–180"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF pp. 1–8, printed pp. 173–180"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF pp. 1–8, printed pp. 173–180"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "dots",
+      "name": "CdSe/ZnSe nanocrystals",
+      "formula": "CdSe/ZnSe",
+      "role": "particle film precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "[ZnSe/CdSe]=2.5; film deposited from solution, not an ES-OMCVD matrix composite."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    },
+    {
+      "id": "glass",
+      "name": "Glass slide",
+      "formula": null,
+      "role": "substrate",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    },
+    {
+      "id": "he",
+      "name": "Helium",
+      "formula": "He",
+      "role": "annealing gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "as-deposited",
+      "name": "Deposit the nanocrystal film output",
+      "kind": "mixture",
+      "parent_ids": [
+        "dots",
+        "glass"
+      ]
+    },
+    {
+      "id": "annealed",
+      "name": "Anneal under helium output",
+      "kind": "mixture",
+      "parent_ids": [
+        "as-deposited",
+        "he"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "deposit",
+      "action": "solution_deposition",
+      "label": "Deposit the nanocrystal film",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dots",
+        "glass"
+      ],
+      "outputs": [
+        "as-deposited"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Solution-deposited film on glass; exact solution and deposition parameters not restated.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    },
+    {
+      "id": "anneal",
+      "action": "annealing",
+      "label": "Anneal under helium",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "as-deposited",
+        "he"
+      ],
+      "outputs": [
+        "annealed"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Helium flux; flow and pressure unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Unresolved source conflict: body~400°C versus Figure4 caption~450°C. Do not turn this into a400–450°C interval or select one value.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "before",
+      "source_sample_label": "Figure4a particle film",
+      "batch_id": null,
+      "material_state_id": "as-deposited",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "after",
+      "source_sample_label": "Figure4b annealed particle film",
+      "batch_id": null,
+      "material_state_id": "annealed",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Absorption blue shift interpreted by authors as alloying; Zn0.7Cd0.3Se bulk bandgap inFigure4 is calculated reference, not a measured refined structure."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "conflicting-temperature-report-400",
+      "sample_id": "after",
+      "property": "conflicting_source_temperature_report",
+      "technique": "Source text/caption comparison",
+      "value": {
+        "value": 400,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Body text report; conflicts with the other report; operative annealing temperature remains unresolved",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Conflicting reports for one annealing control, not alternative experimental recipes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    },
+    {
+      "id": "conflicting-temperature-report-450",
+      "sample_id": "after",
+      "property": "conflicting_source_temperature_report",
+      "technique": "Source text/caption comparison",
+      "value": {
+        "value": 450,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Figure4 caption report; conflicts with the other report; operative annealing temperature remains unresolved",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Conflicting reports for one annealing control, not alternative experimental recipes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Structural Characterization and Figure4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eight supplied main pages read in full and visually inspected. Independently audited source extraction and canonical chemistry, conditions and sample links. SI not located or verified. General recipes, control studies and characterization cohorts remain distinct; these record IDs are not author-assigned independent batches.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or fully refined core/shell interface structure is supplied.",
+      "Exact annealing temperature is conflicting; flow, pressure, ramp and film preparation parameters absent."
+    ],
+    "conflicts": [
+      "Body~400°C versus Figure4caption~450°C; unresolved."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source review",
+      "url": "../paper-review.html?id=danek1996",
+      "relation": "Supplied main only; matching SI not located or verified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

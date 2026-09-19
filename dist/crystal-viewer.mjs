@@ -1,7 +1,7 @@
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 let registryPromise;
-const colors={O:'#ce6374',Zn:'#6c96ba',In:'#91a3c6',P:'#d4a457',Cs:'#9983bd',Pb:'#6b91aa',Br:'#b78654',Co:'#789baa',Fe:'#c48c59',Ir:'#7993a7',X:'#9575b0'};
+const colors={Cd:'#d9af67',Se:'#689db3',O:'#ce6374',Zn:'#6c96ba',In:'#91a3c6',P:'#d4a457',Cs:'#9983bd',Pb:'#6b91aa',Br:'#b78654',Co:'#789baa',Fe:'#c48c59',Ir:'#7993a7',X:'#9575b0'};
 export async function mountCrystalReferences(host,r){
  if(!host)return;host.replaceChildren();registryPromise??=fetch(new URL('assets/crystal-references/registry.json',import.meta.url),{cache:'no-store'}).then(r=>r.json());const data=await registryPromise;const entries=data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id));if(!entries.length){if(r.lineage?.source_group==='heath1996')host.append(el('h3','Atomic structure data'),el('p','The supplied article reports microscopy and crystallinity evidence but provides no atomic coordinates or measured CIF. A verified Ge reference structure is not available in the current local collection; no downloadable sample structure is inferred from the lattice mismatch.','guide-notice'));return;}
  host.append(el('h3','Reference crystal structures'),el('p','Independent bulk references for comparison. The unit cell and extended lattice are illustrative references, not atom-by-atom reconstructions of the synthesized nanocrystal.','guide-notice'));const grid=el('div',undefined,'crystal-reference-grid');host.append(grid);

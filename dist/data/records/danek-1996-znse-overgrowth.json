@@ -1,0 +1,1790 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "danek-1996-znse-overgrowth",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Danek et al. (1996) · Solution overgrowth of ZnSe on CdSe",
+  "material": {
+    "formula": "CdSe/ZnSe",
+    "family": "II–VI quantum-dot heterostructures",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn"
+    ],
+    "components": [
+      "CdSe",
+      "ZnSe"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Seeded ZnSe overgrowth in TOP",
+  "sources": [
+    {
+      "id": "danek1996",
+      "doi": "10.1021/cm9503137",
+      "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe",
+      "authors": "Michal Danek; Klavs F. Jensen; Chris B. Murray; Moungi G. Bawendi",
+      "year": 1996,
+      "url": "https://doi.org/10.1021/cm9503137",
+      "main_status": "All eight supplied main pages read and visually inspected; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "danek1996",
+    "recipe_family": "danek1996-passivation-and-film-composites",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe core with ZnSe overlayer",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 1, printed p. 173, Abstract"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF pp. 1–8, printed pp. 173–180"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF pp. 1–8, printed pp. 173–180"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF pp. 1–8, printed pp. 173–180"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-seeds",
+      "name": "Purified, size-selected CdSe nanocrystals",
+      "formula": "CdSe",
+      "role": "seed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "Reported purified nanocrystal sample; ligand mass basis not specified",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Initial TOP/TOPO preparation is cited to reference10; detailed core synthesis is not repeated here."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "top",
+      "name": "Trioctylphosphine",
+      "formula": "C24H51P",
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Fluka; used as received (Materials)."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "topse",
+      "name": "Trioctylphosphine selenide",
+      "formula": "C24H51PSe",
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "1.0 M stock prepared by cited reference10. Seed dispersion charge and fed stock amounts are distinct."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "dezn",
+      "name": "Diethylzinc",
+      "formula": "C4H10Zn",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Aldrich; filtered through0.2µm PTFE. Source explicitly identifies high pyrophoricity. Separate OMCVD grade is not this reagent."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "nonane",
+      "name": "Nonane",
+      "formula": "C9H20",
+      "role": "optional cosolvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Anhydrous, Aldrich; used as received. Optional small amount accelerates redispersion; amount unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "antisolvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Electronic grade, Mallinckrodt; used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "butanol",
+      "name": "Butanol (isomer unspecified)",
+      "formula": "C4H10O",
+      "role": "quench reagent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Mallinckrodt; source does not identify isomer. Alcoholyzes residual DEZn."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": "C6H14",
+      "role": "antisolvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "HPLC grade, Mallinckrodt; used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "pyridine",
+      "name": "Pyridine",
+      "formula": "C5H5N",
+      "role": "ligand and solvent",
+      "stage": "surface_exchange",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Anhydrous, Aldrich; used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "ar",
+      "name": "Argon",
+      "formula": "Ar",
+      "role": "inert atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "name": "Nitrogen",
+      "formula": "N2",
+      "role": "storage atmosphere",
+      "stage": "storage",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Materials"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "seed-dispersion",
+      "name": "CdSe seeds in TOP/TOPSe",
+      "components": [
+        {
+          "material_id": "cdse-seeds",
+          "quantities": {}
+        },
+        {
+          "material_id": "top",
+          "quantities": {
+            "volume": {
+              "value": 10,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "danek1996",
+                  "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "topse",
+          "quantities": {
+            "amount": {
+              "value": 0.5,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "danek1996",
+                  "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [
+        "redisperse"
+      ],
+      "scope": "10mL TOP contains0.5mmol TOPSe. Optional nonane is added only if required; final volume not measured.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "growth-feed",
+      "name": "Equimolar DEZn/TOPSe in TOP",
+      "components": [
+        {
+          "material_id": "dezn",
+          "quantities": {
+            "amount": {
+              "value": null,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "not_reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "danek1996",
+                  "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "topse",
+          "quantities": {
+            "amount": {
+              "value": null,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "not_reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "danek1996",
+                  "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "top",
+          "quantities": {
+            "volume": {
+              "value": 10,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "danek1996",
+                  "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {
+        "dezn_per_topse": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Equimolar DEZn and TOPSe; absolute feed precursor quantities not reported",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "prepare-feed"
+      ],
+      "scope": "Separate10mL TOP stock; total dosed volume and absolute precursor amounts are unreported. Do not infer the whole stock was delivered.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "precipitated",
+      "name": "Precipitate purified CdSe seeds output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cdse-seeds",
+        "methanol"
+      ]
+    },
+    {
+      "id": "seed-pellet",
+      "name": "Collect CdSe nanocrystals output",
+      "kind": "mixture",
+      "parent_ids": [
+        "precipitated"
+      ]
+    },
+    {
+      "id": "seed-slurry",
+      "name": "Prepare the CdSe seed dispersion output",
+      "kind": "mixture",
+      "parent_ids": [
+        "seed-pellet",
+        "top",
+        "topse"
+      ]
+    },
+    {
+      "id": "nonane-branch",
+      "name": "Optional nonane-assisted redispersion output",
+      "kind": "mixture",
+      "parent_ids": [
+        "seed-slurry",
+        "nonane"
+      ]
+    },
+    {
+      "id": "filtered-seeds",
+      "name": "Filter the nanocrystal dispersion output",
+      "kind": "mixture",
+      "parent_ids": [
+        "seed-slurry"
+      ]
+    },
+    {
+      "id": "hot-seeds",
+      "name": "Heat the argon-backfilled flask output",
+      "kind": "mixture",
+      "parent_ids": [
+        "filtered-seeds",
+        "ar"
+      ]
+    },
+    {
+      "id": "prepared-feed",
+      "name": "Prepare and filter the shell-growth feed output",
+      "kind": "mixture",
+      "parent_ids": [
+        "dezn",
+        "topse",
+        "top"
+      ]
+    },
+    {
+      "id": "overgrown",
+      "name": "Dose the precursors while stirring output",
+      "kind": "mixture",
+      "parent_ids": [
+        "hot-seeds",
+        "growth-feed"
+      ]
+    },
+    {
+      "id": "cooled",
+      "name": "Cool to room temperature output",
+      "kind": "mixture",
+      "parent_ids": [
+        "overgrown"
+      ]
+    },
+    {
+      "id": "quenched",
+      "name": "Alcoholyze residual diethylzinc output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cooled",
+        "butanol"
+      ]
+    },
+    {
+      "id": "isolated",
+      "name": "Isolate the overcoated particles output",
+      "kind": "mixture",
+      "parent_ids": [
+        "quenched",
+        "hexane"
+      ]
+    },
+    {
+      "id": "pyridine-particles",
+      "name": "Purify and exchange the surface ligand output",
+      "kind": "mixture",
+      "parent_ids": [
+        "isolated",
+        "pyridine",
+        "hexane"
+      ]
+    },
+    {
+      "id": "stored",
+      "name": "Store in anhydrous pyridine output",
+      "kind": "product",
+      "parent_ids": [
+        "pyridine-particles",
+        "pyridine",
+        "n2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "precipitate",
+      "action": "precipitation",
+      "label": "Precipitate purified CdSe seeds",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-seeds",
+        "methanol"
+      ],
+      "outputs": [
+        "precipitated"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Methanol precipitation before transfer to the glovebox; solvent volume is not stated.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "separate",
+      "action": "centrifugation",
+      "label": "Collect CdSe nanocrystals",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "precipitate"
+      ],
+      "inputs": [
+        "precipitated"
+      ],
+      "outputs": [
+        "seed-pellet"
+      ],
+      "parameters": {
+        "speed": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "seed-pellet",
+      "description": "Separate by centrifugation; retain the particles, then transfer into a glovebox.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "redisperse",
+      "action": "redispersion",
+      "label": "Prepare the CdSe seed dispersion",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "separate"
+      ],
+      "inputs": [
+        "seed-pellet",
+        "top",
+        "topse"
+      ],
+      "outputs": [
+        "seed-slurry"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Disperse in10mL TOP containing0.5mmol TOPSe in a glovebox. Optional nonane amount is unspecified.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "nonane-option",
+      "action": "cosolvent_addition",
+      "label": "Optional nonane-assisted redispersion",
+      "stage": "precursor_preparation",
+      "branch": "optional_redispersion",
+      "optional": true,
+      "depends_on": [
+        "redisperse"
+      ],
+      "inputs": [
+        "seed-slurry",
+        "nonane"
+      ],
+      "outputs": [
+        "nonane-branch"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Optional small amount of anhydrous nonane. The main filtered-dispersion state includes this branch only when used; no volume assumed.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "filter-seeds",
+      "action": "filtration",
+      "label": "Filter the nanocrystal dispersion",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "redisperse"
+      ],
+      "inputs": [
+        "seed-slurry"
+      ],
+      "outputs": [
+        "filtered-seeds"
+      ],
+      "parameters": {
+        "filter_pore_size": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "filtered-seeds",
+      "description": "0.2µm PTFE filter; collect the dispersion. Optional nonane-assisted branch is not a mandatory step.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ],
+      "optional_inputs": [
+        "nonane-branch"
+      ]
+    },
+    {
+      "id": "heat",
+      "action": "heating",
+      "label": "Heat the argon-backfilled flask",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "filter-seeds"
+      ],
+      "inputs": [
+        "filtered-seeds",
+        "ar"
+      ],
+      "outputs": [
+        "hot-seeds"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Argon, Schlenk line",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Transfer to an Ar-backfilled flask and heat to150°C. Body discussion gives150–160°C as general overgrowth range; standard procedure is150°C. Pressure and stabilization time unreported.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 3, printed p. 175, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "prepare-feed",
+      "action": "stock_preparation",
+      "label": "Prepare and filter the shell-growth feed",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dezn",
+        "topse",
+        "top"
+      ],
+      "outputs": [
+        "prepared-feed"
+      ],
+      "parameters": {
+        "filter_pore_size": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Glovebox; gas not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix equimolar DEZn and TOPSe in a separate10mL TOP portion;0.2µm PTFE syringe filtration. Absolute amounts/concentrations and total delivered fraction are unknown. Independent stock preparation; no timing relative to flask heating is inferred.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "dose",
+      "action": "continuous_addition",
+      "label": "Dose the precursors while stirring",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat",
+        "prepare-feed"
+      ],
+      "inputs": [
+        "hot-seeds",
+        "growth-feed"
+      ],
+      "outputs": [
+        "overgrown"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "feed_flow": {
+          "value": 0.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL/min",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "dosed_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Argon, Schlenk line",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Desired precursor amount added; overgrowth monitored by UV/vis absorption",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Syringe-pump delivery to heated stirred dispersion; follow overgrowth by UV/vis absorption. Stop after the desired amount, not a stated exact time. Slow delivery is intended to suppress separate ZnSe nucleation.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 3, printed p. 175, Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "cool",
+      "action": "cooling",
+      "label": "Cool to room temperature",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dose"
+      ],
+      "inputs": [
+        "overgrown"
+      ],
+      "outputs": [
+        "cooled"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Room temperature is not a numerically specified setpoint; cooling rate/time unknown.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "quench",
+      "action": "alcoholysis",
+      "label": "Alcoholyze residual diethylzinc",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cool"
+      ],
+      "inputs": [
+        "cooled",
+        "butanol"
+      ],
+      "outputs": [
+        "quenched"
+      ],
+      "parameters": {
+        "butanol_volume": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add about5mL butanol to the cooled mixture; no quench duration is given.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "isolate",
+      "action": "precipitation_centrifugation",
+      "label": "Isolate the overcoated particles",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "quench"
+      ],
+      "inputs": [
+        "quenched",
+        "hexane"
+      ],
+      "outputs": [
+        "isolated"
+      ],
+      "parameters": {
+        "speed": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "isolated",
+      "description": "Precipitate with hexane and centrifuge; retain nanocrystals. Hexane volume and centrifuge settings are unreported.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "exchange",
+      "action": "ligand_exchange",
+      "label": "Purify and exchange the surface ligand",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "isolate"
+      ],
+      "inputs": [
+        "isolated",
+        "pyridine",
+        "hexane"
+      ],
+      "outputs": [
+        "pyridine-particles"
+      ],
+      "parameters": {
+        "cycle_count": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "pyridine-particles",
+      "description": "Repeated redispersion in pyridine and precipitation with hexane; cycle count, volumes and durations unspecified. Source reports phosphorus below AES detection after purification.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Purification and storage discussion"
+        }
+      ]
+    },
+    {
+      "id": "store",
+      "action": "storage",
+      "label": "Store in anhydrous pyridine",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "exchange"
+      ],
+      "inputs": [
+        "pyridine-particles",
+        "pyridine",
+        "n2"
+      ],
+      "outputs": [
+        "stored"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "day",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "danek1996",
+              "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Store dispersed in anhydrous pyridine under nitrogen. Body reports several months of inert-gas stability, not an exact required storage duration.",
+      "evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        },
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 4, printed p. 176, Purification and storage discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "overcoated",
+      "source_sample_label": "General isolated CdSe/ZnSe product",
+      "batch_id": null,
+      "material_state_id": "stored",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Overcoated nanocrystals; sample-specific size and shape are in the separate characterization record",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 3, printed p. 175, Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Pyridine after exchange",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "danek1996",
+            "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "danek1996",
+          "locator": "Main PDF p. 2, printed p. 174, Synthesis of CdSe/ZnSe Nanocrystals"
+        }
+      ],
+      "notes": [
+        "This general recipe is not a unique quantified run or automatic assignment of every later figure."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eight supplied main pages read in full and visually inspected. Independently audited source extraction and canonical chemistry, conditions and sample links. SI not located or verified. General recipes, control studies and characterization cohorts remain distinct; these record IDs are not author-assigned independent batches.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or fully refined core/shell interface structure is supplied.",
+      "Exact seed size of the general procedure, shell target, absolute feed precursor amounts, feed concentration, delivered volume and growth time are unstated.",
+      "Flask size, stirring rate, inert pressure, ramp/cooling profile, workup volumes/centrifuge settings and cycle count are unstated.",
+      "Butanol isomer and optional nonane amount are unspecified."
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "precursor_selection",
+      "partial_protocol"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Full source review",
+      "url": "../paper-review.html?id=danek1996",
+      "relation": "Supplied main only; matching SI not located or verified."
+    },
+    {
+      "label": "Solution and structural evidence",
+      "url": "../records/danek-1996-solution-characterization.html",
+      "relation": "Multiple explicitly separated cohorts; no complete run-to-figure assignment inferred."
+    },
+    {
+      "label": "Upstream CdSe and TOPSe preparation",
+      "url": "../records/danek-1996-seed-preparation.html",
+      "relation": "Only steps restated by this source; full cited protocol remains its own source."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

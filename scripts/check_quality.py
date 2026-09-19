@@ -16,6 +16,7 @@ import re
 import sys
 
 CRYSTALS = {
+    "cdse-wurtzite-cod-9016056": (186, "92e759602b5c7fd26e8bb0fe63bc7a3b52c86d09cfbe72d79f71a297f8b8ac4a", {"Cd": 2, "Se": 2}),
     "zno-wurtzite": (186, "dbc92c19b101d4fabb5594cc89f2a31629a0e8adab6539edd248c40c585649a1", {"Zn": 2, "O": 2}),
     "ir-fcc": (225, "ecc80c2b26b98c67712b6418ab7175e6e4a86a6f277a58d7556459c8f0ff3566", {"Ir": 4}),
     "inp-zinc-blende": (216, "dae92a9da8c000121f86e0f5c0f133d39f65cb94ccfb005410f2c213532afb42", {"In": 4, "P": 4}),
@@ -198,7 +199,7 @@ class Audit:
     def crystals(self):
         base = self.dist / "assets/crystal-references"
         entries = {e["id"]: e for e in load(base / "registry.json")["entries"]}
-        self.check(set(entries) == set(CRYSTALS), "Seven independently reviewed crystal references changed; review additions explicitly")
+        self.check(set(entries) == set(CRYSTALS), "Eight independently reviewed crystal references changed; review additions explicitly")
         for cid, (sg, expected_hash, composition) in CRYSTALS.items():
             if not self.check(cid in entries, f"Missing crystal {cid}"):
                 continue
@@ -301,7 +302,7 @@ def main():
             method(*values)
         except (OSError, ValueError, KeyError, TypeError, IndexError) as error:
             audit.errors.append(f"{method.__name__}: incomplete/malformed build: {type(error).__name__}: {error}")
-    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, six pinned database CIFs plus one pinned ideal silicon reference, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
+    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, seven pinned database CIFs plus one pinned ideal silicon reference, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
     print(json.dumps(report, indent=2, ensure_ascii=False))
     return 1 if audit.errors else 0
 

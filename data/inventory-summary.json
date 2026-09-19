@@ -1,36 +1,36 @@
 {
-  "inventory_version": "2026-09-19-heath-actual-local-snapshot",
-  "scope": "Inventory reconciled to locally integrated canonical records. Incoming-folder counts remain separate; local generated/proposed routes do not establish remote publication or independent experiment counts.",
+  "inventory_version": "2026-09-19-danek-actual-local-snapshot",
+  "scope": "Inventory reconciled to locally integrated canonical records. Incoming-folder counts are separate. Record/hub counts are not independent experiment counts or confirmation of deployment.",
   "summary": {
     "local_document_files_indexed": 7373,
     "local_paper_groups_indexed": 4176,
     "paper_candidate_groups_total": 4570,
     "candidate_groups_without_local_documents": 394,
     "unique_document_content_hashes": 6857,
-    "canonical_records": 172,
-    "reviewed_literature_records": 72,
-    "reviewed_literature_source_groups": 11,
+    "canonical_records": 184,
+    "reviewed_literature_records": 84,
+    "reviewed_literature_source_groups": 12,
     "published_benchmark_rows": 100,
     "published_benchmark_source_groups": 1,
-    "total_canonical_source_groups": 12,
+    "total_canonical_source_groups": 13,
     "formal_full_main_and_matched_si_reviews": 5,
     "formal_full_review_pages": 74,
     "legacy_main_article_reviews_si_unverified": 2,
     "legacy_main_pages_inspected": 13,
     "selected_recipe_figure_review_sources": 2,
-    "local_groups_without_canonical_records": 4164,
-    "synthesis_route_variant_records": 37,
-    "contextual_control_variant_records": 9,
-    "shared_preparation_workup_characterization_assay_procedures": 24,
-    "nonprocedure_literature_records": 48,
+    "local_groups_without_canonical_records": 4163,
+    "synthesis_route_variant_records": 40,
+    "contextual_control_variant_records": 11,
+    "shared_preparation_workup_characterization_assay_procedures": 28,
+    "nonprocedure_literature_records": 56,
     "literature_record_type_counts": {
-      "literature_protocol": 13,
-      "observation": 2,
-      "procedure": 24,
-      "protocol_variant": 33
+      "literature_protocol": 16,
+      "observation": 5,
+      "procedure": 28,
+      "protocol_variant": 35
     },
-    "literature_recipe_family_ids": 14,
-    "primary_synthesis_recipe_family_ids": 11,
+    "literature_recipe_family_ids": 15,
+    "primary_synthesis_recipe_family_ids": 12,
     "public_material_hubs": 17,
     "direct_synthesis_target_systems": 12,
     "component_only_hubs": 5,
@@ -39,33 +39,34 @@
     "full_corpus_distinct_synthesized_material_count": null,
     "full_corpus_recipe_count": null,
     "verified_exact_structure_recipe_pairs": 0,
-    "formal_full_main_reviews_si_unverified": 2,
-    "formal_full_main_only_review_pages": 13,
-    "contextual_observation_records": 2,
-    "recipe_or_control_literature_records": 46,
+    "formal_full_main_reviews_si_unverified": 3,
+    "formal_full_main_only_review_pages": 21,
+    "contextual_observation_records": 5,
+    "recipe_or_control_literature_records": 51,
     "canonical_record_type_counts": {
       "experiment": 100,
-      "literature_protocol": 13,
-      "observation": 2,
-      "procedure": 24,
-      "protocol_variant": 33
+      "literature_protocol": 16,
+      "observation": 5,
+      "procedure": 28,
+      "protocol_variant": 35
     },
-    "contextual_observation_family_ids": 2
+    "contextual_observation_family_ids": 3
   },
   "count_definitions": {
     "paper_group": "Corpus DOI/document grouping. It is not a count of independently identity-verified primary papers; duplicate/mismatched payloads remain in the corpus metadata.",
     "synthesis_route_variant": "Distinct reviewed canonical route or condition-variant used for publication, not necessarily a complete executable recipe, unique physical batch or independent experiment.",
-    "contextual_control": "The 9 existing Nakonechnyi controls are separate from 37 synthesis-route variants and 2 contextual observations.",
+    "contextual_control": "11 protocol-variant controls are separate from 40 synthesis routes, 28 procedures and 5 observations. Danek no-seed/no-DEZn variants add two controls; the annealing diagnostic is typed as a procedure.",
     "procedure": "Precursor preparation, isolation, size-selection, ligand exchange, post-treatment, acquisition or assay records. Not additional material syntheses.",
-    "recipe_family": "14 canonical literature grouping IDs: 11 contain primary synthesis routes, one is ZnO post-treatment and two are contextual observation families. They are not unique physical recipes.",
-    "material_system": "12 direct product-system labels retain architecture and unresolved stoichiometry. Ge/Si means substrate-supported Ge islands; SiO2 is a template mask, not a Ge oxide shell. The 17 hubs include 5 component-only cross-links, not extra standalone syntheses.",
+    "recipe_family": "15 literature grouping IDs; 12 contain primary synthesis routes. Grouping IDs are not unique physical recipes or independent runs.",
+    "material_system": "12 direct product-system labels retain architecture and unresolved stoichiometry. 17 public hubs include 5 component-only cross-links. Colloidal CdSe-core/ZnSe-overlayer particles and ZnSe-matrix films have distinct routes under the shared CdSe/ZnSe system.",
     "benchmark": "Published numeric rows from one external study, not 100 reviewed papers or 100 newly reconstructed laboratory protocols.",
     "unknown_full_corpus_totals": "Unreviewed titles and keyword windows cannot establish whether a material was synthesized, the actual product, complete recipes, variants, controls or duplication. Do not extrapolate reviewed-subset counts.",
-    "contextual_observation": "Characterization or incomplete growth-series context without a reconstructed complete synthesis: Littau AKS41 and Heath unpatterned Ge growth. Neither creates an extra synthesis route.",
+    "contextual_observation": "Scoped characterization series or incomplete growth observations: Littau AKS41, Heath unpatterned growth and three Danek observations. They do not create additional synthesis routes.",
     "public_material_hub": "A locally generated public-facing material/component route. Existence is checked against generated files, not a remote deployment check. Shared canonical record IDs are counted once globally.",
     "nonprocedure_literature": "All literature records except supporting procedures: synthesis routes, contextual controls and contextual observations. The observation is excluded from recipe_or_control_literature_records.",
     "legacy_corpus_baseline": "The fixed indexed downloaded_papers corpus: 7,373 document files and 4,176 groups with local documents. Incoming-folder tracking is not added to these counts, including byte-duplicate incoming copies.",
-    "shared_wafer": "The two Heath template variants were prepared on the same wafer in one reported exposure. Individual wells and variant records are not independent synthesis runs."
+    "shared_wafer": "The two Heath template variants were prepared on the same wafer in one reported exposure. Individual wells and variant records are not independent synthesis runs.",
+    "danek_series": "Figure-defined particle sizes, shell ratios, optical aliquots and film-deposition categories are source-scoped observations. Their number must not be interpreted as fully specified independent synthesis recipes."
   },
   "material_system_lists": {
     "direct_synthesis_targets": [
@@ -96,6 +97,7 @@
     "benchmark_only_product": "PbS",
     "excluded_precursor_procedure_identity": "Fe–C–H–O",
     "contextual_observation_product_labels": [
+      "CdSe/ZnSe",
       "Ge/Si",
       "Si/SiOx"
     ]
@@ -117,6 +119,81 @@
     "scope_limit": "Indexing/extraction is not recipe curation. Title material mentions do not verify synthesis contributions. No OCR or legacy DOC conversion performed."
   },
   "per_paper": [
+    {
+      "source_group": "danek1996",
+      "doi": "10.1021/cm9503137",
+      "url": "https://doi.org/10.1021/cm9503137",
+      "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe",
+      "year": 1996,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Eight supplied main pages read and visually checked; independent supplied-main source audit complete. Matching SI not located or verified. Canonical record review and reader/publication acceptance are separate gates; prospective inventory promotion is conditional.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/danek1996.json",
+      "paper_review_url": "paper-review.html?id=danek1996",
+      "si_status": "not_located_or_verified",
+      "canonical_record_count": 12,
+      "synthesis_route_variant_count": 3,
+      "contextual_control_count": 2,
+      "contextual_observation_count": 3,
+      "procedure_count": 4,
+      "benchmark_row_count": 0,
+      "measurement_entry_count": 72,
+      "record_type_counts": {
+        "literature_protocol": 3,
+        "observation": 3,
+        "procedure": 4,
+        "protocol_variant": 2
+      },
+      "canonical_recipe_family_ids": [
+        "danek1996-passivation-and-film-composites"
+      ],
+      "direct_route_material_systems": [
+        "CdSe/ZnSe"
+      ],
+      "record_ids": [
+        "danek-1996-annealing-control",
+        "danek-1996-bare-dot-film",
+        "danek-1996-characterization",
+        "danek-1996-electrospray-dispersion",
+        "danek-1996-film-characterization",
+        "danek-1996-high-temperature-overgrowth",
+        "danek-1996-no-dezn-control",
+        "danek-1996-no-seed-control",
+        "danek-1996-overcoated-dot-film",
+        "danek-1996-seed-preparation",
+        "danek-1996-solution-characterization",
+        "danek-1996-znse-overgrowth"
+      ],
+      "record_urls": {
+        "danek-1996-annealing-control": "records/danek-1996-annealing-control.html",
+        "danek-1996-bare-dot-film": "records/danek-1996-bare-dot-film.html",
+        "danek-1996-characterization": "records/danek-1996-characterization.html",
+        "danek-1996-electrospray-dispersion": "records/danek-1996-electrospray-dispersion.html",
+        "danek-1996-film-characterization": "records/danek-1996-film-characterization.html",
+        "danek-1996-high-temperature-overgrowth": "records/danek-1996-high-temperature-overgrowth.html",
+        "danek-1996-no-dezn-control": "records/danek-1996-no-dezn-control.html",
+        "danek-1996-no-seed-control": "records/danek-1996-no-seed-control.html",
+        "danek-1996-overcoated-dot-film": "records/danek-1996-overcoated-dot-film.html",
+        "danek-1996-seed-preparation": "records/danek-1996-seed-preparation.html",
+        "danek-1996-solution-characterization": "records/danek-1996-solution-characterization.html",
+        "danek-1996-znse-overgrowth": "records/danek-1996-znse-overgrowth.html"
+      },
+      "notes": [
+        "Three routes: solution ZnSe overgrowth, matrix deposition with bare dots, and matrix deposition with pre-overcoated dots.",
+        "Four procedures include cited upstream preparation, delivery dispersion, characterization and the annealing diagnostic; only no-seed/no-DEZn are counted as control variants.",
+        "Three observation records preserve incomplete high-temperature overgrowth and multiple solution/film characterization cohorts.",
+        "Figure1 has an embedded four-row table, not four complete recipes; the article contains11figures, one embedded table, one unnumbered reaction and18 numbered references.",
+        "Product ratios, surface ratios, derived shell dimensions and absolute versus relative luminescence values retain distinct scopes."
+      ]
+    },
     {
       "source_group": "feld2019",
       "doi": "10.1021/acsnano.8b05032",
@@ -1129,20 +1206,24 @@
         "peng-2000-cdse-high-aspect",
         "peng-2000-cdse-typical"
       ],
-      "contextual_control_count": 4,
+      "contextual_control_count": 5,
       "contextual_control_record_ids": [
+        "danek-1996-no-dezn-control",
         "nakonechnyi-2017-core-stability-cd-oa-1to20",
         "nakonechnyi-2017-core-stability-cd-oa-1to3",
         "nakonechnyi-2017-core-stability-neither",
         "nakonechnyi-2017-core-stability-top-s-only"
       ],
-      "procedure_count": 3,
+      "procedure_count": 4,
       "benchmark_row_count": 0,
       "public_hub_exists": true,
       "public_hub_component_only": false,
-      "public_hub_route_contributions": 13,
-      "component_route_contribution_count": 6,
+      "public_hub_route_contributions": 16,
+      "component_route_contribution_count": 9,
       "component_route_record_ids": [
+        "danek-1996-bare-dot-film",
+        "danek-1996-overcoated-dot-film",
+        "danek-1996-znse-overgrowth",
         "nakonechnyi-2017-wz-cdse-cds-seeded-growth",
         "nakonechnyi-2017-wz-cdse-znse-seeded-growth",
         "nakonechnyi-2017-zb-cdse-cds-seeded-growth",
@@ -1150,18 +1231,26 @@
         "nakonechnyi-2017-zb-cdse-znse-25nmol",
         "nakonechnyi-2017-zb-cdse-znse-50nmol"
       ],
-      "primary_reviewed_source_count": 3,
+      "primary_reviewed_source_count": 4,
       "notes": [
-        "Seven direct routes: Murray3, Peng2, Nakonechnyi2. Public hub count13 also includes six CdSe-core-containing shell-growth records; those are not extra bare-CdSe recipes."
+        "Before the Danek1996 addition: Seven direct routes: Murray3, Peng2, Nakonechnyi2. Public hub count13 also includes six CdSe-core-containing shell-growth records; those are not extra bare-CdSe recipes.",
+        "Danek1996 adds three existing route IDs to this hub; the current route contribution count is 16. The shell-overgrowth route is distinct from the two matrix-film routes; component links do not create standalone CdSe or ZnSe synthesis recipes."
       ],
       "material_hub_id": "cdse-d923c5",
       "material_hub_url": "cdse.html",
       "source_groups": [
+        "danek1996",
         "murray1993",
         "nakonechnyi2017",
         "peng2000"
       ],
       "source_links": [
+        {
+          "source_group": "danek1996",
+          "doi": "10.1021/cm9503137",
+          "url": "https://doi.org/10.1021/cm9503137",
+          "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe"
+        },
         {
           "source_group": "murray1993",
           "doi": "10.1021/ja00072a025",
@@ -1232,8 +1321,11 @@
     },
     {
       "material_system": "CdSe/ZnSe",
-      "direct_synthesis_route_variant_count": 4,
+      "direct_synthesis_route_variant_count": 7,
       "direct_route_record_ids": [
+        "danek-1996-bare-dot-film",
+        "danek-1996-overcoated-dot-film",
+        "danek-1996-znse-overgrowth",
         "nakonechnyi-2017-wz-cdse-znse-seeded-growth",
         "nakonechnyi-2017-zb-cdse-znse-100nmol",
         "nakonechnyi-2017-zb-cdse-znse-25nmol",
@@ -1241,21 +1333,30 @@
       ],
       "contextual_control_count": 0,
       "contextual_control_record_ids": [],
-      "procedure_count": 0,
+      "procedure_count": 3,
       "benchmark_row_count": 0,
       "public_hub_exists": true,
       "public_hub_component_only": false,
-      "public_hub_route_contributions": 4,
+      "public_hub_route_contributions": 7,
       "component_route_contribution_count": 0,
       "component_route_record_ids": [],
-      "primary_reviewed_source_count": 1,
-      "notes": [],
+      "primary_reviewed_source_count": 2,
+      "notes": [
+        "Danek1996 adds three existing route IDs to this hub; the current route contribution count is 7. The shell-overgrowth route is distinct from the two matrix-film routes; component links do not create standalone CdSe or ZnSe synthesis recipes."
+      ],
       "material_hub_id": "cdse-znse-0f8c68",
       "material_hub_url": "material.html?id=cdse-znse-0f8c68",
       "source_groups": [
+        "danek1996",
         "nakonechnyi2017"
       ],
       "source_links": [
+        {
+          "source_group": "danek1996",
+          "doi": "10.1021/cm9503137",
+          "url": "https://doi.org/10.1021/cm9503137",
+          "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe"
+        },
         {
           "source_group": "nakonechnyi2017",
           "doi": "10.1021/acs.chemmater.7b00354",
@@ -1264,10 +1365,15 @@
         }
       ],
       "direct_route_recipe_family_ids": [
+        "danek1996-passivation-and-film-composites",
         "nakonechnyi2017-cdse"
       ],
-      "contextual_observation_count": 0,
-      "contextual_observation_record_ids": []
+      "contextual_observation_count": 3,
+      "contextual_observation_record_ids": [
+        "danek-1996-film-characterization",
+        "danek-1996-high-temperature-overgrowth",
+        "danek-1996-solution-characterization"
+      ]
     },
     {
       "material_system": "CoFe2O4",
@@ -1783,8 +1889,9 @@
       "material_system": "ZnSe",
       "direct_synthesis_route_variant_count": 0,
       "direct_route_record_ids": [],
-      "contextual_control_count": 2,
+      "contextual_control_count": 3,
       "contextual_control_record_ids": [
+        "danek-1996-no-seed-control",
         "nakonechnyi-2017-wz-route-znse-no-seed-control",
         "nakonechnyi-2017-zb-route-znse-no-seed-control"
       ],
@@ -1792,24 +1899,35 @@
       "benchmark_row_count": 0,
       "public_hub_exists": true,
       "public_hub_component_only": true,
-      "public_hub_route_contributions": 4,
-      "component_route_contribution_count": 4,
+      "public_hub_route_contributions": 7,
+      "component_route_contribution_count": 7,
       "component_route_record_ids": [
+        "danek-1996-bare-dot-film",
+        "danek-1996-overcoated-dot-film",
+        "danek-1996-znse-overgrowth",
         "nakonechnyi-2017-wz-cdse-znse-seeded-growth",
         "nakonechnyi-2017-zb-cdse-znse-100nmol",
         "nakonechnyi-2017-zb-cdse-znse-25nmol",
         "nakonechnyi-2017-zb-cdse-znse-50nmol"
       ],
-      "primary_reviewed_source_count": 1,
+      "primary_reviewed_source_count": 2,
       "notes": [
-        "Two no-seed control protocols carry this product identity in the canonical data, but are not published as independently complete synthesis routes. Public hub contributions are shell-growth components."
+        "Before the Danek1996 addition: Two no-seed control protocols carry this product identity in the canonical data, but are not published as independently complete synthesis routes. Public hub contributions are shell-growth components.",
+        "Danek1996 adds three existing route IDs to this hub; the current route contribution count is 7. The shell-overgrowth route is distinct from the two matrix-film routes; component links do not create standalone CdSe or ZnSe synthesis recipes."
       ],
       "material_hub_id": "znse-930698",
       "material_hub_url": "material.html?id=znse-930698",
       "source_groups": [
+        "danek1996",
         "nakonechnyi2017"
       ],
       "source_links": [
+        {
+          "source_group": "danek1996",
+          "doi": "10.1021/cm9503137",
+          "url": "https://doi.org/10.1021/cm9503137",
+          "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe"
+        },
         {
           "source_group": "nakonechnyi2017",
           "doi": "10.1021/acs.chemmater.7b00354",
@@ -1834,8 +1952,8 @@
     "note": "These benchmark grouping counts are generated from the documented input rule; they are not the number of fully reconstructed synthesis protocols or independently reproduced experiments."
   },
   "training_eligibility": {
-    "precursor_selection": 37,
-    "partial_protocol": 53,
+    "precursor_selection": 40,
+    "partial_protocol": 56,
     "size_conditioned_recipe": 6,
     "exact_structure_recipe": 0,
     "success_prediction": 0,
@@ -1847,8 +1965,8 @@
     "Upgrade claims only after page/figure/recipe inventory and source/sample linkage review; no title-based material expansion."
   ],
   "provenance": {
-    "canonical_record_files": 172,
-    "canonical_tree_sha256": "3c1f6f157e563b59fd7a23c815673f390820250d5dcd453584a85322dad1ed8a",
+    "canonical_record_files": 184,
+    "canonical_tree_sha256": "941f9b4c58e8ae0c1e58293aaafae983c2401b658655d95ff9fbbd9f11397fcd",
     "corpus_summary_snapshot": "2026-09-17T17:19:41.310914+00:00",
     "files_used": [
       "data/corpus/library-source.json",
@@ -2054,11 +2172,11 @@
       "dist/data/recipe-figures/zhang2019.json",
       "dist/data/validation-report.json"
     ],
-    "canonical_tree_hash_rule": "SHA256 of sorted record-ID to normalized record-digest JSON; actual canonical records.",
+    "canonical_tree_hash_rule": "SHA256 of sorted record-ID to normalized-record-digest JSON; actual integrated records.",
     "base_inventory_sha256": "bff3bad5d60662e19b109bae86deb34f8cce7348e9372a6cb25effd8eee313ed",
-    "generated_dataset_version_observed": "0.6.0",
+    "generated_dataset_version_observed": "0.7.0",
     "dataset_version_note": "Observed local build version; this inventory does not bump dataset version or verify deployment.",
-    "publication_verification": "Not assessed; final publication remains outside this inventory task.",
+    "publication_verification": "Not assessed; publication remains outside this private inventory task.",
     "summary_artifact_sha256": {
       "data/corpus/library-source.json": "cf38a92227f08937fd57fae37c25a17d5846e23db9ca1968b6fc4728e3baabcc",
       "dist/data/library-index.json": "6f4042789035d39d43a983fcd7a788c1706d51a6fafb73aac50c975e16a25464",
@@ -2074,19 +2192,21 @@
       "data/paper-reviews/saha2019.json": "2e4da642be457e37f9fee415d8ab384bc4f4bd6dacaa0012b9603d41c8814c1f",
       "data/paper-reviews/stowell2005.json": "d61a097e0e8c29973d9381c077af738a9733dd4a57871f5f27832778087245b8"
     },
-    "baseline_inventory_sha256": "91ddfe14aa6550ffe24e1a835ce9d5f9dac9e79df700a06b0fd15bea306a9d66",
+    "baseline_inventory_sha256": "3c119daccd7df72eb29e6772e29dcc26b08bf2cbc031262c239044757dd1490d",
     "draft_audit_sha256": "b6ed3eeb88debf355205e44b09d758751a6bfcdfbf60bf9de64a5cc5b891ba10",
     "inventory_mode": "actual_local",
-    "promotion_assumption": "Parent-authorized source_reviewed for four audited records; only two variants request precursor_selection and partial_protocol. No file promotion is performed here.",
+    "promotion_assumption": "Source-reviewed metadata is simulated only after required canonical audit passes. Only znse-overgrowth, bare-dot-film and overcoated-dot-film request precursor_selection and partial_protocol. No draft/Site promotion occurs here.",
     "source_input_sha256": {
       "data\\corpus\\library-source.json": "cf38a92227f08937fd57fae37c25a17d5846e23db9ca1968b6fc4728e3baabcc",
-      "dist\\data\\materials-index.json": "fa63ce4dad595f0431af83b7c354e25b4afc36bdc962cc7ccb55e44fbb74477f",
-      "dist\\data\\library-index.json": "d52eadb2130e59b7033b6689dc3943cc3ec4f2da618d5d107c1d24599a0c5b60",
-      "dist\\data\\dataset-manifest.json": "f27ad75a536d50af40660dee7b3f72881fd82f34fd7cdc8980627310817b0dcb",
-      "dist\\data\\validation-report.json": "52c495eb96c185e737977fea264454ffe47d390b5dc13b14d7b7a03b24b2ed4a",
-      "private/canonical-records-audit.json": "b6ed3eeb88debf355205e44b09d758751a6bfcdfbf60bf9de64a5cc5b891ba10",
-      "private/source-audit.json": "b5599e206afa9d177d5240a5d7955daaf998307e4b629ed0cd9081a072019fe3",
-      "private/heath1996.json": "bb00fcd5ee5c245f2f950d61f32233598e1eb7c10a851b1594634630e4b2a50e"
-    }
+      "dist\\data\\materials-index.json": "3fdd63437938c25f5c6affc1e1296ba803daff6eddcecdd47b082c20c8ab4680",
+      "dist\\data\\library-index.json": "bc5ea7c9a1d7e618eb7f296a0d971693f4bef4a5d79834ef943100332323a7ee",
+      "dist\\data\\dataset-manifest.json": "5442ad5f21d32041545814c1abbba1e8d070f34368baa749196e8363eafe09db",
+      "dist\\data\\validation-report.json": "884ae404459a85adfd4a0596bdf8ed7bb108ae8690c621c4de64a2293ae41f7e",
+      "private/source-identity.json": "2a678feab5622324d6d893b6c3cac16b85b0d2bb34ad6ce18a4d2424addb9132",
+      "private/source-audit.json": "ee8c044ce701df526fa67233a7b41dc4f2fa6633295f508de55a648b2f6c9a59",
+      "private/danek1996.json": "7ef2b4987d3a48a6dd9ee9d0d72704c9c02d4001bd1c962c23fbc60b098ae764",
+      "private/canonical-records-audit.json": "db9de6547c4486b8bf9a3e55710a430512ecc842d3b6364fd9ac67ae822664fe"
+    },
+    "canonical_audit_status_observed": "passed_bounded_scientific_audit"
   }
 }
