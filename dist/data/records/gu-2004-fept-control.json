@@ -1,0 +1,513 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gu-2004-fept-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Gu et al. (2004) · As-prepared FePt 1 optical and magnetic comparisons",
+  "material": {
+    "formula": "FePt",
+    "family": "FePt–CdS heterodimers and source-linked precursor/control contexts",
+    "elements": [
+      "Fe",
+      "Pt"
+    ],
+    "components": [
+      "FePt"
+    ],
+    "architecture": "alloy"
+  },
+  "method": "Source-stage optical and magnetic controls",
+  "sources": [
+    {
+      "id": "gu2004",
+      "doi": "10.1021/ja0496423",
+      "title": "Facile One-Pot Synthesis of Bifunctional Heterodimers of Nanoparticles: A Conjugate of Quantum Dot and Magnetic Nanoparticles",
+      "authors": "Hongwei Gu; Rongkun Zheng; XiXiang Zhang; Bing Xu",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/ja0496423",
+      "main_status": "Both supplied main pages text-read and visually inspected; independent source and canonical audits passed.",
+      "si_status": "Matched three-page supporting information verified by title/authors/content and unchanged source hashes. All three pages text-read and visually inspected in the independently passed extraction audit.",
+      "reuse_status": "Private bibliographic/factual extraction; original source and figure rights remain separate. No publication or reuse license is inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "gu2004",
+    "recipe_family": "gu2004-one-pot-fept-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Title/byline/footer"
+        }
+      ],
+      "note": "Context/procedure record; not a separately quantified target-synthesis experiment."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Complete two-page main article and matched three-page supporting information"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Complete two-page main article and matched three-page supporting information"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Complete two-page main article and matched three-page supporting information"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "fept-1",
+      "name": "FePt 1 control specimens",
+      "formula": "FePt",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nominal source specimen identity; a shared label does not establish an identical physical batch across measurement techniques."
+      ],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "SI PDF p. 2, Figure S-2"
+        }
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": "C6H14",
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "purity": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source sample scope: main workup and optics.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gu2004",
+              "locator": "SI PDF p. 1, General and preparation paragraphs"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "notes": [
+        "Hexane: redispersion/storage/optical solvent. Supplier: not reported. Numerical purity not reported.",
+        "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+      ],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "SI PDF p. 1, General and preparation paragraphs"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "absorption-data",
+      "name": "Measure the as-prepared FePt 1 absorption comparison data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "fept-1",
+        "hexane"
+      ]
+    },
+    {
+      "id": "zfc-fc-data",
+      "name": "Record the FePt 1 magnetic comparison data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "fept-1"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "absorption",
+      "action": "uv_visible_absorption",
+      "label": "Measure the as-prepared FePt 1 absorption comparison",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "fept-1",
+        "hexane"
+      ],
+      "outputs": [
+        "absorption-data"
+      ],
+      "parameters": {
+        "absorption_peak": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "No numerical precursor peak is assigned from the unlabelled broad curve.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gu2004",
+              "locator": "SI PDF p. 2, Figure S-2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Only source-supported acquisition context is retained. Instrument settings and specimen preparation absent from the paper remain unknown.",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "SI PDF p. 2, Figure S-2"
+        }
+      ]
+    },
+    {
+      "id": "zfc-fc",
+      "action": "zfc_fc_magnetometry",
+      "label": "Record the FePt 1 magnetic comparison",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "fept-1"
+      ],
+      "outputs": [
+        "zfc-fc-data"
+      ],
+      "parameters": {
+        "applied_field": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Oe",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "The 100 Oe final-product condition is not inherited.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gu2004",
+              "locator": "SI PDF p. 2, Figure S-3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Only source-supported acquisition context is retained. Instrument settings and specimen preparation absent from the paper remain unknown.",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "SI PDF p. 2, Figure S-3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "absorption-1",
+      "source_sample_label": "SI Figure S-2 / FePt 1 in hexane",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "FePt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Physical batch/aliquot identity relative to other analytical records is not established."
+      ]
+    },
+    {
+      "sample_id": "zfc-fc-1",
+      "source_sample_label": "SI Figure S-3 / as-synthesized FePt 1",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "FePt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Physical batch/aliquot identity relative to other analytical records is not established."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "source-figure-s2",
+      "sample_id": "absorption-1",
+      "property": "source_figure",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "Absorbance (a.u.) versus wavelength (nm) for as-synthesized FePt 1 in hexane; axis labels 200–700 nm with line extending to roughly 750 nm. Visible broad UV maximum has no numerical peak label. Source says main 293 nm band agrees with this control; no exact precursor peak is entered from visual estimation.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-2"
+          }
+        ],
+        "note": "Source scope: FePt 1 optical specimen. Source kind: figure."
+      },
+      "conditions": "FePt 1 optical specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "SI PDF p. 2, Figure S-2"
+        }
+      ]
+    },
+    {
+      "id": "source-figure-s3",
+      "sample_id": "zfc-fc-1",
+      "property": "source_figure",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "ZFC/FC of as-synthesized FePt 1: magnetic moment (10^−5 emu) vs Temperature (K), axis 0–110 K; plotted traces roughly 5–100 K. No SI applied field, explicit peak temperature, separate fitting table or trace labels are given. Do not transfer final-product 100 Oe solely by similarity.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 2, Figure S-3"
+          }
+        ],
+        "note": "Source scope: FePt 1 magnetic specimen. Source kind: figure."
+      },
+      "conditions": "FePt 1 magnetic specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "SI PDF p. 2, Figure S-3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All 2 supplied main pages and 3 content-matched SI pages completely read and visually inspected; independent source extraction and canonical scientific audits passed. Source conflicts and unreported parameters are preserved. This scope does not establish identical physical aliquots across analytical techniques or measured atomic coordinates.",
+    "missing_fields": [
+      "No atomic coordinates, CIF, unit-cell constants, occupancy refinement, interface lattice mapping or crystallographic atom model is supplied. SAED establishes author phase assignments only.",
+      "No XRD pattern, Raman spectrum, electrical transport or elemental spatial map is supplied. XRF must not be relabeled XRD or EDS.",
+      "Samples are explicitly labeled 1–4 and figures identify those stages. Exact batch/aliquot provenance, microscopy transfer/isolation details, and whether TEM, SAED, magnetometry and optical measurements used the same physical batch are unreported.",
+      "Reaction vessel, heating apparatus, numeric inert pressure, gas identity, ramp rates and stirring speeds are not reported. Dioctyl-ether boiling point is not numerically supplied.",
+      "CdCl2 hydration and 80.5% assay basis are unresolved. Recrystallization solvent ratio/amount/temperature, vacuum pressure and drying duration are absent. Purity and hydration of isolated Cd(acac)2 are not analytically quantified.",
+      "Centrifugation force/speed/time, yield or final mass of 4, final particle concentration and nitrogen storage temperature/duration are absent.",
+      "Instrument models, TEM voltage, XRF source/substrate/calibration, magnetic sample mass/state, full FC/ZFC protocol, SI-3 field, optical concentration and fluorescence correction details are absent.",
+      "Core–shell intermediates and dewetting mechanism remain author-supported interpretations with an isolation limitation; no separately varied annealing study, in situ kinetics or interface thermodynamic parameters are supplied.",
+      "No synthesis replicate count, error bars, numerical dispersity, failed-isolation trial count or raw data files are provided in the supplied bundle."
+    ],
+    "conflicts": [
+      "SI inset mol% values Fe 0.0562, Pt 0.0604, Cd 1.5447, S 1.9262 do not directly reproduce the main stated approximate Fe/Pt/Cd/S ratio 1:1:3:3.6. Corrections, substrate contribution and quantification basis are not supplied. Preserve both representations; do not silently rescale either."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "In-pot FePt 1 stage",
+      "url": "../records/gu-2004-heterodimer.html",
+      "relation": "These controls do not establish a separate complete purified-FePt synthesis or an independent reaction run."
+    },
+    {
+      "label": "Source synthesis context",
+      "url": "../records/gu-2004-heterodimer.html",
+      "relation": "Nominal stage/product context only; no unproven same-batch linkage is implied."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

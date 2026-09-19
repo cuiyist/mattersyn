@@ -1,0 +1,69 @@
+{
+  "id": "gu2004-nitrogen-reference",
+  "name": "Nitrogen",
+  "formula": "N2",
+  "pubchemCid": null,
+  "representation": "3d",
+  "has3D": true,
+  "allowRotation": true,
+  "coordinateUnits": "angstrom",
+  "indexConvention": "zero-based",
+  "atoms": [
+    {
+      "index": 0,
+      "element": "N",
+      "x": -0.54884,
+      "y": 0.0,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 0,
+      "implicitHydrogenCount": 0,
+      "chiralTag": "CHI_UNSPECIFIED"
+    },
+    {
+      "index": 1,
+      "element": "N",
+      "x": 0.54884,
+      "y": 0.0,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 0,
+      "implicitHydrogenCount": 0,
+      "chiralTag": "CHI_UNSPECIFIED"
+    }
+  ],
+  "bonds": [
+    {
+      "a": 0,
+      "b": 1,
+      "order": 3.0,
+      "stereo": "STEREONONE",
+      "stereoAtoms": []
+    }
+  ],
+  "functionalGroups": [
+    {
+      "label": "Dinitrogen triple bond",
+      "atomIndices": [
+        0,
+        1
+      ],
+      "bondIndices": [
+        0
+      ]
+    }
+  ],
+  "connectivitySmiles": "N#N",
+  "caption": "Ground-state dinitrogen reference. The 3D reference uses a NIST internuclear distance with arbitrary overall orientation, not Gu gas coordinates.",
+  "notes": [
+    "NIST constant refers to 14N2; Gu does not report isotopic composition.",
+    "Nitrogen is stated for storage; the general inert reaction gas remains unspecified."
+  ],
+  "eligible_training": false,
+  "modelType": "Reference-distance-derived diatomic geometry",
+  "coordinateSource": "NIST ground-state 14N2 r_e, rounded to 1.09768 Å (half-even rounding); centered on x axis",
+  "construction": "Atoms placed at ±r_e/2 on an arbitrary x axis; no force field or recovered XYZ claimed.",
+  "referenceDistanceAngstrom": 1.09768,
+  "referenceIsotopologue": "14N2",
+  "sourceType": "Coordinates constructed from a published reference scalar, not an observed Gu structure"
+}

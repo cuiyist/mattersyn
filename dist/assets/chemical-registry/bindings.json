@@ -2617,7 +2617,52 @@
       "topo-component": "topo",
       "argon": "argon"
     },
-    "sashchiuk-2004-wire-structure": {}
+    "sashchiuk-2004-wire-structure": {},
+    "gu-2004-cdacac-preparation": {
+      "cadmium-chloride": "gu2004-cadmium-chloride-reference",
+      "water": "water",
+      "acetylacetone": "gu2004-acetylacetone-reference",
+      "triethylamine": "gu2004-triethylamine-reference",
+      "ethanol": "ethanol"
+    },
+    "gu-2004-fept-control": {
+      "hexane": "hexane",
+      "fept-1": "identity-gu-fept-1"
+    },
+    "gu-2004-heterodimer": {
+      "platinum-acac": "gu2004-platinum-acac-reference",
+      "diol": "hexadecane-1-2-diol",
+      "dioctyl-ether": "dioctyl-ether",
+      "oleylamine": "oleylamine",
+      "oleic-acid": "oleic-acid",
+      "iron-pentacarbonyl": "gu2004-iron-pentacarbonyl-reference",
+      "sulfur": "gu2004-sulfur-element-reference",
+      "topo": "topo",
+      "cadmium-acac": "gu2004-cadmium-acac-reference",
+      "ethanol": "ethanol",
+      "hexane": "hexane",
+      "nitrogen": "gu2004-nitrogen-reference"
+    },
+    "gu-2004-literature-context": {},
+    "gu-2004-magnetic-model": {},
+    "gu-2004-magnetometry": {
+      "product-4": "identity-gu-fept-cds-4"
+    },
+    "gu-2004-mechanism": {},
+    "gu-2004-microscopy": {
+      "precursor-1": "identity-gu-fept-1",
+      "isolated-2": "identity-gu-isolated-2",
+      "isolated-3": "identity-gu-isolated-3",
+      "product-4": "identity-gu-fept-cds-4"
+    },
+    "gu-2004-optical": {
+      "hexane": "hexane",
+      "dibromoanthracene": "gu2004-dibromoanthracene-reference",
+      "product-4": "identity-gu-fept-cds-4"
+    },
+    "gu-2004-xrf": {
+      "product-4": "identity-gu-fept-cds-4"
+    }
   },
   "bindingNotes": {
     "feld-2019-fe2-carbonate-to-oleate-preparation": {
@@ -3848,7 +3893,679 @@
     "sashchiuk-2004-transport-model": "Named chemical identities are reference depictions, not measured stock speciation or surface ligands. Pb-cHxBu molecular identity and butanol isomer remain unresolved. Trimethylsilane depicts the literal source name, not verified surface-treatment chemistry.",
     "sashchiuk-2004-wire-high": "Named chemical identities are reference depictions, not measured stock speciation or surface ligands. Pb-cHxBu molecular identity and butanol isomer remain unresolved. Trimethylsilane depicts the literal source name, not verified surface-treatment chemistry.",
     "sashchiuk-2004-wire-intermediate": "Named chemical identities are reference depictions, not measured stock speciation or surface ligands. Pb-cHxBu molecular identity and butanol isomer remain unresolved. Trimethylsilane depicts the literal source name, not verified surface-treatment chemistry.",
-    "sashchiuk-2004-wire-structure": "Named chemical identities are reference depictions, not measured stock speciation or surface ligands. Pb-cHxBu molecular identity and butanol isomer remain unresolved. Trimethylsilane depicts the literal source name, not verified surface-treatment chemistry."
+    "sashchiuk-2004-wire-structure": "Named chemical identities are reference depictions, not measured stock speciation or surface ligands. Pb-cHxBu molecular identity and butanol isomer remain unresolved. Trimethylsilane depicts the literal source name, not verified surface-treatment chemistry.",
+    "gu-2004-cdacac-preparation": {
+      "cadmium-chloride": {
+        "source_material_id": "gu2004-cadmium-chloride",
+        "registry_id": "gu2004-cadmium-chloride-reference",
+        "asset_origin": "private additions",
+        "source_name": "CdCl2",
+        "source_role": "metal_precursor",
+        "source_stage": "precursor_preparation",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "CdCl2: cadmium reagent for upstream chelate preparation. Supplier: Fisher scientific. Reported grade 80.5%. Hydration state/assay basis not stated; retain 80.5% and formula as printed.",
+          "Hydration state/assay basis not stated; retain 80.5% and formula as printed.",
+          "Formula denotes the source-named salt/chelate only; hydration and assay basis are unresolved, and the formula is not a measured full reagent composition."
+        ],
+        "display_scope": "Formal Cd2+ and two Cl− stoichiometric components; no lattice, coordination geometry or dissolved-species distribution is implied. Gu prints CdCl2 at 80.5%; hydration and assay basis are unspecified. No hydrate shell, isolated linear molecule, mass correction or 3D geometry is assigned.",
+        "viewOverrides": {
+          "name": "CdCl2",
+          "caption": "Formal Cd2+ and two Cl− stoichiometric components; no lattice, coordination geometry or dissolved-species distribution is implied. Gu prints CdCl2 at 80.5%; hydration and assay basis are unspecified. No hydrate shell, isolated linear molecule, mass correction or 3D geometry is assigned.",
+          "limitations": [
+            "Formal Cd2+ and two Cl− stoichiometric components; no lattice, coordination geometry or dissolved-species distribution is implied. Gu prints CdCl2 at 80.5%; hydration and assay basis are unspecified. No hydrate shell, isolated linear molecule, mass correction or 3D geometry is assigned."
+          ],
+          "modelNotes": [
+            "Formal Cd2+ and two Cl− stoichiometric components; no lattice, coordination geometry or dissolved-species distribution is implied. Gu prints CdCl2 at 80.5%; hydration and assay basis are unspecified. No hydrate shell, isolated linear molecule, mass correction or 3D geometry is assigned."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "water": {
+        "source_material_id": "gu2004-water",
+        "registry_id": "water",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "DI water",
+        "source_role": "solvent",
+        "source_stage": "precursor_preparation",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "DI water: dissolution solvent; water also used for recrystallization. Supplier: not reported. Numerical purity not reported. Water in recrystallization mixture is not explicitly called DI.",
+          "Water in recrystallization mixture is not explicitly called DI.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Water reference. DI specified for initial dissolution; recrystallization water not explicitly DI.",
+        "viewOverrides": {
+          "name": "DI water",
+          "caption": "Water reference. DI specified for initial dissolution; recrystallization water not explicitly DI.",
+          "limitations": [
+            "Water reference. DI specified for initial dissolution; recrystallization water not explicitly DI."
+          ],
+          "modelNotes": [
+            "Water reference. DI specified for initial dissolution; recrystallization water not explicitly DI."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "acetylacetone": {
+        "source_material_id": "gu2004-acetylacetone",
+        "registry_id": "gu2004-acetylacetone-reference",
+        "asset_origin": "private additions",
+        "source_name": "2,4-Pentanedione",
+        "source_role": "chelating_reagent",
+        "source_stage": "precursor_preparation",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "2,4-Pentanedione: chelate precursor. Supplier: Nacalai Tesque, Inc.. Reported grade 99%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu names 2,4-pentanedione 99%. This depicts the diketo tautomer; no keto/enol ratio or chelated structure is implied.",
+        "viewOverrides": {
+          "name": "2,4-Pentanedione",
+          "caption": "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu names 2,4-pentanedione 99%. This depicts the diketo tautomer; no keto/enol ratio or chelated structure is implied.",
+          "limitations": [
+            "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu names 2,4-pentanedione 99%. This depicts the diketo tautomer; no keto/enol ratio or chelated structure is implied."
+          ],
+          "modelNotes": [
+            "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu names 2,4-pentanedione 99%. This depicts the diketo tautomer; no keto/enol ratio or chelated structure is implied."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "triethylamine": {
+        "source_material_id": "gu2004-triethylamine",
+        "registry_id": "gu2004-triethylamine-reference",
+        "asset_origin": "private additions",
+        "source_name": "Triethylamine",
+        "source_role": "precipitation_reagent",
+        "source_stage": "precursor_preparation",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Triethylamine: precipitation reagent/base role is chemical interpretation. Supplier: Sigma-Aldrich. Reported grade 99%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu reagent is 99%; protonation and solution populations are not determined by this reference.",
+        "viewOverrides": {
+          "name": "Triethylamine",
+          "caption": "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu reagent is 99%; protonation and solution populations are not determined by this reference.",
+          "limitations": [
+            "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu reagent is 99%; protonation and solution populations are not determined by this reference."
+          ],
+          "modelNotes": [
+            "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Gu reagent is 99%; protonation and solution populations are not determined by this reference."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "ethanol": {
+        "source_material_id": "gu2004-ethanol",
+        "registry_id": "ethanol",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Ethanol",
+        "source_role": "recrystallization_solvent",
+        "source_stage": "precursor_preparation",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Ethanol: recrystallization solvent and product antisolvent. Supplier: not reported. Numerical purity not reported.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Ethanol reference; purity and ethanol/water recrystallization ratio unreported.",
+        "viewOverrides": {
+          "name": "Ethanol",
+          "caption": "Ethanol reference; purity and ethanol/water recrystallization ratio unreported.",
+          "limitations": [
+            "Ethanol reference; purity and ethanol/water recrystallization ratio unreported."
+          ],
+          "modelNotes": [
+            "Ethanol reference; purity and ethanol/water recrystallization ratio unreported."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      }
+    },
+    "gu-2004-fept-control": {
+      "hexane": {
+        "source_material_id": "gu2004-hexane",
+        "registry_id": "hexane",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Hexane",
+        "source_role": "solvent",
+        "source_stage": "characterization",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Hexane: redispersion/storage/optical solvent. Supplier: not reported. Numerical purity not reported.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported.",
+        "viewOverrides": {
+          "name": "Hexane",
+          "caption": "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported.",
+          "limitations": [
+            "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported."
+          ],
+          "modelNotes": [
+            "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "fept-1": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred."
+    },
+    "gu-2004-heterodimer": {
+      "platinum-acac": {
+        "source_material_id": "gu2004-platinum-acac",
+        "registry_id": "gu2004-platinum-acac-reference",
+        "asset_origin": "private additions",
+        "source_name": "Pt(acac)2",
+        "source_role": "metal_precursor",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Pt(acac)2: platinum precursor. Supplier: Strem Chem. Reported grade 98%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Formal Pt2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition.",
+        "viewOverrides": {
+          "name": "Pt(acac)2",
+          "caption": "Formal Pt2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition.",
+          "limitations": [
+            "Formal Pt2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition."
+          ],
+          "modelNotes": [
+            "Formal Pt2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "diol": {
+        "source_material_id": "gu2004-diol",
+        "registry_id": "hexadecane-1-2-diol",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Hexadecane-1,2-diol",
+        "source_role": "reducing_agent",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Hexadecane-1,2-diol: reductant; two distinct additions. Supplier: Sigma-Aldrich. Reported grade 90%. technical grade",
+          "technical grade",
+          "Technical-grade reagent is a mixture; no complete molecular formula or molecular coordinates are assigned to the dosed reagent."
+        ],
+        "display_scope": "Named hexadecane-1,2-diol reference component; technical 90%. Stereochemistry and impurities unspecified; a reference conformer does not assign the source enantiomer.",
+        "viewOverrides": {
+          "name": "Hexadecane-1,2-diol",
+          "caption": "Named hexadecane-1,2-diol reference component; technical 90%. Stereochemistry and impurities unspecified; a reference conformer does not assign the source enantiomer.",
+          "limitations": [
+            "Named hexadecane-1,2-diol reference component; technical 90%. Stereochemistry and impurities unspecified; a reference conformer does not assign the source enantiomer."
+          ],
+          "modelNotes": [
+            "Named hexadecane-1,2-diol reference component; technical 90%. Stereochemistry and impurities unspecified; a reference conformer does not assign the source enantiomer."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "dioctyl-ether": {
+        "source_material_id": "gu2004-dioctyl-ether",
+        "registry_id": "dioctyl-ether",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Dioctyl ether",
+        "source_role": "solvent",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Dioctyl ether: reaction solvent. Supplier: Sigma-Aldrich. Reported grade 99%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Named dioctyl ether reference; Gu 99%. No numerical boiling temperature or pressure supplied by model.",
+        "viewOverrides": {
+          "name": "Dioctyl ether",
+          "caption": "Named dioctyl ether reference; Gu 99%. No numerical boiling temperature or pressure supplied by model.",
+          "limitations": [
+            "Named dioctyl ether reference; Gu 99%. No numerical boiling temperature or pressure supplied by model."
+          ],
+          "modelNotes": [
+            "Named dioctyl ether reference; Gu 99%. No numerical boiling temperature or pressure supplied by model."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "oleylamine": {
+        "source_material_id": "gu2004-oleylamine",
+        "registry_id": "oleylamine",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Oleylamine",
+        "source_role": "ligand",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Oleylamine: surface ligand. Supplier: Sigma-Aldrich. Reported grade 97%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Reference cis/Z oleylamine component. Gu reports 97% reagent purity; geometric-isomer composition is unassayed.",
+        "viewOverrides": {
+          "name": "Oleylamine",
+          "caption": "Reference cis/Z oleylamine component. Gu reports 97% reagent purity; geometric-isomer composition is unassayed.",
+          "limitations": [
+            "Reference cis/Z oleylamine component. Gu reports 97% reagent purity; geometric-isomer composition is unassayed."
+          ],
+          "modelNotes": [
+            "Reference cis/Z oleylamine component. Gu reports 97% reagent purity; geometric-isomer composition is unassayed."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "oleic-acid": {
+        "source_material_id": "gu2004-oleic-acid",
+        "registry_id": "oleic-acid",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Oleic acid",
+        "source_role": "ligand",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Oleic acid: surface ligand. Supplier: Sigma-Aldrich. Reported grade 99%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Named oleic acid reference; Gu 99%. No measured surface-bound oleate geometry.",
+        "viewOverrides": {
+          "name": "Oleic acid",
+          "caption": "Named oleic acid reference; Gu 99%. No measured surface-bound oleate geometry.",
+          "limitations": [
+            "Named oleic acid reference; Gu 99%. No measured surface-bound oleate geometry."
+          ],
+          "modelNotes": [
+            "Named oleic acid reference; Gu 99%. No measured surface-bound oleate geometry."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "iron-pentacarbonyl": {
+        "source_material_id": "gu2004-iron-pentacarbonyl",
+        "registry_id": "gu2004-iron-pentacarbonyl-reference",
+        "asset_origin": "private additions",
+        "source_name": "Fe(CO)5",
+        "source_role": "metal_precursor",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Fe(CO)5: iron precursor. Supplier: Strem Chem. Numerical purity not reported. Purity not printed next to Fe(CO)5; do not transfer Pt(acac)2 98% to this reagent.",
+          "Purity not printed next to Fe(CO)5; do not transfer Pt(acac)2 98% to this reagent.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Fe(CO)5 ligand inventory: one Fe center and five CO reference fragments. No metal–carbon geometry is encoded; these are not asserted to be free components in the reagent. No 3D or Fe–C bonds are provided. Formal C−/O+ charges are one carbon-monoxide resonance representation. Gu does not print a purity next to Fe(CO)5; Pt(acac)2 98% must not be transferred.",
+        "viewOverrides": {
+          "name": "Fe(CO)5",
+          "caption": "Fe(CO)5 ligand inventory: one Fe center and five CO reference fragments. No metal–carbon geometry is encoded; these are not asserted to be free components in the reagent. No 3D or Fe–C bonds are provided. Formal C−/O+ charges are one carbon-monoxide resonance representation. Gu does not print a purity next to Fe(CO)5; Pt(acac)2 98% must not be transferred.",
+          "limitations": [
+            "Fe(CO)5 ligand inventory: one Fe center and five CO reference fragments. No metal–carbon geometry is encoded; these are not asserted to be free components in the reagent. No 3D or Fe–C bonds are provided. Formal C−/O+ charges are one carbon-monoxide resonance representation. Gu does not print a purity next to Fe(CO)5; Pt(acac)2 98% must not be transferred."
+          ],
+          "modelNotes": [
+            "Fe(CO)5 ligand inventory: one Fe center and five CO reference fragments. No metal–carbon geometry is encoded; these are not asserted to be free components in the reagent. No 3D or Fe–C bonds are provided. Formal C−/O+ charges are one carbon-monoxide resonance representation. Gu does not print a purity next to Fe(CO)5; Pt(acac)2 98% must not be transferred."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "sulfur": {
+        "source_material_id": "gu2004-sulfur",
+        "registry_id": "gu2004-sulfur-element-reference",
+        "asset_origin": "private additions",
+        "source_name": "Elemental sulfur powder",
+        "source_role": "chalcogen_precursor",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Elemental sulfur powder: sulfur precursor. Supplier: Sigma-Aldrich. Reported grade 99.998%.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Elemental sulfur identity. The paper does not identify a powder allotrope or a discrete dissolved molecule. No S8 ring, monatomic vapor, crystal lattice or 3D structure is assigned. Source grade 99.998%; precursor form is powder.",
+        "viewOverrides": {
+          "name": "Elemental sulfur powder",
+          "caption": "Elemental sulfur identity. The paper does not identify a powder allotrope or a discrete dissolved molecule. No S8 ring, monatomic vapor, crystal lattice or 3D structure is assigned. Source grade 99.998%; precursor form is powder.",
+          "limitations": [
+            "Elemental sulfur identity. The paper does not identify a powder allotrope or a discrete dissolved molecule. No S8 ring, monatomic vapor, crystal lattice or 3D structure is assigned. Source grade 99.998%; precursor form is powder."
+          ],
+          "modelNotes": [
+            "Elemental sulfur identity. The paper does not identify a powder allotrope or a discrete dissolved molecule. No S8 ring, monatomic vapor, crystal lattice or 3D structure is assigned. Source grade 99.998%; precursor form is powder."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "topo": {
+        "source_material_id": "gu2004-topo",
+        "registry_id": "topo",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Trioctylphosphine oxide (TOPO)",
+        "source_role": "reaction_additive",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Trioctylphosphine oxide (TOPO): added with cadmium precursor; specific role not explicitly resolved. Supplier: Sigma-Aldrich. Reported grade 90%. technical grade; not a pure single-component composition claim",
+          "technical grade; not a pure single-component composition claim",
+          "Technical-grade reagent is a mixture; no complete molecular formula or molecular coordinates are assigned to the dosed reagent."
+        ],
+        "display_scope": "Pure named TOPO component only; Gu technical 90% mixture, unspecified impurities. Do not infer pure stock composition.",
+        "viewOverrides": {
+          "name": "Trioctylphosphine oxide (TOPO)",
+          "caption": "Pure named TOPO component only; Gu technical 90% mixture, unspecified impurities. Do not infer pure stock composition.",
+          "limitations": [
+            "Pure named TOPO component only; Gu technical 90% mixture, unspecified impurities. Do not infer pure stock composition."
+          ],
+          "modelNotes": [
+            "Pure named TOPO component only; Gu technical 90% mixture, unspecified impurities. Do not infer pure stock composition."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "cadmium-acac": {
+        "source_material_id": "gu2004-cadmium-acac",
+        "registry_id": "gu2004-cadmium-acac-reference",
+        "asset_origin": "private additions",
+        "source_name": "Cd(acac)2",
+        "source_role": "metal_precursor",
+        "source_stage": "synthesis",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Cd(acac)2: cadmium precursor. Supplier: prepared in this SI. Numerical purity not reported. Reported pure isolated product; no numerical purity, hydration state or elemental analysis.",
+          "Reported pure isolated product; no numerical purity, hydration state or elemental analysis.",
+          "Formula denotes the source-named salt/chelate only; hydration and assay basis are unresolved, and the formula is not a measured full reagent composition."
+        ],
+        "display_scope": "Formal Cd2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition.",
+        "viewOverrides": {
+          "name": "Cd(acac)2",
+          "caption": "Formal Cd2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition.",
+          "limitations": [
+            "Formal Cd2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition."
+          ],
+          "modelNotes": [
+            "Formal Cd2+ and two acetylacetonate ligand fragments. Fragment layout is not a molecular coordination structure or evidence of free ions in the reagent. Metal–oxygen bonds and 3D geometry deliberately unavailable. The ligand is one reference resonance form; displayed Z connectivity is not a source conformational measurement. Hydration, oligomerization, solution speciation and actual solid structure are unreported. Formula is the named anhydrous stoichiometric unit, not measured complete reagent composition."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "ethanol": {
+        "source_material_id": "gu2004-ethanol",
+        "registry_id": "ethanol",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Ethanol",
+        "source_role": "antisolvent",
+        "source_stage": "workup",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Ethanol: recrystallization solvent and product antisolvent. Supplier: not reported. Numerical purity not reported.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Ethanol reference; purity and ethanol/water recrystallization ratio unreported.",
+        "viewOverrides": {
+          "name": "Ethanol",
+          "caption": "Ethanol reference; purity and ethanol/water recrystallization ratio unreported.",
+          "limitations": [
+            "Ethanol reference; purity and ethanol/water recrystallization ratio unreported."
+          ],
+          "modelNotes": [
+            "Ethanol reference; purity and ethanol/water recrystallization ratio unreported."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "hexane": {
+        "source_material_id": "gu2004-hexane",
+        "registry_id": "hexane",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Hexane",
+        "source_role": "solvent",
+        "source_stage": "workup",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Hexane: redispersion/storage/optical solvent. Supplier: not reported. Numerical purity not reported.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported.",
+        "viewOverrides": {
+          "name": "Hexane",
+          "caption": "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported.",
+          "limitations": [
+            "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported."
+          ],
+          "modelNotes": [
+            "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "nitrogen": {
+        "source_material_id": "gu2004-nitrogen",
+        "registry_id": "gu2004-nitrogen-reference",
+        "asset_origin": "private additions",
+        "source_name": "Nitrogen",
+        "source_role": "storage_gas",
+        "source_stage": "storage",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Nitrogen: storage atmosphere. Supplier: not reported. Numerical purity not reported. Not automatically the identity of the general inert reaction gas.",
+          "Not automatically the identity of the general inert reaction gas.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Nitrogen storage atmosphere only; inert reaction gas identity is not thereby established. Uses a private NIST-distance 3D reference; no source-batch molecular coordinates.",
+        "viewOverrides": {
+          "name": "Nitrogen",
+          "caption": "Nitrogen storage atmosphere only; inert reaction gas identity is not thereby established. Uses a private NIST-distance 3D reference; no source-batch molecular coordinates.",
+          "limitations": [
+            "Nitrogen storage atmosphere only; inert reaction gas identity is not thereby established. Uses a private NIST-distance 3D reference; no source-batch molecular coordinates."
+          ],
+          "modelNotes": [
+            "Nitrogen storage atmosphere only; inert reaction gas identity is not thereby established. Uses a private NIST-distance 3D reference; no source-batch molecular coordinates."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      }
+    },
+    "gu-2004-literature-context": {},
+    "gu-2004-magnetic-model": {},
+    "gu-2004-magnetometry": {
+      "product-4": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred."
+    },
+    "gu-2004-mechanism": {},
+    "gu-2004-microscopy": {
+      "precursor-1": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred.",
+      "isolated-2": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred.",
+      "isolated-3": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred.",
+      "product-4": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred."
+    },
+    "gu-2004-optical": {
+      "hexane": {
+        "source_material_id": "gu2004-hexane",
+        "registry_id": "hexane",
+        "asset_origin": "existing independently reuse-qualified registry",
+        "source_name": "Hexane",
+        "source_role": "solvent",
+        "source_stage": "characterization",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "Hexane: redispersion/storage/optical solvent. Supplier: not reported. Numerical purity not reported.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported.",
+        "viewOverrides": {
+          "name": "Hexane",
+          "caption": "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported.",
+          "limitations": [
+            "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported."
+          ],
+          "modelNotes": [
+            "Illustrative n-hexane reference. Gu says hexane; exact isomer composition/assay unreported."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "dibromoanthracene": {
+        "source_material_id": "gu2004-dibromoanthracene",
+        "registry_id": "gu2004-dibromoanthracene-reference",
+        "asset_origin": "private additions",
+        "source_name": "9,10-Dibromoanthracene",
+        "source_role": "quantum_yield_reference",
+        "source_stage": "characterization",
+        "canonical_evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "SI PDF p. 1, General and preparation paragraphs"
+          }
+        ],
+        "source_notes": [
+          "9,10-Dibromoanthracene: fluorescence quantum-yield standard. Supplier: not reported. Numerical purity not reported.",
+          "Formula denotes the source-named chemical identity; no connectivity or atomic-coordinate asset has been generated or verified in this canonical subtask."
+        ],
+        "display_scope": "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Optical quantum-yield standard, not a synthesis reagent. Purity and source-batch geometry are unreported.",
+        "viewOverrides": {
+          "name": "9,10-Dibromoanthracene",
+          "caption": "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Optical quantum-yield standard, not a synthesis reagent. Purity and source-batch geometry are unreported.",
+          "limitations": [
+            "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Optical quantum-yield standard, not a synthesis reagent. Purity and source-batch geometry are unreported."
+          ],
+          "modelNotes": [
+            "Named reference molecule with verified connectivity; not a recovered molecular structure from the Gu paper. Optical quantum-yield standard, not a synthesis reagent. Purity and source-batch geometry are unreported."
+          ]
+        },
+        "override_policy": "Replace unrelated source-specific purity/mixture notes in displayed shared entry/model metadata; retain original reference provenance separately.",
+        "binding_approved": true,
+        "independent_scientific_audit": "Passed Gu molecular source audit; exact private inputs bound separately."
+      },
+      "product-4": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred."
+    },
+    "gu-2004-xrf": {
+      "product-4": "Source-labeled composition/domain reference; physical batch, atomic arrangement and interface/ligand geometry are not inferred."
+    }
   },
   "sourceRecordSha256": {
     "feld-2019-fe2-carbonate-to-oleate-preparation": "3ee09fd63f6a26d92a27b7b74ad567eab13af9bbf47d18f1ac8a5276bc3616fd",
@@ -4264,7 +4981,17 @@
     "sashchiuk-2004-transport-model": "4977c0b8f158671c5fd02cafe18ade9c427aff95e8bbc40dcdaec9b2dd4991d4",
     "sashchiuk-2004-wire-high": "9300a7b1ef9eb348241915f5d4a9ed9b5112fe4ad997819575306d228280c1d9",
     "sashchiuk-2004-wire-intermediate": "0597f04294f6a0ed0d5bc92a8ea23c34befe2b2f983628347f5dced520197344",
-    "sashchiuk-2004-wire-structure": "821b302a67014d186b0d9f418553b6d7fc94b8e20c55061b5512b6d0f15935e0"
+    "sashchiuk-2004-wire-structure": "821b302a67014d186b0d9f418553b6d7fc94b8e20c55061b5512b6d0f15935e0",
+    "gu-2004-cdacac-preparation": "a557bd2c0123b6bbce139118e18b4902571c218f697ea1368727eef6127f7a03",
+    "gu-2004-fept-control": "d1dd39a598214f3c8da764dd5d7c2912e8b0a8239c201cb14d9670b1380258e3",
+    "gu-2004-heterodimer": "bde8a1ee6d1789b10af291703b5fd652c03fe83015f13932787da4ce00a73f2f",
+    "gu-2004-literature-context": "db9f10931af90cb4fe54ff9d4508c090d66c2592b58edc7aa15aa59c47d478fa",
+    "gu-2004-magnetic-model": "98f8a4417ba2b4106058bb2b843ffea27ee4d7d350abfd8648ba37ddcc2c0a77",
+    "gu-2004-magnetometry": "b54614787da0698656e93919b826b49e6b0c84ac3e5b82c59674f123a0cc8589",
+    "gu-2004-mechanism": "bcb40f72b6528de9ab1d00414c31239092cbdc21ed5216fc198066de2d5682d3",
+    "gu-2004-microscopy": "2020f64b33473a57acebf43b179bb86bfd763d9033b5c6500372d33b49fee165",
+    "gu-2004-optical": "5c325a4d608176d57c7ca61fee387230b76a69f6cff64736b336f7a3b7134dea",
+    "gu-2004-xrf": "6c0e2821305afe68396cace73ae4c9888777eb43b8cac13ef9256d6d28dee8b6"
   },
   "unresolved": []
 }

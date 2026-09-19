@@ -1,0 +1,638 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gu-2004-magnetometry",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Gu et al. (2004) · Magnetism of final heterodimer 4",
+  "material": {
+    "formula": "FePt/CdS",
+    "family": "FePt–CdS heterodimers and source-linked precursor/control contexts",
+    "elements": [
+      "Fe",
+      "Pt",
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "FePt",
+      "CdS"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "ZFC/FC and field-dependent magnetometry",
+  "sources": [
+    {
+      "id": "gu2004",
+      "doi": "10.1021/ja0496423",
+      "title": "Facile One-Pot Synthesis of Bifunctional Heterodimers of Nanoparticles: A Conjugate of Quantum Dot and Magnetic Nanoparticles",
+      "authors": "Hongwei Gu; Rongkun Zheng; XiXiang Zhang; Bing Xu",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/ja0496423",
+      "main_status": "Both supplied main pages text-read and visually inspected; independent source and canonical audits passed.",
+      "si_status": "Matched three-page supporting information verified by title/authors/content and unchanged source hashes. All three pages text-read and visually inspected in the independently passed extraction audit.",
+      "reuse_status": "Private bibliographic/factual extraction; original source and figure rights remain separate. No publication or reuse license is inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "gu2004",
+    "recipe_family": "gu2004-one-pot-fept-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Title/byline/footer"
+        }
+      ],
+      "note": "Context/procedure record; not a separately quantified target-synthesis experiment."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Complete two-page main article and matched three-page supporting information"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Complete two-page main article and matched three-page supporting information"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Complete two-page main article and matched three-page supporting information"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "product-4",
+      "name": "Final-product magnetic specimen",
+      "formula": "FePt/CdS",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nominal source specimen identity; a shared label does not establish an identical physical batch across measurement techniques."
+      ],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Magnetic measurements paragraph"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zfc-fc-data",
+      "name": "Record ZFC/FC magnetic response of 4 data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "product-4"
+      ]
+    },
+    {
+      "id": "hysteresis-data",
+      "name": "Record the 5 K field-dependent moment of 4 data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "product-4"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "zfc-fc",
+      "action": "zfc_fc_magnetometry",
+      "label": "Record ZFC/FC magnetic response of 4",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "product-4"
+      ],
+      "outputs": [
+        "zfc-fc-data"
+      ],
+      "parameters": {
+        "applied_field": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Oe",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Acquisition field appears in main p2 Figure 2A caption; this value is not inherited by SI S-3.",
+          "basis": "Source sample scope: final product 4 magnetic sample.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gu2004",
+              "locator": "Main PDF p. 2, Figure 2A caption"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Only source-supported acquisition context is retained. Instrument settings and specimen preparation absent from the paper remain unknown.",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+        }
+      ]
+    },
+    {
+      "id": "hysteresis",
+      "action": "field_dependent_magnetometry",
+      "label": "Record the 5 K field-dependent moment of 4",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "product-4"
+      ],
+      "outputs": [
+        "hysteresis-data"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source sample scope: final product 4 magnetic sample.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gu2004",
+              "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Only source-supported acquisition context is retained. Instrument settings and specimen preparation absent from the paper remain unknown.",
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zfc-fc-4",
+      "source_sample_label": "Figure 2A / product 4 ZFC–FC",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "FePt/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Physical batch/aliquot identity relative to other analytical records is not established."
+      ]
+    },
+    {
+      "sample_id": "hysteresis-4",
+      "source_sample_label": "Figure 2B / product 4 at 5 K",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "FePt/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Physical batch/aliquot identity relative to other analytical records is not established."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "blocking-temperature",
+      "sample_id": "zfc-fc-4",
+      "property": "blocking_temperature",
+      "technique": "ZFC/FC magnetometry",
+      "value": {
+        "value": 11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "K",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Source sample scope: final product 4 magnetic sample.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "final product 4 magnetic sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+        }
+      ]
+    },
+    {
+      "id": "coercivity",
+      "sample_id": "hysteresis-4",
+      "property": "coercivity",
+      "technique": "Field-dependent magnetometry",
+      "value": {
+        "value": 0.85,
+        "minimum": null,
+        "maximum": null,
+        "unit": "kOe",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Source sample scope: final product 4 magnetic sample.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "final product 4 magnetic sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+        }
+      ]
+    },
+    {
+      "id": "source-magnetic-timing",
+      "sample_id": "zfc-fc-4",
+      "property": "source_acquisition",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "Magnetic measurements of 4 were performed immediately after synthesis. Exact elapsed time, specimen preparation/state/mass, instrument and field protocol are not otherwise detailed.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph"
+          }
+        ],
+        "note": "Source scope: final product 4 magnetic sample. Source kind: acquisition."
+      },
+      "conditions": "final product 4 magnetic sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Magnetic measurements paragraph"
+        }
+      ]
+    },
+    {
+      "id": "source-magnetic-zfc-fc",
+      "sample_id": "zfc-fc-4",
+      "property": "source_measurement",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "ZFC/FC of 4 gives an estimated blocking temperature around 11 K. Figure 2A specifies applied field 100 Oe. Sharp peak and an origin-crossing extrapolated 1/m versus T plot are interpreted as uniform FePt sizes and weak dipolar interaction.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+          }
+        ],
+        "note": "Source scope: final product 4 magnetic sample. Source kind: measurement."
+      },
+      "conditions": "final product 4 magnetic sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, Magnetic measurements paragraph; Figure 2A caption on main p2"
+        }
+      ]
+    },
+    {
+      "id": "source-magnetic-weak-interactions",
+      "sample_id": "zfc-fc-4",
+      "property": "source_author_interpretation",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "Sharp ZFC peak and extrapolated FC inverse moment through the origin are the authors’ evidence for a narrow FePt size distribution and weak interparticle magnetic dipolar interaction; no numerical interaction strength is reported.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 1, End of magnetic paragraph; continuation main p2"
+          }
+        ],
+        "note": "Source scope: final product 4 magnetic sample. Source kind: author_interpretation."
+      },
+      "conditions": "final product 4 magnetic sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 1, End of magnetic paragraph; continuation main p2"
+        }
+      ]
+    },
+    {
+      "id": "source-hysteresis",
+      "sample_id": "hysteresis-4",
+      "property": "source_measurement",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "Product 4 measured at 5 K has hysteresis and coercivity around 0.85 kOe. Source concludes magnetic function is retained; this does not mean the sample is non-hysteretic at all temperatures.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+          }
+        ],
+        "note": "Source scope: final product 4 magnetic sample. Source kind: measurement."
+      },
+      "conditions": "final product 4 magnetic sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 2, Field-dependent magnetization paragraph and Fig 2B caption"
+        }
+      ]
+    },
+    {
+      "id": "source-figure-2a",
+      "sample_id": "zfc-fc-4",
+      "property": "source_figure",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "Temperature-dependent magnetic moment m (10^−5 emu); temperature axis 0–100 K. Inset 1/m (emu^−1) versus Temperature (K), shown 0–50 K; no raw curve digitization.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Figure 2A panel/caption"
+          }
+        ],
+        "note": "Source scope: product 4 magnetic specimen. Source kind: figure."
+      },
+      "conditions": "product 4 magnetic specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 2, Figure 2A panel/caption"
+        }
+      ]
+    },
+    {
+      "id": "source-figure-2b",
+      "sample_id": "hysteresis-4",
+      "property": "source_figure",
+      "technique": "Source text / original figure or table context",
+      "value": {
+        "value": "Moment m (emu), ordinate approximately −0.010 to +0.010; abscissa printed Hc (kOe), −20 to +20. Preserve the Hc axis label even though this is a field-sweep plot.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gu2004",
+            "locator": "Main PDF p. 2, Figure 2B panel/caption"
+          }
+        ],
+        "note": "Source scope: product 4 at 5 K. Source kind: figure."
+      },
+      "conditions": "product 4 at 5 K",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gu2004",
+          "locator": "Main PDF p. 2, Figure 2B panel/caption"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All 2 supplied main pages and 3 content-matched SI pages completely read and visually inspected; independent source extraction and canonical scientific audits passed. Source conflicts and unreported parameters are preserved. This scope does not establish identical physical aliquots across analytical techniques or measured atomic coordinates.",
+    "missing_fields": [
+      "No atomic coordinates, CIF, unit-cell constants, occupancy refinement, interface lattice mapping or crystallographic atom model is supplied. SAED establishes author phase assignments only.",
+      "No XRD pattern, Raman spectrum, electrical transport or elemental spatial map is supplied. XRF must not be relabeled XRD or EDS.",
+      "Samples are explicitly labeled 1–4 and figures identify those stages. Exact batch/aliquot provenance, microscopy transfer/isolation details, and whether TEM, SAED, magnetometry and optical measurements used the same physical batch are unreported.",
+      "Reaction vessel, heating apparatus, numeric inert pressure, gas identity, ramp rates and stirring speeds are not reported. Dioctyl-ether boiling point is not numerically supplied.",
+      "CdCl2 hydration and 80.5% assay basis are unresolved. Recrystallization solvent ratio/amount/temperature, vacuum pressure and drying duration are absent. Purity and hydration of isolated Cd(acac)2 are not analytically quantified.",
+      "Centrifugation force/speed/time, yield or final mass of 4, final particle concentration and nitrogen storage temperature/duration are absent.",
+      "Instrument models, TEM voltage, XRF source/substrate/calibration, magnetic sample mass/state, full FC/ZFC protocol, SI-3 field, optical concentration and fluorescence correction details are absent.",
+      "Core–shell intermediates and dewetting mechanism remain author-supported interpretations with an isolation limitation; no separately varied annealing study, in situ kinetics or interface thermodynamic parameters are supplied.",
+      "No synthesis replicate count, error bars, numerical dispersity, failed-isolation trial count or raw data files are provided in the supplied bundle."
+    ],
+    "conflicts": [
+      "SI inset mol% values Fe 0.0562, Pt 0.0604, Cd 1.5447, S 1.9262 do not directly reproduce the main stated approximate Fe/Pt/Cd/S ratio 1:1:3:3.6. Corrections, substrate contribution and quantification basis are not supplied. Preserve both representations; do not silently rescale either."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source synthesis context",
+      "url": "../records/gu-2004-heterodimer.html",
+      "relation": "Nominal stage/product context only; no unproven same-batch linkage is implied."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
