@@ -3,9 +3,12 @@ from copy import deepcopy
 def ev(source,locator):return [{'source_id':source,'locator':locator}]
 def fact(value=None,evidence=None,status=None,note=''):
     return {'value':value,'status':status or ('reported' if value is not None else 'not_reported'),'evidence':evidence or [],'note':note}
-def qty(value=None,unit='',evidence=None,status=None,minimum=None,maximum=None,approximate=False,qualifier='',basis='',raw_text='',derivation=None):
-    known=value is not None or minimum is not None
-    return dict(value=value,minimum=minimum,maximum=maximum,unit=unit,status=status or ('reported' if known else 'not_reported'),approximate=approximate,qualifier=qualifier,basis=basis,raw_text=raw_text,evidence=evidence or [],derivation=derivation)
+def qty(value=None,unit='',evidence=None,status=None,minimum=None,maximum=None,approximate=False,qualifier='',basis='',raw_text='',derivation=None,minimum_exclusive=None,maximum_exclusive=None):
+    known=value is not None or minimum is not None or maximum is not None
+    result=dict(value=value,minimum=minimum,maximum=maximum,unit=unit,status=status or ('reported' if known else 'not_reported'),approximate=approximate,qualifier=qualifier,basis=basis,raw_text=raw_text,evidence=evidence or [],derivation=derivation)
+    for key,flag in [('minimum_exclusive',minimum_exclusive),('maximum_exclusive',maximum_exclusive)]:
+        if flag is not None:result[key]=flag
+    return result
 def source(id,doi,title,authors,year,si='Not located or verified'):
     return dict(id=id,doi=doi,title=title,authors=authors,year=year,url='https://doi.org/'+doi,main_status='Relevant original text reviewed',si_status=si,reuse_status='Bibliographic and factual extraction; original article/figure rights remain separate')
 def record(id,title,formula,family,method,src,loc,kind='literature_protocol'):

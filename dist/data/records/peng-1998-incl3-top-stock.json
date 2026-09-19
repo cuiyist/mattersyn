@@ -1,0 +1,489 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "peng-1998-incl3-top-stock",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Peng et al. (1998) · Concentrated InCl3/TOP stock preparation",
+  "material": {
+    "formula": "InAs",
+    "family": "Colloidal semiconductor nanocrystals"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "peng1998",
+      "doi": "10.1021/ja9805425",
+      "title": "Kinetics of II-VI and III-V Colloidal Semiconductor Nanocrystal Growth: “Focusing” of Size Distributions",
+      "authors": "Xiaogang Peng; J. Wickham; A. P. Alivisatos",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/ja9805425",
+      "main_status": "All two supplied main pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Matched four-page supplied SI: exact DOI cover and three scientific pages fully text/visually reviewed with independent audit.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "peng1998",
+    "recipe_family": "peng1998-inas-focusing",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ],
+      "note": "Supporting procedure or evidence context; not an independently specified synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF pp. 1–2; matched SI PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF pp. 1–2; matched SI PDF pp. 1–4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF pp. 1–2; matched SI PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "incl3",
+      "name": "Indium(III) chloride",
+      "formula": "InCl3",
+      "role": "metal precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    },
+    {
+      "id": "top",
+      "name": "Trioctylphosphine",
+      "formula": "C24H51P",
+      "role": "coordinating solvent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Distilled TOP; the source does not describe distillation conditions."
+      ],
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    },
+    {
+      "id": "argon",
+      "name": "Argon",
+      "formula": "Ar",
+      "role": "atmosphere",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "incl3-top-stock",
+      "name": "InCl3 in distilled TOP",
+      "components": [
+        {
+          "material_id": "incl3",
+          "quantities": {}
+        },
+        {
+          "material_id": "top",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "incl3_per_top_volume": {
+          "value": 0.33,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g/mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "grams InCl3 per mL TOP",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "peng1998",
+              "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "0.33 g InCl3 per mL TOP, a solvent-volume basis, not a demonstrated final-solution molarity. Total prepared volume and ligand coordination structure are unreported.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "hot-stock",
+      "name": "Heat InCl3 in distilled TOP output",
+      "kind": "mixture",
+      "parent_ids": [
+        "incl3",
+        "top",
+        "argon"
+      ]
+    },
+    {
+      "id": "cooled-stock",
+      "name": "Cool the concentrated solution output",
+      "kind": "mixture",
+      "parent_ids": [
+        "hot-stock"
+      ]
+    },
+    {
+      "id": "stored-stock",
+      "name": "Transfer the cooled stock to drybox storage output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cooled-stock"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "heat",
+      "action": "heated_stock_preparation",
+      "label": "Heat InCl3 in distilled TOP",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "incl3",
+        "top",
+        "argon"
+      ],
+      "outputs": [
+        "hot-stock"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 260,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "peng1998",
+              "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+            }
+          ],
+          "derivation": null
+        },
+        "incl3_per_top_volume": {
+          "value": 0.33,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g/mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "solvent-volume basis",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "peng1998",
+              "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Argon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating duration and total prepared amount unreported.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    },
+    {
+      "id": "cool",
+      "action": "cooling",
+      "label": "Cool the concentrated solution",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat"
+      ],
+      "inputs": [
+        "hot-stock"
+      ],
+      "outputs": [
+        "cooled-stock"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Final temperature, cooling rate and duration unreported.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    },
+    {
+      "id": "store",
+      "action": "drybox_storage",
+      "label": "Transfer the cooled stock to drybox storage",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cool"
+      ],
+      "inputs": [
+        "cooled-stock"
+      ],
+      "outputs": [
+        "stored-stock"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Drybox; internal gas composition unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Storage temperature and duration unreported. Do not inherit −35 °C from another paper or precursor.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "incl3-top-stock",
+      "source_sample_label": "Concentrated InCl3·TOP solution",
+      "batch_id": null,
+      "material_state_id": "stored-stock",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InCl3 in TOP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ],
+      "notes": [
+        "Source notation InCl3·TOP does not establish an isolated crystalline adduct or a unique coordination structure."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All two main pages and four matched SI PDF pages read and visually inspected, with independent source and canonical audits. Strict injection bounds, inferred CdSe growth temperature, sequential feeds, aliquot preparation, calibration rows and the unlinked 8.5 nm TEM specimen remain distinct. No measured phase, atomic coordinates or independent calibration synthesis runs inferred.",
+    "missing_fields": [
+      "No author-assigned physical batch IDs or complete cross-technique sample joins.",
+      "No measured lattice phase, atomic coordinates or exact experimental CIF supplied."
+    ],
+    "conflicts": [
+      "CdSe baseline stock gives Se:Cd(CH3)2:tributylphosphine = 2:5:100 by mass; discussion separately describes Cd:Se about 1.4:1 by mole. Preserve both approximate descriptions without replacing either.",
+      "Main Figure 3 shows 8.5 nm CdSe by TEM; no demonstrated specimen join to the smaller-particle Figure 1/2 kinetic trajectory."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main and SI review",
+      "url": "../paper-review.html?id=peng1998",
+      "relation": "Two main pages and matched SI: cover plus three scientific pages."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -45,8 +45,10 @@ def validate_record(r):
             if present and not value['evidence']:fail(path+' value has no provenance')
             if numeric:
                 lo,hi=value['minimum'],value['maximum']
-                if (lo is None)!=(hi is None):fail(path+' range must have both endpoints')
-                if lo is not None and (lo>hi or value['value'] is not None):fail(path+' invalid or ambiguous range')
+                if (lo is not None or hi is not None) and value['value'] is not None:fail(path+' scalar and bounds are ambiguous')
+                if lo is not None and hi is not None and (lo>hi or lo==hi and (value.get('minimum_exclusive') or value.get('maximum_exclusive'))):fail(path+' empty or reversed range')
+                for bound in ['minimum','maximum']:
+                    if value.get(bound+'_exclusive') and value[bound] is None:fail(path+' exclusivity requires its bound')
                 for n in [value['value'],lo,hi]:
                     if n is not None and not math.isfinite(n):fail(path+' nonfinite quantity')
                 if value['status']=='calculated' and not value['derivation']:fail(path+' calculation missing derivation')
@@ -99,7 +101,7 @@ def validate_record(r):
     return errors
 
 def chemical_signature(r):
-    def quantities(qs):return {k:{z:q[z] for z in ['value','minimum','maximum','unit','status','basis']} for k,q in qs.items()}
+    def quantities(qs):return {k:{z:q[z] for z in ['value','minimum','maximum','unit','status','basis','minimum_exclusive','maximum_exclusive'] if z in q} for k,q in qs.items()}
     def sorted_rows(rows):return sorted(rows,key=lambda x:json.dumps(x,sort_keys=True))
     identities={m['id']:(m['name'].lower(),m['formula'],m['role'],m['identity']) for m in r['materials']}
     return digest({'material':r['material']['formula'],'method':r['method'],'materials':sorted_rows([(identities[m['id']],quantities(m['quantities'])) for m in r['materials']]),'stocks':sorted_rows([{'components':sorted_rows([(identities[c['material_id']],quantities(c['quantities'])) for c in s['components']]),'concentrations':quantities(s['concentrations'])} for s in r['stocks']]),'alternatives':sorted_rows([quantities(o['parameters']) for o in r['condition_options']]),'operations':[(o['action'],o['stage'],o['optional'],o['branch'],quantities(o['parameters']),o['environment']['value'],o['endpoint']['value']) for o in r['operations']]})
@@ -184,5 +186,10 @@ def fmt(q):
     if 'unit' not in q:
         return (str(q['value']) if q['value'] is not None else q['status'].replace('_',' ').capitalize())+(' · '+q.get('note','') if q.get('note') else '')
     if q['status'] in ['not_reported','not_applicable']:return q['status'].replace('_',' ').capitalize()+(' · '+q['qualifier'] if q['qualifier'] else '')
-    value=f"{q['minimum']:g}–{q['maximum']:g}" if q['minimum'] is not None else f"{q['value']:g}"
+    lo,hi=q['minimum'],q['maximum']
+    if lo is not None and hi is not None:
+        value=(('(' if q.get('minimum_exclusive') else '[')+f'{lo:g}, {hi:g}'+(')' if q.get('maximum_exclusive') else ']')) if q.get('minimum_exclusive') or q.get('maximum_exclusive') else f'{lo:g}–{hi:g}'
+    elif lo is not None:value=('>' if q.get('minimum_exclusive') else '≥')+f'{lo:g}'
+    elif hi is not None:value=('<' if q.get('maximum_exclusive') else '≤')+f'{hi:g}'
+    else:value=f"{q['value']:g}"
     return ('≈' if q['approximate'] else '')+value+' '+q['unit']+(' · '+q['qualifier'] if q['qualifier'] else '')

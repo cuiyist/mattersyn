@@ -1,0 +1,494 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "peng-1998-pl-size-analysis",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Peng et al. (1998) · PL-based size-distribution analysis",
+  "material": {
+    "formula": "CdSe/InAs",
+    "family": "Colloidal semiconductor nanocrystals"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "peng1998",
+      "doi": "10.1021/ja9805425",
+      "title": "Kinetics of II-VI and III-V Colloidal Semiconductor Nanocrystal Growth: “Focusing” of Size Distributions",
+      "authors": "Xiaogang Peng; J. Wickham; A. P. Alivisatos",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/ja9805425",
+      "main_status": "All two supplied main pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Matched four-page supplied SI: exact DOI cover and three scientific pages fully text/visually reviewed with independent audit.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "peng1998",
+    "recipe_family": "peng1998-cdse/inas-focusing",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Note 22"
+        }
+      ],
+      "note": "Supporting procedure or evidence context; not an independently specified synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF pp. 1–2; matched SI PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF pp. 1–2; matched SI PDF pp. 1–4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF pp. 1–2; matched SI PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "spectra",
+      "name": "CdSe or InAs PL spectra",
+      "formula": null,
+      "role": "analytical input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "calibrated",
+      "name": "Use the appropriate TEM-calibrated energy–size relation output",
+      "kind": "mixture",
+      "parent_ids": [
+        "spectra"
+      ]
+    },
+    {
+      "id": "size-distribution",
+      "name": "Convert the PL distribution to size space output",
+      "kind": "mixture",
+      "parent_ids": [
+        "calibrated"
+      ]
+    },
+    {
+      "id": "moments",
+      "name": "Report mean size and variance output",
+      "kind": "mixture",
+      "parent_ids": [
+        "size-distribution"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "calibrate",
+      "action": "optical_calibration",
+      "label": "Use the appropriate TEM-calibrated energy–size relation",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "spectra"
+      ],
+      "outputs": [
+        "calibrated"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "CdSe and InAs use separate SI tables; prior calibration sources are main references 5, 7 and 9. These rows are calibration pairs, not documented syntheses in this paper.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+        }
+      ]
+    },
+    {
+      "id": "convert",
+      "action": "spectral_size_conversion",
+      "label": "Convert the PL distribution to size space",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "calibrate"
+      ],
+      "inputs": [
+        "calibrated"
+      ],
+      "outputs": [
+        "size-distribution"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 3, supplemental p. 2, High-energy-half note"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 3, supplemental p. 2, High-energy-half note"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Assume delta-function emission for each single size and equal emission efficiency across sizes. The authors say both assumptions systematically overestimate distribution widths. InAs uses only the high-energy PL half due reabsorption; interpolation, fitting and normalization implementation unreported.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 3, supplemental p. 2, High-energy-half note"
+        }
+      ]
+    },
+    {
+      "id": "moments",
+      "action": "distribution_moments",
+      "label": "Report mean size and variance",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "convert"
+      ],
+      "inputs": [
+        "size-distribution"
+      ],
+      "outputs": [
+        "moments"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "First and second moments only; third moment/asymmetry is not determined. Figure 2 displays mean size and standard deviation in percent. These are optical calibration-derived sizes, not new TEM measurements of every aliquot.",
+      "evidence": [
+        {
+          "source_id": "peng1998",
+          "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+        },
+        {
+          "source_id": "peng1998",
+          "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "analysis-context",
+      "source_sample_label": "Optical size-distribution method",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng1998",
+            "locator": "Main PDF p. 1, printed p. 5343, Optical sizing assumptions"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 2, supplemental p. 1, CdSe calibration table"
+          },
+          {
+            "source_id": "peng1998",
+            "locator": "SI PDF p. 4, supplemental p. 3, InAs calibration table"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Mathematical analysis context, not a physical nanocrystal batch."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All two main pages and four matched SI PDF pages read and visually inspected, with independent source and canonical audits. Strict injection bounds, inferred CdSe growth temperature, sequential feeds, aliquot preparation, calibration rows and the unlinked 8.5 nm TEM specimen remain distinct. No measured phase, atomic coordinates or independent calibration synthesis runs inferred.",
+    "missing_fields": [
+      "No author-assigned physical batch IDs or complete cross-technique sample joins.",
+      "No measured lattice phase, atomic coordinates or exact experimental CIF supplied."
+    ],
+    "conflicts": [
+      "CdSe baseline stock gives Se:Cd(CH3)2:tributylphosphine = 2:5:100 by mass; discussion separately describes Cd:Se about 1.4:1 by mole. Preserve both approximate descriptions without replacing either.",
+      "Main Figure 3 shows 8.5 nm CdSe by TEM; no demonstrated specimen join to the smaller-particle Figure 1/2 kinetic trajectory."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main and SI review",
+      "url": "../paper-review.html?id=peng1998",
+      "relation": "Two main pages and matched SI: cover plus three scientific pages."
+    },
+    {
+      "label": "CdSe calibration table",
+      "url": "../records/peng-1998-cdse-calibration.html",
+      "relation": "Sixteen reported calibration rows."
+    },
+    {
+      "label": "InAs calibration table",
+      "url": "../records/peng-1998-inas-calibration.html",
+      "relation": "Twenty reported calibration rows."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
