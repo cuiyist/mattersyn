@@ -1,0 +1,344 @@
+{
+  "schema_version": "1.2.0",
+  "record_id": "yao-1998-optical-microscopy",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Yao et al. (1998) · Optical imaging of the CdS dispersion layer",
+  "material": {
+    "formula": "CdS/polymer",
+    "family": "II–VI nanocrystals in chelate polymer microparticles",
+    "components": [
+      "CdS"
+    ],
+    "elements": [
+      "Cd",
+      "S",
+      "C",
+      "H",
+      "N",
+      "O"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "yao1998",
+      "doi": "10.1021/la970480g",
+      "title": "Electrolyte Effects on CdS Nanocrystal Formation in Chelate Polymer Particles: Optical and Distribution Properties",
+      "authors": "Hiroshi Yao; Yukako Takada; Noboru Kitamura",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/la970480g",
+      "main_status": "All seven supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "yao1998",
+    "recipe_family": "yao1998-cds-chelex",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS nanocrystals embedded in Chelex 100 polymer",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hybrid",
+      "name": "CdS nanocrystal / Chelex 100 hybrid specimen",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Measurements"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "optical-images",
+      "name": "Image individual hybrid particles output",
+      "kind": "mixture",
+      "parent_ids": [
+        "hybrid"
+      ]
+    },
+    {
+      "id": "layer-results",
+      "name": "Measure the width from bead surface to the ring boundary output",
+      "kind": "mixture",
+      "parent_ids": [
+        "optical-images"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "image",
+      "action": "optical_microscopy",
+      "label": "Image individual hybrid particles",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hybrid"
+      ],
+      "outputs": [
+        "optical-images"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sony DXC-930 CCD camera attached to the microscope; Mitsubishi CP-11 video printer. Figure 6 optical image contains a 25 µm scale bar. Do not equate the bright ring with an atomically thin shell.",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Measurements"
+        }
+      ]
+    },
+    {
+      "id": "measure-layer",
+      "action": "radial_layer_measurement",
+      "label": "Measure the width from bead surface to the ring boundary",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "image"
+      ],
+      "inputs": [
+        "optical-images"
+      ],
+      "outputs": [
+        "layer-results"
+      ],
+      "parameters": {
+        "precision_limit": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "L below this value was not measured precisely; not an instrumental resolution specification",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yao1998",
+              "locator": "Main PDF p. 5, printed p. 599, Layer width limitation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, Figure 6 and definition of L"
+          },
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 5, printed p. 599, Figure 9 discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, Figure 6 and definition of L"
+          },
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 5, printed p. 599, Figure 9 discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "L is CdS dispersion-layer width within the host; small L ring boundary is hard to establish. Absorbance-derived early L is an author-model estimate, not a direct image measurement.",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 3, printed p. 597, Figure 6 and definition of L"
+        },
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 5, printed p. 599, Figure 9 discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "optical-image-specimens",
+      "source_sample_label": "Single-particle layer-imaging specimens",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS nanocrystals in Chelex 100 polymer",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Figure 6 identifies sample a. General time-dependent layer measurements discuss both formulations."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All seven supplied main pages read in full and visually inspected with independent source and canonical scientific audits. Matching SI not located or verified. Two formulations, upstream host preparation, analytical procedures and contextual observations remain separate. Regional and instrument cohorts do not establish unique physical batches. Salt-concentration and reaction-clock ambiguities remain unresolved.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No atomic coordinates, exact physical batch IDs or complete specimen-to-batch joins supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review",
+      "url": "../paper-review.html?id=yao1998",
+      "relation": "Seven supplied main pages; SI not located or verified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -156,6 +156,8 @@ def training_view(r,task):
     inputs={'composition':r['material']['formula'],'method':r['method']}
     if r['intended_target'].get('surface',{}).get('value') is not None:
         inputs['requested_surface']=r['intended_target']['surface']
+    if r['intended_target'].get('host',{}).get('value') is not None:
+        inputs['requested_host']=r['intended_target']['host']
     output={}
     if task=='optical_outcome':
         inputs={'composition':r['material']['formula'],'features':{k:{f:q[f] for f in ['value','unit','status']} for k,q in optical_operation(r)['parameters'].items() if k in OPTICAL_FEATURES}}
@@ -164,6 +166,8 @@ def training_view(r,task):
         output={'absorption_peak':{k:m['value'][k] for k in ['value','unit','status']}}
     elif task=='precursor_selection':
         output={'precursors':[{'name':m['name'],'formula':m['formula'],'role':m['role']} for m in synthesis_precursors(r)]}
+        process_materials=[{'name':m['name'],'formula':m['formula'],'role':m['role']} for m in r['materials'] if m['stage']=='synthesis' and m['role'] in {'host_matrix','electrolyte'}]
+        if process_materials:output['process_materials']=process_materials
     else:
         output={'materials':r['materials'],'stocks':r['stocks'],'material_states':r['material_states'],'operations':[o for o in r['operations'] if o['stage']!='characterization'],'condition_options':r['condition_options'],'missing_fields':r['quality']['missing_fields']}
     if task=='size_conditioned_recipe':

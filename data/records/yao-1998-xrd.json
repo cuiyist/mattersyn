@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.2.0",
+  "record_id": "yao-1998-xrd",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Yao et al. (1998) · X-ray diffraction acquisition",
+  "material": {
+    "formula": "CdS/polymer",
+    "family": "II–VI nanocrystals in chelate polymer microparticles",
+    "components": [
+      "CdS"
+    ],
+    "elements": [
+      "Cd",
+      "S",
+      "C",
+      "H",
+      "N",
+      "O"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "yao1998",
+      "doi": "10.1021/la970480g",
+      "title": "Electrolyte Effects on CdS Nanocrystal Formation in Chelate Polymer Particles: Optical and Distribution Properties",
+      "authors": "Hiroshi Yao; Yukako Takada; Noboru Kitamura",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/la970480g",
+      "main_status": "All seven supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "yao1998",
+    "recipe_family": "yao1998-cds-chelex",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS nanocrystals embedded in Chelex 100 polymer",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hybrid",
+      "name": "CdS nanocrystal / Chelex 100 hybrid specimen",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Measurements"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "diffraction",
+      "name": "Acquire the diffraction pattern output",
+      "kind": "mixture",
+      "parent_ids": [
+        "hybrid"
+      ]
+    },
+    {
+      "id": "size-estimates",
+      "name": "Fit the broad reflection and estimate crystallite size output",
+      "kind": "mixture",
+      "parent_ids": [
+        "diffraction"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "acquire",
+      "action": "xrd",
+      "label": "Acquire the diffraction pattern",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hybrid"
+      ],
+      "outputs": [
+        "diffraction"
+      ],
+      "parameters": {
+        "two_theta_range": {
+          "value": null,
+          "minimum": 20,
+          "maximum": 60,
+          "unit": "degree",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yao1998",
+              "locator": "Main PDF p. 2, printed p. 596, Measurements"
+            }
+          ],
+          "derivation": null
+        },
+        "xray_wavelength": {
+          "value": 0.154,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yao1998",
+              "locator": "Main PDF p. 2, printed p. 596, Measurements"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rigaku RINT 2000, Cu Kα. Specimen mount, scan speed, step size and instrumental-broadening correction are not supplied. No original XRD pattern is printed in these seven pages.",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Measurements"
+        }
+      ]
+    },
+    {
+      "id": "fit",
+      "action": "xrd_peak_fit",
+      "label": "Fit the broad reflection and estimate crystallite size",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "acquire"
+      ],
+      "inputs": [
+        "diffraction"
+      ],
+      "outputs": [
+        "size-estimates"
+      ],
+      "parameters": {
+        "fitted_two_theta": {
+          "value": 26.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degree",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yao1998",
+              "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Gaussian fit to 26.5° reflection and Debye–Scherrer formula (source spelling Debye–Scheller), references 22–23. Derived mean sizes 3.8 nm (a) and 3.1 nm (b), not raw TEM diameters.",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xrd-a",
+      "source_sample_label": "sample a XRD",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS nanocrystals in Chelex 100 polymer",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source formulation identity explicit; exact reaction age and specimen-to-TEM or optical linkage unreported."
+      ]
+    },
+    {
+      "sample_id": "xrd-b",
+      "source_sample_label": "sample b XRD",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS nanocrystals in Chelex 100 polymer",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 3, printed p. 597, XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source formulation identity explicit; exact reaction age and specimen-to-TEM or optical linkage unreported."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All seven supplied main pages read in full and visually inspected with independent source and canonical scientific audits. Matching SI not located or verified. Two formulations, upstream host preparation, analytical procedures and contextual observations remain separate. Regional and instrument cohorts do not establish unique physical batches. Salt-concentration and reaction-clock ambiguities remain unresolved.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No atomic coordinates, exact physical batch IDs or complete specimen-to-batch joins supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review",
+      "url": "../paper-review.html?id=yao1998",
+      "relation": "Seven supplied main pages; SI not located or verified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

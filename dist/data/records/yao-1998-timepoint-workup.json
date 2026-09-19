@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.2.0",
+  "record_id": "yao-1998-timepoint-workup",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Yao et al. (1998) · Time-resolved aliquot sampling and specimen workup",
+  "material": {
+    "formula": "CdS/polymer",
+    "family": "II–VI nanocrystals in chelate polymer microparticles",
+    "components": [
+      "CdS"
+    ],
+    "elements": [
+      "Cd",
+      "S",
+      "C",
+      "H",
+      "N",
+      "O"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "yao1998",
+      "doi": "10.1021/la970480g",
+      "title": "Electrolyte Effects on CdS Nanocrystal Formation in Chelate Polymer Particles: Optical and Distribution Properties",
+      "authors": "Hiroshi Yao; Yukako Takada; Noboru Kitamura",
+      "year": 1998,
+      "url": "https://doi.org/10.1021/la970480g",
+      "main_status": "All seven supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "yao1998",
+    "recipe_family": "yao1998-cds-chelex",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS nanocrystals embedded in Chelex 100 polymer",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF pp. 1–7, printed pp. 595–601"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hybrid",
+      "name": "CdS nanocrystal / Chelex 100 hybrid specimen",
+      "formula": null,
+      "role": "reaction suspension",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Distilled water",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "aliquot",
+      "name": "Withdraw a time-point aliquot output",
+      "kind": "aliquot",
+      "parent_ids": [
+        "hybrid"
+      ]
+    },
+    {
+      "id": "beads",
+      "name": "Remove the aliquot supernatant output",
+      "kind": "fraction",
+      "parent_ids": [
+        "aliquot"
+      ]
+    },
+    {
+      "id": "washed-water",
+      "name": "Wash aliquot beads with water output",
+      "kind": "fraction",
+      "parent_ids": [
+        "beads",
+        "water"
+      ]
+    },
+    {
+      "id": "washed-ethanol",
+      "name": "Wash aliquot beads with ethanol output",
+      "kind": "fraction",
+      "parent_ids": [
+        "washed-water",
+        "ethanol"
+      ]
+    },
+    {
+      "id": "dry-aliquot",
+      "name": "Dry the sampled hybrid output",
+      "kind": "product",
+      "parent_ids": [
+        "washed-ethanol"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "sample",
+      "action": "aliquot_sampling",
+      "label": "Withdraw a time-point aliquot",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hybrid"
+      ],
+      "outputs": [
+        "aliquot"
+      ],
+      "parameters": {
+        "aliquot_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "several milliliters",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yao1998",
+              "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sample at various times after Na2S mixing. Full list of withdrawal times and total aliquot count not supplied; do not fabricate an experiment per plotted point.",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    },
+    {
+      "id": "recover",
+      "action": "supernatant_removal",
+      "label": "Remove the aliquot supernatant",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "sample"
+      ],
+      "inputs": [
+        "aliquot"
+      ],
+      "outputs": [
+        "beads"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "beads",
+      "description": "Recovery method and quench chemistry unreported. Washing is not evidence of an instantaneous reaction quench.",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    },
+    {
+      "id": "wash-water",
+      "action": "resin_washing",
+      "label": "Wash aliquot beads with water",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "recover"
+      ],
+      "inputs": [
+        "beads",
+        "water"
+      ],
+      "outputs": [
+        "washed-water"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "washed-water",
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    },
+    {
+      "id": "wash-ethanol",
+      "action": "resin_washing",
+      "label": "Wash aliquot beads with ethanol",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "wash-water"
+      ],
+      "inputs": [
+        "washed-water",
+        "ethanol"
+      ],
+      "outputs": [
+        "washed-ethanol"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "washed-ethanol",
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "vacuum_drying",
+      "label": "Dry the sampled hybrid",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "wash-ethanol"
+      ],
+      "inputs": [
+        "washed-ethanol"
+      ],
+      "outputs": [
+        "dry-aliquot"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Vacuum; pressure unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "timepoint-specimen",
+      "source_sample_label": "Time-point hybrid specimen",
+      "batch_id": null,
+      "material_state_id": "dry-aliquot",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS nanocrystals in Chelex 100 polymer",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yao1998",
+            "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yao1998",
+          "locator": "Main PDF p. 2, printed p. 596, Preparation of CdS Nanocrystals/Polymer Hybrids"
+        }
+      ],
+      "notes": [
+        "Known timing anchor: after mixing. No unique aliquot labels, quench kinetics or exact full sampling schedule."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All seven supplied main pages read in full and visually inspected with independent source and canonical scientific audits. Matching SI not located or verified. Two formulations, upstream host preparation, analytical procedures and contextual observations remain separate. Regional and instrument cohorts do not establish unique physical batches. Salt-concentration and reaction-clock ambiguities remain unresolved.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No atomic coordinates, exact physical batch IDs or complete specimen-to-batch joins supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review",
+      "url": "../paper-review.html?id=yao1998",
+      "relation": "Seven supplied main pages; SI not located or verified."
+    },
+    {
+      "label": "Absorption specimen preparation",
+      "url": "../records/yao-1998-absorption.html",
+      "relation": "Dry particles redispersed in water for microspectroscopy."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,6 +1,6 @@
 # MatterSyn training data pilot
 
-The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Read the generated dataset manifest and `inventory-summary.json` for current counts and release version. Record schema 1.1.0 adds typed qualitative measurements and an optional intended surface target; existing 1.0.0 records remain supported.
+The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Read the generated dataset manifest and `inventory-summary.json` for current counts and release version. Record schema 1.2.0 adds an optional intended host; 1.1.0 adds typed qualitative measurements and an optional intended surface target. Earlier records remain supported.
 
 ## Current collection
 
@@ -50,4 +50,6 @@ See `benchmarks/README.md` for reproducing the saved baseline. Its model artifac
 
 ## Expansion to 5,000–50,000 records
 
-Keep this scientific schema and shared renderer; extend it through explicit migrations, controlled action/property/unit vocabularies and verified chemical identifiers. Pilot records are not yet a fully normalized chemical ontology. Measure extraction agreement and curator throughput before scaling. Add a review queue, database indexing and server-side catalog pagination when the collection outgrows the current static manifest. The current implementation has been tested at 151 records, not load-tested at 50,000. Keep rich paper guides as separate context with reciprocal links to canonical records. Prospectively test proposed recipes with the collaborating lab and retain failures and repeats.
+Keep this scientific schema and shared renderer; extend it through explicit migrations, controlled action/property/unit vocabularies and verified chemical identifiers. Pilot records are not yet a fully normalized chemical ontology. Measure extraction agreement and curator throughput before scaling. Add database indexing and server-side catalog pagination when the collection outgrows the current static manifest. Testing covers the curated pilot; it is not a 50,000-record load test. Keep rich paper guides as separate context with reciprocal links to canonical records. Prospectively test proposed recipes with the collaborating lab and retain failures and repeats.
+
+Schema 1.2 adds an optional source-linked intended host. Host-aware recipe tasks retain it as `requested_host`; precursor-selection output can additionally retain distinct `process_materials` such as an electrolyte. These are source-specified inputs or recipe ingredients, not measured outcomes. A polymer host diameter, regional CdS diameter and host-internal layer depth are separate quantities; their sample and method scopes must remain explicit.
