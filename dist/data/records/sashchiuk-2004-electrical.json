@@ -1,0 +1,945 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sashchiuk-2004-electrical",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sashchiuk et al. (2004) · Room-temperature transport through three PbSe wire assemblies",
+  "material": {
+    "formula": "PbSe",
+    "family": "Lead selenide nanocrystals and their assemblies",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Two-contact current–voltage measurement",
+  "sources": [
+    {
+      "id": "sashchiuk2004",
+      "doi": "10.1021/nl0345116",
+      "title": "PbSe Nanocrystal Assemblies: Synthesis and Structural, Optical, and Electrical Characterization",
+      "authors": "A. Sashchiuk; L. Amirav; M. Bashouti; M. Krueger; U. Sivan; E. Lifshitz",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/nl0345116",
+      "main_status": "All seven supplied main pages text-read and visually inspected; independent source and canonical audits completed. No SI used.",
+      "si_status": "No matching SI is present in the supplied local bundle; SI existence/absence is not independently established. No SI used.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "sashchiuk2004",
+    "recipe_family": "sashchiuk2004-pbse-assembly",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-wires",
+      "name": "Ordered wire-like assemblies of PbSe nanocrystals",
+      "formula": "PbSe",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 3, printed p. 161, Figure 2"
+        },
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Figure 3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "iv-data",
+      "name": "Measure separate contacted wires at room temperature output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "pbse-wires"
+      ]
+    },
+    {
+      "id": "conductivity-data",
+      "name": "Normalize I–V slopes by the wire dimensions output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "iv-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "measure",
+      "action": "current_voltage_measurement",
+      "label": "Measure separate contacted wires at room temperature",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-wires"
+      ],
+      "outputs": [
+        "iv-data"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Room temperature; numerical value not stated.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+            },
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+            }
+          ],
+          "derivation": null
+        },
+        "applied_electric_field": {
+          "value": 35000.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "V/m",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Three wires have separate I–V curves. Source gives an applied-field value but does not tabulate complete source-meter settings or per-wire voltage grids.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+        },
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+        }
+      ]
+    },
+    {
+      "id": "normalize",
+      "action": "geometry_normalized_conductivity",
+      "label": "Normalize I–V slopes by the wire dimensions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "measure"
+      ],
+      "inputs": [
+        "iv-data"
+      ],
+      "outputs": [
+        "conductivity-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source reports a representative resistivity/conductivity after dimension normalization, not separately tabulated uncertainty-bearing values for all three wires. Cross-section model and contact-resistance de-embedding are not fully specified.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "square",
+      "source_sample_label": "Figure 5D squares wire",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "circle",
+      "source_sample_label": "Figure 5D circles wire",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "triangle",
+      "source_sample_label": "Figure 5D triangles wire",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "transport-context",
+      "source_sample_label": "Source-wide interpretation of the three contacted wire curves",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "square-width",
+      "sample_id": "square",
+      "property": "wire_width",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 110,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ]
+    },
+    {
+      "id": "square-length",
+      "sample_id": "square",
+      "property": "wire_length",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 700,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ]
+    },
+    {
+      "id": "circle-width",
+      "sample_id": "circle",
+      "property": "wire_width",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 60,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ]
+    },
+    {
+      "id": "circle-length",
+      "sample_id": "circle",
+      "property": "wire_length",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1000,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ]
+    },
+    {
+      "id": "triangle-width",
+      "sample_id": "triangle",
+      "property": "wire_width",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 150,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ]
+    },
+    {
+      "id": "triangle-length",
+      "sample_id": "triangle",
+      "property": "wire_length",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1200,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Dimensions and curve assignment"
+        }
+      ]
+    },
+    {
+      "id": "building-block",
+      "sample_id": "transport-context",
+      "property": "electrical_wire_building_block_edge",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cubic nanocrystal building blocks; not the complete wire width.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+        }
+      ]
+    },
+    {
+      "id": "resistivity",
+      "sample_id": "transport-context",
+      "property": "reported_specific_resistivity",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 0.15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Ω cm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+        }
+      ]
+    },
+    {
+      "id": "conductivity",
+      "sample_id": "transport-context",
+      "property": "reported_conductivity",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Ω^-1 cm^-1",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 6, printed p. 164, Transport discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+        },
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 6, printed p. 164, Transport discussion"
+        }
+      ]
+    },
+    {
+      "id": "linear",
+      "sample_id": "transport-context",
+      "property": "current_voltage_behavior",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Source curves are approximately linear at room temperature. Authors take this as excluding a Schottky barrier at the contacts; this is their interpretation, not an independent contact-potential measurement.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Electrical measurements"
+        }
+      ]
+    },
+    {
+      "id": "sem-scale",
+      "sample_id": "transport-context",
+      "property": "device_sem_scale_bar",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "µm",
+        "status": "inferred",
+        "approximate": false,
+        "qualifier": "Original image annotation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Figure 5B scale bar"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 5, printed p. 163, Figure 5B scale bar"
+        }
+      ]
+    },
+    {
+      "id": "transport-limit",
+      "sample_id": "transport-context",
+      "property": "transport_mechanism_status",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Resonant tunneling, thermally activated transport and variable-range hopping are discussed. Temperature-dependent, higher-field and gated measurements remain future work; the mechanism is not established.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 5, printed p. 163, Transport discussion"
+          },
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 6, printed p. 164, Discussion and Summary"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 5, printed p. 163, Transport discussion"
+        },
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 6, printed p. 164, Discussion and Summary"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All seven supplied main pages text-read and visually inspected, with independent source, canonical, reader, molecular, crystal and apparatus audits. No SI located or verified. Individual particles, spherical assemblies, wires, device specimens and author models retain separate scopes; source conflicts and missing parameters remain explicit.",
+    "missing_fields": [
+      "Absolute precursor charges, injected stock amount, stock aging/speciation and quantitative Pb-cHxBu molecular identity are not established.",
+      "Several heating rates, withdrawal volumes, separation settings, purification solvent ratios and final storage conditions are unreported.",
+      "No measured atomic-coordinate file or raw electronic transport/spectral array is supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=sashchiuk2004",
+      "relation": "Original figures, methods, source conflicts, theory and references."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

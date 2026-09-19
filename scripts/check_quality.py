@@ -16,6 +16,7 @@ import re
 import sys
 
 CRYSTALS = {
+    "sashchiuk-2004-pbse-ideal-reference": (1, "451a51951af70a8ce50b5e6d0b4db53f67a2a3647901f5784de5c44c62961b0a", {"Pb": 4, "Se": 4}),
     "cdse-wurtzite-cod-9016056": (186, "92e759602b5c7fd26e8bb0fe63bc7a3b52c86d09cfbe72d79f71a297f8b8ac4a", {"Cd": 2, "Se": 2}),
     "zno-wurtzite": (186, "dbc92c19b101d4fabb5594cc89f2a31629a0e8adab6539edd248c40c585649a1", {"Zn": 2, "O": 2}),
     "ir-fcc": (225, "ecc80c2b26b98c67712b6418ab7175e6e4a86a6f277a58d7556459c8f0ff3566", {"Ir": 4}),
@@ -219,7 +220,7 @@ class Audit:
     def crystals(self):
         base = self.dist / "assets/crystal-references"
         entries = {e["id"]: e for e in load(base / "registry.json")["entries"]}
-        self.check(set(entries) == set(CRYSTALS), "Eight independently reviewed crystal references changed; review additions explicitly")
+        self.check(set(entries) == set(CRYSTALS), "Nine independently reviewed crystal references changed; review additions explicitly")
         for cid, (sg, expected_hash, composition) in CRYSTALS.items():
             if not self.check(cid in entries, f"Missing crystal {cid}"):
                 continue
@@ -231,6 +232,11 @@ class Audit:
                 self.check(e.get("referenceType") == "locally_constructed_ideal_reference" and e.get("structureAssetRole") == "illustrative" and e.get("measuredSampleStructure") is False, f"{cid}: generated reference misrepresented as experimental CIF")
                 self.check(set(e.get("record_ids", [])) == LITTAU_SI_ROUTES - {"littau-1993-si-aerosol-1p0"}, f"{cid}: reference attached outside phase-supported 6.0/2.0 formulations")
                 self.check(e.get("modelSha256") == IDEAL_SI_UNIT_HASH, f"{cid}: independently validated ideal cell changed")
+            elif cid == "sashchiuk-2004-pbse-ideal-reference":
+                self.check(e.get("finiteModelPeriodic") is False and e.get("structureAssetRole") == "illustrative", f"{cid}: registry finite/illustrative flags changed")
+                self.check(e.get("sourceUrl") == "https://doi.org/10.1021/nl0345116" and e.get("referenceType") == "locally_constructed_ideal_reference" and e.get("measuredSampleStructure") is False, f"{cid}: ideal reference scope changed")
+                self.check(set(e.get("record_ids",[])) == {"sashchiuk-2004-"+x for x in ["individual-low","sphere-intermediate","wire-intermediate","wire-high"]}, f"{cid}: wrong source scopes")
+                self.check(e.get("prototypeSpaceGroupNumber") == 225 and e.get("spaceGroupNumber") == 1, f"{cid}: expanded P1 export/prototype confusion")
             else:
                 self.check(bool(e.get("scope")) and e.get("sourceUrl", "").startswith("https://www.crystallography.net/cod/"), f"{cid}: source/scope absent")
             self.check(set(e["record_ids"]) <= set(self.byid), f"{cid}: bound to nonexistent canonical recipe")
@@ -250,6 +256,16 @@ class Audit:
                     finite = load(finite_path)
                     self.check(finite.get("periodic") is False and finite.get("training_eligible") is False and finite.get("measured_sample_structure") is False and finite.get("evidence_type") == "illustrative", f"{cid}: finite illustration promoted to measured/training structure")
                     self.check(len(finite.get("atoms", [])) == 705 and {a.get("element") for a in finite.get("atoms", [])} == {"Si"}, f"{cid}: finite Si illustration gained an unverified shell or changed atom count")
+            elif cid == "sashchiuk-2004-pbse-ideal-reference":
+                self.check(m.get("source",{}).get("source_sha256") == "72684e3bf22a2ef173ea1d6d6e31648a1222b2b15bc069bb8fe6cef8d1876a33" and m.get("cell",{}).get("a") == 6.1 and m.get("evidence_type") == "illustrative", f"{cid}: reference source or rounded parameter changed")
+                self.check(e.get("modelSha256") == "94a827b12f1f464e07fb01d1a125afc0e6fa0680ed35cd3dc3f4b07c655f1127", f"{cid}: audited ideal unit cell changed")
+                fp = self.asset(base,e.get("finiteModelPath"),e.get("finiteModelSha256"),cid+"/finite-model")
+                self.check(e.get("finiteModelSha256") == "cc9bf5594ffd16a28ee829de0b9bc6f404bdd111272785676da73a3ffa90a4e4", f"{cid}: audited finite block changed")
+                if fp:
+                    fm=load(fp)
+                    self.check(fm.get("periodic") is False and fm.get("training_eligible") is False and fm.get("measured_sample_structure") is False and fm.get("evidence_type") == "illustrative",f"{cid}: finite model scope changed")
+                    self.check(Counter(x["element"] for x in fm["atoms"]) == {"Pb":2048,"Se":2048},f"{cid}: finite block composition changed")
+                for download in e.get("additionalDownloads",[]):self.asset(base,download["path"],download["sha256"],cid+"/download")
             else:
                 self.check(m["source"]["sha256"] == expected_hash, f"{cid}: model derives from wrong CIF")
             counts, positions = Counter(), set()
@@ -323,7 +339,7 @@ def main():
             method(*values)
         except (OSError, ValueError, KeyError, TypeError, IndexError) as error:
             audit.errors.append(f"{method.__name__}: incomplete/malformed build: {type(error).__name__}: {error}")
-    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, seven pinned database CIFs plus one pinned ideal silicon reference, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
+    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, seven pinned database CIFs plus two pinned ideal Si/PbSe references, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
     print(json.dumps(report, indent=2, ensure_ascii=False))
     return 1 if audit.errors else 0
 

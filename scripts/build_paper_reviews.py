@@ -24,7 +24,7 @@ def validate(c):
         if not all(p.get('text_read') is True and p.get('visual_review') is True for p in pages):errors.append('Unread or visually unchecked page')
         if not re.fullmatch('[a-f0-9]{64}',d['sha256']):errors.append('Missing source hash')
     items=c['figures']+[f for category in ['tables','equations','schemes','source_notes'] for f in c.get(category,[]) if f.get('public_asset')]
-    items += [{'id':item['id'], 'public_asset':a['public_asset'], 'public_asset_sha256':a['sha256']} for s in c.get('reader_sections',[]) for item in s.get('items',[]) for a in item.get('original_assets',[])]
+    items += [{'id':item['id'], 'public_asset':a['public_asset'], 'public_asset_sha256':a.get('sha256', a.get('public_asset_sha256'))} for s in c.get('reader_sections',[]) for item in s.get('items',[]) for a in item.get('original_assets',[])]
     for f in items:
         a=f.get('public_asset')
         if not a:errors.append('Missing figure asset: '+str(f.get('id')));continue

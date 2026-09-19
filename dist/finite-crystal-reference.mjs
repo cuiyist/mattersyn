@@ -14,7 +14,10 @@ export function finiteReferenceAtoms(model) {
 export function drawFiniteReference(viewer, model) {
   viewer.clear();
   viewer.addModel().addAtoms(finiteReferenceAtoms(model));
-  viewer.setStyle({}, {sphere:{radius:.37,color:'#6b95b3'},stick:{radius:.07,color:'#a0b7c6'}});
+  for (const element of new Set(model.atoms.map(a=>a.element))) {
+    const color=({Pb:'#8b9bae',Se:'#bc8957'})[element]||'#6b95b3';
+    viewer.setStyle({elem:element}, {sphere:{radius:.37,color},stick:{radius:.07,color:'#a0b7c6'}});
+  }
   // No periodic tiling and no enclosing crystal-cell box for a finite crop.
   viewer.zoomTo();viewer.rotate(17,'y');viewer.rotate(-12,'x');viewer.render();
   return model.caption; // Show this beside the viewer, not only in metadata.

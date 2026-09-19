@@ -1,0 +1,910 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sashchiuk-2004-microscopy",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sashchiuk et al. (2004) · TEM, HR-TEM, HR-SEM, SAED and EDAX acquisition",
+  "material": {
+    "formula": "PbSe",
+    "family": "Lead selenide nanocrystals and their assemblies",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electron microscopy and diffraction",
+  "sources": [
+    {
+      "id": "sashchiuk2004",
+      "doi": "10.1021/nl0345116",
+      "title": "PbSe Nanocrystal Assemblies: Synthesis and Structural, Optical, and Electrical Characterization",
+      "authors": "A. Sashchiuk; L. Amirav; M. Bashouti; M. Krueger; U. Sivan; E. Lifshitz",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/nl0345116",
+      "main_status": "All seven supplied main pages text-read and visually inspected; independent source and canonical audits completed. No SI used.",
+      "si_status": "No matching SI is present in the supplied local bundle; SI existence/absence is not independently established. No SI used.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "sashchiuk2004",
+    "recipe_family": "sashchiuk2004-pbse-assembly",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Complete seven-page main article"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-individual",
+      "name": "Individual TOPO/TBP-capped PbSe nanocrystals",
+      "formula": "PbSe",
+      "role": "possible_specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Section 3"
+        },
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 3, printed p. 161, Section 3 continuation"
+        }
+      ]
+    },
+    {
+      "id": "pbse-spheres",
+      "name": "Spherical polycrystalline assemblies of PbSe nanocrystals",
+      "formula": "PbSe",
+      "role": "possible_specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 3, printed p. 161, Figure 1"
+        }
+      ]
+    },
+    {
+      "id": "pbse-wires",
+      "name": "Ordered wire-like assemblies of PbSe nanocrystals",
+      "formula": "PbSe",
+      "role": "possible_specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 3, printed p. 161, Figure 2"
+        },
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 4, printed p. 162, Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "formvar-grid",
+      "name": "300-mesh copper TEM grid with amorphous Formvar and evaporated carbon film",
+      "formula": null,
+      "role": "sample_support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "grid-specimen",
+      "name": "Place small solution droplets on a Formvar/carbon-coated copper grid output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "dry-grid",
+      "name": "Dry the TEM specimen at room temperature output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "grid-specimen"
+      ]
+    },
+    {
+      "id": "tem-data",
+      "name": "Image the selected specimen with JEOL 2000FX TEM output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dry-grid"
+      ]
+    },
+    {
+      "id": "hrtem-data",
+      "name": "Acquire high-resolution images with JEOL 3010 output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dry-grid"
+      ]
+    },
+    {
+      "id": "sem-data",
+      "name": "Examine separate assembly specimens with Zeiss Leo 982 HR-SEM output",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "saed-data",
+      "name": "Acquire selected-area electron diffraction for separate specimens output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dry-grid"
+      ]
+    },
+    {
+      "id": "edax-data",
+      "name": "Perform EDAX coupled to the JEOL 2000FX TEM output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dry-grid"
+      ]
+    },
+    {
+      "id": "microdiffraction-data",
+      "name": "Examine wire microdiffraction as reported output",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "deposit",
+      "action": "tem_grid_deposition",
+      "label": "Place small solution droplets on a Formvar/carbon-coated copper grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "formvar-grid"
+      ],
+      "outputs": [
+        "grid-specimen"
+      ],
+      "parameters": {
+        "grid_mesh": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mesh",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        },
+        "droplet_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "A selected TEM specimen is placed on the grid. The three morphology inputs are possible separate populations, not one mixed specimen; grid is support, not product composition.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "grid_drying",
+      "label": "Dry the TEM specimen at room temperature",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "grid-specimen"
+      ],
+      "outputs": [
+        "dry-grid"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Room temperature; numerical value not stated.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "tem",
+      "action": "transmission_electron_microscopy",
+      "label": "Image the selected specimen with JEOL 2000FX TEM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-grid"
+      ],
+      "outputs": [
+        "tem-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "hrtem",
+      "action": "high_resolution_tem",
+      "label": "Acquire high-resolution images with JEOL 3010",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-grid"
+      ],
+      "outputs": [
+        "hrtem-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "sem",
+      "action": "high_resolution_sem",
+      "label": "Examine separate assembly specimens with Zeiss Leo 982 HR-SEM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "sem-data"
+      ],
+      "parameters": {
+        "accelerating_voltage_methods": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        },
+        "accelerating_voltage_figure5_label": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "inferred",
+          "approximate": false,
+          "qualifier": "Read from original SEM image annotation; distinct from Methods.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 5, printed p. 163, Figure 5B micrograph label"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SEM sample deposition is not specified as identical to TEM grid preparation. The electrical-device SEM annotation prints 10.0 kV, in contrast to the general 4 kV method.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "saed",
+      "action": "selected_area_electron_diffraction",
+      "label": "Acquire selected-area electron diffraction for separate specimens",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-grid"
+      ],
+      "outputs": [
+        "saed-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "JEOL 2000FX is the named TEM/EDAX/SAED instrument. Figure 1E spherical and Figure 2C wire patterns are actual distinct measured images.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "edax",
+      "action": "energy_dispersive_xray_analysis",
+      "label": "Perform EDAX coupled to the JEOL 2000FX TEM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-grid"
+      ],
+      "outputs": [
+        "edax-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sashchiuk2004",
+              "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Technique is listed, but no EDAX spectrum, composition result or quantitative stoichiometry is reproduced in the inspected article.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    },
+    {
+      "id": "microdiffraction",
+      "action": "electron_microdiffraction",
+      "label": "Examine wire microdiffraction as reported",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "microdiffraction-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 3, printed p. 161, Wire diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 3, printed p. 161, Wire diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Authors state additional microdiffraction confirmed single-crystalline behavior, but the pattern and its exact instrument/settings are not shown.",
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 3, printed p. 161, Wire diffraction discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "acquisition",
+      "source_sample_label": "Shared instrument context; morphology-specific results remain separate",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "edax-limit",
+      "sample_id": "acquisition",
+      "property": "edax_result_availability",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "EDAX is named as a method but no measured composition table or spectrum is supplied. Cu/Formvar/carbon grid materials cannot be treated as PbSe composition.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sashchiuk2004",
+            "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sashchiuk2004",
+          "locator": "Main PDF p. 2, printed p. 160, Microscopy methods"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All seven supplied main pages text-read and visually inspected, with independent source, canonical, reader, molecular, crystal and apparatus audits. No SI located or verified. Individual particles, spherical assemblies, wires, device specimens and author models retain separate scopes; source conflicts and missing parameters remain explicit.",
+    "missing_fields": [
+      "Absolute precursor charges, injected stock amount, stock aging/speciation and quantitative Pb-cHxBu molecular identity are not established.",
+      "Several heating rates, withdrawal volumes, separation settings, purification solvent ratios and final storage conditions are unreported.",
+      "No measured atomic-coordinate file or raw electronic transport/spectral array is supplied."
+    ],
+    "conflicts": [
+      "General HR-SEM method is 4 kV, but Figure 5B image annotation reads 10.0 kV."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=sashchiuk2004",
+      "relation": "Original figures, methods, source conflicts, theory and references."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

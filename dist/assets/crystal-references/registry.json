@@ -216,6 +216,45 @@
       "modelSha256": "bb2dcc19a6e466396a12bf8f18320e3341c62bfaf94170e16ed3a05925a71fec",
       "referenceOnly": true,
       "trainingEligible": false
+    },
+    {
+      "id": "sashchiuk-2004-pbse-ideal-reference",
+      "name": "Ideal rock-salt PbSe reference",
+      "formula": "PbSe",
+      "record_ids": [
+        "sashchiuk-2004-individual-low",
+        "sashchiuk-2004-sphere-intermediate",
+        "sashchiuk-2004-wire-intermediate",
+        "sashchiuk-2004-wire-high"
+      ],
+      "description": "Constructed ideal rock-salt prototype using the paper rounded lattice parameter 6.1 Å; not measured or refined sample coordinates.",
+      "scope": "Constructed ideal reference using reported rounded a = 6.1 Å. Source SAED/HRTEM supports rock-salt order; no sample coordinates or measured assembly atom model are supplied. P1 export expands all eight conventional-cell sites; ideal prototype Fm-3m.",
+      "sourceUrl": "https://doi.org/10.1021/nl0345116",
+      "sourceLinkLabel": "Paper supplying rounded lattice parameter",
+      "cifPath": "pbse-ideal-expanded-p1.cif",
+      "modelPath": "models/pbse-ideal-unit-cell.json",
+      "spaceGroup": "P 1 (expanded ideal Fm-3m prototype)",
+      "spaceGroupNumber": 1,
+      "prototypeSpaceGroupNumber": 225,
+      "mixedOccupancy": false,
+      "referenceOnly": true,
+      "trainingEligible": false,
+      "measuredSampleStructure": false,
+      "referenceType": "locally_constructed_ideal_reference",
+      "structureAssetRole": "illustrative",
+      "finiteModelPath": "models/pbse-illustrative-block.json",
+      "finiteCaption": "Illustrative 8 × 8 × 8 cell PbSe block: 4.88 nm cell envelope; 4.575 nm atom-center span. Chosen visualization dimensions, not a fitted or measured particle. No surface ligands or assembly geometry reconstructed.",
+      "finiteModelPeriodic": false,
+      "additionalDownloads": [
+        {
+          "label": "Illustrative PbSe block XYZ",
+          "path": "downloads/pbse-illustrative-block.xyz",
+          "sha256": "29a63ea4cb0be14e4ae85ab327b43f9da359242d6bf824db6f7edfb838b43015"
+        }
+      ],
+      "cifSha256": "451a51951af70a8ce50b5e6d0b4db53f67a2a3647901f5784de5c44c62961b0a",
+      "modelSha256": "94a827b12f1f464e07fb01d1a125afc0e6fa0680ed35cd3dc3f4b07c655f1127",
+      "finiteModelSha256": "cc9bf5594ffd16a28ee829de0b9bc6f404bdd111272785676da73a3ffa90a4e4"
     }
   ],
   "excluded_materials": [
@@ -224,5 +263,5 @@
       "reason": "Source phase and stoichiometry unresolved; no phase assigned."
     }
   ],
-  "scope": "Every entry is an external bulk crystal reference, never a measured synthesis-specimen atomic structure or exact-structure recipe label."
+  "scope": "Independent database references and explicitly constructed ideal prototypes for comparison; never measured sample atomic coordinates or training labels."
 }
