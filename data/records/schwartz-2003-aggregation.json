@@ -1,0 +1,629 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schwartz-2003-aggregation",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Schwartz et al. (2003) · Room-temperature aggregation of Co2+:ZnO colloids",
+  "material": {
+    "formula": "ZnO:Co",
+    "family": "ZnO and separately Co2+- or Ni2+-doped ZnO quantum dots",
+    "elements": [
+      "Zn",
+      "O",
+      "Co"
+    ],
+    "components": [
+      "ZnO:Co"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Evaporation-driven aggregation",
+  "sources": [
+    {
+      "id": "schwartz2003",
+      "doi": "10.1021/ja036811v",
+      "title": "Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals",
+      "authors": "Dana A. Schwartz; Nick S. Norberg; Quyen P. Nguyen; Jason M. Parker; Daniel R. Gamelin",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja036811v",
+      "main_status": "All14 main and4 matched SI pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Four supplied SI pages, Figures S1–S6, matched by exact main-paper declarations and cross-references plus Gamelin metadata. No standalone SI title/byline. All pages text-read and visually inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "schwartz2003",
+    "recipe_family": "schwartz2003-zno-doping",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO:Co",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 1, printed p. 13205, Abstract"
+        }
+      ],
+      "note": "Dopant notation denotes the material family, not a refined site occupancy. Shared analytical records retain distinct compositions in their product/sample contexts."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "co-specimen",
+      "name": "Co2+-doped ZnO nanocrystals; dopant content specified by specimen",
+      "formula": "ZnO:Co",
+      "role": "specimen",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "concentrated-colloid",
+      "name": "Use a concentrated ethanol suspension of the doped nanocrystals output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "co-specimen",
+        "ethanol"
+      ]
+    },
+    {
+      "id": "aggregates",
+      "name": "Allow solvent to evaporate in air on a benchtop output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "concentrated-colloid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-ethanol",
+      "action": "concentrated_ethanol_suspension",
+      "label": "Use a concentrated ethanol suspension of the doped nanocrystals",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "co-specimen",
+        "ethanol"
+      ],
+      "outputs": [
+        "concentrated-colloid"
+      ],
+      "parameters": {
+        "concentration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g/mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "No numerical concentration, volume or new evaporation/concentration step is provided. The starting individual dots are described as paramagnetic.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    },
+    {
+      "id": "evaporate",
+      "action": "ambient_evaporation_aggregation",
+      "label": "Allow solvent to evaporate in air on a benchtop",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare-ethanol"
+      ],
+      "inputs": [
+        "concentrated-colloid"
+      ],
+      "outputs": [
+        "aggregates"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Room temperature; no numeric value.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slow, reaction-limited aggregation is described. No elevated-temperature anneal or post-aggregation treatment is used; vessel geometry and evaporation rate are missing.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "aggregate",
+      "source_sample_label": "Figure 10: 3.6% Co2+:ZnO aggregates",
+      "batch_id": null,
+      "material_state_id": "aggregates",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:Co",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "dopant",
+      "sample_id": "aggregate",
+      "property": "reported_specimen_cobalt_percentage",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 3.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported aggregate specimen composition; not the nominal salt feed fraction.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 7, printed p. 13211, Figure 10"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 13, printed p. 13217, IV.D.v Ferromagnetism"
+        }
+      ]
+    },
+    {
+      "id": "size-results",
+      "sample_id": "aggregate",
+      "property": "reported_starting_dot_diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Results-section value; discussion uses 4.9 nm for the same aggregate context.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+        }
+      ]
+    },
+    {
+      "id": "size-discussion",
+      "sample_id": "aggregate",
+      "property": "reported_starting_dot_diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 4.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Discussion value; not silently merged with 5.0 nm earlier.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+        }
+      ]
+    },
+    {
+      "id": "phase",
+      "sample_id": "aggregate",
+      "property": "aggregation_diffraction_comparison",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Aggregated and nonaggregated samples have identical powder diffraction patterns; no new phase is reported. Actual paired XRD patterns are not reproduced in the supplied bundle.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+        }
+      ]
+    },
+    {
+      "id": "morphology",
+      "sample_id": "aggregate",
+      "property": "aggregate_morphology",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Dense micron-scale gel structures are shown by SEM. Related Ni aggregates discussed with reference 50 are external/forthcoming context, not a supplied Ni-aggregation dataset.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 7, printed p. 13211, Figure 10 inset"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 10 discussion"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 7, printed p. 13211, Figure 10 inset"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 13, printed p. 13217, IV.D.v"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All14 main and4 matched SI pages text-read and visually inspected with independent source, canonical, molecular, reader and apparatus audits. Separate pure/doped routes, postprocessing, surface-bound control, magnetic aggregates and theoretical models retain distinct sample scopes. Missing parameters and source conflicts remain explicit; cited external works not independently inspected.",
+    "missing_fields": [
+      "Per-specimen synthesis batches and complete links between nominal feed doping and measured incorporation are not given.",
+      "Several workup volumes, separation hardware, stirring speed, aging times, TOPO/powder ratio and exact purification cycles are unreported.",
+      "No measured atomic coordinate file, sample-specific refined dopant occupancy, raw spectral array or full statistical error model is supplied."
+    ],
+    "conflicts": [
+      "The Figure 10 aggregate starting-particle diameter is 5.0 nm in Results and 4.9 nm in Discussion; both remain source-scoped."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=schwartz2003",
+      "relation": "Main figures, matched SI, tables, equations and evidence limitations."
+    },
+    {
+      "label": "Aggregate magnetic measurements",
+      "url": "../records/schwartz-2003-magnetometry.html",
+      "relation": "Source-scoped related preparation or characterization."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

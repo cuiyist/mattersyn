@@ -1,0 +1,1382 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schwartz-2003-optical-absorption",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Schwartz et al. (2003) · Room-temperature and low-temperature absorption",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO and separately Co2+- or Ni2+-doped ZnO quantum dots",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electronic absorption spectroscopy",
+  "sources": [
+    {
+      "id": "schwartz2003",
+      "doi": "10.1021/ja036811v",
+      "title": "Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals",
+      "authors": "Dana A. Schwartz; Nick S. Norberg; Quyen P. Nguyen; Jason M. Parker; Daniel R. Gamelin",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja036811v",
+      "main_status": "All14 main and4 matched SI pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Four supplied SI pages, Figures S1–S6, matched by exact main-paper declarations and cross-references plus Gamelin metadata. No standalone SI title/byline. All pages text-read and visually inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "schwartz2003",
+    "recipe_family": "schwartz2003-zno-doping",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 1, printed p. 13205, Abstract"
+        }
+      ],
+      "note": "Dopant notation denotes the material family, not a refined site occupancy. Shared analytical records retain distinct compositions in their product/sample contexts."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zno-specimen",
+      "name": "ZnO nanocrystal specimen; batch specified by context",
+      "formula": "ZnO",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    },
+    {
+      "id": "co-specimen",
+      "name": "Co2+-doped ZnO nanocrystals; dopant content specified by specimen",
+      "formula": "ZnO:Co",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    },
+    {
+      "id": "ni-specimen",
+      "name": "Ni2+-doped ZnO nanocrystals; dopant content specified by specimen",
+      "formula": "ZnO:Ni",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    },
+    {
+      "id": "quartz",
+      "name": "Quartz disk for spin-coated optical film",
+      "formula": "SiO2",
+      "role": "substrate",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    },
+    {
+      "id": "helium",
+      "name": "Helium vapor for cryostat cooling",
+      "formula": "He",
+      "role": "coolant",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "room-absorption-data",
+      "name": "Measure room-temperature colloids in quartz cuvettes output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "zno-specimen",
+        "co-specimen",
+        "ni-specimen"
+      ]
+    },
+    {
+      "id": "optical-films",
+      "name": "Spin-coat TOPO-treated nanocrystals onto quartz disks output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "co-specimen",
+        "ni-specimen"
+      ]
+    },
+    {
+      "id": "optical-glasses",
+      "name": "Prepare separate frozen-solution optical specimens output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "co-specimen",
+        "ni-specimen"
+      ]
+    },
+    {
+      "id": "cold-optical-specimens",
+      "name": "Cool the selected film or frozen-solution specimen with helium vapor output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "optical-films",
+        "optical-glasses"
+      ]
+    },
+    {
+      "id": "cold-absorption-data",
+      "name": "Acquire low-temperature electronic absorption spectra output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "cold-optical-specimens"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "room",
+      "action": "room_temperature_absorption",
+      "label": "Measure room-temperature colloids in quartz cuvettes",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zno-specimen",
+        "co-specimen",
+        "ni-specimen"
+      ],
+      "outputs": [
+        "room-absorption-data"
+      ],
+      "parameters": {
+        "optical_path_length": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cary 5E (Varian); individual colloids are separate. Concentration, baseline and spectral resolution are not universally specified.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    },
+    {
+      "id": "film",
+      "action": "optical_film_preparation",
+      "label": "Spin-coat TOPO-treated nanocrystals onto quartz disks",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "co-specimen",
+        "ni-specimen",
+        "quartz"
+      ],
+      "outputs": [
+        "optical-films"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thin films are an alternative to frozen solutions; do not place every specimen through both preparations. Rotation rate, film thickness, dose and drying are unreported; quartz is support, not part of the nanocrystal composition.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    },
+    {
+      "id": "glass",
+      "action": "frozen_solution_preparation",
+      "label": "Prepare separate frozen-solution optical specimens",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "co-specimen",
+        "ni-specimen"
+      ],
+      "outputs": [
+        "optical-glasses"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Glassy solvent identity/composition and cooling schedule are not stated. Co Figure 6a is a frozen solution; Ni Figure 6b is a thin film.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    },
+    {
+      "id": "cool",
+      "action": "helium_cryostat_cooling",
+      "label": "Cool the selected film or frozen-solution specimen with helium vapor",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "film",
+        "glass"
+      ],
+      "inputs": [
+        "optical-films",
+        "optical-glasses",
+        "helium"
+      ],
+      "outputs": [
+        "cold-optical-specimens"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Janis STVP-100 continuous-flow optical cryostat inside Cary 5E. Film and glass are alternative specimen preparations, not physically combined materials.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    },
+    {
+      "id": "acquire",
+      "action": "low_temperature_absorption",
+      "label": "Acquire low-temperature electronic absorption spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cool"
+      ],
+      "inputs": [
+        "cold-optical-specimens"
+      ],
+      "outputs": [
+        "cold-absorption-data"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+            },
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 5, printed p. 13209, Figures 6–7 discussion"
+            },
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figures 6–7 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figures 6–7 discussion"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figures 6–7 discussion"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "co17",
+      "source_sample_label": "Figure 6a/7a/8a/9: 1.7% Co2+:ZnO, frozen solution",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:Co",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figures 7–9"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "ni15",
+      "source_sample_label": "Figure 6b/7b/8b: 1.5% Ni2+:ZnO, TOPO-treated thin film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:Ni",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–8"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–8"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–8"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figures 7–8"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6b"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figures 7–8"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "bulk-co",
+      "source_sample_label": "Cited bulk Co2+:ZnO optical comparator",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:Co",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Comparison to reference 19"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Comparison to reference 19"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Comparison to reference 19"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Comparison to reference 19"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "co17-doping",
+      "sample_id": "co17",
+      "property": "reported_specimen_dopant_percentage",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "co17-diameter",
+      "sample_id": "co17",
+      "property": "reported_optical_specimen_diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Characterized specimen diameter, not uniquely linked to a complete route batch.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6 discussion"
+        }
+      ]
+    },
+    {
+      "id": "ni15-doping",
+      "sample_id": "ni15",
+      "property": "reported_specimen_dopant_percentage",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "ni15-diameter",
+      "sample_id": "ni15",
+      "property": "reported_optical_specimen_diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Characterized specimen diameter, not uniquely linked to a complete route batch.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6 discussion"
+        }
+      ]
+    },
+    {
+      "id": "co-lf",
+      "sample_id": "co17",
+      "property": "co_ligand_field_band_center",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 15900,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6a discussion"
+        }
+      ]
+    },
+    {
+      "id": "co-oscillator",
+      "sample_id": "co17",
+      "property": "integrated_ligand_field_oscillator_strength",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 0.002,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6a discussion"
+        }
+      ]
+    },
+    {
+      "id": "bulk-oscillator",
+      "sample_id": "bulk-co",
+      "property": "cited_bulk_oscillator_strength",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 0.005,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Comparison to reference 19"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Literature comparator, not a current-paper bulk synthesis.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Comparison to reference 19"
+        }
+      ]
+    },
+    {
+      "id": "ni-region-ligand-field",
+      "sample_id": "ni15",
+      "property": "nickel_ligand_field_spectral_region",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 15160,
+        "maximum": 16300,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6b discussion"
+        }
+      ]
+    },
+    {
+      "id": "ni-region-charge-transfer",
+      "sample_id": "ni15",
+      "property": "nickel_charge_transfer_spectral_region",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 19400,
+        "maximum": 25300,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6b discussion"
+        }
+      ]
+    },
+    {
+      "id": "ni-region-bandgap",
+      "sample_id": "ni15",
+      "property": "nickel_bandgap_spectral_region",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 26000,
+        "maximum": 28000,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6b discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6b discussion"
+        }
+      ]
+    },
+    {
+      "id": "ni-origin-a1",
+      "sample_id": "ni15",
+      "property": "nickel_trigonal_ligand_field_origin",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 15163,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "A1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+        }
+      ]
+    },
+    {
+      "id": "ni-origin-e",
+      "sample_id": "ni15",
+      "property": "nickel_trigonal_ligand_field_origin",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 15198,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "E",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+        }
+      ]
+    },
+    {
+      "id": "ni-linewidth",
+      "sample_id": "ni15",
+      "property": "ligand_field_transition_fwhm",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+        }
+      ]
+    },
+    {
+      "id": "co-fine-agreement",
+      "sample_id": "co17",
+      "property": "ligand_field_agreement_with_bulk_tolerance",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source quantitative agreement statement, not instrumental energy uncertainty.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+        }
+      ]
+    },
+    {
+      "id": "co-fano",
+      "sample_id": "co17",
+      "property": "fano_antiresonance_energy",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 17700,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, Note 25"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, Note 25"
+        }
+      ]
+    },
+    {
+      "id": "co-lines",
+      "sample_id": "co17",
+      "property": "co_ligand_field_assignment",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Structured tetrahedral Co2+ 4A2→4T1(P) absorption includes nearby doublets. Fine structure closely matches bulk, supporting localized ligand-field states and homogeneous substitutional doping; no measurable confinement energy shift is established.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+        }
+      ]
+    },
+    {
+      "id": "ni-lines",
+      "sample_id": "ni15",
+      "property": "ni_ligand_field_assignment",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Ni3T1(F)→3T1(P) features include oppositely signed A1 and E origins in MCD, while higher-energy electronic/vibronic overlap broadens structure. The quoted approximately 30 cm−1 widths support homogeneous sites.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.D.i"
+        }
+      ]
+    },
+    {
+      "id": "co-tail",
+      "sample_id": "co17",
+      "property": "co_absorption_tail",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Band-gap absorption tails into the visible without an inflection even at low temperature; a distinct Co charge-transfer maximum cannot be isolated in absorption alone.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 10, printed p. 13214, IV.D.ii"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 5, printed p. 13209, Figure 6a"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 10, printed p. 13214, IV.D.ii"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All14 main and4 matched SI pages text-read and visually inspected with independent source, canonical, molecular, reader and apparatus audits. Separate pure/doped routes, postprocessing, surface-bound control, magnetic aggregates and theoretical models retain distinct sample scopes. Missing parameters and source conflicts remain explicit; cited external works not independently inspected.",
+    "missing_fields": [
+      "Per-specimen synthesis batches and complete links between nominal feed doping and measured incorporation are not given.",
+      "Several workup volumes, separation hardware, stirring speed, aging times, TOPO/powder ratio and exact purification cycles are unreported.",
+      "No measured atomic coordinate file, sample-specific refined dopant occupancy, raw spectral array or full statistical error model is supplied."
+    ],
+    "conflicts": [
+      "The text uses inconsistent 4T1(P)/4T2(P) labels for some Co multiplet references; original equations, captions and discussion are retained without changing measured line positions."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=schwartz2003",
+      "relation": "Main figures, matched SI, tables, equations and evidence limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

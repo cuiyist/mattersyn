@@ -1,0 +1,543 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schwartz-2003-surface-cleaning-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Schwartz et al. (2003) · TOPO removal of deliberately surface-bound cobalt",
+  "material": {
+    "formula": "ZnO:Co",
+    "family": "ZnO and separately Co2+- or Ni2+-doped ZnO quantum dots",
+    "elements": [
+      "Zn",
+      "O",
+      "Co"
+    ],
+    "components": [
+      "ZnO:Co"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Surface-dopant removal control",
+  "sources": [
+    {
+      "id": "schwartz2003",
+      "doi": "10.1021/ja036811v",
+      "title": "Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals",
+      "authors": "Dana A. Schwartz; Nick S. Norberg; Quyen P. Nguyen; Jason M. Parker; Daniel R. Gamelin",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja036811v",
+      "main_status": "All14 main and4 matched SI pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Four supplied SI pages, Figures S1–S6, matched by exact main-paper declarations and cross-references plus Gamelin metadata. No standalone SI title/byline. All pages text-read and visually inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "schwartz2003",
+    "recipe_family": "schwartz2003-zno-doping",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO:Co",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 1, printed p. 13205, Abstract"
+        }
+      ],
+      "note": "Dopant notation denotes the material family, not a refined site occupancy. Shared analytical records retain distinct compositions in their product/sample contexts."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "surface-co-specimen",
+      "name": "ZnO nanocrystals with Co intentionally bound at the surface; loading/preparation incomplete",
+      "formula": null,
+      "role": "specimen",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, Figure S2"
+        }
+      ]
+    },
+    {
+      "id": "topo-technical",
+      "name": "Technical-grade trioctylphosphine oxide (Aldrich), with unspecified phosphonic-acid impurities",
+      "formula": null,
+      "role": "surface_ligand",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, Note 16"
+        }
+      ]
+    },
+    {
+      "id": "topo-component",
+      "name": "Trioctylphosphine oxide, named component of the technical reagent",
+      "formula": "C24H51OP",
+      "role": "named_reagent_component",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "The named component of technical TOPO, not an additional independently dosed material."
+      ],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, Note 16"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "treated-control",
+      "name": "Treat ZnO with deliberately surface-bound Co in TOPO output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "surface-co-specimen",
+        "topo-technical"
+      ]
+    },
+    {
+      "id": "cleaning-data",
+      "name": "Compare initial, 30 min and 120 min absorption spectra output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "treated-control"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "treat",
+      "action": "surface_cobalt_solvation",
+      "label": "Treat ZnO with deliberately surface-bound Co in TOPO",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "surface-co-specimen",
+        "topo-technical"
+      ],
+      "outputs": [
+        "treated-control"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 180,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "inherited",
+          "approximate": false,
+          "qualifier": "Shared TOPO procedure; S2 caption does not independently restate its temperature.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+            },
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 9, printed p. 13213, IV.C Postsynthetic Processing"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.C Postsynthetic Processing"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.C Postsynthetic Processing"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The deliberate adsorption recipe and initial surface-Co dose/speciation are not quantified. This control is not a substitutionally doped production batch.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.C Postsynthetic Processing"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "action": "cleaning_control_absorption",
+      "label": "Compare initial, 30 min and 120 min absorption spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "treat"
+      ],
+      "inputs": [
+        "treated-control"
+      ],
+      "outputs": [
+        "cleaning-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "surface-control",
+      "source_sample_label": "S2 deliberately surface-bound Co control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:Co",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        }
+      ],
+      "notes": [
+        "ZnO:Co family notation does not assert internal doping in this control."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "time-0",
+      "sample_id": "surface-control",
+      "property": "topo_cleaning_observation_time",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Zero identifies the caption’s initial spectrum, not a measured time uncertainty.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        }
+      ]
+    },
+    {
+      "id": "time-30",
+      "sample_id": "surface-control",
+      "property": "topo_cleaning_observation_time",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Zero identifies the caption’s initial spectrum, not a measured time uncertainty.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        }
+      ]
+    },
+    {
+      "id": "time-120",
+      "sample_id": "surface-control",
+      "property": "topo_cleaning_observation_time",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 120,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Zero identifies the caption’s initial spectrum, not a measured time uncertainty.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        }
+      ]
+    },
+    {
+      "id": "decrease",
+      "sample_id": "surface-control",
+      "property": "surface_co_absorption_decrease",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Surface-associated Co ligand-field absorption decreases strongly during TOPO treatment. No precise removal fraction, solution-Co assay or calibrated residual surface occupancy is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Matched SI PDF p. 2, S2"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 9, printed p. 13213, IV.C"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Matched SI PDF p. 2, S2"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 9, printed p. 13213, IV.C"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All14 main and4 matched SI pages text-read and visually inspected with independent source, canonical, molecular, reader and apparatus audits. Separate pure/doped routes, postprocessing, surface-bound control, magnetic aggregates and theoretical models retain distinct sample scopes. Missing parameters and source conflicts remain explicit; cited external works not independently inspected.",
+    "missing_fields": [
+      "Per-specimen synthesis batches and complete links between nominal feed doping and measured incorporation are not given.",
+      "Several workup volumes, separation hardware, stirring speed, aging times, TOPO/powder ratio and exact purification cycles are unreported.",
+      "No measured atomic coordinate file, sample-specific refined dopant occupancy, raw spectral array or full statistical error model is supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=schwartz2003",
+      "relation": "Main figures, matched SI, tables, equations and evidence limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

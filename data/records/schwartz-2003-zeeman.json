@@ -1,0 +1,490 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schwartz-2003-zeeman",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Schwartz et al. (2003) · Field-dependent band-edge Zeeman shifts",
+  "material": {
+    "formula": "ZnO:Co",
+    "family": "ZnO and separately Co2+- or Ni2+-doped ZnO quantum dots",
+    "elements": [
+      "Zn",
+      "O",
+      "Co"
+    ],
+    "components": [
+      "ZnO:Co"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Band-edge Zeeman spectroscopy",
+  "sources": [
+    {
+      "id": "schwartz2003",
+      "doi": "10.1021/ja036811v",
+      "title": "Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals",
+      "authors": "Dana A. Schwartz; Nick S. Norberg; Quyen P. Nguyen; Jason M. Parker; Daniel R. Gamelin",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja036811v",
+      "main_status": "All14 main and4 matched SI pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Four supplied SI pages, Figures S1–S6, matched by exact main-paper declarations and cross-references plus Gamelin metadata. No standalone SI title/byline. All pages text-read and visually inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "schwartz2003",
+    "recipe_family": "schwartz2003-zno-doping",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO:Co",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 1, printed p. 13205, Abstract"
+        }
+      ],
+      "note": "Dopant notation denotes the material family, not a refined site occupancy. Shared analytical records retain distinct compositions in their product/sample contexts."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "co-specimen",
+      "name": "Co2+-doped ZnO nanocrystals; dopant content specified by specimen",
+      "formula": "ZnO:Co",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "zeeman-transmission",
+      "name": "Measure single-beam transmission as magnetic field varies output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "co-specimen"
+      ]
+    },
+    {
+      "id": "zeeman-data",
+      "name": "Determine band-edge energy shifts relative to zero field output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "zeeman-transmission"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "acquire",
+      "action": "zeeman_single_beam_transmission",
+      "label": "Measure single-beam transmission as magnetic field varies",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "co-specimen"
+      ],
+      "outputs": [
+        "zeeman-transmission"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 6, printed p. 13210, Figure 9 discussion"
+            }
+          ],
+          "derivation": null
+        },
+        "field_range": {
+          "value": null,
+          "minimum": 0,
+          "maximum": 7,
+          "unit": "T",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schwartz2003",
+              "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Same magneto-optical instrument, single-beam mode. Abs = −log(I/I0); no exact absorption threshold or fitting window is printed.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+        }
+      ]
+    },
+    {
+      "id": "extract",
+      "action": "band_edge_shift_extraction",
+      "label": "Determine band-edge energy shifts relative to zero field",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "acquire"
+      ],
+      "inputs": [
+        "zeeman-transmission"
+      ],
+      "outputs": [
+        "zeeman-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "co17",
+      "source_sample_label": "1.7% Co2+:ZnO sample from Figure 6a",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO:Co",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "average",
+      "sample_id": "co17",
+      "property": "average_zeeman_redshift_per_tesla",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 53,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1/T",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Average redshift magnitude over 0–7 T, not a constant linear slope.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Results"
+        }
+      ]
+    },
+    {
+      "id": "high-field",
+      "sample_id": "co17",
+      "property": "high_field_zeeman_redshift_per_tesla",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 65,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1/T",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "3–7 T region.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Results"
+        }
+      ]
+    },
+    {
+      "id": "turning",
+      "sample_id": "co17",
+      "property": "zeeman_turning_field_interval",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 1,
+        "maximum": 3,
+        "unit": "T",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Results"
+        }
+      ]
+    },
+    {
+      "id": "plot",
+      "sample_id": "co17",
+      "property": "figure9_model_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Figure 9a is the modeled band-level splitting for H parallel z; Figure 9b contains measured shifts and calculated lines. No quantum-dot crystallographic alignment or per-particle band structure is measured.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 6, printed p. 13210, Figure 9"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All14 main and4 matched SI pages text-read and visually inspected with independent source, canonical, molecular, reader and apparatus audits. Separate pure/doped routes, postprocessing, surface-bound control, magnetic aggregates and theoretical models retain distinct sample scopes. Missing parameters and source conflicts remain explicit; cited external works not independently inspected.",
+    "missing_fields": [
+      "Per-specimen synthesis batches and complete links between nominal feed doping and measured incorporation are not given.",
+      "Several workup volumes, separation hardware, stirring speed, aging times, TOPO/powder ratio and exact purification cycles are unreported.",
+      "No measured atomic coordinate file, sample-specific refined dopant occupancy, raw spectral array or full statistical error model is supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=schwartz2003",
+      "relation": "Main figures, matched SI, tables, equations and evidence limitations."
+    },
+    {
+      "label": "Exchange-coupling analysis",
+      "url": "../records/schwartz-2003-exchange-model.html",
+      "relation": "Source-scoped related preparation or characterization."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

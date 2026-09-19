@@ -4326,7 +4326,7 @@
       "model3dPath": null,
       "functionalGroups": [],
       "limitations": [
-        "Carrier-gas element identity only; a single-atom symbol is sufficient."
+        "Element identity only; a single-atom symbol is sufficient."
       ],
       "provenance": {
         "connectivitySource": "PubChem",
@@ -4339,7 +4339,10 @@
         "sourceLookupSha256": "c0cfb157966ea04a685c2748c1da5ce130be2efe333f58698a132e4ca98dd93b",
         "depictionSoftware": "RDKit 2026.03.6",
         "sourceFormula": "He",
-        "limitations": "Reference connectivity and computed geometry are not experimental particle, solution or surface structures."
+        "limitations": "Reference connectivity and computed geometry are not experimental particle, solution or surface structures.",
+        "previousSourceSpecificLimitations": [
+          "Carrier-gas element identity only; a single-atom symbol is sufficient."
+        ]
       },
       "caption": "Verified helium element identity. A symbol is shown without invented molecular geometry.",
       "assetHashes": {
@@ -8159,9 +8162,9 @@
           ]
         }
       ],
-      "caption": "ACS spectrophotometric grade; QDOH and esterification stocks use DMSO. Distinct from DMSO-d6 used for NMR. Conventional free-molecule connectivity and a locally computed illustrative conformer only; not a measured solution geometry, surface state or specimen crystal.",
+      "caption": "Dimethyl sulfoxide reference connectivity and computed free-molecule conformer. Grade, concentration, reaction role and sample preparation belong to each source record. This reference is not a measured solution complex, hydration structure or surface-bound ligand geometry.",
       "limitations": [
-        "ACS spectrophotometric grade; QDOH and esterification stocks use DMSO. Distinct from DMSO-d6 used for NMR. Conventional free-molecule connectivity and a locally computed illustrative conformer only; not a measured solution geometry, surface state or specimen crystal."
+        "Reference geometry is illustrative and excluded from measured crystal-structure labels. Source-specific solvent grade and use are not inferred."
       ],
       "provenance": {
         "identitySource": "Source-named compound or material in Veinot et al. 1997",
@@ -8266,12 +8269,18 @@
           "twoDimensional": "passed; all 22 source-named molecular depictions inspected",
           "threeDimensional": "passed; all 22 actual JSON conformers projected and inspected",
           "scope": "Illustrative connectivity/conformers, not experimental coordinates"
+        },
+        "previousSourceSpecificDisplayText": {
+          "caption": "ACS spectrophotometric grade; QDOH and esterification stocks use DMSO. Distinct from DMSO-d6 used for NMR. Conventional free-molecule connectivity and a locally computed illustrative conformer only; not a measured solution geometry, surface state or specimen crystal.",
+          "limitations": [
+            "ACS spectrophotometric grade; QDOH and esterification stocks use DMSO. Distinct from DMSO-d6 used for NMR. Conventional free-molecule connectivity and a locally computed illustrative conformer only; not a measured solution geometry, surface state or specimen crystal."
+          ]
         }
       },
       "assetHashes": {
-        "svgPath": "8068f244cdfb3d831c99aa90b14e617e6f0c8f2e28487832883803b83b50efb0",
-        "model2dPath": "f2f831958aba508c1e56061986165b0c48d734636e561da091ebae72e1bc4c0d",
-        "model3dPath": "ebe9ceb405761252afabdb230ecf5f0c0003ef8493f93fcc2a4d968ef744eb9a"
+        "svgPath": "281a248265d7a407c6730a22cb2c3e82fa02f3f5f1fb69cdafc2f7c20e53f6bd",
+        "model2dPath": "4c0353e0df19b32605268b918e803b284897d2fa1f79f6b0e1d8ed7b1dbff75c",
+        "model3dPath": "e717a2360191d643edc8715e7fe9da82ebdd7ecb538f1ed22dda3c583f9451de"
       }
     },
     {
@@ -17717,6 +17726,430 @@
       },
       "assetHashes": {
         "svgPath": "49814410744e2d7de901d017ffa8a4b60392f0357b5c494636cf268b007f9604"
+      }
+    },
+    {
+      "id": "zinc-acetate-dihydrate",
+      "name": "Zinc acetate dihydrate",
+      "aliases": [
+        "Zinc acetate dihydrate"
+      ],
+      "formula": "C4H10O6Zn",
+      "displayFormula": "Zn(OAc)2·2H2O",
+      "depictionKind": "ionic_components",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/zinc-acetate-dihydrate.svg",
+      "model2dPath": "models/zinc-acetate-dihydrate-2d.json",
+      "model3dPath": null,
+      "functionalGroups": [
+        {
+          "label": "Carboxylate group",
+          "atomIndices": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "bondIndices": [
+            1,
+            2,
+            4,
+            5
+          ]
+        }
+      ],
+      "caption": "Reported hydrate represented as disconnected formula components. No Zn–acetate coordination, crystal packing or DMSO solution complex is assigned. Reference connectivity; any computed conformer is illustrative and is not measured solution or surface geometry.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false,
+        "smiles": "[Zn+2].CC(=O)[O-].CC(=O)[O-].O.O",
+        "software": "RDKit 2026.03.6",
+        "coordinates": "2D depiction; no ion-pair or crystalline geometry"
+      },
+      "assetHashes": {
+        "svgPath": "fba44d83ca8f55ac53a0f8fad54f82a467f2995cf0f080d309e4e0c219671433",
+        "model2dPath": "11489116bdd5e5954a26ffbfa7dc04199b3dde8b38bae69c5dc72b55d5d32836"
+      }
+    },
+    {
+      "id": "cobalt-acetate-tetrahydrate",
+      "name": "Cobalt(II) acetate tetrahydrate",
+      "aliases": [
+        "Cobalt(II) acetate tetrahydrate"
+      ],
+      "formula": "C4H14CoO8",
+      "displayFormula": "Co(OAc)2·4H2O",
+      "depictionKind": "ionic_components",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/cobalt-acetate-tetrahydrate.svg",
+      "model2dPath": "models/cobalt-acetate-tetrahydrate-2d.json",
+      "model3dPath": null,
+      "functionalGroups": [
+        {
+          "label": "Carboxylate group",
+          "atomIndices": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "bondIndices": [
+            1,
+            2,
+            4,
+            5
+          ]
+        }
+      ],
+      "caption": "Reported hydrate represented as disconnected formula components. No cobalt coordination, hydration shell or DMSO speciation is assigned. Reference connectivity; any computed conformer is illustrative and is not measured solution or surface geometry.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false,
+        "smiles": "[Co+2].CC(=O)[O-].CC(=O)[O-].O.O.O.O",
+        "software": "RDKit 2026.03.6",
+        "coordinates": "2D depiction; no ion-pair or crystalline geometry"
+      },
+      "assetHashes": {
+        "svgPath": "3080e05e9e57a7aa25a32bb394142fe9f6e32ed4686cbdd0b08bf1ed69b19e5b",
+        "model2dPath": "424b54a2b61063e281b25c60dcc893c6828ca42fdedc1127d2ee0ef66489bca2"
+      }
+    },
+    {
+      "id": "nickel-perchlorate-hexahydrate",
+      "name": "Nickel(II) perchlorate hexahydrate",
+      "aliases": [
+        "Nickel(II) perchlorate hexahydrate"
+      ],
+      "formula": "H12Cl2NiO14",
+      "displayFormula": "Ni(ClO4)2·6H2O",
+      "depictionKind": "ionic_components",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/nickel-perchlorate-hexahydrate.svg",
+      "model2dPath": "models/nickel-perchlorate-hexahydrate-2d.json",
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Reported hydrate formula components. Perchlorate connectivity is a resonance representation, not a measured nickel complex or hydrated crystal. Reference connectivity; any computed conformer is illustrative and is not measured solution or surface geometry.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false,
+        "smiles": "[Ni+2].[O-]Cl(=O)(=O)=O.[O-]Cl(=O)(=O)=O.O.O.O.O.O.O",
+        "software": "RDKit 2026.03.6",
+        "coordinates": "2D depiction; no ion-pair or crystalline geometry"
+      },
+      "assetHashes": {
+        "svgPath": "d285c13ca3240688ce4fed7a23839ebc98b98ea3ab4a2b24c23d13a0330dd21b",
+        "model2dPath": "2e0fee00a166a16703732d9fbba5e7a80bd0e41c0f965c37b205c991ec58a3ab"
+      }
+    },
+    {
+      "id": "dodecylamine",
+      "name": "Dodecylamine",
+      "aliases": [
+        "Dodecylamine"
+      ],
+      "formula": "C12H27N",
+      "displayFormula": "C12H27N",
+      "depictionKind": "molecule",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/dodecylamine.svg",
+      "model2dPath": "models/dodecylamine-2d.json",
+      "model3dPath": "models/dodecylamine-3d.json",
+      "functionalGroups": [
+        {
+          "label": "Primary amine",
+          "atomIndices": [
+            12
+          ],
+          "bondIndices": []
+        }
+      ],
+      "caption": "Free dodecylamine connectivity and computed conformer. Surface binding, protonation and ligand density on ZnO are not reconstructed. Reference connectivity; any computed conformer is illustrative and is not measured solution or surface geometry.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false,
+        "conformerConverged": true,
+        "embeddingSeed": 20260919,
+        "minimization": "UFF, maximum 3000 iterations",
+        "smiles": "CCCCCCCCCCCCN",
+        "software": "RDKit 2026.03.6",
+        "coordinates": "2D depiction and ETKDGv3/UFF computed conformer"
+      },
+      "assetHashes": {
+        "svgPath": "d736f1b0312db0000e0196743cc50e78fa3d1e1b019d55a760a4610a693a4748",
+        "model2dPath": "fc2991b7cdb8106fba8909b42c3cc3240324bcb5d22a158119f94e1438fed8fd",
+        "model3dPath": "8e967c0b1d461e157105a612b810d854bdd297e38c5b48e080a1ca686e874afd"
+      }
+    },
+    {
+      "id": "identity-schwartz-zinc-acetate-additive",
+      "name": "Zinc acetate clarity additive",
+      "aliases": [
+        "Zinc acetate clarity additive"
+      ],
+      "formula": null,
+      "displayFormula": null,
+      "depictionKind": "unresolved-identity",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-zinc-acetate-additive.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "The source writes approximately10mg Zn(OAc)2 for optical-clarity restoration without specifying hydration. The separate main starting salt is dihydrate; that hydration is not silently transferred here.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "c25b7a19f8ab6bb1acb036971b2b83685d32fa0094d277d9aeeb5202fa6bc0e8"
+      }
+    },
+    {
+      "id": "identity-schwartz-topo-technical",
+      "name": "Technical-grade TOPO",
+      "aliases": [
+        "Technical-grade TOPO"
+      ],
+      "formula": null,
+      "displayFormula": null,
+      "depictionKind": "mixture",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-topo-technical.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Footnote16 specifies technical-grade TOPO and unidentified phosphonic-acid impurities. The linked pure TOPO structure describes only the named component, not the full reagent or actual surface ligand distribution.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "96d4e9fe3322beda772b1073ba7bcae4dafed8a2bb2ecf325508777a4197ed75"
+      }
+    },
+    {
+      "id": "identity-schwartz-zno-specimen",
+      "name": "ZnO nanocrystals",
+      "aliases": [
+        "ZnO nanocrystals"
+      ],
+      "formula": "ZnO",
+      "displayFormula": "ZnO",
+      "depictionKind": "specimen",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-zno-specimen.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source reports ZnO phase and TEM/electron-diffraction evidence. This identity card is not a measured particle lattice; the separate independent bulk CIF does not reconstruct the synthesized sample.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "7c1e35a012df6f1ccc4e385636926e6a440ea39ba06247023e81dd3953bce3f4"
+      }
+    },
+    {
+      "id": "identity-schwartz-co-specimen",
+      "name": "Co-doped ZnO nanocrystals",
+      "aliases": [
+        "Co-doped ZnO nanocrystals"
+      ],
+      "formula": "ZnO:Co",
+      "displayFormula": "ZnO:Co",
+      "depictionKind": "specimen",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-co-specimen.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source-assigned substituted Co2+ in ZnO. No exact universal stoichiometry, site occupancy, radial dopant profile or measured atomic coordinates are supplied.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "ac5274b20329cbdc233aecabaff54674a94a82f652ccea94ee4f2e50d2ed4d39"
+      }
+    },
+    {
+      "id": "identity-schwartz-ni-specimen",
+      "name": "Ni-doped ZnO nanocrystals",
+      "aliases": [
+        "Ni-doped ZnO nanocrystals"
+      ],
+      "formula": "ZnO:Ni",
+      "displayFormula": "ZnO:Ni",
+      "depictionKind": "specimen",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-ni-specimen.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source-assigned substituted Ni2+ in ZnO. No exact universal stoichiometry, site occupancy, radial dopant profile or measured atomic coordinates are supplied.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "3421c128289e8946e6ce5e43f8b825826bec847e0f60126c3dd5dd3156f0f07a"
+      }
+    },
+    {
+      "id": "identity-schwartz-surface-co-specimen",
+      "name": "Surface-bound Co on ZnO control",
+      "aliases": [
+        "Surface-bound Co on ZnO control"
+      ],
+      "formula": null,
+      "displayFormula": null,
+      "depictionKind": "specimen",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-surface-co-specimen.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "This control has intentionally surface-bound Co and is separate from substitutionally doped ZnO. No exact loading, binding geometry or missing preparation recipe is inferred.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "c2843abdcd497f17ba172fc69d8bbf796ca5a9a2a3b77da03b7bcd5f2402c537"
+      }
+    },
+    {
+      "id": "identity-schwartz-co-aggregate-specimen",
+      "name": "Co-doped ZnO aggregate powder",
+      "aliases": [
+        "Co-doped ZnO aggregate powder"
+      ],
+      "formula": "ZnO:Co",
+      "displayFormula": "ZnO:Co",
+      "depictionKind": "specimen",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-co-aggregate-specimen.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Macroscopic aggregates of doped nanocrystals are distinct from isolated colloids. The source prints4.9 and5.0nm precursor sizes in different places. No measured interparticle atomic reconstruction is supplied.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "71c733f9a85fb9fa023dc903dc0eca7857ae3b5f2bb2e5c6d9c14a876d5db19e"
+      }
+    },
+    {
+      "id": "identity-schwartz-quartz",
+      "name": "Quartz optical support",
+      "aliases": [
+        "Quartz optical support"
+      ],
+      "formula": "SiO2",
+      "displayFormula": "SiO2",
+      "depictionKind": "support",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ja036811v"
+      ],
+      "svgPath": "svg/identity-schwartz-quartz.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source-named optical support, not a synthesis ingredient or a refined quartz crystal. SiO2 identifies the material; no measured substrate structure or thickness is assigned.",
+      "limitations": [],
+      "provenance": {
+        "sourceDoi": "10.1021/ja036811v",
+        "sourceSha256": "48bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f",
+        "identitySource": "Named compound and/or connectivity diagram in inspected local main article; no external database lookup claimed.",
+        "measuredCoordinates": false,
+        "eligible_training": false
+      },
+      "assetHashes": {
+        "svgPath": "caeaa781301dba3f9b25cbed56c8e7be136b9df0aa83f77a7a1fca01f2152772"
       }
     }
   ],

@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schwartz-2003-icp",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Schwartz et al. (2003) · Dopant-concentration measurement by ICP-AES",
+  "material": {
+    "formula": "ZnO",
+    "family": "ZnO and separately Co2+- or Ni2+-doped ZnO quantum dots",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Inductively coupled plasma atomic emission spectroscopy",
+  "sources": [
+    {
+      "id": "schwartz2003",
+      "doi": "10.1021/ja036811v",
+      "title": "Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals",
+      "authors": "Dana A. Schwartz; Nick S. Norberg; Quyen P. Nguyen; Jason M. Parker; Daniel R. Gamelin",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/ja036811v",
+      "main_status": "All14 main and4 matched SI pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "Four supplied SI pages, Figures S1–S6, matched by exact main-paper declarations and cross-references plus Gamelin metadata. No standalone SI title/byline. All pages text-read and visually inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "schwartz2003",
+    "recipe_family": "schwartz2003-zno-doping",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 1, printed p. 13205, Abstract"
+        }
+      ],
+      "note": "Dopant notation denotes the material family, not a refined site occupancy. Shared analytical records retain distinct compositions in their product/sample contexts."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Complete 14-page main and matched four-page SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "co-specimen",
+      "name": "Co2+-doped ZnO nanocrystals; dopant content specified by specimen",
+      "formula": "ZnO:Co",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    },
+    {
+      "id": "ni-specimen",
+      "name": "Ni2+-doped ZnO nanocrystals; dopant content specified by specimen",
+      "formula": "ZnO:Ni",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "icp-data",
+      "name": "Determine dopant concentrations in separate samples output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "co-specimen",
+        "ni-specimen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "analyze",
+      "action": "icp_aes",
+      "label": "Determine dopant concentrations in separate samples",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "co-specimen",
+        "ni-specimen"
+      ],
+      "outputs": [
+        "icp-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Jarrel Ash model 955. Digestion acid/procedure, standards, wavelengths, recovery, uncertainty and sample-by-sample nominal-to-incorporated mappings are absent.",
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "method",
+      "source_sample_label": "Dopant analysis method, no full table",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "scope",
+      "sample_id": "method",
+      "property": "dopant_measurement_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "The paper states that ICP-AES determined dopant concentrations; characterization labels therefore remain reported specimen percentages. No universal equality with initial salt fraction or exact uniform atomic occupancy is asserted.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+          },
+          {
+            "source_id": "schwartz2003",
+            "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 3, printed p. 13207, II.B Physical Measurements"
+        },
+        {
+          "source_id": "schwartz2003",
+          "locator": "Main PDF p. 2, printed p. 13206, II.A Sample Preparation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All14 main and4 matched SI pages text-read and visually inspected with independent source, canonical, molecular, reader and apparatus audits. Separate pure/doped routes, postprocessing, surface-bound control, magnetic aggregates and theoretical models retain distinct sample scopes. Missing parameters and source conflicts remain explicit; cited external works not independently inspected.",
+    "missing_fields": [
+      "Per-specimen synthesis batches and complete links between nominal feed doping and measured incorporation are not given.",
+      "Several workup volumes, separation hardware, stirring speed, aging times, TOPO/powder ratio and exact purification cycles are unreported.",
+      "No measured atomic coordinate file, sample-specific refined dopant occupancy, raw spectral array or full statistical error model is supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=schwartz2003",
+      "relation": "Main figures, matched SI, tables, equations and evidence limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
