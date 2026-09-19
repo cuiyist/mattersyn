@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.2.0",
+  "record_id": "stiger-1999-afm",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Stiger et al. (1999) · AFM imaging, height distributions and nucleation density",
+  "material": {
+    "formula": "Ag/Si",
+    "family": "Metal nanocrystals on semiconductor substrates",
+    "components": [
+      "Ag",
+      "Si"
+    ],
+    "elements": [
+      "Ag",
+      "Si"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "stiger1999",
+      "doi": "10.1021/la980800b",
+      "title": "Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100)",
+      "authors": "R. M. Stiger; S. Gorer; B. Craft; R. M. Penner",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/la980800b",
+      "main_status": "All nine supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "stiger1999",
+    "recipe_family": "stiger1999-ag-si-electrodeposition",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: silicon preparation and electrochemistry"
+        }
+      ],
+      "note": "Analytical or comparison context; not an intended synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: silicon preparation and electrochemistry"
+        }
+      ],
+      "note": "Substrate identity and doping remain specific to each source cohort."
+    }
+  },
+  "materials": [
+    {
+      "id": "ag-si",
+      "name": "Electrodeposited Ag nanocrystals on Si(100)",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    },
+    {
+      "id": "h-si",
+      "name": "Hydrogen-terminated Si(100) electrode",
+      "formula": "Si",
+      "role": "etched-surface reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "afm-images",
+      "name": "Image the surface in noncontact AFM output",
+      "kind": "mixture",
+      "parent_ids": [
+        "ag-si",
+        "h-si"
+      ]
+    },
+    {
+      "id": "flattened",
+      "name": "Correct piezo-tube curvature and flatten the images output",
+      "kind": "mixture",
+      "parent_ids": [
+        "afm-images"
+      ]
+    },
+    {
+      "id": "afm-results",
+      "name": "Measure all particle heights and areal densities output",
+      "kind": "mixture",
+      "parent_ids": [
+        "flattened"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "scan",
+      "action": "noncontact_afm",
+      "label": "Image the surface in noncontact AFM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ag-si",
+        "h-si"
+      ],
+      "outputs": [
+        "afm-images"
+      ],
+      "parameters": {
+        "scan_width": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 8, printed p. 797, Figures 7–9"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_height": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 8, printed p. 797, Figures 7–9"
+            }
+          ],
+          "derivation": null
+        },
+        "fields_per_sample": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fields",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 8, printed p. 797, Figures 7–9"
+            }
+          ],
+          "derivation": null
+        },
+        "nc_resonance_frequency": {
+          "value": null,
+          "minimum": 90,
+          "maximum": 120,
+          "unit": "kHz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 8, printed p. 797, Figures 7–9; contact-mode comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 8, printed p. 797, Figures 7–9; contact-mode comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Park Scientific Instruments LS multimode AFM; contact0.6µm and noncontact2µm Ultralevers as source dimensions, not assigned tip radii. Five randomly selected3×3µm NC-AFM areas per sample for distributions. Etched-Si reference and plated specimens are alternatives. Contact-mode comparison can remove nanoparticles, lowering apparent density; not an equivalent nondestructive measurement.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        },
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 8, printed p. 797, Figures 7–9; contact-mode comparison"
+        }
+      ]
+    },
+    {
+      "id": "flatten",
+      "action": "afm_flattening",
+      "label": "Correct piezo-tube curvature and flatten the images",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "scan"
+      ],
+      "inputs": [
+        "afm-images"
+      ],
+      "outputs": [
+        "flattened"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Park Scientific software for tube-curvature correction; source does not specify flattening polynomial or filtering.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    },
+    {
+      "id": "analyze",
+      "action": "afm_distribution_analysis",
+      "label": "Measure all particle heights and areal densities",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "flatten"
+      ],
+      "inputs": [
+        "flattened"
+      ],
+      "outputs": [
+        "afm-results"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, NC-AFM analysis"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 8, printed p. 797, Three-day experiment groups"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, NC-AFM analysis"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 8, printed p. 797, Three-day experiment groups"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "NIH Image SXM1.61. Height is the measured quantity; tip-broadened lateral widths are not true diameters. Diameter proxy assumes approximately spherical particles and relies on cited prior comparisons. Density series:15experiments, three days×five, fresh etchants each day and one etch batch per day. No raw15-point table or unique specimen joins reconstructed.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        },
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 7, printed p. 796, NC-AFM analysis"
+        },
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 8, printed p. 797, Three-day experiment groups"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "afm-context",
+      "source_sample_label": "AFM source cohorts",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag nanocrystals on Si(100)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Figure5 imaging, Figure7 histograms and three-day Figure8/9 series retain their own labels. Figure8 axis/body density interpretation conflicts with its height caption."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine supplied main pages read in full and visually inspected, with independent source and canonical audits. Matching SI not located or verified. Preparation, electrochemical comparisons, controls, AFM and transferred TEM/SAED cohorts retain their separate scopes. Source charge units, CV concentrations, captions and nucleation-rate units remain unresolved; no measured atomic coordinates or exact physical batch joins inferred.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No author-assigned physical batch IDs or complete cross-instrument specimen joins.",
+      "No experimental atomic coordinates, interfacial registry or refined Ag/Si unit cell supplied."
+    ],
+    "conflicts": [
+      "Figure 5 and surrounding prose print deposition charges in mC/cm²; Figures 7 and 9 use µC/cm². The monolayer reference is printed 222 mC/cm². Values and upper-limit equivalent-monolayer estimates remain as printed, without a silent factor-of-1000 correction.",
+      "Figure 2 caption and section introduction give 10 mM silver, whereas the Figure 2b discussion and Scheme 1 give 1.0 mM. The general preparation is 1 mM; Figure 3 separately specifies 1.5 mM. These contexts are not merged.",
+      "Figure 2d caption names n++-Si whereas its discussion assigns nondegenerate n-Si. The body-based assignment is exposed with this conflict.",
+      "Figure 7 contains four displayed histograms and lists four pulse durations, but its caption says five samples. The top panel mean 2.2 nm and sigma 2.4 nm differ from body values 2.4 nm and 2 nm. Four source panels are retained, not a reconstructed fifth specimen.",
+      "Figure 8 ordinate is particle density (µm−2) and its discussion concerns nucleation density, while its caption says mean height and height-distribution error bars. The axis/body interpretation is retained with ambiguous error-bar semantics.",
+      "Nucleation rates on printed p.797 use cm−2 ms−1, whereas the Summary uses cm−2 s−1. These are separately scoped statements, not a normalized rate label.",
+      "Table 1 prints expected FCC Ag (111) d spacing 2.32 Å versus experimental 2.37 Å. No corrected reference value is substituted.",
+      "Equation 2 includes an undefined A and does not show the F that appears in Equation 1. Preserve the original equation rather than silently repair it. The text on p.798 refers to Figure 8 for the size–charge model plotted in Figure 9."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review",
+      "url": "../paper-review.html?id=stiger1999",
+      "relation": "Nine supplied main pages; SI not located or verified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

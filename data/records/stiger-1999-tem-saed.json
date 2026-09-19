@@ -1,0 +1,615 @@
+{
+  "schema_version": "1.2.0",
+  "record_id": "stiger-1999-tem-saed",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Stiger et al. (1999) · Transferred-particle TEM and selected-area electron diffraction",
+  "material": {
+    "formula": "Ag/Si",
+    "family": "Metal nanocrystals on semiconductor substrates",
+    "components": [
+      "Ag",
+      "Si"
+    ],
+    "elements": [
+      "Ag",
+      "Si"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "stiger1999",
+      "doi": "10.1021/la980800b",
+      "title": "Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100)",
+      "authors": "R. M. Stiger; S. Gorer; B. Craft; R. M. Penner",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/la980800b",
+      "main_status": "All nine supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "stiger1999",
+    "recipe_family": "stiger1999-ag-si-electrodeposition",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: silicon preparation and electrochemistry"
+        }
+      ],
+      "note": "Analytical or comparison context; not an intended synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: silicon preparation and electrochemistry"
+        }
+      ],
+      "note": "Substrate identity and doping remain specific to each source cohort."
+    }
+  },
+  "materials": [
+    {
+      "id": "ag-si",
+      "name": "Electrodeposited Ag nanocrystals on Si(100)",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    },
+    {
+      "id": "carbon-grid",
+      "name": "Carbon-supported gold TEM grid",
+      "formula": null,
+      "role": "specimen support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Carbon-supported gold grid, Ted Pella Inc."
+      ],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    },
+    {
+      "id": "hopg",
+      "name": "Highly oriented pyrolytic graphite calibration flakes",
+      "formula": "C",
+      "role": "diffraction calibration reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "transferred",
+      "name": "Transfer deposited nanoparticles to a TEM grid output",
+      "kind": "fraction",
+      "parent_ids": [
+        "ag-si",
+        "carbon-grid"
+      ]
+    },
+    {
+      "id": "tem-images",
+      "name": "Image the transferred nanoparticles output",
+      "kind": "mixture",
+      "parent_ids": [
+        "transferred"
+      ]
+    },
+    {
+      "id": "saed-pattern",
+      "name": "Acquire selected-area electron diffraction output",
+      "kind": "mixture",
+      "parent_ids": [
+        "transferred"
+      ]
+    },
+    {
+      "id": "instrument-calibration",
+      "name": "Correct microscope astigmatism using graphite diffraction output",
+      "kind": "mixture",
+      "parent_ids": [
+        "hopg"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "transfer",
+      "action": "mechanical_tem_transfer",
+      "label": "Transfer deposited nanoparticles to a TEM grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ag-si",
+        "carbon-grid"
+      ],
+      "outputs": [
+        "transferred"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mechanical removal from Si(100); transfer method, efficiency and exact pulse duration unreported. Aggregation on the grid cannot define as-grown substrate coverage.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "action": "tem",
+      "label": "Image the transferred nanoparticles",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "transfer"
+      ],
+      "inputs": [
+        "transferred"
+      ],
+      "outputs": [
+        "tem-images"
+      ],
+      "parameters": {
+        "source_accelerating_voltage_label": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "keV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Source calls this accelerating voltage but prints energy units; retained as printed",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "field_width": {
+          "value": 260,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 7, printed p. 796, Figure6a"
+            }
+          ],
+          "derivation": null
+        },
+        "field_height": {
+          "value": 260,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 7, printed p. 796, Figure6a"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure 6a"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure 6a"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Philips EM-200; Figure6a is the original TEM image. Do not silently relabel the printed200keV as measured voltage or assign the specimen to a Figure7 pulse cohort.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        },
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 7, printed p. 796, Figure 6a"
+        }
+      ]
+    },
+    {
+      "id": "diffract",
+      "action": "saed",
+      "label": "Acquire selected-area electron diffraction",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "transfer"
+      ],
+      "inputs": [
+        "transferred"
+      ],
+      "outputs": [
+        "saed-pattern"
+      ],
+      "parameters": {
+        "camera_length": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "selected_area_aperture": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure6b and Table1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure6b and Table1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure6b is the measured pattern; Figure6c is an author-drawn indexing schematic. Table1 experimental d spacings and ICDD reference values are separate; original expected111value2.32Å retained.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        },
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 7, printed p. 796, Figure6b and Table1"
+        }
+      ]
+    },
+    {
+      "id": "calibrate",
+      "action": "diffraction_astigmatism_calibration",
+      "label": "Correct microscope astigmatism using graphite diffraction",
+      "stage": "characterization",
+      "branch": "independent instrument calibration",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hopg"
+      ],
+      "outputs": [
+        "instrument-calibration"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Diffraction patterns from single-crystal HOPG flakes were used to correct microscope astigmatism. Timing relative to specimen acquisition and calibration details are unreported; not a retrospective correction of the Ag diffraction image.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 2, printed p. 791, Experimental Section: microscopy"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tem-saed-context",
+      "source_sample_label": "Figure6 transferred Ag particles",
+      "batch_id": null,
+      "material_state_id": "transferred",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag nanocrystals mechanically transferred from Si(100) to a carbon-supported gold TEM grid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, TEM and SAED discussion"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, TEM and SAED discussion"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, TEM and SAED discussion"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, TEM and SAED discussion"
+          },
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 7, printed p. 796, Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Deposited at−800mV; pulse duration and correspondence toAFM cohorts unspecified. Source reports10–25Å TEMdiameters and at least1h air exposure during analysis. This is not a complete time-dependent oxidation test."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine supplied main pages read in full and visually inspected, with independent source and canonical audits. Matching SI not located or verified. Preparation, electrochemical comparisons, controls, AFM and transferred TEM/SAED cohorts retain their separate scopes. Source charge units, CV concentrations, captions and nucleation-rate units remain unresolved; no measured atomic coordinates or exact physical batch joins inferred.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No author-assigned physical batch IDs or complete cross-instrument specimen joins.",
+      "No experimental atomic coordinates, interfacial registry or refined Ag/Si unit cell supplied."
+    ],
+    "conflicts": [
+      "Figure 5 and surrounding prose print deposition charges in mC/cm²; Figures 7 and 9 use µC/cm². The monolayer reference is printed 222 mC/cm². Values and upper-limit equivalent-monolayer estimates remain as printed, without a silent factor-of-1000 correction.",
+      "Figure 2 caption and section introduction give 10 mM silver, whereas the Figure 2b discussion and Scheme 1 give 1.0 mM. The general preparation is 1 mM; Figure 3 separately specifies 1.5 mM. These contexts are not merged.",
+      "Figure 2d caption names n++-Si whereas its discussion assigns nondegenerate n-Si. The body-based assignment is exposed with this conflict.",
+      "Figure 7 contains four displayed histograms and lists four pulse durations, but its caption says five samples. The top panel mean 2.2 nm and sigma 2.4 nm differ from body values 2.4 nm and 2 nm. Four source panels are retained, not a reconstructed fifth specimen.",
+      "Figure 8 ordinate is particle density (µm−2) and its discussion concerns nucleation density, while its caption says mean height and height-distribution error bars. The axis/body interpretation is retained with ambiguous error-bar semantics.",
+      "Nucleation rates on printed p.797 use cm−2 ms−1, whereas the Summary uses cm−2 s−1. These are separately scoped statements, not a normalized rate label.",
+      "Table 1 prints expected FCC Ag (111) d spacing 2.32 Å versus experimental 2.37 Å. No corrected reference value is substituted.",
+      "Equation 2 includes an undefined A and does not show the F that appears in Equation 1. Preserve the original equation rather than silently repair it. The text on p.798 refers to Figure 8 for the size–charge model plotted in Figure 9."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review",
+      "url": "../paper-review.html?id=stiger1999",
+      "relation": "Nine supplied main pages; SI not located or verified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

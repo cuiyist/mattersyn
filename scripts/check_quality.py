@@ -147,14 +147,22 @@ class Audit:
         self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing reviewed Saha ferrite-shell contribution")
         silicon = self.hubs.get("Si", {})
         self.check(silicon.get("component_only") is True and silicon.get("direct_record_ids") == [], "Si: Littau component contribution promoted to pure-material synthesis")
-        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES, "Si: missing or unaudited synthesis contribution; only reviewed Littau and Heath routes are allowed")
-        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019", "10.1021/jp951903v"}, "Si: unreviewed title match added to the reviewed contributions")
+        stiger_routes = {"stiger-1999-electrodeposition"}
+        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES | stiger_routes, "Si: missing or unaudited synthesis contribution; only reviewed Littau, Heath and Stiger routes are allowed")
+        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019", "10.1021/jp951903v", "10.1021/la980800b"}, "Si: unreviewed title match added to the reviewed contributions")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Si/SiOx" for rid in LITTAU_SI_ROUTES), "Si: source surface-oxidized product identity was erased")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ge/Si" for rid in HEATH_GE_SI_ROUTES), "Ge/Si: supported island identity was erased")
         germanium = self.hubs.get("Ge", {})
         self.check(germanium.get("component_only") is True and set(germanium.get("record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge: substrate-supported routes became isolated Ge synthesis")
         self.check(set(self.hubs.get("Ge/Si", {}).get("direct_record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
-        for formula in ("Ag", "CO", "NO", "PbS", "Fe–C–H–O"):
+        silver = self.hubs.get("Ag", {})
+        self.check(silver.get("component_only") is True and set(silver.get("record_ids", [])) == stiger_routes, "Ag: only the reviewed Stiger supported-particle component is permitted")
+        self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
+        self.check(self.byid.get("stiger-1999-electrodeposition", {}).get("material", {}).get("formula") == "Ag/Si", "Ag/Si: supported-product identity was erased")
+        stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")
+        self.check(stiger_review.get("doi") == "10.1021/la980800b" and stiger_review.get("review_scope") == "supplied_main_only_si_unverified", "Stiger: contribution lacks the scoped source review")
+        self.check(any(d.get("role") == "main" and d.get("page_count") == 9 and d.get("sha256") == "e581449713ddca5e0cb68d05593df476d0e5150b88bc7c6dcbdb269ac70881fb" and len(d.get("pages", [])) == 9 and all(p.get("text_read") and p.get("visual_review") for p in d["pages"]) for d in stiger_review.get("documents", [])), "Stiger: nine-page source coverage or source identity changed")
+        for formula in ("CO", "NO", "PbS", "Fe–C–H–O"):
             self.check(formula not in self.hubs, f"{formula}: former title-only/benchmark/procedure hub reappeared; independent route review required")
         for paper in load(self.dist / "data/library-index.json")["papers"]:
             if paper["reviewStatus"] == "indexed_awaiting_review":

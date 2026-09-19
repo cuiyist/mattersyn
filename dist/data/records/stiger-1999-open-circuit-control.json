@@ -1,0 +1,652 @@
+{
+  "schema_version": "1.2.0",
+  "record_id": "stiger-1999-open-circuit-control",
+  "revision": 1,
+  "record_type": "protocol_variant",
+  "title": "Stiger et al. (1999) · Open-circuit plating-solution exposure control",
+  "material": {
+    "formula": "Si",
+    "family": "Metal nanocrystals on semiconductor substrates",
+    "components": [
+      "Si"
+    ],
+    "elements": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrochemical control",
+  "sources": [
+    {
+      "id": "stiger1999",
+      "doi": "10.1021/la980800b",
+      "title": "Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100)",
+      "authors": "R. M. Stiger; S. Gorer; B. Craft; R. M. Penner",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/la980800b",
+      "main_status": "All nine supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "stiger1999",
+    "recipe_family": "stiger1999-ag-si-electrodeposition",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si(100) control surface",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF pp. 1–9, printed pp. 790–798"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Hydrogen-terminated Si(100); control-specific doping not reported",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "h-si",
+      "name": "Hydrogen-terminated Si(100) electrode",
+      "formula": "Si",
+      "role": "working electrode",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Si(100); no distinct control doping value is stated in this paragraph."
+      ],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "agclo4",
+      "name": "Silver perchlorate monohydrate",
+      "formula": "AgClO4·H2O",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "reagent_purity": {
+          "value": 99.9,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source supplier specification; not a measured bath composition",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 2, printed p. 791, Experimental Section: silicon preparation and electrochemistry"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Alfa silver perchlorate monohydrate, 99.9%; hydration retained."
+      ],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "liclo4",
+      "name": "Lithium perchlorate",
+      "formula": "LiClO4",
+      "role": "supporting electrolyte",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "reagent_purity": {
+          "value": 99.99,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source supplier specification; not a measured bath composition",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 2, printed p. 791, Experimental Section: silicon preparation and electrochemistry"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Aldrich, 99.99%."
+      ],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "mecn",
+      "name": "Acetonitrile",
+      "formula": "C2H3N",
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Burdick & Jackson high-purity acetonitrile; atmospheric water not rigorously excluded."
+      ],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen purge gas",
+      "formula": "N2",
+      "role": "purge gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "pt-wire",
+      "name": "Platinum wire counter electrode",
+      "formula": "Pt",
+      "role": "counter electrode",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "ag-wire",
+      "name": "Silver wire reference electrode",
+      "formula": "Ag",
+      "role": "reference electrode",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "plating-solution",
+      "name": "Silver plating electrolyte",
+      "components": [
+        {
+          "material_id": "agclo4",
+          "quantities": {}
+        },
+        {
+          "material_id": "liclo4",
+          "quantities": {}
+        },
+        {
+          "material_id": "mecn",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "liclo4_molarity": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+            }
+          ],
+          "derivation": null
+        },
+        "agclo4_molarity": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stiger1999",
+              "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Total solution volume and reagent masses unreported. All reported potentials use the Ag reference scale; blank-electrolyte measurements physically use SCE, whose conversion offset is not supplied.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "control-surface",
+      "name": "Expose Si(100) to silver electrolyte at open circuit output",
+      "kind": "mixture",
+      "parent_ids": [
+        "h-si",
+        "plating-solution"
+      ]
+    },
+    {
+      "id": "rinsed-control",
+      "name": "Rinse the control surface in acetonitrile output",
+      "kind": "mixture",
+      "parent_ids": [
+        "control-surface",
+        "mecn"
+      ]
+    },
+    {
+      "id": "control-observation",
+      "name": "Inspect the control surface with NC-AFM output",
+      "kind": "mixture",
+      "parent_ids": [
+        "rinsed-control"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "immerse",
+      "action": "open_circuit_exposure",
+      "label": "Expose Si(100) to silver electrolyte at open circuit",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "h-si",
+        "plating-solution"
+      ],
+      "outputs": [
+        "control-surface"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Exposure duration unreported. Used to assess contamination/electroless deposition; no externally applied deposition pulse.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "rinse",
+      "action": "wafer_rinsing",
+      "label": "Rinse the control surface in acetonitrile",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "immerse"
+      ],
+      "inputs": [
+        "control-surface",
+        "mecn"
+      ],
+      "outputs": [
+        "rinsed-control"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    },
+    {
+      "id": "scan",
+      "action": "noncontact_afm",
+      "label": "Inspect the control surface with NC-AFM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rinse"
+      ],
+      "inputs": [
+        "rinsed-control"
+      ],
+      "outputs": [
+        "control-observation"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "No original control image is supplied. Background particles have unassigned chemistry; apparent morphology is not proof of a zero Ag concentration.",
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "open-circuit-control",
+      "source_sample_label": "open-circuit-control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si(100) control surface",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Control outcome, not an independent Ag synthesis route. No detection limit or exact sample ID supplied."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "control-result",
+      "sample_id": "open-circuit-control",
+      "property": "background_particle_density",
+      "technique": "NC-AFM",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "um^-2",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "stiger1999",
+            "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Average background density, identity unassigned; original images not shown.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stiger1999",
+          "locator": "Main PDF p. 5, printed p. 794, III.C two control experiments"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine supplied main pages read in full and visually inspected, with independent source and canonical audits. Matching SI not located or verified. Preparation, electrochemical comparisons, controls, AFM and transferred TEM/SAED cohorts retain their separate scopes. Source charge units, CV concentrations, captions and nucleation-rate units remain unresolved; no measured atomic coordinates or exact physical batch joins inferred.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No author-assigned physical batch IDs or complete cross-instrument specimen joins.",
+      "No experimental atomic coordinates, interfacial registry or refined Ag/Si unit cell supplied."
+    ],
+    "conflicts": [
+      "Figure 5 and surrounding prose print deposition charges in mC/cm²; Figures 7 and 9 use µC/cm². The monolayer reference is printed 222 mC/cm². Values and upper-limit equivalent-monolayer estimates remain as printed, without a silent factor-of-1000 correction.",
+      "Figure 2 caption and section introduction give 10 mM silver, whereas the Figure 2b discussion and Scheme 1 give 1.0 mM. The general preparation is 1 mM; Figure 3 separately specifies 1.5 mM. These contexts are not merged.",
+      "Figure 2d caption names n++-Si whereas its discussion assigns nondegenerate n-Si. The body-based assignment is exposed with this conflict.",
+      "Figure 7 contains four displayed histograms and lists four pulse durations, but its caption says five samples. The top panel mean 2.2 nm and sigma 2.4 nm differ from body values 2.4 nm and 2 nm. Four source panels are retained, not a reconstructed fifth specimen.",
+      "Figure 8 ordinate is particle density (µm−2) and its discussion concerns nucleation density, while its caption says mean height and height-distribution error bars. The axis/body interpretation is retained with ambiguous error-bar semantics.",
+      "Nucleation rates on printed p.797 use cm−2 ms−1, whereas the Summary uses cm−2 s−1. These are separately scoped statements, not a normalized rate label.",
+      "Table 1 prints expected FCC Ag (111) d spacing 2.32 Å versus experimental 2.37 Å. No corrected reference value is substituted.",
+      "Equation 2 includes an undefined A and does not show the F that appears in Equation 1. Preserve the original equation rather than silently repair it. The text on p.798 refers to Figure 8 for the size–charge model plotted in Figure 9."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review",
+      "url": "../paper-review.html?id=stiger1999",
+      "relation": "Nine supplied main pages; SI not located or verified."
+    },
+    {
+      "label": "AFM procedure",
+      "url": "../records/stiger-1999-afm.html",
+      "relation": "Method context; control-specific sample and missing pulse settings remain distinct."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
