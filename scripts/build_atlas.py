@@ -9,6 +9,8 @@ NAMES['InAs']='Indium arsenide'
 NAMES['Ag/Si']='Silver nanocrystals on silicon'
 NAMES['Ag']='Silver nanocrystals'
 NAMES['Pt']='Platinum nanocrystals'
+NAMES['CdS/HgS/CdS']='CdS/HgS quantum-dot quantum wells'
+NAMES['HgS']='Mercury sulfide · quantum-well component'
 NAMES['CdSe/ZnS/siloxane']='Siloxane-coated CdSe/ZnS quantum dots'
 NAMES['CdS/polymer']='Cadmium sulfide nanocrystals in chelate polymer microparticles'
 

@@ -1,0 +1,742 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "braun-2001-transient-absorption-acquisition",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Braun et al. (2001) · Femtosecond transient-absorption procedure",
+  "material": {
+    "formula": "CdS/HgS/CdS",
+    "family": "Semiconductor quantum-dot quantum-well heterostructures",
+    "elements": [
+      "Cd",
+      "Hg",
+      "S"
+    ],
+    "components": [
+      "CdS",
+      "HgS"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Pump–probe transient absorption",
+  "sources": [
+    {
+      "id": "braun2001",
+      "doi": "10.1021/jp010002l",
+      "title": "Variation of the Thickness and Number of Wells in the CdS/HgS/CdS Quantum Dot Quantum Well System",
+      "authors": "Markus Braun; Clemens Burda; Mostafa A. El-Sayed",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp010002l",
+      "main_status": "All four supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No SI supplied or independently matched. SI existence/availability is not established from this supplied four-page main article; no SI was inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "braun2001",
+    "recipe_family": "braun2001-cds-hgs-qdqw",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 2, printed p. 5549, Figure 1 and system dimensions"
+        }
+      ],
+      "note": "Material descriptor denotes a layered heterostructure, not an overall stoichiometric formula or a measured atomic model."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Complete supplied main PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Complete supplied main PDF pp. 1–4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Complete supplied main PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "specimen",
+      "name": "Selected source-scoped CdS/HgS quantum-dot quantum-well dispersion",
+      "formula": null,
+      "role": "System-labelled colloidal dispersion",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ta-cell",
+      "name": "Load and rotate the colloidal-sample glass cell output",
+      "kind": "aliquot",
+      "parent_ids": [
+        "specimen"
+      ]
+    },
+    {
+      "id": "ta-excited",
+      "name": "Overlap the excitation and probe in the sample output",
+      "kind": "aliquot",
+      "parent_ids": [
+        "ta-cell"
+      ]
+    },
+    {
+      "id": "ta-data",
+      "name": "Vary pump–probe delay and record absorption changes output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ta-excited"
+      ]
+    },
+    {
+      "id": "ta-comparison",
+      "name": "Compare decay times across observation wavelengths output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ta-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "load",
+      "action": "sample_cell_preparation",
+      "label": "Load and rotate the colloidal-sample glass cell",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "specimen"
+      ],
+      "outputs": [
+        "ta-cell"
+      ],
+      "parameters": {
+        "cell_thickness": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Room temperature, numerical value unspecified.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rotate to prevent photodegeneration. Rotation rate and actual degraded fraction are not reported; this is handling, not measured long-term stability.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "probe",
+      "action": "white_light_generation",
+      "label": "Generate the white-light probe in sapphire",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [],
+      "parameters": {
+        "fundamental_wavelength": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "probe_spectral_range": {
+          "value": null,
+          "minimum": 450,
+          "maximum": 1050,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Focus a small portion of the fundamental laser output into a sapphire plate. Sapphire is optical hardware, not a synthesis reagent.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "pump",
+      "action": "pump_probe_excitation",
+      "label": "Overlap the excitation and probe in the sample",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "load",
+        "probe"
+      ],
+      "inputs": [
+        "ta-cell"
+      ],
+      "outputs": [
+        "ta-excited"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "pulse_duration_fwhm": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fs",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "pulse_energy": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uJ",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source gives pulse energy, not energy density or fluence. Focal spot size is not reported. Quantities belong to transient absorption, not the separate 440 nm PL method.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "delay-scan",
+      "action": "time_resolved_absorption",
+      "label": "Vary pump–probe delay and record absorption changes",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "pump"
+      ],
+      "inputs": [
+        "ta-excited"
+      ],
+      "outputs": [
+        "ta-data"
+      ],
+      "parameters": {
+        "optical_delay_line_spatial_resolution": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "reported_delay_time_resolution": {
+          "value": 21,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fs",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source states 3 µm (21 fs) resolution. Preserve both reported quantities without silently recomputing or equating stage resolution with instrument-response width. No raw full delay/wavelength matrix supplied.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "analyze",
+      "action": "kinetic_comparison",
+      "label": "Compare decay times across observation wavelengths",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "delay-scan"
+      ],
+      "inputs": [
+        "ta-data"
+      ],
+      "outputs": [
+        "ta-comparison"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 4 presents decay times and representative traces; exact kinetic fitting model, point uncertainties and raw data are not supplied. Least-squares lines around the crossover are visual aids, not a validated mechanistic law.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+        },
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ta-context",
+      "source_sample_label": "Shared pump–probe method for separate Systems I–III",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/HgS/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "negative-signal",
+      "sample_id": "ta-context",
+      "property": "negative_transient_signal_interpretation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Negative transient absorption can be bleaching or stimulated emission. Authors assign high-energy short-lived response to bleach recovery of an optically allowed low-energy excitonic state; long-lived low-energy response is assigned to stimulated emission in the PL range.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+        },
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+        }
+      ]
+    },
+    {
+      "id": "wavelength-dependence",
+      "sample_id": "ta-context",
+      "property": "decay_time_trend",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Low-energy decay times form a distribution and increase with increasing observation wavelength; the interpretation invokes recombination through an inhomogeneous distribution of trapping states.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 3, printed p. 5550, Energy Dependence of the Relaxation Dynamics"
+        },
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 4, printed p. 5551, Figure 4 and continued discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All four supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Three CdS/HgS/CdS architectures retain distinct exchange/deposition sequences and source-assigned optical contexts. Counterions, several feed doses and the core-size discrepancy remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "Cd and Hg precursor salts/counterions, hexametaphosphate counterion and dose, preparation of H2S/water stock, and pH-adjustment reagents are not reported.",
+      "No current-paper TEM micrograph, XRD/SAED pattern, refined phase, unit cell or atomic-coordinate file. Figure 1 is a schematic and cites earlier theory/morphology.",
+      "Synthesis temperature, detailed growth timing, final workup/isolation, yield and physical-batch identifiers are not supplied. Room temperature is stated for optical experiments, not assigned numerically or silently transferred to synthesis."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=braun2001",
+      "relation": "Source figures, complete reported method principles, optical properties, interpretations and unresolved details."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,567 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "braun-2001-photoluminescence-acquisition",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Braun et al. (2001) · Photoluminescence and water-background correction",
+  "material": {
+    "formula": "CdS/HgS/CdS",
+    "family": "Semiconductor quantum-dot quantum-well heterostructures",
+    "elements": [
+      "Cd",
+      "Hg",
+      "S"
+    ],
+    "components": [
+      "CdS",
+      "HgS"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Photoluminescence spectroscopy",
+  "sources": [
+    {
+      "id": "braun2001",
+      "doi": "10.1021/jp010002l",
+      "title": "Variation of the Thickness and Number of Wells in the CdS/HgS/CdS Quantum Dot Quantum Well System",
+      "authors": "Markus Braun; Clemens Burda; Mostafa A. El-Sayed",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp010002l",
+      "main_status": "All four supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No SI supplied or independently matched. SI existence/availability is not established from this supplied four-page main article; no SI was inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "braun2001",
+    "recipe_family": "braun2001-cds-hgs-qdqw",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 2, printed p. 5549, Figure 1 and system dimensions"
+        }
+      ],
+      "note": "Material descriptor denotes a layered heterostructure, not an overall stoichiometric formula or a measured atomic model."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Complete supplied main PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Complete supplied main PDF pp. 1–4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Complete supplied main PDF pp. 1–4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "specimen",
+      "name": "Selected source-scoped CdS/HgS quantum-dot quantum-well dispersion",
+      "formula": null,
+      "role": "System-labelled colloidal specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water; aqueous synthesis medium and optical reference",
+      "formula": "H2O",
+      "role": "Separate reference for background and Raman correction",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "pl-excited",
+      "name": "Excite the specimen with the OPO output",
+      "kind": "aliquot",
+      "parent_ids": [
+        "specimen"
+      ]
+    },
+    {
+      "id": "pl-raw",
+      "name": "Collect emission through the cutoff filter and monochromator output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "pl-excited"
+      ]
+    },
+    {
+      "id": "water-reference-data",
+      "name": "Record a separate water reference spectrum output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "water"
+      ]
+    },
+    {
+      "id": "pl-corrected",
+      "name": "Subtract the water-reference spectrum output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "pl-raw",
+        "water-reference-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "excite",
+      "action": "pulsed_optical_excitation",
+      "label": "Excite the specimen with the OPO",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "specimen"
+      ],
+      "outputs": [
+        "pl-excited"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 440,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "pump_pulse_duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ns",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Q-switched Nd:YAG laser pumping the OPO; no separate measured OPO pulse width.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "laser_repetition_rate": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Hz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "detection_angle": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degree",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Room temperature; numerical value unspecified.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "braun2001",
+              "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "OPO pumped by the third harmonic of a Q-switched Nd:YAG laser. Pulse energy, fluence, spot size and specimen concentration are not reported for PL.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "action": "emission_spectroscopy",
+      "label": "Collect emission through the cutoff filter and monochromator",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "excite"
+      ],
+      "inputs": [
+        "pl-excited"
+      ],
+      "outputs": [
+        "pl-raw"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "90° setup; cutoff filter, monochromator and CCD camera. No instrument models or quantitative spectral-response calibration supplied.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "water-reference",
+      "action": "reference_spectrum_acquisition",
+      "label": "Record a separate water reference spectrum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "water"
+      ],
+      "outputs": [
+        "water-reference-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Water reference is separate from the nanocrystal specimen; this is not a mixed material or a new synthesis input.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    },
+    {
+      "id": "subtract",
+      "action": "background_subtraction",
+      "label": "Subtract the water-reference spectrum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "record",
+        "water-reference"
+      ],
+      "inputs": [
+        "pl-raw",
+        "water-reference-data"
+      ],
+      "outputs": [
+        "pl-corrected"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Corrects Raman bands and background. This does not provide a nanocrystal Raman spectrum or a measured Raman property.",
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "pl-context",
+      "source_sample_label": "PL acquisition shared by the three separate systems",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/HgS/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pl-scope",
+      "sample_id": "pl-context",
+      "property": "acquisition_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "All spectra acquired at room temperature, with source system labels retained. No numerical room temperature, calibrated per-system quantum yield, absolute emission intensity or raw spectral table.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+          },
+          {
+            "source_id": "braun2001",
+            "locator": "Main PDF p. 3, printed p. 5550, Figure 3 and Emission Spectra"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 1, printed p. 5548, Experimental Section, optical methods"
+        },
+        {
+          "source_id": "braun2001",
+          "locator": "Main PDF p. 3, printed p. 5550, Figure 3 and Emission Spectra"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All four supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Three CdS/HgS/CdS architectures retain distinct exchange/deposition sequences and source-assigned optical contexts. Counterions, several feed doses and the core-size discrepancy remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "Cd and Hg precursor salts/counterions, hexametaphosphate counterion and dose, preparation of H2S/water stock, and pH-adjustment reagents are not reported.",
+      "No current-paper TEM micrograph, XRD/SAED pattern, refined phase, unit cell or atomic-coordinate file. Figure 1 is a schematic and cites earlier theory/morphology.",
+      "Synthesis temperature, detailed growth timing, final workup/isolation, yield and physical-batch identifiers are not supplied. Room temperature is stated for optical experiments, not assigned numerically or silently transferred to synthesis."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=braun2001",
+      "relation": "Source figures, complete reported method principles, optical properties, interpretations and unresolved details."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
