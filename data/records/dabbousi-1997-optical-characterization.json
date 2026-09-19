@@ -1,0 +1,437 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dabbousi-1997-optical-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Dabbousi et al. (1997) · Solution absorption and photoluminescence",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "II–VI quantum-dot heterostructures",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "UV/visible absorption and photoluminescence",
+  "sources": [
+    {
+      "id": "dabbousi1997",
+      "doi": "10.1021/jp971091y",
+      "title": "(CdSe)ZnS Core–Shell Quantum Dots: Synthesis and Characterization of a Size Series of Highly Luminescent Nanocrystallites",
+      "authors": "B. O. Dabbousi; J. Rodriguez-Viejo; F. V. Mikulec; J. R. Heine; H. Mattoussi; R. Ober; K. F. Jensen; M. G. Bawendi",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/jp971091y",
+      "main_status": "All thirteen supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "dabbousi1997",
+    "recipe_family": "dabbousi1997-core-shell",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Source-scoped analytical specimen or preparation; bare and coated states remain separate",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Experimental characterization"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 3, printed p. 9465, Experimental continuation"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "dots",
+      "name": "Bare or shell-coated CdSe dots",
+      "formula": "CdSe or CdSe/ZnS or CdSe/CdS",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "n-Hexane",
+      "formula": "C6H14",
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ]
+    },
+    {
+      "id": "rhodamine590",
+      "name": "Rhodamine 590 standard",
+      "formula": null,
+      "role": "fluorescence standard",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact salt/species and solvent not stated; do not force a molecular identity."
+      ],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ]
+    },
+    {
+      "id": "rhodamine640",
+      "name": "Rhodamine 640 standard",
+      "formula": null,
+      "role": "fluorescence standard",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Alternative standard, exact form and solvent not stated."
+      ],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dispersion",
+      "name": "Prepare dilute dot dispersions output",
+      "kind": "mixture",
+      "parent_ids": [
+        "dots",
+        "hexane"
+      ]
+    },
+    {
+      "id": "measured",
+      "name": "Measure absorption and emission output",
+      "kind": "mixture",
+      "parent_ids": [
+        "dispersion"
+      ]
+    },
+    {
+      "id": "yield-measured",
+      "name": "Compare matched-optical-density dye standards output",
+      "kind": "mixture",
+      "parent_ids": [
+        "measured"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "dilute",
+      "action": "dilution",
+      "label": "Prepare dilute dot dispersions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dots",
+        "hexane"
+      ],
+      "outputs": [
+        "dispersion"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dilute solutions in hexane; concentration and dilution factor unspecified.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "action": "uvvis_photoluminescence",
+      "label": "Measure absorption and emission",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dilute"
+      ],
+      "inputs": [
+        "dispersion"
+      ],
+      "outputs": [
+        "measured"
+      ],
+      "parameters": {
+        "path_length": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "room temperature",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "excitation_wavelength": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "1cm quartz cuvettes; HP8452 diode-array UV/vis; SPEX Fluorolog-2 in front-face collection.450nm applies explicitly to Figure15, not every PL trace;365nm applies to Figure3 photo.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ]
+    },
+    {
+      "id": "standard",
+      "action": "relative_quantum_yield",
+      "label": "Compare matched-optical-density dye standards",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "measure"
+      ],
+      "inputs": [
+        "measured"
+      ],
+      "outputs": [
+        "yield-measured"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Compare integrated dot emission with rhodamine590 OR640 at identical optical density at the excitation wavelength. Dye solvent and exact assignment by every sample are unspecified.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Optical Characterization"
+        }
+      ],
+      "optional_inputs": [
+        "rhodamine590",
+        "rhodamine640"
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All thirteen supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. General synthesis routes, analytical procedures, source model parameters and observation cohorts remain separate; records do not assert independent physical batches.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No sample-resolved atomic coordinates or fully refined core/shell interface structure supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=dabbousi1997",
+      "relation": "Supplied main only; matching SI unverified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,436 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dabbousi-1997-air-exposure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Dabbousi et al. (1997) · Air-exposure XPS comparison",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "II–VI quantum-dot heterostructures",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Post-synthesis oxidation comparison",
+  "sources": [
+    {
+      "id": "dabbousi1997",
+      "doi": "10.1021/jp971091y",
+      "title": "(CdSe)ZnS Core–Shell Quantum Dots: Synthesis and Characterization of a Size Series of Highly Luminescent Nanocrystallites",
+      "authors": "B. O. Dabbousi; J. Rodriguez-Viejo; F. V. Mikulec; J. R. Heine; H. Mattoussi; R. Ober; K. F. Jensen; M. G. Bawendi",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/jp971091y",
+      "main_status": "All thirteen supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "dabbousi1997",
+    "recipe_family": "dabbousi1997-core-shell",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Source-scoped analytical specimen or preparation; bare and coated states remain separate",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Experimental characterization"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 3, printed p. 9465, Experimental continuation"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "xps-films",
+      "name": "Bare or ZnS-coated particle XPS films",
+      "formula": "CdSe or CdSe/ZnS",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+        }
+      ]
+    },
+    {
+      "id": "air",
+      "name": "Air",
+      "formula": null,
+      "role": "exposure atmosphere",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "exposed-film",
+      "name": "Expose XPS specimens to air output",
+      "kind": "mixture",
+      "parent_ids": [
+        "xps-films",
+        "air"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "expose",
+      "action": "air_exposure",
+      "label": "Expose XPS specimens to air",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "xps-films",
+        "air"
+      ],
+      "outputs": [
+        "exposed-film"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+            },
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+            }
+          ],
+          "derivation": null
+        },
+        "humidity": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+            },
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Distinct exposure states; see condition sets",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+            },
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+          },
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+          },
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Brief ordinary exposure typically15min is separate from16h and80h oxidation comparisons. Do not turn measured time points into a compulsory sequential synthesis. Temperature and humidity not supplied.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "exposure-15min",
+      "label": "Typical brief exposure",
+      "parameters": {
+        "exposure_duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+            },
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+        }
+      ]
+    },
+    {
+      "id": "exposure-16h",
+      "label": "BareCdSe16h comparison",
+      "parameters": {
+        "exposure_duration": {
+          "value": 16,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+            },
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+        }
+      ]
+    },
+    {
+      "id": "exposure-80h",
+      "label": "Extended exposure comparison",
+      "parameters": {
+        "exposure_duration": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+            },
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 5, printed p. 9467, XPS atmospheric exposure"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, XPS oxidation discussion and Figure7"
+        }
+      ]
+    }
+  ],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All thirteen supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. General synthesis routes, analytical procedures, source model parameters and observation cohorts remain separate; records do not assert independent physical batches.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No sample-resolved atomic coordinates or fully refined core/shell interface structure supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=dabbousi1997",
+      "relation": "Supplied main only; matching SI unverified."
+    },
+    {
+      "label": "XPS specimen and acquisition",
+      "url": "../records/dabbousi-1997-xps-preparation.html",
+      "relation": "Companion methodological procedure."
+    },
+    {
+      "label": "Oxidation measurements",
+      "url": "../records/dabbousi-1997-air-exposure-observations.html",
+      "relation": "Preserves specimen and exposure state."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

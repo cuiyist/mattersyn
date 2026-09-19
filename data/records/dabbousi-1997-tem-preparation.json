@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "dabbousi-1997-tem-preparation",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Dabbousi et al. (1997) · HRTEM specimen preparation and sizing",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "II–VI quantum-dot heterostructures",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "High-resolution transmission electron microscopy",
+  "sources": [
+    {
+      "id": "dabbousi1997",
+      "doi": "10.1021/jp971091y",
+      "title": "(CdSe)ZnS Core–Shell Quantum Dots: Synthesis and Characterization of a Size Series of Highly Luminescent Nanocrystallites",
+      "authors": "B. O. Dabbousi; J. Rodriguez-Viejo; F. V. Mikulec; J. R. Heine; H. Mattoussi; R. Ober; K. F. Jensen; M. G. Bawendi",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/jp971091y",
+      "main_status": "All thirteen supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "dabbousi1997",
+    "recipe_family": "dabbousi1997-core-shell",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Source-scoped analytical specimen or preparation; bare and coated states remain separate",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Experimental characterization"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 3, printed p. 9465, Experimental continuation"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF pp. 1–13, printed pp. 9463–9475"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "dots",
+      "name": "Bare and ZnS-overcoated CdSe dots",
+      "formula": "CdSe or CdSe/ZnS",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "octane",
+      "name": "Octane",
+      "formula": "C8H18",
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "copper-grid",
+      "name": "Copper TEM grid",
+      "formula": "Cu",
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "carbon",
+      "name": "Amorphous carbon support and overcoat",
+      "formula": "C",
+      "role": "support and protective coating",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "wet-grid",
+      "name": "Deposit a dilute dispersion on the TEM grid output",
+      "kind": "mixture",
+      "parent_ids": [
+        "dots",
+        "octane",
+        "copper-grid",
+        "carbon"
+      ]
+    },
+    {
+      "id": "wicked-grid",
+      "name": "Wick away the remaining solvent output",
+      "kind": "mixture",
+      "parent_ids": [
+        "wet-grid"
+      ]
+    },
+    {
+      "id": "coated-grid",
+      "name": "Evaporate a protective carbon layer output",
+      "kind": "mixture",
+      "parent_ids": [
+        "wicked-grid",
+        "carbon"
+      ]
+    },
+    {
+      "id": "tem-result",
+      "name": "Acquire HRTEM images and size distributions output",
+      "kind": "mixture",
+      "parent_ids": [
+        "coated-grid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "drop",
+      "action": "drop_casting",
+      "label": "Deposit a dilute dispersion on the TEM grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dots",
+        "octane",
+        "copper-grid",
+        "carbon"
+      ],
+      "outputs": [
+        "wet-grid"
+      ],
+      "parameters": {
+        "drop_count": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "drop",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "One drop of dilute octane dispersion onto a copper grid supporting amorphous carbon. Drop volume and concentration not given.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "wick",
+      "action": "wicking",
+      "label": "Wick away the remaining solvent",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "drop"
+      ],
+      "inputs": [
+        "wet-grid"
+      ],
+      "outputs": [
+        "wicked-grid"
+      ],
+      "parameters": {
+        "contact_time": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wick remaining solvent after30s. This is contact time, not centrifugation or heating.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "coat",
+      "action": "carbon_evaporation",
+      "label": "Evaporate a protective carbon layer",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "wick"
+      ],
+      "inputs": [
+        "wicked-grid",
+        "carbon"
+      ],
+      "outputs": [
+        "coated-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Second thin amorphous-carbon layer reduces charging and electron-beam damage; thickness not supplied.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        }
+      ]
+    },
+    {
+      "id": "tem",
+      "action": "tem_analysis",
+      "label": "Acquire HRTEM images and size distributions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "coat"
+      ],
+      "inputs": [
+        "coated-grid"
+      ],
+      "outputs": [
+        "tem-result"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "particle_count": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "greater_than",
+          "basis": "Over150 crystallites per sample for major-axis statistics; aspect-ratio subset is smaller and unspecified",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dabbousi1997",
+              "locator": "Main PDF p. 6, printed p. 9468, TEM analysis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          },
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 6, printed p. 9468, Transmission Electron Microscopy"
+          },
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 7, printed p. 9469, Figure9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+          },
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 6, printed p. 9468, Transmission Electron Microscopy"
+          },
+          {
+            "source_id": "dabbousi1997",
+            "locator": "Main PDF p. 7, printed p. 9469, Figure9"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TopconEM002B; objective aperture selects(100),(002),(101) wurtzite lattice planes. Measure longest dimension and aspect ratios. Lattice interface not resolved; noSAED pattern supplied.",
+      "evidence": [
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 2, printed p. 9464, Transmission Electron Microscopy"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 6, printed p. 9468, Transmission Electron Microscopy"
+        },
+        {
+          "source_id": "dabbousi1997",
+          "locator": "Main PDF p. 7, printed p. 9469, Figure9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All thirteen supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. General synthesis routes, analytical procedures, source model parameters and observation cohorts remain separate; records do not assert independent physical batches.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No sample-resolved atomic coordinates or fully refined core/shell interface structure supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=dabbousi1997",
+      "relation": "Supplied main only; matching SI unverified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

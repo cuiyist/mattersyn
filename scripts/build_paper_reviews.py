@@ -23,11 +23,13 @@ def validate(c):
         if sorted(nums)!=list(range(1,d['page_count']+1)):errors.append('Incomplete or duplicate page inventory')
         if not all(p.get('text_read') is True and p.get('visual_review') is True for p in pages):errors.append('Unread or visually unchecked page')
         if not re.fullmatch('[a-f0-9]{64}',d['sha256']):errors.append('Missing source hash')
-    items=c['figures']+[f for category in ['tables','equations','schemes'] for f in c.get(category,[]) if f.get('public_asset')]
+    items=c['figures']+[f for category in ['tables','equations','schemes','source_notes'] for f in c.get(category,[]) if f.get('public_asset')]
+    items += [{'id':item['id'], 'public_asset':a['public_asset'], 'public_asset_sha256':a['sha256']} for s in c.get('reader_sections',[]) for item in s.get('items',[]) for a in item.get('original_assets',[])]
     for f in items:
         a=f.get('public_asset')
         if not a:errors.append('Missing figure asset: '+str(f.get('id')));continue
-        p=ROOT/'dist'/a
+        p=(ROOT/'dist'/a).resolve()
+        if not p.is_relative_to((ROOT/'dist').resolve()):errors.append('Asset path leaves publication directory: '+a);continue
         if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=f['public_asset_sha256']:errors.append('Figure hash mismatch: '+a)
     for item in c['recipe_inventory']:
         for rid in item.get('record_ids',[]):
