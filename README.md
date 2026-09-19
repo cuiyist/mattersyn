@@ -1,4 +1,12 @@
-## Current material atlas — 2026-09-17 quality correction
+## Current contribution — Heath et al. (1996), Ge/Si
+
+Dataset 0.6.0 adds two template variants of selective Ge growth on patterned Si, one shared characterization procedure and one incomplete unpatterned-growth observation. Both template variants share one wafer exposure; they are not independent runs. Six supplied main pages were fully read and independently audited; matching SI was not located or verified. All six figures, three equations, seventeen citation contexts and forty-four source-evidence items are available. Raman and near-IR peaks remain prose-only evidence. No measured atomic structure or locally verified Ge reference CIF is available.
+
+The same atlas now contains 172 canonical records: 37 routes/variants, 9 controls, 24 supporting procedures, 2 observations and 100 benchmark rows. Seventeen material/component hubs cover 12 direct systems and 5 component-only links. New Ge/Si and Ge pages connect through the periodic table; the existing Si page includes both substrate and silicon-colloid contributions. These counts do not mean that the 7,373 indexed documents have been fully reviewed.
+
+New wafer-specific diagrams cover lithography, etching, loading, CVD and characterization. Ten chemical identities and five illustrative rotatable molecular models extend the existing registry. Only the two synthesis variants enter precursor-selection and partial-protocol tasks; no new exact-structure, size, optical or success targets are enabled. Supporting evidence and sample bounds retain their source scope.
+
+## Earlier material atlas — 2026-09-17 quality correction
 
 `inventory.html` summarizes 4,176 local paper groups and 7,373 files, with per-paper/per-material counts. The verified subset contains 10 direct material systems and 32 synthesis routes/variants, plus 9 controls, 14 procedures and 100 separately counted benchmark rows. Full-corpus material/recipe totals remain unknown. The latest user instruction is local-only, sequential paper+SI review; it supersedes earlier download and parallel-family preferences.
 

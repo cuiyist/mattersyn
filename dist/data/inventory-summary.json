@@ -1,70 +1,71 @@
 {
-  "inventory_version": "2026-09-19-littau-local-reconciled-snapshot",
-  "scope": "Read-only reconciliation of the legacy corpus baseline, current canonical records, local generated hubs and formal review ledgers. Incoming-folder queue totals are separate. Counts are curation units, not independent experiments; local generated public-facing routes do not establish remote publication.",
+  "inventory_version": "2026-09-19-heath-actual-local-snapshot",
+  "scope": "Inventory reconciled to locally integrated canonical records. Incoming-folder counts remain separate; local generated/proposed routes do not establish remote publication or independent experiment counts.",
   "summary": {
     "local_document_files_indexed": 7373,
     "local_paper_groups_indexed": 4176,
     "paper_candidate_groups_total": 4570,
     "candidate_groups_without_local_documents": 394,
     "unique_document_content_hashes": 6857,
-    "canonical_records": 168,
-    "reviewed_literature_records": 68,
-    "reviewed_literature_source_groups": 10,
+    "canonical_records": 172,
+    "reviewed_literature_records": 72,
+    "reviewed_literature_source_groups": 11,
     "published_benchmark_rows": 100,
     "published_benchmark_source_groups": 1,
-    "total_canonical_source_groups": 11,
+    "total_canonical_source_groups": 12,
     "formal_full_main_and_matched_si_reviews": 5,
     "formal_full_review_pages": 74,
     "legacy_main_article_reviews_si_unverified": 2,
     "legacy_main_pages_inspected": 13,
     "selected_recipe_figure_review_sources": 2,
-    "local_groups_without_canonical_records": 4165,
-    "synthesis_route_variant_records": 35,
+    "local_groups_without_canonical_records": 4164,
+    "synthesis_route_variant_records": 37,
     "contextual_control_variant_records": 9,
-    "shared_preparation_workup_characterization_assay_procedures": 23,
-    "nonprocedure_literature_records": 45,
+    "shared_preparation_workup_characterization_assay_procedures": 24,
+    "nonprocedure_literature_records": 48,
     "literature_record_type_counts": {
       "literature_protocol": 13,
-      "observation": 1,
-      "procedure": 23,
-      "protocol_variant": 31
+      "observation": 2,
+      "procedure": 24,
+      "protocol_variant": 33
     },
-    "literature_recipe_family_ids": 12,
-    "primary_synthesis_recipe_family_ids": 10,
-    "public_material_hubs": 15,
-    "direct_synthesis_target_systems": 11,
-    "component_only_hubs": 4,
-    "all_nonprocedure_literature_product_identity_categories_including_controls": 13,
+    "literature_recipe_family_ids": 14,
+    "primary_synthesis_recipe_family_ids": 11,
+    "public_material_hubs": 17,
+    "direct_synthesis_target_systems": 12,
+    "component_only_hubs": 5,
+    "all_nonprocedure_literature_product_identity_categories_including_controls": 14,
     "independent_experiment_count": null,
     "full_corpus_distinct_synthesized_material_count": null,
     "full_corpus_recipe_count": null,
     "verified_exact_structure_recipe_pairs": 0,
-    "formal_full_main_reviews_si_unverified": 1,
-    "formal_full_main_only_review_pages": 7,
-    "contextual_observation_records": 1,
-    "recipe_or_control_literature_records": 44,
+    "formal_full_main_reviews_si_unverified": 2,
+    "formal_full_main_only_review_pages": 13,
+    "contextual_observation_records": 2,
+    "recipe_or_control_literature_records": 46,
     "canonical_record_type_counts": {
       "experiment": 100,
       "literature_protocol": 13,
-      "observation": 1,
-      "procedure": 23,
-      "protocol_variant": 31
+      "observation": 2,
+      "procedure": 24,
+      "protocol_variant": 33
     },
-    "contextual_observation_family_ids": 1
+    "contextual_observation_family_ids": 2
   },
   "count_definitions": {
     "paper_group": "Corpus DOI/document grouping. It is not a count of independently identity-verified primary papers; duplicate/mismatched payloads remain in the corpus metadata.",
     "synthesis_route_variant": "Distinct reviewed canonical route or condition-variant used for publication, not necessarily a complete executable recipe, unique physical batch or independent experiment.",
-    "contextual_control": "The 9 Nakonechnyi core-stability/no-seed/low-OA control variants, kept distinct from the 35 current synthesis-route records and contextual observations.",
+    "contextual_control": "The 9 existing Nakonechnyi controls are separate from 37 synthesis-route variants and 2 contextual observations.",
     "procedure": "Precursor preparation, isolation, size-selection, ligand exchange, post-treatment, acquisition or assay records. Not additional material syntheses.",
-    "recipe_family": "Assigned canonical grouping for related records, not unique physical recipes: 12 literature grouping IDs; 10 contain primary synthesis routes, one is the ZnO post-treatment family and one is the AKS41 observation family.",
-    "material_system": "Direct product identity retaining architecture and unresolved stoichiometry. The 11 direct system labels include unresolved Fe–O and Si/SiOx. Adding the no-seed control product labels CdS and ZnSe gives 13 nonprocedure literature identity categories. The 15 generated hubs include 4 component-only cross-links; these are not additional standalone syntheses.",
+    "recipe_family": "14 canonical literature grouping IDs: 11 contain primary synthesis routes, one is ZnO post-treatment and two are contextual observation families. They are not unique physical recipes.",
+    "material_system": "12 direct product-system labels retain architecture and unresolved stoichiometry. Ge/Si means substrate-supported Ge islands; SiO2 is a template mask, not a Ge oxide shell. The 17 hubs include 5 component-only cross-links, not extra standalone syntheses.",
     "benchmark": "Published numeric rows from one external study, not 100 reviewed papers or 100 newly reconstructed laboratory protocols.",
     "unknown_full_corpus_totals": "Unreviewed titles and keyword windows cannot establish whether a material was synthesized, the actual product, complete recipes, variants, controls or duplication. Do not extrapolate reviewed-subset counts.",
-    "contextual_observation": "A source-reviewed characterization/context record without a reconstructed synthesis recipe. AKS41 is an earlier-apparatus observation, not a fourth Littau recipe, control experiment or current-apparatus batch.",
+    "contextual_observation": "Characterization or incomplete growth-series context without a reconstructed complete synthesis: Littau AKS41 and Heath unpatterned Ge growth. Neither creates an extra synthesis route.",
     "public_material_hub": "A locally generated public-facing material/component route. Existence is checked against generated files, not a remote deployment check. Shared canonical record IDs are counted once globally.",
     "nonprocedure_literature": "All literature records except supporting procedures: synthesis routes, contextual controls and contextual observations. The observation is excluded from recipe_or_control_literature_records.",
-    "legacy_corpus_baseline": "The fixed indexed downloaded_papers corpus: 7,373 document files and 4,176 groups with local documents. Incoming-folder tracking is not added to these counts, including byte-duplicate incoming copies."
+    "legacy_corpus_baseline": "The fixed indexed downloaded_papers corpus: 7,373 document files and 4,176 groups with local documents. Incoming-folder tracking is not added to these counts, including byte-duplicate incoming copies.",
+    "shared_wafer": "The two Heath template variants were prepared on the same wafer in one reported exposure. Individual wells and variant records are not independent synthesis runs."
   },
   "material_system_lists": {
     "direct_synthesis_targets": [
@@ -75,6 +76,7 @@
       "CoO/CoFe2O4",
       "CsPbBr3",
       "Fe–O",
+      "Ge/Si",
       "InP",
       "Ir",
       "Si/SiOx",
@@ -87,12 +89,14 @@
     "component_only_public_hubs": [
       "CdS",
       "CoFe2O4",
+      "Ge",
       "Si",
       "ZnSe"
     ],
     "benchmark_only_product": "PbS",
     "excluded_precursor_procedure_identity": "Fe–C–H–O",
     "contextual_observation_product_labels": [
+      "Ge/Si",
       "Si/SiOx"
     ]
   },
@@ -239,6 +243,63 @@
       },
       "contextual_observation_count": 0,
       "measurement_entry_count": 39
+    },
+    {
+      "source_group": "heath1996",
+      "doi": "10.1021/jp951903v",
+      "url": "https://doi.org/10.1021/jp951903v",
+      "title": "Spatially Confined Chemistry: Fabrication of Ge Quantum Dot Arrays",
+      "year": 1996,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Six supplied main pages read and visually inspected; independent source and bounded four-record scientific audits passed. Matching SI is not located or verified. Two template populations share one wafer/exposure. Canonical-to-reader audit and publication remain separate gates.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/heath1996.json",
+      "paper_review_url": "paper-review.html?id=heath1996",
+      "si_status": "not_located_or_verified",
+      "canonical_record_count": 4,
+      "synthesis_route_variant_count": 2,
+      "contextual_control_count": 0,
+      "contextual_observation_count": 1,
+      "procedure_count": 1,
+      "benchmark_row_count": 0,
+      "measurement_entry_count": 23,
+      "record_type_counts": {
+        "observation": 1,
+        "procedure": 1,
+        "protocol_variant": 2
+      },
+      "canonical_recipe_family_ids": [
+        "heath1996-patterned-wafer-cvd",
+        "heath1996-unpatterned-pilot-context"
+      ],
+      "direct_route_material_systems": [
+        "Ge/Si"
+      ],
+      "record_ids": [
+        "heath-1996-ge-100nm-wells",
+        "heath-1996-ge-150nm-wells",
+        "heath-1996-ge-characterization",
+        "heath-1996-ge-unpatterned-growth-context"
+      ],
+      "record_urls": {
+        "heath-1996-ge-100nm-wells": "records/heath-1996-ge-100nm-wells.html",
+        "heath-1996-ge-150nm-wells": "records/heath-1996-ge-150nm-wells.html",
+        "heath-1996-ge-characterization": "records/heath-1996-ge-characterization.html",
+        "heath-1996-ge-unpatterned-growth-context": "records/heath-1996-ge-unpatterned-growth-context.html"
+      },
+      "notes": [
+        "The 100 and 150 nm wells are two templates on the same substrate, not independent runs.",
+        "The unpatterned temperature/time series is contextual observation, not an additional complete recipe.",
+        "Raman and near-IR peaks are prose-only; AFM bounds, inferred pseudo-time and Figure 2 identity conflict remain explicit."
+      ]
     },
     {
       "source_group": "littau1993",
@@ -1399,6 +1460,86 @@
       "contextual_observation_record_ids": []
     },
     {
+      "material_system": "Ge",
+      "notes": [
+        "Component-only links to the same two substrate-supported Ge/Si variants; no separate colloidal or free-standing Ge synthesis is established."
+      ],
+      "direct_synthesis_route_variant_count": 0,
+      "direct_route_record_ids": [],
+      "contextual_control_count": 0,
+      "contextual_control_record_ids": [],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": [],
+      "procedure_count": 0,
+      "benchmark_row_count": 0,
+      "public_hub_exists": true,
+      "public_hub_component_only": true,
+      "public_hub_route_contributions": 2,
+      "component_route_contribution_count": 2,
+      "component_route_record_ids": [
+        "heath-1996-ge-100nm-wells",
+        "heath-1996-ge-150nm-wells"
+      ],
+      "primary_reviewed_source_count": 0,
+      "material_hub_id": "ge-954edb",
+      "material_hub_url": "material.html?id=ge-954edb",
+      "source_groups": [
+        "heath1996"
+      ],
+      "source_links": [
+        {
+          "source_group": "heath1996",
+          "doi": "10.1021/jp951903v",
+          "url": "https://doi.org/10.1021/jp951903v",
+          "title": "Spatially Confined Chemistry: Fabrication of Ge Quantum Dot Arrays"
+        }
+      ],
+      "direct_route_recipe_family_ids": []
+    },
+    {
+      "material_system": "Ge/Si",
+      "notes": [
+        "Two template variants share one substrate and exposure; no independent-run count is inferred.",
+        "Substrate-supported Ge islands on Si(100); SiO2 defines the growth wells and is not a nanocrystal shell.",
+        "Shared characterization and incomplete unpatterned growth context remain separate from the two routes."
+      ],
+      "direct_synthesis_route_variant_count": 2,
+      "direct_route_record_ids": [
+        "heath-1996-ge-100nm-wells",
+        "heath-1996-ge-150nm-wells"
+      ],
+      "contextual_control_count": 0,
+      "contextual_control_record_ids": [],
+      "contextual_observation_count": 1,
+      "contextual_observation_record_ids": [
+        "heath-1996-ge-unpatterned-growth-context"
+      ],
+      "procedure_count": 1,
+      "benchmark_row_count": 0,
+      "public_hub_exists": true,
+      "public_hub_component_only": false,
+      "public_hub_route_contributions": 2,
+      "component_route_contribution_count": 0,
+      "component_route_record_ids": [],
+      "primary_reviewed_source_count": 1,
+      "material_hub_id": "ge-si-d31843",
+      "material_hub_url": "material.html?id=ge-si-d31843",
+      "source_groups": [
+        "heath1996"
+      ],
+      "source_links": [
+        {
+          "source_group": "heath1996",
+          "doi": "10.1021/jp951903v",
+          "url": "https://doi.org/10.1021/jp951903v",
+          "title": "Spatially Confined Chemistry: Fabrication of Ge Quantum Dot Arrays"
+        }
+      ],
+      "direct_route_recipe_family_ids": [
+        "heath1996-patterned-wafer-cvd"
+      ]
+    },
+    {
       "material_system": "InP",
       "direct_synthesis_route_variant_count": 1,
       "direct_route_record_ids": [
@@ -1519,24 +1660,34 @@
       "benchmark_row_count": 0,
       "public_hub_exists": true,
       "public_hub_component_only": true,
-      "public_hub_route_contributions": 3,
-      "component_route_contribution_count": 3,
+      "public_hub_route_contributions": 5,
+      "component_route_contribution_count": 5,
       "component_route_record_ids": [
+        "heath-1996-ge-100nm-wells",
+        "heath-1996-ge-150nm-wells",
         "littau-1993-si-aerosol-1p0",
         "littau-1993-si-aerosol-2p0",
         "littau-1993-si-aerosol-6p0"
       ],
       "primary_reviewed_source_count": 0,
       "notes": [
-        "Component-only cross-links to the same three surface-oxidized Si/SiOx formulations; no separate bare-Si synthesis is established.",
-        "Oxide-layer information remains within Si/SiOx; no standalone SiOx synthesis or separate oxide material page is counted."
+        "Littau1993: Component-only cross-links to the same three surface-oxidized Si/SiOx formulations; no separate bare-Si synthesis is established.",
+        "Littau1993: Oxide-layer information remains within Si/SiOx; no standalone SiOx synthesis or separate oxide material page is counted.",
+        "Heath1996 adds two Ge/Si routes in which Si is the substrate. These do not become isolated Si syntheses or intrinsic Si property labels. The five component links refer to five existing route IDs across two sources."
       ],
       "material_hub_id": "si-243a7b",
       "material_hub_url": "material.html?id=si-243a7b",
       "source_groups": [
+        "heath1996",
         "littau1993"
       ],
       "source_links": [
+        {
+          "source_group": "heath1996",
+          "doi": "10.1021/jp951903v",
+          "url": "https://doi.org/10.1021/jp951903v",
+          "title": "Spatially Confined Chemistry: Fabrication of Ge Quantum Dot Arrays"
+        },
         {
           "source_group": "littau1993",
           "doi": "10.1021/j100108a019",
@@ -1683,8 +1834,8 @@
     "note": "These benchmark grouping counts are generated from the documented input rule; they are not the number of fully reconstructed synthesis protocols or independently reproduced experiments."
   },
   "training_eligibility": {
-    "precursor_selection": 35,
-    "partial_protocol": 51,
+    "precursor_selection": 37,
+    "partial_protocol": 53,
     "size_conditioned_recipe": 6,
     "exact_structure_recipe": 0,
     "success_prediction": 0,
@@ -1696,8 +1847,8 @@
     "Upgrade claims only after page/figure/recipe inventory and source/sample linkage review; no title-based material expansion."
   ],
   "provenance": {
-    "canonical_record_files": 168,
-    "canonical_tree_sha256": "a20f056282929f8283210a67d40fe40dac5880d2e037be9f1500f2c91e0e27ec",
+    "canonical_record_files": 172,
+    "canonical_tree_sha256": "3c1f6f157e563b59fd7a23c815673f390820250d5dcd453584a85322dad1ed8a",
     "corpus_summary_snapshot": "2026-09-17T17:19:41.310914+00:00",
     "files_used": [
       "data/corpus/library-source.json",
@@ -1903,11 +2054,11 @@
       "dist/data/recipe-figures/zhang2019.json",
       "dist/data/validation-report.json"
     ],
-    "canonical_tree_hash_rule": "SHA256 of sorted UTF-8 relative-path + NUL + raw-file-SHA256 + LF records; raw file hashes appear in private validation.json.",
+    "canonical_tree_hash_rule": "SHA256 of sorted record-ID to normalized record-digest JSON; actual canonical records.",
     "base_inventory_sha256": "bff3bad5d60662e19b109bae86deb34f8cce7348e9372a6cb25effd8eee313ed",
-    "generated_dataset_version_observed": "0.5.0",
+    "generated_dataset_version_observed": "0.6.0",
     "dataset_version_note": "Observed local build version; this inventory does not bump dataset version or verify deployment.",
-    "publication_verification": "Not assessed; local build only.",
+    "publication_verification": "Not assessed; final publication remains outside this inventory task.",
     "summary_artifact_sha256": {
       "data/corpus/library-source.json": "cf38a92227f08937fd57fae37c25a17d5846e23db9ca1968b6fc4728e3baabcc",
       "dist/data/library-index.json": "6f4042789035d39d43a983fcd7a788c1706d51a6fafb73aac50c975e16a25464",
@@ -1922,6 +2073,20 @@
       "data/paper-reviews/nakonechnyi2017.json": "36d0e41138fa6daea6a4f32fc91590b4949b2768cc485aa19c9db2e516d5efd7",
       "data/paper-reviews/saha2019.json": "2e4da642be457e37f9fee415d8ab384bc4f4bd6dacaa0012b9603d41c8814c1f",
       "data/paper-reviews/stowell2005.json": "d61a097e0e8c29973d9381c077af738a9733dd4a57871f5f27832778087245b8"
+    },
+    "baseline_inventory_sha256": "91ddfe14aa6550ffe24e1a835ce9d5f9dac9e79df700a06b0fd15bea306a9d66",
+    "draft_audit_sha256": "b6ed3eeb88debf355205e44b09d758751a6bfcdfbf60bf9de64a5cc5b891ba10",
+    "inventory_mode": "actual_local",
+    "promotion_assumption": "Parent-authorized source_reviewed for four audited records; only two variants request precursor_selection and partial_protocol. No file promotion is performed here.",
+    "source_input_sha256": {
+      "data\\corpus\\library-source.json": "cf38a92227f08937fd57fae37c25a17d5846e23db9ca1968b6fc4728e3baabcc",
+      "dist\\data\\materials-index.json": "fa63ce4dad595f0431af83b7c354e25b4afc36bdc962cc7ccb55e44fbb74477f",
+      "dist\\data\\library-index.json": "d52eadb2130e59b7033b6689dc3943cc3ec4f2da618d5d107c1d24599a0c5b60",
+      "dist\\data\\dataset-manifest.json": "f27ad75a536d50af40660dee7b3f72881fd82f34fd7cdc8980627310817b0dcb",
+      "dist\\data\\validation-report.json": "52c495eb96c185e737977fea264454ffe47d390b5dc13b14d7b7a03b24b2ed4a",
+      "private/canonical-records-audit.json": "b6ed3eeb88debf355205e44b09d758751a6bfcdfbf60bf9de64a5cc5b891ba10",
+      "private/source-audit.json": "b5599e206afa9d177d5240a5d7955daaf998307e4b629ed0cd9081a072019fe3",
+      "private/heath1996.json": "bb00fcd5ee5c245f2f950d61f32233598e1eb7c10a851b1594634630e4b2a50e"
     }
   }
 }

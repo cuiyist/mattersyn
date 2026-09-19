@@ -11,6 +11,11 @@ def write(p,x):
     p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def validate(c):
     errors=[]
+    chars=c.get('characterization_inventory',[])
+    if isinstance(chars,dict):
+        ids={x['id'] for s in c.get('reader_sections',[]) for x in s.get('items',[])}
+        if not isinstance(chars.get('reader_item_ids'),list) or not set(chars['reader_item_ids'])<=ids:errors.append('Unresolved characterization reader links')
+    elif not isinstance(chars,list):errors.append('Unsupported characterization inventory format')
     try:source_review_scope(c)
     except (ValueError,KeyError) as exc:errors.append(str(exc))
     for d in c['documents']:

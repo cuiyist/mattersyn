@@ -25,6 +25,7 @@ CRYSTALS = {
     "littau-1993-si-diamond-ideal-reference": (227, "1252db5c1bedea5e671a9995282b976002f67cb6418d296796c392eef8e8476f", {"Si": 8}),
 }
 LITTAU_SI_ROUTES = {"littau-1993-si-aerosol-1p0", "littau-1993-si-aerosol-2p0", "littau-1993-si-aerosol-6p0"}
+HEATH_GE_SI_ROUTES = {"heath-1996-ge-100nm-wells", "heath-1996-ge-150nm-wells"}
 IDEAL_SI_ID = "littau-1993-si-diamond-ideal-reference"
 IDEAL_SI_UNIT_HASH = "f37cb123ed21eed6bd1c681d78373ffa9c179810a8d3f52ea80fb954617cff6f"
 IDEAL_SI_FINITE_HASH = "eab44501bd84a248f8343694869c0aae37dcc71d29f0641da954e8a34af7fe59"
@@ -145,9 +146,13 @@ class Audit:
         self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing reviewed Saha ferrite-shell contribution")
         silicon = self.hubs.get("Si", {})
         self.check(silicon.get("component_only") is True and silicon.get("direct_record_ids") == [], "Si: Littau component contribution promoted to pure-material synthesis")
-        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES, "Si: missing or unaudited synthesis contribution; exactly the three reviewed Littau formulations are allowed")
-        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019"}, "Si: unreviewed title match added to the reviewed Littau contribution")
+        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES, "Si: missing or unaudited synthesis contribution; only reviewed Littau and Heath routes are allowed")
+        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019", "10.1021/jp951903v"}, "Si: unreviewed title match added to the reviewed contributions")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Si/SiOx" for rid in LITTAU_SI_ROUTES), "Si: source surface-oxidized product identity was erased")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ge/Si" for rid in HEATH_GE_SI_ROUTES), "Ge/Si: supported island identity was erased")
+        germanium = self.hubs.get("Ge", {})
+        self.check(germanium.get("component_only") is True and set(germanium.get("record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge: substrate-supported routes became isolated Ge synthesis")
+        self.check(set(self.hubs.get("Ge/Si", {}).get("direct_record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
         for formula in ("Ag", "CO", "NO", "PbS", "Fe–C–H–O"):
             self.check(formula not in self.hubs, f"{formula}: former title-only/benchmark/procedure hub reappeared; independent route review required")
         for paper in load(self.dist / "data/library-index.json")["papers"]:

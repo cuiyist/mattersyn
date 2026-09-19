@@ -1,0 +1,537 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "heath-1996-ge-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Heath et al. (1996) · Shared structural and spectroscopic characterization",
+  "material": {
+    "formula": "Ge/Si",
+    "family": "Supported group-IV quantum-dot arrays",
+    "elements": [
+      "Ge",
+      "Si"
+    ],
+    "components": [
+      "Ge",
+      "Si"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Template-confined UHV chemical vapor deposition",
+  "sources": [
+    {
+      "id": "heath1996",
+      "doi": "10.1021/jp951903v",
+      "title": "Spatially Confined Chemistry: Fabrication of Ge Quantum Dot Arrays",
+      "authors": "J. R. Heath; R. S. Williams; J. J. Shiang; S. J. Wind; J. Chu; C. D’Emic; W. Chen; C. L. Stanis; J. J. Bucchignano",
+      "year": 1996,
+      "url": "https://doi.org/10.1021/jp951903v",
+      "main_status": "All six supplied main pages read and visually inspected; independent scientific audit completed for this source scope",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "heath1996",
+    "recipe_family": "heath1996-patterned-wafer-cvd",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ge islands on Si(100) exposed through a patterned SiO2 mask",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 1, printed p. 3144, Process Methodology"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ],
+      "note": "No exact atomic target structure supplied."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF pp. 1–2, printed pp. 3144–3145, Process Methodology"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "Spatially positioned quantum-dot arrays",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 1, printed p. 3144, Process Methodology"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "carbon-tip",
+      "name": "Carbon whisker",
+      "formula": "C",
+      "role": "AFM probe modification",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supertip geometry and fabrication recipe unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "silicon-nitride-tip",
+      "name": "Silicon nitride AFM tip",
+      "formula": null,
+      "role": "AFM probe support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source identifies silicon nitride but does not specify exact stoichiometry; do not impose Si3N4 sample composition."
+      ],
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "diced-wafer",
+      "name": "Diced patterned Ge/Si wafer pieces",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "raman",
+      "action": "raman_spectroscopy",
+      "label": "Micro-Raman spectroscopy",
+      "stage": "characterization",
+      "branch": "independent_measurement",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "diced-wafer"
+      ],
+      "outputs": [],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "LO phonon observed only in patterned regions. Excitation wavelength, power, resolution and spectrum are not supplied.",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "nir",
+      "action": "near_ir_absorption",
+      "label": "Near-infrared absorption",
+      "stage": "characterization",
+      "branch": "independent_measurement",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "diced-wafer"
+      ],
+      "outputs": [],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reported Ge surface-state peak; no displayed spectrum or acquisition settings. This peak is not a bandgap.",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "tem",
+      "action": "plan_view_tem",
+      "label": "Plan-view transmission electron microscopy",
+      "stage": "characterization",
+      "branch": "independent_measurement",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "diced-wafer"
+      ],
+      "outputs": [],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heath1996",
+              "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          },
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 3, printed p. 3146, 150 nm Wells and Figure 3"
+          },
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 5, printed p. 3148, 100 nm Wells and Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          },
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 3, printed p. 3146, 150 nm Wells and Figure 3"
+          },
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 5, printed p. 3148, 100 nm Wells and Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "JEOL4000; 150nm wells show Moire fringes, epitaxial registry and defects in some larger islands. Preparation destroyed or insufficiently thinned100nm regions. Image calibration uses well-to-well centers; no fabricated scale bar.",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        },
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 3, printed p. 3146, 150 nm Wells and Figure 3"
+        },
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 5, printed p. 3148, 100 nm Wells and Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "afm",
+      "action": "contact_mode_afm",
+      "label": "Supertip atomic force microscopy",
+      "stage": "characterization",
+      "branch": "independent_measurement",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "diced-wafer"
+      ],
+      "outputs": [],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          },
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 5, printed p. 3148, 100 nm Wells and Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          },
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 5, printed p. 3148, 100 nm Wells and Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TopometrixTMX2010 MultiView, contact mode, carbon whisker on silicon nitride tip. High aspect ratio improves narrow-valley access; tip convolution still broadens widths and reduces heights.",
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        },
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 5, printed p. 3148, 100 nm Wells and Figure 6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "patterned-cohort",
+      "source_sample_label": "Patterned-wafer characterization cohort",
+      "batch_id": null,
+      "material_state_id": "diced-wafer",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ge on patterned Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Raman and near-IR are reported for the patterned material collectively; no separation by100/150nm region or physical piece."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "raman-ge-lo",
+      "sample_id": "patterned-cohort",
+      "property": "raman_mode_wavenumber",
+      "technique": "Micro-Raman spectroscopy",
+      "value": {
+        "value": 301,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Ge LO phonon, patterned portion only",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "No spectrum, laser wavelength, power, temperature or measurement-region split supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "nir-ge-surface",
+      "sample_id": "patterned-cohort",
+      "property": "surface_state_absorption_wavenumber",
+      "technique": "Near-IR absorption spectroscopy",
+      "value": {
+        "value": 5890,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Author-assigned characteristic Ge surface-state absorption; not a bandgap",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "heath1996",
+            "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "No spectrum or detailed acquisition conditions supplied; template-class assignment unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heath1996",
+          "locator": "Main PDF p. 2, printed p. 3145, Analysis of the Ge Quantum Dots"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read and visually reviewed; independently audited source extraction and sample links. SI not located or verified. Shared template variants are not independent growth runs. No experimental atomic-structure or exact-size label is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Initial wafer cleaning reagents/conditions, oxidation temperature/time/atmosphere and wafer doping/resistivity are unreported.",
+      "PMMA molecular weight, solvent, solution concentration, coating method and spinning conditions are not reported; no spin-coating step is invented.",
+      "Developer ratio basis, bath temperature and development duration are unstated.",
+      "CF4/CHF3 flow ratio, etch pressure/power/time and endpoint parameters are unreported; no endpoint detection was used.",
+      "10% HF concentration basis, solvent, exact dip duration, rinse/dry and transfer conditions are unreported.",
+      "Gas stock fraction and sccm reference basis are unstated; gas purity/supplier, temperature ramp, cool-down and final storage are unreported.",
+      "Both well sizes occur on the same substrate/exposure; individual wafer or specimen identifiers are not supplied.",
+      "No measured atomic coordinates, XRD/SAED figure, Raman spectrum or near-IR spectrum is supplied.",
+      "AFM tip dimensions/force/scan settings, TEM thinning procedure, Raman settings and near-IR setup unreported."
+    ],
+    "conflicts": [
+      "Figure 1 caption gives approximately 60–150 nm photoresist openings, whereas process prose gives approximately 60 and 100 nm; final etched openings are 100 and 150 nm.",
+      "Figure 2 body identifies 100 nm wells and a 25 square-micrometre field, whereas its caption identifies 150 nm wells. Keep the image unassigned to either template variant.",
+      "Title page prints Received July 6, 1995 and In Final Form November 6, 1994. This internally inconsistent chronology is preserved."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source review",
+      "url": "../paper-review.html?id=heath1996",
+      "relation": "Supplied-main review; SI not located or verified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

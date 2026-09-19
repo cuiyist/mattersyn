@@ -106,7 +106,7 @@ def chemical_signature(r):
 
 def eligibility(r):
     reviewed=r['quality']['review_status']=='source_reviewed';duplicate=r['lineage']['duplicate_of'] is not None
-    precursors=[m for m in r['materials'] if m['role'] in ['metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor'] and m['stage']=='synthesis']
+    precursors=[m for m in r['materials'] if m['role'] in ['metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor','metalloid_precursor'] and m['stage']=='synthesis']
     explicit={p['sample_id'] for p in r['products'] if p['recipe_link']=='explicit'}
     sizes=[m for m in r['measurements'] if m['sample_id'] in explicit and m['property']=='diameter' and m['value']['value'] is not None]
     measured=[s for s in r['structure_assets'] if s['eligible_as_measured_label'] and s['sample_id'] in explicit]
@@ -156,7 +156,7 @@ def training_view(r,task):
         m=next(m for m in r['measurements'] if m['sample_id'] in explicit and m['property']=='absorption_peak' and m['value']['value'] is not None)
         output={'absorption_peak':{k:m['value'][k] for k in ['value','unit','status']}}
     elif task=='precursor_selection':
-        output={'precursors':[{'name':m['name'],'formula':m['formula'],'role':m['role']} for m in r['materials'] if m['role'] in ['metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor'] and m['stage']=='synthesis']}
+        output={'precursors':[{'name':m['name'],'formula':m['formula'],'role':m['role']} for m in r['materials'] if m['role'] in ['metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor','metalloid_precursor'] and m['stage']=='synthesis']}
     else:
         output={'materials':r['materials'],'stocks':r['stocks'],'material_states':r['material_states'],'operations':[o for o in r['operations'] if o['stage']!='characterization'],'condition_options':r['condition_options'],'missing_fields':r['quality']['missing_fields']}
     if task=='size_conditioned_recipe':
