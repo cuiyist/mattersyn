@@ -1,0 +1,580 @@
+{
+  "schema_version": "1.1.0",
+  "record_id": "veinot-1997-acylimidazole-3b",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Veinot et al. (1997) · N-Butanoylimidazole precursor preparation (3b)",
+  "material": {
+    "formula": "CdS",
+    "family": "Surface-functionalized II–VI quantum dots",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "veinot1997",
+      "doi": "10.1021/cm970189m",
+      "title": "Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot",
+      "authors": "Jonathan G. C. Veinot; Madlen Ginzburg; William J. Pietro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/cm970189m",
+      "main_status": "All six supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "veinot1997",
+    "recipe_family": "veinot1997-phenolic-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C7H10N2O",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 3, printed p. 2119, Scheme1 and Table1 compound identities"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "imidazole",
+      "name": "Imidazole",
+      "formula": "C3H4N2",
+      "role": "organic precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    },
+    {
+      "id": "butyric-anhydride",
+      "name": "Butyric anhydride",
+      "formula": "C8H14O3",
+      "role": "acyl donor / reaction medium",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    },
+    {
+      "id": "toluene",
+      "name": "Dry toluene",
+      "formula": "C7H8",
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "name": "Nitrogen",
+      "formula": "N2",
+      "role": "inert atmosphere",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anhydride-mixture",
+      "name": "Dissolve imidazole in excess anhydride output",
+      "kind": "mixture",
+      "parent_ids": [
+        "imidazole",
+        "butyric-anhydride",
+        "n2"
+      ]
+    },
+    {
+      "id": "reacted",
+      "name": "Stir at room temperature output",
+      "kind": "mixture",
+      "parent_ids": [
+        "anhydride-mixture"
+      ]
+    },
+    {
+      "id": "crystals",
+      "name": "Remove acid and excess anhydride output",
+      "kind": "fraction",
+      "parent_ids": [
+        "reacted"
+      ]
+    },
+    {
+      "id": "purified",
+      "name": "Recrystallize from toluene output",
+      "kind": "fraction",
+      "parent_ids": [
+        "crystals",
+        "toluene"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "dissolve",
+      "action": "dissolution",
+      "label": "Dissolve imidazole in excess anhydride",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "imidazole",
+        "butyric-anhydride",
+        "n2"
+      ],
+      "outputs": [
+        "anhydride-mixture"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Dry nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Large excess corresponding acid anhydride; absolute charges and concentration unreported.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "action": "stirring",
+      "label": "Stir at room temperature",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dissolve"
+      ],
+      "inputs": [
+        "anhydride-mixture"
+      ],
+      "outputs": [
+        "reacted"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Common anhydride-method text",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "veinot1997",
+              "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "room temperature",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "veinot1997",
+              "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+            }
+          ],
+          "derivation": null
+        },
+        "table1_reaction_duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Conflicts with common anhydride-method30min; no resolved operative value",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "veinot1997",
+              "locator": "Main PDF p. 3, printed p. 2119, Table 1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Dry nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "For3b Table1 reports15min, conflicting with common30min method; retain both as source conflict, not two independent runs.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    },
+    {
+      "id": "evaporate",
+      "action": "vacuum_evaporation",
+      "label": "Remove acid and excess anhydride",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "react"
+      ],
+      "inputs": [
+        "reacted"
+      ],
+      "outputs": [
+        "crystals"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Reduced pressure; numerical pressure not stated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove liquid to afford white crystals.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    },
+    {
+      "id": "recrystallize",
+      "action": "recrystallization",
+      "label": "Recrystallize from toluene",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evaporate"
+      ],
+      "inputs": [
+        "crystals",
+        "toluene"
+      ],
+      "outputs": [
+        "purified"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Recrystallize from toluene; number of cycles not specified.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "compound-3b",
+      "source_sample_label": "3b (N-Butanoylimidazole)",
+      "batch_id": null,
+      "material_state_id": "purified",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C7H10N2O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Scheme1 and Table1 compound identities"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Scheme1 and Table1 compound identities"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Scheme1 and Table1 compound identities"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Scheme1 and Table1 compound identities"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, N-Acylimidazoles"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 3, printed p. 2119, Scheme1 and Table1 compound identities"
+        }
+      ],
+      "notes": [
+        "Molecular precursor; material-hub context CdS is not the molecular product formula. Slight air sensitivity discussed generally."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. Named surface-functionalization variants, molecular precursor procedures, controls and compound-level analytical observations remain separate. Characterization compound labels do not establish unique physical batches or individual specimen-to-run joins.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or explicit CdS crystalline phase assignment supplied."
+    ],
+    "conflicts": [
+      "Table1 3b reaction duration15min versus common anhydride preparation30min."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=veinot1997",
+      "relation": "Six supplied main pages; matching SI unverified."
+    },
+    {
+      "label": "CdS ester2b",
+      "url": "../records/veinot-1997-ester-2b.html",
+      "relation": "Downstream surface-functionalization route."
+    },
+    {
+      "label": "Molecular precursor yields and NMR",
+      "url": "../records/veinot-1997-characterization.html",
+      "relation": "Yield and spectra identify compound class, not a unique physical run."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

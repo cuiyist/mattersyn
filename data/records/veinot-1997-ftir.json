@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.1.0",
+  "record_id": "veinot-1997-ftir",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Veinot et al. (1997) · FTIR measurements of KBr pellets",
+  "material": {
+    "formula": "CdS",
+    "family": "Surface-functionalized II–VI quantum dots",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "veinot1997",
+      "doi": "10.1021/cm970189m",
+      "title": "Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot",
+      "authors": "Jonathan G. C. Veinot; Madlen Ginzburg; William J. Pietro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/cm970189m",
+      "main_status": "All six supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "veinot1997",
+    "recipe_family": "veinot1997-phenolic-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cluster",
+      "name": "Source-specific functionalized CdS nanocluster specimen",
+      "formula": "CdS",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+        }
+      ]
+    },
+    {
+      "id": "kbr",
+      "name": "Potassium bromide",
+      "formula": "KBr",
+      "role": "pellet matrix",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kbr-pellets",
+      "name": "Prepare KBr pellets output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cluster",
+        "kbr"
+      ]
+    },
+    {
+      "id": "ir-observations",
+      "name": "Acquire Fourier-transform infrared spectra output",
+      "kind": "mixture",
+      "parent_ids": [
+        "kbr-pellets"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "pellet",
+      "action": "kbr_pellet_preparation",
+      "label": "Prepare KBr pellets",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cluster",
+        "kbr"
+      ],
+      "outputs": [
+        "kbr-pellets"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Particle/KBr ratio, pressing force and drying conditions unreported.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+        }
+      ]
+    },
+    {
+      "id": "acquire",
+      "action": "ftir",
+      "label": "Acquire Fourier-transform infrared spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "pellet"
+      ],
+      "inputs": [
+        "kbr-pellets"
+      ],
+      "outputs": [
+        "ir-observations"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mattson3000spectrometer. Resolution and scan count unreported. Figure4 is2e;Table2 covers1and2a–e.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 3, printed p. 2119, Table 2"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. Named surface-functionalization variants, molecular precursor procedures, controls and compound-level analytical observations remain separate. Characterization compound labels do not establish unique physical batches or individual specimen-to-run joins.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or explicit CdS crystalline phase assignment supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=veinot1997",
+      "relation": "Six supplied main pages; matching SI unverified."
+    },
+    {
+      "label": "Complete IR band inventory",
+      "url": "../records/veinot-1997-characterization.html",
+      "relation": "AllTable2positions, intensities and source assignments retained."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

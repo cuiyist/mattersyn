@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.1.0",
+  "record_id": "veinot-1997-unfunctionalized-control",
+  "revision": 1,
+  "record_type": "protocol_variant",
+  "title": "Veinot et al. (1997) · Unfunctionalized thiophenolate-capped CdS control",
+  "material": {
+    "formula": "CdS",
+    "family": "Surface-functionalized II–VI quantum dots",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Surface-reactivity control",
+  "sources": [
+    {
+      "id": "veinot1997",
+      "doi": "10.1021/cm970189m",
+      "title": "Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot",
+      "authors": "Jonathan G. C. Veinot; Madlen Ginzburg; William J. Pietro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/cm970189m",
+      "main_status": "All six supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "veinot1997",
+    "recipe_family": "veinot1997-phenolic-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bare-capped",
+      "name": "Unfunctionalized thiophenolate-capped CdS nanoclusters",
+      "formula": "CdS",
+      "role": "control substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ]
+    },
+    {
+      "id": "acyl-agent",
+      "name": "Unspecified N-acylimidazole reagent",
+      "formula": "Variable",
+      "role": "surface_functionalization_reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Deionized, charcoal-treated water",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "control-mixture",
+      "name": "Expose unfunctionalized capped CdS to N-acylimidazole output",
+      "kind": "mixture",
+      "parent_ids": [
+        "bare-capped",
+        "acyl-agent"
+      ]
+    },
+    {
+      "id": "control-recovery",
+      "name": "Perform aqueous workup output",
+      "kind": "mixture",
+      "parent_ids": [
+        "control-mixture",
+        "water"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "expose",
+      "action": "control_exposure",
+      "label": "Expose unfunctionalized capped CdS to N-acylimidazole",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bare-capped",
+        "acyl-agent"
+      ],
+      "outputs": [
+        "control-mixture"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reported control without exact acyl identity, dose, solvent, duration or temperature. Do not copy2a conditions.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ]
+    },
+    {
+      "id": "workup",
+      "action": "aqueous_workup",
+      "label": "Perform aqueous workup",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "expose"
+      ],
+      "inputs": [
+        "control-mixture",
+        "water"
+      ],
+      "outputs": [
+        "control-recovery"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Only unchanged nanocluster and recovered organic acid reported; no quantified conversion or detection limit.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "control-cluster",
+      "source_sample_label": "Unchanged thiophenolate-capped CdS",
+      "batch_id": null,
+      "material_state_id": "control-recovery",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ],
+      "notes": [
+        "No reaction reported. Conditions incompletely specified; no success-calibration training label."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "no-reaction",
+      "sample_id": "control-cluster",
+      "property": "reaction_observation",
+      "technique": "Reported control observation",
+      "value": {
+        "value": "No reaction observed; unchanged nanocluster and recovered organic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Deliberate unfunctionalized control, not a failed QDOH synthesis or calibrated negative label.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Control experiments"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. Named surface-functionalization variants, molecular precursor procedures, controls and compound-level analytical observations remain separate. Characterization compound labels do not establish unique physical batches or individual specimen-to-run joins.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or explicit CdS crystalline phase assignment supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=veinot1997",
+      "relation": "Six supplied main pages; matching SI unverified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

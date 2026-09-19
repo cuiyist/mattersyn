@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.1.0",
+  "record_id": "veinot-1997-prolonged-degradation",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Veinot et al. (1997) · Prolonged N-acylimidazole exposure",
+  "material": {
+    "formula": "CdS",
+    "family": "Surface-functionalized II–VI quantum dots",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Contextual degradation observation",
+  "sources": [
+    {
+      "id": "veinot1997",
+      "doi": "10.1021/cm970189m",
+      "title": "Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot",
+      "authors": "Jonathan G. C. Veinot; Madlen Ginzburg; William J. Pietro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/cm970189m",
+      "main_status": "All six supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "veinot1997",
+    "recipe_family": "veinot1997-phenolic-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "qdoh",
+      "name": "Surface phenol-functionalized CdS nanoclusters (1, QDOH)",
+      "formula": "CdS",
+      "role": "surface-functionalized substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+        }
+      ]
+    },
+    {
+      "id": "acyl-agent",
+      "name": "Unspecified N-acylimidazole reagent",
+      "formula": "Variable",
+      "role": "reaction reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "degraded-mixture",
+      "name": "Prolonged N-acylimidazole exposure output",
+      "kind": "mixture",
+      "parent_ids": [
+        "qdoh",
+        "acyl-agent"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "exposure",
+      "action": "prolonged_surface_reaction",
+      "label": "Prolonged N-acylimidazole exposure",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qdoh",
+        "acyl-agent"
+      ],
+      "outputs": [
+        "degraded-mixture"
+      ],
+      "parameters": {
+        "duration_threshold": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "greater than; strict lower threshold, not a12h measured run",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "veinot1997",
+              "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Extending ordinary time did not improve conversion; exposure >12h destroyed the cluster, precipitated bulkCdS and afforded crystalline corresponding O,S-diester. Exact acyl variant and isolated yields unreported.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "degradation-observation",
+      "source_sample_label": "Unresolved degraded CdS-containing material",
+      "batch_id": null,
+      "material_state_id": "degraded-mixture",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Esterification and prolonged exposure"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Extending ordinary time did not improve conversion; exposure >12h destroyed the cluster, precipitated bulkCdS and afforded crystalline corresponding O,S-diester. Exact acyl variant and isolated yields unreported."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. Named surface-functionalization variants, molecular precursor procedures, controls and compound-level analytical observations remain separate. Characterization compound labels do not establish unique physical batches or individual specimen-to-run joins.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or explicit CdS crystalline phase assignment supplied.",
+      "Incomplete contextual experiment; not a full recipe or negative-example label."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_failure"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=veinot1997",
+      "relation": "Six supplied main pages; matching SI unverified."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,10 +1,10 @@
 # MatterSyn training data pilot
 
-The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Dataset version 0.4.0 uses record schema 1.0.0.
+The canonical files in `records/` are the source for generated record pages and task-specific exports. Edit a canonical JSON record, increment its revision when changing published scientific content, then regenerate. Never edit `dist/data/records` or `dist/records` by hand. Read the generated dataset manifest and `inventory-summary.json` for current counts and release version. Record schema 1.1.0 adds typed qualitative measurements and an optional intended surface target; existing 1.0.0 records remain supported.
 
 ## Current collection
 
-- 41 source-reviewed literature protocols, variants and controls, plus 14 separately scoped supporting procedures. These are not 55 independent experiments.
+- The reviewed subset contains separately counted synthesis routes, controls, supporting procedures and contextual observations. The inventory gives the current totals; records are not automatically independent experiments.
 - A separate, attributed 100-row coverage subset of the published Voznyy 2019 PbS dataset: 95 optical-outcome rows and five failure-coded rows. These are experimental rows, not 100 reviewed complete SOPs or 100 independent papers.
 - Five fully inventoried main–SI sets cover 74 pages: ZnO, CdSe/core–shell, Ir, Fe–O and CoO/CoFe2O4. Their review ledgers expose original graphics, tables, equations, sample links and unresolved claims. Most of the 4,176 local paper groups still await full curation. Screening alone does not create a training example; source-reviewed recipes do not imply whole-paper review.
 - Zero verified sample-resolved exact-CIF-to-complete-recipe pairs. The existing bulk CdSe CIF and finite particle illustration cannot supply those labels.
@@ -14,6 +14,8 @@ The canonical files in `records/` are the source for generated record pages and 
 One record represents a coherent protocol, variant, procedure, experiment or observation. Paper, recipe-family, parent, batch, sample and measurement identities are separate. A source-row ID is not an author-assigned physical batch ID. Intended targets remain distinct from observed products.
 
 Every reported or derived quantity carries evidence, units, status and basis; missing values are null rather than zero. Retain reported ranges, uncertainties and conflicting source statements. State whether a product is explicitly linked to this recipe, only general context, or unresolved. Author-derived sizes remain labeled. Diameter, particle size, optical wavelength and geometric model size are different fields.
+
+Measurements may contain either a numeric quantity or a qualitative fact, each with status and provenance. Colloidal solubility, spectral non-detection and nonreactive controls must not be replaced by invented concentrations, zero values or calibrated failure labels. Schema1.1.0 surface-functionalization examples carry their intended surface explicitly and retain both the seed material and the functionalization reagent in precursor-selection outputs. Supporting organic preparations may belong to a CdS material page while their actual intended and observed compositions remain organic molecules.
 
 Use the original paper and verified SI. Record page/section/figure locators; do not assign a nearby figure to a protocol without evidence. Inspect extraction and sample links independently before setting `source_reviewed`. The pilot has source audits, not a measured inter-annotator agreement study or laboratory reproduction. Murray 1993 SI remains unlocated/unverified.
 

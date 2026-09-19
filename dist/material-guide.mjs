@@ -1,14 +1,14 @@
 import {sourceItemCard} from './source-evidence.mjs';
-import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.8.0-r1';
-export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.8.0-r1';
-import {mountProtocol} from './protocol-visuals.mjs?v=0.8.0-r1';
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.8.0-r1';
+import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.9.0-r1';
+export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.9.0-r1';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.9.0-r1';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.9.0-r1';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const link=(text,url)=>{const a=el('a',text);a.href=new URL(url,import.meta.url);return a;};
 let reviewIndex,figureDialog;
 function enlargeFigure(f){if(!figureDialog){figureDialog=el('dialog',undefined,'guide-figure-dialog');document.body.append(figureDialog);}figureDialog.replaceChildren();const header=el('header'),close=el('button','Close ×');close.type='button';close.onclick=()=>figureDialog.close();header.append(el('h2',f.label||f.id),close);const view=el('div',undefined,'figure-zoom-area'),img=el('img');img.src=new URL(f.public_asset+'?sha='+f.public_asset_sha256,import.meta.url);img.alt=f.caption_paraphrase||f.summary||f.label;view.append(img);let scale=1;const controls=el('div',undefined,'protocol-controls');for(const [label,n] of [['−',1/1.25],['Reset',0],['+',1.25]]){const button=el('button',label);button.type='button';button.onclick=()=>{scale=n?Math.max(.5,Math.min(5,scale*n)):1;img.style.width=(scale*100)+'%';};controls.append(button);}figureDialog.append(header,view,controls,el('p',img.alt));figureDialog.showModal();}
 
-function quantity(q){if(q.value===null&&q.minimum===null)return q.qualifier||'Not reported';return (q.approximate?'≈':'')+(q.value??`${q.minimum}–${q.maximum}`)+' '+q.unit+(q.qualifier?' · '+q.qualifier:'');}
+function quantity(q){if(!('unit' in q))return q.value===null?'Not reported':String(q.value);if(q.value===null&&q.minimum===null)return q.qualifier||'Not reported';return (q.approximate?'≈':'')+(q.value??`${q.minimum}–${q.maximum}`)+' '+q.unit+(q.qualifier?' · '+q.qualifier:'');}
 function flatten(v){if(v===null||v===undefined)return '';if(typeof v!=='object')return String(v);return Array.isArray(v)?v.map(flatten).join(' · '):Object.entries(v).map(([k,x])=>k.replaceAll('_',' ')+': '+flatten(x)).join('; ');}
 export async function mountEvidence(host,r){
  if(!host)return;host.replaceChildren();const intuitionTarget=document.getElementById('material-intuition-content')||document.getElementById('record-intuition-content');if(intuitionTarget)intuitionTarget.replaceChildren();reviewIndex??=fetch(new URL('data/paper-review-index.json',import.meta.url),{cache:'no-store'}).then(r=>r.json());const index=await reviewIndex;host.dataset.sourceGroup=r.lineage.source_group;const full=index.papers.some(p=>p.id===r.lineage.source_group);const selected=['tessier2015','zhang2019'].includes(r.lineage.source_group);if(!full&&!selected){host.append(el('p','Original characterization is available in the linked source or illustrated paper guide. Figure-to-recipe assignments remain source-specific.','guide-notice'));for(const x of r.context_links||[])host.append(link(x.label+' →',x.url.startsWith('http')?x.url:x.url.replace(/^\.\.\//,'')));return;}const res=await fetch(new URL('data/'+(full?'paper-reviews/':'recipe-figures/')+r.lineage.source_group+'.json',import.meta.url),{cache:'no-store'});

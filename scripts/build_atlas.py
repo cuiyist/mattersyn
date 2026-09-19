@@ -58,7 +58,11 @@ def main():
         library.append({k:p.get(k) for k in ['id','doi','doiUrl','title','year','coverage','materials','candidateMaterialMentions','reviewStatus','reviewedRecordIds','benchmarkRecordIds','titleMetadata','fullDocumentReview']})
     index=[]
     for f,m in materials.items():
-        related=[byid[x] for x in sorted(m['record_ids'])];m['record_ids']=sorted(m['record_ids']);m['direct_record_ids']=sorted(m['direct_record_ids']);m['architectures']=sorted(m['architectures'])
+        def reader_order(rid):
+            rec=byid[rid];review=full_reviews.get(rec['sources'][0]['doi'].lower(),{})
+            ordered=[x for item in review.get('recipe_inventory',[]) for x in item.get('record_ids',[])]
+            return (rid not in m['direct_record_ids'],rec['sources'][0].get('year') or 9999,ordered.index(rid) if rid in ordered else 9999,rid)
+        related=[byid[x] for x in sorted(m['record_ids'],key=reader_order)];m['record_ids']=sorted(m['record_ids']);m['direct_record_ids']=sorted(m['direct_record_ids']);m['architectures']=sorted(m['architectures'])
         m['reviewed_records']=sum(synthesis_route(r) for r in related)
         m['publication_status']='verified_synthesis_contribution'
         m['component_only']=not bool(m['direct_record_ids'])

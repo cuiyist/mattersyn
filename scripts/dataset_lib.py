@@ -104,9 +104,14 @@ def chemical_signature(r):
     identities={m['id']:(m['name'].lower(),m['formula'],m['role'],m['identity']) for m in r['materials']}
     return digest({'material':r['material']['formula'],'method':r['method'],'materials':sorted_rows([(identities[m['id']],quantities(m['quantities'])) for m in r['materials']]),'stocks':sorted_rows([{'components':sorted_rows([(identities[c['material_id']],quantities(c['quantities'])) for c in s['components']]),'concentrations':quantities(s['concentrations'])} for s in r['stocks']]),'alternatives':sorted_rows([quantities(o['parameters']) for o in r['condition_options']]),'operations':[(o['action'],o['stage'],o['optional'],o['branch'],quantities(o['parameters']),o['environment']['value'],o['endpoint']['value']) for o in r['operations']]})
 
+def synthesis_precursors(r):
+    roles={'metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor','metalloid_precursor','surface_functionalization_reagent'}
+    if any(m['role']=='surface_functionalization_reagent' and m['stage']=='synthesis' for m in r['materials']):roles.add('seed')
+    return [m for m in r['materials'] if m['role'] in roles and m['stage']=='synthesis']
+
 def eligibility(r):
     reviewed=r['quality']['review_status']=='source_reviewed';duplicate=r['lineage']['duplicate_of'] is not None
-    precursors=[m for m in r['materials'] if m['role'] in ['metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor','metalloid_precursor'] and m['stage']=='synthesis']
+    precursors=synthesis_precursors(r)
     explicit={p['sample_id'] for p in r['products'] if p['recipe_link']=='explicit'}
     sizes=[m for m in r['measurements'] if m['sample_id'] in explicit and m['property']=='diameter' and m['value']['value'] is not None]
     measured=[s for s in r['structure_assets'] if s['eligible_as_measured_label'] and s['sample_id'] in explicit]
@@ -149,6 +154,8 @@ def training_view(r,task):
     if not eligibility(r).get(task,{}).get('eligible'):raise ValueError('Record is not eligible for '+task)
     # Explicit allowlist: contextual figures, intuition, measured structure illustrations and outcome text never enter recipe inputs.
     inputs={'composition':r['material']['formula'],'method':r['method']}
+    if r['intended_target'].get('surface',{}).get('value') is not None:
+        inputs['requested_surface']=r['intended_target']['surface']
     output={}
     if task=='optical_outcome':
         inputs={'composition':r['material']['formula'],'features':{k:{f:q[f] for f in ['value','unit','status']} for k,q in optical_operation(r)['parameters'].items() if k in OPTICAL_FEATURES}}
@@ -156,7 +163,7 @@ def training_view(r,task):
         m=next(m for m in r['measurements'] if m['sample_id'] in explicit and m['property']=='absorption_peak' and m['value']['value'] is not None)
         output={'absorption_peak':{k:m['value'][k] for k in ['value','unit','status']}}
     elif task=='precursor_selection':
-        output={'precursors':[{'name':m['name'],'formula':m['formula'],'role':m['role']} for m in r['materials'] if m['role'] in ['metal_precursor','chalcogen_precursor','halide_precursor','nonmetal_precursor','metalloid_precursor'] and m['stage']=='synthesis']}
+        output={'precursors':[{'name':m['name'],'formula':m['formula'],'role':m['role']} for m in synthesis_precursors(r)]}
     else:
         output={'materials':r['materials'],'stocks':r['stocks'],'material_states':r['material_states'],'operations':[o for o in r['operations'] if o['stage']!='characterization'],'condition_options':r['condition_options'],'missing_fields':r['quality']['missing_fields']}
     if task=='size_conditioned_recipe':
@@ -170,6 +177,8 @@ def training_view(r,task):
     return {'record_id':r['record_id'],'task':task,'input':inputs,'output':output,'provenance':[{'doi':s['doi'],'url':s['url'],'reuse_status':s['reuse_status']} for s in r['sources']]}
 
 def fmt(q):
+    if 'unit' not in q:
+        return (str(q['value']) if q['value'] is not None else q['status'].replace('_',' ').capitalize())+(' · '+q.get('note','') if q.get('note') else '')
     if q['status'] in ['not_reported','not_applicable']:return q['status'].replace('_',' ').capitalize()+(' · '+q['qualifier'] if q['qualifier'] else '')
     value=f"{q['minimum']:g}–{q['maximum']:g}" if q['minimum'] is not None else f"{q['value']:g}"
     return ('≈' if q['approximate'] else '')+value+' '+q['unit']+(' · '+q['qualifier'] if q['qualifier'] else '')

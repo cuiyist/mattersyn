@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.1.0",
+  "record_id": "veinot-1997-uv-visible",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Veinot et al. (1997) · UV–visible absorption measurements",
+  "material": {
+    "formula": "CdS",
+    "family": "Surface-functionalized II–VI quantum dots",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "veinot1997",
+      "doi": "10.1021/cm970189m",
+      "title": "Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot",
+      "authors": "Jonathan G. C. Veinot; Madlen Ginzburg; William J. Pietro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/cm970189m",
+      "main_status": "All six supplied main pages read and visually checked; independent source and canonical audits completed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "veinot1997",
+    "recipe_family": "veinot1997-phenolic-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF pp. 1–6, printed pp. 2117–2122"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cluster",
+      "name": "Source-specific functionalized CdS nanocluster specimen",
+      "formula": "CdS",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+        }
+      ]
+    },
+    {
+      "id": "chloroform",
+      "name": "Chloroform",
+      "formula": "CHCl3",
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "optical-specimens",
+      "name": "Prepare solvent-specific optical specimens output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cluster",
+        "methanol",
+        "chloroform"
+      ]
+    },
+    {
+      "id": "uv-observations",
+      "name": "Measure absorption in quartz cuvettes output",
+      "kind": "mixture",
+      "parent_ids": [
+        "optical-specimens"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare",
+      "action": "optical_sample_preparation",
+      "label": "Prepare solvent-specific optical specimens",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cluster",
+        "methanol",
+        "chloroform"
+      ],
+      "outputs": [
+        "optical-specimens"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Methanol forQDOH;chloroform for allesters. These are separate specimens, not a mixed-solvent stock. Figure5QDOH10^-4M has unspecified molarity basis.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+        }
+      ]
+    },
+    {
+      "id": "acquire",
+      "action": "uv_visible",
+      "label": "Measure absorption in quartz cuvettes",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare"
+      ],
+      "inputs": [
+        "optical-specimens"
+      ],
+      "outputs": [
+        "uv-observations"
+      ],
+      "parameters": {
+        "path_length": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "veinot1997",
+              "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+          },
+          {
+            "source_id": "veinot1997",
+            "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hewlett-Packard8452diode-array spectrophotometer. Absorption onsets and model-derived diameters must remain distinct.",
+      "evidence": [
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 2, printed p. 2118, Spectroscopy"
+        },
+        {
+          "source_id": "veinot1997",
+          "locator": "Main PDF p. 5, printed p. 2121, Figure5"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read in full and visually inspected, with independent source and canonical scientific audits. SI not located or verified. Named surface-functionalization variants, molecular precursor procedures, controls and compound-level analytical observations remain separate. Characterization compound labels do not establish unique physical batches or individual specimen-to-run joins.",
+    "missing_fields": [
+      "Matching supporting information not located or verified.",
+      "No measured atomic coordinates or explicit CdS crystalline phase assignment supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=veinot1997",
+      "relation": "Six supplied main pages; matching SI unverified."
+    },
+    {
+      "label": "Absorption and model-derived sizes",
+      "url": "../records/veinot-1997-characterization.html",
+      "relation": "Methods295/305nm versusTable3390nm conflict remains explicit."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
