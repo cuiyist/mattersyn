@@ -1,0 +1,536 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yi-2002-xrd",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Yi et al. (2002) · Diffraction phase assignment and Scherrer crystallite estimate",
+  "material": {
+    "formula": "La2(MoO4)3:Yb,Er",
+    "family": "Ytterbium- and erbium-codoped lanthanum molybdate phosphors",
+    "elements": [
+      "La",
+      "Mo",
+      "O",
+      "Yb",
+      "Er"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Powder X-ray diffraction",
+  "sources": [
+    {
+      "id": "yi2002",
+      "doi": "10.1021/cm0115416",
+      "title": "Synthesis and Characterization of High-Efficiency Nanocrystal Up-Conversion Phosphors: Ytterbium and Erbium Codoped Lanthanum Molybdate",
+      "authors": "Guangshun Yi; Baoquan Sun; Fengzhen Yang; Depu Chen; Yuxiang Zhou; Jing Cheng",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/cm0115416",
+      "main_status": "All five supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No matching SI supplied or independently verified. No SI declaration observed in the supplied five-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "yi2002",
+    "recipe_family": "yi2002-lanthanum-molybdate",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "La2(MoO4)3:Yb,Er",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 1, printed p. 2910, Abstract"
+        }
+      ],
+      "note": "Source host/dopant notation; not refined atomic occupancies or a measured exact dopant composition."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "anneal-800-specimen",
+      "name": "Phosphor after 800 °C annealing for 5 h",
+      "formula": "La2(MoO4)3:Yb,Er",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Section 2.1, hydrothermal preparation"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Annealing-temperature comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xrd-data",
+      "name": "Acquire the annealed powder diffraction pattern output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "anneal-800-specimen"
+      ]
+    },
+    {
+      "id": "scherrer-data",
+      "name": "Estimate coherent crystallite size from line broadening output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xrd-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "acquire",
+      "action": "powder_xrd_acquisition",
+      "label": "Acquire the annealed powder diffraction pattern",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "anneal-800-specimen"
+      ],
+      "outputs": [
+        "xrd-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Section 2.2, characterization techniques"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Section 2.2, characterization techniques"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bruker D8 advance. Radiation wavelength, voltage/current, scan step/rate, sample holder, refinement and phase fractions are not given.",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Section 2.2, characterization techniques"
+        }
+      ]
+    },
+    {
+      "id": "scherrer",
+      "action": "scherrer_analysis",
+      "label": "Estimate coherent crystallite size from line broadening",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "acquire"
+      ],
+      "inputs": [
+        "xrd-data"
+      ],
+      "outputs": [
+        "scherrer-data"
+      ],
+      "parameters": {
+        "peak_two_theta": {
+          "value": 28.053,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+            }
+          ],
+          "derivation": null
+        },
+        "measured_fwhm_b1": {
+          "value": 0.186,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+            }
+          ],
+          "derivation": null
+        },
+        "instrument_broadening_b0": {
+          "value": 0.104,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source invokes Scherrer’s equation and reports B1/B0. No explicit equation, shape factor, wavelength or correction convention is printed; no new calculation replaces its 52.5 nm result.",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "annealed-800",
+      "source_sample_label": "800 °C / 5 h XRD specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Tetragonal La2(MoO4)3 with a little unidentified second phase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "scherrer-size",
+      "sample_id": "annealed-800",
+      "property": "scherrer_crystallite_size",
+      "technique": "XRD / Scherrer equation",
+      "value": {
+        "value": 52.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "sample_id": "annealed-800",
+      "property": "diffraction_reference",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "ICDD No. 45-0407; peak positions agree with literature tetragonal La2(MoO4)3 and compare well with bulk phosphors.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        }
+      ]
+    },
+    {
+      "id": "minor-phase",
+      "sample_id": "annealed-800",
+      "property": "phase_purity_limit",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "A little second phase is explicitly reported; its identity, concentration and indexed peaks are not supplied. Do not label this sample phase-pure.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        }
+      ]
+    },
+    {
+      "id": "figure-scope",
+      "sample_id": "annealed-800",
+      "property": "figure1_display_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Figure 1 plots linear counts versus 2-theta, with ticks from 10° through 70° and a displayed count scale up to 500. No tabulated peak list, Rietveld refinement, unit-cell constants or atom coordinates are supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 axes"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 axes"
+        }
+      ]
+    },
+    {
+      "id": "single-crystal-inference",
+      "sample_id": "annealed-800",
+      "property": "author_particle_crystallinity_inference",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Agreement of Scherrer size with particle-size measurements is used to infer individual single crystals rather than aggregates of much smaller crystallites. This is an author inference, not lattice-resolved TEM or SAED evidence.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 2, printed p. 2911, Particle-size discussion"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Figure 3"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Figure 1 and X-ray diffraction discussion"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Particle-size discussion"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Figure 3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Five hydrothermal annealing comparisons, independent solid-state bulk preparation, stock preparation, structural/optical analyses and author mechanisms retain their own evidence scopes. Printed mass/mole and nominal feed/formula conflicts, individual comparison charges and unassigned analysis specimens remain explicit. Matching SI not located or verified; cited external works not independently inspected.",
+    "missing_fields": [
+      "No verified SI, raw spectral arrays, atomic coordinates, refined dopant occupancies or absolute quantum yield is supplied.",
+      "Physical batch identifiers and most characterization specimen preparation/settings are absent; general figure context is not a per-run sample join."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=yi2002",
+      "relation": "Full methods, original figures, source conflicts and interpretation."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

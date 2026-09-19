@@ -1,0 +1,1116 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yi-2002-erbium-series",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Yi et al. (2002) · Erbium concentration dependence and quenching interpretation",
+  "material": {
+    "formula": "La2(MoO4)3:Yb,Er",
+    "family": "Ytterbium- and erbium-codoped lanthanum molybdate phosphors",
+    "elements": [
+      "La",
+      "Mo",
+      "O",
+      "Yb",
+      "Er"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Dopant-composition comparison",
+  "sources": [
+    {
+      "id": "yi2002",
+      "doi": "10.1021/cm0115416",
+      "title": "Synthesis and Characterization of High-Efficiency Nanocrystal Up-Conversion Phosphors: Ytterbium and Erbium Codoped Lanthanum Molybdate",
+      "authors": "Guangshun Yi; Baoquan Sun; Fengzhen Yang; Depu Chen; Yuxiang Zhou; Jing Cheng",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/cm0115416",
+      "main_status": "All five supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No matching SI supplied or independently verified. No SI declaration observed in the supplied five-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "yi2002",
+    "recipe_family": "yi2002-lanthanum-molybdate",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "La2(MoO4)3:Yb,Er",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 1, printed p. 2910, Abstract"
+        }
+      ],
+      "note": "Source host/dopant notation; not refined atomic occupancies or a measured exact dopant composition."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "erbium-series-specimens",
+      "name": "Separate Er concentration-series specimens; adjusted input quantities unreported",
+      "formula": "La2(MoO4)3:Yb,Er",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "er-comparison",
+      "name": "Compare the six displayed Er3+ concentration conditions output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "erbium-series-specimens"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "compare",
+      "action": "dopant_series_comparison",
+      "label": "Compare the six displayed Er3+ concentration conditions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "erbium-series-specimens"
+      ],
+      "outputs": [
+        "er-comparison"
+      ],
+      "parameters": {
+        "stated_er_range": {
+          "value": null,
+          "minimum": 1,
+          "maximum": 7,
+          "unit": "mol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+            },
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+            }
+          ],
+          "derivation": null
+        },
+        "selected_er_fraction": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+            },
+            {
+              "source_id": "yi2002",
+              "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 7 markers occur at 1, 2, 3, 4, 5 and 7%; there is no 6% marker. Adjusted La/Yb fractions, oxide charges, fixed-total convention and batch identities are unreported. The stated optimum 800 °C precedes subsequent experiments, but individual thermal histories and the exact plotted emission channel are not independently specified.",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "er-1",
+      "source_sample_label": "Figure 7 nominal 1% Er3+ condition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "er-2",
+      "source_sample_label": "Figure 7 nominal 2% Er3+ condition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "er-3",
+      "source_sample_label": "Figure 7 nominal 3% Er3+ condition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "er-4",
+      "source_sample_label": "Figure 7 nominal 4% Er3+ condition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "er-5",
+      "source_sample_label": "Figure 7 nominal 5% Er3+ condition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "er-7",
+      "source_sample_label": "Figure 7 nominal 7% Er3+ condition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "series",
+      "source_sample_label": "Er3+ concentration comparison",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "fraction-1",
+      "sample_id": "er-1",
+      "property": "reported_er_mole_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure marker composition label; concentration denominator/compensation are not explicitly defined for the series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "fraction-2",
+      "sample_id": "er-2",
+      "property": "reported_er_mole_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure marker composition label; concentration denominator/compensation are not explicitly defined for the series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "fraction-3",
+      "sample_id": "er-3",
+      "property": "reported_er_mole_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure marker composition label; concentration denominator/compensation are not explicitly defined for the series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "fraction-4",
+      "sample_id": "er-4",
+      "property": "reported_er_mole_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure marker composition label; concentration denominator/compensation are not explicitly defined for the series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "fraction-5",
+      "sample_id": "er-5",
+      "property": "reported_er_mole_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure marker composition label; concentration denominator/compensation are not explicitly defined for the series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "fraction-7",
+      "sample_id": "er-7",
+      "property": "reported_er_mole_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure marker composition label; concentration denominator/compensation are not explicitly defined for the series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "text-trend",
+      "sample_id": "series",
+      "property": "source_prose_dopant_intensity_trend",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Prose says all three transition peaks increase from 1% to 3%, then decrease sharply with further Er3+ from 4% to 7%, attributed to concentration quenching.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "figure-trend",
+      "sample_id": "series",
+      "property": "figure7_dopant_display_limit",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "The single unassigned intensity curve has its highest displayed point at 3%; 4% remains close to 3%, while 5% and 7% are much lower. No numerical intensity values are digitized and the curve cannot be assigned to each of three channels.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "optimum",
+      "sample_id": "series",
+      "property": "author_selected_er_fraction",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "3 mol% Er3+ was selected as the optimum within the studied comparison.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "recipe-limit",
+      "sample_id": "series",
+      "property": "dopant_series_recipe_missingness",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "This series is not six fully weighed synthesis recipes. No guessed oxide substitutions, 6% experiment, constant Yb fraction, renormalized La fraction or chemical-dose interpolation is added.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+          },
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 3, printed p. 2912, Er3+ concentration comparison"
+        },
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 4, printed p. 2913, Figure 7"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Five hydrothermal annealing comparisons, independent solid-state bulk preparation, stock preparation, structural/optical analyses and author mechanisms retain their own evidence scopes. Printed mass/mole and nominal feed/formula conflicts, individual comparison charges and unassigned analysis specimens remain explicit. Matching SI not located or verified; cited external works not independently inspected.",
+    "missing_fields": [
+      "No verified SI, raw spectral arrays, atomic coordinates, refined dopant occupancies or absolute quantum yield is supplied.",
+      "Physical batch identifiers and most characterization specimen preparation/settings are absent; general figure context is not a per-run sample join."
+    ],
+    "conflicts": [
+      "Body describes a sharp intensity decline over 4–7%, but the plotted 4% point remains near the 3% maximum.",
+      "Body discusses three transition peaks, whereas Figure 7 supplies one intensity curve without an emission-channel label."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=yi2002",
+      "relation": "Full methods, original figures, source conflicts and interpretation."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

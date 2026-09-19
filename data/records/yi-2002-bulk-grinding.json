@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yi-2002-bulk-grinding",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Yi et al. (2002) · Grinding control on the solid-state bulk material",
+  "material": {
+    "formula": "La2(MoO4)3:Yb,Er",
+    "family": "Ytterbium- and erbium-codoped lanthanum molybdate phosphors",
+    "elements": [
+      "La",
+      "Mo",
+      "O",
+      "Yb",
+      "Er"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Mechanical grinding control",
+  "sources": [
+    {
+      "id": "yi2002",
+      "doi": "10.1021/cm0115416",
+      "title": "Synthesis and Characterization of High-Efficiency Nanocrystal Up-Conversion Phosphors: Ytterbium and Erbium Codoped Lanthanum Molybdate",
+      "authors": "Guangshun Yi; Baoquan Sun; Fengzhen Yang; Depu Chen; Yuxiang Zhou; Jing Cheng",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/cm0115416",
+      "main_status": "All five supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No matching SI supplied or independently verified. No SI declaration observed in the supplied five-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "yi2002",
+    "recipe_family": "yi2002-lanthanum-molybdate",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "La2(MoO4)3:Yb,Er",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 1, printed p. 2910, Abstract"
+        }
+      ],
+      "note": "Source host/dopant notation; not refined atomic occupancies or a measured exact dopant composition."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bulk-specimen",
+      "name": "Solid-state bulk phosphor comparator",
+      "formula": "La2(MoO4)3:Yb,Er",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 2, printed p. 2911, Section 2.1, solid-state bulk comparison"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ground-bulk",
+      "name": "Grind the bulk material into fine powder output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "bulk-specimen"
+      ]
+    },
+    {
+      "id": "grinding-comparison",
+      "name": "Compare the optical properties after grinding output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ground-bulk",
+        "bulk-specimen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "grind",
+      "action": "bulk_grinding",
+      "label": "Grind the bulk material into fine powder",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bulk-specimen"
+      ],
+      "outputs": [
+        "ground-bulk"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The paper reports an experimental grinding control but no mill, medium, duration, energy, final size, aliquot mass or surface characterization.",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "action": "optical_control_comparison",
+      "label": "Compare the optical properties after grinding",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "grind"
+      ],
+      "inputs": [
+        "ground-bulk",
+        "bulk-specimen"
+      ],
+      "outputs": [
+        "grinding-comparison"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate original and ground specimens are compared, not mixed. No control spectrum, numerical intensity ratio or independent defect measurement is supplied.",
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ground",
+      "source_sample_label": "Finely ground bulk phosphor",
+      "batch_id": null,
+      "material_state_id": "ground-bulk",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "La2(MoO4)3:Yb,Er",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "result",
+      "sample_id": "ground",
+      "property": "grinding_control_result",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Grinding bulk material into fine powder did not improve its optical properties; the authors say this was experimentally confirmed.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+        }
+      ]
+    },
+    {
+      "id": "interpretation",
+      "sample_id": "ground",
+      "property": "author_grinding_defect_explanation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "The authors attribute the result to altered intrinsic point-defect concentration and decreased emission, citing analogous materials. Defect concentrations and emission-loss magnitude were not measured here.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "yi2002",
+            "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yi2002",
+          "locator": "Main PDF p. 5, printed p. 2914, Bulk-grinding control paragraph"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Five hydrothermal annealing comparisons, independent solid-state bulk preparation, stock preparation, structural/optical analyses and author mechanisms retain their own evidence scopes. Printed mass/mole and nominal feed/formula conflicts, individual comparison charges and unassigned analysis specimens remain explicit. Matching SI not located or verified; cited external works not independently inspected.",
+    "missing_fields": [
+      "No verified SI, raw spectral arrays, atomic coordinates, refined dopant occupancies or absolute quantum yield is supplied.",
+      "Physical batch identifiers and most characterization specimen preparation/settings are absent; general figure context is not a per-run sample join."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=yi2002",
+      "relation": "Full methods, original figures, source conflicts and interpretation."
+    },
+    {
+      "label": "Bulk precursor preparation",
+      "url": "../records/yi-2002-bulk.html",
+      "relation": "Described current-paper solid-state comparator; grinding is a support control, not another nanocrystal synthesis."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
