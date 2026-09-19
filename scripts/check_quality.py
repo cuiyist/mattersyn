@@ -156,7 +156,9 @@ class Audit:
         self.check(germanium.get("component_only") is True and set(germanium.get("record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge: substrate-supported routes became isolated Ge synthesis")
         self.check(set(self.hubs.get("Ge/Si", {}).get("direct_record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
         silver = self.hubs.get("Ag", {})
-        self.check(silver.get("component_only") is True and set(silver.get("record_ids", [])) == stiger_routes, "Ag: only the reviewed Stiger supported-particle component is permitted")
+        shah_ag_routes = {"shah-2001-ag-" + letter for letter in "abcdefghi"}
+        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes, "Ag: nine reviewed Shah colloidal experiments must remain direct synthesis routes")
+        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | stiger_routes, "Ag: retain the supported Stiger contribution alongside the separate colloidal routes")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
         self.check(self.byid.get("stiger-1999-electrodeposition", {}).get("material", {}).get("formula") == "Ag/Si", "Ag/Si: supported-product identity was erased")
         stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")
@@ -257,7 +259,8 @@ class Audit:
                 self.check(e["mixedOccupancy"] is True and len(positions) == 56 and sum(a["mixed_site"] for a in m["atoms"]) == 24, "Ferrite: mixed-site representation/count changed")
                 self.check(e["record_ids"] == ["saha-2019-coo-cofe2o4-seeded-growth"], "Ferrite reference attached to standalone CoO or unrelated protocol")
             if cid == "ir-fcc":
-                self.check(e["record_ids"] == ["stowell-2005-ir-oa-oleylamine-290c"], "FCC Ir reference assigned to unverified TOAB/TOPB/TOP sample phase")
+                self.check(set(e["record_ids"]) == {"stowell-2005-ir-oa-oleylamine-290c", "shah-2001-ir"}, "FCC Ir reference assigned outside reviewed comparison contexts")
+                self.check("does not establish the phase" in e.get("scope", "") and e.get("referenceOnly") is True and e.get("trainingEligible") is False, "Bulk Ir comparison must not become a measured Shah phase assignment or training label")
             if cid == "inp-zinc-blende":
                 self.check(e.get("sample_context_ids") == ["inp-reference-characterization-20min"] and "30 min" in e["scope"], "InP: 20-minute characterization confused with 30-minute recipe product")
         self.counts["crystal_references"] = len(entries)

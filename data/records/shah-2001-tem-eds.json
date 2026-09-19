@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shah-2001-tem-eds",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Shah et al. (2001) · TEM, particle sizing and EDS",
+  "material": {
+    "formula": "Ag/Ir/Pt",
+    "family": "Ligand-stabilized metal nanocrystals"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "shah2001",
+      "doi": "10.1021/jp011815c",
+      "title": "Nanocrystal Arrested Precipitation in Supercritical Carbon Dioxide",
+      "authors": "Parag S. Shah; Shabbir Husain; Keith P. Johnston; Brian A. Korgel",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp011815c",
+      "main_status": "All eight supplied main pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "No supplied SI located or verified; absence not established. Review scope is the complete eight-page supplied main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "shah2001",
+    "recipe_family": "shah2001-ag/ir/pt-sc-co2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Synthesis"
+        }
+      ],
+      "note": "Procedure or evidence context, not an independent synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Complete supplied main PDF pp. 1–8"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Complete supplied main PDF pp. 1–8"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Complete supplied main PDF pp. 1–8"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "specimen",
+      "name": "Source-scoped Ag, Ir or Pt nanocrystal specimen; separate samples",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Preserve each source metal and sample separately; not an Ag–Ir–Pt alloy."
+      ],
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "grid",
+      "name": "200 mesh carbon-coated copper TEM grid",
+      "formula": null,
+      "role": "microscopy support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "on-grid",
+      "name": "Deposit the selected nanocrystal specimen on the TEM grid output",
+      "kind": "mixture",
+      "parent_ids": [
+        "specimen",
+        "grid"
+      ]
+    },
+    {
+      "id": "tem-data",
+      "name": "Acquire TEM and high-resolution TEM images output",
+      "kind": "mixture",
+      "parent_ids": [
+        "on-grid"
+      ]
+    },
+    {
+      "id": "sizes",
+      "name": "Measure particle sizes and distributions output",
+      "kind": "mixture",
+      "parent_ids": [
+        "tem-data"
+      ]
+    },
+    {
+      "id": "eds-data",
+      "name": "Acquire in situ EDS for the selected specimen output",
+      "kind": "mixture",
+      "parent_ids": [
+        "on-grid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "deposit",
+      "action": "grid_deposition",
+      "label": "Deposit the selected nanocrystal specimen on the TEM grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "specimen",
+        "grid"
+      ],
+      "outputs": [
+        "on-grid"
+      ],
+      "parameters": {
+        "grid_mesh": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mesh",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shah2001",
+              "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Carbon-coated copper grid. Deposition volume, drop count, drying conditions and carbon thickness are not supplied.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "action": "tem_imaging",
+      "label": "Acquire TEM and high-resolution TEM images",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "on-grid"
+      ],
+      "outputs": [
+        "tem-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shah2001",
+              "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "instrument_point_resolution": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "angstrom",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shah2001",
+              "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "JEOL 2010 high-resolution TEM with GATAN digital photography. The 1.7 Å number is instrument point resolution, not a measured lattice spacing.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "size",
+      "action": "particle_size_analysis",
+      "label": "Measure particle sizes and distributions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "image"
+      ],
+      "inputs": [
+        "tem-data"
+      ],
+      "outputs": [
+        "sizes"
+      ],
+      "parameters": {
+        "minimum_particles_per_sample": {
+          "value": null,
+          "minimum": 400,
+          "maximum": null,
+          "unit": "particles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "At least 400",
+          "evidence": [
+            {
+              "source_id": "shah2001",
+              "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Scion Image for Windows. At least 400 nanocrystals per sample; no raw particle list, sampling-field design or per-run actual N supplied. Widths represent polydispersity, not uncertainty of the measurement technique.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "eds",
+      "action": "energy_dispersive_xray",
+      "label": "Acquire in situ EDS for the selected specimen",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "on-grid"
+      ],
+      "outputs": [
+        "eds-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Oxford Link ISIS EDS attached to the JEOL 2010 TEM. Acquisition time, quantitative calibration and peak integration are not given; printed EDS Figure 6 is Ag-specific.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "analytical-context",
+      "source_sample_label": "Shared TEM/size-analysis/EDS method",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Characterization"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Analysis procedure only; individual microscopy fields and metal identities remain separate."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eight supplied main pages read and visually inspected with independent source, canonical, molecular, apparatus and reader audits. Nine Ag A–I experiments, separate Ir/Pt conditions, typical framework, common workup, unassigned microscopy/optical cohorts, prior comparisons and author models retain their distinct scope. No matched SI verified; no invented per-run masses, Pt precursor correction or atomic coordinates.",
+    "missing_fields": [
+      "SI not located or verified; absence is not established.",
+      "No measured atomic coordinates, refined unit cell, experimental CIF, XRD or SAED supplied.",
+      "Unless explicitly named, source figures lack an assigned Table 1 experiment or physical batch identity."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied main-paper review",
+      "url": "../paper-review.html?id=shah2001",
+      "relation": "Source text, all figures, table, equations and limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

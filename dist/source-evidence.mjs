@@ -7,6 +7,17 @@ function describe(value){
  return Object.entries(value).map(([key,val])=>human(key)+': '+describe(val)).join('; ');
 }
 function sourceLabel(e){return [e.source_id,e.document_role||e.document,e.pdf_page?'PDF page '+e.pdf_page:null,e.printed_page?'printed page '+e.printed_page:null,e.locator].filter(Boolean).join(' · ');}
+function presentationFacts(facts){
+ const rows=[],shared=new Map();
+ for(const fact of facts){
+  if(fact.canonical_material_id&&fact.basis==='reagent_specification'){
+   const {id,canonical_record_id,json_pointer,...specification}=fact,key=JSON.stringify(specification);
+   const existing=shared.get(key);if(existing){existing.records.add(canonical_record_id);continue;}
+   const row={fact,records:new Set([canonical_record_id])};shared.set(key,row);rows.push(row);
+  }else rows.push({fact,records:new Set()});
+ }
+ return rows;
+}
 
 export function sourceItemCard(item,{compact=false,sourceDoi=null,sourceId=null}={}){
  const card=el(compact?'details':'article',undefined,'source-evidence-item');card.dataset.evidenceItem=item.id;card.id='evidence-'+item.id;
@@ -15,7 +26,7 @@ export function sourceItemCard(item,{compact=false,sourceDoi=null,sourceId=null}
  for(const paragraph of item.paragraphs||[item.text])if(paragraph)card.append(el('p',describe(paragraph)));
  const scope=item.sample_scope;
  if(scope){const parts=[scope.formulations?.length?'Formulations: '+scope.formulations.join(', '):null,scope.state&&scope.state!=='Not assigned'?'State: '+human(scope.state):null,scope.scope_kind?'Scope: '+human(scope.scope_kind):null,scope.link_limit];card.append(el('p',parts.filter(Boolean).join(' · '),'source-sample-scope'));}
- if(item.facts?.length){const list=el('dl',undefined,'source-facts');for(const fact of item.facts){const row=el('div');row.append(el('dt',fact.label||fact.name||'Source fact'));const value=(fact.approximate?'≈ ':'')+describe(fact.value)+(fact.unit?' '+fact.unit:'');row.append(el('dd',value));for(const key of ['status','qualifier','basis'])if(fact[key])row.append(el('small',human(fact[key])));if(fact.evidence?.length)row.append(el('small',fact.evidence.map(sourceLabel).join('; ')));list.append(row);}card.append(list);}
+ if(item.facts?.length){const list=el('dl',undefined,'source-facts');for(const {fact,records} of presentationFacts(item.facts)){const row=el('div');row.append(el('dt',fact.label||fact.name||'Source fact'));const value=(fact.approximate?'≈ ':'')+describe(fact.value)+(fact.unit?' '+fact.unit:'');row.append(el('dd',value));for(const key of ['status','qualifier','basis'])if(fact[key])row.append(el('small',human(fact[key])));if(fact.evidence?.length)row.append(el('small',fact.evidence.map(sourceLabel).join('; ')));if(records.size>1)row.append(el('small','Source specification shared by '+records.size+' linked records.'));list.append(row);}card.append(list);}
  if(item.notes?.length){const list=el('ul');for(const note of item.notes)list.append(el('li',describe(note)));card.append(list);}
  for(const asset of item.original_assets||[]){if(!asset.public_asset)continue;const a=el('a',asset.label||'Open original source excerpt');a.href=new URL(asset.public_asset,import.meta.url);a.target='_blank';a.rel='noopener';card.append(a);}
  const evidence=item.evidence||[];if(evidence.length){const sources=el('p',undefined,'source-evidence-locator');for(const [i,e] of evidence.entries()){if(i)sources.append(document.createTextNode('; '));const label=sourceLabel(e);if(sourceDoi&&(!e.source_id||e.source_id===sourceId)){const a=el('a',label);a.href='https://doi.org/'+sourceDoi;sources.append(a);}else sources.append(document.createTextNode(label));}card.append(sources);}else if(item.source_locators?.length)card.append(el('small',describe(item.source_locators),'source-evidence-locator'));

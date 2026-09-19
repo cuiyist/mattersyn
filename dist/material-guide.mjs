@@ -1,9 +1,9 @@
 import {quantityValue} from './quantity-value.mjs';
-import {sourceItemCard} from './source-evidence.mjs';
-import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.12.0-r1';
-export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.12.0-r1';
-import {mountProtocol} from './protocol-visuals.mjs?v=0.12.0-r1';
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.12.0-r1';
+import {sourceItemCard} from './source-evidence.mjs?v=0.13.0-r2';
+import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.13.0-r2';
+export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.13.0-r2';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.13.0-r2';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.13.0-r2';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const link=(text,url)=>{const a=el('a',text);a.href=new URL(url,import.meta.url);return a;};
 let reviewIndex,figureDialog;

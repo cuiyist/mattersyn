@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shah-2001-growth-analysis",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Shah et al. (2001) · Nondimensional analysis of Ag particle distributions",
+  "material": {
+    "formula": "Ag",
+    "family": "Ligand-stabilized metal nanocrystals"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "shah2001",
+      "doi": "10.1021/jp011815c",
+      "title": "Nanocrystal Arrested Precipitation in Supercritical Carbon Dioxide",
+      "authors": "Parag S. Shah; Shabbir Husain; Keith P. Johnston; Brian A. Korgel",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp011815c",
+      "main_status": "All eight supplied main pages text and visually reviewed; independent source and canonical audits completed.",
+      "si_status": "No supplied SI located or verified; absence not established. Review scope is the complete eight-page supplied main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "shah2001",
+    "recipe_family": "shah2001-ag-sc-co2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 2, printed p. 9434, Experimental Section, Synthesis"
+        }
+      ],
+      "note": "Procedure or evidence context, not an independent synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Complete supplied main PDF pp. 1–8"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Complete supplied main PDF pp. 1–8"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Complete supplied main PDF pp. 1–8"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "distributions",
+      "name": "TEM-derived particle diameter distributions A–I",
+      "formula": null,
+      "role": "analytical input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+        },
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "volumes",
+      "name": "Convert TEM diameters to particle volumes output",
+      "kind": "mixture",
+      "parent_ids": [
+        "distributions"
+      ]
+    },
+    {
+      "id": "normalized",
+      "name": "Construct nondimensional distributions output",
+      "kind": "mixture",
+      "parent_ids": [
+        "volumes"
+      ]
+    },
+    {
+      "id": "moments",
+      "name": "Compare radius means and moment ratios output",
+      "kind": "mixture",
+      "parent_ids": [
+        "normalized"
+      ]
+    },
+    {
+      "id": "comparison",
+      "name": "Compare cumulative distributions with a coagulation model output",
+      "kind": "mixture",
+      "parent_ids": [
+        "normalized"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "volume",
+      "action": "spherical_volume_conversion",
+      "label": "Convert TEM diameters to particle volumes",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "distributions"
+      ],
+      "outputs": [
+        "volumes"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Assume spherical particles; geometric conversion is analytical, not evidence of atomically perfect spheres. Keep experiments A–I separate.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+        },
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+        }
+      ]
+    },
+    {
+      "id": "normalize",
+      "action": "distribution_normalization",
+      "label": "Construct nondimensional distributions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "volume"
+      ],
+      "inputs": [
+        "volumes"
+      ],
+      "outputs": [
+        "normalized"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use ψ1(η)=n(v)φ/N∞² and η=vN∞/φ, with N∞=∫n(v)dv and φ=∫v n(v)dv. ψ1 distributions are displayed for A–I in Figure 9. Raw n(v), counts and histogram processing are not supplied.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+        },
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+        }
+      ]
+    },
+    {
+      "id": "moments",
+      "action": "radius_moment_analysis",
+      "label": "Compare radius means and moment ratios",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "normalize"
+      ],
+      "inputs": [
+        "normalized"
+      ],
+      "outputs": [
+        "moments"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism moment definitions"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism moment definitions"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "r1=Σri/N∞; r3=(Σri³/N∞)^(1/3); rh=N∞/Σ(1/ri). Report µ1=r3/rh and µ3=r1/r3. The labels are the authors’ dimensionless radius ratios, not unqualified raw statistical moments.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism moment definitions"
+        }
+      ]
+    },
+    {
+      "id": "cumulative",
+      "action": "cumulative_distribution_comparison",
+      "label": "Compare cumulative distributions with a coagulation model",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "normalize"
+      ],
+      "inputs": [
+        "normalized"
+      ],
+      "outputs": [
+        "comparison"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism and Figure 10"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism and Figure 10"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "ψ2(η)=Nv/N∞ and Nv=∫v∞n(v)dv. The printed ψ2 integral uses ψ1(η) with dv; preserve that notation as source text rather than implement an unverified dimensionless normalization. Figure 10 compares measurements with long-time Brownian coagulation and unit sticking probability.",
+      "evidence": [
+        {
+          "source_id": "shah2001",
+          "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism and Figure 10"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "analysis-context",
+      "source_sample_label": "A–I statistical analysis workflow",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 5, printed p. 9437, Growth Mechanism"
+          },
+          {
+            "source_id": "shah2001",
+            "locator": "Main PDF p. 6, printed p. 9438, Growth Mechanism"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Analytical context only, not an additional synthesis or particle batch."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eight supplied main pages read and visually inspected with independent source, canonical, molecular, apparatus and reader audits. Nine Ag A–I experiments, separate Ir/Pt conditions, typical framework, common workup, unassigned microscopy/optical cohorts, prior comparisons and author models retain their distinct scope. No matched SI verified; no invented per-run masses, Pt precursor correction or atomic coordinates.",
+    "missing_fields": [
+      "SI not located or verified; absence is not established.",
+      "No measured atomic coordinates, refined unit cell, experimental CIF, XRD or SAED supplied.",
+      "Unless explicitly named, source figures lack an assigned Table 1 experiment or physical batch identity."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied main-paper review",
+      "url": "../paper-review.html?id=shah2001",
+      "relation": "Source text, all figures, table, equations and limitations."
+    },
+    {
+      "label": "Growth interpretation and model assumptions",
+      "url": "../records/shah-2001-growth-model.html",
+      "relation": "Measured summaries and theoretical limits remain distinct."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

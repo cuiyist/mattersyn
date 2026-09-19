@@ -7,7 +7,8 @@ SYMBOLS=set('H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe
 NAMES={'CdSe/ZnS':'Cadmium selenide / zinc sulfide core/shell','ZnS':'Zinc sulfide · shell-component context','CdSe/ZnSe':'Cadmium selenide / zinc selenide · coated dots and composite films','Si/SiOx':'Surface-oxidized silicon nanocrystal colloids','Si':'Silicon · cores and substrates','Ge/Si':'Germanium quantum dots on silicon','Ge':'Germanium in supported quantum-dot arrays','SiOx':'Silicon oxide surface layer · stoichiometry unresolved','CdSe':'Cadmium selenide','CdS':'Cadmium sulfide','CoFe2O4':'Cobalt ferrite','CoO':'Cobalt(II) oxide','CoO/CoFe2O4':'Cobalt oxide / cobalt ferrite core–shell','ZnO':'Zinc oxide','InP':'Indium phosphide','CsPbBr3':'Caesium lead bromide','PbS':'Lead sulfide','CdSe/CdS':'Cadmium selenide / cadmium sulfide core/shell','Ir':'Iridium','Fe–O':'Iron oxide · phase and stoichiometry unresolved','Fe3O4':'Magnetite','Fe2O3':'Iron(III) oxide'}
 NAMES['InAs']='Indium arsenide'
 NAMES['Ag/Si']='Silver nanocrystals on silicon'
-NAMES['Ag']='Silver · supported nanocrystal component'
+NAMES['Ag']='Silver nanocrystals'
+NAMES['Pt']='Platinum nanocrystals'
 NAMES['CdS/polymer']='Cadmium sulfide nanocrystals in chelate polymer microparticles'
 
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
