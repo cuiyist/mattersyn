@@ -1,0 +1,461 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "besson-2002-sims",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Besson et al. (2002) · Cadmium depth-distribution evidence",
+  "material": {
+    "formula": "CdS/SiO2",
+    "family": "Semiconductor quantum dots in ordered mesoporous silica",
+    "elements": [
+      "Cd",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdS",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Secondary ion mass spectrometry",
+  "sources": [
+    {
+      "id": "besson2002",
+      "doi": "10.1021/nl015685v",
+      "title": "3D Quantum Dot Lattice Inside Mesoporous Silica Films",
+      "authors": "Sophie Besson; Thierry Gacoin; Christian Ricolleau; Catherine Jacquiod; Jean-Pierre Boilot",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/nl015685v",
+      "main_status": "All six supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No supporting information supplied or matched; SI existence/availability is not established by the supplied six-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "besson2002",
+    "recipe_family": "besson2002-cds-mesoporous-silica",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 1, printed p. 409, Title and abstract"
+        }
+      ],
+      "note": "Material-system descriptor, not a single stoichiometric crystal. Mesoscopic order is distinct from the atomic CdS phase."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ctab-loaded",
+      "name": "CdS-loaded CTAB-templated silica film",
+      "formula": "CdS/SiO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, UV–visible results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 1"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "cadmium-adsorbed-film",
+      "name": "Cadmium-adsorbed silica film before hydrogen sulfide treatment",
+      "formula": null,
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "sims-data",
+      "name": "Measure cadmium distribution versus film depth output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ctab-loaded",
+        "cadmium-adsorbed-film"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "profile",
+      "action": "sims_depth_profile",
+      "label": "Measure cadmium distribution versus film depth",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ctab-loaded",
+        "cadmium-adsorbed-film"
+      ],
+      "outputs": [
+        "sims-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Two treatment states: Cd2+-impregnated before sulfiding and saturated CdS film. Instrument, primary ions, sputter conditions, depth calibration and raw profiles are not given. This is not an EDS dataset.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cadmium-adsorbed",
+      "source_sample_label": "Cadmium-impregnated film before H2S",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "saturated",
+      "source_sample_label": "CdS-saturated film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cadmium-adsorbed-depth",
+      "sample_id": "cadmium-adsorbed",
+      "property": "cadmium_depth_distribution",
+      "technique": "SIMS",
+      "value": {
+        "value": "Homogeneous cadmium distribution as a function of depth is reported; no numerical concentration profile or uncertainty is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+        }
+      ]
+    },
+    {
+      "id": "saturated-depth",
+      "sample_id": "saturated",
+      "property": "cadmium_depth_distribution",
+      "technique": "SIMS",
+      "value": {
+        "value": "Homogeneous cadmium distribution as a function of depth is reported; no numerical concentration profile or uncertainty is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, SIMS results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Acknowledgment of SIMS analyses"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Mesoporous silica preparation, repeated CdS pore loading, optical properties and microscopy retain separate host and nanoparticle structure scopes. Copolymer identity, several operation conditions and the Figure4 stage-assignment conflict remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "No SI, raw spectra, coordinate file, refined atomic lattice parameters or particle-by-particle size table is supplied.",
+      "Absolute synthesis charges, film area, impregnation and H2S exposure times, gas flow, vacuum level, and most acquisition settings are absent.",
+      "Mesoscopic 3D hexagonal order and atomic CdS blende fringes must remain separate structure descriptions."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete paper review",
+      "url": "../paper-review.html?id=besson2002",
+      "relation": "Original figures, source facts and unresolved limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,1047 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "besson-2002-xrd",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Besson et al. (2002) · Mesostructural diffraction during CdS filling",
+  "material": {
+    "formula": "CdS/SiO2",
+    "family": "Semiconductor quantum dots in ordered mesoporous silica",
+    "elements": [
+      "Cd",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdS",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Low-angle X-ray diffraction in Bragg–Brentano geometry",
+  "sources": [
+    {
+      "id": "besson2002",
+      "doi": "10.1021/nl015685v",
+      "title": "3D Quantum Dot Lattice Inside Mesoporous Silica Films",
+      "authors": "Sophie Besson; Thierry Gacoin; Christian Ricolleau; Catherine Jacquiod; Jean-Pierre Boilot",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/nl015685v",
+      "main_status": "All six supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No supporting information supplied or matched; SI existence/availability is not established by the supplied six-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "besson2002",
+    "recipe_family": "besson2002-cds-mesoporous-silica",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 1, printed p. 409, Title and abstract"
+        }
+      ],
+      "note": "Material-system descriptor, not a single stoichiometric crystal. Mesoscopic order is distinct from the atomic CdS phase."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ctab-host",
+      "name": "Calcined CTAB-templated mesoporous silica film",
+      "formula": "SiO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Mesoporous matrix preparation, lower left to upper right"
+        }
+      ]
+    },
+    {
+      "id": "cadmium-adsorbed-film",
+      "name": "Cadmium-adsorbed silica film before hydrogen sulfide treatment",
+      "formula": null,
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "ctab-loaded",
+      "name": "CdS-loaded CTAB-templated silica film",
+      "formula": "CdS/SiO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, UV–visible results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 1"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xrd-specimens",
+      "name": "Place the textured film in Bragg–Brentano geometry output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "ctab-host",
+        "cadmium-adsorbed-film",
+        "ctab-loaded"
+      ]
+    },
+    {
+      "id": "xrd-data",
+      "name": "Acquire low-angle diffraction patterns output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xrd-specimens"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "align",
+      "action": "textured_film_geometry",
+      "label": "Place the textured film in Bragg–Brentano geometry",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ctab-host",
+        "cadmium-adsorbed-film",
+        "ctab-loaded"
+      ],
+      "outputs": [
+        "xrd-specimens"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate initial, Cd-adsorbed and cycle-treated films or states; not a mixture. The c-axis is normal to the film. No sample area or mounting details are reported.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "acquire",
+      "action": "low_angle_xrd",
+      "label": "Acquire low-angle diffraction patterns",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "align"
+      ],
+      "inputs": [
+        "xrd-specimens"
+      ],
+      "outputs": [
+        "xrd-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "X’Pert Philips diffractometer, Cu Kα radiation. The mesostructural 0002 reflection and its harmonic dominate due to texture; no CdS atomic diffraction pattern is reported.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "calcined",
+      "source_sample_label": "Initial calcined CTAB host",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No physical-batch identifiers; source treatment-state scope only. Before H2S, cadmium is adsorbed and CdS is not yet present."
+      ]
+    },
+    {
+      "sample_id": "cadmium-adsorbed",
+      "source_sample_label": "Before the first H2S treatment",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No physical-batch identifiers; source treatment-state scope only. Before H2S, cadmium is adsorbed and CdS is not yet present."
+      ]
+    },
+    {
+      "sample_id": "first-h2s",
+      "source_sample_label": "After the first H2S treatment",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No physical-batch identifiers; source treatment-state scope only. Before H2S, cadmium is adsorbed and CdS is not yet present."
+      ]
+    },
+    {
+      "sample_id": "saturated",
+      "source_sample_label": "Saturated CdS/CTAB silica film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No physical-batch identifiers; source treatment-state scope only. Before H2S, cadmium is adsorbed and CdS is not yet present."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "calcined-meso-c",
+      "sample_id": "calcined",
+      "property": "xrd_mesoscopic_c_parameter",
+      "technique": "X-ray diffraction",
+      "value": {
+        "value": 6.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Mesoscopic silica/CdS array parameter, not an atomic CdS unit-cell parameter.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "cadmium-adsorbed-meso-c",
+      "sample_id": "cadmium-adsorbed",
+      "property": "xrd_mesoscopic_c_parameter",
+      "technique": "X-ray diffraction",
+      "value": {
+        "value": 6.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Mesoscopic silica/CdS array parameter, not an atomic CdS unit-cell parameter.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "saturated-meso-c",
+      "sample_id": "saturated",
+      "property": "xrd_mesoscopic_c_parameter",
+      "technique": "X-ray diffraction",
+      "value": {
+        "value": 7.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Mesoscopic silica/CdS array parameter, not an atomic CdS unit-cell parameter.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "adsorbed-relative-intensity",
+      "sample_id": "cadmium-adsorbed",
+      "property": "0002_intensity_relative_to_calcined_host",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 0.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Prose says twice less intense after first Cd adsorption; approximate qualitative comparison, not a fitted peak integral.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "initial-shift",
+      "sample_id": "cadmium-adsorbed",
+      "property": "0002_peak_shift",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Shifts toward larger 2θ after Cd adsorption, with c decreasing 6.9 to 6.8 nm; possible high-pH silica-wall condensation.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "contrast-inversion",
+      "sample_id": "first-h2s",
+      "property": "0002_intensity_evolution",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Intensity decreases dramatically after first H2S, then rises progressively with further CdS filling. Authors assign this to inversion from silica–air to silica–CdS scattering contrast, not loss and recovery of order.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "peak-width",
+      "sample_id": "saturated",
+      "property": "0002_peak_width_evolution",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "No significant peak-width change is reported; no numerical FWHM, domain-size fit or uncertainty is supplied. Constant ordered-domain size and homogeneous growth are author inferences.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "growth-shift",
+      "sample_id": "saturated",
+      "property": "0002_peak_shift",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Progressive shift toward lower 2θ during filling, with c reaching 7.2 nm; attributed to slight pore deformation upon filling.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, XRD acquisition and initial adsorption"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 and XRD discussion"
+        }
+      ]
+    },
+    {
+      "id": "figure-range",
+      "sample_id": "saturated",
+      "property": "figure2_displayed_two_theta_range",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 2.2,
+        "maximum": 2.9,
+        "unit": "degree",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 axis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Plot range, not a separately stated scan acquisition range.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 axis"
+        }
+      ]
+    },
+    {
+      "id": "calcined-scale",
+      "sample_id": "calcined",
+      "property": "figure2_intensity_display_multiplier",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 0.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 label"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 label"
+        }
+      ]
+    },
+    {
+      "id": "first-cycle-scale",
+      "sample_id": "first-h2s",
+      "property": "figure2_intensity_display_multiplier",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2 label"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2 label"
+        }
+      ]
+    },
+    {
+      "id": "trace-labels",
+      "sample_id": "saturated",
+      "property": "figure2_trace_labels",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Calcined film, Cd2+-impregnated film, and cycles 1, 2, 3, 4, 5, 7 and 9 are labeled. Intensity axis is arbitrary units; no raw numerical intensities supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Mesoporous silica preparation, repeated CdS pore loading, optical properties and microscopy retain separate host and nanoparticle structure scopes. Copolymer identity, several operation conditions and the Figure4 stage-assignment conflict remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "No SI, raw spectra, coordinate file, refined atomic lattice parameters or particle-by-particle size table is supplied.",
+      "Absolute synthesis charges, film area, impregnation and H2S exposure times, gas flow, vacuum level, and most acquisition settings are absent.",
+      "Mesoscopic 3D hexagonal order and atomic CdS blende fringes must remain separate structure descriptions."
+    ],
+    "conflicts": [
+      "Saturated-film XRD discussion gives mesoscopic c = 7.2 nm, while saturated-film HRTEM/power-spectrum discussion gives approximately c = 6.8 nm. The paper does not resolve the discrepancy; do not collapse them into a single fitted parameter."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete paper review",
+      "url": "../paper-review.html?id=besson2002",
+      "relation": "Original figures, source facts and unresolved limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

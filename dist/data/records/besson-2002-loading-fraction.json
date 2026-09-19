@@ -1,0 +1,830 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "besson-2002-loading-fraction",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Besson et al. (2002) · CdS volume fraction and pore-filling estimate",
+  "material": {
+    "formula": "CdS/SiO2",
+    "family": "Semiconductor quantum dots in ordered mesoporous silica",
+    "elements": [
+      "Cd",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdS",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Absorbance calibration and mesopore-volume comparison",
+  "sources": [
+    {
+      "id": "besson2002",
+      "doi": "10.1021/nl015685v",
+      "title": "3D Quantum Dot Lattice Inside Mesoporous Silica Films",
+      "authors": "Sophie Besson; Thierry Gacoin; Christian Ricolleau; Catherine Jacquiod; Jean-Pierre Boilot",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/nl015685v",
+      "main_status": "All six supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No supporting information supplied or matched; SI existence/availability is not established by the supplied six-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "besson2002",
+    "recipe_family": "besson2002-cds-mesoporous-silica",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 1, printed p. 409, Title and abstract"
+        }
+      ],
+      "note": "Material-system descriptor, not a single stoichiometric crystal. Mesoscopic order is distinct from the atomic CdS phase."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ctab-loaded",
+      "name": "CdS-loaded CTAB-templated silica film",
+      "formula": "CdS/SiO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, UV–visible results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 1"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "cds-colloid",
+      "name": "CdS reference colloid; cited reverse-micelle preparation",
+      "formula": "CdS",
+      "role": "calibration_reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "volume-calibration",
+      "name": "Compare saturated-film absorbance with a CdS colloid reference output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ctab-loaded",
+        "cds-colloid"
+      ]
+    },
+    {
+      "id": "filling-estimate",
+      "name": "Estimate CdS loading and mesopore filling output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "volume-calibration"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "compare",
+      "action": "absorbance_reference_comparison",
+      "label": "Compare saturated-film absorbance with a CdS colloid reference",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ctab-loaded",
+        "cds-colloid"
+      ],
+      "outputs": [
+        "volume-calibration"
+      ],
+      "parameters": {
+        "reference_mean_diameter": {
+          "value": 3.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+            },
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+            },
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reference maximum absorbance comes from a same-average-size CdS colloid. Reverse-micelle preparation is cited in note 38 to reference 42, without reagents or a complete recipe here. Concentration, path-length normalization and full conversion equation are absent.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    },
+    {
+      "id": "estimate",
+      "action": "volume_fraction_ratio",
+      "label": "Estimate CdS loading and mesopore filling",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "compare"
+      ],
+      "inputs": [
+        "volume-calibration"
+      ],
+      "outputs": [
+        "filling-estimate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Authors compare inferred CdS volume fraction with mesopore volume fraction calculated from crystallographic data. Preserve the reported approximate 85% value; no new exact 13/15 calculation replaces it.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "saturated",
+      "source_sample_label": "Saturated CTAB-host film, optical filling model",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "reference",
+      "source_sample_label": "CdS colloid used only for optical calibration",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "reference-size",
+      "sample_id": "reference",
+      "property": "reference_colloid_average_diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 3.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source calls this the same average size as the saturated-film particles, whereas the UV–visible growth section gives 3.6 nm for saturation. Distinct reported contexts retained.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    },
+    {
+      "id": "cds-volume",
+      "sample_id": "saturated",
+      "property": "cds_volume_fraction",
+      "technique": "Absorbance-reference comparison",
+      "value": {
+        "value": 13,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    },
+    {
+      "id": "pore-volume",
+      "sample_id": "saturated",
+      "property": "mesopore_volume_fraction",
+      "technique": "Crystallographic mesopore model",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    },
+    {
+      "id": "pores-per-cell",
+      "sample_id": "saturated",
+      "property": "mesopores_per_mesoscopic_hexagonal_unit_cell",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Model input; not two atoms or CdS formula units per atomic cell.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    },
+    {
+      "id": "pore-filling",
+      "sample_id": "saturated",
+      "property": "mesopore_volume_filling_fraction",
+      "technique": "Comparison of CdS and mesopore volume fractions",
+      "value": {
+        "value": 85,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Author-rounded estimate; no uncertainty or full calibration data supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    },
+    {
+      "id": "reference-method",
+      "sample_id": "reference",
+      "property": "reference_colloid_preparation_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Reverse-micelle technique is named in reference note 38, citing reference 42; chemicals, concentrations and operations are not reproduced. This is a calibration comparator, not a newly complete synthesis route.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, CdS and mesopore volume fractions"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 5, printed p. 413, Reference note 36"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 6, printed p. 414, Reference note 38"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Mesoporous silica preparation, repeated CdS pore loading, optical properties and microscopy retain separate host and nanoparticle structure scopes. Copolymer identity, several operation conditions and the Figure4 stage-assignment conflict remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "No SI, raw spectra, coordinate file, refined atomic lattice parameters or particle-by-particle size table is supplied.",
+      "Absolute synthesis charges, film area, impregnation and H2S exposure times, gas flow, vacuum level, and most acquisition settings are absent.",
+      "Mesoscopic 3D hexagonal order and atomic CdS blende fringes must remain separate structure descriptions."
+    ],
+    "conflicts": [
+      "Optical growth endpoints report 3.6 nm at CTAB saturation, while the volume-calibration paragraph uses a 3.5 nm same-average-size colloid comparison. These rounded/contextual values are retained separately.",
+      "About 85% pore filling is a volume model, not proof that every pore is full; HRTEM notes a few empty pores despite also using totally filled wording."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete paper review",
+      "url": "../paper-review.html?id=besson2002",
+      "relation": "Original figures, source facts and unresolved limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

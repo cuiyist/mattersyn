@@ -1,0 +1,773 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "besson-2002-cadmium-stock",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Besson et al. (2002) · Cadmium–citrate–ammonia impregnation solution",
+  "material": {
+    "formula": "CdS/SiO2",
+    "family": "Semiconductor quantum dots in ordered mesoporous silica",
+    "elements": [
+      "Cd",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdS",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Aqueous coordination and pH adjustment",
+  "sources": [
+    {
+      "id": "besson2002",
+      "doi": "10.1021/nl015685v",
+      "title": "3D Quantum Dot Lattice Inside Mesoporous Silica Films",
+      "authors": "Sophie Besson; Thierry Gacoin; Christian Ricolleau; Catherine Jacquiod; Jean-Pierre Boilot",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/nl015685v",
+      "main_status": "All six supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No supporting information supplied or matched; SI existence/availability is not established by the supplied six-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "besson2002",
+    "recipe_family": "besson2002-cds-mesoporous-silica",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 1, printed p. 409, Title and abstract"
+        }
+      ],
+      "note": "Material-system descriptor, not a single stoichiometric crystal. Mesoscopic order is distinct from the atomic CdS phase."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cadmium-nitrate",
+      "name": "Cadmium nitrate; hydration state not specified",
+      "formula": "Cd(NO3)2",
+      "role": "metal_precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water; deionized for the rinse",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Mesoporous matrix preparation, lower left to upper right"
+        }
+      ]
+    },
+    {
+      "id": "ammonia",
+      "name": "Ammonia; stock formulation and concentration unspecified",
+      "formula": "NH3",
+      "role": "complexing_agent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    },
+    {
+      "id": "sodium-citrate",
+      "name": "Sodium citrate; protonation, sodium stoichiometry and hydrate unspecified",
+      "formula": null,
+      "role": "complexing_agent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "nitrate-water",
+      "name": "Starting cadmium nitrate solution",
+      "components": [
+        {
+          "material_id": "cadmium-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "cadmium_nitrate_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Starting stock, not the final concentration after ligand additions.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    },
+    {
+      "id": "citrate-water",
+      "name": "Sodium citrate stock",
+      "components": [
+        {
+          "material_id": "sodium-citrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "sodium_citrate_concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Source associates 1 M in water with sodium citrate. Do not assign 1 M to ammonia.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    },
+    {
+      "id": "final-stock",
+      "name": "Basic cadmium impregnation solution",
+      "components": [
+        {
+          "material_id": "cadmium-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        },
+        {
+          "material_id": "ammonia",
+          "quantities": {}
+        },
+        {
+          "material_id": "sodium-citrate",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "final_cadmium_concentration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        },
+        "final_pH": {
+          "value": 9.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "pH",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "prepare",
+        "complex",
+        "adjust-ph"
+      ],
+      "scope": "Final volume and concentrations are unknown; two ammonia additions are distinct.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "nitrate-solution",
+      "name": "Prepare the starting aqueous cadmium nitrate stock output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cadmium-nitrate",
+        "water"
+      ]
+    },
+    {
+      "id": "complexed-cd",
+      "name": "Add ammonia and aqueous sodium citrate output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nitrate-solution",
+        "ammonia",
+        "sodium-citrate",
+        "water"
+      ]
+    },
+    {
+      "id": "impregnation-solution",
+      "name": "Add further ammonia to pH 9.5 output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "complexed-cd",
+        "ammonia"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare",
+      "action": "aqueous_stock_preparation",
+      "label": "Prepare the starting aqueous cadmium nitrate stock",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cadmium-nitrate",
+        "water"
+      ],
+      "outputs": [
+        "nitrate-solution"
+      ],
+      "parameters": {
+        "cadmium_nitrate_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        },
+        "solution_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The paper starts from this solution; salt hydration and absolute charge are unreported.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    },
+    {
+      "id": "complex",
+      "action": "ligand_addition",
+      "label": "Add ammonia and aqueous sodium citrate",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare"
+      ],
+      "inputs": [
+        "nitrate-solution",
+        "ammonia",
+        "sodium-citrate",
+        "water"
+      ],
+      "outputs": [
+        "complexed-cd"
+      ],
+      "parameters": {
+        "ammonia_equivalents": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "equiv",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source says one equivalent added to the cadmium solution; reference amount is not explicitly defined.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        },
+        "sodium_citrate_equivalents": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "equiv",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source says one equivalent; reference amount is not explicitly defined.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        },
+        "citrate_stock_concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        },
+        "ammonia_stock_concentration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Order between the two ligand additions is not specified. No nitrate/citrate complex stoichiometry is assigned.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    },
+    {
+      "id": "adjust-ph",
+      "action": "ammonia_ph_adjustment",
+      "label": "Add further ammonia to pH 9.5",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "complex"
+      ],
+      "inputs": [
+        "complexed-cd",
+        "ammonia"
+      ],
+      "outputs": [
+        "impregnation-solution"
+      ],
+      "parameters": {
+        "target_pH": {
+          "value": 9.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "pH",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        },
+        "additional_ammonia_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "pH 9.5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Further ammonia supplements the initial one-equivalent charge; total ammonia and final Cd concentration cannot be reconstructed.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "stock",
+      "source_sample_label": "Cadmium impregnation solution",
+      "batch_id": null,
+      "material_state_id": "impregnation-solution",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Cadmium impregnation solution and impregnation–precipitation protocol"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "solution-purpose",
+      "sample_id": "stock",
+      "property": "complexant_function",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Citrate and ammonia retain soluble cadmium species in the alkaline adsorption window and prevent hydroxide precipitation.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 2, printed p. 410, Chemical strategy and pH window"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Chemical strategy and pH window"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Mesoporous silica preparation, repeated CdS pore loading, optical properties and microscopy retain separate host and nanoparticle structure scopes. Copolymer identity, several operation conditions and the Figure4 stage-assignment conflict remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "No SI, raw spectra, coordinate file, refined atomic lattice parameters or particle-by-particle size table is supplied.",
+      "Absolute synthesis charges, film area, impregnation and H2S exposure times, gas flow, vacuum level, and most acquisition settings are absent.",
+      "Mesoscopic 3D hexagonal order and atomic CdS blende fringes must remain separate structure descriptions."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete paper review",
+      "url": "../paper-review.html?id=besson2002",
+      "relation": "Original figures, source facts and unresolved limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

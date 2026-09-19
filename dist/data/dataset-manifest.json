@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.15.0",
-  "record_count": 309,
-  "group_count": 21,
+  "dataset_version": "0.16.0",
+  "record_count": 321,
+  "group_count": 22,
   "families": [
     "Colloidal semiconductor nanocrystals",
     "II-VI colloidal nanocrystals",
@@ -18,6 +18,7 @@
     "Metal nanocrystals on semiconductor substrates",
     "Metal oxides",
     "Noble-metal nanocrystals",
+    "Semiconductor quantum dots in ordered mesoporous silica",
     "Semiconductor quantum-dot quantum-well heterostructures",
     "Supported group-IV quantum-dot arrays",
     "Surface-functionalized II–VI quantum dots",
@@ -27,6 +28,593 @@
   ],
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
   "records": [
+    {
+      "record_id": "besson-2002-cadmium-stock",
+      "title": "Besson et al. (2002) · Cadmium–citrate–ammonia impregnation solution",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Aqueous coordination and pH adjustment",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "ed04df6bf13fe06a8320519cbc7a782ef0254f1f65b533ba5dc0d5f388532bba",
+      "recipe_signature": "d76bd24bb846d8b550e6affd8728724d2f20a7728ce4ddf691bdde30d2511e83",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-cadmium-stock.json",
+      "page_url": "records/besson-2002-cadmium-stock.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-chemical-intuition",
+      "title": "Besson et al. (2002) · Chemical intuition and evidence-limited mechanism",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Source-scoped characterization and interpretation",
+      "record_type": "observation",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "27b6228f2035358c2d307b89bf25a904d1632562d2d1f48e1e0f23cbd9023ca0",
+      "recipe_signature": "abe4a9c035df803b61cb19a7571e2a627b1416e5f45c3f6585f177b6bdc056a0",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-chemical-intuition.json",
+      "page_url": "records/besson-2002-chemical-intuition.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-copolymer-cds-loading",
+      "title": "Besson et al. (2002) · Triblock-copolymer-templated CdS/silica film",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Repeated cadmium adsorption and gaseous hydrogen-sulfide precipitation",
+      "record_type": "protocol_variant",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "a802f888ca7fe36ac8a1cd319ed4b816b07187ebfea293a51d49ed0cf411df97",
+      "recipe_signature": "7b443681d74111133c9f9822c10b7195e6a204fa64686706bb485e064151b775",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-copolymer-cds-loading.json",
+      "page_url": "records/besson-2002-copolymer-cds-loading.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-ctab-cds-loading",
+      "title": "Besson et al. (2002) · CTAB-templated CdS/silica film",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Repeated cadmium adsorption and gaseous hydrogen-sulfide precipitation",
+      "record_type": "literature_protocol",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "aab94f760811adb7162e606fb4b8d630729f12f5435ae4d2887ace8b04291359",
+      "recipe_signature": "4a613a0c83a29e87c8373c33366a6ca11f63a9574c05f6404867baf47b619345",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-ctab-cds-loading.json",
+      "page_url": "records/besson-2002-ctab-cds-loading.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-ctab-silica-host",
+      "title": "Besson et al. (2002) · CTAB-templated mesoporous silica host",
+      "formula": "SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Acid-catalyzed sol–gel preparation, spin coating and template calcination",
+      "record_type": "literature_protocol",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "6e195ccf2d8e02ff19399e51c6886ba29727d837848b7cefa5cad1d49185b02e",
+      "recipe_signature": "565c74ab0ca49603d72b3ab98f10a530eea9dca66716ae1758aadf82afc1f2eb",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-ctab-silica-host.json",
+      "page_url": "records/besson-2002-ctab-silica-host.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-hrtem",
+      "title": "Besson et al. (2002) · HRTEM and Fourier power of the CdS mesoscopic lattice",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Cross-sectional high-resolution TEM and image Fourier power",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "0656b014bdfb711dfcb36d039f96038b8868e0ba734c0bb9559b67dd0ba83fb2",
+      "recipe_signature": "5c58aa2b3ff2d864358462227afb5a2eb821f3a01f26dc0d53e41aea3fe43d68",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-hrtem.json",
+      "page_url": "records/besson-2002-hrtem.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-literature-context",
+      "title": "Besson et al. (2002) · Cited methods, study scope and unresolved evidence",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Source-scoped characterization and interpretation",
+      "record_type": "observation",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "f931af058eb8bc0f9516f40c570094da4b93cfdfdcca77b45f60c2c428ae8c59",
+      "recipe_signature": "abe4a9c035df803b61cb19a7571e2a627b1416e5f45c3f6585f177b6bdc056a0",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-literature-context.json",
+      "page_url": "records/besson-2002-literature-context.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-loading-fraction",
+      "title": "Besson et al. (2002) · CdS volume fraction and pore-filling estimate",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Absorbance calibration and mesopore-volume comparison",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "dbd6aabf7a5faa7521abf9cceceb2c46749773e6baefccd8bd4cbeeb258acb0a",
+      "recipe_signature": "1b1abe2103bdb4ee785edebf830bcacd64bd911c832422b14344b169fd02f88f",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-loading-fraction.json",
+      "page_url": "records/besson-2002-loading-fraction.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-pl-silicon",
+      "title": "Besson et al. (2002) · Silicon-supported film preparation and photoluminescence",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Stage-resolved photoluminescence and excitation spectroscopy",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "dd3bda9d4ff2f82677409830e6195734da442dda11c2ca4d5e4477a18e1fb5f7",
+      "recipe_signature": "4316a4dc8d051b08bdb4dbaa068a8d4b5ced5e463585ff5f657baa6fbb7f7188",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-pl-silicon.json",
+      "page_url": "records/besson-2002-pl-silicon.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-sims",
+      "title": "Besson et al. (2002) · Cadmium depth-distribution evidence",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Secondary ion mass spectrometry",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "717f294159e86b4e074e22b560d7ff9830d6575849a9bb3895f448370f99a367",
+      "recipe_signature": "0fc1e994224b77eed4df72eea2ae7ef85f9de58d4042bd380c5fada7b81a90a4",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-sims.json",
+      "page_url": "records/besson-2002-sims.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-uv-visible",
+      "title": "Besson et al. (2002) · Absorption evolution and optical size inference",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "UV–visible spectroscopy and published gap–size correlation",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "33c251b6debf35bfaefef5eaf109e3e8485e4d229233f6a33f2b299001320487",
+      "recipe_signature": "0a3c1f232e175ac297d8c5055d7744a3046606c77fb6bb10c0fae9f31cbcaf53",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-uv-visible.json",
+      "page_url": "records/besson-2002-uv-visible.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
+    {
+      "record_id": "besson-2002-xrd",
+      "title": "Besson et al. (2002) · Mesostructural diffraction during CdS filling",
+      "formula": "CdS/SiO2",
+      "family": "Semiconductor quantum dots in ordered mesoporous silica",
+      "method": "Low-angle X-ray diffraction in Bragg–Brentano geometry",
+      "record_type": "procedure",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl015685v",
+      "revision": 1,
+      "record_sha256": "e66f929d3cc3188618e77c80bdb4e8af001b5fa0957068df0a4c5fe9181e9571",
+      "recipe_signature": "4e76d19585ed46ad469fd36f165621ca384d9821e8877807424d049994cf8ede",
+      "group_id": "group-76d7b607660b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/besson-2002-xrd.json",
+      "page_url": "records/besson-2002-xrd.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "SiO2"
+      ]
+    },
     {
       "record_id": "braun-2001-absorption-acquisition",
       "title": "Braun et al. (2001) · Stage-resolved steady-state absorption",

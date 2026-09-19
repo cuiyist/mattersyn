@@ -1,0 +1,1146 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "besson-2002-hrtem",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Besson et al. (2002) · HRTEM and Fourier power of the CdS mesoscopic lattice",
+  "material": {
+    "formula": "CdS/SiO2",
+    "family": "Semiconductor quantum dots in ordered mesoporous silica",
+    "elements": [
+      "Cd",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdS",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Cross-sectional high-resolution TEM and image Fourier power",
+  "sources": [
+    {
+      "id": "besson2002",
+      "doi": "10.1021/nl015685v",
+      "title": "3D Quantum Dot Lattice Inside Mesoporous Silica Films",
+      "authors": "Sophie Besson; Thierry Gacoin; Christian Ricolleau; Catherine Jacquiod; Jean-Pierre Boilot",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/nl015685v",
+      "main_status": "All six supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No supporting information supplied or matched; SI existence/availability is not established by the supplied six-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "besson2002",
+    "recipe_family": "besson2002-cds-mesoporous-silica",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 1, printed p. 409, Title and abstract"
+        }
+      ],
+      "note": "Material-system descriptor, not a single stoichiometric crystal. Mesoscopic order is distinct from the atomic CdS phase."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Complete supplied main PDF pp. 1–6"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ctab-loaded",
+      "name": "CdS-loaded CTAB-templated silica film",
+      "formula": "CdS/SiO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, UV–visible results"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, Figure 1"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "ctab-host",
+      "name": "Calcined CTAB-templated mesoporous silica film",
+      "formula": "SiO2",
+      "role": "comparison_specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 2, printed p. 410, Mesoporous matrix preparation, lower left to upper right"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "cross-sections",
+      "name": "Prepare or select cross sections of filled and empty films output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "ctab-loaded",
+        "ctab-host"
+      ]
+    },
+    {
+      "id": "hrtem-data",
+      "name": "Image the cross sections under slight underfocus output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "cross-sections"
+      ]
+    },
+    {
+      "id": "power-spectrum",
+      "name": "Calculate the image power spectrum output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "hrtem-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "section",
+      "action": "cross_section_specimen",
+      "label": "Prepare or select cross sections of filled and empty films",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ctab-loaded",
+        "ctab-host"
+      ],
+      "outputs": [
+        "cross-sections"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cross sections are reported, but cutting, thinning, grid, embedding and thickness details are not provided. Empty and filled films remain separate comparators.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "action": "high_resolution_tem",
+      "label": "Image the cross sections under slight underfocus",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "section"
+      ],
+      "inputs": [
+        "cross-sections"
+      ],
+      "outputs": [
+        "hrtem-data"
+      ],
+      "parameters": {
+        "acceleration_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+            },
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+            }
+          ],
+          "derivation": null
+        },
+        "point_resolution": {
+          "value": 0.18,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+            },
+            {
+              "source_id": "besson2002",
+              "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Topcon 002B microscope. Slight underfocus enhances particle/matrix contrast; numerical defocus is absent. Comparison assumes equal specimen thickness and experimental conditions and states identical objective-lens underfocus.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "fourier",
+      "action": "image_fourier_power",
+      "label": "Calculate the image power spectrum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "image"
+      ],
+      "inputs": [
+        "hrtem-data"
+      ],
+      "outputs": [
+        "power-spectrum"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 3d is the squared modulus of the Fourier transform of Figure 3a, not selected-area electron diffraction and not a separately acquired atomic diffraction pattern.",
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "filled",
+      "source_sample_label": "Figure 3a and enlarged 3c: saturated CTAB-host film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "empty",
+      "source_sample_label": "Figure 3b: calcined film before impregnation",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "power",
+      "source_sample_label": "Figure 3d: Fourier power of Figure 3a",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "filled-scale-bar",
+      "sample_id": "filled",
+      "property": "figure3a_scale_bar_length",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3a"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3a"
+        }
+      ]
+    },
+    {
+      "id": "empty-scale-bar",
+      "sample_id": "empty",
+      "property": "figure3b_scale_bar_length",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3b"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3b"
+        }
+      ]
+    },
+    {
+      "id": "enlargement-scale-bar",
+      "sample_id": "filled",
+      "property": "figure3c_scale_bar_length",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3c"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3c"
+        }
+      ]
+    },
+    {
+      "id": "contrast",
+      "sample_id": "filled",
+      "property": "filled_empty_image_contrast",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Filled CdS particles appear as dark dots on lighter background; empty pores appear light on darker silica. Authors compare this inversion with XRD contrast inversion.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "contrast-assumptions",
+      "sample_id": "filled",
+      "property": "contrast_interpretation_assumptions",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "HRTEM contrast also depends on zone-axis orientation, specimen thickness, focus and accelerating voltage. Filled/empty contrast interpretation assumes the same thickness and experimental conditions, including identical underfocus.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "filling",
+      "sample_id": "filled",
+      "property": "pore_occupancy_observation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Homogeneous particle filling and preserved periodic order are observed; a few white points near the film/substrate interface are interpreted as remaining empty pores. The prose also uses totally filled, which must not override these exceptions or the independent approximately 85% volume-filling estimate.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "atomic-fringes",
+      "sample_id": "filled",
+      "property": "local_atomic_structure_assignment",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Some clusters show 111 fringes of blende-type CdS; cited reference 39 supports this size-regime assignment. No atomic lattice constant, fringe distance, phase fraction or refined coordinates are reported.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "orientation-contrast",
+      "sample_id": "filled",
+      "property": "particle_orientation_contrast",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Darkest particles are attributed to zone-axis, strong-Bragg orientations; differing particle orientations affect contrast.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "projection",
+      "sample_id": "filled",
+      "property": "mesoscopic_projection",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Projected 3D particle array with slight misorientation of the mesostructural [11−20] direction relative to the electron beam; superposition accounts for continuous gray contrast between some particles.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "power-definition",
+      "sample_id": "power",
+      "property": "image_power_definition",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Power spectrum = |Fourier transform|² of the cross-sectional image; Figure 3d is not SAED.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "meso-space-group",
+      "sample_id": "power",
+      "property": "mesoscopic_space_group",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "P6₃/mmc",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Mesoscopic pore/particle array, not atomic CdS space group.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "meso-a",
+      "sample_id": "power",
+      "property": "image_derived_mesoscopic_a_parameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "meso-c",
+      "sample_id": "power",
+      "property": "image_derived_mesoscopic_c_parameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 6.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "meso-c-a",
+      "sample_id": "power",
+      "property": "image_derived_mesoscopic_c_over_a",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 1.13,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+          },
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 3, printed p. 411, TEM acquisition"
+        },
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3 and HRTEM discussion"
+        }
+      ]
+    },
+    {
+      "id": "power-labels",
+      "sample_id": "power",
+      "property": "figure3d_index_labels",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "0002, 01−11 and 01−10 are indexed in the image power spectrum.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "besson2002",
+            "locator": "Main PDF p. 4, printed p. 412, Figure 3d"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Four-index mesoscopic hexagonal labels. Overbars are retained in plain-text minus notation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "besson2002",
+          "locator": "Main PDF p. 4, printed p. 412, Figure 3d"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Mesoporous silica preparation, repeated CdS pore loading, optical properties and microscopy retain separate host and nanoparticle structure scopes. Copolymer identity, several operation conditions and the Figure4 stage-assignment conflict remain unresolved. Matching SI not located or verified; cited upstream preparations and theory are not independently reviewed here.",
+    "missing_fields": [
+      "No SI, raw spectra, coordinate file, refined atomic lattice parameters or particle-by-particle size table is supplied.",
+      "Absolute synthesis charges, film area, impregnation and H2S exposure times, gas flow, vacuum level, and most acquisition settings are absent.",
+      "Mesoscopic 3D hexagonal order and atomic CdS blende fringes must remain separate structure descriptions."
+    ],
+    "conflicts": [
+      "HRTEM discussion gives mesoscopic c approximately 6.8 nm for the filled-film image, versus XRD saturated-film c = 7.2 nm. No resolution is supplied.",
+      "The prose says totally filled but explicitly notes a few empty pores; the separate volume model yields about 85% pore filling. These are distinct observation/model scopes, not a 100% occupancy measurement."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete paper review",
+      "url": "../paper-review.html?id=besson2002",
+      "relation": "Original figures, source facts and unresolved limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
