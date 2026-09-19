@@ -1,9 +1,10 @@
 """Aggregate source-level reader hubs; never promote indexed papers to training records."""
 import json,re,hashlib
 from pathlib import Path
+from review_scope import source_review_scope
 ROOT=Path(__file__).resolve().parents[1]
 SYMBOLS=set('H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og'.split())
-NAMES={'CdSe':'Cadmium selenide','CdS':'Cadmium sulfide','CoFe2O4':'Cobalt ferrite','CoO':'Cobalt(II) oxide','CoO/CoFe2O4':'Cobalt oxide / cobalt ferrite core–shell','ZnO':'Zinc oxide','InP':'Indium phosphide','CsPbBr3':'Caesium lead bromide','PbS':'Lead sulfide','CdSe/CdS':'Cadmium selenide / cadmium sulfide core/shell','Ir':'Iridium','Fe–O':'Iron oxide · phase and stoichiometry unresolved','Fe3O4':'Magnetite','Fe2O3':'Iron(III) oxide'}
+NAMES={'Si/SiOx':'Surface-oxidized silicon nanocrystal colloids','Si':'Silicon cores in surface-oxidized colloids','SiOx':'Silicon oxide surface layer · stoichiometry unresolved','CdSe':'Cadmium selenide','CdS':'Cadmium sulfide','CoFe2O4':'Cobalt ferrite','CoO':'Cobalt(II) oxide','CoO/CoFe2O4':'Cobalt oxide / cobalt ferrite core–shell','ZnO':'Zinc oxide','InP':'Indium phosphide','CsPbBr3':'Caesium lead bromide','PbS':'Lead sulfide','CdSe/CdS':'Cadmium selenide / cadmium sulfide core/shell','Ir':'Iridium','Fe–O':'Iron oxide · phase and stoichiometry unresolved','Fe3O4':'Magnetite','Fe2O3':'Iron(III) oxide'}
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
 def slug(f):return re.sub('[^a-z0-9]+','-',f.lower()).strip('-')+'-'+hashlib.sha256(f.encode()).hexdigest()[:6]
@@ -48,8 +49,9 @@ def main():
         review=full_reviews.get(doi)
         p['fullDocumentReview']=None
         if review:
-            p['reviewStatus']='full_documents_reviewed'
-            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'pages':sum(d['page_count'] for d in review['documents']),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
+            scope=source_review_scope(review)
+            p['reviewStatus']=scope['review_status']
+            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'scope':scope['scope'],'label':scope['label'],'si_status':scope['si_status'],'pages':sum(d['page_count'] for d in review['documents']),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
         p['materials']=sorted({f for f,m in materials.items() if doi in m['paper_dois']})
         p['candidateMaterialMentions']=sorted({x['formula'] for x in p.get('materialTitleMentions',[])})
         write(ROOT/'dist/data/papers'/(p['id']+'.json'),p)
@@ -68,9 +70,23 @@ def main():
             contribution=dict(p)
             contribution['reviewedRecordIds']=[rid for rid in p['reviewedRecordIds'] if rid in m['record_ids']]
             contribution['benchmarkRecordIds']=[rid for rid in p['benchmarkRecordIds'] if rid in m['record_ids']]
-            contribution['reviewStatus']='selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
+            contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
         m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else 'component_of_heterostructure'} for r in related]
+        # Supporting evidence is explicitly curated per material, never inferred
+        # from a paper title or promoted into a synthesis route.
+        evidence_ids=set(m['record_ids']);m['evidence_scope_notes']=[]
+        for doi in sorted(m['paper_dois']):
+            review=full_reviews.get(doi,{})
+            for rid in review.get('material_evidence_records',{}).get(f,[]):
+                assert rid in byid, f'Unknown material evidence record: {rid}'
+                record=byid[rid]
+                assert record['quality']['review_status']=='source_reviewed'
+                assert any(s['doi'].lower()==doi for s in record['sources'])
+                evidence_ids.add(rid)
+            note=review.get('material_evidence_scope_notes',{}).get(f)
+            if note:m['evidence_scope_notes'].append(note)
+        m['evidence_records']=[{'record_id':rid,'record_type':byid[rid]['record_type'],'collection':byid[rid]['collection']} for rid in sorted(evidence_ids)]
         m['paper_dois']=sorted(m['paper_dois']);m['mentioned_paper_dois']=sorted(m['mentioned_paper_dois'])
         write(ROOT/'dist/data/materials'/(m['id']+'.json'),m)
         index.append({k:m[k] for k in ['id','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','publication_status','component_only']})

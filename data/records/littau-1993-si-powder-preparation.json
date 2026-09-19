@@ -1,0 +1,549 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-si-powder-preparation",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Littau et al. (1993) · Preparation of dry silicon-colloid powder",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Evaporation and repeated washing",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; no main-plus-SI completion claim.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-si-aerosol",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Supporting procedure; measured sizes are not prospective targets.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    }
+  },
+  "materials": [
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "role": "wash_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "ethylene-dichloride",
+      "name": "Ethylene dichloride",
+      "formula": "C2H4Cl2",
+      "role": "wash_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "colloid-feed",
+      "name": "Unassigned colloid for dry-powder preparation",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "paste",
+      "name": "Paste after mild heated vacuum evaporation",
+      "kind": "mixture",
+      "parent_ids": [
+        "colloid-feed"
+      ]
+    },
+    {
+      "id": "washed-powder",
+      "name": "Deep-brown washed powder",
+      "kind": "product",
+      "parent_ids": [
+        "paste"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "evaporate",
+      "action": "vacuum_evaporation",
+      "label": "Evaporate to a paste",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid-feed"
+      ],
+      "outputs": [
+        "paste"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Not numerically reported for this powder-preparation stage",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Not numerically reported for this powder-preparation stage",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Not numerically reported for this powder-preparation stage",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Mild heating under vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Paste",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Do not transfer the separate 80 °C colloid-concentration condition to this step.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "wash-paste",
+      "action": "repeated_washing",
+      "label": "Wash the paste repeatedly",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evaporate"
+      ],
+      "inputs": [
+        "paste",
+        "acetone",
+        "ethylene-dichloride"
+      ],
+      "outputs": [
+        "washed-powder"
+      ],
+      "parameters": {
+        "wash_count": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "acetone_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "ethylene_dichloride_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "separation_conditions": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Deep-brown powder",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "washed-powder",
+      "description": "Both solvents are named, but their sequence, mixing and separation procedure are not specified. No centrifugation speed or fabricated supernatant branch.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "washed-powder-context",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": "washed-powder",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 7, printed p. 1230, Reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 7, printed p. 1230, Reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 7, printed p. 1230, Reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 7, printed p. 1230, Reference 41"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "Used subsequently for IR and powder XRD. It is not established which single batch supplies every later measurement.",
+        "Note 41: powder before washing can show extra sharp XRD peaks and larger foreign crystallites; proposed small-molecule oxidation products were not identified."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "typical-small-crystallite-powder-mass",
+      "sample_id": "washed-powder-context",
+      "property": "recovered_powder_mass_context",
+      "technique": "Reported preparation amount",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "typically_at_most",
+        "basis": "Typical powder amount for smaller crystallite sizes; not fixed batch output or chemical yield",
+        "raw_text": "typically 10 mg or less for the smaller crystallite sizes",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Generic smaller-size preparations; exact formulation and physical run not assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. Supporting-procedure operations and their measurement/reference/cohort entries passed the bounded procedure audit. No training task is requested; this is not a standalone synthesis or complete SOP. Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+      "Numeric drying temperature, vacuum level and duration.",
+      "Wash order, number, volumes, separation device and final-drying details.",
+      "The typical mass is not a run-resolved synthesis yield."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Shared aerosol formulation contexts (6.0, 2.0, 1.0)",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "Same source and formulation families; exact specimen/batch joins unresolved."
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "url": "../records/littau-1993-si-aerosol-1p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "url": "../records/littau-1993-si-aerosol-2p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "url": "../records/littau-1993-si-aerosol-6p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Powder X-ray diffraction",
+      "url": "../records/littau-1993-si-xrd-characterization.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    },
+    {
+      "label": "Littau et al. (1993) · Infrared characterization of dry powder",
+      "url": "../records/littau-1993-si-ir-characterization.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

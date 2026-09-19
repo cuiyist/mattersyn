@@ -22,7 +22,12 @@ CRYSTALS = {
     "cspbbr3-orthorhombic": (62, "3abeb5af8ba1fb302248380fac29c51611d3d516bf981b5f4d4652ef06c4434a", {"Cs": 4, "Pb": 4, "Br": 12}),
     "coo-rocksalt": (225, "35661cbc816a7728cd6b7ef101483aa091b1b08f1f30fbde52343d5d6f9da07a", {"Co": 4, "O": 4}),
     "cofe2o4-spinel": (227, "cac0e1674371e05b06b58c22e6b518d0a38a218b2430207b54e5da7f87e58431", {"Co": 8, "Fe": 16, "O": 32}),
+    "littau-1993-si-diamond-ideal-reference": (227, "1252db5c1bedea5e671a9995282b976002f67cb6418d296796c392eef8e8476f", {"Si": 8}),
 }
+LITTAU_SI_ROUTES = {"littau-1993-si-aerosol-1p0", "littau-1993-si-aerosol-2p0", "littau-1993-si-aerosol-6p0"}
+IDEAL_SI_ID = "littau-1993-si-diamond-ideal-reference"
+IDEAL_SI_UNIT_HASH = "f37cb123ed21eed6bd1c681d78373ffa9c179810a8d3f52ea80fb954617cff6f"
+IDEAL_SI_FINITE_HASH = "eab44501bd84a248f8343694869c0aae37dcc71d29f0641da954e8a34af7fe59"
 FIGURES = {
     "tessier2015": {"doi": "10.1021/acs.chemmater.5b02138", "figures": {"figure-1": ("main", 2), "figure-s3": ("si", 8), "figure-s4": ("si", 9)}, "sources": {"main": "964dfbf6fc6714dceef89fdb0d6c7cc425ab49903fa688cab9ca0796c36f45d5", "si": "20b8647e367caad427366d8b2b4e50a07738f44b326ffba749997bedd9fdd31a"}},
     "zhang2019": {"doi": "10.1021/acs.chemmater.9b03529", "figures": {"table-1": ("main", 3), "figure-1": ("main", 3), "figure-s2": ("si", 3), "figure-s3": ("si", 4), "table-s1": ("si", 4), "figure-s9": ("si", 9)}, "sources": {"main": "63f1ce8f9c67c93ff838c7bd1863456ed1a7eaa59d090866ea7f15b47a555e8e", "si": "171b0d4ca916dff8a3febe101a25ca836f17af8bdcdac79ecb50a47e525a4477"}},
@@ -138,7 +143,12 @@ class Audit:
         ferrite = self.hubs.get("CoFe2O4", {})
         self.check(ferrite.get("component_only") is True, "CoFe2O4: Saha shell contribution incorrectly promoted to pure-ferrite synthesis")
         self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing reviewed Saha ferrite-shell contribution")
-        for formula in ("Ag", "CO", "NO", "Si", "PbS", "Fe–C–H–O"):
+        silicon = self.hubs.get("Si", {})
+        self.check(silicon.get("component_only") is True and silicon.get("direct_record_ids") == [], "Si: Littau component contribution promoted to pure-material synthesis")
+        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES, "Si: missing or unaudited synthesis contribution; exactly the three reviewed Littau formulations are allowed")
+        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019"}, "Si: unreviewed title match added to the reviewed Littau contribution")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Si/SiOx" for rid in LITTAU_SI_ROUTES), "Si: source surface-oxidized product identity was erased")
+        for formula in ("Ag", "CO", "NO", "PbS", "Fe–C–H–O"):
             self.check(formula not in self.hubs, f"{formula}: former title-only/benchmark/procedure hub reappeared; independent route review required")
         for paper in load(self.dist / "data/library-index.json")["papers"]:
             if paper["reviewStatus"] == "indexed_awaiting_review":
@@ -183,14 +193,20 @@ class Audit:
     def crystals(self):
         base = self.dist / "assets/crystal-references"
         entries = {e["id"]: e for e in load(base / "registry.json")["entries"]}
-        self.check(set(entries) == set(CRYSTALS), "Six independently reviewed crystal references changed; review additions explicitly")
+        self.check(set(entries) == set(CRYSTALS), "Seven independently reviewed crystal references changed; review additions explicitly")
         for cid, (sg, expected_hash, composition) in CRYSTALS.items():
             if not self.check(cid in entries, f"Missing crystal {cid}"):
                 continue
             e = entries[cid]
             self.check(e.get("referenceOnly") is True and e.get("trainingEligible") is False, f"{cid}: reference promoted to experimental training label")
             self.check(e.get("spaceGroupNumber") == sg and e.get("cifSha256") == expected_hash, f"{cid}: independently verified CIF identity changed")
-            self.check(bool(e.get("scope")) and e.get("sourceUrl", "").startswith("https://www.crystallography.net/cod/"), f"{cid}: source/scope absent")
+            if cid == IDEAL_SI_ID:
+                self.check(bool(e.get("scope")) and e.get("sourceUrl") == "https://doi.org/10.1021/j100108a019", f"{cid}: quoted bulk-parameter source/scope absent")
+                self.check(e.get("referenceType") == "locally_constructed_ideal_reference" and e.get("structureAssetRole") == "illustrative" and e.get("measuredSampleStructure") is False, f"{cid}: generated reference misrepresented as experimental CIF")
+                self.check(set(e.get("record_ids", [])) == LITTAU_SI_ROUTES - {"littau-1993-si-aerosol-1p0"}, f"{cid}: reference attached outside phase-supported 6.0/2.0 formulations")
+                self.check(e.get("modelSha256") == IDEAL_SI_UNIT_HASH, f"{cid}: independently validated ideal cell changed")
+            else:
+                self.check(bool(e.get("scope")) and e.get("sourceUrl", "").startswith("https://www.crystallography.net/cod/"), f"{cid}: source/scope absent")
             self.check(set(e["record_ids"]) <= set(self.byid), f"{cid}: bound to nonexistent canonical recipe")
             self.asset(base, e.get("cifPath"), e.get("cifSha256"), cid + "/CIF")
             path = self.asset(base, e.get("modelPath"), e.get("modelSha256"), cid + "/model")
@@ -198,7 +214,18 @@ class Audit:
                 continue
             m = load(path)
             self.check(m.get("training_eligible") is False and m.get("measured_sample_structure") is False, f"{cid}: model fails reference-only flags")
-            self.check(m["source"]["sha256"] == expected_hash, f"{cid}: model derives from wrong CIF")
+            if cid == IDEAL_SI_ID:
+                self.check(m.get("source", {}).get("source_sha256") == "dd498b93be57a3701beedb3302c5111e85b58f4e73db40be8e8c58b1622a592e", f"{cid}: wrong bulk-parameter paper")
+                parameter = m.get("source", {}).get("reported_parameter", {})
+                self.check(parameter.get("value") == 5.43 and parameter.get("status") == "reported_bulk_reference" and m.get("evidence_type") == "illustrative", f"{cid}: bulk comparison value relabeled as a measured sample parameter")
+                self.check(e.get("finiteModelSha256") == IDEAL_SI_FINITE_HASH and e.get("finiteModelPeriodic") is False, f"{cid}: validated finite illustration changed or became periodic")
+                finite_path = self.asset(base, e.get("finiteModelPath"), e.get("finiteModelSha256"), cid + "/finite-model")
+                if finite_path:
+                    finite = load(finite_path)
+                    self.check(finite.get("periodic") is False and finite.get("training_eligible") is False and finite.get("measured_sample_structure") is False and finite.get("evidence_type") == "illustrative", f"{cid}: finite illustration promoted to measured/training structure")
+                    self.check(len(finite.get("atoms", [])) == 705 and {a.get("element") for a in finite.get("atoms", [])} == {"Si"}, f"{cid}: finite Si illustration gained an unverified shell or changed atom count")
+            else:
+                self.check(m["source"]["sha256"] == expected_hash, f"{cid}: model derives from wrong CIF")
             counts, positions = Counter(), set()
             for a in m["atoms"]:
                 xyz = tuple(a[k] for k in ("x", "y", "z"))
@@ -269,7 +296,7 @@ def main():
             method(*values)
         except (OSError, ValueError, KeyError, TypeError, IndexError) as error:
             audit.errors.append(f"{method.__name__}: incomplete/malformed build: {type(error).__name__}: {error}")
-    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, six independently pinned CIF identities, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
+    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, six pinned database CIFs plus one pinned ideal silicon reference, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
     print(json.dumps(report, indent=2, ensure_ascii=False))
     return 1 if audit.errors else 0
 

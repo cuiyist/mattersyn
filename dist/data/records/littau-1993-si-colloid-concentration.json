@@ -1,0 +1,334 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-si-colloid-concentration",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Littau et al. (1993) · Concentration of silicon colloids",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Vacuum concentration",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; no main-plus-SI completion claim.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-si-aerosol",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Supporting procedure; measured sizes are not prospective targets.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "colloid-feed",
+      "name": "Colloid before concentration",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "concentrated-colloid",
+      "name": "Concentrated colloid",
+      "kind": "product",
+      "parent_ids": [
+        "colloid-feed"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "concentrate",
+      "action": "vacuum_concentration",
+      "label": "Concentrate the colloid under vacuum",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid-feed"
+      ],
+      "outputs": [
+        "concentrated-colloid"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+            }
+          ],
+          "derivation": null
+        },
+        "concentration_factor": {
+          "value": null,
+          "minimum": 5,
+          "maximum": 10,
+          "unit": "fold",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+            }
+          ],
+          "derivation": null
+        },
+        "vacuum_pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Vacuum; numerical pressure not reported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mild concentration of the colloid; this 80 °C value is not a reported temperature for the distinct dry-powder procedure.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "concentrated-colloid-context",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": "concentrated-colloid",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, colloid concentration"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. Supporting-procedure operations and their measurement/reference/cohort entries passed the bounded procedure audit. No training task is requested; this is not a standalone synthesis or complete SOP. Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+      "Vacuum level, duration, initial/final volumes and exact formulation/sample assignment."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Shared aerosol formulation contexts (6.0, 2.0, 1.0)",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "Same source and formulation families; exact specimen/batch joins unresolved."
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "url": "../records/littau-1993-si-aerosol-1p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "url": "../records/littau-1993-si-aerosol-2p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "url": "../records/littau-1993-si-aerosol-6p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

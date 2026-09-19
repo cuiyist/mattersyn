@@ -1,0 +1,865 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-aks41-context",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Littau et al. (1993) · AKS41 contextual characterization",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Characterization of AKS41 from an earlier aerosol apparatus; synthesis not reconstructed",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; main-only scope.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-aks41-context",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": "Contextual characterization; no prospective synthesis target reconstructed."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": "Observed phase is stored with the sample, not as a synthesis target."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Not a reconstructed synthesis.",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": "Not a reconstructed synthesis."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "aks41-colloid",
+      "name": "AKS41 colloid; earlier-apparatus context",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "aks41-imaged-particle",
+      "name": "One lattice-resolved particle within the Figure 3 aggregate",
+      "kind": "aliquot",
+      "parent_ids": [
+        "aks41-colloid"
+      ]
+    },
+    {
+      "id": "aks41-excluded-fraction",
+      "name": "AKS41 HPLC excluded aggregate fraction",
+      "kind": "fraction",
+      "parent_ids": [
+        "aks41-colloid"
+      ]
+    },
+    {
+      "id": "aks41-middle-fraction",
+      "name": "AKS41 middle HPLC peak fraction",
+      "kind": "fraction",
+      "parent_ids": [
+        "aks41-colloid"
+      ]
+    },
+    {
+      "id": "aks41-monomer-fraction",
+      "name": "AKS41 late monomer HPLC peak fraction",
+      "kind": "fraction",
+      "parent_ids": [
+        "aks41-colloid"
+      ]
+    }
+  ],
+  "operations": [],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "aks41-population",
+      "source_sample_label": "AKS41",
+      "batch_id": null,
+      "material_state_id": "aks41-colloid",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Diamond-lattice Si core",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Author characterization of AKS41 crystallites; not proof for the separate 1.0 formulation."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Amorphous surface-oxide shell; atomic structure and exact oxide stoichiometry not established.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "The 1.5 nm shell measurement belongs to one depicted particle, not every AKS41 particle."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "TEM population average and individual-particle measurements have separate sample IDs.",
+        "Contextual sample only; no verified synthesis recipe-to-outcome link.",
+        "Prose reports intense narrow diamond-lattice electron-diffraction lines; there is no displayed SAED pattern to reproduce.",
+        "HPLC reinjection retains each fraction elution time, supporting permanent aggregation rather than a simple core-size distribution."
+      ]
+    },
+    {
+      "sample_id": "aks41-fig3-particle",
+      "source_sample_label": "AKS41 (Figure 3 particle)",
+      "batch_id": null,
+      "material_state_id": "aks41-imaged-particle",
+      "parent_sample_id": "aks41-population",
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Diamond-lattice Si core",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Author characterization of AKS41 crystallites; not proof for the separate 1.0 formulation."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Amorphous surface-oxide shell; atomic structure and exact oxide stoichiometry not established.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "The 1.5 nm shell measurement belongs to one depicted particle, not every AKS41 particle."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "One fortuitously lattice-resolved particle in an aggregate; not the population mean. Schema state kind aliquot denotes a subset here, not a reported aliquoting operation.",
+        "Contextual sample only; no verified synthesis recipe-to-outcome link."
+      ]
+    },
+    {
+      "sample_id": "aks41-excluded-sample",
+      "source_sample_label": "AKS41 excluded HPLC peak",
+      "batch_id": null,
+      "material_state_id": "aks41-excluded-fraction",
+      "parent_sample_id": "aks41-population",
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Diamond-lattice Si core",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Inherited parent-AKS41 characterization context; no independent fraction-specific phase determination is reported. The one depicted particle does not establish every fraction particle shell thickness."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Amorphous surface-oxide shell; atomic structure and exact oxide stoichiometry not established.",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Inherited parent-AKS41 characterization context; no independent fraction-specific surface determination is reported. The one depicted particle does not establish every fraction particle shell thickness."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Excluded peak contains aggregates tens of nanometers across.",
+        "Contextual sample only; no verified synthesis recipe-to-outcome link."
+      ]
+    },
+    {
+      "sample_id": "aks41-middle-sample",
+      "source_sample_label": "AKS41 middle HPLC peak",
+      "batch_id": null,
+      "material_state_id": "aks41-middle-fraction",
+      "parent_sample_id": "aks41-population",
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Diamond-lattice Si core",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Inherited parent-AKS41 characterization context; no independent fraction-specific phase determination is reported. The one depicted particle does not establish every fraction particle shell thickness."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Amorphous surface-oxide shell; atomic structure and exact oxide stoichiometry not established.",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Inherited parent-AKS41 characterization context; no independent fraction-specific surface determination is reported. The one depicted particle does not establish every fraction particle shell thickness."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Mostly dimers and trimers according to TEM of the fraction.",
+        "Contextual sample only; no verified synthesis recipe-to-outcome link."
+      ]
+    },
+    {
+      "sample_id": "aks41-monomer-sample",
+      "source_sample_label": "AKS41 late HPLC peak",
+      "batch_id": null,
+      "material_state_id": "aks41-monomer-fraction",
+      "parent_sample_id": "aks41-population",
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Diamond-lattice Si core",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Inherited parent-AKS41 characterization context; no independent fraction-specific phase determination is reported. The one depicted particle does not establish every fraction particle shell thickness."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Amorphous surface-oxide shell; atomic structure and exact oxide stoichiometry not established.",
+        "status": "inherited",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          }
+        ],
+        "note": "Inherited parent-AKS41 characterization context; no independent fraction-specific surface determination is reported. The one depicted particle does not establish every fraction particle shell thickness."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Mostly individual crystallites according to TEM of the fraction.",
+        "Contextual sample only; no verified synthesis recipe-to-outcome link."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "population-tem-mean",
+      "sample_id": "aks41-population",
+      "property": "mean_individual_particle_size",
+      "technique": "TEM",
+      "value": {
+        "value": 14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source wording: individual crystallite average size. This sentence does not explicitly distinguish outer diameter from core extent; do not reinterpret as a crystalline-core mean or the single Figure 3 particle.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source preparation allows direct aerosol collection or colloid evaporation on holey carbon, with JEOL 2000-FX at 200 keV; the exact branch for Figure 3 is not assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        }
+      ]
+    },
+    {
+      "id": "population-tem-sd",
+      "sample_id": "aks41-population",
+      "property": "particle_diameter_standard_deviation",
+      "technique": "TEM",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Population standard deviation, not measurement uncertainty on each particle.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source preparation allows direct aerosol collection or colloid evaporation on holey carbon, with JEOL 2000-FX at 200 keV; the exact branch for Figure 3 is not assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        }
+      ]
+    },
+    {
+      "id": "fig3-core",
+      "sample_id": "aks41-fig3-particle",
+      "property": "crystalline_core_diameter",
+      "technique": "Lattice-resolved TEM",
+      "value": {
+        "value": 13,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "One lattice-resolved core in Figure 3.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source preparation allows direct aerosol collection or colloid evaporation on holey carbon, with JEOL 2000-FX at 200 keV; the exact branch for Figure 3 is not assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "fig3-shell",
+      "sample_id": "aks41-fig3-particle",
+      "property": "amorphous_shell_thickness",
+      "technique": "TEM",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Shell width of the same single depicted particle, not a population-wide thickness.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source preparation allows direct aerosol collection or colloid evaporation on holey carbon, with JEOL 2000-FX at 200 keV; the exact branch for Figure 3 is not assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "fig3-fringes",
+      "sample_id": "aks41-fig3-particle",
+      "property": "111_lattice_plane_spacing",
+      "technique": "Lattice-resolved TEM",
+      "value": {
+        "value": 3.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Author-reported (111) spacing in the depicted crystalline-Si core.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source preparation allows direct aerosol collection or colloid evaporation on holey carbon, with JEOL 2000-FX at 200 keV; the exact branch for Figure 3 is not assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "excluded-size",
+      "sample_id": "aks41-excluded-sample",
+      "property": "equivalent_HPLC_diameter",
+      "technique": "Size-exclusion HPLC",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "greater_than",
+        "basis": "Polymer-calibrated equivalent hard-sphere size; aggregate-containing fraction.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Sequential ZORBAX 60-S and 300-S, 50 °C, 0.75 cm3/min; reported 60:40 methanol/ethylene glycol with 0.0015 M sodium methylate and 0.1 M tetrabutylammonium bromide. Equivalent hard-sphere diameters use polymer calibration, not direct Si-core measurement. Solvent-ratio basis is unstated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "middle-size",
+      "sample_id": "aks41-middle-sample",
+      "property": "equivalent_HPLC_diameter",
+      "technique": "Size-exclusion HPLC",
+      "value": {
+        "value": 16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Polymer-calibrated equivalent hard-sphere size; aggregate-containing fraction.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Sequential ZORBAX 60-S and 300-S, 50 °C, 0.75 cm3/min; reported 60:40 methanol/ethylene glycol with 0.0015 M sodium methylate and 0.1 M tetrabutylammonium bromide. Equivalent hard-sphere diameters use polymer calibration, not direct Si-core measurement. Solvent-ratio basis is unstated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "monomer-size",
+      "sample_id": "aks41-monomer-sample",
+      "property": "equivalent_HPLC_diameter",
+      "technique": "Size-exclusion HPLC",
+      "value": {
+        "value": 11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Polymer-calibrated equivalent hard-sphere size; late fraction contains mostly individual crystallites.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Sequential ZORBAX 60-S and 300-S, 50 °C, 0.75 cm3/min; reported 60:40 methanol/ethylene glycol with 0.0015 M sodium methylate and 0.1 M tetrabutylammonium bromide. Equivalent hard-sphere diameters use polymer calibration, not direct Si-core measurement. Solvent-ratio basis is unstated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "exclusion-elution",
+      "sample_id": "aks41-excluded-sample",
+      "property": "exclusion_elution_time",
+      "technique": "Size-exclusion HPLC",
+      "value": {
+        "value": 8.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Total exclusion from the column pores.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Sequential ZORBAX 60-S and 300-S, 50 °C, 0.75 cm3/min; reported 60:40 methanol/ethylene glycol with 0.0015 M sodium methylate and 0.1 M tetrabutylammonium bromide. Equivalent hard-sphere diameters use polymer calibration, not direct Si-core measurement. Solvent-ratio basis is unstated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, AKS41 TEM and HPLC discussion"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B, TEM and HPLC preparation/acquisition"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Figure 4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. The AKS41 contextual observation and nine separate population, particle and HPLC entries passed the corrected bounded context audit. No complete AKS41 synthesis, current-apparatus stock-flow assignment or training eligibility is asserted. The earlier-apparatus observation is not a parent recipe for the three current-apparatus formulations.",
+    "missing_fields": [
+      "Earlier-apparatus AKS41 synthesis parameters and run history are not supplied as a reconstructable method.",
+      "Exact physical batch, collector fraction and figure-to-specimen identity beyond author AKS41 label remain unresolved.",
+      "No displayed electron-diffraction/SAED image or experimental atomic-coordinate model is supplied.",
+      "Matching SI is not located or verified."
+    ],
+    "conflicts": [
+      "Figure 4 caption prints ASK41; surrounding prose and Figure 3 identify AKS41. This is not a second sample.",
+      "The aggregate discussion on printed p. 1227 cross-references Figure 1, which is the apparatus; Figure 3 contains the aggregate TEM."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Original paper",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "source"
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Transmission electron microscopy",
+      "url": "../records/littau-1993-si-tem-characterization.html",
+      "relation": "Reported acquisition-method context for AKS41 characterization; does not reconstruct its earlier-apparatus synthesis or assign a current formulation."
+    },
+    {
+      "label": "Littau et al. (1993) · Chromatographic characterization and fractionation",
+      "url": "../records/littau-1993-si-hplc-fractionation.html",
+      "relation": "Reported acquisition-method context for AKS41 characterization; does not reconstruct its earlier-apparatus synthesis or assign a current formulation."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

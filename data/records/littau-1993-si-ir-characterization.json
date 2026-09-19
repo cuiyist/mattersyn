@@ -1,0 +1,700 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-si-ir-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Littau et al. (1993) · Infrared characterization of dry powder",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "KBr-pellet infrared spectroscopy",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; no main-plus-SI completion claim.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-si-aerosol",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Supporting procedure; measured sizes are not prospective targets.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    }
+  },
+  "materials": [
+    {
+      "id": "kbr",
+      "name": "Potassium bromide",
+      "formula": "KBr",
+      "role": "IR_matrix",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "washed-powder",
+      "name": "Washed dry colloid powder; upstream powder procedure is separate",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "kbr-pellet",
+      "name": "Ground and pressed powder/KBr pellet",
+      "kind": "product",
+      "parent_ids": [
+        "washed-powder",
+        "kbr"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "press-pellet",
+      "action": "grind_and_press",
+      "label": "Grind sample and press a KBr pellet",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "washed-powder",
+        "kbr"
+      ],
+      "outputs": [
+        "kbr-pellet"
+      ],
+      "parameters": {
+        "KBr_amount": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "powder_amount": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "press_pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "press_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Washed powder input; drying temperature is not inferred from colloid concentration.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "record-ir",
+      "action": "infrared_spectroscopy",
+      "label": "Record the infrared spectrum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "press-pellet"
+      ],
+      "inputs": [
+        "kbr-pellet"
+      ],
+      "outputs": [],
+      "parameters": {
+        "resolution": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm^-1",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            },
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+            },
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 7 is 6.0 powder. Source reports near absence of the 2100 cm^-1 SiH feature; this is not quantitative zero hydrogen.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ir-6p0-powder",
+      "source_sample_label": "6.0",
+      "batch_id": null,
+      "material_state_id": "kbr-pellet",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Figure 7 and Results A"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR continuation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "Source identifies the same 6.0 powder as used for XRD, but physical run and XRD mounting alternative remain unresolved.",
+        "Near-absent 2100 cm^-1 SiH band is retained qualitatively; no detection limit or numeric zero intensity.",
+        "No Raman data are reported."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ir-6p0-band-1100",
+      "sample_id": "ir-6p0-powder",
+      "property": "IR_band_position",
+      "technique": "KBr-pellet infrared spectroscopy",
+      "value": {
+        "value": 1100,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "strong band assigned by authors to SiO2",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, IR interpretation and Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 washed dry powder; author-assigned band identity, not independently resolved molecular composition. Wash history for this specimen is not fully quantified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, IR interpretation and Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "ir-6p0-band-800",
+      "sample_id": "ir-6p0-powder",
+      "property": "IR_band_position",
+      "technique": "KBr-pellet infrared spectroscopy",
+      "value": {
+        "value": 800,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "weak band assigned by authors to SiO2",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, IR interpretation and Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 washed dry powder; author-assigned band identity, not independently resolved molecular composition. Wash history for this specimen is not fully quantified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, IR interpretation and Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "ir-6p0-band-3300",
+      "sample_id": "ir-6p0-powder",
+      "property": "IR_band_position",
+      "technique": "KBr-pellet infrared spectroscopy",
+      "value": {
+        "value": 3300,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "OH stretch assignment",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, IR interpretation and Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 washed dry powder; author-assigned band identity, not independently resolved molecular composition. Wash history for this specimen is not fully quantified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, IR interpretation and Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "ir-6p0-band-1350",
+      "sample_id": "ir-6p0-powder",
+      "property": "IR_band_position",
+      "technique": "KBr-pellet infrared spectroscopy",
+      "value": {
+        "value": 1350,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "wash-dependent; presumed residual organic species",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR interpretation and Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 washed dry powder; author-assigned band identity, not independently resolved molecular composition. Wash history for this specimen is not fully quantified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, IR interpretation and Figure 7"
+        }
+      ]
+    },
+    {
+      "id": "ir-6p0-band-1700",
+      "sample_id": "ir-6p0-powder",
+      "property": "IR_band_position",
+      "technique": "KBr-pellet infrared spectroscopy",
+      "value": {
+        "value": 1700,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "wash-dependent; presumed residual organic species",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, IR interpretation and Figure 7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 washed dry powder; author-assigned band identity, not independently resolved molecular composition. Wash history for this specimen is not fully quantified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, IR interpretation and Figure 7"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. Supporting-procedure operations and their measurement/reference/cohort entries passed the bounded procedure audit. No training task is requested; this is not a standalone synthesis or complete SOP. Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+      "KBr/sample loading, grinding/pressing conditions, instrument, spectral resolution and acquisition settings."
+    ],
+    "conflicts": [
+      "Results A calls the X-ray plot Figure 5 when discussing the same 6.0 powder; actual XRD plot is Figure 6."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Shared aerosol formulation contexts (6.0, 2.0, 1.0)",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "Same source and formulation families; exact specimen/batch joins unresolved."
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "url": "../records/littau-1993-si-aerosol-1p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "url": "../records/littau-1993-si-aerosol-2p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "url": "../records/littau-1993-si-aerosol-6p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Preparation of dry silicon-colloid powder",
+      "url": "../records/littau-1993-si-powder-preparation.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    },
+    {
+      "label": "Littau et al. (1993) · Powder X-ray diffraction",
+      "url": "../records/littau-1993-si-xrd-characterization.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

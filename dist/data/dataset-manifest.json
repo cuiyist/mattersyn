@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.4.0",
-  "record_count": 155,
-  "group_count": 10,
+  "dataset_version": "0.5.0",
+  "record_count": 168,
+  "group_count": 11,
   "families": [
     "II-VI colloidal nanocrystals",
     "III–V semiconductors",
@@ -13,6 +13,7 @@
     "Lead halide perovskites",
     "Metal oxides",
     "Noble-metal nanocrystals",
+    "Surface-oxidized silicon colloids",
     "magnetic oxide nanocrystals"
   ],
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
@@ -735,6 +736,643 @@
       "collection": "reviewed_literature",
       "components": [
         "ZnO"
+      ]
+    },
+    {
+      "record_id": "littau-1993-aks41-context",
+      "title": "Littau et al. (1993) · AKS41 contextual characterization",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Characterization of AKS41 from an earlier aerosol apparatus; synthesis not reconstructed",
+      "record_type": "observation",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "504b02c44a9df75257c1832e5f33d35ed8d552cdbffeaf7bc69ae62fd0a164c5",
+      "recipe_signature": "b6bfe598de2ac47f6c0f4d889436b723b091749f9f57de6531b0b689294023e8",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-aks41-context.json",
+      "page_url": "records/littau-1993-aks41-context.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-acid-activation",
+      "title": "Littau et al. (1993) · Acid activation of silicon colloids",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Postsynthetic acidic reflux",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "c0dbce2016389d56348ef6245e32ed0e48c4c3f3834de6998e655bd065a15e9d",
+      "recipe_signature": "9afb831c86c831be4d9920c7ef2a935d564472dfe219143885163fcc111ead5b",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-acid-activation.json",
+      "page_url": "records/littau-1993-si-acid-activation.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-aerosol-1p0",
+      "title": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Continuous aerosol pyrolysis and oxidative passivation",
+      "record_type": "protocol_variant",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "e7437df2ce522bf079f69ca88a96070cc85de13904880b79c31a570c15774017",
+      "recipe_signature": "aef0cc62f866376c33a77ba82408ab230c9a63636d93f61513a779bd0af59190",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-aerosol-1p0.json",
+      "page_url": "records/littau-1993-si-aerosol-1p0.html",
+      "missing_field_count": 11,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-aerosol-2p0",
+      "title": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Continuous aerosol pyrolysis and oxidative passivation",
+      "record_type": "protocol_variant",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "bf95579befdca9879d1756bbad3f338f08b5ec7f68425a3bd7d46671a345d37f",
+      "recipe_signature": "9c304a1cddf3721548bbcb8f655a235a8c63c0ffb991d1e1a12cf6433e2d530c",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-aerosol-2p0.json",
+      "page_url": "records/littau-1993-si-aerosol-2p0.html",
+      "missing_field_count": 11,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-aerosol-6p0",
+      "title": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Continuous aerosol pyrolysis and oxidative passivation",
+      "record_type": "protocol_variant",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "a584b7387bf33c0f20c5d6bec82788422fab46474b7e0550e5d7b7ff9a2d6b9d",
+      "recipe_signature": "82ba43bc89627e6b512ab59511df2a8346eeaa7638c28f815985da999f383fda",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-aerosol-6p0.json",
+      "page_url": "records/littau-1993-si-aerosol-6p0.html",
+      "missing_field_count": 11,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-colloid-concentration",
+      "title": "Littau et al. (1993) · Concentration of silicon colloids",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Vacuum concentration",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "59c08fb6f5ec9bd80f2da5c23449ef93a91c17cecabbf31489b21020ac14f80f",
+      "recipe_signature": "070016d431e8934a23e4be49285728b44accdb1b92a89ea407a69f34472c4a4c",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-colloid-concentration.json",
+      "page_url": "records/littau-1993-si-colloid-concentration.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-hplc-fractionation",
+      "title": "Littau et al. (1993) · Chromatographic characterization and fractionation",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Size-exclusion HPLC",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "dbe3d3b0d6b2158a0cccde58683b2be8977bbb9aebccd905bee7182dc109b50d",
+      "recipe_signature": "f9921b71ad93a019e4bdde4587e2d8af06cabed0421dfe2e7fad31f71c6e5dd1",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-hplc-fractionation.json",
+      "page_url": "records/littau-1993-si-hplc-fractionation.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-ir-characterization",
+      "title": "Littau et al. (1993) · Infrared characterization of dry powder",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "KBr-pellet infrared spectroscopy",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "ba2ce187b10e66eaba9ab79be96f8f7726ef330b44b8aaf4f98847a6b70648fe",
+      "recipe_signature": "221a258031283f31d95e1db44bd6e7b6f30a596888ab32e860e03720438af330",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-ir-characterization.json",
+      "page_url": "records/littau-1993-si-ir-characterization.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-optical-characterization",
+      "title": "Littau et al. (1993) · Optical absorption and steady-state luminescence",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "UV–vis and steady-state PL",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "c9f7b7d7ba28f706798fd1cb27e6930bbb674b917351b1bb9841dbbe9294974a",
+      "recipe_signature": "aa252732b65aaa9d46f42bc0a86b1c94db0b5bdb4fe26f60b783d9030564834f",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-optical-characterization.json",
+      "page_url": "records/littau-1993-si-optical-characterization.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-powder-preparation",
+      "title": "Littau et al. (1993) · Preparation of dry silicon-colloid powder",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Evaporation and repeated washing",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "977ddb14523e2b6a57ff6de6b705894607fb02ebce5090cc96429df8f6cd19a0",
+      "recipe_signature": "558e798c8af9bdbbfe67798c812b8cbcf5be75ccfe60a4a255886d694c7b2c0e",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-powder-preparation.json",
+      "page_url": "records/littau-1993-si-powder-preparation.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-tem-characterization",
+      "title": "Littau et al. (1993) · Transmission electron microscopy",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "TEM specimen preparation and imaging",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "7b8205f724b10d400e9a904c1b1f3914c9f0809fb8c566456de6d95ce2df50b9",
+      "recipe_signature": "e53aa71b0165087a918730af8456afccf58e51e6cd831abc1d956df8f8e2d2f8",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-tem-characterization.json",
+      "page_url": "records/littau-1993-si-tem-characterization.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-time-resolved-pl",
+      "title": "Littau et al. (1993) · Time-resolved luminescence of the 1.0 colloid",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Pulsed time-resolved PL",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "a852b14f0fc1e264a85bc0e0d3cef863294600459782c50f360f79a3b12d462a",
+      "recipe_signature": "cf5434cfb0c0108ac0e14f6866aba25d5bf65c3c544b0a07da3288228b33dfd3",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-time-resolved-pl.json",
+      "page_url": "records/littau-1993-si-time-resolved-pl.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
+      ]
+    },
+    {
+      "record_id": "littau-1993-si-xrd-characterization",
+      "title": "Littau et al. (1993) · Powder X-ray diffraction",
+      "formula": "Si/SiOx",
+      "family": "Surface-oxidized silicon colloids",
+      "method": "Powder XRD with alternative mounts",
+      "record_type": "procedure",
+      "source_year": 1993,
+      "source_doi": "10.1021/j100108a019",
+      "revision": 1,
+      "record_sha256": "33f5d0dac5ddd865c6112e08c86f88002caa02a37558c5afb92b33b3f5570cc6",
+      "recipe_signature": "848c763619b9a4eaf6e6ed28e2c6f8f1251af064eb13eca09f89314727955aa2",
+      "group_id": "group-928107d349c5",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Requires measured sample coordinates, explicit recipe linkage and no unresolved required fields."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        }
+      },
+      "record_url": "data/records/littau-1993-si-xrd-characterization.json",
+      "page_url": "records/littau-1993-si-xrd-characterization.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Si",
+        "SiOx"
       ]
     },
     {

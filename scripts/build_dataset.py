@@ -3,6 +3,11 @@ import argparse,json,html,sys,shutil
 from pathlib import Path
 from collections import Counter
 from dataset_lib import ROOT,SCHEMA,validate_record,eligibility,build_groups,training_view,digest,chemical_signature,fmt
+from review_scope import source_review_scope
+
+DISPLAY=json.loads((ROOT/'data/measurement-display.json').read_text(encoding='utf-8'))
+PROTOCOL_TYPES={'literature_protocol','protocol_variant','experiment'}
+def is_structural(m):return m['property'] in DISPLAY['structural_properties'] or any(part in m['property'] for part in DISPLAY['structural_property_fragments'])
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
@@ -14,7 +19,7 @@ def quantities(qs):
     return ''.join('<div class="quantity"><dt>'+esc(human(k))+'</dt><dd>'+esc(fmt(q))+'<small>'+esc(q['status'].replace('_',' '))+(' · '+esc(q['basis']) if q['basis'] else '')+'</small></dd></div>' for k,q in qs.items()) or '<p class="muted">No separate quantity entered here; consult stocks, operations and source notes below.</p>'
 def fact_text(f):return (str(f['value']) if f['value'] is not None else f['status'].replace('_',' ').capitalize())+(' · '+f['note'] if f.get('note') else '')
 def head(title,prefix=''):
-    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' · MatterSyn</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%23295888%27/%3E%3Ctext x=%2720%27 y=%2728%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-size=%2726%27%3EM%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="'+prefix+'styles.css"><link rel="stylesheet" href="'+prefix+'academic.css"><link rel="stylesheet" href="'+prefix+'dataset.css"><link rel="stylesheet" href="'+prefix+'apparatus.css"><link rel="stylesheet" href="'+prefix+'illustrated-guide.css?v=0.4.0-r1"></head>'
+    return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' · MatterSyn</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%23295888%27/%3E%3Ctext x=%2720%27 y=%2728%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-size=%2726%27%3EM%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="'+prefix+'styles.css"><link rel="stylesheet" href="'+prefix+'academic.css"><link rel="stylesheet" href="'+prefix+'dataset.css"><link rel="stylesheet" href="'+prefix+'apparatus.css"><link rel="stylesheet" href="'+prefix+'illustrated-guide.css?v=0.5.0-r1"></head>'
 def header(prefix=''):
     return '<header class="site-header dataset-header"><a class="brand" href="'+prefix+'index.html"><span class="brand-mark">M</span>MatterSyn</a><nav aria-label="Dataset navigation"><a href="'+prefix+'index.html">Periodic table</a><a href="'+prefix+'library.html">Source library</a><a href="'+prefix+'dataset.html">Synthesis dataset</a></nav></header>'
 def section(id,number,title,subtitle,body):return '<section id="'+id+'" class="record-section"><div class="section-heading"><div><span class="section-number">'+number+'</span><h2>'+title+'<small>'+subtitle+'</small></h2></div></div>'+body+'</section>'
@@ -50,26 +55,26 @@ def render_record(r,meta):
     for prod in r['products']:
         body+='<article class="product-record"><span class="record-badge">Recipe link: '+esc(prod['recipe_link'].replace('_',' '))+'</span><h3>'+esc(prod['source_sample_label'] or prod['sample_id'])+'</h3><dl class="fact-list">'+''.join('<div><dt>'+k.capitalize()+'</dt><dd>'+esc(fact_text(prod[k]))+'</dd></div>' for k in ['composition','phase','morphology','surface'])+'</dl>'+''.join('<p>'+esc(n)+'</p>' for n in prod['notes'])+'</article>'
     body+='</div>'
-    structural=[m for m in r['measurements'] if m['property'] in ['diameter','diameter_spread','particle_size','particle_size_spread','characteristic_size','edge_length','edge_length_spread','length','width','crystal_phase','lattice_parameter','interplanar_spacing']]
+    structural=[m for m in r['measurements'] if is_structural(m)]
     body+=measurement_table(structural)
     if r['structure_assets']:
         body+='<h3 class="inventory-heading">Structure references</h3><div class="structure-downloads">'+''.join('<a href="'+esc(x['url'])+'"><strong>'+esc(human(x['role']))+' ↗</strong><span>'+esc(x['description'])+'</span></a>' for x in r['structure_assets'])+'</div>'
     else:body+='<p class="record-note">No sample-resolved atomic coordinates are supplied for this record. A reported phase or size does not establish an exact product CIF.</p>'
     body+='<div id="record-crystal-references"></div>'
     s+=section('structures','03','Final structures','Source-linked product identity, phase and size measurements',body)
-    optical=[m for m in r['measurements'] if m not in structural]
-    s+=section('properties','04','Properties','Measurements retain their sample, technique and source',measurement_table(optical))
+    other_measurements=[m for m in r['measurements'] if not is_structural(m)]
+    s+=section('properties','04','Properties','Measurements retain their sample, technique and source',measurement_table(other_measurements))
     if r['collection']=='reviewed_literature':s+='<section id="original-characterization" class="record-section"><h2>Original characterization and property figures</h2><div id="record-original-evidence"></div></section>'
     links=[dict(l,url=('../'+l['url'] if l['url'].startswith('paper-review.html') else l['url'])) for l in r['context_links']]
     review=ROOT/'data/paper-reviews'/(r['lineage']['source_group']+'.json')
-    if review.exists() and not any('paper-review.html' in l['url'] for l in links):links.append({'url':'../paper-review.html?id='+r['lineage']['source_group'],'label':'Full main/SI review and original characterization figures','relation':'source coverage'})
+    if review.exists() and not any('paper-review.html' in l['url'] for l in links):links.append({'url':'../paper-review.html?id='+r['lineage']['source_group'],'label':source_review_scope(json.loads(review.read_text(encoding='utf-8')))['label']+' and original figures','relation':'source coverage'})
     body='<div id="record-intuition-content"></div><p>Mechanistic interpretations and related literature remain separate from the experimental training labels.</p>'+(''.join('<a class="context-reference" href="'+esc(l['url'])+'"><strong>'+esc(l['label'])+' ↗</strong><span>'+esc(l['relation'])+'</span></a>' for l in links) if links else '<p class="record-note">No separately reviewed chemical-intuition essay is attached to this record yet.</p>')
     s+=section('intuition','05','Chemical intuition','Referenced context and interpretation',body)
     body='<div class="eligibility-grid">'+''.join('<article><strong>'+esc(human(task))+'</strong><span class="record-badge '+('eligible' if v['eligible'] else '')+'">'+('Included' if v['eligible'] else 'Excluded')+'</span><p>'+esc(v['reason'])+'</p></article>' for task,v in e.items())+'</div><h3>Unresolved information</h3><ul class="gap-list">'+''.join('<li>'+esc(x)+'</li>' for x in r['quality']['missing_fields'])+'</ul>'
     if r['quality']['conflicts']:body+='<h3>Source distinctions and conflicts</h3><ul class="gap-list">'+''.join('<li>'+esc(x)+'</li>' for x in r['quality']['conflicts'])+'</ul>'
     body+='<details class="record-audit"><summary>Provenance and record integrity</summary><p>Revision '+str(r['revision'])+' · Schema '+r['schema_version']+'</p><p>Evaluation group: '+meta['group_id']+' · '+meta['split']+'</p><p>Record SHA-256: <code>'+meta['record_sha256']+'</code></p><p>All records in the same source, recipe, parent/batch or duplicate group stay together in data splits.</p>'+''.join('<p><a href="'+esc(x['url'])+'">'+esc(x['title'])+'</a><br>Main: '+esc(x['main_status'])+'<br>SI: '+esc(x['si_status'])+'</p>' for x in r['sources'])+'</details>'
     s+=section('evidence','06','Evidence and training','Task eligibility follows source review and sample linkage',body)
-    s+='</main><dialog id="record-molecule-dialog" class="record-dialog"><div class="dialog-header"><h2 id="record-molecule-title">Molecular identity</h2><button id="record-molecule-close" type="button">Close ×</button></div><div id="record-molecule-view" class="record-molecule-view"></div><p id="record-molecule-note"></p><a id="record-molecule-source" target="_blank" rel="noopener">Reference ↗</a></dialog><script src="../vendor/3Dmol-min.js"></script><script type="module" src="../illustrated-record.mjs?v=0.4.0-r1"></script></body></html>'
+    s+='</main><dialog id="record-molecule-dialog" class="record-dialog"><div class="dialog-header"><h2 id="record-molecule-title">Molecular identity</h2><button id="record-molecule-close" type="button">Close ×</button></div><div id="record-molecule-view" class="record-molecule-view"></div><p id="record-molecule-note"></p><a id="record-molecule-source" target="_blank" rel="noopener">Reference ↗</a></dialog><script src="../vendor/3Dmol-min.js"></script><script type="module" src="../illustrated-record.mjs?v=0.5.0-r1"></script></body></html>'
     return s
 
 def measurement_table(ms):
@@ -109,14 +114,17 @@ def main():
     stale=[str(p) for folder in [public/'records',pages] for p in folder.glob('*') if p.is_file() and p.stem not in expected]
     if stale:raise ValueError('Review and remove obsolete generated record files explicitly: '+', '.join(stale))
     families=sorted({r['material']['family'] for r in records if r['record_type']!='procedure'})
-    manifest={'schema_version':'1.0.0','dataset_version':'0.4.0','record_count':len(records),'group_count':len(unique_groups),'families':families,'split_policy':'Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.','records':items}
-    report={'status':'passed','dataset_version':'0.4.0','records':len(records),'recipe_records':sum(r['record_type']!='procedure' for r in records),'shared_procedures':sum(r['record_type']=='procedure' for r in records),'independent_experiment_count':None,'source_groups':len(unique_groups),'families':len(families),'eligible_by_task':{k:len(v) for k,v in exports.items()},'checks':['JSON Schema Draft 2020-12','Unique IDs and source references','Typed finite quantities and missing-value status','Operation dependencies and material-state graph','Product/measurement linkage','Illustrative-structure exclusion','Connected-component evaluation grouping','Allowlisted training inputs'],'warnings':['No source-reviewed exact experimental CIF-to-complete-recipe pair is established.','Small seed collection; no general model-performance estimate.','No experimental failure-rate or reproducibility dataset yet.']}
-    report['curated_recipes']=sum(r['record_type']!='procedure' and r.get('collection')=='reviewed_literature' for r in records)
+    manifest={'schema_version':'1.0.0','dataset_version':'0.5.0','record_count':len(records),'group_count':len(unique_groups),'families':families,'split_policy':'Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.','records':items}
+    report={'status':'passed','dataset_version':'0.5.0','records':len(records),'recipe_records':sum(r['record_type']!='procedure' for r in records),'shared_procedures':sum(r['record_type']=='procedure' for r in records),'independent_experiment_count':None,'source_groups':len(unique_groups),'families':len(families),'eligible_by_task':{k:len(v) for k,v in exports.items()},'checks':['JSON Schema Draft 2020-12','Unique IDs and source references','Typed finite quantities and missing-value status','Operation dependencies and material-state graph','Product/measurement linkage','Illustrative-structure exclusion','Connected-component evaluation grouping','Allowlisted training inputs'],'warnings':['No source-reviewed exact experimental CIF-to-complete-recipe pair is established.','Small seed collection; no general model-performance estimate.','No experimental failure-rate or reproducibility dataset yet.']}
+    report['curated_recipes']=sum(r['record_type'] in PROTOCOL_TYPES and r.get('collection')=='reviewed_literature' for r in records)
+    report['contextual_observation_records']=sum(r['record_type']=='observation' for r in records)
+    report['recipe_records']=sum(r['record_type'] in PROTOCOL_TYPES for r in records)
     report['published_benchmark_rows']=sum(r.get('collection')=='published_benchmark' for r in records)
     report['warnings']=['No verified exact experimental CIF-to-complete-recipe pairs.','Literature seed is too small for cross-study performance estimates.','PbS benchmark rows are published numeric experiments, not individually reviewed complete protocols. The baseline is evaluated separately within that study.','Five selected PbS failure rows are retained as evidence with null continuous targets.']
     queue=ROOT/'data/pilot-source-queue.json'
     if queue.exists():
         q=json.loads(queue.read_text(encoding='utf-8'));dump(public/'pilot-source-queue.json',q);report['queue_count']=len(q['candidates']);report['queue_families']=len({x['family'] for x in q['candidates']})
+    dump(public/'measurement-display.json',DISPLAY)
     dump(public/'record.schema.json',SCHEMA);dump(public/'dataset-manifest.json',manifest);dump(public/'validation-report.json',report)
     (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8')
     for task,rows in exports.items():

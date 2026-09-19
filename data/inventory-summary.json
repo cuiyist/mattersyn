@@ -1,53 +1,70 @@
 {
-  "inventory_version": "2026-09-18-verified-snapshot",
-  "scope": "Read-only inventory of existing corpus metadata, canonical records and review ledgers. No new downloads or paper reading. Counts are curation units, not independent experiments.",
+  "inventory_version": "2026-09-19-littau-local-reconciled-snapshot",
+  "scope": "Read-only reconciliation of the legacy corpus baseline, current canonical records, local generated hubs and formal review ledgers. Incoming-folder queue totals are separate. Counts are curation units, not independent experiments; local generated public-facing routes do not establish remote publication.",
   "summary": {
     "local_document_files_indexed": 7373,
     "local_paper_groups_indexed": 4176,
     "paper_candidate_groups_total": 4570,
     "candidate_groups_without_local_documents": 394,
     "unique_document_content_hashes": 6857,
-    "canonical_records": 155,
-    "reviewed_literature_records": 55,
-    "reviewed_literature_source_groups": 9,
+    "canonical_records": 168,
+    "reviewed_literature_records": 68,
+    "reviewed_literature_source_groups": 10,
     "published_benchmark_rows": 100,
     "published_benchmark_source_groups": 1,
-    "total_canonical_source_groups": 10,
+    "total_canonical_source_groups": 11,
     "formal_full_main_and_matched_si_reviews": 5,
     "formal_full_review_pages": 74,
     "legacy_main_article_reviews_si_unverified": 2,
     "legacy_main_pages_inspected": 13,
     "selected_recipe_figure_review_sources": 2,
-    "local_groups_without_canonical_records": 4166,
-    "synthesis_route_variant_records": 32,
+    "local_groups_without_canonical_records": 4165,
+    "synthesis_route_variant_records": 35,
     "contextual_control_variant_records": 9,
-    "shared_preparation_workup_characterization_assay_procedures": 14,
-    "nonprocedure_literature_records": 41,
+    "shared_preparation_workup_characterization_assay_procedures": 23,
+    "nonprocedure_literature_records": 45,
     "literature_record_type_counts": {
-      "procedure": 14,
       "literature_protocol": 13,
-      "protocol_variant": 28
+      "observation": 1,
+      "procedure": 23,
+      "protocol_variant": 31
     },
-    "literature_recipe_family_ids": 10,
-    "primary_synthesis_recipe_family_ids": 9,
-    "public_material_hubs": 13,
-    "direct_synthesis_target_systems": 10,
-    "component_only_hubs": 3,
-    "all_nonprocedure_literature_product_identity_categories_including_controls": 12,
+    "literature_recipe_family_ids": 12,
+    "primary_synthesis_recipe_family_ids": 10,
+    "public_material_hubs": 15,
+    "direct_synthesis_target_systems": 11,
+    "component_only_hubs": 4,
+    "all_nonprocedure_literature_product_identity_categories_including_controls": 13,
     "independent_experiment_count": null,
     "full_corpus_distinct_synthesized_material_count": null,
     "full_corpus_recipe_count": null,
-    "verified_exact_structure_recipe_pairs": 0
+    "verified_exact_structure_recipe_pairs": 0,
+    "formal_full_main_reviews_si_unverified": 1,
+    "formal_full_main_only_review_pages": 7,
+    "contextual_observation_records": 1,
+    "recipe_or_control_literature_records": 44,
+    "canonical_record_type_counts": {
+      "experiment": 100,
+      "literature_protocol": 13,
+      "observation": 1,
+      "procedure": 23,
+      "protocol_variant": 31
+    },
+    "contextual_observation_family_ids": 1
   },
   "count_definitions": {
     "paper_group": "Corpus DOI/document grouping. It is not a count of independently identity-verified primary papers; duplicate/mismatched payloads remain in the corpus metadata.",
     "synthesis_route_variant": "Distinct reviewed canonical route or condition-variant used for publication, not necessarily a complete executable recipe, unique physical batch or independent experiment.",
-    "contextual_control": "The nine Nakonechnyi core-stability/no-seed/low-OA control variants, kept distinct from the 32 currently published route records.",
+    "contextual_control": "The 9 Nakonechnyi core-stability/no-seed/low-OA control variants, kept distinct from the 35 current synthesis-route records and contextual observations.",
     "procedure": "Precursor preparation, isolation, size-selection, ligand exchange, post-treatment, acquisition or assay records. Not additional material syntheses.",
-    "recipe_family": "Assigned canonical grouping used to keep related records together; one family can span several materials or protocols. Literature has 10 grouping IDs, of which 9 contain primary synthesis routes; ZnO post-treatment adds the tenth. These are not 10 unique physical recipes.",
-    "material_system": "Direct product identity retaining core/shell architecture. Nine exact composition-system labels plus phase/stoichiometry-unresolved Fe–O give 10 primary categories. Adding no-seed control product labels CdS and ZnSe yields 12. These are not 13 standalone materials from the 13 website hubs.",
+    "recipe_family": "Assigned canonical grouping for related records, not unique physical recipes: 12 literature grouping IDs; 10 contain primary synthesis routes, one is the ZnO post-treatment family and one is the AKS41 observation family.",
+    "material_system": "Direct product identity retaining architecture and unresolved stoichiometry. The 11 direct system labels include unresolved Fe–O and Si/SiOx. Adding the no-seed control product labels CdS and ZnSe gives 13 nonprocedure literature identity categories. The 15 generated hubs include 4 component-only cross-links; these are not additional standalone syntheses.",
     "benchmark": "Published numeric rows from one external study, not 100 reviewed papers or 100 newly reconstructed laboratory protocols.",
-    "unknown_full_corpus_totals": "Unreviewed titles and keyword windows cannot establish whether a material was synthesized, the actual product, complete recipes, variants, controls or duplication. Do not extrapolate reviewed-subset counts."
+    "unknown_full_corpus_totals": "Unreviewed titles and keyword windows cannot establish whether a material was synthesized, the actual product, complete recipes, variants, controls or duplication. Do not extrapolate reviewed-subset counts.",
+    "contextual_observation": "A source-reviewed characterization/context record without a reconstructed synthesis recipe. AKS41 is an earlier-apparatus observation, not a fourth Littau recipe, control experiment or current-apparatus batch.",
+    "public_material_hub": "A locally generated public-facing material/component route. Existence is checked against generated files, not a remote deployment check. Shared canonical record IDs are counted once globally.",
+    "nonprocedure_literature": "All literature records except supporting procedures: synthesis routes, contextual controls and contextual observations. The observation is excluded from recipe_or_control_literature_records.",
+    "legacy_corpus_baseline": "The fixed indexed downloaded_papers corpus: 7,373 document files and 4,176 groups with local documents. Incoming-folder tracking is not added to these counts, including byte-duplicate incoming copies."
   },
   "material_system_lists": {
     "direct_synthesis_targets": [
@@ -60,6 +77,7 @@
       "Fe–O",
       "InP",
       "Ir",
+      "Si/SiOx",
       "ZnO"
     ],
     "control_only_additional_product_labels": [
@@ -68,11 +86,15 @@
     ],
     "component_only_public_hubs": [
       "CdS",
-      "ZnSe",
-      "CoFe2O4"
+      "CoFe2O4",
+      "Si",
+      "ZnSe"
     ],
     "benchmark_only_product": "PbS",
-    "excluded_precursor_procedure_identity": "Fe–C–H–O"
+    "excluded_precursor_procedure_identity": "Fe–C–H–O",
+    "contextual_observation_product_labels": [
+      "Si/SiOx"
+    ]
   },
   "corpus_candidate_metadata": {
     "title_material_mention_paper_groups": 1820,
@@ -121,8 +143,8 @@
       "procedure_count": 2,
       "benchmark_row_count": 0,
       "record_type_counts": {
-        "procedure": 2,
         "literature_protocol": 1,
+        "procedure": 2,
         "protocol_variant": 6
       },
       "canonical_recipe_family_ids": [
@@ -153,7 +175,9 @@
         "feld-2019-iron-oxide-ode56-growth-family": "records/feld-2019-iron-oxide-ode56-growth-family.html",
         "feld-2019-iron-oxide-ode8-growth-family": "records/feld-2019-iron-oxide-ode8-growth-family.html",
         "feld-2019-iron-oxide-undiluted-cubic-condition": "records/feld-2019-iron-oxide-undiluted-cubic-condition.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 31
     },
     {
       "source_group": "fu2007",
@@ -185,8 +209,8 @@
       "procedure_count": 2,
       "benchmark_row_count": 0,
       "record_type_counts": {
-        "procedure": 2,
         "literature_protocol": 1,
+        "procedure": 2,
         "protocol_variant": 3
       },
       "canonical_recipe_family_ids": [
@@ -197,21 +221,99 @@
         "ZnO"
       ],
       "record_ids": [
-        "fu-2007-zno-s1-hcl-perturbation",
         "fu-2007-zno-s1",
-        "fu-2007-zno-s2-oa-post-treatment",
+        "fu-2007-zno-s1-hcl-perturbation",
         "fu-2007-zno-s2",
+        "fu-2007-zno-s2-oa-post-treatment",
         "fu-2007-zno-s3",
         "fu-2007-zno-s4"
       ],
       "paper_review_url": "paper-review.html?id=fu2007",
       "record_urls": {
-        "fu-2007-zno-s1-hcl-perturbation": "records/fu-2007-zno-s1-hcl-perturbation.html",
         "fu-2007-zno-s1": "records/fu-2007-zno-s1.html",
-        "fu-2007-zno-s2-oa-post-treatment": "records/fu-2007-zno-s2-oa-post-treatment.html",
+        "fu-2007-zno-s1-hcl-perturbation": "records/fu-2007-zno-s1-hcl-perturbation.html",
         "fu-2007-zno-s2": "records/fu-2007-zno-s2.html",
+        "fu-2007-zno-s2-oa-post-treatment": "records/fu-2007-zno-s2-oa-post-treatment.html",
         "fu-2007-zno-s3": "records/fu-2007-zno-s3.html",
         "fu-2007-zno-s4": "records/fu-2007-zno-s4.html"
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 39
+    },
+    {
+      "source_group": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "year": 1993,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All seven supplied main pages read and visually inspected with independent source and bounded record-join audits. Matching SI not located or verified. The three current-apparatus formulation records, nine supporting procedures and AKS41 observation retain unresolved specimen linkage, source conflicts and missing parameters. Final reader integration and publication are separate gates.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 7,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/littau1993.json",
+      "paper_review_url": "paper-review.html?id=littau1993",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "The 1.0, 2.0 and 6.0 labels are supplied 0.1%-disilane/He stock-mixture flows and formulation families, not independently identified physical batches.",
+        "AKS41 is a contextual observation from an earlier apparatus; no quantified synthesis is reconstructed and no training task is enabled.",
+        "Si/SiOx retains unresolved surface stoichiometry and the unconfirmed 1.0 crystallinity; Si is a component-only link, not a bare-silicon synthesis.",
+        "48 measurement entries are scoped separately across the 13 records; they are not 48 independent experiments."
+      ],
+      "has_local_corpus_group": true,
+      "canonical_record_count": 13,
+      "synthesis_route_variant_count": 3,
+      "contextual_control_count": 0,
+      "contextual_observation_count": 1,
+      "procedure_count": 9,
+      "benchmark_row_count": 0,
+      "measurement_entry_count": 48,
+      "record_type_counts": {
+        "observation": 1,
+        "procedure": 9,
+        "protocol_variant": 3
+      },
+      "canonical_recipe_family_ids": [
+        "littau1993-aks41-context",
+        "littau1993-si-aerosol"
+      ],
+      "direct_route_material_systems": [
+        "Si/SiOx"
+      ],
+      "record_ids": [
+        "littau-1993-aks41-context",
+        "littau-1993-si-acid-activation",
+        "littau-1993-si-aerosol-1p0",
+        "littau-1993-si-aerosol-2p0",
+        "littau-1993-si-aerosol-6p0",
+        "littau-1993-si-colloid-concentration",
+        "littau-1993-si-hplc-fractionation",
+        "littau-1993-si-ir-characterization",
+        "littau-1993-si-optical-characterization",
+        "littau-1993-si-powder-preparation",
+        "littau-1993-si-tem-characterization",
+        "littau-1993-si-time-resolved-pl",
+        "littau-1993-si-xrd-characterization"
+      ],
+      "record_urls": {
+        "littau-1993-aks41-context": "records/littau-1993-aks41-context.html",
+        "littau-1993-si-acid-activation": "records/littau-1993-si-acid-activation.html",
+        "littau-1993-si-aerosol-1p0": "records/littau-1993-si-aerosol-1p0.html",
+        "littau-1993-si-aerosol-2p0": "records/littau-1993-si-aerosol-2p0.html",
+        "littau-1993-si-aerosol-6p0": "records/littau-1993-si-aerosol-6p0.html",
+        "littau-1993-si-colloid-concentration": "records/littau-1993-si-colloid-concentration.html",
+        "littau-1993-si-hplc-fractionation": "records/littau-1993-si-hplc-fractionation.html",
+        "littau-1993-si-ir-characterization": "records/littau-1993-si-ir-characterization.html",
+        "littau-1993-si-optical-characterization": "records/littau-1993-si-optical-characterization.html",
+        "littau-1993-si-powder-preparation": "records/littau-1993-si-powder-preparation.html",
+        "littau-1993-si-tem-characterization": "records/littau-1993-si-tem-characterization.html",
+        "littau-1993-si-time-resolved-pl": "records/littau-1993-si-time-resolved-pl.html",
+        "littau-1993-si-xrd-characterization": "records/littau-1993-si-xrd-characterization.html"
       }
     },
     {
@@ -237,8 +339,8 @@
       "procedure_count": 3,
       "benchmark_row_count": 0,
       "record_type_counts": {
-        "procedure": 3,
         "literature_protocol": 1,
+        "procedure": 3,
         "protocol_variant": 2
       },
       "canonical_recipe_family_ids": [
@@ -263,7 +365,9 @@
         "murray-1993-cdse-size-selection": "records/murray-1993-cdse-size-selection.html",
         "murray-1993-cdse-small-species": "records/murray-1993-cdse-small-species.html",
         "murray-1993-cdse-surface-exchange": "records/murray-1993-cdse-surface-exchange.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 3
     },
     {
       "source_group": "nakonechnyi2017",
@@ -295,8 +399,8 @@
       "procedure_count": 0,
       "benchmark_row_count": 0,
       "record_type_counts": {
-        "protocol_variant": 12,
-        "literature_protocol": 5
+        "literature_protocol": 5,
+        "protocol_variant": 12
       },
       "canonical_recipe_family_ids": [
         "nakonechnyi2017-cdse"
@@ -344,7 +448,9 @@
         "nakonechnyi-2017-zb-cdse-znse-50nmol": "records/nakonechnyi-2017-zb-cdse-znse-50nmol.html",
         "nakonechnyi-2017-zb-route-cds-no-seed-control": "records/nakonechnyi-2017-zb-route-cds-no-seed-control.html",
         "nakonechnyi-2017-zb-route-znse-no-seed-control": "records/nakonechnyi-2017-zb-route-znse-no-seed-control.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 21
     },
     {
       "source_group": "peng2000",
@@ -369,8 +475,8 @@
       "procedure_count": 0,
       "benchmark_row_count": 0,
       "record_type_counts": {
-        "protocol_variant": 1,
-        "literature_protocol": 1
+        "literature_protocol": 1,
+        "protocol_variant": 1
       },
       "canonical_recipe_family_ids": [
         "peng2000-cdse"
@@ -386,7 +492,9 @@
       "record_urls": {
         "peng-2000-cdse-high-aspect": "records/peng-2000-cdse-high-aspect.html",
         "peng-2000-cdse-typical": "records/peng-2000-cdse-typical.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 0
     },
     {
       "source_group": "saha2019",
@@ -440,7 +548,9 @@
         "saha-2019-coo-core": "records/saha-2019-coo-core.html",
         "saha-2019-magnetic-heating-assay": "records/saha-2019-magnetic-heating-assay.html",
         "saha-2019-structural-magnetic-characterization": "records/saha-2019-structural-magnetic-characterization.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 19
     },
     {
       "source_group": "stowell2005",
@@ -503,7 +613,9 @@
         "stowell-2005-ir-top-290c": "records/stowell-2005-ir-top-290c.html",
         "stowell-2005-ir-topb-270c": "records/stowell-2005-ir-topb-270c.html",
         "stowell-2005-ir-topb-recycling-assay": "records/stowell-2005-ir-topb-recycling-assay.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 59
     },
     {
       "source_group": "tessier2015",
@@ -536,7 +648,9 @@
       "paper_review_url": null,
       "record_urls": {
         "tessier2015-inp-incl3-reference1": "records/tessier2015-inp-incl3-reference1.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 4
     },
     {
       "source_group": "voznyy2019",
@@ -861,7 +975,9 @@
         "pbs2019-002524": "records/pbs2019-002524.html",
         "pbs2019-002535": "records/pbs2019-002535.html",
         "pbs2019-002546": "records/pbs2019-002546.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 200
     },
     {
       "source_group": "zhang2019",
@@ -894,7 +1010,9 @@
       "paper_review_url": null,
       "record_urls": {
         "zhang2019-cspbbr3-tdpa-only": "records/zhang2019-cspbbr3-tdpa-only.html"
-      }
+      },
+      "contextual_observation_count": 0,
+      "measurement_entry_count": 5
     }
   ],
   "per_material": [
@@ -934,7 +1052,9 @@
           "title": "Mechanistic Insights in Seeded Growth Synthesis of Colloidal Core/Shell Quantum Dots"
         }
       ],
-      "direct_route_recipe_family_ids": []
+      "direct_route_recipe_family_ids": [],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CdSe",
@@ -1004,7 +1124,9 @@
         "murray1993-cdse",
         "nakonechnyi2017-cdse",
         "peng2000-cdse"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CdSe/CdS",
@@ -1043,7 +1165,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "nakonechnyi2017-cdse"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CdSe/ZnSe",
@@ -1080,7 +1204,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "nakonechnyi2017-cdse"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CoFe2O4",
@@ -1114,7 +1240,9 @@
           "title": "Interface Modeling Leading to Giant Exchange Bias from the CoO/CoFe2O4 Quantum Dot Heterostructure"
         }
       ],
-      "direct_route_recipe_family_ids": []
+      "direct_route_recipe_family_ids": [],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CoO",
@@ -1150,7 +1278,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "saha2019-coo-cofe2o4"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CoO/CoFe2O4",
@@ -1184,7 +1314,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "saha2019-coo-cofe2o4"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "CsPbBr3",
@@ -1218,7 +1350,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "zhang2019-cspbbr3-phosphonic-acids"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "Fe–O",
@@ -1260,7 +1394,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "feld2019-iron-carbonate-oleate-thermolysis"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "InP",
@@ -1294,7 +1430,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "tessier2015-inp-aminophosphine"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "Ir",
@@ -1331,7 +1469,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "stowell2005-ir"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "PbS",
@@ -1363,7 +1503,91 @@
           "title": "Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis"
         }
       ],
+      "direct_route_recipe_family_ids": [],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
+    },
+    {
+      "material_system": "Si",
+      "direct_synthesis_route_variant_count": 0,
+      "direct_route_record_ids": [],
+      "contextual_control_count": 0,
+      "contextual_control_record_ids": [],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": [],
+      "procedure_count": 0,
+      "benchmark_row_count": 0,
+      "public_hub_exists": true,
+      "public_hub_component_only": true,
+      "public_hub_route_contributions": 3,
+      "component_route_contribution_count": 3,
+      "component_route_record_ids": [
+        "littau-1993-si-aerosol-1p0",
+        "littau-1993-si-aerosol-2p0",
+        "littau-1993-si-aerosol-6p0"
+      ],
+      "primary_reviewed_source_count": 0,
+      "notes": [
+        "Component-only cross-links to the same three surface-oxidized Si/SiOx formulations; no separate bare-Si synthesis is established.",
+        "Oxide-layer information remains within Si/SiOx; no standalone SiOx synthesis or separate oxide material page is counted."
+      ],
+      "material_hub_id": "si-243a7b",
+      "material_hub_url": "material.html?id=si-243a7b",
+      "source_groups": [
+        "littau1993"
+      ],
+      "source_links": [
+        {
+          "source_group": "littau1993",
+          "doi": "10.1021/j100108a019",
+          "url": "https://doi.org/10.1021/j100108a019",
+          "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction"
+        }
+      ],
       "direct_route_recipe_family_ids": []
+    },
+    {
+      "material_system": "Si/SiOx",
+      "direct_synthesis_route_variant_count": 3,
+      "direct_route_record_ids": [
+        "littau-1993-si-aerosol-1p0",
+        "littau-1993-si-aerosol-2p0",
+        "littau-1993-si-aerosol-6p0"
+      ],
+      "contextual_control_count": 0,
+      "contextual_control_record_ids": [],
+      "contextual_observation_count": 1,
+      "contextual_observation_record_ids": [
+        "littau-1993-aks41-context"
+      ],
+      "procedure_count": 9,
+      "benchmark_row_count": 0,
+      "public_hub_exists": true,
+      "public_hub_component_only": false,
+      "public_hub_route_contributions": 3,
+      "component_route_contribution_count": 0,
+      "component_route_record_ids": [],
+      "primary_reviewed_source_count": 1,
+      "notes": [
+        "Three current-apparatus formulation variants; nine supporting procedures and one earlier-apparatus AKS41 observation are separate curation units, not additional synthesis routes.",
+        "The oxide stoichiometry is unresolved and 1.0 crystallinity is not directly established. Neither the slash label nor the illustrative lattice is a measured atomic-structure label."
+      ],
+      "material_hub_id": "si-siox-3a1c19",
+      "material_hub_url": "material.html?id=si-siox-3a1c19",
+      "source_groups": [
+        "littau1993"
+      ],
+      "source_links": [
+        {
+          "source_group": "littau1993",
+          "doi": "10.1021/j100108a019",
+          "url": "https://doi.org/10.1021/j100108a019",
+          "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction"
+        }
+      ],
+      "direct_route_recipe_family_ids": [
+        "littau1993-si-aerosol"
+      ]
     },
     {
       "material_system": "ZnO",
@@ -1400,7 +1624,9 @@
       ],
       "direct_route_recipe_family_ids": [
         "fu2007-zno-aqueous-dea-oa"
-      ]
+      ],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     },
     {
       "material_system": "ZnSe",
@@ -1440,7 +1666,9 @@
           "title": "Mechanistic Insights in Seeded Growth Synthesis of Colloidal Core/Shell Quantum Dots"
         }
       ],
-      "direct_route_recipe_family_ids": []
+      "direct_route_recipe_family_ids": [],
+      "contextual_observation_count": 0,
+      "contextual_observation_record_ids": []
     }
   ],
   "benchmark_scope": {
@@ -1455,8 +1683,8 @@
     "note": "These benchmark grouping counts are generated from the documented input rule; they are not the number of fully reconstructed synthesis protocols or independently reproduced experiments."
   },
   "training_eligibility": {
-    "precursor_selection": 32,
-    "partial_protocol": 48,
+    "precursor_selection": 35,
+    "partial_protocol": 51,
     "size_conditioned_recipe": 6,
     "exact_structure_recipe": 0,
     "success_prediction": 0,
@@ -1468,20 +1696,232 @@
     "Upgrade claims only after page/figure/recipe inventory and source/sample linkage review; no title-based material expansion."
   ],
   "provenance": {
-    "canonical_record_files": 155,
-    "canonical_tree_sha256": "4129ee7105d25e56eff31674a3091c7cee684e05048885449b83801f7397ad06",
+    "canonical_record_files": 168,
+    "canonical_tree_sha256": "a20f056282929f8283210a67d40fe40dac5880d2e037be9f1500f2c91e0e27ec",
     "corpus_summary_snapshot": "2026-09-17T17:19:41.310914+00:00",
     "files_used": [
       "data/corpus/library-source.json",
-      "data/records/*.json",
       "data/paper-reviews/*.json",
+      "data/paper-reviews/feld2019.json",
+      "data/paper-reviews/fu2007.json",
+      "data/paper-reviews/littau1993.json",
+      "data/paper-reviews/nakonechnyi2017.json",
+      "data/paper-reviews/saha2019.json",
+      "data/paper-reviews/stowell2005.json",
+      "data/records/*.json",
+      "data/records/feld-2019-fe2-carbonate-to-oleate-preparation.json",
+      "data/records/feld-2019-fe3-carbonate-to-oleate-preparation.json",
+      "data/records/feld-2019-iron-oleate-general-thermolysis.json",
+      "data/records/feld-2019-iron-oxide-high-dilution-fe-oa-series.json",
+      "data/records/feld-2019-iron-oxide-ode30-growth-family.json",
+      "data/records/feld-2019-iron-oxide-ode34-star-condition.json",
+      "data/records/feld-2019-iron-oxide-ode56-growth-family.json",
+      "data/records/feld-2019-iron-oxide-ode8-growth-family.json",
+      "data/records/feld-2019-iron-oxide-undiluted-cubic-condition.json",
+      "data/records/fu-2007-zno-s1-hcl-perturbation.json",
+      "data/records/fu-2007-zno-s1.json",
+      "data/records/fu-2007-zno-s2-oa-post-treatment.json",
+      "data/records/fu-2007-zno-s2.json",
+      "data/records/fu-2007-zno-s3.json",
+      "data/records/fu-2007-zno-s4.json",
+      "data/records/littau-1993-aks41-context.json",
+      "data/records/littau-1993-si-acid-activation.json",
+      "data/records/littau-1993-si-aerosol-1p0.json",
+      "data/records/littau-1993-si-aerosol-2p0.json",
+      "data/records/littau-1993-si-aerosol-6p0.json",
+      "data/records/littau-1993-si-colloid-concentration.json",
+      "data/records/littau-1993-si-hplc-fractionation.json",
+      "data/records/littau-1993-si-ir-characterization.json",
+      "data/records/littau-1993-si-optical-characterization.json",
+      "data/records/littau-1993-si-powder-preparation.json",
+      "data/records/littau-1993-si-tem-characterization.json",
+      "data/records/littau-1993-si-time-resolved-pl.json",
+      "data/records/littau-1993-si-xrd-characterization.json",
+      "data/records/murray-1993-cdse-isolation.json",
+      "data/records/murray-1993-cdse-method1.json",
+      "data/records/murray-1993-cdse-method2.json",
+      "data/records/murray-1993-cdse-size-selection.json",
+      "data/records/murray-1993-cdse-small-species.json",
+      "data/records/murray-1993-cdse-surface-exchange.json",
+      "data/records/nakonechnyi-2017-core-stability-cd-oa-1to20.json",
+      "data/records/nakonechnyi-2017-core-stability-cd-oa-1to3.json",
+      "data/records/nakonechnyi-2017-core-stability-neither.json",
+      "data/records/nakonechnyi-2017-core-stability-top-s-only.json",
+      "data/records/nakonechnyi-2017-wz-cdse-cds-seeded-growth.json",
+      "data/records/nakonechnyi-2017-wz-cdse-core.json",
+      "data/records/nakonechnyi-2017-wz-cdse-znse-seeded-growth.json",
+      "data/records/nakonechnyi-2017-wz-route-cds-no-seed-control.json",
+      "data/records/nakonechnyi-2017-wz-route-znse-no-seed-control.json",
+      "data/records/nakonechnyi-2017-zb-cdse-cds-low-oa-control.json",
+      "data/records/nakonechnyi-2017-zb-cdse-cds-seeded-growth.json",
+      "data/records/nakonechnyi-2017-zb-cdse-core.json",
+      "data/records/nakonechnyi-2017-zb-cdse-znse-100nmol.json",
+      "data/records/nakonechnyi-2017-zb-cdse-znse-25nmol.json",
+      "data/records/nakonechnyi-2017-zb-cdse-znse-50nmol.json",
+      "data/records/nakonechnyi-2017-zb-route-cds-no-seed-control.json",
+      "data/records/nakonechnyi-2017-zb-route-znse-no-seed-control.json",
+      "data/records/pbs2019-000001.json",
+      "data/records/pbs2019-000005.json",
+      "data/records/pbs2019-000016.json",
+      "data/records/pbs2019-000064.json",
+      "data/records/pbs2019-000070.json",
+      "data/records/pbs2019-000082.json",
+      "data/records/pbs2019-000084.json",
+      "data/records/pbs2019-000085.json",
+      "data/records/pbs2019-000094.json",
+      "data/records/pbs2019-000101.json",
+      "data/records/pbs2019-000145.json",
+      "data/records/pbs2019-000158.json",
+      "data/records/pbs2019-000197.json",
+      "data/records/pbs2019-000207.json",
+      "data/records/pbs2019-000286.json",
+      "data/records/pbs2019-000293.json",
+      "data/records/pbs2019-000318.json",
+      "data/records/pbs2019-000341.json",
+      "data/records/pbs2019-000473.json",
+      "data/records/pbs2019-000514.json",
+      "data/records/pbs2019-000612.json",
+      "data/records/pbs2019-000857.json",
+      "data/records/pbs2019-000923.json",
+      "data/records/pbs2019-000977.json",
+      "data/records/pbs2019-001009.json",
+      "data/records/pbs2019-001111.json",
+      "data/records/pbs2019-001116.json",
+      "data/records/pbs2019-001126.json",
+      "data/records/pbs2019-001201.json",
+      "data/records/pbs2019-001209.json",
+      "data/records/pbs2019-001251.json",
+      "data/records/pbs2019-001272.json",
+      "data/records/pbs2019-001292.json",
+      "data/records/pbs2019-001364.json",
+      "data/records/pbs2019-001442.json",
+      "data/records/pbs2019-001521.json",
+      "data/records/pbs2019-001528.json",
+      "data/records/pbs2019-001531.json",
+      "data/records/pbs2019-001535.json",
+      "data/records/pbs2019-001605.json",
+      "data/records/pbs2019-001650.json",
+      "data/records/pbs2019-001655.json",
+      "data/records/pbs2019-001846.json",
+      "data/records/pbs2019-001918.json",
+      "data/records/pbs2019-001929.json",
+      "data/records/pbs2019-001940.json",
+      "data/records/pbs2019-002024.json",
+      "data/records/pbs2019-002040.json",
+      "data/records/pbs2019-002041.json",
+      "data/records/pbs2019-002042.json",
+      "data/records/pbs2019-002043.json",
+      "data/records/pbs2019-002059.json",
+      "data/records/pbs2019-002067.json",
+      "data/records/pbs2019-002072.json",
+      "data/records/pbs2019-002112.json",
+      "data/records/pbs2019-002168.json",
+      "data/records/pbs2019-002171.json",
+      "data/records/pbs2019-002175.json",
+      "data/records/pbs2019-002190.json",
+      "data/records/pbs2019-002202.json",
+      "data/records/pbs2019-002206.json",
+      "data/records/pbs2019-002222.json",
+      "data/records/pbs2019-002227.json",
+      "data/records/pbs2019-002229.json",
+      "data/records/pbs2019-002233.json",
+      "data/records/pbs2019-002251.json",
+      "data/records/pbs2019-002254.json",
+      "data/records/pbs2019-002256.json",
+      "data/records/pbs2019-002273.json",
+      "data/records/pbs2019-002276.json",
+      "data/records/pbs2019-002288.json",
+      "data/records/pbs2019-002295.json",
+      "data/records/pbs2019-002316.json",
+      "data/records/pbs2019-002328.json",
+      "data/records/pbs2019-002330.json",
+      "data/records/pbs2019-002334.json",
+      "data/records/pbs2019-002344.json",
+      "data/records/pbs2019-002356.json",
+      "data/records/pbs2019-002373.json",
+      "data/records/pbs2019-002375.json",
+      "data/records/pbs2019-002377.json",
+      "data/records/pbs2019-002408.json",
+      "data/records/pbs2019-002409.json",
+      "data/records/pbs2019-002413.json",
+      "data/records/pbs2019-002420.json",
+      "data/records/pbs2019-002424.json",
+      "data/records/pbs2019-002432.json",
+      "data/records/pbs2019-002437.json",
+      "data/records/pbs2019-002473.json",
+      "data/records/pbs2019-002490.json",
+      "data/records/pbs2019-002509.json",
+      "data/records/pbs2019-002510.json",
+      "data/records/pbs2019-002512.json",
+      "data/records/pbs2019-002513.json",
+      "data/records/pbs2019-002515.json",
+      "data/records/pbs2019-002516.json",
+      "data/records/pbs2019-002523.json",
+      "data/records/pbs2019-002524.json",
+      "data/records/pbs2019-002535.json",
+      "data/records/pbs2019-002546.json",
+      "data/records/peng-2000-cdse-high-aspect.json",
+      "data/records/peng-2000-cdse-typical.json",
+      "data/records/saha-2019-coo-cofe2o4-seeded-growth.json",
+      "data/records/saha-2019-coo-core.json",
+      "data/records/saha-2019-magnetic-heating-assay.json",
+      "data/records/saha-2019-structural-magnetic-characterization.json",
+      "data/records/stowell-2005-ir-characterization-methods.json",
+      "data/records/stowell-2005-ir-hydrogenation-assay.json",
+      "data/records/stowell-2005-ir-oa-oleylamine-290c.json",
+      "data/records/stowell-2005-ir-oa-size-selection.json",
+      "data/records/stowell-2005-ir-toab-270c.json",
+      "data/records/stowell-2005-ir-toab-recycling-assay.json",
+      "data/records/stowell-2005-ir-top-290c.json",
+      "data/records/stowell-2005-ir-topb-270c.json",
+      "data/records/stowell-2005-ir-topb-recycling-assay.json",
+      "data/records/tessier2015-inp-incl3-reference1.json",
+      "data/records/zhang2019-cspbbr3-tdpa-only.json",
+      "dist/data/baseline-report.json",
+      "dist/data/dataset-manifest.json",
+      "dist/data/library-index.json",
       "dist/data/materials-index.json",
       "dist/data/materials/*.json",
+      "dist/data/materials/cds-fad408.json",
+      "dist/data/materials/cdse-cds-34750d.json",
+      "dist/data/materials/cdse-d923c5.json",
+      "dist/data/materials/cdse-znse-0f8c68.json",
+      "dist/data/materials/cofe2o4-aa1bf0.json",
+      "dist/data/materials/coo-24989d.json",
+      "dist/data/materials/coo-cofe2o4-72dfe8.json",
+      "dist/data/materials/cspbbr3-2b7650.json",
+      "dist/data/materials/fe-o-a96f85.json",
+      "dist/data/materials/inp-9eb58d.json",
+      "dist/data/materials/ir-460eda.json",
+      "dist/data/materials/si-243a7b.json",
+      "dist/data/materials/si-siox-3a1c19.json",
+      "dist/data/materials/zno-cf05e2.json",
+      "dist/data/materials/znse-930698.json",
       "dist/data/paper-evidence/murray1993.json",
+      "dist/data/paper-review-index.json",
       "dist/data/recipe-figures/tessier2015.json",
       "dist/data/recipe-figures/zhang2019.json",
-      "dist/data/validation-report.json",
-      "dist/data/baseline-report.json"
-    ]
+      "dist/data/validation-report.json"
+    ],
+    "canonical_tree_hash_rule": "SHA256 of sorted UTF-8 relative-path + NUL + raw-file-SHA256 + LF records; raw file hashes appear in private validation.json.",
+    "base_inventory_sha256": "bff3bad5d60662e19b109bae86deb34f8cce7348e9372a6cb25effd8eee313ed",
+    "generated_dataset_version_observed": "0.5.0",
+    "dataset_version_note": "Observed local build version; this inventory does not bump dataset version or verify deployment.",
+    "publication_verification": "Not assessed; local build only.",
+    "summary_artifact_sha256": {
+      "data/corpus/library-source.json": "cf38a92227f08937fd57fae37c25a17d5846e23db9ca1968b6fc4728e3baabcc",
+      "dist/data/library-index.json": "6f4042789035d39d43a983fcd7a788c1706d51a6fafb73aac50c975e16a25464",
+      "dist/data/dataset-manifest.json": "a3ffeaa1833aa70b15dbf0ea15970fdb08d030fd9159b5125977cf7d320fd197",
+      "dist/data/validation-report.json": "6cc870e1c134b871311e496a713817fa1a2b0d55d10af1dfb68246a672fb37b7",
+      "dist/data/materials-index.json": "024f6098a8b24a4558f8d95c08e4060d2b5d1db2a20bfa5a7e382a470379401a",
+      "dist/data/paper-review-index.json": "d59e68102ea230f94c87c74146650d189fb6c349731fcfa0960c7ca3a932f398",
+      "dist/data/baseline-report.json": "93e25e0e58f25e6b25d46d36011607b360bb58746b35bce388b11ef15ef3c90e",
+      "data/paper-reviews/feld2019.json": "be9021a317885c7fcd650a43017d0f3190660e99bd6963b32fa479b6db88dfb0",
+      "data/paper-reviews/fu2007.json": "493aac56d37556350bc12b8cc32765e46f81f9f7622cb04000bfb2c0084989d4",
+      "data/paper-reviews/littau1993.json": "35bd635a68965d169a8db67bc4ad3b097c460c3d1792c8298e4483e7cec3d40e",
+      "data/paper-reviews/nakonechnyi2017.json": "36d0e41138fa6daea6a4f32fc91590b4949b2768cc485aa19c9db2e516d5efd7",
+      "data/paper-reviews/saha2019.json": "2e4da642be457e37f9fee415d8ab384bc4f4bd6dacaa0012b9603d41c8814c1f",
+      "data/paper-reviews/stowell2005.json": "d61a097e0e8c29973d9381c077af738a9733dd4a57871f5f27832778087245b8"
+    }
   }
 }

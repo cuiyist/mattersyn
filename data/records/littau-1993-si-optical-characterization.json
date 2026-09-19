@@ -1,0 +1,539 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-si-optical-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Littau et al. (1993) · Optical absorption and steady-state luminescence",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "UV–vis and steady-state PL",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; no main-plus-SI completion claim.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-si-aerosol",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Supporting procedure; measured sizes are not prospective targets.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "colloid-input",
+      "name": "Colloid for steady-state optical acquisition; activation state must follow each observation",
+      "kind": "mixture",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "uv-vis",
+      "action": "uv_vis_spectroscopy",
+      "label": "Record UV–vis spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid-input"
+      ],
+      "outputs": [],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "HP 8452A diode-array spectrometer. The weak tail and UV spectral-shape observations remain source-linked qualitative context; no unobserved indirect gap is converted into a measured bandgap.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "pl-spex",
+      "action": "steady_state_PL",
+      "label": "Acquire spectra with SPEX Fluorolog 2",
+      "stage": "characterization",
+      "branch": "SPEX",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid-input"
+      ],
+      "outputs": [],
+      "parameters": {
+        "extended_red_response": {
+          "value": 900,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "Approximate instrumental red response, not a sample emission cutoff",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Instrument alternative. Both PL systems calibrated with tungsten lamp of known irradiance.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "pl-long-wavelength",
+      "action": "steady_state_PL",
+      "label": "Acquire selected long-wavelength spectra",
+      "stage": "characterization",
+      "branch": "Jobin-Yvon",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid-input"
+      ],
+      "outputs": [],
+      "parameters": {
+        "reported_excitation": {
+          "value": 355,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Jobin-Yvon HR640 with Ge photodiode detection; used for some spectra only. Do not assign this configuration to every curve. Both PL systems calibrated with tungsten lamp of known irradiance.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "as-made-6p0-optical",
+      "source_sample_label": "6.0",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results B and Figure 9, as-prepared emission"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, excitation for Figures 9–11"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results B and Figure 9, as-prepared emission"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, excitation for Figures 9–11"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results B and Figure 9, as-prepared emission"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, excitation for Figures 9–11"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results B and Figure 9, as-prepared emission"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, excitation for Figures 9–11"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "As-prepared state. Does not inherit activated 970 nm peak or activated QY.",
+        "Figure 9 caption reports 355 nm excitation; Results B on p. 1229 describes Figures 9–11 as 350 nm. Both are retained without selecting or averaging a setting."
+      ]
+    },
+    {
+      "sample_id": "bulk-si-optical-control",
+      "source_sample_label": "High-quality bulk crystalline Si",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, bulk silicon comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, bulk silicon comparison"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, bulk silicon comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, bulk silicon comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "External comparison sample; not this synthesis product.",
+        "No detectable room-temperature emission in the authors’ apparatus is qualitative; no zero intensity or detection threshold assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "as-made-6p0-weak-pl",
+      "sample_id": "as-made-6p0-optical",
+      "property": "PL_emission_peak_region",
+      "technique": "Steady-state photoluminescence",
+      "value": {
+        "value": null,
+        "minimum": 900,
+        "maximum": 950,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "broad_weak_peak_region",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results B and Figure 9, as-prepared emission"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Room temperature; Figure 9 lower trace, as prepared. Figure 9 caption reports 355 nm excitation; Results B on p. 1229 describes Figures 9–11 as 350 nm. Both are retained without selecting or averaging a setting.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results B and Figure 9, as-prepared emission"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 6, printed p. 1229, Results B, excitation for Figures 9–11"
+        }
+      ]
+    },
+    {
+      "id": "bulk-si-low-temperature-emission",
+      "sample_id": "bulk-si-optical-control",
+      "property": "PL_emission_peak",
+      "technique": "Steady-state photoluminescence",
+      "value": {
+        "value": 1060,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "sharp_line",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 6, printed p. 1229, Results B, bulk silicon comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Bulk silicon reference at liquid-helium temperature; exact temperature unreported. Not room-temperature nanocrystal PL.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 6, printed p. 1229, Results B, bulk silicon comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. Supporting-procedure operations and their measurement/reference/cohort entries passed the bounded procedure audit. No training task is requested; this is not a standalone synthesis or complete SOP. Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+      "Per-curve PL instrument assignment, sample concentration, path length, slit settings and numeric room temperature.",
+      "Exact liquid-helium temperature and bulk-Si control specimen identity."
+    ],
+    "conflicts": [
+      "Figure 9 caption reports 355 nm excitation; Results B on p. 1229 describes Figures 9–11 as 350 nm. Both are retained without selecting or averaging a setting."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Shared aerosol formulation contexts (6.0, 2.0, 1.0)",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "Same source and formulation families; exact specimen/batch joins unresolved."
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "url": "../records/littau-1993-si-aerosol-1p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "url": "../records/littau-1993-si-aerosol-2p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "url": "../records/littau-1993-si-aerosol-6p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Acid activation of silicon colloids",
+      "url": "../records/littau-1993-si-acid-activation.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    },
+    {
+      "label": "Littau et al. (1993) · Time-resolved luminescence of the 1.0 colloid",
+      "url": "../records/littau-1993-si-time-resolved-pl.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,825 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-si-tem-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Littau et al. (1993) · Transmission electron microscopy",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "TEM specimen preparation and imaging",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; no main-plus-SI completion claim.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-si-aerosol",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Supporting procedure; measured sizes are not prospective targets.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    }
+  },
+  "materials": [
+    {
+      "id": "holey-carbon",
+      "name": "Holey-carbon film",
+      "formula": "C",
+      "role": "TEM_support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "ethylene-chloride",
+      "name": "Ethylene chloride (source wording; identity unresolved)",
+      "formula": null,
+      "role": "fraction_wash_solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Do not silently equate with the separately printed ethylene dichloride powder-wash solvent."
+      ],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "aerosol-feed",
+      "name": "Aerosol before grid collection",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "colloid-feed",
+      "name": "Colloid for grid evaporation",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "hplc-feed",
+      "name": "HPLC fraction for grid evaporation",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "aerosol-grid",
+      "name": "Aerosol collected directly on holey carbon",
+      "kind": "product",
+      "parent_ids": [
+        "aerosol-feed",
+        "holey-carbon"
+      ]
+    },
+    {
+      "id": "colloid-grid",
+      "name": "Evaporated colloid on holey carbon",
+      "kind": "product",
+      "parent_ids": [
+        "colloid-feed",
+        "holey-carbon"
+      ]
+    },
+    {
+      "id": "fraction-grid",
+      "name": "Evaporated HPLC fraction on holey carbon",
+      "kind": "mixture",
+      "parent_ids": [
+        "hplc-feed",
+        "holey-carbon"
+      ]
+    },
+    {
+      "id": "washed-fraction-grid",
+      "name": "HPLC-fraction grid after salt-removal wash",
+      "kind": "product",
+      "parent_ids": [
+        "fraction-grid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "collect-aerosol",
+      "action": "grid_deposition",
+      "label": "Collect aerosol directly on the support",
+      "stage": "characterization",
+      "branch": "direct-aerosol",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "aerosol-feed",
+        "holey-carbon"
+      ],
+      "outputs": [
+        "aerosol-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reported alternative; no source image is assigned to this branch by inference.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "evaporate-colloid",
+      "action": "grid_evaporation",
+      "label": "Evaporate colloid on the support",
+      "stage": "characterization",
+      "branch": "colloid-evaporation",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid-feed",
+        "holey-carbon"
+      ],
+      "outputs": [
+        "colloid-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "evaporate-fraction",
+      "action": "grid_evaporation",
+      "label": "Evaporate an HPLC fraction on the support",
+      "stage": "characterization",
+      "branch": "HPLC-fraction",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hplc-feed",
+        "holey-carbon"
+      ],
+      "outputs": [
+        "fraction-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "wash-fraction-grid",
+      "action": "grid_washing",
+      "label": "Remove organic salt from the evaporated fraction",
+      "stage": "characterization",
+      "branch": "HPLC-fraction",
+      "optional": false,
+      "depends_on": [
+        "evaporate-fraction"
+      ],
+      "inputs": [
+        "fraction-grid",
+        "ethylene-chloride"
+      ],
+      "outputs": [
+        "washed-fraction-grid"
+      ],
+      "parameters": {
+        "wash_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        },
+        "wash_count": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Printed solvent identity is retained without an invented chemical structure.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    },
+    {
+      "id": "tem-acquisition",
+      "action": "electron_microscopy",
+      "label": "Acquire TEM images",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [],
+      "parameters": {
+        "electron_energy": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "keV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "JEOL 2000-FX; the source permits alternative preparation routes but does not map each observed sample to a route. Inputs intentionally unresolved rather than pooled.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tem-6p0-context",
+      "source_sample_label": "6.0",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "TEM observation context; route, fraction and exact physical specimen unresolved."
+      ]
+    },
+    {
+      "sample_id": "tem-2p0-context",
+      "source_sample_label": "2.0",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, 2.0 and 1.0 TEM limitations"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, 2.0 and 1.0 TEM limitations"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, 2.0 and 1.0 TEM limitations"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, 2.0 and 1.0 TEM limitations"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "Occasional resolved lattices are a biased subset and do not define the full core-size distribution."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tem-6p0-total-diameter-standard-deviation",
+      "sample_id": "tem-6p0-context",
+      "property": "total_particle_diameter_standard_deviation",
+      "technique": "TEM",
+      "value": {
+        "value": 2.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 formulation; standard deviation about total-particle diameter, not FWHM or uncertainty of the mean.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+        }
+      ]
+    },
+    {
+      "id": "tem-6p0-oxide-shell-thickness",
+      "sample_id": "tem-6p0-context",
+      "property": "oxide_shell_thickness",
+      "technique": "Bright/dark-field TEM comparison",
+      "value": {
+        "value": 1.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Reported average oxide-shell thickness",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 formulation; shell thickness, not total diameter; no crystalline SiO2 shell phase established.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+        }
+      ]
+    },
+    {
+      "id": "tem-6p0-core-total-diameter-ratio",
+      "sample_id": "tem-6p0-context",
+      "property": "core_to_total_diameter_ratio",
+      "technique": "Bright/dark-field TEM comparison",
+      "value": {
+        "value": 0.6666666666666666,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Mean Si-core diameter divided by total particle diameter; not a volume fraction",
+        "raw_text": "2/3",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 formulation; no systematic variation reported across 5–8 nm overall particle diameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 4, printed p. 1227, Results A, 6.0 TEM core and shell observations"
+        }
+      ]
+    },
+    {
+      "id": "tem-2p0-occasional-lattice-core-size",
+      "sample_id": "tem-2p0-context",
+      "property": "lattice_resolved_core_diameter",
+      "technique": "Lattice-resolved TEM",
+      "value": {
+        "value": null,
+        "minimum": 3,
+        "maximum": 4,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "occasional_resolved_particles",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, 2.0 and 1.0 TEM limitations"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "2.0 formulation; occasional resolved Si lattice planes, not population-average size. Table I bright/dark-field ranges remain separate.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, 2.0 and 1.0 TEM limitations"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. Supporting-procedure operations and their measurement/reference/cohort entries passed the bounded procedure audit. No training task is requested; this is not a standalone synthesis or complete SOP. Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+      "Preparation route and HPLC fraction are not linked to each reported micrograph or quantitative specimen.",
+      "Grid exposure/evaporation conditions, wash volume/count and exact identity of printed ethylene chloride.",
+      "No original SAED pattern is displayed; diffraction rings are discussed only in prose."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Shared aerosol formulation contexts (6.0, 2.0, 1.0)",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "Same source and formulation families; exact specimen/batch joins unresolved."
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "url": "../records/littau-1993-si-aerosol-1p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "url": "../records/littau-1993-si-aerosol-2p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "url": "../records/littau-1993-si-aerosol-6p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Chromatographic characterization and fractionation",
+      "url": "../records/littau-1993-si-hplc-fractionation.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

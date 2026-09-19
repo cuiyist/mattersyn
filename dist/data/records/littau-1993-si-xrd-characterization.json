@@ -1,0 +1,864 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "littau-1993-si-xrd-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Littau et al. (1993) · Powder X-ray diffraction",
+  "material": {
+    "formula": "Si/SiOx",
+    "family": "Surface-oxidized silicon colloids",
+    "elements": [
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Si",
+      "SiOx"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Powder XRD with alternative mounts",
+  "sources": [
+    {
+      "id": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "authors": "K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/j100108a019",
+      "main_status": "All seven supplied main pages read and visually inspected; independent source review and bounded canonical source-join audit passed. Final item-coverage reconciliation, canonical-to-reader audit and publication are separate pending gates.",
+      "si_status": "Not located or verified in either local collection; no main-plus-SI completion claim.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "littau1993",
+    "recipe_family": "littau1993-si-aerosol",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_applicable",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "Supporting procedure; measured sizes are not prospective targets.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation"
+        }
+      ],
+      "note": "Supporting procedure; no prospective crystal-design target specified."
+    }
+  },
+  "materials": [
+    {
+      "id": "aot",
+      "name": "AOT soap (identity not expanded)",
+      "formula": null,
+      "role": "powder_binder",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "A small amount; numerical amount absent",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    },
+    {
+      "id": "mylar",
+      "name": "Mylar film",
+      "formula": null,
+      "role": "powder_encasement",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    },
+    {
+      "id": "optical-fiber",
+      "name": "Optical fiber",
+      "formula": null,
+      "role": "mechanical_mount",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "powder-input",
+      "name": "Washed dry colloid powder; upstream powder preparation separate",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "aot-bound-powder",
+      "name": "Powder bound with AOT",
+      "kind": "mixture",
+      "parent_ids": [
+        "powder-input",
+        "aot"
+      ]
+    },
+    {
+      "id": "mylar-powder",
+      "name": "Powder encased in Mylar",
+      "kind": "mixture",
+      "parent_ids": [
+        "powder-input",
+        "mylar"
+      ]
+    },
+    {
+      "id": "aot-fiber-mount",
+      "name": "AOT-bound powder on optical-fiber tip",
+      "kind": "product",
+      "parent_ids": [
+        "aot-bound-powder",
+        "optical-fiber"
+      ]
+    },
+    {
+      "id": "mylar-fiber-mount",
+      "name": "Mylar-encased powder on optical-fiber tip",
+      "kind": "product",
+      "parent_ids": [
+        "mylar-powder",
+        "optical-fiber"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "bind-aot",
+      "action": "powder_mount_preparation",
+      "label": "Bind powder with a little AOT",
+      "stage": "characterization",
+      "branch": "AOT-mount",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "powder-input",
+        "aot"
+      ],
+      "outputs": [
+        "aot-bound-powder"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    },
+    {
+      "id": "encase-mylar",
+      "action": "powder_mount_preparation",
+      "label": "Encase powder in Mylar",
+      "stage": "characterization",
+      "branch": "Mylar-mount",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "powder-input",
+        "mylar"
+      ],
+      "outputs": [
+        "mylar-powder"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    },
+    {
+      "id": "mount-aot",
+      "action": "mechanical_mounting",
+      "label": "Mount bound powder on optical-fiber tip",
+      "stage": "characterization",
+      "branch": "AOT-mount",
+      "optional": false,
+      "depends_on": [
+        "bind-aot"
+      ],
+      "inputs": [
+        "aot-bound-powder",
+        "optical-fiber"
+      ],
+      "outputs": [
+        "aot-fiber-mount"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    },
+    {
+      "id": "mount-mylar",
+      "action": "mechanical_mounting",
+      "label": "Mount encased powder on optical-fiber tip",
+      "stage": "characterization",
+      "branch": "Mylar-mount",
+      "optional": false,
+      "depends_on": [
+        "encase-mylar"
+      ],
+      "inputs": [
+        "mylar-powder",
+        "optical-fiber"
+      ],
+      "outputs": [
+        "mylar-fiber-mount"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    },
+    {
+      "id": "acquire-xrd",
+      "action": "powder_diffraction",
+      "label": "Acquire powder diffraction",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [],
+      "parameters": {
+        "rotating_anode_source_nominal_power": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kW",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source described as a 12-kW rotating anode; actual operating power not separately supplied",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+            }
+          ],
+          "derivation": null
+        },
+        "operating_power": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kW",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "littau1993",
+              "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Triple-crystal spectrometer; Mo Kα radiation from Rigaku rotating-anode source; pyrolytic graphite monochromator and analyzer. Either mount may be used; the source does not assign each formulation to one mount. No combined two-mount specimen is asserted.",
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xrd-6p0-powder",
+      "source_sample_label": "6.0",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "Dry-powder context; exact mount unspecified.",
+        "Figure 6 low-angle broad scattering contains binder and possible oxide contributions; an arbitrary Gaussian is a fit component, not a newly identified phase."
+      ]
+    },
+    {
+      "sample_id": "xrd-2p0-powder",
+      "source_sample_label": "2.0",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si/SiOx",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+          },
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "Dry-powder context; exact mount unspecified.",
+        "Figure 6 low-angle broad scattering contains binder and possible oxide contributions; an arbitrary Gaussian is a fit component, not a newly identified phase."
+      ]
+    },
+    {
+      "sample_id": "bulk-si-lattice-reference",
+      "source_sample_label": "Bulk Si lattice reference",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+        "Comparison constant cited by source, not a produced or independently measured sample."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "xrd-6p0-bulk-lattice-agreement",
+      "sample_id": "xrd-6p0-powder",
+      "property": "lattice_parameter_relative_agreement_with_bulk",
+      "technique": "Simultaneous least-squares fit of powder-XRD line positions",
+      "value": {
+        "value": 0.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "within",
+        "basis": "Agreement bound relative to bulk Si a0 = 5.43 Å; no exact nanocrystal lattice parameter reported",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "6.0 dry powder; mounting alternative unresolved. This agreement is not size error or lattice strain measured as exactly 0.25%.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+        }
+      ]
+    },
+    {
+      "id": "xrd-2p0-bulk-lattice-agreement",
+      "sample_id": "xrd-2p0-powder",
+      "property": "lattice_parameter_relative_agreement_with_bulk",
+      "technique": "Simultaneous least-squares fit of powder-XRD line positions",
+      "value": {
+        "value": 0.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "within",
+        "basis": "Agreement bound relative to bulk Si a0 = 5.43 Å; no exact nanocrystal lattice parameter reported",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "2.0 dry powder; mounting alternative unresolved. This agreement is not size error or lattice strain measured as exactly 0.25%.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 2, printed p. 1225, Experimental B"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 3, printed p. 1226, Experimental B continuation, powder XRD apparatus"
+        },
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+        }
+      ]
+    },
+    {
+      "id": "bulk-si-reference-a0",
+      "sample_id": "bulk-si-lattice-reference",
+      "property": "reference_lattice_parameter",
+      "technique": "Source-stated bulk reference",
+      "value": {
+        "value": 5.43,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source comparison value a0 for bulk Si; not measured nanocrystal lattice constant",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "littau1993",
+            "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reference only; no experimental CIF or atomic coordinates supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "littau1993",
+          "locator": "Main PDF p. 5, printed p. 1228, Results A, simultaneous least-squares lattice fit"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Supplied main only: all seven main pages were read and visually inspected, with independent source review and a bounded canonical source-join audit. Matching SI has not been located or verified; no main-plus-SI review is claimed. Source-item coverage, canonical-to-reader mapping and targeted browser checks are complete for this supplied-main contribution. Supporting-procedure operations and their measurement/reference/cohort entries passed the bounded procedure audit. No training task is requested; this is not a standalone synthesis or complete SOP. Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+    "missing_fields": [
+      "Matching SI not located or verified.",
+      "Source labels identify formulation families, not individually documented physical batches. Collector fraction, exact synthesis run and specimen identity across techniques are unresolved. No cross-record physical-specimen identity is asserted.",
+      "AOT composition/charge, Mylar specification, mount assignment, scan range/step/time and detailed fit uncertainty.",
+      "No experimental atomic coordinates or measured CIF; bulk reference lattice is not a measured nanocrystal structure."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Shared aerosol formulation contexts (6.0, 2.0, 1.0)",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "relation": "Same source and formulation families; exact specimen/batch joins unresolved."
+    },
+    {
+      "label": "Source review · seven supplied main pages; SI unverified",
+      "url": "../paper-review.html?id=littau1993",
+      "relation": "source_review; bounded main-only evidence and unresolved source gaps"
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 1.0",
+      "url": "../records/littau-1993-si-aerosol-1p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 2.0",
+      "url": "../records/littau-1993-si-aerosol-2p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Surface-oxidized silicon colloid 6.0",
+      "url": "../records/littau-1993-si-aerosol-6p0.html",
+      "relation": "Related formulation family, not an identified parent batch or an asserted same-specimen measurement."
+    },
+    {
+      "label": "Littau et al. (1993) · Preparation of dry silicon-colloid powder",
+      "url": "../records/littau-1993-si-powder-preparation.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    },
+    {
+      "label": "Littau et al. (1993) · Infrared characterization of dry powder",
+      "url": "../records/littau-1993-si-ir-characterization.html",
+      "relation": "Related supporting-procedure context in this source; not an exact physical-batch join. Consult each record for acquisition branches and unresolved specimen assignment."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
