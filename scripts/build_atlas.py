@@ -9,6 +9,7 @@ NAMES['InAs']='Indium arsenide'
 NAMES['Ag/Si']='Silver nanocrystals on silicon'
 NAMES['Ag']='Silver nanocrystals'
 NAMES['Pt']='Platinum nanocrystals'
+NAMES['CdSe/ZnS/siloxane']='Siloxane-coated CdSe/ZnS quantum dots'
 NAMES['CdS/polymer']='Cadmium sulfide nanocrystals in chelate polymer microparticles'
 
 def read(p):return json.loads(p.read_text(encoding='utf-8'))

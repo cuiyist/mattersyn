@@ -1,0 +1,3488 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gerion-2001-silica-silanization",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Gerion et al. (2001) · Siloxane coating and aqueous transfer",
+  "material": {
+    "formula": "CdSe/ZnS/siloxane",
+    "family": "Surface-functionalized semiconductor nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdSe/ZnS",
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Silane ligand exchange, polymerization and surface functionalization",
+  "sources": [
+    {
+      "id": "gerion2001",
+      "doi": "10.1021/jp0105488",
+      "title": "Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots",
+      "authors": "Daniele Gerion; Fabien Pinaud; Shara C. Williams; Wolfgang J. Parak; Daniela Zanchet; Shimon Weiss; A. Paul Alivisatos",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp0105488",
+      "main_status": "All eleven supplied main pages text and visually reviewed; independent source and canonical audits completed. Announced HRTEM/AFM SI remains unmatched locally.",
+      "si_status": "SI is explicitly announced on printed p. 8870: HRTEM and AFM figures of silanized nanocrystals. No SI located/matched in supplied bundle; those images were not inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "gerion2001",
+    "recipe_family": "gerion2001-water-soluble-cdse-zns",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS/siloxane",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "note": "Composite descriptors identify material families, not overall stoichiometry. No measured atomic coordinates or phase refinement supplied."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-zns-stock",
+      "name": "TOPO-capped CdSe/ZnS nanocrystals in butanol/TOPO",
+      "formula": "CdSe/ZnS",
+      "role": "upstream nanocrystal dispersion",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream stock"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "antisolvent/reaction/dialysis solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "mps",
+      "name": "Mercaptopropyltris(methyloxy)silane / (3-mercaptopropyl)trimethoxysilane",
+      "formula": "C6H16O3SSi",
+      "role": "thiol primer and shell precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog 175617. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "tmah-methanol",
+      "name": "Tetramethylammonium hydroxide in methanol; concentration not specified",
+      "formula": null,
+      "role": "base solution",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source gives catalog 334901 but no TMAH concentration. Do not import an assumed commercial concentration. Discussion states water <5%; no basis specified.",
+        "Source supplier: Sigma-Aldrich; catalog 334901. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "tmah-pentahydrate",
+      "name": "Tetramethylammonium hydroxide pentahydrate",
+      "formula": "C4H13NO·5H2O",
+      "role": "quench-solution base",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog 223212. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "phosphonate-stock",
+      "name": "(Trihydroxysilyl)propyl methylphosphonate in water, 42 wt%; counterion/form not fully specified",
+      "formula": null,
+      "role": "charged silane precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "supplier_mass_fraction": {
+          "value": 42,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Purchased aqueous reagent; counterion not specified.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog 435716. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "tmscl",
+      "name": "Chlorotrimethylsilane",
+      "formula": "C3H9ClSi",
+      "role": "siloxane growth quencher",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog 386529. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water; source specifies Millipore for preparation and washing steps",
+      "formula": "H2O",
+      "role": "hydrolysis/optional dialysis solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        },
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, MPA-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen",
+      "formula": "N2",
+      "role": "process atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "pb",
+      "name": "Phosphate buffer; K2HPO4/KH2PO4 mixture",
+      "formula": null,
+      "role": "aqueous exchange buffer",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "sephadex-g25",
+      "name": "Sephadex G25 medium",
+      "formula": null,
+      "role": "exchange stationary phase",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog G2580. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "topo",
+      "name": "Trioctylphosphine oxide",
+      "formula": "C24H51OP",
+      "role": "upstream stock component",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog 346187. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "butanol",
+      "name": "Butanol; isomer not specified",
+      "formula": "C4H10O",
+      "role": "upstream stock component",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream stock"
+        }
+      ]
+    },
+    {
+      "id": "tmah",
+      "name": "Tetramethylammonium hydroxide; dissolved ionic solute",
+      "formula": "C4H13NO",
+      "role": "purchased base-stock component",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "phosphonate",
+      "name": "(Trihydroxysilyl)propyl methylphosphonate; exact connectivity/counterion unresolved",
+      "formula": null,
+      "role": "purchased phosphonate-stock component",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "k2hpo4",
+      "name": "Dipotassium hydrogen phosphate",
+      "formula": "K2HPO4",
+      "role": "phosphate buffer component",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog P8709. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "kh2po4",
+      "name": "Potassium dihydrogen phosphate",
+      "formula": "KH2PO4",
+      "role": "phosphate buffer component",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog P8584. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "upstream-stock-components",
+      "name": "CdSe/ZnS in butanol/TOPO",
+      "components": [
+        {
+          "material_id": "cdse-zns-stock",
+          "quantities": {}
+        },
+        {
+          "material_id": "butanol",
+          "quantities": {}
+        },
+        {
+          "material_id": "topo",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Pre-existing nanocrystal stock; butanol/TOPO~1:2 by volume. Stock total precursor mass is not reconstructed from OD or the separate 5–10 mg/mL storage range.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+        }
+      ]
+    },
+    {
+      "id": "tmah-stock-components",
+      "name": "TMAH in methanol",
+      "components": [
+        {
+          "material_id": "tmah",
+          "quantities": {}
+        },
+        {
+          "material_id": "methanol",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Purchased reagent; concentration unknown, not assumed 25%.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "phosphonate-stock-components",
+      "name": "Aqueous functional silane stock",
+      "components": [
+        {
+          "material_id": "phosphonate",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "supplier_mass_fraction": {
+          "value": 42,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Purchased42wt% aqueous reagent. Named phosphonate/depictedPbonding/counterion remain unresolved; no sodium salt silently assigned.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "pb-components",
+      "name": "Phosphate buffer components",
+      "components": [
+        {
+          "material_id": "k2hpo4",
+          "quantities": {}
+        },
+        {
+          "material_id": "kh2po4",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Source names K2HPO4/KH2PO4 mixture; component ratio and stock preparation not supplied. Use per-operation PB concentration/pH rather than a universal buffer recipe.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "wet-precipitate",
+      "name": "Precipitate the TOPO-capped core/shell stock output",
+      "kind": "fraction",
+      "parent_ids": [
+        "cdse-zns-stock",
+        "methanol"
+      ]
+    },
+    {
+      "id": "mps-dispersion",
+      "name": "Dissolve wet precipitate in MPS and vortex output",
+      "kind": "mixture",
+      "parent_ids": [
+        "wet-precipitate",
+        "mps"
+      ]
+    },
+    {
+      "id": "primed",
+      "name": "Add TMAH/methanol to clarify the dispersion output",
+      "kind": "mixture",
+      "parent_ids": [
+        "mps-dispersion",
+        "tmah-methanol"
+      ]
+    },
+    {
+      "id": "diluted",
+      "name": "Transfer to basified anhydrous methanol under nitrogen output",
+      "kind": "mixture",
+      "parent_ids": [
+        "primed",
+        "methanol",
+        "tmah-methanol",
+        "nitrogen"
+      ]
+    },
+    {
+      "id": "equilibrated1",
+      "name": "Stir mildly before first consolidation output",
+      "kind": "mixture",
+      "parent_ids": [
+        "diluted"
+      ]
+    },
+    {
+      "id": "consolidated1",
+      "name": "Consolidate the primary siloxane layer output",
+      "kind": "mixture",
+      "parent_ids": [
+        "equilibrated1"
+      ]
+    },
+    {
+      "id": "cooled1",
+      "name": "Cool to room temperature output",
+      "kind": "mixture",
+      "parent_ids": [
+        "consolidated1"
+      ]
+    },
+    {
+      "id": "secondary-feed",
+      "name": "Add fresh silanes and water for further shell growth output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cooled1",
+        "methanol",
+        "water",
+        "phosphonate-stock",
+        "mps"
+      ]
+    },
+    {
+      "id": "equilibrated2",
+      "name": "Allow secondary silane incorporation output",
+      "kind": "mixture",
+      "parent_ids": [
+        "secondary-feed"
+      ]
+    },
+    {
+      "id": "consolidated2",
+      "name": "Briefly consolidate the enlarged siloxane layer output",
+      "kind": "mixture",
+      "parent_ids": [
+        "equilibrated2"
+      ]
+    },
+    {
+      "id": "cooled2",
+      "name": "Cool before quenching output",
+      "kind": "mixture",
+      "parent_ids": [
+        "consolidated2"
+      ]
+    },
+    {
+      "id": "quench-mixture",
+      "name": "Prepare the basified chlorotrimethylsilane mixture output",
+      "kind": "mixture",
+      "parent_ids": [
+        "methanol",
+        "tmscl",
+        "tmah-pentahydrate"
+      ]
+    },
+    {
+      "id": "quenched",
+      "name": "Quench remaining silanol groups output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cooled2",
+        "quench-mixture"
+      ]
+    },
+    {
+      "id": "equilibrated3",
+      "name": "Stir after adding the quench mixture output",
+      "kind": "mixture",
+      "parent_ids": [
+        "quenched"
+      ]
+    },
+    {
+      "id": "heated3",
+      "name": "Heat the quenched dispersion output",
+      "kind": "mixture",
+      "parent_ids": [
+        "equilibrated3"
+      ]
+    },
+    {
+      "id": "aged",
+      "name": "Age at room temperature while stirring under nitrogen output",
+      "kind": "mixture",
+      "parent_ids": [
+        "heated3"
+      ]
+    },
+    {
+      "id": "condensed",
+      "name": "Reduce volume with a rotary evaporator output",
+      "kind": "mixture",
+      "parent_ids": [
+        "aged"
+      ]
+    },
+    {
+      "id": "rested24",
+      "name": "Rest after rotary evaporation output",
+      "kind": "mixture",
+      "parent_ids": [
+        "condensed"
+      ]
+    },
+    {
+      "id": "dialyzed",
+      "name": "Dialyze against methanol output",
+      "kind": "mixture",
+      "parent_ids": [
+        "rested24",
+        "methanol"
+      ]
+    },
+    {
+      "id": "filtered045",
+      "name": "Filter through the nylon syringe membrane output",
+      "kind": "fraction",
+      "parent_ids": [
+        "dialyzed"
+      ]
+    },
+    {
+      "id": "concentrated2",
+      "name": "Remove small free silanes and concentrate output",
+      "kind": "fraction",
+      "parent_ids": [
+        "filtered045"
+      ]
+    },
+    {
+      "id": "rested12",
+      "name": "Rest the methanolic concentrate before exchange output",
+      "kind": "mixture",
+      "parent_ids": [
+        "concentrated2"
+      ]
+    },
+    {
+      "id": "aqueous",
+      "name": "Exchange into phosphate buffer and collect fluorescent fraction output",
+      "kind": "fraction",
+      "parent_ids": [
+        "rested12",
+        "pb",
+        "sephadex-g25"
+      ]
+    },
+    {
+      "id": "rested-aqueous",
+      "name": "Allow aqueous solvation for a few hours output",
+      "kind": "mixture",
+      "parent_ids": [
+        "aqueous"
+      ]
+    },
+    {
+      "id": "filtered022",
+      "name": "Filter through the acetate membrane output",
+      "kind": "fraction",
+      "parent_ids": [
+        "rested-aqueous"
+      ]
+    },
+    {
+      "id": "optional-dialyzed",
+      "name": "Optionally dialyze against Millipore water output",
+      "kind": "mixture",
+      "parent_ids": [
+        "filtered022",
+        "water"
+      ]
+    },
+    {
+      "id": "optional-filtered",
+      "name": "Optionally filter the water-dialyzed dispersion output",
+      "kind": "fraction",
+      "parent_ids": [
+        "optional-dialyzed"
+      ]
+    },
+    {
+      "id": "optional-concentrated",
+      "name": "Optionally concentrate to the desired concentration output",
+      "kind": "mixture",
+      "parent_ids": [
+        "optional-filtered"
+      ]
+    },
+    {
+      "id": "final-supernatant",
+      "name": "Remove final sediment and retain supernatant output",
+      "kind": "fraction",
+      "parent_ids": [
+        "filtered022"
+      ]
+    },
+    {
+      "id": "stored-product",
+      "name": "Store the aqueous nanocrystal dispersion in air output",
+      "kind": "mixture",
+      "parent_ids": [
+        "final-supernatant"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "precipitate",
+      "action": "antisolvent_precipitation",
+      "label": "Precipitate the TOPO-capped core/shell stock",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-zns-stock",
+        "methanol"
+      ],
+      "outputs": [
+        "wet-precipitate"
+      ],
+      "parameters": {
+        "stock_volume": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "stock_optical_density": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "dimensionless",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "Source nanocrystal OD; wavelength/path length unspecified for this stock",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "wet-precipitate",
+      "description": "Use anhydrous methanol. Methanol amount, collection device and centrifuge conditions are unreported. Retain wet precipitate; no dry-powder step.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "mps",
+      "action": "ligand_priming",
+      "label": "Dissolve wet precipitate in MPS and vortex",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "precipitate"
+      ],
+      "inputs": [
+        "wet-precipitate",
+        "mps"
+      ],
+      "outputs": [
+        "mps-dispersion"
+      ],
+      "parameters": {
+        "mps_volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Initially cloudy in MPS; vortex duration and speed unspecified. Figure 1 draws hydrolyzed MPS for convenience, while the reagent is methoxy silane.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "basify",
+      "action": "base_addition",
+      "label": "Add TMAH/methanol to clarify the dispersion",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "mps"
+      ],
+      "inputs": [
+        "mps-dispersion",
+        "tmah-methanol"
+      ],
+      "outputs": [
+        "primed"
+      ],
+      "parameters": {
+        "base_solution_volume": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Optically clear",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Base concentration not reported. Discussion gives pH9–10 checked with pH paper; do not replace the exact 5 µL source operation with a guessed molar dose.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "dilute",
+      "action": "reaction_dilution",
+      "label": "Transfer to basified anhydrous methanol under nitrogen",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "basify"
+      ],
+      "inputs": [
+        "primed",
+        "methanol",
+        "tmah-methanol",
+        "nitrogen"
+      ],
+      "outputs": [
+        "diluted"
+      ],
+      "parameters": {
+        "methanol_volume": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "base_solution_volume": {
+          "value": 750,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "pH": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "pH",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "flask_capacity": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "500 mL three-neck flask. Capacity is hardware size, not reaction volume; no numerical pressure supplied.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "stir1",
+      "action": "stirring",
+      "label": "Stir mildly before first consolidation",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dilute"
+      ],
+      "inputs": [
+        "diluted"
+      ],
+      "outputs": [
+        "equilibrated1"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mild stirring; rpm unreported.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "heat1",
+      "action": "thermal_consolidation",
+      "label": "Consolidate the primary siloxane layer",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "stir1"
+      ],
+      "inputs": [
+        "equilibrated1"
+      ],
+      "outputs": [
+        "consolidated1"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Gentle heating. Heat source, ramp and bath are not specified.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "cool1",
+      "action": "cooling",
+      "label": "Cool to room temperature",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat1"
+      ],
+      "inputs": [
+        "consolidated1"
+      ],
+      "outputs": [
+        "cooled1"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Room temperature",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "No numerical room temperature or cooling duration specified.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "feed2",
+      "action": "surface_functionalization",
+      "label": "Add fresh silanes and water for further shell growth",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cool1"
+      ],
+      "inputs": [
+        "cooled1",
+        "methanol",
+        "water",
+        "phosphonate-stock",
+        "mps"
+      ],
+      "outputs": [
+        "secondary-feed"
+      ],
+      "parameters": {
+        "methanol_volume": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "water_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "phosphonate_stock_volume": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "mps_volume": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Millipore water stated 18 MΩ; purchased phosphonate solution 42 wt%. The fresh addition contains approximately 10% added water, not a proven 10% final reactor water fraction. Optional APS addition is separately scoped.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "stir2",
+      "action": "stirring",
+      "label": "Allow secondary silane incorporation",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "feed2"
+      ],
+      "inputs": [
+        "secondary-feed"
+      ],
+      "outputs": [
+        "equilibrated2"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "heat2",
+      "action": "thermal_consolidation",
+      "label": "Briefly consolidate the enlarged siloxane layer",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "stir2"
+      ],
+      "inputs": [
+        "equilibrated2"
+      ],
+      "outputs": [
+        "consolidated2"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration_upper_bound": {
+          "value": null,
+          "minimum": null,
+          "maximum": 5,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null,
+          "maximum_exclusive": true
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "cool2",
+      "action": "cooling",
+      "label": "Cool before quenching",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat2"
+      ],
+      "inputs": [
+        "consolidated2"
+      ],
+      "outputs": [
+        "cooled2"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "prepare-quench",
+      "action": "quench_mixture_preparation",
+      "label": "Prepare the basified chlorotrimethylsilane mixture",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "methanol",
+        "tmscl",
+        "tmah-pentahydrate"
+      ],
+      "outputs": [
+        "quench-mixture"
+      ],
+      "parameters": {
+        "methanol_volume": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "tmscl_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "base_mass": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Quench preparation is explicit. Exact pH, temperature, addition sequence and equilibration time of this separate mixture are unreported.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "quench",
+      "action": "siloxane_growth_quenching",
+      "label": "Quench remaining silanol groups",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cool2",
+        "prepare-quench"
+      ],
+      "inputs": [
+        "cooled2",
+        "quench-mixture"
+      ],
+      "outputs": [
+        "quenched"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Residual groups are blocked with trimethylsilyl-derived hydrophobic functionality. The article’s methyl-group wording is retained as a chemical interpretation, not a literal Si–OH to C–H atom mapping.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "stir3",
+      "action": "stirring",
+      "label": "Stir after adding the quench mixture",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "quench"
+      ],
+      "inputs": [
+        "quenched"
+      ],
+      "outputs": [
+        "equilibrated3"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "heat3",
+      "action": "thermal_treatment",
+      "label": "Heat the quenched dispersion",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "stir3"
+      ],
+      "inputs": [
+        "equilibrated3"
+      ],
+      "outputs": [
+        "heated3"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "action": "aging",
+      "label": "Age at room temperature while stirring under nitrogen",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat3"
+      ],
+      "inputs": [
+        "heated3"
+      ],
+      "outputs": [
+        "aged"
+      ],
+      "parameters": {
+        "duration": {
+          "value": null,
+          "minimum": 2,
+          "maximum": 4,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Room temperature, numerical value unreported. This long rest is not collapsed into the later 24 h or ≥12 h rests.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "rotovap",
+      "action": "rotary_evaporation",
+      "label": "Reduce volume with a rotary evaporator",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "age"
+      ],
+      "inputs": [
+        "aged"
+      ],
+      "outputs": [
+        "condensed"
+      ],
+      "parameters": {
+        "volume_reduction_factor": {
+          "value": null,
+          "minimum": 2,
+          "maximum": 5,
+          "unit": "fold",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Re111 Buchi rotary evaporator. Temperature, pressure and rotation rate not reported. Discussion says factor <4; both source versions retained as a conflict.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "rest24",
+      "action": "equilibration",
+      "label": "Rest after rotary evaporation",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rotovap"
+      ],
+      "inputs": [
+        "condensed"
+      ],
+      "outputs": [
+        "rested24"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Distinct from later ≥12 h pre-column rest. Discussion states at least 24 h under nitrogen.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "dialyze-methanol",
+      "action": "dialysis",
+      "label": "Dialyze against methanol",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rest24"
+      ],
+      "inputs": [
+        "rested24",
+        "methanol"
+      ],
+      "outputs": [
+        "dialyzed"
+      ],
+      "parameters": {
+        "membrane_mwco": {
+          "value": 10000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Da",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Molecular-weight cutoff; operational membrane rating",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Solvent changes, dialysis-bath volume and stirring settings not stated.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "filter045",
+      "action": "membrane_filtration",
+      "label": "Filter through the nylon syringe membrane",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dialyze-methanol"
+      ],
+      "inputs": [
+        "dialyzed"
+      ],
+      "outputs": [
+        "filtered045"
+      ],
+      "parameters": {
+        "pore_size": {
+          "value": 0.45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "filtered045",
+      "description": "Procedure prints 0.45 µm nylon filter; materials list prints 0.45 mm. Preserve discrepancy; canonical operation follows the procedure.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "centrifugal-concentrate",
+      "action": "centrifugal_membrane_concentration",
+      "label": "Remove small free silanes and concentrate",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "filter045"
+      ],
+      "inputs": [
+        "filtered045"
+      ],
+      "outputs": [
+        "concentrated2"
+      ],
+      "parameters": {
+        "membrane_mwco": {
+          "value": 100000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Da",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "final_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "concentrated2",
+      "description": "YM-100 Centriplus/Centricon100. Membrane retains nanoparticles; speed/time not specified for this concentration step. Do not reuse final 20,000 g clearing conditions.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "rest12",
+      "action": "equilibration",
+      "label": "Rest the methanolic concentrate before exchange",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "centrifugal-concentrate"
+      ],
+      "inputs": [
+        "concentrated2"
+      ],
+      "outputs": [
+        "rested12"
+      ],
+      "parameters": {
+        "duration_lower_bound": {
+          "value": null,
+          "minimum": 12,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Methods places ≥12h rest after centrifugal concentration and before exchange column; Discussion places ~12 h between rotary and centrifugal stages. Neither rest is silently moved.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "column",
+      "action": "size_exclusion_solvent_exchange",
+      "label": "Exchange into phosphate buffer and collect fluorescent fraction",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rest12"
+      ],
+      "inputs": [
+        "rested12",
+        "pb",
+        "sephadex-g25"
+      ],
+      "outputs": [
+        "aqueous"
+      ],
+      "parameters": {
+        "buffer_concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "buffer_pH": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "pH",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "eluted_volume": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "aqueous",
+      "description": "Either NAP column or homemade 20 cm × 0.7 cm column with ~5 g Sephadex G25. Monitor fluorescence; collect only fluorescent fraction. Do not treat both columns as serial mandatory stages.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "rest-aqueous",
+      "action": "equilibration",
+      "label": "Allow aqueous solvation for a few hours",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "column"
+      ],
+      "inputs": [
+        "aqueous"
+      ],
+      "outputs": [
+        "rested-aqueous"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source says a few hours; no exact number invented.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "filter022",
+      "action": "membrane_filtration",
+      "label": "Filter through the acetate membrane",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rest-aqueous"
+      ],
+      "inputs": [
+        "rested-aqueous"
+      ],
+      "outputs": [
+        "filtered022"
+      ],
+      "parameters": {
+        "pore_size": {
+          "value": 0.22,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "filtered022",
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "optional-dialysis",
+      "action": "dialysis",
+      "label": "Optionally dialyze against Millipore water",
+      "stage": "workup",
+      "branch": "optional-water-purification",
+      "optional": true,
+      "depends_on": [
+        "filter022"
+      ],
+      "inputs": [
+        "filtered022",
+        "water"
+      ],
+      "outputs": [
+        "optional-dialyzed"
+      ],
+      "parameters": {
+        "duration": {
+          "value": null,
+          "minimum": 1,
+          "maximum": 4,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "membrane_mwco": {
+          "value": 10000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Da",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Optional sequence; not mandatory for every batch. Millipore water 18 MΩ; bath changes unreported.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "optional-filter",
+      "action": "membrane_filtration",
+      "label": "Optionally filter the water-dialyzed dispersion",
+      "stage": "workup",
+      "branch": "optional-water-purification",
+      "optional": true,
+      "depends_on": [
+        "optional-dialysis"
+      ],
+      "inputs": [
+        "optional-dialyzed"
+      ],
+      "outputs": [
+        "optional-filtered"
+      ],
+      "parameters": {
+        "pore_size_as_printed": {
+          "value": 0.22,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "The optional-step sentence prints mm; surrounding routine filtration says µm. Unresolved source-unit conflict.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "optional-filtered",
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "optional-vacufuge",
+      "action": "centrifugal_evaporation",
+      "label": "Optionally concentrate to the desired concentration",
+      "stage": "workup",
+      "branch": "optional-water-purification",
+      "optional": true,
+      "depends_on": [
+        "optional-filter"
+      ],
+      "inputs": [
+        "optional-filtered"
+      ],
+      "outputs": [
+        "optional-concentrated"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Vacufuge 5301 Eppendorf. Final desired concentration/time/pressure not specified.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "clear",
+      "action": "centrifugation",
+      "label": "Remove final sediment and retain supernatant",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "filter022"
+      ],
+      "inputs": [
+        "filtered022"
+      ],
+      "outputs": [
+        "final-supernatant"
+      ],
+      "parameters": {
+        "relative_centrifugal_force": {
+          "value": 20000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "final-supernatant",
+      "description": "Clear either standard filtered dispersion or optional water-purified concentrate. Discard precipitate, retain supernatant. Operation input names primary path; optional branch output is explicitly optional.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "optional_inputs": [
+        "optional-concentrated"
+      ]
+    },
+    {
+      "id": "store",
+      "action": "storage",
+      "label": "Store the aqueous nanocrystal dispersion in air",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "clear"
+      ],
+      "inputs": [
+        "final-supernatant"
+      ],
+      "outputs": [
+        "stored-product"
+      ],
+      "parameters": {
+        "optical_density": {
+          "value": null,
+          "minimum": 0.3,
+          "maximum": 1,
+          "unit": "dimensionless",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "At absorption feature; not matched to another sample OD",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "particle_concentration": {
+          "value": null,
+          "minimum": 3,
+          "maximum": 10,
+          "unit": "uM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Author approximate concentration using assumed extinction coefficient",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "assumed_extinction_coefficient": {
+          "value": 100000.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M^-1 cm^-1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Author assumption, not independently measured for each size",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Discussion reports stability for months in air and light. No numerical storage temperature specified in this final sentence.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "homemade-column",
+      "label": "Alternative homemade exchange column (not an additional serial column)",
+      "parameters": {
+        "length": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "diameter": {
+          "value": 0.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "sephadex_mass": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "discussion-condensation",
+      "label": "Discussion guidance differs from primary Methods",
+      "parameters": {
+        "volume_reduction_factor": {
+          "value": null,
+          "minimum": null,
+          "maximum": 4,
+          "unit": "fold",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 8, printed p. 8868, Discussion A, concentration"
+            }
+          ],
+          "derivation": null,
+          "maximum_exclusive": true
+        },
+        "concentrated_volume": {
+          "value": null,
+          "minimum": 2,
+          "maximum": 3,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 8, printed p. 8868, Discussion A, concentration"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 8, printed p. 8868, Discussion A, concentration"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "silica-generic",
+      "source_sample_label": "Typical silanized product",
+      "batch_id": null,
+      "material_state_id": "stored-product",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS/siloxane",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Thiol and phosphonate functionality, hydrophobic trimethylsilyl-derived groups, and residual silanols; optional amines require separate APS variant.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 9, printed p. 8869, Discussion A"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "notes": [
+        "Generic downstream coating recipe; not a separately identified Table 1/Table 2 physical batch. Siloxane shell is organic-functional and amorphous; no overall SiO2 stoichiometry or crystalline silica phase is assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "applicability-size",
+      "sample_id": "silica-generic",
+      "property": "source_recipe_applicability_particle_size",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 2,
+        "maximum": 8,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source says typical scalable coating quantities apply to CdSe/ZnS of these sizes; not an observed final size range or a per-run target.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "workup-hardware",
+      "sample_id": "silica-generic",
+      "property": "source_hardware_identifiers",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Dialysis tubing 10000 MWCO, Sigma-Aldrich D9652; Slide-A-Lyzer cassettes 66810, Pierce; Pall Gelman Acrodisc nylon PN4428T. YM-100 Centrip(l)us/Centricon100, Millipore. NAP columns 17-0852-01, Amersham Pharmacia; Sephadex G25 G2580. Hardware identifiers do not resolve conflicting filter units.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "column-water-option",
+      "sample_id": "silica-generic",
+      "property": "discussion_solvent_exchange_alternative",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Discussion additionally permits G25 column pre-equilibrated with 18 MΩ water instead of 10 mM PB, pH approximately 7. This is an alternative solvent-exchange medium, not a mandatory extra column or inferred additional batch.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 8, printed p. 8868, Discussion A, solvent exchange"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 8, printed p. 8868, Discussion A, solvent exchange"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eleven supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Siloxane and MPA coating routes, optional APS extension, analytical procedures, distinct color cohorts and study-wide observations retain their scope. Explicitly announced HRTEM/AFM SI not located or verified; no missing micrographs, phase, atomic coordinates or recipe–specimen links invented.",
+    "missing_fields": [
+      "Declared HRTEM/AFM SI not located or inspected.",
+      "No measured atomic coordinates, refined unit cell, CIF, SAED or XRD dataset supplied.",
+      "Color labels are cohort descriptions, not universal physical-batch identifiers across tables/figures.",
+      "Upstream core and ZnS shell recipes cited rather than reproduced.",
+      "TMAH solution concentration, first precipitation methanol amount, many agitation/ramp/pressure settings, isolated yield and final shell stoichiometry unreported."
+    ],
+    "conflicts": [
+      "Materials list 0.45 mm nylon filter vs Methods 0.45 µm; optional filtration sentence 0.22 mm vs repeated 0.22 µm routine filters. No silent normalization.",
+      "Methods rotary reduction 2–5× vs Discussion <4×; Discussion mentions Schlenk line alternative.",
+      "Methods 24 h after rotary and ≥12h after centrifugal before column; Discussion ~12 h between rotary and centrifugal stages. Preserve chronology conflict."
+    ],
+    "requested_tasks": [
+      "precursor_selection",
+      "partial_protocol"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=gerion2001",
+      "relation": "Main text, figures, tables, source conflicts and missing declared SI."
+    },
+    {
+      "label": "Upstream stock",
+      "url": "../records/gerion-2001-core-shell-stock.html",
+      "relation": "Cited core/shell synthesis and aged stock description."
+    },
+    {
+      "label": "Optional amine functionality",
+      "url": "../records/gerion-2001-aps-functionalization.html",
+      "relation": "Addition after MPS priming; APS amount unknown."
+    },
+    {
+      "label": "Source control observations",
+      "url": "../records/gerion-2001-synthesis-controls.html",
+      "relation": "Source failure observations and incomplete procedure variants."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

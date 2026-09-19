@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gerion-2001-core-shell-stock",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Gerion et al. (2001) · Upstream CdSe/ZnS stock and storage",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "Surface-functionalized semiconductor nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "gerion2001",
+      "doi": "10.1021/jp0105488",
+      "title": "Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots",
+      "authors": "Daniele Gerion; Fabien Pinaud; Shara C. Williams; Wolfgang J. Parak; Daniela Zanchet; Shimon Weiss; A. Paul Alivisatos",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp0105488",
+      "main_status": "All eleven supplied main pages text and visually reviewed; independent source and canonical audits completed. Announced HRTEM/AFM SI remains unmatched locally.",
+      "si_status": "SI is explicitly announced on printed p. 8870: HRTEM and AFM figures of silanized nanocrystals. No SI located/matched in supplied bundle; those images were not inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "gerion2001",
+    "recipe_family": "gerion2001-water-soluble-cdse-zns",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "note": "Composite descriptors identify material families, not overall stoichiometry. No measured atomic coordinates or phase refinement supplied."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-zns-stock",
+      "name": "TOPO-capped CdSe/ZnS nanocrystals in butanol/TOPO",
+      "formula": "CdSe/ZnS",
+      "role": "upstream nanocrystal stock",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Synthesis cites references 1 and 11–13; precursor charges, injection and ZnS growth conditions are not restated."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream stock"
+        }
+      ]
+    },
+    {
+      "id": "butanol",
+      "name": "Butanol; isomer not specified",
+      "formula": "C4H10O",
+      "role": "stock solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Butanol isomer unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream stock"
+        }
+      ]
+    },
+    {
+      "id": "topo",
+      "name": "Trioctylphosphine oxide",
+      "formula": "C24H51OP",
+      "role": "ligand/stock medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source supplier: Sigma-Aldrich; catalog 346187. Purity is not supplied unless explicitly recorded."
+      ],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section A, chemicals and materials"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "stored",
+      "name": "Store aged CdSe/ZnS in butanol/TOPO output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cdse-zns-stock",
+        "butanol",
+        "topo"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "store",
+      "action": "stock_storage",
+      "label": "Store aged CdSe/ZnS in butanol/TOPO",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-zns-stock",
+        "butanol",
+        "topo"
+      ],
+      "outputs": [
+        "stored"
+      ],
+      "parameters": {
+        "butanol_to_topo_volume_ratio": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "volume/volume",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "Butanol/TOPO approximately 1/2 by volume, not solvent mass fraction",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream CdSe/ZnS"
+            }
+          ],
+          "derivation": null
+        },
+        "cdse_core_mass_concentration": {
+          "value": null,
+          "minimum": 5,
+          "maximum": 10,
+          "unit": "mg/mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Mass of CdSe cores per mL of stock, not total CdSe/ZnS/surfactant mass",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream CdSe/ZnS"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream CdSe/ZnS"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Stored stock; preparation of CdSe/ZnS itself is cited, not reproduced.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream CdSe/ZnS"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Room-temperature storage; stable for months. No special oxidation precautions. Aged stocks were used throughout the study; no exact age per assay.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, upstream CdSe/ZnS"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "upstream-stock",
+      "source_sample_label": "Common aged core/shell stock",
+      "batch_id": null,
+      "material_state_id": "stored",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cited-synthesis",
+      "sample_id": "upstream-stock",
+      "property": "upstream_synthesis_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "CdSe/ZnS synthesized in TOPO by cited standard procedures (references 1, 11–13). Do not assign another paper’s charges or recipe without a separate source link.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B"
+        }
+      ]
+    },
+    {
+      "id": "aged-stock",
+      "sample_id": "upstream-stock",
+      "property": "storage_state",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Aged CdSe/ZnS used throughout; no precautions taken to prevent oxidation. Authors suggest freshly prepared or double-shell CdSe/CdS/ZnS could improve QY; not an experiment here.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 9, printed p. 8869, Discussion B"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 9, printed p. 8869, Discussion B"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eleven supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Siloxane and MPA coating routes, optional APS extension, analytical procedures, distinct color cohorts and study-wide observations retain their scope. Explicitly announced HRTEM/AFM SI not located or verified; no missing micrographs, phase, atomic coordinates or recipe–specimen links invented.",
+    "missing_fields": [
+      "Declared HRTEM/AFM SI not located or inspected.",
+      "No measured atomic coordinates, refined unit cell, CIF, SAED or XRD dataset supplied.",
+      "Color labels are cohort descriptions, not universal physical-batch identifiers across tables/figures."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=gerion2001",
+      "relation": "Main text, figures, tables, source conflicts and missing declared SI."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,786 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gerion-2001-cw-photostability",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Gerion et al. (2001) · Continuous-laser photostability and rhodamine comparison",
+  "material": {
+    "formula": "CdSe/ZnS/siloxane",
+    "family": "Surface-functionalized semiconductor nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdSe/ZnS",
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "gerion2001",
+      "doi": "10.1021/jp0105488",
+      "title": "Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots",
+      "authors": "Daniele Gerion; Fabien Pinaud; Shara C. Williams; Wolfgang J. Parak; Daniela Zanchet; Shimon Weiss; A. Paul Alivisatos",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp0105488",
+      "main_status": "All eleven supplied main pages text and visually reviewed; independent source and canonical audits completed. Announced HRTEM/AFM SI remains unmatched locally.",
+      "si_status": "SI is explicitly announced on printed p. 8870: HRTEM and AFM figures of silanized nanocrystals. No SI located/matched in supplied bundle; those images were not inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "gerion2001",
+    "recipe_family": "gerion2001-water-soluble-cdse-zns",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "note": "Composite descriptors identify material families, not overall stoichiometry. No measured atomic coordinates or phase refinement supplied."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "silica-specimen",
+      "name": "Silanized CdSe/ZnS specimen; organofunctional siloxane shell",
+      "formula": "CdSe/ZnS/siloxane",
+      "role": "nanocrystal test specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+        }
+      ]
+    },
+    {
+      "id": "rhodamine6g",
+      "name": "Rhodamine 6G reference dye; exact supplied salt not stated",
+      "formula": null,
+      "role": "dye comparator",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "matched-specimens",
+      "name": "Load matched-OD test and dye specimens separately output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "silica-specimen",
+        "rhodamine6g"
+      ]
+    },
+    {
+      "id": "irradiated",
+      "name": "Excite continuously with the argon-ion laser output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "matched-specimens"
+      ]
+    },
+    {
+      "id": "cw-data",
+      "name": "Record and normalize regional fluorescence output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "irradiated"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare",
+      "action": "analytical_sample_preparation",
+      "label": "Load matched-OD test and dye specimens separately",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "silica-specimen",
+        "rhodamine6g"
+      ],
+      "outputs": [
+        "matched-specimens"
+      ],
+      "parameters": {
+        "sample_volume": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "optical_density": {
+          "value": 0.065,
+          "minimum": null,
+          "maximum": null,
+          "unit": "dimensionless",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "od_wavelength": {
+          "value": 488,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thin quartz cuvette; separate nanocrystal/dye specimens, not a mixture. No path length assigned from2mm general spectroscopy cuvette.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+        }
+      ]
+    },
+    {
+      "id": "irradiate",
+      "action": "continuous_laser_irradiation",
+      "label": "Excite continuously with the argon-ion laser",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare"
+      ],
+      "inputs": [
+        "matched-specimens"
+      ],
+      "outputs": [
+        "irradiated"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 488,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "laser_power": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "spot_size": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source spot size; diameter/radius not explicitly distinguished",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "observation_duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "AxiovertS100TV epifluorescence microscope; cwAr+ laser. Laser species is not reaction atmosphere.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+        }
+      ]
+    },
+    {
+      "id": "record",
+      "action": "fluorescence_time_series",
+      "label": "Record and normalize regional fluorescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "irradiate"
+      ],
+      "inputs": [
+        "irradiated"
+      ],
+      "outputs": [
+        "cw-data"
+      ],
+      "parameters": {
+        "roi_width": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "roi_height": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "sampling_interval": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Integrated region intensity normalized to initial value. Full raw four-hour series unavailable; source Figure 4 displays only0–4000s.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section C, photophysical characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nanocrystals",
+      "source_sample_label": "Figure 4 colored nanocrystal curves",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS/siloxane",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Green/orange/red curves represent emission colors; no universal Table 1/2 batch join."
+      ]
+    },
+    {
+      "sample_id": "r6g",
+      "source_sample_label": "Figure 4 black rhodamine6G curve",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "nc-stability",
+      "sample_id": "nanocrystals",
+      "property": "reported_stable_emission_duration",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 4,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4 caption and Results A"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "At least approximately 4 h source claim; plotted axis ends 4000 s, not a complete display of claimed duration.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 5, printed p. 8865, Figure 4 caption and Results A"
+        }
+      ]
+    },
+    {
+      "id": "brightening-level",
+      "sample_id": "nanocrystals",
+      "property": "fluorescence_relative_to_initial",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 120,
+        "maximum": 200,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Results A"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Plateau after first minutes, not quantum yield or percent increase;120–200% of initial.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 5, printed p. 8865, Results A"
+        }
+      ]
+    },
+    {
+      "id": "dye-bleaching",
+      "sample_id": "r6g",
+      "property": "reported_photobleaching_time",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4 caption and Results A"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 5, printed p. 8865, Figure 4 caption and Results A"
+        }
+      ]
+    },
+    {
+      "id": "plotted-end",
+      "sample_id": "nanocrystals",
+      "property": "displayed_time_axis_endpoint",
+      "technique": "Original plot axis",
+      "value": {
+        "value": 4000,
+        "minimum": null,
+        "maximum": null,
+        "unit": "s",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Figure 4 time axis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Display extent only, not an extracted experimental endpoint or contradiction resolved by rescaling.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 5, printed p. 8865, Figure 4 time axis"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "sample_id": "nanocrystals",
+      "property": "photobrightening_interpretation",
+      "technique": "Author interpretation",
+      "value": {
+        "value": "Brightening also observed for CdSe/ZnS in toluene and not in vacuum; authors suggest aerated-solution photooxidation and a porous silica matrix. Cause remains under investigation; not proven reaction stoichiometry.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 9, printed p. 8869, Discussion B"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 9, printed p. 8869, Discussion B"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eleven supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Siloxane and MPA coating routes, optional APS extension, analytical procedures, distinct color cohorts and study-wide observations retain their scope. Explicitly announced HRTEM/AFM SI not located or verified; no missing micrographs, phase, atomic coordinates or recipe–specimen links invented.",
+    "missing_fields": [
+      "Declared HRTEM/AFM SI not located or inspected.",
+      "No measured atomic coordinates, refined unit cell, CIF, SAED or XRD dataset supplied.",
+      "Color labels are cohort descriptions, not universal physical-batch identifiers across tables/figures."
+    ],
+    "conflicts": [
+      "Methods/caption state4h observation/stability, while Figure 4 visibly spans0–4000s. Preserve both without stretching time axis."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=gerion2001",
+      "relation": "Main text, figures, tables, source conflicts and missing declared SI."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

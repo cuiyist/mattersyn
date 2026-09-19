@@ -1,0 +1,687 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gerion-2001-afm-acquisition",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Gerion et al. (2001) · AFM height measurement and histogram preparation",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "Surface-functionalized semiconductor nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "gerion2001",
+      "doi": "10.1021/jp0105488",
+      "title": "Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots",
+      "authors": "Daniele Gerion; Fabien Pinaud; Shara C. Williams; Wolfgang J. Parak; Daniela Zanchet; Shimon Weiss; A. Paul Alivisatos",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp0105488",
+      "main_status": "All eleven supplied main pages text and visually reviewed; independent source and canonical audits completed. Announced HRTEM/AFM SI remains unmatched locally.",
+      "si_status": "SI is explicitly announced on printed p. 8870: HRTEM and AFM figures of silanized nanocrystals. No SI located/matched in supplied bundle; those images were not inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "gerion2001",
+    "recipe_family": "gerion2001-water-soluble-cdse-zns",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "note": "Composite descriptors identify material families, not overall stoichiometry. No measured atomic coordinates or phase refinement supplied."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "specimen",
+      "name": "Selected source-scoped nanocrystal specimen",
+      "formula": null,
+      "role": "separate silica/MPA aqueous specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "mica",
+      "name": "Freshly cleaved mica; exact composition not stated",
+      "formula": null,
+      "role": "freshly cleaved substrate",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water; source specifies Millipore for preparation and washing steps",
+      "formula": "H2O",
+      "role": "rinsing solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen",
+      "formula": "N2",
+      "role": "drying gas",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "on-mica",
+      "name": "Spread water-soluble particles on freshly cleaved mica output",
+      "kind": "mixture",
+      "parent_ids": [
+        "specimen",
+        "mica"
+      ]
+    },
+    {
+      "id": "incubated",
+      "name": "Incubate on mica output",
+      "kind": "mixture",
+      "parent_ids": [
+        "on-mica"
+      ]
+    },
+    {
+      "id": "rinsed",
+      "name": "Rinse gently with water output",
+      "kind": "mixture",
+      "parent_ids": [
+        "incubated",
+        "water"
+      ]
+    },
+    {
+      "id": "dried",
+      "name": "Dry under nitrogen flow output",
+      "kind": "mixture",
+      "parent_ids": [
+        "rinsed",
+        "nitrogen"
+      ]
+    },
+    {
+      "id": "afm-data",
+      "name": "Acquire tapping-mode images and particle heights output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dried"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "deposit",
+      "action": "substrate_deposition",
+      "label": "Spread water-soluble particles on freshly cleaved mica",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "specimen",
+        "mica"
+      ],
+      "outputs": [
+        "on-mica"
+      ],
+      "parameters": {
+        "sample_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "incubate",
+      "action": "substrate_incubation",
+      "label": "Incubate on mica",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "on-mica"
+      ],
+      "outputs": [
+        "incubated"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "rinse",
+      "action": "substrate_rinsing",
+      "label": "Rinse gently with water",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "incubate"
+      ],
+      "inputs": [
+        "incubated",
+        "water"
+      ],
+      "outputs": [
+        "rinsed"
+      ],
+      "parameters": {
+        "rinse_amount": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "drops",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drop volume not given; no conversion to microliters.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "gas_drying",
+      "label": "Dry under nitrogen flow",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rinse"
+      ],
+      "inputs": [
+        "rinsed",
+        "nitrogen"
+      ],
+      "outputs": [
+        "dried"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Flowing nitrogen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Flow rate, time and temperature not specified.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "action": "tapping_mode_afm",
+      "label": "Acquire tapping-mode images and particle heights",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dried"
+      ],
+      "outputs": [
+        "afm-data"
+      ],
+      "parameters": {
+        "count_lower_bound": {
+          "value": null,
+          "minimum": 500,
+          "maximum": null,
+          "unit": "particles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": true
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "MultiMode AFM withTESP cantilevers. All features counted for measurement; publishedFigure 5 selectively omits sub-core-height features perNote27. No tip-convolution-corrected lateral diameter asserted.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "afm-method",
+      "source_sample_label": "AFM acquisition context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, AFM"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "small-feature-range",
+      "sample_id": "afm-method",
+      "property": "unplotted_feature_height_interval",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 0.5,
+        "maximum": 2,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 11, printed p. 8871, Note 27"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Prominent features in every water-soluble sample; source attributes mainly small silica complexes/ZnS byproducts. Not established nanocrystal shell thickness.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 11, printed p. 8871, Note 27"
+        }
+      ]
+    },
+    {
+      "id": "histogram-filter",
+      "sample_id": "afm-method",
+      "property": "published_histogram_selection",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "The source states that Figure 5 omits heights lower than the corresponding CdSe/ZnS diameter, while underlying methods count all features. However, the plotted yellow histograms retain visible approximately 3–4 nm features below the 4.4 nm core/shell mean. The exact implemented filter and raw distributions cannot be established; the stated selection rule is not a verified strict cutoff.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 6, printed p. 8866, Figure 5"
+          },
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 11, printed p. 8871, Note 27"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 6, printed p. 8866, Figure 5"
+        },
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 11, printed p. 8871, Note 27"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eleven supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Siloxane and MPA coating routes, optional APS extension, analytical procedures, distinct color cohorts and study-wide observations retain their scope. Explicitly announced HRTEM/AFM SI not located or verified; no missing micrographs, phase, atomic coordinates or recipe–specimen links invented.",
+    "missing_fields": [
+      "Declared HRTEM/AFM SI not located or inspected.",
+      "No measured atomic coordinates, refined unit cell, CIF, SAED or XRD dataset supplied.",
+      "Color labels are cohort descriptions, not universal physical-batch identifiers across tables/figures."
+    ],
+    "conflicts": [
+      "Caption/Note 27 says heights below corresponding core/shell diameter are excluded, yet Figure 5 retains visible approximately 3–4 nm features below yellow 4.4 nm. Exact filter implementation and raw distributions are unavailable."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=gerion2001",
+      "relation": "Main text, figures, tables, source conflicts and missing declared SI."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

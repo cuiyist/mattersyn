@@ -1,0 +1,491 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gerion-2001-eels-acquisition",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Gerion et al. (2001) · EELS preparation and preliminary elemental-shell evidence",
+  "material": {
+    "formula": "CdSe/ZnS/siloxane",
+    "family": "Surface-functionalized semiconductor nanocrystals",
+    "elements": [
+      "Cd",
+      "Se",
+      "Zn",
+      "S",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "CdSe/ZnS",
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Supporting procedure",
+  "sources": [
+    {
+      "id": "gerion2001",
+      "doi": "10.1021/jp0105488",
+      "title": "Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots",
+      "authors": "Daniele Gerion; Fabien Pinaud; Shara C. Williams; Wolfgang J. Parak; Daniela Zanchet; Shimon Weiss; A. Paul Alivisatos",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/jp0105488",
+      "main_status": "All eleven supplied main pages text and visually reviewed; independent source and canonical audits completed. Announced HRTEM/AFM SI remains unmatched locally.",
+      "si_status": "SI is explicitly announced on printed p. 8870: HRTEM and AFM figures of silanized nanocrystals. No SI located/matched in supplied bundle; those images were not inspected.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "gerion2001",
+    "recipe_family": "gerion2001-water-soluble-cdse-zns",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 2, printed p. 8862, Experimental Section B, silica-coated nanocrystals"
+        }
+      ],
+      "note": "Composite descriptors identify material families, not overall stoichiometry. No measured atomic coordinates or phase refinement supplied."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Complete supplied main PDF pp. 1–11"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "silica-specimen",
+      "name": "Silanized CdSe/ZnS specimen; organofunctional siloxane shell",
+      "formula": "CdSe/ZnS/siloxane",
+      "role": "silanized nanocrystal specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+        }
+      ]
+    },
+    {
+      "id": "carbon-grid",
+      "name": "Carbon-coated microscopy grid; mesh specified per procedure",
+      "formula": null,
+      "role": "400mesh carbon-coated support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "on-grid",
+      "name": "Deposit the EELS specimen output",
+      "kind": "mixture",
+      "parent_ids": [
+        "silica-specimen",
+        "carbon-grid"
+      ]
+    },
+    {
+      "id": "dry-grid",
+      "name": "Allow the deposited specimen to dry overnight output",
+      "kind": "mixture",
+      "parent_ids": [
+        "on-grid"
+      ]
+    },
+    {
+      "id": "eels-data",
+      "name": "Record the source Si and Se edge regions output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dry-grid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "deposit",
+      "action": "grid_deposition",
+      "label": "Deposit the EELS specimen",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "silica-specimen",
+        "carbon-grid"
+      ],
+      "outputs": [
+        "on-grid"
+      ],
+      "parameters": {
+        "specimen_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+            }
+          ],
+          "derivation": null
+        },
+        "grid_mesh": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mesh",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "overnight_drying",
+      "label": "Allow the deposited specimen to dry overnight",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "on-grid"
+      ],
+      "outputs": [
+        "dry-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Overnight duration has no exact hour value; atmosphere not explicitly supplied.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "action": "electron_energy_loss_spectroscopy",
+      "label": "Record the source Si and Se edge regions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-grid"
+      ],
+      "outputs": [
+        "eels-data"
+      ],
+      "parameters": {
+        "silicon_edge_energy": {
+          "value": 110,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+            }
+          ],
+          "derivation": null
+        },
+        "selenium_edge_energy": {
+          "value": 67,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gerion2001",
+              "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TEM-CM200FEG microscope. Source calls these absorption-band edges. Numerical edge energies are source-stated settings, not independent elemental calibration.",
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 3, printed p. 8863, Experimental Section D, EELS"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "eels-context",
+      "source_sample_label": "Unshown preliminary EELS specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS/siloxane",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Results B EELS"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Results B EELS"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Results B EELS"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Results B EELS"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "preliminary-shell",
+      "sample_id": "eels-context",
+      "property": "elemental_spatial_interpretation",
+      "technique": "Author preliminary EELS interpretation",
+      "value": {
+        "value": "Preliminary, unshown results suggest selenium-rich center surrounded by silica-rich shell; shell size, shape and homogeneity could not be unambiguously identified. No element map, radial profile or quantitative composition provided.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gerion2001",
+            "locator": "Main PDF p. 5, printed p. 8865, Results B EELS"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gerion2001",
+          "locator": "Main PDF p. 5, printed p. 8865, Results B EELS"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eleven supplied main pages read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Siloxane and MPA coating routes, optional APS extension, analytical procedures, distinct color cohorts and study-wide observations retain their scope. Explicitly announced HRTEM/AFM SI not located or verified; no missing micrographs, phase, atomic coordinates or recipe–specimen links invented.",
+    "missing_fields": [
+      "Declared HRTEM/AFM SI not located or inspected.",
+      "No measured atomic coordinates, refined unit cell, CIF, SAED or XRD dataset supplied.",
+      "Color labels are cohort descriptions, not universal physical-batch identifiers across tables/figures."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete main-paper review",
+      "url": "../paper-review.html?id=gerion2001",
+      "relation": "Main text, figures, tables, source conflicts and missing declared SI."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
