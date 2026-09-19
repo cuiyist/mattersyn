@@ -1,0 +1,664 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "dantas-2002-power-response",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Dantas et al. (2002) · SG1 excitation-power dependence of integrated ASPL",
+  "material": {
+    "formula": "PbS/glass",
+    "family": "Lead-sulfide quantum dots embedded in a multicomponent glass",
+    "elements": [
+      "Pb",
+      "S",
+      "Si",
+      "O",
+      "Na",
+      "Zn",
+      "Al",
+      "B"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Log–log excitation-power series and regression",
+  "sources": [
+    {
+      "id": "dantas2002",
+      "doi": "10.1021/jp0208743",
+      "title": "Anti-Stokes Photoluminescence in Nanocrystal Quantum Dots",
+      "authors": "Noelio Oliveira Dantas; Fanyao Qu; R. S. Silva; Paulo César Morais",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/jp0208743",
+      "main_status": "All five supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No matching SI supplied or independently verified. No SI declaration observed in the supplied five-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "dantas2002",
+    "recipe_family": "dantas2002-pbs-glass",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS/glass",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 1, printed p. 7453, Abstract"
+        }
+      ],
+      "note": "Composite-system descriptor, not a stoichiometric single crystal or pure silica host."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Sulfur-doped glass prepared from SiO2–Na2CO3–ZnO–Al2O3–PbO2–B2O3; proportions unreported",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 1, printed p. 7453, Section 2, powder mixture and fusion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Section 2, cooling and stress relief"
+        }
+      ],
+      "note": "Input mixture identifies source precursors, not measured final glass speciation. PbO2 is retained literally."
+    }
+  },
+  "materials": [
+    {
+      "id": "sg1-specimen",
+      "name": "Sample SG1: PbS quantum dots embedded in multicomponent glass",
+      "formula": "PbS/glass",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Section 2, six sample labels and annealing durations"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "power-series",
+      "name": "Vary excitation intensity for SG1 output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "sg1-specimen"
+      ]
+    },
+    {
+      "id": "integrated-aspl",
+      "name": "Integrate the ASPL line at each excitation intensity output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "power-series"
+      ]
+    },
+    {
+      "id": "power-fit",
+      "name": "Fit the excitation-power dependence on logarithmic axes output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "integrated-aspl"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "sweep",
+      "action": "excitation_power_series",
+      "label": "Vary excitation intensity for SG1",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sg1-specimen"
+      ],
+      "outputs": [
+        "power-series"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 514.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 5, printed p. 7457, Figure 6 caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "514.5 nm laser excitation of SG1 (600 °C, 1 h). Excitation axis is kW/cm²; exact sampled powers, spot area, exposure duration and absolute calibration are not tabulated.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "integrate",
+      "action": "aspl_spectral_integration",
+      "label": "Integrate the ASPL line at each excitation intensity",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "sweep"
+      ],
+      "inputs": [
+        "power-series"
+      ],
+      "outputs": [
+        "integrated-aspl"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Integration limits, baseline subtraction, detector corrections and errors are not given. Integrated intensity uses arbitrary units.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "fit",
+      "action": "log_log_regression",
+      "label": "Fit the excitation-power dependence on logarithmic axes",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "integrate"
+      ],
+      "inputs": [
+        "integrated-aspl"
+      ],
+      "outputs": [
+        "power-fit"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 6 gives an approximately 0.86 slope. No intercept, regression uncertainty, fitting weights or raw points are reported.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sg1",
+      "source_sample_label": "Figure 6 SG1 excitation-power series",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS/glass",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "exponent",
+      "sample_id": "sg1",
+      "property": "integrated_aspl_excitation_power_exponent",
+      "technique": "Log–log regression",
+      "value": {
+        "value": 0.86,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "SG1 only, not a shared exponent fitted for all six annealed samples.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "power-law",
+      "sample_id": "sg1",
+      "property": "reported_power_law",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "I ∝ I_exc^0.86",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "I is integrated ASPL intensity; I_exc is excitation intensity. No proportionality constant supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "power-axis",
+      "sample_id": "sg1",
+      "property": "figure6_axis_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Horizontal excitation intensity is kW/cm² on a log scale, with labeled 0.1 and 1 ticks; vertical integrated intensity is arbitrary units on a log scale. Tick labels do not establish a full tabulated sweep or exact extrema.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "sublinear-inference",
+      "sample_id": "sg1",
+      "property": "author_power_law_interpretation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Authors use sublinear rather than superlinear response to argue against Auger-driven ASPL under low excitation and in favor of a surface-state-mediated two-step process. The power law is evidence for their interpretation, not unique mechanistic proof.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Excitation-power dependence"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Two-step model discussion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 5, printed p. 7457, Figure 6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Six annealing variants, common glass preparation, optical and AFM specimens, and author calculations retain their own evidence scopes. Glass proportions, sulfur reagent, literal vessel identity and size/radius ambiguity remain unresolved. Matching SI not located or verified; cited external works not independently inspected.",
+    "missing_fields": [
+      "Mixture proportions, absolute charges, sulfur chemical source/loading and addition timing, quantitative purity grades, annealing atmosphere and temperature ramps are not reported.",
+      "No current TEM, XRD, SAED, refined atomic lattice, crystal coordinate file, yield, error bars or raw numerical spectra are supplied.",
+      "The source alternates between generic QD size, calculated radius and AFM grain height. No universal diameter conversion is justified."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=dantas2002",
+      "relation": "Original figures, all methods, theory and source limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

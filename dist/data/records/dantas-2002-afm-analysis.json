@@ -1,0 +1,729 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "dantas-2002-afm-analysis",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Dantas et al. (2002) · AFM topography, correlation and height distributions",
+  "material": {
+    "formula": "PbS/glass",
+    "family": "Lead-sulfide quantum dots embedded in a multicomponent glass",
+    "elements": [
+      "Pb",
+      "S",
+      "Si",
+      "O",
+      "Na",
+      "Zn",
+      "Al",
+      "B"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Atomic force microscopy",
+  "sources": [
+    {
+      "id": "dantas2002",
+      "doi": "10.1021/jp0208743",
+      "title": "Anti-Stokes Photoluminescence in Nanocrystal Quantum Dots",
+      "authors": "Noelio Oliveira Dantas; Fanyao Qu; R. S. Silva; Paulo César Morais",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/jp0208743",
+      "main_status": "All five supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No matching SI supplied or independently verified. No SI declaration observed in the supplied five-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "dantas2002",
+    "recipe_family": "dantas2002-pbs-glass",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS/glass",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 1, printed p. 7453, Abstract"
+        }
+      ],
+      "note": "Composite-system descriptor, not a stoichiometric single crystal or pure silica host."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Sulfur-doped glass prepared from SiO2–Na2CO3–ZnO–Al2O3–PbO2–B2O3; proportions unreported",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 1, printed p. 7453, Section 2, powder mixture and fusion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Section 2, cooling and stress relief"
+        }
+      ],
+      "note": "Input mixture identifies source precursors, not measured final glass speciation. PbO2 is retained literally."
+    }
+  },
+  "materials": [
+    {
+      "id": "afm1-specimen",
+      "name": "Sample AFM1: PbS quantum dots embedded in multicomponent glass",
+      "formula": "PbS/glass",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Section 2, six sample labels and annealing durations"
+        }
+      ]
+    },
+    {
+      "id": "afm2-specimen",
+      "name": "Sample AFM2: PbS quantum dots embedded in multicomponent glass",
+      "formula": "PbS/glass",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Section 2, six sample labels and annealing durations"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "topography-data",
+      "name": "Image AFM1 and AFM2 as separate specimens output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "afm1-specimen",
+        "afm2-specimen"
+      ]
+    },
+    {
+      "id": "afm-analysis-data",
+      "name": "Inspect selected areas, correlation curves and height distributions output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "topography-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "scan",
+      "action": "afm_topography",
+      "label": "Image AFM1 and AFM2 as separate specimens",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "afm1-specimen",
+        "afm2-specimen"
+      ],
+      "outputs": [
+        "topography-data"
+      ],
+      "parameters": {
+        "afm1_scan_width": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+            },
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+            }
+          ],
+          "derivation": null
+        },
+        "afm1_scan_height": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+            },
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The 5 × 5 µm² field applies to the upper AFM1 image. AFM instrument, mode, tip, resolution, environment and AFM2 full-field dimensions are unreported; optical cutting/polishing is not silently transferred.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "analyze",
+      "action": "afm_image_distribution_analysis",
+      "label": "Inspect selected areas, correlation curves and height distributions",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "scan"
+      ],
+      "inputs": [
+        "topography-data"
+      ],
+      "outputs": [
+        "afm-analysis-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 4a includes a magnified selected square, a correlation panel and a depth/height histogram; Figure 4b shows AFM2 detail and matching analysis panels. No particle counts, uncertainty, tip correction, correlation algorithm or exact size-distribution function is supplied.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "afm1",
+      "source_sample_label": "AFM1 source AFM specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS/glass",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "afm2",
+      "source_sample_label": "AFM2 source AFM specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS/glass",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "afm1-scope",
+      "sample_id": "afm1",
+      "property": "figure4a_panel_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Upper AFM1 overview is a 5 × 5 µm² scan with a selected rectangular region; lower image magnifies that selection. Histograms and correlation plot belong to this region, not the entire annealing series.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4a caption and panels"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4a caption and panels"
+        }
+      ]
+    },
+    {
+      "id": "afm2-scope",
+      "sample_id": "afm2",
+      "property": "figure4b_panel_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "AFM2 shows a magnified image and its own correlation and histogram panels. No identical magnification, absolute lateral size or particle count is established relative to AFM1.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4b caption and panels"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4b caption and panels"
+        }
+      ]
+    },
+    {
+      "id": "afm1-hist-range",
+      "sample_id": "afm1",
+      "property": "figure4_histogram_displayed_depth_range",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 0,
+        "maximum": 90,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4a histogram axis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure axis, not min/max particle size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4a histogram axis"
+        }
+      ]
+    },
+    {
+      "id": "afm2-hist-range",
+      "sample_id": "afm2",
+      "property": "figure4_histogram_displayed_depth_range",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 0,
+        "maximum": 670,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4b histogram axis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure axis, not min/max particle size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4b histogram axis"
+        }
+      ]
+    },
+    {
+      "id": "histogram-axis",
+      "sample_id": "afm1",
+      "property": "figure4_histogram_axis_labels",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Horizontal axis Depth (Å), vertical axis Hist. %. Separate upper panels are labeled Correlation. Grain-height values are not a diameter histogram merely because prose says QD-size.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4 analysis panels"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4 analysis panels"
+        }
+      ]
+    },
+    {
+      "id": "afm-observation",
+      "sample_id": "afm2",
+      "property": "author_afm_growth_observation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Authors state direct observation of QDs in both AFM specimens and larger mean apparent size with wider distribution after 30 h than after 5 h. No chemical map or atomic-resolution phase verification accompanies AFM.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "cross-cohort-comparison",
+      "sample_id": "afm1",
+      "property": "author_optical_afm_comparison",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "AFM1 (5 h) approximately 40 Å is compared with theory/absorption size for SG3 (6 h), also 40 Å. This is a comparison between distinct samples and size metrics, not a shared physical batch.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Six annealing variants, common glass preparation, optical and AFM specimens, and author calculations retain their own evidence scopes. Glass proportions, sulfur reagent, literal vessel identity and size/radius ambiguity remain unresolved. Matching SI not located or verified; cited external works not independently inspected.",
+    "missing_fields": [
+      "Mixture proportions, absolute charges, sulfur chemical source/loading and addition timing, quantitative purity grades, annealing atmosphere and temperature ramps are not reported.",
+      "No current TEM, XRD, SAED, refined atomic lattice, crystal coordinate file, yield, error bars or raw numerical spectra are supplied.",
+      "The source alternates between generic QD size, calculated radius and AFM grain height. No universal diameter conversion is justified."
+    ],
+    "conflicts": [
+      "Rounded AFM prose sizes about 40 Å and 291 Å are compared with optical estimates, but Figure 4 specifies grain heights 40.19 Å and 291.24 Å. No diameter/radius conversion or identical metric is established."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=dantas2002",
+      "relation": "Original figures, all methods, theory and source limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

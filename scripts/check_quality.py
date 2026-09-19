@@ -164,7 +164,17 @@ class Audit:
         stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")
         self.check(stiger_review.get("doi") == "10.1021/la980800b" and stiger_review.get("review_scope") == "supplied_main_only_si_unverified", "Stiger: contribution lacks the scoped source review")
         self.check(any(d.get("role") == "main" and d.get("page_count") == 9 and d.get("sha256") == "e581449713ddca5e0cb68d05593df476d0e5150b88bc7c6dcbdb269ac70881fb" and len(d.get("pages", [])) == 9 and all(p.get("text_read") and p.get("visual_review") for p in d["pages"]) for d in stiger_review.get("documents", [])), "Stiger: nine-page source coverage or source identity changed")
-        for formula in ("CO", "NO", "PbS", "Fe–C–H–O"):
+        dantas_routes = {"dantas-2002-" + sample for sample in ("sg1", "sg2", "sg3", "sg4", "afm1", "afm2")}
+        lead_sulfide = self.hubs.get("PbS", {})
+        self.check(lead_sulfide.get("component_only") is True and lead_sulfide.get("direct_record_ids") == [], "PbS: embedded-glass contribution became isolated PbS synthesis")
+        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes, "PbS: only the six independently reviewed Dantas glass routes may create this component hub; benchmark rows remain excluded")
+        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
+        self.check(set(self.hubs.get("PbS/glass", {}).get("direct_record_ids", [])) == dantas_routes, "PbS/glass: six reviewed annealing variants must remain direct composite routes")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "PbS/glass" for rid in dantas_routes), "PbS/glass: whole-composite identity was erased")
+        dantas_review = load(self.root / "data/paper-reviews/dantas2002.json")
+        self.check(dantas_review.get("doi") == "10.1021/jp0208743" and dantas_review.get("review_scope") == "supplied_main_only_si_unverified", "Dantas: source contribution lacks the scoped main-only review")
+        self.check(any(d.get("role") == "main" and d.get("page_count") == 5 and d.get("sha256") == "c8fd35a429bf636fcccc5dfeb3211cea44299e911fbfc80e1a308c75b7b04917" and len(d.get("pages", [])) == 5 and all(p.get("text_read") and p.get("visual_review") for p in d["pages"]) for d in dantas_review.get("documents", [])), "Dantas: five-page source coverage or source identity changed")
+        for formula in ("CO", "NO", "Fe–C–H–O"):
             self.check(formula not in self.hubs, f"{formula}: former title-only/benchmark/procedure hub reappeared; independent route review required")
         for paper in load(self.dist / "data/library-index.json")["papers"]:
             if paper["reviewStatus"] == "indexed_awaiting_review":

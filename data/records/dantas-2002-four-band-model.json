@@ -1,0 +1,754 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "dantas-2002-four-band-model",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Dantas et al. (2002) · Four-band envelope-function calculation and optical-size interpretation",
+  "material": {
+    "formula": "PbS/glass",
+    "family": "Lead-sulfide quantum dots embedded in a multicomponent glass",
+    "elements": [
+      "Pb",
+      "S",
+      "Si",
+      "O",
+      "Na",
+      "Zn",
+      "Al",
+      "B"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Bulk (4 × 4) k·p envelope-function formalism",
+  "sources": [
+    {
+      "id": "dantas2002",
+      "doi": "10.1021/jp0208743",
+      "title": "Anti-Stokes Photoluminescence in Nanocrystal Quantum Dots",
+      "authors": "Noelio Oliveira Dantas; Fanyao Qu; R. S. Silva; Paulo César Morais",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/jp0208743",
+      "main_status": "All five supplied main pages text and visually reviewed; independent source and canonical audits completed. Matching local SI not located or verified.",
+      "si_status": "No matching SI supplied or independently verified. No SI declaration observed in the supplied five-page main article.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "dantas2002",
+    "recipe_family": "dantas2002-pbs-glass",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS/glass",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 1, printed p. 7453, Abstract"
+        }
+      ],
+      "note": "Composite-system descriptor, not a stoichiometric single crystal or pure silica host."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Complete supplied main PDF pp. 1–5"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Sulfur-doped glass prepared from SiO2–Na2CO3–ZnO–Al2O3–PbO2–B2O3; proportions unreported",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 1, printed p. 7453, Section 2, powder mixture and fusion"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Section 2, cooling and stress relief"
+        }
+      ],
+      "note": "Input mixture identifies source precursors, not measured final glass speciation. PbO2 is retained literally."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "four-band-levels",
+      "name": "Calculate levels with the four-band k·p formalism output",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "size-inferences",
+      "name": "Compare calculated transitions with experimental absorption output",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "four-band-levels"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "solve",
+      "action": "four_band_envelope_calculation",
+      "label": "Calculate levels with the four-band k·p formalism",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "four-band-levels"
+      ],
+      "parameters": {
+        "hamiltonian_dimension": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "matrix dimension",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+            },
+            {
+              "source_id": "dantas2002",
+              "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bulk (4 × 4) k·p Hamiltonian in envelope-function formalism; PbS band parameters treated as nearly isotropic and anisotropy neglected. References 19–20 support the formalism. The paper gives no explicit Hamiltonian elements or complete parameter set; the parabolic model’s 0.25 m0 masses are not silently assigned here.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "action": "optical_energy_size_comparison",
+      "label": "Compare calculated transitions with experimental absorption",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "solve"
+      ],
+      "inputs": [
+        "four-band-levels"
+      ],
+      "outputs": [
+        "size-inferences"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source assigns approximate optical sizes by matching transitions. Figure 3 axis is radius, while the prose says size. Preserve the ambiguity; do not calculate universal diameters or an atomic structure from these values.",
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "model",
+      "source_sample_label": "Figure 3b theoretical levels and size interpretation",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "radius-axis",
+      "sample_id": "model",
+      "property": "figure3b_displayed_dot_radius_range",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 10,
+        "maximum": 50,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3b axis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Theoretical radius-axis range, not a measured size distribution.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3b axis"
+        }
+      ]
+    },
+    {
+      "id": "eigenvalue-labels",
+      "sample_id": "model",
+      "property": "four_band_quantum_labels",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Eigenvalues labeled by angular momentum j and parity π; l is orbital angular momentum.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Four-band model"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Four-band model"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3 caption"
+        }
+      ]
+    },
+    {
+      "id": "space-i",
+      "sample_id": "model",
+      "property": "figure3b_space_i_definition",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Space I: j = l + 1/2, π = (−1)^(l+1).",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3b legend"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Literal legend, not a reconstructed derivation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3b legend"
+        }
+      ]
+    },
+    {
+      "id": "space-ii",
+      "sample_id": "model",
+      "property": "figure3b_space_ii_definition",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Space II: j = (l + 1) − 1/2, π = (−1)^l.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3b legend"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Literal legend preserved, including its l convention; no algebraic reinterpretation of the basis.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3b legend"
+        }
+      ]
+    },
+    {
+      "id": "curve-parities",
+      "sample_id": "model",
+      "property": "figure3b_labeled_curve_states",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Labeled curves include j = 1/2, π = 1; j = 1/2, π = −1; j = 3/2, π = 1; j = 3/2, π = −1; and j = 5/2, π = −1. No exact eigenvalue arrays are supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3b"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3b"
+        }
+      ]
+    },
+    {
+      "id": "strong-regime",
+      "sample_id": "model",
+      "property": "source_strong_confinement_size_upper_bound",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 80,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Confinement-regime discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Prose QD size ≤ 80 Å; metric ambiguity with radius axis retained.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Confinement-regime discussion"
+        }
+      ]
+    },
+    {
+      "id": "weak-size",
+      "sample_id": "model",
+      "property": "source_weaker_size_dependence_threshold",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": 100,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Confinement-regime discussion"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "Prose dot size larger than 100 Å; not an experimentally measured threshold for these glass samples.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Confinement-regime discussion"
+        }
+      ]
+    },
+    {
+      "id": "level-spacing",
+      "sample_id": "model",
+      "property": "author_large_dot_level_spacing_interpretation",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "For larger dots, electron/hole subband dependence weakens and spacings become smaller than room-temperature thermal energy; authors infer breakdown of the phonon bottleneck and temperature-dependent lasing characteristics. No temperature series or laser experiment is supplied.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+        }
+      ]
+    },
+    {
+      "id": "comparison-size",
+      "sample_id": "model",
+      "property": "source_model_comparison_qd_size",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 24,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, SG1 size estimate"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source calls it size; Figure 3 radius axis prevents automatic diameter assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, SG1 size estimate"
+        }
+      ]
+    },
+    {
+      "id": "comparison-energy",
+      "sample_id": "model",
+      "property": "calculated_first_transition_energy",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 2.44,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, SG1 size estimate"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Calculated for source-described 24 Å dot; not a measured absorption energy.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, SG1 size estimate"
+        }
+      ]
+    },
+    {
+      "id": "rounded-experimental-energy",
+      "sample_id": "model",
+      "property": "rounded_sg1_absorption_feature_for_model_comparison",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 2.48,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, SG1 size estimate"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Comparison paragraph rounding; earlier SG1 feature 1 is 2.486 eV. Both retained without silently replacing either.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, SG1 size estimate"
+        }
+      ]
+    },
+    {
+      "id": "size-agreement",
+      "sample_id": "model",
+      "property": "author_size_validation_scope",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Authors compare SG1/SG2/SG3 inferred sizes with prior Thielsch et al. results (reference 8) and separate AFM specimens. This is qualitative model agreement, not a coordinate-level validation.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+          },
+          {
+            "source_id": "dantas2002",
+            "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 2, printed p. 7454, Numerical energy-level calculations and optical sizes"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, Figure 3 and comparison"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 3, printed p. 7455, AFM analysis"
+        },
+        {
+          "source_id": "dantas2002",
+          "locator": "Main PDF p. 4, printed p. 7456, Figure 4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Six annealing variants, common glass preparation, optical and AFM specimens, and author calculations retain their own evidence scopes. Glass proportions, sulfur reagent, literal vessel identity and size/radius ambiguity remain unresolved. Matching SI not located or verified; cited external works not independently inspected.",
+    "missing_fields": [
+      "Mixture proportions, absolute charges, sulfur chemical source/loading and addition timing, quantitative purity grades, annealing atmosphere and temperature ramps are not reported.",
+      "No current TEM, XRD, SAED, refined atomic lattice, crystal coordinate file, yield, error bars or raw numerical spectra are supplied.",
+      "The source alternates between generic QD size, calculated radius and AFM grain height. No universal diameter conversion is justified."
+    ],
+    "conflicts": [
+      "Source optical sizes 24, 27 and 40 Å are called QD size, while theoretical axes explicitly say dot radius. AFM labels instead give grain height. These quantities are retained separately without unit-metric conversion."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source review",
+      "url": "../paper-review.html?id=dantas2002",
+      "relation": "Original figures, all methods, theory and source limitations."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
