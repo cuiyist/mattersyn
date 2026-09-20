@@ -29,10 +29,10 @@ def E(uid):
  u=U[uid];return [{'source_id':SID,'locator':('CIF ' if u['source_role']=='cif' else u['source_role'].upper()+' PDF p. '+str(u['pdf_page'])+' (printed '+str(u['printed_page'])+'), ')+u['locator']}]
 def bindu(r,uid,p):UL[uid].append({'record_id':r['record_id'],'pointer':p})
 def bindf(r,fid,p,sub=''):FL[fid].append({'record_id':r['record_id'],'pointer':p,'source_value_pointer':sub})
-SRC=source(SID,I['doi'],I['title'],'Christopher M. Evans; Meagan E. Evans; Todd D. Krauss',2010,si='Matched 21-page SI and species-9 molecular CIF; source author reading complete, independent scientific audit pending.')
-SRC['main_status']='All three main pages and 21 SI pages read and visually inspected by source author; independent audit is a separate gate.'
+SRC=source(SID,I['doi'],I['title'],'Christopher M. Evans; Meagan E. Evans; Todd D. Krauss',2010,si='Matched 21-page SI and species-9 molecular CIF; independent source scientific audit passed revision 2. Canonical review remains pending.')
+SRC['main_status']='All three main pages and 21 SI pages read and visually inspected; independent source scientific audit passed revision 2. This canonical proposal needs its own independent review.'
 SRC['reuse_status']='Private canonical proposal. No article or figure reuse permission inferred.'
-COMMON=['Source and canonical independent scientific audits are pending.','No QD atomic-coordinate CIF is supplied.','Source-defined recipe families and observation contexts are not independently enumerated physical batches.']
+COMMON=['Canonical independent scientific audit is pending; the source audit passed separately.','No QD atomic-coordinate CIF is supplied.','Source-defined recipe families and observation contexts are not independently enumerated physical batches.']
 def base(k,title,formula='CdSe / PbSe',kind='observation',method='Source-scoped characterization or interpretation'):
  r=record(PRE+norm(k),'Evans et al. (2010) · '+title,formula,'Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals',method,deepcopy(SRC),'Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF',kind)
  r['schema_version']='1.3.0';r['lineage'].update(source_group=SID,recipe_family=SID+'-phosphine-selenide-study')
@@ -170,6 +170,16 @@ for fid,f in F.items():
   val=q(f,sub);mid=norm(fid)+('-field-'+str(n+1) if sub else '')
   m=measurement(mid,sid,norm(f['property']+sub).replace('-','_'),val,'Original CIF refinement field' if f['source_unit_id'].startswith('evans2010-cif-') else 'Source-reported or explicitly classified context',E(f['source_unit_id']),conditions='Exact source scope: '+f['sample_scope']+'. '+f.get('qualifier',''))
   r['measurements'].append(m);ptr=f'/measurements/{len(r["measurements"])-1}/value';bindf(r,fid,ptr,sub);bindu(r,f['source_unit_id'],ptr)
+# Preserve the curated table columns, identity footnotes, time-course joins and
+# complete worked expressions in addition to their separately typed quantities.
+for category in ['tables','equations']:
+ for ix,obj in enumerate(I[category]):
+  uids=[obj['source_unit_id']] if 'source_unit_id' in obj else obj['source_unit_ids'];uid=uids[0];r=R[uk(uid)];sid=sample(r,uk(uid)+'-source-context',U[uid]['sample_scope'],None,uid=uid)
+  val=fact(compact(obj),E(uid),'reported',note='Lossless curated '+category[:-1]+' inventory payload. Individual measured, author-derived, cited and model fields retain their separate classifications; this container is not itself a new measurement.')
+  r['measurements'].append(measurement('inventory-'+category+'-'+norm(obj['id']),sid,'source_inventory_payload',val,'Curated source table or worked expression',E(uid)))
+  ptr=f'/measurements/{len(r["measurements"])-1}/value'
+  for u in uids:bindu(r,u,ptr)
+  OBJ.append({'category':category,'source_id':obj['id'],'source_pointer':f'/{category}/{ix}','record_id':r['record_id'],'pointer':ptr,'mode':'lossless_curated_source_payload'})
 # Preserve selected microscopy specimen boundaries explicitly; image bars remain scale bars.
 for sx in I['sample_lineage']:
  if sx['id'] in P:r=R[sx['id']]
@@ -208,5 +218,5 @@ for uid,links in UL.items():
 for x in FREEZE['files']:assert sha(x['path'])==x['sha256'];checks+=1
 counts={'records':len(R),'synthesis_route_families':3,'supporting_preparation_control_families':13,'observation_context_records':len(R)-16,'operations':sum(len(r['operations']) for r in R.values()),'materials':sum(len(r['materials']) for r in R.values()),'stocks':sum(len(r['stocks']) for r in R.values()),'products_or_contexts':sum(len(r['products']) for r in R.values()),'measurements':sum(len(r['measurements']) for r in R.values()),'source_facts':len(F),'source_fact_bindings':sum(map(len,FL.values())),'source_units':len(U),'source_unit_bindings':sum(map(len,UL.values())),'source_groups':1,'training_rows':0,'exact_qd_structure_pairs':0}
 save('author-validation.json',{'status':'passed_author_schema_and_transport_checks','checks':checks,'counts':counts,'schema_errors':errors,'source_freeze_unchanged':True,'independent_scientific_audit':'pending','reader_visual_browser_publication':'pending','record_hashes':{x['record_id']:x['sha256'] for x in recs}})
-save('record-manifest.json',{'schema':'mattersyn-private-canonical-proposal/1','source_id':SID,'version':2,'created_at':datetime.now(timezone.utc).isoformat(),'author':'/root/norberg2004_extract','status':'author_draft_pending_source_and_canonical_audits','source_freeze_sha256':sha(B/'source-extraction-revision-2/source-extraction-freeze.json'),'records':recs,'counts':counts,'coverage_sha256':sha(O/'source-to-field-coverage.json'),'validation_sha256':sha(O/'author-validation.json'),'author_script_sha256':sha(__file__)})
+save('record-manifest.json',{'schema':'mattersyn-private-canonical-proposal/1','source_id':SID,'version':2,'created_at':datetime.now(timezone.utc).isoformat(),'author':'/root/norberg2004_extract','status':'source_audit_passed_canonical_author_draft_pending_independent_audit','source_freeze_sha256':sha(B/'source-extraction-revision-2/source-extraction-freeze.json'),'source_scientific_audit_sha256':sha(B/'source-scientific-audit.json'),'records':recs,'counts':counts,'coverage_sha256':sha(O/'source-to-field-coverage.json'),'validation_sha256':sha(O/'author-validation.json'),'author_script_sha256':sha(__file__)})
 print(json.dumps(counts));print('MANIFEST',sha(O/'record-manifest.json'))

@@ -6,7 +6,7 @@ const statusNames={complete:'Complete within stated scope',in_progress:'In progr
 function safeLink(label,path){const a=el('a',label);const url=new URL(path,import.meta.url);if(url.origin!==location.origin||!url.pathname.startsWith(new URL('.',import.meta.url).pathname))throw Error('Unexpected progress link');a.href=url.href;return a;}
 function metrics(host,items){host.replaceChildren(...items.map(([value,label])=>{const n=el('div',undefined,'progress-metric');n.append(el('strong',number(value)),el('span',label));return n;}));}
 function render(data){
- if($('review-progress-brief')){$('review-progress-brief').textContent=`${data.batch.published} of ${data.batch.total} papers published in the current batch. ${data.current_work[0]?.short_label??'Next batch'}: ${data.current_work[0]?.stage??'selection in preparation'}.`;$('review-progress-time').textContent=`Snapshot generated ${date(data.updated_at)} · checked for updates every minute`;}
+ if($('review-progress-brief')){$('review-progress-brief').textContent=`${data.batch.published} of ${data.batch.total} papers published in the retained pilot. ${data.current_work[0]?.short_label??'Next batch'}: ${data.current_work[0]?.stage??'selection in preparation'}.`;$('review-progress-time').textContent=`Snapshot generated ${date(data.updated_at)} · checked for updates every minute`;}
  if(!$('published-metrics'))return;
  $('progress-updated').textContent=`Snapshot generated ${date(data.updated_at)} · automatic update check every minute`;
  const p=data.published;metrics($('published-metrics'),[[p.record_count,'Structured records'],[p.synthesis_route_count,'Synthesis routes / variants'],[p.material_hub_count,'Material / component collections'],[p.formal_source_reader_count,'Formal source readers']]);

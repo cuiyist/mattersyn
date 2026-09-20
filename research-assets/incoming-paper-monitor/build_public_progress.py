@@ -28,7 +28,7 @@ for name in ('index.html','library.html','dataset.html','inventory.html'):
  if 'href="progress.html"' not in s:s=s.replace('</nav>','<a href="progress.html">Review progress</a></nav>',1)
  if name=='index.html':
   s=re.sub(r'<!--review-progress-start-->.*?<!--review-progress-end-->','',s,flags=re.S)
-  widget='<!--review-progress-start--><section class="progress-teaser" aria-label="Current review progress"><div><span class="eyebrow">REVIEW PROGRESS</span><p id="review-progress-brief">'+str(editorial['batch']['published'])+' of '+str(editorial['batch']['total'])+' papers published in the current batch. '+editorial['current_work'][0]['short_label']+' remains in preparation.</p><small id="review-progress-time">Progress is saved at review milestones.</small></div><a href="progress.html">Open the review queue →</a></section><!--review-progress-end-->'
+  widget='<!--review-progress-start--><section class="progress-teaser" aria-label="Current review progress"><div><span class="eyebrow">REVIEW PROGRESS</span><p id="review-progress-brief">'+str(editorial['batch']['published'])+' of '+str(editorial['batch']['total'])+' papers published in the retained pilot. '+editorial['current_work'][0]['short_label']+' remains in preparation.</p><small id="review-progress-time">Progress is saved at review milestones.</small></div><a href="progress.html">Open the review queue →</a></section><!--review-progress-end-->'
   s=s.replace('<div class="element-controls">',widget+'<div class="element-controls">',1)
   if 'progress.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="progress.css?v=1"></head>')
   if 'progress.mjs' not in s:s=s.replace('</body>','<script type="module" src="progress.mjs?v=1"></script></body>')
