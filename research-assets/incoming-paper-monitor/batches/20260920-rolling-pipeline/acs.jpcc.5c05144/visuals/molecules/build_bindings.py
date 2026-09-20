@@ -13,7 +13,10 @@ def save(n,v):(O/n).write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n','u
 def ptr(v,p):
  for k in p.strip('/').split('/'):v=v[int(k)] if isinstance(v,list) else v[k.replace('~1','/').replace('~0','~')]
  return v
-def fmt(q):return (q.get('raw_text') or (str(q['value']) if q.get('value') is not None else 'Not reported'))+' '+(q.get('unit') or '')
+def fmt(q):
+ unit=q.get('unit') or ''
+ if unit=='volume_parts':unit='volume part' if q.get('value')==1 else 'volume parts'
+ return (q.get('raw_text') or (str(q['value']) if q.get('value') is not None else 'Not reported'))+' '+unit
 checks=[]
 def ck(n,v):checks.append({'check':n,'passed':bool(v)});assert v,n
 manifest=read(C/'record-manifest.json');records={};paths={}

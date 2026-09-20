@@ -56,7 +56,9 @@ for r in records:
    for k in sel['keys']:labels[k]=k.replace('_',' ').capitalize();typed.append({'scene_id':sid,'pointer':sel['pointer']+'/parameters/'+k,'quantity':opt['parameters'][k],'kind':'paired_comparison_context'})
 labels.update({'fa_precursor_aliquot':'FA-stock aliquot','pbi2_charge':'PbI2 charge','ode_charge':'ODE charge','oa_charge':'Whole-stock OA charge','formamidine_acetate_charge':'Whole-stock formamidine acetate charge','selected_oa_volume':'OA selection (see paired contexts)','selected_growth_temperature':'Growth-temperature selection (see paired contexts)','growth_temperature':'Growth temperature','oa_volume':'OA volume','oam_volume':'OAm volume','wash_acetonitrile_parts':'Washing MeCN volume parts','wash_toluene_parts':'Washing toluene volume parts'})
 assert len(cfg)==len(base)==21 and len(records)==8
-data={'source_group':'sasongko2025','configs':cfg,'parameter_labels':labels}
+labels.update({'stock_oa_charge':'Whole-stock OA charge','stock_ode_charge':'Whole-stock ODE charge','irf':'Instrument response (IRF)','pl_scan_interval':'PL scan interval'})
+option_labels={'ligand-1-2':'Figure 1 · OAm:OA = 1:2','ligand-1-3':'Figure 1 · OAm:OA = 1:3','ligand-1-4':'Figure 1 · OAm:OA = 1:4','wash-1-1':'Figure 2 · acetonitrile:toluene = 1:1','wash-1-10':'Figure 2 · acetonitrile:toluene = 1:10','wash-1-20':'Figure 2 · acetonitrile:toluene = 1:20','growth-25':'Figure 3 · growth at 25 °C','growth-50':'Figure 3 · growth at 50 °C','growth-100':'Figure 3 · growth at 100 °C'}
+data={'source_group':'sasongko2025','configs':cfg,'parameter_labels':labels,'option_labels':option_labels,'parameter_display_values':{'selected_oa_volume':'Select one reported alternative below; no single charge is assigned.','selected_growth_temperature':'Select one reported alternative below; no single temperature is assigned.'}}
 save('scene-config.json',data);save('records.json',records);save('typed-field-map.json',typed)
 save('canonical-bindings.json',{'author':'/root/norberg2004_extract','status':'private_unapproved','canonical_freeze_sha256':sha(C/'package-freeze.json'),'canonical_audit_sha256':sha(audit),'source_freeze_sha256':sha(J/'source-extraction-revision-2/package-freeze.json'),'bindings':bindings})
 template=(T/'protocol-template.mjs').read_text('utf8');template=template[:template.index('function draw(c)')]+(A/'draw-scenes.mjs').read_text('utf8')+'\n'+template[template.index('function quantity(q)'):]
@@ -64,6 +66,8 @@ template=template.replace('Friedfeld2019','Sasongko2025').replace('friedfeld2019
 template=template.replace("volume_parts:'',", "volume_parts:'',")
 template=template.replace("time_text:'',dimensionless:'',", "time_text:'',dimensionless:'',volume_parts:'volume parts',")
 template=template.replace("label:option.label.replace", "label:'Paired comparison · '+option.label.replace")
+template=template.replace("+option.label.replace", "+(DATA.option_labels[option.id]||option.label).replace")
+template=template.replace('value:quantity(q),pointer:c.operation_pointer','value:DATA.parameter_display_values[k]||quantity(q),pointer:c.operation_pointer')
 template=template.replace("kind:'alternative_schedule_group'", "kind:'paired_comparison_context'")
 (A/'protocol-template.mjs').write_text(template,'utf8');(A/'sasongko2025-protocol.mjs').write_text(template.replace('__CONFIG__',json.dumps(data,ensure_ascii=False,separators=(',',':'))),'utf8')
 shutil.copyfile(T/'quantity-value.mjs',A/'quantity-value.mjs')

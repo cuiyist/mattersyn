@@ -1,0 +1,17 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,copy
+J=Path(__file__).resolve().parent;O=J/'site-integration-proposal';S=J.parents[4]/'recipe-atlas'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def save(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n','utf8')
+records=[json.loads(p.read_text('utf8')) for p in (O/'v1/records').glob('*.json')]
+stages=[{'record_id':r['record_id'],'operation_id':o['id'],'rendered_title':o['label'],'source_specific_art_and_conditions_present':True}for r in records for o in r['operations']]
+assert len(stages)==21
+checks={'status':'passed','author':'/root','at':datetime.now(timezone.utc).isoformat(),'origin':'http://127.0.0.1:5197','scope':'Actual CUA integrated browser inspection, distinct from scientific audits.','stages':stages,'stage_count':21,'procedure_record_count':8,'route_stage_buttons_selected':12,'fa_stock_stage_buttons_selected':3,'single_stage_acquisition_pages_loaded_and_protocol_scrolled':6,'route_product_selector_contexts_tested':13,'stock_component_selections_tested':18,'original_asset_dialogs_opened':17,'original_assets_all_loaded_positive_natural_width':True,'molecular_viewer':{'oleic_acid_3d_rendered':True,'zoom_plus':True,'functional_group_toggle':True,'reset':True,'close':True,'rotation_drag_tested_this_release':False},'responsive':{'desktop_viewport':[1280,720],'mobile_viewport':[390,844],'material_hub_scroll_width':375,'synthesis_record_scroll_width':375,'source_reader_scroll_width_after_fix':375,'stage_selection_mobile':True,'apparatus_enlargement_mobile':True,'raman_enlargement_mobile':True,'temporary_viewport_reset':True},'findings_resolved':[{'id':'J-BROWSER-01','problem':'Source-reader long hashes and status identifiers created 643px overflow at390px viewport.','fix':'Wrap review-body text anywhere; version stylesheet reference so cached CSS updates.','after':375},{'id':'J-BROWSER-02','problem':'Original table count could be confused with six typed numerical collections.','fix':'Label explicitly original table attachments and point to extracted numerical collections.'}],'open_findings':[],'console_errors':[],'broken_loaded_images':0,'source_table_scope':'One source-labeled table attachment; six extracted typed numerical collections retained.','full_current_product_coordinates':False,'public_release_verified':False,'bound_presentation_files':{x:sha(S/x)for x in ['dist/paper-review.mjs','dist/paper-review.css','scripts/build_reader_views.py','dist/paper-review.html','dist/protocol-visuals.mjs','dist/sasongko2025-protocol.mjs','dist/crystal-viewer.mjs']}}
+save(O/'browser-validation.json',checks)
+p=S/'data/paper-reviews/sasongko2025.json';before=json.loads(p.read_text('utf8'));after=copy.deepcopy(before)
+after['presentation_gates']['browser_render']=True
+after['publication_status']='Source, canonical, illustration and actual desktop/mobile browser reviews passed; anonymous deployment verification remains pending.'
+save(O/'reader-before-browser-gate.json',before);save(p,after)
+save(O/'browser-gate-delta.json',{'status':'applied_after_actual_browser_checks','before_sha256':sha(O/'reader-before-browser-gate.json'),'after_sha256':sha(p),'browser_validation_sha256':sha(O/'browser-validation.json'),'changes':['/presentation_gates/browser_render','/publication_status'],'science_changed':False,'publication':False})
+print(sha(O/'browser-validation.json'))

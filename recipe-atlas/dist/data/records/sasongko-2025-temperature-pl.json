@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sasongko-2025-temperature-pl",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sasongko et al. (2025) · Variable-temperature photoluminescence",
+  "material": {
+    "formula": "FAPbI3",
+    "family": "Lead halide perovskite quantum dots"
+  },
+  "method": "Variable-temperature photoluminescence",
+  "sources": [
+    {
+      "id": "sasongko2025",
+      "doi": "10.1021/acs.jpcc.5c05144",
+      "title": "High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection",
+      "authors": "Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park",
+      "year": 2025,
+      "url": "https://doi.org/10.1021/acs.jpcc.5c05144",
+      "main_status": "All nine supplied main pages read, visually inspected and independently audited; canonical and reader checks passed.",
+      "si_status": "All 11 matched SI pages read, visually inspected and independently audited; title, authors and contents verify the pairing.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI, complete text and full-page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sasongko2025",
+    "recipe_family": "sasongko2025-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "MAIN PDF p. 1 (printed 15342), Title, abstract, DOI and dates; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+        },
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 1 (printed S1), Same title and seven authors; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ],
+      "note": "Nominal target only; observation/acquisition records do not establish a new synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "Exact original main/SI page and figure locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "Exact original main/SI page and figure locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "Exact original main/SI page and figure locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "temperature-pl",
+      "name": "Separate source specimen: 80–430K PL experiment",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "temperature-pl-data",
+      "name": "temperature pl data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "temperature-pl"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "temperature-pl-acquire",
+      "action": "variable-temperature-pl-and-lorentzian-analysis",
+      "label": "Variable-temperature PL and Lorentzian analysis",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "temperature-pl"
+      ],
+      "outputs": [
+        "temperature-pl-data"
+      ],
+      "parameters": {
+        "pl_scan_interval": {
+          "value": null,
+          "minimum": 80.0,
+          "maximum": 430.0,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Source scope: temperature-pl. G3: Factor-series panels have specified conditions but no complete replicate or exact cross-technique physical-batch map. Final dispersions have unreported concentration/storage. No isolated yield, absolute PLQY or measured solar-cell efficiency is supplied. G4: No measured QD CIF/coordinates, occupancy refinement, SAED dataset or exact training pair. Source/cited phase cells and conceptual drawings are separate from QD measurements; no surface ligand/particle geometry is inferred. G5: Measurement physical form/atmosphere/mounting, thermal dwell/ramp, laser power, XRD settings, TEM preparation/counts and full fit coefficients/errors are missing. Curves are not digitized or refitted. Original status: reported. Ordered source endpoints: [80.0,430.0].",
+          "basis": "temperature-pl",
+          "raw_text": "80–430",
+          "evidence": [
+            {
+              "source_id": "sasongko2025",
+              "locator": "MAIN PDF p. 4 (printed 15345), Figures 4 and 5; Results; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+            },
+            {
+              "source_id": "sasongko2025",
+              "locator": "MAIN PDF p. 5 (printed 15346), Figures 4 and 5; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "MAIN PDF p. 4 (printed 15345), Figures 4 and 5; Results; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+          },
+          {
+            "source_id": "sasongko2025",
+            "locator": "MAIN PDF p. 5 (printed 15346), Figures 4 and 5; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+          },
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "MAIN PDF p. 4 (printed 15345), Figures 4 and 5; Results; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+          },
+          {
+            "source_id": "sasongko2025",
+            "locator": "MAIN PDF p. 5 (printed 15346), Figures 4 and 5; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+          },
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure PL from 80 to 430 K. Fit spectra with Lorentzian functions and extract PL peak energy, FWHM and intensity. The observed trend changes are assigned to γ-tetragonal-1 → β-tetragonal-2 at 140 K and β → α-cubic at 250 K. These are source interpretations supported by optical/Raman trends, not variable-temperature coordinate refinements on the QDs. Observation or comparison context, not an acquisition setpoint: gamma-beta transition = 140 K. Observation or comparison context, not an acquisition setpoint: beta-alpha transition = 250 K. Inputs denote separate source specimens or datasets, not a physically pooled mixture. Synthesis nitrogen is not inherited by acquisition. Unreported: See source acquisition missingness G5.",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "MAIN PDF p. 4 (printed 15345), Figures 4 and 5; Results; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+        },
+        {
+          "source_id": "sasongko2025",
+          "locator": "MAIN PDF p. 5 (printed 15346), Figures 4 and 5; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+        },
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fact-context-temperature-method",
+      "source_sample_label": "fact-context-temperature-method",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source context only; no exact physical-aliquot or replicate association."
+      ]
+    },
+    {
+      "sample_id": "source-payload-context",
+      "source_sample_label": "source-payload-context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source context only; no exact physical-aliquot or replicate association."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sasongko2025-temperature-method-claim",
+      "sample_id": "fact-context-temperature-method",
+      "property": "source_claim",
+      "technique": "Source evidence",
+      "value": {
+        "value": "Measure temperature-dependent Raman and PL with a Horiba LabRam, controlling temperature using Linkam LNP96_S and LTS 420, printed as a hostage module. Laser power, sample physical form, mounting, temperature ramp/equilibration and atmosphere are not specified. N2 synthesis is not silently inherited by measurement.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": "Claim class: reported_acquisition. C5: SI prints average-lifetime equation number(2) without a supplied equation(1), and calls the temperature stage a hostage module. Literal source wording is retained; no missing equation or hardware specification is reconstructed. G5: Measurement physical form/atmosphere/mounting, thermal dwell/ramp, laser power, XRD settings, TEM preparation/counts and full fit coefficients/errors are missing. Curves are not digitized or refitted."
+      },
+      "conditions": "variable-temperature PL/Raman",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    },
+    {
+      "id": "payload-facts-sasongko2025-temperature-method",
+      "sample_id": "source-payload-context",
+      "property": "source_facts_payload",
+      "technique": "Structured source inventory",
+      "value": {
+        "value": "{\"id\":\"sasongko2025-temperature-method\",\"title\":\"Temperature-dependent spectroscopy\",\"claim\":\"Measure temperature-dependent Raman and PL with a Horiba LabRam, controlling temperature using Linkam LNP96_S and LTS 420, printed as a hostage module. Laser power, sample physical form, mounting, temperature ramp/equilibration and atmosphere are not specified. N2 synthesis is not silently inherited by measurement.\",\"sample_scope\":\"variable-temperature PL/Raman\",\"claim_class\":\"reported_acquisition\",\"evidence\":[{\"source_id\":\"sasongko2025-si\",\"document_role\":\"si\",\"source_sha256\":\"d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"Analysis and Characterization\"}],\"quantities\":[],\"conflict_ids\":[\"C5\"],\"gap_ids\":[\"G5\"],\"independent_audit_status\":\"pending\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": "Exact structured source object; historical author-stage flags remain literal. Full source pages and raw text are excluded."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    },
+    {
+      "id": "payload-protocols-temperature-pl",
+      "sample_id": "source-payload-context",
+      "property": "source_protocols_payload",
+      "technique": "Structured source inventory",
+      "value": {
+        "value": "{\"id\":\"temperature-pl\",\"title\":\"Variable-temperature PL and Lorentzian analysis\",\"kind\":\"measurement_or_analysis\",\"operations\":[{\"id\":\"temperature-pl-acquire\",\"action\":\"Variable-temperature PL and Lorentzian analysis\",\"description\":\"Measure PL from 80 to 430 K. Fit spectra with Lorentzian functions and extract PL peak energy, FWHM and intensity. The observed trend changes are assigned to γ-tetragonal-1 → β-tetragonal-2 at 140 K and β → α-cubic at 250 K. These are source interpretations supported by optical/Raman trends, not variable-temperature coordinate refinements on the QDs.\",\"inputs\":[\"temperature-pl\"],\"outputs\":[\"temperature-pl-data\"],\"source_fact_ids\":[\"sasongko2025-pl-temperature-scan\",\"sasongko2025-temperature-method\"],\"quantities\":[{\"raw_text\":\"80–430\",\"value\":null,\"unit\":\"K\",\"uncertainty\":null,\"range\":{\"min\":80.0,\"max\":430.0},\"ordered_endpoints\":[80.0,430.0],\"comparison\":null,\"approximate\":false,\"status\":\"reported\",\"meaning\":\"PL scan interval\",\"evidence\":[{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":4,\"printed_page\":15345,\"locator\":\"Figures 4 and 5; Results\"},{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":5,\"printed_page\":15346,\"locator\":\"Figures 4 and 5\"}],\"conflict_ids\":[],\"gap_ids\":[\"G3\",\"G4\",\"G5\"]},{\"raw_text\":\"140\",\"value\":140.0,\"unit\":\"K\",\"uncertainty\":null,\"range\":null,\"ordered_endpoints\":null,\"comparison\":null,\"approximate\":false,\"status\":\"reported\",\"meaning\":\"gamma-beta transition\",\"evidence\":[{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":4,\"printed_page\":15345,\"locator\":\"Figures 4 and 5; Results\"},{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":5,\"printed_page\":15346,\"locator\":\"Figures 4 and 5\"}],\"conflict_ids\":[],\"gap_ids\":[\"G3\",\"G4\",\"G5\"]},{\"raw_text\":\"250\",\"value\":250.0,\"unit\":\"K\",\"uncertainty\":null,\"range\":null,\"ordered_endpoints\":null,\"comparison\":null,\"approximate\":false,\"status\":\"reported\",\"meaning\":\"beta-alpha transition\",\"evidence\":[{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":4,\"printed_page\":15345,\"locator\":\"Figures 4 and 5; Results\"},{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":5,\"printed_page\":15346,\"locator\":\"Figures 4 and 5\"}],\"conflict_ids\":[],\"gap_ids\":[\"G3\",\"G4\",\"G5\"]}],\"evidence\":[{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":4,\"printed_page\":15345,\"locator\":\"Figures 4 and 5; Results\"},{\"source_id\":\"sasongko2025-main\",\"document_role\":\"main\",\"source_sha256\":\"3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6\",\"pdf_page\":5,\"printed_page\":15346,\"locator\":\"Figures 4 and 5\"},{\"source_id\":\"sasongko2025-si\",\"document_role\":\"si\",\"source_sha256\":\"d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"Analysis and Characterization\"}],\"missing_fields\":[\"See source acquisition missingness G5\"],\"retained_fraction\":null}],\"sample_ids\":[\"temperature-pl\"]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "MAIN PDF p. 1 (printed 15342), Title, abstract, DOI and dates; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+          },
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 1 (printed S1), Same title and seven authors; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": "Exact structured source object; historical author-stage flags remain literal. Full source pages and raw text are excluded."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "MAIN PDF p. 1 (printed 15342), Title, abstract, DOI and dates; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+        },
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 1 (printed S1), Same title and seven authors; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine supplied main pages and 11 matched SI pages read and independently audited. The canonical records and reader, molecular/stock references, 21 operation illustrations and symbolic source sample contexts passed separate scoped audits. One synthesis route, seven supporting preparation/acquisition procedures and eleven observation records remain distinct. Nine paired comparison contexts do not establish independent replicate counts or shared physical aliquots. Source inconsistencies and missing conditions remain explicit. No current QD atomic coordinates or exact structure–recipe training pair is admitted.",
+    "missing_fields": [
+      "No current atomic coordinates or exact structure–recipe pair.",
+      "Named contexts are not physical batch identifiers or independent replicates.",
+      "See source acquisition missingness G5"
+    ],
+    "conflicts": [
+      "C5: SI prints average-lifetime equation number(2) without a supplied equation(1), and calls the temperature stage a hostage module. Literal source wording is retained; no missing equation or hardware specification is reconstructed."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source document reader",
+      "url": "/paper-review.html?id=sasongko2025",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

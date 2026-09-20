@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sasongko-2025-tem",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sasongko et al. (2025) · Transmission electron microscopy acquisition",
+  "material": {
+    "formula": "FAPbI3",
+    "family": "Lead halide perovskite quantum dots"
+  },
+  "method": "Transmission electron microscopy acquisition",
+  "sources": [
+    {
+      "id": "sasongko2025",
+      "doi": "10.1021/acs.jpcc.5c05144",
+      "title": "High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection",
+      "authors": "Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park",
+      "year": 2025,
+      "url": "https://doi.org/10.1021/acs.jpcc.5c05144",
+      "main_status": "All nine supplied main pages read, visually inspected and independently audited; canonical and reader checks passed.",
+      "si_status": "All 11 matched SI pages read, visually inspected and independently audited; title, authors and contents verify the pairing.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI, complete text and full-page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sasongko2025",
+    "recipe_family": "sasongko2025-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "MAIN PDF p. 1 (printed 15342), Title, abstract, DOI and dates; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+        },
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 1 (printed S1), Same title and seven authors; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ],
+      "note": "Nominal target only; observation/acquisition records do not establish a new synthesis target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "Exact original main/SI page and figure locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "Exact original main/SI page and figure locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "Exact original main/SI page and figure locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "growth-25",
+      "name": "Separate source specimen: Figure3 growth25C",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "growth-50",
+      "name": "Separate source specimen: Figure3 growth50C",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "growth-100",
+      "name": "Separate source specimen: Figure3 growth100C",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-data",
+      "name": "tem data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "growth-25",
+        "growth-50",
+        "growth-100"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "tem-acquire",
+      "action": "tem-imagej-acquisition",
+      "label": "TEM/ImageJ acquisition",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "growth-25",
+        "growth-50",
+        "growth-100"
+      ],
+      "outputs": [
+        "tem-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use FE TEM JEM-F200 (JEOL), with ImageJ for size distributions. Voltage, grid/support, deposition procedure and raw particle measurements are unspecified. No SAED or atomic-coordinate dataset is supplied. Inputs denote separate source specimens or datasets, not a physically pooled mixture. Synthesis nitrogen is not inherited by acquisition. Unreported: See source acquisition missingness G5.",
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fact-context-tem-method",
+      "source_sample_label": "fact-context-tem-method",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source context only; no exact physical-aliquot or replicate association."
+      ]
+    },
+    {
+      "sample_id": "source-payload-context",
+      "source_sample_label": "source-payload-context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source context only; no exact physical-aliquot or replicate association."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sasongko2025-tem-method-claim",
+      "sample_id": "fact-context-tem-method",
+      "property": "source_claim",
+      "technique": "Source evidence",
+      "value": {
+        "value": "Use FE TEM JEM-F200 (JEOL), with ImageJ for size distributions. Voltage, grid/support, deposition procedure and raw particle measurements are unspecified. No SAED or atomic-coordinate dataset is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": "Claim class: reported_acquisition. G5: Measurement physical form/atmosphere/mounting, thermal dwell/ramp, laser power, XRD settings, TEM preparation/counts and full fit coefficients/errors are missing. Curves are not digitized or refitted."
+      },
+      "conditions": "TEM acquisition",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    },
+    {
+      "id": "payload-facts-sasongko2025-tem-method",
+      "sample_id": "source-payload-context",
+      "property": "source_facts_payload",
+      "technique": "Structured source inventory",
+      "value": {
+        "value": "{\"id\":\"sasongko2025-tem-method\",\"title\":\"Microscopy acquisition\",\"claim\":\"Use FE TEM JEM-F200 (JEOL), with ImageJ for size distributions. Voltage, grid/support, deposition procedure and raw particle measurements are unspecified. No SAED or atomic-coordinate dataset is supplied.\",\"sample_scope\":\"TEM acquisition\",\"claim_class\":\"reported_acquisition\",\"evidence\":[{\"source_id\":\"sasongko2025-si\",\"document_role\":\"si\",\"source_sha256\":\"d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"Analysis and Characterization\"}],\"quantities\":[],\"conflict_ids\":[],\"gap_ids\":[\"G5\"],\"independent_audit_status\":\"pending\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": "Exact structured source object; historical author-stage flags remain literal. Full source pages and raw text are excluded."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 4 (printed S4), Analysis and Characterization; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    },
+    {
+      "id": "payload-protocols-tem",
+      "sample_id": "source-payload-context",
+      "property": "source_protocols_payload",
+      "technique": "Structured source inventory",
+      "value": {
+        "value": "{\"id\":\"tem\",\"title\":\"TEM/ImageJ acquisition\",\"kind\":\"measurement_or_analysis\",\"operations\":[{\"id\":\"tem-acquire\",\"action\":\"TEM/ImageJ acquisition\",\"description\":\"Use FE TEM JEM-F200 (JEOL), with ImageJ for size distributions. Voltage, grid/support, deposition procedure and raw particle measurements are unspecified. No SAED or atomic-coordinate dataset is supplied.\",\"inputs\":[\"growth-25\",\"growth-50\",\"growth-100\"],\"outputs\":[\"tem-data\"],\"source_fact_ids\":[\"sasongko2025-tem-method\"],\"quantities\":[],\"evidence\":[{\"source_id\":\"sasongko2025-si\",\"document_role\":\"si\",\"source_sha256\":\"d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"Analysis and Characterization\"}],\"missing_fields\":[\"See source acquisition missingness G5\"],\"retained_fraction\":null}],\"sample_ids\":[\"growth-25\",\"growth-50\",\"growth-100\"]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sasongko2025",
+            "locator": "MAIN PDF p. 1 (printed 15342), Title, abstract, DOI and dates; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+          },
+          {
+            "source_id": "sasongko2025",
+            "locator": "SI PDF p. 1 (printed S1), Same title and seven authors; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+          }
+        ],
+        "note": "Exact structured source object; historical author-stage flags remain literal. Full source pages and raw text are excluded."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sasongko2025",
+          "locator": "MAIN PDF p. 1 (printed 15342), Title, abstract, DOI and dates; original SHA256 3ce868c1778f11e0d703e2bf68c47dfa6537f0a70716372977251caeb0b3efc6"
+        },
+        {
+          "source_id": "sasongko2025",
+          "locator": "SI PDF p. 1 (printed S1), Same title and seven authors; original SHA256 d0e6fc7676c629e3f4a621b53495fb43716985d3018d60e99de192e2788ae38e"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine supplied main pages and 11 matched SI pages read and independently audited. The canonical records and reader, molecular/stock references, 21 operation illustrations and symbolic source sample contexts passed separate scoped audits. One synthesis route, seven supporting preparation/acquisition procedures and eleven observation records remain distinct. Nine paired comparison contexts do not establish independent replicate counts or shared physical aliquots. Source inconsistencies and missing conditions remain explicit. No current QD atomic coordinates or exact structure–recipe training pair is admitted.",
+    "missing_fields": [
+      "No current atomic coordinates or exact structure–recipe pair.",
+      "Named contexts are not physical batch identifiers or independent replicates.",
+      "See source acquisition missingness G5"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source document reader",
+      "url": "/paper-review.html?id=sasongko2025",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}
