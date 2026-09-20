@@ -11,6 +11,7 @@ names += ['research-assets/incoming-paper-monitor/'+n for n in ['ledger.json','l
 names += ['research-assets/incoming-paper-monitor/deadline-20260920/active-cutoff.json']
 files=[M/n for n in names if (M/n).is_file()]
 folders=[L,L.parent/'acsanm.2c04342',L.parent/'intake-20260920T111852Z',MON/'deadline-20260920/admission-20260920T111852Z',M/'skills',M/'recipe-atlas/data',M/'recipe-atlas/dist',M/'recipe-atlas/scripts']
+folders += [L.parent/'la8031286',L.parent/'intake-20260920T114139Z',MON/'deadline-20260920/admission-20260920T114139Z']
 for folder in folders:
  for directory,dirs,names in os.walk(io_path(folder)):
   dirs[:]=[n for n in dirs if n not in {'.git','__pycache__','node_modules','preview-vendor'}]
