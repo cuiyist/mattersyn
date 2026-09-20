@@ -10,6 +10,7 @@ names=['MEMORY.md','README.md','REFERENCES.md','research-assets/verify_public_de
 names += ['research-assets/incoming-paper-monitor/'+n for n in ['ledger.json','latest-publication.json','public-progress-editorial.json','queue-status.json','queue-status.md','queue-status.html']]
 names += ['research-assets/incoming-paper-monitor/deadline-20260920/active-cutoff.json']
 files=[M/n for n in names if (M/n).is_file()]
+files += [MON/'deadline-20260920/matuhina-published-scope-20260920.json']
 folders=[L,L.parent/'acs.cgd.9b01519',L.parent/'intake-20260920T111852Z',MON/'deadline-20260920/admission-20260920T111852Z',M/'skills',M/'recipe-atlas/data',M/'recipe-atlas/dist',M/'recipe-atlas/scripts']
 folders += [L.parent/'la8031286',L.parent/'intake-20260920T114139Z',MON/'deadline-20260920/admission-20260920T114139Z']
 for folder in folders:
