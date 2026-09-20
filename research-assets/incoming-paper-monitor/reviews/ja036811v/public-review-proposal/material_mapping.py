@@ -1,0 +1,15 @@
+material_lists={
+'ZnO':['zno-route','clarity-restoration','topo-zno','pure-kinetics','pure-titration','thermal-ripening','room-aging','microscopy','diffraction','optical-absorption','luminescence','topo-optical-comparisons','nucleation-model','source-context'],
+'ZnO:Co':['co-route','topo-co','aggregation','co-titration','dopant-series','surface-cleaning-control','microscopy','diffraction','icp','optical-absorption','mcd','zeeman','magnetometry','luminescence','topo-optical-comparisons','nucleation-model','mcd-intensity-model','charge-transfer-model','exchange-model','magnetization-model','source-context'],
+'ZnO:Ni':['ni-route','topo-ni','dopant-series','microscopy','diffraction','icp','optical-absorption','mcd','nucleation-model','mcd-intensity-model','charge-transfer-model','exchange-model','source-context']}
+out['material_evidence_records']={k:[P+r for r in rs] for k,rs in material_lists.items()}
+out['material_evidence_scope_notes']={
+'ZnO':'Undoped synthesis, aging and processing. Shared microscopy/optical records contain explicitly labeled doped comparisons; their Co/Ni properties are not undoped ZnO outcomes. No ferromagnetic pure-ZnO result is asserted.',
+'ZnO:Co':'Co synthesis, surface cleaning, spectroscopy and separately formed aggregates. Initial feeds and approximately 5%, 1.7%, 3.6% and 2% cohorts are distinct. Shared Co/Ni records preserve comparison scope; Ni quantities do not become Co outcomes.',
+'ZnO:Ni':'Ni synthesis, processing and source-specific microscopy/optical cohorts. Shared Co/Ni analyses retain their species labels. No Co aggregate magnetism, Co-only Zeeman acquisition, Co luminescence quenching or surface-cobalt control is assigned as a Ni experiment.'}
+out['material_original_asset_ids']={
+'ZnO':['figure-1','figure-2','si-figure-1','si-figure-4','si-figure-6','synthesis-method','topo-method','note-16','physical-methods','scheme-1','equation-3','si-declaration'],
+'ZnO:Co':['figure-3','figure-4','figure-5','figure-6','figure-7','figure-8','figure-9','figure-10','figure-11','si-figure-1','si-figure-2','si-figure-4','si-figure-5','table-1','table-2','scheme-1',*[f'equation-{n}' for n in range(1,11)],'synthesis-method','topo-method','note-16','physical-methods','note-25-29','note-33','magnetism-estimate','si-declaration'],
+'ZnO:Ni':['figure-4','figure-6','figure-7','figure-8','si-figure-1','si-figure-3','table-1','table-2',*[f'equation-{n}' for n in [1,2,4,5,6,7,8,9]],'synthesis-method','topo-method','note-16','physical-methods','note-33','si-declaration']}
+out['material_asset_scope_note']='These material-specific lists identify applicable source assets and explicitly labeled comparisons; combined Co/Ni panels remain intact. They do not establish physical identity between route products and analytical specimens.'
+out['route_evidence_contexts']={P+'zno-route':[P+r for r in material_lists['ZnO'] if r!='zno-route'],P+'co-route':[P+r for r in material_lists['ZnO:Co'] if r!='co-route'],P+'ni-route':[P+r for r in material_lists['ZnO:Ni'] if r!='ni-route']}

@@ -1,0 +1,39 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+B=Path(__file__).resolve().parent;M=B.parents[3];S=M/'recipe-atlas'
+def read(p):return json.loads(p.read_text(encoding='utf8'))
+p=read(B/'publication-checkpoint.json');assert p['deployment_status']=='succeeded';inv=read(S/'data/inventory-summary.json');s=inv['summary']
+entry=f'''## 2026-09-19 — CdTe–carbon-nanotube heterostructures added to the existing MatterSyn atlas
+
+Published the same public MatterSyn Site version {p['public_live_version']}, dataset {p['dataset_version']}, commit {p['source_commit']} at {p['published_at']}. New material hub: {p['material_url']}. CdTe/MWNT direct synthesis plus explicit CdTe and MWNT component-only discovery join the existing periodic-table atlas. MWNT is mapped to carbon explicitly, not parsed as an elemental formula. User reminder honored: all new materials belong in this existing site. Proof: research-assets/incoming-paper-monitor/reviews/ja035980c/publication-checkpoint.json.
+
+Banerjee and Wong, In Situ Quantum Dot Growth on Multiwalled Carbon Nanotubes, JACS 2003,125(34),10342–10350, DOI10.1021/ja035980c. All nine main pages and matched one-page SI text-read and visually inspected. Main SHA25624faaec54cea1293bc7951b7d363587e2ec80edaa68d6e90049b5525bc312837; SI SHA2560746611853616b5531750d1cd4c610d605c551eec0b3317805c0fcc98fce301e. Four copies/two unique documents across both local folders, unchanged final generation2. Main SI declaration, SI heading and manuscript-specific metadata establish SI identity; standalone SI does not print the full DOI/title. All43 references retained; external full texts not independently inspected. Later or changed source evidence reopens this review.
+
+Retained {p['records']} canonical records: {p['synthesis_routes']} synthesis route, {p['supporting_procedures']} supporting procedures and {p['contextual_observations']} observations, {p['operations']} operations and {p['measurement_entries']} measurements. Reader {p['reader_evidence_items']} items covers {p['source_audit_units']} source units with {p['typed_facts']} typed facts. All8 main figures, matched SI IR figure and6 excerpts: {p['original_assets']} assets. Eleven new identity/specimen cards plus12 reused chemical references cover41 material slots. Thirty-nine source-specific operation scenes. Independent source/canonical/reader/chemical/binding/apparatus audits, actual training exporter check, integrated/runtime/browser/build checks passed.
+
+Scientific boundaries: purchased MER MWNTs treated KMnO4/H2SO4, successively35%HCl and10%HF (percentage basis unspecified), extensively distilled-water washed and oven dried150°C (time unreported). No nanotube synthesis or invented oxidant/acid doses. Oxidized tubes mixed with CdO/TDPA/TOPO,320°C under Ar with vigorous stirring; TDPA only described as substoichiometric. Te-in-TOP injected300°C, growth250°C/20min, remove heat, cool50°C, add5mL toluene, methanol precipitate,0.2µmPTFE filter, copious toluene washing and unspecified final drying. Filter residue initially includes composite plus free CdTe; washing removes free CdTe while retaining nanotube composite. No unsupported Te starting form, TOPTe molecular identity, stock concentration, injection dose/rate or final150°C drying is invented. Ar explicitly belongs the320°C step rather than silently all later steps.
+
+Bound CdTe long axis1–9nm/aspect ratio1–5, predominantly wurtzite with possible zinc-blende/stacking faults. Bound particles, washings and no-tube~5nm comparison are separate populations; differing monodispersity descriptions remain contextual. No SAED, refined coordinates, measured junction geometry or crystal file supplied. Expected oxygen groups are not measured site occupancies. Figure4 EDS caption eV versus displayed scale remains unresolved; literal TeO3 XPS assignment retained. Cd3d5/2 405.22eV; Raman166cm-1 versus cited bulk170, CNTG~1590,D1290–1320cm-1. Matched SI IR measures oxidized nanotube precursor, not composite or isolated CdTe. No guessed exact IR peaks or reconstructed raw curves. UV-visible composite inDMF versus washings intoluene; no resolved composite CdTe exciton reported. Analytical instrument preparation, microscope voltage, XPS vacuum/pass/step energies, XRD wavelength, optical path, ATR material and Raman wavelength/power/aperture stay attached to their analysis. Author growth/coordination mechanisms, schematic junctions and prospective device applications are interpretations, not measured transport or device performance.
+
+Actual reviewed subset now {s['canonical_records']} canonical records, {s['synthesis_route_variant_records']} synthesis routes, {s['public_material_hubs']} material hubs and {s['total_canonical_source_groups']} source groups. Training eligibility: {json.dumps(inv['training_eligibility'])}. These are not independent-experiment counts or claims of whole-corpus completion. Continue oldest saved arrival across both local folders with the existing heartbeat, no additional downloads. Future chatbot, DFT tooling and theory comparisons remain deferred.
+
+'''
+mem=M/'MEMORY.md';old=mem.read_text(encoding='utf8');assert entry.splitlines()[0] not in old;mem.write_text(entry+old,encoding='utf8')
+skill=M/'skills/mattersyn-paper-to-site/references/incoming-corpus.md';heading='## Nanotube composites and separated particle populations'
+lesson='''
+
+## Nanotube composites and separated particle populations
+
+Lessons from Banerjee and Wong (2003), DOI10.1021/ja035980c:
+
+- Map source-defined host acronyms such as MWNT to their verified constituent elements explicitly; do not feed acronyms to an elemental-formula parser. Component-only discovery must name the supported heterostructure and must not claim synthesis of purchased hosts or isolated constituent products.
+- Track the retained and removed fractions through every separation. A filter may initially retain both composite and free particles; a later solvent wash separates them. Apparatus and analytical specimen drawings must remove free-particle symbols after purification when depicting the retained composite.
+- A tellurium solution in TOP does not by itself establish the starting allotrope, organophosphine chalcogenide speciation, stock concentration or preparation route. Unknown identity needs an explicit composition schematic; reuse the known solvent structure separately.
+- Keep precursor-only spectra out of final-product evidence. Route, scaffold, attached nanocrystals, washings and no-host comparison populations need explicit associations; mixed-panel figures require panel-specific scope. Surface oxygen percentage is not an exact formula or atomically determined functional-group pattern.
+- Preserve printed EDS units and unusual XPS species assignments when unresolved; do not silently fix them from chemical expectations. Citation-based bulk peak comparisons and proposed mechanisms do not become new measured samples. Instruments, analysis vacuum and sample deposition supports remain distinct from synthesis equipment and conditions.
+- A supplement can be matched by convergent main-paper declaration, manuscript-specific metadata and unique content even when it does not print the full title/DOI; record that evidence and its limit. Inspect the original figure and do not infer exact peaks from unlabeled traces.
+'''
+t=skill.read_text(encoding='utf8');assert heading not in t;skill.write_text(t+lesson,encoding='utf8')
+(B/'memory-skill-checkpoint.json').write_text(json.dumps({'saved_at':datetime.now(timezone.utc).isoformat(),'memory':str(mem),'project_skill_reference':str(skill),'project_skill_sha256':hashlib.sha256(skill.read_bytes()).hexdigest(),'installed_skill_sync':'pending'},indent=2)+'\n',encoding='utf8')
+print('Memory and project skill saved; installed sync pending.')

@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+const B=path.dirname(fileURLToPath(import.meta.url)),sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const p=path.join(B,'product-source-audit.json'),m=path.join(B,'product-source-audit.md'),key='visuals/molecules/registry-additions.json';
+const a=JSON.parse(fs.readFileSync(p,'utf8')),r=JSON.parse(fs.readFileSync(path.join(B,key),'utf8'));
+const cd=r.entries.find(x=>x.id==='gu2004-cadmium-acac-reference');
+if(cd.formula!=='C10H14CdO4'||cd.depictionKind!=='ionic_components'||cd.model3dPath!==null||cd.assetHashes.svgPath!=='0bc867049735cf7a0189a888979ec2d0e6a5053ce82cb84946013b2473fdbf0f'||cd.assetHashes.model2dPath!=='4a95f7d4b87dff5fd8fe15a8a8d97b2850c1e4914a277ee5de7ec86d4348d2b2')throw Error('Cdacac scoped identity/assets changed');
+const old=sha(p),oldMd=sha(m),oldRegistry=a.bound_files[key];
+fs.copyFileSync(p,path.join(B,'product-source-audit.pre-molecule-finalization.json'),fs.constants.COPYFILE_EXCL);
+fs.copyFileSync(m,path.join(B,'product-source-audit.pre-molecule-finalization.md'),fs.constants.COPYFILE_EXCL);
+a.bound_files[key]=sha(path.join(B,key));
+a.targeted_recheck={at:new Date().toISOString(),scope:'Final frozen Cd(acac)2 product-reference identity, formula and stated depiction limitations only; unchanged product diagrams are not redundantly re-audited.',previous_audit_sha256:old,previous_markdown_sha256:oldMd,previous_molecule_registry_sha256:oldRegistry,final_molecule_registry_sha256:a.bound_files[key],result:'passed',reason:'Molecule registry finalized after the product audit. Re-read the final Cd(acac)2 entry: C10H14CdO4 formal Cd2+/two-acetylacetonate representation, no metal–oxygen or 3D geometry, no inferred hydration/speciation, same two asset hashes. Product-reference binding remains valid. Final provenance text adds readable spacing around PubChem 5460482; no scientific product claim changes.',product_assets_changed:false};
+fs.writeFileSync(p,JSON.stringify(a,null,2)+'\n');
+fs.appendFileSync(m,'\nTargeted finalization recheck: the molecule registry was finalized after the first product audit. Its frozen Cd(acac)₂ entry was reread and checked for C10H14CdO4 formal-component identity, unchanged depiction hashes and unchanged non-coordinate/hydration limitations. The registry binding is updated; unchanged product diagrams were not re-audited. The previous audit is preserved as `product-source-audit.pre-molecule-finalization.json/.md`.\n');
+console.log(JSON.stringify({json_sha256:sha(p),md_sha256:sha(m),registry_sha256:a.bound_files[key],prior_audit_sha256:old}));

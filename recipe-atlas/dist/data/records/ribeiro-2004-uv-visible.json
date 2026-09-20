@@ -1,0 +1,477 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ribeiro-2004-uv-visible",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Ribeiro et al. (2004) · Optical absorption acquisition and concentration trend",
+  "material": {
+    "formula": "SnO2",
+    "family": "Cassiterite tin dioxide colloids",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "components": [
+      "SnO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "UV–visible absorption",
+  "sources": [
+    {
+      "id": "ribeiro2004",
+      "doi": "10.1021/jp0473669",
+      "title": "Study of Synthesis Variables in the Nanocrystal Growth Behavior of Tin Oxide Processed by Controlled Hydrolysis",
+      "authors": "Caue Ribeiro; Eduardo J. H. Lee; Tania R. Giraldi; Elson Longo; Jose A. Varela; Edson R. Leite",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/jp0473669",
+      "main_status": "All 6 supplied main pages text-read and visually inspected; independent source and canonical scientific audits passed. Preserved source conflicts and missing fields remain explicit.",
+      "si_status": "No matched supporting information located or verified. SI existence remains unverified; no absence inferred.",
+      "reuse_status": "Private bibliographic/factual extraction. Original article and figure rights remain separate; no public-use license inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "ribeiro2004",
+    "recipe_family": "ribeiro2004-controlled-hydrolysis",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 1 (printed p. 15612), Study scope"
+        }
+      ],
+      "note": "Procedure or source context, not an independently instantiated target-synthesis batch."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "All six supplied main pages; SI unverified"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "All six supplied main pages; SI unverified"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "All six supplied main pages; SI unverified"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sno2-colloid",
+      "name": "Cassiterite tin dioxide colloid",
+      "formula": "SnO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        ""
+      ],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "uv-acquisition-data",
+      "name": "Acquire UV–visible absorption spectra data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "sno2-colloid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "uv-acquisition",
+      "action": "uv-acquisition",
+      "label": "Acquire UV–visible absorption spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sno2-colloid"
+      ],
+      "outputs": [
+        "uv-acquisition-data"
+      ],
+      "parameters": {
+        "wavelength_interval": {
+          "value": null,
+          "minimum": 220,
+          "maximum": 360,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Figure1a displayed interval is narrower; no path length or dilution specified.",
+          "basis": "Source status: reported. Source scope: UV-vis acquisition.",
+          "raw_text": "[220, 360]",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "colloidal suspensions at room temperature",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": "Source status: reported. Source scope: all optical measurements. "
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Acquisition explicitly described in the source. Inputs identify an analytical specimen set, not mixing of all measurement samples. Unreported parameters remain unknown.",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "concentration-series",
+      "source_sample_label": "Figure 1 concentration-series optical specimens",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Figure1 and Section3.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Figure1 and Section3.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Figure1 and Section3.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Figure1 and Section3.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "The full curve-to-concentration key is absent. No exact peak coordinates or specimen identities are reconstructed.",
+        "No author-assigned physical batch identifier is supplied. Matching concentration labels do not establish identical aliquots across figures."
+      ]
+    },
+    {
+      "sample_id": "low-concentration-monitor",
+      "source_sample_label": "0.0025 M-origin optical monitoring, no new independent batch",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 3 (printed p. 15614), 3.1 nucleation discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 3 (printed p. 15614), 3.1 nucleation discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 3 (printed p. 15614), 3.1 nucleation discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 3 (printed p. 15614), 3.1 nucleation discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No author-assigned physical batch identifier is supplied. Matching concentration labels do not establish identical aliquots across figures."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "uv-instrument-concentration-series",
+      "sample_id": "concentration-series",
+      "property": "uv_instrument",
+      "technique": "Optical acquisition",
+      "value": {
+        "value": "Perkin-Elmer; model unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": "Source status: reported. Source scope: UV-vis acquisition. "
+      },
+      "conditions": "UV-vis acquisition",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "optical-trend-concentration-series",
+      "sample_id": "concentration-series",
+      "property": "optical_trend",
+      "technique": "Reported concentration-series spectral trend",
+      "value": {
+        "value": "higher initial Sn2+ concentrations shift absorption and PL toward longer wavelengths",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Figure1 and Section3.1"
+          }
+        ],
+        "note": "Source status: reported_qualitative. Source scope: initial-concentration series. No per-curve numerical peak table or full concentration legend. Original normalized plots retained; no invented exact peak positions."
+      },
+      "conditions": "initial-concentration series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Figure1 and Section3.1"
+        }
+      ]
+    },
+    {
+      "id": "source-figures-figure-1",
+      "sample_id": "concentration-series",
+      "property": "source_figure",
+      "technique": "Source text / original figure / inventory context",
+      "value": {
+        "value": "{\"id\": \"ribeiro2004-figure-1\", \"number\": 1, \"pdf_page\": 2, \"title\": \"Optical concentration series\", \"scope\": \"Normalized absorption and PL; precursor range0.0025–0.1M, no full numerical curve-to-concentration key.\", \"sections\": [\"properties\"], \"disposition\": \"original asset retained with source-bound interpretation; raw plot numbers not digitized\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Source inventory: figures 1"
+          }
+        ],
+        "note": "Retained source-inventory figure; pointer /figures/0."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Source inventory: figures 1"
+        }
+      ]
+    },
+    {
+      "id": "monitor-low-low-concentration-monitor",
+      "sample_id": "low-concentration-monitor",
+      "property": "monitor_low",
+      "technique": "Time-window observation by optical absorption",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 2,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Absorbance changes only slightly from initial stages. An observation window, not an instructed synthesis reaction time.",
+        "basis": "Source status: reported. Source scope: 0.0025M-origin suspension.",
+        "raw_text": "2",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 3 (printed p. 15614), 3.1 nucleation discussion"
+          }
+        ],
+        "derivation": null,
+        "maximum_exclusive": false
+      },
+      "conditions": "0.0025M-origin suspension",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 3 (printed p. 15614), 3.1 nucleation discussion"
+        }
+      ]
+    },
+    {
+      "id": "source-assets-figure-1",
+      "sample_id": "concentration-series",
+      "property": "source_asset",
+      "technique": "Source text / original figure / inventory context",
+      "value": {
+        "value": "{\"id\": \"ribeiro2004-figure-1\", \"filename\": \"reader-assets\\\\figure-1.png\", \"sha256\": \"b342dbe6751cf3b84f248c53c4cc8e13686c492ea1b88e2e0e44068d56d4b5ef\", \"source_sha256\": \"fc10a7101b4acb74f15398a530b8f916641f89b171fad065dd789747204eee88\", \"pdf_page\": 2, \"printed_page\": 15613, \"crop_reference_pixels\": {\"width\": 978, \"height\": 1265, \"box\": [495, 66, 936, 785]}, \"status\": \"original source region rendered and cropped; not recreated or digitized\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Source inventory: assets 1"
+          }
+        ],
+        "note": "Retained source-inventory asset; pointer /assets/0. Original crop is private and not yet integrated into a reader. The asset is not atomic coordinates."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Source inventory: assets 1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages completely read and visually inspected; independent source, canonical, reader and private visual audits passed. No matched supporting information was located or verified; SI existence remains unverified and no absence is inferred. Preserve the unspecified basis of the approximately 500:1 water/Sn ratio, acid-set treatment pH versus unreported final TBAOH measurement pH, and radius/diameter/model distinctions. XRD is mentioned but the inspected article supplies no trace, SAED or atomic coordinates.",
+    "missing_fields": [
+      "Main-only review; matched SI not located/verified and existence remains unverified. No SI supplied or inferred absent.",
+      "Refs7/25 contain fuller upstream synthesis; their full procedures have not been inspected in this extraction. No external downloads performed.",
+      "Absolute precursor and ethanol/water charges, water-ratio basis/order/rate, mixing, vessel, atmosphere, hydrolysis duration and oxidation conditions absent.",
+      "Dialysis membrane, water volume/exchange schedule, duration and chloride-removal endpoint absent.",
+      "Acid concentration/dose, TBAOH addition volume, post-redispersion pH, sonication power and final colloid concentration absent.",
+      "No numerical full spectral curves, tabulated peak/radius values, histogram particle list, or uncertainties for optical-derived radii. Original plots retained without invented digitization.",
+      "Cassiterite assignment is source-reported XRD prose; no XRD trace or SAED pattern supplied. No unit-cell constants, measured atom coordinates, CIF, surface ligands or full-particle atom model supplied.",
+      "No powder-isolation protocol, quantitative yield, PL quantum yield/lifetime, Raman data or sensor/device test supplied.",
+      "Mechanistic conclusions involve author assumptions, models and cited studies; sample atomistic dynamics and solution oxidation/speciation were not directly measured."
+    ],
+    "conflicts": [
+      "Discussion identifies Figure4 HRTEM but parenthetical references say Figure3a/b; actual Figure3 is schematic. Figure4 captions and panels establish the imaging assignment.",
+      "Figure5 ordinate-independent horizontal variable is particle radius; Figure6b axis says Size but caption says radius from PL. Preserve radius and original labels, never silently use diameter.",
+      "The paper describes acid-set pH, then adds basic TBAOH after24h for spectra without reporting final pH. Treat plotted labels as treatment labels, not verified final measurement pH.",
+      "p3 proposes polycondensation rather than direct ion deposition, while conclusion p6 uses ion-deposition phrasing; these are retained author interpretations, not a resolved measured mechanism."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Controlled-hydrolysis source framework",
+      "url": "../records/ribeiro-2004-hydrolysis.html",
+      "relation": "Related literature context; individual experimental batches and cross-technique specimen joins remain unresolved."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

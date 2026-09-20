@@ -1,0 +1,596 @@
+{
+  "schema_version": "1.0",
+  "record_type": "source-grounded literature recipe family; not a complete executable protocol",
+  "source": {
+    "title": "Shape control of CdSe nanocrystals",
+    "authors": [
+      "Xiaogang Peng",
+      "Liberato Manna",
+      "Weidong Yang",
+      "Juanita Wickham",
+      "Erik Scher",
+      "Andreas Kadavanich",
+      "A. P. Alivisatos"
+    ],
+    "journal": "Nature",
+    "volume": 404,
+    "pages": "59-61",
+    "publication_date": "2000-03-02",
+    "doi": "10.1038/35003535",
+    "url": "https://www.nature.com/articles/35003535",
+    "inspected_pdf_pages": [
+      1,
+      2,
+      3
+    ],
+    "inspection": "All 3 pages text-extracted and visually inspected. Article begins part-way down PDF page 1 and ends part-way through PDF page 3; adjacent articles excluded.",
+    "supporting_information_used": false,
+    "other_papers_used_to_fill_methods": false
+  },
+  "scope": {
+    "material": "CdSe colloidal quantum dots and quantum rods",
+    "rod_crystal_structure": "wurtzite",
+    "long_axis": "wurtzite c-axis",
+    "source": {
+      "pdf_page": 3,
+      "printed_page": 61,
+      "location": "Left column, TEM and XRD paragraph"
+    },
+    "key_constraint": "This short letter reports a typical protocol, parameter variants and example characterization. It does not identify a fully specified recipe for each figure sample.",
+    "separate_from": "The introductory spherical-nanocrystal preparation with technical-grade 90% TOPO is prior-work context, not an additional step or a reagent grade for the rod recipe."
+  },
+  "ingredients": [
+    {
+      "id": "se",
+      "name": "selenium",
+      "form": "powder",
+      "formula": "Se",
+      "role": "selenium precursor",
+      "absolute_amount": null,
+      "supplier": null,
+      "purity": null,
+      "source": {
+        "pdf_page": 1,
+        "printed_page": 59,
+        "location": "Bottom-left paragraph describing precursor solution; actual recipe specified on PDF2"
+      }
+    },
+    {
+      "id": "cdme2",
+      "name": "dimethylcadmium",
+      "formula": "Cd(CH3)2",
+      "normalized_formula": "C2H6Cd",
+      "role": "cadmium precursor",
+      "absolute_amount": null,
+      "supplier": null,
+      "purity": null,
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Typical synthesis paragraph, left column bottom continuing at right column top"
+      }
+    },
+    {
+      "id": "tbp",
+      "name": "tributylphosphine",
+      "abbreviation": "TBP",
+      "formula": "C12H27P",
+      "formula_status": "normalized identity; paper spells out tributylphosphine",
+      "role": "stock-solution medium / coordinating phosphine",
+      "absolute_amount": null,
+      "supplier": null,
+      "purity": null,
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Typical synthesis paragraph, left column bottom continuing at right column top"
+      }
+    },
+    {
+      "id": "topo",
+      "name": "trioctylphosphine oxide",
+      "abbreviation": "TOPO",
+      "formula": "C24H51OP",
+      "formula_status": "normalized identity",
+      "role": "hot coordinating reaction medium / surfactant",
+      "grade": "described as pure in the HPA-controlled experiments; numeric purity unspecified",
+      "supplier": null,
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Left column, surfactant-control and typical-synthesis paragraphs"
+      }
+    },
+    {
+      "id": "hpa",
+      "name": "hexylphosphonic acid",
+      "abbreviation": "HPA",
+      "formula": "C6H15PO3",
+      "formula_status": "explicitly printed",
+      "role": "stronger coordinating additive used to tune shape and growth rate",
+      "supplier": null,
+      "purity": null,
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Left column, paragraph immediately before typical synthesis"
+      }
+    }
+  ],
+  "stock_solutions": [
+    {
+      "id": "stock_typical",
+      "components": [
+        "se",
+        "cdme2",
+        "tbp"
+      ],
+      "mass_ratio": [
+        1,
+        2,
+        38
+      ],
+      "ratio_basis": "by weight, explicitly stated",
+      "stock_total_prepared_mass_g": null,
+      "stock_preparation_volume_ml": null,
+      "absolute_component_masses_g": null,
+      "molarity": null,
+      "preparation": {
+        "description": "A common precursor stock contains selenium and dimethylcadmium in tributylphosphine. The paper does not detail its preparation order, temperature, duration or atmosphere.",
+        "source": {
+          "pdf_page": 2,
+          "printed_page": 60,
+          "location": "Typical synthesis paragraph, left column bottom continuing at right column top"
+        }
+      },
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Typical synthesis paragraph, left column bottom continuing at right column top"
+      }
+    },
+    {
+      "id": "stock_high_aspect_ratio",
+      "components": [
+        "se",
+        "cdme2",
+        "tbp"
+      ],
+      "mass_ratio": [
+        1,
+        2.6,
+        48
+      ],
+      "ratio_basis": "by weight, explicitly stated",
+      "stock_total_prepared_mass_g": null,
+      "stock_preparation_volume_ml": null,
+      "absolute_component_masses_g": null,
+      "molarity": null,
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Right column, best results / high-aspect-ratio paragraph"
+      }
+    }
+  ],
+  "reported_protocols": [
+    {
+      "id": "typical_protocol_family",
+      "label": "Typical synthesis with alternative conditions",
+      "stock_id": "stock_typical",
+      "initial_stock_injection_ml": 2,
+      "reaction_medium": {
+        "description": "4 g of TOPO or TOPO + HPA",
+        "reported_mass_g": 4,
+        "mass_scope": "reaction-medium charge described as TOPO (or TOPO + HPA)",
+        "hpa_weight_percent": "variable; see surfactant_sweep",
+        "absolute_hpa_mass_g": null,
+        "absolute_topo_mass_g": null,
+        "mass_fraction_denominator_note": "The paper reports percentages by weight / HPA in TOPO but does not separately give the component masses or explicitly define the percentage denominator. No HPA mass was calculated."
+      },
+      "thermal_variants": [
+        {
+          "id": "T360",
+          "before_injection_c": 360,
+          "after_injection_c": 300
+        },
+        {
+          "id": "T310",
+          "before_injection_c": 310,
+          "after_injection_c": 280
+        },
+        {
+          "id": "T280",
+          "before_injection_c": 280,
+          "after_injection_c": 250
+        }
+      ],
+      "thermal_variant_note": "Corresponding alternatives are presented in the same order in the before- and after-injection sentences. They are alternatives, not successive heating steps.",
+      "injection_time": {
+        "operator": "much_less_than",
+        "value": 1,
+        "unit": "s",
+        "source_notation": "<< 1 s",
+        "visual_verification": "Printed double-less-than sign, not a plain less-than sign."
+      },
+      "steps": [
+        {
+          "id": "prepare_stock",
+          "action": "prepare precursor stock",
+          "stock_id": "stock_typical",
+          "evidence_status": "composition explicit; preparation procedure unreported",
+          "duration_s": null,
+          "temperature_c": null
+        },
+        {
+          "id": "prepare_bath",
+          "action": "prepare hot TOPO or TOPO + HPA medium",
+          "charge_g": 4,
+          "temperature_c": "choose one reported thermal variant",
+          "evidence_status": "hot medium and amount explicit; heating procedure implicit in injection into hot medium",
+          "ramp_rate_c_per_min": null,
+          "hold_duration_s": null
+        },
+        {
+          "id": "inject",
+          "action": "quickly inject precursor stock into hot reaction medium",
+          "stock_id": "stock_typical",
+          "volume_ml": 2,
+          "duration_s": null,
+          "duration_constraint": "much less than 1 second",
+          "before_temperature_c": "thermal variant before_injection_c"
+        },
+        {
+          "id": "growth_and_sampling",
+          "action": "allow growth after injection; take aliquots for UV-visible and photoluminescence monitoring",
+          "after_temperature_c": "thermal variant after_injection_c",
+          "growth_duration_s": null,
+          "aliquot_volume_ml": null,
+          "aliquot_schedule_s": null,
+          "temperature_note": "The paper describes a temperature drop; it gives no cooling rate or time-resolved temperature trace."
+        },
+        {
+          "id": "optional_reinjection",
+          "action": "repeat injections of the same precursor stock when needed",
+          "optional": true,
+          "purpose": "replenish monomer; maintain or recover rod morphology",
+          "secondary_injection_volume_ml": null,
+          "reported_volume_constraint": "secondary injection less than 40% of the stock solution volume injected previously",
+          "number_of_reinjections": null,
+          "reinjection_times_s": null,
+          "evidence_note": "Do not assume a fixed reinjection volume or a repeated 0.4 geometric schedule; the text does not provide a full sequence."
+        },
+        {
+          "id": "stop",
+          "action": "remove heating mantle to stop the reaction",
+          "stop_time_s": null,
+          "cooling_rate_c_per_min": null,
+          "final_temperature_c": null
+        }
+      ],
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Typical synthesis paragraph, left column bottom continuing at right column top"
+      },
+      "workup": {
+        "reported": false,
+        "purification": null,
+        "centrifugation": null,
+        "redispersion": null,
+        "yield": null
+      }
+    },
+    {
+      "id": "high_aspect_ratio_variant",
+      "label": "Reported best high-aspect-ratio conditions",
+      "stock_id": "stock_high_aspect_ratio",
+      "initial_stock_injection_ml": 2,
+      "reaction_medium": {
+        "description": "8% HPA in TOPO",
+        "hpa_percent": 8,
+        "percent_basis": "weight; contextual interpretation from preceding explicitly weight-based HPA series",
+        "percent_basis_status": "contextual normalization; best-conditions sentence does not repeat by weight",
+        "total_mass_g": null,
+        "total_mass_note": "4 g appears in the typical protocol; the best-conditions sentence does not repeat the bath mass. Do not present 4 g as independently stated for this variant.",
+        "absolute_hpa_mass_g": null,
+        "absolute_topo_mass_g": null
+      },
+      "injection_temperature_c": 360,
+      "post_injection_temperature_c": null,
+      "post_injection_temperature_note": "300 C is stated for the 360 C branch of the typical family, but is not separately restated for this stock-composition variant.",
+      "injection_duration_s": null,
+      "injection_duration_note": "Fast injection is described for the typical protocol; this sentence does not independently restate a duration.",
+      "growth_duration_s": null,
+      "number_of_injections": null,
+      "reported_outcome": "Best results in terms of high aspect ratios; no exact size or aspect ratio is assigned to this recipe sentence.",
+      "figure_sample_assignment": null,
+      "source": {
+        "pdf_page": 2,
+        "printed_page": 60,
+        "location": "Right column, best results / high-aspect-ratio paragraph"
+      }
+    }
+  ],
+  "surfactant_sweep": {
+    "basis": "HPA concentration by weight in pure TOPO",
+    "series": [
+      {
+        "hpa_percent": 1.5,
+        "reported_morphology": "monodisperse spherical nanocrystals"
+      },
+      {
+        "hpa_percent": 3,
+        "reported_morphology": "monodisperse spherical nanocrystals"
+      },
+      {
+        "hpa_percent": 5,
+        "reported_morphology": "rod-like"
+      },
+      {
+        "hpa_percent": 10,
+        "reported_morphology": "rod-like"
+      },
+      {
+        "hpa_percent": 20,
+        "reported_morphology": "rod-like"
+      }
+    ],
+    "separate_best_variant_hpa_percent": 8,
+    "source": {
+      "pdf_page": 2,
+      "printed_page": 60,
+      "location": "Right column, HPA concentration and best-results passage"
+    },
+    "constraints": "Do not call these mol%. Do not infer a continuous calibrated aspect-ratio response, a threshold guaranteed at all temperatures, or a full factorial condition grid. The 8% best variant also changes precursor stock mass ratio."
+  },
+  "growth_narrative": {
+    "stages": [
+      {
+        "order": 1,
+        "description": "Just after injection the aspect ratio rises rapidly while the short-axis length remains nearly constant.",
+        "time_s": null,
+        "source": {
+          "pdf_page": 2,
+          "printed_page": 60,
+          "location": "Right column, final paragraph; cites Figure 1a,b,d,e"
+        }
+      },
+      {
+        "order": 2,
+        "description": "As monomer is depleted, the aspect ratio gradually approaches one while the short axis grows.",
+        "time_s": null,
+        "source": {
+          "pdf_page": 3,
+          "printed_page": 61,
+          "location": "First paragraph"
+        }
+      },
+      {
+        "order": 3,
+        "description": "Additional injections can maintain rods or recover rods from dots by replenishing monomer, giving bigger rods.",
+        "optional": true,
+        "time_s": null,
+        "source": {
+          "pdf_page": 3,
+          "printed_page": 61,
+          "location": "First paragraph; cites Figure 1c,f,g"
+        }
+      }
+    ],
+    "display_note": "Use a qualitative, stage-based diagram. No numerical time trajectory, reaction duration, growth-rate constant or predictive simulator can be extracted from this letter."
+  },
+  "figure_outcomes": [
+    {
+      "figure": 1,
+      "pdf_page": 1,
+      "printed_page": 59,
+      "type": "TEM images of distinct samples",
+      "panels": [
+        {
+          "panels": [
+            "a",
+            "b",
+            "c"
+          ],
+          "observation": "Low-resolution TEM of three quantum-rod samples with different sizes and aspect ratios.",
+          "numeric_dimensions_nm": null,
+          "recipe_assignment": null
+        },
+        {
+          "panels": [
+            "d",
+            "e"
+          ],
+          "observation": "High-resolution images from the sample in panel a.",
+          "parent_sample_panel": "a",
+          "numeric_dimensions_nm": null,
+          "recipe_assignment": null
+        },
+        {
+          "panels": [
+            "f",
+            "g"
+          ],
+          "observation": "High-resolution images from the sample in panel c.",
+          "parent_sample_panel": "c",
+          "numeric_dimensions_nm": null,
+          "recipe_assignment": null
+        }
+      ],
+      "body_connections": "Text uses a,b,d,e to illustrate early axial growth and c,f,g to illustrate larger rods obtained with monomer replenishment. It does not provide the individual samples’ concentrations, exact times, injection counts or temperature choices.",
+      "scale_bars": {
+        "low_resolution": "50 nm",
+        "high_resolution": "10 nm"
+      },
+      "measurement_caution": "Scale bars are not sample size statistics. No individual lengths or distributions were estimated from the image."
+    },
+    {
+      "figure": 2,
+      "pdf_page": 1,
+      "printed_page": 59,
+      "type": "Experimental XRD and simulated patterns",
+      "panels": [
+        {
+          "panel": "a",
+          "long_axis_nm": 5.6,
+          "short_axis_nm": 4.2,
+          "dimension_label_as_printed": "c/a = 5.6 / 4.2 (nm)",
+          "aspect_ratio_derived": 1.3333333333333333,
+          "recipe_assignment": null
+        },
+        {
+          "panel": "b",
+          "long_axis_nm": 9.1,
+          "short_axis_nm": 4.5,
+          "dimension_label_as_printed": "c/a = 9.1 / 4.5 (nm)",
+          "aspect_ratio_derived": 2.022222222222222,
+          "recipe_assignment": null
+        }
+      ],
+      "dimension_method": "Sizes and aspect ratios inferred from experimental diffraction patterns using the displayed simulations.",
+      "observations": [
+        "Short-axis dimensions match within experimental error.",
+        "TEM/XRD support a wurtzite long axis along c; body reports fewer stacking faults than in spherical CdSe."
+      ],
+      "caution": "Here c/a labels nanocrystal long/short dimensions, not crystallographic unit-cell lattice constants. No match to Figure 1 or a unique recipe is stated."
+    },
+    {
+      "figure": 3,
+      "pdf_page": 2,
+      "printed_page": 60,
+      "type": "TEM showing three-dimensional rod orientation",
+      "observations": [
+        "View perpendicular to c shows faceted hexagonal cross sections.",
+        "The paper reports micrometre-scale c-axis alignment with an optimal solvent/substrate combination."
+      ],
+      "scale_bars": {
+        "overview": "50 nm",
+        "details": "10 nm"
+      },
+      "sample_dimensions_nm": null,
+      "recipe_assignment": null,
+      "solvent": null,
+      "substrate": null,
+      "caution": "This is an orientation image, not a growth-time series or a quantitative morphology-vs-time plot."
+    },
+    {
+      "figure": 4,
+      "pdf_page": 2,
+      "printed_page": 60,
+      "type": "Optical spectra and polarization",
+      "panels": [
+        {
+          "panel": "a",
+          "sample": "CdSe quantum dot",
+          "long_axis_nm": 3.7,
+          "short_axis_nm": 3.3,
+          "dimension_label_as_printed": "c/a = 3.7/3.3 (nm)",
+          "measurements": [
+            "UV-visible",
+            "photoluminescence"
+          ],
+          "exact_peak_wavelengths_nm": null,
+          "recipe_assignment": null
+        },
+        {
+          "panel": "b",
+          "sample": "CdSe quantum rods",
+          "long_axis_nm": 6.6,
+          "short_axis_nm": 3.6,
+          "dimension_label_as_printed": "c/a = 6.6/3.6 (nm)",
+          "measurements": [
+            "UV-visible",
+            "photoluminescence"
+          ],
+          "exact_peak_wavelengths_nm": null,
+          "recipe_assignment": null,
+          "observation": "Short-axis lengths comparable to dot diameters in a; absorption/emission separation is larger in rods."
+        },
+        {
+          "panel": "c",
+          "sample": "core/shell quantum rods",
+          "curves": [
+            "core",
+            "step 1",
+            "step 2"
+          ],
+          "excitation_wavelength_nm": 520,
+          "comparison_condition": "Same optical density at excitation wavelength",
+          "shell_material_of_displayed_sample": null,
+          "shell_thickness_nm": null,
+          "shell_recipe": null,
+          "observation": "Initial shell growth increases photoluminescence; thicker shells reduce yield again. Body discusses CdS or ZnS shells but does not assign a shell composition to this plotted series."
+        },
+        {
+          "panel": "d",
+          "sample": "CdSe rods in stretched poly(vinyl-butyral), PVB",
+          "temperature_k": 4.7,
+          "polymer_stretch_ratio_up_to": 4,
+          "measurement": "PL parallel and perpendicular to stretching direction",
+          "integrated_pl_polarization_anisotropy_ratio_up_to": 1.66,
+          "control": "Dots prepared by the same alignment method showed no polarization anisotropy.",
+          "recipe_assignment": null
+        }
+      ],
+      "caption_optical_density": {
+        "value": 0.15,
+        "plus_minus": 0.05,
+        "scope": "caption says all samples shown in this figure"
+      },
+      "body_luminescence_yields": {
+        "as_grown_rods_room_temperature_percent_approx": 1,
+        "shell_improvement_factor": 5,
+        "shell_materials_mentioned": [
+          "CdS",
+          "ZnS"
+        ],
+        "thicker_shell_trend": "yield decreases again",
+        "dot_maximum_percent_mentioned": 80,
+        "dot_maximum_scope": "A maximum observed in dots, not the quantum rods or an assigned sample in this recipe."
+      },
+      "caution": "Do not use the core/shell yield, PVB alignment processing or dot maximum yield as results of the unshelled best-rod stock recipe. Spectral maxima have not been digitized or invented."
+    }
+  ],
+  "headline_outcome": {
+    "reported_maximum_aspect_ratio": 10,
+    "source": {
+      "pdf_page": 1,
+      "printed_page": 59,
+      "location": "Abstract"
+    },
+    "assignment": "Study-level maximum; no unique full recipe or figure panel assignment supplied."
+  },
+  "critical_missing_fields": [
+    "Absolute masses and stock concentration: mass ratios plus a 2 mL aliquot do not determine individual masses without further stock properties.",
+    "Detailed stock preparation order, mixing, dissolution time and atmosphere.",
+    "Reagent suppliers and numeric purity specifications for the controlled HPA/TOPO rod protocol.",
+    "Precise meaning of the weight-percentage denominator and separate HPA / TOPO component masses.",
+    "Vessel geometry, volume, stirring, atmosphere, degassing and drying.",
+    "Temperature ramp, pre-injection hold, thermal lag and post-injection temperature trace.",
+    "Reaction durations and aliquot sampling schedule / volumes.",
+    "Exact number, time and volume of secondary injections for each sample.",
+    "Cooling trajectory and endpoint after removal of heating mantle.",
+    "Workup, precipitation, centrifugation, redispersion, ligand purification, isolation yield and storage.",
+    "Complete sample-to-recipe linkage for all figures, including the study-level maximum aspect ratio.",
+    "Solvent/substrate conditions for Figure 3 alignment.",
+    "Shell-growth reagents, quantities, thicknesses and assigned shell material for Figure 4c."
+  ],
+  "recommended_site_presentation": {
+    "default": "Present the high-aspect-ratio condition set as a reported variant with missing fields visibly marked. Present the complete available typical-family workflow alongside it, not silently merged with it.",
+    "timeline": "Sequence or qualitative stages; no fabricated minutes or heating-rate sliders.",
+    "parameter_comparison": "Discrete source-reported HPA weight-percent conditions, paired thermal alternatives and stock-composition alternatives.",
+    "structure_view": "Idealized wurtzite rod, explicitly illustrative; separate reported Figure 2 / Figure 4 dimensions can be selectable characterization examples with no full recipe mapping.",
+    "evidence_view": "Citation pointers to PDF page 2 for conditions, PDF page 1 / Figure 2 for XRD dimensions, and PDF page 2 / Figure 4 for optical samples.",
+    "avoid": [
+      "An executable lab protocol claim",
+      "Oleic acid / oleylamine / ODE from the prior example",
+      "TOP substituted for tributylphosphine",
+      "Weights labeled as molar ratios",
+      "8% HPA interpreted as 8 mol%",
+      "A continuous validated shape predictor",
+      "Single shared product-size label combining different figures",
+      "A growth-time chart labeled Figure 3"
+    ]
+  }
+}

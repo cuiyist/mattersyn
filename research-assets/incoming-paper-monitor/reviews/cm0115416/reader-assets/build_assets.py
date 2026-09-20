@@ -1,0 +1,20 @@
+"""Yi 2002 original crops, local preparation only."""
+from pathlib import Path
+import json,hashlib
+import pypdfium2 as pdfium
+from PIL import Image
+B=Path(__file__).resolve().parents[1];O=B/'reader-assets';O.mkdir(exist_ok=True)
+info=json.loads((B/'source-manifest.json').read_text(encoding='utf8'));src=Path(info['source_path'])
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+assert sha(src)==info['sha256']
+specs=[('figure-1', 'figure', 2, (550, 79, 981, 359), 'Figure 1 · X-ray diffraction of annealed nanocrystals'), ('figure-2', 'figure', 2, (550, 368, 981, 622), 'Figure 2 · TEM before and after 800 °C annealing'), ('figure-3', 'figure', 3, (92, 77, 522, 451), 'Figure 3 · Particle-size intensity distribution'), ('figure-4', 'figure', 3, (92, 979, 978, 1321), 'Figure 4 · Down-conversion and up-conversion spectra'), ('figure-5', 'figure', 4, (92, 77, 522, 445), 'Figure 5 · Near-infrared absorption spectrum'), ('figure-6', 'figure', 4, (92, 459, 522, 799), 'Figure 6 · Five annealing-temperature spectra'), ('figure-7', 'figure', 4, (92, 815, 522, 1169), 'Figure 7 · Erbium concentration dependence'), ('figure-8', 'figure', 4, (550, 78, 981, 459), 'Figure 8 · Up-conversion excitation-power dependence'), ('figure-9', 'figure', 4, (550, 467, 981, 903), 'Figure 9 · Proposed Yb/Er energy-level mechanism'), ('figure-10', 'figure', 5, (92, 78, 522, 437), 'Figure 10 · Bulk and nanocrystal emission comparison'), ('hydrothermal-preparation', 'source_note', 2, (92, 531, 522, 914), 'Hydrothermal preparation · Solutions, precipitation, treatment and workup'), ('bulk-preparation', 'source_note', 2, (92, 914, 522, 999), 'Bulk comparison · Solid-state mixing, pressing and firing'), ('characterization-methods', 'source_note', 2, (92, 999, 522, 1252), 'Characterization · Microscopy, spectroscopy, diffraction and sizing'), ('excitation-method', 'source_note', 2, (550, 635, 981, 690), 'Up-conversion acquisition · Laser and fiber coupling'), ('xrd-analysis', 'source_note', 2, (550, 740, 981, 1008), 'XRD analysis · Phase assignment, line widths and Scherrer estimate'), ('power-law-analysis', 'source_note', 3, (550, 711, 981, 957), 'Power analysis · Intensity relation and rounded regression slopes')]
+
+doc=pdfium.PdfDocument(src);cache={}
+manifest={'schema_version':'1.0','source_id':'yi2002','doi':'10.1021/cm0115416','review_status':'private_proposal_pending_independent_audit','page_inspection':{'main':list(range(1,6)),'text_read':True,'visual_reviewed':True},'sources':[{'role':'main','source':str(src),'sha256':info['sha256'],'page_count':5}],'supporting_information':{'status':'not_located_or_matched','claim':'No SI declaration identified in five supplied main pages; no matched SI asserted.'},'assets':[]}
+for key,kind,n,bbox,label in specs:
+ if n not in cache:
+  page=doc[n-1];cache[n]=(page.render(scale=300/72).to_pil().copy(),page.get_size())
+ full,psize=cache[n];base=Image.open(B/f'main-{n}.png');norm=[bbox[0]/base.width,bbox[1]/base.height,bbox[2]/base.width,bbox[3]/base.height]
+ px=tuple(round(v*(full.width if i%2==0 else full.height)) for i,v in enumerate(norm));crop=full.crop(px);output=O/(key+'.png');crop.save(output)
+ manifest['assets'].append({'id':key,'source_asset_type':kind,'label':label,'relative_asset':output.name,'public_asset':f'assets/figures/yi2002/{output.name}','sha256':sha(output),'source_role':'main','source_pdf_page':n,'source_filename':src.name,'source_sha256':info['sha256'],'crop_bbox_reference_pixels_125dpi':bbox,'reference_render_size':list(base.size),'crop_bbox_pdf_points_top_left':[v*psize[i%2] for i,v in enumerate(norm)],'crop_normalized':norm,'render_dpi':300,'pixel_dimensions':list(crop.size),'transformation':'Original PDF rendered with PDFium at 300 dpi and rectangularly cropped only. Original curves, glyphs and author image processing preserved; no redraw or reconstruction.','text_reviewed':True,'visual_reviewed':False,'reviewed':False,'reader_render_verified':False})
+(O/'crop-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf8');print('Prepared',len(manifest['assets']),'original assets')

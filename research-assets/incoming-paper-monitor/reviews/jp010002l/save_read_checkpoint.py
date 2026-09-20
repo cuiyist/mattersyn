@@ -1,0 +1,13 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json
+B=Path(__file__).resolve().parent
+def write(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+proof={'at':datetime.now(timezone.utc).isoformat(),'main_pages_text_read':[1,2,3,4],'main_pages_visually_inspected':[1,2,3,4],'scope':'Complete supplied four-page main article; all four figures, experimental sections and nineteen references/notes inspected. References are not independently reviewed source papers.','source_sha256':'00ac817e60651f0e7f9faabe85ba18372ac37fea1f0f5d174779c982064b4184','identity':'Braun, Burda and El-Sayed; J. Phys. Chem. A2001,105,5548–5551; DOI10.1021/jp010002l','key_boundaries':['Three A/B/C sequences retain exchange versus layer deposition. Released Cd2+ remains available after B; only C after C needs unquantified Cd addition.','StepA3.5nm and system3.2nm core sizes conflict; no exact atomic structure supplied.','Room temperature reported in optical methods; no numeric synthesis temperature invented.','No matching SI located or verified. Missing stock dose/speciation remain explicit.']}
+write(B/'root-reading.json',proof)
+ms={k:{'status':'complete'if k=='read'else 'partial'if k in ['extract','audit']else 'pending','evidence':[str(B/'root-reading.json'),str(B/'source-manifest.json')]if k=='read'else [],'note':{'read':'All four supplied main pages read and visually inspected. Matching SI not located or verified.','extract':'Three QDQW architectures, preparations, optical acquisition, original figures and source interpretation being curated.','audit':'Independent full-source audit and molecular checks underway.','integrate':'Root will add audited CdS/HgS/CdS contribution to the existing atlas.','publish':'Not yet published.'}[k]}for k in ['read','extract','audit','integrate','publish']}
+write(B/'milestones.json',ms)
+c={'paper':'10.1021/jp010002l','title':'Variation of the Thickness and Number of Wells in the CdS/HgS/CdS Quantum Dot Quantum Well System','source_id':'braun2001','source_generation':2,'review_scope':'supplied_main_only_si_unverified','main_pages_text_reviewed':[1,2,3,4],'main_pages_visually_reviewed':[1,2,3,4],'si_status':'Matching SI not located or verified. No SI declaration observed in the supplied main.','website_published':False,'checkpoint_at':proof['at'],'current_work_items':[{'label':k.capitalize(),'status':v['status'],'scope':v['note']}for k,v in ms.items()],'next_action':'Finish extraction and independent audits, integrate and verify the same MatterSyn atlas, then publish.'}
+write(B/'checkpoint.json',c)
+print('Four supplied main pages read; downstream milestones remain separate.')
+

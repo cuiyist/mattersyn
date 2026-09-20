@@ -1,0 +1,703 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "pbs2019-000094",
+  "revision": 2,
+  "record_type": "experiment",
+  "title": "PbS hot injection · published experiment 94",
+  "material": {
+    "formula": "PbS",
+    "family": "Lead chalcogenides",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "hot injection",
+  "sources": [
+    {
+      "id": "voznyy2019",
+      "doi": "10.1021/acsnano.9b03864",
+      "title": "Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis",
+      "authors": "Voznyy, O.; Levina, L.; Fan, J. Z.; et al.",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/acsnano.9b03864",
+      "main_status": "Dataset columns and benchmark context checked against primary paper and author code; numeric row verified against source file",
+      "si_status": "Official published numeric dataset verified; full per-run procedures not individually audited",
+      "reuse_status": "Voznyy, O.; Levina, L.; Fan, J. Z.; et al. (2019). Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis. ACS Nano 13, 11122-11128. Dataset DOI: 10.1021/acsnano.9b03864.s002. CC BY-NC 4.0. Adapted from author full.dat: columns named and units retained; source row identifiers added; author-rule cohorts derived; failure placeholders flagged and continuous outcomes set to null; deterministic coverage subset selected. No synthetic experiments or modeled outcomes added. License: https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+  ],
+  "lineage": {
+    "source_group": "voznyy2019",
+    "recipe_family": "pbs2019-f02afb986e359c1c5e3e",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lead-oleate",
+      "name": "Lead oleate stock",
+      "formula": "C36H66O4Pb",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "stock_volume": {
+          "value": 19.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Volume of Pb(OA)2 stock; stock protocol described in source Methods",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Stock concentration is not encoded in this row."
+      ],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    },
+    {
+      "id": "ode",
+      "name": "1-Octadecene",
+      "formula": "C18H36",
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "reaction_volume": {
+          "value": 12.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "1-Octadecene volume in reaction mixture",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "sulfur_stock_volume": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "1-Octadecene used to dilute sulfur precursor",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    },
+    {
+      "id": "oleylamine",
+      "name": "Oleylamine",
+      "formula": "C18H37N",
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Oleylamine volume",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    },
+    {
+      "id": "tms2s",
+      "name": "Bis(trimethylsilyl)sulfide",
+      "formula": "C6H18SSi2",
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 175.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Bis(trimethylsilyl)sulfide volume; labeled TMS in author header",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    },
+    {
+      "id": "chloride",
+      "name": "Author-pooled chloride parameter",
+      "formula": null,
+      "role": "additive",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "at_high_temperature": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Author-pooled/rescaled chloride parameter; exact historical chloride identity unavailable",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "at_60c": {
+          "value": 0.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Author-pooled/rescaled chloride parameter at 60 C; exact historical chloride identity unavailable",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Chemical identities are pooled and some concentrations rescaled by the authors; no exact historical chloride species is assigned."
+      ],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "reported-run",
+      "name": "Reported experimental row",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "reported-features",
+      "action": "published_experiment_features",
+      "label": "Reported synthesis features",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "reported-run"
+      ],
+      "parameters": {
+        "ambient_temperature_proxy": {
+          "value": 17.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Seasonal outdoor temperature proxy, not measured laboratory temperature",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "lead_oleate_stock_volume": {
+          "value": 19.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Volume of Pb(OA)2 stock; stock protocol described in source Methods",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "ode_reaction_volume": {
+          "value": 12.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "1-Octadecene volume in reaction mixture",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "oleylamine_volume": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Oleylamine volume",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "injection_temperature": {
+          "value": 104.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Sulfur precursor injection temperature",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "bis_trimethylsilyl_sulfide_volume": {
+          "value": 175.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Bis(trimethylsilyl)sulfide volume; labeled TMS in author header",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "ode_sulfur_stock_volume": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "1-Octadecene used to dilute sulfur precursor",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "chloride_high_temperature_concentration": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Author-pooled/rescaled chloride parameter; exact historical chloride identity unavailable",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        },
+        "chloride_60c_concentration": {
+          "value": 0.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Author-pooled/rescaled chloride parameter at 60 C; exact historical chloride identity unavailable",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "voznyy2019",
+              "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "This row specifies nine model inputs, not a complete chronological protocol. The outdoor temperature proxy is not a reaction condition. Numeric zero is retained as reported; missing duration, phase and coordinates remain unknown.",
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "reported-outcome",
+      "source_sample_label": "full.dat row 94",
+      "batch_id": null,
+      "material_state_id": "reported-run",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ],
+      "notes": [
+        "Source-row identity is known; physical batch identifiers and exact atomic structure are not supplied.",
+        "author code PbOA2 stock volume in {18,4.5,7,19} mL -> historical; otherwise ML-guided; not verified chronology"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "absorption_peak",
+      "sample_id": "reported-outcome",
+      "property": "absorption_peak",
+      "technique": "Optical absorption",
+      "value": {
+        "value": 1704.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Author-published row; acquisition details not individually resolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    },
+    {
+      "id": "absorption_peak_valley_ratio",
+      "sample_id": "reported-outcome",
+      "property": "absorption_peak_valley_ratio",
+      "technique": "Optical absorption",
+      "value": {
+        "value": 5.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "voznyy2019",
+            "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Author-published row; acquisition details not individually resolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "voznyy2019",
+          "locator": "Dataset SI full.dat, row 94 (one-based, excluding header)"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "structured_data_verified",
+    "review_scope": "Published experimental row checked against the source dataset; not an individually curated complete recipe or laboratory reproduction.",
+    "missing_fields": [
+      "Per-run growth duration",
+      "Exact chloride reagent identity",
+      "Sample-resolved crystal phase and atomic coordinates",
+      "Direct particle-size measurement",
+      "Complete stock preparation, workup and storage for this row"
+    ],
+    "conflicts": [
+      "Outdoor temperature is a seasonal proxy, not measured laboratory temperature.",
+      "Author-defined cohort: historical_pre_ml; not verified chronology.",
+      "Source full.dat SHA-256: 60ae5d942b998258840df3eba8b31f5508f699edf36c5c4564061a119f8977a4"
+    ],
+    "requested_tasks": [
+      "optical_outcome"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Official source dataset and license",
+      "url": "https://acs.figshare.com/articles/dataset/Machine_Learning_Accelerates_Discovery_of_Optimal_Colloidal_Quantum_Dot_Synthesis/9896762",
+      "relation": "Voznyy, O.; Levina, L.; Fan, J. Z.; et al. (2019). Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis. ACS Nano 13, 11122-11128. Dataset DOI: 10.1021/acsnano.9b03864.s002. CC BY-NC 4.0. Adapted from author full.dat: columns named and units retained; source row identifiers added; author-rule cohorts derived; failure placeholders flagged and continuous outcomes set to null; deterministic coverage subset selected. No synthetic experiments or modeled outcomes added."
+    }
+  ],
+  "collection": "published_benchmark"
+}

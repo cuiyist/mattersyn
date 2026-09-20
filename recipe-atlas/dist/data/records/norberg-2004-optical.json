@@ -1,0 +1,1167 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "norberg-2004-optical",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Norberg et al. (2004) · Undoped, 0.13% and 1.3% optical specimens",
+  "material": {
+    "formula": "Mn:ZnO",
+    "family": "Mn-doped ZnO, surface controls and nanocrystalline films",
+    "elements": [
+      "Mn",
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "Mn:ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Normalized absorption and photoluminescence comparison",
+  "sources": [
+    {
+      "id": "norberg2004",
+      "doi": "10.1021/ja048427j",
+      "title": "Synthesis of Colloidal Mn2+:ZnO Quantum Dots and High-TC Ferromagnetic Nanocrystalline Thin Films",
+      "authors": "Nick S. Norberg; Kevin R. Kittilstved; James E. Amonette; Ravi K. Kukkadapu; Dana A. Schwartz; Daniel R. Gamelin",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/ja048427j",
+      "main_status": "All 12 supplied main pages text-read and visually inspected; independent source and canonical scientific audits passed. Preserved source conflicts and missing fields remain explicit.",
+      "si_status": "Matched four-page SI; all supplied pages text-read and visually inspected in passed independent full-source audit.",
+      "reuse_status": "Private factual extraction with original locators. No public rights or figure reuse permission inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "norberg2004",
+    "recipe_family": "norberg2004-acetate-hydrolysis-mn-zno",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 3 (printed 9389), II.B first paragraph"
+        }
+      ],
+      "note": "Procedure, specimen, model or reference context; not an independent target-synthesis experiment."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main pp. 9387–9398 and matched SI pp. S-1–S-4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main pp. 9387–9398 and matched SI pp. S-1–S-4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main pp. 9387–9398 and matched SI pp. S-1–S-4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "input-acquire-optics",
+      "name": "optical series",
+      "formula": null,
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-defined starting specimen/state; no additional preparation quantities or independent batch/replicate inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), figure-7"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "acquire-optics-state",
+      "name": "Acquire optics — source state",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "input-acquire-optics"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "norberg-2004-acquire-optics",
+      "action": "acquire_optics",
+      "label": "Acquire optics",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "input-acquire-optics"
+      ],
+      "outputs": [
+        "acquire-optics-state"
+      ],
+      "parameters": {
+        "excitation_wavenumber": {
+          "value": 28200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm−1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source unit: optical-series. Sample scope: optical-series. Original source status: reported.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "norberg2004",
+              "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+            }
+          ],
+          "derivation": null
+        },
+        "excitation_absorbance_range": {
+          "value": null,
+          "minimum": 0.1,
+          "maximum": 0.4,
+          "unit": "absorbance",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Absorption was normalized at the excitation energy, and emission was scaled proportionally.",
+          "basis": "Source unit: optical-series. Sample scope: optical-series. Original source status: reported.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "norberg2004",
+              "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), figure-7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), figure-7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate undoped, estimated 0.13% and reported 1.3% dodecylamine-capped colloids. Absorption is normalized at the excitation and emission scaled proportionally; no common exact feed or physical batch is inferred.",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), figure-7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "optical-pure-zno",
+      "source_sample_label": "optical pure zno",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "dodecylamine-capped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "note": "Named capping ligand only; no surface coverage, binding geometry or retained nitrogen concentration is inferred."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source composition/state/linkage: {\"id\":\"optical-pure-zno\",\"parent_protocol\":\"protocol-hydrolysis\",\"variant\":\"undopedcontrol\",\"state\":\"dodecylamineheated,capped,toluene\",\"linked_items\":[\"figure-7\"],\"link_status\":\"explicitopticalcontrol;notnecessarilyphysicalsamesynthesisbatchassurfacecontrol\"}",
+        "No unique experimental batch ID, independent replicate or calibrated success label is inferred."
+      ]
+    },
+    {
+      "sample_id": "optical-0.13pct",
+      "source_sample_label": "optical 0.13pct",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Mn:ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "dodecylamine-capped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": "Named capping ligand only; no surface coverage, binding geometry or retained nitrogen concentration is inferred."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source composition/state/linkage: {\"id\":\"optical-0.13pct\",\"parent_protocol\":\"protocol-hydrolysis\",\"post_treatment\":\"protocol-amine-cleaning\",\"composition\":\"0.13%estimatedMn\",\"state\":\"dodecylaminecappedtoluene\",\"linked_items\":[\"figure-7\",\"figure-s1\"],\"link_status\":\"explicitoptical/statisticsmatch;feednotgiven\"}",
+        "No unique experimental batch ID, independent replicate or calibrated success label is inferred."
+      ]
+    },
+    {
+      "sample_id": "optical-1.3pct",
+      "source_sample_label": "optical 1.3pct",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Mn:ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "dodecylamine-capped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": "Named capping ligand only; no surface coverage, binding geometry or retained nitrogen concentration is inferred."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source composition/state/linkage: {\"id\":\"optical-1.3pct\",\"parent_protocol\":\"protocol-hydrolysis\",\"post_treatment\":\"protocol-amine-cleaning\",\"composition\":\"1.3%Mnreported\",\"state\":\"dodecylaminecappedtoluene\",\"linked_items\":[\"figure-7\",\"figure-s1\"],\"link_status\":\"explicitoptical/statisticsmatch;feednotgiven\"}",
+        "No unique experimental batch ID, independent replicate or calibrated success label is inferred."
+      ]
+    },
+    {
+      "sample_id": "optical-series",
+      "source_sample_label": "optical series",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), IV.G"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), IV.G"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), IV.G"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), IV.G"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source specimen or context, not an independently enumerated synthesis replicate."
+      ]
+    },
+    {
+      "sample_id": "source-context",
+      "source_sample_label": "source context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-samples-optical-pure-zno"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-samples-optical-pure-zno"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-samples-optical-pure-zno"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-samples-optical-pure-zno"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source specimen or context, not an independently enumerated synthesis replicate."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "norberg2004-lum-low-mn",
+      "sample_id": "optical-0.13pct",
+      "property": "mn_concentration",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 0.13,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: optical-0.13pct. Sample scope: optical-0.13pct. Original source status: author_estimated. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-0.13pct; source sample scope optical-0.13pct.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), Figure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-high-mn",
+      "sample_id": "optical-1.3pct",
+      "property": "mn_concentration",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 1.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "No sample-specific ICP uncertainty is stated.",
+        "basis": "Source unit: optical-1.3pct. Sample scope: optical-1.3pct. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-1.3pct; source sample scope optical-1.3pct.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), Figure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-excitation",
+      "sample_id": "optical-series",
+      "property": "excitation_wavenumber",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 28200,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm−1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: optical-series. Sample scope: optical-series. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-series; source sample scope optical-series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-abs-range",
+      "sample_id": "optical-series",
+      "property": "absorbance_at_excitation",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": null,
+        "minimum": 0.1,
+        "maximum": 0.4,
+        "unit": "absorbance",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Absorption was normalized at the excitation energy, and emission was scaled proportionally.",
+        "basis": "Source unit: optical-series. Sample scope: optical-series. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-series; source sample scope optical-series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-green",
+      "sample_id": "optical-pure-zno",
+      "property": "visible_emission_peak",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 18600,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm−1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Source unit: optical-pure-zno. Sample scope: optical-pure-zno. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-pure-zno; source sample scope optical-pure-zno.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-uv",
+      "sample_id": "optical-pure-zno",
+      "property": "uv_emission_peak",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 26900,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm−1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: optical-pure-zno. Sample scope: optical-pure-zno. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-pure-zno; source sample scope optical-pure-zno.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-low-green",
+      "sample_id": "optical-0.13pct",
+      "property": "visible_emission_quenching_relative_to_undoped_zno",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 42,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: optical-0.13pct. Sample scope: optical-0.13pct. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-0.13pct; source sample scope optical-0.13pct.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-low-uv",
+      "sample_id": "optical-0.13pct",
+      "property": "uv_emission_quenching_relative_to_undoped_zno",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 69,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: optical-0.13pct. Sample scope: optical-0.13pct. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-0.13pct; source sample scope optical-0.13pct.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-high-green",
+      "sample_id": "optical-1.3pct",
+      "property": "visible_emission_quenching_relative_to_undoped_zno",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 96,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: optical-1.3pct. Sample scope: optical-1.3pct. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit optical-1.3pct; source sample scope optical-1.3pct.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-no-mn",
+      "sample_id": "optical-series",
+      "property": "mn_ligand_field_emission",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": "not observed",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), IV.G"
+          }
+        ],
+        "note": "Source unit: optical-series. Sample scope: optical-series. Original source status: reported. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality. A negative observation, not an unperformed measurement."
+      },
+      "conditions": "Source unit optical-series; source sample scope optical-series.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 10 (printed 9396), IV.G"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lum-high-uv",
+      "sample_id": "optical-1.3pct",
+      "property": "uv_emission",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": "No corresponding excitonic feature; the weak remaining intensity may be scattering.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "note": "Source unit: optical-1.3pct. Sample scope: optical-1.3pct. Original source status: reported. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality. "
+      },
+      "conditions": "Source unit optical-1.3pct; source sample scope optical-1.3pct.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "inventory-samples-optical-pure-zno",
+      "sample_id": "source-context",
+      "property": "source_inventory_samples",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"optical-pure-zno\",\"parent_protocol\":\"protocol-hydrolysis\",\"variant\":\"undopedcontrol\",\"state\":\"dodecylamineheated,capped,toluene\",\"linked_items\":[\"figure-7\"],\"link_status\":\"explicitopticalcontrol;notnecessarilyphysicalsamesynthesisbatchassurfacecontrol\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        }
+      ]
+    },
+    {
+      "id": "inventory-samples-optical-0-13pct",
+      "sample_id": "source-context",
+      "property": "source_inventory_samples",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"optical-0.13pct\",\"parent_protocol\":\"protocol-hydrolysis\",\"post_treatment\":\"protocol-amine-cleaning\",\"composition\":\"0.13%estimatedMn\",\"state\":\"dodecylaminecappedtoluene\",\"linked_items\":[\"figure-7\",\"figure-s1\"],\"link_status\":\"explicitoptical/statisticsmatch;feednotgiven\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), Figure7"
+        },
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        },
+        {
+          "source_id": "norberg2004",
+          "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+        },
+        {
+          "source_id": "norberg2004",
+          "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+        }
+      ]
+    },
+    {
+      "id": "inventory-samples-optical-1-3pct",
+      "sample_id": "source-context",
+      "property": "source_inventory_samples",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"optical-1.3pct\",\"parent_protocol\":\"protocol-hydrolysis\",\"post_treatment\":\"protocol-amine-cleaning\",\"composition\":\"1.3%Mnreported\",\"state\":\"dodecylaminecappedtoluene\",\"linked_items\":[\"figure-7\",\"figure-s1\"],\"link_status\":\"explicitoptical/statisticsmatch;feednotgiven\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), Figure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), Figure7"
+        },
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), ResultsFigure7"
+        },
+        {
+          "source_id": "norberg2004",
+          "locator": "SI PDF p. 3 (printed S-3), FigureS1"
+        },
+        {
+          "source_id": "norberg2004",
+          "locator": "SI PDF p. 3 (printed S-3), FigureS1/equationsS1–S2"
+        }
+      ]
+    },
+    {
+      "id": "inventory-figures-tables-schemes-figure-7",
+      "sample_id": "source-context",
+      "property": "source_inventory_figures_tables_schemes",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"figure-7\",\"kind\":\"figure\",\"title\":\"Absorption and photoluminescence\",\"sample_ids\":[\"optical-pure-zno\",\"optical-0.13pct\",\"optical-1.3pct\"],\"evidence\":[{\"source_id\":\"norberg2004-main\",\"source_role\":\"main\",\"source_sha256\":\"ed5e5f4cc0db81c73fd9863922471bfd3d641ecd2a2793d4ea654e1a6d1550f3\",\"pdf_page\":5,\"printed_page\":\"9391\",\"locator\":\"figure-7\"}],\"asset_id\":\"figure-7\",\"disposition\":\"original_readable_asset_and_semantic_extraction\",\"numeric_trace_status\":\"not_digitized\",\"notes\":\"Normalizedabsorbanceatemissionexcitation;0.13%estimated;negativeMn-emissionresultretained.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), figure-7"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), figure-7"
+        }
+      ]
+    },
+    {
+      "id": "figure-7",
+      "sample_id": "source-context",
+      "property": "original_figure_scope",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "Absorption and photoluminescence. Normalizedabsorbanceatemissionexcitation;0.13%estimated;negativeMn-emissionresultretained.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 5 (printed 9391), figure-7"
+          }
+        ],
+        "note": "Original asset ID figure-7. Numeric plot traces remain undigitized; measured, reference and model panels retain their individual sample scopes."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 5 (printed 9391), figure-7"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All twelve supplied main pages and all four content-matched SI pages completely read and visually inspected; independent source, canonical, reader and private visual audits passed. Absolute recipe scale and multiple workup conditions remain unreported. Keep the 0.02% feed EPR series, 0.20 +/- 0.01% measured colloids, 1.1% TOPO/MCD specimen and optical/model contexts separate. Preserve SI statistical-notation and Figure S3/Table S4 D/F conflicts. Films A-C preparation does not supply missing D-F coat counts or annealing conditions. An external undoped ZnO cell is a reference, not measured Mn:ZnO coordinates.",
+    "missing_fields": [
+      "g-absolute-scale (Absolute recipe scale): No absolute reagent masses, stock/reaction volumes, yield, addition rate, wash volumes/cycle counts, separation force/time, or quantified initial capping stage are supplied. Retain partial protocols; do not call these fully quantified recipes or complete laboratory SOPs.",
+      "g-tmah-formula (TMAH formula discrepancy): Materials prints N(CH4)4OH·5H2O, whereas sample preparation prints N(Me)4OH·5H2O. Normalize the named tetramethylammonium identity while retaining the printed discrepancy.",
+      "g-base (Base amount and clouding): The titration begins to cloud beyond ca. 1.65 equivalents, while the common preparation uses 1.7 equivalents. Preserve the separate experimental scopes.",
+      "g-topo (TOPO route): The alternative procedure cites reference 32 without restating its full conditions. That referenced full paper was not inspected for this extraction. Keep the alternative partial; do not inherit the dodecylamine treatment conditions.",
+      "g-mn-feed (Feed and measured dopant content): Only the 0.20±0.01% product is explicitly linked to a 0.50% feed. The EPR series uses a 0.02% feed/nominal label; optical and MCD samples do not supply their initial feed. Retain separate sample identities and mask unavailable feed/outcome fields.",
+      "g-s4-count (SI table count): The main article announces three SI tables; the matched supplied SI contains four. Inventory all four, including the six-film Table S4.",
+      "g-poisson (SI statistical notation): The printed variables and λ definition mix concentration with mean dopants per particle. The reported means are 7.9 and 79, not fractions 0.0013 and 0.013. Preserve the equations, original figure and author-reported means as a model with a notation gap; do not silently repair it.",
+      "g-structure (Atomic structure and SAED): Wurtzite is supported by XRD and HRTEM. No experimental CIF, atomic coordinates, refined site occupancies, numerical lattice constants, or SAED pattern appear in the inspected main/SI. Allow phase/morphology evidence; exclude an exact experimental atomic-structure/recipe label.",
+      "g-film-df (Films D–F preparation): The SI gives film masses and magnetization, but omits coat counts, individual parent batches, and independently stated annealing conditions. Retain partial outcomes; do not assign 20 or 40 coats by proximity.",
+      "g-film-mass (Film masses): Main-text A–C masses are 0.59/0.24/0.28 mg; SI values are 593/236/279 μg. Both are retained as source reporting, consistent with rounding rather than separate replicates.",
+      "g-si-curve-table (Figure S3 / Table S4 conflict): Figure S3b visually orders mass-normalized high-field curves D > E > F, whereas Table S4 lists D = 0.038, E = 0.059, F = 0.076 emu/g. D/F identities or values are inconsistent between representations. Preserve the figure and table separately. Do not swap labels or assign resolved D/F outcome training targets. Independent audit must assess this conflict.",
+      "g-raw-curves (Raw plot data): Numerical curves and histogram counts were not supplied as raw arrays and have not been digitized. Readable original plots plus explicit scalar results are retained; do not claim raw-data recovery.",
+      "g-interpretation (Mechanistic evidence): Measured pH, carrier polarity/density, nitrogen content, and a quantitative impurity-detection limit are absent. Keep mechanistic hypotheses separate from measurements. Tc >350 K remains a lower bound.",
+      "g-other-techniques (Other characterization): No Raman, SAED, sample-specific DFT calculation, refined atomic structure, or electrical carrier-transport measurement is reported in these 16 pages. The actual additional property techniques are MCD, EPR and magnetometry; do not invent missing techniques."
+    ],
+    "conflicts": [
+      "g-tmah-formula: Materials prints N(CH4)4OH·5H2O, whereas sample preparation prints N(Me)4OH·5H2O. Normalize the named tetramethylammonium identity while retaining the printed discrepancy.",
+      "g-base: The titration begins to cloud beyond ca. 1.65 equivalents, while the common preparation uses 1.7 equivalents. Preserve the separate experimental scopes.",
+      "g-s4-count: The main article announces three SI tables; the matched supplied SI contains four. Inventory all four, including the six-film Table S4.",
+      "g-poisson: The printed variables and λ definition mix concentration with mean dopants per particle. The reported means are 7.9 and 79, not fractions 0.0013 and 0.013. Preserve the equations, original figure and author-reported means as a model with a notation gap; do not silently repair it.",
+      "g-si-curve-table: Figure S3b visually orders mass-normalized high-field curves D > E > F, whereas Table S4 lists D = 0.038, E = 0.059, F = 0.076 emu/g. D/F identities or values are inconsistent between representations. Preserve the figure and table separately. Do not swap labels or assign resolved D/F outcome training targets. Independent audit must assess this conflict."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Absorption and photoluminescence",
+      "url": "../assets/figures/norberg2004/figure-7.png",
+      "relation": "Existing private original evidence asset figure-7; SHA-256 c524b83823de74f129ef0ae244747765d4f61a5326281ad708a8bcaff4e40c35. Relative to this private canonical-drafts folder. Reader integration must establish the eventual public evidence route; this is not an atomic-structure download."
+    },
+    {
+      "label": "Common Mn:ZnO hydrolysis preparation",
+      "url": "../records/norberg-2004-hydrolysis.html",
+      "relation": "Same source family, not a claim of identical specimen, exact batch or complete quantitative preparation. Source group is shared to prevent training/test leakage."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,11 @@
+from pathlib import Path
+B=Path(__file__).resolve().parent;P=B.parent/'jp0105488'
+s=(P/'finalize_publication.py').read_text(encoding='utf-8')
+changes={'jp0105488':'jp010002l','gerion2001':'braun2001','0fd1a52e69681426376a6ee2bf55512c2bb2b663738f7a2cecee59163d92aee3':'f09cafb6571e19e9dade734c99c74202528a6648701947a446c46d64434e7f90','98a21f9489eda29e1e1f5f40b336661ceb1b27d9468095a9b44ad342a780400b':'00ac817e60651f0e7f9faabe85ba18372ac37fea1f0f5d174779c982064b4184','CdSe/ZnS/siloxane':'CdS/HgS/CdS','site-v21.tar.gz':'site-braun2001.tar.gz','0.14.0':'0.15.0','records=28,synthesis_routes=2,controls=0,supporting_procedures=16,contextual_observations=10,measurement_entries=186,operations=82,reader_evidence_items=139,source_audit_units=251,typed_facts=329,original_assets=17,original_figures=7,original_tables=2':'records=9,synthesis_routes=3,controls=0,supporting_procedures=3,contextual_observations=3,measurement_entries=75,operations=45,reader_evidence_items=85,source_audit_units=132,typed_facts=179,original_assets=8,original_figures=4,original_tables=0',"'crop-source-audit.json'":"'role-normalization-source-audit.json'",'Explicitly announced HRTEM/AFM supporting figures not located or verified locally.':'No SI declaration observed in supplied main; matching SI not located or verified.',"row['canonical_record_count']==28 and row['synthesis_route_variant_count']==2 and row['procedure_count']==16 and row['contextual_observation_count']==10":"row['canonical_record_count']==9 and row['synthesis_route_variant_count']==3 and row['procedure_count']==3 and row['contextual_observation_count']==3",'explicitly announced SI remains a re-review obligation':'matching SI remains unverified and later SI reopens review'}
+for old,new in changes.items():
+ assert old in s,old
+ s=s.replace(old,new)
+(B/'finalize_publication.py').write_text(s,encoding='utf-8')
+a=(P/'verify_archive.py').read_text(encoding='utf-8').replace('site-v21.tar.gz','site-braun2001.tar.gz').replace('gerion2001','braun2001').replace("'ccc6edea9ba91b45f129925d9f09a663881232ab'","json.loads((B/'publication-source.json').read_text(encoding='utf-8'))['commit_sha']")
+(B/'verify_archive.py').write_text(a,encoding='utf-8')
+print('Prepared same-Site publication checks for Braun source and exact pushed commit.')

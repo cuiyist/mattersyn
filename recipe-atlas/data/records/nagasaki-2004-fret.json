@@ -1,0 +1,1059 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nagasaki-2004-fret",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Nagasaki et al. (2004) · Biotin-CdS/TexasRed-streptavidin recognition series",
+  "material": {
+    "formula": "CdS",
+    "family": "Polymer-stabilized CdS and related source procedures",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Source-reported fluorescence resonance energy transfer assay",
+  "sources": [
+    {
+      "id": "nagasaki2004",
+      "doi": "10.1021/la036034c",
+      "title": "Novel Molecular Recognition via Fluorescent Resonance Energy Transfer Using a Biotin-PEG/Polyamine Stabilized CdS Quantum Dot",
+      "authors": "Yukio Nagasaki; Takehiko Ishii; Yuka Sunaga; Yousuke Watanabe; Hidenori Otsuka; Kazunori Kataoka",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/la036034c",
+      "main_status": "All 5 supplied main pages text-read and visually inspected; independent source and canonical scientific audits passed. Preserved source conflicts and missing fields remain explicit.",
+      "si_status": "Matched three-page SI verified by manuscript metadata/content and identical copies. All three pages text-read and visually inspected in the independent source audit.",
+      "reuse_status": "Private source-linked factual extraction; original article/figure rights remain separate. No public reuse license inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "nagasaki2004",
+    "recipe_family": "nagasaki2004-aqueous-polymer-cds",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 2 (printed 6397), Experimental Section 2: aqueous CdS coprecipitation"
+        }
+      ],
+      "note": "Supporting procedure or context record, not a separately verified target-synthesis experiment."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Supplied five-page main article and matched three-page SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Supplied five-page main article and matched three-page SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Supplied five-page main article and matched three-page SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "biotin-cds-specimen",
+      "name": "Preformed biotin-PEG/PAMA-CdS dispersion",
+      "formula": "CdS",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-described specimen identity only; exact batch, end-group identity and cross-technique aliquot linkage are not inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        },
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+        }
+      ]
+    },
+    {
+      "id": "texasred-streptavidin",
+      "name": "TexasRed-labeled streptavidin",
+      "formula": null,
+      "role": "fret_acceptor_protein_conjugate",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "purity": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Reagent purity is not reported.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Conjugation preparation, dye loading per protein and supplier are not given; graph abbreviates Tex-Avidin.",
+        "Source role: FRET acceptor protein conjugate.",
+        "Supplier: not reported.",
+        "Pretreatment/storage: unreported unless explicitly in linked operations.",
+        "Source supplies no verified molecular coordinates; null formula is not an inferred chemical identity."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "biotin-cds-texasred-streptavidin-mixtures",
+      "name": "Combine biotin-CdS with TexasRed-streptavidin for fluorescence — source output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "biotin-cds-specimen",
+        "texasred-streptavidin"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "fret-mix",
+      "action": "combine_biotin_cds_with_texasred_streptavidin_for_fluorescence",
+      "label": "Combine biotin-CdS with TexasRed-streptavidin for fluorescence",
+      "stage": "characterization",
+      "branch": "fret-assay",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "biotin-cds-specimen",
+        "texasred-streptavidin"
+      ],
+      "outputs": [
+        "biotin-cds-texasred-streptavidin-mixtures"
+      ],
+      "parameters": {
+        "ionic_strength": {
+          "value": 0.15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Electrolyte identity/composition for this FRET medium is not specified in caption.",
+          "basis": "Source scope: fret-assay.",
+          "raw_text": "I = 0.15 M",
+          "evidence": [
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+            }
+          ],
+          "derivation": null
+        },
+        "initial_nominal_CdS_concentration": {
+          "value": 396,
+          "minimum": null,
+          "maximum": null,
+          "unit": "micromol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Do not equate CdS molarity with QD particle-number molarity or derive an unreported dilution procedure.",
+          "basis": "Source scope: fret-assay.",
+          "raw_text": "[CdS]0 = 396 µmol/L",
+          "evidence": [
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+            }
+          ],
+          "derivation": null
+        },
+        "excitation_wavelength": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Same nominal excitation setting across stated experiments, not proof of same specimen.",
+          "basis": "Source scope: fluorescence-measurement.",
+          "raw_text": "excitation wavelength of 400 nm",
+          "evidence": [
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 2 (printed 6397), Experimental Section 3: measurements"
+            },
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 3 (printed 6398), Results and Discussion; Figure 1"
+            },
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 3 (printed 6398), Results and Discussion; Figure 2"
+            },
+            {
+              "source_id": "nagasaki2004",
+              "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": "No atmosphere or pressure is assigned beyond the source statement."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix biotinylated CdS QD with TexasRed-streptavidin and acquire fluorescence at400nm excitation. Unreported: mixture volumes, buffer/electrolyte identity, incubation time, temperature, protein dye labeling ratio, exact dialysis/dilution lineage. Figure4 contains spectra; Figure6 contains concentration-response plots, including an inset with different axes/scales. Exact point-to-spectrum joins are not supplied. This operation denotes a source comparison or series scope; it does not enumerate independent experimental replicates.",
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        },
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "figure4-fret-series",
+      "source_sample_label": "figure4 fret series",
+      "batch_id": null,
+      "material_state_id": "biotin-cds-texasred-streptavidin-mixtures",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "State: biotin-CdS/protein assay mixtures",
+        "Source linkage: explicit formula-CdS concentration and printed protein concentration series",
+        "Spectral series; unreported replicate count and exact aliquot lineage.",
+        "Unique experimental batch/replicate not verified; shared labels do not establish cross-technique aliquot identity."
+      ]
+    },
+    {
+      "sample_id": "figure6-response-series",
+      "source_sample_label": "figure6 response series",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "State: concentration-response assay series",
+        "Source linkage: same assay family; exact Figure4 point joins unverified",
+        "Main plot μmol/L, inset nmol/L; no regression coefficients or detection limit supplied.",
+        "Unique experimental batch/replicate not verified; shared labels do not establish cross-technique aliquot identity."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "texasred-luminescence-wavelength",
+      "sample_id": "figure4-fret-series",
+      "property": "texasred_luminescence_wavelength",
+      "technique": "Acceptor emission assignment in reported fluorescence spectra",
+      "value": {
+        "value": 620,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Acceptor emission; no measured energy-transfer efficiency is provided.",
+        "basis": "Source scope: fret-assay.",
+        "raw_text": "peak at 620 nm is TexasRed luminescence",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "fret-assay",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-0",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 11400,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 0; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-1",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 9116,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 1; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-2",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 6837,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 2; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-3",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 4558,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 3; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-4",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 2279,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 4; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-5",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 1593,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 5; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-6",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 912,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 6; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-7",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 228,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 7; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-8",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 159,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 8; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-9",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 91.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 9; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "printed-texasred-streptavidin-concentration-labels-10",
+      "sample_id": "figure4-fret-series",
+      "property": "printed_texasred_streptavidin_concentration_labels",
+      "technique": "Printed concentration legend; not curve-digitized data or independent replicates",
+      "value": {
+        "value": 22.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nmol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed legend, not curve digitization. Text/caption identifies streptavidin while graph abbreviates Tex-Avidin. C4: explicit text/caption identifies streptavidin, although graph abbreviates Tex-Avidin. Legend labels are not independent replicate rows.",
+        "basis": "Source scope: figure4-fret-series. Ordered source list index 10; original array preserved in coverage.",
+        "raw_text": "Tex-Avidin Conc. nmol/L: 11,400 ... 22.8",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "figure4-fret-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "outcome-5-figure4-fret-series",
+      "sample_id": "figure4-fret-series",
+      "property": "reported_observation",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "TexasRed620nm emission grows with labeled-protein concentration under400nm excitation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figures4,6"
+          }
+        ],
+        "note": "reported_qualitative_response; qualitative/source context only, no calibrated success label."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figures4,6"
+        }
+      ]
+    },
+    {
+      "id": "outcome-5-figure6-response-series",
+      "sample_id": "figure6-response-series",
+      "property": "reported_observation",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "TexasRed620nm emission grows with labeled-protein concentration under400nm excitation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figures4,6"
+          }
+        ],
+        "note": "reported_qualitative_response; qualitative/source context only, no calibrated success label."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), FRET discussion; Figures4,6"
+        }
+      ]
+    },
+    {
+      "id": "figure-context-main-figure4",
+      "sample_id": "figure4-fret-series",
+      "property": "original_figure_context",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "Figure4. CdS donor and TexasRed acceptor spectra at the printed protein concentrations; CdS396µmol/L,I0.15M,excitation400nm.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Original figure and caption; Figure4"
+          }
+        ],
+        "note": "Axes and printed labels: wavelength_nm_ticks: [400, 500, 600, 700]; intensity_au_ticks: [0, 40, 80, 120, 160]; protein_legend_fact: \"nagasaki2004-fig4-protein-labels\". full original figure/caption and all11 printed concentration labels retained; no raw curve digitization. Source sample labels: figure4-fret-series. Original asset: main-figure4."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Original figure and caption; Figure4"
+        }
+      ]
+    },
+    {
+      "id": "figure-context-main-figure6",
+      "sample_id": "figure6-response-series",
+      "property": "original_figure_context",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "Figure6 and inset. Concentration-response plot and low-concentration inset; preserve differing main/inset intensity scales and source proportionality claim.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Original figure and caption; Figure6 and inset"
+          }
+        ],
+        "note": "Axes and printed labels: main_x: \"Tex-Avidin Conc.(µmol/L)\"; main_x_ticks: [0, 2, 4, 6, 8, 10, 12]; main_y_ticks_au: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5]; inset_x: \"Tex-Av Conc.(nmol/L)\"; inset_x_ticks: [0, 50, 100, 150, 200, 250]; inset_y_ticks_au: [0, 20, 40, 60, 80, 100, 120]. full original plot/inset/caption retained; no fit/slope/LOD or exact Figure4 point joins. Source sample labels: figure6-response-series. Original asset: main-figure6."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Original figure and caption; Figure6 and inset"
+        }
+      ]
+    },
+    {
+      "id": "unresolved-C3",
+      "sample_id": "figure6-response-series",
+      "property": "unresolved_source_conflict",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "C3 — Figure6 proportionality and intensity scales. Source claim: Authors describe FRET peak as increasing proportionally with TexasRed-streptavidin concentration. Visual observation: Main plotted response is curved over its displayed micromolar range. Inset is approximately linear over a lower nanomolar range, and its arbitrary intensity scale differs from the main plot. Resolution: Retain as qualitative author conclusion plus original plots. No global linear model, calibration slope, exact limit of detection or cross-panel intensity normalization is extracted.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Concentration response; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Concentration response; Figure6"
+        }
+      ]
+    },
+    {
+      "id": "unresolved-C4",
+      "sample_id": "figure4-fret-series",
+      "property": "unresolved_source_conflict",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "C4 — Protein name in figure axes. Source claim: Text and captions identify TexasRed-streptavidin. Visual observation: Graph labels abbreviate Tex-Avidin/Tex-Av Conc. Resolution: Use streptavidin according to explicit text/caption; retain the original graph labels and do not create an additional avidin reagent or claim equivalence of the proteins.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          },
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Concentration response; Figure6"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        },
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Concentration response; Figure6"
+        }
+      ]
+    },
+    {
+      "id": "scope-figure4-fret-series",
+      "sample_id": "figure4-fret-series",
+      "property": "source_scope",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "figure4 fret series. typed source facts retained with scope, evidence and missingness",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagasaki2004",
+            "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+          }
+        ],
+        "note": "Scope label only; numerical source facts remain individually mapped."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagasaki2004",
+          "locator": "Main PDF p. 4 (printed 6399), Molecular recognition; Figure 4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All five supplied main pages and all three content-matched SI pages completely read and visually inspected; independent source, canonical, reader, apparatus, component and product-context audits passed. Four source ambiguities, the incomplete biotin variant and all missing quantities remain explicit. The abstract size summary and optical-model size do not establish a TEM/XRD/biotin recipe-to-specimen join. No measured atomic coordinates are supplied.",
+    "missing_fields": [
+      "G1 (pdp-preparation/acetal-block-polymer): Separate initiator reagent charges, EO-stage temperature, atmosphere, addition rates, PAMA protonating reagent, precipitation/extraction volumes and durations, yields/drying/storage. Present paper has an operational summary, not a fully reproducible upstream polymer SOP. References14a/14b are cited but their full texts were not inspected.",
+      "G2 (aldehyde-polymer/biotin-polymer): Polymer/solvent charges, neutralization endpoint, biocytin-hydrazide and NaBH4 amounts, reduction duration/temperature, exact purified biotin-polymer concentration and biotin functionality. Do not infer stoichiometry, quantitative biotin coverage, reduction conditions or yield.",
+      "G3 (all dialysis operations): Membrane/MWCO, time, water-exchange schedule, temperature, final volume/concentration, recovered yield and storage. Final material is an incompletely specified dialyzed dispersion; no invented isolated powder preparation.",
+      "G4 (CdS coprecipitation): CdCl2/Na2S solution-addition volumes and unequivocal stock-versus-final concentration basis, hydration state, pH, numerical ambient temperature, atmosphere, speed and addition rates. Do not multiply2.5mM by8mL to assert an added reagent charge or total yield;8mL is the initial polymer-solution volume.",
+      "G5 (comparison and concentration variants): Independent whole-batch records, exact workup and specimen links, replicate counts and outcomes per salt/concentration combination. Variants/photographs are not verified independent experiments or a timing sequence.",
+      "G6 (optical/structural sample links): Which Figure2 concentration supplies absorption trace d, Figure3 specimen, SI TEM or SI XRD; whether SI samples are biotin-ended. No exact recipe-to-structure, biotin-to-TEM, or structure-to-FRET join. Nominal same material is insufficient.",
+      "G7 (size and atomistic structure): TEM particle counts/histogram, measured mean and distribution, indexed XRD peak table, lattice parameters, refinements, atom coordinates/CIF, defect or facet determination. 4.8nm remains an author band-gap-derived estimate; hexagonal wurtzite is an author powder-diffraction assignment, not a refined atomistic model.",
+      "G8 (recognition assays): Buffer/electrolyte composition, volumes, incubation times, temperature, dye labeling ratio, exact sample dilution lineage, background corrections, repeats/errors, QY/FRET efficiency and detection limit. Preserve original arbitrary intensity plots and printed concentration labels without inventing calibration or protein-count-per-QD values.",
+      "G9 (SI acquisition): TEM drop/dilution/drying numbers, XRD freeze-drying/loading details, dwell/scan rate, provenance and indexing of reference sticks, separately labeled polymer-only XRD trace. No assignment of sharp XRD features to polymer/impurity and no background subtraction inferred.",
+      "G10 (external cited sources): Full primary procedures/data from references cited in this paper. Bibliography is inventoried as cited context only; full8-page coverage applies only to the supplied main and matched SI. No extra papers downloaded or opened."
+    ],
+    "conflicts": [
+      "C1 — Figure2 polymer-concentration/PL trend. Source claim: Prose states that increasing block-copolymer concentration increased emission intensity along with a hypochromic shift. Visual observation: Caption assigns a=1.16,b=3.08,c=4.62×10^-4mol/L; printed a/b/c arrow orders the spectra from larger to smaller plotted amplitudes. The highest amplitude is labeled a and lowest c. Resolution: Unresolved source discrepancy. Preserve caption values, curve labels, image and prose separately; do not reverse concentrations, correct the word hypochromic, or create a monotonic concentration-to-size rule.",
+      "C2 — Figure5 varied protein concentration. Source claim: Caption calls the abscissa TexasRed-streptavidin concentration, while prose describes changing nonlabeled streptavidin/BSA in inhibition experiments. Visual observation: Abscissa reads10^-5 Protein Conc.(mol/L), with filled/nonfilled symbols assigned to nonlabeled streptavidin/BSA in the caption. Resolution: Do not decide which protein concentration varies or populate quantitative competitive-binding rows until separately resolved.",
+      "C3 — Figure6 proportionality and intensity scales. Source claim: Authors describe FRET peak as increasing proportionally with TexasRed-streptavidin concentration. Visual observation: Main plotted response is curved over its displayed micromolar range. Inset is approximately linear over a lower nanomolar range, and its arbitrary intensity scale differs from the main plot. Resolution: Retain as qualitative author conclusion plus original plots. No global linear model, calibration slope, exact limit of detection or cross-panel intensity normalization is extracted.",
+      "C4 — Protein name in figure axes. Source claim: Text and captions identify TexasRed-streptavidin. Visual observation: Graph labels abbreviate Tex-Avidin/Tex-Av Conc. Resolution: Use streptavidin according to explicit text/caption; retain the original graph labels and do not create an additional avidin reagent or claim equivalence of the proteins."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Representative CdS preparation",
+      "url": "../records/nagasaki-2004-cho-cds.html",
+      "relation": "Same source and nominal material family only; no inferred common physical batch, exact structural sample join or borrowed quantitative conditions."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,12 @@
+from pathlib import Path
+B=Path(__file__).resolve().parent;p=B/'visuals/sashchiuk2004-protocol.mjs';s=p.read_text(encoding='utf8')
+s=s.replace('heat=false,gas=false,inject=false','heat=false,gas=false,inject=false,particles=false,morphology="individual"')
+s=s.replace('+dots(x,y+19);if(heat)',"+(particles?(morphology==='sphere'?`<circle cx=\"${x}\" cy=\"${y+18}\" r=\"29\" fill=\"#cadde6\" stroke=\"${C.line}\"/>`+dots(x,y+18):morphology==='wire'?[-36,-24,-12,0,12,24,36].map((q,i)=>`<rect x=\"${x+q-4}\" y=\"${y+14+Math.sin(i/2)*7}\" width=\"8\" height=\"8\" fill=\"${C.gold}\"/>`).join(''):dots(x,y+19)):'');if(heat)")
+s=s.replace("if(id==='grow'){art=flask(176,203,{heat:true})","if(id==='grow'){art=flask(176,203,{heat:true,particles:true,morphology:k==='individual-low'?'individual':k==='sphere-intermediate'?'sphere':'wire'})")
+s=s.replace("if(id==='cool'){art=flask(176,192)","if(id==='cool'){art=flask(176,192,{particles:true})")
+s=s.replace("if(id==='withdraw'){art=flask(151,208)","if(id==='withdraw'){art=flask(151,208,{particles:true})")
+s=s.replace("+grid(154,261)+panel(319", "+(id==='sem'?box(105,253,98,16)+dots(155,244,true):grid(154,261))+panel(319")
+s=s.replace('microdiffraction of individual constituent crystals','additional microdiffraction confirming single-crystal-like behavior of the wire assembly')
+s=s.replace('ρ ≈ 0.15 Ω·cm','ρ = 0.15 Ω·cm')
+p.write_text(s,encoding='utf8')
+print('Fixed pre-injection particles, SEM support, microdiffraction scope, morphology and reported resistivity.')

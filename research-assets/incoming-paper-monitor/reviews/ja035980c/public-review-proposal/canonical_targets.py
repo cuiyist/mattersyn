@@ -1,0 +1,27 @@
+oxidation_ops={'oxidize':'oxidative-treatment','acid-hcl':'hcl-treatment','acid-hf':'hf-treatment','wash-tubes':'water-wash','dry-tubes':'dry-nanotubes'}
+operation_targets={
+'oxidation':oxidation_ops,
+'growth':{**oxidation_ops,'mix-cd':'precursor-mixing','heat':'precursor-heating','adjust':'te-injection','injection':'te-injection','grow':'growth','stop':'cooling','cool':'cooling','solvate':'toluene-addition','precipitate':'precipitation','filter':'filtration','wash':'toluene-washing','final-dry':'product-drying'},
+'electron-microscopy':{'disperse':'tem-preparation','deposit':'tem-preparation','image-tem':'tem-acquisition','image-hrtem':'hrtem-acquisition'},
+'sem':{'deposit':'sem-preparation','image':'sem-acquisition'},'eds':{'analyze':'eds-acquisition'},
+'xps':{'mount':'xps-mounting','evacuate':'xps-mounting','survey':'xps-survey','high-resolution':'xps-high-resolution'},
+'xrd':{'acquire':'xrd-acquisition'},'uv-visible':{'dissolve-washings':'uv-preparation','disperse-composite':'uv-preparation','acquire':'uv-acquisition'},
+'infrared':{'acquire':'ir-acquisition'},'raman':{'acquire':'raman-acquisition'}}
+measurement_targets={
+'oxidation':{'oxygen':'oxidation-coverage','cleaning':'purification-evidence','surface-sites':'surface-groups'},
+'growth':{'long-axis':'particle-dimensions','aspect':'particle-dimensions','tdpa-role':'tdpa','junctions':'figure4-junction'},
+'electron-microscopy':{**{f'scale-1{p}':'figure1' for p in 'abcd'},**{f'scale-2{p}':'figure2-tem' for p in 'cde'},'scale-3a':'figure3-interface','scale-3a-inset':'figure3-interface',**{f'scale-3{p}':'figure3-sites' for p in 'bcd'},**{f'scale-4{p}':'figure4-junction' for p in 'abc'},'pristine':'figure1','oxidation':'oxidation-morphology','figure2':'figure2-tem','figure3':'figure3-sites','figure4':'figure4-junction','phase':'crystal-phase','site-density':'site-selectivity'},
+'sem':{'scale-2a':'figure2-sem','scale-2b':'figure2-sem','motifs':'figure2-sem'},
+'eds':{'elements':'eds-elements','plotted-elements':'eds-elements','energy-units':'eds-unit-conflict','metal-limit':'purification-evidence'},
+'xps':{'cd-binding':'surface-xps','strong-oxygen':'oxidation-coverage','mild-oxygen':'oxidation-coverage','carbon':'surface-xps','tellurium':'teo3','oxygen-curve':'figure5-xps','passivation':'passivation-model','thermal-decomposition':'thermal-context','carboxyl-removal':'thermal-context','integrity':'thermal-context'},
+'xrd':{'cdte-indices':'xrd-indexing','mwnt-indices':'xrd-indexing','mixed-phase':'crystal-phase','broadening':'xrd-broadening','axis-range':'xrd-indexing'},
+'uv-visible':{'plot-range':'figure7','composite-spectrum':'uv-heterostructure','background':'uv-heterostructure','washings-heterogeneity':'uv-washings','detachment':'detachment-model','signal-type':'figure7'},
+'infrared':{'axis':'si-ir','assignments':'si-ir','identity':'si-identity'},
+'raman':{'lo':'raman-cdte','bulk-lo':'raman-cdte','g-precursor':'raman-carbon','d-precursor':'raman-carbon','g-composite':'raman-carbon','d-composite':'raman-carbon','lo-absent':'raman-cdte','confinement':'quantum-confinement','plot':'figure6'},
+'oxidation-controls':{'strong-oxygen':'oxidation-coverage','mild-oxygen':'oxidation-coverage','strong-result':'oxidation-coverage','mild-result':'oxidation-coverage','pristine-result':'oxidation-coverage','raw-scope':'control-scope','correlation':'oxidation-coverage'},
+'free-nanocrystals':{'free-prose-size':'free-particle-size','no-tube-size':'free-particle-size','free-shape':'free-particle-size','later-comparison':'uv-washings','no-tube-recipe':'free-particle-size'},
+'mechanisms':{'coordination':'figure8-model','ligand-competition':'tdpa-competition','diffusion':'diffusion-model','site-geometry':'shape-variables','tip-preference':'site-selectivity','junction':'shape-variables','scheme':'figure8-model','passivation':'passivation-model','swnt-limit':'mwnt-swnt','outlook':'outlook'},
+'source-context':{'documents':'coverage','external-preparations':'missing-fields','prior-attachment':'prior-cdse','other-nanostructures':'chemistry-context','measurement-limits':'property-limits','matching':'si-identity'},
+}
+material_targets={'cadmium-oxide':'cdo','tdpa':'tdpa','topo':'topo','te-top-stock':'te-top','hydrochloric-acid':'hcl','hydrofluoric-acid':'hf','tellurium-source':'te-top','top':'te-top'}
+stock_targets={'hydrochloric-acid-solution':'hcl','hydrofluoric-acid-solution':'hf','te-in-top':'te-top'}

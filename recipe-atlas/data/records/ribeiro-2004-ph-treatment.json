@@ -1,0 +1,803 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ribeiro-2004-ph-treatment",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Ribeiro et al. (2004) · Acid-set aging and optical redispersion",
+  "material": {
+    "formula": "SnO2",
+    "family": "Cassiterite tin dioxide colloids",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "components": [
+      "SnO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "pH modification, aging and probe sonication",
+  "sources": [
+    {
+      "id": "ribeiro2004",
+      "doi": "10.1021/jp0473669",
+      "title": "Study of Synthesis Variables in the Nanocrystal Growth Behavior of Tin Oxide Processed by Controlled Hydrolysis",
+      "authors": "Caue Ribeiro; Eduardo J. H. Lee; Tania R. Giraldi; Elson Longo; Jose A. Varela; Edson R. Leite",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/jp0473669",
+      "main_status": "All 6 supplied main pages text-read and visually inspected; independent source and canonical scientific audits passed. Preserved source conflicts and missing fields remain explicit.",
+      "si_status": "No matched supporting information located or verified. SI existence remains unverified; no absence inferred.",
+      "reuse_status": "Private bibliographic/factual extraction. Original article and figure rights remain separate; no public-use license inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "ribeiro2004",
+    "recipe_family": "ribeiro2004-controlled-hydrolysis",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 1 (printed p. 15612), Study scope"
+        }
+      ],
+      "note": "Procedure or source context, not an independently instantiated target-synthesis batch."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "All six supplied main pages; SI unverified"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "All six supplied main pages; SI unverified"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "All six supplied main pages; SI unverified"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sno2-colloid",
+      "name": "Cassiterite tin dioxide colloid",
+      "formula": "SnO2",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        ""
+      ],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "nitric-acid",
+      "name": "Dilute nitric acid",
+      "formula": "HNO3",
+      "role": "ph_adjustment_reagent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "dose/concentration unreported",
+        "Supplier: Synth"
+      ],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "tbaoh-aqueous",
+      "name": "Tetrabutylammonium hydroxide aqueous solution",
+      "formula": null,
+      "role": "redispersion_reagent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "stock_concentration": {
+          "value": 0.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Aqueous stock; dose and final pH after adding the base are unreported. Do not equate treatment pH with final measurement pH.",
+          "basis": "Source status: reported. Source scope: commercial redispersion reagent.",
+          "raw_text": "0.4",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "addition volume/final pH unreported",
+        "Supplier: J.T.Baker",
+        "Aqueous reagent, not a single molecular formula. Source identity: [N(C4H9)4]+ OH- in H2O"
+      ],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "acid-set-series",
+      "name": "Set the treatment pH of 0.025 M-origin colloids — resulting source state",
+      "kind": "sample_set",
+      "parent_ids": [
+        "sno2-colloid",
+        "nitric-acid"
+      ]
+    },
+    {
+      "id": "aged-treatment-series",
+      "name": "Age the acid-set samples for 24 hours — resulting source state",
+      "kind": "sample_set",
+      "parent_ids": [
+        "acid-set-series"
+      ]
+    },
+    {
+      "id": "redispersed-series",
+      "name": "Add aqueous TBAOH for spectroscopic redispersion — resulting source state",
+      "kind": "sample_set",
+      "parent_ids": [
+        "aged-treatment-series",
+        "tbaoh-aqueous"
+      ]
+    },
+    {
+      "id": "sonicated-optical-series",
+      "name": "Probe-sonicate the redispersed optical samples — resulting source state",
+      "kind": "sample_set",
+      "parent_ids": [
+        "redispersed-series"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "ph-treatment-acidify",
+      "action": "pH_adjustment",
+      "label": "Set the treatment pH of 0.025 M-origin colloids",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sno2-colloid",
+        "nitric-acid"
+      ],
+      "outputs": [
+        "acid-set-series"
+      ],
+      "parameters": {
+        "treatment_pH_range": {
+          "value": null,
+          "minimum": 1.5,
+          "maximum": 8.5,
+          "unit": "pH",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Starting pH approximately8.5 is lowered with nitric acid. Range does not enumerate every dose or every independent batch.",
+          "basis": "Source status: reported. Source scope: separate modified-pH samples.",
+          "raw_text": "[1.5, 8.5]",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          },
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 5 (printed p. 15616), Figure7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          },
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 5 (printed p. 15616), Figure7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Lower starting pHapproximately8.5 to a range of values down to1.5; specific HRTEM treatment states6.0 and2.7.",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        },
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 5 (printed p. 15616), Figure7"
+        }
+      ]
+    },
+    {
+      "id": "ph-treatment-age",
+      "action": "hold",
+      "label": "Age the acid-set samples for 24 hours",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "ph-treatment-acidify"
+      ],
+      "inputs": [
+        "acid-set-series"
+      ],
+      "outputs": [
+        "aged-treatment-series"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Reported 'After24h'; no explicit hold-temperature or atmosphere specified.",
+          "basis": "Source status: reported. Source scope: modified-pH samples.",
+          "raw_text": "24",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "After24h, proceed to redispersion. Temperature and atmosphere unreported.",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "ph-treatment-redisperse",
+      "action": "add_surfactant",
+      "label": "Add aqueous TBAOH for spectroscopic redispersion",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "ph-treatment-age"
+      ],
+      "inputs": [
+        "aged-treatment-series",
+        "tbaoh-aqueous"
+      ],
+      "outputs": [
+        "redispersed-series"
+      ],
+      "parameters": {
+        "addition_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "TBAOH stock addition volume is unreported.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        },
+        "measurement_pH_after_base": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "pH",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Final pH after basic TBAOH addition is unreported; acid-set treatment labels cannot replace it.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add0.4M aqueous tetrabutylammonium hydroxide for redispersion before spectroscopy; unknown dose and final pH.",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "ph-treatment-sonicate",
+      "action": "probe_sonication",
+      "label": "Probe-sonicate the redispersed optical samples",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "ph-treatment-redisperse"
+      ],
+      "inputs": [
+        "redispersed-series"
+      ],
+      "outputs": [
+        "sonicated-optical-series"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Power, probe geometry and final volume unreported.",
+          "basis": "Source status: reported. Source scope: redispersed modified-pH optical samples.",
+          "raw_text": "2",
+          "evidence": [
+            {
+              "source_id": "ribeiro2004",
+              "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultrasonic probe for2min for spectroscopic measurements; no power/geometry given.",
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "treatment-series",
+      "source_sample_label": "Acid-set treatment states before base addition",
+      "batch_id": null,
+      "material_state_id": "aged-treatment-series",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No author-assigned physical batch identifier is supplied. Matching concentration labels do not establish identical aliquots across figures."
+      ]
+    },
+    {
+      "sample_id": "optical-series",
+      "source_sample_label": "After TBAOH and probe sonication; final pH unknown",
+      "batch_id": null,
+      "material_state_id": "sonicated-optical-series",
+      "parent_sample_id": "treatment-series",
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "No author-assigned physical batch identifier is supplied. Matching concentration labels do not establish identical aliquots across figures."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "parent-ph-series-treatment-series",
+      "sample_id": "treatment-series",
+      "property": "parent_ph_series",
+      "technique": "Source pH-treatment procedure",
+      "value": {
+        "value": 0.025,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mol/L",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Initial ethanolic concentration; no measured final colloidal concentration stated.",
+        "basis": "Source status: reported. Source scope: parent synthesis for pH/agglomeration experiments.",
+        "raw_text": "0.025",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "parent synthesis for pH/agglomeration experiments",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "acid-treatment-series",
+      "sample_id": "treatment-series",
+      "property": "acid",
+      "technique": "Source pH-treatment procedure",
+      "value": {
+        "value": "dilute nitric acid; Synth",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": "Source status: reported. Source scope: pH modification. No acid concentration, volume or addition rate reported."
+      },
+      "conditions": "pH modification",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "tbaoh-optical-series",
+      "sample_id": "optical-series",
+      "property": "tbaoh",
+      "technique": "Source pH-treatment procedure",
+      "value": {
+        "value": "tetrabutylammonium hydroxide; J. T. Baker",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+          }
+        ],
+        "note": "Source status: reported. Source scope: redispersion for spectroscopic measurement. "
+      },
+      "conditions": "redispersion for spectroscopic measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Experimental Procedure"
+        }
+      ]
+    },
+    {
+      "id": "source-protocols-ph-treatment",
+      "sample_id": "treatment-series",
+      "property": "source_protocol",
+      "technique": "Source text / original figure / inventory context",
+      "value": {
+        "value": "{\"id\": \"ribeiro2004-ph-treatment\", \"kind\": \"post_synthesis_variant_family\", \"method\": \"Acid-induced agglomeration and redispersion\", \"parent\": \"ribeiro2004-hydrolysis\", \"parent_constraint\": \"initial Sn2+0.025M\", \"completeness\": \"partial; treatment and measurement states must remain distinct\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 1 (printed p. 15612), Source inventory: protocols 2"
+          }
+        ],
+        "note": "Retained source-inventory protocol; pointer /protocols/1."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 1 (printed p. 15612), Source inventory: protocols 2"
+        }
+      ]
+    },
+    {
+      "id": "source-assets-experimental-procedure",
+      "sample_id": "treatment-series",
+      "property": "source_asset",
+      "technique": "Source text / original figure / inventory context",
+      "value": {
+        "value": "{\"id\": \"ribeiro2004-experimental-procedure\", \"filename\": \"reader-assets\\\\experimental-procedure.png\", \"sha256\": \"45aa705728c3b28e69fcef3f6cdff1cf68b7f18af300c66f263d38feb268deb5\", \"source_sha256\": \"fc10a7101b4acb74f15398a530b8f916641f89b171fad065dd789747204eee88\", \"pdf_page\": 2, \"printed_page\": 15613, \"crop_reference_pixels\": {\"width\": 978, \"height\": 1265, \"box\": [78, 110, 480, 948]}, \"status\": \"original source region rendered and cropped; not recreated or digitized\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ribeiro2004",
+            "locator": "Main PDF p. 2 (printed p. 15613), Source inventory: assets 12"
+          }
+        ],
+        "note": "Retained source-inventory asset; pointer /assets/11. Original crop is private and not yet integrated into a reader. The asset is not atomic coordinates."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ribeiro2004",
+          "locator": "Main PDF p. 2 (printed p. 15613), Source inventory: assets 12"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All six supplied main pages completely read and visually inspected; independent source, canonical, reader and private visual audits passed. No matched supporting information was located or verified; SI existence remains unverified and no absence is inferred. Preserve the unspecified basis of the approximately 500:1 water/Sn ratio, acid-set treatment pH versus unreported final TBAOH measurement pH, and radius/diameter/model distinctions. XRD is mentioned but the inspected article supplies no trace, SAED or atomic coordinates.",
+    "missing_fields": [
+      "Main-only review; matched SI not located/verified and existence remains unverified. No SI supplied or inferred absent.",
+      "Refs7/25 contain fuller upstream synthesis; their full procedures have not been inspected in this extraction. No external downloads performed.",
+      "Absolute precursor and ethanol/water charges, water-ratio basis/order/rate, mixing, vessel, atmosphere, hydrolysis duration and oxidation conditions absent.",
+      "Dialysis membrane, water volume/exchange schedule, duration and chloride-removal endpoint absent.",
+      "Acid concentration/dose, TBAOH addition volume, post-redispersion pH, sonication power and final colloid concentration absent.",
+      "No numerical full spectral curves, tabulated peak/radius values, histogram particle list, or uncertainties for optical-derived radii. Original plots retained without invented digitization.",
+      "Cassiterite assignment is source-reported XRD prose; no XRD trace or SAED pattern supplied. No unit-cell constants, measured atom coordinates, CIF, surface ligands or full-particle atom model supplied.",
+      "No powder-isolation protocol, quantitative yield, PL quantum yield/lifetime, Raman data or sensor/device test supplied.",
+      "Mechanistic conclusions involve author assumptions, models and cited studies; sample atomistic dynamics and solution oxidation/speciation were not directly measured."
+    ],
+    "conflicts": [
+      "Discussion identifies Figure4 HRTEM but parenthetical references say Figure3a/b; actual Figure3 is schematic. Figure4 captions and panels establish the imaging assignment.",
+      "Figure5 ordinate-independent horizontal variable is particle radius; Figure6b axis says Size but caption says radius from PL. Preserve radius and original labels, never silently use diameter.",
+      "The paper describes acid-set pH, then adds basic TBAOH after24h for spectra without reporting final pH. Treat plotted labels as treatment labels, not verified final measurement pH.",
+      "p3 proposes polycondensation rather than direct ion deposition, while conclusion p6 uses ion-deposition phrasing; these are retained author interpretations, not a resolved measured mechanism."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Parent synthesis framework",
+      "url": "../records/ribeiro-2004-hydrolysis.html",
+      "relation": "Parent concentration is explicitly 0.025 mol/L in ethanol; final colloidal concentration and physical batch identity are unreported."
+    },
+    {
+      "label": "Controlled-hydrolysis source framework",
+      "url": "../records/ribeiro-2004-hydrolysis.html",
+      "relation": "Related literature context; individual experimental batches and cross-technique specimen joins remain unresolved."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

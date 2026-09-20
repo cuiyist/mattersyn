@@ -1,0 +1,522 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "murray-1993-cdse-surface-exchange",
+  "revision": 2,
+  "record_type": "procedure",
+  "title": "Optional repeated pyridine surface exchange",
+  "material": {
+    "formula": "CdSe",
+    "family": "II–VI chalcogenides",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Post-synthesis procedure",
+  "sources": [
+    {
+      "id": "murray1993",
+      "doi": "10.1021/ja00072a025",
+      "title": "Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites",
+      "authors": "C. B. Murray; D. J. Norris; M. G. Bawendi",
+      "year": 1993,
+      "url": "https://doi.org/10.1021/ja00072a025",
+      "main_status": "Relevant original text reviewed",
+      "si_status": "Not located or verified",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "murray1993",
+    "recipe_family": "murray1993-cdse",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chemical.hexane",
+      "name": "hexane",
+      "formula": "C6H14",
+      "role": "workup_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supplier: variety of sources; no individual supplier given",
+        "Grade: anhydrous"
+      ],
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8706, 8707; II. Experimental Section / General"
+        }
+      ]
+    },
+    {
+      "id": "chemical.pyridine",
+      "name": "pyridine",
+      "formula": "C5H5N",
+      "role": "workup_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supplier: variety of sources; no individual supplier given",
+        "Grade: anhydrous"
+      ],
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8706, 8707; II. Experimental Section / General"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "state.exchange.dispersion",
+      "name": "Crystallites gradually dispersed in pyridine",
+      "kind": "mixture",
+      "parent_ids": [
+        "state.exchange.input",
+        "chemical.pyridine"
+      ]
+    },
+    {
+      "id": "state.exchange.final",
+      "name": "Repeatedly exchanged crystallites",
+      "kind": "mixture",
+      "parent_ids": [
+        "state.exchange.flocculate"
+      ]
+    },
+    {
+      "id": "state.exchange.flocculate",
+      "name": "Hexane-flocculated crystallites",
+      "kind": "mixture",
+      "parent_ids": [
+        "state.exchange.dispersion",
+        "chemical.hexane"
+      ]
+    },
+    {
+      "id": "state.exchange.input",
+      "name": "TOP/TOPO-capped crystallites supplied to exchange",
+      "kind": "mixture",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "exchange.disperse",
+      "action": "heat_with_competing_ligand_until_dispersed",
+      "label": "Heat with competing ligand until dispersed",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": true,
+      "depends_on": [],
+      "inputs": [
+        "state.exchange.input",
+        "chemical.pyridine"
+      ],
+      "outputs": [
+        "state.exchange.dispersion"
+      ],
+      "parameters": {
+        "exchange.input.mass": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "TOP/TOPO-capped crystallites",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "murray1993",
+              "locator": "Main pp. 8707; Surface Exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "exchange.pyridine.volume": {
+          "value": null,
+          "minimum": 5,
+          "maximum": 10,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "murray1993",
+              "locator": "Main pp. 8707; Surface Exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "exchange.temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "murray1993",
+              "locator": "Main pp. 8707; Surface Exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "exchange.duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "murray1993",
+              "locator": "Main pp. 8707; Surface Exchange"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ]
+    },
+    {
+      "id": "exchange.flocculate",
+      "action": "add_excess_nonsolvent_then_centrifuge",
+      "label": "Add excess nonsolvent then centrifuge",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": true,
+      "depends_on": [
+        "exchange.disperse"
+      ],
+      "inputs": [
+        "state.exchange.dispersion",
+        "chemical.hexane"
+      ],
+      "outputs": [
+        "state.exchange.flocculate"
+      ],
+      "parameters": {
+        "exchange.hexane.volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "murray1993",
+              "locator": "Main pp. 8707; Surface Exchange"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "state.exchange.flocculate",
+      "description": "hexane amount description: excess; retain: crystallite flocculate",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ]
+    },
+    {
+      "id": "exchange.repeat",
+      "action": "repeat_dispersion_and_flocculation",
+      "label": "Repeat dispersion and flocculation",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": true,
+      "depends_on": [
+        "exchange.flocculate"
+      ],
+      "inputs": [
+        "state.exchange.flocculate"
+      ],
+      "outputs": [
+        "state.exchange.final"
+      ],
+      "parameters": {
+        "exchange.cycles": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "murray1993",
+              "locator": "Main pp. 8707; Surface Exchange"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "repeat operations: ['exchange.disperse', 'exchange.flocculate']; repeat text: a number of times",
+      "evidence": [
+        {
+          "source_id": "murray1993",
+          "locator": "Main pp. 8707; Surface Exchange"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "murray-1993-cdse-surface-exchange-product",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "murray1993",
+            "locator": "Main pp. 8707; Surface Exchange"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source-defined protocol context; independent batch identity is not supplied."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source extraction reviewed for this named literature protocol; not an independent laboratory reproduction. IDs identify records, not author-assigned physical batches.",
+    "missing_fields": [
+      "Starting batch identity, source-specific timing and a complete numerical sample history remain unreported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "partial_protocol"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original interactive evidence guide",
+      "url": "/murray-1993-method-1.html",
+      "relation": "Source context; shared figures do not establish recipe-specific sample links."
+    },
+    {
+      "label": "Chemical intuition",
+      "url": "/cdse.html#intuition",
+      "relation": "Separate literature interpretation, excluded from training inputs."
+    },
+    {
+      "label": "Complete original figure archive",
+      "url": "/murray-1993-characterization.html",
+      "relation": "All 15 main-article figures, sample-specific evidence and structural models. Figure-to-method assignments remain unresolved."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

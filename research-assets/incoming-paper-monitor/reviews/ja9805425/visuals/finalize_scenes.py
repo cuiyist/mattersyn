@@ -1,0 +1,23 @@
+from pathlib import Path
+p=Path(__file__).with_name('peng1998-protocol.mjs');s=p.read_text(encoding='utf8')
+def rep(old,new):
+ global s
+ assert s.count(old)==1,(old[:60],s.count(old));s=s.replace(old,new)
+rep("return v.value!=null?`${v.approximate?'≈':''}${v.value} ${unit}`", "return v.value!=null?`${/strictly less/.test(v.qualifier||'')?'<':''}${v.approximate?'≈':''}${v.value}${unit==='dimensionless'?'':' '+unit}`")
+rep("const rtype=r=>r.record_id.replace('peng-1998-','');", "const rtype=r=>r.record_id.replace('peng-1998-','');\nconst op=(r,id)=>r.operations.find(o=>o.id===id)||{};\nconst massRatio=r=>(r.stocks.find(s=>s.components?.every(c=>c.quantities?.mass_parts))?.components||[]).map(c=>c.quantities.mass_parts.value).join(' : ');")
+rep("inas?'Mass ratio · 1 : 1.1 : 2.8':'Mass ratio · 2 : 5 : 100'", "'Mass ratio · '+massRatio(r)")
+rep("[['temperature','Solution'],['mass','Charge'],['mass_concentration','InCl₃']]", "[['temperature','Solution'],['topo_mass','TOPO'],['top_mass','TOP'],['incl3_per_top_volume','InCl₃ / TOP']]")
+rep("+txt(171,159,'Cold feed · injection <0.1 s',17)", "+txt(171,159,'Cold feed · '+q(o,'injection_volume')+' · '+q(o,'injection_duration_upper_bound'),17)")
+rep("+txt(140,274,inas?'300 → 250 °C initially':'360 → 300 °C',21)", "+txt(140,272,'Initially '+q(op(r,'heat'),'temperature'),18)+txt(140,303,'After '+q(o,inas?'initial_post_injection_temperature':'post_injection_temperature'),18)")
+rep("conditions(o,[['temperature','Solution'],['duration','Interval']],462,175)", "conditions(o,[['temperature','Solution'],['growth_temperature','Solution'],['elapsed_time_before_reinjection','Elapsed'],['elapsed_time_to_next_injection','Next feed'],['next_injection_elapsed_time','Next feed']],462,168)+(inas&&o.id==='grow'?txt(462,230,'Growth: '+q(op(r,'recover'),'temperature'),17):'')")
+rep("function recover(o)", "function recover(o,r)")
+rep("'250 °C initially'", "q(op(r,'injection'),'initial_post_injection_temperature')+' initially'")
+rep("'260 °C growth'", "q(o,'temperature')+' growth'")
+rep("[['volume','Feed'],['elapsed_time','After first injection'],['time_from_first_injection','Elapsed']]", "[['injection_volume','Feed'],['elapsed_time_from_first_injection','Elapsed']]")
+rep("inas?'Aliquot volume unreported':'0.2 mL reaction aliquot'", "(q(o,'aliquot_volume')||'Unreported volume')+' aliquot'")
+rep("function precipitate()", "function precipitate(o,r)")
+rep("'0.2 mL aliquot'", "q(op(r,'withdraw'),'aliquot_volume')+' aliquot'")
+rep("txt(303,214,'2 mL',22)", "txt(303,214,q(o,'methanol_volume'),22)")
+rep("function adjust()", "function adjust(o)")
+rep("'0.09 ± 0.02'", "q(o,'optical_density')+' ± '+q(o,'optical_density_tolerance')")
+p.write_text(s,encoding='utf8')

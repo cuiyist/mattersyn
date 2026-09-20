@@ -1,0 +1,4 @@
+out['material_evidence_records']['CdTe']=[rid for rid in records if rid not in {P+'oxidation',P+'infrared'}]
+out['material_evidence_records']['MWNT']=[rid for rid in records if rid!=P+'free-nanocrystals']
+out['material_evidence_scope_notes']['CdTe']='CdTe as particles grown on an oxidized MWNT scaffold. This component contribution is not a standalone CdTe synthesis. Mixed analytical records retain explicitly distinct precursor, attached-particle, washing, comparator and model samples; precursor-only infrared is excluded.'
+out['material_evidence_scope_notes']['MWNT']='Nanotubes are the scaffold of the CdTe/MWNT growth route, not newly synthesized CNTs. Purchased pristine, aggressively oxidized and mild-control nanotubes retain distinct scopes. SI infrared belongs to the oxidized precursor; independent free-CdTe/no-tube comparison is excluded.'

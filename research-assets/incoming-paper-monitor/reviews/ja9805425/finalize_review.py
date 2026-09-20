@@ -1,0 +1,42 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json
+B=Path(__file__).resolve().parent;MON=B.parents[1];M=B.parents[3];S=M/'recipe-atlas'
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def write(p,d):p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+native=read(B/'native-publication.json');saved=native['saved_version'];dep=native['deployment'];archive=read(B/'archive-validation.json')
+assert dep['status']=='succeeded' and dep['url'] and dep['version_id']==saved['id'] and saved['version_number']==19
+assert saved['project_id']==dep['project_id']==archive['project_id']
+assert archive['status']=='passed' and archive['dataset_version']=='0.12.0'
+g=read(MON/'ledger.json')['groups']['10.1021_ja9805425'];fp=g['fingerprint']
+assert fp['generation']==g['generation']==2
+assert fp['bundle_sha256']=='cbb481cc439962882eb037b7bee2c8601a3327258a0b755becaf04fd155bd1af'
+assert set(fp['files'].values())=={'9ab487d6125bd30631b0acf02803e59b0a5bfc4524ae1b3f25d4e40e5e8ff98d','685498938cf9b25f92418fea546faac46d8774074715e0e29220eab649a1c580'}
+manifest=read(S/'dist/data/dataset-manifest.json');groups={r['group_id']for r in manifest['records']if r['record_id'].startswith('peng-1998-')};assert len(groups)==1
+write(B/'final-source-fingerprint.json',{'group_id':'10.1021_ja9805425',**fp})
+p={'status':'published','source_commit':saved['source']['commit_sha'],'site_project_id':saved['project_id'],'public_live_version':19,'dataset_version':'0.12.0','source_pushed':True,'archive':'recipe-atlas/.sites-runtime/site-v19.tar.gz','archive_sha256':archive['sha256'],'archive_storage':saved['archive_storage'],'version_id':saved['id'],'deployment_id':dep['id'],'deployment_status':dep['status'],'public_url':dep['url'],'published_at':dep['updated_at'],'review_scope':'supplied_main_and_matched_si','source_id':'peng1998','doi':'10.1021/ja9805425','records':12,'synthesis_routes':2,'controls':0,'supporting_procedures':4,'contextual_observations':6,'measurement_entries':159,'operations':28,'reader_evidence_items':119,'source_audit_units':160,'original_assets':11,'original_figures':5,'original_tables':2,'original_equations':2,'original_source_notes':2,'canonical_records_total':253,'material_hubs_total':23,'source_groups_total':18,'source_documents_unchanged':True,'source_generation':fp['generation'],'source_fingerprint_at':fp['created_at'],'bundle_sha256':fp['bundle_sha256'],'evaluation_group':next(iter(groups)),'independent_audit':['source-audit.json','canonical-records-audit.json','reader-source-audit.json','crop-source-audit.json','visual-source-audit.json','reader-assets/canonical-to-reader-audit.json','reader-assets/final-presentation-check.json'],'browser_checks':'browser-qa.json','build_checks':'build-validation.json','native_publication_evidence':'native-publication.json','material_url':dep['url']+'/material.html?id=inas-a2e691','cdse_url':dep['url']+'/cdse.html'}
+write(B/'publication-checkpoint.json',p)
+stages=read(B/'milestones.json');assert all(stages[k]['status']=='complete'for k in ['read','extract','audit','integrate'])
+stages['publish']={'status':'complete','evidence':[str(B/'publication-checkpoint.json')],'note':'Published within existing public MatterSyn Site; two main and four matched SI PDF pages fully reviewed.'};write(B/'milestones.json',stages)
+c=read(B/'checkpoint.json');c.update(checkpoint_at=datetime.now(timezone.utc).isoformat(),website_published=True,public_live_version=19,dataset_version='0.12.0',publication_checkpoint=str(B/'publication-checkpoint.json'),source_commit=p['source_commit'],public_url=p['public_url'],source_fingerprint_at=fp['created_at'],current_work_items=[{'label':k.capitalize(),'status':v['status'],'scope':v['note']}for k,v in stages.items()],next_action='Peng1998 supplied main/SI review closed. Continue oldest eligible existing local arrival with the existing monitor. Reopen on new or changed source/SI. Add new reviewed materials to the same MatterSyn periodic table and material pages.');write(B/'checkpoint.json',c)
+entry=f'''## 2026-09-19 — InAs and CdSe focusing added to existing MatterSyn
+
+Published version 19, dataset 0.12.0, commit {p['source_commit']} at {p['published_at']}. The user's standing reminder is fulfilled: new InAs appears on the existing periodic-table atlas, and the Peng1998 method is a normal method card on the existing CdSe page. URLs: {p['material_url']} and {p['cdse_url']}. Native publication proof: research-assets/incoming-paper-monitor/reviews/ja9805425/publication-checkpoint.json. CdSe method discovery no longer uses a Nakonechnyi-only prefix whitelist; every unrepresented, source-reviewed synthesis route is included, preserving the existing cards.
+
+Peng, Wickham and Alivisatos, Kinetics of II-VI and III-V Colloidal Semiconductor Nanocrystal Growth: Focusing of Size Distributions, JACS 1998,120,5343–5344, DOI10.1021/ja9805425: all two main pages and four matched SI PDF pages (one cover, three scientific) read and visually reviewed. Incoming and legacy copies are byte-identical for each document. Source generation2 unchanged at final fingerprint {fp['created_at']}; main/SI hashes retained in source-identity and final-source-fingerprint files.
+
+Twelve audited records = two hot-injection routes, four supporting procedures and six contextual observations. Includes 28 operations,159 measurement entries,119 reader items covering160 source units, and11 original crops: four main figures, SI spectra, two calibration tables, two equations and two method endnotes. All original assets open in reader dialogs. Molecular/stock/product representations, stage-specific illustrations, actual canonical-to-reader mappings, periodic-table discovery, CdSe card navigation, injection quantities, source search and mobile layout verified. No measured phase, atomic coordinates or unsupported CIF invented.
+
+Scientific boundaries: sequential feeds belong to their original growth run; CdSe cold feed2:5:100 Se:CdMe2:TBP mass,2.4mL<0.1s with360→300°C drop and slow0.8mL reinjection at190min; InAs1mL<0.1s into2gTOP300°C,250°C drop then260°C growth,0.5mL at23min and0.8mL at158min. InCl3 stock0.33g per mL TOP at260°C/Ar then cooling/drybox has no reported storage temperature. Do not assign this Ar atmosphere to InAs growth. CdSe aliquot methanol precipitation/optical OD conditions do not transfer to InAs. Distinct InAs absorption and PL sample-time sets preserved; PL analysis uses only high-energy half because of reabsorption. Sixteen CdSe and20 InAs calibration rows are prior optical/TEM reference points, not current synthesized batches. The8.5nmCdSe TEM specimen remains separate from smaller kinetic trajectory sizes. Gibbs–Thomson/diffusion equations are author models and control strategy is outlook.
+
+Schema1.3.0 supports strict one-sided bounds. The<0.1s injection limit is maximum0.1 with maximum_exclusive=true and value=null, never an exact0.1s. Shared browser quantity rendering and task export retain bounds; four targeted bound tests passed. Calibration rows and unjoined TEM do not create recipe outcome labels; all12Peng records remain in evaluation group {p['evaluation_group']}.
+
+Atlas totals:253 records=53routes+14controls+64procedures+22observations+100benchmark rows.23hubs=17direct systems+6components;18source groups=17literature+onebenchmark. Formal main-only reviews:7/56pages; matched-main/SI reviews:6/80PDFpages. Training exports:53precursor,69partial-protocol,6size-conditioned,0exact-structure,0success,95optical entries. These counts are not independent experiments or full-corpus completion. All five milestones closed for this supplied bundle; continue existing five-minute heartbeat oldest local arrival first, no downloads, preserve CdSe quality, same existing website. Future chatbot/DFT/theory tasks remain deferred.
+
+'''
+memory=M/'MEMORY.md';old=memory.read_text(encoding='utf-8')
+if not old.startswith(entry.splitlines()[0]):memory.write_text(entry+old,encoding='utf-8')
+skill=M/'skills/mattersyn-paper-to-site/references/incoming-corpus.md';lessons=(B/'workflow-lessons.md').read_text(encoding='utf-8');old=skill.read_text(encoding='utf-8')
+if lessons not in old:skill.write_text(old+'\n\n'+lessons+'\n',encoding='utf-8')
+q=MON/'build_queue_report.py';q.write_text(q.read_text(encoding='utf-8').replace('reviews/la980800b/publication-checkpoint.json','reviews/ja9805425/publication-checkpoint.json'),encoding='utf-8')
+print('Saved native publication proof, full supplied main/SI closure, memory and workflow lessons.')

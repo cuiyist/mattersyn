@@ -1,0 +1,2008 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "norberg-2004-magnetism",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Norberg et al. (2004) · Colloid and films A–C magnetic behavior",
+  "material": {
+    "formula": "Mn:ZnO",
+    "family": "Mn-doped ZnO, surface controls and nanocrystalline films",
+    "elements": [
+      "Mn",
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "Mn:ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "SQUID magnetometry, residual-paramagnetism analysis and EPR",
+  "sources": [
+    {
+      "id": "norberg2004",
+      "doi": "10.1021/ja048427j",
+      "title": "Synthesis of Colloidal Mn2+:ZnO Quantum Dots and High-TC Ferromagnetic Nanocrystalline Thin Films",
+      "authors": "Nick S. Norberg; Kevin R. Kittilstved; James E. Amonette; Ravi K. Kukkadapu; Dana A. Schwartz; Daniel R. Gamelin",
+      "year": 2004,
+      "url": "https://doi.org/10.1021/ja048427j",
+      "main_status": "All 12 supplied main pages text-read and visually inspected; independent source and canonical scientific audits passed. Preserved source conflicts and missing fields remain explicit.",
+      "si_status": "Matched four-page SI; all supplied pages text-read and visually inspected in passed independent full-source audit.",
+      "reuse_status": "Private factual extraction with original locators. No public rights or figure reuse permission inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "norberg2004",
+    "recipe_family": "norberg2004-acetate-hydrolysis-mn-zno",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 3 (printed 9389), II.B first paragraph"
+        }
+      ],
+      "note": "Procedure, specimen, model or reference context; not an independent target-synthesis experiment."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main pp. 9387–9398 and matched SI pp. S-1–S-4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main pp. 9387–9398 and matched SI pp. S-1–S-4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main pp. 9387–9398 and matched SI pp. S-1–S-4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "input-acquire-magnetism",
+      "name": "magnetic specimen set",
+      "formula": "Mn:ZnO",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-defined starting specimen/state; no additional preparation quantities or independent batch/replicate inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-8"
+        }
+      ]
+    },
+    {
+      "id": "input-zfc-series",
+      "name": "films a b",
+      "formula": "Mn:ZnO",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-defined starting specimen/state; no additional preparation quantities or independent batch/replicate inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-9"
+        }
+      ]
+    },
+    {
+      "id": "input-film-epr",
+      "name": "film a",
+      "formula": "Mn:ZnO",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-defined starting specimen/state; no additional preparation quantities or independent batch/replicate inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-10"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "acquire-magnetism-state",
+      "name": "Acquire magnetism — source state",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "input-acquire-magnetism"
+      ]
+    },
+    {
+      "id": "zfc-series-state",
+      "name": "Zfc series — source state",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "input-zfc-series"
+      ]
+    },
+    {
+      "id": "film-epr-state",
+      "name": "Film epr — source state",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "input-film-epr"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "norberg-2004-acquire-magnetism",
+      "action": "acquire_magnetism",
+      "label": "Acquire magnetism",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "input-acquire-magnetism"
+      ],
+      "outputs": [
+        "acquire-magnetism-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate colloid powder and films A–C measured by SQUID. Preserve temperature, field and model-specific contexts in each reported measurement.",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-8"
+        }
+      ]
+    },
+    {
+      "id": "norberg-2004-zfc-series",
+      "action": "zfc_series",
+      "label": "Zfc series",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "input-zfc-series"
+      ],
+      "outputs": [
+        "zfc-series-state"
+      ],
+      "parameters": {
+        "measurement_field": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Oe",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source unit: films-a-b. Sample scope: films-a-b. Original source status: reported.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "norberg2004",
+              "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-9"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-9"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "ZFC series for films A and B at 80 Oe; no transition in 5–350 K. This is not a universal impurity-detection limit.",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-9"
+        }
+      ]
+    },
+    {
+      "id": "norberg-2004-film-epr",
+      "action": "film_epr",
+      "label": "Film epr",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "input-film-epr"
+      ],
+      "outputs": [
+        "film-epr-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-10"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-10"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Film A and its precursor have separate spectra. New sharp g = 2.00 resonance has tentative radical/redox interpretation, not measured carrier polarity or nitrogen content.",
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-10"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cleaned-0.20pct",
+      "source_sample_label": "cleaned 0.20pct",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Zn0.998Mn0.002O",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b/continuationp4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b–d/Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c caption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d image annotation"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 9 (printed 9395), IV.F"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b/continuationp4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b–d/Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c caption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d image annotation"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 9 (printed 9395), IV.F"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b/continuationp4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b–d/Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c caption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d image annotation"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 9 (printed 9395), IV.F"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), Results Figure1b/continuationp4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b–d/Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3c caption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d image annotation"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3d"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 9 (printed 9395), IV.F"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Explicit 0.20 ± 0.01% Mn precursor/material identity. Nominal formula is source reported, not refined occupancies or exact atomic coordinates."
+      ]
+    },
+    {
+      "sample_id": "cleaned-0.20pct-powder",
+      "source_sample_label": "cleaned 0.20pct powder",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Mn:ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 8 (printed 9394), IV.D"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source-linked specimen context. Measurements at multiple temperatures/fields are not additional synthesis replicates."
+      ]
+    },
+    {
+      "sample_id": "film-a",
+      "source_sample_label": "film a",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Mn:ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results continuationFigure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H/Brillouinfit"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results continuationFigure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H/Brillouinfit"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results continuationFigure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H/Brillouinfit"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Figure3a"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 4 (printed 9390), Results continuationFigure1b"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H/Brillouinfit"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9c"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source-linked specimen context. Measurements at multiple temperatures/fields are not additional synthesis replicates."
+      ]
+    },
+    {
+      "sample_id": "film-b",
+      "source_sample_label": "film b",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Mn:ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source-linked specimen context. Measurements at multiple temperatures/fields are not additional synthesis replicates."
+      ]
+    },
+    {
+      "sample_id": "film-c",
+      "source_sample_label": "film c",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Mn:ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), TableS4"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 3 (printed 9389), II.B"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source-linked specimen context. Measurements at multiple temperatures/fields are not additional synthesis replicates."
+      ]
+    },
+    {
+      "sample_id": "films-a-b-c",
+      "source_sample_label": "films a b c",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results continuationfromp5"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 1 (printed 9387), Abstract; Results/IV.H/SIFigureS2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results continuationfromp5"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 1 (printed 9387), Abstract; Results/IV.H/SIFigureS2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results continuationfromp5"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 1 (printed 9387), Abstract; Results/IV.H/SIFigureS2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results continuationfromp5"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 1 (printed 9387), Abstract; Results/IV.H/SIFigureS2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source specimen or context, not an independently enumerated synthesis replicate."
+      ]
+    },
+    {
+      "sample_id": "films-a-b-c-collective",
+      "source_sample_label": "films a b c collective",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source specimen or context, not an independently enumerated synthesis replicate."
+      ]
+    },
+    {
+      "sample_id": "films-a-b",
+      "source_sample_label": "films a b",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+          },
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source specimen or context, not an independently enumerated synthesis replicate."
+      ]
+    },
+    {
+      "sample_id": "source-context",
+      "source_sample_label": "source context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-figures_tables_schemes-figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-figures_tables_schemes-figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-figures_tables_schemes-figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Complete supplied main (12 pages) and matched SI (4 pages); source inventory scope inventory-figures_tables_schemes-figure-8"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source specimen or context, not an independently enumerated synthesis replicate."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "norberg2004-film-remanence",
+      "sample_id": "films-a-b-c",
+      "property": "mean_relative_remanence_mr_ms_at_300_k",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 0.12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " Reported uncertainty: {\"value\":0.01,\"definition\":\"sourceaverageerrorunspecified\"}. It is not reclassified as a standard deviation or confidence interval.",
+        "basis": "Source unit: films-a-b-c. Sample scope: films-a-b-c. Original source status: reported. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results continuationfromp5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit films-a-b-c; source sample scope films-a-b-c.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), Results continuationfromp5"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-film-coercivity",
+      "sample_id": "films-a-b-c",
+      "property": "mean_coercivity_at_300_k",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 92,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Oe",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " Reported uncertainty: {\"value\":7,\"unit\":\"Oe\",\"definition\":\"sourceaverageerrorunspecified\"}. It is not reclassified as a standard deviation or confidence interval.",
+        "basis": "Source unit: films-a-b-c. Sample scope: films-a-b-c. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit films-a-b-c; source sample scope films-a-b-c.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), Results"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-tc-bound",
+      "sample_id": "films-a-b-c",
+      "property": "curie_temperature_lower_bound",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": null,
+        "minimum": 350,
+        "maximum": null,
+        "unit": "K",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Tc >350 K; the instrument ceiling was 350 K, so no exact transition temperature was measured.",
+        "basis": "Source unit: films-a-b-c. Sample scope: films-a-b-c. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 1 (printed 9387), Abstract; Results/IV.H/SIFigureS2"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "Source unit films-a-b-c; source sample scope films-a-b-c.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 1 (printed 9387), Abstract; Results/IV.H/SIFigureS2"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-paramagnetic-ratio",
+      "sample_id": "film-a",
+      "property": "residual_paramagnetic_mn_fraction",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 0.64,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-a. Sample scope: film-a. Original source status: author_fit. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H/Brillouinfit"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit film-a; source sample scope film-a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H/Brillouinfit"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-transition-fraction",
+      "sample_id": "film-a",
+      "property": "non_paramagnetic_mn_fraction",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 36,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-a. Sample scope: film-a. Original source status: author_derived. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit film-a; source sample scope film-a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lower-ferro-a",
+      "sample_id": "film-a",
+      "property": "lower_bound_on_the_ferromagnetically_aligned_mn_fraction",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": null,
+        "minimum": 13,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Assumes a maximum of 5 μB per Mn; this is a lower bound rather than an exact ferromagnetic fraction.",
+        "basis": "Source unit: film-a. Sample scope: film-a. Original source status: author_model_bound. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false
+      },
+      "conditions": "Source unit film-a; source sample scope film-a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lower-ferro-b",
+      "sample_id": "film-b",
+      "property": "lower_bound_on_the_ferromagnetically_aligned_mn_fraction",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": null,
+        "minimum": 24,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-b. Sample scope: film-b. Original source status: author_model_bound. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false
+      },
+      "conditions": "Source unit film-b; source sample scope film-b.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-lower-ferro-c",
+      "sample_id": "film-c",
+      "property": "lower_bound_on_the_ferromagnetically_aligned_mn_fraction",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": null,
+        "minimum": 27,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-c. Sample scope: film-c. Original source status: author_model_bound. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false
+      },
+      "conditions": "Source unit film-c; source sample scope film-c.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-domain-spin-bound",
+      "sample_id": "films-a-b-c-collective",
+      "property": "lower_bound_on_effective_ferromagnetic_domain_spin",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": null,
+        "minimum": 800,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "The average effective domain spin exceeds 800, estimated from the 300 K saturation curvature in Figure 8. The source discusses the thin-film domains collectively and does not assign a separate film-A value. This is not an individual atomic spin or a film-specific outcome.",
+        "basis": "Source unit: figure-8. Sample scope: Films A–C collectively / individual film not specified. Original source status: author_estimated. Author fit, estimate, model or interpretation; not recomputed here and not converted into a direct measurement. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "Source unit figure-8; source sample scope Films A–C collectively / individual film not specified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-radical-resonance",
+      "sample_id": "film-a",
+      "property": "field_of_the_new_sharp_epr_resonance",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 3362,
+        "minimum": null,
+        "maximum": null,
+        "unit": "G",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-a. Sample scope: film-a. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit film-a; source sample scope film-a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-radical-g",
+      "sample_id": "film-a",
+      "property": "g_of_the_new_sharp_epr_resonance",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-a. Sample scope: film-a. Original source status: reported. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit film-a; source sample scope film-a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), ResultsFigure10"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-zfc-field",
+      "sample_id": "films-a-b",
+      "property": "zfc_measurement_field",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 80,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Oe",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: films-a-b. Sample scope: films-a-b. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit films-a-b; source sample scope films-a-b.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), Figure9acaption"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-paramag-probe-field",
+      "sample_id": "film-a",
+      "property": "applied_field_for_residual_magnetization_temperature_series",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "T",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source unit: film-a. Sample scope: film-a. Original source status: reported.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), Figure9c"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source unit film-a; source sample scope film-a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), Figure9c"
+        }
+      ]
+    },
+    {
+      "id": "norberg2004-zfc-transition-absence",
+      "sample_id": "films-a-b",
+      "property": "zfc_magnetic_phase_transitions",
+      "technique": "Source-reported quantity, outcome or analysis",
+      "value": {
+        "value": "No transition observed in the 5–350 K window",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 11 (printed 9397), IV.H"
+          }
+        ],
+        "note": "Source unit: films-a-b. Sample scope: films-a-b. Original source status: reported. Empty unit means no explicit unit is supplied for this member; it does not assert dimensionality. Authors argue against MnO/Mn3O4 impurities, whose cited nanocrystals show transition maxima below ca. 45 K; no universal impurity detection limit is established."
+      },
+      "conditions": "Source unit films-a-b; source sample scope films-a-b.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 11 (printed 9397), IV.H"
+        }
+      ]
+    },
+    {
+      "id": "inventory-figures-tables-schemes-figure-8",
+      "sample_id": "source-context",
+      "property": "source_inventory_figures_tables_schemes",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"figure-8\",\"kind\":\"figure\",\"title\":\"Magnetization of colloids and films\",\"sample_ids\":[\"cleaned-0.20pct-powder\",\"film-a\",\"film-b\",\"film-c\"],\"evidence\":[{\"source_id\":\"norberg2004-main\",\"source_role\":\"main\",\"source_sha256\":\"ed5e5f4cc0db81c73fd9863922471bfd3d641ecd2a2793d4ea654e1a6d1550f3\",\"pdf_page\":6,\"printed_page\":\"9392\",\"locator\":\"figure-8\"}],\"asset_id\":\"figure-8\",\"disposition\":\"original_readable_asset_and_semantic_extraction\",\"numeric_trace_status\":\"not_digitized\",\"notes\":\"Colloidsparamagnetic,filmsferromagneticwithresidualparamagnetism.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-8"
+        }
+      ]
+    },
+    {
+      "id": "figure-8",
+      "sample_id": "source-context",
+      "property": "original_figure_scope",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "Magnetization of colloids and films. Colloidsparamagnetic,filmsferromagneticwithresidualparamagnetism.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-8"
+          }
+        ],
+        "note": "Original asset ID figure-8. Numeric plot traces remain undigitized; measured, reference and model panels retain their individual sample scopes."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-8"
+        }
+      ]
+    },
+    {
+      "id": "inventory-figures-tables-schemes-figure-9",
+      "sample_id": "source-context",
+      "property": "source_inventory_figures_tables_schemes",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"figure-9\",\"kind\":\"figure\",\"title\":\"ZFC magnetization and paramagnetic residuals\",\"sample_ids\":[\"film-a\",\"film-b\",\"cleaned-0.20pct-powder\"],\"evidence\":[{\"source_id\":\"norberg2004-main\",\"source_role\":\"main\",\"source_sha256\":\"ed5e5f4cc0db81c73fd9863922471bfd3d641ecd2a2793d4ea654e1a6d1550f3\",\"pdf_page\":6,\"printed_page\":\"9392\",\"locator\":\"figure-9\"}],\"asset_id\":\"figure-9\",\"disposition\":\"original_readable_asset_and_semantic_extraction\",\"numeric_trace_status\":\"not_digitized\",\"notes\":\"PanelZFC80Oe;5Kfieldseriesand1Ttemperatureseries;solidcurvesBrillouinmodel;errorbarsMncontentuncertainty.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-9"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-9"
+        }
+      ]
+    },
+    {
+      "id": "figure-9",
+      "sample_id": "source-context",
+      "property": "original_figure_scope",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "ZFC magnetization and paramagnetic residuals. PanelZFC80Oe;5Kfieldseriesand1Ttemperatureseries;solidcurvesBrillouinmodel;errorbarsMncontentuncertainty.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-9"
+          }
+        ],
+        "note": "Original asset ID figure-9. Numeric plot traces remain undigitized; measured, reference and model panels retain their individual sample scopes."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-9"
+        }
+      ]
+    },
+    {
+      "id": "inventory-figures-tables-schemes-figure-10",
+      "sample_id": "source-context",
+      "property": "source_inventory_figures_tables_schemes",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"figure-10\",\"kind\":\"figure\",\"title\":\"EPR of the colloid and ferromagnetic film\",\"sample_ids\":[\"cleaned-0.20pct\",\"film-a\"],\"evidence\":[{\"source_id\":\"norberg2004-main\",\"source_role\":\"main\",\"source_sha256\":\"ed5e5f4cc0db81c73fd9863922471bfd3d641ecd2a2793d4ea654e1a6d1550f3\",\"pdf_page\":6,\"printed_page\":\"9392\",\"locator\":\"figure-10\"}],\"asset_id\":\"figure-10\",\"disposition\":\"original_readable_asset_and_semantic_extraction\",\"numeric_trace_status\":\"not_digitized\",\"notes\":\"FMRbroadfilmresonanceplusparamagneticMnandnewg2.00line.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-10"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-10"
+        }
+      ]
+    },
+    {
+      "id": "figure-10",
+      "sample_id": "source-context",
+      "property": "original_figure_scope",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "EPR of the colloid and ferromagnetic film. FMRbroadfilmresonanceplusparamagneticMnandnewg2.00line.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 6 (printed 9392), figure-10"
+          }
+        ],
+        "note": "Original asset ID figure-10. Numeric plot traces remain undigitized; measured, reference and model panels retain their individual sample scopes."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 6 (printed 9392), figure-10"
+        }
+      ]
+    },
+    {
+      "id": "inventory-figures-tables-schemes-figure-s2",
+      "sample_id": "source-context",
+      "property": "source_inventory_figures_tables_schemes",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"figure-s2\",\"kind\":\"figure\",\"title\":\"Temperature dependence of hysteresis parameters\",\"sample_ids\":[\"film-a\",\"film-b\",\"film-c\"],\"evidence\":[{\"source_id\":\"norberg2004-si\",\"source_role\":\"si\",\"source_sha256\":\"b357afa581c9d2e1e15b6dfc6520c4a81542b8d9d24fe6c1e590dd0a17f47dfc\",\"pdf_page\":4,\"printed_page\":\"S-4\",\"locator\":\"figure-s2\"}],\"asset_id\":\"figure-s2\",\"disposition\":\"original_readable_asset_and_semantic_extraction\",\"numeric_trace_status\":\"not_digitized\",\"notes\":\"Ms,MR/MS,Hc;originalpointsnotdigitized;Tcnotlocatedwithinrange.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), figure-s2"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "SI PDF p. 4 (printed S-4), figure-s2"
+        }
+      ]
+    },
+    {
+      "id": "figure-s2",
+      "sample_id": "source-context",
+      "property": "original_figure_scope",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "Temperature dependence of hysteresis parameters. Ms,MR/MS,Hc;originalpointsnotdigitized;Tcnotlocatedwithinrange.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "SI PDF p. 4 (printed S-4), figure-s2"
+          }
+        ],
+        "note": "Original asset ID figure-s2. Numeric plot traces remain undigitized; measured, reference and model panels retain their individual sample scopes."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "SI PDF p. 4 (printed S-4), figure-s2"
+        }
+      ]
+    },
+    {
+      "id": "inventory-equations-equation-4",
+      "sample_id": "source-context",
+      "property": "source_inventory_equations",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "{\"id\":\"equation-4\",\"page\":10,\"role\":\"main\",\"expression\":\"M = (N g μB/2){(2S+1)coth[(2S+1)gμBH/(2kT)] − coth[gμBH/(2kT)]}\",\"classification\":\"Brillouinmodel\",\"meaning\":\"Brillouin magnetization. Nanocrystal data use S=5/2, g=1.999 and N from ICP with no fit; film A residual fits N only.\",\"asset\":\"equation-4\",\"evidence\":[{\"source_id\":\"norberg2004-main\",\"source_role\":\"main\",\"source_sha256\":\"ed5e5f4cc0db81c73fd9863922471bfd3d641ecd2a2793d4ea654e1a6d1550f3\",\"pdf_page\":10,\"printed_page\":\"9396\",\"locator\":\"equation-4\"}]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), equation-4"
+          }
+        ],
+        "note": "Exact source-inventory payload. Classification and source scope apply to all fields. This is not a measured target or an additional experimental record."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 10 (printed 9396), equation-4"
+        }
+      ]
+    },
+    {
+      "id": "equation-4",
+      "sample_id": "source-context",
+      "property": "source_equation",
+      "technique": "Source text / original figure context",
+      "value": {
+        "value": "M = (N g μB/2){(2S+1)coth[(2S+1)gμBH/(2kT)] − coth[gμBH/(2kT)]}",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "norberg2004",
+            "locator": "Main PDF p. 10 (printed 9396), equation-4"
+          }
+        ],
+        "note": "Brillouinmodel. Brillouin magnetization. Nanocrystal data use S=5/2, g=1.999 and N from ICP with no fit; film A residual fits N only."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "norberg2004",
+          "locator": "Main PDF p. 10 (printed 9396), equation-4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All twelve supplied main pages and all four content-matched SI pages completely read and visually inspected; independent source, canonical, reader and private visual audits passed. Absolute recipe scale and multiple workup conditions remain unreported. Keep the 0.02% feed EPR series, 0.20 +/- 0.01% measured colloids, 1.1% TOPO/MCD specimen and optical/model contexts separate. Preserve SI statistical-notation and Figure S3/Table S4 D/F conflicts. Films A-C preparation does not supply missing D-F coat counts or annealing conditions. An external undoped ZnO cell is a reference, not measured Mn:ZnO coordinates.",
+    "missing_fields": [
+      "g-absolute-scale (Absolute recipe scale): No absolute reagent masses, stock/reaction volumes, yield, addition rate, wash volumes/cycle counts, separation force/time, or quantified initial capping stage are supplied. Retain partial protocols; do not call these fully quantified recipes or complete laboratory SOPs.",
+      "g-tmah-formula (TMAH formula discrepancy): Materials prints N(CH4)4OH·5H2O, whereas sample preparation prints N(Me)4OH·5H2O. Normalize the named tetramethylammonium identity while retaining the printed discrepancy.",
+      "g-base (Base amount and clouding): The titration begins to cloud beyond ca. 1.65 equivalents, while the common preparation uses 1.7 equivalents. Preserve the separate experimental scopes.",
+      "g-topo (TOPO route): The alternative procedure cites reference 32 without restating its full conditions. That referenced full paper was not inspected for this extraction. Keep the alternative partial; do not inherit the dodecylamine treatment conditions.",
+      "g-mn-feed (Feed and measured dopant content): Only the 0.20±0.01% product is explicitly linked to a 0.50% feed. The EPR series uses a 0.02% feed/nominal label; optical and MCD samples do not supply their initial feed. Retain separate sample identities and mask unavailable feed/outcome fields.",
+      "g-s4-count (SI table count): The main article announces three SI tables; the matched supplied SI contains four. Inventory all four, including the six-film Table S4.",
+      "g-poisson (SI statistical notation): The printed variables and λ definition mix concentration with mean dopants per particle. The reported means are 7.9 and 79, not fractions 0.0013 and 0.013. Preserve the equations, original figure and author-reported means as a model with a notation gap; do not silently repair it.",
+      "g-structure (Atomic structure and SAED): Wurtzite is supported by XRD and HRTEM. No experimental CIF, atomic coordinates, refined site occupancies, numerical lattice constants, or SAED pattern appear in the inspected main/SI. Allow phase/morphology evidence; exclude an exact experimental atomic-structure/recipe label.",
+      "g-film-df (Films D–F preparation): The SI gives film masses and magnetization, but omits coat counts, individual parent batches, and independently stated annealing conditions. Retain partial outcomes; do not assign 20 or 40 coats by proximity.",
+      "g-film-mass (Film masses): Main-text A–C masses are 0.59/0.24/0.28 mg; SI values are 593/236/279 μg. Both are retained as source reporting, consistent with rounding rather than separate replicates.",
+      "g-si-curve-table (Figure S3 / Table S4 conflict): Figure S3b visually orders mass-normalized high-field curves D > E > F, whereas Table S4 lists D = 0.038, E = 0.059, F = 0.076 emu/g. D/F identities or values are inconsistent between representations. Preserve the figure and table separately. Do not swap labels or assign resolved D/F outcome training targets. Independent audit must assess this conflict.",
+      "g-raw-curves (Raw plot data): Numerical curves and histogram counts were not supplied as raw arrays and have not been digitized. Readable original plots plus explicit scalar results are retained; do not claim raw-data recovery.",
+      "g-interpretation (Mechanistic evidence): Measured pH, carrier polarity/density, nitrogen content, and a quantitative impurity-detection limit are absent. Keep mechanistic hypotheses separate from measurements. Tc >350 K remains a lower bound.",
+      "g-other-techniques (Other characterization): No Raman, SAED, sample-specific DFT calculation, refined atomic structure, or electrical carrier-transport measurement is reported in these 16 pages. The actual additional property techniques are MCD, EPR and magnetometry; do not invent missing techniques."
+    ],
+    "conflicts": [
+      "g-tmah-formula: Materials prints N(CH4)4OH·5H2O, whereas sample preparation prints N(Me)4OH·5H2O. Normalize the named tetramethylammonium identity while retaining the printed discrepancy.",
+      "g-base: The titration begins to cloud beyond ca. 1.65 equivalents, while the common preparation uses 1.7 equivalents. Preserve the separate experimental scopes.",
+      "g-s4-count: The main article announces three SI tables; the matched supplied SI contains four. Inventory all four, including the six-film Table S4.",
+      "g-poisson: The printed variables and λ definition mix concentration with mean dopants per particle. The reported means are 7.9 and 79, not fractions 0.0013 and 0.013. Preserve the equations, original figure and author-reported means as a model with a notation gap; do not silently repair it.",
+      "g-si-curve-table: Figure S3b visually orders mass-normalized high-field curves D > E > F, whereas Table S4 lists D = 0.038, E = 0.059, F = 0.076 emu/g. D/F identities or values are inconsistent between representations. Preserve the figure and table separately. Do not swap labels or assign resolved D/F outcome training targets. Independent audit must assess this conflict."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Magnetization of colloids and films",
+      "url": "../assets/figures/norberg2004/figure-8.png",
+      "relation": "Existing private original evidence asset figure-8; SHA-256 212a1d2917a0b5ce8a5b444844eb010fd584993ef1a334ca837fd89e32f98321. Relative to this private canonical-drafts folder. Reader integration must establish the eventual public evidence route; this is not an atomic-structure download."
+    },
+    {
+      "label": "ZFC magnetization and paramagnetic residuals",
+      "url": "../assets/figures/norberg2004/figure-9.png",
+      "relation": "Existing private original evidence asset figure-9; SHA-256 101c796eca81dfc3f80d01009967be45d630ea56b1a0f21e7a9949ef9f002b4e. Relative to this private canonical-drafts folder. Reader integration must establish the eventual public evidence route; this is not an atomic-structure download."
+    },
+    {
+      "label": "EPR of the colloid and ferromagnetic film",
+      "url": "../assets/figures/norberg2004/figure-10.png",
+      "relation": "Existing private original evidence asset figure-10; SHA-256 dad7e4f7bef7381b1c6442436b2192c67063ad12f4fe385fd860f9a3a969446a. Relative to this private canonical-drafts folder. Reader integration must establish the eventual public evidence route; this is not an atomic-structure download."
+    },
+    {
+      "label": "Temperature dependence of hysteresis parameters",
+      "url": "../assets/figures/norberg2004/figure-s2.png",
+      "relation": "Existing private original evidence asset figure-s2; SHA-256 642d2d30a8e29b05bb2f2b21a7599149450dabd5c64b418a6e822fbcba0f2a4c. Relative to this private canonical-drafts folder. Reader integration must establish the eventual public evidence route; this is not an atomic-structure download."
+    },
+    {
+      "label": "Common Mn:ZnO hydrolysis preparation",
+      "url": "../records/norberg-2004-hydrolysis.html",
+      "relation": "Same source family, not a claim of identical specimen, exact batch or complete quantitative preparation. Source group is shared to prevent training/test leakage."
+    }
+  ],
+  "collection": "reviewed_literature"
+}

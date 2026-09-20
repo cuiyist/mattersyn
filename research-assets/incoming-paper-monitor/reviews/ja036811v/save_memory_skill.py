@@ -1,0 +1,40 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+B=Path(__file__).resolve().parent;M=B.parents[3];S=M/'recipe-atlas'
+def read(p):return json.loads(p.read_text(encoding='utf8'))
+p=read(B/'publication-checkpoint.json');assert p['deployment_status']=='succeeded';inv=read(S/'data/inventory-summary.json');s=inv['summary']
+entry=f'''## 2026-09-19 — Pure and magnetic doped ZnO added to the existing MatterSyn atlas
+
+Published the SAME existing public MatterSyn Site version {p['public_live_version']}, dataset {p['dataset_version']}, commit {p['source_commit']} at {p['published_at']}. User reminder honored: newly reviewed materials appear in the existing periodic-table atlas. Hubs: {json.dumps(p['material_urls'],ensure_ascii=False)}. Reader: {p['paper_url']}. Proof: research-assets/incoming-paper-monitor/reviews/ja036811v/publication-checkpoint.json.
+
+Schwartz, Norberg, Nguyen, Parker and Gamelin, Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals, JACS 2003,125(43),13205–13218, DOI10.1021/ja036811v. All14 main+4 matched SI pages text-read and visually inspected. Main SHA25648bb96493905290ae44c58f2346c6313677041e68ec5a9d50bdc428011c2be9f; SI SHA256aba65f3549f74271d5d716e49c343977a43891fb9bd58dac76b0bb3bb59d08ef. Four local copies/two unique documents across both folders; final generation2 unchanged. SI identity uses all six main declarations and unique matching contents plus author metadata; supplement lacks standalone full title/byline. All51 references/notes retained; cited full texts not independently inspected. Changed or late evidence reopens scope.
+
+Retained {p['records']} canonical records: {p['synthesis_routes']} synthesis routes, {p['supporting_procedures']} supporting procedures and {p['contextual_observations']} observations, {p['operations']} operations and {p['measurement_entries']} measurement entries. Reader {p['reader_evidence_items']} items covers {p['source_audit_units']} source units, with {p['typed_facts']} typed facts. All11 main figures+6 SI figures, two tables, Scheme1, ten numbered equation groups (13 components) and source excerpts retained: {p['original_assets']} assets. Original electron-diffraction images appear in main Figures2/5 and SI S3. Source says XRD performed but supplies no original XRD trace. Chemical/protocol/reader/canonical/binding audits and actual integrated/runtime/browser/build checks passed. All publication evidence is private review sidecars, not inferred from indexing.
+
+Scientific boundaries: hydrated Zn acetate, Co acetate, Ni perchlorate and TMAOH identities preserved; room-temperature DMSO/ethanolic-base synthesis with constant total metal concentration. Nominal dopant feed does not imply measured incorporation.30mL0.552Mbase into90mL0.101Mmetal stock at~2mL/min is the typical framework; separate microvolume experiments print0.554M and0.6/0.66equiv. Source conflicts retained. Ethyl acetate OR heptane precipitation and DMSO OR ethanol redispersion are alternatives, not mandatory co-additions. Optional~10mg zinc acetate clarity additive has unspecified hydration. TOPO processing includes excess Zn removal before dodecylamine, ethanol washing, repeated toluene/ethanol purification,180°C at least30min, cooling below80°C, precipitation/washing and nonpolar redispersion with1mg extraTOPO. Technical TOPO has unidentified phosphonic-acid impurities; pure component structure does not specify full reagent or surface-ligand composition.
+
+Separate sample scopes: pure ZnO TEM3.8±0.6nm,~5%Co TEM2.9±0.3nm, optical1.7%Co5nm,1.5%Ni4nm,3.6%Co aggregates, deliberately surface-bound Co cleaning control, and cited bulk/ICS comparisons. Aggregate size4.9/5.0nm, spectral probe energies, term assignments and charge-transfer wording conflicts remain explicit. Magnetic300K hysteresis andTC>350K lowerbound apply to aggregates, not isolated colloids. Exchange constants, domain sizes, carrier mechanism, optical electronegativity and mean-field results retain author-derived/model/cited status. SI S6 high-energy rise belongs to toluene. No invented raw arrays, refined dopant occupancies or surface atomic coordinates. Existing COD9004178 undoped ZnO bulk unit-cell/CIF is explicitly independent host comparison: a3.2494,c5.2038Å versus cited bulk3.2495/5.2067Å in this paper, never relabeled a measured Co/Ni sample. Shared DMSO display metadata was neutralized without changing graph or coordinates; previous paper-specific provenance retained privately in registry provenance.
+
+Actual reviewed subset now {s['canonical_records']} canonical records, {s['synthesis_route_variant_records']} synthesis routes, {s['public_material_hubs']} material hubs and {s['total_canonical_source_groups']} source groups. Training eligibility: {json.dumps(inv['training_eligibility'])}. These are not independent-experiment counts or whole-corpus completion. Continue saved oldest arrival across both local folders, one paper end-to-end, no downloads. Existing heartbeat remains active; future chatbot, DFT tooling and broader theory comparisons deferred.
+
+'''
+mem=M/'MEMORY.md';old=mem.read_text(encoding='utf8');assert entry.splitlines()[0]not in old;mem.write_text(entry+old,encoding='utf8')
+skill=M/'skills/mattersyn-paper-to-site/references/incoming-corpus.md';heading='## Doped hosts, technical reagents and theory-rich characterization'
+lesson='''
+
+## Doped hosts, technical reagents and theory-rich characterization
+
+Lessons from Schwartz et al. (2003), DOI10.1021/ja036811v:
+
+- Doped-host routes must keep nominal feed, incorporated dopant concentration, surface-bound control and aggregate specimens separate. A concentration series is not automatically a set of complete independent recipes. Do not create elemental dopant synthesis hubs from a doped material's components.
+- Represent alternative solvents as choices with separate parentage, never an implicit co-added mixture. Separate pure/Co/Ni stock options rather than one stock containing both dopants. Shared typical conditions require explicit inheritance, not per-batch attribution.
+- Technical-grade reagents may contain chemically consequential unidentified impurities. Show the known molecule as a named component and the technical material as an incompletely specified mixture. Hydration in a starting salt does not establish hydration of a later vaguely named additive.
+- Shared chemical-viewer metadata must be source-neutral. Remove previous-paper grade, purpose or handling conditions from shared captions while retaining original provenance and exact molecular graphs/coordinates. Audit metadata and asset hashes together.
+- Keep measurement acquisition settings, source-derived fit parameters, assumed bulk constants and mechanistic hypotheses distinguishable. Different MCD intensity definitions or fitted versus comparative exchange estimates are not interchangeable labels. Lower bounds from instrument limits are not measured transitions.
+- Distinguish original electron-diffraction images from source-reported XRD conclusions when no XRD trace is supplied. Independent undoped-host CIFs may aid comparison but cannot stand in for refined dopant occupancies or measured nanocrystal structures. Preserve parameter differences between the external reference and the paper.
+- Check source mathematical glyphs visually. If a PDF renderer substitutes Symbol characters, use a faithful renderer for original crops; preserve equations, captions, footnotes and contradictions instead of silently correcting from chemical expectations.
+'''
+t=skill.read_text(encoding='utf8');assert heading not in t;skill.write_text(t+lesson,encoding='utf8')
+(B/'memory-skill-checkpoint.json').write_text(json.dumps({'saved_at':datetime.now(timezone.utc).isoformat(),'memory':str(mem),'project_skill_reference':str(skill),'project_skill_sha256':hashlib.sha256(skill.read_bytes()).hexdigest(),'installed_skill_sync':'pending'},indent=2)+'\n',encoding='utf8')
+print('Project memory and reusable skill saved; installed sync pending.')

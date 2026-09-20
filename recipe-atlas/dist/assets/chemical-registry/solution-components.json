@@ -1,0 +1,51 @@
+{
+  "schema": "mattersyn-solution-components/1",
+  "contexts": [
+    {
+      "record_id": "ribeiro-2004-ph-treatment",
+      "label": "aqueous nitric acid reagent",
+      "scope": "Component references only; no acid:water ratio, solution species fractions or reagent concentration supplied.",
+      "components": [
+        {
+          "registry_id": "reference-nitric-acid",
+          "role": "acid reference",
+          "viewOverrides": {}
+        },
+        {
+          "registry_id": "water",
+          "role": "aqueous solvent",
+          "viewOverrides": {
+            "name": "Water · aqueous reagent solvent",
+            "caption": "Water component reference for this aqueous reagent. Its grade, number of solvent molecules and solution geometry are not specified.",
+            "limitations": [
+              "This is a separate solvent reference, not an assigned solution structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "ribeiro-2004-ph-treatment",
+      "label": "aqueous TBAOH stock reagent",
+      "scope": "0.4 mol/L TBAOH stock; solvent water has no fixed stoichiometric count in this depiction. Final concentration, dose and measurement pH remain unknown.",
+      "components": [
+        {
+          "registry_id": "reference-tetrabutylammonium-hydroxide",
+          "role": "solute components",
+          "viewOverrides": {}
+        },
+        {
+          "registry_id": "water",
+          "role": "aqueous solvent",
+          "viewOverrides": {
+            "name": "Water · aqueous reagent solvent",
+            "caption": "Water component reference for this aqueous reagent. Its grade, number of solvent molecules and solution geometry are not specified.",
+            "limitations": [
+              "This is a separate solvent reference, not an assigned solution structure."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

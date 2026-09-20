@@ -1,0 +1,90 @@
+"""Bounded independent serialized-asset checks and actual-SVG contact sheet."""
+import sys,json,hashlib,re,math,collections,xml.etree.ElementTree as ET
+from pathlib import Path
+sys.dont_write_bytecode=True
+OUT=Path(__file__).resolve().parent
+SITE=Path('[local path redacted]')
+EXISTING=SITE/'dist/assets/chemical-registry'
+sys.path.insert(0,'[local path redacted]')
+sys.path.insert(0,'[local path redacted]')
+from rdkit import Chem
+from rdkit.Chem import rdMolDescriptors
+import pymupdf
+from PIL import Image,ImageDraw
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def counts(s):
+    c=collections.Counter()
+    for e,n in re.findall(r'([A-Z][a-z]?)(\d*)',s):c[e]+=int(n or 1)
+    return c
+checks=[]
+def check(p,label):
+    checks.append({'check':label,'passed':bool(p)})
+def reconstruct(model):
+    rw=Chem.RWMol()
+    for a in model['atoms']:
+        x=Chem.Atom(a['element']);x.SetFormalCharge(a['formalCharge']);x.SetIsotope(a['isotope']);x.SetNoImplicit(True);x.SetNumExplicitHs(a['implicitHydrogenCount']);rw.AddAtom(x)
+    for b in model['bonds']:rw.AddBond(b['a'],b['b'],{1:Chem.BondType.SINGLE,1.5:Chem.BondType.AROMATIC,2:Chem.BondType.DOUBLE,3:Chem.BondType.TRIPLE}[b['order']])
+    m=rw.GetMol();Chem.SanitizeMol(m);return m
+registry=read(OUT/'molecule-registry-proposal.json');new={e['id']:e for e in registry['entries']}
+old={e['id']:e for e in read(EXISTING/'registry.json')['entries']}
+check(len(new)==22 and all(all(old[i].get('assetHashes',{}).get(k)==h for k,h in new[i]['assetHashes'].items()) for i in set(new)&set(old)),'Twenty-two unique identities; any already imported identity has identical asset hashes')
+expected={e['id']:counts(e['formula']) for e in registry['entries']}
+images=[]
+for ident,e in new.items():
+    check(e['pubchemCid'] is None,ident+' no invented external identifier')
+    check(e['sourceUrls']==['https://doi.org/10.1021/cm970189m'],ident+' source identity provenance')
+    for key,h in e['assetHashes'].items():check(sha(OUT/e[key])==h,ident+' '+key+' file hash')
+    svg=(OUT/e['svgPath']).read_text(encoding='utf-8');ET.fromstring(svg)
+    check(not re.search(r'<script|onload=|javascript:|(?:href|src)="https?://',svg,re.I),ident+' passive SVG')
+    doc=pymupdf.open(stream=svg.encode(),filetype='svg');pdf=pymupdf.open('pdf',doc.convert_to_pdf());pix=pdf[0].get_pixmap(matrix=pymupdf.Matrix(.8,.8),alpha=False)
+    image=Image.frombytes('RGB',[pix.width,pix.height],pix.samples);images.append((ident,image))
+    if e['depictionKind']!='molecule':
+        check(not e['model2dPath'] and not e['model3dPath'],ident+' no guessed solid or polymer graph');continue
+    reference=Chem.MolFromSmiles(e['provenance']['smiles'])
+    for key in ['model2dPath','model3dPath']:
+        m=read(OUT/e[key]);aa=m['atoms'];bb=m['bonds'];mol=reconstruct(m)
+        check(counts(rdMolDescriptors.CalcMolFormula(mol,separateIsotopes=True,abbreviateHIsotopes=True))==expected[ident],ident+' '+key+' independently reconstructed formula')
+        check(Chem.GetFormalCharge(mol)==0 and len(Chem.GetMolFrags(mol))==1,ident+' '+key+' charge and fragment count')
+        check(Chem.MolToSmiles(Chem.RemoveHs(mol))==Chem.MolToSmiles(Chem.RemoveHs(reference)),ident+' '+key+' connectivity matches source identity')
+        check([a['index'] for a in aa]==list(range(len(aa))) and all(math.isfinite(a[c]) for a in aa for c in ['x','y','z']),ident+' '+key+' atom indices and finite coordinates')
+        check(len({tuple(sorted((b['a'],b['b']))) for b in bb})==len(bb) and all(0<=b['a']<len(aa) and 0<=b['b']<len(aa) and b['a']!=b['b'] for b in bb),ident+' '+key+' valid unique bonds')
+        check(m.get('eligible_training') is False,ident+' '+key+' excluded from experimental labels')
+        if key=='model2dPath':
+            check(not m['has3D'] and not m['allowRotation'] and all(a['z']==0 for a in aa),ident+' drawing flags')
+        else:
+            check(m['has3D'] and m['allowRotation'] and m['coordinateSource']=='local-rdkit' and 'not a measured structure' in m['caption'],ident+' computed conformer flags and limitation')
+            check(m['conformerGeneration']['minimizationReturnCode']==0 if ident!='diethylzinc' else m['conformerGeneration']['minimizationReturnCode'] is None and m['conformerGeneration']['forceField'] is None and 'unminimized' in m['caption'],ident+' truthful minimization status')
+            distances=[math.dist([aa[b['a']][c] for c in ['x','y','z']],[aa[b['b']][c] for c in ['x','y','z']]) for b in bb]
+            check(all(.45<d<2.9 for d in distances),ident+' plausible nonzero bond lengths')
+            check(all(math.dist([aa[i][c] for c in ['x','y','z']],[aa[j][c] for c in ['x','y','z']])>.45 for i in range(len(aa)) for j in range(i)),ident+' no gross atomic overlap')
+            check(all(a['implicitHydrogenCount']==0 for a in aa),ident+' explicit 3D hydrogen inventory')
+            center={'diethylzinc':'Zn','hydrogen-selenide':'Se'}.get(ident)
+            if center:
+                atom=[a for a in aa if a['element']==center][0]
+                check(sum(b['a']==atom['index'] or b['b']==atom['index'] for b in bb)==2,ident+' two central-atom bonds')
+            sdf=Chem.MolFromMolFile(str(OUT/'sdf'/(ident+'-computed-illustrative-3d.sdf')),removeHs=False)
+            check(Chem.MolToSmiles(Chem.RemoveHs(sdf))==Chem.MolToSmiles(Chem.RemoveHs(mol)),ident+' downloadable SDF connectivity round trip')
+        for g in m['functionalGroups']:
+            check(all(0<=i<len(aa) for i in g['atomIndices']) and all(0<=i<len(bb) for i in g['bondIndices']),ident+' functional-group indices')
+for ident,count in [('dimethyl-sulfoxide-d6',6),('chloroform-d',1),('deuterium-oxide',2)]:
+    for key in ['model2dPath','model3dPath']:
+        m=read(OUT/new[ident][key])
+        check(sum(a['element']=='H' and a['isotope']==2 for a in m['atoms'])==count,ident+' '+key+' explicit deuterium count')
+for ident in ['pyrene-1-carboxylic-acid','pyrene-1-carbonyl-chloride','n-pyrene-1-carbonylimidazole']:
+    m=Chem.MolFromSmiles(new[ident]['provenance']['smiles'])
+    rings=list(m.GetRingInfo().AtomRings())
+    check(sum(len(r)==6 for r in rings)==4,ident+' four fused six-member aromatic rings')
+check('not a measured structure' in read(OUT/new['4-hydroxythiophenol']['model3dPath'])['caption'],'Free capping precursor is illustrative rather than a surface structure')
+contact_paths=[]
+for sheetnum in range((len(images)+7)//8):
+    batch=images[sheetnum*8:sheetnum*8+8];height=((len(batch)+1)//2)*340
+    sheet=Image.new('RGB',(1400,height),'white');draw=ImageDraw.Draw(sheet)
+    for n,(ident,im) in enumerate(batch):
+        x=(n%2)*700;y=(n//2)*340;draw.text((x+15,y+10),ident,fill='black');sheet.paste(im,(x+14,y+40))
+    dest=OUT/'review'/('svg-contact-sheet-'+str(sheetnum+1)+'.png');sheet.save(dest);contact_paths.append(str(dest))
+fail=[x['check'] for x in checks if not x['passed']]
+report={'status':'passed' if not fail else 'failed','scope':'Bounded serialized molecular asset, identity, formula, connectivity, hash and record-binding checks. Visual SVG review separately recorded.','checkCount':len(checks),'errors':fail,'checks':checks,'registrySha256':sha(OUT/'molecule-registry-proposal.json')}
+(OUT/'validation-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'status':report['status'],'checks':len(checks),'errors':fail,'contactSheets':contact_paths}))
+assert not fail

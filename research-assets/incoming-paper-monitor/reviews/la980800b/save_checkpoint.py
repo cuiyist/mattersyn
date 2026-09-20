@@ -1,0 +1,11 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json
+B=Path(__file__).resolve().parent;MON=B.parents[1]
+def read(p):return json.loads(p.read_text(encoding='utf-8'))
+def write(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+g=read(MON/'ledger.json')['groups']['10.1021_la980800b'];fp=g['fingerprint'];assert fp['bundle_sha256']=='a9904d5768e81aba7d5b51264a2b4d741a190e6b4118c99fa2f153aad9cf7c7c'
+c={'paper':'10.1021/la980800b','title':read(B/'source-identity.json')['title'],'source_id':'stiger1999','year':1999,'review_scope':'supplied_main_only_si_unverified','source_generation':g['generation'],'source_sha256':'e581449713ddca5e0cb68d05593df476d0e5150b88bc7c6dcbdb269ac70881fb','bundle_sha256':fp['bundle_sha256'],'main_pages_text_reviewed':list(range(1,10)),'main_pages_visually_reviewed':list(range(1,10)),'si_status':'Matching supporting information not located or verified; two byte-identical local mains.','canonical_records_created':len(list((B/'canonical-drafts').glob('*.json'))),'website_published':False,'checkpoint_at':datetime.now(timezone.utc).isoformat(),'current_work_items':[{'label':'Source reading','status':'complete','scope':'All9 supplied main pages,202source units; identity verified and1999year corrected.'},{'label':'Extraction and independent audit','status':'in_progress','scope':'One synthesis route,4procedures,2controls and one characterization record;143evidence rows drafted. No review promotion yet.'},{'label':'Existing website integration and publication','status':'pending','scope':'New Ag/Si material and links will be added to the existing MatterSyn periodic table and component hubs after audit.'}],'next_action':'Finish current paper canonical and source-asset audits, integrate in existing Site, verify reader, publish, and close five milestones before next source.'}
+write(B/'checkpoint.json',c)
+write(B/'milestones.json',{'read':{'status':'complete','evidence':[str(B/f)for f in ['source-manifest.json','source-identity.json','source-audit.json']],'note':'All9 supplied main pages text and visually reviewed; SI unverified.'},**{s:{'status':'pending','evidence':[],'note':'Not complete at this checkpoint.'}for s in ['extract','audit','integrate','publish']}})
+print('Saved evidence-backed current-paper checkpoint; publication remains pending.')
