@@ -1,0 +1,1653 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ghosh-2012-stoichiometry-series",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Ghosh et al. (2012) · Withdrawal and OA-excess comparisons",
+  "material": {
+    "formula": "CdSe/CdS",
+    "family": "CdSe cores and CdSe/CdS giant quantum dots",
+    "architecture": "core_shell",
+    "components": [
+      "CdSe",
+      "CdS"
+    ]
+  },
+  "method": "Withdrawal and OA-excess comparisons",
+  "sources": [
+    {
+      "id": "ghosh2012",
+      "doi": "10.1021/ja212032q",
+      "title": "New Insights into the Complexities of Shell Growth and the Strong Influence of Particle Volume in Nonblinking “Giant” Core/Shell Nanocrystal Quantum Dots",
+      "authors": "Yagnaseni Ghosh; Benjamin D. Mangum; Joanna L. Casson; Darrick J. Williams; Han Htoon; Jennifer A. Hollingsworth",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/ja212032q",
+      "main_status": "All ten supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched nine-page SI fully read, visually inspected and independently audited; unresolved specimen and acquisition contexts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "ghosh2012",
+    "recipe_family": "ghosh2012-core-shell-parameter-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 3 (printed 9636), CdSe/nCdS Core–Shell g-NQD Synthesis; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ],
+      "note": "Nominal preparation target only; observations and acquisition records have no synthetic target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "Full supplied main/SI source scope with exact field locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "Full supplied main/SI source scope with exact field locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "Full supplied main/SI source scope with exact field locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "oa",
+      "name": "Oleic acid",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "90%; no batch-specific isomer assay.",
+        "Source formula or abbreviation: OA. Abbreviations such as OA, ODE, OD, TOP and TOPO are not treated as elemental formulae.",
+        "Source-qualified identity only; molecular/product visual binding is separately pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 2 (printed 9635), Materials / General Methods; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "growing-shells",
+      "name": "Shell-growth mixture from the comparison family; complete row-specific parent composition is not established.",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "withdrawal-series-particles",
+      "name": "withdrawal series particles",
+      "kind": "sample_set",
+      "parent_ids": [
+        "growing-shells"
+      ]
+    },
+    {
+      "id": "compare-withdrawals-withdrawn-aliquots",
+      "name": "compare withdrawals withdrawn aliquots",
+      "kind": "aliquot",
+      "parent_ids": [
+        "growing-shells"
+      ]
+    },
+    {
+      "id": "withdrawal-oa-particles",
+      "name": "withdrawal oa particles",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "growing-shells",
+        "oa"
+      ]
+    },
+    {
+      "id": "withdraw-oa-withdrawn-aliquots",
+      "name": "withdraw oa withdrawn aliquots",
+      "kind": "aliquot",
+      "parent_ids": [
+        "growing-shells",
+        "oa"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "compare-withdrawals",
+      "action": "remove-one-or-ten-percent-per-shell-cycle-without-reducing-shell-precursor-doses",
+      "label": "Remove one or ten percent per shell cycle without reducing shell precursor doses",
+      "stage": "fractionation",
+      "branch": "reported_parameter_comparison",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "growing-shells"
+      ],
+      "outputs": [
+        "withdrawal-series-particles",
+        "compare-withdrawals-withdrawn-aliquots"
+      ],
+      "parameters": {
+        "small_withdrawal": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+          "basis": "Source context: stoichiometry-series.",
+          "raw_text": "1",
+          "evidence": [
+            {
+              "source_id": "ghosh2012",
+              "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+            }
+          ],
+          "derivation": null
+        },
+        "large_withdrawal": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+          "basis": "Source context: stoichiometry-series.",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "ghosh2012",
+              "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove one or ten percent per shell cycle without reducing shell precursor doses. Withdraw 1% or 10% after each complete shell cycle but retain the original precursor doses. Both reduce precipitation; the larger withdrawal almost eliminates it but gives poor QY and misshapen particles. Lesser withdrawal gives rods or irregular particles. Missing fields: full per-layer accounting. This operation groups source-described alternatives for navigation, not a single physical charge containing all alternatives simultaneously.",
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "withdraw-oa",
+      "action": "combine-one-percent-withdrawals-with-increased-oa-at-the-reported-transition-span",
+      "label": "Combine one-percent withdrawals with increased OA at the reported transition span",
+      "stage": "synthesis",
+      "branch": "reported_parameter_comparison",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "growing-shells",
+        "oa"
+      ],
+      "outputs": [
+        "withdrawal-oa-particles",
+        "withdraw-oa-withdrawn-aliquots"
+      ],
+      "parameters": {
+        "withdrawal": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+          "basis": "Source context: stoichiometry-series.",
+          "raw_text": "1",
+          "evidence": [
+            {
+              "source_id": "ghosh2012",
+              "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+            }
+          ],
+          "derivation": null
+        },
+        "oa_factor": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fold",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+          "basis": "Source context: stoichiometry-series.",
+          "raw_text": "2.5",
+          "evidence": [
+            {
+              "source_id": "ghosh2012",
+              "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+            }
+          ],
+          "derivation": null
+        },
+        "oa_change_shell_span": {
+          "value": null,
+          "minimum": 5.0,
+          "maximum": 8.0,
+          "unit": "monolayer",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+          "basis": "Source context: stoichiometry-series.",
+          "raw_text": "5-8",
+          "evidence": [
+            {
+              "source_id": "ghosh2012",
+              "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Combine one-percent withdrawals with increased OA at the reported transition span. Combine 1% withdrawals with 2.5-fold more OA per layer starting at the fifth to eighth shell. Thick-shell QY reaches 50% with symmetric spherical/hexagonal particles, while precipitation returns. Do not replace the experimental paragraph’s switch wording with a single exact cycle. Missing fields: exact switch cycle. This operation groups source-described alternatives for navigation, not a single physical charge containing all alternatives simultaneously.",
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "withdrawal-series",
+      "source_sample_label": "withdrawal-series",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: withdrawal-series.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved.",
+        "Source context object: {\"id\":\"withdrawal-series\",\"name\":\"withdrawal series\",\"scope_type\":\"comparison_or_acquisition_context\",\"physical_sample_identity_verified\":false,\"source_fact_ids\":[\"ghosh2012-withdrawal-series\"],\"source_units\":[],\"evidence\":[{\"source_id\":\"ghosh2012-main\",\"document_role\":\"main\",\"source_sha256\":\"a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96\",\"pdf_page\":6,\"printed_page\":9639,\"locator\":\"Impact of Reaction Stoichiometry\"}],\"parent_ids\":[],\"scope_note\":\"Source-scoped context only; matching context labels do not certify a unique batch or a cross-technique exact sample join.\"}"
+      ]
+    },
+    {
+      "sample_id": "withdrawal-oa",
+      "source_sample_label": "withdrawal-oa",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: withdrawal-oa.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved.",
+        "Source context object: {\"id\":\"withdrawal-oa\",\"name\":\"withdrawal oa\",\"scope_type\":\"comparison_or_acquisition_context\",\"physical_sample_identity_verified\":false,\"source_fact_ids\":[\"ghosh2012-withdrawal-oa\"],\"source_units\":[],\"evidence\":[{\"source_id\":\"ghosh2012-main\",\"document_role\":\"main\",\"source_sha256\":\"a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96\",\"pdf_page\":6,\"printed_page\":9639,\"locator\":\"Impact of Reaction Stoichiometry\"}],\"parent_ids\":[],\"scope_note\":\"Source-scoped context only; matching context labels do not certify a unique batch or a cross-technique exact sample join.\"}"
+      ]
+    },
+    {
+      "sample_id": "stoichiometry-series",
+      "source_sample_label": "stoichiometry-series",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: stoichiometry-series.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved."
+      ]
+    },
+    {
+      "sample_id": "withdraw-10",
+      "source_sample_label": "withdraw-10",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: withdraw-10.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved.",
+        "Source context object: {\"id\":\"withdraw-10\",\"name\":\"table-3 row 1\",\"scope_type\":\"source_table_row\",\"physical_sample_identity_verified\":false,\"parent_ids\":[\"stoichiometry-series\"],\"source_units\":[\"table-3\"],\"evidence\":[{\"source_id\":\"ghosh2012-main\",\"document_role\":\"main\",\"source_sha256\":\"a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96\",\"pdf_page\":7,\"printed_page\":9640,\"locator\":\"table-3\"}],\"scope_note\":\"Parameter-variant context includes moderately thick-shell TEM and a separate >15 ML QY descriptor; not a verified identical specimen across modalities.\"}"
+      ]
+    },
+    {
+      "sample_id": "withdraw-1",
+      "source_sample_label": "withdraw-1",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: withdraw-1.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved.",
+        "Source context object: {\"id\":\"withdraw-1\",\"name\":\"table-3 row 2\",\"scope_type\":\"source_table_row\",\"physical_sample_identity_verified\":false,\"parent_ids\":[\"stoichiometry-series\"],\"source_units\":[\"table-3\"],\"evidence\":[{\"source_id\":\"ghosh2012-main\",\"document_role\":\"main\",\"source_sha256\":\"a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96\",\"pdf_page\":7,\"printed_page\":9640,\"locator\":\"table-3\"}],\"scope_note\":\"Parameter-variant context includes moderately thick-shell TEM and a separate >15 ML QY descriptor; not a verified identical specimen across modalities.\"}"
+      ]
+    },
+    {
+      "sample_id": "withdraw-1-oa",
+      "source_sample_label": "withdraw-1-oa",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: withdraw-1-oa.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved.",
+        "Source context object: {\"id\":\"withdraw-1-oa\",\"name\":\"table-3 row 3\",\"scope_type\":\"source_table_row\",\"physical_sample_identity_verified\":false,\"parent_ids\":[\"stoichiometry-series\"],\"source_units\":[\"table-3\"],\"evidence\":[{\"source_id\":\"ghosh2012-main\",\"document_role\":\"main\",\"source_sha256\":\"a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96\",\"pdf_page\":7,\"printed_page\":9640,\"locator\":\"table-3\"}],\"scope_note\":\"Parameter-variant context includes moderately thick-shell TEM and a separate >15 ML QY descriptor; not a verified identical specimen across modalities.\"}"
+      ]
+    },
+    {
+      "sample_id": "constant-s",
+      "source_sample_label": "constant-s",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: constant-s.",
+        "Context ID is not an author-assigned physical batch. No all-technique same-particle join is inferred.",
+        "No product atomic coordinates or exact training pair are approved."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ghosh2012-withdrawal-series-claim",
+      "sample_id": "withdrawal-series",
+      "property": "source_claim",
+      "technique": "Source text with explicit reported/model/context scope",
+      "value": {
+        "value": "Withdraw 1% or 10% after each complete shell cycle but retain the original precursor doses. Both reduce precipitation; the larger withdrawal almost eliminates it but gives poor QY and misshapen particles. Lesser withdrawal gives rods or irregular particles.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source claim class: reported_source_evidence. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses."
+      },
+      "conditions": "withdrawal-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-series-q1",
+      "sample_id": "withdrawal-series",
+      "property": "small_withdrawal",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": 1.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-series.",
+        "raw_text": "1",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-series; small withdrawal",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-series-q2",
+      "sample_id": "withdrawal-series",
+      "property": "large_withdrawal",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": 10.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-series.",
+        "raw_text": "10",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-series; large withdrawal",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-series-q3",
+      "sample_id": "withdrawal-series",
+      "property": "large_withdrawal_qy",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 10.0,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-series.",
+        "raw_text": "<10",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null,
+        "maximum_exclusive": true
+      },
+      "conditions": "withdrawal-series; large-withdrawal QY",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-series-q4",
+      "sample_id": "withdrawal-series",
+      "property": "small_withdrawal_qy",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": null,
+        "minimum": 35.0,
+        "maximum": 40.0,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. G3: Many TEM/FTIR/XRD population images lack unique batch/core/shell labels. Table series are parameter comparisons, not a complete factorial design. No exact cross-technique or per-row QY/lifetime joins are fabricated. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-series.",
+        "raw_text": "35-40",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-series; small-withdrawal QY",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-oa-claim",
+      "sample_id": "withdrawal-oa",
+      "property": "source_claim",
+      "technique": "Source text with explicit reported/model/context scope",
+      "value": {
+        "value": "Combine 1% withdrawals with 2.5-fold more OA per layer starting at the fifth to eighth shell. Thick-shell QY reaches 50% with symmetric spherical/hexagonal particles, while precipitation returns. Do not replace the experimental paragraph’s switch wording with a single exact cycle.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source claim class: reported_source_evidence. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses."
+      },
+      "conditions": "withdrawal-oa",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-oa-q1",
+      "sample_id": "withdrawal-oa",
+      "property": "withdrawal",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": 1.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-oa.",
+        "raw_text": "1",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-oa; withdrawal",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-oa-q2",
+      "sample_id": "withdrawal-oa",
+      "property": "oa_factor",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": 2.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-oa.",
+        "raw_text": "2.5",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-oa; OA factor",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-oa-q3",
+      "sample_id": "withdrawal-oa",
+      "property": "oa_change_shell_span",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": null,
+        "minimum": 5.0,
+        "maximum": 8.0,
+        "unit": "monolayer",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-oa.",
+        "raw_text": "5-8",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-oa; OA change shell span",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "ghosh2012-withdrawal-oa-q4",
+      "sample_id": "withdrawal-oa",
+      "property": "reported_qy",
+      "technique": "Source result, condition or stated model parameter",
+      "value": {
+        "value": 50.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_source_evidence. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses. C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch. G4: Precursor aliquot volumes, exact particle number calibration, layer-by-layer concentration/dilution schedule and exact OA switch cycle are absent. One-percent and ten-percent labels are removed solution fractions, not known molar excesses.",
+        "basis": "Source context: withdrawal-oa.",
+        "raw_text": "50",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "withdrawal-oa; reported QY",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Impact of Reaction Stoichiometry; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-definition",
+      "sample_id": "stoichiometry-series",
+      "property": "table_definition",
+      "technique": "Source table definition",
+      "value": {
+        "value": "{\"id\":\"table-3\",\"title\":\"Influence of reaction stoichiometry\",\"columns\":[\"stoichiometry_variation\",\"precipitation_onset\",\"shape\",\"thick_shell_QY\",\"TEM\"],\"sample_scope\":\"stoichiometry-series\",\"notes\":[\"Percentages are aliquot-removal fractions, not direct molar precursor excess.\",\"QYs concern thickest shells >15 ML. Main p.6 explicitly says the TEM images depict moderately thick shells because image quality was better. Never join TEM and QY as a verified exact same-thickness specimen.\",\"Qualitative QY labels retained as text; scale bars 10 nm.\"],\"evidence\":[{\"source_id\":\"ghosh2012-main\",\"document_role\":\"main\",\"source_sha256\":\"a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96\",\"pdf_page\":7,\"printed_page\":9640,\"locator\":\"table-3\"}]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Lossless source table headings and qualifiers, not an exact multi-technique sample join."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), table-3; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r001-c01",
+      "sample_id": "withdraw-10",
+      "property": "table_3_1_stoichiometry_variation",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Excess Precursor (10%)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-10. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 1; column stoichiometry_variation. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r001-c02",
+      "sample_id": "withdraw-10",
+      "property": "table_3_1_precipitation_onset",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "~None",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-10. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 1; column precipitation_onset. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r001-c03",
+      "sample_id": "withdraw-10",
+      "property": "table_3_1_shape",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Misshapen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-10. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 1; column shape. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r001-c04",
+      "sample_id": "withdraw-10",
+      "property": "table_3_1_thick_shell_qy",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Low",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-10. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 1; column thick_shell_QY. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r001-c05",
+      "sample_id": "withdraw-10",
+      "property": "table_3_1_tem",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Original moderately thick-shell TEM, scale bar 10 nm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          },
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-10. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null. Original asset ID: table-3-tem-1"
+      },
+      "conditions": "Row 1; column TEM. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 1 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        },
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r002-c01",
+      "sample_id": "withdraw-1",
+      "property": "table_3_2_stoichiometry_variation",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Excess Precursor (1%)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 2; column stoichiometry_variation. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r002-c02",
+      "sample_id": "withdraw-1",
+      "property": "table_3_2_precipitation_onset",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Late",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 2; column precipitation_onset. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r002-c03",
+      "sample_id": "withdraw-1",
+      "property": "table_3_2_shape",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Rods",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 2; column shape. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r002-c04",
+      "sample_id": "withdraw-1",
+      "property": "table_3_2_thick_shell_qy",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Mod.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 2; column thick_shell_QY. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r002-c05",
+      "sample_id": "withdraw-1",
+      "property": "table_3_2_tem",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Original moderately thick-shell TEM, scale bar 10 nm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          },
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null. Original asset ID: table-3-tem-2"
+      },
+      "conditions": "Row 2; column TEM. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 2 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        },
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r003-c01",
+      "sample_id": "withdraw-1-oa",
+      "property": "table_3_3_stoichiometry_variation",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Excess Precursor (1%) + Excess Oleic Acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1-oa. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 3; column stoichiometry_variation. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r003-c02",
+      "sample_id": "withdraw-1-oa",
+      "property": "table_3_3_precipitation_onset",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Middle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1-oa. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 3; column precipitation_onset. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r003-c03",
+      "sample_id": "withdraw-1-oa",
+      "property": "table_3_3_shape",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Spherical/hexagonal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1-oa. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 3; column shape. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r003-c04",
+      "sample_id": "withdraw-1-oa",
+      "property": "table_3_3_thick_shell_qy",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "High",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1-oa. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 3; column thick_shell_QY. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r003-c05",
+      "sample_id": "withdraw-1-oa",
+      "property": "table_3_3_tem",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Original moderately thick-shell TEM, scale bar 10 nm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          },
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: withdraw-1-oa. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null. Original asset ID: table-3-tem-3"
+      },
+      "conditions": "Row 3; column TEM. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 3 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        },
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r004-c01",
+      "sample_id": "constant-s",
+      "property": "table_3_4_stoichiometry_variation",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Constant Sulfur",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: constant-s. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 4; column stoichiometry_variation. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 stoichiometry_variation; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r004-c02",
+      "sample_id": "constant-s",
+      "property": "table_3_4_precipitation_onset",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Middle (minimal & persistent)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: constant-s. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 4; column precipitation_onset. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 precipitation_onset; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r004-c03",
+      "sample_id": "constant-s",
+      "property": "table_3_4_shape",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Rods",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: constant-s. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 4; column shape. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 shape; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r004-c04",
+      "sample_id": "constant-s",
+      "property": "table_3_4_thick_shell_qy",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Low",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: constant-s. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null."
+      },
+      "conditions": "Row 4; column thick_shell_QY. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 thick_shell_QY; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    },
+    {
+      "id": "table-3-r004-c05",
+      "sample_id": "constant-s",
+      "property": "table_3_4_tem",
+      "technique": "Source table numeric/text/image cell",
+      "value": {
+        "value": "Original moderately thick-shell TEM, scale bar 10 nm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          },
+          {
+            "source_id": "ghosh2012",
+            "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+          }
+        ],
+        "note": "Source context: constant-s. Table 3 TEM represents moderately thick shells; QY column >15 ML. Same-thickness identity is unverified.  No numeric unit is inferred for this text/image field. Ratio components: null. Original asset ID: table-3-tem-4"
+      },
+      "conditions": "Row 4; column TEM. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 7 (printed 9640), Table 3 row 4 TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        },
+        {
+          "source_id": "ghosh2012",
+          "locator": "MAIN PDF p. 6 (printed 9639), Stoichiometry discussion: moderately thick shell TEM; source SHA256 a624fe12df46fdfb6101824ec0836522ccd6bff10aa663c2379316001e175d96"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied ten-page main article and matched nine-page SI read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Two routes, three variants, ten supporting procedures and six observation contexts remain distinct. Missing precursor preparations, unresolved specimen joins and source-scoped comparisons are retained. No new training task or exact structure–recipe pair is admitted.",
+    "missing_fields": [
+      "Record/context IDs do not count independent batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training eligibility is approved.",
+      "Parameter-comparison branches are not a complete factorial design or interchangeable preferred protocol.",
+      "full per-layer accounting",
+      "exact switch cycle"
+    ],
+    "conflicts": [
+      "C1: Preferred main p.3 anneals S 1 h / Cd 2.5 h; Table 1 has separate S 1 h / Cd 3 h and other schedules. Main p.3 says initial 5–8 cycles then ligand ratio switch; p.6 says more OA starting at the fifth to eighth shell. These are retained as differently worded scopes, without a fabricated exact switch."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source reader and limitations",
+      "url": "/paper-review.html?id=ghosh2012",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}
