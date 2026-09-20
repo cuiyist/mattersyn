@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-20T03:42:06.349030+00:00",
-  "corpus_scanned_at": "2026-09-20T02:40:13.546221+00:00",
+  "updated_at": "2026-09-20T04:28:49.475287+00:00",
+  "corpus_scanned_at": "2026-09-20T04:12:37.018721+00:00",
   "published": {
     "dataset_version": "0.23.0",
     "record_count": 470,
@@ -12,17 +12,17 @@
     "public_source_group_count": 31,
     "formal_source_reader_count": 26,
     "exact_structure_recipe_count": 0,
-    "published_at": "2026-09-20T02:23:26Z"
+    "published_at": "2026-09-20T03:53:23Z"
   },
   "corpus": {
-    "present_files": 13786,
+    "present_files": 13862,
     "source_document_copies": {
-      "incoming": 6413,
+      "incoming": 6489,
       "legacy": 7373
     },
-    "canonical_review_units": 9492,
-    "waiting_review_scopes": 9469,
-    "active_review_claims": 1,
+    "canonical_review_units": 9567,
+    "waiting_review_scopes": 9543,
+    "active_review_claims": 2,
     "confirmed_duplicate_main_aliases": 23
   },
   "count_note": "Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.",
@@ -68,7 +68,7 @@
     {
       "short_label": "Heo et al. (2003)",
       "title": "Spatially Ordered Quantum Dot Array of Indium Nanoclusters in Fully Indium-Exchanged Zeolite X",
-      "stage": "Canonical records and illustrated reader in preparation",
+      "stage": "Independent canonical and illustration audits; integration pending",
       "summary": "All 9 main-paper pages and 14 matched SI pages have been read within the recorded review scopes. The complete SI transcription contains 1,209 reflection rows: 7,252 resolved numerical values and two unresolved signs. Independent source, numerical-transcription and average-crystal-model checks have passed their stated scopes. The contribution is not yet published.",
       "stages": [
         {
@@ -89,12 +89,12 @@
         {
           "label": "Canonical records and reader",
           "status": "in_progress",
-          "detail": "One route, acquisition procedures and separate observations"
+          "detail": "Frozen canonical/reader proposal under a distinct reviewer; corrections stay versioned"
         },
         {
           "label": "Illustrations and website checks",
           "status": "in_progress",
-          "detail": "Chemical components and stage-specific apparatus; final audit pending"
+          "detail": "Molecular identities and exact stock/material bindings audited; apparatus, product and browser checks remain"
         },
         {
           "label": "GitHub Pages publication",
@@ -109,9 +109,48 @@
         "One source angle differs from the geometry calculated from printed coordinates by 2.27 reported estimated standard deviations.",
         "The geometry/occupancy CIF omits source displacement tensors with unresolved symmetry inconsistencies. It is not an author-supplied full refinement or a unique ordered structure."
       ]
+    },
+    {
+      "short_label": "Evans et al. (2010)",
+      "title": "Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation",
+      "stage": "Source pairing, inventory and extraction assigned",
+      "summary": "A high-priority candidate with a three-page main paper, 21-page supplement and CIF in the existing local collection. It covers phosphine precursor purity, nucleation controls and quantum-dot reactions. Source identity, specimen assignments and CIF scope require review before scientific publication.",
+      "stages": [
+        {
+          "label": "Source files fingerprinted",
+          "status": "complete",
+          "detail": "Three unchanged local files; original names preserved"
+        },
+        {
+          "label": "Main/SI/CIF pairing and reading",
+          "status": "in_progress",
+          "detail": "Content verification and complete page inventory"
+        },
+        {
+          "label": "Extraction and independent audit",
+          "status": "pending",
+          "detail": "Separate author and auditor; negative controls retained"
+        },
+        {
+          "label": "Illustrated reader and publication",
+          "status": "pending",
+          "detail": "After scientific and website checks"
+        }
+      ],
+      "gaps": [
+        "A CIF file does not establish measured quantum-dot coordinates; its chemical species and specimen association must be verified."
+      ]
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-20T04:28:47.792995+00:00",
+      "text": "Heo molecular identities and exact material/stock bindings passed their scoped independent audit after a source-page locator correction. Canonical corrections and website integration remain pending."
+    },
+    {
+      "at": "2026-09-20T04:25:16.712882+00:00",
+      "text": "Corpus screening refreshed and fixed-cutoff selection activated. A rolling review slot admitted Evans 2010 alongside Heo; original four published batch contributions and their audits remain unchanged."
+    },
     {
       "at": "2026-09-20T03:05:46.482412+00:00",
       "text": "Heo complete SI aggregation and average-position/occupancy model passed scoped independent checks. Two SI signs and source geometry/recipe discrepancies remain explicit."
@@ -125,38 +164,34 @@
       "text": "GitHub Pages dataset 0.23.0 published: 470 records and 42 material/component collections. Nagasaki, Ribeiro and Norberg contributions added 46 records."
     }
   ],
+  "workflow": {
+    "summary": "Screen the fixed collection first, prioritize usable synthesis evidence, and review papers in parallel with a separate independent audit for each.",
+    "screening_scope": "The 20 September screening snapshot accounts for all 13,831 top-level cutoff files: 13,593 have text-based candidate screening and 238 need manual format/text inspection. Three additional nested PDFs were also screened and remain held for identity and queue reconciliation. Thirty-one later-arrival files in this snapshot are queued separately. Screening is not full reading or a no-recipe exclusion.",
+    "steps": [
+      "Preserve stable filenames and verify main-paper/SI associations against content and hashes.",
+      "Use synthesis and structure evidence to rank papers; retain partial recipes, unsuccessful outcomes and unresolved cases.",
+      "Extract one paper while a different reviewer audits another. Every contribution retains its own source, sample and figure checks.",
+      "Generate academic readers from reviewed records and reusable illustrations, checking each source-specific condition and chemical identity.",
+      "Publish completed, independently passed contributions together; leave unfinished papers in review."
+    ],
+    "capacity": "Up to five active paper claims; current runtime supports four simultaneous agents including the coordinating agent. These are different limits. Completed members can free review slots while earlier work continues.",
+    "paid_processing": "The paid API pilot is deferred. Work continues with the existing local setup.",
+    "screened_at": "2026-09-20T04:15:45.301305+00:00",
+    "fixed_pending_provisional_scopes": 9514,
+    "manual_file_dispositions": 238,
+    "nested_identity_cases": 3,
+    "later_arrival_files_at_screen": 31
+  },
   "estimate": {
     "status": "conditional_scenarios_not_validated_forecast",
-    "summary": "The user has set a two-month target for the existing collection, with later arrivals queued separately. This target is not yet supported by demonstrated processing capacity. Using the last measured 9,470 pending provisional scopes, completion requires about 158 closed scopes per day over 60 days, or 190 per production day if 10 days are reserved for calibration and final quality checks.",
-    "current_batch": "Planning estimate for the remaining Heo contribution: roughly 3–6 additional active-work hours for canonical review, illustrations, integration and publication. Confidence is low; new findings and availability can extend calendar time.",
-    "scenarios": [
-      {
-        "label": "9,470 pending scopes, including the active paper",
-        "reviews_per_day": "10",
-        "duration": "About 947 days (31 months)"
-      },
-      {
-        "label": "Conditional planning pace",
-        "reviews_per_day": "15",
-        "duration": "About 631 days (21 months)"
-      },
-      {
-        "label": "Conditional planning pace",
-        "reviews_per_day": "20",
-        "duration": "About 474 days (16 months)"
-      },
-      {
-        "label": "Higher sustained pace, not demonstrated",
-        "reviews_per_day": "30",
-        "duration": "About 316 days (10 months)"
-      }
-    ],
+    "summary": "The two-month target covers the fixed existing collection. After mapping the 45 previously ungrouped cutoff files, the known backlog is 9,514 pending provisional scopes, plus three nested identity cases. The required pace is about 159 closures/day over 60 days, or 190/day over 50 production days. Achievable capacity and the recipe-bearing fraction remain unverified.",
+    "current_batch": "Heo remains in final data/illustration review; Evans has entered source pairing and extraction. No new measured completion-time forecast is claimed from this workflow change.",
+    "scenarios": [],
     "notes": [
-      "Scope closure means either an independently evidenced no-recipe exclusion or a retained contribution that passes reading, extraction, audit, website and publication checks. The recipe-bearing fraction is not yet known.",
-      "At the earlier conditional planning rate of 15–20 closed scopes/day, the same backlog would take roughly 16–21 months. The short observed review window does not establish a sustained rate.",
-      "A representative benchmark will measure screening, retained-paper review time, audit corrections, website generation and cost before additional processing capacity is sized. More agents alone do not guarantee a proportional speedup.",
-      "The fixed inventory was captured on 20 September 2026 at 03:34 UTC: 13,831 top-level document copies, 9,470 known pending provisional scopes, 45 files awaiting grouping and three nested document candidates held for scope review. The required-rate calculations use the known queue, not a verified unique-paper total. Later new papers are queued separately; late or changed SI for an included paper remains an evidence update.",
-      "A cost-and-capacity pilot proposal has been requested. No paid API processing has started; expanded capacity and the two-month finish remain unverified."
+      "A closure is either an independently evidenced no-recipe exclusion or a retained contribution passing reading, extraction, audit, website and publication checks.",
+      "The frozen collection has 13,831 top-level document copies and three nested document candidates. File copies, provisional scopes and synthesis recipes are different counts.",
+      "Later-arrival papers remain separate. Late or changed supporting information for an included paper reopens the relevant review.",
+      "The paid pilot decision is deferred. Screening speed cannot be used as the detailed-review rate; throughput will be updated from completed audited contributions."
     ]
   }
 }

@@ -16,6 +16,7 @@ out={'schema_version':'1.0.0','updated_at':datetime.now(timezone.utc).isoformat(
  'priority':'Synthesis and crystal-structure evidence richness; existing batch retained.',
  'update_policy':'Progress is published at meaningful review milestones. This page checks for a newer published snapshot every minute. Scientific records are released after their required audits and website checks.',
  'batch':editorial['batch'],'current_work':editorial['current_work'],'recent_milestones':editorial['recent_milestones'],
+ 'workflow':editorial.get('workflow'),
  'estimate':editorial.get('estimate',{'status':'being_recalibrated','summary':'Whole-corpus finish time is being recalibrated from completed reviews; incoming documents are counted separately.'})}
 text=json.dumps(out,ensure_ascii=False,indent=2)+'\n'
 assert not re.search(r'[A-Za-z]:[[local path redacted] 'Private path or credential-like token in public projection.'

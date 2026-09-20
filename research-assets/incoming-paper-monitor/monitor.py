@@ -661,8 +661,12 @@ def claim(path: Path, reviewer: str, group_id=None, now=None, allow_incomplete_b
         return {**current, "resumed": False, "files": group["files"], "needs_recheck": group["needs_recheck"]}
 
 
-def claim_batch(path: Path, reviewer: str, size=MAX_BATCH_SIZE, now=None):
-    """Reserve eligible scopes in explicit policy order; never refill an open batch."""
+def claim_batch(path: Path, reviewer: str, size=MAX_BATCH_SIZE, now=None, refill=False):
+    """Resume a batch; explicitly requested refill uses free active-paper slots.
+
+    Historical completed members remain attached to their original audit/release.
+    The size bound applies to active papers, never simultaneous agent count.
+    """
     if type(size) is not int or not 1 <= size <= MAX_BATCH_SIZE:
         raise ValueError(f"Batch size must be between 1 and {MAX_BATCH_SIZE}.")
     now = time.time_ns() if now is None else now
@@ -702,10 +706,30 @@ def claim_batch(path: Path, reviewer: str, size=MAX_BATCH_SIZE, now=None):
                      "size_limit": size, "papers": papers}
             ledger["current_batch"] = batch
         sync_batch(ledger, now)
+        if refill and ledger.get("current_batch"):
+            batch = ledger["current_batch"]
+            free_slots = max(0, size - len(active_claims(ledger)))
+            existing = {p["group_id"] for p in batch["papers"]}
+            rankings = priority_index(ledger)
+            additions = [key for key in queued(ledger) if key not in existing
+                         and claimable(ledger, key, now, rankings=rankings)][:free_slots]
+            for key in additions:
+                group = ledger["groups"][key]
+                review = group["review"]
+                if review["status"] in TERMINAL_STATUSES:
+                    review["history"].append({"previous_status": review["status"], "reopened_at": iso(now)})
+                review.update(status="in_progress", reviewer=reviewer, updated_at=iso(now))
+                batch["papers"].append({"group_id": key, "reviewer": reviewer,
+                    "claimed_at": iso(now), "generation_at_claim": group["generation"]})
+            if additions:
+                batch.setdefault("admissions", []).append({"at": iso(now), "group_ids": additions,
+                    "reason": "Explicit rolling pipeline refill; earlier claims/audits/releases preserved."})
+                batch["size_limit"] = max(batch["size_limit"], size)
+            sync_batch(ledger, now)
         save_ledger(path, ledger)
         return {**batch, "resumed": resumed, "active_papers": active_claims(ledger),
                 "active_review_claims": len(active_claims(ledger)),
-                "refill_policy": "Close every member before claiming the next batch."}
+                "refill_policy": "Explicit --refill may admit screened papers into free active slots; existing paper audits and releases are retained."}
 
 
 def fingerprint(path: Path, reviewer: str, now=None, group_id=None):
@@ -840,6 +864,7 @@ def main():
     b = sub.add_parser("claim-batch", help="Claim up to five eligible scopes in active policy order, or resume an unfinished fixed batch")
     b.add_argument("--reviewer", required=True)
     b.add_argument("--size", type=int, default=MAX_BATCH_SIZE)
+    b.add_argument("--refill", action="store_true", help="Explicitly fill free active-paper slots; preserves all earlier batch members and their audits")
     f = sub.add_parser("fingerprint")
     f.add_argument("--reviewer", required=True)
     f.add_argument("--group", help="Exact claimed group ID; required in batch mode")
@@ -863,7 +888,7 @@ def main():
         elif args.command == "claim":
             result = claim(args.ledger, args.reviewer, args.group, allow_incomplete_bundle=args.allow_incomplete_bundle)
         elif args.command == "claim-batch":
-            result = claim_batch(args.ledger, args.reviewer, args.size)
+            result = claim_batch(args.ledger, args.reviewer, args.size, refill=args.refill)
         elif args.command == "fingerprint":
             result = fingerprint(args.ledger, args.reviewer, group_id=args.group)
         else:
