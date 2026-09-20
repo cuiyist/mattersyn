@@ -1,3 +1,17 @@
+## 2026-09-20 — Parallel-review progress published and verified
+
+Saved 2026-09-20T06:31:49.911497+00:00. Public progress https://cuiyist.github.io/mattersyn-site/progress.html is LIVE at site commit 2db973487f0d2f1749763ed86fba7af2e56f482d, Pages built 2026-09-20T06:29:57Z. All24anonymous page/data/model checks, both32-citation READMEs and source-page exclusions passed. Root inspected the actual public dashboard with Evans ready for integration and Morrison in independent source review/canonical drafting. No new scientific records were published; dataset0.24.0 remains480records/98routes/44hubs. The scientific dataset publication date/commit are retained separately from this progress-only deployment.
+
+Current public project verification bound 79801c00ccd354760c65e025854d6d2e0da06aa1; a subsequent project commit saves these exact verification artifacts and final memory. Project and installed skills include the reviewed lessons on retained distillation fractions, quantity-bound captions and precursor/product structure separation. Temporary root preview servers5193/5194 are stopped; the live progress tab remains open. The existing heartbeat reads this current memory and ledger, so its older Evans-v2 narrative must not supersede passed v3/visual audits. No paid API processing or source download was started. Next root work is Evans shared-site integration with a distinct integration audit and browser/release checks; Morrison source audit and unapproved canonical drafting proceed independently.
+
+## 2026-09-20 — Evans visual audits passed; Morrison frozen for independent review
+
+Saved 2026-09-20T06:28:45.733839+00:00. Evans apparatus independent audit PASSED (51aa1554d88497f2a145d8a2d5346c149093c3f7a74aad8069a2982dc1fc97ff), bound to root freeze474a21a8b43326cc94058063c040019aa68810567a5c2592186f997c85e41025. It checked all46scenes/153conditions, reopened10sourcepages and passed1200binding/module checks. Evans source, canonical/reader v3, molecular revision2 and apparatus gates have passed. Next: root prepares preserved promotion/public-projection overlays, integrates into shared Site, then obtains distinct integration audit and actual browser checks before publication. No Evans scientific record is live yet.
+
+Morrison source freeze ca9640453f84ee64649ea34f723b717d8e418b3454936faf8e065280268f2594 contains all10main+17SIpages,71facts,29materials,5stocks,10procedure/branch families/24operations,8tables/471cells,30selectedcrops,175sourceunits and52references. All1270authorchecks passed. Ten printed discrepancies/qualifications and ten gaps are retained. Peng independently audits sources; backlog drafts canonical/reader proposals outside Site with unapproved status. No new downloads or paid calls. Continue the current frozen handoffs rather than restarting extraction.
+
+Published science stays dataset0.24.0/480records/98routes/44hubs. The public progress dashboard is being updated as a separate release; final exact commit verification is recorded below when complete. Source exclusions and the single five-minute heartbeat remain in effect.
+
 ## 2026-09-20 — Parallel review checkpoint: Evans data passed; Morrison admitted
 
 Saved 2026-09-20T06:23:16.393871+00:00. Existing public science remains dataset 0.24.0: 480 structured records, 98 synthesis routes/variants, 44 material/component hubs, 32 source groups and 27 formal readers. No new exact structure–recipe pair or training eligibility was added. This checkpoint updates workflow/progress only; deployment is verified separately below when complete.
