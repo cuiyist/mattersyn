@@ -45,3 +45,9 @@ elif mode=='graphs':
   r=load(p);print(p.stem,'LINEAGE',short(r['lineage']))
   for o in r['operations']:print('OP',o['id'],'deps',o['depends_on'],'branch',o['branch'],'in',o['inputs'],'out',o['outputs'],'retained',o['retained_fraction'])
   print('STATES',json.dumps(short(r['material_states']),ensure_ascii=False))
+elif mode=='identities':
+ for p in sorted(C.glob('ghosh-2012-*.json')):
+  r=load(p);print(p.stem,'TARGET',short(r['intended_target']))
+  print('MATERIALS',[(m['id'],m['name'],m['formula'],m['role'],m['stage'],short(m['quantities'])) for m in r['materials']])
+  print('STOCKS',json.dumps(short(r['stocks']),ensure_ascii=False))
+  print('PRODUCTS',[(p['sample_id'],p['material_state_id'],p['parent_sample_id'],p['recipe_link'],p['composition']['value']) for p in r['products']])

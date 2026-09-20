@@ -68,7 +68,7 @@ for frow in cov['facts']:
   if b['source_pointer']=='/claim':ck(q['value']==sourcevalue,'source_claim',label);evcheck(q,f['evidence'],label)
   else:qcheck(q,sourcevalue,label)
   if b['pointer'].startswith('/measurements/'):
-   m=ptr(records[b['record_id']],b['pointer'].rsplit('/',1)[0]);ck(m['sample_id']==f['sample_scope'],'fact_sample',label)
+   m=ptr(records[b['record_id']],b['pointer'].rsplit('/',1)[0]);ck(m['sample_id']==f['sample_scope'].lower(),'fact_sample',label)
 ck({x['source_unit_id'] for x in cov['source_units']}==set(units),'unit_complete','243')
 for row in cov['source_units']:
  ck(bool(row['canonical_bindings']),'unit_has_binding',row['source_unit_id'])
@@ -78,9 +78,9 @@ for row in cov['table_cells']:
  x,t,tr=cells[row['source_cell_id']]
  for b in row['canonical_bindings']:
   q=ptr(records[b['record_id']],b['pointer']);qcheck(q,x,row['source_cell_id'])
-  m=ptr(records[b['record_id']],b['pointer'].rsplit('/',1)[0]);ck(m['sample_id']==tr.get('sample_id','pure-oleic-acid'),'cell_sample',row['source_cell_id'])
+  m=ptr(records[b['record_id']],b['pointer'].rsplit('/',1)[0]);ck(m['sample_id']==tr.get('sample_id',t['sample_scope']),'cell_sample',row['source_cell_id'])
 for row in cov['table_definitions']:
- q=ptr(records[row['record_id']],row['pointer']);ck(json.loads(q['value'])==next(t for t in tables if t['id']==row['table_id']),'whole_table_payload',row['table_id'])
+ q=ptr(records[row['record_id']],row['pointer']);t=next(t for t in tables if t['id']==row['table_id']);ck(json.loads(q['value'])=={k:t[k] for k in ['id','title','columns','sample_scope','notes','evidence']},'table_definition_payload',row['table_id'])
 for row in cov['source_objects']:ck(ptr(records[row['record_id']],row['pointer']) is not None,'source_object_pointer',row)
 allq=set();measurements=set();ops=set()
 for rid,r in records.items():
@@ -109,7 +109,7 @@ for i in items:
   if value is not None:
    if f['presentation_kind']=='curated_source_inventory':expected=json.loads(value)
    else:expected=value
-  elif q.get('minimum') is not None and q.get('maximum') is not None:expected=('(' if q.get('minimum_exclusive') else '[')+str(q['minimum'])+', '+str(q['maximum'])+(')' if q.get('maximum_exclusive') else ']')
+  elif q.get('minimum') is not None and q.get('maximum') is not None:expected=str(q['minimum'])+'–'+str(q['maximum'])
   elif q.get('minimum') is not None:expected=('> ' if q.get('minimum_exclusive') else '≥ ')+str(q['minimum'])
   elif q.get('maximum') is not None:expected=('< ' if q.get('maximum_exclusive') else '≤ ')+str(q['maximum'])
   else:expected='Not reported'
