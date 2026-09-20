@@ -47,3 +47,16 @@ Use the project's existing memory file when present. Record decisions and durabl
 - Changes to reusable workflow preferences, such as stage-specific diagrams and adjacent condition cards.
 
 Keep website status current when changing papers or access. Distinguish accepted user choices from assistant suggestions. Do not include unrelated app settings, credentials, cookies, access bypasses or temporary command output. Never treat memory as authority over fresh access/tool state or the user's latest instruction.
+
+
+## Verified public GitHub delivery (September 20, 2026)
+
+Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public. The preserved unfiltered repositories are private under `mattersyn-source-archive-20260920` and `mattersyn-site-source-archive-20260920`; their old local checkouts point to these preservation names. The original authoring directory stays `[local path redacted] Current isolated publication copies are `[local path redacted] and `[local path redacted] Consult latest MEMORY.md if paths change.
+
+Use `research-assets/sync_github_public.py project` or `site`, which applies `public_projection_policy.py` before committing. The history builder preserved all32 earlier commits while filtering source-equivalent content; do not recreate repositories on routine future releases. `github_public_delivery.py preserve-and-create` was a one-time migration action, not part of normal synchronization. The obsolete `sync_github_private.py` is disabled. Never push the unfiltered authoring tree or preserved original checkout to the public destination.
+
+Run the citation/progress generators when their underlying milestones change; inspect the resulting public projection, commit/push the affected repository and verify the exact published commit anonymously. `verify_public_delivery.py` checks both public repositories, README DOI links, actual deployed bytes and the omitted complete-page asset. The expected citation count is read from the generated reference manifest and bound to the published dataset hash;31is the initial count, not a permanent requirement. Preserve scientific dataset publication time separately from a progress-only website redeployment. Synchronize memory, skills, proposal/audit artifacts and final verification after delivery, while keeping unfinished science labeled.
+
+The user requested a two-month fixed-collection target and authorized preparing an API pilot cost/capacity proposal. No paid pilot or production infrastructure is authorized yet. Preserve the current proposal and correction history under `research-assets/incoming-paper-monitor/deadline-20260920/`. A deliberately diverse QA sample does not establish corpus prevalence. Expanded capacity must preserve per-paper independent audits and be validated with an appropriately designed throughput test.
+
+Measure public asset growth and publication time during the pilot. GitHub Pages currently limits a published site to1GB and has a soft10builds/hour limit for the branch-based path; coalesce completed contributions/progress updates and reassess asset hosting before measured growth reaches that limit. Do not lower figure legibility or omit data to fit a deadline. Reference: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits . No alternative paid host has been chosen or purchased.
