@@ -46,6 +46,11 @@ def validate_delivery(F,v,plan):
  bypath={x['path']:x for x in checks}
  for rel in ['data/dataset-manifest.json','data/paper-reviews/friedfeld2019.json']:
   assert bypath[rel]['sha256']==sha(S/'dist'/rel)
- assert sha(S/'data/paper-reviews/friedfeld2019.json')==sha(S/'dist/data/paper-reviews/friedfeld2019.json')
+ # The established reader builder adds this reviewed-scope display label.
+ # All other fields must remain exactly equal to the source reader object;
+ # anonymous verification above separately pins the deployed raw bytes.
+ projected_reader=read(S/'data/paper-reviews/friedfeld2019.json')
+ projected_reader['review_scope_label']='Complete supplied main + matched SI review'
+ assert projected_reader==read(S/'dist/data/paper-reviews/friedfeld2019.json')
  assert_local_candidate(F)
  return v

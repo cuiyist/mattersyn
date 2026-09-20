@@ -1,0 +1,71 @@
+"""Private Sasongko operation-specific module authoring; no shared writes."""
+from pathlib import Path
+from copy import deepcopy
+import json,hashlib,shutil
+A=Path(__file__).resolve().parent;J=A.parents[1];C=J/'canonical-proposal/v1';T=J.parent/'acs.inorgchem.8b02945/visuals/apparatus'
+assert not(A/'package-freeze.json').exists()
+read=lambda p:json.loads(Path(p).read_bytes())
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(n,x):(A/n).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n','utf8')
+assert sha(C/'package-freeze.json')=='3cab2fe6181dbf2149b2a0ac59f4a80d99c05cab4870342e141815c904549fb5'
+audit=J/'canonical-independent-audit/independent-audit-v1.json'
+assert sha(audit)=='86691d16cedb8115d02e46c9d658e6a25f96593cc9f8d2363733ec81bffd71aa'and read(audit)['status']=='passed'
+cm=read(C/'record-manifest.json');paths={x['record_id']:Path(x['path'])for x in cm['records']}
+for x in cm['records']:assert sha(x['path'])==x['sha256']
+records=[read(p)for p in paths.values()if read(p)['operations']]
+reader=read(C/'reader/sasongko2025.json');items={i['id']:i for s in reader['reader_sections']for i in s['items']}
+facts=read(J/'source-extraction-revision-2/source-facts.json');FM={f['id']:f for f in facts['facts']}
+base={}
+def scene(id,art,title,notes,ids):
+ fs=['sasongko2025-'+x for x in ids];ev=list({json.dumps(e,sort_keys=True):e for f in fs for e in FM[f]['evidence']}.values())
+ base[id]={'art':art,'title':title,'prose':items['operation-'+id]['text'],'notes':[{'label':a,'value':b,'source_fact_ids':fs,'evidence':ev}for a,b in notes],'source_context_fact_ids':fs}
+unknown='Vessel, neck count, stirrer and heating equipment are unreported. The container and heat symbols are explanatory.'
+scene('fa-charge','fa-charge','Charge the complete FA precursor stock',[('Whole-stock basis','0.1042 g salt, 0.8 mL OA and 3.2 mL ODE prepare the stock; the later QD injection transfers only 0.51 mL.'),('Identity','Prepared FA-oleate is an operational stock, not an assigned dissolved coordination structure.'),('Apparatus scope',unknown)],['fa-charge'])
+scene('fa-vacuum-hold','vacuum','Hold the FA precursor under vacuum',[('Atmosphere','Vacuum is explicit for this FA preparation. Numerical pressure is unreported.'),('Apparatus scope',unknown)],['fa-vacuum'])
+scene('fa-nitrogen-hold','fa-hot','Heat the FA precursor under nitrogen',[('Atmosphere','N2 applies to this 135 °C stock hold. Gas pressure and flow are unreported.'),('Stock output','Final stock volume, concentration and storage conditions are unreported.'),('Apparatus scope',unknown)],['fa-hot'])
+scene('lead-charge-degas','lead-degas','Charge and degas the lead precursor',[('Atmosphere','The synthesis is described under nitrogen. The lead-degassing sentence does not explicitly specify vacuum, unlike the FA preparation.'),('Apparatus scope',unknown)],['qd-charge'])
+scene('lead-preheat','lead-hot','Preheat the lead precursor',[('Atmosphere','Nitrogen is stated for synthesis; numerical gas pressure is unreported.'),('Sequence','135 °C is precursor treatment, not the selected QD growth temperature.'),('Apparatus scope',unknown)],['qd-preheat'])
+paired='The nine rows are three ligand, three washing and three growth-temperature comparison contexts. Repeated optimal conditions do not identify one physical aliquot or independent replicates. Do not combine them as a Cartesian design.'
+scene('add-oa','oa','Inject the selected oleic acid volume',[('Current action','Only the OA volume is applied here. OAm, growth temperature and washing ratios in the paired rows identify the comparison context; they are not simultaneous additions.'),('Paired condition scope',paired),('Atmosphere','Nitrogen synthesis conditions; injection implement and numerical rate are unreported.'),('Apparatus scope',unknown)],['qd-ligands','ligand-design','wash-design','temperature-design'])
+scene('add-oam','oam','Inject oleylamine after oleic acid',[('Order','0.2 mL OAm follows the selected OA charge, at 135 °C. No new OA addition occurs in this stage.'),('Atmosphere','Nitrogen synthesis conditions; injection rate is unreported.'),('Apparatus scope',unknown)],['qd-ligands'])
+scene('cool-equilibrate','equilibrate','Cool to the selected growth temperature',[('Current action','Apply the selected growth temperature and 30 min hold. The other paired-row values identify the prior ligand and later washing context.'),('Paired condition scope',paired),('Atmosphere','Nitrogen synthesis conditions; cooling equipment and rate are unreported.')],['qd-equilibrate','ligand-design','wash-design','temperature-design'])
+scene('inject-fa','inject','Inject an aliquot of FA precursor',[('Aliquot boundary','0.51 mL is transferred from the separately prepared whole FA stock. Stock concentration and transferred salt amount are unreported.'),('Temperature','Use the already selected 25, 50 or 100 °C growth condition; no fixed temperature is silently selected.'),('Atmosphere','Nitrogen synthesis conditions; transfer implement and injection rate are unreported.')],['qd-inject','fa-charge'])
+scene('prompt-cool','cool','Promptly cool the crude QD mixture',[('Unreported','Numerical room temperature, cooling method/rate and post-injection growth dwell.'),('Particle symbols','Symbols indicate formed/crude material only; no uniform size, pure phase, atomic positions or yield is assigned.')],['qd-inject','temperature-phase'])
+scene('add-wash','wash','Add the selected washing formulation',[('Current action','Select one acetonitrile:toluene formulation. Paired growth and ligand values identify context; they are not additional treatment here.'),('Paired condition scope',paired),('Volumes','Ratios are volume parts. Absolute solvent volumes, premixing details and repetition count are unreported.'),('Atmosphere','The workup atmosphere is not separately specified.')],['wash-formulation','ligand-design','wash-design','temperature-design'])
+scene('first-spin','first-spin','Centrifuge and retain the precipitate',[('Retained fraction','Keep the first precipitate for hexane redispersion. The other fraction is washing waste.'),('Unreported','Rotor radius, centrifugal force, temperature and tube specification. The reported rpm is not converted to RCF.')],['wash-spin','washing-photo'])
+scene('redisperse-hexane','redisperse','Redisperse the first precipitate in hexane',[('Input fraction','The retained first precipitate enters this step, not the discarded washing waste.'),('Unreported','Hexane quantity, dispersion concentration and redispersion equipment.')],['redisperse'])
+scene('second-spin','second-spin','Centrifuge and retain the supernatant',[('Retained fraction','Keep the final supernatant. The second precipitate is not the stored product.'),('Unreported','Rotor radius, centrifugal force, temperature and tube specification.')],['clarify-spin'])
+scene('store-supernatant','store','Store the final supernatant',[('Unreported','Storage temperature, duration, atmosphere, vessel and dispersion concentration. No refrigerator or cold-storage setting is inferred.'),('Specimen linkage','Common preparation and labels do not establish exact cross-technique aliquot identity.')],['clarify-spin'])
+scene('xrd-acquire','xrd','Acquire powder X-ray diffraction',[('Instrument','X-pert3-Powder (PANalytical).'),('Separate specimens','Ligand, washing and growth series remain separate sample contexts, not a pooled powder.'),('Unreported','Radiation/wavelength, scan range/step, sample mounting, instrumental broadening correction and atmosphere.')],['xrd-method'])
+scene('trpl-acquire','trpl','Measure and fit time-resolved photoluminescence',[('Instrument','HORIBA Fluorolog-QM; 404 nm excitation and 4 ns instrument response.'),('Analysis','Triple-exponential fit and the printed intensity-weighted average. Component amplitudes, lifetimes and errors are unreported; no synthetic decay trace is drawn.'),('Specimen scope','Separate source comparison specimens; no exact common aliquot or measurement atmosphere is assigned.')],['trpl-method'])
+scene('tem-acquire','tem','Acquire TEM and evaluate size distributions',[('Instrument','JEM-F200 (JEOL), with ImageJ analysis.'),('Specimen scope','Separate growth-temperature specimens; size, phase and fringe annotations remain source evidence.'),('Unreported','Voltage, support/grid, preparation, particle count, dose and specimen atmosphere. No SAED or atomic model is invented.')],['tem-method','temperature-size'])
+scene('temperature-pl-acquire','temperature-pl','Measure variable-temperature photoluminescence',[('Instrument','Horiba LabRam with Linkam LNP96_S and LTS 420 temperature control.'),('Observation boundary','140 and 250 K are source-assigned optical phase boundaries, not extra acquisition setpoints. No QD coordinate refinement is supplied.'),('Unreported','Laser power, specimen form/mounting, atmosphere, temperature ramp and equilibration time.')],['temperature-method','pl-temperature-scan'])
+scene('temperature-raman-acquire','raman','Measure low-frequency Raman spectra',[('Instrument','Horiba LabRam with Linkam temperature control; 633 nm excitation.'),('Reported ranges','Attempted 80–200 K; displayed 80–190 K. The >190 K overlap limit is an observation, not a selected setpoint.'),('Unreported','Laser power, specimen form/mounting, atmosphere, ramp and equilibration time. The source figure-reference conflict remains in the reader.')],['temperature-method','raman-range'])
+scene('thermal-aging-acquire','aging','Measure photoluminescence during thermal aging',[('Comparison','350 K time series with a separately labeled 300 K reference spectrum; exact common aliquot is not established.'),('Analysis boundary','The −0.026t + 1 normalized fit, with t in hours, is a measured-trend fit, not an acquisition setting or absolute quantum yield.'),('Unreported','Illumination history, specimen form, mounting, atmosphere, ramp and equilibration details.')],['thermal-stability','temperature-method'])
+cfg={};bindings=[];labels={};typed=[]
+for r in records:
+ for j,o in enumerate(r['operations']):
+  c=deepcopy(base[o['id']]);c.update(record_id=r['record_id'],operation_id=o['id'],operation_pointer=f'/operations/{j}',option_selections=[])
+  if o['id']in['add-oa','cool-equilibrate','add-wash']:
+   c['option_selections']=[{'pointer':f'/condition_options/{i}','keys':list(x['parameters'])}for i,x in enumerate(r['condition_options'])]
+  sid=r['record_id']+'--'+o['id'];cfg[sid]=c
+  bindings.append({'scene_id':sid,'record_id':r['record_id'],'record_path':str(paths[r['record_id']]),'record_sha256':sha(paths[r['record_id']]),'operation_id':o['id'],'operation_pointer':c['operation_pointer'],'inputs':o['inputs'],'outputs':o['outputs'],'retained_fraction':o['retained_fraction'],'source_evidence':o['evidence'],'source_context_fact_ids':c['source_context_fact_ids'],'canonical_description':o['description'],'human_prose':c['prose'],'art':c['art'],'option_selections':c['option_selections']})
+  for k,q in o['parameters'].items():labels[k]=k.replace('_',' ').capitalize();typed.append({'scene_id':sid,'pointer':f'/operations/{j}/parameters/{k}','quantity':q,'kind':'operation_parameter'})
+  for sel in c['option_selections']:
+   opt=r['condition_options'][int(sel['pointer'].split('/')[-1])]
+   for k in sel['keys']:labels[k]=k.replace('_',' ').capitalize();typed.append({'scene_id':sid,'pointer':sel['pointer']+'/parameters/'+k,'quantity':opt['parameters'][k],'kind':'paired_comparison_context'})
+labels.update({'fa_precursor_aliquot':'FA-stock aliquot','pbi2_charge':'PbI2 charge','ode_charge':'ODE charge','oa_charge':'Whole-stock OA charge','formamidine_acetate_charge':'Whole-stock formamidine acetate charge','selected_oa_volume':'OA selection (see paired contexts)','selected_growth_temperature':'Growth-temperature selection (see paired contexts)','growth_temperature':'Growth temperature','oa_volume':'OA volume','oam_volume':'OAm volume','wash_acetonitrile_parts':'Washing MeCN volume parts','wash_toluene_parts':'Washing toluene volume parts'})
+assert len(cfg)==len(base)==21 and len(records)==8
+data={'source_group':'sasongko2025','configs':cfg,'parameter_labels':labels}
+save('scene-config.json',data);save('records.json',records);save('typed-field-map.json',typed)
+save('canonical-bindings.json',{'author':'/root/norberg2004_extract','status':'private_unapproved','canonical_freeze_sha256':sha(C/'package-freeze.json'),'canonical_audit_sha256':sha(audit),'source_freeze_sha256':sha(J/'source-extraction-revision-2/package-freeze.json'),'bindings':bindings})
+template=(T/'protocol-template.mjs').read_text('utf8');template=template[:template.index('function draw(c)')]+(A/'draw-scenes.mjs').read_text('utf8')+'\n'+template[template.index('function quantity(q)'):]
+template=template.replace('Friedfeld2019','Sasongko2025').replace('friedfeld2019','sasongko2025').replace('Friedfeld et al. 2019','Sasongko et al. 2025').replace('friedfeld-','sasongko-')
+template=template.replace("volume_parts:'',", "volume_parts:'',")
+template=template.replace("time_text:'',dimensionless:'',", "time_text:'',dimensionless:'',volume_parts:'volume parts',")
+template=template.replace("label:option.label.replace", "label:'Paired comparison · '+option.label.replace")
+template=template.replace("kind:'alternative_schedule_group'", "kind:'paired_comparison_context'")
+(A/'protocol-template.mjs').write_text(template,'utf8');(A/'sasongko2025-protocol.mjs').write_text(template.replace('__CONFIG__',json.dumps(data,ensure_ascii=False,separators=(',',':'))),'utf8')
+shutil.copyfile(T/'quantity-value.mjs',A/'quantity-value.mjs')
+save('helper-provenance.json',{'templates':[{'path':str(T/'protocol-template.mjs'),'sha256':sha(T/'protocol-template.mjs'),'scope':'Source-neutral SVG primitives and public condition-grid API only; all source-specific draw cases replaced.'},{'path':str(T/'quantity-value.mjs'),'sha256':sha(T/'quantity-value.mjs'),'scope':'Unmodified quantity formatting primitive.'}],'canonical_changes':False})
+print(json.dumps({'records':8,'scenes':21,'typed_fields':len(typed),'comparison_contexts':9,'comparison_context_displays':27}))
