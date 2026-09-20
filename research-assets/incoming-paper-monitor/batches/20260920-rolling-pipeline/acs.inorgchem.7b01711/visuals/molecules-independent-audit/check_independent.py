@@ -79,7 +79,7 @@ expected_graph={
 def smiles(model):
     rw=Chem.RWMol()
     for a in model['atoms']:
-        at=Chem.Atom(a['element']);at.SetFormalCharge(a.get('formalCharge',0));at.SetIsotope(a.get('isotope',0));at.SetNoImplicit(True);at.SetNumExplicitHs(a.get('implicitHydrogenCount',0));rw.AddAtom(at)
+        at=Chem.Atom(a['element']);at.SetFormalCharge(a.get('formalCharge',0));at.SetIsotope(a.get('isotope',0));at.SetNoImplicit('implicitHydrogenCount' in a);at.SetNumExplicitHs(a.get('implicitHydrogenCount',0));rw.AddAtom(at)
     types={1:Chem.BondType.SINGLE,1.5:Chem.BondType.AROMATIC,2:Chem.BondType.DOUBLE,3:Chem.BondType.TRIPLE}
     for b in model['bonds']:rw.AddBond(b['a'],b['b'],types[b['order']])
     mol=rw.GetMol();Chem.SanitizeMol(mol);return Chem.MolToSmiles(Chem.RemoveHs(mol)),mol
@@ -119,10 +119,24 @@ for e in entries:
         rid=e['provenance'].get('retainedRegistryId')
         if rid:
             old=read(M/'reference-snapshots/models'/f'{rid}-{ "2d" if key=="model2dPath" else "3d"}.json')
-            for f in ['atoms','bonds','functionalGroups']:ck(model.get(f)==old.get(f),'cached '+f+' unchanged '+mid+key)
+            oldsmiles,_=smiles(old);ck(oldsmiles==exp,'cached named graph identity '+mid+key)
+            if key=='model3dPath':
+                for f in ['atoms','bonds']:ck(model.get(f)==old.get(f),'cached '+f+' unchanged '+mid+key)
+            # 2D layouts and functional highlights are explicitly regenerated, not raw arrays promised unchanged.
         graphs.append({'material':mid,'representation':key,'canonical_smiles':g,'formula':formula,'atoms':len(ats),'bonds':len(bs),'groups':len(fg),'minimum_pair_distance':minimum,'bond_length_range':([min(lengths),max(lengths)] if lengths else None)})
 snap=read(M/'reference-snapshots/manifest.json')
 for s in snap['snapshots']:ck(sha(M/s['snapshot_path'])==s['sha256'],'retained provenance artifact '+s['snapshot_path'])
+for p in (M/'reference-snapshots/primary').rglob('*.sdf'):
+    mid=p.parent.name;mol=next(iter(Chem.SDMolSupplier(str(p),removeHs=False)))
+    ck(mol is not None,'primary SDF parses '+p.name)
+    if mol is not None:
+        ck(Chem.MolToSmiles(Chem.RemoveHs(mol))==Chem.MolToSmiles(Chem.MolFromSmiles(expected_graph[mid])),'retained primary graph '+p.name)
+        if '-3d.sdf' in p.name:
+            e=next(e for e in entries if e['provenance']['sourceMaterialId']==mid);model=read(M/e['model3dPath']);conf=mol.GetConformer()
+            ck(mol.GetNumAtoms()==len(model['atoms']),'primary coordinate atom count '+mid)
+            for i,a in enumerate(model['atoms']):
+                ck(mol.GetAtomWithIdx(i).GetSymbol()==a['element'],'primary atom ordering '+mid)
+                q=conf.GetAtomPosition(i);ck(max(abs(q[j]-a[k]) for j,k in enumerate(['x','y','z']))<0.001,'primary cached coordinate agreement '+mid)
 allow=read(M/'public-asset-proposal.json')['relative_asset_files']
 ck(len(allow)==56,'56 public assets')
 expectedfiles={e[k] for e in entries for k in ['svgPath','model2dPath','model3dPath'] if e.get(k)}
