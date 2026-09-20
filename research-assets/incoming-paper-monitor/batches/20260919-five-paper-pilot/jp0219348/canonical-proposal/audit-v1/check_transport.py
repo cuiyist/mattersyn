@@ -26,6 +26,12 @@ for rel,h in package['files'].items():
     p=V/rel;ck('frozen package',rel,p.is_file() and sha(bind(p))==h)
 for rel,h in package['external_input_hashes'].items():
     p=H/rel;ck('external frozen input',rel,p.is_file() and sha(bind(p))==h)
+for name,expected in {
+    '10.1021_jp0219348.pdf':'03e6f3be5375a0e2023a6850c1c6931904be8e3c85c37e0c30effdf6ecf73c01',
+    '10.1021_jp0219348_si_1.pdf':'3b2e262af1932ed04cfddd596958c92d89c37099ab9dad8c4ce1f11254d4acc6',
+}.items():
+    source=Path('[local path redacted]')/name
+    ck('original source identity',name,source.is_file() and sha(bind(source))==expected)
 records={p.stem:load(p) for p in (V/'canonical-drafts').glob('*.json')}
 reader=load(V/'public-review-proposal/heo2003.json');items=[i for s in reader['reader_sections'] for i in s['items']];byitem={i['id']:i for i in items}
 facts=load(H/'source-facts.json');inv=load(H/'source-inventory.json');tables=load(H/'main-tables.json');si=load(H/'si-complete-candidate/all-reflections.json')
@@ -66,7 +72,13 @@ for b in fc['bindings']:
             if b['source_fact_id']=='heo2003-table2-fixed-sites':unit='site multiplicity' if l['source_value_pointer'].endswith('/1') else 'atoms per conventional unit cell'
             ck(b['source_fact_id'],'Unit/approximation retained',q.get('unit','')==unit and q.get('approximate')==source.get('approximate',False))
 
-tc=load(V/'table-field-coverage.json');quantitypaths={p for p,x in walk(tables) if isinstance(x,dict) and {'raw','value','status','unit'}<=x.keys()}
+tc=load(V/'table-field-coverage.json');allquantitypaths={p for p,x in walk(tables) if isinstance(x,dict) and {'raw','value','status','unit'}<=x.keys()}
+# The package's 209 count is table-row quantities. Fourteen duplicate
+# condition-conflict quantities and the oxygen-radius derivation reference
+# are auxiliary metadata, retained by the exact source payload checks above.
+auxiliarypaths={p for p in allquantitypaths if p.startswith('/conflicts/') or p=='/tables/4/derivation/oxygen_reference'}
+quantitypaths=allquantitypaths-auxiliarypaths
+ck('table coverage','15 auxiliary quantities retained in exact source payload',len(auxiliarypaths)==15 and (H/'main-tables.json').read_bytes()==(V/'source-payloads/main-tables.json').read_bytes())
 ck('table coverage','209 table quantity objects independently enumerated',len(quantitypaths)==209 and {b['source_quantity_pointer'] for b in tc['quantity_bindings']}==quantitypaths,{'enumerated':len(quantitypaths),'missing_bindings':sorted(quantitypaths-{b['source_quantity_pointer'] for b in tc['quantity_bindings']}),'extra_bindings':sorted({b['source_quantity_pointer'] for b in tc['quantity_bindings']}-quantitypaths)})
 for b in tc['quantity_bindings']:
     src=ptr(tables,b['source_quantity_pointer']);q=ptr(records[b['record_id']],b['json_pointer'])
