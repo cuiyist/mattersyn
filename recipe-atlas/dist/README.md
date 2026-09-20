@@ -6,7 +6,7 @@ This repository contains the published static materials atlas and machine-readab
 
 ## Papers used in the published website
 
-Generated from dataset **0.30.0**, containing **38 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.
+Generated from dataset **0.31.0**, containing **39 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Main paper reviewed; SI unverified](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
@@ -59,6 +59,8 @@ Generated from dataset **0.30.0**, containing **38 primary source groups**. The 
 - Cynthia A. Stowell and Brian A. Korgel (2005). Iridium Nanocrystal Synthesis and Surface Coating-Dependent Catalytic Activity. *Nano Letters*, 5, 1203–1207. [10.1021/nl050648f](https://doi.org/10.1021/nl050648f). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=stowell2005).
 
 - Ying-Song Fu; Xi-Wen Du; Sergei A. Kulinich; Jian-Sheng Qiu; Wen-Jing Qin; Rui Li; Jing Sun; Jim Liu (2007). Stable Aqueous Dispersion of ZnO Quantum Dots with Strong Blue Emission via Simple Solution Route. [10.1021/ja075604i](https://doi.org/10.1021/ja075604i). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=fu2007).
+
+- Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman (2009). Precipitation of Nanocrystalline CeO2 Using Triethanolamine. *Langmuir*, 25, 67–70. [10.1021/la8031286](https://doi.org/10.1021/la8031286). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=pati2009).
 
 - Christopher M. Evans; Meagan E. Evans; Todd D. Krauss (2010). Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation. *Journal of the American Chemical Society*, 132, 10973–10975. [10.1021/ja103805s](https://doi.org/10.1021/ja103805s). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=evans2010).
 

@@ -1,0 +1,2781 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pati-2009-xps-fit",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Pati et al. (2009) · Peak fitting and surface-valence calculation",
+  "material": {
+    "formula": "CeO2",
+    "family": "Ceria precipitation with triethanolamine"
+  },
+  "method": "Peak fitting and surface-valence calculation",
+  "sources": [
+    {
+      "id": "pati2009",
+      "doi": "10.1021/la8031286",
+      "title": "Precipitation of Nanocrystalline CeO2 Using Triethanolamine",
+      "authors": "Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/la8031286",
+      "main_status": "All four supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched four-page XPS SI fully read, visually inspected and independently audited. Pairing uses the main-paper declaration, matching content and embedded document metadata; SI has no title/byline.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "pati2009",
+    "recipe_family": "pati2009-alcohol-tea-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 1 (printed 67), Title and journal heading; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ],
+      "note": "Intended target only; no pure whole as-prepared product composition is asserted."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xps-fit-context",
+      "name": "Separate source specimen/context: xps fit context",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "xps-fit-data",
+      "name": "Analysis result: xps fit data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xps-fit-context"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "xps-fit-analyze",
+      "action": "peak-fitting-and-surface-valence-calculation",
+      "label": "Peak fitting and surface-valence calculation",
+      "stage": "characterization",
+      "branch": "separate_source_contexts",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "xps-fit-context"
+      ],
+      "outputs": [
+        "xps-fit-data"
+      ],
+      "parameters": {
+        "gaussian_fraction": {
+          "value": 50.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+          "basis": "Source context: xps-fit.",
+          "raw_text": "50",
+          "evidence": [
+            {
+              "source_id": "pati2009",
+              "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+            }
+          ],
+          "derivation": null
+        },
+        "lorentzian_fraction": {
+          "value": 50.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+          "basis": "Source context: xps-fit.",
+          "raw_text": "50",
+          "evidence": [
+            {
+              "source_id": "pati2009",
+              "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+            }
+          ],
+          "derivation": null
+        },
+        "printed_calibration_energy": {
+          "value": 884.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+          "basis": "Source context: xps-fit.",
+          "raw_text": "884.5",
+          "evidence": [
+            {
+              "source_id": "pati2009",
+              "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Peak fitting and surface-valence calculation. Only explicitly applicable source-context quantities are conditions; diagnostic and reference values remain separate. Missing fields: See source acquisition facts and missingness G4. Inputs identify separate specimens or contexts; they are not pooled.",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xps-fit-context",
+      "source_sample_label": "xps-fit-context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: xps-fit-context.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link.",
+        "",
+        "unknown or not applicable; no batch match inferred"
+      ]
+    },
+    {
+      "sample_id": "xps-model-labels",
+      "source_sample_label": "XPS model labels",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), Calculation section continuedSIp2; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Continuation of the literal spin-orbit and peak assignment; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), Calculation section continuedSIp2; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Continuation of the literal spin-orbit and peak assignment; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), Calculation section continuedSIp2; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Continuation of the literal spin-orbit and peak assignment; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), Calculation section continuedSIp2; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Continuation of the literal spin-orbit and peak assignment; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: XPS model labels.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "four-xps-spectra",
+      "source_sample_label": "four XPS spectra",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: four XPS spectra.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "xps-fitting-protocol",
+      "source_sample_label": "XPS fitting protocol",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: XPS fitting protocol.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "as-prepared-long-exposure-surface",
+      "source_sample_label": "as-prepared long-exposure surface",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: as-prepared long-exposure surface.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "xps-fitting-context",
+      "source_sample_label": "XPS fitting context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: XPS fitting context.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "short-exposure-surfaces",
+      "source_sample_label": "short-exposure surfaces",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: short-exposure surfaces.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "long-exposure-surfaces",
+      "source_sample_label": "long-exposure surfaces",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: long-exposure surfaces.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figures-figure-s1",
+      "source_sample_label": "source unit pati2009-figures-figure-s1",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figures-figure-s1.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figure-s1-a",
+      "source_sample_label": "source unit pati2009-figure-s1-a",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figure-s1-a.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figure-s1-b",
+      "source_sample_label": "source unit pati2009-figure-s1-b",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figure-s1-b.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figure-s1-c",
+      "source_sample_label": "source unit pati2009-figure-s1-c",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figure-s1-c.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figure-s1-d",
+      "source_sample_label": "source unit pati2009-figure-s1-d",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figure-s1-d.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-equations-ceiii-area",
+      "source_sample_label": "source unit pati2009-equations-ceiii-area",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), First unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), First unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), First unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), First unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-equations-ceiii-area.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-equations-ceiv-area",
+      "source_sample_label": "source unit pati2009-equations-ceiv-area",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Second unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Second unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Second unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Second unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-equations-ceiv-area.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-equations-ceiii-percentage",
+      "source_sample_label": "source unit pati2009-equations-ceiii-percentage",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Unnumbered percentage equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Unnumbered percentage equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Unnumbered percentage equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Unnumbered percentage equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-equations-ceiii-percentage.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pati2009-si-peak-labels-claim",
+      "sample_id": "xps-model-labels",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "SI assigns u/v to Ce3d5/2 and3d7/2, respectively, as printed; 3d7/2 is physically atypical and retained as a source-label issue. CeIII uses v0,u0,v′,u′ and CeIV uses v,u,v″,u″,v‴,u‴.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), Calculation section continuedSIp2; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Continuation of the literal spin-orbit and peak assignment; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: source_model. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label."
+      },
+      "conditions": "XPS model labels",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), Calculation section continuedSIp2; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        },
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Continuation of the literal spin-orbit and peak assignment; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-exposure-claim",
+      "sample_id": "four-xps-spectra",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "FigureS1 is organized as(a)as-prepared long exposure,(b)as-prepared short,(c)calcined long,(d)calcined short, supported by SI first paragraph and spectra. Caption/fitting prose have inconsistent labels. Long exposure is more than5h; short exposure is~15min in caption and15min in prose.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: reported_acquisition. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied."
+      },
+      "conditions": "four XPS spectra",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        },
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-exposure-q1",
+      "sample_id": "four-xps-spectra",
+      "property": "long_exposure",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": null,
+        "minimum": 5.0,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_acquisition. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: four XPS spectra.",
+        "raw_text": ">5",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "four XPS spectra",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        },
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-exposure-q2",
+      "sample_id": "four-xps-spectra",
+      "property": "si_caption_short_exposure",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 15.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported_acquisition. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: four XPS spectra.",
+        "raw_text": "~15",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "four XPS spectra",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        },
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-exposure-q3",
+      "sample_id": "four-xps-spectra",
+      "property": "si_prose_short_exposure",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 15.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_acquisition. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: four XPS spectra.",
+        "raw_text": "15",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "four XPS spectra",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), First paragraph and FigureS1; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        },
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), FigureS1 caption and four panels; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fitting-claim",
+      "sample_id": "xps-fitting-protocol",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "Apply Shirley background and50%Gaussian/50%Lorentzian peak shape. Calibrate to the printed v¹ component884.5eV; TableS1 v′ energy884.8eV is retained separately. Stronger long-exposure spectra supply fitting positions/widths for lower-SNR short-exposure data.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value."
+      },
+      "conditions": "XPS fitting protocol",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fitting-q1",
+      "sample_id": "xps-fitting-protocol",
+      "property": "gaussian_fraction",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 50.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+        "basis": "Source context: XPS fitting protocol.",
+        "raw_text": "50",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "XPS fitting protocol",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fitting-q2",
+      "sample_id": "xps-fitting-protocol",
+      "property": "lorentzian_fraction",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 50.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+        "basis": "Source context: XPS fitting protocol.",
+        "raw_text": "50",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "XPS fitting protocol",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fitting-q3",
+      "sample_id": "xps-fitting-protocol",
+      "property": "printed_calibration_energy",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 884.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+        "basis": "Source context: XPS fitting protocol.",
+        "raw_text": "884.5",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "XPS fitting protocol",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fit-four-claim",
+      "sample_id": "as-prepared-long-exposure-surface",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "FigureS1a is described as fitting four CeIII peaks; absence of an~916eV feature is interpreted as no CeIV evidence. It is not a measured exact zero bulk CeIV fraction.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied."
+      },
+      "conditions": "as-prepared long-exposure surface",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fit-four-q1",
+      "sample_id": "as-prepared-long-exposure-surface",
+      "property": "fit_peak_count",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: as-prepared long-exposure surface.",
+        "raw_text": "4",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "as-prepared long-exposure surface",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fit-four-q2",
+      "sample_id": "as-prepared-long-exposure-surface",
+      "property": "absent_ceiv_marker_position",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 916.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: as-prepared long-exposure surface.",
+        "raw_text": "~916",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "as-prepared long-exposure surface",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fit-ten-claim",
+      "sample_id": "xps-fitting-context",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "SI refers repeatedly to spectrum3a/3c, while actual SI figure isS1 and main Figure3 is thermal analysis. A10-peak mixed CeIII/CeIV fit supplies the TableS1 values used for remaining spectra. Preserve this label discrepancy rather than assigning thermal data as XPS.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied."
+      },
+      "conditions": "XPS fitting context",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-fit-ten-q1",
+      "sample_id": "xps-fitting-context",
+      "property": "mixed_fit_peak_count",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 10.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_analysis. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: XPS fitting context.",
+        "raw_text": "10",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "XPS fitting context",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 2 (printed None), Fitting paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-short-results-claim",
+      "sample_id": "short-exposure-surfaces",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "After~15min X-rays, SI reports as-prepared81%CeIII/19%CeIV and calcined33%CeIII/67%CeIV, matching main values but not its strict<15min wording.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: reported_measurement. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula."
+      },
+      "conditions": "short-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-short-results-q1",
+      "sample_id": "short-exposure-surfaces",
+      "property": "si_short_exposure",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 15.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported_measurement. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: short-exposure surfaces.",
+        "raw_text": "~15",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "short-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-short-results-q2",
+      "sample_id": "short-exposure-surfaces",
+      "property": "as_prepared_ceiii",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 81.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_measurement. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: short-exposure surfaces.",
+        "raw_text": "81",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "short-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-short-results-q3",
+      "sample_id": "short-exposure-surfaces",
+      "property": "as_prepared_ceiv",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 19.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_measurement. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: short-exposure surfaces.",
+        "raw_text": "19",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "short-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-short-results-q4",
+      "sample_id": "short-exposure-surfaces",
+      "property": "calcined_ceiii",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 33.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_measurement. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: short-exposure surfaces.",
+        "raw_text": "33",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "short-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-short-results-q5",
+      "sample_id": "short-exposure-surfaces",
+      "property": "calcined_ceiv",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 67.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_measurement. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: short-exposure surfaces.",
+        "raw_text": "67",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "short-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Paragraph after equations; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-long-results-claim",
+      "sample_id": "long-exposure-surfaces",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "After more than5h, as-prepared material shows no evidence of CeIV; calcined sample CeIII increases to~45%. The unreported complementary percentage is not inserted as a measured value.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Source claim class: reported_measurement. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula."
+      },
+      "conditions": "long-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-long-results-q1",
+      "sample_id": "long-exposure-surfaces",
+      "property": "long_exposure",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": null,
+        "minimum": 5.0,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_measurement. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: long-exposure surfaces.",
+        "raw_text": ">5",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "long-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-si-long-results-q2",
+      "sample_id": "long-exposure-surfaces",
+      "property": "calcined_ceiii_after_long_exposure",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 45.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported_measurement. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula.",
+        "basis": "Source context: long-exposure surfaces.",
+        "raw_text": "~45",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "long-exposure surfaces",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Final paragraph; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-definition",
+      "sample_id": "xps-fit-context",
+      "property": "source_table_definition",
+      "technique": "Original table definition",
+      "value": {
+        "value": "{\"id\":\"table-s1\",\"title\":\"The binding energy positions and FWHM values obtained from the fitting of spectrum3(c)\",\"raw_grid\":[[\"Ce3d7/2\",\"v0 Ce3+\",\"v Ce4+\",\"v′ Ce3+\",\"v″ Ce4+\",\"v‴ Ce4+\"],[\"Binding Energy(eV)\",\"880.3\",\"881.9\",\"884.8\",\"888.3\",\"897.8\"],[\"FWHM(eV)\",\"3.0\",\"2.2\",\"3.9\",\"3.8\",\"2.3\"],[\"Ce3d5/2\",\"u0 Ce3+\",\"u Ce4+\",\"u′ Ce3+\",\"u″ Ce4+\",\"u‴ Ce4+\"],[\"Binding Energy(eV)\",\"898.8\",\"900.4\",\"902.9\",\"906.8\",\"916.1\"],[\"FWHM(eV)\",\"3.2\",\"1.5\",\"4.5\",\"2.9\",\"2.3\"]],\"numeric_cell_count\":20,\"raw_grid_cell_count\":36,\"evidence\":[{\"source_id\":\"pati2009-si\",\"document_role\":\"si\",\"source_sha256\":\"1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e\",\"pdf_page\":3,\"printed_page\":null,\"locator\":\"Complete TableS1 and caption\"}],\"conflict_ids\":[\"C6\",\"C7\",\"C10\"],\"footnotes\":[],\"sample_scope\":\"XPS fitting context; literal3(c) label unresolved, shared fits across4source spectra; no exact physical batch join\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Complete TableS1 and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Literal printed headings, 36 raw grid cells and inconsistent spin/specimen labels retained; no repaired fit or fractions."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Complete TableS1 and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v0-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 880.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v0 Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "880.3",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v0 binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v0 binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v0-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v0 Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "3.0",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v0 FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v0 FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 881.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "881.9",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 2.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "2.2",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v′-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 884.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v′ Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied. C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "884.8",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v′ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v′ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v′-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 3.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v′ Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "3.9",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v′ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v′ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v″-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 888.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v″ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "888.3",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v″ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v″ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v″-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 3.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v″ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "3.8",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v″ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v″ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v‴-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 897.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v‴ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "897.8",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v‴ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v‴ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-v‴-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 2.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d7/2 v‴ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "2.3",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v‴ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d7/2, v‴ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u0-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 898.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u0 Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "898.8",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u0 binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u0 binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u0-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 3.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u0 Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "3.2",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u0 FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u0 FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 900.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "900.4",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "1.5",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u′-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 902.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u′ Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "902.9",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u′ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u′ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u′-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 4.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u′ Ce3+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "4.5",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u′ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u′ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u″-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 906.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u″ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "906.8",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u″ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u″ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u″-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 2.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u″ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "2.9",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u″ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u″ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u‴-binding_energy",
+      "sample_id": "xps-fit-context",
+      "property": "binding_energy",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 916.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u‴ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "916.1",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u‴ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u‴ binding-energy cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "table-s1-u‴-fwhm",
+      "sample_id": "xps-fit-context",
+      "property": "fwhm",
+      "technique": "Source XPS fitted peak",
+      "value": {
+        "value": 2.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Ce3d5/2 u‴ Ce4+ as printed. No unambiguous unique physical specimen assigned from conflicting labels. C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label. C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+        "basis": "Source context: xps-fit-context.",
+        "raw_text": "2.3",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u‴ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), TableS1 Ce3d5/2, u‴ FWHM cell; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figures-figure-s1",
+      "sample_id": "source-unit-pati2009-figures-figure-s1",
+      "property": "source_figures",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"id\":\"figure-s1\",\"role\":\"si\",\"page\":1,\"title\":\"Ce3d XPS and peak fits\",\"panels\":[{\"label\":\"a\",\"sample_id\":\"xps-as-long\"},{\"label\":\"b\",\"sample_id\":\"xps-as-short\"},{\"label\":\"c\",\"sample_id\":\"xps-calcined-long\"},{\"label\":\"d\",\"sample_id\":\"xps-calcined-short\"}],\"annotations\":{\"x_label\":\"Binding Energy(eV)\",\"x_ticks_raw\":[\"930\",\"920\",\"910\",\"900\",\"890\",\"880\",\"870\"],\"x_direction\":\"descending left to right\",\"y_label\":\"Intensity(arb.units)\",\"peak_label_legend\":\"u/v components retained in original and TableS1\",\"curves_digitized\":false},\"scope_note\":\"Mappings follow SI first paragraph and plotted4/10peak context; conflicting caption/fitting prose explicitly preserved. No extra FigureS2 exists.\",\"evidence\":[{\"source_id\":\"pati2009-si\",\"document_role\":\"si\",\"source_sha256\":\"1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e\",\"pdf_page\":1,\"printed_page\":null,\"locator\":\"figure-s1 complete original and caption\"}]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figure-s1-a",
+      "sample_id": "source-unit-pati2009-figure-s1-a",
+      "property": "source_figure_panel",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"label\":\"a\",\"sample_id\":\"xps-as-long\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figure-s1-b",
+      "sample_id": "source-unit-pati2009-figure-s1-b",
+      "property": "source_figure_panel",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"label\":\"b\",\"sample_id\":\"xps-as-short\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figure-s1-c",
+      "sample_id": "source-unit-pati2009-figure-s1-c",
+      "property": "source_figure_panel",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"label\":\"c\",\"sample_id\":\"xps-calcined-long\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figure-s1-d",
+      "sample_id": "source-unit-pati2009-figure-s1-d",
+      "property": "source_figure_panel",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"label\":\"d\",\"sample_id\":\"xps-calcined-short\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 1 (printed None), figure-s1 complete original and caption; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-equations-ceiii-area",
+      "sample_id": "source-unit-pati2009-equations-ceiii-area",
+      "property": "source_equations",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"id\":\"ceiii-area\",\"raw_expression\":\"Ce(III) = I_v0 + I_u0 + I_v + I_u′\",\"title\":\"First unnumbered area equation\",\"note\":\"I is area under the peak. The unprimed I_v is preserved, conflicting with the peak assignments.\",\"evidence\":[{\"source_id\":\"pati2009-si\",\"document_role\":\"si\",\"source_sha256\":\"1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e\",\"pdf_page\":3,\"printed_page\":null,\"locator\":\"First unnumbered area equation\"}],\"conflict_ids\":[\"C8\"],\"numerical_recalculation_performed\":false}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), First unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), First unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-equations-ceiv-area",
+      "sample_id": "source-unit-pati2009-equations-ceiv-area",
+      "property": "source_equations",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"id\":\"ceiv-area\",\"raw_expression\":\"Ce(IV) = I_v + I_u + I_v″ + I_u″ + I_v‴ + I_u‴\",\"title\":\"Second unnumbered area equation\",\"note\":\"I is area under the peak; retain source notation and source-reported fractions.\",\"evidence\":[{\"source_id\":\"pati2009-si\",\"document_role\":\"si\",\"source_sha256\":\"1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e\",\"pdf_page\":3,\"printed_page\":null,\"locator\":\"Second unnumbered area equation\"}],\"conflict_ids\":[\"C8\"],\"numerical_recalculation_performed\":false}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Second unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Second unnumbered area equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-equations-ceiii-percentage",
+      "sample_id": "source-unit-pati2009-equations-ceiii-percentage",
+      "property": "source_equations",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"id\":\"ceiii-percentage\",\"raw_expression\":\"%Ce(III) = Ce(III)/(Ce(III)+Ce(IV)) ×100\",\"title\":\"Unnumbered percentage equation\",\"note\":\"Source calculation rule; no peak-area raw data are supplied for independent recomputation.\",\"evidence\":[{\"source_id\":\"pati2009-si\",\"document_role\":\"si\",\"source_sha256\":\"1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e\",\"pdf_page\":3,\"printed_page\":null,\"locator\":\"Unnumbered percentage equation\"}],\"conflict_ids\":[\"C8\"],\"numerical_recalculation_performed\":false}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "SI PDF p. 3 (printed None), Unnumbered percentage equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "SI PDF p. 3 (printed None), Unnumbered percentage equation; source SHA256 1669359b67be6fcf7362dbf33d708d76b76d70e079b91b6c70d2856683de431e"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main and four-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. Three alcohol-specific precipitation routes, eleven supporting procedures and five observation records remain separate. As-prepared whole-powder identity is unresolved despite local CeO2 microscopy; calcination, DLS and XPS exposure histories retain their own scopes. Source conflicts are preserved. No atomic model, exact structure-recipe pair or new training task is admitted.",
+    "missing_fields": [
+      "Records and context counts do not count independent physical batches.",
+      "Three alcohol substitutions, as-prepared/calcined powders, solution DLS and XPS exposure states remain distinct.",
+      "As-prepared local CeO2 crystallites do not establish pure whole-powder composition.",
+      "No qualified atomic model, exact recipe–structure pair, automatic same-aliquot join or training admission.",
+      "See source acquisition facts and missingness G4"
+    ],
+    "conflicts": [
+      "C6: SI prose/table print Ce3d7/2 for v and3d5/2 for u. Do not silently substitute a conventional label.",
+      "C4: Mainp3 reports less than15min; SIcaption/p3 approximately15min and SIp2 exactly15min wording. Keep separate source assertions.",
+      "C7: S1caption first clause lacks(a)/places(b) ambiguously. SI first paragraph placesa/b as-prepared andc/d calcined, but later saysa andc are as-prepared. Fitting prose/TableS1 cite3a/3c despite onlyS1 supplied.",
+      "C10: SI calibrates printed v¹ to884.5eV, while TableS1 lists v′884.8eV. Do not harmonize by editing either value.",
+      "C8: SI CeIII equation prints I_v without prime, unlike its own CeIII peak assignment/table, and I_v also occurs in CeIV sum. Retain literal expression and do not recalculate source percentages from a silently repaired formula."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=pati2009",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

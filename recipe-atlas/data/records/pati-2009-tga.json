@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pati-2009-tga",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Pati et al. (2009) · Thermogravimetry",
+  "material": {
+    "formula": "CeO2",
+    "family": "Ceria precipitation with triethanolamine"
+  },
+  "method": "Thermogravimetry",
+  "sources": [
+    {
+      "id": "pati2009",
+      "doi": "10.1021/la8031286",
+      "title": "Precipitation of Nanocrystalline CeO2 Using Triethanolamine",
+      "authors": "Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/la8031286",
+      "main_status": "All four supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched four-page XPS SI fully read, visually inspected and independently audited. Pairing uses the main-paper declaration, matching content and embedded document metadata; SI has no title/byline.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "pati2009",
+    "recipe_family": "pati2009-alcohol-tea-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 1 (printed 67), Title and journal heading; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ],
+      "note": "Intended target only; no pure whole as-prepared product composition is asserted."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "air",
+      "name": "Air",
+      "formula": "air",
+      "role": "measurement_environment",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "TGA environment only; does not specify calcination atmosphere.",
+        "Named identity and printed formula retained separately; no molecular model approval."
+      ],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "butanol-tga",
+      "name": "Separate source specimen/context: butanol tga",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "tga-data",
+      "name": "Analysis result: tga data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "butanol-tga"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "tga-acquire",
+      "action": "thermogravimetry",
+      "label": "Thermogravimetry",
+      "stage": "characterization",
+      "branch": "separate_source_contexts",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "butanol-tga",
+        "air"
+      ],
+      "outputs": [
+        "tga-data"
+      ],
+      "parameters": {
+        "tga_heating_rate": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established.",
+          "basis": "Source context: tga.",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "pati2009",
+              "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air (TGA only)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermogravimetry. Only explicitly applicable source-context quantities are conditions; diagnostic and reference values remain separate. Missing fields: See source acquisition facts and missingness G4. Inputs identify separate specimens or contexts; they are not pooled.",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "butanol-tga",
+      "source_sample_label": "butanol-tga",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results Figure3a discussion; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results Figure3a discussion; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results Figure3a discussion; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results Figure3a discussion; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: butanol-tga.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link.",
+        "",
+        "unknown or not applicable; no batch match inferred"
+      ]
+    },
+    {
+      "sample_id": "as-prepared-thermal-sample",
+      "source_sample_label": "as-prepared thermal sample",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: as-prepared thermal sample.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pati2009-tga-acquisition-claim",
+      "sample_id": "as-prepared-thermal-sample",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "Perkin-Elmer TGA-7 measurement is performed in air at10°C/min to identify impurities.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Source claim class: reported_acquisition. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established."
+      },
+      "conditions": "as-prepared thermal sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-tga-acquisition-q1",
+      "sample_id": "as-prepared-thermal-sample",
+      "property": "tga_heating_rate",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 10.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_acquisition. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established.",
+        "basis": "Source context: as-prepared thermal sample.",
+        "raw_text": "10",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "as-prepared thermal sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main and four-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. Three alcohol-specific precipitation routes, eleven supporting procedures and five observation records remain separate. As-prepared whole-powder identity is unresolved despite local CeO2 microscopy; calcination, DLS and XPS exposure histories retain their own scopes. Source conflicts are preserved. No atomic model, exact structure-recipe pair or new training task is admitted.",
+    "missing_fields": [
+      "Records and context counts do not count independent physical batches.",
+      "Three alcohol substitutions, as-prepared/calcined powders, solution DLS and XPS exposure states remain distinct.",
+      "As-prepared local CeO2 crystallites do not establish pure whole-powder composition.",
+      "No qualified atomic model, exact recipe–structure pair, automatic same-aliquot join or training admission.",
+      "See source acquisition facts and missingness G4"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=pati2009",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pati-2009-filtrate-diagnostic",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Pati et al. (2009) · Separate filtrate-completeness test",
+  "material": {
+    "formula": "CeO2",
+    "family": "Ceria precipitation with triethanolamine"
+  },
+  "method": "Separate filtrate-completeness test",
+  "sources": [
+    {
+      "id": "pati2009",
+      "doi": "10.1021/la8031286",
+      "title": "Precipitation of Nanocrystalline CeO2 Using Triethanolamine",
+      "authors": "Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/la8031286",
+      "main_status": "All four supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched four-page XPS SI fully read, visually inspected and independently audited. Pairing uses the main-paper declaration, matching content and embedded document metadata; SI has no title/byline.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "pati2009",
+    "recipe_family": "pati2009-alcohol-tea-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 1 (printed 67), Title and journal heading; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ],
+      "note": "Intended target only; no pure whole as-prepared product composition is asserted."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ammonium-hydroxide",
+      "name": "Ammonium hydroxide solution",
+      "formula": "ammonium hydroxide",
+      "role": "diagnostic_reagent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Filtrate-completeness check only; not main synthesis precipitant. Concentration/amount unknown.",
+        "Named identity and printed formula retained separately; no molecular model approval."
+      ],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "filtrate",
+      "name": "Separate source specimen/context: filtrate",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "diagnostic-mixture",
+      "name": "Separate specimens: diagnostic mixture",
+      "kind": "sample_set",
+      "parent_ids": [
+        "filtrate",
+        "ammonium-hydroxide"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "diagnostic",
+      "action": "test-separate-filtrate-aliquot-with-ammonium-hydroxide",
+      "label": "Test separate filtrate aliquot with ammonium hydroxide",
+      "stage": "characterization",
+      "branch": "separate_source_contexts",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "filtrate",
+        "ammonium-hydroxide"
+      ],
+      "outputs": [
+        "diagnostic-mixture"
+      ],
+      "parameters": {
+        "filtrate_aliquot": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G2: Wash volumes/cycles, filter vacuum, stirring speed, NH4OH concentration/amount and explicit control outcome are absent. No post-acetone drying details are supplied.",
+          "basis": "Source context: precipitation-family.",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "pati2009",
+              "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "diagnostic-mixture",
+      "description": "Test separate filtrate aliquot with ammonium hydroxide. Only explicitly applicable source-context quantities are conditions; diagnostic and reference values remain separate. Missing fields: NH4OH amount/concentration, explicit positive/negative criterion. Inputs identify separate specimens or contexts; they are not pooled. Only a 10 mL filtrate aliquot enters the NH4OH diagnostic; the retained precipitate stays on the separate main branch. No explicit diagnostic result is supplied. Source retained-fraction wording: diagnostic only; not returned to precipitate.",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "filtrate-diagnostic-aliquot",
+      "source_sample_label": "filtrate diagnostic aliquot",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: filtrate diagnostic aliquot.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pati2009-filtrate-control-claim",
+      "sample_id": "filtrate-diagnostic-aliquot",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "Add a10mL filtrate aliquot with ammonium hydroxide solution to confirm precipitation completeness. Ammonium hydroxide amount/concentration and an explicit visual pass criterion are unreported; it is not the main synthesis precipitant.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Source claim class: reported_control. G2: Wash volumes/cycles, filter vacuum, stirring speed, NH4OH concentration/amount and explicit control outcome are absent. No post-acetone drying details are supplied."
+      },
+      "conditions": "filtrate diagnostic aliquot",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-filtrate-control-q1",
+      "sample_id": "filtrate-diagnostic-aliquot",
+      "property": "filtrate_aliquot",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 10.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_control. G2: Wash volumes/cycles, filter vacuum, stirring speed, NH4OH concentration/amount and explicit control outcome are absent. No post-acetone drying details are supplied. G2: Wash volumes/cycles, filter vacuum, stirring speed, NH4OH concentration/amount and explicit control outcome are absent. No post-acetone drying details are supplied.",
+        "basis": "Source context: filtrate diagnostic aliquot.",
+        "raw_text": "10",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "filtrate diagnostic aliquot",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental first paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main and four-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. Three alcohol-specific precipitation routes, eleven supporting procedures and five observation records remain separate. As-prepared whole-powder identity is unresolved despite local CeO2 microscopy; calcination, DLS and XPS exposure histories retain their own scopes. Source conflicts are preserved. No atomic model, exact structure-recipe pair or new training task is admitted.",
+    "missing_fields": [
+      "Records and context counts do not count independent physical batches.",
+      "Three alcohol substitutions, as-prepared/calcined powders, solution DLS and XPS exposure states remain distinct.",
+      "As-prepared local CeO2 crystallites do not establish pure whole-powder composition.",
+      "No qualified atomic model, exact recipe–structure pair, automatic same-aliquot join or training admission.",
+      "NH4OH amount/concentration",
+      "explicit positive/negative criterion"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=pati2009",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

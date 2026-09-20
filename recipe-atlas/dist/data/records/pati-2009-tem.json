@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pati-2009-tem",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Pati et al. (2009) · HRTEM and SAED",
+  "material": {
+    "formula": "CeO2",
+    "family": "Ceria precipitation with triethanolamine"
+  },
+  "method": "HRTEM and SAED",
+  "sources": [
+    {
+      "id": "pati2009",
+      "doi": "10.1021/la8031286",
+      "title": "Precipitation of Nanocrystalline CeO2 Using Triethanolamine",
+      "authors": "Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/la8031286",
+      "main_status": "All four supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched four-page XPS SI fully read, visually inspected and independently audited. Pairing uses the main-paper declaration, matching content and embedded document metadata; SI has no title/byline.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "pati2009",
+    "recipe_family": "pati2009-alcohol-tea-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 1 (printed 67), Title and journal heading; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ],
+      "note": "Intended target only; no pure whole as-prepared product composition is asserted."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ethanol-as-prepared",
+      "name": "Separate source specimen/context: ethanol as prepared",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "propanol-as-prepared",
+      "name": "Separate source specimen/context: propanol as prepared",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "butanol-as-prepared",
+      "name": "Separate source specimen/context: butanol as prepared",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "butanol-calcined",
+      "name": "Separate source specimen/context: butanol calcined",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-data",
+      "name": "Analysis result: tem data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ethanol-as-prepared",
+        "propanol-as-prepared",
+        "butanol-as-prepared",
+        "butanol-calcined"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "tem-acquire",
+      "action": "hrtem-and-saed",
+      "label": "HRTEM and SAED",
+      "stage": "characterization",
+      "branch": "separate_source_contexts",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ethanol-as-prepared",
+        "propanol-as-prepared",
+        "butanol-as-prepared",
+        "butanol-calcined"
+      ],
+      "outputs": [
+        "tem-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "HRTEM and SAED. Only explicitly applicable source-context quantities are conditions; diagnostic and reference values remain separate. Missing fields: See source acquisition facts and missingness G4. Inputs identify separate specimens or contexts; they are not pooled.",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "figure1-samples",
+      "source_sample_label": "Figure1 samples",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: Figure1 samples.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pati2009-tem-acquisition-claim",
+      "sample_id": "figure1-samples",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "JEOL2100 HRTEM is used for morphology and crystallite size; source Figure1 includes actual selected-area diffraction. Grid preparation and operating voltage are not supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Source claim class: reported_acquisition. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established."
+      },
+      "conditions": "Figure1 samples",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main and four-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. Three alcohol-specific precipitation routes, eleven supporting procedures and five observation records remain separate. As-prepared whole-powder identity is unresolved despite local CeO2 microscopy; calcination, DLS and XPS exposure histories retain their own scopes. Source conflicts are preserved. No atomic model, exact structure-recipe pair or new training task is admitted.",
+    "missing_fields": [
+      "Records and context counts do not count independent physical batches.",
+      "Three alcohol substitutions, as-prepared/calcined powders, solution DLS and XPS exposure states remain distinct.",
+      "As-prepared local CeO2 crystallites do not establish pure whole-powder composition.",
+      "No qualified atomic model, exact recipe–structure pair, automatic same-aliquot join or training admission.",
+      "See source acquisition facts and missingness G4"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=pati2009",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

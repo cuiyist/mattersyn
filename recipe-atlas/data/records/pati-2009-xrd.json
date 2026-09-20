@@ -1,0 +1,701 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "pati-2009-xrd",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Pati et al. (2009) · Powder XRD and source Scherrer analysis",
+  "material": {
+    "formula": "CeO2",
+    "family": "Ceria precipitation with triethanolamine"
+  },
+  "method": "Powder XRD and source Scherrer analysis",
+  "sources": [
+    {
+      "id": "pati2009",
+      "doi": "10.1021/la8031286",
+      "title": "Precipitation of Nanocrystalline CeO2 Using Triethanolamine",
+      "authors": "Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/la8031286",
+      "main_status": "All four supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched four-page XPS SI fully read, visually inspected and independently audited. Pairing uses the main-paper declaration, matching content and embedded document metadata; SI has no title/byline.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "pati2009",
+    "recipe_family": "pati2009-alcohol-tea-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 1 (printed 67), Title and journal heading; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ],
+      "note": "Intended target only; no pure whole as-prepared product composition is asserted."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "Complete supplied main and SI; exact local source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xrd-as-prepared",
+      "name": "Separate source specimen/context: xrd as prepared",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "xrd-calcined",
+      "name": "Separate source specimen/context: xrd calcined",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "xrd-data",
+      "name": "Analysis result: xrd data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xrd-as-prepared",
+        "xrd-calcined"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "xrd-acquire",
+      "action": "powder-xrd-and-source-scherrer-analysis",
+      "label": "Powder XRD and source Scherrer analysis",
+      "stage": "characterization",
+      "branch": "separate_source_contexts",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "xrd-as-prepared",
+        "xrd-calcined"
+      ],
+      "outputs": [
+        "xrd-data"
+      ],
+      "parameters": {
+        "cu_kalpha_wavelength": {
+          "value": 1.5408,
+          "minimum": null,
+          "maximum": null,
+          "unit": "angstrom",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established.",
+          "basis": "Source context: xrd.",
+          "raw_text": "1.5408",
+          "evidence": [
+            {
+              "source_id": "pati2009",
+              "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Powder XRD and source Scherrer analysis. Only explicitly applicable source-context quantities are conditions; diagnostic and reference values remain separate. Missing fields: See source acquisition facts and missingness G4. Inputs identify separate specimens or contexts; they are not pooled.",
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xrd-as-prepared",
+      "source_sample_label": "xrd-as-prepared",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: xrd-as-prepared.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link.",
+        "",
+        "unknown or not applicable; no batch match inferred"
+      ]
+    },
+    {
+      "sample_id": "xrd-calcined",
+      "source_sample_label": "xrd-calcined",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results first left paragraph; Figure2; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph: calcination temperature and duration; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results first left paragraph; Figure2; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph: calcination temperature and duration; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results first left paragraph; Figure2; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph: calcination temperature and duration; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), Results first left paragraph; Figure2; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          },
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Results final paragraph: calcination temperature and duration; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: xrd-calcined.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link.",
+        "",
+        "unknown or not applicable; no batch match inferred"
+      ]
+    },
+    {
+      "sample_id": "xrd-specimens-individual-physical-batches-unknown",
+      "source_sample_label": "XRD specimens; individual physical batches unknown",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: XRD specimens; individual physical batches unknown.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figures-figure-2",
+      "source_sample_label": "source unit pati2009-figures-figure-2",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figures-figure-2.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figure-2-a",
+      "source_sample_label": "source unit pati2009-figure-2-a",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figure-2-a.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    },
+    {
+      "sample_id": "source-unit-pati2009-figure-2-b",
+      "source_sample_label": "source unit pati2009-figure-2-b",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: source unit pati2009-figure-2-b.",
+        "A context is not a new replicate or a verified same-aliquot cross-technique link."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "pati2009-xrd-acquisition-claim",
+      "sample_id": "xrd-specimens-individual-physical-batches-unknown",
+      "property": "source_claim",
+      "technique": "Source process/observation/model/cited context",
+      "value": {
+        "value": "Characterize as-prepared and calcined powders with Bruker AXS D8 Advance using Cu Kα incident radiation. Crystallite diameter is estimated with the cited Scherrer equation; no explicit equation or shape factor is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Source claim class: reported_acquisition. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established."
+      },
+      "conditions": "XRD specimens; individual physical batches unknown",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-xrd-acquisition-q1",
+      "sample_id": "xrd-specimens-individual-physical-batches-unknown",
+      "property": "cu_kalpha_wavelength",
+      "technique": "Reported source quantity with stated scope",
+      "value": {
+        "value": 1.5408,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_acquisition. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established. G4: Several measurement settings, replicates and batch identities are absent. XRD/XPS solvent provenance is not explicit; Figure3buses butanol as-prepared, but exact calcined DSC physical batch is not uniquely established.",
+        "basis": "Source context: XRD specimens; individual physical batches unknown.",
+        "raw_text": "1.5408",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "XRD specimens; individual physical batches unknown",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 2 (printed 68), Experimental characterization; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figures-figure-2",
+      "sample_id": "source-unit-pati2009-figures-figure-2",
+      "property": "source_figures",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"id\":\"figure-2\",\"role\":\"main\",\"page\":3,\"title\":\"X-ray diffraction\",\"panels\":[{\"label\":\"a\",\"sample_id\":\"xrd-as-prepared\"},{\"label\":\"b\",\"sample_id\":\"xrd-calcined\"}],\"annotations\":{\"x_label\":\"2Theta(degree)\",\"x_ticks_raw\":[\"20\",\"30\",\"40\",\"50\",\"60\",\"70\",\"80\",\"90\"],\"y_label\":\"Relative intensity(a.u.)\",\"legend\":\"* CeO2; source assigns calcined cubic peaks\",\"curves_digitized\":false},\"scope_note\":\"Solvent for these XRD specimens not explicit. Calcined200°C/3h; as-prepared phase unresolved.\",\"evidence\":[{\"source_id\":\"pati2009-main\",\"document_role\":\"main\",\"source_sha256\":\"eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581\",\"pdf_page\":3,\"printed_page\":69,\"locator\":\"figure-2 complete original and caption\"}]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figure-2-a",
+      "sample_id": "source-unit-pati2009-figure-2-a",
+      "property": "source_figure_panel",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"label\":\"a\",\"sample_id\":\"xrd-as-prepared\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    },
+    {
+      "id": "pati2009-figure-2-b",
+      "sample_id": "source-unit-pati2009-figure-2-b",
+      "property": "source_figure_panel",
+      "technique": "Source inventory context",
+      "value": {
+        "value": "{\"label\":\"b\",\"sample_id\":\"xrd-calcined\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "pati2009",
+            "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+          }
+        ],
+        "note": "Exact source-unit payload retained for scope and completeness; historical author-status fields are not the current independent-audit decision."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "pati2009",
+          "locator": "MAIN PDF p. 3 (printed 69), figure-2 complete original and caption; source SHA256 eb93e8ce4e893bde4215914cc7920bd7567388fdd895537334e80e5d3354d581"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main and four-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. Three alcohol-specific precipitation routes, eleven supporting procedures and five observation records remain separate. As-prepared whole-powder identity is unresolved despite local CeO2 microscopy; calcination, DLS and XPS exposure histories retain their own scopes. Source conflicts are preserved. No atomic model, exact structure-recipe pair or new training task is admitted.",
+    "missing_fields": [
+      "Records and context counts do not count independent physical batches.",
+      "Three alcohol substitutions, as-prepared/calcined powders, solution DLS and XPS exposure states remain distinct.",
+      "As-prepared local CeO2 crystallites do not establish pure whole-powder composition.",
+      "No qualified atomic model, exact recipe–structure pair, automatic same-aliquot join or training admission.",
+      "See source acquisition facts and missingness G4"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=pati2009",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}
