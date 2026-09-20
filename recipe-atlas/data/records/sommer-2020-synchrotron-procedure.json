@@ -1,0 +1,702 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sommer-2020-synchrotron-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sommer et al. (2020) · Selected ex situ synchrotron diffraction",
+  "material": {
+    "formula": "ZnAl2O4",
+    "family": "ZnAl2O4 spinel hydrothermal synthesis"
+  },
+  "method": "Selected ex situ synchrotron diffraction",
+  "sources": [
+    {
+      "id": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "authors": "Sanna Sommer; Espen D. Bøjesen; Hazel Reardon; Bo B. Iversen",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "main_status": "All eleven supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Declared supporting information remains locally unlocated/unverified; no SI content is claimed read.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sommer2020",
+    "recipe_family": "sommer2020-hydrothermal-reactor-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Conclusions paragraph 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "note": "Nominal target only for the three laboratory route records. Procedure/model/context records do not create a new synthesis outcome."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "glass-capillary",
+      "name": "Glass diffraction capillary",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Selected ex situ synchrotron sample diameter 0.3 mm; rotates during acquisition.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "ceria-reference",
+      "name": "Cerium oxide standard",
+      "formula": "CeO2",
+      "role": "measurement_reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Selected synchrotron resolution/wavelength standard.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dried-lab-powders",
+      "name": "Separately isolated laboratory powders; not pooled samples",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "synchrotron-data",
+      "name": "synchrotron data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dried-lab-powders"
+      ]
+    },
+    {
+      "id": "synchrotron-refinement-data",
+      "name": "synchrotron refinement data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "synchrotron-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "synchrotron-load-acquire",
+      "action": "pack-and-rotate-glass-capillaries-and-acquire-diffraction",
+      "label": "Pack and rotate glass capillaries and acquire diffraction",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dried-lab-powders",
+        "glass-capillary",
+        "ceria-reference"
+      ],
+      "outputs": [
+        "synchrotron-data"
+      ],
+      "parameters": {
+        "glass_capillary_diameter": {
+          "value": 0.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+          "basis": "Source context: synchrotron-procedure.",
+          "raw_text": "0.3",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "wavelength": {
+          "value": 0.50054,
+          "minimum": null,
+          "maximum": null,
+          "unit": "angstrom",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. Reported parenthetic uncertainty 6e-05 angstrom; parenthetic digits in last reported places; statistical definition not restated.",
+          "basis": "Source context: synchrotron-procedure.",
+          "raw_text": "0.50054(6)",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pack and rotate glass capillaries and acquire diffraction.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: packing mass, exposure. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "synchrotron-fit",
+      "action": "refine-using-maud-with-glass-background-features-and-anisotropic-size",
+      "label": "Refine using MAUD with glass/background features and anisotropic size",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "synchrotron-load-acquire"
+      ],
+      "inputs": [
+        "synchrotron-data"
+      ],
+      "outputs": [
+        "synchrotron-refinement-data"
+      ],
+      "parameters": {
+        "polynomial_functions": {
+          "value": 4.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+          "basis": "Source context: synchrotron-procedure.",
+          "raw_text": "4",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "additional_background_features": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+          "basis": "Source context: synchrotron-procedure.",
+          "raw_text": "2",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "size_spherical_harmonics": {
+          "value": 3.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+          "basis": "Source context: synchrotron-procedure.",
+          "raw_text": "3",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Refine using MAUD with glass/background features and anisotropic size.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: SI results. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "m1-m2-m3-m7-s1-a1-a2",
+      "source_sample_label": "M1/M2/M3/M7/S1/A1/A2",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M1/M2/M3/M7/S1/A1/A2.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "laboratory-xrd",
+      "source_sample_label": "laboratory-XRD",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: laboratory-XRD.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sommer2020-synchrotron-xrd-claim",
+      "sample_id": "m1-m2-m3-m7-s1-a1-a2",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Selected M1-M3, M7, S1 and A1-A2 powders are packed in rotating 0.3 mm glass capillaries at SPring-8 BL44B2. Debye-Scherrer geometry and an image plate are used. The reported wavelength includes parenthetic uncertainty; CeO2 supplies resolution and wavelength calibration.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated."
+      },
+      "conditions": "M1/M2/M3/M7/S1/A1/A2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-synchrotron-xrd-q1",
+      "sample_id": "m1-m2-m3-m7-s1-a1-a2",
+      "property": "glass_capillary_diameter",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+        "basis": "Source context: M1/M2/M3/M7/S1/A1/A2.",
+        "raw_text": "0.3",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1/M2/M3/M7/S1/A1/A2; glass capillary diameter",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-synchrotron-xrd-q2",
+      "sample_id": "m1-m2-m3-m7-s1-a1-a2",
+      "property": "wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.50054,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. Reported parenthetic uncertainty 6e-05 angstrom; parenthetic digits in last reported places; statistical definition not restated.",
+        "basis": "Source context: M1/M2/M3/M7/S1/A1/A2.",
+        "raw_text": "0.50054(6)",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1/M2/M3/M7/S1/A1/A2; wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-synchrotron-fit-claim",
+      "sample_id": "laboratory-xrd",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "MAUD models a background combining four polynomial functions and two features for small-angle scattering/glass. Three spherical-harmonic functions represent anisotropic size broadening. For all laboratory-sample data, positions and occupancies are fixed to literature values; atom-type ADPs are refined as defect/disorder proxies and microstrain is not modeled.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported_model. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated."
+      },
+      "conditions": "laboratory-XRD",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-synchrotron-fit-q1",
+      "sample_id": "laboratory-xrd",
+      "property": "polynomial_functions",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_model. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+        "basis": "Source context: laboratory-XRD.",
+        "raw_text": "4",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "laboratory-XRD; polynomial functions",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-synchrotron-fit-q2",
+      "sample_id": "laboratory-xrd",
+      "property": "additional_background_features",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_model. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+        "basis": "Source context: laboratory-XRD.",
+        "raw_text": "2",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "laboratory-XRD; additional background features",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-synchrotron-fit-q3",
+      "sample_id": "laboratory-xrd",
+      "property": "size_spherical_harmonics",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_model. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated.",
+        "basis": "Source context: laboratory-XRD.",
+        "raw_text": "3",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "laboratory-XRD; size spherical harmonics",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Ex Situ XRD Analysis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+    "missing_fields": [
+      "Record IDs and context counts do not count independent physical batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training admission is approved.",
+      "Pure process specifications and author refinement/model results are distinguished from experimental product observations.",
+      "packing mass",
+      "exposure",
+      "SI results"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source reader and limitations",
+      "url": "/paper-review.html?id=sommer2020",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

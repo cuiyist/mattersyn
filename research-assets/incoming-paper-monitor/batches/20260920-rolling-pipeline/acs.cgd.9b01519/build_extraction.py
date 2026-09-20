@@ -94,6 +94,10 @@ for i,name,comps,fs,scope,note in [
 ('insitu-oxide-slurry','ZnO/Al(OH)3 suspension',['zno-feed','aloh3','millipore-water'],['insitu-oxide-stock'],'I15/I16','Both masses and final metal concentrations reported; water volume not given.')]:
  stocks.append({'id':i,'name':name,'components':comps,'source_fact_ids':[SID+'-'+f for f in fs],'quantities':quantities(fs),'sample_scope':scope,'notes':note,'evidence':[e for f in fs for e in fb[f]['evidence']]})
 for stock,idx in [(stocks[1],0),(stocks[2],1),(stocks[3],2)]:stock['quantities']=[stock['quantities'][idx]]
+base_stock=next(s for s in stocks if s['id']=='insitu-base-solutions')
+base_stock['quantities']=[q for q in base_stock['quantities']if q['meaning']=='NaOH solution aliquot']
+base_stock['notes']+=' Only the 1.00 mL NaOH-solution aliquot applies to this stock entry; the nitrate aliquot and final Zn/Al concentrations belong to the mixed reaction, retained in sommer2020-insitu-mix and the insitu-mix operation.'
+base_stock['mixed_reaction_context']={'source_fact_id':SID+'-insitu-mix','protocol_id':'insitu-nitrate','operation_id':'insitu-mix'}
 
 specs=[
 ('mw-route','Microwave laboratory synthesis','synthesis',['M'+str(i)for i in range(1,10)],[
@@ -144,7 +148,7 @@ for i,title,kind,sids,ops in specs:
  operations=[]
  for oi,action,ins,outs,fs,retained,missing in ops:
   operations.append({'id':oi,'action':action,'inputs':ins,'outputs':outs,'retained_fraction':retained,'source_fact_ids':[SID+'-'+f for f in fs],'quantities':quantities(fs),'quantity_scope_note':'Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously.','evidence':[e for f in fs for e in fb[f]['evidence']],'missing_fields':missing})
- protocols.append({'id':i,'title':title,'kind':kind,'sample_ids':sids,'operations':operations,'source_table_ids':['table-1'],'independent_audit_status':'pending','exact_protocol_eligibility':False})
+ protocols.append({'id':i,'title':title,'kind':kind,'sample_ids':sids,'operations':operations,'specimen_application':'Each listed specimen is processed separately; grouped reactor-family inputs are alternatives, never a pooled physical charge.','source_table_ids':['table-1'],'independent_audit_status':'pending','exact_protocol_eligibility':False})
 # Do not accidentally assign nitrate-branch five-minute stirring to oxide loading.
 oxide_load=next(o for p in protocols for o in p['operations']if o['id']=='oxide-load')
 oxide_load['source_fact_ids']=[SID+'-insitu-oxide-stock'];oxide_load['quantities']=[];oxide_load['evidence']=[ev(8,'ZnO Based Solutions: subsequent injection into sapphire capillary')]

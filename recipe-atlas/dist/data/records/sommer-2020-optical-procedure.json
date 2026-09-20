@@ -1,0 +1,598 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sommer-2020-optical-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sommer et al. (2020) · Diffuse-reflectance and optical-gap analysis",
+  "material": {
+    "formula": "ZnAl2O4",
+    "family": "ZnAl2O4 spinel hydrothermal synthesis"
+  },
+  "method": "Diffuse-reflectance and optical-gap analysis",
+  "sources": [
+    {
+      "id": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "authors": "Sanna Sommer; Espen D. Bøjesen; Hazel Reardon; Bo B. Iversen",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "main_status": "All eleven supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Declared supporting information remains locally unlocated/unverified; no SI content is claimed read.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sommer2020",
+    "recipe_family": "sommer2020-hydrothermal-reactor-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Conclusions paragraph 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "note": "Nominal target only for the three laboratory route records. Procedure/model/context records do not create a new synthesis outcome."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "baso4-reference",
+      "name": "Barium sulfate reference",
+      "formula": "BaSO4",
+      "role": "measurement_reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Diffuse-reflectance optical reference.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dried-lab-powders",
+      "name": "Separately isolated laboratory powders; not pooled samples",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "reflectance-data",
+      "name": "reflectance data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dried-lab-powders"
+      ]
+    },
+    {
+      "id": "optical-analysis-data",
+      "name": "optical analysis data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "reflectance-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "optical-acquire",
+      "action": "measure-diffuse-reflectance-at-room-temperature-against-baso4",
+      "label": "Measure diffuse reflectance at room temperature against BaSO4",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dried-lab-powders",
+        "baso4-reference"
+      ],
+      "outputs": [
+        "reflectance-data"
+      ],
+      "parameters": {
+        "measurement_spectral_interval": {
+          "value": null,
+          "minimum": 200.0,
+          "maximum": 2500.0,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity.",
+          "basis": "Source context: optical-procedure.",
+          "raw_text": "200-2500",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure diffuse reflectance at room temperature against BaSO4.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: sample preparation details. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "optical-transform",
+      "action": "apply-the-printed-transform-and-linear-tauc-fit",
+      "label": "Apply the printed transform and linear Tauc fit",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "optical-acquire"
+      ],
+      "inputs": [
+        "reflectance-data"
+      ],
+      "outputs": [
+        "optical-analysis-data"
+      ],
+      "parameters": {
+        "source_exponent_x": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ratio_parts",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only. G7: Exact optical gap values, several impurity fractions and trajectory coordinates are not printed. Original graphics are retained; no new numeric labels from visual estimates.",
+          "basis": "Source context: optical-procedure.",
+          "raw_text": "1/2",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), UV-vis Spectroscopy continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), UV-vis Spectroscopy continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Apply the printed transform and linear Tauc fit.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: SI Tauc plots, exact printed sample gap values. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        },
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 9 (printed 1797), UV-vis Spectroscopy continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "a2-m2-s1",
+      "source_sample_label": "A2/M2/S1",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: A2/M2/S1.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m2-a2-s1",
+      "source_sample_label": "M2/A2/S1",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy formula and exponent; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), Tauc fit continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy formula and exponent; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), Tauc fit continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy formula and exponent; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), Tauc fit continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy formula and exponent; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), Tauc fit continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M2/A2/S1.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sommer2020-uvvis-acquire-claim",
+      "sample_id": "a2-m2-s1",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Acquire at room temperature with a BaSO4 reference using Shimadzu UV-3101 PC over the stated wavelength interval. A2, M2 and S1 are the displayed optical contexts, without a new independently specified optical preparation recipe.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity."
+      },
+      "conditions": "A2/M2/S1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-uvvis-acquire-q1",
+      "sample_id": "a2-m2-s1",
+      "property": "measurement_spectral_interval",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": null,
+        "minimum": 200.0,
+        "maximum": 2500.0,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity.",
+        "basis": "Source context: A2/M2/S1.",
+        "raw_text": "200-2500",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "A2/M2/S1; measurement spectral interval",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-uvvis-transform-claim",
+      "sample_id": "a2-m2-s1",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "The printed transformation and exponent are retained literally, with C called absorbance and S the scattering coefficient. The authors assign a direct transition at Gamma and use a straight-line Tauc fit shown in unavailable Figure S31. No precise M2/A2/S1 band-gap number is printed in the main text or on inset bars.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), UV-vis Spectroscopy continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported_model. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only. G7: Exact optical gap values, several impurity fractions and trajectory coordinates are not printed. Original graphics are retained; no new numeric labels from visual estimates."
+      },
+      "conditions": "A2/M2/S1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        },
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 9 (printed 1797), UV-vis Spectroscopy continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-uvvis-transform-q1",
+      "sample_id": "a2-m2-s1",
+      "property": "source_exponent_x",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio_parts",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported_model. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only. G7: Exact optical gap values, several impurity fractions and trajectory coordinates are not printed. Original graphics are retained; no new numeric labels from visual estimates. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only. G7: Exact optical gap values, several impurity fractions and trajectory coordinates are not printed. Original graphics are retained; no new numeric labels from visual estimates.",
+        "basis": "Source context: A2/M2/S1.",
+        "raw_text": "1/2",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "A2/M2/S1; source exponent x",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy continued p9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "kubelka-munk-context",
+      "sample_id": "m2-a2-s1",
+      "property": "equation_context",
+      "technique": "Original equation",
+      "value": {
+        "value": "C/S = (1-R)^2 (2R)^x; x=1/2. Native printed layout is multiplication by (2R)^x, with no division bar or negative exponent; retained literally. Original visual is authoritative; no standard-convention correction or independently validated optical model. ",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy formula and exponent; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 9 (printed 1797), Tauc fit continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source context/graphic only; no additional measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), UV-vis Spectroscopy formula and exponent; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        },
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 9 (printed 1797), Tauc fit continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+    "missing_fields": [
+      "Record IDs and context counts do not count independent physical batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training admission is approved.",
+      "Pure process specifications and author refinement/model results are distinguished from experimental product observations.",
+      "sample preparation details",
+      "SI Tauc plots",
+      "exact printed sample gap values"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source reader and limitations",
+      "url": "/paper-review.html?id=sommer2020",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

@@ -1,0 +1,554 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sommer-2020-microscopy-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sommer et al. (2020) · TEM/STEM/EDS preparation and acquisition",
+  "material": {
+    "formula": "ZnAl2O4",
+    "family": "ZnAl2O4 spinel hydrothermal synthesis"
+  },
+  "method": "TEM/STEM/EDS preparation and acquisition",
+  "sources": [
+    {
+      "id": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "authors": "Sanna Sommer; Espen D. Bøjesen; Hazel Reardon; Bo B. Iversen",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "main_status": "All eleven supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Declared supporting information remains locally unlocated/unverified; no SI content is claimed read.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sommer2020",
+    "recipe_family": "sommer2020-hydrothermal-reactor-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Conclusions paragraph 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "note": "Nominal target only for the three laboratory route records. Procedure/model/context records do not create a new synthesis outcome."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ethanol-99",
+      "name": "Ethanol, 99%",
+      "formula": "C2H6O",
+      "role": "dispersion_solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Microscopy dispersion; sonication settings unknown.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "tem-grid",
+      "name": "Copper Formvar/carbon TEM grid",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "200 mesh; ambient drying.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dried-lab-powders",
+      "name": "Separately isolated laboratory powders; not pooled samples",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "microscopy-dispersion",
+      "name": "Separate source specimens: microscopy dispersion",
+      "kind": "sample_set",
+      "parent_ids": [
+        "dried-lab-powders",
+        "ethanol-99"
+      ]
+    },
+    {
+      "id": "microscopy-specimens",
+      "name": "Separate source specimens: microscopy specimens",
+      "kind": "sample_set",
+      "parent_ids": [
+        "microscopy-dispersion"
+      ]
+    },
+    {
+      "id": "microscopy-data",
+      "name": "microscopy data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "microscopy-specimens"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "microscopy-disperse",
+      "action": "sonicate-dried-powder-in-99-ethanol",
+      "label": "Sonicate dried powder in 99% ethanol",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dried-lab-powders",
+        "ethanol-99"
+      ],
+      "outputs": [
+        "microscopy-dispersion"
+      ],
+      "parameters": {
+        "dispersion_ethanol_grade": {
+          "value": 99.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity.",
+          "basis": "Source context: microscopy-procedure.",
+          "raw_text": "99",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sonicate dried powder in 99% ethanol.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: sonication settings, concentration. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "microscopy-deposit",
+      "action": "drop-onto-supported-copper-grids-and-dry-in-ambient-atmosphere",
+      "label": "Drop onto supported copper grids and dry in ambient atmosphere",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "microscopy-disperse"
+      ],
+      "inputs": [
+        "microscopy-dispersion",
+        "tem-grid"
+      ],
+      "outputs": [
+        "microscopy-specimens"
+      ],
+      "parameters": {
+        "grid_mesh": {
+          "value": 200.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mesh",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity.",
+          "basis": "Source context: microscopy-procedure.",
+          "raw_text": "200",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ambient atmosphere during grid drying",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "microscopy-specimens",
+      "description": "Drop onto supported copper grids and dry in ambient atmosphere.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: drop volume. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "microscopy-acquire",
+      "action": "acquire-bright-field-tem-haadf-stem-and-eds",
+      "label": "Acquire bright-field TEM, HAADF-STEM and EDS",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "microscopy-deposit"
+      ],
+      "inputs": [
+        "microscopy-specimens"
+      ],
+      "outputs": [
+        "microscopy-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Acquire bright-field TEM, HAADF-STEM and EDS.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: explicit operating voltage, per-grid exact sample identity. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "microscopy",
+      "source_sample_label": "microscopy",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: microscopy.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "Source context object: {\"id\":\"microscopy\",\"kind\":\"context_only\",\"name\":\"Acquisition scope with incomplete per-grid assignments\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sommer2020-tem-prep-claim",
+      "sample_id": "microscopy",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Sonicate dried powders dispersed in 99% ethanol, deposit individual drops on 200 mesh copper grids with Formvar/carbon support, and dry in ambient atmosphere. Sonication settings, deposited quantity and per-grid batch IDs are absent.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity."
+      },
+      "conditions": "microscopy",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-tem-prep-q1",
+      "sample_id": "microscopy",
+      "property": "dispersion_ethanol_grade",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 99.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity.",
+        "basis": "Source context: microscopy.",
+        "raw_text": "99",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "microscopy; dispersion ethanol grade",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-tem-prep-q2",
+      "sample_id": "microscopy",
+      "property": "grid_mesh",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 200.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mesh",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G2: Named Table 1 samples link their stated main figures and results, but no unique physical aliquot/batch identifiers prove universal cross-technique or cross-reactor identity.",
+        "basis": "Source context: microscopy.",
+        "raw_text": "200",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "microscopy; grid mesh",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-tem-acquire-claim",
+      "sample_id": "microscopy",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Bright-field TEM uses TALOS F200A, TWIN lens, X-FEG and Ceta 16M camera. HAADF-STEM and Super-X EDS maps are collected with Bruker Esprit and plotted using Hyperspy. The model name does not itself establish an explicit operating voltage. Element maps and their detailed results are in unavailable SI.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only. G6: Main gives no complete atomic coordinates/lattice/refinement table for qualified product CIF. Literature-fixed structural parameters, partial site/formula expressions, phase fractions and refined sizes remain correctly separated."
+      },
+      "conditions": "microscopy",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), TEM; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+    "missing_fields": [
+      "Record IDs and context counts do not count independent physical batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training admission is approved.",
+      "Pure process specifications and author refinement/model results are distinguished from experimental product observations.",
+      "sonication settings",
+      "concentration",
+      "drop volume",
+      "explicit operating voltage",
+      "per-grid exact sample identity"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source reader and limitations",
+      "url": "/paper-review.html?id=sommer2020",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

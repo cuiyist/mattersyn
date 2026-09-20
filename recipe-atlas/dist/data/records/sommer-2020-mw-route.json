@@ -1,0 +1,3706 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sommer-2020-mw-route",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "title": "Sommer et al. (2020) · Microwave laboratory synthesis",
+  "material": {
+    "formula": "ZnAl2O4",
+    "family": "ZnAl2O4 spinel hydrothermal synthesis"
+  },
+  "method": "Microwave laboratory synthesis",
+  "sources": [
+    {
+      "id": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "authors": "Sanna Sommer; Espen D. Bøjesen; Hazel Reardon; Bo B. Iversen",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "main_status": "All eleven supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Declared supporting information remains locally unlocated/unverified; no SI content is claimed read.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sommer2020",
+    "recipe_family": "sommer2020-hydrothermal-reactor-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnAl2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Conclusions paragraph 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "note": "Nominal target only for the three laboratory route records. Procedure/model/context records do not create a new synthesis outcome."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zn-nitrate",
+      "name": "Zinc nitrate hexahydrate",
+      "formula": "Zn(NO3)2·6H2O",
+      "role": "precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich, >=99%; hydration explicitly supplied.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "al-nitrate",
+      "name": "Aluminum nitrate nonahydrate",
+      "formula": "Al(NO3)3·9H2O",
+      "role": "precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich, >=98%; hydration explicitly supplied.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "demin-feed-water",
+      "name": "Demineralized water for nitrate feed",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "MW stock charge and ACS shared feed; not automatically Millipore or PDF background water.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "naoh",
+      "name": "Sodium hydroxide",
+      "formula": "NaOH",
+      "role": "base",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich >=97%; do not invent charge masses from table concentrations.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "quartz-vessel",
+      "name": "Thick-walled quartz vessel",
+      "formula": null,
+      "role": "apparatus",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "80 mL nominal vessel, 10 mL fill; symbolic apparatus only.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sapphire-tube",
+      "name": "Sapphire sensor immersion tube",
+      "formula": null,
+      "role": "apparatus",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "MW temperature/pressure sensor housing, not in situ capillary.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "mw-nitrate-stock",
+      "name": "Microwave/autoclave mixed-nitrate feed",
+      "components": [
+        {
+          "material_id": "zn-nitrate",
+          "quantities": {
+            "zn_no3_2_6h2o_mass": {
+              "value": 1.425,
+              "minimum": null,
+              "maximum": null,
+              "unit": "g",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "Source context: mw-nitrate-stock.",
+              "raw_text": "1.425",
+              "evidence": [
+                {
+                  "source_id": "sommer2020",
+                  "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "al-nitrate",
+          "quantities": {
+            "al_no3_3_9h2o_mass": {
+              "value": 3.596,
+              "minimum": null,
+              "maximum": null,
+              "unit": "g",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "Source context: mw-nitrate-stock.",
+              "raw_text": "3.596",
+              "evidence": [
+                {
+                  "source_id": "sommer2020",
+                  "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "demin-feed-water",
+          "quantities": {
+            "demineralized_water_charge": {
+              "value": 20.0,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "Source context: mw-nitrate-stock.",
+              "raw_text": "20",
+              "evidence": [
+                {
+                  "source_id": "sommer2020",
+                  "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [
+        "mw-dissolve"
+      ],
+      "scope": "M1-M9/A1-A6. 20 mL water charge, not asserted final solution volume.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-low-base",
+      "name": "Low-base laboratory formulation",
+      "components": [
+        {
+          "material_id": "zn-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "al-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "demin-feed-water",
+          "quantities": {}
+        },
+        {
+          "material_id": "naoh",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "low_final_naoh": {
+          "value": 1.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: mw-low-base.",
+          "raw_text": "1.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "mw-base"
+      ],
+      "scope": "M1/A1/A4. Final NaOH 1.5 M only; shared fact also retains other alternative concentrations. These constituents belong to the already prepared mixed-nitrate stock. They do not represent fresh nitrate/water charges; only the source-specific final NaOH concentration is assigned here.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-middle-base",
+      "name": "Middle-base laboratory formulation",
+      "components": [
+        {
+          "material_id": "zn-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "al-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "demin-feed-water",
+          "quantities": {}
+        },
+        {
+          "material_id": "naoh",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "middle_final_naoh": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: mw-middle-base.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "mw-base"
+      ],
+      "scope": "M2/M4-M9/A2/A5. Final NaOH 1.7 M only; variants are alternatives, not mixed together. These constituents belong to the already prepared mixed-nitrate stock. They do not represent fresh nitrate/water charges; only the source-specific final NaOH concentration is assigned here.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-high-base",
+      "name": "High-base laboratory formulation",
+      "components": [
+        {
+          "material_id": "zn-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "al-nitrate",
+          "quantities": {}
+        },
+        {
+          "material_id": "demin-feed-water",
+          "quantities": {}
+        },
+        {
+          "material_id": "naoh",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "high_final_naoh": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: mw-high-base.",
+          "raw_text": "2.0",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "mw-base"
+      ],
+      "scope": "M3/A3/A6. Final NaOH 2.0 M only. These constituents belong to the already prepared mixed-nitrate stock. They do not represent fresh nitrate/water charges; only the source-specific final NaOH concentration is assigned here.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "mw-nitrate-stock-prepared-state",
+      "name": "mw nitrate stock",
+      "kind": "mixture",
+      "parent_ids": [
+        "zn-nitrate",
+        "al-nitrate",
+        "demin-feed-water"
+      ]
+    },
+    {
+      "id": "mw-formulations",
+      "name": "Separate source specimens: mw formulations",
+      "kind": "sample_set",
+      "parent_ids": [
+        "mw-nitrate-stock-prepared-state",
+        "naoh"
+      ]
+    },
+    {
+      "id": "mw-loaded",
+      "name": "Separate source specimens: mw loaded",
+      "kind": "sample_set",
+      "parent_ids": [
+        "mw-formulations"
+      ]
+    },
+    {
+      "id": "mw-crude",
+      "name": "Separate source specimens: mw crude",
+      "kind": "sample_set",
+      "parent_ids": [
+        "mw-loaded"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "mw-dissolve",
+      "action": "dissolve-nitrate-hydrates-in-water",
+      "label": "Dissolve nitrate hydrates in water",
+      "stage": "precursor_preparation",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zn-nitrate",
+        "al-nitrate",
+        "demin-feed-water"
+      ],
+      "outputs": [
+        "mw-nitrate-stock-prepared-state"
+      ],
+      "parameters": {
+        "zn_no3_2_6h2o_mass": {
+          "value": 1.425,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: mw-route.",
+          "raw_text": "1.425",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "al_no3_3_9h2o_mass": {
+          "value": 3.596,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: mw-route.",
+          "raw_text": "3.596",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "demineralized_water_charge": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: mw-route.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve nitrate hydrates in water.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: mixing duration. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-base",
+      "action": "prepare-separate-naoh-adjusted-formulations",
+      "label": "Prepare separate NaOH-adjusted formulations",
+      "stage": "precursor_preparation",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "mw-dissolve"
+      ],
+      "inputs": [
+        "mw-nitrate-stock-prepared-state",
+        "naoh"
+      ],
+      "outputs": [
+        "mw-formulations"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prepare separate NaOH-adjusted formulations.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: NaOH masses, final mixture volumes. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-load",
+      "action": "load-aliquot-into-quartz-microwave-vessel",
+      "label": "Load aliquot into quartz microwave vessel",
+      "stage": "precursor_preparation",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "mw-base"
+      ],
+      "inputs": [
+        "mw-formulations",
+        "quartz-vessel",
+        "sapphire-tube"
+      ],
+      "outputs": [
+        "mw-loaded"
+      ],
+      "parameters": {
+        "reaction_aliquot": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: mw-route.",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "quartz_vessel_capacity": {
+          "value": 80.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: mw-route.",
+          "raw_text": "80",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Load aliquot into quartz microwave vessel.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: none additionally identified. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-heat",
+      "action": "apply-sample-specific-heating-profile-and-table-1-dwell",
+      "label": "Apply sample-specific heating profile and Table 1 dwell",
+      "stage": "synthesis",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "mw-load"
+      ],
+      "inputs": [
+        "mw-loaded"
+      ],
+      "outputs": [
+        "mw-crude"
+      ],
+      "parameters": {
+        "reported_approximate_pressure_interval": {
+          "value": null,
+          "minimum": 40.0,
+          "maximum": 60.0,
+          "unit": "bar",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only.",
+          "basis": "Source context: mw-route.",
+          "raw_text": "~40-60",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          },
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Apply sample-specific heating profile and Table 1 dwell. Profile 2 only M4-M6; profile 1 only M1-M3/M7-M9. See independent Table 1 row condition schedules. Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: unresolved total-time discrepancy, power settings. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        },
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        },
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "table-1-m1",
+      "label": "M1 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1.",
+          "raw_text": "1.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M1, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 280.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1.",
+          "raw_text": "280",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M1, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 124.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1.",
+          "raw_text": "124.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M1, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 30.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1.",
+          "raw_text": "30",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M1, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m2",
+      "label": "M2 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M2.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M2, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 280.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M2.",
+          "raw_text": "280",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M2, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 124.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M2.",
+          "raw_text": "124.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M2, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 30.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M2.",
+          "raw_text": "30",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M2, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m3",
+      "label": "M3 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M3.",
+          "raw_text": "2.0",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M3, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 280.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M3.",
+          "raw_text": "280",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M3, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 124.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M3.",
+          "raw_text": "124.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M3, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 30.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M3.",
+          "raw_text": "30",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M3, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 3; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m4",
+      "label": "M4 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M4, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 250.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4.",
+          "raw_text": "250",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M4, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 39.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4.",
+          "raw_text": "39.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M4, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 30.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4.",
+          "raw_text": "30",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M4, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 4; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m5",
+      "label": "M5 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M5.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M5, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 250.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M5.",
+          "raw_text": "250",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M5, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 99.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M5.",
+          "raw_text": "99.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M5, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 90.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M5.",
+          "raw_text": "90",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M5, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 5; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m6",
+      "label": "M6 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M6.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M6, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 250.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M6.",
+          "raw_text": "250",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M6, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 189.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M6.",
+          "raw_text": "189.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M6, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 180.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M6.",
+          "raw_text": "180",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M6, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 6; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m7",
+      "label": "M7 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M7.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M7, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 280.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M7.",
+          "raw_text": "280",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M7, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 94.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M7.",
+          "raw_text": "94.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M7, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M7.",
+          "raw_text": "0",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M7, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 7; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m8",
+      "label": "M8 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M8.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M8, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 260.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M8.",
+          "raw_text": "260",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M8, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 124.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M8.",
+          "raw_text": "124.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M8, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 50.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M8.",
+          "raw_text": "50",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M8, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 8; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-m9",
+      "label": "M9 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 1.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M9.",
+          "raw_text": "1.7",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M9, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 270.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M9.",
+          "raw_text": "270",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M9, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 124.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M9.",
+          "raw_text": "124.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M9, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 40.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M9.",
+          "raw_text": "40",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 M9, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-profile-1",
+      "label": "Profile 1: M1-M3 and M7-M9; Table 1 totals conflict and remain separate",
+      "parameters": {
+        "first_set_point": {
+          "value": 130.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "130",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "first_ramp_duration": {
+          "value": 1.45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "1.45",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "second_set_point": {
+          "value": 210.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "210",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "second_ramp_duration": {
+          "value": 7.85,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "7.85",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "third_set_point": {
+          "value": 240.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "240",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "third_ramp_duration": {
+          "value": 15.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "15",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "final_ramp_rate": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M1-M3/M7-M9.",
+          "raw_text": "1",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "mw-profile-2",
+      "label": "Profile 2: M4-M6; Table 1 totals conflict and remain separate",
+      "parameters": {
+        "first_set_point": {
+          "value": 130.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4-M6.",
+          "raw_text": "130",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "first_ramp_duration": {
+          "value": 1.45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4-M6.",
+          "raw_text": "1.45",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "second_set_point": {
+          "value": 250.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4-M6.",
+          "raw_text": "250",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "second_ramp_duration": {
+          "value": 7.45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+          "basis": "Source context: M4-M6.",
+          "raw_text": "7.45",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "mw-stock",
+      "source_sample_label": "MW-stock",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: MW-stock.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m1-m9-a1-a6",
+      "source_sample_label": "M1-M9/A1-A6",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M1-M9/A1-A6.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m1-m9",
+      "source_sample_label": "M1-M9",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M1-M9.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m1-m3-m7-m9",
+      "source_sample_label": "M1-M3/M7-M9",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M1-M3/M7-M9.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m4-m6",
+      "source_sample_label": "M4-M6",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M4-M6.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m1",
+      "source_sample_label": "M1",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M1.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M1\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/0\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 1\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m2",
+      "source_sample_label": "M2",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M2.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M2\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/1\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 2\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m3",
+      "source_sample_label": "M3",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 3; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 3; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 3; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 3; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 3; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M3.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M3\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/2\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 3\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m4",
+      "source_sample_label": "M4",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 4; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 4; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 4; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 4; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 4; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M4.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M4\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/3\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 4\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m5",
+      "source_sample_label": "M5",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 5; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 5; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 5; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 5; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 5; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M5.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M5\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/4\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 5\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m6",
+      "source_sample_label": "M6",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 6; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 6; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 6; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 6; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 6; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M6.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M6\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/5\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 6\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m7",
+      "source_sample_label": "M7",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 7; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 7; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 7; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 7; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 7; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M7.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M7\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/6\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 7\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m8",
+      "source_sample_label": "M8",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 8; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 8; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 8; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 8; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 8; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M8.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M8\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/7\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 8\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m9",
+      "source_sample_label": "M9",
+      "batch_id": null,
+      "material_state_id": "mw-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 9; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: M9.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"M9\",\"kind\":\"laboratory_microwave_sample\",\"table_row_pointer\":\"/tables/0/rows/8\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 9\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "m1-m2-m3-m7-m8-m9",
+      "source_sample_label": "M1/M2/M3/M7/M8/M9",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M1/M2/M3/M7/M8/M9.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "m4-m5-m6",
+      "source_sample_label": "M4/M5/M6",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M4/M5/M6.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sommer2020-mw-stock-claim",
+      "sample_id": "mw-stock",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Dissolve the two nitrate hydrates in demineralized water to obtain Zn:Al 1:2. The stated 20 mL is water charged, not an independently measured final solution volume.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. "
+      },
+      "conditions": "MW-stock",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-stock-q1",
+      "sample_id": "mw-stock",
+      "property": "zn_no3_2_6h2o_mass",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.425,
+        "minimum": null,
+        "maximum": null,
+        "unit": "g",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: MW-stock.",
+        "raw_text": "1.425",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "MW-stock; Zn(NO3)2·6H2O mass",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-stock-q2",
+      "sample_id": "mw-stock",
+      "property": "al_no3_3_9h2o_mass",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 3.596,
+        "minimum": null,
+        "maximum": null,
+        "unit": "g",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: MW-stock.",
+        "raw_text": "3.596",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "MW-stock; Al(NO3)3·9H2O mass",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-stock-q3",
+      "sample_id": "mw-stock",
+      "property": "demineralized_water_charge",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 20.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: MW-stock.",
+        "raw_text": "20",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "MW-stock; demineralized water charge",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-stock-q4",
+      "sample_id": "mw-stock",
+      "property": "zn_al_molar_ratio",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": "1:2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source context: MW-stock. Source claim class: reported. Source ratio components: [1.0,2.0]. No numerical unit or endpoint is inferred for text-only fields."
+      },
+      "conditions": "MW-stock; Zn:Al molar ratio",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-base-claim",
+      "sample_id": "m1-m9-a1-a6",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Dissolve NaOH in separate aqueous Zn-Al mixtures to give the three stated final NaOH concentrations. Table 1 records their specimen-specific Zn:Al:OH ratios; exact NaOH masses and final mixture volumes are not supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings."
+      },
+      "conditions": "M1-M9/A1-A6",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-base-q1",
+      "sample_id": "m1-m9-a1-a6",
+      "property": "low_final_naoh",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "M",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/A1-A6.",
+        "raw_text": "1.5",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/A1-A6; low final NaOH",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-base-q2",
+      "sample_id": "m1-m9-a1-a6",
+      "property": "middle_final_naoh",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "M",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/A1-A6.",
+        "raw_text": "1.7",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/A1-A6; middle final NaOH",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-base-q3",
+      "sample_id": "m1-m9-a1-a6",
+      "property": "high_final_naoh",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "M",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/A1-A6.",
+        "raw_text": "2.0",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/A1-A6; high final NaOH",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-vessel-claim",
+      "sample_id": "m1-m9",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Transfer a 10 mL aliquot into a thick-walled 80 mL quartz reaction vessel in an Anton Paar Multiwave 3000 multisample multimode microwave digestion system. Pressure and temperature are sensed in a sapphire immersion tube. The vessel geometry is not an atomistic structure.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings."
+      },
+      "conditions": "M1-M9",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-vessel-q1",
+      "sample_id": "m1-m9",
+      "property": "reaction_aliquot",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 10.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9.",
+        "raw_text": "10",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9; reaction aliquot",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-vessel-q2",
+      "sample_id": "m1-m9",
+      "property": "quartz_vessel_capacity",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 80.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9.",
+        "raw_text": "80",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9; quartz vessel capacity",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Microwave Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-claim",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "The printed sequence is RT to 130 °C in 1.45 min, then to 210 °C in 7.85 min, then to 240 °C in 15 min, then at 1 °C/min to the Table 1 target. It applies to M1-M3 and M7-M9. Table 1 total times remain independently reported and are not arithmetically reconciled with this sequence.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp."
+      },
+      "conditions": "M1-M3/M7-M9",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q1",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "first_set_point",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 130.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "130",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; first set point",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q2",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "first_ramp_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.45,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "1.45",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; first ramp duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q3",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "second_set_point",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 210.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "210",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; second set point",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q4",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "second_ramp_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 7.85,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "7.85",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; second ramp duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q5",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "third_set_point",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 240.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "240",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; third set point",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q6",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "third_ramp_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 15.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "15",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; third ramp duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-1-q7",
+      "sample_id": "m1-m3-m7-m9",
+      "property": "final_ramp_rate",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M1-M3/M7-M9.",
+        "raw_text": "1",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M3/M7-M9; final ramp rate",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-2-claim",
+      "sample_id": "m4-m6",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "For M4-M6 the printed sequence is RT to 130 °C in 1.45 min and then to 250 °C in 7.45 min. The source separately reports total reaction and dwell times in Table 1.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp."
+      },
+      "conditions": "M4-M6",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-2-q1",
+      "sample_id": "m4-m6",
+      "property": "first_set_point",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 130.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M4-M6.",
+        "raw_text": "130",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M4-M6; first set point",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-2-q2",
+      "sample_id": "m4-m6",
+      "property": "first_ramp_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.45,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M4-M6.",
+        "raw_text": "1.45",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M4-M6; first ramp duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-2-q3",
+      "sample_id": "m4-m6",
+      "property": "second_set_point",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 250.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M4-M6.",
+        "raw_text": "250",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M4-M6; second set point",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-profile-2-q4",
+      "sample_id": "m4-m6",
+      "property": "second_ramp_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 7.45,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp. C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "basis": "Source context: M4-M6.",
+        "raw_text": "7.45",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M4-M6; second ramp duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2 and following paragraph; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-pressure-claim",
+      "sample_id": "m1-m9",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "The final slow ramp of profile 1 avoids sudden pressure spikes above manufacturer recommendations. Reaction pressure varied approximately over the reported interval; SI Figure S30 contains further settings and is unavailable locally.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only."
+      },
+      "conditions": "M1-M9",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-mw-pressure-q1",
+      "sample_id": "m1-m9",
+      "property": "reported_approximate_pressure_interval",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": null,
+        "minimum": 40.0,
+        "maximum": 60.0,
+        "unit": "bar",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only. G1: Only one unique main PDF is locally verified. Declared SI tables/figures, detailed refinements and settings remain unread/unverified; this package completes supplied main scope only.",
+        "basis": "Source context: M1-M9.",
+        "raw_text": "~40-60",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9; reported approximate pressure interval",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Microwave methods continuation; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "heating-profile-1-context",
+      "sample_id": "m1-m2-m3-m7-m8-m9",
+      "property": "equation_context",
+      "technique": "Original equation",
+      "value": {
+        "value": "RT --1.45 min--> 130 °C --7.85 min--> 210 °C --15 min--> 240 °C --1 °C/min--> T_rxn.  C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source context/graphic only; no additional measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "heating-profile-2-context",
+      "sample_id": "m4-m5-m6",
+      "property": "equation_context",
+      "technique": "Original equation",
+      "value": {
+        "value": "RT --1.45 min--> 130 °C --7.45 min--> 250 °C.  C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Equation 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source context/graphic only; no additional measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Equation 2; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+    "missing_fields": [
+      "Record IDs and context counts do not count independent physical batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training admission is approved.",
+      "Pure process specifications and author refinement/model results are distinguished from experimental product observations.",
+      "mixing duration",
+      "NaOH masses",
+      "final mixture volumes",
+      "unresolved total-time discrepancy",
+      "power settings"
+    ],
+    "conflicts": [
+      "C1: Equations 1-2 ramp durations do not directly sum to Table 1 total-minus-dwell values. Both are literal source observations; do not invent a missing hold/ramp."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source reader and limitations",
+      "url": "/paper-review.html?id=sommer2020",
+      "relation": "private_unapproved_reader_proposal"
+    },
+    {
+      "label": "Common powder isolation applied separately after this route",
+      "url": "/records/sommer-2020-lab-workup.html",
+      "relation": "source_reported_shared_workup"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

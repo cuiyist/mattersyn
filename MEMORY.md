@@ -1,3 +1,17 @@
+## 2026-09-20 — Sommer integrated; anonymous publication pending
+
+Saved 2026-09-20T11:36:13.631426+00:00. Candidate dataset0.29.0:586records,114routes/variants,47hubs(36direct11component),37sourcegroups32formalreaders. Sommer contributes19records(3routes,9procedures,7observations),31illustrated stages,20selected source crops,28chemical identities/sevenstocks and77symbolic phase-component mappings. Independent transport audit be01ab5ea2fb8bbb0579b7850db209d0bb9df737920e6d630548dcc90c4fa233; actual browser receipt 500d544d2b40625c3ee4bfba4dc182fb7e48d83f64565ff8f2567b17c2db3fdc. All567older records and training exports unchanged. The11-page supplied main is fully reviewed; declared SI remains locally unlocated/unverified. No exact atomic structure–recipe pair is admitted.
+
+Public science remains0.28.0 until exact anonymous verification. Matuhina2023 CsMnCl3 main13+SI13 extraction and independent audit continue in parallel. Publication batches only passed contributions; no downloads or paid processing. Original PDFs/SI/raw text/full pages remain local. Reuse frozen reviews rather than restarting them.
+
+## 2026-09-20 — Sommer scientific audits passed; Matuhina admitted
+
+Saved 2026-09-20T11:22:32.858139+00:00. Sommer source revision 2, canonical/reader revision 2, molecular overlay, 31 apparatus scenes and 77 explicit phase-component mappings passed separate independent audits. Promotion v1 freeze 05ac8e9e770d888613223b755d19e26552d35d8e84183d32f6f7ce833cebdd3d passed distinct audit 6802ccbe253a1e134469d2e67d51e6184e493b3baabff60b58b68e3c00447fee. There are 19 records (3 routes, 9 procedures, 7 observations), 532 measurement/context entries, 20 selected crops, 28 chemical identities and seven stocks. SI remains unlocated/unverified. Website integration, actual browser review and anonymous publication remain separate. The public dataset is still 0.28.0 / 567 records; do not claim Sommer public until verification.
+
+Next fixed-cutoff claim: Matuhina et al. (2023), DOI10.1021/acsanm.2c04342, “Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties.” Main13pages and SI13pages, two unique documents/four verified copies. Backlog authors complete extraction; Norberg reads and audits independently at batches/20260920-rolling-pipeline/acsanm.2c04342. Root/Peng finish Sommer integration in parallel. Intake: intake-20260920T111852Z; bundle1f4a99d36e2d6921df540a3b34f0ad2b6cf1fdc87ddf5766504c29b098953681. Do not restart closed Ghosh/Lian work or alter downloader files.
+
+The reusable skill now explicitly separates nominal targets from observed phase components and unknown whole-specimen composition, and groups alternative schedules without pooling conditions. Project and installed skill references synchronized. The existing heartbeat, public filtered repositories, independent audits, fixed cutoff, no paper downloads and deferred paid API decision persist. Original PDFs/SI/raw full text/full pages remain local.
+
 ## 2026-09-20 — Sommer audit requires a preserved source revision
 
 Saved 2026-09-20T10:42:38.695947+00:00. Norberg completed the supplied-main comparison: all 11 pages, 20 crops and 222 Table 1 cells inspected; 3,217 mechanical checks passed. Final scientific approval is withheld pending bounded corrections: remove unsupported low-crystallinity wording; detach mixed-reaction quantities from the NaOH stock; refine three locators; type one cited-context temperature range; and preserve separate workup specimens explicitly. SI remains unlocated and unverified.

@@ -95,8 +95,8 @@ Independent source audit, canonical record construction, reader mapping, visual 
 # Bind the complete author package without absorbing the distinct reviewer's files.
 files=[]
 for child in P.iterdir():
- if child.is_file()and child.name!='package-freeze.json':files.append(child)
+ if child.is_file()and child.name not in ['package-freeze.json','build_canonical_proposal.py','build_reader_proposal.py','freeze_proposals.py']:files.append(child)
 for folder in ['private','reader-assets','source-render']:files.extend(x for x in(P/folder).rglob('*')if x.is_file())
 bound={str(x.resolve()):sha(x)for x in sorted(set(files))}
-freeze={'schema':'mattersyn-source-package-freeze/1','source_id':f['source_id'],'doi':f['doi'],'author':AUTHOR,'frozen_at':NOW,'revision':1,'status':'author_frozen_pending_distinct_source_audit','scope':'Complete supplied main: 11 pages. SI declared, locally unlocated/unverified.','source_generation':intake['source_generation'],'bundle_sha256':intake['bundle_sha256'],'source_hashes':{c['source_path']:c['sha256']for c in intake['file_copies']},'counts':inv['counts'],'author_validation_sha256':sha(P/'author-validation.json'),'bound_files':bound,'independent_audit_status':'pending','publication_approval':False}
+freeze={'schema':'mattersyn-source-package-freeze/1','source_id':f['source_id'],'doi':f['doi'],'author':AUTHOR,'frozen_at':NOW,'revision':2,'status':'author_frozen_pending_distinct_source_audit','scope':'Complete supplied main: 11 pages. SI declared, locally unlocated/unverified.','source_generation':intake['source_generation'],'bundle_sha256':intake['bundle_sha256'],'source_hashes':{c['source_path']:c['sha256']for c in intake['file_copies']},'counts':inv['counts'],'author_validation_sha256':sha(P/'author-validation.json'),'bound_files':bound,'independent_audit_status':'pending','publication_approval':False}
 write('package-freeze.json',freeze);print(json.dumps({'freeze':str(P/'package-freeze.json'),'sha256':sha(P/'package-freeze.json'),'checks':len(checks),'bound_files':len(bound),'counts':inv['counts']},indent=2))

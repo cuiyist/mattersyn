@@ -1,0 +1,31 @@
+from pathlib import Path
+import json,hashlib,datetime
+A=Path(__file__).parent;R=A.parent;C=R/'canonical-proposal/v1';P=R/'public-review-proposal/v1'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def load(p):return json.loads(p.read_text(encoding='utf-8'))
+checks=load(A/'mechanical-checks-v1.json');assert not checks['failures']
+findings=[
+ {'id':'SOMMER-PROP-01','status':'open','scope':'17 named products across the three laboratory route records; mirrored reader fields','finding':'All 17 route products have reported ZnAl2O4 composition based only on their nominal target and Table1 row. A4 explicitly contains only AlOOH without ZnAl2O4 (main p6). Target language in notes does not correct the reported observed-composition field.','required_change':'Keep intended_target ZnAl2O4, but qualify product compositions as unknown for these preparation contexts unless individually backed by result evidence. Retain preparation links and preserve all separately reported phase outcomes, including A4.'},
+ {'id':'SOMMER-PROP-02','status':'open','scope':'SCF insitu-water slot and mirrored reader input labels','finding':'SCF solvent uses a shared in-situ nitrate-water name and grade note, although SCF feed formulation and solvent grade are unreported.','required_change':'Use a route-specific SCF aqueous solvent display name and explicit grade/formulation limits; do not import in-situ nitrate-stock masses, concentrations or grade into SCF. Keep chemical identity and formula unchanged.'},
+ {'id':'SOMMER-PROP-03','status':'open','scope':'curated Figure11 reader title','finding':'The display title says phase fractions and diffraction, but Figure11 itself is an impurity-weight-fraction versus duration plot.','required_change':'Change curated title to Autoclave impurity phase fractions versus duration. Original source inventory and graphic remain unchanged.'}
+]
+manual=[
+ 'Read all 357 reader prose cards, including all five academic sections plus sources, every table-row card, references and 13 source-conflict cards.',
+ 'Reviewed all 19 record target/product identities and graphs, all 31 operations, all 39 condition options, all 62 material slots and 7 stock inventories/23 components.',
+ 'Reopened original main pages6 and8 to verify A4, Figure11 content, SCF/ACS/in-situ source boundaries and the printed methods.',
+ 'Reused passed independent full-source audit of all11 main pages and20 crop views; this audit hash-verifies retained crop bytes rather than claiming a new full-page/crop visual pass.',
+ 'Confirmed 20selected crops only; proposed reader exposes no complete PDF pages, original document binary, raw full-text cache or local filesystem path.',
+ 'Checked MW20mL water charge versus final solution volume,10mL reaction aliquot, separate low/middle/high base formulations and two unreconciled ramp profiles.',
+ 'Checked SCF450/380C conflict, ACS1day/17days/2.5weeks distinctions, and assumed45–60min heating lag as an author assumption rather than a measured trace.',
+ 'Checked NaOHstock only1mL aliquot; final Zn0.480M/Al0.960M remain mixed reaction; zero-base diluent and NaOH table concentration basis stay unresolved.',
+ 'Checked separate oxide/nitrate branches, I1/I2 staged temperature versus directI3, I12/I13 low yield, I14 unknown outcome, I15/I16 different conversion, and D-series acquisition time rather than heated synthesis.',
+ 'Checked all phase fractions/uncertainties, impurity versus yield, bimodal sample-specific refined sizes, TEM scale bars, graph-only outcomes and source-dependent model claims.',
+ 'Confirmed literal printed optical formula, literature-fixed coordinates and partial site models do not become measured coordinates or training labels.',
+ 'Confirmed all source facts, units and table tokens remain recoverable and all records remain imported_unreviewed with no requested or eligible training tasks and one source split component.'
+]
+bound={x['path']:x['sha256'] for x in checks['bound_files']}
+for p in [A/'mechanical-checks-v1.json',A/'check_proposal.py',A/'inspect_proposal.py',Path(__file__),R/'source-independent-audit/independent-audit-v2.json',R/'source-independent-audit/audit-pages/main-06.png',R/'source-independent-audit/audit-pages/main-08.png']:bound[str(p)]=sha(p)
+report={'schema':'mattersyn-independent-canonical-reader-audit/1','source_id':'sommer2020','doi':'10.1021/acs.cgd.9b01519','reviewer':'/root/norberg2004_extract','author':'/root/backlog_eta','created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'status':'open_findings','audited_revision':1,'proposal_freeze_sha256':sha(C/'package-manifest.json'),'source_audit_sha256':sha(R/'source-independent-audit/independent-audit-v2.json'),'reader_sha256':sha(P/'sommer2020.json'),'counts':checks['counts'],'manual_scopes':manual,'independent_mechanical_checks':checks['check_count'],'checks_by_category':checks['checks_by_category'],'findings':findings,'limits':['SI declared but locally unlocated/unverified; supplied-main-only source scope.','No approval of molecule or apparatus source science, mounted browser, Site import, publication, coordinate models or training.','All source conflicts remain unresolved as recorded. Mechanical consistency is not a substitute for manual source/reader review.'],'bound_files':bound}
+(A/'independent-audit-v1.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+(A/'independent-audit-v1.md').write_text('# Independent Sommer canonical/reader audit — v1\n\nStatus: open findings. All19 records,31 operations,39 condition options and357 prose cards were read;1,515 exact typed reader fields and all source/table mappings were checked. '+str(checks['check_count'])+' supporting checks pass.\n\n'+'\n'.join('- **'+f['id']+'**: '+f['finding']+' '+f['required_change'] for f in findings)+'\n\nThe independent supplied-main source approval is preserved. SI remains locally unlocated/unverified. This report does not approve molecular/apparatus science, browser delivery, training or publication. Exact input hashes and manual review scope are in the JSON.\n',encoding='utf-8')
+print(json.dumps({'path':str(A/'independent-audit-v1.json'),'sha256':sha(A/'independent-audit-v1.json'),'bound_files':len(bound),'findings':len(findings)}))

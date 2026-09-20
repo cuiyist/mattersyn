@@ -20,7 +20,9 @@ for er,ar in zip(reading['rows'],rows):
  check('independent label '+er[0],er[0]==ar['row_label']==ar['sample_id'])
  for j,(raw,c) in enumerate(zip(er[1:],ar['cells'])):
   actual=c['raw_text'];expected=raw
-  if 'day' in raw:actual=actual+' '+c['unit'];expected=expected.replace('days','day')
+  if 'day' in raw:
+   if 'day' not in actual:actual=actual+' '+c['unit']
+   actual=actual.replace('days','day');expected=expected.replace('days','day')
   check('independent raw '+er[0]+'/'+str(j),norm(expected)==norm(actual))
   unit=['M','degC','ratio_parts','min','min'][j]
   if 'day' in raw:unit='day'
@@ -58,7 +60,7 @@ for rootname,root in [('facts',facts),('tables',tables)]:
    check('quantity evidence '+rootname+path,bool(x.get('evidence')))
    raw=x['raw_text']
    if x.get('value') is not None:
-    token=raw.lstrip('~<>=').strip()
+    token=raw.lstrip('~<>=').strip().split()[0]
     try:expected=float(token.split('(')[0]) if '/' not in token else float(token.split('/')[0])/float(token.split('/')[1])
     except ValueError:expected=None
     check('typed scalar '+rootname+path,expected==x['value'])

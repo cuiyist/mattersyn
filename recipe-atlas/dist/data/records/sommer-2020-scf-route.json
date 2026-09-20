@@ -1,0 +1,976 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sommer-2020-scf-route",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "title": "Sommer et al. (2020) · Supercritical-flow synthesis",
+  "material": {
+    "formula": "ZnAl2O4",
+    "family": "ZnAl2O4 spinel hydrothermal synthesis"
+  },
+  "method": "Supercritical-flow synthesis",
+  "sources": [
+    {
+      "id": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "authors": "Sanna Sommer; Espen D. Bøjesen; Hazel Reardon; Bo B. Iversen",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "main_status": "All eleven supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Declared supporting information remains locally unlocated/unverified; no SI content is claimed read.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sommer2020",
+    "recipe_family": "sommer2020-hydrothermal-reactor-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnAl2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Conclusions paragraph 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "note": "Nominal target only for the three laboratory route records. Procedure/model/context records do not create a new synthesis outcome."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "zn-nitrate",
+      "name": "Zinc nitrate hexahydrate",
+      "formula": "Zn(NO3)2·6H2O",
+      "role": "precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich, >=99%; hydration explicitly supplied.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "al-nitrate",
+      "name": "Aluminum nitrate nonahydrate",
+      "formula": "Al(NO3)3·9H2O",
+      "role": "precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich, >=98%; hydration explicitly supplied.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "naoh",
+      "name": "Sodium hydroxide",
+      "formula": "NaOH",
+      "role": "base",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich >=97%; do not invent charge masses from table concentrations.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "insitu-water",
+      "name": "Aqueous SCF solvent",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "SCF solvent-water context; grade is not separately reported. No in situ nitrate-stock preparation, salt charge or solution volume is inherited by this material slot.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "scf-feed",
+      "name": "Separate source specimens: scf feed",
+      "kind": "sample_set",
+      "parent_ids": [
+        "zn-nitrate",
+        "al-nitrate",
+        "naoh",
+        "insitu-water"
+      ]
+    },
+    {
+      "id": "scf-crude",
+      "name": "Separate source specimens: scf crude",
+      "kind": "sample_set",
+      "parent_ids": [
+        "scf-feed"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "scf-feed",
+      "action": "supply-precursor-and-solvent-to-the-cited-in-house-flow-reactor",
+      "label": "Supply precursor and solvent to the cited in-house flow reactor",
+      "stage": "precursor_preparation",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "zn-nitrate",
+        "al-nitrate",
+        "naoh",
+        "insitu-water"
+      ],
+      "outputs": [
+        "scf-feed"
+      ],
+      "parameters": {
+        "solvent_flow_rate": {
+          "value": 14.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+          "basis": "Source context: scf-route.",
+          "raw_text": "14.5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "precursor_flow_rate": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+          "basis": "Source context: scf-route.",
+          "raw_text": "5",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "oh_concentration": {
+          "value": 0.18,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+          "basis": "Source context: scf-route.",
+          "raw_text": "0.18",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Supply precursor and solvent to the cited in-house flow reactor.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: full precursor formulation, solvent grade, reactor dimensions. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch. The main gives flow rates and ratios; it does not supply a fully quantified upstream feed recipe.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "scf-react",
+      "action": "react-at-sample-specific-scf-conditions",
+      "label": "React at sample-specific SCF conditions",
+      "stage": "synthesis",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "scf-feed"
+      ],
+      "inputs": [
+        "scf-feed"
+      ],
+      "outputs": [
+        "scf-crude"
+      ],
+      "parameters": {
+        "pressure": {
+          "value": 250.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "bar",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+          "basis": "Source context: scf-route.",
+          "raw_text": "250",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "React at sample-specific SCF conditions.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: 450/380 degree source conflict, collection protocol. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "table-1-s1",
+      "label": "S1 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 0.18,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: S1.",
+          "raw_text": "0.18",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S1, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 450.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: S1.",
+          "raw_text": "450",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S1, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "Source context: S1.",
+          "raw_text": "~1",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S1, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: S1.",
+          "raw_text": "0",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S1, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 10; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "table-1-s2",
+      "label": "S2 · separately reported conditions",
+      "parameters": {
+        "C_NaOH": {
+          "value": 0.18,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results.",
+          "basis": "Source context: S2.",
+          "raw_text": "0.18",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S2, C_NaOH; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "T_rxn": {
+          "value": 380.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results.",
+          "basis": "Source context: S2.",
+          "raw_text": "380",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S2, T_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_rxn": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results.",
+          "basis": "Source context: S2.",
+          "raw_text": "~1",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S2, t_rxn; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "t_dwell": {
+          "value": 0.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results.",
+          "basis": "Source context: S2.",
+          "raw_text": "0",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 4 (printed 1792), Table 1 S2, t_dwell; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 11; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "s1-s2",
+      "source_sample_label": "S1/S2",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: S1/S2.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    },
+    {
+      "sample_id": "s1",
+      "source_sample_label": "S1",
+      "batch_id": null,
+      "material_state_id": "scf-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 10; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 10; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 10; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 10; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 10; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: S1.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"S1\",\"kind\":\"laboratory_scf_sample\",\"table_row_pointer\":\"/tables/0/rows/9\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 10\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    },
+    {
+      "sample_id": "s2",
+      "source_sample_label": "S2",
+      "batch_id": null,
+      "material_state_id": "scf-crude",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 11; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "The preparation label and intended ZnAl2O4 target do not establish the observed product composition. Sample-specific phase and result observations remain in their separate source contexts; no pure-target product composition is assigned here."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 11; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 11; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 11; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 4 (printed 1792), Table 1 sample column row 11; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "notes": [
+        "Source scope: S2.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved.",
+        "This row denotes its source-defined preparation specimen and nominal target, not phase purity, isolated yield or an exact atomic structure.",
+        "Source context object: {\"id\":\"S2\",\"kind\":\"laboratory_scf_sample\",\"table_row_pointer\":\"/tables/0/rows/10\",\"table_id\":\"table-1\",\"evidence\":[{\"source_id\":\"sommer2020-main\",\"document_role\":\"main\",\"source_sha256\":\"ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97\",\"pdf_page\":4,\"printed_page\":1792,\"locator\":\"Table 1 sample column row 11\"}],\"phase_assignment_note\":\"Use explicit result facts/figure scopes. A table row alone is not proof of phase purity, a yield or a new independent batch.\",\"verified_cross_technique_exact_pair\":false}"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sommer2020-scf-settings-claim",
+      "sample_id": "s1-s2",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "An in-house SCF reactor cited to Hellstern et al. and Hald et al. is used with the stated pressure and two flow rates. This methods paragraph says 450 °C for each synthesis, but Table 1 and Results explicitly give S2 as 380 °C. The upstream reactor papers have not been read.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main."
+      },
+      "conditions": "S1/S2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-scf-settings-q1",
+      "sample_id": "s1-s2",
+      "property": "pressure",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 250.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "bar",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+        "basis": "Source context: S1/S2.",
+        "raw_text": "250",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "S1/S2; pressure",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-scf-settings-q2",
+      "sample_id": "s1-s2",
+      "property": "methods_temperature_each_synthesis",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 450.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+        "basis": "Source context: S1/S2.",
+        "raw_text": "450",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "S1/S2; methods temperature each synthesis",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-scf-settings-q3",
+      "sample_id": "s1-s2",
+      "property": "solvent_flow_rate",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 14.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+        "basis": "Source context: S1/S2.",
+        "raw_text": "14.5",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "S1/S2; solvent flow rate",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-scf-settings-q4",
+      "sample_id": "s1-s2",
+      "property": "precursor_flow_rate",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+        "basis": "Source context: S1/S2.",
+        "raw_text": "5",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "S1/S2; precursor flow rate",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-scf-settings-q5",
+      "sample_id": "s1-s2",
+      "property": "oh_concentration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.18,
+        "minimum": null,
+        "maximum": null,
+        "unit": "M",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main.",
+        "basis": "Source context: S1/S2.",
+        "raw_text": "0.18",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "S1/S2; OH concentration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-scf-settings-q6",
+      "sample_id": "s1-s2",
+      "property": "zn_al_oh_molar_ratio",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": "1:2:7",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source context: S1/S2. Source claim class: reported. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results. G4: Cited reactor/setup/uncertainty papers have not been read. SCF feed formulation and complete in situ pressure/exposure/heating details are not reproduced in the main. Source ratio components: [1.0,2.0,7.0]. No numerical unit or endpoint is inferred for text-only fields."
+      },
+      "conditions": "S1/S2; Zn:Al:OH molar ratio",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 8 (printed 1796), Supercritical Flow Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+    "missing_fields": [
+      "Record IDs and context counts do not count independent physical batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training admission is approved.",
+      "Pure process specifications and author refinement/model results are distinguished from experimental product observations.",
+      "full precursor formulation",
+      "solvent grade",
+      "reactor dimensions",
+      "450/380 degree source conflict",
+      "collection protocol"
+    ],
+    "conflicts": [
+      "C2: Methods say 450 °C for each synthesis; S2 is 380 °C in Table 1 and Results."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source reader and limitations",
+      "url": "/paper-review.html?id=sommer2020",
+      "relation": "private_unapproved_reader_proposal"
+    },
+    {
+      "label": "Common powder isolation applied separately after this route",
+      "url": "/records/sommer-2020-lab-workup.html",
+      "relation": "source_reported_shared_workup"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

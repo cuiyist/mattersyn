@@ -1,0 +1,715 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sommer-2020-lab-workup",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Sommer et al. (2020) · Common laboratory powder isolation",
+  "material": {
+    "formula": "ZnAl2O4",
+    "family": "ZnAl2O4 spinel hydrothermal synthesis"
+  },
+  "method": "Common laboratory powder isolation",
+  "sources": [
+    {
+      "id": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "authors": "Sanna Sommer; Espen D. Bøjesen; Hazel Reardon; Bo B. Iversen",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "main_status": "All eleven supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Declared supporting information remains locally unlocated/unverified; no SI content is claimed read.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "sommer2020",
+    "recipe_family": "sommer2020-hydrothermal-reactor-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Conclusions paragraph 1; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ],
+      "note": "Nominal target only for the three laboratory route records. Procedure/model/context records do not create a new synthesis outcome."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "Complete supplied-main source scope with exact locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "demin-wash-water",
+      "name": "Demineralized wash water",
+      "formula": "H2O",
+      "role": "wash_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Three washes of laboratory powders; quantity unreported.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "ethanol-96",
+      "name": "Ethanol, 96%",
+      "formula": "C2H6O",
+      "role": "wash_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "One laboratory powder wash; not microscopy 99%.",
+        "Chemical identity and source role only; independently qualified molecular/component bindings remain pending."
+      ],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Source material / apparatus / structural context; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mw-crude",
+      "name": "Microwave crude products, separate specimens",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "scf-crude",
+      "name": "SCF crude products, separate specimens",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "acs-crude",
+      "name": "Autoclave crude products, separate specimens",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "retained-lab-powder",
+      "name": "Separate source specimens: retained lab powder",
+      "kind": "sample_set",
+      "parent_ids": [
+        "mw-crude",
+        "scf-crude",
+        "acs-crude"
+      ]
+    },
+    {
+      "id": "supernatant",
+      "name": "supernatant",
+      "kind": "waste",
+      "parent_ids": [
+        "mw-crude",
+        "scf-crude",
+        "acs-crude"
+      ]
+    },
+    {
+      "id": "washed-powder",
+      "name": "Separate source specimens: washed powder",
+      "kind": "sample_set",
+      "parent_ids": [
+        "retained-lab-powder"
+      ]
+    },
+    {
+      "id": "wash-supernatants",
+      "name": "wash supernatants",
+      "kind": "waste",
+      "parent_ids": [
+        "retained-lab-powder",
+        "demin-wash-water",
+        "ethanol-96"
+      ]
+    },
+    {
+      "id": "dried-lab-powders",
+      "name": "Separate source specimens: dried lab powders",
+      "kind": "sample_set",
+      "parent_ids": [
+        "washed-powder"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "lab-separate",
+      "action": "centrifuge-and-separate-powders-until-solution-appears-colorless",
+      "label": "Centrifuge and separate powders until solution appears colorless",
+      "stage": "workup",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "mw-crude",
+        "scf-crude",
+        "acs-crude"
+      ],
+      "outputs": [
+        "retained-lab-powder",
+        "supernatant"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "retained-lab-powder",
+      "description": "Centrifuge and separate powders until solution appears colorless.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: speed, duration. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch. Microwave, SCF and autoclave powders are alternative inputs from their respective routes, not a pooled charge.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "lab-wash",
+      "action": "wash-retained-powder-three-times-with-demineralized-water-then-once-with-96-ethanol",
+      "label": "Wash retained powder three times with demineralized water then once with 96% ethanol",
+      "stage": "workup",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "lab-separate"
+      ],
+      "inputs": [
+        "retained-lab-powder",
+        "demin-wash-water",
+        "ethanol-96"
+      ],
+      "outputs": [
+        "washed-powder",
+        "wash-supernatants"
+      ],
+      "parameters": {
+        "water_washes": {
+          "value": 3.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: lab-workup.",
+          "raw_text": "3",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "ethanol_washes": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: lab-workup.",
+          "raw_text": "1",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "wash_ethanol_grade": {
+          "value": 96.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: lab-workup.",
+          "raw_text": "96",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "washed-powder",
+      "description": "Wash retained powder three times with demineralized water then once with 96% ethanol.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: solvent amounts. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch. Microwave, SCF and autoclave powders are alternative inputs from their respective routes, not a pooled charge.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "lab-dry",
+      "action": "vacuum-dry-retained-powder-at-50-c-for-4-h",
+      "label": "Vacuum-dry retained powder at 50 °C for 4 h",
+      "stage": "workup",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "lab-wash"
+      ],
+      "inputs": [
+        "washed-powder"
+      ],
+      "outputs": [
+        "dried-lab-powders"
+      ],
+      "parameters": {
+        "drying_temperature": {
+          "value": 50.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: lab-workup.",
+          "raw_text": "50",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        },
+        "drying_duration": {
+          "value": 4.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+          "basis": "Source context: lab-workup.",
+          "raw_text": "4",
+          "evidence": [
+            {
+              "source_id": "sommer2020",
+              "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum; pressure unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "dried-lab-powders",
+      "description": "Vacuum-dry retained powder at 50 °C for 4 h.  Source-context quantities are retained for evidence coverage; only the explicitly applicable subset is an action condition. Alternative sample conditions must never be applied simultaneously. Missing fields: vacuum pressure, yield. The operation applies separately to the listed source contexts and does not combine different experiments into one physical batch. Microwave, SCF and autoclave powders are alternative inputs from their respective routes, not a pooled charge.",
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "source_sample_label": "M1-M9/S1-S2/A1-A6",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: M1-M9/S1-S2/A1-A6.",
+        "This is a named source specimen or context, not proof of a unique batch, all-technique same-aliquot identity or independent outcome.",
+        "No measured atomic structure or exact recipe–structure pair is approved."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "sommer2020-workup-claim",
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "property": "source_claim",
+      "technique": "Source text: process, observation, model or cited context as labeled",
+      "value": {
+        "value": "Separate as-synthesized powders from supernatant by centrifugation until the solution appears colorless. Wash the retained powders three times with demineralized water and once with 96% ethanol, then dry in a Thermo Scientific Heraeus vacuum oven. Centrifuge settings, solvent quantities, vacuum pressure and yields are absent. Apply this workup separately to the microwave, SCF and autoclave powders; these are alternative specimens, never a pooled charge. This workup is not automatically assigned to D-series solutions or in situ capillary observations.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "note": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings."
+      },
+      "conditions": "M1-M9/S1-S2/A1-A6",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-workup-q1",
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "property": "water_washes",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 3.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/S1-S2/A1-A6.",
+        "raw_text": "3",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/S1-S2/A1-A6; water washes",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-workup-q2",
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "property": "ethanol_washes",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/S1-S2/A1-A6.",
+        "raw_text": "1",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/S1-S2/A1-A6; ethanol washes",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-workup-q3",
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "property": "wash_ethanol_grade",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 96.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/S1-S2/A1-A6.",
+        "raw_text": "96",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/S1-S2/A1-A6; wash ethanol grade",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-workup-q4",
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "property": "drying_temperature",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 50.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/S1-S2/A1-A6.",
+        "raw_text": "50",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/S1-S2/A1-A6; drying temperature",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    },
+    {
+      "id": "sommer2020-workup-q5",
+      "sample_id": "m1-m9-s1-s2-a1-a6",
+      "property": "drying_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings. G3: NaOH masses, several final volumes, centrifuge speed/time, wash quantities, vacuum pressure and product yields are not reported; unknowns are not zero or default protocol settings.",
+        "basis": "Source context: M1-M9/S1-S2/A1-A6.",
+        "raw_text": "4",
+        "evidence": [
+          {
+            "source_id": "sommer2020",
+            "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "M1-M9/S1-S2/A1-A6; drying duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sommer2020",
+          "locator": "MAIN PDF p. 7 (printed 1795), Experimental: Laboratory Synthesis; source SHA256 ca731728f443477c041c370f3e6de6df63d8659cf61bfc47c07582750ce59b97"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+    "missing_fields": [
+      "Record IDs and context counts do not count independent physical batches or replicates.",
+      "No atomic model, exact recipe–structure pair, universal cross-technique sample join or training admission is approved.",
+      "Pure process specifications and author refinement/model results are distinguished from experimental product observations.",
+      "speed",
+      "duration",
+      "solvent amounts",
+      "vacuum pressure",
+      "yield"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Full source reader and limitations",
+      "url": "/paper-review.html?id=sommer2020",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}
