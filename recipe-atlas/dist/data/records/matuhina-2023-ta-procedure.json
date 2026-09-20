@@ -1,0 +1,1963 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-ta-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · Transient absorption",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "Transient absorption",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "quartz-cuvette",
+      "name": "Quartz cuvette",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "2mm thickness for TA; no atomistic substrate model.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "heavy-water",
+      "name": "Heavy-water continuum generator",
+      "formula": "D2O",
+      "role": "instrument_medium",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "TA white-light generator, not NC dispersion solvent.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nc-dispersion-series",
+      "name": "Source context supplied separately: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "ta-specimens",
+      "name": "Separate source specimens: ta specimens",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-dispersion-series"
+      ]
+    },
+    {
+      "id": "ta-data",
+      "name": "Analysis result: ta data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ta-specimens"
+      ]
+    },
+    {
+      "id": "ta-fits",
+      "name": "Analysis result: ta fits",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ta-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "ta-load",
+      "action": "place-dispersion-in-quartz-cuvette",
+      "label": "Place dispersion in quartz cuvette",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-dispersion-series",
+        "quartz-cuvette"
+      ],
+      "outputs": [
+        "ta-specimens"
+      ],
+      "parameters": {
+        "cuvette_thickness": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: ta-procedure.",
+          "raw_text": "2",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Place dispersion in quartz cuvette.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "ta-acquire",
+      "action": "acquire-source-specific-pump-probe-spectra-and-decay-series",
+      "label": "Acquire source-specific pump/probe spectra and decay series",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "ta-load"
+      ],
+      "inputs": [
+        "ta-specimens",
+        "heavy-water"
+      ],
+      "outputs": [
+        "ta-data"
+      ],
+      "parameters": {
+        "time_resolution": {
+          "value": 150.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fs",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: ta-procedure.",
+          "raw_text": "~150",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 11 (printed S11), FigureS6, mainp8 discussion; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 11 (printed S11), FigureS6, mainp8 discussion; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Acquire source-specific pump/probe spectra and decay series. 300nm/80uW and445/550nm probes belong Figure6. FigureS6 uses nc180-07 only,300/370/420nm excitation and600nm probe. They are separate acquisition conditions. Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "SI PDF p. 11 (printed S11), FigureS6, mainp8 discussion; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+        }
+      ]
+    },
+    {
+      "id": "ta-fit",
+      "action": "fit-cubic-bi-exponential-and-rhombohedral-tri-exponential-decays",
+      "label": "Fit cubic bi-exponential and rhombohedral tri-exponential decays",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "ta-acquire"
+      ],
+      "inputs": [
+        "ta-data"
+      ],
+      "outputs": [
+        "ta-fits"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), STE Formation and Table1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), STE Formation and Table1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fit cubic bi-exponential and rhombohedral tri-exponential decays.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), STE Formation and Table1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ta-three-samples",
+      "source_sample_label": "ta-three-samples",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: ta-three-samples.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "table-1-definition",
+      "source_sample_label": "table-1 definition",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: table-1 definition.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "nc150-ta",
+      "source_sample_label": "nc150-ta",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc150-ta.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "nc180-07-ta",
+      "source_sample_label": "nc180-07-ta",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc180-07-ta.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"nc180-07-ta\",\"name\":\"Excitation-dependent TA control\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc180-07\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-si\",\"document_role\":\"si\",\"source_sha256\":\"1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662\",\"pdf_page\":11,\"printed_page\":\"S11\",\"locator\":\"FigureS6\"}]}"
+      ]
+    },
+    {
+      "sample_id": "nc180-05-ta",
+      "source_sample_label": "nc180-05-ta",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc180-05-ta.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "nc150-nc180-07-nc180-05",
+      "source_sample_label": "nc150/nc180-07/nc180-05",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), figure-6; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), figure-6; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), figure-6; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), figure-6; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc150/nc180-07/nc180-05.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "nc180-07-nc180-05",
+      "source_sample_label": "nc180-07/nc180-05",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc180-07/nc180-05.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "nc150",
+      "source_sample_label": "nc150",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc150.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-ta-acquisition-claim",
+      "sample_id": "ta-three-samples",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Measure dispersions in a 2 mm quartz cuvette using 300 nm laser pulses (Libra F/Topas C), heavy-water white continuum probe and ExciPro CCD detection. Figure 6 supplies the 80 µW excitation condition.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen."
+      },
+      "conditions": "ta-three-samples",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-acquisition-q1",
+      "sample_id": "ta-three-samples",
+      "property": "cuvette_thickness",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; cuvette thickness",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-acquisition-q2",
+      "sample_id": "ta-three-samples",
+      "property": "laser_excitation_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 300.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "300",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; laser excitation wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-acquisition-q3",
+      "sample_id": "ta-three-samples",
+      "property": "time_resolution",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 150.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fs",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "~150",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; time resolution",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Ultrafast TA methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-power-claim",
+      "sample_id": "ta-three-samples",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Figure 6 compares nc150, nc180-07 and nc180-05 under 300 nm/80 µW excitation. Decays are monitored at 445 nm for nc150 and 550 nm for the two rhombohedral samples.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. "
+      },
+      "conditions": "ta-three-samples",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-power-q1",
+      "sample_id": "ta-three-samples",
+      "property": "excitation_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 300.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "300",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; excitation wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-power-q2",
+      "sample_id": "ta-three-samples",
+      "property": "excitation_power",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 80.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "uW",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "80",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; excitation power",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-power-q3",
+      "sample_id": "ta-three-samples",
+      "property": "cubic_probe_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 445.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "445",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; cubic probe wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ta-power-q4",
+      "sample_id": "ta-three-samples",
+      "property": "rhombohedral_probe_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 550.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: ta-three-samples.",
+        "raw_text": "550",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ta-three-samples; rhombohedral probe wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure 6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-definition",
+      "sample_id": "table-1-definition",
+      "property": "source_table_definition",
+      "technique": "Original table definition",
+      "value": {
+        "value": "{\"id\":\"table-1\",\"title\":\"TA decay fits\",\"columns\":[\"sample\",\"A1\",\"tau1\",\"A2\",\"tau2\",\"A3\",\"tau3\"],\"column_units\":[null,\"%\",\"ps\",\"%\",\"ps\",\"%\",\"ps\"],\"evidence\":[{\"source_id\":\"matuhina2023-main\",\"document_role\":\"main\",\"source_sha256\":\"9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852\",\"pdf_page\":8,\"printed_page\":960,\"locator\":\"table-1\"}],\"notes\":[\"The two A3/tau3 cells in the cubic row are blank, not zero. Fitted decay parameters are not reaction times.\"],\"footnotes\":[],\"independent_numerical_audit\":\"pending\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Literal source headings, units, notes and footnotes. Structural/refinement values remain unqualified; blank and zero cells are not repaired."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-sample",
+      "sample_id": "nc150-ta",
+      "property": "sample",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": "150@NCs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, sample; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source context: nc150-ta. Literal table-1 row 150@NCs. Printed body cell. Source components: null. Text-only fields retain their literal form."
+      },
+      "conditions": "150@NCs; sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, sample; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-A1",
+      "sample_id": "nc150-ta",
+      "property": "a1",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 95.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 150@NCs. Printed body cell.",
+        "basis": "Source context: nc150-ta.",
+        "raw_text": "95.8",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, A1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "150@NCs; A1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, A1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-tau1",
+      "sample_id": "nc150-ta",
+      "property": "tau1",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 0.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 150@NCs. Printed body cell.",
+        "basis": "Source context: nc150-ta.",
+        "raw_text": "0.4",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, tau1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "150@NCs; tau1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, tau1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-A2",
+      "sample_id": "nc150-ta",
+      "property": "a2",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 4.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 150@NCs. Printed body cell.",
+        "basis": "Source context: nc150-ta.",
+        "raw_text": "4.2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, A2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "150@NCs; A2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, A2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-tau2",
+      "sample_id": "nc150-ta",
+      "property": "tau2",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 47.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 150@NCs. Printed body cell.",
+        "basis": "Source context: nc150-ta.",
+        "raw_text": "47.1",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, tau2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "150@NCs; tau2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, tau2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-A3",
+      "sample_id": "nc150-ta",
+      "property": "a3",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "not_reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 150@NCs. Printed body cell.",
+        "basis": "Source context: nc150-ta.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, A3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "150@NCs; A3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, A3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r01-tau3",
+      "sample_id": "nc150-ta",
+      "property": "tau3",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "not_reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 150@NCs. Printed body cell.",
+        "basis": "Source context: nc150-ta.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, tau3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "150@NCs; tau3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 1, tau3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-sample",
+      "sample_id": "nc180-07-ta",
+      "property": "sample",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": "180@NCs//0.7",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, sample; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source context: nc180-07-ta. Literal table-1 row 180@NCs//0.7. Printed body cell. Source components: null. Text-only fields retain their literal form."
+      },
+      "conditions": "180@NCs//0.7; sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, sample; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-A1",
+      "sample_id": "nc180-07-ta",
+      "property": "a1",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 70.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.7. Printed body cell.",
+        "basis": "Source context: nc180-07-ta.",
+        "raw_text": "70.9",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, A1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.7; A1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, A1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-tau1",
+      "sample_id": "nc180-07-ta",
+      "property": "tau1",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.7. Printed body cell.",
+        "basis": "Source context: nc180-07-ta.",
+        "raw_text": "1.5",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, tau1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.7; tau1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, tau1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-A2",
+      "sample_id": "nc180-07-ta",
+      "property": "a2",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 10.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.7. Printed body cell.",
+        "basis": "Source context: nc180-07-ta.",
+        "raw_text": "10.6",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, A2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.7; A2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, A2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-tau2",
+      "sample_id": "nc180-07-ta",
+      "property": "tau2",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 152.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.7. Printed body cell.",
+        "basis": "Source context: nc180-07-ta.",
+        "raw_text": "152.7",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, tau2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.7; tau2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, tau2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-A3",
+      "sample_id": "nc180-07-ta",
+      "property": "a3",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 18.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.7. Printed body cell.",
+        "basis": "Source context: nc180-07-ta.",
+        "raw_text": "18.5",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, A3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.7; A3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, A3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r02-tau3",
+      "sample_id": "nc180-07-ta",
+      "property": "tau3",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 8026.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.7. Printed body cell.",
+        "basis": "Source context: nc180-07-ta.",
+        "raw_text": "8026.8",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, tau3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.7; tau3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 2, tau3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-sample",
+      "sample_id": "nc180-05-ta",
+      "property": "sample",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": "180@NCs//0.5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, sample; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source context: nc180-05-ta. Literal table-1 row 180@NCs//0.5. Printed body cell. Source components: null. Text-only fields retain their literal form."
+      },
+      "conditions": "180@NCs//0.5; sample",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, sample; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-A1",
+      "sample_id": "nc180-05-ta",
+      "property": "a1",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 71.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.5. Printed body cell.",
+        "basis": "Source context: nc180-05-ta.",
+        "raw_text": "71.8",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, A1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.5; A1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, A1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-tau1",
+      "sample_id": "nc180-05-ta",
+      "property": "tau1",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 1.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.5. Printed body cell.",
+        "basis": "Source context: nc180-05-ta.",
+        "raw_text": "1.1",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, tau1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.5; tau1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, tau1; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-A2",
+      "sample_id": "nc180-05-ta",
+      "property": "a2",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 11.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.5. Printed body cell.",
+        "basis": "Source context: nc180-05-ta.",
+        "raw_text": "11.2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, A2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.5; A2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, A2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-tau2",
+      "sample_id": "nc180-05-ta",
+      "property": "tau2",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 161.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.5. Printed body cell.",
+        "basis": "Source context: nc180-05-ta.",
+        "raw_text": "161.7",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, tau2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.5; tau2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, tau2; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-A3",
+      "sample_id": "nc180-05-ta",
+      "property": "a3",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 17.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.5. Printed body cell.",
+        "basis": "Source context: nc180-05-ta.",
+        "raw_text": "17.0",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, A3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.5; A3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, A3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "table-1-r03-tau3",
+      "sample_id": "nc180-05-ta",
+      "property": "tau3",
+      "technique": "Original table cell; measurement/refinement context",
+      "value": {
+        "value": 8525.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Literal table-1 row 180@NCs//0.5. Printed body cell.",
+        "basis": "Source context: nc180-05-ta.",
+        "raw_text": "8525.1",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, tau3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "180@NCs//0.5; tau3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), table-1 row 3, tau3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "figure-6-context",
+      "sample_id": "nc150-nc180-07-nc180-05",
+      "property": "figure_context",
+      "technique": "Original figure",
+      "value": {
+        "value": "Ultrafast transient absorption.  Three source-labeled dispersions; pump300nm80uW, separate probes445/550nm; original fits/equations. C11: The authors describe300 nm excitation as enabling above-gap carriers while optical gaps are~4.8–5.0 eV. No source correction or new microscopic mechanism is inferred; these are distinct source statements. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), figure-6; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), figure-6; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "figure-s6-context",
+      "sample_id": "nc180-07-ta",
+      "property": "figure_context",
+      "technique": "Original figure",
+      "value": {
+        "value": "Excitation-dependent transient absorption.  180//0.7 with300/370/420nm pumps,600nm decay probe. C11: The authors describe300 nm excitation as enabling above-gap carriers while optical gaps are~4.8–5.0 eV. No source correction or new microscopic mechanism is inferred; these are distinct source statements. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 11 (printed S11), figure-s6; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "SI PDF p. 11 (printed S11), figure-s6; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+        }
+      ]
+    },
+    {
+      "id": "ta-triexponential-context",
+      "sample_id": "nc180-07-nc180-05",
+      "property": "equation_context",
+      "technique": "Original equation",
+      "value": {
+        "value": "Rhombohedral TA decay fit. DeltaOD = A1 exp(-t/tau1) + A2 exp(-t/tau2) + A3 exp(-t/tau3) Source fit;Table1 values. ",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "ta-biexponential-context",
+      "sample_id": "nc150",
+      "property": "equation_context",
+      "technique": "Original equation",
+      "value": {
+        "value": "Cubic TA decay fit. DeltaOD = A1 exp(-t/tau1) + A2 exp(-t/tau2) Source fit;A3/tau3 absent. ",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 7 (printed 959), Figure6 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

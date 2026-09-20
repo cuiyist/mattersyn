@@ -1,0 +1,963 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-xrd-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · XRD specimen preparation and analysis",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "XRD specimen preparation and analysis",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cover-glass",
+      "name": "Microscopy cover glass",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Precleaned20×20mm XRD substrate; no thickness or cleaning recipe.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nc-dispersion-series",
+      "name": "Source context supplied separately: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "xrd-films",
+      "name": "Separate source specimens: xrd films",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-dispersion-series",
+        "cover-glass"
+      ]
+    },
+    {
+      "id": "xrd-data",
+      "name": "Analysis result: xrd data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xrd-films"
+      ]
+    },
+    {
+      "id": "reported-refinement-data",
+      "name": "Analysis result: reported refinement data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "xrd-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "xrd-deposit",
+      "action": "drop-cast-separate-dispersions-onto-covers",
+      "label": "Drop-cast separate dispersions onto covers",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-dispersion-series",
+        "cover-glass"
+      ],
+      "outputs": [
+        "xrd-films"
+      ],
+      "parameters": {
+        "cover_glass_side_1": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "cover_glass_side_2": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "xrd-films",
+      "description": "Drop-cast separate dispersions onto covers.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "xrd-acquire",
+      "action": "acquire-powder-xrd-in-ambient-conditions",
+      "label": "Acquire powder XRD in ambient conditions",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "xrd-deposit"
+      ],
+      "inputs": [
+        "xrd-films"
+      ],
+      "outputs": [
+        "xrd-data"
+      ],
+      "parameters": {
+        "cu_kalpha_wavelength": {
+          "value": 1.5406,
+          "minimum": null,
+          "maximum": null,
+          "unit": "angstrom",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "1.5406",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "cathode_voltage": {
+          "value": 45.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "45",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "cathode_current": {
+          "value": 40.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mA",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "40",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_interval": {
+          "value": null,
+          "minimum": 4.0,
+          "maximum": 62.0,
+          "unit": "degree_2theta",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "4-62",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "step_size": {
+          "value": 0.0262,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degree_2theta",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "0.0262",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "time_per_step": {
+          "value": 17.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "17",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "relative_humidity": {
+          "value": 40.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "~40",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 25.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source context: xrd-procedure.",
+          "raw_text": "25",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ambient conditions, about 40% relative humidity and 25 °C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Acquire powder XRD in ambient conditions.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "xrd-refine",
+      "action": "refine-diffraction-and-draw-source-crystal-illustrations",
+      "label": "Refine diffraction and draw source crystal illustrations",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "xrd-acquire"
+      ],
+      "inputs": [
+        "xrd-data"
+      ],
+      "outputs": [
+        "reported-refinement-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Refine diffraction and draw source crystal illustrations.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "five-series-xrd",
+      "source_sample_label": "five-series-xrd",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: five-series-xrd.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-xrd-prep-claim",
+      "sample_id": "five-series-xrd",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Drop-cast as-synthesized dispersions on precleaned microscopy cover glass, using similar thickness for comparison. No deposited volume or measured thickness is given.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen."
+      },
+      "conditions": "five-series-xrd",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-prep-q1",
+      "sample_id": "five-series-xrd",
+      "property": "cover_glass_side_1",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 20.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "20",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; cover-glass side 1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-prep-q2",
+      "sample_id": "five-series-xrd",
+      "property": "cover_glass_side_2",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 20.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "20",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; cover-glass side 2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-claim",
+      "sample_id": "five-series-xrd",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Use a Malvern Panalytical Empyrean Alpha 1 diffractometer in powder geometry under identical scan settings. HighScore supplies Rietveld analysis; VESTA supplies crystal illustrations. The native tables are reported refinement results, not a validated exportable atomistic model.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels."
+      },
+      "conditions": "five-series-xrd",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-q1",
+      "sample_id": "five-series-xrd",
+      "property": "cu_kalpha_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.5406,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "1.5406",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; Cu Kalpha wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-q2",
+      "sample_id": "five-series-xrd",
+      "property": "cathode_voltage",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 45.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "kV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "45",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; cathode voltage",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-q3",
+      "sample_id": "five-series-xrd",
+      "property": "cathode_current",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 40.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mA",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "40",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; cathode current",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-q4",
+      "sample_id": "five-series-xrd",
+      "property": "scan_interval",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": null,
+        "minimum": 4.0,
+        "maximum": 62.0,
+        "unit": "degree_2theta",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "4-62",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; scan interval",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-q5",
+      "sample_id": "five-series-xrd",
+      "property": "step_size",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.0262,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree_2theta",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "0.0262",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; step size",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-acquire-q6",
+      "sample_id": "five-series-xrd",
+      "property": "time_per_step",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 17.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "s",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels. G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "17",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; time per step",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-ambient-claim",
+      "sample_id": "five-series-xrd",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "All five NC XRD patterns are recorded in ambient conditions.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. "
+      },
+      "conditions": "five-series-xrd",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-ambient-q1",
+      "sample_id": "five-series-xrd",
+      "property": "relative_humidity",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 40.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "~40",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; relative humidity",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-xrd-ambient-q2",
+      "sample_id": "five-series-xrd",
+      "property": "temperature",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 25.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported.",
+        "basis": "Source context: five-series-xrd.",
+        "raw_text": "25",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-xrd; temperature",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Structural and Morphological Analysis; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

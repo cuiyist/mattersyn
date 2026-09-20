@@ -1,4 +1,4 @@
-import {mountSourceSections} from './source-evidence.mjs?v=0.29.0-r1';
+import {mountSourceSections} from './source-evidence.mjs?v=0.30.0-r1';
 const $=id=>document.getElementById(id);
 function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}
 function link(text,href){const a=node('a',text);a.href=href;return a;}

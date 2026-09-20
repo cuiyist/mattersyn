@@ -1,0 +1,884 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-tem-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · TEM and SAED preparation and acquisition",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "TEM and SAED preparation and acquisition",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": "C6H14",
+      "role": "dispersion_solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "reported_grade": {
+          "value": null,
+          "minimum": 95.0,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G1: Dry ODE/OA/OlAm and anhydrous solvents are named without their full drying protocols; ODE/technical ligand isomer distributions and surface coverage are not measured.",
+          "basis": "Source context: hexane.",
+          "raw_text": ">=95",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Experimental: Materials; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false
+        }
+      },
+      "notes": [
+        ">=95%; primary redispersion volume absent.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "cu-grid",
+      "name": "Carbon-coated copper grid",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "TEM/SAED substrate; no mesh specified.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nc-dispersion-series",
+      "name": "Source context supplied separately: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-specimens",
+      "name": "Separate source specimens: tem specimens",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-dispersion-series",
+        "hexane",
+        "cu-grid"
+      ]
+    },
+    {
+      "id": "tem-saed-data",
+      "name": "Analysis result: tem saed data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "tem-specimens"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "tem-deposit",
+      "action": "adjust-optical-density-and-drop-dispersion-on-carbon-coated-cu-grid",
+      "label": "Adjust optical density and drop dispersion on carbon-coated Cu grid",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-dispersion-series",
+        "hexane",
+        "cu-grid"
+      ],
+      "outputs": [
+        "tem-specimens"
+      ],
+      "parameters": {
+        "deposition_aliquot": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: tem-procedure.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "absorbance_at_280_nm": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "dimensionless",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: tem-procedure.",
+          "raw_text": "0.2",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "absorbance_wavelength": {
+          "value": 280.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: tem-procedure.",
+          "raw_text": "280",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "tem-specimens",
+      "description": "Adjust optical density and drop dispersion on carbon-coated Cu grid.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "tem-acquire",
+      "action": "acquire-tem-and-saed-from-source-labeled-specimens",
+      "label": "Acquire TEM and SAED from source-labeled specimens",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "tem-deposit"
+      ],
+      "inputs": [
+        "tem-specimens"
+      ],
+      "outputs": [
+        "tem-saed-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: tem-procedure.",
+          "raw_text": "200",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Acquire TEM and SAED from source-labeled specimens.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "five-series-tem",
+      "source_sample_label": "five-series-tem",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: five-series-tem.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    },
+    {
+      "sample_id": "nc150-tem",
+      "source_sample_label": "nc150-tem",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc150-tem.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"nc150-tem\",\"name\":\"150@NCs TEM\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc150\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-si\",\"document_role\":\"si\",\"source_sha256\":\"1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"SI FiguresS2-S3\"}]}"
+      ]
+    },
+    {
+      "sample_id": "nc180-07-tem",
+      "source_sample_label": "nc180-07-tem",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc180-07-tem.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"nc180-07-tem\",\"name\":\"180@NCs//0.7 TEM\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc180-07\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-si\",\"document_role\":\"si\",\"source_sha256\":\"1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"SI FiguresS2-S3\"}]}"
+      ]
+    },
+    {
+      "sample_id": "nc180-05-tem",
+      "source_sample_label": "nc180-05-tem",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 4 (printed 956), Figure3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 4 (printed 956), Figure3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 4 (printed 956), Figure3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 4 (printed 956), Figure3; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc180-05-tem.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"nc180-05-tem\",\"name\":\"180@NCs//0.5 TEM\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc180-05\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-main\",\"document_role\":\"main\",\"source_sha256\":\"9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852\",\"pdf_page\":4,\"printed_page\":956,\"locator\":\"Figure3\"}]}"
+      ]
+    },
+    {
+      "sample_id": "nc180-035-tem",
+      "source_sample_label": "nc180-035-tem",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc180-035-tem.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"nc180-035-tem\",\"name\":\"180@NCs//0.35 TEM\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc180-035\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-si\",\"document_role\":\"si\",\"source_sha256\":\"1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"SI FiguresS2-S3\"}]}"
+      ]
+    },
+    {
+      "sample_id": "nc200-tem",
+      "source_sample_label": "nc200-tem",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 4 (printed S4), SI FiguresS2-S3; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc200-tem.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"nc200-tem\",\"name\":\"200@NCs TEM\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc200\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-si\",\"document_role\":\"si\",\"source_sha256\":\"1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662\",\"pdf_page\":4,\"printed_page\":\"S4\",\"locator\":\"SI FiguresS2-S3\"}]}"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-tem-claim",
+      "sample_id": "five-series-tem",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Drop-cast 20 µL of NC dispersion in hexane, adjusted to absorbance 0.2 at 280 nm, on carbon-coated Cu grids. TEM uses JEM-F200 at 200 kV. Figures 3 and S2 provide corresponding SAED assignments; no universal same-particle identity across methods is established.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen."
+      },
+      "conditions": "five-series-tem",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-tem-q1",
+      "sample_id": "five-series-tem",
+      "property": "deposition_aliquot",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 20.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "uL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: five-series-tem.",
+        "raw_text": "20",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-tem; deposition aliquot",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-tem-q2",
+      "sample_id": "five-series-tem",
+      "property": "absorbance_at_280_nm",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: five-series-tem.",
+        "raw_text": "0.2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-tem; absorbance at 280 nm",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-tem-q3",
+      "sample_id": "five-series-tem",
+      "property": "absorbance_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 280.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: five-series-tem.",
+        "raw_text": "280",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-tem; absorbance wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-tem-q4",
+      "sample_id": "five-series-tem",
+      "property": "accelerating_voltage",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 200.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "kV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: five-series-tem.",
+        "raw_text": "200",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "five-series-tem; accelerating voltage",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Characterization Techniques; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

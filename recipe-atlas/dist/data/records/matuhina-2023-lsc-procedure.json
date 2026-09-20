@@ -1,0 +1,902 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-lsc-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · Photocurrent proof-of-concept",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "Photocurrent proof-of-concept",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "lsc-glass",
+      "name": "LSC glass plate",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Deposited unencapsulated NC film; edge~2×0.15cm.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "si-photodiode",
+      "name": "Silicon pn-junction photodiode",
+      "formula": "Si",
+      "role": "device_component",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "2×2cm2; doping/contact details not supplied.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nc-dispersion-series",
+      "name": "Source context supplied separately: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "lsc-film",
+      "name": "Separate source specimens: lsc film",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-dispersion-series",
+        "lsc-glass"
+      ]
+    },
+    {
+      "id": "lsc-assembly",
+      "name": "Separate source specimens: lsc assembly",
+      "kind": "sample_set",
+      "parent_ids": [
+        "lsc-film",
+        "lsc-glass",
+        "si-photodiode"
+      ]
+    },
+    {
+      "id": "lsc-curves",
+      "name": "Analysis result: lsc curves",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "lsc-assembly"
+      ]
+    },
+    {
+      "id": "aged-lsc-curves",
+      "name": "Analysis result: aged lsc curves",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "lsc-film"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "lsc-deposit",
+      "action": "deposit-an-unencapsulated-nc-film-on-glass",
+      "label": "Deposit an unencapsulated NC film on glass",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-dispersion-series",
+        "lsc-glass"
+      ],
+      "outputs": [
+        "lsc-film"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "lsc-film",
+      "description": "Deposit an unencapsulated NC film on glass.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "lsc-assemble",
+      "action": "place-film-coated-glass-edge-on-diode-with-opaque-surrounding-cover-and-dark-box",
+      "label": "Place film-coated glass edge on diode with opaque surrounding cover and dark box",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "lsc-deposit"
+      ],
+      "inputs": [
+        "lsc-film",
+        "lsc-glass",
+        "si-photodiode"
+      ],
+      "outputs": [
+        "lsc-assembly"
+      ],
+      "parameters": {
+        "window_edge_length": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "~2",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "window_edge_thickness": {
+          "value": 0.15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "~0.15",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "photodiode_side_1": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "2",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "photodiode_side_2": {
+          "value": 2.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "2",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Place film-coated glass edge on diode with opaque surrounding cover and dark box.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "lsc-measure",
+      "action": "measure-bias-dependent-current-under-scoped-lighting-control-conditions",
+      "label": "Measure bias-dependent current under scoped lighting/control conditions",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "lsc-assemble"
+      ],
+      "inputs": [
+        "lsc-assembly"
+      ],
+      "outputs": [
+        "lsc-curves"
+      ],
+      "parameters": {
+        "beam_spectrum": {
+          "value": null,
+          "minimum": 400.0,
+          "maximum": 700.0,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "400-700",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "spot_diameter": {
+          "value": 1.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "~1.6",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "beam_power": {
+          "value": 9.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "~9.5",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "applied_bias_interval": {
+          "value": null,
+          "minimum": -5.0,
+          "maximum": 0.5,
+          "unit": "V",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "-5-0.5",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure bias-dependent current under scoped lighting/control conditions.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "lsc-age-remeasure",
+      "action": "remeasure-the-same-film-after11-weeks-in-air",
+      "label": "Remeasure the same film after11 weeks in air",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "lsc-deposit"
+      ],
+      "inputs": [
+        "lsc-film"
+      ],
+      "outputs": [
+        "aged-lsc-curves"
+      ],
+      "parameters": {
+        "film_aging_time": {
+          "value": 11.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "week",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+          "basis": "Source context: lsc-procedure.",
+          "raw_text": "11",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 10 (printed 962), LSC results and Figure9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 10 (printed 962), LSC results and Figure9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 10 (printed 962), LSC results and Figure9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remeasure the same film after11 weeks in air.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 10 (printed 962), LSC results and Figure9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lsc-film",
+      "source_sample_label": "lsc-film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: lsc-film.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-lsc-setup-claim",
+      "sample_id": "lsc-film",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "A thin NC film is deposited on glass; its edge is placed directly on a silicon pn photodiode. Cover the surrounding diode area opaquely, place it in a dark box and illuminate perpendicular to the glass center using a lens-collimated warm-white-like beam. The experimental film is unencapsulated, not a demonstrated polymer-embedded recipe.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis."
+      },
+      "conditions": "lsc-film",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q1",
+      "sample_id": "lsc-film",
+      "property": "window_edge_length",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "~2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; window edge length",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q2",
+      "sample_id": "lsc-film",
+      "property": "window_edge_thickness",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 0.15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "~0.15",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; window edge thickness",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q3",
+      "sample_id": "lsc-film",
+      "property": "photodiode_side_1",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; photodiode side 1",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q4",
+      "sample_id": "lsc-film",
+      "property": "photodiode_side_2",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "2",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; photodiode side 2",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q5",
+      "sample_id": "lsc-film",
+      "property": "beam_spectrum",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": null,
+        "minimum": 400.0,
+        "maximum": 700.0,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "400-700",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; beam spectrum",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q6",
+      "sample_id": "lsc-film",
+      "property": "spot_diameter",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 1.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "~1.6",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; spot diameter",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q7",
+      "sample_id": "lsc-film",
+      "property": "beam_power",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 9.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mW",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "~9.5",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; beam power",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-lsc-setup-q8",
+      "sample_id": "lsc-film",
+      "property": "applied_bias_interval",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": null,
+        "minimum": -5.0,
+        "maximum": 0.5,
+        "unit": "V",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis. G6: LSC film loading, thickness, preparation/drying detail, exact loading variant and device efficiency are absent. Protective polymer encapsulation and ligand engineering are proposed future work, not an observed current synthesis.",
+        "basis": "Source context: lsc-film.",
+        "raw_text": "-5-0.5",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "lsc-film; applied bias interval",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), LSC Setup; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

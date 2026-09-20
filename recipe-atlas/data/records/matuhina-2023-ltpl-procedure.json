@@ -1,0 +1,705 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-ltpl-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · Deposited-film low-temperature PL",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "Deposited-film low-temperature PL",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "silica-substrate",
+      "name": "Silica substrate",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Low-temperature PL deposition substrate; no deposition recipe.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nc-dispersion-series",
+      "name": "Source context supplied separately: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "ltpl-film",
+      "name": "Separate source specimens: ltpl film",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-dispersion-series",
+        "silica-substrate"
+      ]
+    },
+    {
+      "id": "ltpl-data",
+      "name": "Analysis result: ltpl data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ltpl-film"
+      ]
+    },
+    {
+      "id": "binding-energy-fit",
+      "name": "Analysis result: binding energy fit",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ltpl-data"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "ltpl-deposit",
+      "action": "deposit-ncs-on-silica",
+      "label": "Deposit NCs on silica",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-dispersion-series",
+        "silica-substrate"
+      ],
+      "outputs": [
+        "ltpl-film"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "ltpl-film",
+      "description": "Deposit NCs on silica.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "ltpl-acquire",
+      "action": "cool-to30k-then-warm-through-measured-pl-sequence",
+      "label": "Cool to30K then warm through measured PL sequence",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "ltpl-deposit"
+      ],
+      "inputs": [
+        "ltpl-film"
+      ],
+      "outputs": [
+        "ltpl-data"
+      ],
+      "parameters": {
+        "temperature_interval": {
+          "value": null,
+          "minimum": 30.0,
+          "maximum": 293.0,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: ltpl-procedure.",
+          "raw_text": "30-293",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature_increment": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: ltpl-procedure.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "excitation_wavelength": {
+          "value": 380.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: ltpl-procedure.",
+          "raw_text": "380",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool to30K then warm through measured PL sequence.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "ltpl-fit",
+      "action": "fit-thermal-quenching-model-over-stated-interval",
+      "label": "Fit thermal-quenching model over stated interval",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "ltpl-acquire"
+      ],
+      "inputs": [
+        "ltpl-data"
+      ],
+      "outputs": [
+        "binding-energy-fit"
+      ],
+      "parameters": {
+        "fit_temperature_interval": {
+          "value": null,
+          "minimum": 100.0,
+          "maximum": 300.0,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Printed coordinates, occupancies, B values and spacegroups are retained literally but require separate symmetry/geometry/scattering validation. No CIF, raw refinement or DFT input file is supplied in this local pair. Author interpretations of STEs, passivation and fitted parameters are not exact measured atomistic labels.",
+          "basis": "Source context: ltpl-procedure.",
+          "raw_text": "100-300",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 8 (printed 960), Thermal-quenching equation and Figure7; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), Thermal-quenching equation and Figure7; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7b fit inset; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), Thermal-quenching equation and Figure7; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7b fit inset; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fit thermal-quenching model over stated interval.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), Thermal-quenching equation and Figure7; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), Figure7b fit inset; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ltpl-nc180-05",
+      "source_sample_label": "ltpl-nc180-05",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: ltpl-nc180-05.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair.",
+        "Source context definition: {\"id\":\"ltpl-nc180-05\",\"name\":\"Optimized deposited-film LTPL\",\"kind\":\"measurement\",\"source_supported_parent_contexts\":[\"nc180-05\"],\"same_physical_batch_across_methods\":false,\"evidence\":[{\"source_id\":\"matuhina2023-main\",\"document_role\":\"main\",\"source_sha256\":\"9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852\",\"pdf_page\":8,\"printed_page\":960,\"locator\":\"LTPL discussion\"}]}"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-ltpl-claim",
+      "sample_id": "ltpl-nc180-05",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Deposit NCs on silica substrate and measure in CTI CCS-150 cryostat from 30 to 293 K at 20 K intervals, excited by a pE-4000 CoolLED at 380 nm. Figure 7 says cool initially to 30 K and then increase temperature; this is the acquisition order despite prose describing cooling trends.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen."
+      },
+      "conditions": "ltpl-nc180-05",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), Figure7 caption; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ltpl-q1",
+      "sample_id": "ltpl-nc180-05",
+      "property": "temperature_interval",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": null,
+        "minimum": 30.0,
+        "maximum": 293.0,
+        "unit": "K",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: ltpl-nc180-05.",
+        "raw_text": "30-293",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ltpl-nc180-05; temperature interval",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ltpl-q2",
+      "sample_id": "ltpl-nc180-05",
+      "property": "temperature_increment",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 20.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "K",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: ltpl-nc180-05.",
+        "raw_text": "20",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ltpl-nc180-05; temperature increment",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-ltpl-q3",
+      "sample_id": "ltpl-nc180-05",
+      "property": "excitation_wavelength",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 380.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: ltpl-nc180-05.",
+        "raw_text": "380",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ltpl-nc180-05; excitation wavelength",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Low-temperature PL methods; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "figure-7-context",
+      "sample_id": "ltpl-nc180-05",
+      "property": "figure_context",
+      "technique": "Original figure",
+      "value": {
+        "value": "Low-temperature PL and thermal-quenching fit.  Optimized film,380nm excitation,30K initialcooling then20K increments; fitted binding-energy model. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), figure-7; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), figure-7; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "figure-s7-context",
+      "sample_id": "ltpl-nc180-05",
+      "property": "figure_context",
+      "technique": "Original figure",
+      "value": {
+        "value": "Temperature-dependent FWHM.  meV ordinate,380nm excitation; plotted lowest point near70K versus main50K prose. C13: Main8 describes52meV at50K, but FigureS7 lowest visible marker is near70K. No exact curve digitization or silent temperature correction. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 12 (printed S12), figure-s7; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "SI PDF p. 12 (printed S12), figure-s7; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+        }
+      ]
+    },
+    {
+      "id": "thermal-quenching-context",
+      "sample_id": "ltpl-nc180-05",
+      "property": "equation_context",
+      "technique": "Original equation",
+      "value": {
+        "value": "Activated PL-quenching fit. I(T) = I0 / (1 + A exp(-Eb/(kB*T))) I0 is extrapolated0K intensity;sourcefit over100–300K,not direct binding-energy measurement. ",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), Displayed equation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source graphic/expression context; no additional experiment or qualified measured atomic structure."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), Displayed equation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

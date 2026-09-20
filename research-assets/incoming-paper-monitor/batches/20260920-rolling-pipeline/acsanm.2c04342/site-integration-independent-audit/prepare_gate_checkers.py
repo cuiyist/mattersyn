@@ -1,0 +1,16 @@
+from pathlib import Path
+A=Path(__file__).resolve().parent;T=A.parent.parent/'acs.cgd.9b01519/site-integration-independent-audit'
+s=(T/'check_browser_gate.py').read_text('utf8').replace('sommer2020','matuhina2023').replace('Sommer','Matuhina').replace('/root/peng1998_reader_assets','/root/norberg2004_extract').replace('canonical-proposal/v2','canonical-proposal/v1')
+s=s.replace('500d544d2b40625c3ee4bfba4dc182fb7e48d83f64565ff8f2567b17c2db3fdc','2552db9168b67ce7bdd5a48dedcab505645f2502ff16157d0d81f45ca796d890').replace('dc1a67278cb3b3a6f0f2fb0b1f9d7b1e0319e9bc7c8da2c12258c9da41db76e8','cff3d2c1882686e81f935edf71aba588c37c8762a2771a6b1e079c0e97005cd4').replace('8aa2ffb8301f6c43bea35fa64d522f6c5d21771169d6b4f2ae8a607589df06cb','e5618aaf111c8bbbbe4a42096b1b2fa934a6b461e962a292d0b083b0dd3e6771')
+s=s.replace('All 31','All 39').replace('==31','==39').replace('all 31','all 39').replace('14 figure modals','20 figure modals').replace('==14','==20').replace("'Six table/equation links observed',receipt['table_and_equation_crop_links_observed']==6","'22 table/equation link occurrences observed',receipt['table_and_equation_link_occurrences_observed']==22")
+s=s.replace("ck('SI and rotation limitations retained',any('SI remains' in x for x in receipt['limitations'])and any('rotation was not separately tested' in x for x in receipt['limitations']))","ck('Rotation and source rereading limits retained',any('rotation was not separately tested' in x for x in receipt['limitations']) and any('second scientific rereading' in x for x in receipt['limitations']))")
+s=s.replace('Its untested rotation and unverified SI limitations','Its untested rotation and source-rereading limitations')
+(A/'check_browser_gate.py').write_text(s,'utf8')
+s=(T/'check_publication_rule.py').read_text('utf8').replace('sommer2020','matuhina2023').replace('sommer-2020','matuhina-2023').replace('Sommer','Matuhina').replace('/root/peng1998_reader_assets','/root/norberg2004_extract').replace('0.29.0','0.30.0')
+s=s.replace('94 unique','219 unique').replace('==94','==219').replace("'endpoint_count':94","'endpoint_count':219").replace('94-path','219-path')
+s=s.replace("ck('17 source endpoints',sum('matuhina2023' in x or 'matuhina-2023' in x for x in paths)==17)","ck('Source endpoints included',sum('matuhina2023' in x or 'matuhina-2023' in x for x in paths)>21)")
+s=s.replace('Declared SI remains locally unlocated and unverified.','Complete supplied main and matched SI reviewed; source conflicts remain explicit.')
+s='\n'.join(line for line in s.split('\n') if "Original pre-hardening script preserved" not in line and "bind(O/'finalizer-pre-proof-hardening.py')" not in line)
+s=s.replace("'ghosh2012','matuhina2023']","'ghosh2012','sommer2020','matuhina2023']")
+s=s.replace("'expected_citation_count':37","'expected_citation_count':38").replace("'doi_links':37","'doi_links':38").replace("'citations_per_readme':37","'citations_per_readme':38").replace("'withheld_path_count':12","'withheld_path_count':14")
+(A/'check_publication_rule.py').write_text(s,'utf8')

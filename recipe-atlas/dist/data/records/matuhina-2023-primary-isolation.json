@@ -1,0 +1,579 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-primary-isolation",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · Primary NC isolation",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "Primary NC isolation",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": "C6H14",
+      "role": "dispersion_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "reported_grade": {
+          "value": null,
+          "minimum": 95.0,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G1: Dry ODE/OA/OlAm and anhydrous solvents are named without their full drying protocols; ODE/technical ligand isomer distributions and surface coverage are not measured.",
+          "basis": "Source context: hexane.",
+          "raw_text": ">=95",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Experimental: Materials; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false
+        }
+      },
+      "notes": [
+        ">=95%; primary redispersion volume absent.",
+        "Identity and role are source scoped; qualified molecular/component bindings remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Material/method/result context; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nc-crude-series",
+      "name": "Source context supplied separately: nc crude series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "nc-precipitate-series",
+      "name": "Separate source specimens: nc precipitate series",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-crude-series"
+      ]
+    },
+    {
+      "id": "discarded-supernatants",
+      "name": "discarded supernatants",
+      "kind": "waste",
+      "parent_ids": [
+        "nc-crude-series"
+      ]
+    },
+    {
+      "id": "dried-nc-series",
+      "name": "Separate source specimens: dried nc series",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nc-precipitate-series"
+      ]
+    },
+    {
+      "id": "nc-dispersion-series",
+      "name": "Separate source specimens: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": [
+        "dried-nc-series",
+        "hexane"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "nc-centrifuge",
+      "action": "centrifuge-crude-solution-without-antisolvent",
+      "label": "Centrifuge crude solution without antisolvent",
+      "stage": "workup",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-crude-series"
+      ],
+      "outputs": [
+        "nc-precipitate-series",
+        "discarded-supernatants"
+      ],
+      "parameters": {
+        "centrifuge_speed": {
+          "value": 8550.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: primary-isolation.",
+          "raw_text": "8550",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "centrifuge_duration": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: primary-isolation.",
+          "raw_text": "5",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "nc-precipitate-series",
+      "description": "Centrifuge crude solution without antisolvent.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "nc-dry",
+      "action": "discard-supernatant-and-vacuum-desiccate-retained-precipitate",
+      "label": "Discard supernatant and vacuum-desiccate retained precipitate",
+      "stage": "workup",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "nc-centrifuge"
+      ],
+      "inputs": [
+        "nc-precipitate-series"
+      ],
+      "outputs": [
+        "dried-nc-series"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Vacuum desiccator; pressure unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "dried-nc-series",
+      "description": "Discard supernatant and vacuum-desiccate retained precipitate.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "nc-redisperse",
+      "action": "redisperse-retained-dry-ncs-in-hexane",
+      "label": "Redisperse retained dry NCs in hexane",
+      "stage": "workup",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "nc-dry"
+      ],
+      "inputs": [
+        "dried-nc-series",
+        "hexane"
+      ],
+      "outputs": [
+        "nc-dispersion-series"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "nc-dispersion-series",
+      "description": "Redisperse retained dry NCs in hexane.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred..",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nc-series",
+      "source_sample_label": "nc-series",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: nc-series.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-isolate-claim",
+      "sample_id": "nc-series",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Centrifuge the crude reaction solution without antisolvent. Discard the supernatant and retain the white-pinkish NC precipitate. The generic red-emission observation must not override the nonemissive cubic 150@ result.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen."
+      },
+      "conditions": "nc-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-isolate-q1",
+      "sample_id": "nc-series",
+      "property": "centrifuge_speed",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 8550.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "rpm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: nc-series.",
+        "raw_text": "8550",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "nc-series; centrifuge speed",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-isolate-q2",
+      "sample_id": "nc-series",
+      "property": "centrifuge_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: nc-series.",
+        "raw_text": "5",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "nc-series; centrifuge duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-dry-redisperse-claim",
+      "sample_id": "nc-series",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Dry the retained precipitate in a vacuum desiccator, typically overnight, to remove excess solvent, then redisperse in hexane. The primary redispersion volume, numerical overnight duration and vacuum pressure are not given. The authors report high colloidal stability for the resulting suspensions.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G2: Stock final volume/molarity, Ar/vacuum pressure, injection speed, stirring rpm, cooling trace, numerical overnight duration, primary redispersion amount and synthetic yield are absent. Source loading labels are retained without reconstructed molarity."
+      },
+      "conditions": "nc-series",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-dry-redisperse-q1",
+      "sample_id": "nc-series",
+      "property": "typical_desiccator_duration",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": "overnight",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source context: nc-series. Source claim class: reported. G2: Stock final volume/molarity, Ar/vacuum pressure, injection speed, stirring rpm, cooling trace, numerical overnight duration, primary redispersion amount and synthetic yield are absent. Source loading labels are retained without reconstructed molarity. G2: Stock final volume/molarity, Ar/vacuum pressure, injection speed, stirring rpm, cooling trace, numerical overnight duration, primary redispersion amount and synthetic yield are absent. Source loading labels are retained without reconstructed molarity. Source components: null. Text-only fields retain their literal form."
+      },
+      "conditions": "nc-series; typical desiccator duration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 2 (printed 954), Synthesis of CsMnCl3 NCs; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

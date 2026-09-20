@@ -1,0 +1,554 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "matuhina-2023-stability-procedure",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Matuhina et al. (2023) · Separate film and dispersion aging",
+  "material": {
+    "formula": "CsMnCl3",
+    "family": "CsMnCl3 nanocrystal phase and luminescence"
+  },
+  "method": "Separate film and dispersion aging",
+  "sources": [
+    {
+      "id": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "authors": "Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo",
+      "year": 2023,
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "main_status": "All thirteen supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched thirteen-page SI fully read, visually inspected and independently audited; its literal tables and source conflicts are retained.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "matuhina2023",
+    "recipe_family": "matuhina2023-hot-injection-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 1 (printed 953), Title/byline/abstract; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ],
+      "note": "Intended synthesis target only. Other records retain preparation, analytical, control, model or source context."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "Complete supplied main and SI with exact source locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xrd-films",
+      "name": "Source context supplied separately: xrd films",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "nc-dispersion-series",
+      "name": "Source context supplied separately: nc dispersion series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "aged-specimen-set",
+      "name": "Separate source specimens: aged specimen set",
+      "kind": "sample_set",
+      "parent_ids": [
+        "xrd-films",
+        "nc-dispersion-series"
+      ]
+    },
+    {
+      "id": "stability-data",
+      "name": "Analysis result: stability data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "aged-specimen-set"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "age-specimens",
+      "action": "store-separate-films-dispersions-in-the-dark-in-ambient-conditions",
+      "label": "Store separate films/dispersions in the dark in ambient conditions",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "xrd-films",
+        "nc-dispersion-series"
+      ],
+      "outputs": [
+        "aged-specimen-set"
+      ],
+      "parameters": {
+        "relative_humidity": {
+          "value": 40.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "~40",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 25.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "25",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Dark storage of separate film/dispersion specimens at about 40% relative humidity and 25 °C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Store separate films/dispersions in the dark in ambient conditions.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred.. Stored films and dispersions are separate specimens, never pooled.",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "stability-measure",
+      "action": "follow-film-xrd-dispersion-pl-and-aged-specimen-tem-in-their-own-contexts",
+      "label": "Follow film XRD, dispersion PL and aged-specimen TEM in their own contexts",
+      "stage": "characterization",
+      "branch": "source_contexts_applied_separately",
+      "optional": false,
+      "depends_on": [
+        "age-specimens"
+      ],
+      "inputs": [
+        "aged-specimen-set"
+      ],
+      "outputs": [
+        "stability-data"
+      ],
+      "parameters": {
+        "rhombohedral_structural_observation": {
+          "value": 3.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "month",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "3",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 8 (printed 960), Structural and Emission Stabilities, continuedp9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "cubic_aging_time": {
+          "value": 9.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "week",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "9",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 8 (printed 960), Structural and Emission Stabilities, continuedp9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "first_observation_time": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "week",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C9: Prose labels retention PLQY/PL efficiency and states5% at55days; plot labels normalized integrated PL and visually ends near0.15. Plot reading is qualitative, not a replacement exact value.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "1",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 9 (printed 961), Stability paragraph and Figure8b; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "second_time": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C9: Prose labels retention PLQY/PL efficiency and states5% at55days; plot labels normalized integrated PL and visually ends near0.15. Plot reading is qualitative, not a replacement exact value.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 9 (printed 961), Stability paragraph and Figure8b; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        },
+        "third_time": {
+          "value": 55.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "C9: Prose labels retention PLQY/PL efficiency and states5% at55days; plot labels normalized integrated PL and visually ends near0.15. Plot reading is qualitative, not a replacement exact value.",
+          "basis": "Source context: stability-procedure.",
+          "raw_text": "55",
+          "evidence": [
+            {
+              "source_id": "matuhina2023",
+              "locator": "MAIN PDF p. 9 (printed 961), Stability paragraph and Figure8b; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), Structural and Emission Stabilities, continuedp9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Cubic aging paragraph; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Stability paragraph and Figure8b; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 13 (printed S13), FigureS9; mainp9; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 8 (printed 960), Structural and Emission Stabilities, continuedp9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Cubic aging paragraph; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 9 (printed 961), Stability paragraph and Figure8b; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          },
+          {
+            "source_id": "matuhina2023",
+            "locator": "SI PDF p. 13 (printed S13), FigureS9; mainp9; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Follow film XRD, dispersion PL and aged-specimen TEM in their own contexts.  Only source-scoped action conditions are listed. Alternative preparation/measurement series are separate specimens, never a pooled charge. Missing fields: See source missingness G1-G6; no unreported settings inferred.. Stored films and dispersions are separate specimens, never pooled.",
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 8 (printed 960), Structural and Emission Stabilities, continuedp9; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), Cubic aging paragraph; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 9 (printed 961), Stability paragraph and Figure8b; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        },
+        {
+          "source_id": "matuhina2023",
+          "locator": "SI PDF p. 13 (printed S13), FigureS9; mainp9; source SHA256 1d548be9eff43114c371a6f2210d2037ddc80e08fd9743c49e0fb5f0ed526662"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "stability",
+      "source_sample_label": "stability",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source scope: stability.",
+        "Named specimen, preparation condition or analysis context only; not proof of one unique physical batch or an exact same-aliquot cross-technique link.",
+        "No approved atomic structure or exact recipe–structure pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matuhina2023-stability-storage-claim",
+      "sample_id": "stability",
+      "property": "source_claim",
+      "technique": "Source text with process/observation/model/cited scope",
+      "value": {
+        "value": "Monitor the same diluted NC dispersions stored in the dark at ambient RH about 40% and 25 °C. Film XRD storage and dispersion PL stability are separate measurement specimens.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "note": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen."
+      },
+      "conditions": "stability",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-stability-storage-q1",
+      "sample_id": "stability",
+      "property": "relative_humidity",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 40.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: stability.",
+        "raw_text": "~40",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "stability; relative humidity",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    },
+    {
+      "id": "matuhina2023-stability-storage-q2",
+      "sample_id": "stability",
+      "property": "temperature",
+      "technique": "Reported source specification or result; scope retained",
+      "value": {
+        "value": 25.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source claim class: reported. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen. G3: Five preparation labels are supported, but independent batch counts, exact aliquot sharing across measurements, deposition thicknesses and every stability/LSC sample loading label are not supplied. A common material family is not proof of the same specimen.",
+        "basis": "Source context: stability.",
+        "raw_text": "25",
+        "evidence": [
+          {
+            "source_id": "matuhina2023",
+            "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "stability; temperature",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "matuhina2023",
+          "locator": "MAIN PDF p. 3 (printed 955), Characterization continuation; source SHA256 9e1d2860f09d5eb835cb3c2595fcec92e4fe529d4fb4974e5b269edaa6a9d852"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+    "missing_fields": [
+      "Record and sample-context counts do not count independent physical batches.",
+      "Five source-defined preparation conditions are not a Cartesian grid; source loading ratios are not recalculated from unknown stock molarity.",
+      "No qualified atomic model, exact recipe–structure pair, same-aliquot cross-technique join or training admission is approved.",
+      "See source missingness G1-G6; no unreported settings inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=matuhina2023",
+      "relation": "private_unapproved_reader_proposal"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}
