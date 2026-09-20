@@ -8,7 +8,9 @@ const mod='[local path redacted]';
 const {chemicalEntry}=await import(pathToFileURL(mod));
 const read=n=>JSON.parse(fs.readFileSync(path.join(M,n),'utf8'));
 const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
-const reg=read('registry-additions.json'), bindings=read('bindings-proposal.json');
+const effective=process.argv.includes('--effective-v2');
+const bindingFile=effective?'canonical-v2-rebind/bindings-proposal.json':'bindings-proposal.json';
+const reg=read('registry-additions.json'), bindings=read(bindingFile);
 const entries=new Map(reg.entries.map(e=>[e.id,e])), baseline=JSON.stringify(bindings),entryBaseline=JSON.stringify([...entries]);
 let checks=0; const test=(label,f)=>{f();checks++;};
 for(const [rid,mapping] of Object.entries(bindings.recordBindings))for(const [mid,eid]of Object.entries(mapping)){
@@ -30,7 +32,7 @@ test('saved gates unchanged',()=>assert.equal(JSON.stringify(bindings),baseline)
 test('registry unchanged',()=>assert.equal(JSON.stringify([...entries]),entryBaseline));
 const report={schema:'mattersyn.independent_chemical_viewer_function_audit/1',status:'passed',auditor:'/root/peng1998_reader_assets',check_count:checks,
  scope:'Executed the actual shared chemicalEntry pure function for all88 proposed material slots, false and simulated true gates, scientific-field override rejection and unknown IDs. No mounted-browser or publication claim.',
- module_path:mod,module_sha256:sha(mod),bindings_sha256:sha(path.join(M,'bindings-proposal.json')),registry_sha256:sha(path.join(M,'registry-additions.json')),
+ module_path:mod,module_sha256:sha(mod),bindings_sha256:sha(path.join(M,bindingFile)),registry_sha256:sha(path.join(M,'registry-additions.json')),
  no_author_or_site_files_changed:true};
-fs.writeFileSync(path.join(A,'actual-viewer-checks-v1.json'),JSON.stringify(report,null,2)+'\n');
+fs.writeFileSync(path.join(A,effective?'actual-viewer-checks-v2.json':'actual-viewer-checks-v1.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({status:report.status,checks}));

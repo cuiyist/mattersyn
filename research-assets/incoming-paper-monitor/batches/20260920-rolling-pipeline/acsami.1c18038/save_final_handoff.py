@@ -1,0 +1,22 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib,sys
+L=Path(__file__).resolve().parent;MON=L.parents[2];M=L.parents[4];G=L.parent/'ja212032q';O=L/'site-integration-proposal'
+read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+v=read(O/'progress-release-anonymous-verification.json');assert v['status']=='passed'
+ga=G/'canonical-reader-independent-audit/independent-audit-v2.json';assert read(ga)['status']=='passed'
+sys.path.insert(0,str(MON));import monitor
+monitor.checkpoint(MON/'ledger.json','mattersyn-primary',group_id='10.1021_ja212032q',note='Canonical/reader revision2 independently passed; separate molecular and apparatus audits still required. No Ghosh contribution is yet integrated or published.',data={'current_step':'Source and canonical/reader audits passed; independent molecular audit and apparatus authoring/audit in progress','canonical_reader_audit':{'path':str(ga),'sha256':sha(ga)}},milestones={'extract':{'status':'complete','evidence':[str(ga),str(G/'canonical-proposal/v2/package-manifest.json')],'note':'21records and325readeritems; all33operations,88materialslots,3stocks and272tablecells preserved; sample-set comparisons are distinct from physical reaction batches.'},'audit':{'status':'partial','evidence':[str(ga)],'note':'Source and canonical/reader passed; molecule and apparatus audits are distinct remaining gates.'}})
+note=f'''## 2026-09-20 — Verified delivery and current continuation
+
+Saved {datetime.now(timezone.utc).isoformat()}. Lian is complete and publicly available at https://cuiyist.github.io/mattersyn-site/records/lian-2021-nc-a-route.html . Current website commit {v['site_commit']} was built at {v['build']['updated_at']}. All 63 anonymous checks and both 35-citation READMEs passed. Root also exercised the actual public injection stage and inspected the public progress dashboard. Dataset 0.27.0 contains 546 records, 106 synthesis routes/variants, 46 material/component hubs and 30 formal readers. Scientific release commit e9ce1ecd12b6647ac92b8cceb39832951b4349a0 is retained separately from the final progress deployment. No new exact structure–recipe pairs or training eligibility were added.
+
+Continue Ghosh, not Lian re-extraction. Canonical/reader revision 2 independently PASSED: {sha(ga)}; package 7b71cd4d861328b057adefab344b0bb1029152cf981e569ccfacf06f1672316d. It has 21 records, 33 operations, 88 material slots, three stocks, 585 measurement/context entries and 325 reader items. Five comparison state kinds now use sample_set; the separate FTIR sample label is explicit. All source values remain unchanged. Molecular review is with Peng; its v2 canonical overlay freeze is fca7a26e33f67fd4f4f0a6899eb5c89776439909bfaf6b54866ebec7e550cf73. A source-specific leftover in N2 model metadata is being corrected without geometry changes; final audited overlay must supersede earlier bindings. Norberg authors the 33-operation apparatus proposal; Backlog independently audits it after freeze. No Ghosh Site mutation or publication yet.
+
+The latest public progress is a verified milestone snapshot, prepared before the just-completed Ghosh canonical delta audit. Update that status at the next meaningful publication rather than silently treating it as current proof. The current private ledger reflects the newly passed audit. No new paper is admitted during these visual handoffs; refill through admit_next_screened.py once a worker can start the next independently reviewed paper. Keep the fixed cutoff, later-arrival queue, existing heartbeat and source-bound audits. The corpus is not fully reviewed; 238 format/text screening exceptions and three held nested identity cases remain.
+
+Project/installed visualization skill SHA e0a034e65322c5519b77438d662355627fc79fedf9d5e778de3100cb25655261. Papers, SI, full text and complete-page scans remain local. No paid API run, paper download or new automation. Public project verification currently binds {v['project_commit']}; a final project-only commit stores these proofs and handoffs. Temporary root server 5193 will be stopped after this save; other agents own their preview servers. Use current memory and audits rather than the heartbeat's older narrative.
+'''
+p=M/'MEMORY.md';p.write_text(note+'\n'+p.read_text(encoding='utf8'),encoding='utf8')
+print('Saved final verified delivery and current Ghosh handoff; no new scientific publication.')

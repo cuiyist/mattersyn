@@ -51,7 +51,7 @@ case 'lifetime':return optics('Pulsed PL / lifetime fitting',true);
 case 'core-control':return compare('Separate 7 nm core-only control',['Before washing','After washing'])+text(203,375,'Upstream synthesis is unreported',14);
 default:throw Error('Unmapped Ghosh stage '+c.art);
 }}
-function quantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',angstrom:'Å',um:'µm',count:'cycles','cm^-1':'cm⁻¹',monolayer:'ML',fold:'fold'})[q.unit]??q.unit??'';return v===null?(q.raw_text||'Not reported'):`${q.approximate?'≈ ':''}${v}${unit?' '+unit:''}`;}
+function quantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',angstrom:'Å',um:'µm',count:'count','cm^-1':'cm⁻¹',monolayer:'ML',fold:'fold'})[q.unit]??q.unit??'';return v===null?(q.raw_text||'Not reported'):`${q.approximate?'≈ ':''}${v}${unit?' '+unit:''}`;}
 export function buildGhosh2012Scene(o,r){
  if(r?.lineage?.source_group!=='ghosh2012')return null;const c=DATA.configs[o?.id];if(!c||c.record_id!==r.record_id)return null;
  const rows=Object.entries(o.parameters||{}).map(([k,q])=>({label:DATA.parameter_labels[k]||k.replaceAll('_',' '),value:quantity(q),pointer:c.operation_pointer+'/parameters/'+k,quantity:q,kind:'operation_parameter'}));
