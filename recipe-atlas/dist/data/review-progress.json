@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-20T05:44:31.549953+00:00",
-  "corpus_scanned_at": "2026-09-20T04:48:27.295643+00:00",
+  "updated_at": "2026-09-20T06:23:18.185900+00:00",
+  "corpus_scanned_at": "2026-09-20T05:54:22.294949+00:00",
   "published": {
     "dataset_version": "0.24.0",
     "record_count": 480,
@@ -12,18 +12,18 @@
     "public_source_group_count": 32,
     "formal_source_reader_count": 27,
     "exact_structure_recipe_count": 0,
-    "published_at": "2026-09-20T05:41:09Z"
+    "published_at": "2026-09-20T05:45:59Z"
   },
   "corpus": {
-    "present_files": 13892,
+    "present_files": 13933,
     "source_document_copies": {
-      "incoming": 6519,
+      "incoming": 6560,
       "legacy": 7373
     },
-    "canonical_review_units": 9597,
-    "waiting_review_scopes": 9573,
-    "active_review_claims": 1,
-    "confirmed_duplicate_main_aliases": 23
+    "canonical_review_units": 9637,
+    "waiting_review_scopes": 9612,
+    "active_review_claims": 2,
+    "confirmed_duplicate_main_aliases": 24
   },
   "count_note": "Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.",
   "priority": "Synthesis and crystal-structure evidence richness; existing batch retained.",
@@ -68,8 +68,8 @@
     {
       "short_label": "Evans et al. (2010)",
       "title": "Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation",
-      "stage": "Source audit passed; canonical records and illustrated reader in preparation",
-      "summary": "All 3 main-paper pages and 21 matched SI pages, 25 selected scientific crops and the molecular CIF were read and independently checked. The source audit covers 198 evidence units, 457 typed facts and 2,896 CIF table cells. One dimensionless CIF completeness value was corrected in a preserved revision. The structured records and reader have a separate review gate.",
+      "stage": "Source, structured-data and molecular audits passed; apparatus audit in progress",
+      "summary": "All 24 main/SI pages and the molecular CIF were independently checked. The 32 structured records and source reader passed a separate audit after preserving the distinction between distillation residue and collected fractions. Fifty chemical references also passed their own audit. Forty-six operation-specific diagrams have completed author browser checks and are undergoing independent review.",
       "stages": [
         {
           "label": "Main/SI/CIF pairing and full reading",
@@ -83,22 +83,59 @@
         },
         {
           "label": "Canonical records and reader audit",
-          "status": "in_progress",
-          "detail": "Routes, controls and analytical contexts retain separate identities; no automatic training promotion"
+          "status": "complete",
+          "detail": "32 records; 457 facts; residue-C lineage correction retained in version history"
         },
         {
-          "label": "Illustrations, browser checks and publication",
-          "status": "pending",
-          "detail": "Release only after the remaining individual gates pass"
+          "label": "Molecular illustrations and exact source bindings",
+          "status": "complete",
+          "detail": "50 chemical references; 123 material slots and 41 stock components; lower-bound purity captions corrected"
+        },
+        {
+          "label": "Apparatus, integrated website and publication",
+          "status": "in_progress",
+          "detail": "46 diagrams; 153 condition rows; private preview controls checked. Independent apparatus and integrated website checks remain."
         }
       ],
       "gaps": [
         "The supplied CIF describes molecular compound 9; it does not supply quantum-dot atomic coordinates.",
         "Source variants, negative controls and sample assignments remain separated; no exact QD structure–recipe pair is established."
       ]
+    },
+    {
+      "short_label": "Morrison et al. (2017)",
+      "title": "Cadmium Bis(phenyldithiocarbamate) as a Nanocrystal Shell-Growth Precursor",
+      "stage": "Main/SI paired; extraction and independent source reading in parallel",
+      "summary": "A synthesis-rich cutoff paper was admitted through the screened queue. The matched 10-page main paper and 17-page SI cover a CdS shell-growth precursor and CdSe/CdS quantum belts. Existing legacy and incoming copies were matched by content hashes; original filenames remain unchanged.",
+      "stages": [
+        {
+          "label": "Main/SI pairing and author reading",
+          "status": "complete",
+          "detail": "10 main-paper and 17 SI pages inspected by the extracting reviewer"
+        },
+        {
+          "label": "Detailed extraction and independent audit",
+          "status": "in_progress",
+          "detail": "Recipes, controls, measurements, figures and SI coordinate tables; separate reviewer"
+        },
+        {
+          "label": "Illustrations and publication",
+          "status": "pending",
+          "detail": "Not yet approved for the website or training exports"
+        }
+      ],
+      "gaps": [
+        "Upstream ammonium precursor and CdSe-belt preparations are cited, but complete recipes are not supplied in this source bundle.",
+        "SI coordinates describe the molecular precursor crystal, not the CdSe/CdS quantum-belt product.",
+        "Printed amount, condition and caption discrepancies remain explicit until their individual source checks are complete."
+      ]
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-20T06:23:16.393871+00:00",
+      "text": "Evans structured records/reader and molecular source bindings passed separate audits. Forty-six operation diagrams entered independent review. Morrison CdSe/CdS shell-growth paper was admitted through the fixed-cutoff evidence-ranked queue and is being extracted alongside a distinct source reviewer."
+    },
     {
       "at": "2026-09-20T05:36:51Z",
       "text": "Heo contribution published and anonymously verified: dataset 0.24.0, 480 records, 98 routes/variants and 44 material/component collections. The complete 1,209-row SI reader and qualified average-occupancy CIF are included; the original five-paper pilot is 5/5 published."
@@ -126,7 +163,7 @@
   ],
   "workflow": {
     "summary": "Screen the fixed collection first, prioritize usable synthesis evidence, and review papers in parallel with a separate independent audit for each.",
-    "screening_scope": "The 20 September screening snapshot accounts for all 13,831 top-level cutoff files: 13,593 have text-based candidate screening and 238 need manual format/text inspection. Three additional nested PDFs were also screened and remain held for identity and queue reconciliation. Thirty-one later-arrival files in this snapshot are queued separately. Screening is not full reading or a no-recipe exclusion.",
+    "screening_scope": "The fixed-cutoff screen accounts for all 13,831 top-level document copies: 13,593 text-screened candidates and 238 manual format/text cases. Three nested PDFs were separately screened and remain held for identity reconciliation. Later arrivals stay outside the fixed completion target. Screening is not full reading or a no-recipe exclusion.",
     "steps": [
       "Preserve stable filenames and verify main-paper/SI associations against content and hashes.",
       "Use synthesis and structure evidence to rank papers; retain partial recipes, unsuccessful outcomes and unresolved cases.",
@@ -137,15 +174,15 @@
     "capacity": "Up to five active paper claims; current runtime supports four simultaneous agents including the coordinating agent. These are different limits. Completed members can free review slots while earlier work continues.",
     "paid_processing": "The paid API pilot is deferred. Work continues with the existing local setup.",
     "screened_at": "2026-09-20T04:15:45.301305+00:00",
-    "fixed_pending_provisional_scopes": 9514,
+    "fixed_pending_provisional_scopes": 9512,
     "manual_file_dispositions": 238,
     "nested_identity_cases": 3,
     "later_arrival_files_at_screen": 31
   },
   "estimate": {
     "status": "conditional_scenarios_not_validated_forecast",
-    "summary": "The two-month target covers the fixed existing collection. After mapping the 45 previously ungrouped cutoff files, the known backlog is 9,514 pending provisional scopes, plus three nested identity cases. The required pace is about 159 closures/day over 60 days, or 190/day over 50 production days. Achievable capacity and the recipe-bearing fraction remain unverified.",
-    "current_batch": "The retained five-paper pilot is now 5/5 published within each recorded source scope. Evans has passed independent source review and is entering structured-data and reader integration. The two-month required pace remains unvalidated.",
+    "summary": "The two-month target covers the fixed existing collection. Following completed reviews and duplicate reconciliation, 9,512 provisional cutoff scopes remain pending, plus three nested identity cases. Roughly 159 closures/day over 60 days or 190/day over 50 production days would be required. Achievable capacity and the recipe-bearing fraction remain unverified.",
+    "current_batch": "The original five-paper pilot remains 5/5 published. Evans is in visual/integration review and Morrison is in source extraction/audit. These are active reviews, not completed publications; required two-month throughput remains unvalidated.",
     "scenarios": [],
     "notes": [
       "A closure is either an independently evidenced no-recipe exclusion or a retained contribution passing reading, extraction, audit, website and publication checks.",

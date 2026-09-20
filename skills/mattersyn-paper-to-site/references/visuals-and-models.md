@@ -63,3 +63,11 @@ Place temperature, time, pressure, atmosphere, quantity or endpoint beside the s
 Reuse suitable existing imagery and code-native components. Follow the current Sites/image-generation rules for new representational apparatus artwork; existing diagrams can be refined without rebuilding them. Chemical connectivity, stock-flow and scientific-data diagrams can remain code-native when that best preserves their meaning. Apparatus geometry and unreported liquid colors remain illustrative. Do not infer motion or chemical kinetics from a decorative animation.
 
 Responsive diagrams must keep controls and condition text readable; ensure scenes remain distinct on mobile. Respect reduced motion. Do not reset unrelated viewers or merge protocol state when changing a stage.
+
+## Source-bound illustrations and quantities
+
+- A distillation pot residue and its collected distillates are separate material states. Give each retained fraction its own identity; an independently prepared comparison stock must not become another distillation cut. Diagram arrows must follow the reviewed state lineage.
+- Render quantity bounds and intervals as bounds and intervals in every caption, including purity labels. A lower-bound value such as 99.9+% must not become a missing scalar, an exact percentage or a string such as `None%`.
+- Match a structure model to the identified sample or chemical species. A molecular precursor or mechanistic complex CIF does not provide the atomic coordinates of the nanocrystal product, even when both occur in the same synthesis paper.
+- Keep a generic heating schematic when the source reports heating without specifying a bath. Do not carry an oil-bath label, vessel closure, sample preparation mode or temperature from another control into the selected operation.
+- Check every operation selector and its conditions, inspect all illustrated scenes, and test a narrow viewport. Private component previews, independent scientific audits and integrated website approval are separate checks; record their actual scopes.
