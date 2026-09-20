@@ -13,7 +13,7 @@ P = O.parents[1]
 M = P.parents[4]
 S = M / 'recipe-atlas'
 REG = S / 'dist/assets/chemical-registry'
-C = P / 'canonical-proposal/v1'
+C = P / 'canonical-proposal/v2'
 sys.path.insert(0, str(M / 'research-assets/rdkit-runtime'))
 sys.path.insert(0, str(M / 'research-assets/corpus-20260917/runtime'))
 from rdkit import Chem
@@ -46,8 +46,10 @@ def snap(p,rel):
     return out
 for p in [C/'package-manifest.json',C/'record-manifest.json',P/'source-facts.json',P/'source-inventory.json',P/'package-freeze.json',P/'source-independent-audit/independent-audit-v2.json',S/'dist/chemical-viewer.mjs']:
     bind(p)
-assert sha(C/'package-manifest.json')=='11ff0d309d4b8b785b53a141d4694a6f5a139a81801e7b72f9f0550afbe82c61'
+assert sha(C/'package-manifest.json')=='433555d5ccaaa0a3d98c01f3f9657921872611fee766557e9c4756f49e806508'
 assert sha(P/'source-independent-audit/independent-audit-v2.json')=='5cabf080455991d4aeb36792f37b884afc29595895785b8c7d38e3d3ab00165d'
+bind(P/'canonical-reader-independent-audit/independent-audit-v2.json')
+assert sha(P/'canonical-reader-independent-audit/independent-audit-v2.json')=='c8be4ee1522e9c1c4fb9555f8242870e5b75dd0be3c0198eaa0915f1320d4139'
 records={}
 for row in read(C/'record-manifest.json')['records']:
     assert sha(row['path'])==row['sha256']; bind(row['path'])
@@ -75,7 +77,7 @@ GRAPH={
  'diphenylthiourea':('S=C(Nc1ccccc1)Nc1ccccc1','C13H12N2S',None),
  'dichloromethane':('ClCCl','CH2Cl2',None)}
 SYMBOLS={
- 'cdptc':('Cadmium bis(phenyldithiocarbamate)', 'C14H12CdN2S4', ['Cd(PTC)2 precursor','Coordination-polymer powder identity','Solution nuclearity is not established'], 'No monomer, dissolved complex or product lattice is asserted.'),
+ 'cdptc':('Cadmium bis(phenyldithiocarbamate)', 'C14H12CdN2S4', ['Cd(PTC)2 precursor','Isolated precursor powder identity','Solution nuclearity is not established'], 'No monomer, dissolved complex or product lattice is asserted.'),
  'cdptc-thf-crystal':('Cd(PTC)2·THF precursor crystal','C18H20CdN2OS4',['Cd(PTC)2 · THF','Measured precursor coordination polymer','Atomic tables belong to this precursor'], 'No crystal model is generated in this molecular proposal.'),
  'hexane':('Hexane: source isomer unspecified','C6H14',['Hexane solvent','Isomer composition is not reported','No specific isomer graph selected'], 'Cached n-hexane is not evidence that this source used n-hexane.'),
  'cdse-qb':('Starting CdSe quantum belts','{CdSe[n-octylamine]0.53}',['CdSe quantum belts','Reported n-octylamine ligand composition','Pre-existing nanocrystal dispersion'], 'Symbolic composition only; no ligand binding geometry or atomic coordinates.'),
@@ -140,6 +142,7 @@ def m2d(e,mol):
 
 for mid,(smiles,formula,cached) in GRAPH.items():
     mol=Chem.MolFromSmiles(smiles); assert mol is not None
+    if mid=='water':mol=Chem.AddHs(mol)
     calculated=rdMolDescriptors.CalcMolFormula(mol,separateIsotopes=True,abbreviateHIsotopes=True)
     assert calculated==formula,(mid,calculated,formula)
     e=identity(mid,formula)
@@ -192,6 +195,31 @@ for mid,(name,formula,lines,limit) in SYMBOLS.items():
     render(e,frame(e,body,'Symbolic identity / context · no atomistic or dissolved-species model'))
     checks.append({'material_id':mid,'symbol_only':True,'atoms_generated':0,'bonds_generated':0,'source_formula':slots[mid][0][2]['formula'],'display_formula':formula})
 by_mid={e['provenance']['sourceMaterialId']:e for e in entries}
+
+# Retained primary identity/coordinate artifacts and computed-reference inputs.
+# They are private provenance snapshots, not new retrievals or measurements.
+primary_checks=[]
+raw=M/'research-assets/quality-20260918/molecules/raw'
+newraw=M/'research-assets/new-molecular-assets'
+primary={
+ 'water':[raw/'water-properties.json',raw/'water-pubchem-2d.sdf',raw/'water-lookup.json'],
+ 'ethanol':[raw/'ethanol-properties.json',raw/'ethanol-pubchem-2d.sdf',raw/'ethanol-lookup.json'],
+ 'toluene':[raw/'toluene-properties.json',raw/'toluene-pubchem-2d.sdf',M/'research-assets/toluene-pubchem-1140-3d.sdf'],
+ 'methanol':[M/'research-assets/methanol-pubchem-887-3d.sdf'],
+ 'thf':[newraw/'thf-pubchem-identity.json',newraw/'thf-pubchem-8028-2d.sdf',newraw/'thf-pubchem-8028-3d.sdf',newraw/'thf-retrieval.json'],
+ 'chloroform':[raw/'chloroform-properties.json',newraw/'chloroform-pubchem-6212-2d.sdf',newraw/'chloroform-pubchem-6212-3d.sdf',newraw/'chloroform-retrieval.json']}
+for mid,name in [('dmf','dimethylformamide'),('dmso','dimethyl-sulfoxide'),('dmso-d6','dimethyl-sulfoxide-d6')]:
+    primary[mid]=[M/'research-assets/incoming-paper-monitor/reviews/cm970189m/molecular-assets/sdf'/(name+'-computed-illustrative-3d.sdf')]
+for mid,paths in primary.items():
+    for path in paths:
+        assert path.is_file(),path
+        out=snap(path,'primary/'+mid+'/'+path.name)
+        row={'material_id':mid,'snapshot_path':str(out.relative_to(O)),'sha256':sha(out),'reference_type':'computed_reference' if 'computed-' in path.name else 'retained_PubChem_artifact'}
+        if path.suffix=='.sdf':
+            source_mol=Chem.SDMolSupplier(str(out),removeHs=False)[0];assert source_mol is not None
+            assert canon(source_mol)==canon(Chem.MolFromSmiles(GRAPH[mid][0])),(mid,path,'retained SDF identity')
+            row.update(graph_matches=True,formula=rdMolDescriptors.CalcMolFormula(source_mol,separateIsotopes=True,abbreviateHIsotopes=True))
+        primary_checks.append(row)
 
 # Exact quantity selections: only fields in the same canonical record/operation.
 QMAP={
@@ -257,13 +285,14 @@ for rid,r in records.items():
             comps.append({'material_id':mid,'registry_id':e['id'],'json_pointer':f'/stocks/{si}/components/{ci}','material_json_pointer':f'/materials/{mi}','source_quantities':deepcopy(component['quantities']),'quantity_links':quantity_links(rid,spec['amounts'][mid]),'binding_approved':False})
         row={'record_id':rid,'stock_id':stock['id'],'json_pointer':f'/stocks/{si}','canonical_record_sha256':inputs[str(C/(rid+'.json'))],'components':comps,'concentrations':deepcopy(stock['concentrations']),'scope':stock['scope'],'evidence':deepcopy(stock['evidence']),'solution_quantity_links':quantity_links(rid,spec.get('solution_amounts',[])),'display_summary':spec['summary'],'display_limit':spec['limit'],'binding_approved':False}
         stock_rows.append(row)
-        ctx={'record_id':rid,'id':'morrison2017-'+stock['id'],'label':spec['title'],'scope':spec['summary']+'. '+spec['limit']+' Select components as references; the selector does not describe dissolved speciation.','components':[{'material_id':z['material_id'],'registry_id':z['registry_id'],'label':r['materials'][int(z['material_json_pointer'].split('/')[-1])]['name'],'viewOverrides':{'caption':spec['summary']+'. '+spec['limit'],'limitations':[spec['limit'],'Component identity only; no dissolved complex or ion-pair geometry.']}} for z in comps],'binding_approved':False}
+        ctx={'record_id':rid,'id':'morrison2017-'+stock['id'],'label':spec['title'],'scope':spec['summary']+'. '+spec['limit']+' Select components as references; the selector does not describe dissolved speciation.','components':[{'material_id':z['material_id'],'registry_id':z['registry_id'],'role':'solute' if ci==0 else 'solvent','label':r['materials'][int(z['material_json_pointer'].split('/')[-1])]['name'],'viewOverrides':{'caption':spec['summary']+'. '+spec['limit'],'limitations':[spec['limit'],'Component identity only; no dissolved complex or ion-pair geometry.']}} for ci,z in enumerate(comps)],'binding_approved':False}
         solution_contexts.append(ctx)
         body=wrapped(spec['summary'],45,151,86,22,30)
         for j,z in enumerate(comps):
             e=next(e for e in entries if e['id']==z['registry_id']);x=45+j*520
             body+=f'<rect x="{x}" y="212" width="490" height="197" rx="16" fill="#f1f7fa" stroke="#bdd1dd"/>'+tx(x+245,258,'Solute component' if j==0 else 'Solvent component',22)+tx(x+245,303,e['displayFormula'] or e['name'],24)
             values='; '.join(qfmt(a['quantity']) for a in z['quantity_links']) or 'No separate component dose specified'
+            if stock['id']=='cdptc-thf-crystal-feed' and j==0:values='Printed, ambiguous: '+values
             body+=wrapped(values,x+20,347,43,18,24)
         body+=wrapped(spec['limit'],45,462,94,19,27)
         e={'name':spec['title'],'caption':ctx['scope'],'displayFormula':'Component selector • two separate reference identities'}
@@ -306,7 +335,7 @@ save('bindings-proposal.json',bindings)
 save('material-slot-map.json',{'schema':'mattersyn-molecular-slot-proposal/1','material_slot_count':64,'identity_count':29,'slots':slot_rows,'independent_audit':'pending'})
 save('stock-component-map.json',{'schema':'mattersyn-stock-component-proposal/1','stock_count':5,'component_count':10,'stocks':stock_rows,'independent_audit':'pending'})
 save('solution-components-proposal.json',{'schemaVersion':'1.0','contexts':solution_contexts,'binding_approved':False})
-save('reference-qualification.json',{'status':'author_checks_only','cached_identity_count':10,'qualifications':qualifications,'rejected':[{'registry_id':'hexane','cached_name':'n-Hexane','source_name':'Hexane','reason':'Source isomer unspecified; no exact-isomer binding approved.'}],'normalization':'Ten source-scoped entries reuse identical cached connectivity; nine retain atom/bond/coordinate arrays unchanged with source-neutral model captions/notes. Other-paper grades and sample assignments are not copied into new display metadata.'})
+save('reference-qualification.json',{'status':'author_checks_only','cached_identity_count':10,'qualifications':qualifications,'retained_primary_artifacts':primary_checks,'rejected':[{'registry_id':'hexane','cached_name':'n-Hexane','source_name':'Hexane','reason':'Source isomer unspecified; no exact-isomer binding approved.'}],'normalization':'Ten source-scoped entries reuse identical cached connectivity; nine retain atom/bond/coordinate arrays unchanged with source-neutral model captions/notes. Other-paper grades and sample assignments are not copied into new display metadata.'})
 save('reference-snapshots/manifest.json',{'snapshots':snapshots,'note':'Registry and reused assets are immutable private byte snapshots. Original absolute paths are audit-only metadata.'})
 save('author-validation.json',{'schema':'mattersyn-molecule-author-validation/1','author':'/root/backlog_eta','created_at':datetime.now(timezone.utc).isoformat(),'status':'automated_author_checks_passed_manual_visual_check_pending','counts':{'entries':29,'material_slots':64,'stocks':5,'stock_components':10,'source_graph_models_2d':18,'retained_illustrative_3d':9,'symbolic_contexts':11,'new_named_graphs':8,'cached_graphs':10},'scientific_checks':checks,'supporting_checks':['Exact canonical-v1 and passed source-revision-2 audit hashes','Every current input remains unchanged','Named graph formula/charge/isotope and cached graph identity','Zero-based atom/bond/functional-group indices','Retained three-dimensional atom/bond/coordinate arrays unchanged','Finite Å coordinates and plausible reference bond ranges','Exact per-record quantity JSON pointers; approximation fields retained','Five stock definitions and ten exact component memberships','No 20 mmol to 20 mM conversion; no 40 mM cross-control transfer','No dry-core mass from dispersion aliquot; no precursor coordinates used for products'],'independent_scientific_audit':'pending','browser_validation':'not_claimed','binding_approved':False,'bound_files':inputs})
 save('input-bindings.json',inputs)
