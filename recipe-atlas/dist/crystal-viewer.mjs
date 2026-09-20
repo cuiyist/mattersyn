@@ -1,6 +1,6 @@
 import {mountEvansSpecies9} from './evans2010-products.mjs';
 import {mountHeoAverage} from './heo2003-average-viewer.mjs';
-import {drawFiniteReference} from './finite-crystal-reference.mjs?v=0.25.0-r1';
+import {drawFiniteReference} from './finite-crystal-reference.mjs?v=0.26.0-r1';
 import {chemicalRegistry,chemicalImage,openChemical} from './chemical-viewer.mjs';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 let registryPromise;

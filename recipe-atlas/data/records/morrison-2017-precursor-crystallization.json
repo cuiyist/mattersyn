@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "morrison-2017-precursor-crystallization",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Morrison et al. (2017) · THF/hexane precursor crystallization",
+  "material": {
+    "formula": "C18H20CdN2OS4",
+    "family": "Cadmium dithiocarbamate precursor and CdSe/CdS quantum belts"
+  },
+  "method": "THF/hexane vapor-diffusion crystals",
+  "sources": [
+    {
+      "id": "morrison2017",
+      "doi": "10.1021/acs.inorgchem.7b01711",
+      "title": "Cadmium Bis(phenyldithiocarbamate) as a Nanocrystal Shell-Growth Precursor",
+      "authors": "Calynn E. Morrison; Fudong Wang; Nigam P. Rath; Brian M. Wieliczka; Richard A. Loomis; William E. Buhro",
+      "year": 2017,
+      "url": "https://doi.org/10.1021/acs.inorgchem.7b01711",
+      "main_status": "All 10 supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "Matched 17-page SI fully read, visually inspected and independently audited. Printed source conflicts remain explicit; cited CIF not supplied.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "morrison2017",
+    "recipe_family": "morrison2017-precursor-shell-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C18H20CdN2OS4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ],
+      "note": "Only a reported preparation identifies a target; observation and model contexts do not create synthetic runs."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "Complete main and matched SI; exact fields carry individual locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "Complete main and matched SI; exact fields carry individual locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "Complete main and matched SI; exact fields carry individual locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdptc",
+      "name": "Cadmium bis(phenyldithiocarbamate)",
+      "formula": "C14H12CdN2S4",
+      "role": "metal_precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Powder formula differs from THF-solvated diffraction crystal. Solution nuclearity not established.",
+        "Original role: prepared single-source Cd/S precursor.",
+        "A condensed formula/name does not qualify a molecular or atomistic depiction."
+      ],
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), Materials/protocol/results as specified in linked facts; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    },
+    {
+      "id": "thf",
+      "name": "Tetrahydrofuran",
+      "formula": "THF",
+      "role": "solvent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Also one THF solvate per Cd in crystal; solution speciation not inferred.",
+        "Original role: crystallization/shell-growth/powder-control solvent.",
+        "A condensed formula/name does not qualify a molecular or atomistic depiction."
+      ],
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), Materials/protocol/results as specified in linked facts; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "Hexane",
+      "formula": null,
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Isomer, amounts and vial/jar volumes not specified.",
+        "Original role: vapor-diffusion antisolvent.",
+        "A condensed formula/name does not qualify a molecular or atomistic depiction."
+      ],
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), Materials/protocol/results as specified in linked facts; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "cdptc-thf-crystal-feed",
+      "name": "cdptc thf crystal feed",
+      "components": [
+        {
+          "material_id": "cdptc",
+          "quantities": {}
+        },
+        {
+          "material_id": "thf",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Printed20mmol solution is not a defined20mM stock. This is the solution formulation already described by the linked operation, not an additional charge or independently prepared batch.",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "crystal-feed",
+      "name": "crystal feed",
+      "kind": "mixture",
+      "parent_ids": [
+        "cdptc",
+        "thf"
+      ]
+    },
+    {
+      "id": "precursor-crystal",
+      "name": "precursor crystal",
+      "kind": "fraction",
+      "parent_ids": [
+        "crystal-feed",
+        "hexane"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "crystal-solution",
+      "action": "crystal_solution",
+      "label": "Prepare the ambiguously quantified THF crystallization solution",
+      "stage": "precursor_preparation",
+      "branch": "precursor-crystallization",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdptc",
+        "thf"
+      ],
+      "outputs": [
+        "crystal-feed"
+      ],
+      "parameters": {
+        "printed_solution_amount": {
+          "value": 20.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "This field retains its stated meaning: charge, process setting, time-course point or observed endpoint. It is not automatically a requested target. C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM.",
+          "basis": "Source scope: THF/hexane vapor-diffusion crystals. Printed-to-value scale: 1.",
+          "raw_text": "20",
+          "evidence": [
+            {
+              "source_id": "morrison2017",
+              "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ambient conditions unless otherwise specified; heating conditions are separately typed.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), Materials and General Procedures; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": "Ambient is not a numerical room-temperature setting or a specified gas atmosphere."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Place the printed “20 mmol solution” of Cd(PTC)2 in THF in a small vial. Neither a solvent volume nor a concentration denominator is reported. Missing fields for this phase: THF volume, concentration basis. C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM.",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    },
+    {
+      "id": "crystal-vapor",
+      "action": "crystal_vapor",
+      "label": "Leave the sealed THF/hexane vapor-diffusion assembly overnight",
+      "stage": "workup",
+      "branch": "precursor-crystallization",
+      "optional": false,
+      "depends_on": [
+        "crystal-solution"
+      ],
+      "inputs": [
+        "crystal-feed",
+        "hexane"
+      ],
+      "outputs": [
+        "precursor-crystal"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ambient conditions unless otherwise specified; heating conditions are separately typed.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), Materials and General Procedures; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": "Ambient is not a numerical room-temperature setting or a specified gas atmosphere."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "precursor-crystal",
+      "description": "Place the vial within a larger hexane-containing jar, seal, and leave undisturbed overnight. The source reports pale-yellow spindling crystals; no numerical duration is supplied. Missing fields for this phase: jar/vial dimensions, hexane amount, numerical duration, temperature. C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM.",
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "precursor-crystal",
+      "source_sample_label": "precursor-crystal",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C18H20CdN2OS4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "monoclinic; P21/n",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 3 (printed 12922), table-1; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": "Source-family or cited-reference assignment. No measured atomic coordinates or universal physical-batch identity is implied."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Source context: precursor-crystal.",
+        "No author-assigned batch identifier or universal cross-technique specimen link is supplied.",
+        "This context does not count a replicate, aliquot series point or independent experiment."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "morrison2017-crystal-growth-claim",
+      "sample_id": "precursor-crystal",
+      "property": "source_claim",
+      "technique": "Source text with claim classification",
+      "value": {
+        "value": "A printed “20 mmol solution” of Cd(PTC)2 in THF was placed in a small vial within a sealed larger jar containing hexane and left undisturbed overnight. No THF volume or concentration denominator is supplied. Small spindling pale-yellow crystals result.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "note": "Source classification: reported_source_evidence. C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM."
+      },
+      "conditions": "precursor-crystal",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    },
+    {
+      "id": "morrison2017-crystal-growth-q1",
+      "sample_id": "precursor-crystal",
+      "property": "printed_solution_amount",
+      "technique": "Source-reported quantity; source scope retained",
+      "value": {
+        "value": 20.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mmol",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source classification: reported_source_evidence. C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM. C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM.",
+        "basis": "Source scope: precursor-crystal. Printed-to-value scale: 1.",
+        "raw_text": "20",
+        "evidence": [
+          {
+            "source_id": "morrison2017",
+            "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Uncertainty, bounds, source conflicts and reference/model status remain explicit.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "morrison2017",
+          "locator": "MAIN PDF p. 2 (printed 12921), X-ray Structure Determination; source SHA256 4b2a67c728c3594486f5080a645e3fffc67a39130c36234b7f1a35b706b8ef55"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 10-page main article and matched 17-page SI read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Two shell-growth routes, eight supporting procedures and eight observation contexts remain distinct. Printed conflicts and unresolved specimen joins are preserved. Precursor crystal coordinates are not CdSe/CdS product coordinates. No new training task or exact structure–recipe pair is admitted.",
+    "missing_fields": [
+      "No complete executable laboratory SOP is asserted.",
+      "Upstream NH4PTC and starting CdSe-belt preparations are cited rather than supplied in full.",
+      "No supplied CdSe/CdS product atomic coordinates; precursor crystal tables do not establish a product structure.",
+      "Physical batch identity is not inferred across TEM, XRD, elemental and optical contexts.",
+      "THF volume",
+      "concentration basis",
+      "jar/vial dimensions",
+      "hexane amount",
+      "numerical duration",
+      "temperature"
+    ],
+    "conflicts": [
+      "C3: Main p2 says20mmol solution without a solvent volume or concentration denominator. It cannot be recast as20mM."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete source reader and limitations",
+      "url": "/paper-review.html?id=morrison2017",
+      "relation": "private_reader_pending_independent_review"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

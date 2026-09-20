@@ -16,14 +16,23 @@ def git(dest,*args):
  if p.returncode:raise RuntimeError('Git '+args[0]+' failed; source/credential details withheld.')
  return p.stdout
 def sha(raw):return hashlib.sha256(raw).hexdigest()
+
+def io_path(path):
+ """Keep logical/public paths unchanged; support deep local audit directories."""
+ # Do not resolve links here: collect() must still detect and exclude them.
+ absolute=path.absolute()
+ if os.name=='nt' and not str(absolute).startswith('\\\\?\\'):
+  return Path('\\\\?\\'+str(absolute))
+ return absolute
 def collect(kind):
  source=ROOT if kind=='project' else ROOT/'recipe-atlas/dist'
  rows=[];omissions=[]
- for directory,dirs,files in os.walk(source):
+ walkroot=io_path(source)
+ for directory,dirs,files in os.walk(walkroot):
   dirs[:]=[n for n in dirs if n not in SKIP]
   for name in files:
-   path=Path(directory)/name;rel=path.relative_to(source).as_posix();policyrel=rel if kind=='project' else 'recipe-atlas/dist/'+rel
-   if path.is_symlink() or path.suffix.lower() in MORE_SUFFIX or name.endswith(('.tar.gz','.tar')) or name=='.env' or name.startswith('.env.'):
+   rel=(Path(directory)/name).relative_to(walkroot).as_posix();path=source/rel;policyrel=rel if kind=='project' else 'recipe-atlas/dist/'+rel
+   if io_path(path).is_symlink() or path.suffix.lower() in MORE_SUFFIX or name.endswith(('.tar.gz','.tar')) or name=='.env' or name.startswith('.env.'):
     omissions.append({'path':rel,'reason':'local_archive_dependency_link_or_credential_configuration'});continue
    reason=policy.exclude_path(policyrel)
    if reason:omissions.append({'path':rel,'reason':reason});continue
@@ -39,12 +48,12 @@ def sync(kind):
  entries,omissions=collect(kind)
  changes=[];transforms=[];count=0;total=0
  def project(entry):
-  rel,policyrel,path=entry;raw=path.read_bytes();clean,stats=policy.project_bytes(policyrel,raw)
+  rel,policyrel,path=entry;raw=io_path(path).read_bytes();clean,stats=policy.project_bytes(policyrel,raw)
   if kind=='site' and path.suffix.lower()=='.html':clean=clean.replace(OLD_URL.encode(),NEW_URL.encode())
   if len(clean)>=100*1024*1024:raise RuntimeError('File exceeds GitHub per-file limit: '+rel)
   if kind=='site' and path.suffix.lower() in {'.html','.js','.mjs','.json','.jsonl','.css','.md','.toml','.txt'}:
    if re.search(rb'(?:C:[/\\]+Users[/\\]|file://|[local path redacted]',clean):raise RuntimeError('Local path in website projection: '+rel)
-  target=dest/rel;changed=not target.is_file() or sha(target.read_bytes())!=sha(clean)
+  target=io_path(dest/rel);changed=not target.is_file() or sha(target.read_bytes())!=sha(clean)
   if changed:target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(clean)
   return {'path':rel,'bytes':len(clean),'sha256':sha(clean),'changed':changed,'projection':stats}
  with ThreadPoolExecutor(max_workers=8) as pool:
@@ -60,7 +69,8 @@ def sync(kind):
   if not rel or rel in keep:continue
   target=(dest/rel).resolve()
   if dest.resolve() not in target.parents:raise RuntimeError('Deletion target escapes isolated projection.')
-  if target.is_file():target.unlink();removed.append(rel)
+  physical=io_path(target)
+  if physical.is_file():physical.unlink();removed.append(rel)
  report={'schema':'mattersyn-public-sync/1','created_at':datetime.now(timezone.utc).isoformat(),'kind':kind,'source_root':str(ROOT),'destination':str(dest),'files_compared':count,'projected_bytes':total,'changed_or_added':changes,'excluded_paths':omissions,'content_transformations':transforms,'removed_projection_only_files':removed,'policy':policy.policy_metadata(),'original_source_files_changed':False,'git_commit_or_push_performed':False}
  out=ROOT/'research-assets'/('github-public-'+kind+'-sync.json');out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
  print(json.dumps({'kind':kind,'files':count,'updated':len(changes),'excluded':len(omissions),'transformed':len(transforms),'removed_stale_projection_files':len(removed),'report':str(out)},indent=2))
