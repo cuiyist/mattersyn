@@ -1,0 +1,2806 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "evans-2010-topse-distillation",
+  "revision": 2,
+  "record_type": "procedure",
+  "title": "Evans et al. (2010) · Fractional distillation of neat TOPSe",
+  "material": {
+    "formula": "TOPSe mixture",
+    "family": "Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals"
+  },
+  "method": "purification",
+  "sources": [
+    {
+      "id": "evans2010",
+      "doi": "10.1021/ja103805s",
+      "title": "Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation",
+      "authors": "Christopher M. Evans; Meagan E. Evans; Todd D. Krauss",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/ja103805s",
+      "main_status": "Complete supplied three-page main article read, visually inspected and independently audited with canonical/source checks.",
+      "si_status": "Matched21-page SI and species9 molecular CIF fully read and independently audited; source conflicts retained.",
+      "reuse_status": "Source-linked factual extraction and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "evans2010",
+    "recipe_family": "evans2010-phosphine-selenide-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "MAIN PDF p. 1 (printed 10973), Title, byline, received date and DOI/footer"
+        }
+      ],
+      "note": "Only the named synthesis route supplies an intended product; supporting procedures and observations do not imply a new QD synthesis."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "topse",
+      "name": "Trioctylphosphine selenide",
+      "formula": "SeP(C8H17)3",
+      "role": "chalcogen_precursor",
+      "stage": "fractionation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Trioctylphosphine selenide preparation"
+        }
+      ]
+    },
+    {
+      "id": "top-unspecified",
+      "name": "Trioctylphosphine; source does not identify the lot for this use",
+      "formula": "P(C8H17)3",
+      "role": "source_material",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Identity/grade is not silently selected from a different source context."
+      ],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "dop",
+      "name": "Dioctylphosphine",
+      "formula": "HP(C8H17)2",
+      "role": "source_material",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 3 (printed S3), figure-S1"
+        }
+      ]
+    },
+    {
+      "id": "unknown-p-impurities",
+      "name": "Unidentified phosphorus impurities",
+      "formula": null,
+      "role": "source_material",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Identity/grade is not silently selected from a different source context."
+      ],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "topse-A",
+      "name": "topse A",
+      "components": [
+        {
+          "material_id": "topse",
+          "quantities": {}
+        },
+        {
+          "material_id": "top-unspecified",
+          "quantities": {}
+        },
+        {
+          "material_id": "dop",
+          "quantities": {}
+        },
+        {
+          "material_id": "unknown-p-impurities",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "{\"id\":\"topse-A\",\"source_unit_id\":\"evans2010-topse-distillation\",\"components\":[\"TOPSe\",\"TOP\",\"DOP\",\"unidentified P impurities\"],\"volume_mL\":2,\"collection_start_degC\":185,\"composition_table\":\"table-S7-composition A\"} Stock IDs distinguish formulations, not independently identified physical batches.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "topse-C",
+      "name": "topse C",
+      "components": [
+        {
+          "material_id": "topse",
+          "quantities": {}
+        },
+        {
+          "material_id": "top-unspecified",
+          "quantities": {}
+        },
+        {
+          "material_id": "dop",
+          "quantities": {}
+        },
+        {
+          "material_id": "unknown-p-impurities",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "{\"id\":\"topse-C\",\"source_unit_id\":\"evans2010-topse-distillation\",\"components\":[\"TOPSe\",\"TOP\",\"DOP\",\"unidentified P impurities\"],\"volume_mL\":4,\"volume_approximate\":true,\"origin\":\"residue\",\"composition_table\":\"table-S7-composition C\"} Stock IDs distinguish formulations, not independently identified physical batches.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "evans-2010-topse-distillation-op-1-state",
+      "name": "Charge and evacuate the short-path apparatus — resulting state",
+      "kind": "mixture",
+      "parent_ids": [
+        "topse"
+      ]
+    },
+    {
+      "id": "evans-2010-topse-distillation-op-2-state",
+      "name": "Collect A and two unlabelled distillation cuts — resulting state",
+      "kind": "sample_set",
+      "parent_ids": [
+        "evans-2010-topse-distillation-op-1-state"
+      ]
+    },
+    {
+      "id": "evans-2010-topse-distillation-op-3-state",
+      "name": "Retain residue C and analyze the fractions — resulting state",
+      "kind": "fraction",
+      "parent_ids": [
+        "evans-2010-topse-distillation-op-2-pot-state"
+      ]
+    },
+    {
+      "id": "evans-2010-topse-distillation-op-2-pot-state",
+      "name": "Residual TOPSe mixture remaining in the distillation pot after collecting the three cuts",
+      "kind": "fraction",
+      "parent_ids": [
+        "evans-2010-topse-distillation-op-1-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "evans-2010-topse-distillation-op-1",
+      "action": "evacuate_heat",
+      "label": "Charge and evacuate the short-path apparatus",
+      "stage": "fractionation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "topse"
+      ],
+      "outputs": [
+        "evans-2010-topse-distillation-op-1-state"
+      ],
+      "parameters": {
+        "initial_topse_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "pressure": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mTorr",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "50 mTorr",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "One-neck flask; short-path head; receiving flask",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Charge10mL neat TOPSe to one-neck flask with short-path distillation head and receiving flask. Evacuate50mTorr; heat slowly.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans-2010-topse-distillation-op-2",
+      "action": "distill",
+      "label": "Collect A and two unlabelled distillation cuts",
+      "stage": "fractionation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evans-2010-topse-distillation-op-1"
+      ],
+      "inputs": [
+        "evans-2010-topse-distillation-op-1-state"
+      ],
+      "outputs": [
+        "evans-2010-topse-distillation-op-2-state",
+        "evans-2010-topse-distillation-op-2-pot-state"
+      ],
+      "parameters": {
+        "a_collection_start_temperature": {
+          "value": 185,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "185 degC",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "a_collected_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "2 mL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "unlabelled_cut2_temperature": {
+          "value": 190,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "190 degC",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "unlabelled_cut2_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "2 mL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "unlabelled_cut3_temperature": {
+          "value": 195,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "195 degC",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "unlabelled_cut3_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+          "raw_text": "2 mL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Slow heating; rate and temperature location unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "evans-2010-topse-distillation-op-2-state",
+      "description": "Collect A starting185°C for2mL. Collect two further2mL cuts at190°C and195°C; these cuts are not labelled B. The output state denotes three physically separate collected fractions, not a pooled solution. The separate residual-pot output remains in the original flask and supplies residue C; it is not pooled with the distillate cuts.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans-2010-topse-distillation-op-3",
+      "action": "retain_residue",
+      "label": "Retain residue C and analyze the fractions",
+      "stage": "fractionation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evans-2010-topse-distillation-op-2"
+      ],
+      "inputs": [
+        "evans-2010-topse-distillation-op-2-pot-state"
+      ],
+      "outputs": [
+        "evans-2010-topse-distillation-op-3-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "evans-2010-topse-distillation-op-3-state",
+      "description": "Remaining approximately4mL in round-bottom flask is C. Use31P NMR integrations to determine reported composition.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "topse-distillation",
+      "source_sample_label": "TOPSe fractions A and C plus two unlabelled cuts",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "topse-distillation-source-context",
+      "source_sample_label": "TOPSe fractions A and C plus two unlabelled cuts",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TOPSe mixture",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "source_sample_label": "TOPSe fractions A and C plus two unlabelled cuts",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "topse-source-a",
+      "source_sample_label": "TOPSe source A",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "topse-source-b",
+      "source_sample_label": "TOPSe source B",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "topse-source-c",
+      "source_sample_label": "TOPSe source C",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "source_sample_label": "distilledA/residueC and separateB stock panelA",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "source_sample_label": "distilledA/residueC and separateB stock panelB",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "source_sample_label": "distilledA/residueC and separateB stock panelC",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "evans2010-topse-distillation-context",
+      "sample_id": "topse-distillation-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "Fractional distillation of neat TOPSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "note": "Original classification: procedure; original status: reported. Source scope: TOPSe fractions A and C plus two unlabelled cuts."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-context",
+      "sample_id": "topse-distillation-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "31P-integrated composition spectra for distilledA/residueC and independently madeB stock; all printed peak/integral labels remain in exact original.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": "Original classification: observation; original status: reported. Source scope: distilledA/residueC and separateB stock."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-context",
+      "sample_id": "topse-distillation-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "Three source-composition rows calculated from31P integrations. Three listed species do not sum100 because other impurities remain.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": "Original classification: table; original status: reported. Source scope: table-S7-composition."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-initial-topse-volume",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "initial_topse_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "10 mL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-pressure",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "pressure",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 50,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mTorr",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "50 mTorr",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-a-collection-start-temperature",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "a_collection_start_temperature",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 185,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "185 degC",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-a-collected-volume",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "a_collected_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "2 mL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-unlabelled-cut2-temperature",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "unlabelled_cut2_temperature",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 190,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "190 degC",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-unlabelled-cut2-volume",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "unlabelled_cut2_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "2 mL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-unlabelled-cut3-temperature",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "unlabelled_cut3_temperature",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 195,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "195 degC",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-unlabelled-cut3-volume",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "unlabelled_cut3_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "2 mL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-topse-distillation-c-residual-volume",
+      "sample_id": "topse-fractions-a-and-c-plus-two-unlabelled-cuts",
+      "property": "c_residual_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mL",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-topse-distillation. Source scope: TOPSe fractions A and C plus two unlabelled cuts.",
+        "raw_text": "~4.0mL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe fractions A and C plus two unlabelled cuts. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), Fractional distillation of neat TOPSe"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-a-topse-fraction",
+      "sample_id": "topse-source-a",
+      "property": "a_topse_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 82.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source A.",
+        "raw_text": "82.7 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source A. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-a-top-fraction",
+      "sample_id": "topse-source-a",
+      "property": "a_top_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 11.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source A.",
+        "raw_text": "11.0 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source A. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-a-dop-fraction",
+      "sample_id": "topse-source-a",
+      "property": "a_dop_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source A.",
+        "raw_text": "1.1 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source A. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-b-topse-fraction",
+      "sample_id": "topse-source-b",
+      "property": "b_topse_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 45.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source B.",
+        "raw_text": "45.0 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source B. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-b-top-fraction",
+      "sample_id": "topse-source-b",
+      "property": "b_top_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 53.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source B.",
+        "raw_text": "53.6 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source B. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-b-dop-fraction",
+      "sample_id": "topse-source-b",
+      "property": "b_dop_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source B.",
+        "raw_text": "0.1 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source B. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-c-topse-fraction",
+      "sample_id": "topse-source-c",
+      "property": "c_topse_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 99.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source C.",
+        "raw_text": "99.3 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source C. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-c-top-fraction",
+      "sample_id": "topse-source-c",
+      "property": "c_top_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source C.",
+        "raw_text": "0.14 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source C. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-table-s7-composition-c-dop-fraction",
+      "sample_id": "topse-source-c",
+      "property": "c_dop_fraction",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.02,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+        "basis": "Source status: reported. Source unit: evans2010-object-table-S7-composition. Source scope: TOPSe source C.",
+        "raw_text": "0.02 %",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: TOPSe source C. Reported31P-integration fraction; other impurities omitted from summary; no renormalization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-1",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_peak_labels_ppm_0",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 36.77,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /peak_labels_ppm/0.",
+        "raw_text": "36.77",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-2",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_peak_labels_ppm_1",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": -31.72,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /peak_labels_ppm/1.",
+        "raw_text": "-31.72",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-3",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_peak_labels_ppm_2",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": -69.21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /peak_labels_ppm/2.",
+        "raw_text": "-69.21",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-4",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_0",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2.15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/0.",
+        "raw_text": "2.15",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-5",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_1",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 32.87,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/1.",
+        "raw_text": "32.87",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-6",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_2",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1000.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/2.",
+        "raw_text": "1000.0",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-7",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_3",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.99,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/3.",
+        "raw_text": "1.99",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-8",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_4",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 6.29,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/4.",
+        "raw_text": "6.29",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-9",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_5",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 4.06,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/5.",
+        "raw_text": "4.06",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-10",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_6",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 132.44,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/6.",
+        "raw_text": "132.44",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-11",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_7",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 11.86,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/7.",
+        "raw_text": "11.86",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-12",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_8",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2.72,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/8.",
+        "raw_text": "2.72",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-13",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_9",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.51,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/9.",
+        "raw_text": "1.51",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panela-printed-annotations-field-14",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panela",
+      "property": "panela_printed_annotations_integrals_left_to_right_10",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 12.99,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelA. Source value pointer: /integrals_left_to_right/10.",
+        "raw_text": "12.99",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelA. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-1",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_0",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.92,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/0.",
+        "raw_text": "0.92",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-2",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_1",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.19,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/1.",
+        "raw_text": "1.19",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-3",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_2",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 11.92,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/2.",
+        "raw_text": "11.92",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-4",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_3",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1000.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/3.",
+        "raw_text": "1000.0",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-5",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_4",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 3.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/4.",
+        "raw_text": "3.6",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-6",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_5",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 17.27,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/5.",
+        "raw_text": "17.27",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-7",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_6",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1147.52,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/6.",
+        "raw_text": "1147.52",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelb-printed-annotations-field-8",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelb",
+      "property": "panelb_printed_annotations_integrals_left_to_right_7",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelB. Source value pointer: /integrals_left_to_right/7.",
+        "raw_text": "2.2",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelB. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-1",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_0",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.53,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/0.",
+        "raw_text": "0.53",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-2",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_1",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.56,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/1.",
+        "raw_text": "0.56",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-3",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_2",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 4.19,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/2.",
+        "raw_text": "4.19",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-4",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_3",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1000.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/3.",
+        "raw_text": "1000.0",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-5",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_4",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/4.",
+        "raw_text": "0.25",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-6",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_5",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.17,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/5.",
+        "raw_text": "0.17",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-7",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_6",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.41,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/6.",
+        "raw_text": "1.41",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-8",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_integrals_left_to_right_7",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /integrals_left_to_right/7.",
+        "raw_text": "0.16",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s4-panelc-printed-annotations-field-9",
+      "sample_id": "distilleda-residuec-and-separateb-stock-panelc",
+      "property": "panelc_printed_annotations_central_integral_reading_note",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": "1000.00 confirmed using rotated magnified original-pixel detail; plotted lines cross the label. Original reported composition is retained rather than recomputed.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 6 (printed S6), figure-S4"
+          }
+        ],
+        "note": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S4. Source scope: distilledA/residueC and separateB stock panelC. Source value pointer: /central_integral_reading_note. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment. C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species."
+      },
+      "conditions": "Exact source scope: distilledA/residueC and separateB stock panelC. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 6 (printed S6), figure-S4"
+        }
+      ]
+    },
+    {
+      "id": "inventory-tables-table-s7-composition",
+      "sample_id": "topse-distillation-source-context",
+      "property": "source_inventory_payload",
+      "technique": "Curated source table or worked expression",
+      "value": {
+        "value": "{\"id\":\"table-S7-composition\",\"source_unit_id\":\"evans2010-object-table-S7-composition\",\"rows\":[{\"sample\":\"A\",\"basis\":\"31P peak integration, not weight%\",\"TOPSe_percent\":82.7,\"TOP_percent\":11.0,\"DOP_percent\":1.1},{\"sample\":\"B\",\"basis\":\"31P peak integration, not weight%\",\"TOPSe_percent\":45.0,\"TOP_percent\":53.6,\"DOP_percent\":0.1},{\"sample\":\"C\",\"basis\":\"31P peak integration, not weight%\",\"TOPSe_percent\":99.3,\"TOP_percent\":0.14,\"DOP_percent\":0.02}],\"duplicate_main_figure\":\"figure-1\",\"duplicate_policy\":\"One underlying composition determination, not two independent measurements.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+          }
+        ],
+        "note": "Lossless curated table inventory payload. Individual measured, author-derived, cited and model fields retain their separate classifications; this container is not itself a new measurement."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 7 (printed S7), table-S7-composition"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 3-page main article, matched 21-page SI and molecular-species-9 CIF read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Three QD/MSC synthesis families, supporting procedures and analytical contexts retain separate identities; record IDs are not replicate counts. Source discrepancies and unspecified sample joins remain explicit. No QD atomic coordinates or training eligibility is inferred.",
+    "missing_fields": [
+      "No QD atomic-coordinate CIF is supplied.",
+      "Source-defined recipe families and observation contexts are not independently enumerated physical batches.",
+      "heating rate",
+      "temperature location/head vs pot",
+      "cut collection durations",
+      "unlabelled cut identities/compositions",
+      "No complete executable SOP is asserted."
+    ],
+    "conflicts": [
+      "C4: B is a separate1M stock, not a distillation fraction; source wording differs concerning the dissolved starting species."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied source and limitations",
+      "url": "/paper-review.html?id=evans2010",
+      "relation": "source_reader_pending_independent_audit"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

@@ -1,0 +1,17 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,urllib.request
+E=Path(__file__).resolve().parent;S=E.parents[4]/'recipe-atlas';O=E/'site-integration-proposal'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+records=[json.loads(p.read_text(encoding='utf8')) for p in sorted((S/'data/records').glob('evans-*.json'))]
+operations={r['record_id']:len(r['operations']) for r in records if r['operations']}
+assert len(operations)==16 and sum(operations.values())==46
+path='assets/chemical-registry/models/evans2010-species9-reference-3d.json'
+with urllib.request.urlopen('http://127.0.0.1:5193/'+path) as response:model=response.read()
+assert hashlib.sha256(model).hexdigest()==sha(S/'dist'/path)=='60dcc117105d7a70edf803bf5dedc35617302c6de485447efd431cb05e99ca2c'
+v={'status':'passed','at':datetime.now(timezone.utc).isoformat(),'agent':'/root','tool':'CUA actual integrated localhost browser','base_url':'http://127.0.0.1:5193/','operations_exercised':operations,'operation_total':46,
+'checks':['All16procedure record pages loaded and every one of46stage buttons was clicked; source-specific diagrams and conditions updated.','PbSe sealed1cm cuvette in80degreeC oil bath visually checked; conditions displayed adjacent.','Molecular9refinement and crystallization product contexts both mount their own exact sample-bound adapter; PbSe QD context mounts none.','Actual51-atom molecular viewer opened; +zoom, mouse drag rotation and functional-group toggle exercised; source asymmetric-unit/calculated-H and no-QD qualifications visible.','Local model download endpoint bytes match the independently audited existing model.','PbSe QD figure filter switches4associated figures to20paper figures/tables; FigureS16TEM enlargement,+zoom andReset work.','Reader loads24main/SI pages,18figures,4table inventories and6source evidence sections. Five other selected scheme/structure crops remain in typed source reader items;25unique source crop files.','PbSe method cards show4previous routes and2Evans routes equally; selection mounts corresponding illustrated protocol.','CdSe method section includes Evans route alongside existing contributions.','390x844responsive PbSe material view renders apparatus and horizontally scrollable stage controls; viewport reset aftercheck.','Raw stock scope objects now appear as readable fields plus provenance details; source quantities remainunchanged.','Review progress navigation survives generated reader/record templates.'],
+'console_log_review':{'unexpected_errors':0,'expected_invalid_link_test':{'url':'material.html?id=pbse-bf2bfa','message':'Material not found','note':'An incorrect manually entered material slug rendered the intended unavailable-material state; verified actual PbSe slug ispbse-752487. No valid-page runtime errors.'}},
+'screenshots':'Visual evidence was inspected in the CUA tool results; no claim that screenshots were persisted to a local file.',
+'bound_files':{p.relative_to(S).as_posix():sha(p) for p in [S/'dist/evans2010-protocol.mjs',S/'dist/evans2010-products.mjs',S/'dist/protocol-visuals.mjs',S/'dist/crystal-viewer.mjs',S/'dist/stock-scope.mjs',S/'dist/material-guide.mjs',S/'dist/material-hub.mjs',S/'data/measurement-display.json',S/'scripts/build_dataset.py',S/'dist/data/paper-reviews/evans2010.json',S/'dist'/path]},'publication_verified':False}
+(O/'browser-validation.json').write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf8');print('Integrated browser checks saved; publication remains separate.')

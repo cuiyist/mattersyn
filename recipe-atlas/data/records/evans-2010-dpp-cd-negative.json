@@ -1,0 +1,866 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "evans-2010-dpp-cd-negative",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Evans et al. (2010) · DPP and Cd oleate negative thermal control",
+  "material": {
+    "formula": "Cd precursor control",
+    "family": "Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals"
+  },
+  "method": "negative control",
+  "sources": [
+    {
+      "id": "evans2010",
+      "doi": "10.1021/ja103805s",
+      "title": "Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation",
+      "authors": "Christopher M. Evans; Meagan E. Evans; Todd D. Krauss",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/ja103805s",
+      "main_status": "Complete supplied three-page main article read, visually inspected and independently audited with canonical/source checks.",
+      "si_status": "Matched21-page SI and species9 molecular CIF fully read and independently audited; source conflicts retained.",
+      "reuse_status": "Source-linked factual extraction and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "evans2010",
+    "recipe_family": "evans2010-phosphine-selenide-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "MAIN PDF p. 1 (printed 10973), Title, byline, received date and DOI/footer"
+        }
+      ],
+      "note": "Only the named synthesis route supplies an intended product; supporting procedures and observations do not imply a new QD synthesis."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "dpp",
+      "name": "Diphenylphosphine",
+      "formula": "Ph2PH",
+      "role": "source_material",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "purity": {
+          "value": 98,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Commercial label, not this study’s analytical purity.",
+          "basis": "Source status: reported. Source unit: evans2010-reagent-dpp. Source scope: reagent inventory.",
+          "raw_text": "98%",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 1 (printed S1), Materials and Methods: supplier list"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "notes": [
+        "Supplier: Sigma-Aldrich.",
+        "Grade: not reported.",
+        "Identity follows the named source reagent; no molecular coordinates supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Materials and Methods: supplier list"
+        }
+      ]
+    },
+    {
+      "id": "cd-oleate",
+      "name": "Cadmium(II) oleate",
+      "formula": "Cd(C18H33O2)2",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Cadmium(II) oleate preparation"
+        }
+      ]
+    },
+    {
+      "id": "toluene-d8",
+      "name": "Toluene-d8",
+      "formula": "C7D8",
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supplier: Cambridge Isotope Labs.",
+        "Grade: not reported.",
+        "Identity follows the named source reagent; no molecular coordinates supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Materials and Methods: supplier list"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "evans-2010-dpp-cd-negative-op-1-state",
+      "name": "Prepare and monitor the Cd thermal control — resulting state",
+      "kind": "mixture",
+      "parent_ids": [
+        "dpp",
+        "cd-oleate",
+        "toluene-d8"
+      ]
+    },
+    {
+      "id": "evans-2010-dpp-cd-negative-op-2-state",
+      "name": "Record the reported absence of reaction — resulting state",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "evans-2010-dpp-cd-negative-op-1",
+      "action": "heat_monitor",
+      "label": "Prepare and monitor the Cd thermal control",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dpp",
+        "cd-oleate",
+        "toluene-d8"
+      ],
+      "outputs": [
+        "evans-2010-dpp-cd-negative-op-1-state"
+      ],
+      "parameters": {
+        "dpp_volume": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+          "raw_text": "25 uL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "dpp_amount": {
+          "value": 0.14,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+          "raw_text": "0.14 mmol",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "cd_oleate_mass": {
+          "value": 0.14,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+          "raw_text": "0.14 g",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "cd_oleate_amount": {
+          "value": 0.21,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+          "raw_text": "0.21 mmol",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "toluene_d8_volume": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+          "raw_text": "600 uL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "inherited_bath_temperature": {
+          "value": 140,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+          "raw_text": "140 degC",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Analogous sealed-tube heating; several days",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Combine DPP, Cd oleate and toluene-d8 using analogous sealed-tube heating procedure; monitor at140°C over several days.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans-2010-dpp-cd-negative-op-2",
+      "action": "context",
+      "label": "Record the reported absence of reaction",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evans-2010-dpp-cd-negative-op-1"
+      ],
+      "inputs": [],
+      "outputs": [
+        "evans-2010-dpp-cd-negative-op-2-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "No reaction observed. A numeric duration, detection limit and separately resolved spectra are not provided.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "dpp-cd-negative",
+      "source_sample_label": "DPP/Cd oleate control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "dpp-cd-negative-source-context",
+      "source_sample_label": "DPP/Cd oleate control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cd precursor control",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "dpp-cd-oleate-control",
+      "source_sample_label": "DPP/Cd oleate control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "evans2010-dpp-cd-negative-context",
+      "sample_id": "dpp-cd-negative-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "DPP and Cd oleate negative thermal control",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": "Original classification: procedure; original status: reported. Source scope: DPP/Cd oleate control."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-dpp-volume",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "dpp_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "uL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+        "raw_text": "25 uL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-dpp-amount",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "dpp_amount",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mmol",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+        "raw_text": "0.14 mmol",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-cd-oleate-mass",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "cd_oleate_mass",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "g",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+        "raw_text": "0.14 g",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-cd-oleate-amount",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "cd_oleate_amount",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mmol",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+        "raw_text": "0.21 mmol",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-toluene-d8-volume",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "toluene_d8_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 600,
+        "minimum": null,
+        "maximum": null,
+        "unit": "uL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+        "raw_text": "600 uL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-inherited-bath-temperature",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "inherited_bath_temperature",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 140,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control.",
+        "raw_text": "140 degC",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-cd-negative-observed-outcome",
+      "sample_id": "dpp-cd-oleate-control",
+      "property": "observed_outcome",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": "No reaction after several days",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+          }
+        ],
+        "note": "Source status: reported. Source unit: evans2010-dpp-cd-negative. Source scope: DPP/Cd oleate control. "
+      },
+      "conditions": "Exact source scope: DPP/Cd oleate control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Cd oleate negative thermal control"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 3-page main article, matched 21-page SI and molecular-species-9 CIF read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Three QD/MSC synthesis families, supporting procedures and analytical contexts retain separate identities; record IDs are not replicate counts. Source discrepancies and unspecified sample joins remain explicit. No QD atomic coordinates or training eligibility is inferred.",
+    "missing_fields": [
+      "No QD atomic-coordinate CIF is supplied.",
+      "Source-defined recipe families and observation contexts are not independently enumerated physical batches.",
+      "numeric several-days duration",
+      "vacuum pressure",
+      "detection limit",
+      "No complete executable SOP is asserted."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Explicitly inherited procedure conditions",
+      "url": "/records/evans-2010-dpp-pb-control.html",
+      "relation": "procedure_inheritance_not_physical_sample_lineage"
+    },
+    {
+      "label": "Complete supplied source and limitations",
+      "url": "/paper-review.html?id=evans2010",
+      "relation": "source_reader_pending_independent_audit"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

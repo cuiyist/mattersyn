@@ -1,9 +1,10 @@
+import {stockScope} from './stock-scope.mjs';
 import {quantityValue} from './quantity-value.mjs';
-import {sourceItemCard} from './source-evidence.mjs?v=0.24.0-r1';
-import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.24.0-r1';
-export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.24.0-r1';
-import {mountProtocol} from './protocol-visuals.mjs?v=0.24.0-r1';
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.24.0-r1';
+import {sourceItemCard} from './source-evidence.mjs?v=0.25.0-r1';
+import {mountCrystalReferences} from './crystal-viewer.mjs?v=0.25.0-r1';
+export {mountCrystalReferences} from './crystal-viewer.mjs?v=0.25.0-r1';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.25.0-r1';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,mountStockComponents,mountReagentComponents} from './chemical-viewer.mjs?v=0.25.0-r1';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const link=(text,url)=>{const a=el('a',text);a.href=new URL(url.startsWith('/')&&!url.startsWith('//')?url.slice(1):url,import.meta.url);return a;};
 let reviewIndex,figureDialog;
@@ -21,7 +22,7 @@ export async function mountMaterialGuide(host,data){
  host.replaceChildren();host.className='material-visual-guide';host.append(el('h2','Illustrated synthesis methods'));const select=el('select',undefined,'guide-route-select');select.setAttribute('aria-label','Choose an illustrated synthesis method');const records=data.records.filter(r=>r.is_synthesis_route&&r.collection==='reviewed_literature');for(const r of records){const o=el('option',r.title);o.value=r.record_id;select.append(o);}host.append(select);const content=el('div');host.append(content);let generation=0;
  async function render(){const current=++generation;const r=await(await fetch(new URL('data/records/'+select.value+'.json',import.meta.url),{cache:'no-store'})).json();const chemicals=await chemicalRegistry();if(current!==generation)return;content.replaceChildren();content.append(el('p',r.material.formula+' · '+r.method,'method-label'),el('p',r.sources[0].title),link('Full quantities, stocks, branches and evidence →','records/'+r.record_id+'.html'));if(data.component_only||r.material.formula!==data.formula)content.append(el('p','This method synthesizes '+r.material.formula+'. Measurements describe that product and its named specimens, not isolated '+data.formula+'.','guide-notice'));
   content.append(el('h3','Precursors'));const grid=el('div',undefined,'guide-precursors');for(const m of r.materials){const card=el('article',undefined,'guide-chemical');card.append(el('small',m.role.replaceAll('_',' ')+' · '+m.stage.replaceAll('_',' ')),el('h4',m.name));const entry=chemicalEntry(chemicals,r.record_id,m.id);if(entry){card.append(chemicalImage(entry));const button=el('button',entry.model3dPath?'Rotate molecular structure ↗':'Inspect representation ↗','molecule-link');button.type='button';button.onclick=()=>openChemical(entry);card.append(button,el('small',entry.caption||entry.depictionKind));}else card.append(el('p',m.formula||'Source-defined mixture'));for(const [k,q] of Object.entries(m.quantities))card.append(el('p',k.replaceAll('_',' ')+': '+quantity(q)));grid.append(card);}content.append(grid);
-  if(r.stocks.length){content.append(el('h3','Stocks and solutions'));for(const s of r.stocks){const d=el('details');d.append(el('summary',s.name),el('p',s.scope));for(const c of s.components){const m=r.materials.find(m=>m.id===c.material_id);d.append(el('p',(m?.name||c.material_id)+': '+Object.entries(c.quantities).map(([k,q])=>k+' '+quantity(q)).join(' · ')));}for(const [k,q] of Object.entries(s.concentrations))d.append(el('p',k+': '+quantity(q)));mountStockComponents(d,r,s,chemicals);content.append(d);}}
+  if(r.stocks.length){content.append(el('h3','Stocks and solutions'));for(const s of r.stocks){const d=el('details');d.append(el('summary',s.name),stockScope(s,r));for(const c of s.components){const m=r.materials.find(m=>m.id===c.material_id);d.append(el('p',(m?.name||c.material_id)+': '+Object.entries(c.quantities).map(([k,q])=>k+' '+quantity(q)).join(' · ')));}for(const [k,q] of Object.entries(s.concentrations))d.append(el('p',k+': '+quantity(q)));mountStockComponents(d,r,s,chemicals);content.append(d);}}
   await mountReagentComponents(content,r,chemicals);if(current!==generation)return;
   content.append(el('h3','Synthesis protocol'));const protocol=el('div');content.append(protocol);mountProtocol(protocol,r);content.append(link('Read the complete protocol and source notes →','records/'+r.record_id+'.html'));const models=el('div');content.append(models);await mountCrystalReferences(models,r);
   const figureHost=document.getElementById('material-original-evidence');if(figureHost)await mountEvidence(figureHost,r,{materialFormula:data.formula});

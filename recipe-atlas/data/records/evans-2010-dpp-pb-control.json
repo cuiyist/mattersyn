@@ -1,0 +1,2550 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "evans-2010-dpp-pb-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Evans et al. (2010) · DPP and Pb oleate thermal control",
+  "material": {
+    "formula": "Pb",
+    "family": "Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals"
+  },
+  "method": "mechanistic control",
+  "sources": [
+    {
+      "id": "evans2010",
+      "doi": "10.1021/ja103805s",
+      "title": "Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation",
+      "authors": "Christopher M. Evans; Meagan E. Evans; Todd D. Krauss",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/ja103805s",
+      "main_status": "Complete supplied three-page main article read, visually inspected and independently audited with canonical/source checks.",
+      "si_status": "Matched21-page SI and species9 molecular CIF fully read and independently audited; source conflicts retained.",
+      "reuse_status": "Source-linked factual extraction and selected scientific crops; original article, SI files, complete text and page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "evans2010",
+    "recipe_family": "evans2010-phosphine-selenide-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "MAIN PDF p. 1 (printed 10973), Title, byline, received date and DOI/footer"
+        }
+      ],
+      "note": "Only the named synthesis route supplies an intended product; supporting procedures and observations do not imply a new QD synthesis."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "Main pp. 10973–10975; SI pp. S1–S21 and molecular CIF"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "dpp",
+      "name": "Diphenylphosphine",
+      "formula": "Ph2PH",
+      "role": "source_material",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "purity": {
+          "value": 98,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Commercial label, not this study’s analytical purity.",
+          "basis": "Source status: reported. Source unit: evans2010-reagent-dpp. Source scope: reagent inventory.",
+          "raw_text": "98%",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 1 (printed S1), Materials and Methods: supplier list"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "notes": [
+        "Supplier: Sigma-Aldrich.",
+        "Grade: not reported.",
+        "Identity follows the named source reagent; no molecular coordinates supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Materials and Methods: supplier list"
+        }
+      ]
+    },
+    {
+      "id": "pb-oleate",
+      "name": "Lead(II) oleate",
+      "formula": "Pb(C18H33O2)2",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Lead(II) oleate preparation"
+        }
+      ]
+    },
+    {
+      "id": "toluene-d8",
+      "name": "Toluene-d8",
+      "formula": "C7D8",
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supplier: Cambridge Isotope Labs.",
+        "Grade: not reported.",
+        "Identity follows the named source reagent; no molecular coordinates supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 1 (printed S1), Materials and Methods: supplier list"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "evans-2010-dpp-pb-control-op-1-state",
+      "name": "Prepare and flame-seal the DPP/Pb control — resulting state",
+      "kind": "mixture",
+      "parent_ids": [
+        "dpp",
+        "pb-oleate",
+        "toluene-d8"
+      ]
+    },
+    {
+      "id": "evans-2010-dpp-pb-control-op-2-state",
+      "name": "Heat in an oil bath and follow NMR — resulting state",
+      "kind": "mixture",
+      "parent_ids": [
+        "evans-2010-dpp-pb-control-op-1-state"
+      ]
+    },
+    {
+      "id": "evans-2010-dpp-pb-control-op-3-state",
+      "name": "Record the incompletely specified Pb-metal challenge — resulting state",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "evans-2010-dpp-pb-control-op-1",
+      "action": "combine_seal",
+      "label": "Prepare and flame-seal the DPP/Pb control",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "dpp",
+        "pb-oleate",
+        "toluene-d8"
+      ],
+      "outputs": [
+        "evans-2010-dpp-pb-control-op-1-state"
+      ],
+      "parameters": {
+        "dpp_volume": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+          "raw_text": "100 uL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "dpp_amount": {
+          "value": 0.57,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+          "raw_text": "0.57 mmol",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "pb_oleate_mass": {
+          "value": 0.22,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+          "raw_text": "0.22 g",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "pb_oleate_amount": {
+          "value": 0.57,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+          "raw_text": "0.57 mmol",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "toluene_d8_volume": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+          "raw_text": "500 uL",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Flame-sealed under vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Combine DPP, Pb oleate and toluene-d8 in an NMR tube; flame-seal under vacuum.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans-2010-dpp-pb-control-op-2",
+      "action": "heat_monitor",
+      "label": "Heat in an oil bath and follow NMR",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evans-2010-dpp-pb-control-op-1"
+      ],
+      "inputs": [
+        "evans-2010-dpp-pb-control-op-1-state"
+      ],
+      "outputs": [
+        "evans-2010-dpp-pb-control-op-2-state"
+      ],
+      "parameters": {
+        "oil_bath_temperature": {
+          "value": 140,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+          "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+          "raw_text": "140 degC",
+          "evidence": [
+            {
+              "source_id": "evans2010",
+              "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Oil bath",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat in140°C oil bath and monitor NMR with time. Main reports Pb0 formation after hours, unlike QD formation in minutes; species12 and oleic acid appear in time courses.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans-2010-dpp-pb-control-op-3",
+      "action": "context",
+      "label": "Record the incompletely specified Pb-metal challenge",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "evans-2010-dpp-pb-control-op-2"
+      ],
+      "inputs": [],
+      "outputs": [
+        "evans-2010-dpp-pb-control-op-3-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Main separately reports that resulting Pb0 is inert to TOPSe; no complete challenge protocol supplied.",
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "dpp-pb-control",
+      "source_sample_label": "DPP/Pb oleate sealed-tube control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Pb",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "dpp-pb-control-source-context",
+      "source_sample_label": "DPP/Pb oleate sealed-tube control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Pb",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "source_sample_label": "DPP/Pb oleate sealed-tube control",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "source_sample_label": "DPP/Pb oleate31P time course",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "source_sample_label": "same DPP/Pb oleate1H time course",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    },
+    {
+      "sample_id": "same-dpp-pb-oleate1h-time-course-panelf",
+      "source_sample_label": "same DPP/Pb oleate1H time course panelF",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Curated source context; no physical batch or replicate identity inferred."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "evans2010-dpp-pb-control-context",
+      "sample_id": "dpp-pb-control-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "DPP and Pb oleate thermal control",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "note": "Original classification: procedure; original status: reported. Source scope: DPP/Pb oleate sealed-tube control."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-context",
+      "sample_id": "dpp-pb-control-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "DPP/Pb140°C31P time course with H3PO4 capillary standard; printed integrals are intensity comparisons, not independent isolated yields.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "note": "Original classification: observation; original status: reported. Source scope: DPP/Pb oleate31P time course."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-context",
+      "sample_id": "dpp-pb-control-source-context",
+      "property": "source_context",
+      "technique": "Source text / original object",
+      "value": {
+        "value": "Corresponding1H time course; DPP integrals calibrated using FigureS6 phosphorus signal. Oleic acid grows as DPP decreases.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": "Original classification: observation; original status: reported. Source scope: same DPP/Pb oleate1H time course."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-pb-control-dpp-volume",
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "property": "dpp_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 100,
+        "minimum": null,
+        "maximum": null,
+        "unit": "uL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+        "raw_text": "100 uL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate sealed-tube control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-pb-control-dpp-amount",
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "property": "dpp_amount",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.57,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mmol",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+        "raw_text": "0.57 mmol",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate sealed-tube control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-pb-control-pb-oleate-mass",
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "property": "pb_oleate_mass",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.22,
+        "minimum": null,
+        "maximum": null,
+        "unit": "g",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+        "raw_text": "0.22 g",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate sealed-tube control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-pb-control-pb-oleate-amount",
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "property": "pb_oleate_amount",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.57,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mmol",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+        "raw_text": "0.57 mmol",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate sealed-tube control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-pb-control-toluene-d8-volume",
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "property": "toluene_d8_volume",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 500,
+        "minimum": null,
+        "maximum": null,
+        "unit": "uL",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+        "raw_text": "500 uL",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate sealed-tube control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-dpp-pb-control-oil-bath-temperature",
+      "sample_id": "dpp-pb-oleate-sealed-tube-control",
+      "property": "oil_bath_temperature",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 140,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving.",
+        "basis": "Source status: reported. Source unit: evans2010-dpp-pb-control. Source scope: DPP/Pb oleate sealed-tube control.",
+        "raw_text": "140 degC",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate sealed-tube control. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 8 (printed S8), DPP and Pb oleate thermal control"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panela-sampling-time",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panela_sampling_time",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "A means prior to heating, not a measured kinetic time origin.",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "0 min",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. A means prior to heating, not a measured kinetic time origin.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panela-dpp31p-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panela_dpp31p_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 35.33,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "35.33 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panela-compound12-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panela_compound12_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "not_reported",
+        "approximate": false,
+        "qualifier": "No A product integral printed; do not invent zero.",
+        "basis": "Source status: not_tabulated. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. No A product integral printed; do not invent zero.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panela-calibrated-dpp1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panela_calibrated_dpp1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 10.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "10.0 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panela-oleic-acid1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panela_oleic_acid1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "0.0 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelb-sampling-time",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelb_sampling_time",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "10 min",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelb-dpp31p-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelb_dpp31p_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 33.37,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "33.37 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelb-compound12-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelb_compound12_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.46,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "1.46 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelb-calibrated-dpp1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panelb_calibrated_dpp1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 9.44,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "9.44 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelb-oleic-acid1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panelb_oleic_acid1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0.62,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "0.62 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelc-sampling-time",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelc_sampling_time",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "20 min",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelc-dpp31p-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelc_dpp31p_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 31.05,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "31.05 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelc-compound12-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelc_compound12_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 3.11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "3.11 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelc-calibrated-dpp1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panelc_calibrated_dpp1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 8.79,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "8.79 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelc-oleic-acid1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panelc_oleic_acid1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 1.29,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "1.29 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-paneld-sampling-time",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "paneld_sampling_time",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 40,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "40 min",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-paneld-dpp31p-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "paneld_dpp31p_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 30.82,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "30.82 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-paneld-compound12-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "paneld_compound12_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 4.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "4.6 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-paneld-calibrated-dpp1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "paneld_calibrated_dpp1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 8.72,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "8.72 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-paneld-oleic-acid1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "paneld_oleic_acid1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2.33,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "2.33 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panele-sampling-time",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panele_sampling_time",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 60,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "60 min",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panele-dpp31p-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panele_dpp31p_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 28.02,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "28.02 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panele-compound12-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panele_compound12_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 5.22,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "5.22 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panele-calibrated-dpp1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panele_calibrated_dpp1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 7.93,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "7.93 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panele-oleic-acid1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panele_oleic_acid1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 2.69,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "2.69 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelf-sampling-time",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelf_sampling_time",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 240,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "240 min",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelf-dpp31p-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelf_dpp31p_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 22.42,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "22.42 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-panelf-compound12-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "panelf_compound12_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 8.21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "8.21 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-calibrated-dpp1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panelf_calibrated_dpp1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 6.35,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "6.35 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-oleic-acid1h-integral",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "panelf_oleic_acid1h_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 4.39,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "4.39 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-bath-temperature",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "bath_temperature",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 140,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degC",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "140 degC",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-compound12-shift",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "compound12_shift",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": -14.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "-14.4 ppm",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-dpp-shift",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "dpp_shift",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": -40.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "-40.1 ppm",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-standard-shift",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "standard_shift",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "0 ppm",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s6-standard-normalized-integral",
+      "sample_id": "dpp-pb-oleate31p-time-course",
+      "property": "standard_normalized_integral",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 100,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative_integral",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S6. Source scope: DPP/Pb oleate31P time course.",
+        "raw_text": "100 relative_integral",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: DPP/Pb oleate31P time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-dpp-doublet-shift",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "dpp_doublet_shift",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 5.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "5.2 ppm",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-oleic-acid-shift",
+      "sample_id": "same-dpp-pb-oleate1h-time-course",
+      "property": "oleic_acid_shift",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 12.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source status: reported. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course.",
+        "raw_text": "12.5 ppm",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-printed-annotations-field-1",
+      "sample_id": "same-dpp-pb-oleate1h-time-course-panelf",
+      "property": "panelf_printed_annotations_additional_peak_labels_ppm_0",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 12.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course panelF. Source value pointer: /additional_peak_labels_ppm/0.",
+        "raw_text": "12.5",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course panelF. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-printed-annotations-field-2",
+      "sample_id": "same-dpp-pb-oleate1h-time-course-panelf",
+      "property": "panelf_printed_annotations_additional_peak_labels_ppm_1",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 5.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course panelF. Source value pointer: /additional_peak_labels_ppm/1.",
+        "raw_text": "5.5",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course panelF. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-printed-annotations-field-3",
+      "sample_id": "same-dpp-pb-oleate1h-time-course-panelf",
+      "property": "panelf_printed_annotations_additional_peak_labels_ppm_2",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 5.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course panelF. Source value pointer: /additional_peak_labels_ppm/2.",
+        "raw_text": "5.4",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course panelF. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-printed-annotations-field-4",
+      "sample_id": "same-dpp-pb-oleate1h-time-course-panelf",
+      "property": "panelf_printed_annotations_additional_peak_labels_ppm_3",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+        "basis": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course panelF. Source value pointer: /additional_peak_labels_ppm/3.",
+        "raw_text": "5.0",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course panelF. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "evans2010-object-figure-s7-panelf-printed-annotations-field-5",
+      "sample_id": "same-dpp-pb-oleate1h-time-course-panelf",
+      "property": "panelf_printed_annotations_note",
+      "technique": "Source-reported or explicitly classified context",
+      "value": {
+        "value": "5.5 is a printed nearby resonance; do not relabel all peaks DPP. DPP identity from caption is the5.2ppm doublet.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 10 (printed S10), figure-S7"
+          }
+        ],
+        "note": "Source status: source_figure_transcription. Source unit: evans2010-object-figure-S7. Source scope: same DPP/Pb oleate1H time course panelF. Source value pointer: /note. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment."
+      },
+      "conditions": "Exact source scope: same DPP/Pb oleate1H time course panelF. Transcribed printed labels only, in visual left-to-right order where stated; not a digitized trace, complete peak-picking result or chemical identity assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 10 (printed S10), figure-S7"
+        }
+      ]
+    },
+    {
+      "id": "inventory-tables-nmr-control-timecourse",
+      "sample_id": "dpp-pb-control-source-context",
+      "property": "source_inventory_payload",
+      "technique": "Curated source table or worked expression",
+      "value": {
+        "value": "{\"id\":\"nmr-control-timecourse\",\"source_unit_ids\":[\"evans2010-object-figure-S6\",\"evans2010-object-figure-S7\"],\"rows\":[{\"panel\":\"A\",\"time_min\":0,\"time_zero_basis\":\"prior to heating\",\"31P_DPP_integral\":35.33,\"31P_12_integral\":null,\"31P_standard_integral\":100,\"1H_DPP_calibrated_integral\":10.0,\"1H_oleic_acid_integral\":0.0,\"integral_units\":\"relative arbitrary normalization, not yield\"},{\"panel\":\"B\",\"time_min\":10,\"time_zero_basis\":\"elapsed heating\",\"31P_DPP_integral\":33.37,\"31P_12_integral\":1.46,\"31P_standard_integral\":100,\"1H_DPP_calibrated_integral\":9.44,\"1H_oleic_acid_integral\":0.62,\"integral_units\":\"relative arbitrary normalization, not yield\"},{\"panel\":\"C\",\"time_min\":20,\"time_zero_basis\":\"elapsed heating\",\"31P_DPP_integral\":31.05,\"31P_12_integral\":3.11,\"31P_standard_integral\":100,\"1H_DPP_calibrated_integral\":8.79,\"1H_oleic_acid_integral\":1.29,\"integral_units\":\"relative arbitrary normalization, not yield\"},{\"panel\":\"D\",\"time_min\":40,\"time_zero_basis\":\"elapsed heating\",\"31P_DPP_integral\":30.82,\"31P_12_integral\":4.6,\"31P_standard_integral\":100,\"1H_DPP_calibrated_integral\":8.72,\"1H_oleic_acid_integral\":2.33,\"integral_units\":\"relative arbitrary normalization, not yield\"},{\"panel\":\"E\",\"time_min\":60,\"time_zero_basis\":\"elapsed heating\",\"31P_DPP_integral\":28.02,\"31P_12_integral\":5.22,\"31P_standard_integral\":100,\"1H_DPP_calibrated_integral\":7.93,\"1H_oleic_acid_integral\":2.69,\"integral_units\":\"relative arbitrary normalization, not yield\"},{\"panel\":\"F\",\"time_min\":240,\"time_zero_basis\":\"elapsed heating\",\"31P_DPP_integral\":22.42,\"31P_12_integral\":8.21,\"31P_standard_integral\":100,\"1H_DPP_calibrated_integral\":6.35,\"1H_oleic_acid_integral\":4.39,\"integral_units\":\"relative arbitrary normalization, not yield\"}],\"sample_link\":\"dpp-pb-control; one time series with two nuclei, not six replicate syntheses.\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "evans2010",
+            "locator": "SI PDF p. 9 (printed S9), figure-S6"
+          }
+        ],
+        "note": "Lossless curated table inventory payload. Individual measured, author-derived, cited and model fields retain their separate classifications; this container is not itself a new measurement."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "evans2010",
+          "locator": "SI PDF p. 9 (printed S9), figure-S6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 3-page main article, matched 21-page SI and molecular-species-9 CIF read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Three QD/MSC synthesis families, supporting procedures and analytical contexts retain separate identities; record IDs are not replicate counts. Source discrepancies and unspecified sample joins remain explicit. No QD atomic coordinates or training eligibility is inferred.",
+    "missing_fields": [
+      "No QD atomic-coordinate CIF is supplied.",
+      "Source-defined recipe families and observation contexts are not independently enumerated physical batches.",
+      "Pb oleate mass/amount mismatch",
+      "vacuum pressure",
+      "quantitative Pb0 assay",
+      "complete Pb0+TOPSe challenge charges/temperature/time",
+      "No complete executable SOP is asserted."
+    ],
+    "conflicts": [
+      "C2: Mass and amount do not agree with stated Pb(C18H33O2)2 formula; preserve both and avoid silently doubling or halving."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied source and limitations",
+      "url": "/paper-review.html?id=evans2010",
+      "relation": "source_reader_pending_independent_audit"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

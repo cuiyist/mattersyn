@@ -51,6 +51,8 @@ Check visually any source detail prone to OCR error: Greek letters, superscripts
 
 A compact review should trace representative facts from source to record to visible page, especially temperatures, quantities, durations, pressures, product fractions and sample-property assignments. Follow a clearly chosen sample through preparation and characterization; leave the link unknown when the paper does.
 
+When complete extraction retains recipe parameters, reagent specifications, structural tables, properties and interpretive context together, classify website sections from the independently reviewed item-to-record links. Use source-scoped measurement IDs rather than adding generic property names that could reclassify earlier papers. Preserve every remaining source field in an appropriate evidence section and the download; completeness does not make every field a product property. Verify that older records and training eligibility remain unchanged after presentation-only updates.
+
 ## Cited preparations and chemical interpretation
 
 - Follow explicitly cited precursor preparations when they affect the requested explanation. Keep a source-specific upstream record and its materials separate from the target synthesis; a downstream reaction on the same page must not supply missing precursor-preparation conditions.

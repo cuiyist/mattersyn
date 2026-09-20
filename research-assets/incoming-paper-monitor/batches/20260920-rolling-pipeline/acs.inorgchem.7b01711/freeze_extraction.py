@@ -7,7 +7,7 @@ from datetime import datetime,timezone
 import hashlib,json,re
 
 P=Path(__file__).resolve().parent
-assert not(P/'package-freeze.json').exists(),'Preserve frozen revision before any correction.'
+assert (P/'source-extraction-revision-1'/'preservation-manifest.json').exists(),'Preserve frozen revision before any correction.'
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def read(name):return json.loads((P/name).read_bytes())
 def write(name,value):(P/name).write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -68,14 +68,15 @@ write('author-validation.json',V)
 notes=(P/'extraction-notes.md').read_text(encoding='utf-8')
 notes=notes.replace('Final freeze follows rendered-crop checks; this file does not claim independent passage or publication.','The final 30 crops were inspected after clipping corrections. The hash-bound package freeze records completed author extraction; distinct scientific review, canonical mapping, model qualification and publication remain pending.')
 (P/'extraction-notes.md').write_text(notes,encoding='utf-8')
-root_names=['prepare_sources.py','source_author_data.py','build_extraction.py','make_crop_contacts.py','freeze_extraction.py','complete-source-payloads.json','pairing-review.json','relevance-screening.json','source-facts.json','source-inventory.json','source-tables.json','page-coverage.json','original-assets-manifest.json','author-validation.json','extraction-notes.md']
+root_names=['prepare_sources.py','source_author_data.py','build_extraction.py','make_crop_contacts.py','freeze_extraction.py','complete-source-payloads.json','pairing-review.json','relevance-screening.json','source-facts.json','source-inventory.json','source-tables.json','page-coverage.json','original-assets-manifest.json','author-validation.json','extraction-notes.md','source-correction-history.json','preserve_source_revision_1.py','record_source_corrections.py']
 files=[P/n for n in root_names]
 files.extend(p for directory in ['reader-assets','source-render','private/text','private/crop-checks']for p in(P/directory).rglob('*')if p.is_file())
+files.extend(p for p in(P/'source-extraction-revision-1').iterdir()if p.is_file())
 files.extend(Path(s['source_path'])for s in D['source_copies'])
 files.append(P.parent/'intake-20260920T055502Z'/'intake-manifest.json')
 bound={str(p.resolve()):sha(p)for p in sorted(set(files),key=str)}
 freeze={
- 'schema':'mattersyn-source-extraction-freeze/1','source_id':F['source_id'],'doi':F['doi'],'group_id':F['group_id'],
+ 'schema':'mattersyn-source-extraction-freeze/1','revision':2,'source_id':F['source_id'],'doi':F['doi'],'group_id':F['group_id'],
  'source_generation':2,'bundle_sha256':D['bundle_sha256'],'author':'/root/backlog_eta','frozen_at':NOW,
  'status':'author_extraction_complete_pending_independent_scientific_audit',
  'main_sha256':F['source_sha256'],'si_sha256':F['si_sha256'],'counts':F['counts'],
@@ -84,6 +85,7 @@ freeze={
  'private_complete_source_payloads':{'manifest':str(P/'complete-source-payloads.json'),'full_text_directory':str(P/'private'/'text'),'whole_page_render_directory':str(P/'source-render'),'classification':'Local-only complete source material. Exclude from public projection; selected excerpts require separate publication approval.'},
  'preparation_status_note':'complete-source-payloads.json records historical preparation state; page-coverage.json and this freeze record subsequently completed author reading.',
  'remaining_gates':['Distinct source/scientific and numerical audit','Canonical mapping and independent canonical audit','Any molecular/atomic-model qualification','Public excerpt projection, reader/visual integration and browser validation'],
+ 'revision_history':{'previous_freeze':str(P/'source-extraction-revision-1'/'package-freeze.json'),'previous_freeze_sha256':sha(P/'source-extraction-revision-1'/'package-freeze.json'),'corrections':str(P/'source-correction-history.json'),'corrections_sha256':sha(P/'source-correction-history.json')},
  'source_gaps':F['gaps'],'source_discrepancies':F['contradictions'],
  'no_source_mutation':True,'no_live_ledger_mutation':True,'no_site_mutation':True,'no_downloads':True,
  'independent_audit_approved':False,'training_admission':False,'published':False}
