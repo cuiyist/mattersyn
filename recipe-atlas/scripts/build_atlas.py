@@ -12,6 +12,8 @@ NAMES['Pt']='Platinum nanocrystals'
 NAMES['PbSe']='Lead selenide nanocrystals and assemblies'
 NAMES['FePt/CdS']='Iron–platinum / cadmium sulfide heterodimers'
 NAMES['FePt']='Iron–platinum · heterodimer-component context'
+NAMES['In66Si100Al92O384']='Indium nanoclusters in zeolite X · nominal In66-X'
+NAMES['In']='Indium · zeolite-hosted nanocluster component'
 NAMES['SnO2']='Tin dioxide colloids'
 NAMES['Mn:ZnO']='Manganese-doped zinc oxide nanocrystals and films'
 NAMES['ZnO:Co']='Cobalt-doped zinc oxide quantum dots'
@@ -36,7 +38,7 @@ def slug(f):return re.sub('[^a-z0-9]+','-',f.lower()).strip('-')+'-'+hashlib.sha
 def synthesis_route(r):
     return (r['collection']=='reviewed_literature' and r['record_type']!='procedure'
             and r['quality']['review_status']=='source_reviewed'
-            and 'precursor_selection' in r['quality']['requested_tasks']
+            and (r.get('reader_role')=='synthesis_route' or 'precursor_selection' in r['quality']['requested_tasks'])
             and any(o['stage']=='synthesis' for o in r['operations']))
 def main():
     source=ROOT/'data/corpus/library-source.json'

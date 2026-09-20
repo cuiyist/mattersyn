@@ -120,6 +120,7 @@ class Audit:
                 # than calling or copying the builder's synthesis_route gate.
                 self.check(r["collection"] == "reviewed_literature" and r["quality"]["review_status"] == "source_reviewed", f"{formula}/{rid}: unreviewed/benchmark record published as synthesis")
                 self.check(r["record_type"] != "procedure" and any(o["stage"] == "synthesis" for o in r["operations"]), f"{formula}/{rid}: procedure/assay published as material route")
+                self.check(r.get('reader_role') == 'synthesis_route' or 'precursor_selection' in r['quality']['requested_tasks'], f'{formula}/{rid}: route lacks a separate reader or legacy training admission')
                 self.check(stub.get("is_synthesis_route") is True, f"{formula}/{rid}: displayed route is not marked synthesis")
                 self.check(not ("control" in rid and not r["quality"].get("requested_tasks")), f"{formula}/{rid}: contextual control promoted to a synthesis contribution")
                 self.check(stub["formula"] == r["material"]["formula"], f"{formula}/{rid}: original product identity erased on component card")

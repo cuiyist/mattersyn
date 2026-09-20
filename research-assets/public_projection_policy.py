@@ -9,7 +9,7 @@ import hashlib
 import json
 import re
 
-POLICY_VERSION = '2026-09-20.1'
+POLICY_VERSION = '2026-09-20.2'
 REPORT_RELATIVE = 'incoming-paper-monitor/batches/20260919-five-paper-pilot/public-repository-exclusion-proposal-20260920.json'
 EXPECTED_REPORT_SHA256 = '572ae70749f8fac09451154a565e8ede9ac486ba5f39d595bfa903d94334ae82'
 EXPECTED_EXCLUDED_PATHS = 12556
@@ -53,6 +53,7 @@ def exclude_path(rel):
     if any(s in low for s in ('/private/text/','/cache/text/','/first-page-text/')):
         return 'raw_full_or_page_text_cache'
     if low.startswith('research-assets/') and ext=='.txt':return 'individual_raw_source_text'
+    if name=='complete-source-payloads.json':return 'private_complete_source_text_payload'
     if ext not in ('.png','.jpg','.jpeg','.webp'):return None
     if '/source-render/' in low or '/audit-pages/' in low or '/norberg2004/pages/' in low:return 'source_page_render'
     if name.startswith('pages-contact-') or ('/pages/' in low and name.startswith('contact-')):return 'source_page_contact_sheet'

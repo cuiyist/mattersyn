@@ -29,6 +29,8 @@ record['properties']['schema_version']={'enum':['1.0.0','1.1.0','1.2.0','1.3.0']
 record['properties']['intended_target']['properties']['surface']=ref('fact')
 record['properties']['intended_target']['properties']['host']=ref('fact')
 record['properties']['collection']={'enum':['reviewed_literature','published_benchmark']}
+# Reader navigation and machine-training admission are separate decisions.
+record['properties']['reader_role']={'enum':['synthesis_route','supporting_procedure','contextual_observation']}
 record['properties']['material']['properties']['elements']=strings
 record['properties']['material']['properties']['components']=strings
 record['properties']['material']['properties']['architecture']={'enum':['single_material','core_shell','heterostructure','alloy','composite','unresolved']}

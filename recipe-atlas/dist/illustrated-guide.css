@@ -15,3 +15,22 @@
 .solution-components{margin:18px 0}.solution-component-view{max-width:600px;margin:12px auto}.solution-component-view .chemical-preview{height:240px}.solution-components .guide-route-select{box-sizing:border-box}
 .protocol-diagram-dialog{width:94vw;max-width:1200px;border:1px solid #cbdde9;border-radius:14px;padding:20px}.protocol-diagram-dialog::backdrop{background:#173c4b88}.protocol-diagram-dialog header{display:flex;gap:20px;justify-content:space-between;align-items:center}.protocol-diagram-dialog header h2{font-size:20px}.protocol-diagram-dialog .diagram-pan{max-height:70vh;overflow:auto;background:#f5f9fc}.diagram-pan svg{display:block;width:100%;height:auto}.protocol-diagram-dialog button{border:1px solid #cbdde9;border-radius:6px;background:white;padding:10px 16px;color:#234c67}
 @media(max-width:650px){.protocol-art-nagasaki2004 svg,.protocol-art-ribeiro2004 svg,.protocol-art-norberg2004 svg{min-width:620px}.protocol-stage:has(.protocol-art-nagasaki2004,.protocol-art-ribeiro2004,.protocol-art-norberg2004) .protocol-visual{padding:10px}.solution-component-view .chemical-preview{height:200px}}
+
+/* Source-average and supporting-reflection readers: scoped to Heo2003. */
+.heo-average-card .crystal-reference-view{position:relative;width:100%;height:480px;min-height:440px}
+.heo-average-card fieldset{display:flex;flex-wrap:wrap;gap:12px;border:1px solid #d3dfe5;margin:16px 0}
+.heo-average-card fieldset label{padding-left:8px;font-size:13px;white-space:nowrap}
+.heo-average-card fieldset input{margin-right:7px}
+.heo-average-card details{overflow-x:auto}
+.heo-average-card table,.heo-reflections table{border-collapse:collapse;font-size:13px}
+.heo-average-card th,.heo-average-card td,.heo-reflections th,.heo-reflections td{padding:8px 10px;text-align:left;border-bottom:1px solid #e1e8eb;white-space:nowrap}
+.heo-average-card th,.heo-reflections th{background:#edf5f7}
+.heo-average-card .protocol-controls,.heo-reflections .protocol-controls{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.heo-average-card button,.heo-reflections button,.heo-reflections input,.heo-reflections select{font:inherit;border:1px solid #c7d4da;border-radius:7px;background:white;padding:8px 12px;color:#234b60}
+.heo-average-card button,.heo-reflections button{cursor:pointer}
+.heo-reflections button:disabled{opacity:.4;cursor:default}
+.heo-reflections input[type=search]{min-width:230px;flex:1}
+.heo-reflections .unresolved{background:#fff4d9}
+.heo-average-card summary,.heo-reflections summary{cursor:pointer;font-weight:600}
+.heo-average-card .protocol-controls a,.heo-reflections .protocol-controls a{overflow-wrap:anywhere}
+@media(max-width:620px){.heo-average-card .crystal-reference-view{height:440px}.heo-reflections input[type=search]{min-width:0;width:100%}.heo-reflections .protocol-controls{align-items:stretch}}

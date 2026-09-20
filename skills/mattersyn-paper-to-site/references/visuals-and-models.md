@@ -27,6 +27,14 @@ For stock views, let readers inspect both solute and solvent components with the
 
 ## Characterization and properties
 
+### Average crystal models and reflection lists
+
+An average refinement with partial or mixed occupancy is a distinct representation. Preserve site populations and mutually alternative positions without selecting an ordered microstate. Use a source-specific viewer when a generic renderer would show partial sites as fully occupied or introduce unrelated mixed-element labels. State marker size, color and opacity as display conventions. A repeated average cell is not a finite particle, measured ligand shell or DFT-ready ordered input. Keep nominal composition, occupancy-weighted composition, omitted displacement parameters and unresolved coordinate/table discrepancies visible. A qualified curator reconstruction may be downloadable without becoming an exact structure–recipe training label.
+
+For large SI reflection lists, offer a searchable, paginated typed table and raw/numeric downloads. Preserve source row identities, negative observations, zeros and ambiguous signs; retain null numeric values with explicit candidate values when a sign cannot be resolved. Calculated source intensities are not website-recomputed values. Rows are measurement data, not separate synthesis samples. Complete source pages and raw full-text payloads remain local under the publication policy.
+
+Reader contracts must be checked on the built website as well as against evidence: route-evidence context fields contain arrays of real record IDs; narrative scope belongs in separate text fields. Withheld source-page attachments must not leave broken image URLs, and source identities, extracted facts and selected crops must remain intact.
+
 Separate structural evidence (for example TEM, diffraction, phase and morphology) from material properties (for example absorption, emission and Raman). Associate each figure or result with its own reported sample or series, measurement conditions, and main/SI locator. Similar nominal sizes do not prove cross-figure identity.
 
 For selected original figures, render or crop faithfully from the verified PDF and retain axes, legends, panel labels and scale bars. Inspect source pages and extracted panels, provide attribution and source links, and record crop/page provenance. Never generate, cosmetically redraw or enhance a micrograph or spectrum as if it were measured evidence. Enlarging an original figure is preferable to an invented interactive curve; digitization, if requested, needs a separate derived-data label and uncertainty.

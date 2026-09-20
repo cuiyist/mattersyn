@@ -1,0 +1,1607 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "heo-2003-single-crystal-acquisition",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Heo et al. (2003) · Single-crystal diffraction acquisition",
+  "material": {
+    "formula": "In66Si100Al92O384",
+    "family": "Indium nanoclusters in zeolite X",
+    "elements": [
+      "In",
+      "Si",
+      "Al",
+      "O"
+    ],
+    "components": [
+      "In",
+      "aluminosilicate zeolite X"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Single-crystal diffraction acquisition",
+  "sources": [
+    {
+      "id": "heo2003",
+      "doi": "10.1021/jp0219348",
+      "title": "Spatially Ordered Quantum Dot Array of Indium Nanoclusters in Fully Indium-Exchanged Zeolite X",
+      "authors": "Nam Ho Heo; Jong Sam Park; Young Joo Kim; Woo Taik Lim; Sung Wook Jung; Karl Seff",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/jp0219348",
+      "main_status": "Complete supplied 9-page main article read, extracted and independently audited; source conflicts retained.",
+      "si_status": "Matched 14-page reflection list fully read and independently audited: 1209 rows, with two signed values preserved as unresolved nulls.",
+      "reuse_status": "Bibliographic and factual extraction; original article/figure rights remain separate"
+    }
+  ],
+  "lineage": {
+    "source_group": "heo2003",
+    "recipe_family": "heo2003-in66-zeolite-x",
+    "parent_record_id": "heo-2003-in66-route",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "In66Si100Al92O384",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main paper; source scope: Sealed final crystal at 294 K; acquisition and absorption-correction trial are separate from synthesis conditions."
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main paper; source scope: Sealed final crystal at 294 K; acquisition and absorption-correction trial are separate from synthesis conditions."
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main paper; source scope: Sealed final crystal at 294 K; acquisition and absorption-correction trial are separate from synthesis conditions."
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main paper; source scope: Sealed final crystal at 294 K; acquisition and absorption-correction trial are separate from synthesis conditions."
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "Zeolite X (faujasite-type aluminosilicate)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 2 (printed p. 1121), Experimental; Table 1 on main PDF p. 4"
+        }
+      ],
+      "note": "Nominal composition and average Si/Al refinement are distinct."
+    }
+  },
+  "materials": [
+    {
+      "id": "final-crystal",
+      "name": "Treated In66-X crystal",
+      "formula": "In66Si100Al92O384",
+      "role": "specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sample preparation links to the source route; numerical XPS, EPXMA and diffraction conditions remain separate."
+      ],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 2 (printed p. 1121), Experimental; Table 1 on main PDF p. 4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "initial-specimen",
+      "name": "Treated crystal",
+      "kind": "product",
+      "parent_ids": [
+        "final-crystal"
+      ]
+    },
+    {
+      "id": "diffraction-data",
+      "name": "Single-crystal diffraction data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "initial-specimen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "xrd-acquire",
+      "action": "single_crystal_diffraction",
+      "label": "Collect single-crystal diffraction data",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "initial-specimen"
+      ],
+      "outputs": [
+        "diffraction-data"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 294,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source scope: diffraction specimen. Source status: reported.",
+          "raw_text": "294",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+            }
+          ],
+          "derivation": null
+        },
+        "mo_kalpha1_wavelength": {
+          "value": 0.7093,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Å",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.70930",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 4 (printed p. 1123), Table 1, Mo Kα wavelengths"
+            }
+          ],
+          "derivation": null
+        },
+        "mo_kalpha2_wavelength": {
+          "value": 0.71359,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Å",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.71359",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 4 (printed p. 1123), Table 1, Mo Kα wavelengths"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_speed": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degree 2θ/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 4 (printed p. 1123), Table 1, scan speed"
+            }
+          ],
+          "derivation": null
+        },
+        "data_collection_angle": {
+          "value": null,
+          "minimum": 2,
+          "maximum": 70,
+          "unit": "degree 2θ",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 4 (printed p. 1123), Table 1, collection 2θ range"
+            }
+          ],
+          "derivation": null
+        },
+        "lattice_determination_angle": {
+          "value": null,
+          "minimum": 10,
+          "maximum": 20,
+          "unit": "degree 2θ",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 4 (printed p. 1123), Table 1, 2θ range for a0"
+            }
+          ],
+          "derivation": null
+        },
+        "monitor_reflections": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+            }
+          ],
+          "derivation": null
+        },
+        "monitor_interval": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+            }
+          ],
+          "derivation": null
+        },
+        "background_fraction_of_scan_time": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "dimensionless",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "At each scan endpoint, background is counted for half the scan time. This is not an absolute counting duration.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "heo2003",
+              "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Diffraction intensities for structure refinement",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Collect data on the sealed crystal at 294 K using a CAD4/Turbo diffractometer, rotating-anode source and graphite-monochromated Mo radiation. The Table 1 acquisition settings are retained as separate typed values. A ψ-scan absorption correction was tested but was not used in the adopted refinement. The scan is ω–2θ at 0.5 degree 2θ/min, with width 0.51 + 0.61 tan θ degrees. Three monitoring reflections are checked every 3 h; background at each scan endpoint is counted for half the scan time.",
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "final",
+      "source_sample_label": "Current In66-X analytical specimen",
+      "batch_id": null,
+      "material_state_id": "initial-specimen",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "In66Si100Al92O384",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 2 (printed p. 1121), Experimental; Table 1 on main PDF p. 4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 2 (printed p. 1121), Experimental; Table 1 on main PDF p. 4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 2 (printed p. 1121), Experimental; Table 1 on main PDF p. 4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 2 (printed p. 1121), Experimental; Table 1 on main PDF p. 4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Current In66-X analytical specimen",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes."
+      ]
+    },
+    {
+      "sample_id": "acquisition-context",
+      "source_sample_label": "single-crystal diffraction",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "single-crystal diffraction",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes.",
+        "Original sample scope: single-crystal diffraction"
+      ]
+    },
+    {
+      "sample_id": "analysis-method-context",
+      "source_sample_label": "refinement data treatment",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "refinement data treatment",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes.",
+        "Original sample scope: refinement data treatment"
+      ]
+    },
+    {
+      "sample_id": "table-1-data-temperature",
+      "source_sample_label": "Table 1, data-temperature",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, data-temperature",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes.",
+        "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row data-temperature. ",
+        "Tabular refined, fixed and varied values are not separate synthesis outcomes."
+      ]
+    },
+    {
+      "sample_id": "table-1-mo-wavelengths",
+      "source_sample_label": "Table 1, mo-wavelengths",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, mo-wavelengths",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes.",
+        "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row mo-wavelengths. ",
+        "Tabular refined, fixed and varied values are not separate synthesis outcomes."
+      ]
+    },
+    {
+      "sample_id": "table-1-lattice-reflection-count",
+      "source_sample_label": "Table 1, lattice-reflection-count",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, lattice-reflection-count",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes.",
+        "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row lattice-reflection-count. ",
+        "Tabular refined, fixed and varied values are not separate synthesis outcomes."
+      ]
+    },
+    {
+      "sample_id": "table-1-scan-technique",
+      "source_sample_label": "Table 1, scan-technique",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, scan-technique",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes."
+      ]
+    },
+    {
+      "sample_id": "table-1-scan-speed",
+      "source_sample_label": "Table 1, scan-speed",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, scan-speed",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes.",
+        "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row scan-speed. ",
+        "Tabular refined, fixed and varied values are not separate synthesis outcomes."
+      ]
+    },
+    {
+      "sample_id": "table-1-scan-width",
+      "source_sample_label": "Table 1, scan-width",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, scan-width",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes."
+      ]
+    },
+    {
+      "sample_id": "table-1-lattice-angle-range",
+      "source_sample_label": "Table 1, lattice-angle-range",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, lattice-angle-range",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes."
+      ]
+    },
+    {
+      "sample_id": "table-1-collection-angle-range",
+      "source_sample_label": "Table 1, collection-angle-range",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Table 1, collection-angle-range",
+        "Source-defined analytical or refinement context. These identifiers are curator labels, not independent physical batches. Cited controls, model iterations and partially occupied sites do not create additional synthesis routes."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "heo2003-xrd-instrument",
+      "sample_id": "acquisition-context",
+      "property": "instrument",
+      "technique": "Source reported",
+      "value": {
+        "value": "CAD4/Turbo rotating-anode generator with graphite monochromator; Mo radiation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": " Source status: reported. Source scope: single-crystal diffraction."
+      },
+      "conditions": "single-crystal diffraction",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-xrd-t",
+      "sample_id": "final",
+      "property": "temperature",
+      "technique": "Source reported",
+      "value": {
+        "value": 294,
+        "minimum": null,
+        "maximum": null,
+        "unit": "K",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": " Source status: reported. Source scope: diffraction specimen.",
+        "basis": "temperature; source value path /",
+        "raw_text": "294",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "diffraction specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-cell-reflections",
+      "sample_id": "final",
+      "property": "intense-reflections",
+      "technique": "Source reported",
+      "value": {
+        "value": 25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Diverse reciprocal-space regions; not the full reflection dataset. Source status: reported. Source scope: unit-cell determination.",
+        "basis": "intense reflections; source value path /",
+        "raw_text": "25",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "unit-cell determination",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-background-count",
+      "sample_id": "final",
+      "property": "background-counting",
+      "technique": "Source reported",
+      "value": {
+        "value": "at each scan endpoint for half the scan time",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": " Source status: reported. Source scope: diffraction acquisition."
+      },
+      "conditions": "diffraction acquisition",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-xrd-monitor",
+      "sample_id": "final",
+      "property": "check-schedule",
+      "technique": "Source reported",
+      "value": {
+        "value": "three reflections in diverse regions every3h; small random fluctuations only",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": " Source status: reported. Source scope: instrument/crystal monitoring."
+      },
+      "conditions": "instrument/crystal monitoring",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-absorption-correction",
+      "sample_id": "analysis-method-context",
+      "property": "absorption-correction",
+      "technique": "Source reported",
+      "value": {
+        "value": "semiempirical psi-scan evaluated with mu2.20mm^-1; not used because corrected data yielded nearly identical final R values",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": "Do not state absorption correction was applied to the adopted final result. Source status: reported. Source scope: refinement data treatment."
+      },
+      "conditions": "refinement data treatment",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-reflection-conditions",
+      "sample_id": "final",
+      "property": "reflection-conditions",
+      "technique": "Source reported",
+      "value": {
+        "value": "hkl:h+k,k+l,l+h=2n; 0kl:k+l=4n; hkl and khl intensity equality",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+          }
+        ],
+        "note": "As printed. Not a substitution for validating a chosen space-group origin/setting. Source status: reported. Source scope: observed diffraction symmetry."
+      },
+      "conditions": "observed diffraction symmetry",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), X-ray Data Collection"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-refinement-method",
+      "sample_id": "analysis-method-context",
+      "property": "refinement",
+      "technique": "Source reported",
+      "value": {
+        "value": "SHELXL97 full-matrix least squares on F² using all reflections with no n-sigma cutoff; framework starting coordinates fromref34",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), Structure Determination"
+          }
+        ],
+        "note": " Source status: reported. Source scope: adopted structure."
+      },
+      "conditions": "adopted structure",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), Structure Determination"
+        }
+      ]
+    },
+    {
+      "id": "heo2003-weight-model",
+      "sample_id": "analysis-method-context",
+      "property": "weight-equation",
+      "technique": "Source author model",
+      "value": {
+        "value": "w=1/[sigma²(Fo²)+(aP)²+bP]; P=[max(Fo²,0)+2Fc²]/3; a=.0789,b=296.55",
+        "status": "inferred",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 3 (printed p. 1122), Structure Determination last paragraph"
+          }
+        ],
+        "note": "The max() term is in the weight model; measured negative Fo² observations in SI must not be clamped away. Source status: author_model. Source scope: diffraction refinement."
+      },
+      "conditions": "diffraction refinement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 3 (printed p. 1122), Structure Determination last paragraph"
+        }
+      ]
+    },
+    {
+      "id": "table-1-data-temperature-quantities-temperature",
+      "sample_id": "table-1-data-temperature",
+      "property": "table_1_data-temperature_quantities-temperature",
+      "technique": "Tabulated source value",
+      "value": {
+        "value": 294.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "K",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source-to-value multiplier 1. Source status: reported. Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row data-temperature. ",
+        "basis": "",
+        "raw_text": "294",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row data-temperature. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-mo-wavelengths-quantities-lambda1",
+      "sample_id": "table-1-mo-wavelengths",
+      "property": "table_1_mo-wavelengths_quantities-lambda1",
+      "technique": "Tabulated source value",
+      "value": {
+        "value": 0.7093,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source-to-value multiplier 1. Source status: reported. Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row mo-wavelengths. ",
+        "basis": "",
+        "raw_text": "0.70930",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row mo-wavelengths. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-mo-wavelengths-quantities-lambda2",
+      "sample_id": "table-1-mo-wavelengths",
+      "property": "table_1_mo-wavelengths_quantities-lambda2",
+      "technique": "Tabulated source value",
+      "value": {
+        "value": 0.71359,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source-to-value multiplier 1. Source status: reported. Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row mo-wavelengths. ",
+        "basis": "",
+        "raw_text": "0.71359",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row mo-wavelengths. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-lattice-reflection-count-quantities-reflection-count",
+      "sample_id": "table-1-lattice-reflection-count",
+      "property": "table_1_lattice-reflection-count_quantities-reflection-count",
+      "technique": "Tabulated source value",
+      "value": {
+        "value": 25.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "count",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source-to-value multiplier 1. Source status: reported. Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row lattice-reflection-count. ",
+        "basis": "",
+        "raw_text": "25",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row lattice-reflection-count. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-scan-technique",
+      "sample_id": "table-1-scan-technique",
+      "property": "table_1_scan-technique",
+      "technique": "Tabulated context",
+      "value": {
+        "value": "scan technique | ω–2θ | Source blank",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals."
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-scan-speed-quantities-scan-speed",
+      "sample_id": "table-1-scan-speed",
+      "property": "table_1_scan-speed_quantities-scan-speed",
+      "technique": "Tabulated source value",
+      "value": {
+        "value": 0.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree 2θ/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source-to-value multiplier 1. Source status: reported. Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row scan-speed. ",
+        "basis": "",
+        "raw_text": "0.5",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals. Row scan-speed. ",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-scan-width",
+      "sample_id": "table-1-scan-width",
+      "property": "table_1_scan-width",
+      "technique": "Tabulated context",
+      "value": {
+        "value": "scan width (deg) | 0.51 + 0.61*tanθ | Source blank",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals."
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-lattice-angle-range",
+      "sample_id": "table-1-lattice-angle-range",
+      "property": "table_1_lattice-angle-range",
+      "technique": "Tabulated context",
+      "value": {
+        "value": "2θ range for a0 (deg) | 10–20 | Source blank",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals."
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-lattice-angle-range-range",
+      "sample_id": "table-1-lattice-angle-range",
+      "property": "table_1_lattice-angle-range_range",
+      "technique": "Single-crystal X-ray diffraction",
+      "value": {
+        "value": null,
+        "minimum": 10,
+        "maximum": 20,
+        "unit": "degree 2θ",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Acquisition angle range, not a synthesis condition.",
+        "basis": "",
+        "raw_text": "10–20",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-collection-angle-range",
+      "sample_id": "table-1-collection-angle-range",
+      "property": "table_1_collection-angle-range",
+      "technique": "Tabulated context",
+      "value": {
+        "value": "2θ range in data collection (deg) | 2–70 | Source blank",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "note": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals."
+      },
+      "conditions": "Source summary of the treatment and diffraction/refinement of the In66–X single crystal. Experimental prose in main page 2 disagrees with three treatment rows; both versions remain separate. The two refinement columns concern alternative space-group models of the same diffraction study, not two recipes or independent crystals.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    },
+    {
+      "id": "table-1-collection-angle-range-range",
+      "sample_id": "table-1-collection-angle-range",
+      "property": "table_1_collection-angle-range_range",
+      "technique": "Single-crystal X-ray diffraction",
+      "value": {
+        "value": null,
+        "minimum": 2,
+        "maximum": 70,
+        "unit": "degree 2θ",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Acquisition angle range, not a synthesis condition.",
+        "basis": "",
+        "raw_text": "2–70",
+        "evidence": [
+          {
+            "source_id": "heo2003",
+            "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "heo2003",
+          "locator": "Main PDF p. 4 (printed p. 1123), Table 1, title through all footnotes"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [
+    {
+      "id": "heo2003-average-position-occupancy",
+      "role": "computed_reference",
+      "sample_id": "final",
+      "url": "/assets/crystal-references/heo2003-average-position-occupancy.cif",
+      "description": "Curator reconstruction from the adopted Table 2 average structure: mixed Si/Al sites, fractional indium occupancies and alternative InII/InIIa positions. Geometry/occupancy only; ADPs omitted. Nominal Si100Al92 differs from average Si96Al96. Not an author-supplied CIF, unique ordered specimen, full refinement or DFT-ready input.",
+      "eligible_as_measured_label": false
+    }
+  ],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied 9-page main article and matched 14-page SI reviewed. Separate independent source, canonical/reader, reflection-table and molecular-binding audits passed. One synthesis route, three acquisition procedures and six analytical/model contexts retain their own sample identities. Average position/occupancy reconstruction is qualified separately; condition conflicts, two uncertain SI signs and unresolved physical sample links remain explicit. No exact ordered structure or training task is admitted.",
+    "missing_fields": [
+      "The prose and Table 1 disagree on dehydration temperatures/durations and indium-contact duration. Neither version is selected as a resolved recipe.",
+      "Absolute host and indium amounts, capillary dimensions, feed-flow rate, indium/crystal temperature difference, redox vacuum, gas amount/flow, final vacuum and cooling rate are unreported.",
+      "Nominal Si100Al92 differs from the averaged Table 2 model containing 96 Si and 96 Al; fixed and varied occupancies are refinement parameters.",
+      "Average disorder, fractional site populations and charge-compensation hypotheses do not specify a unique atomistic specimen or a DFT-ready structure.",
+      "A curator reconstruction of the reported average positions and occupancies is qualified for source interpretation. It omits unresolved ADPs, preserves mixed and alternative sites, and is not a full refinement, ordered DFT model or exact-structure training label. Two SI signs remain unresolved.",
+      "The approximately 4300 Å XPS depth statement cannot be reconstructed from the displayed approximately 10 s sputter cycles and reported rate.",
+      "The input Na-X synthesis and cited control preparations are external references, not complete procedures supplied here."
+    ],
+    "conflicts": [
+      "Experimental prose: initial/redehydration623K48h1e-6Torr; In contact623K96 h. Table 1: dehydrations673K3 days; In contact623K5 days. Unresolved same-study conflicts, not approved alternative protocols.",
+      "Table 2 footnotec models96Si+96Al, while nominal In66Si100Al92O384 framework and text use100Si92Al. Preserve refinement representation and nominal composition separately.",
+      "Cluster charge7+ and local In1.75+/ca2+ are proposed; total83+versusframework92- motivates unverified oxygen-loss4.5/unitcell or9H+/unitcell alternatives. Never add those atoms/defects to measured coordinate model.",
+      "Figure 1B In87-X spectrum copied fromreference 34. Figure 2A Inmetal intensity scaled percaption1/20. ProductXPS versus reactant/reference must remain separate.",
+      "Figure 3 caption says0.6Å/s and~10 s sputtering after each measurement, while prose says depth~4300Å. Printed depth not derivable from shown20-ishcycles; do not invent total sputtering schedule.",
+      "Table 1 data/parameter ratios17.1/18.3 correspond observed reflections754/44 and1207/66, although heading labelsm/s withm=allunique1209/2032. Preserve printed table and flag definition mismatch.",
+      "Heo subsectionc heading sayssitesIprimeandIIprime but body/finaltable placesInIIa atsiteII; use exactatomlabels and preserve heading discrepancy."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source paper",
+      "url": "https://doi.org/10.1021/jp0219348",
+      "relation": "Primary source; current proposal is private and not promoted."
+    }
+  ],
+  "collection": "reviewed_literature"
+}
