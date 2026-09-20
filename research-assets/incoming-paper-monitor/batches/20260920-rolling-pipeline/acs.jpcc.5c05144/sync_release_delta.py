@@ -11,7 +11,7 @@ def main():
  from sync_github_public import io_path,SKIP,MORE_SUFFIX
  assert (D/'.git').is_dir()
  names=['MEMORY.md','README.md','REFERENCES.md','research-assets/verify_public_delivery.py','research-assets/public_projection_policy.py','research-assets/sync_github_public.py','research-assets/reference-readme-generation.json','research-assets/github-public-delivery-verification.json','research-assets/github-publication-checkpoint.json','research-assets/github-public-project-sync.json','research-assets/github-public-site-sync.json']
- names+=['research-assets/incoming-paper-monitor/'+n for n in ['ledger.json','review-control.json','latest-publication.json','public-progress-editorial.json','queue-status.json','queue-status.md','queue-status.html']]
+ names+=['research-assets/incoming-paper-monitor/'+n for n in ['ledger.json','review-control.json','latest-publication.json','public-progress-editorial.json','queue-status.json','queue-status.md','queue-status.html','build_public_progress.py','joint-review-handoff.md']]
  files=[M/n for n in names if io_path(M/n).is_file()]
  folders=[J,J.parent/'acs.inorgchem.8b02945',M/'skills',M/'recipe-atlas',MON/'deadline-20260920',J.parent/'intake-20260920T133256Z',J.parent/'intake-20260920T141934Z']
  for folder in folders:

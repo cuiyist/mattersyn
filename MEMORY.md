@@ -1,3 +1,7 @@
+## 2026-09-20 — Sasongko verify delivery verified; joint-review pause
+
+Saved 2026-09-20T17:13:24.709336+00:00. Dataset 0.33.0; site commit a67b54af6acf1bb22f5c77a90e62c11e0b468c3b; scientific commit a67b54af6acf1bb22f5c77a90e62c11e0b468c3b. All 672 anonymous endpoint checks, 20 additional withheld paths and both 41-citation READMEs passed. Friedfeld and Sasongko active contributions are complete within supplied-source scope; zero active claims. Remaining corpus work is unfinished and paused until a new user instruction. New admissions remain disabled and later arrivals separate. Original papers, SI, full text and full-page images stay local. No paid run or download. The root automation pause must be supported by its separate actual tool receipt.
+
 ## 2026-09-20 — Friedfeld progress release verified
 
 Saved 2026-09-20T16:23:56.627312+00:00. Public website commit af272e24721d321cf1bdd3634733ec78c133cd3e, built 2026-09-20T16:18:33Z. All 547 anonymous public endpoints, 18 additional withheld source-page paths and both 40-source citation READMEs passed verification. Dataset 0.32.0 contains 656 records, 122 routes/variants, 49 hubs (38 direct + 11 component), 40 source groups and 35 formal readers. Scientific commit 81b7afc24b4d4fcab730c01e245f2853c4b34a7f is separate from progress-only delivery. Reader: https://cuiyist.github.io/mattersyn-site/paper-review.html?id=friedfeld2019 . Prior 626 records and six training-export bytes unchanged; exact structure–recipe pairs remain zero.
