@@ -1,0 +1,18 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import json,hashlib
+N=Path(__file__).resolve().parent;MON=N.parents[2];M=N.parents[4]
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+v=json.loads((N/'site-integration-proposal/progress-release-anonymous-verification.json').read_text('utf8'));assert v['status']=='passed'
+a=M/'skills/mattersyn-paper-to-site/references/visuals-and-models.md';b=Path(r'[local path redacted]');assert sha(a)==sha(b)
+receipt={'status':'passed','at':datetime.now(timezone.utc).isoformat(),'author':'/root','site_commit':v['site_commit'],'public_material_url':'https://cuiyist.github.io/mattersyn-site/material.html?id=znal2o4-2345bc','public_progress_url':'https://cuiyist.github.io/mattersyn-site/progress.html','public_checks':['Material page displays ZnAl2O4 and all three equal-format source methods.','Progress page visibly shows 586 records and both current Matuhina/Pati review cards.','All three method selectors choose their source-specific protocol and full-record link in the built local material page.'],'anonymous_proof_sha256':sha(N/'site-integration-proposal/progress-release-anonymous-verification.json'),'temporary_viewport_reset':True,'root_local_preview_stopped':True,'public_tabs_retained':True,'installed_skill_sha256':sha(b)}
+(N/'site-integration-proposal/final-public-browser-handoff.json').write_text(json.dumps(receipt,indent=2)+'\n','utf8')
+p=M/'MEMORY.md';text=f'''## 2026-09-20 — Verified release and precise continuation
+
+Latest website commit {v['site_commit']} built {v['build']['updated_at']}; all 94 anonymous endpoint checks and both 37-citation READMEs passed. Dataset 0.29.0 remains at scientific commit d91090111c2ae39639fc0064cef09872b93b46e1. The later commit updates verified publication labels and progress only. Public totals: 586 records, 114 synthesis routes/variants, 47 material/component hubs, 37 source groups, 32 formal source readers, and zero exact structure–recipe pairs. New material: https://cuiyist.github.io/mattersyn-site/material.html?id=znal2o4-2345bc . Queue: https://cuiyist.github.io/mattersyn-site/progress.html . Both were actually opened and checked in the public browser. Root preview server 5193 is stopped; temporary viewport reset; public tabs retained.
+
+Resume the two active claims without repeating closed Sommer work. Matuhina CsMnCl3: immutable source freeze e57825801f343b57b48ff66722a686b9fda045a04baeb71c5d1fc946f75c0151; Norberg independently compares it, Backlog prepares canonical/reader drafts pending source pass. Pati CeO2: Peng authors full source extraction; Norberg has independently read all eight pages and will compare its frozen extraction after the earlier Matuhina audit. Main/SI matching must preserve Pati's absent SI title/byline and use content/document evidence. Check fresh worker messages before changing status. Neither is yet approved for website or training. No extra source admission is needed while these two claims occupy useful review capacity.
+
+Reusable skill reference matches installed SHA256 {sha(b)} and passed validation. Latest lessons separate intended targets from observed phase components and unknown specimen composition, and preserve separate sample schedules. Existing five-minute heartbeat, fixed cutoff, separate arrivals, no downloads, deferred paid API pilot, public code/memory/skills/audits and original-document exclusions remain in force. The final project commit stores this proof and current work; the verification intentionally binds preceding project commit {v['project_commit']} to avoid a self-reference.
+''';p.write_text(text+'\n'+p.read_text('utf8'),'utf8')
+print('Verified public handoff and current review assignments saved.')
