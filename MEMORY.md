@@ -1,3 +1,9 @@
+## 2026-09-20 — Sommer audit requires a preserved source revision
+
+Saved 2026-09-20T10:42:38.695947+00:00. Norberg completed the supplied-main comparison: all 11 pages, 20 crops and 222 Table 1 cells inspected; 3,217 mechanical checks passed. Final scientific approval is withheld pending bounded corrections: remove unsupported low-crystallinity wording; detach mixed-reaction quantities from the NaOH stock; refine three locators; type one cited-context temperature range; and preserve separate workup specimens explicitly. SI remains unlocated and unverified.
+
+Backlog was instructed to preserve source v1, create a corrected v2 and delta, obtain Norberg's final approval, and bind canonical drafts to that effective source. Peng was notified of the stock/specimen corrections before freezing molecular bindings. Do not import or publish Sommer yet. The public progress page already correctly labels this paper under independent review. Ghosh remains closed and unchanged; the verified public site is d223f71ed65ce56348f4dea7cea3539e8e341475.
+
 ## 2026-09-20 — Verified public release and continuation
 
 The latest website commit is d223f71ed65ce56348f4dea7cea3539e8e341475, built 2026-09-20T10:40:12Z. All 77 anonymous endpoint checks passed, and both GitHub READMEs retain 36 source citations. This final change only improves the readability of the progress card. Scientific dataset 0.28.0 remains at commit 5c138bb63bba8702453d209c5ecf7e48714a4b5c: 567 structured records, 111 synthesis routes or variants, 46 material/component hubs, 36 source groups and 31 formal readers. Ghosh is fully closed through publication. Its exact structure–recipe contribution remains zero.
