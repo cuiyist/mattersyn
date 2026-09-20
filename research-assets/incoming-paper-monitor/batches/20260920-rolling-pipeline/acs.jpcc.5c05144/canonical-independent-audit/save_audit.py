@@ -1,0 +1,43 @@
+from pathlib import Path
+import json,hashlib,datetime
+O=Path(__file__).resolve().parent;J=O.parent;C=J/'canonical-proposal/v1';S=J/'source-extraction-revision-2'
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+freeze=read(C/'package-freeze.json');bound={str(C/'package-freeze.json'):sha(C/'package-freeze.json')}
+assert bound[str(C/'package-freeze.json')]=='3cab2fe6181dbf2149b2a0ac59f4a80d99c05cab4870342e141815c904549fb5'
+for category in ['bound_files','external_inputs']:
+ for p,h in freeze[category].items():
+  fp=Path(p) if Path(p).is_absolute() else C/p
+  assert sha(fp)==h,fp
+  bound[str(fp)]=h
+for n in ['check_transport.py','transport-checks.json','check_scopes.py','scope-and-reader-checks.json','check_schema.py','schema-and-eligibility-checks.json','save_audit.py','inspect_inputs.py','records-scope-summary.txt']+[f'reader-prose-{i}.txt' for i in range(6)]:bound[str(O/n)]=sha(O/n)
+schema=read(O/'schema-and-eligibility-checks.json');bound.update(schema['bound_validator_files'])
+reader_validator=Path('[local path redacted]');bound[str(reader_validator)]=sha(reader_validator)
+for a in read(J/'original-assets-manifest.json')['assets']:
+ p=C/'isolated-reader-fixture/dist/assets/figures/sasongko2025'/Path(a['path']).name
+ assert sha(p)==a['sha256'];bound[str(p)]=sha(p);bound[a['path']]=sha(a['path'])
+for name in ['si-03.png','si-05.png','main-02.png','main-03.png','main-04.png','main-06.png']:
+ p=J/'source-render'/name;bound[str(p)]=sha(p)
+transport=read(O/'transport-checks.json');scopes=read(O/'scope-and-reader-checks.json')
+assert not transport['failures'] and scopes['status']=='passed' and schema['status']=='passed'
+manual=[
+'Read all six reader sections, all 273 item titles, prose and notes, including the 89 reference entries. Display prose uses readable sentences and separates source interpretations, cited studies and current observations.',
+'Reviewed all 19 record boundaries: one hot-injection route, seven upstream/acquisition procedures and eleven observations. No Cartesian synthesis matrix or independent replicates were manufactured from the three comparison families.',
+'Checked all nine paired condition choices against source Figure 1/2/3 captions: ligand variation fixes 100 °C and 1:20 washing; washing variation fixes 100 °C and OAm:OA 1:3; temperature variation fixes OAm:OA 1:3 and 1:20 washing.',
+'Inspected all 21 operation graphs and their 33 directly mapped source parameter objects. Whole FA-stock charges, its 0.51 mL transfer, PbI2 degassing, precursor heating, selected reaction temperature, prompt cooling and missing dwell remain distinct.',
+'Checked 26 material slots and five canonical stock instances (four unique formulations). Wash stocks preserve volume parts without invented absolute amounts, and the selected-wash input prevents pooling of all alternatives.',
+'Checked the first centrifugation retains precipitate, hexane redispersion consumes that precipitate, the second centrifugation retains supernatant, and washing waste/second precipitate do not become final products.',
+'Checked six acquisition records use sample_set inputs and analysis_data outputs. Nitrogen synthesis is not inherited as measurement atmosphere. Temperature-phase observations, Raman limits and thermal-aging fits are not acquisition setpoints.',
+'Checked 117 contextual product slots and all 33 named source context links. Unknown batch/aliquot identities remain unknown; cited literature table rows, current QDs, washing fractions, optical/Raman contexts and conceptual phase models remain separate.',
+'Checked all 48 facts, 100 fact quantities, 157 semantic source units, 121 table cells plus six additional specimen-label quantities, 502 measurement entries and 1,197 exact reader field pointers through independently reconstructed universes and values.',
+'Checked all eight figure sample mappings, one scheme, two equations, five source conflicts and six missingness groups. Original image IDs, hashes, roles and pages remain exact; all 17 selected source crops are reachable.',
+'Reopened actual original SI pages 3 and 5 and main pages 2, 3, 4 and 6. Verified whole-stock/aliquot and retained fractions, paired figure conditions, undefined TEM ± statistic, d(002)=6.38 Å, literal Pm3m and cited 6.36 Å cell, plus the corrected Figure S2 SI p5 caption.',
+'Directly executed current Site schema/semantic eligibility and current reader validator on the frozen private fixture. No author builder was executed as independent evidence. All requested training tasks are empty, structure assets absent and visual/browser/publication gates false.'
+]
+out={'schema':'mattersyn-independent-canonical-reader-audit/1.0','status':'passed','revision':1,'source_id':'sasongko2025','created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'auditor':'/root/peng1998_reader_assets','author':'/root/norberg2004_extract','role_disclosure':'Auditor authored the original source extraction but did not author these canonical records or reader. Backlog independently read the supplied originals and passed source revision 2. This audit evaluates the distinct canonical/reader transformation against that passed source; it does not replace or self-certify the extraction audit.','proposal_freeze_sha256':sha(C/'package-freeze.json'),'source_freeze_sha256':sha(S/'package-freeze.json'),'source_audit_sha256':sha(J/'source-independent-audit/independent-audit-v2.json'),'record_manifest_sha256':sha(C/'record-manifest.json'),'reader_sha256':sha(C/'reader/sasongko2025.json'),'open_findings':[],'canonical_scientific_findings':[],'supporting_check_counts':{'source_and_reader_transport':transport['check_count'],'scope_and_reader_consumer':scopes['check_count'],'schema_and_eligibility_records':len(schema['rows'])},'actual_counts':{**transport['actual_counts'],'source_facts':48,'fact_quantities':100,'source_units':157,'body_table_cells':121,'additional_table_label_quantities':6,'paired_condition_options':9,'unique_source_sample_contexts':33,'canonical_context_slots':117,'original_crops':17},'manual_scopes':manual,'actual_original_source_scope':'The original 9 main + 11 SI pages were fully read/viewed during prior extraction authorship and independently by Backlog. This downstream pass reopens six specifically named original page images only. Seventeen crop hashes and mappings were checked; a fresh full 17-crop visual reread is not claimed.','checks_not_reused_as_independent_evidence':['Author builder execution','Author validation counts or author receipt alone'],'retained_limitations':['Missing current QD coordinates, occupancy, CIF, SAED and exact structure/recipe pair remain absent.','Printed Pm3m and fringe/reference-cell tension remain literal and unresolved.','Raman attempted 80–200 K versus displayed 80–190 K, source figure/page misreferences and Table S1 citation mismatch remain explicit.','Undefined TEM ± statistic, absent absolute PLQY, yields and device efficiency are not imputed.','Citation-level literature records do not assert newly downloaded or independently checked cited papers.'],'excluded_gates':['Molecular identity/geometry and slot viewers','Apparatus illustration audit','Product illustration or atomic-model qualification','Site transport, mounted browser, deployment and publication','Training admission'],'inputs_unchanged':True,'bound_files':bound}
+for n in ['independent-audit-v1.json','independent-audit.json']:assert not (O/n).exists(),'preserve frozen audit'
+body=json.dumps(out,ensure_ascii=False,indent=2)+'\n'
+for n in ['independent-audit-v1.json','independent-audit.json']:(O/n).write_text(body,encoding='utf8')
+md='# Sasongko canonical/reader v1 independent audit\n\nStatus: passed; no open findings.\n\n'+out['role_disclosure']+'\n\nAll 19 records, 21 operations, nine paired condition choices, 502 measurement entries and 1,197 reader fields passed the bounded transport/scientific review. All 273 reader cards were read. The current reader validator and schema/eligibility evaluator passed on private inputs.\n\n'+'\n'.join('- '+x for x in manual)+'\n\nThis is not approval of molecular/apparatus/product visuals, atomic models, Site integration, browser, publication or training. Source and author freezes and Site were not edited.\n'
+for n in ['independent-audit-v1.md','independent-audit.md']:(O/n).write_text(md,encoding='utf8')
+print(json.dumps({'path':str(O/'independent-audit-v1.json'),'sha256':sha(O/'independent-audit-v1.json'),'bound_files':len(bound),'checks':transport['check_count']+scopes['check_count'],'schema_records':len(schema['rows'])}))

@@ -6,7 +6,7 @@ This repository contains the published static materials atlas and machine-readab
 
 ## Papers used in the published website
 
-Generated from dataset **0.31.0**, containing **39 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.
+Generated from dataset **0.32.0**, containing **40 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Main paper reviewed; SI unverified](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
@@ -75,6 +75,8 @@ Generated from dataset **0.31.0**, containing **39 primary source groups**. The 
 - Baowei Zhang, Luca Goldoni, Juliette Zito, Zhiya Dang, Guilherme Almeida, Francesco Zaccaria, Jur de Wit, Ivan Infante, Luca De Trizio, Liberato Manna (2019). Alkyl Phosphonic Acids Deliver CsPbBr3 Nanocrystals with High Photoluminescence Quantum Yield and Truncated Octahedron Shape. [10.1021/acs.chemmater.9b03529](https://doi.org/10.1021/acs.chemmater.9b03529). Review scope is stated in the linked website records; this citation does not imply full main/SI review.
 
 - Artur Feld; Agnes Weimer; Andreas Kornowski; Naomi Winckelmans; Jan-Philip Merkl; Hauke Kloust; Robert Zierold; Christian Schmidtke; Theo Schotten; Maria Riedner; Sara Bals; Horst Weller (2019). Chemistry of Shape-Controlled Iron Oxide Nanocrystal Formation. [10.1021/acsnano.8b05032](https://doi.org/10.1021/acsnano.8b05032). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=feld2019).
+
+- Max R. Friedfeld; Dane A. Johnson; Brandi M. Cossairt (2019). Conversion of InP Clusters to Quantum Dots. *Inorganic Chemistry*, 58, 803–810. [10.1021/acs.inorgchem.8b02945](https://doi.org/10.1021/acs.inorgchem.8b02945). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=friedfeld2019).
 
 - Avijit Saha; Siddhartha Sohoni; Ranjani Viswanatha (2019). Interface Modeling Leading to Giant Exchange Bias from the CoO/CoFe2O4 Quantum Dot Heterostructure. *Journal of Physical Chemistry C*, 123, 2421–2427. [10.1021/acs.jpcc.8b11124](https://doi.org/10.1021/acs.jpcc.8b11124). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=saha2019).
 

@@ -1,5 +1,5 @@
 import {quantityValue} from './quantity-value.mjs';
-import {mountMaterialGuide} from './material-guide.mjs?v=0.31.0-r1';
+import {mountMaterialGuide} from './material-guide.mjs?v=0.32.0-r1';
 const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);let id=params.get('id');
 function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}
 function link(text,url){const a=node('a',text);a.href=url;return a;}

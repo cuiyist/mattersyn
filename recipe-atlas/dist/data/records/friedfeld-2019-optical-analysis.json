@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "friedfeld-2019-optical-analysis",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Friedfeld et al. (2019) · Smoothing and baseline subtraction",
+  "material": {
+    "formula": "InP",
+    "family": "InP cluster conversion"
+  },
+  "method": "Smoothing and baseline subtraction",
+  "sources": [
+    {
+      "id": "friedfeld2019",
+      "doi": "10.1021/acs.inorgchem.8b02945",
+      "title": "Conversion of InP Clusters to Quantum Dots",
+      "authors": "Max R. Friedfeld; Dane A. Johnson; Brandi M. Cossairt",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/acs.inorgchem.8b02945",
+      "main_status": "All eight supplied main pages read, visually inspected and independently audited; source and canonical checks passed.",
+      "si_status": "All 25 matched SI pages read, visually inspected and independently audited; title, authors and contents confirm the main–SI association.",
+      "reuse_status": "Source-linked facts and selected scientific crops; original article, SI, complete text and full-page scans remain local."
+    }
+  ],
+  "lineage": {
+    "source_group": "friedfeld2019",
+    "recipe_family": "friedfeld2019-cluster-conversion-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "MAIN PDF p. 1 (printed 803), Title, abstract and publication identity; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+        }
+      ],
+      "note": "Source-scoped intended target only; unassigned observation records have no invented target."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "Exact source document/page/figure locators"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "Exact source document/page/figure locators"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "Exact source document/page/figure locators"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "temperature-series",
+      "name": "Separate source specimen/context: temperature series",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "concentration-fit",
+      "name": "Separate source specimen/context: concentration fit",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "optical-analysis-data",
+      "name": "optical analysis data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "temperature-series",
+        "concentration-fit"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "optical-analysis-analyze",
+      "action": "smoothing-and-baseline-subtraction",
+      "label": "Smoothing and baseline subtraction",
+      "stage": "characterization",
+      "branch": "optical-analysis",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "temperature-series",
+        "concentration-fit"
+      ],
+      "outputs": [
+        "optical-analysis-data"
+      ],
+      "parameters": {
+        "binomial_smoothing_factor": {
+          "value": 1000.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "dimensionless",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "G5: Curves are supplied as figures, not raw datasets. No curve digitization/refit was performed. Complete Scherrer implementation, errors and instrumental broadening treatment are absent. All reported fit coefficients remain source calculations. Raw source status: reported.",
+          "basis": "Source scope: optical-analysis. ",
+          "raw_text": "1000",
+          "evidence": [
+            {
+              "source_id": "friedfeld2019",
+              "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Smoothing and baseline subtraction. Inputs represent separate specimens or data contexts; they are not physically pooled. Missing details: See source acquisition/analysis gapG5.",
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fact-context-optical-processing",
+      "source_sample_label": "fact-context-optical-processing",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "A source context is not a new physical replicate or an exact cross-technique aliquot join."
+      ]
+    },
+    {
+      "sample_id": "source-payload-context",
+      "source_sample_label": "source-payload-context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "A source context is not a new physical replicate or an exact cross-technique aliquot join."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "friedfeld2019-optical-processing-claim",
+      "sample_id": "fact-context-optical-processing",
+      "property": "source_claim",
+      "technique": "Source evidence",
+      "value": {
+        "value": "Process dip-probe data in Igor Pro v6.02A using binomial smoothing factor 1000; subtract the pre-injection baseline from subsequent spectra and plot selected wavelengths against time. No raw instrumental file is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": "Source claim class: reported_analysis. G5: Curves are supplied as figures, not raw datasets. No curve digitization/refit was performed. Complete Scherrer implementation, errors and instrumental broadening treatment are absent. All reported fit coefficients remain source calculations."
+      },
+      "conditions": "in situ optical data",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+        }
+      ]
+    },
+    {
+      "id": "friedfeld2019-optical-processing-q1",
+      "sample_id": "fact-context-optical-processing",
+      "property": "binomial_smoothing_factor",
+      "technique": "Source evidence",
+      "value": {
+        "value": 1000.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "G5: Curves are supplied as figures, not raw datasets. No curve digitization/refit was performed. Complete Scherrer implementation, errors and instrumental broadening treatment are absent. All reported fit coefficients remain source calculations. Raw source status: reported.",
+        "basis": "Source scope: in situ optical data. Source claim class: reported_analysis. G5: Curves are supplied as figures, not raw datasets. No curve digitization/refit was performed. Complete Scherrer implementation, errors and instrumental broadening treatment are absent. All reported fit coefficients remain source calculations.",
+        "raw_text": "1000",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "in situ optical data",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+        }
+      ]
+    },
+    {
+      "id": "payload-facts-friedfeld2019-optical-processing",
+      "sample_id": "source-payload-context",
+      "property": "source_facts_payload",
+      "technique": "Structured source inventory",
+      "value": {
+        "value": "{\"id\":\"friedfeld2019-optical-processing\",\"title\":\"Optical processing\",\"claim\":\"Process dip-probe data in Igor Pro v6.02A using binomial smoothing factor 1000; subtract the pre-injection baseline from subsequent spectra and plot selected wavelengths against time. No raw instrumental file is supplied.\",\"sample_scope\":\"in situ optical data\",\"claim_class\":\"reported_analysis\",\"evidence\":[{\"source_id\":\"friedfeld2019-main\",\"document_role\":\"main\",\"source_sha256\":\"5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7\",\"pdf_page\":7,\"printed_page\":809,\"locator\":\"Experimental continuation\"}],\"quantities\":[{\"raw_text\":\"1000\",\"value\":1000.0,\"unit\":\"dimensionless\",\"uncertainty\":null,\"range\":null,\"ordered_endpoints\":null,\"comparison\":null,\"approximate\":false,\"status\":\"reported\",\"meaning\":\"binomial smoothing factor\",\"evidence\":[{\"source_id\":\"friedfeld2019-main\",\"document_role\":\"main\",\"source_sha256\":\"5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7\",\"pdf_page\":7,\"printed_page\":809,\"locator\":\"Experimental continuation\"}],\"conflict_ids\":[],\"gap_ids\":[\"G5\"]}],\"conflict_ids\":[],\"gap_ids\":[\"G5\"],\"independent_audit_status\":\"pending\"}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": "Exact frozen structured source object. Embedded author-stage pending flags are historical; this draft is independently unapproved. Not a full-text page cache."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "MAIN PDF p. 7 (printed 809), Experimental continuation; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+        }
+      ]
+    },
+    {
+      "id": "payload-protocols-optical-analysis",
+      "sample_id": "source-payload-context",
+      "property": "source_protocols_payload",
+      "technique": "Structured source inventory",
+      "value": {
+        "value": "{\"id\":\"optical-analysis\",\"title\":\"Smoothing and baseline subtraction\",\"kind\":\"measurement_or_analysis\",\"operations\":[{\"id\":\"optical-analysis-analyze\",\"action\":\"Smoothing and baseline subtraction\",\"inputs\":[\"temperature-series\",\"concentration-fit\"],\"outputs\":[\"optical-analysis-data\"],\"source_fact_ids\":[\"friedfeld2019-optical-processing\"],\"quantities\":[{\"raw_text\":\"1000\",\"value\":1000.0,\"unit\":\"dimensionless\",\"uncertainty\":null,\"range\":null,\"ordered_endpoints\":null,\"comparison\":null,\"approximate\":false,\"status\":\"reported\",\"meaning\":\"binomial smoothing factor\",\"evidence\":[{\"source_id\":\"friedfeld2019-main\",\"document_role\":\"main\",\"source_sha256\":\"5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7\",\"pdf_page\":7,\"printed_page\":809,\"locator\":\"Experimental continuation\"}],\"conflict_ids\":[],\"gap_ids\":[\"G5\"]}],\"evidence\":[{\"source_id\":\"friedfeld2019-main\",\"document_role\":\"main\",\"source_sha256\":\"5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7\",\"pdf_page\":7,\"printed_page\":809,\"locator\":\"Experimental continuation\"}],\"missing_fields\":[\"See source acquisition/analysis gapG5\"],\"retained_fraction\":null}],\"sample_ids\":[\"temperature-series\",\"concentration-fit\"]}",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "friedfeld2019",
+            "locator": "MAIN PDF p. 1 (printed 803), Title, abstract and publication identity; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+          }
+        ],
+        "note": "Exact frozen structured source object. Embedded author-stage pending flags are historical; this draft is independently unapproved. Not a full-text page cache."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "friedfeld2019",
+          "locator": "MAIN PDF p. 1 (printed 803), Title, abstract and publication identity; original source SHA256 5c5303217a93c14e5593ababad927e03c039eb18699a872cc0af8e7bdf3803b7"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All eight supplied main pages and 25 matched SI pages read and independently audited. Canonical records, corrected reader, molecular references and bindings, stage-specific apparatus and symbolic product contexts passed separate audits. Four conversion route/variant records, fifteen supporting procedures and eleven observation records retain their separate contexts. Source inconsistencies and unreported conditions remain explicit. No current-product atomic coordinates, exact structure–recipe pair or new training task is admitted.",
+    "missing_fields": [
+      "Context identifiers are not physical batch IDs or independent replicates.",
+      "No current QD atomic coordinates, supplied CIF, exact structure–recipe pair or training admission.",
+      "Cited prior cluster/precursor syntheses do not fill missing current recipes.",
+      "See source acquisition/analysis gapG5"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Source document reader draft",
+      "url": "/paper-review.html?id=friedfeld2019",
+      "relation": "private_unapproved_reader"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}
