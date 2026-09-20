@@ -8,7 +8,7 @@ from sync_github_public import io_path
 assert (D/'.git').is_dir()
 names=['MEMORY.md','README.md','REFERENCES.md','research-assets/verify_public_delivery.py','research-assets/reference-readme-generation.json','research-assets/github-public-delivery-verification.json','research-assets/github-publication-checkpoint.json','research-assets/github-public-project-sync.json','research-assets/github-public-site-sync.json']
 names += ['research-assets/incoming-paper-monitor/'+n for n in ['ledger.json','latest-publication.json','public-progress-editorial.json','queue-status.json','queue-status.md','queue-status.html']]
-names += ['research-assets/incoming-paper-monitor/deadline-20260920/admission-20260920T095744Z/scope-partition.json']
+names += ['research-assets/incoming-paper-monitor/deadline-20260920/admission-20260920T095744Z/scope-partition.json','research-assets/incoming-paper-monitor/deadline-20260920/ghosh-release-scope-20260920.json']
 files=[M/n for n in names if (M/n).is_file()]
 folders=[L,L.parent/'acs.cgd.9b01519',L.parent/'intake-20260920T095744Z',M/'skills',M/'recipe-atlas/data',M/'recipe-atlas/dist',M/'recipe-atlas/scripts']
 for folder in folders:

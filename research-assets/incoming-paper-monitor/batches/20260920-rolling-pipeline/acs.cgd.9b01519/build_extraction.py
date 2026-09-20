@@ -34,6 +34,8 @@ for i,p,loc,title,claim,scope,qs,flags,kind in A.FACTS:
  facts.append({'id':SID+'-'+i,'title':title,'claim':claim,'sample_scope':scope,'claim_class':kind,'evidence':[ev(p,loc)],'quantities':[quantity(r,u,n,p,loc,flags)for n,r,u in qs],'conflict_ids':[x for x in flags if x.startswith('C')],'gap_ids':[x for x in flags if x.startswith('G')],'independent_audit_status':'pending'})
 fb={f['id'].removeprefix(SID+'-'):f for f in facts}
 for fid,p,loc in [('structures-background',1,'Introduction: spinel structure'),('d4-solution',3,'Figure 3 and Figure 4b caption/legend'),('mw-time-outcome',5,'Microwave discussion begins'),('uvvis-transform',9,'UV-vis Spectroscopy continuation'),('mw-middle-outcome',6,'Figure 10 caption and phase-pure qualification'),('insitu-middle',5,'Crystallite discussion: I4-I8 initially phase-pure')]:fb[fid]['evidence'].append(ev(p,loc))
+fb['d4-solution']['quantities'][1]['evidence']=[ev(3,'First paragraph: coordination features up to about 8 angstrom')]
+fb['insitu-i7-i8-scope']['evidence'].append(ev(4,'In situ discussion: 1:2:7.81 and 1:2:8.34 initially ZnO-bearing'))
 
 rows=[];cols=['C_NaOH','T_rxn','Zn_Al_OH','t_rxn','t_dwell']
 for ir,line in enumerate(A.TABLE.splitlines(),1):
@@ -46,6 +48,7 @@ for ir,line in enumerate(A.TABLE.splitlines(),1):
   cells.append({'id':f'table-1-r{ir:02}-{col}','column':col,**q})
  rows.append({'row_label':sid,'sample_id':sid,'source_raw_row':line,'row_label_evidence':[ev(4,f'Table 1 sample column row {ir}')],'cells':cells})
 table={'id':'table-1','title':'Samples Prepared in This Study','columns':cols,'rows':rows,'evidence':[ev(4,'Table 1, all 37 rows and nomenclature footnote')],'notes':['37 row labels plus 185 typed data cells = 222 printed body cells.','Source column headings give minutes, but autoclave body cells explicitly say days; preserve their day units.','Native SCF rows contain ~1 in t_rxn and 0 in t_dwell; text extraction merges them into ~10.','In situ 0-40 min entries are reported ranges, not invented fixed-duration process endpoints.','C_NaOH basis is not silently harmonized across different preparation branches.','RT remains room-temperature text without an assumed numeric temperature.'],'footnotes':[{'id':'table-1-footnote-a','text':'M: microwave synthesis; S: supercritical flow synthesis; A: autoclave synthesis; I: in situ XRD; D: solutions for X-ray total scattering experiments.','evidence':[ev(4,'Table 1 footnote a')]}],'independent_numerical_audit':'pending'}
+table['notes'].append('D1-D4 are total-scattering solution observations at RT; their 3.3 min table entries are not a demonstrated synthesis-heating or growth duration.')
 write('source-tables.json',{'schema':'mattersyn-source-tables/1','source_id':SID,'author':AUTHOR,'tables':[table],'independent_audit_status':'pending'})
 
 material_data=[
@@ -171,11 +174,12 @@ equations=[
 {'id':'zn-dissolution','source_label':'unnumbered equilibrium','expression':'ZnO(s) + 5 H2O(l) <=> [Zn(H2O)_(4-delta)(OH)_delta]^(2-delta)(aq) + 2 OH-(aq)','sample_ids':['D2'],'evidence':[ev(3,'ZnO dissolution paragraph')],'notes':'Source formula retained literally; no silently repaired stoichiometry or resolved aqueous speciation.'},
 {'id':'al-dimer','source_label':'unnumbered precursor formula','expression':'[Al2(H2O)_(11±delta)(OH)_delta]^(6±delta)(aq)','sample_ids':['D4'],'evidence':[ev(2,'Al precursor paragraph, cited ref 41')],'notes':'Main p3 separately prints 11-delta; preserve source-dependent symbols and unknown protonation, not a unique molecular graph.'},
 {'id':'spinel-defects','source_label':'unnumbered occupancy constraint','expression':'[(A2+)_(1-x-y)(B3+)_x]_tet[(B3+)_(2-x)(A2+)_x]_okt[(A2+)_y]_000 O4','sample_ids':['I1-I16'],'evidence':[ev(8,'In situ refinement paragraph')],'notes':'Stoichiometric model constraint; x/y results unavailable in SI Table S7. Does not constitute a complete coordinate set.'},
-{'id':'kubelka-munk','source_label':'unnumbered optical expression','expression':'C/S = (1-R)^2 / (2R)^x; x=1/2','sample_ids':['M2','A2','S1'],'evidence':[ev(8,'UV-vis Spectroscopy formula and exponent'),ev(9,'Tauc fit continuation')],'notes':'Literal layout awaits original-crop author verification; original visual is authoritative. No standard-convention correction or independently validated optical model.'}]
+{'id':'kubelka-munk','source_label':'unnumbered optical expression','expression':'C/S = (1-R)^2 (2R)^x; x=1/2','sample_ids':['M2','A2','S1'],'evidence':[ev(8,'UV-vis Spectroscopy formula and exponent'),ev(9,'Tauc fit continuation')],'notes':'Native printed layout is multiplication by (2R)^x, with no division bar or negative exponent; retained literally. Original visual is authoritative; no standard-convention correction or independently validated optical model.'}]
 
 conflicts=[{'id':i,'title':t,'description':d,'status':'unresolved_source_discrepancy','evidence':[ev(p,t)for p in ps]}for i,t,d,ps in A.CONFLICTS]
 gaps=[{'id':i,'title':t,'description':d,'status':'open'}for i,t,d in A.GAPS]
 figures=[{'id':i,'label':lab,'title':title,'sample_ids':sids,'evidence':[ev(p,lab+' including caption')],'asset_id':i,'conflict_ids':[f for f in flags if f.startswith('C')],'gap_ids':[f for f in flags if f.startswith('G')],'interpretation_scope':'Literature or author model where stated; graph-only values are not digitized as reported exact numbers.'}for i,p,lab,title,sids,flags,bbox in A.FIGURES]
+next(f for f in figures if f['id']=='figure-11')['conflict_ids'].append('C12')
 
 # References remain literal local-source text with page locators; no cited full texts are claimed read.
 refs=[];reftext=''
@@ -192,11 +196,11 @@ write('source-facts.json',{'schema':'mattersyn-source-facts/1','source_id':SID,'
 
 crop_specs=[(i,p,lab,title,bbox)for i,p,lab,title,sids,flags,bbox in A.FIGURES]+[
 ('table-1',4,'Table 1','All 37 sample rows and footnote',(.09,.224,.489,.832)),
-('heating-profiles',8,'Equations 1 and 2','Literal microwave heating profiles',(.09,.068,.488,.150)),
-('spinel-defect-expression',8,'Unnumbered defect constraint','Refinement constraint with context',(.09,.709,.49,.802)),
-('optical-transform',8,'Unnumbered optical expression','Printed transformation and exponent',(.512,.860,.911,.941)),
-('zn-hydrolysis-expression',2,'Unnumbered reaction','Source Zn-aquo reaction with unknown delta',(.512,.731,.911,.791)),
-('zn-dissolution-expression',3,'Unnumbered equilibrium','Source ZnO dissolution with unknown delta',(.512,.678,.911,.769))]
+('heating-profiles',8,'Equations 1 and 2','Literal microwave heating profiles',(.09,.077,.488,.141)),
+('spinel-defect-expression',8,'Unnumbered defect constraint','Refinement constraint with context',(.09,.681,.49,.812)),
+('optical-transform',8,'Unnumbered optical expression','Printed transformation and exponent',(.512,.8245,.911,.936)),
+('zn-hydrolysis-expression',2,'Unnumbered reaction','Source Zn-aquo reaction with unknown delta',(.512,.704,.911,.799)),
+('zn-dissolution-expression',3,'Unnumbered equilibrium','Source ZnO dissolution with unknown delta',(.512,.650,.911,.785))]
 assets=[];images={}
 for i,p,lab,title,bbox in crop_specs:
  if p not in images:images[p]=pdf[p-1].render(scale=3).to_pil().convert('RGB')
@@ -223,7 +227,10 @@ assert len({x['id']for x in units})==len(units)
 counts={'facts':len(facts),'fact_quantities':sum(len(f['quantities'])for f in facts),'materials':len(materials),'stocks':len(stocks),'protocols':len(protocols),'operations':sum(len(p['operations'])for p in protocols),'sample_contexts':len(contexts),'table_rows':len(rows),'table_data_cells':185,'table_row_labels':37,'table_total_body_cells':222,'figures':len(figures),'equations_or_expressions':len(equations),'references':len(refs),'selected_original_crops':len(assets),'inventory_units':len(units),'source_conflicts_or_qualifications':len(conflicts),'gap_categories':len(gaps)}
 write('source-inventory.json',{'schema':'mattersyn-source-inventory/1','source_id':SID,'author':AUTHOR,'created_at':NOW,'counts':counts,'inventory_units':units,'supporting_information_status':'declared_not_locally_verified','complete_supplied_main_inventory':True,'complete_main_plus_si_inventory':False,'source_table_scope':'all visible main Table 1 body cells and footnote; no SI table values inferred','main_page_count':11,'si_page_count':None,'si_expected':True,'independent_audit_status':'pending'})
 pages=[]
-for p,n in enumerate(A.PAGE_NOTES,1):pages.append({'document_id':'main','pdf_page':p,'printed_page':1788+p,'source_sha256':HASH,'text_path':str(P/f'private/text/main-{p:02}.txt'),'text_sha256':sha(P/f'private/text/main-{p:02}.txt'),'image_path':str(P/f'source-render/main-{p:02}.png'),'image_sha256':sha(P/f'source-render/main-{p:02}.png'),'text_read':True,'native_page_visually_inspected':True,'reader':AUTHOR,'coverage_notes':n,'fact_ids':[f['id']for f in facts if any(e['pdf_page']==p for e in f['evidence'])],'asset_ids':[a['id']for a in assets if a['pdf_page']==p]})
+for p,n in enumerate(A.PAGE_NOTES,1):
+ if p==10:n='References continued, 21-56; cited studies retained as references only, not newly read source evidence.'
+ if p==11:n='References 57-65 and footer; complete supplied-main scope, with no local SI read or inferred.'
+ pages.append({'document_id':'main','pdf_page':p,'printed_page':1788+p,'source_sha256':HASH,'text_path':str(P/f'private/text/main-{p:02}.txt'),'text_sha256':sha(P/f'private/text/main-{p:02}.txt'),'image_path':str(P/f'source-render/main-{p:02}.png'),'image_sha256':sha(P/f'source-render/main-{p:02}.png'),'text_read':True,'native_page_visually_inspected':True,'reader':AUTHOR,'coverage_notes':n,'fact_ids':[f['id']for f in facts if any(e['pdf_page']==p for e in f['evidence'])],'asset_ids':[a['id']for a in assets if a['pdf_page']==p]})
 write('page-coverage.json',{'schema':'mattersyn-page-coverage/1','author':AUTHOR,'created_at':NOW,'pages':pages,'main_read_pages':11,'main_visually_inspected_pages':11,'si_read_pages':0,'si_status':'declared_unlocated_not_claimed_read','complete_supplied_page_coverage':True,'complete_main_plus_si_coverage':False})
 write('complete-source-payloads.json',{'schema':'mattersyn-complete-source-payloads/1','source_id':SID,'publication_scope':'PRIVATE ONLY: source PDFs, complete extracted text and full page images are not public selected assets','source_copies':copies,'documents':[{'document_id':'main','source_path':str(SOURCE),'source_sha256':HASH,'page_count':11,'text_files':[{'path':str(p),'sha256':sha(p)}for p in sorted((P/'private/text').glob('*.txt'))],'full_page_images':[{'path':p['image_path'],'sha256':p['image_sha256']}for p in pages]}],'supporting_information':{'status':'declared_unlocated','not_read':True}})
 write('pairing-review.json',{'schema':'mattersyn-pairing/1','source_id':SID,'doi':DOI,'author':AUTHOR,'created_at':NOW,'main_identity':'Title/byline/DOI/printed pagination agree with intake','main_sha256':HASH,'main_page_count':11,'duplicate_copies_verified':True,'source_copies':copies,'si_status':'declared_unlocated_unverified','main_si_pairing_status':'cannot_pair_absent_local_candidate','si_declaration_evidence':[ev(9,'Associated Content')],'local_search_report':'local-source-search.json','complete_main_only_scope':True,'independent_audit_status':'pending'})
