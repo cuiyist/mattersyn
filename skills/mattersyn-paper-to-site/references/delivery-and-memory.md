@@ -16,8 +16,6 @@ Publishing invariants:
 - Publishing a website and making it public are distinct actions. Change access only within the user's requested audience. Do not require redundant conversational approval when the session already authorizes the action; follow current tool/system permission requirements.
 - Verify deployment completion before claiming success. Reuse the site's existing browser tab for handoff when available.
 
-## Check public access
-
 ## MatterSyn GitHub publication choice
 
 The user's latest September 19 choice supersedes the earlier one-public-repository answer. Keep code, memory, skills, structured research data and audit history in PRIVATE `cuiyist/mattersyn`. Publish only website assets in PUBLIC `cuiyist/mattersyn-site`, with the intended Pages address `https://cuiyist.github.io/mattersyn-site/`. Keep downloaded papers and SI local. Existing Site hosting is a historical deployment until the GitHub migration is verified; do not claim the new address is live merely because files are staged.
