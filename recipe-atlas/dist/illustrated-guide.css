@@ -37,3 +37,6 @@
 
 /* Long source hashes must wrap inside operation provenance at narrow widths. */
 .material-flow small{overflow-wrap:anywhere;word-break:normal}
+/* Long source digests remain readable without widening mobile record pages. */
+.protocol-copy small,.crystal-reference-card small{overflow-wrap:anywhere;word-break:normal;max-width:100%;}
+@media(max-width:620px){.record-main .lian-bulk-view{height:auto;aspect-ratio:1/1;min-height:260px;}}

@@ -1,0 +1,61 @@
+"""Source-bound release bookkeeping; public claims require exact anonymous proof."""
+from pathlib import Path
+from datetime import datetime,timezone
+import argparse,copy,hashlib,json,sys
+L=Path(__file__).resolve().parent;O=L/'site-integration-proposal';MON=L.parents[2];M=L.parents[4];S=M/'recipe-atlas';G=L.parent/'ja212032q'
+sys.path.insert(0,str(MON));import monitor
+read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def save(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+def memory(t):
+ p=M/'MEMORY.md';p.write_text(t+'\n\n'+p.read_text(encoding='utf8'),encoding='utf8')
+ap=argparse.ArgumentParser();ap.add_argument('stage',choices=['prepare','verify','finish']);args=ap.parse_args();now=datetime.now(timezone.utc).isoformat()
+ia=L/'site-integration-independent-audit/integration-transport-audit.json';ba=O/'browser-validation.json';ma=L/'visuals/bulk-structure-independent-audit/independent-audit.json'
+assert all(read(p)['status']=='passed' for p in [ia,ba,ma])
+assert read(S/'dist/data/dataset-manifest.json')['dataset_version']=='0.27.0'
+if args.stage=='prepare':
+ prior=O/'prior-latest-publication.json';assert not prior.exists();save(prior,read(MON/'latest-publication.json'))
+ milestones={k:{'status':'complete','evidence':[str(p) for p in paths],'note':note} for k,paths,note in [
+ ('read',[L/'source-independent-audit/independent-audit-v2.json',L/'page-coverage.json'],'Complete supplied eight main and26SI pages read and independently audited.'),
+ ('extract',[L/'canonical-proposal/v1/package-manifest.json',L/'canonical-reader-independent-audit/independent-audit-v1.json'],'16records,224readeritems and891source tablecells; bulk/NC/film/calculation contexts distinct.'),
+ ('audit',[ia,ma,L/'site-integration-independent-audit/promotion-delta-audit.json'],'Separate source,data,molecular,apparatus,partial-model,promotion and integration audits passed.'),
+ ('integrate',[ia,ba,O/'build-check-output.json'],'21actualstage controls/122conditionrows, source figures and390pxlayout checked;530oldrecords and trainingeligibility unchanged.') ]}
+ monitor.checkpoint(MON/'ledger.json','mattersyn-primary',group_id='legacy::10.1021_acsami.1c18038',note='Complete audited Lian contribution integrated locally; public verification pending.',data={'current_step':'Publishing Lian after independent audits and actual browser checks','integration_audit':{'path':str(ia),'sha256':sha(ia)},'browser_validation':{'path':str(ba),'sha256':sha(ba)},'qualified_partial_bulk_model_audit':{'path':str(ma),'sha256':sha(ma)}},milestones=milestones)
+ ga=G/'source-independent-audit/independent-audit-v2.json';assert read(ga)['status']=='passed'
+ monitor.checkpoint(MON/'ledger.json','mattersyn-primary',group_id='10.1021_ja212032q',note='All19supplied pages and36selectedcrops independently reviewed; source revision2 passed. Canonical/reader v1 under separate audit; molecule/apparatus authorship continues outside Site.',data={'current_step':'Source audit passed; canonical/reader independent audit and illustration preparation in parallel','source_scientific_audit':{'path':str(ga),'sha256':sha(ga)},'effective_source_freeze':{'path':str(G/'package-freeze.json'),'sha256':sha(G/'package-freeze.json')},'canonical_proposal':{'path':str(G/'canonical-proposal/v1/package-manifest.json'),'sha256':sha(G/'canonical-proposal/v1/package-manifest.json')}},milestones={'read':{'status':'complete','evidence':[str(ga)],'note':'10main+9SIpages; separate audit checks all272tablecells and36crops.'},'extract':{'status':'partial','evidence':[str(ga),str(G/'canonical-proposal/v1/package-manifest.json')],'note':'Source passed;21canonicalrecords and325readeritems remain under independent review.'}})
+ memory(f'''## 2026-09-20 — Lian fully integrated; anonymous publication check pending
+
+Saved {now}. Local candidate dataset0.27.0:546structuredrecords,106routes/variants,46material/componenthubs(35direct+11component),35sourcegroups,30formalreaders. Verified public science remains0.26.0 until the current deployment passes. All530priorcanonicalrecords and trainingeligibility remain unchanged; exact structure–recipe pairs0.
+
+Lian source,canonical/reader,molecular,apparatus,promotion,symbolic context,qualified partial bulk-model and integration audits passed. Integration audit {sha(ia)}; root model audit {sha(ma)}; browser receipt {sha(ba)}. Actual21stagecontrols/122conditions,DMFviewer,stockcomponents,9/48figurefilter,HRTEMimage,two bulkcoordinate viewers and390pxlayout were checked. Mobile hash wrapping and initialcamera framing corrected with explicit independently audited deltas. Two partial non-H reconstructions preserve unknownoccupancy and absentH; four exactbulk contexts only, no NC/film/DFT/trainingmodel.
+
+Ghosh source revision2 passed {sha(ga)}, all19pages/36crops/272tablecells. Frozen canonical/reader v1 has21records,33operations,88slots,3stocks,585measurementcontexts and325readeritems; independent review pending. Molecular and apparatus work continue separately. Existing screen-first fixed-cutoff priority, separate later arrivals, one heartbeat and no paidAPI/downloads remain. Project and installed visualization skill updated at e0a034e65322c5519b77438d662355627fc79fedf9d5e778de3100cb25655261. Original PDFs/SI/rawtext/fullpages remain local.''')
+ save(O/'prepublication-checkpoint.json',{'at':now,'candidate_dataset':'0.27.0','integration_audit_sha256':sha(ia),'browser_sha256':sha(ba),'public_verification_pending':True})
+ print('Prepared; no public-completion claim yet.')
+else:
+ v=read(M/'research-assets/github-public-delivery-verification.json');assert v['status']=='passed' and v['build']['status']=='built' and v['expected_citation_count']==35
+ assert len(v['anonymous']['checks'])==63 and all(x['matches_checked_local_bytes'] for x in v['anonymous']['checks'])
+ proof=O/('science-release-anonymous-verification.json' if args.stage=='verify' else 'progress-release-anonymous-verification.json');assert not proof.exists();save(proof,v)
+ if args.stage=='verify':
+  monitor.checkpoint(MON/'ledger.json','mattersyn-primary',group_id='legacy::10.1021_acsami.1c18038',status='complete',note='Complete supplied main/SI contribution published after independent audits and actual browser checks;63anonymous endpoints and both35-citation READMEs match.',data={'current_step':'Published and anonymously verified','publication':{'dataset_version':'0.27.0','site_commit':v['site_commit'],'verification_path':str(proof),'verification_sha256':sha(proof)}},milestones={'publish':{'status':'complete','evidence':[str(proof)],'note':'Exact-byte public delivery verified; original papers/SI/fulltext/fullpages remain excluded.'}})
+  release=read(O/'prior-latest-publication.json')
+  release.update(status='published_verified',public_live_version='GitHub Pages / dataset0.27.0',published_at=v['build']['updated_at'],dataset_version='0.27.0',record_count=546,synthesis_route_count=106,material_hub_count=46,direct_material_hub_count=35,component_material_hub_count=11,public_source_group_count=35,formal_source_reader_count=30,exact_structure_recipe_count=0,new_source_ids=['lian2021'],scientific_dataset_published_at=v['build']['updated_at'],scientific_dataset_commit=v['site_commit'],publication_scope='Lian complete supplied main/SI:3routes/variants,6supportingprocedures,7observations,21operation scenes,53selectedcrops and2qualifiedpartialbulk models.530oldrecords and trainingeligibility unchanged.',progress_only_update=False)
+  release.pop('publication_status_delta_audit',None)
+  ed=read(MON/'public-progress-editorial.json');ed['current_work']=[x for x in ed['current_work'] if x['short_label']!='Lian et al. (2021)']
+  for x in ed['current_work']:
+   if x['short_label']=='Ghosh et al. (2012)':
+    x.update(stage='Complete source audit passed; structured data and illustrations in parallel review',summary='All19supplied main/SI pages,36selectedcrops and272tablecells passed independent source review. The frozen21-record/325-item reader proposal is being checked separately. Chemical and33operation illustrations are being prepared; no Ghosh record is published yet.',stages=[{'label':'Complete main/SI reading and independent source audit','status':'complete','detail':'Source revision2 preserves71facts,194quantities,33operations and272tablecells; source wording/crop fixes reviewed.'},{'label':'Independent canonical/reader audit','status':'in_progress','detail':'21records,88materialslots,3stocks and585measurement contexts; no automatic training admission.'},{'label':'Molecular and apparatus preparation','status':'in_progress','detail':'Separate review required before integration.'},{'label':'Website publication','status':'pending','detail':'Only individually passed contributions enter a release.'}])
+  ed['recent_milestones'].insert(0,{'at':v['build']['updated_at'],'text':'Lian antimony-halide contribution published:3routes/variants,21illustratedoperations,53selectedcrops and2qualifiedpartialbulkstructureviews. Dataset0.27.0 has546records,106routes and46material/componenthubs. Ghosh source audit passed; data/illustration work continues.'})
+  ed['estimate']['current_batch']='The retained pilot and Evans, Morrison and Lian rolling contributions are published. Ghosh data and illustrations proceed in parallel with distinct audits. Full-corpus completion and target throughput remain unverified.'
+  save(MON/'public-progress-editorial.json',ed)
+ else:
+  release=read(MON/'latest-publication.json');assert release['dataset_version']=='0.27.0';release.update(progress_only_update=True,progress_published_at=v['build']['updated_at'],publication_scope='Lian final publication-status metadata and current Ghosh queue; scientific dataset0.27.0 unchanged.')
+ release.update(recorded_at=now,commit_sha=v['site_commit'],project_commit_sha=v['project_commit'],current_active_paper_claims=len(monitor.active_claims(monitor.read_ledger(MON/'ledger.json'))),raw_papers_and_si_uploaded=False,full_document_equivalents_excluded_from_public_history=True,subsequent_project_commits_may_record_this_verification=True)
+ release['deployment']={'provider':'github_pages','status':'built','source_branch':'main','source_path':'/','commit':v['site_commit']};release['anonymous_verification']=v['anonymous'];release['integration_checks']={p.relative_to(M).as_posix():sha(p) for p in [ia,ba,ma,O/'build-check-output.json']}
+ for p in [MON/'latest-publication.json',M/'research-assets/github-publication-checkpoint.json']:save(p,release)
+ memory(f'''## 2026-09-20 — Lian {'published' if args.stage=='verify' else 'final progress release verified'}
+
+Saved {now}. Public site https://cuiyist.github.io/mattersyn-site/ verified at commit {v['site_commit']}, built {v['build']['updated_at']}. All63anonymous page/data/asset endpoints and both35-source README citations match. Source reader https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lian2021 . Dataset0.27.0 contains546structuredrecords,106routes/variants,46material/componenthubs,35sourcegroups and30formalreaders. Exactstructure–recipepairs remain0. Scientific release commit {release['scientific_dataset_commit']} is preserved separately from progress-only deployments.
+
+Lian is closed through full supplied-source reading, extraction, distinct audits, website integration and anonymous publication. Missing crystalZIP/video,H positions,occupancies and same-aliquot joins remain explicit. Bulk coordinates are qualified partial table reconstructions, not nanocrystal/film/DFT or training models. Ghosh source revision2 passed; its21-record canonical/reader audit and molecule/apparatus preparation continue outsideSite. Continue current frozen handoffs, fixed-cutoff evidence priority and the existing single heartbeat. No downloads or paidAPI run. Original papers/SI/fulltext/fullpageimages excluded from public project and website. Current proof binds project{v['project_commit']}; subsequent project commit saves this verification and latest memory.''')
+ print(json.dumps({'stage':args.stage,'dataset':'0.27.0','site_commit':v['site_commit'],'science_commit':release['scientific_dataset_commit'],'status':'published_verified'}))

@@ -1,3 +1,11 @@
+## 2026-09-20 — Lian fully integrated; anonymous publication check pending
+
+Saved 2026-09-20T09:28:29.387808+00:00. Local candidate dataset0.27.0:546structuredrecords,106routes/variants,46material/componenthubs(35direct+11component),35sourcegroups,30formalreaders. Verified public science remains0.26.0 until the current deployment passes. All530priorcanonicalrecords and trainingeligibility remain unchanged; exact structure–recipe pairs0.
+
+Lian source,canonical/reader,molecular,apparatus,promotion,symbolic context,qualified partial bulk-model and integration audits passed. Integration audit fa7705a07193197993128fb3765a569a5937b8495e118a19272d830eec1a8d85; root model audit 926661a6426520a147a35a1129cbfdb0e4c750467f91a19b8497f719e5b0679a; browser receipt d1fda9e34b27f9d4a4c0b71fd87ef4d1557c4d2c35f8125962b2f8e7e40d0cb0. Actual21stagecontrols/122conditions,DMFviewer,stockcomponents,9/48figurefilter,HRTEMimage,two bulkcoordinate viewers and390pxlayout were checked. Mobile hash wrapping and initialcamera framing corrected with explicit independently audited deltas. Two partial non-H reconstructions preserve unknownoccupancy and absentH; four exactbulk contexts only, no NC/film/DFT/trainingmodel.
+
+Ghosh source revision2 passed 366bb63e0011c3c1b44d5940e0d1e0f396c04e57ab786cf72ac527cc3d1fd6e0, all19pages/36crops/272tablecells. Frozen canonical/reader v1 has21records,33operations,88slots,3stocks,585measurementcontexts and325readeritems; independent review pending. Molecular and apparatus work continue separately. Existing screen-first fixed-cutoff priority, separate later arrivals, one heartbeat and no paidAPI/downloads remain. Project and installed visualization skill updated at e0a034e65322c5519b77438d662355627fc79fedf9d5e778de3100cb25655261. Original PDFs/SI/rawtext/fullpages remain local.
+
 Lian molecular audit subsequently PASSED: 1f23225e481f2170887964ee322527c4f5c75b7632b4e1b7e8783fe5d3375c71. All 45 slots, five stocks and 25 preview panels independently checked; no author corrections. Peng now audits the frozen 21-operation apparatus package. This is newer than the public progress snapshot; scientific publication remains unchanged.
 
 ## 2026-09-20 — Progress deployment verified; current review handoffs

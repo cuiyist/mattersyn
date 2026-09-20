@@ -31,10 +31,13 @@ def check(rel):
 paths += ['records/evans-2010-pbse-qd.html','records/evans-2010-cdse-qd.html','records/evans-2010-molecular9-structure.html','data/records/evans-2010-topse-distillation.json','data/paper-reviews/evans2010.json','data/measurement-display.json','evans2010-protocol.mjs','evans2010-products.mjs','stock-scope.mjs','assets/chemical-registry/models/evans2010-species9-reference-3d.json','assets/figures/evans2010/figure-S15.png','assets/figures/evans2010/figure-S16.png']
 if (D/'data/paper-reviews/morrison2017.json').exists():
  paths += ['records/morrison-2017-monolayer-shell.html','records/morrison-2017-excess-precursor-hot.html','records/morrison-2017-precursor-preparation.html','data/records/morrison-2017-monolayer-shell.json','data/paper-reviews/morrison2017.json','morrison2017-protocol.mjs','assets/chemical-registry/product-contexts.json','assets/chemical-registry/solution-components.json','assets/chemical-registry/models/morrison2017-thf-reference-3d.json','assets/figures/morrison2017/figure-7.png','assets/figures/morrison2017/figure-8.png']
+if (D/'data/paper-reviews/lian2021.json').exists():
+ paths += ['records/lian-2021-bulk-a-route.html','records/lian-2021-bulk-b-route.html','records/lian-2021-nc-a-route.html','records/lian-2021-bulk-characterization.html','data/records/lian-2021-nc-a-route.json','data/paper-reviews/lian2021.json','lian2021-protocol.mjs','lian2021-bulk-viewer.mjs','lian2021-bulk-viewer.css','crystal-viewer.mjs','assets/crystal-references/lian2021-bulk-a-non-h.json','assets/crystal-references/lian2021-bulk-b-non-h.json','assets/crystal-references/lian2021-bulk-a-non-h-partial.cif','assets/crystal-references/lian2021-bulk-b-non-h-partial.cif','assets/figures/lian2021/figure-4.png','assets/figures/lian2021/figure-s11.png']
 with ThreadPoolExecutor(max_workers=5) as pool:checks=list(pool.map(check,paths))
 excluded_status,_,_=anonymous(BASE+'assets/figures/norberg2004/pages/main-01.png?verify='+site_head)
 withheld=['assets/figures/heo2003/pages/main-01.png','assets/figures/heo2003/pages/si-01.png','assets/figures/evans2010/pages/main-01.png','assets/figures/evans2010/pages/si-01.png']
 withheld += ['assets/figures/morrison2017/pages/main-01.png','assets/figures/morrison2017/pages/si-01.png']
+withheld += ['assets/figures/lian2021/pages/main-01.png','assets/figures/lian2021/pages/si-01.png']
 withheld_checks=[{'path':p,'http_status':anonymous(BASE+p+'?verify='+site_head)[0]} for p in withheld]
 readmes=[]
 for name,dest,commit in [('mattersyn',P,project_head),('mattersyn-site',D,site_head)]:
