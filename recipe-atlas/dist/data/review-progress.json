@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-20T14:02:11.870418+00:00",
-  "corpus_scanned_at": "2026-09-20T13:32:16.995108+00:00",
+  "updated_at": "2026-09-20T14:46:20.448333+00:00",
+  "corpus_scanned_at": "2026-09-20T14:19:20.812770+00:00",
   "published": {
     "dataset_version": "0.31.0",
     "record_count": 626,
@@ -15,14 +15,14 @@
     "published_at": "2026-09-20T13:59:40Z"
   },
   "corpus": {
-    "present_files": 14260,
+    "present_files": 14286,
     "source_document_copies": {
-      "incoming": 6887,
+      "incoming": 6913,
       "legacy": 7373
     },
-    "canonical_review_units": 9950,
-    "waiting_review_scopes": 9919,
-    "active_review_claims": 1,
+    "canonical_review_units": 9976,
+    "waiting_review_scopes": 9944,
+    "active_review_claims": 2,
     "confirmed_duplicate_main_aliases": 27
   },
   "count_note": "Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.",
@@ -68,33 +68,59 @@
     {
       "short_label": "Friedfeld et al. (2019)",
       "title": "Conversion of InP Clusters to Quantum Dots",
-      "stage": "Full-source extraction and separate independent comparison",
-      "summary": "The eight-page main article and 25-page supporting information have been read by the extractor and a separate reviewer. Extraction covers cluster conversion, ligand and isotope preparations, kinetics, diffraction and optical results. Final extraction/crop checks and independent comparison remain in progress.",
+      "stage": "Source audit passed; structured records and illustrations under review",
+      "summary": "All eight main-paper pages and 25 SI pages were read and compared independently. The extraction audit passed after four preserved corrections to evidence locators, uncertainty wording and a figure’s specimen assignment. Thirty draft records and 51 selected source crops are being prepared for separate data and website checks.",
       "stages": [
         {
           "label": "Main/SI pairing and complete source reading",
           "status": "complete",
-          "detail": "33 supplied pages inspected separately by author and auditor; original hashes matched intake."
+          "detail": "33 supplied pages inspected independently; original source hashes matched intake."
         },
         {
-          "label": "Extraction and separate audit",
+          "label": "Extraction and independent source audit",
+          "status": "complete",
+          "detail": "Corrected revision 2 passed. Reported numeric values and original figure-crop bytes were retained."
+        },
+        {
+          "label": "Structured records and scientific illustrations",
           "status": "in_progress",
-          "detail": "The extraction author is checking figures and typed data. The independent reader has frozen a separate reading checkpoint; this is not approval of the author package."
+          "detail": "Thirty record drafts; 39 chemical identities, 30 connectivity graphs, 21 reference or computed conformers and five stock definitions. These are proposals pending independent validation and exact record binding."
         },
         {
-          "label": "Structured records and illustrations",
+          "label": "Website checks and publication",
           "status": "pending",
-          "detail": "Schema planning can proceed; canonical freezing waits for resolved source findings."
-        },
-        {
-          "label": "Website and publication",
-          "status": "pending",
-          "detail": "No Friedfeld contribution has been added to the live dataset."
+          "detail": "No Friedfeld contribution is in the live dataset yet."
         }
       ],
       "gaps": [
-        "Source tensions and numerical fit annotations remain explicit.",
-        "Exact specimen links, model provenance and training eligibility require their own review."
+        "Prior cluster coordinates are cited, not supplied as the measured quantum-dot structure.",
+        "Source uncertainties, undefined batch links and concentration-specific stock quantities remain explicit."
+      ]
+    },
+    {
+      "short_label": "Sasongko et al. (2025)",
+      "title": "High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection",
+      "stage": "Complete source extraction; independent audit pending",
+      "summary": "The extractor has read all nine main-paper pages and eleven SI pages. The frozen proposal preserves 48 facts, 21 source operations, 121 table cells and 17 selected source crops. Independent reading and scientific audit are still required.",
+      "stages": [
+        {
+          "label": "Source identity and main/SI pairing",
+          "status": "complete",
+          "detail": "Content-level author pairing checked against the stable local filenames; independent review will verify it separately."
+        },
+        {
+          "label": "Author reading and recipe extraction",
+          "status": "complete",
+          "detail": "All 20 supplied pages read; source conflicts and gaps retained in an immutable author proposal. This does not imply independent approval."
+        },
+        {
+          "label": "Independent audit and website publication",
+          "status": "pending",
+          "detail": "This paper has no published contribution yet."
+        }
+      ],
+      "gaps": [
+        "Reference crystal parameters must remain separate from measured quantum-dot geometry."
       ]
     }
   ],
@@ -195,8 +221,8 @@
   },
   "estimate": {
     "status": "conditional_scenarios_not_validated_forecast",
-    "summary": "The two-month target covers the fixed existing collection. 9,502 provisional cutoff scopes remain pending, plus three nested identity cases. Achievable capacity and the recipe-bearing fraction remain unverified; screening is not complete scientific review.",
-    "current_batch": "Pati supplied main/SI contribution is published. Continue the separate Friedfeld DOI10.1021/acs.inorgchem.8b02945 checkpoint and current fixed-cutoff queue. Whole-corpus throughput and finish date remain unvalidated.",
+    "summary": "The fixed existing collection has 9,502 provisional scopes still pending and three nested identity cases. Screening is complete at the file-disposition level; it is not full scientific review. A validated whole-collection finish forecast is not yet available.",
+    "current_batch": "Pati CeO2 is published. Friedfeld InP has passed the source audit and is in canonical/visual preparation. Sasongko FAPbI3 is being extracted separately. Completed contributions will be published together when their individual checks pass.",
     "scenarios": [],
     "notes": [
       "A closure is either an independently evidenced no-recipe exclusion or a retained contribution passing reading, extraction, audit, website and publication checks.",
