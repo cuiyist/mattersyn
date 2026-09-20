@@ -66,6 +66,9 @@ for row in cm['facts']:
         target=ptr(records[binding['record_id']],binding['pointer'])
         original=ptr(src,binding['source_pointer'])
         quantity(original,target,src['id']+binding['source_pointer']+' '+binding['record_id']+binding['pointer'])
+        if binding['pointer'].startswith('/measurements/'):
+            measurement=ptr(records[binding['record_id']],binding['pointer'].rsplit('/',1)[0])
+            ck('fact specimen '+src['id']+binding['pointer'],measurement['sample_id']==src['sample_scope'])
 for row in cm['table_cells']:
     table,srow,cell=cells[row['source_cell_id']]
     for binding in row['canonical_bindings']:
@@ -93,6 +96,11 @@ for rid,r in records.items():
         ck('retained output '+rid+op['id'],not op.get('retained_fraction') or op['retained_fraction'] in op['outputs'])
     for state in r['material_states']:ck('lineage '+rid+state['id'],set(state['parent_ids'])<=ids)
     for m in r['measurements']:ck('measurement sample '+rid+m['id'],m['sample_id'] in samples)
+    source_materials={x['id']:x for x in source['materials']}
+    for material in r['materials']:
+        original=source_materials[material['id']]
+        ck('material name '+rid+material['id'],material['name']==original['name'])
+        ck('material source caveat '+rid+material['id'],original['scope_note'] in material['notes'])
 report={'status':'mechanical_checks_only_not_final_audit','auditor':'/root/peng1998_reader_assets','version':VERSION,'checks':checks,'check_count':len(checks),'failures':[x for x in checks if not x['passed']],'record_hashes':{rid:sha(C/(rid+'.json')) for rid in records}}
 (A/('transport-checks-'+VERSION+'.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'checks':len(checks),'failures':len(report['failures']),'first_failures':report['failures'][:10]},ensure_ascii=False,indent=2))
