@@ -1,4 +1,5 @@
 """Sync project work into the private GitHub checkout; never includes raw papers or dependencies."""
+raise SystemExit('Historical private-only synchronizer disabled. Use sync_github_public.py and the audited public projection; see current MEMORY.md.')
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,timezone

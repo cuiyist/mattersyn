@@ -1,17 +1,8 @@
-# MatterSyn
+# MatterSyn website
 
-[Open the materials atlas](https://cuiyist.github.io/mattersyn-site/) · [Review progress and queue](https://cuiyist.github.io/mattersyn-site/progress.html) · [Synthesis dataset](https://cuiyist.github.io/mattersyn-site/dataset.html)
+[Open MatterSyn](https://cuiyist.github.io/mattersyn-site/) · [Review progress](https://cuiyist.github.io/mattersyn-site/progress.html) · [Public project, memory, skills and audit history](https://github.com/cuiyist/mattersyn)
 
-MatterSyn organizes source-linked materials synthesis recipes, characterization and properties for readers and future machine-learning datasets. Published pages distinguish reported measurements, author interpretations, external reference structures and illustrative models.
-
-This public project repository contains code, structured data, memory, reusable skills and audit history. Work in progress is explicitly labeled; publication in this repository is not scientific approval. Original papers and SI, full-document caches, credentials and installed dependencies remain local. Historical source-file hashes and paths remain provenance references even where their original documents are excluded.
-
-- `recipe-atlas/`: website, canonical dataset and validation code.
-- `research-assets/`: structured extraction, independent audits and progress checkpoints.
-- `skills/`: reusable curation and publishing workflow.
-- `MEMORY.md`: project decisions, progress and unresolved work.
-
-The website is published from the separate [mattersyn-site repository](https://github.com/cuiyist/mattersyn-site). Saved progress, references, memory and skills are synchronized at meaningful work milestones; reviewed scientific additions are published after their required checks. Earlier website commits are retained as history. Original-document equivalents are excluded from public history, with the unfiltered local project preserved.
+This repository contains the published static materials atlas and machine-readable data. The separate public project repository contains development work and review history. Original papers and SI remain local. Progress snapshots update as review milestones are completed; scientific additions retain their individual audit and source-scope requirements.
 
 ## Papers used in the published website
 
