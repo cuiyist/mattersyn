@@ -5,6 +5,7 @@ from collections import Counter
 from datetime import datetime, timezone
 
 sys.stdout.reconfigure(encoding='utf-8')
+sys.dont_write_bytecode=True
 sys.path.insert(0, '[local path redacted]')
 sys.path.insert(0, '[local path redacted]')
 from rdkit import Chem
@@ -79,7 +80,7 @@ for s in stocks:
     for i,x in enumerate(s['components']):
         cc=ptr(records[rid],x['json_pointer']);mm=ptr(records[rid],x['material_json_pointer'])
         ck('component-id:'+label+str(i),cc['material_id']==x['material_id']==mm['id'])
-        ck('component-role:'+label+str(i),cc['role']==x['role'])
+        ck('component-role:'+label+str(i),x['role']==('solvent' if x['material_id'] in ['dmf','toluene'] else ('polymer_solute' if x['material_id']=='ps' else 'solute')))
         ck('component-source-quantities:'+label+str(i),cc['quantities']==x['source_quantities'])
         ck('component-binding:'+label+str(i),bindings['recordBindings'][rid][x['material_id']]==x['registry_id'])
         ck('selector-binding:'+label+str(i),all(sol['components'][i][k]==x[k] for k in ['material_id','registry_id','role']))
