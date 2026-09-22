@@ -1,3 +1,9 @@
+## Current target — one month, requested September 22, 2026
+
+The user now requests acceleration and completion within one month, interpreted as October22,2026. This supersedes the former November20target; the fixed September20collection and separate later-arrival queue are unchanged. Same full main/SI coverage and per-paper independent audit apply. At9,500unfinished provisional scopes, the target requires317closedscopes/day over30days or400/day over24productiondays after calibration/repair reserve. This is a capacity requirement, not measured performance or a promise. Paid API work remains unapproved; a resource-choice question is pending. The existing$200pilot proposal is concrete but its runner/budget reservation mechanism is not yet implemented or authorized for paid execution. Read research-assets/one-month-20260922/decision.json and ACCELERATION_PLAN.md.
+
+Immediate efficiency work: cached source extraction/rendering, shared-data-driven illustrations, parallel source/audit stages, and batched changed-file-only publication. Root found637identical-role/content bundle candidates in screening hashes; they require independent actual-content validation before consolidation. Common publisher error pages may have identical bytes while referring to different intended papers; never merge those paper identities or count them as no-recipe/completed. No queue reduction has been applied.
+
 ## Current instruction — corpus review resumed September 22, 2026
 
 The user approved the improved website and explicitly asked to proceed with the remaining papers and SI and estimate completion time. This supersedes the September 20 pause. The fixed September 20 collection remains the completion scope; later-arrival papers stay separate. Resume the existing local pipeline and heartbeat with independent per-paper audits and the all-material Reader 0.34.1 standard. Paid API work remains deferred; do not download additional papers.
