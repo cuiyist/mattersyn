@@ -1,3 +1,9 @@
+# Current Reader build — September 22, 2026
+
+All 50 material/component hubs and 123 synthesis routes use the shared Reader. Run the dataset, reader views, evidence views, paper reviews, atlas, and inventory builders after their respective reviewed data changes; run `scripts/build_reader_metadata.py` **last**, after dataset and atlas outputs are current. `scripts/build_reader_views.py` generates the common material page, CdSe entrypoint, and four named method aliases from `templates/material-reader.html`. It preserves the earlier `*-evidence.html` editions. Do not use historical one-off redesign scripts as build steps.
+
+For atlas-wide changes, verify every indexed material and synthesis route. The Reader/Data views share canonical records; metadata completeness and page rendering do not establish a new scientific review. Validate source-specific gaps and representative controls separately. The sections below are historical release notes; their old counts and workflow preferences are not the current project state.
+
 ## Current contribution — Heath et al. (1996), Ge/Si
 
 Dataset 0.6.0 adds two template variants of selective Ge growth on patterned Si, one shared characterization procedure and one incomplete unpatterned-growth observation. Both template variants share one wafer exposure; they are not independent runs. Six supplied main pages were fully read and independently audited; matching SI was not located or verified. All six figures, three equations, seventeen citation contexts and forty-four source-evidence items are available. Raman and near-IR peaks remain prose-only evidence. No measured atomic structure or locally verified Ge reference CIF is available.
