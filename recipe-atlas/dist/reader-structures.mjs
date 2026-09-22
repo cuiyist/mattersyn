@@ -1,6 +1,6 @@
-import {mountParticleContext} from './reader-particle.mjs';
+import {mountParticleContext} from './reader-particle.mjs?v=0.34.1';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
-import {elementLegend,atomColors} from './chemical-viewer.mjs';
+import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.34.1';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
 let registry;
 const colors=atomColors;
@@ -117,7 +117,7 @@ export async function mountReaderStructures(host,r,presentation={}){
  const options=[['cell','Unit cell'],['particle','Particle morphology'],...(finite.length?[['finite','Atomistic particle']]:[])];
  for(const [key,label] of options){const panel=el('div',undefined,'reader-structure-panel');panel.id='reader-structure-'+key;panel.setAttribute('role','tabpanel');panel.hidden=true;panels.append(panel);const b=button(label,()=>select(key));b.setAttribute('role','tab');b.setAttribute('aria-controls',panel.id);b.dataset.view=key;tabs.append(b);}
  async function select(key){for(const b of tabs.children)b.setAttribute('aria-selected',String(b.dataset.view===key));for(const p of panels.children)p.hidden=p.id!=='reader-structure-'+key;if(loaded.has(key))return;loaded.add(key);const panel=panels.querySelector('#reader-structure-'+key);
-  try{if(key==='particle'){mountParticleContext(panel,r,presentation);return;}
+  try{if(key==='particle'){await mountParticleContext(panel,r,presentation);return;}
   const entries=key==='finite'?finite:refs;if(entries.length){await mountReferenceChoices(panel,entries,r,key==='finite');return;}
   if(key==='cell'&&r.lineage.source_group==='heo2003'){const {mountHeoAverage}=await import('./heo2003-average-viewer.mjs');if(await mountHeoAverage(panel,r))return;}
   if(key==='cell'&&r.lineage.source_group==='lian2021'){const {mountLianBulk,eligibleBulkContexts}=await import('./lian2021-bulk-viewer.mjs');if(eligibleBulkContexts(r).length){await mountLianBulk(panel,r);return;}}

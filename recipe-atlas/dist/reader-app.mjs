@@ -1,8 +1,8 @@
 import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL} from './reader-utils.mjs';
 import {quantityValue} from './quantity-value.mjs';
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs';
-import {mountProtocol} from './protocol-visuals.mjs';
-import {mountReaderStructures} from './reader-structures.mjs';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.34.1';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.34.1';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.34.1';
 const cache=new Map();
 function json(path){if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
 export function formatQuantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',uL:'µL',umol:'µmol',angstrom:'Å',um:'µm',uM:'µM',volume_parts:'volume parts',mass_percent:'wt%',volume_percent:'vol%'})[q.unit]||q.unit||'';if(v===null)return q.raw_text||q.qualifier||'Not reported';return (q.approximate?'≈':'')+v+(unit?' '+unit:'');}

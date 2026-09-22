@@ -11,9 +11,13 @@
 
 For reused assets, check chemically specific bond distances as well as broad geometric bounds; an in-range number can still be wrong for the named molecule. Retain the original geometry's provenance, but move prior-paper roles and conditions into clearly marked reuse history so they cannot become current-source claims. When a reference CID describes an unlabeled parent, identify it as parent connectivity and attribute isotope substitutions separately to the source; do not present that CID as the isotopologue identity.
 
-Use rotate/zoom/reset controls, clear legends, keyboard support and an informative fallback. A 2D model should pan/zoom, not suggest meaningful out-of-plane geometry. Structure provenance must be available without requiring users to understand the software implementation.
+Use rotate/zoom/reset controls, clear legends, keyboard support and an informative fallback. For MatterSyn, omit atom labels from 3D molecular figures; identify elements with colors and a legend, and show clicked-atom identity outside the figure. Preserve chemically essential labels in 2D connectivity drawings. A 2D model should pan/zoom, not suggest meaningful out-of-plane geometry. Structure provenance must be available without requiring users to understand the software implementation.
 
 For stock views, let readers inspect both solute and solvent components with their roles and provenance. Independent component conformers are explanatory models, not a measured solution complex or complete speciation analysis. Keep upstream preparation components separate from the eventual injection stock unless the source explicitly connects their compositions.
+
+## Particle morphology illustrations
+
+The user authorizes inferred morphology drawings based on cited literature and TEM. A schematic can interpret rounded, faceted, elongated, branched, supported or layered appearance without requiring a full atomic reconstruction. Identify the source sample or figure, explain the basis briefly, and label the drawing as an interpretation. Qualify uncertain thickness, interfaces, relative dimensions and viewing direction. Do not modify measured micrographs, silently insert inferred shapes into canonical measurements, or count a schematic as a verified coordinate–recipe pair. Source-specific schematic colors need not represent optical color or elemental mapping. Keep unrelated samples, washed fractions, controls and proposed intermediates separate.
 
 ## Crystal models
 

@@ -61,7 +61,7 @@ export async function mountEvansSpecies9(host, record, options = {}) {
   const context = evansSpecies9Context(record, options.sampleId);
   if (!host || !context) return { mounted: false, reason: 'outside_species9_scope' };
   if (host.querySelector('[data-evans-species9]')) return { mounted: false, reason: 'already_mounted' };
-  const api = options.chemicalApi || await import('./chemical-viewer.mjs');
+  const api = options.chemicalApi || await import('./chemical-viewer.mjs?v=0.34.1');
   const data = options.data || await api.chemicalRegistry();
   const entry = evansSpecies9Entry(data, context);
   if (!entry) return { mounted: false, reason: 'qualified_registry_entry_unavailable' };

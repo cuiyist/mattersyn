@@ -56,7 +56,8 @@ This public project repository contains code, structured data, memory, reusable 
 The website is published from the separate [mattersyn-site repository](https://github.com/cuiyist/mattersyn-site). Saved progress, references, memory and skills are synchronized at meaningful work milestones; reviewed scientific additions are published after their required checks. Earlier website commits are retained as history. Original-document equivalents are excluded from public history, with the unfiltered local project preserved.
 
 '''
-(ROOT/'README.md').write_text(intro+refs,encoding='utf8')
+visual_policy='Morphology drawings may interpret cited literature and TEM and are labeled as schematics; they are separate from measured coordinates and training labels. Shared 3D molecular figures use element colors and legends without atom-label overlays.\n\n'
+(ROOT/'README.md').write_text(intro+visual_policy+refs,encoding='utf8')
 site_intro='''# MatterSyn website
 
 [Open MatterSyn](https://cuiyist.github.io/mattersyn-site/) · [Review progress](https://cuiyist.github.io/mattersyn-site/progress.html) · [Public project, memory, skills and audit history](https://github.com/cuiyist/mattersyn)
@@ -64,7 +65,7 @@ site_intro='''# MatterSyn website
 This repository contains the published static materials atlas and machine-readable data. The separate public project repository contains development work and review history. Original papers and SI remain local. Progress snapshots update as review milestones are completed; scientific additions retain their individual audit and source-scope requirements.
 
 '''
-(DIST/'README.md').write_text(site_intro+refs,encoding='utf8')
+(DIST/'README.md').write_text(site_intro+visual_policy+refs,encoding='utf8')
 report={'created_at':datetime.now(timezone.utc).isoformat(),'dataset_version':manifest['dataset_version'],
  'primary_sources':len(primary),'additional_record_sources':len(other),'canonical_records':len(records),
  'source_manifest_sha256':hashlib.sha256((DIST/'data/dataset-manifest.json').read_bytes()).hexdigest(),

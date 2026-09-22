@@ -1,4 +1,4 @@
-import {mountProtocolReferences} from './protocol-references.mjs';
+import {mountProtocolReferences} from './protocol-references.mjs?v=0.34.1';
 import {buildSasongko2025Scene,createSasongko2025Art,createSasongko2025ConditionGrid} from './sasongko2025-protocol.mjs';
 import {buildFriedfeld2019Scene,createFriedfeld2019Art,createFriedfeld2019ConditionGrid} from './friedfeld2019-protocol.mjs';
 import {buildPati2009Scene,createPati2009Art,createPati2009ConditionGrid} from './pati2009-protocol.mjs';

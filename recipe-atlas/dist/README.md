@@ -4,6 +4,8 @@
 
 This repository contains the published static materials atlas and machine-readable data. The separate public project repository contains development work and review history. Original papers and SI remain local. Progress snapshots update as review milestones are completed; scientific additions retain their individual audit and source-scope requirements.
 
+Morphology drawings may interpret cited literature and TEM and are labeled as schematics; they are separate from measured coordinates and training labels. Shared 3D molecular figures use element colors and legends without atom-label overlays.
+
 ## Papers used in the published website
 
 Generated from dataset **0.34.0**, containing **41 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.

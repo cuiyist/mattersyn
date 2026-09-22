@@ -13,6 +13,8 @@ This public project repository contains code, structured data, memory, reusable 
 
 The website is published from the separate [mattersyn-site repository](https://github.com/cuiyist/mattersyn-site). Saved progress, references, memory and skills are synchronized at meaningful work milestones; reviewed scientific additions are published after their required checks. Earlier website commits are retained as history. Original-document equivalents are excluded from public history, with the unfiltered local project preserved.
 
+Morphology drawings may interpret cited literature and TEM and are labeled as schematics; they are separate from measured coordinates and training labels. Shared 3D molecular figures use element colors and legends without atom-label overlays.
+
 ## Papers used in the published website
 
 Generated from dataset **0.34.0**, containing **41 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.

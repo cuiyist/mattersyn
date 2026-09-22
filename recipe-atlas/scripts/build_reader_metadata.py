@@ -344,6 +344,29 @@ for rid in ROUTES:
         'intuition':'available' if intuitions.get(sid) else 'no_reviewed_explanation_selected',
         'product_facts':'available' if shortlist else 'no_named_nonnull_product_facts'}}
 
+# Explicit illustration contexts expose existing figure specimens, not new batch joins.
+morphology_path=SITE/'dist/data/reader-morphology-interpretations.json'
+if morphology_path.exists():
+    morphology=read(morphology_path)
+    for key,item in morphology['entries'].items():
+        if sha(SITE/item['source_hash_scope'])!=item['source_sha256']:
+            raise ValueError('Morphology interpretation requires source recheck: '+key)
+    for rid,extensions in morphology.get('additional_contexts',{}).items():
+        for extension in extensions:
+            source_id=extension['record_id'];source_record=ALL_RECORDS[source_id]
+            if source_record['lineage']['source_group']!=records[rid]['source_id']:
+                raise ValueError('Cross-source morphology context: '+rid)
+            facts,contexts=products(source_record,f'data/records/{source_id}.json')
+            selected=set(extension['sample_ids'])
+            if not selected.issubset({c['sample_id'] for c in contexts}):
+                raise ValueError('Missing morphology specimen: '+source_id)
+            for context in contexts:
+                if context['sample_id'] not in selected:continue
+                context['record_id']=source_id
+                context['label']+=' · '+extension['scope_label']
+                records[rid]['productContexts'].append(context)
+            records[rid]['allProductFacts'].extend(f for f in facts if f['sample_id'] in selected)
+
 materials={hid:{'id':hid,'formula':h['formula'],'record_ids':h['record_ids'],
     'component_only':h.get('component_only',False),
     'scopeLabel':('Component in a reported architecture; route results and figures describe their original specimen, not this component in isolation.' if h.get('component_only') else 'Source-specific methods and samples are kept separate.'),
