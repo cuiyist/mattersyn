@@ -71,3 +71,15 @@ report={'created_at':datetime.now(timezone.utc).isoformat(),'dataset_version':ma
  'in_progress_sources_added':False,'source_readme':'README.md','site_readme':'recipe-atlas/dist/README.md'}
 (ROOT/'research-assets/reference-readme-generation.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report,indent=2))
+
+# Independent structure sources do not increase the reviewed synthesis-paper count.
+registry=read(DIST/'assets/crystal-references/registry.json')
+modelrefs=['\n## Crystal reference models\n','Reference models support the Reader and are excluded from measured synthesis labels. Full unit-cell provenance, limitations and licenses are in the [reference registry](https://cuiyist.github.io/mattersyn-site/assets/crystal-references/registry.json).\n']
+seen=set()
+for item in registry['entries']:
+ if not item.get('record_ids') or item['sourceUrl'] in seen:continue
+ seen.add(item['sourceUrl']);modelrefs.append('- ['+item['name']+']('+item['sourceUrl']+'). '+item.get('sourceType','Qualified existing reference').replace('_',' ')+'.\n')
+for name in ['README.md','REFERENCES.md']:
+ for folder in [ROOT,DIST]:
+  target=folder/name
+  target.write_text(target.read_text(encoding='utf8').split('\n## Crystal reference models\n')[0]+'\n'.join(modelrefs),encoding='utf8')

@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Generated from dataset **0.33.0**, containing **41 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.
+Generated from dataset **0.34.0**, containing **41 primary source groups**. The reference list follows published records, not all indexed documents. A paper can contribute several records; records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Main paper reviewed; SI unverified](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
@@ -87,3 +87,61 @@ Generated from dataset **0.33.0**, containing **41 primary source groups**. The 
 - Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park (2025). High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection. *The Journal of Physical Chemistry C*, 129, 15342–15350. [10.1021/acs.jpcc.5c05144](https://doi.org/10.1021/acs.jpcc.5c05144). [Supplied main paper and matched SI reviewed](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=sasongko2025).
 
 Molecular and crystal reference databases and original-figure provenance are also credited beside the corresponding website assets. A bibliography entry does not grant additional rights to third-party figures or data.
+
+## Crystal reference models
+
+Reference models support the Reader and are excluded from measured synthesis labels. Full unit-cell provenance, limitations and licenses are in the [reference registry](https://cuiyist.github.io/mattersyn-site/assets/crystal-references/registry.json).
+
+- [ZnO wurtzite bulk reference](https://www.crystallography.net/cod/9004178.html). literature bulk reference.
+
+- [FCC iridium bulk reference](https://www.crystallography.net/cod/9008470.html). literature bulk reference.
+
+- [Zinc-blende InP bulk reference](https://www.crystallography.net/cod/1010146.html). literature bulk reference.
+
+- [Orthorhombic CsPbBr3 bulk reference](https://www.crystallography.net/cod/4510745.html). Qualified existing reference.
+
+- [Rocksalt CoO bulk reference](https://www.crystallography.net/cod/1533087.html). Qualified existing reference.
+
+- [Partially inverse CoFe2O4 bulk reference](https://www.crystallography.net/cod/1533163.html). Qualified existing reference.
+
+- [Ideal diamond-Si bulk comparison reference](https://doi.org/10.1021/j100108a019). Qualified existing reference.
+
+- [Bulk wurtzite CdSe reference · core comparison](https://www.crystallography.net/cod/9016056.html). literature bulk reference.
+
+- [Ideal rock-salt PbSe reference](https://doi.org/10.1021/nl0345116). constructed lattice reference.
+
+- [CeO2 fluorite reference](https://www.crystallography.net/cod/9009008.html). literature bulk reference.
+
+- [Ag face-centered cubic reference](https://www.crystallography.net/cod/9008459.html). literature bulk reference.
+
+- [Ge diamond cubic reference](https://www.crystallography.net/cod/9008567.html). literature bulk reference.
+
+- [FAPbI3 computed pseudo-cubic framework (P1 ordered model) reference](https://github.com/WMD-group/hybrid-perovskites/blob/master/2014_cubic_halides_PBEsol/FAPbI3.cif). computed reference.
+
+- [CdS wurtzite reference](https://www.crystallography.net/cod/9008862.html). literature bulk reference.
+
+- [CdS zinc blende reference](https://www.crystallography.net/cod/9000067.html). literature bulk reference.
+
+- [Pt face-centered cubic reference](https://www.crystallography.net/cod/9008480.html). literature bulk reference.
+
+- [SnO2 cassiterite (rutile type) reference](https://www.crystallography.net/cod/9009082.html). literature bulk reference.
+
+- [ZnAl2O4 normal spinel reference](https://www.crystallography.net/cod/9015620.html). literature bulk reference.
+
+- [PbS rock salt reference](https://www.crystallography.net/cod/9013403.html). literature bulk reference.
+
+- [ZnS zinc blende reference](https://www.crystallography.net/cod/1100043.html). literature bulk reference.
+
+- [ZnS wurtzite reference](https://www.crystallography.net/cod/1100044.html). literature bulk reference.
+
+- [ZnSe zinc blende reference](https://www.crystallography.net/cod/9008857.html). literature bulk reference.
+
+- [ZnSe wurtzite reference](https://www.crystallography.net/cod/9008879.html). literature bulk reference.
+
+- [InAs zinc blende reference](https://www.crystallography.net/cod/9008851.html). literature bulk reference.
+
+- [CsMnCl3 rhombohedral R-3m, hexagonal axes reference](https://www.crystallography.net/cod/2107040.html). literature bulk reference.
+
+- [Si diamond cubic reference](https://www.crystallography.net/cod/9008565.html). literature bulk reference.
+
+- [Constructed zinc-blende CdSe reference](https://researchconnect.buffalo.edu/en/publications/growth-of-cubic-zinc-blende-cdse-by-molecular-beam-epitaxy/). constructed lattice reference.

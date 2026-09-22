@@ -39,6 +39,8 @@ When the atlas will supply model-training examples, read [references/training-da
 
 ## Build the interactive explanation
 
+For a cross-material interface redesign or structure–recipe metric change, read [references/reader-and-training-views.md](references/reader-and-training-views.md). It defines the paired Reader/Data views and preserves specimen identity, unknown contexts, complete evidence and task-specific training admission.
+
 Read [references/visuals-and-models.md](references/visuals-and-models.md) when building molecular viewers, crystal models or apparatus scenes.
 
 Use the existing project architecture and current Sites building/hosting skills when they apply. Only the site-owning agent edits the site and performs its lifecycle operations. Delegate bounded extraction, model assets, or scientific review when useful; subagents return results outside the site checkout.

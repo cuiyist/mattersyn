@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "dataset_version": "0.33.0",
+  "dataset_version": "0.34.0",
   "records": 675,
   "recipe_records": 237,
   "shared_procedures": 274,
@@ -26,7 +26,7 @@
     "Allowlisted training inputs"
   ],
   "warnings": [
-    "No verified exact experimental CIF-to-complete-recipe pairs.",
+    "Sample-coordinate availability, explicit source links and exact-task readiness are reported separately in structure_recipe_coverage; none is an independent-experiment count.",
     "Literature seed is too small for cross-study performance estimates.",
     "PbS benchmark rows are published numeric experiments, not individually reviewed complete protocols. The baseline is evaluated separately within that study.",
     "Five selected PbS failure rows are retained as evidence with null continuous targets."
@@ -34,6 +34,32 @@
   "curated_recipes": 137,
   "contextual_observation_records": 164,
   "published_benchmark_rows": 100,
+  "structure_recipe_coverage": {
+    "schema_version": "1.0",
+    "scope": "Canonical measured-sample coordinate links only. Reachability is a local file check, not a new structural validation. External reference/illustrative viewers and unregistered source structures are outside this inventory. Assets, documentary links and task-ready records are different units; none counts independent experimental batches.",
+    "availability_assessed": true,
+    "counts": {
+      "sample_coordinate_assets": 1,
+      "records_with_sample_coordinates": 2,
+      "source_verified_explicit_links": 1,
+      "exact_task_ready_records": 0
+    },
+    "asset_representation_counts": {
+      "molecular_structure": 1
+    },
+    "explicit_link_representation_counts": {
+      "molecular_structure": 1
+    },
+    "ready_record_ids": [],
+    "exclusion_reason_record_counts": {
+      "audited_task_profile_missing": 675,
+      "explicit_sample_recipe_link_missing": 1,
+      "measured_label_not_approved": 2,
+      "no_sample_coordinate_asset": 673,
+      "source_review_required": 100,
+      "task_not_requested": 654
+    }
+  },
   "queue_count": 37,
   "queue_families": 14
 }
