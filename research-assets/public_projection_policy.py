@@ -46,7 +46,7 @@ def exclude_path(rel):
     p=normalize_path(rel);low=p.lower();name=PurePosixPath(low).name;ext=PurePosixPath(low).suffix
     paths,allow=_baseline()
     if any(x=='.git' for x in low.split('/')):return 'git_metadata_never_copied'
-    if low.startswith('research-assets/') and '/private/' in low:return 'explicit_private_source_workspace'
+    if low.startswith('research-assets/') and any(part=='private' or part.startswith('private-') for part in low.split('/')):return 'explicit_private_source_workspace'
     if p in paths:return paths[p]
     if ext in ('.pdf','.doc','.docx','.ppt','.pptx','.zip','.xls','.xlsx'):
         return 'original_document_or_archive_local_only'
