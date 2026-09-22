@@ -2,6 +2,7 @@
 from pathlib import Path
 from datetime import datetime,timezone
 import hashlib,json,re
+from html import escape
 ROOT=Path(__file__).resolve().parent;SITE=ROOT.parent.parent/'recipe-atlas';DIST=SITE/'dist'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 queue=read(ROOT/'queue-status.json');counts=queue['counts'];release=read(ROOT/'latest-publication.json')
@@ -29,7 +30,8 @@ for name in ('index.html','library.html','dataset.html','inventory.html','progre
  if name=='index.html':
   s=re.sub(r'<!--review-progress-start-->.*?<!--review-progress-end-->','',s,flags=re.S)
   current=editorial['current_work']
-  state='Active papers are published. Work is paused for joint review; no new papers will start.' if editorial.get('estimate',{}).get('status')=='paused_for_joint_review' else current[0]['short_label']+' remains in preparation.' if current else 'No paper is currently under review.'
+  state='Active papers are published. Work is paused for joint review; no new papers will start.' if editorial.get('estimate',{}).get('status')=='paused_for_joint_review' else current[0]['short_label']+': '+current[0]['stage']+'.' if current else 'No paper is currently under review.'
+  state=escape(state)
   widget='<!--review-progress-start--><section class="progress-teaser" aria-label="Current review progress"><div><span class="eyebrow">REVIEW PROGRESS</span><p id="review-progress-brief">'+state+'</p><small id="review-progress-time">Progress is saved at review milestones.</small></div><a href="progress.html">Open the review queue →</a></section><!--review-progress-end-->'
   s=s.replace('<div class="element-controls">',widget+'<div class="element-controls">',1)
   if 'progress.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="progress.css?v=1"></head>')

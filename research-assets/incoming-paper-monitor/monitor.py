@@ -506,10 +506,15 @@ def claimable(ledger, key, now, require_main=True, rankings=None):
             and eligible(ledger, key, now, require_main=require_main))
 
 
-def set_priority(path: Path, policy, now=None):
+def set_priority(path: Path, policy, now=None, expected_ledger_sha256=None):
     """Validate and atomically activate explicit selection policy under the lock."""
     now = time.time_ns() if now is None else now
     with locked_ledger(path):
+        if expected_ledger_sha256 is not None:
+            if not isinstance(expected_ledger_sha256, str) or not re.fullmatch(r'[0-9a-f]{64}', expected_ledger_sha256):
+                raise ValueError('Expected ledger SHA256 must be a lowercase SHA256 digest.')
+            if hashlib.sha256(path.read_bytes()).hexdigest() != expected_ledger_sha256:
+                raise RuntimeError('Ledger changed before priority activation; refresh the partition and proposal.')
         ledger = read_ledger(path)
         if not isinstance(policy, dict):
             raise ValueError("Priority policy must be an object.")

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-22T22:52:36.759565+00:00",
-  "corpus_scanned_at": "2026-09-22T22:17:11.608328+00:00",
+  "updated_at": "2026-09-22T23:36:09.452797+00:00",
+  "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.34.0",
     "record_count": 675,
@@ -12,16 +12,16 @@
     "public_source_group_count": 41,
     "formal_source_reader_count": 36,
     "exact_structure_recipe_count": 0,
-    "published_at": "2026-09-22T22:28:55.057077+00:00"
+    "published_at": "2026-09-22T22:58:53.326180+00:00"
   },
   "corpus": {
-    "present_files": 17608,
+    "present_files": 17700,
     "source_document_copies": {
-      "incoming": 10235,
+      "incoming": 10327,
       "legacy": 7373
     },
-    "canonical_review_units": 12668,
-    "waiting_review_scopes": 12634,
+    "canonical_review_units": 12729,
+    "waiting_review_scopes": 12695,
     "active_review_claims": 2,
     "confirmed_duplicate_main_aliases": 27
   },
@@ -66,10 +66,43 @@
   },
   "current_work": [
     {
+      "short_label": "Collection screening",
+      "title": "Synthesis–structure evidence and source verification",
+      "stage": "Automated pass audited; source checks and format recovery underway",
+      "summary": "The fixed collection has 9,532 provisional groups and 13,831 top-level document copies. The screen nominated 52 atomic-evidence, 655 phase-link and 433 morphology-link groups. These categories guide review; they do not certify synthesis–structure pairs.",
+      "stages": [
+        {
+          "label": "Cached-text nomination pass",
+          "status": "complete",
+          "detail": "Every fixed-cutoff copy has a disposition; three nested identity cases remain separately held."
+        },
+        {
+          "label": "Independent method checks",
+          "status": "complete",
+          "detail": "Coverage, source exceptions, sample-label counterexamples and previously checked coordinate-table benchmarks passed."
+        },
+        {
+          "label": "Unresolved formats",
+          "status": "in_progress",
+          "detail": "238 copies remain unresolved: 187 legacy Word, 4 spreadsheet, 22 archive, 24 PDF and 1 unidentified file. These are mostly supplements."
+        },
+        {
+          "label": "Priority source verification",
+          "status": "in_progress",
+          "detail": "Inspect the first ten previously unreviewed atomic-evidence nominations; separate product, precursor, bulk-comparison and reference structures."
+        },
+        {
+          "label": "Further website contributions",
+          "status": "pending",
+          "detail": "Resume from verified priorities after screening gaps are addressed; each contribution still requires its own audit."
+        }
+      ]
+    },
+    {
       "short_label": "Saini et al. (2023)",
       "title": "Natural amine-targeted carbon quantum dots and nanoaminocatalysis",
       "stage": "Extraction frozen; retained for pair screening",
-      "summary": "12-page main article and 107-page matched supplement. Carbon-dot preparation, catalytic protocols, characterization and product spectra are being reviewed; this is not a published contribution yet.",
+      "summary": "Complete 12-page main article and 107-page supplement coverage is recorded, and extraction is frozen. The separate scientific audit remains pending; this contribution is not yet published.",
       "stages": [
         {
           "label": "Source reading and pairing",
@@ -102,7 +135,7 @@
       "short_label": "Chen et al. (2018)",
       "title": "Cs₄PbBr₆/CsPbBr₃ composites: synthesis, luminescence and formation mechanism",
       "stage": "Source audit passed; retained for pair screening",
-      "summary": "8-page main article and 10-page matched supplement. Composite variants, a separate CsPbBr₃ comparison route, scale-up and device preparation are being extracted. Refined/fixed coordinate tables require sample- and phase-specific qualification.",
+      "summary": "The 8-page main article and 10-page matched supplement have a complete extraction and a passed independent source audit. Composite variants, scale-up, comparison synthesis and device preparation are preserved. Host refinements and fixed minority-phase coordinates retain separate qualifications.",
       "stages": [
         {
           "label": "Source reading and pairing",
@@ -133,6 +166,10 @@
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-22T23:34:17.771504+00:00",
+      "text": "Corrected automated screen audited: 9,532 provisional groups, 13,831 copies and three nested identity holds. Nominations: 52 atomic-evidence, 655 phase-link and 433 morphology-link groups. All 238 manual format/text cases are retained for further screening. No scientific records or training pairs were added."
+    },
     {
       "at": "2026-09-22T22:52:34.669943+00:00",
       "text": "Workflow changed at the user’s request: screen every source in the fixed collection for usable synthesis–structure pairs before further website builds. Chen source extraction passed its independent audit; Saini complete main/SI extraction is preserved for later audit. No new scientific records published."
@@ -227,8 +264,8 @@
     }
   ],
   "workflow": {
-    "summary": "Screen the full fixed collection for high-quality synthesis–structure pairs first, then build readers for the strongest verified contributions. Prior keyword screening is being upgraded with source validity, recipe completeness, structure type and explicit specimen–recipe linkage checks.",
-    "screening_scope": "The fixed-cutoff screen accounts for all 13,831 top-level document copies: 13,593 text-screened candidates and 238 manual format/text cases. Three nested PDFs were separately screened and remain held for identity reconciliation. Later arrivals stay outside the fixed completion target. Screening is not full reading or a no-recipe exclusion.",
+    "summary": "The corrected automated pair-nomination pass is complete and independently checked. Recover unresolved source formats and inspect priority evidence before further website builds.",
+    "screening_scope": "All 13,831 top-level cutoff copies are accounted for, plus three nested identity cases. The 238 unresolved format/text cases remain explicit; this is not full manual screening or complete reading of every paper.",
     "steps": [
       "Account for every fixed-cutoff main/SI source and retain invalid, missing or mispaired documents as explicit unresolved cases.",
       "Rank measured/refined atomic-structure candidates with usable recipes first; keep phase, size and morphology-linked recipes as a separate useful tier.",
@@ -236,29 +273,29 @@
       "Retain all screened candidates and gaps; external reference cells, simulations and molecular-precursor coordinates do not become measured product pairs.",
       "Build and publish academic material readers only after the selected paper’s source, data, figure and independent audit gates pass."
     ],
-    "capacity": "Existing extraction packages are preserved. Workers are preparing the pair-quality ranker, independent rubric/benchmark checks and source-validity exceptions before further website builds.",
+    "capacity": "Parallel work now covers legacy-format recovery and original-source checks of atomic-evidence nominations. Existing source extractions remain preserved.",
     "paid_processing": "The paid API pilot is deferred. Work continues with the existing local setup.",
-    "screened_at": "2026-09-20T04:15:45.301305+00:00",
+    "screened_at": "2026-09-22T23:34:17.771504+00:00",
     "fixed_pending_provisional_scopes": 9500,
     "manual_file_dispositions": 238,
     "nested_identity_cases": 3,
     "later_arrival_files_at_screen": 31,
-    "scope_counts_updated_at": "2026-09-22T22:25:11.275676+00:00",
-    "later_arrival_groups_current": 3136,
-    "later_arrival_file_candidates_current": 3777
+    "scope_counts_updated_at": "2026-09-22T23:16:21.476670+00:00",
+    "later_arrival_groups_current": 3197,
+    "later_arrival_file_candidates_current": 3869
   },
   "estimate": {
-    "status": "recalibrating_after_pair_priority_screen",
-    "summary": "October22 remains the requested target. The immediate milestone is a complete pair-oriented screen of the fixed collection, followed by verified priority candidates for website curation. A revised finish estimate will use the number and complexity of eligible papers; the old19–28month extrapolation assumed comparable full curation for every provisional group and is not a forecast for this priority workflow.",
-    "current_batch": "Chen’s18-page main/SI source package passed its separate independent audit. Saini’s119-page extraction is frozen and awaiting independent audit. Both are preserved while pair-oriented screening is completed; neither new contribution is published yet.",
+    "status": "recalibrating_after_original_source_priority_checks",
+    "summary": "October 22 remains the requested target. The automated screen has narrowed the first atomic-evidence inspection list to 52 provisional groups, but their usable recipe links and structural roles still need verification. We will estimate priority curation after those checks and the remaining format recovery; this is not a promise to fully curate all 9,500 unfinished scopes by that date.",
+    "current_batch": "Chen’s complete source extraction has passed its separate audit. Saini’s complete extraction is frozen with audit pending. Both are preserved while collection screening is completed.",
     "scenarios": [],
     "notes": [
-      "Screened candidate, source-verified pair, independently audited contribution and published record are separate states.",
-      "A strong pair needs useful synthesis conditions and a defensible link to the characterized specimen. Atomic coordinates have highest priority, while phase/size/morphology pairs remain separately useful.",
-      "Identical promotional or error payloads under unrelated filenames do not establish duplicate paper identity or scientific completion. Source-role and identity exceptions remain visible.",
-      "The existing collection contains13,831top-level document copies and three nested identity cases. Later-arrival papers remain separate.",
-      "Screening all papers and publishing a selected priority subset is not the same as completing full curation of every paper. Remaining work will be reported explicitly.",
-      "Paid API processing remains unapproved. Additional capacity can be considered after the verified priority workload is known."
+      "Counts are paper-group nominations, not verified recipes, physical samples or training pairs.",
+      "Atomic-evidence nominations can refer to a product, bulk comparator, molecular precursor or unavailable deposit; source-specific review is required.",
+      "All supplied files are accounted for, but 238 format/text cases still need recovery or manual inspection. This is not complete reading of every paper.",
+      "Original cached text lacks historical content hashes; current source verification remains necessary.",
+      "Lower-signal, unlinked and unresolved papers remain in the collection. No no-recipe exclusions were assigned.",
+      "No paid API processing has been authorized or started."
     ]
   }
 }
