@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-20T17:16:39.935680+00:00",
-  "corpus_scanned_at": "2026-09-20T14:19:20.812770+00:00",
+  "updated_at": "2026-09-22T22:25:11.344352+00:00",
+  "corpus_scanned_at": "2026-09-22T22:17:11.608328+00:00",
   "published": {
-    "dataset_version": "0.33.0",
+    "dataset_version": "0.34.0",
     "record_count": 675,
     "synthesis_route_count": 123,
     "material_hub_count": 50,
@@ -12,17 +12,17 @@
     "public_source_group_count": 41,
     "formal_source_reader_count": 36,
     "exact_structure_recipe_count": 0,
-    "published_at": "2026-09-20T17:11:29Z"
+    "published_at": "2026-09-22T21:13:47.004167+00:00"
   },
   "corpus": {
-    "present_files": 14286,
+    "present_files": 17608,
     "source_document_copies": {
-      "incoming": 6913,
+      "incoming": 10235,
       "legacy": 7373
     },
-    "canonical_review_units": 9976,
-    "waiting_review_scopes": 9944,
-    "active_review_claims": 0,
+    "canonical_review_units": 12668,
+    "waiting_review_scopes": 12634,
+    "active_review_claims": 2,
     "confirmed_duplicate_main_aliases": 27
   },
   "count_note": "Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.",
@@ -64,8 +64,79 @@
       }
     ]
   },
-  "current_work": [],
+  "current_work": [
+    {
+      "short_label": "Saini et al. (2023)",
+      "title": "Natural amine-targeted carbon quantum dots and nanoaminocatalysis",
+      "stage": "Main/SI review and extraction",
+      "summary": "12-page main article and 107-page matched supplement. Carbon-dot preparation, catalytic protocols, characterization and product spectra are being reviewed; this is not a published contribution yet.",
+      "stages": [
+        {
+          "label": "Source reading and pairing",
+          "status": "in_progress",
+          "detail": "Local main and supplement identities checked; complete coverage documented in the paper package."
+        },
+        {
+          "label": "Structured extraction",
+          "status": "in_progress",
+          "detail": "Recipes, variants, figures, specimen assignments and unresolved details being recorded."
+        },
+        {
+          "label": "Independent audit",
+          "status": "pending",
+          "detail": "A distinct reviewer checks the frozen paper-specific evidence package."
+        },
+        {
+          "label": "Reader and dataset integration",
+          "status": "pending",
+          "detail": "Shared illustrations and Reader standard; source-specific conditions and specimen links checked."
+        },
+        {
+          "label": "Publication",
+          "status": "pending",
+          "detail": "Publish only after required scientific and website checks pass."
+        }
+      ]
+    },
+    {
+      "short_label": "Chen et al. (2018)",
+      "title": "Cs₄PbBr₆/CsPbBr₃ composites: synthesis, luminescence and formation mechanism",
+      "stage": "Main/SI review and extraction",
+      "summary": "8-page main article and 10-page matched supplement. Composite variants, a separate CsPbBr₃ comparison route, scale-up and device preparation are being extracted. Refined/fixed coordinate tables require sample- and phase-specific qualification.",
+      "stages": [
+        {
+          "label": "Source reading and pairing",
+          "status": "in_progress",
+          "detail": "Local main and supplement identities checked; complete coverage documented in the paper package."
+        },
+        {
+          "label": "Structured extraction",
+          "status": "in_progress",
+          "detail": "Recipes, variants, figures, specimen assignments and unresolved details being recorded."
+        },
+        {
+          "label": "Independent audit",
+          "status": "pending",
+          "detail": "A distinct reviewer checks the frozen paper-specific evidence package."
+        },
+        {
+          "label": "Reader and dataset integration",
+          "status": "pending",
+          "detail": "Shared illustrations and Reader standard; source-specific conditions and specimen links checked."
+        },
+        {
+          "label": "Publication",
+          "status": "pending",
+          "detail": "Publish only after required scientific and website checks pass."
+        }
+      ]
+    }
+  ],
   "recent_milestones": [
+    {
+      "at": "2026-09-22T22:25:11.275676+00:00",
+      "text": "Review resumed after the website revision. The fixed-cutoff ranking was refreshed and two main/SI bundles were assigned: Saini2023 carbon dots and Chen2018 perovskite composites. Original source names and hashes are preserved; 3,136 later-arrival scopes remain separate. No additional scientific records are published in this progress update."
+    },
     {
       "at": "2026-09-20T17:11:29Z",
       "text": "Sasongko FAPbI3 contribution published and anonymously verified: 19 records, 21 illustrated operations and 17 selected source crops. Nine paired comparisons and reference-versus-measured structure limits remain explicit. Active work is complete; the remaining corpus is paused for joint review."
@@ -148,7 +219,7 @@
     }
   ],
   "workflow": {
-    "summary": "The active papers are published and verified. Work is temporarily paused for joint review; no new papers will start until the user asks to resume.",
+    "summary": "Corpus review has resumed at the user’s request. Screened synthesis/structure-rich papers are being read and extracted in parallel, with separate audits before shared Reader integration and batched publication.",
     "screening_scope": "The fixed-cutoff screen accounts for all 13,831 top-level document copies: 13,593 text-screened candidates and 238 manual format/text cases. Three nested PDFs were separately screened and remain held for identity reconciliation. Later arrivals stay outside the fixed completion target. Screening is not full reading or a no-recipe exclusion.",
     "steps": [
       "Preserve stable filenames and verify main-paper/SI associations against content and hashes.",
@@ -157,27 +228,46 @@
       "Generate academic readers from reviewed records and reusable illustrations, checking each source-specific condition and chemical identity.",
       "Publish completed, independently passed contributions together; leave unfinished papers in review."
     ],
-    "capacity": "Paused for joint review. The remaining fixed collection and separate later arrivals are unfinished.",
+    "capacity": "Two active paper claims; up to five may be held in the rolling queue. The available runtime supports four agents including the integration owner, so extraction and independent audits share those worker slots.",
     "paid_processing": "The paid API pilot is deferred. Work continues with the existing local setup.",
     "screened_at": "2026-09-20T04:15:45.301305+00:00",
-    "fixed_pending_provisional_scopes": 9501,
+    "fixed_pending_provisional_scopes": 9500,
     "manual_file_dispositions": 238,
     "nested_identity_cases": 3,
     "later_arrival_files_at_screen": 31,
-    "scope_counts_updated_at": "2026-09-20T16:23:20.360378+00:00",
-    "later_arrival_groups_current": 444,
-    "later_arrival_file_candidates_current": 455
+    "scope_counts_updated_at": "2026-09-22T22:25:11.275676+00:00",
+    "later_arrival_groups_current": 3136,
+    "later_arrival_file_candidates_current": 3777
   },
   "estimate": {
-    "status": "paused_for_joint_review",
-    "summary": "No whole-corpus completion claim or finish estimate is made while work is paused.",
-    "current_batch": "Friedfeld and Sasongko are published. There are no active review claims; corpus review is temporarily paused.",
-    "scenarios": [],
+    "status": "active_with_conditional_estimate",
+    "summary": "About 9,500 unfinished provisional scopes remain in the fixed collection. Nine newly admitted scopes reached verified publication over 12.87 elapsed hours in the last observed run (0.70 scopes/hour). If every remaining scope required similar work, the linear extrapolation is about 19 months at continuous throughput, or 28 months at 16 equivalent hours/day. These are conditional planning scenarios, not validated completion forecasts.",
+    "current_batch": "Two paper/SI bundles are now in review. One includes a 107-page supplement, so the recent short cohort does not establish a reliable completion time for this pair.",
+    "scenarios": [
+      {
+        "label": "Observed cadence sustained continuously (hypothetical)",
+        "reviews_per_day": "16.79",
+        "duration": "About 566 days / 19 months"
+      },
+      {
+        "label": "Observed cadence for 16 equivalent hours/day",
+        "reviews_per_day": "11.19",
+        "duration": "About 849 days / 28 months"
+      },
+      {
+        "label": "Observed cadence for 8 equivalent hours/day",
+        "reviews_per_day": "5.60",
+        "duration": "About 1,698 days / 56 months"
+      }
+    ],
     "notes": [
-      "A closure is either an independently evidenced no-recipe exclusion or a retained contribution passing reading, extraction, audit, website and publication checks.",
-      "The frozen collection has 13,831 top-level document copies and three nested document candidates. File copies, provisional scopes and synthesis recipes are different counts.",
-      "Later-arrival papers remain separate. Late or changed supporting information for an included paper reopens the relevant review.",
-      "The paid pilot decision is deferred. Screening speed cannot be used as the detailed-review rate; throughput will be updated from completed audited contributions."
+      "The denominator includes provisional groups, unresolved pairings and potential duplicates. It is not 9,500 verified distinct recipe papers. Two are active; 9,498 are waiting within the fixed collection.",
+      "The throughput sample comprises nine newly admitted, selected evidence-rich scopes, eight with supplied main/SI and one with unverified SI. It excludes an older carry-over paper. Elapsed publication cadence is not measured active compute time or a guarantee of continuous execution.",
+      "Duplicates and independently evidenced no-recipe exclusions may shorten the total; their eventual yield and handling time are not measured. Complex supplements, corrections and interruptions may lengthen it.",
+      "The fixed collection contains 13,831 top-level document copies plus three nested identity cases. A closure is a retained contribution passing its stated review and publication gates, or an independently audited exclusion with its reason retained.",
+      "Later arrivals are separate: 3,136 provisional groups and 3,777 file copies in this scan. Late or changed evidence for an included paper reopens the affected review.",
+      "The original November 20 target would require roughly 163 closures/day from this snapshot. Current observed capacity does not support that target. No paid API processing has been started.",
+      "Local recurring work depends on host/app availability. Estimates will be recalibrated from subsequent audited closures, not from automated screening speed."
     ]
   }
 }

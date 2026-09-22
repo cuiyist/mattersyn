@@ -34,6 +34,6 @@ for name in ('index.html','library.html','dataset.html','inventory.html','progre
   s=s.replace('<div class="element-controls">',widget+'<div class="element-controls">',1)
   if 'progress.css' not in s:s=s.replace('</head>','<link rel="stylesheet" href="progress.css?v=1"></head>')
   if 'progress.mjs' not in s:s=s.replace('</body>','<script type="module" src="progress.mjs?v=1"></script></body>')
- s=re.sub(r'src="progress\.mjs\?v=[^"]+"','src="progress.mjs?v=0.33.0-pause"',s)
+ s=re.sub(r'src="progress\.mjs\?v=[^"]+"','src="progress.mjs?v=0.34.1-resume"',s)
  p.write_text(s,encoding='utf8')
 print(json.dumps({'output':'data/review-progress.json','sha256':hashlib.sha256((DIST/'data/review-progress.json').read_bytes()).hexdigest(),'waiting_scopes':counts['waiting_review_scopes'],'published_records':release['record_count'],'private_paths_exported':False}))

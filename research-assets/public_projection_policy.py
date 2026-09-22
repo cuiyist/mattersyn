@@ -9,7 +9,7 @@ import hashlib
 import json
 import re
 
-POLICY_VERSION = '2026-09-20.2'
+POLICY_VERSION = '2026-09-22.1'
 REPORT_RELATIVE = 'incoming-paper-monitor/batches/20260919-five-paper-pilot/public-repository-exclusion-proposal-20260920.json'
 EXPECTED_REPORT_SHA256 = '572ae70749f8fac09451154a565e8ede9ac486ba5f39d595bfa903d94334ae82'
 EXPECTED_EXCLUDED_PATHS = 12556
@@ -46,6 +46,7 @@ def exclude_path(rel):
     p=normalize_path(rel);low=p.lower();name=PurePosixPath(low).name;ext=PurePosixPath(low).suffix
     paths,allow=_baseline()
     if any(x=='.git' for x in low.split('/')):return 'git_metadata_never_copied'
+    if low.startswith('research-assets/') and '/private/' in low:return 'explicit_private_source_workspace'
     if p in paths:return paths[p]
     if ext in ('.pdf','.doc','.docx','.ppt','.pptx','.zip','.xls','.xlsx'):
         return 'original_document_or_archive_local_only'
