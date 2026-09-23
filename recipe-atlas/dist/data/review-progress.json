@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-22T23:36:09.452797+00:00",
+  "updated_at": "2026-09-23T00:35:47.095734+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.34.0",
@@ -12,7 +12,7 @@
     "public_source_group_count": 41,
     "formal_source_reader_count": 36,
     "exact_structure_recipe_count": 0,
-    "published_at": "2026-09-22T22:58:53.326180+00:00"
+    "published_at": "2026-09-22T23:40:25.826062+00:00"
   },
   "corpus": {
     "present_files": 17700,
@@ -67,34 +67,34 @@
   "current_work": [
     {
       "short_label": "Collection screening",
-      "title": "Synthesis–structure evidence and source verification",
-      "stage": "Automated pass audited; source checks and format recovery underway",
-      "summary": "The fixed collection has 9,532 provisional groups and 13,831 top-level document copies. The screen nominated 52 atomic-evidence, 655 phase-link and 433 morphology-link groups. These categories guide review; they do not certify synthesis–structure pairs.",
+      "title": "Methods-first synthesis and structure screening",
+      "stage": "Rapid source triage; difficult formats separately queued",
+      "summary": "Reuse the completed automated pass. Check the main Methods and relevant SI for usable synthesis; skip synthesis-negative papers from detailed curation, then assess structural evidence in synthesis-positive papers. This is a short eligibility check, not complete paper extraction.",
       "stages": [
         {
           "label": "Cached-text nomination pass",
           "status": "complete",
-          "detail": "Every fixed-cutoff copy has a disposition; three nested identity cases remain separately held."
+          "detail": "Existing screen of 9,532 groups is retained; it is not repeated or relabeled as manual review."
         },
         {
-          "label": "Independent method checks",
-          "status": "complete",
-          "detail": "Coverage, source exceptions, sample-label counterexamples and previously checked coordinate-table benchmarks passed."
-        },
-        {
-          "label": "Unresolved formats",
+          "label": "Methods and relevant SI",
           "status": "in_progress",
-          "detail": "238 copies remain unresolved: 187 legacy Word, 4 spreadsheet, 22 archive, 24 PDF and 1 unidentified file. These are mostly supplements."
+          "detail": "Identify actual target preparation and distinguish precursor-only, cited-only and characterization procedures."
         },
         {
-          "label": "Priority source verification",
+          "label": "Structural evidence",
           "status": "in_progress",
-          "detail": "Inspect the first ten previously unreviewed atomic-evidence nominations; separate product, precursor, bulk-comparison and reference structures."
+          "detail": "Check phase, size/morphology and atomic coordinates separately; retain source/sample linkage limits."
         },
         {
-          "label": "Further website contributions",
+          "label": "Difficult source files",
           "status": "pending",
-          "detail": "Resume from verified priorities after screening gaps are addressed; each contribution still requires its own audit."
+          "detail": "Unresolved files are separately queued and do not delay strong readable candidates."
+        },
+        {
+          "label": "Detailed curation and publication",
+          "status": "pending",
+          "detail": "Full extraction and independent audit are reserved for retained contributions; complete contributions may publish together."
         }
       ]
     },
@@ -166,6 +166,14 @@
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-23T00:33:08.231631+00:00",
+      "text": "Daily review schedule preserved. First eight shortlisted articles passed a separate bounded synthesis/structure screening audit. A second eight-study batch identified two studies with printed product-coordinate candidates; independent audit and training admission remain pending."
+    },
+    {
+      "at": "2026-09-23T00:30:05.531942+00:00",
+      "text": "Workflow simplified at user request: Methods/relevant SI first, structure evidence second. Unreadable files are deferred without blocking readable candidates. Full per-paper audits remain required for published data; no new training pairs claimed."
+    },
     {
       "at": "2026-09-22T23:34:17.771504+00:00",
       "text": "Corrected automated screen audited: 9,532 provisional groups, 13,831 copies and three nested identity holds. Nominations: 52 atomic-evidence, 655 phase-link and 433 morphology-link groups. All 238 manual format/text cases are retained for further screening. No scientific records or training pairs were added."
@@ -264,8 +272,8 @@
     }
   ],
   "workflow": {
-    "summary": "The corrected automated pair-nomination pass is complete and independently checked. Recover unresolved source formats and inspect priority evidence before further website builds.",
-    "screening_scope": "All 13,831 top-level cutoff copies are accounted for, plus three nested identity cases. The 238 unresolved format/text cases remain explicit; this is not full manual screening or complete reading of every paper.",
+    "summary": "Methods-first eligibility screening, then structure checks and detailed review of the strongest retained sources.",
+    "screening_scope": "Automated nominations cover the fixed collection; source-based rapid Methods/SI checks are in progress. Difficult formats remain unresolved and separately queued.",
     "steps": [
       "Account for every fixed-cutoff main/SI source and retain invalid, missing or mispaired documents as explicit unresolved cases.",
       "Rank measured/refined atomic-structure candidates with usable recipes first; keep phase, size and morphology-linked recipes as a separate useful tier.",
@@ -273,7 +281,7 @@
       "Retain all screened candidates and gaps; external reference cells, simulations and molecular-precursor coordinates do not become measured product pairs.",
       "Build and publish academic material readers only after the selected paper’s source, data, figure and independent audit gates pass."
     ],
-    "capacity": "Parallel work now covers legacy-format recovery and original-source checks of atomic-evidence nominations. Existing source extractions remain preserved.",
+    "capacity": "Parallel rapid source triage and audits of already prepared contributions. Parser recovery is no longer a prerequisite for readable papers.",
     "paid_processing": "The paid API pilot is deferred. Work continues with the existing local setup.",
     "screened_at": "2026-09-22T23:34:17.771504+00:00",
     "fixed_pending_provisional_scopes": 9500,
@@ -282,11 +290,12 @@
     "later_arrival_files_at_screen": 31,
     "scope_counts_updated_at": "2026-09-22T23:16:21.476670+00:00",
     "later_arrival_groups_current": 3197,
-    "later_arrival_file_candidates_current": 3869
+    "later_arrival_file_candidates_current": 3869,
+    "scheduled_review_frequency": "Daily, as set by the user. Published milestone snapshots remain separate from scheduler wakeups."
   },
   "estimate": {
-    "status": "recalibrating_after_original_source_priority_checks",
-    "summary": "October 22 remains the requested target. The automated screen has narrowed the first atomic-evidence inspection list to 52 provisional groups, but their usable recipe links and structural roles still need verification. We will estimate priority curation after those checks and the remaining format recovery; this is not a promise to fully curate all 9,500 unfinished scopes by that date.",
+    "status": "separating_fast_screening_from_detailed_curation",
+    "summary": "October 22 remains the target. The earlier 3–7-day screening allowance included file recovery and verification; it is withdrawn as an estimate for the lightweight Methods/SI pass. Detailed curation and training admission are estimated separately from triage.",
     "current_batch": "Chen’s complete source extraction has passed its separate audit. Saini’s complete extraction is frozen with audit pending. Both are preserved while collection screening is completed.",
     "scenarios": [],
     "notes": [
