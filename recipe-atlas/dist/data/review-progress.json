@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-23T13:34:39.426190+00:00",
+  "updated_at": "2026-09-23T14:18:05.402222+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.34.0",
@@ -66,10 +66,10 @@
   },
   "current_work": [
     {
-      "short_label": "Collection screening",
-      "title": "Methods-first synthesis and structure screening",
-      "stage": "97 provisional scopes have targeted source-screen receipts; detailed review remains separate",
-      "summary": "This checkpoint added 76 initial Methods/SI screens: 69 retain preparation information and 7 remain deferred or held. One previously closed news scope was reused. Counts include aliases and are not unique-paper totals. Complete extraction, independent scientific audit and training admission are still separate.",
+      "short_label": "Independent document screening",
+      "title": "Screen each main article and SI independently",
+      "stage": "Companion pairing deferred; cached evidence reused",
+      "summary": "Main articles and supporting information are now screened separately. The fixed inventory contains13,831 original copies representing12,136 distinct document contents;1,695 duplicate copies retain their provenance without repeated reading. Existing reviewed coverage is reused. These inventory counts are not remaining unread papers or completed reviews.",
       "stages": [
         {
           "label": "Cached-text nomination pass",
@@ -77,14 +77,14 @@
           "detail": "Existing screen of 9,532 groups is retained; it is not repeated or relabeled as manual review."
         },
         {
-          "label": "Methods and relevant SI",
+          "label": "Each document’s Methods or preparation sections",
           "status": "in_progress",
-          "detail": "97 provisional scopes now have targeted source receipts across the tracked shortlist and mixed batches. Seven-positive outcomes in each mixed batch passed separate bounded checks; the prior second atomic batch also passed. Other checks remain partial or pending."
+          "detail": "No main/SI pairing prerequisite. A missing companion does not block a readable SI document. Preserve each document’s own source ID, scope and screening result."
         },
         {
           "label": "Structural evidence",
           "status": "in_progress",
-          "detail": "New candidates include actual refined atom tables as well as phase/morphology observations. Preserve average/disordered models, uncertain recipe-variant assignments, molecular precursors, simulations and external references as separate roles; zero new exact pairs approved."
+          "detail": "Check structural evidence within synthesis-positive documents. Verify relationships later when combining cross-document recipes, samples, figures or measurements; standalone SI retains its own evidence scope."
         },
         {
           "label": "Difficult source files",
@@ -166,6 +166,10 @@
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-23T14:18:05.154903+00:00",
+      "text": "User-directed document-first screening activated: each main article and SI can proceed without prior pairing.13,831fixed copies mapped to12,136distinct content tasks;1,695duplicate copies retained. Existing source reading is reused, not reset. Daily schedule preserved and successive batches requested. No scientific records or screening completions added by this queue change."
+    },
     {
       "at": "2026-09-23T13:34:39.358633+00:00",
       "text": "Parallel Methods-first screening added 76 provisional scope checks (69 with usable preparation information; 7 deferred or held), plus reuse of one already-closed news scope. 97 provisional scopes now have tracked source-screen receipts, including aliases. Separate bounded checks passed for both mixed batches and the prior second atomic shortlist; selected phase candidates were spot-checked. No new scientific records or exact training pairs were published."
@@ -276,12 +280,12 @@
     }
   ],
   "workflow": {
-    "summary": "Methods-first eligibility screening, then structure checks and detailed review of the strongest retained sources.",
-    "screening_scope": "Completed automated nominations plus ongoing targeted original-source Methods/SI checks. Source screens are retained with exact file bindings and coverage; they are not complete-paper scientific reviews.",
+    "summary": "Independent document screening, then detailed review of useful synthesis/structure evidence.",
+    "screening_scope": "Main articles and SI are separate screening units. The completed automated nomination pass and previous97provisional-group receipt entries are preserved; no new source reading is claimed by the queue conversion.",
     "steps": [
-      "Account for every fixed-cutoff main/SI source and retain invalid, missing or mispaired documents as explicit unresolved cases.",
+      "Screen every fixed-cutoff document independently; preserve source copies, format holds and prior coverage. Missing companions do not block screening.",
       "Rank measured/refined atomic-structure candidates with usable recipes first; keep phase, size and morphology-linked recipes as a separate useful tier.",
-      "Verify top candidates against the original main/SI: the structure and recipe must describe a supported shared sample or formulation.",
+      "Verify recipe–sample–structure evidence within each retained source, and verify source relationships when joining information from different documents.",
       "Retain all screened candidates and gaps; external reference cells, simulations and molecular-precursor coordinates do not become measured product pairs.",
       "Build and publish academic material readers only after the selected paper’s source, data, figure and independent audit gates pass."
     ],
@@ -299,14 +303,22 @@
     "source_screen_checkpoint_at": "2026-09-23T13:34:39.358633+00:00",
     "source_screen_receipt_scopes": 97,
     "source_screen_new_scopes_latest": 76,
-    "screening_count_limit": "Includes aliases and prior terminal reuse; no final-disposition or training count implied."
+    "screening_count_limit": "Includes aliases and prior terminal reuse; no final-disposition or training count implied.",
+    "document_first_inventory": {
+      "source_copies": 13831,
+      "distinct_content_tasks": 12136,
+      "duplicate_copies_preserved": 1695,
+      "contents_with_some_cached_text": 11925,
+      "prior_review_reconciliation_required": true
+    }
   },
   "estimate": {
-    "status": "initial_screening_timing_measured_in_purposive_batches",
-    "summary": "October 22 remains the planning target for a prioritized audited release. The new Methods-first batches are much lighter than full curation, but their selected-source timings do not establish a whole-collection finish date. The 9,500 unfinished fixed-collection groups still require final dispositions.",
+    "status": "document_first_throughput_recalibration",
+    "summary": "The prior76group checks took roughly33active parallel-session minutes. A linear scenario for9,500groups is about70active session hours, or about9days at8active session hours/day. This selected-group calculation is not a measured calendar forecast for the new document-first queue; complete curation is additional.",
     "current_batch": "Chen’s complete source extraction has passed its separate audit. Saini’s complete extraction is frozen with audit pending. Both are preserved while collection screening is completed.",
     "scenarios": [],
     "notes": [
+      "One similarly short session per day would imply about125days for the historical9,500group workload. The daily workflow now continues successive batches during a run; continuous or eight-hour daily execution is not guaranteed.",
       "Two mixed batches took 6.7 and 8.8 minutes for nine and ten new initial screens; their separate checks took 4.8 and 4.3 minutes. These are selected readable sources, not a representative corpus benchmark.",
       "Initial screening, complete extraction, independent scientific audit, website integration and training admission have different completion gates.",
       "Duplicate receipt reuse saves repeated reading only when exact source identity and inspected coverage match; it is not an extra completed paper.",
