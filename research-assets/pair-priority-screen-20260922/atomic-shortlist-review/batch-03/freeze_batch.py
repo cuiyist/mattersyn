@@ -1,0 +1,31 @@
+import json,hashlib
+from pathlib import Path
+from datetime import datetime,timezone
+O=Path(__file__).resolve().parent
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(p,d):p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+assert not (O/'author-freeze.json').exists()
+rows=[json.loads(p.read_text(encoding='utf-8'))for p in sorted(O.glob('scope-rank*.json'))]
+assert len(rows)==10
+ledger=O.parents[2]/'incoming-paper-monitor/ledger.json'
+L=json.loads(ledger.read_text(encoding='utf-8'))
+states=[]
+for r in rows:
+ g=L['groups'][r['group_id']]
+ assert g['review']['status']=='queued' and not g.get('needs_recheck')
+ assert g['generation']==r['automated_nomination']['source_generation_in_partition']
+ for p,h in r['bound_files'].items():assert sha(p)==h,(p,h)
+ states.append({'rank':r['candidate_rank'],'group_id':r['group_id'],'status':g['review']['status'],'generation':g['generation'],'needs_recheck':g.get('needs_recheck')})
+end=datetime.now(timezone.utc);start=datetime.fromisoformat(json.loads((O/'timing-start.json').read_text())['started_at'])
+save(O/'final-selection-recheck.json',{'checked_at':end.isoformat(),'ledger_sha256':sha(ledger),'all_selected_queued':True,'all_generation_and_recheck_guards_pass':True,'states':states,'skipped_ranks':[25,33],'terminal_policy':'Only queued scopes retained; all terminal statuses excluded, not only complete.'})
+read={(c['source_sha256'],p)for r in rows for c in r['coverage']for p in c['pages_read']}
+view={(c['source_sha256'],p)for r in rows for c in r['coverage']for p in c['pages_visually_inspected']}
+sources={f['sha256']for r in rows for f in r['original_files']}
+summary={'schema':'mattersyn-fast-methods-triage-summary/1','status':'author_screen_complete_independent_audit_pending','author':'/root/backlog_eta','started_at':start.isoformat(),'ended_at':end.isoformat(),'elapsed_seconds':round((end-start).total_seconds(),2),'timing_scope':'Includes reused helper preparation, fresh hashes, targeted reading/views, receipts and final checks; selected atomic nominations only, not a corpus throughput forecast.','scope_count':10,'distinct_articles':10,'source_copies':sum(len(r['original_files'])for r in rows),'unique_source_contents':len(sources),'pdf_pages_read':len(read),'pdf_pages_visually_inspected':len(view),'docx_contents_textually_inspected':1,'docx_visual_pages':0,'outcomes':{'present':10,'no_usable_in_inspected_main_and_si':0,'referenced_only':0,'unresolved':0},'si_coverage':'Seven matched PDFs selectively read; one matched DOCX textually inspected with two identical copies; two scopes have no supplied SI. Uninspected SI portions and unprovided SI remain unresolved.','local_experimental_target_coordinate_table_candidates':{'articles':1,'rank':30,'reported_composite_states':1,'phase_components':2,'independent_preparation_families':1,'qualification':'ZnS/MnS Table1 is a refinement-model candidate, with fixed/free parameter origin and recipe completeness not yet verified.'},'other_atomic_evidence_roles':{'experimental_product_deposit_claims_without_local_measured_array_established':[24,26,31,32,35],'precursor_refinement_without_atom_array_established':[27],'local_computed_precursor_coordinates':[28],'reference_host_pattern':[29],'local_experimental_molecular_precursor_coordinates':[34],'additional_local_computed_product_coordinates':[32]},'new_approved_structure_recipe_pairs':0,'full_source_reviews_completed':0,'training_admissions':0,'site_or_ledger_writes':False,'publication_and_training_states_changed_by_this_task':False,'priority_selection_prevalence_inference_allowed':False,'rows':[{'rank':r['candidate_rank'],'doi':r['identity']['doi'],'title':r['identity']['title'],'outcome':r['synthesis_outcome'],'structure_tier':r['structure_tier'],'recommendation':r['recommendation'],'receipt':f"scope-rank{r['candidate_rank']:03d}.json",'receipt_sha256':sha(O/f"scope-rank{r['candidate_rank']:03d}.json")}for r in rows]}
+save(O/'summary.json',summary)
+md=f"# Batch03 Methods-first screening\n\nAuthor screening complete; independent audit pending. Ten scopes / ten articles contain usable synthesis in the inspected Methods and relevant SI. No source-completion, website or training admission was made.\n\nActual elapsed time: {summary['elapsed_seconds']/60:.1f} minutes ({start.isoformat()} to {end.isoformat()}); {len(read)} PDF pages read, {len(view)} visually inspected, plus one DOCX selectively read as text. This evidence-priority sample is not a corpus prevalence or throughput estimate.\n\nOne local target coordinate-table candidate: ZnS/MnS composite, rank30, with two phase components in one preparation. Refinement constraints, completeness and source discrepancies remain for review. Five scopes declare experimental deposits, one has precursor refinement, one computed precursor coordinates, one a reference-host pattern, and one measured molecular-precursor coordinates. Rank32 also supplies separate calculated molecular-product coordinates. Zero approved exact pairs.\n\nRanks25 and33 were reused as completed benchmarks and skipped. All ten selected scopes were freshly confirmed queued with matching generation and no recheck hold. Original bytes rehashed; no shared state changed. Full pages and raw text remain private.\n\n"
+md+='| Rank | DOI | Synthesis | Structural scope |\n|---|---|---|---|\n'+''.join(f"| {r['candidate_rank']} | {r['identity']['doi']} | present | {r['structure_tier']} |\n"for r in rows)
+(O/'summary.md').write_text(md,encoding='utf-8')
+files={str(p):sha(p)for p in O.rglob('*')if p.is_file()and p.name!='author-freeze.json'}
+save(O/'author-freeze.json',{'schema':'mattersyn-private-triage-freeze/1','created_at':datetime.now(timezone.utc).isoformat(),'author':'/root/backlog_eta','status':'author_screen_complete_independent_audit_pending','summary_sha256':sha(O/'summary.json'),'bound_files':files,'publication_allowlist':['summary.json','summary.md'],'private_paths_and_raw_sources_must_not_be_published':True})
+print(json.dumps({'summary_sha256':sha(O/'summary.json'),'freeze_sha256':sha(O/'author-freeze.json'),'elapsed_seconds':summary['elapsed_seconds'],'pages_read':len(read),'pages_viewed':len(view),'files':len(files)},indent=2))

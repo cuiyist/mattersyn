@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-23T00:35:47.095734+00:00",
+  "updated_at": "2026-09-23T13:34:39.426190+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.34.0",
@@ -12,7 +12,7 @@
     "public_source_group_count": 41,
     "formal_source_reader_count": 36,
     "exact_structure_recipe_count": 0,
-    "published_at": "2026-09-22T23:40:25.826062+00:00"
+    "published_at": "2026-09-23T00:37:17.481184+00:00"
   },
   "corpus": {
     "present_files": 17700,
@@ -68,8 +68,8 @@
     {
       "short_label": "Collection screening",
       "title": "Methods-first synthesis and structure screening",
-      "stage": "Rapid source triage; difficult formats separately queued",
-      "summary": "Reuse the completed automated pass. Check the main Methods and relevant SI for usable synthesis; skip synthesis-negative papers from detailed curation, then assess structural evidence in synthesis-positive papers. This is a short eligibility check, not complete paper extraction.",
+      "stage": "97 provisional scopes have targeted source-screen receipts; detailed review remains separate",
+      "summary": "This checkpoint added 76 initial Methods/SI screens: 69 retain preparation information and 7 remain deferred or held. One previously closed news scope was reused. Counts include aliases and are not unique-paper totals. Complete extraction, independent scientific audit and training admission are still separate.",
       "stages": [
         {
           "label": "Cached-text nomination pass",
@@ -79,12 +79,12 @@
         {
           "label": "Methods and relevant SI",
           "status": "in_progress",
-          "detail": "Identify actual target preparation and distinguish precursor-only, cited-only and characterization procedures."
+          "detail": "97 provisional scopes now have targeted source receipts across the tracked shortlist and mixed batches. Seven-positive outcomes in each mixed batch passed separate bounded checks; the prior second atomic batch also passed. Other checks remain partial or pending."
         },
         {
           "label": "Structural evidence",
           "status": "in_progress",
-          "detail": "Check phase, size/morphology and atomic coordinates separately; retain source/sample linkage limits."
+          "detail": "New candidates include actual refined atom tables as well as phase/morphology observations. Preserve average/disordered models, uncertain recipe-variant assignments, molecular precursors, simulations and external references as separate roles; zero new exact pairs approved."
         },
         {
           "label": "Difficult source files",
@@ -166,6 +166,10 @@
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-23T13:34:39.358633+00:00",
+      "text": "Parallel Methods-first screening added 76 provisional scope checks (69 with usable preparation information; 7 deferred or held), plus reuse of one already-closed news scope. 97 provisional scopes now have tracked source-screen receipts, including aliases. Separate bounded checks passed for both mixed batches and the prior second atomic shortlist; selected phase candidates were spot-checked. No new scientific records or exact training pairs were published."
+    },
     {
       "at": "2026-09-23T00:33:08.231631+00:00",
       "text": "Daily review schedule preserved. First eight shortlisted articles passed a separate bounded synthesis/structure screening audit. A second eight-study batch identified two studies with printed product-coordinate candidates; independent audit and training admission remain pending."
@@ -273,7 +277,7 @@
   ],
   "workflow": {
     "summary": "Methods-first eligibility screening, then structure checks and detailed review of the strongest retained sources.",
-    "screening_scope": "Automated nominations cover the fixed collection; source-based rapid Methods/SI checks are in progress. Difficult formats remain unresolved and separately queued.",
+    "screening_scope": "Completed automated nominations plus ongoing targeted original-source Methods/SI checks. Source screens are retained with exact file bindings and coverage; they are not complete-paper scientific reviews.",
     "steps": [
       "Account for every fixed-cutoff main/SI source and retain invalid, missing or mispaired documents as explicit unresolved cases.",
       "Rank measured/refined atomic-structure candidates with usable recipes first; keep phase, size and morphology-linked recipes as a separate useful tier.",
@@ -291,20 +295,24 @@
     "scope_counts_updated_at": "2026-09-22T23:16:21.476670+00:00",
     "later_arrival_groups_current": 3197,
     "later_arrival_file_candidates_current": 3869,
-    "scheduled_review_frequency": "Daily, as set by the user. Published milestone snapshots remain separate from scheduler wakeups."
+    "scheduled_review_frequency": "Daily, as set by the user. Published milestone snapshots remain separate from scheduler wakeups.",
+    "source_screen_checkpoint_at": "2026-09-23T13:34:39.358633+00:00",
+    "source_screen_receipt_scopes": 97,
+    "source_screen_new_scopes_latest": 76,
+    "screening_count_limit": "Includes aliases and prior terminal reuse; no final-disposition or training count implied."
   },
   "estimate": {
-    "status": "separating_fast_screening_from_detailed_curation",
-    "summary": "October 22 remains the target. The earlier 3–7-day screening allowance included file recovery and verification; it is withdrawn as an estimate for the lightweight Methods/SI pass. Detailed curation and training admission are estimated separately from triage.",
+    "status": "initial_screening_timing_measured_in_purposive_batches",
+    "summary": "October 22 remains the planning target for a prioritized audited release. The new Methods-first batches are much lighter than full curation, but their selected-source timings do not establish a whole-collection finish date. The 9,500 unfinished fixed-collection groups still require final dispositions.",
     "current_batch": "Chen’s complete source extraction has passed its separate audit. Saini’s complete extraction is frozen with audit pending. Both are preserved while collection screening is completed.",
     "scenarios": [],
     "notes": [
-      "Counts are paper-group nominations, not verified recipes, physical samples or training pairs.",
-      "Atomic-evidence nominations can refer to a product, bulk comparator, molecular precursor or unavailable deposit; source-specific review is required.",
-      "All supplied files are accounted for, but 238 format/text cases still need recovery or manual inspection. This is not complete reading of every paper.",
-      "Original cached text lacks historical content hashes; current source verification remains necessary.",
-      "Lower-signal, unlinked and unresolved papers remain in the collection. No no-recipe exclusions were assigned.",
-      "No paid API processing has been authorized or started."
+      "Two mixed batches took 6.7 and 8.8 minutes for nine and ten new initial screens; their separate checks took 4.8 and 4.3 minutes. These are selected readable sources, not a representative corpus benchmark.",
+      "Initial screening, complete extraction, independent scientific audit, website integration and training admission have different completion gates.",
+      "Duplicate receipt reuse saves repeated reading only when exact source identity and inspected coverage match; it is not an extra completed paper.",
+      "A file labelled as the main article was verified to be a Peer Review File; the true main remains held while useful SI preparation information is retained.",
+      "Additional GPU capacity is not established as the bottleneck. An API pilot remains deferred; no paid processing or source upload was started.",
+      "Daily scheduling is preserved. A daily wakeup does not establish continuous execution or a fixed number of processing hours."
     ]
   }
 }
