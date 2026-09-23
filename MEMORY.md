@@ -1,3 +1,7 @@
+## 2026-09-23 — Publication authorization clarified
+
+The user followed up with “publication approval.” Existing explicit authorization already covers publishing completed MatterSyn contributions in batches to the public project repository and GitHub Pages site, while keeping original papers/SI local. No additional per-batch permission request is needed. The remaining publication requirements refer to source extraction, independent scientific audit, sample/evidence checks and website validation, not a pending user approval. This clarification does not waive quality requirements or promote initial screening into completed review or training eligibility. Current scientific dataset and site remain unchanged.
+
 ## 2026-09-23 — Parallel screening checkpoint delivered
 
 Progress-only GitHub Pages deployment verified without login at2026-09-23T13:37:00.092611+00:00: site commit91e83705514ca8b3f1755a83a051ef45080950ec, Pages run35868138168. All four checked public artifacts match the isolated release checkout. The project source-screen checkpoint and memory were pushed in commit8afdc4070b0457269bfab22df43674fbec0dadba; this delivery receipt is saved in the follow-up project commit. No scientific records, training pairs or full-source documents were added to the website. Daily scheduling remains unchanged. Next screening should continue beyond checked shortlist scopes using research-assets/methods-triage-20260923/screened-scopes.json and preserve the independently supported additional source-role hold.
