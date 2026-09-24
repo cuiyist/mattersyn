@@ -1,23 +1,22 @@
 # MatterSyn publication workflow
 
-MatterSyn uses a private project repository and a public website repository.
-`cuiyist/mattersyn` is private and holds project tooling, reviewed records, memory,
-skills, audit summaries and the cleaned project Git history. Complete sources,
-raw extraction caches, unreviewed candidates, detailed private audits and original
-history bundles remain in the local research workspace, outside both repositories.
-`cuiyist/mattersyn-site` remains public and contains only the deployable website,
-the reviewed data and citations needed by readers, selected source figures, and
-site-specific deployment controls. Keep full papers and SI, raw text/OCR, source
-page renders, private working crops, unredacted audit evidence, machine paths and
-private project history out of the public site repository. The site may expose only
-concise reader-facing provenance and progress needed to use it.
+Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public at the owner's
+request. The project repository contains code, reviewed records, project memory,
+reusable skills, safe audit summaries and cleaned history. The site repository
+contains the deployable website, reviewed data and citations, selected source
+figures and site-specific deployment controls. Complete source PDFs/SI, raw
+text/OCR, full-page renders, private working crops, detailed private audit
+evidence, unreviewed candidates, credentials and original history bundles remain
+local. Public status does not mean every old GitHub object or cache is gone: the
+review-cited old raw-source URL returned HTTP 200 anonymously after the repository
+became public on 2026-09-24. Do not claim server-side deletion or cache purging.
 
 ## Evidence and image provenance
 
 At the user's explicit direction, selected original source figures remain available
 on the public reader. The 2026-09-24 restoration checkpoint covers 743 figures; see
 `research-assets/public-audits/source-figure-restoration-20260924.json` in the
-private project repository. This display instruction is not a claim that publisher
+project repository. This display instruction is not a claim that publisher
 permission or a reuse license was verified: the audit records permission as
 unverified, and the registry must retain that status. Pair each public figure with
 its citation, page/figure locator, supported record/sample assignment, exact asset
@@ -99,16 +98,16 @@ bypassed by uploading the repository root or switching back to branch publicatio
 ## Historical preservation
 
 Verified private Git bundles and working-file manifests preserve the original
-project history and evidence. The MatterSyn source repository is private; the public
-site repository receives only the approved deployable site and its required reader
-data. The site's commit history is not a substitute for the private project history
-or detailed audit trail.
+project history and evidence. Both MatterSyn repositories are public, but the
+source and site contain different reviewed deliverables. The source repository
+preserves cleaned project history and safe project documentation; the site
+repository contains the approved deployable website and its required reader data.
+Neither contains the private source archive or detailed private audit evidence.
 
 A follow-up review confirmed that removed content had remained retrievable through
-old public GitHub commit IDs. The user has directed the project repository to be
-private, and the reviewed old source URL returned 404 anonymously afterward. This
-limits anonymous access but does not prove old objects, caches or copies have been
-erased. GitHub Support may or may not remove retained objects; no purge is
-guaranteed. No further history rewrite is planned, and no support request is to be
-submitted without separate explicit user authorization. The public website remains
-public.
+old public GitHub commit IDs. The user later reauthorized the project repository to
+be public; the reviewed old source URL then returned HTTP 200 anonymously. This
+visibility choice does not prove old objects, caches or copies have been erased.
+GitHub Support may or may not remove retained objects; no purge is guaranteed. No
+further history rewrite is planned, and no support request is to be submitted
+without separate explicit user authorization.

@@ -4,12 +4,14 @@ MatterSyn organizes reviewed synthesis procedures, material characterization and
 
 [Open the atlas](https://cuiyist.github.io/mattersyn-site/) · [Review queue](https://cuiyist.github.io/mattersyn-site/progress.html)
 
-The project repository `cuiyist/mattersyn` is private at the owner's request. Code,
-project memory, skills and the cleaned working history are maintained there. The
-reviewed website, citations and its release controls remain public in
-`cuiyist/mattersyn-site`. The build instructions below require access to the project
-repository; complete papers, SI and raw extraction caches remain in the local
-research workspace.
+Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public at the owner's
+request. The project repository contains code, reviewed records, project memory,
+reusable skills and cleaned project history; the separate site repository contains
+the public atlas. Complete papers and SI, raw extraction caches, detailed private
+audits and original history bundles remain in the local research workspace. A
+public repository branch does not guarantee that every old GitHub object or cached
+URL has been removed; previously cited old raw source content was anonymously
+reachable again after the repository was made public on 2026-09-24.
 
 ## Reproduce a review candidate
 
