@@ -10,6 +10,7 @@ This public project repository contains code, structured data, memory, reusable 
 - `research-assets/`: structured extraction, independent audits and progress checkpoints.
 - `skills/`: reusable curation and publishing workflow.
 - `MEMORY.md`: project decisions, progress and unresolved work.
+- `SCREENING_PROGRESS.md`: fixed-folder screening checkpoint and unresolved access exception.
 
 The website is published from the separate [mattersyn-site repository](https://github.com/cuiyist/mattersyn-site). Saved progress, references, memory and skills are synchronized at meaningful work milestones; reviewed scientific additions are published after their required checks. Earlier website commits are retained as history. Original-document equivalents are excluded from public history, with the unfiltered local project preserved.
 
