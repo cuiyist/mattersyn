@@ -54,3 +54,7 @@ The user requests at least 500 papers built into MatterSyn per day. Keep this as
 
 Progress update: Tirosh et al. (2006) revision-4 Fe-alkoxide option-identity correction passed independent targeted recheck, but browser QA and publication remain pending; its 300 K/230–300 °C conflict remains unresolved and schema one-of cardinality is not formal. A separate Chen et al. (2018) local candidate contains 23 records across 17 routes. The changed-scope independent mapping audit passed its 83-check correction addendum after three issues were fixed; browser QA and publication are pending. The original three-source pilot remains 0/3 integrated. See the dated throughput report and public progress snapshot.
 
+
+## 2026-09-24 — Chen molecular-context audit finding
+
+The supplemental audit of Chen et al. (2018) found eight HBr-in-acetic-acid component contexts bound to the nagasaki2004-acetic-acid-reference asset. That shared asset includes source-specific Nagasaki hydrolysis conditions (10:1 v/v, 5 h, 35 °C), which must not appear as Chen recipe conditions. The Chen candidate is held from publication while a clean source-neutral or Chen-supported acetic-acid molecular reference is substituted, with the Nagasaki asset retained for its own paper and the binding re-audited independently. Do not infer an HBr stock concentration or component ratio unless Chen reports it. The prior 83-check source-to-reader correction pass remains bounded; it did not cover this asset/provenance issue.

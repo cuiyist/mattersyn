@@ -45,6 +45,8 @@ Read [references/visuals-and-models.md](references/visuals-and-models.md) when b
 
 Use the existing project architecture and current Sites building/hosting skills when they apply. Only the site-owning agent edits the site and performs its lifecycle operations. Delegate bounded extraction, model assets, or scientific review when useful; subagents return results outside the site checkout.
 
+When chemical identity assets are reused across papers, keep reusable molecular structure/identity separate from paper-specific stock composition, context and conditions. A shared molecule illustration must not carry another paper's experimental conditions into the current recipe; audit every binding and provenance link.
+
 The MatterSyn visual preference is an airy, polished scientific interface: strong typography, clear section numbers, restrained blue/teal/gold accents, substantial molecular/crystal views, and concise source labels. Adapt this to the user's chosen design rather than imposing a universal template.
 
 For MatterSyn, organize discovery around the material: a material hub links paper contributions and individually identified synthesis methods, with a separate detail route for each materially different method. Retain full academic paper titles, authors, journal/year and DOI as primary source labels. Do not make separate methods look like a single complete experiment or hide previous papers behind the newest contribution. Adapt this organization if another project's user requests a different structure.
