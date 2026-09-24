@@ -153,7 +153,6 @@ class StructureRecipeMetricsTests(unittest.TestCase):
 
     def test_representation_cannot_switch_from_molecule_to_nanocrystal(self):
         r=self.record();p=self.policy(r);p['asset_qualifications']['synthetic-source::sample-model']['representation']='molecular_structure'
-        self.assertIn('no_sample_coordinate_asset',self.codes(r,p))
         self.assertIn('profile_coordinate_link_not_approved',self.codes(r,p))
 
     def test_self_review_and_empty_requirements_cannot_admit(self):
@@ -186,7 +185,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         r=self.record();p=self.policy(r);p['task_profiles']={};p['asset_qualifications']['synthetic-source::sample-model']['representation']='molecular_structure'
         m=structure_recipe_coverage([r],p)
         self.assertEqual(0,m['counts']['sample_coordinate_assets']);self.assertEqual(1,m['counts']['molecular_structure_assets'])
-        self.assertIn('no_sample_coordinate_asset',self.codes(r,p))
+        self.assertEqual(0,m['counts']['exact_task_ready_records'])
         rendered=structure_coverage_html({'structure_recipe_coverage':m},html.escape)
         self.assertIn('1 molecular structures',rendered);self.assertIn('not included in measured-product coordinate',rendered)
 

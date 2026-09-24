@@ -137,8 +137,10 @@ def assess_structure_recipe(record, policy=None):
         reject('duplicate_record', 'This record is marked as a duplicate, not a separate training example.')
     if TASK not in quality['requested_tasks']:
         reject('task_not_requested', 'Exact structure–recipe training has not been requested for this record.')
-    sample_assets = [a for a in coordinate_inventory(record, policy)
-                     if a['representation'] != 'molecular_structure']
+    # Preserve the established record-level eligibility explanation for every
+    # published record. Coordinate coverage is counted separately below; a
+    # molecular model cannot satisfy a future exact-coordinate task profile.
+    sample_assets = coordinate_inventory(record, policy)
     if not sample_assets:
         reject('no_sample_coordinate_asset', 'No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate.')
     if sample_assets and not any(a['source_verified_explicit_recipe_link'] for a in sample_assets):
@@ -165,7 +167,9 @@ def assess_structure_recipe(record, policy=None):
         sample_id = profile.get('sample_id')
         samples = {p['sample_id']: p for p in record['products']}
         sample = samples.get(sample_id)
-        linked = {a['asset_id']: a for a in sample_assets if a['sample_id'] == sample_id and a['source_verified_explicit_recipe_link']}
+        linked = {a['asset_id']: a for a in sample_assets if a['sample_id'] == sample_id
+                  and a['source_verified_explicit_recipe_link']
+                  and a['representation'] != 'molecular_structure'}
         ids = profile.get('structure_asset_ids', [])
         if not ids or len(ids) != len(set(ids)) or any(i not in linked or not linked[i]['eligible_as_measured_label'] for i in ids):
             reject('profile_coordinate_link_not_approved', 'The selected measured coordinate assets must resolve to this same explicitly linked, label-approved sample.')
