@@ -14,7 +14,10 @@ def main():
     rows=[];at=datetime.datetime.now(datetime.timezone.utc).isoformat()
     for path in sorted(root.rglob('*')):
         if not path.is_file()or'.git'in path.relative_to(root).parts:continue
-        rel=path.relative_to(root).as_posix();raw=path.read_bytes();decision=g.history_project(a.repo,rel,raw,config)
+        rel=path.relative_to(root).as_posix()
+        # The source control manifest cannot hash itself; its closure is checked separately.
+        if a.repo=='mattersyn' and rel=='publication/project-allowlist.json':continue
+        raw=path.read_bytes();decision=g.history_project(a.repo,rel,raw,config)
         if decision['action']!='allow'or decision['content']!=raw:raise RuntimeError('Tree requires review/projection before approval: '+rel)
         refs=[]
         if path.suffix=='.json':

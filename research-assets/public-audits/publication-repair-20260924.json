@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-publication-repair-checkpoint/1",
   "date": "2026-09-24",
-  "publication_status": "validated_candidate_pending_release",
+  "publication_status": "deployed_verified",
   "scientific_records": 698,
   "synthesis_routes": 140,
   "material_hubs": 52,
@@ -20,7 +20,9 @@
     "browser_checks_passed": 42,
     "held_image_paths_excluded": 745,
     "preserved_project_commits": 97,
-    "preserved_site_commits": 64
+    "preserved_site_commits": 64,
+    "publication_filter_tests": 26,
+    "publication_helper_tests": 6
   },
   "evidence": {
     "candidate_manifest_sha256": "718a8ab81f1f2c381f747535a6160b5b3139990925de49cac42cc48deddd6dfc",
@@ -28,8 +30,88 @@
     "record_links_audit_sha256": "3ebabef8ce1b6a90e96173156a031be63e99feca05daba524280c792ba9c6c6b"
   },
   "limits": [
-    "Repository repair does not recertify scientific evidence or make exact coordinate pairs.",
-    "Original evidence and detailed private audit reports are retained separately.",
-    "Final source-commit build, release gate and deployment verification are required before calling the release published."
-  ]
+    "This repair preserves existing scientific scope and does not recertify all evidence or create new exact coordinate pairs.",
+    "Verified original repository backups and scientific evidence remain private.",
+    "History rewriting does not erase copies previously obtained by others or guarantee removal of GitHub cached objects.",
+    "The website remains bound to its recorded immutable source commit; later memory-only commits do not change that artifact."
+  ],
+  "release": {
+    "source_commit": "25bb0920c3031677023e933660e11968cb472f98",
+    "site_commit": "0a2876bb3107af61f88539c5e4df16ec9a9ae7b3",
+    "site_url": "https://cuiyist.github.io/mattersyn-site/",
+    "artifact_files": 7471,
+    "source_payload_files": 4646,
+    "source_gate_failures": 0,
+    "site_gate_failures": 0,
+    "github_workflows": [
+      {
+        "repo": "mattersyn",
+        "id": 36044990858,
+        "head_sha": "25bb0920c3031677023e933660e11968cb472f98",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/cuiyist/mattersyn/actions/runs/36044990858"
+      },
+      {
+        "repo": "mattersyn-site",
+        "id": 36045083588,
+        "head_sha": "0a2876bb3107af61f88539c5e4df16ec9a9ae7b3",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/cuiyist/mattersyn-site/actions/runs/36045083588"
+      }
+    ],
+    "anonymous_live_check": {
+      "checked_at": "2026-09-24T19:01:59.276991+00:00",
+      "anonymous": true,
+      "source_commit": "25bb0920c3031677023e933660e11968cb472f98",
+      "site_commit": "0a2876bb3107af61f88539c5e4df16ec9a9ae7b3",
+      "checks": [
+        {
+          "path": "index.html",
+          "status": 200,
+          "sha256": "2a2c92fe61dd084eff6602605b006fa0a9c5125867add7b17b370f8f3c989ec1",
+          "expected_sha256": "2a2c92fe61dd084eff6602605b006fa0a9c5125867add7b17b370f8f3c989ec1",
+          "matches": true
+        },
+        {
+          "path": "data/release-snapshot.json",
+          "status": 200,
+          "sha256": "b5ed47808f5e56e9bc88562f15d8623aefd2018b7f90f8b079600c54791f3c43",
+          "expected_sha256": "b5ed47808f5e56e9bc88562f15d8623aefd2018b7f90f8b079600c54791f3c43",
+          "matches": true
+        },
+        {
+          "path": "data/review-progress.json",
+          "status": 200,
+          "sha256": "37a9d0841d8f42e5e43d381df3a0a90ce3c12835f4ce35a070f2d786fb585cfa",
+          "expected_sha256": "37a9d0841d8f42e5e43d381df3a0a90ce3c12835f4ce35a070f2d786fb585cfa",
+          "matches": true
+        },
+        {
+          "path": "data/dataset-manifest.json",
+          "status": 200,
+          "sha256": "a5ecd38927ffe28e88706f993380ac119a017aa12fa5d560aa3a1ed6979934e5",
+          "expected_sha256": "a5ecd38927ffe28e88706f993380ac119a017aa12fa5d560aa3a1ed6979934e5",
+          "matches": true
+        },
+        {
+          "path": "source-figure-links.mjs",
+          "status": 200,
+          "sha256": "4faff92656fdf3f64cfc313ab865094e48b6b65ae3fee05f476373b3b5956f94",
+          "expected_sha256": "4faff92656fdf3f64cfc313ab865094e48b6b65ae3fee05f476373b3b5956f94",
+          "matches": true
+        },
+        {
+          "path": "README.md",
+          "status": 200,
+          "sha256": "a83695d6a50d0f4d5557c4e8d02ece12fdba46c07ef7b27566c490feac42276a",
+          "expected_sha256": "a83695d6a50d0f4d5557c4e8d02ece12fdba46c07ef7b27566c490feac42276a",
+          "matches": true
+        }
+      ],
+      "passed": true
+    },
+    "release_manifest_sha256": "9cc8e3e298d66ac3bc194b5c0acf344d7b849975423c3644c422505ea2e5344c"
+  }
 }
