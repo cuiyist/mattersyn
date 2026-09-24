@@ -1,4 +1,8 @@
-"""Refresh the saved progress report from scoped overnight audit receipts."""
+"""Historical snapshot builder; its zero-paper count was incorrect.
+
+Use reconcile_overnight_count.py for the corrected first-publication accounting.
+This original builder is retained as audit history and should not be rerun.
+"""
 import copy
 import hashlib
 import json
