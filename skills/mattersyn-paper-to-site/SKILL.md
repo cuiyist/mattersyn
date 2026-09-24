@@ -73,6 +73,8 @@ Use discrete reported comparisons and qualitative feedback controls when support
 
 ## Validate, publish and remember
 
+Throughput reporting: keep screening, draft extraction, independent scientific audit, integration, browser QA and publication as separate counts. Benchmark complete end-to-end cycles before forecasting daily output; raw model calls or rapid rendering do not establish audited contribution throughput. Do not relax source, figure, sample-linkage or QA gates to satisfy a volume target.
+
 Read [references/delivery-and-memory.md](references/delivery-and-memory.md) for publication and handoff details.
 
 - Review source-to-page consistency: units, method boundaries, retained/discarded fractions, phase transitions, sample links and missing fields.
@@ -94,3 +96,5 @@ The user-set MatterSyn target is at least 500 website contributions per day whil
 When using a language or vision model to draft extraction, compare its claims against the source before use. Do not let a model silently “correct” an apparent typo: preserve conflicting wording verbatim with separate locators and an unresolved status. Check the exact operations and repetitions, sample-to-figure assignments, and undefined statistics; fluent summaries can omit them. A second pass by the same model is not an independent audit. Estimate throughput from complete source-audited, site-integrated and QA-passed contributions, not draft token speed or a single short-paper benchmark.
 
 A different model's audit pass can help prioritize checks, but it is not sufficient by itself: a 27B audit of a 9B Tirosh draft flagged an omitted reagent yet missed the article's explicit 300 K / 230–300 °C conflict, and it lacked rendered figures. Require evidence quotes with exact pages and independent visual inspection of relevant tables/figures and sample identities before promotion. Model-to-model agreement, empty conflict arrays, schema validity, and fast output do not establish correctness.
+For local text drafts, run 
+esearch-assets/incoming-paper-monitor/validate_quote_spans.py before manual review to reject evidence quotes that do not occur on their cited PDF-text page. The checker only confirms a substring after Unicode NFKC normalization, whitespace collapse and PDF line-end hyphen cleanup; it does not confirm that the adjacent interpretation is correct or that the extraction is complete. A one-page Tirosh trial returned 16 candidate facts in 13.75 s, of which 14 quotes matched; two remained rejected. Keep unmatched claims for direct PDF inspection and visually inspect figures even when all text quotes match.
