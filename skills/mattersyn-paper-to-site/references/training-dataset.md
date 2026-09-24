@@ -67,3 +67,11 @@ Primary precedents checked September 16, 2026:
 
 - Wang et al., Scientific Data (2022), DOI 10.1038/s41597-022-01317-2: 35,675 structured solution-synthesis procedures. https://www.nature.com/articles/s41597-022-01317-2
 - Gu et al., ACS Nano (2025), DOI 10.1021/acsnano.5c09134: 3,508 colloidal recipes covering 348 compositions; recipe-to-size/shape prediction. This is forward prediction, not evidence of general exact-structure-to-complete-recipe planning. https://pubs.acs.org/doi/10.1021/acsnano.5c09134
+
+## Preserve experimental variants and cross-paper evidence
+
+Create a distinct immutable recipe-variant / experiment record for every source-reported change in precursor identity or quantity, stock concentration, sequence, temperature, duration, solvent, atmosphere or other controlled input when it corresponds to a distinct experimental run or reported sample. Link variants to a shared parent recipe family and material hub, but keep each input set, sample, measured product/structure/property outcome and paper locator separate. Never infer a continuous response curve from a sparse condition series or merge distinct measurements because the product formula is the same.
+
+Several papers may contribute to the reader's material or method view. Store each paper as independent source evidence and link it to the specific route, sample or claim it supports. A paper that reports synthesis but no matching atomic model can corroborate the route without supplying coordinates; a structural paper may contribute an external/refined structure only when the sample and phase relationship are supported. Do not fuse complementary details across papers into a synthetic “complete experiment” unless the source chain explicitly establishes that they refer to the same preparation and specimen. Keep source-specific disagreements and missing links visible.
+
+For training exports, one record is one experimentally distinct recipe-to-observation example, not one website or paper. Preserve recipe-family, source-paper, batch, sample and variant group IDs so related variants and cross-paper duplicates stay together in evaluation splits. A pass-screened document is only a candidate, not an audited data point; no record becomes eligible until its preparation, specimen, target structure/property and source linkage pass the required independent review.

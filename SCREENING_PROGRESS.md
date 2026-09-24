@@ -1,15 +1,25 @@
-# MatterSyn screening checkpoint
+# MatterSyn screening and curation checkpoint
 
-Updated: 2026-09-24T04:07:23.964749+00:00
+Updated: 2026-09-23 Central
 
-Screened **10,702 of 10,802 distinct documents (99.074%)**. Screening is still in progress. The frozen folder contains 10,967 source files, including exact duplicate copies; file totals can therefore differ from distinct-document totals.
+The frozen screening scope contains **10,967 source-file copies representing 10,802 distinct document contents**. Main articles and SI are separate screening documents; exact duplicate contents are counted once for distinct-content rates. **10,702/10,802 distinct contents were checked (99.074%); 100 are access-blocked and remain unreviewed.**
 
-| Folder | Current source files | Meaning |
-|---|---:|---|
-| screened_papers | 5,587 | Useful preparation and reported structural evidence; exact linkage deferred |
-| screened_papers_on_hold | 1,679 | Screening eligibility unclear; includes legacy holds awaiting v2 reconsideration |
-| conflicting_papers | 0 | Unresolved screening conflict; includes legacy conflicts awaiting v2 reconsideration |
+| Decision | Distinct document contents | Share of all contents |
+|---|---:|---:|
+| Pass | 5,539 | 51.3% |
+| Hold | 1,666 | 15.4% |
+| No target recipe | 3,497 | 32.4% |
+| Blocked / unreviewed | 100 | 0.9% |
+| **Total collection** | **10,802** | **100%** |
 
-The CSV in each folder gives reasons, source pages and identities. Unreviewed documents remain in the source folder and are not automatically placed on hold. Confirmed no-target-recipe documents also remain there with a recorded decision. Original files are unchanged; copies are SHA-256 checked and the three folders are mutually exclusive. Main papers and SI are screened independently.
+Thus 51.8% of checked distinct contents passed. “Pass” is only an initial shortlist: it is not a verified sample–structure–recipe pair, independent scientific audit, or training-ready record. Initial screening reports **zero exact structure–recipe pairs**. The 100 blocked documents remain in the source collection and are neither passes nor no-target exclusions.
 
-Policy v2 defers exact preparation-to-sample matching, missing-parameter resolution and scientific consistency checks to extraction and audit. Earlier strict passes remain useful; older holds are being reconsidered individually, with their evidence and concerns preserved. This is initial screening, not complete extraction, independent scientific audit, website publication or verified training pairs. Four reviewer lanes are configured; their source ranges and per-document receipts are under `research-assets/screened-folder-20260923/strict-screen/agent-*`. Website work and daily recurrence remain paused. Stop after the frozen screening scope is complete to plan the next stage.
+The local decision folders contain 5,587 pass source files representing 5,539 distinct contents (48 duplicate copies), 1,679 hold files representing 1,666 distinct contents (13 duplicate copies), and zero conflict files. Each folder also has three manifest/readme metadata files not included in these source-file totals. No-target and blocked documents remain in the original source collection.
+
+At the user’s direction, detailed review has resumed for the existing pass set, while later arrivals remain queued. Tirosh et al. 2006 CoFe2O4 and Wu et al. 2008 Cu2S each have a frozen main-article extraction, a full independent audit and a successful targeted correction recheck. Tirosh retains the source’s literal “300 K” statement as an unresolved internal inconsistency; neither extraction is a canonical/site audit or a training-ready exact pair. The phosphinate-ligated CdSe main article and matched 24-page SI are in full review; the source reports separate QD and rod/tetrapod condition families that must remain distinct records. No new contribution from this resumed batch has yet passed all publication gates. Every retained source receives its own audit before scientific website integration; preserve each experimentally distinct recipe/condition/sample variant, and let multiple papers add separately attributed evidence to a material/method view where supported. Original papers and SI remain local.
+
+## Initial observed pace and planning range
+
+Two short main articles (five and six pages) reached frozen extraction plus independent review and correction recheck in parallel during the pilot. This is a selected small-paper sample, not a reliable average for longer articles, matched supplements, complex variants or website work. The first complete extraction-to-audit-to-site cycle from the resumed queue is still needed to measure end-to-end throughput. The current three-paper batch is provisionally estimated at 1–2 working days to complete extraction, audit closeout and integrate the first two audited source contributions, assuming no new source conflicts. This is a planning estimate, not a service-level commitment.
+
+The full backlog cannot yet be assigned a defensible finish date. It contains 5,539 distinct-content pass candidates, not 5,539 verified unique papers; main articles and SI are counted independently. A filename/DOI-stem heuristic produced 4,971 provisional paper buckets that still require identity reconciliation. As an illustrative capacity scenario only, at 30–60 minutes per verified source group with three parallel review lanes and eight productive hours per lane per day, the pass set would require roughly 103–207 working days before material-page integration, blocked-source resolution or later arrivals. Replace this scenario with measured rates after several complete site cycles. Website pages are built per material/method hub; source papers and experimentally distinct recipe variants remain separate underlying evidence records.
