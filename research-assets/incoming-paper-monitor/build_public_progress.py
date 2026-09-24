@@ -1,13 +1,17 @@
 """Publish-safe progress projection: explicit fields only, never raw private ledgers."""
 from pathlib import Path
 from datetime import datetime,timezone
+import argparse
 import hashlib,json,re
 from html import escape
 ROOT=Path(__file__).resolve().parent;SITE=ROOT.parent.parent/'recipe-atlas';DIST=SITE/'dist'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+parser=argparse.ArgumentParser(description='Build the public progress projection using the manifest from the live website when available.')
+parser.add_argument('--published-manifest',type=Path,help='Published website data/dataset-manifest.json. Defaults to the local build manifest.')
+args=parser.parse_args()
 queue=read(ROOT/'queue-status.json');counts=queue['counts'];release=read(ROOT/'latest-publication.json')
 editorial=read(ROOT/'public-progress-editorial.json')
-manifest=read(DIST/'data/dataset-manifest.json')
+manifest=read(args.published_manifest or DIST/'data/dataset-manifest.json')
 assert manifest['dataset_version']==release['dataset_version'] and manifest['record_count']==release['record_count'], 'Only verified live scientific counts may enter the progress page.'
 out={'schema_version':'1.0.0','updated_at':datetime.now(timezone.utc).isoformat(),
  'corpus_scanned_at':queue['ledger_last_scan_at'],
@@ -16,7 +20,7 @@ out={'schema_version':'1.0.0','updated_at':datetime.now(timezone.utc).isoformat(
  'count_note':'Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.',
  'priority':'Synthesis and crystal-structure evidence richness; existing batch retained.',
  'update_policy':'Progress is published at meaningful review milestones. This page checks for a newer published snapshot every minute. Scientific records are released after their required audits and website checks.',
- 'batch':editorial['batch'],'current_work':editorial['current_work'],'recent_milestones':editorial['recent_milestones'],
+ 'fixed_scope_screening':editorial.get('fixed_scope_screening'),'batch':editorial['batch'],'current_work':editorial['current_work'],'recent_milestones':editorial['recent_milestones'],
  'workflow':editorial.get('workflow'),
  'estimate':editorial.get('estimate',{'status':'being_recalibrated','summary':'Whole-corpus finish time is being recalibrated from completed reviews; incoming documents are counted separately.'})}
 text=json.dumps(out,ensure_ascii=False,indent=2)+'\n'

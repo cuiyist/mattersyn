@@ -82,3 +82,15 @@ Read [references/delivery-and-memory.md](references/delivery-and-memory.md) for 
 - When public access is requested, update the audience and verify the actual page using a fresh anonymous request without login cookies or an authorization bypass. A hosting URL alone does not prove the site is public.
 - Update project memory with the selected paper, exact scope, source/SI status, important caveats, artifact locations, deployment/access state and reusable preferences. Exclude unrelated app-settings discussion. Do not store tokens, credentials or session cookies.
 - Return the working site link, a concise description of changes, and any material unresolved source or validation limitation. Do not present incomplete SI work as complete.
+
+### Conflicted-source presentation
+
+When sources or sections report incompatible values for the same method/sample, preserve each statement with its own source and page/figure locator and show the claims side by side in the reader interface. Mark the disagreement unresolved and let readers inspect both claims. Do not silently select, average or normalize a value. A disagreement about one specimen is one unresolved evidence relationship, not separate experimental datasets unless the paper identifies distinct runs or samples. Keep the raw alternatives and resolution status in structured data.
+
+### Throughput and status integrity
+
+The user-set MatterSyn target is at least 500 website contributions per day while preserving source review and quality. Treat this as a scale-up goal, never as a measured rate. Report screening, extraction, independent audit, reader integration and publication counts separately. An automated draft, metadata card or partial source page must remain clearly labeled and must not count as a complete reviewed contribution. Use batch extraction, independent checks, shared Reader components and build validation to improve throughput without lowering scientific evidence requirements.
+
+When using a language or vision model to draft extraction, compare its claims against the source before use. Do not let a model silently “correct” an apparent typo: preserve conflicting wording verbatim with separate locators and an unresolved status. Check the exact operations and repetitions, sample-to-figure assignments, and undefined statistics; fluent summaries can omit them. A second pass by the same model is not an independent audit. Estimate throughput from complete source-audited, site-integrated and QA-passed contributions, not draft token speed or a single short-paper benchmark.
+
+A different model's audit pass can help prioritize checks, but it is not sufficient by itself: a 27B audit of a 9B Tirosh draft flagged an omitted reagent yet missed the article's explicit 300 K / 230–300 °C conflict, and it lacked rendered figures. Require evidence quotes with exact pages and independent visual inspection of relevant tables/figures and sample identities before promotion. Model-to-model agreement, empty conflict arrays, schema validity, and fast output do not establish correctness.
