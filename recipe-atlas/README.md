@@ -23,6 +23,19 @@ input hashes, excludes unpublished records, holds unselected or unclassified sou
 assets and private working materials, and preserves selected original source
 figures as exact cited website inputs under the user's current display preference.
 
+The dataset page reports two distinct structure views. `data/synthesis-structure-pairs.json`
+lists source-reviewed recipe/sample rows with an explicit recipe link, supported
+sample composition and at least one source-backed phase, morphology or structural
+measurement. It also contains an additive `mattersyn.structure/0.2` projection
+that keeps intended targets separate from observed sample outcomes; the projection
+is explicitly partial and does not replace canonical records. It does not require
+an atomic-coordinate file. `data/structure-recipe-coverage.json`
+separately counts available measured-product coordinates, their recipe links and
+records admitted to the stricter exact-coordinate task. The row list is not a
+deduplicated physical-batch count; unresolved cross-paper sample identity must
+remain explicit. Structural measurement properties are selected by the reviewed
+`data/structure-outcome-policy.json` allowlist rather than text matching.
+
 ## Build a release
 
 Use Python 3 with `requirements-data.txt` installed in an existing environment.

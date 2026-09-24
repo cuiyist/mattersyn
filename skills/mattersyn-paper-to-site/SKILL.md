@@ -37,6 +37,10 @@ Expose useful missingness in the page and downloadable data. A working main-text
 
 When the atlas will supply model-training examples, read [references/training-dataset.md](references/training-dataset.md). Use versioned recipe/sample records to generate pages and task-specific exports; a material hub, paper, illustrative crystal or unassigned figure is not automatically one labeled experiment.
 
+When changing a structure descriptor or reporting synthesis–structure coverage, read [references/structure-descriptor-v0.2.md](references/structure-descriptor-v0.2.md). Reuse its versioned schema for separate requested-target and observed-product instances. Count a pair from a source-supported recipe-instance → identified product-sample → structural-outcome link; do not require atomic coordinates for the broad pair count, and report coordinate-based or task-ready subsets separately.
+
+The generated dataset must expose the source-located recipe/sample rows behind its broad count and state whether cross-record specimen deduplication is complete. Keep molecular structure depictions separate from measured nanocrystal-coordinate assets. Never count an optical-only outcome as structural evidence or imply that source-linked rows are independently reproduced runs.
+
 ## Build the interactive explanation
 
 For a cross-material interface redesign or structure–recipe metric change, read [references/reader-and-training-views.md](references/reader-and-training-views.md). It defines the paired Reader/Data views and preserves specimen identity, unknown contexts, complete evidence and task-specific training admission.

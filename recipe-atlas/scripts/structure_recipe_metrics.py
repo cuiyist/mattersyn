@@ -12,7 +12,8 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
 TASK = 'exact_structure_recipe'
-REPRESENTATIONS = {'molecular_structure', 'experimental_periodic_structure', 'finite_sample_structure'}
+ASSET_REPRESENTATIONS = {'molecular_structure', 'experimental_periodic_structure', 'finite_sample_structure'}
+TASK_COORDINATE_REPRESENTATIONS = {'experimental_periodic_structure', 'finite_sample_structure'}
 
 
 def digest(value):
@@ -80,7 +81,7 @@ def load_structure_policy(root):
 
 
 def coordinate_inventory(record, policy=None, asset_root=None):
-    """Read canonical sample-coordinate links; references/illustrations never enter.
+    """Read canonical measured-product structure assets; references/illustrations never enter.
 
     available=None means reachability was not tested (e.g. no filesystem root or
     external URL). Presence of a URL alone is not a successful download/geometry check.
@@ -97,7 +98,7 @@ def coordinate_inventory(record, policy=None, asset_root=None):
                'source_group': record['lineage']['source_group'], 'sample_resolved': sample is not None,
                'available': None, 'asset_sha256': None, 'representation': 'unclassified',
                'label': asset['id'], 'eligible_as_measured_label': asset['eligible_as_measured_label'],
-               'source_verified_explicit_link': False}
+               'source_verified_explicit_recipe_link': False}
         parsed = urlsplit(asset['url'])
         if asset_root is not None and not parsed.scheme and not parsed.netloc:
             root = Path(asset_root).resolve()
@@ -108,11 +109,11 @@ def coordinate_inventory(record, policy=None, asset_root=None):
         key = record['lineage']['source_group'] + '::' + asset['id']
         qualification = policy.get('asset_qualifications', {}).get(key, {})
         if (row['asset_sha256'] and qualification.get('asset_sha256') == row['asset_sha256']
-                and qualification.get('url') == asset['url'] and qualification.get('representation') in REPRESENTATIONS):
+                and qualification.get('url') == asset['url'] and qualification.get('representation') in ASSET_REPRESENTATIONS):
             row['representation'] = qualification['representation']
             row['label'] = qualification.get('label') or asset['id']
         sources = {s['id'] for s in record['sources']}
-        row['source_verified_explicit_link'] = bool(sample and record['quality']['review_status'] == 'source_reviewed'
+        row['source_verified_explicit_recipe_link'] = bool(sample and record['quality']['review_status'] == 'source_reviewed'
             and sample['recipe_link'] == 'explicit' and sample['link_evidence']
             and all(e.get('source_id') in sources and e.get('locator') for e in sample['link_evidence']))
         rows.append(row)
@@ -136,10 +137,11 @@ def assess_structure_recipe(record, policy=None):
         reject('duplicate_record', 'This record is marked as a duplicate, not a separate training example.')
     if TASK not in quality['requested_tasks']:
         reject('task_not_requested', 'Exact structure–recipe training has not been requested for this record.')
-    sample_assets = coordinate_inventory(record, policy)
+    sample_assets = [a for a in coordinate_inventory(record, policy)
+                     if a['representation'] != 'molecular_structure']
     if not sample_assets:
         reject('no_sample_coordinate_asset', 'No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate.')
-    if sample_assets and not any(a['source_verified_explicit_link'] for a in sample_assets):
+    if sample_assets and not any(a['source_verified_explicit_recipe_link'] for a in sample_assets):
         reject('explicit_sample_recipe_link_missing', 'The coordinate-bearing sample has no source-reviewed explicit recipe link.')
     if sample_assets and not any(a['eligible_as_measured_label'] for a in sample_assets):
         reject('measured_label_not_approved', 'The available sample coordinates have not been approved as a measured training label.')
@@ -163,14 +165,14 @@ def assess_structure_recipe(record, policy=None):
         sample_id = profile.get('sample_id')
         samples = {p['sample_id']: p for p in record['products']}
         sample = samples.get(sample_id)
-        linked = {a['asset_id']: a for a in sample_assets if a['sample_id'] == sample_id and a['source_verified_explicit_link']}
+        linked = {a['asset_id']: a for a in sample_assets if a['sample_id'] == sample_id and a['source_verified_explicit_recipe_link']}
         ids = profile.get('structure_asset_ids', [])
         if not ids or len(ids) != len(set(ids)) or any(i not in linked or not linked[i]['eligible_as_measured_label'] for i in ids):
             reject('profile_coordinate_link_not_approved', 'The selected measured coordinate assets must resolve to this same explicitly linked, label-approved sample.')
         else:
             selected_assets = ids
         coordinate = profile.get('coordinate_validation', {})
-        if (coordinate.get('status') != 'passed_for_task' or coordinate.get('representation') not in REPRESENTATIONS
+        if (coordinate.get('status') != 'passed_for_task' or coordinate.get('representation') not in TASK_COORDINATE_REPRESENTATIONS
                 or set(coordinate.get('asset_sha256', {})) != set(ids)
                 or any(not re.fullmatch('[a-f0-9]{64}', str(h)) for h in coordinate.get('asset_sha256', {}).values())):
             reject('coordinate_task_validation_missing', 'The profile must identify and hash the experimentally supported representation validated for this task; a viewer model alone is insufficient.')
@@ -256,31 +258,127 @@ def exact_recipe_selection(record, policy):
 
 
 def structure_recipe_coverage(records, policy=None, asset_root=None):
-    """Counts distinct assets, record/sample links and ready records; never physical batches."""
+    """Count physical-sample coordinate files separately from molecular models and readiness."""
     asset_root = asset_root if asset_root is not None else (policy or {}).get('_asset_root')
     rows = []
-    assets, links, ready = {}, set(), []
+    assets, links, molecules, molecule_links, ready = {}, set(), {}, set(), []
     reason_counts = Counter()
     for record in records:
         inventory = coordinate_inventory(record, policy, asset_root)
         assessment = assess_structure_recipe(record, policy)
         for row in inventory:
-            if row['available'] is True and row['sample_resolved']:
+            if row['available'] is True and row['sample_resolved'] and row['representation'] in TASK_COORDINATE_REPRESENTATIONS:
                 key = (row['source_group'], row['url'])
                 assets[key] = row
-                if row['source_verified_explicit_link']:
+                if row['source_verified_explicit_recipe_link']:
                     links.add((record['record_id'], row['sample_id'], row['url'], row['representation']))
+            elif row['available'] is True and row['sample_resolved'] and row['representation'] == 'molecular_structure':
+                key = (row['source_group'], row['url'])
+                molecules[key] = row
+                if row['source_verified_explicit_recipe_link']:
+                    molecule_links.add((record['record_id'], row['sample_id'], row['url']))
         if assessment['eligible']:
             ready.append(record['record_id'])
         reason_counts.update(assessment['reason_codes'])
         rows.append({'record_id': record['record_id'], 'source_group': record['lineage']['source_group'],
-                     'coordinate_assets': inventory, 'exact_structure_recipe': assessment})
-    return {'schema_version': '1.0', 'scope': 'Canonical measured-sample coordinate links only. Reachability is a local file check, not a new structural validation. External reference/illustrative viewers and unregistered source structures are outside this inventory. Assets, documentary links and task-ready records are different units; none counts independent experimental batches.',
+                     'measured_product_assets': inventory, 'exact_structure_recipe': assessment})
+    return {'schema_version': '1.1', 'scope': 'Canonical measured-product coordinate links only. Experimental periodic/finite-sample structures are counted separately from molecular models. Reachability is a local file check, not a new structural validation. External reference/illustrative viewers and unregistered source structures are outside this inventory. Assets, documentary links and task-ready records are different units; none counts independent experimental batches.',
             'availability_assessed': asset_root is not None,
             'counts': {'sample_coordinate_assets': len(assets) if asset_root is not None else None,
-                       'records_with_sample_coordinates': sum(any(a['available'] is True and a['sample_resolved'] for a in row['coordinate_assets']) for row in rows) if asset_root is not None else None,
-                       'source_verified_explicit_links': len(links) if asset_root is not None else None,
+                       'records_with_sample_coordinates': sum(any(a['available'] is True and a['sample_resolved'] and a['representation'] in TASK_COORDINATE_REPRESENTATIONS for a in row['measured_product_assets']) for row in rows) if asset_root is not None else None,
+                       'source_verified_explicit_coordinate_links': len(links) if asset_root is not None else None,
+                       'molecular_structure_assets': len(molecules) if asset_root is not None else None,
+                       'molecular_structure_recipe_links': len(molecule_links) if asset_root is not None else None,
                        'exact_task_ready_records': len(ready)},
             'asset_representation_counts': dict(Counter(a['representation'] for a in assets.values())),
             'explicit_link_representation_counts': dict(Counter(x[3] for x in links)),
+            'molecular_asset_representation_counts': dict(Counter(a['representation'] for a in molecules.values())),
             'ready_record_ids': ready, 'exclusion_reason_record_counts': dict(sorted(reason_counts.items())), 'records': rows}
+
+
+def _supported_fact(value, source_ids, statuses=None):
+    statuses = statuses or {'reported', 'calculated', 'author_derived', 'inherited'}
+    present = isinstance(value, dict) and (value.get('value') is not None or value.get('minimum') is not None or value.get('maximum') is not None)
+    evidence = value.get('evidence', []) if isinstance(value, dict) else []
+    return bool(present and value.get('status') in statuses and evidence
+                and all(isinstance(e, dict) and e.get('source_id') in source_ids
+                        and isinstance(e.get('locator'), str) and e['locator'].strip() for e in evidence))
+
+
+def _supported_evidence(evidence, source_ids):
+    return bool(evidence and all(isinstance(e, dict) and e.get('source_id') in source_ids
+                                 and isinstance(e.get('locator'), str) and e['locator'].strip() for e in evidence))
+
+
+def recipe_structure_outcome_coverage(records, property_policy):
+    """Export auditable source-reviewed recipe/sample rows with at least one structure outcome.
+
+    These are canonical record/sample rows, not deduplicated physical batches and not
+    exact-coordinate training examples. Structural measurement properties are explicitly
+    allowlisted; optical/electrical/assay outcomes cannot enter by substring matching.
+    """
+    allowed = set(property_policy.get('measurement_properties', []))
+    descriptor_fields = property_policy.get('measurement_fields', {})
+    rows = []
+    for record in records:
+        if record['quality']['review_status'] != 'source_reviewed' or record['record_type'] not in {'literature_protocol', 'protocol_variant', 'experiment'}:
+            continue
+        sources = {s['id']: s for s in record['sources']}
+        source_ids = set(sources)
+        for sample in record['products']:
+            if sample.get('recipe_link') != 'explicit' or not _supported_evidence(sample.get('link_evidence', []), source_ids):
+                continue
+            if not _supported_fact(sample.get('composition'), source_ids, {'reported', 'calculated', 'inherited'}):
+                continue
+            structure = []
+            for field in ('phase', 'morphology'):
+                value = sample.get(field)
+                if _supported_fact(value, source_ids):
+                    structure.append({'kind': field, 'value': value})
+            measurements = []
+            for measurement in record['measurements']:
+                if (measurement.get('sample_id') != sample['sample_id']
+                        or measurement.get('property') not in allowed
+                        or not _supported_fact(measurement.get('value'), source_ids)
+                        or not _supported_evidence(measurement.get('evidence', []), source_ids)):
+                    continue
+                measurements.append({'measurement_id': measurement['id'], 'property': measurement['property'],
+                                     'descriptor_field': descriptor_fields.get(measurement['property'], 'structure.unclassified_structural_observation'),
+                                     'value': measurement['value'], 'technique': measurement['technique'],
+                                     'conditions': measurement.get('conditions'), 'evidence': measurement['evidence']})
+            if not structure and not measurements:
+                continue
+            source_rows = [{'source_id': e['source_id'], 'locator': e['locator'], 'claim': e.get('claim')}
+                           for e in sample['link_evidence']]
+            composition = sample['composition']
+            target = record.get('intended_target', {})
+            descriptor_measurement_refs = [{'measurement_id': m['measurement_id'], 'property': m['property'], 'field': m['descriptor_field']}
+                                           for m in measurements]
+            structure_descriptor = {'schema_version': 'mattersyn.structure/0.2',
+                                    'mapping_status': 'partial_canonical_projection',
+                                    'intended_target': target,
+                                    'observed_product': {'sample_id': sample['sample_id'],
+                                                         'parent_sample_id': sample.get('parent_sample_id'),
+                                                         'batch_id': sample.get('batch_id'),
+                                                         'material_state_id': sample.get('material_state_id'),
+                                                         'composition': sample['composition'],
+                                                         'structure': {'phase': sample.get('phase'),
+                                                                       'morphology': sample.get('morphology'),
+                                                                       'measurement_refs': descriptor_measurement_refs}}}
+            rows.append({'pair_row_id': record['record_id'] + '::' + sample['sample_id'],
+                         'record_id': record['record_id'], 'record_page_path': 'records/' + record['record_id'] + '.html',
+                         'source_group': record['lineage']['source_group'], 'title': record['title'],
+                         'doi': record['sources'][0].get('doi'), 'year': record['sources'][0].get('year'),
+                         'method': record['method'], 'recipe_label': record['title'],
+                         'sample_id': sample['sample_id'], 'source_sample_label': sample.get('source_sample_label'),
+                         'batch_id': sample.get('batch_id'), 'parent_sample_id': sample.get('parent_sample_id'),
+                         'composition': composition, 'recipe_link': 'explicit', 'recipe_link_evidence': source_rows,
+                         'product_structure_fields': structure, 'structural_measurements': measurements,
+                         'structure_descriptor_v02': structure_descriptor,
+                         'cross_record_sample_deduplication': 'not_assessed'})
+    rows.sort(key=lambda r: (r['source_group'], r['record_id'], r['sample_id']))
+    return {'schema_version': '1.0',
+            'definition': 'One source-reviewed canonical recipe record linked explicitly to one identified product sample, with source-backed composition and at least one source-backed product phase, morphology, or allowlisted sample-specific structural measurement. Atomic coordinates are not required. Multiple structural measurements enrich one row. Cross-record physical-sample deduplication has not been completed; row and paper counts are not independent batch counts.',
+            'counts': {'recipe_structure_rows': len(rows), 'source_groups': len({r['source_group'] for r in rows}),
+                       'records': len({r['record_id'] for r in rows}), 'physical_samples_deduplicated': None},
+            'measurement_property_policy': 'data/structure-outcome-policy.json', 'rows': rows}

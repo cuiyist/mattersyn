@@ -1,4 +1,4 @@
-from structure_recipe_metrics import load_structure_policy, structure_recipe_coverage
+from structure_recipe_metrics import load_structure_policy, structure_recipe_coverage, recipe_structure_outcome_coverage
 """Validate canonical records, generate record pages and gated training exports."""
 import argparse,json,html,sys,shutil
 from pathlib import Path
@@ -137,9 +137,9 @@ def measurement_table(ms):
     for m in ms:s+='<tr><td>'+esc(human(m['property']))+'</td><td>'+esc(fmt(m['value']))+'<small>'+esc(human(m['value']['status']))+'</small></td><td>'+esc(m['technique'])+'<small>'+esc(m['conditions'])+'</small></td><td>'+esc(m['sample_id'])+'<small>'+evidence(m['evidence'])+'</small></td></tr>'
     return s+'</tbody></table></div>'
 
-def catalog_html(report,manifest):
+def catalog_html(report,manifest,pair_rows=()):
     from catalog_view import render
-    return render(report,manifest,head,header,esc,human)
+    return render(report,manifest,head,header,esc,human,pair_rows)
 
 
 def main():
@@ -153,6 +153,8 @@ def main():
     if errors:print('\n'.join(errors),file=sys.stderr);return 1
     structure_policy = load_structure_policy(ROOT)
     structure_coverage = structure_recipe_coverage(records, structure_policy, ROOT / "dist")
+    structure_outcome_policy = json.loads((ROOT/'data/structure-outcome-policy.json').read_text(encoding='utf-8'))
+    structure_outcome_coverage = recipe_structure_outcome_coverage(records, structure_outcome_policy)
     groups=build_groups(records);unique_groups=sorted(set(groups.values()));assign={g:('development' if len(unique_groups)<10 else 'test' if int(digest(g)[:8],16)%10==0 else 'validation' if int(digest(g)[:8],16)%10==1 else 'train') for g in unique_groups}
     public=ROOT/'dist/data';pages=ROOT/'dist/records';pages.mkdir(parents=True,exist_ok=True)
     tasks=['precursor_selection','partial_protocol','size_conditioned_recipe','exact_structure_recipe','success_prediction','optical_outcome'];exports={k:[] for k in tasks};items=[]
@@ -170,15 +172,18 @@ def main():
     stale=[str(p) for folder in [public/'records',pages] for p in folder.glob('*') if p.is_file() and p.stem not in expected]
     if stale:raise ValueError('Review and remove obsolete generated record files explicitly: '+', '.join(stale))
     families=sorted({r['material']['family'] for r in records if r['record_type']!='procedure'})
-    manifest={'schema_version':'1.0.0','dataset_version':'0.34.0','record_count':len(records),'group_count':len(unique_groups),'families':families,'split_policy':'Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.','records':items}
-    report={'status':'passed','dataset_version':'0.34.0','records':len(records),'recipe_records':sum(r['record_type']!='procedure' for r in records),'shared_procedures':sum(r['record_type']=='procedure' for r in records),'independent_experiment_count':None,'source_groups':len(unique_groups),'families':len(families),'eligible_by_task':{k:len(v) for k,v in exports.items()},'checks':['JSON Schema Draft 2020-12','Unique IDs and source references','Typed finite quantities and missing-value status','Operation dependencies and material-state graph','Product/measurement linkage','Illustrative-structure exclusion','Connected-component evaluation grouping','Allowlisted training inputs'],'warnings':['Sample-coordinate availability, explicit source links and exact-task readiness are reported separately in structure_recipe_coverage; none is an independent-experiment count.','Small seed collection; no general model-performance estimate.','No experimental failure-rate or reproducibility dataset yet.']}
+    manifest={'schema_version':'1.0.0','dataset_version':'0.35.0','record_count':len(records),'group_count':len(unique_groups),'families':families,'split_policy':'Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.','records':items}
+    report={'status':'passed','dataset_version':'0.35.0','records':len(records),'recipe_records':sum(r['record_type']!='procedure' for r in records),'shared_procedures':sum(r['record_type']=='procedure' for r in records),'independent_experiment_count':None,'source_groups':len(unique_groups),'families':len(families),'eligible_by_task':{k:len(v) for k,v in exports.items()},'checks':['JSON Schema Draft 2020-12','Unique IDs and source references','Typed finite quantities and missing-value status','Operation dependencies and material-state graph','Product/measurement linkage','Illustrative-structure exclusion','Connected-component evaluation grouping','Allowlisted training inputs'],'warnings':['Source-checked synthesis–structure rows, measured-product coordinate assets and exact-coordinate task readiness are separate metrics; counts are not independent experimental batches.','Small seed collection; no general model-performance estimate.','No experimental failure-rate or reproducibility dataset yet.']}
     report['curated_recipes']=sum(r['record_type'] in PROTOCOL_TYPES and r.get('collection')=='reviewed_literature' for r in records)
     report['contextual_observation_records']=sum(r['record_type']=='observation' for r in records)
     report['recipe_records']=sum(r['record_type'] in PROTOCOL_TYPES for r in records)
     report['published_benchmark_rows']=sum(r.get('collection')=='published_benchmark' for r in records)
-    report['warnings']=['Sample-coordinate availability, explicit source links and exact-task readiness are reported separately in structure_recipe_coverage; none is an independent-experiment count.','Literature seed is too small for cross-study performance estimates.','PbS benchmark rows are published numeric experiments, not individually reviewed complete protocols. The baseline is evaluated separately within that study.','Five selected PbS failure rows are retained as evidence with null continuous targets.']
+    report['warnings']=['Source-checked synthesis–structure rows, measured-product coordinate assets and exact-coordinate task readiness are separate metrics; row counts are not independent experimental batches.','Literature seed is too small for cross-study performance estimates.','PbS benchmark rows are published numeric experiments, not individually reviewed complete protocols. The baseline is evaluated separately within that study.','Five selected PbS failure rows are retained as evidence with null continuous targets.']
     report['structure_recipe_coverage'] = {k:v for k,v in structure_coverage.items() if k != 'records'}
+    report['structure_outcome_coverage'] = {k:v for k,v in structure_outcome_coverage.items() if k != 'rows'}
     dump(public / 'structure-recipe-coverage.json', structure_coverage)
+    dump(public / 'structure-outcome-policy.json', structure_outcome_policy)
+    dump(public / 'synthesis-structure-pairs.json', structure_outcome_coverage)
     queue=ROOT/'data/pilot-source-queue.json'
     if queue.exists():
         q=json.loads(queue.read_text(encoding='utf-8'));dump(public/'pilot-source-queue.json',q);report['queue_count']=len(q['candidates']);report['queue_families']=len({x['family'] for x in q['candidates']})
@@ -187,7 +192,7 @@ def main():
     (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8',newline='\n')
     for task,rows in exports.items():
         path=public/'exports'/(task+'.jsonl');path.parent.mkdir(parents=True,exist_ok=True);path.write_text(''.join(json.dumps(row,ensure_ascii=False)+'\n' for row in rows),encoding='utf-8',newline='\n')
-    (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest),encoding='utf-8',newline='\n')
+    (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest,structure_outcome_coverage['rows']),encoding='utf-8',newline='\n')
     print(json.dumps(report,indent=2))
     return 0
 if __name__=='__main__':raise SystemExit(main())

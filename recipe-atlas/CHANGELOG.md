@@ -4,6 +4,21 @@ Archived verbatim from the prior README. Statements and counts below apply to th
 
 # Current Reader build — September 22, 2026
 
+## Dataset 0.35.0 — September 24, 2026
+
+The synthesis dataset now distinguishes source-checked synthesis–structure rows
+from measured-product coordinate assets and exact-coordinate training readiness.
+The current reviewed collection contains 84 recipe/sample rows across 26 source
+groups and 71 canonical records; physical-sample deduplication across records is
+not complete, so these numbers are not counts of independent batches. Each row
+requires an explicit source-located recipe link, source-backed composition and at
+least one source-located phase, morphology or allowlisted structural measurement.
+Several characterization measurements on one sample enrich one row. An optical-
+only PbS benchmark result is not counted as a structure outcome. The dataset page
+lists each included row and links to its record evidence. Exact-coordinate task
+readiness remains 0; the one molecular model is reported separately from measured
+nanocrystal coordinates.
+
 All 50 material/component hubs and 123 synthesis routes use the shared Reader. Run the dataset, reader views, evidence views, paper reviews, atlas, and inventory builders after their respective reviewed data changes; run `scripts/build_reader_metadata.py` **last**, after dataset and atlas outputs are current. `scripts/build_reader_views.py` generates the common material page, CdSe entrypoint, and four named method aliases from `templates/material-reader.html`. It preserves the earlier `*-evidence.html` editions. Do not use historical one-off redesign scripts as build steps.
 
 For atlas-wide changes, verify every indexed material and synthesis route. The Reader/Data views share canonical records; metadata completeness and page rendering do not establish a new scientific review. Validate source-specific gaps and representative controls separately. The sections below are historical release notes; their old counts and workflow preferences are not the current project state.
