@@ -11,6 +11,8 @@ class RuntimeSnapshot(unittest.TestCase):
             subprocess.run(['git','add','.'],cwd=root,check=True);subprocess.run(['git','-c','user.name=Fixture','-c','user.email=fixture@example.invalid','commit','-qm','Synthetic fixture'],cwd=root,check=True)
             out=Path(tmp)/'snapshot.json';result=make(root,bp,out)
             self.assertEqual(result['source_commit'],subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip())
+            self.assertNotIn(b'\r\n',out.read_bytes())
+            self.assertTrue(out.read_bytes().endswith(b'\n'))
             with self.assertRaises(ValueError):make(root,bp,root/'snapshot.json')
             p.write_text('changed')
             with self.assertRaises(ValueError):make(root,bp,Path(tmp)/'dirty.json')

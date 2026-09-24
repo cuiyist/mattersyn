@@ -287,7 +287,7 @@ The observed dataset version is {manifest['dataset_version']}; no version bump w
 
 ## Regenerate
 
-Run `C:\\Users\\jiacu\\miniforge3\\python.exe -B -X utf8` with this directory's `build_inventory_proposal.py`. It reads current Site data, preserves `base-inventory-summary.json` for manual notes, and writes only this private directory. It rejects stale or concurrently changed evidence.
+Run `python -B -X utf8 build_inventory_proposal.py` from this directory. It reads current Site data, preserves `base-inventory-summary.json` for manual notes, and writes only this private directory. It rejects stale or concurrently changed evidence.
 '''
     (OUT/'REPORT.md').write_text(report_text,encoding='utf-8')
     print(json.dumps({'status':'passed','checks':len(checks),'canonical_records':len(records),'routes':len(routes),'controls':len(controls),'procedures':len(procedures),'observations':len(observations),'benchmark_rows':len(bench),'hubs':len(hubs),'source_groups':len(source_groups)}))

@@ -10,7 +10,7 @@ from safe_paths import checked_path, preflight_tree
 
 TEXT={'.json','.jsonl','.html','.js','.mjs','.css','.md','.csv','.txt'}
 def sha(b):return hashlib.sha256(b).hexdigest()
-def save(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def save(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 @lru_cache(maxsize=1)
 def display_guard():
     # One shared validator keeps build-time substitution and release gating in
@@ -110,7 +110,7 @@ def main():
     save(source/'private-build/source-link-generated-assets.json',{'schema':'mattersyn-generated-source-links/1','assets':list({x['path']:x for x in new_assets}.values())})
     if a.phase=='prepare':print(json.dumps({'prepared_overrides':len(overrides)}));return
     save(root/'data/source-figure-links.json',{'schema':'mattersyn-source-figure-links/1','assets':public})
-    (root/'source-figure-links.mjs').write_text(SCRIPT,encoding='utf-8')
+    (root/'source-figure-links.mjs').write_text(SCRIPT,encoding='utf-8',newline='\n')
     if a.phase=='postbuild':
         changed=[];private=[];lookup={x['original_path']:x for x in overrides};pattern=re.compile('|'.join(re.escape(x)for x in sorted(replacements,key=len,reverse=True)))if replacements else None
         for path in root.rglob('*'):
@@ -125,7 +125,7 @@ def main():
             else:clean=pattern.sub(lambda m:replacements[m.group()],raw)if pattern else raw
             if path.suffix=='.html'and'source-figure-links.mjs'not in clean:
                 prefix='../'*len(Path(rel).parent.parts);clean=clean.replace('</body>','<script type="module" src="'+prefix+'source-figure-links.mjs"></script></body>')
-            if clean!=raw:path.write_text(clean,encoding='utf-8');changed.append(rel)
+            if clean!=raw:path.write_text(clean,encoding='utf-8',newline='\n');changed.append(rel)
         for original in replacements:
             target=(root/original).resolve()
             if not target.is_relative_to(root):raise RuntimeError('Out-of-artifact original path')

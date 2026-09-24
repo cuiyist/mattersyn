@@ -269,7 +269,7 @@ class BoundaryGuardTests(unittest.TestCase):
 
         backslash = chr(92)
         slash = chr(47)
-        separator = "[" + backslash * 2 + slash + "]"
+        separator = "[" + backslash * 2 + slash + "]+"
         windows_segment = "[^" + backslash * 2 + slash + r"\s\"'<>|,;]+"
         posix_segment = "[^" + slash + r"\s\"'<>|,;]+"
         expected_windows = (
@@ -300,6 +300,59 @@ class BoundaryGuardTests(unittest.TestCase):
             projected, reason, _ = _sanitize_content("tools/mattersyn-release/source.py", raw)
             self.assertEqual(projected, raw, source.name)
             self.assertEqual(reason, "unchanged", source.name)
+
+    def test_escaped_profile_paths_in_code_and_data_are_removed_without_decoding_code(self):
+        for repetitions in (1, 2, 4, 8):
+            separator = chr(92) * repetitions
+            value = "C:" + separator + separator.join(("Users", "SyntheticUser", "project", "input.json"))
+            for extension, text in (
+                (".mjs", "const fixture = " + json.dumps(value) + ";"),
+                (".py", "fixture = " + repr(value)),
+                (".md", value),
+            ):
+                with self.subTest(repetitions=repetitions, extension=extension):
+                    raw = text.encode()
+                    cleaned, reason, stats = _sanitize_content("synthetic" + extension, raw)
+                    self.assertNotEqual(cleaned, raw)
+                    self.assertNotIn(b"SyntheticUser", cleaned)
+                    self.assertIn(b"[local path redacted]", cleaned)
+                    self.assertEqual(reason, "sanitized_local_paths")
+                    self.assertGreater(stats["local_path_strings_redacted"], 0)
+
+    def test_escaped_paths_in_nested_json_values_and_keys_are_checked(self):
+        for repetitions in (1, 2, 4, 8):
+            separator = chr(92) * repetitions
+            value = "C:" + separator + separator.join(("Users", "SyntheticUser", "project", "input.json"))
+            for depth in (0, 1, 2):
+                obj = {"note": value, "measurement": {"value": 3.2, "unit": "nm", "raw_text": "3.2 nm"}}
+                for _ in range(depth):
+                    obj = {"payload": json.dumps(obj)}
+                raw = json.dumps(obj).encode()
+                with self.subTest(repetitions=repetitions, depth=depth):
+                    cleaned, reason, stats = _sanitize_content("synthetic.json", raw)
+                    self.assertNotEqual(cleaned, raw)
+                    self.assertNotIn(b"SyntheticUser", cleaned)
+                    result = json.loads(cleaned)
+                    for _ in range(depth):
+                        result = json.loads(result["payload"])
+                    self.assertEqual(result["measurement"], {"value": 3.2, "unit": "nm", "raw_text": "3.2 nm"})
+                    self.assertEqual(result["note"], "[local path redacted]")
+                    self.assertGreater(stats["local_path_strings_redacted"], 0)
+            raw = json.dumps({value: {"value": 3.2, "unit": "nm"}}).encode()
+            cleaned, reason, _ = _sanitize_content("synthetic.json", raw)
+            self.assertIsNone(cleaned)
+            self.assertEqual(reason, "local_path_in_json_key")
+
+    def test_escaped_detection_preserves_portable_code_and_scientific_lexemes(self):
+        separator = chr(92) * 2
+        code = ("const example = " + json.dumps("C:" + separator + "example" + separator + "file") + ";\n"
+                + "const pattern = " + repr(separator + "s+") + ";\n"
+                + "const fixture = new URL('./bindings-proposal.json', import.meta.url);\n").encode()
+        self.assertEqual(_sanitize_content("synthetic.mjs", code)[0], code)
+        data = {"source_url": "https://doi.org/10.1000/example",
+                "measurement": {"value": 3.2, "unit": "nm", "raw_text": "3.2 nm"}}
+        raw = json.dumps(data).encode()
+        self.assertEqual(_sanitize_content("synthetic.json", raw)[0], raw)
 
     def test_legacy_source_hash_and_page_located_snippet_text_is_removed(self):
         obj = {

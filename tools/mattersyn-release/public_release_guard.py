@@ -61,7 +61,9 @@ _PAGE_RENDER_NAME_RE = re.compile(
 )
 _PATH_SLASH = chr(47)
 _PATH_BACKSLASH = chr(92)
-_PATH_SEPARATOR_CLASS = "[" + 2 * _PATH_BACKSLASH + _PATH_SLASH + "]"
+# Source-code literals may repeat backslashes before a runtime path is decoded.
+# Match those separators directly; never unescape arbitrary source or data.
+_PATH_SEPARATOR_CLASS = "[" + 2 * _PATH_BACKSLASH + _PATH_SLASH + "]+"
 _WINDOWS_PATH_SEGMENT = "[^" + 2 * _PATH_BACKSLASH + _PATH_SLASH + r"\s\"'<>|,;]+"
 _POSIX_PATH_SEGMENT = "[^" + _PATH_SLASH + r"\s\"'<>|,;]+"
 _WINDOWS_PATH_PATTERN = (

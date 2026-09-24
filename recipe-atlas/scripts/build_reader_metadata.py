@@ -23,6 +23,6 @@ def main():
         if not set(view['record_ids']).issubset(data['records']):raise ValueError('Missing Reader method: '+hid)
     target=ROOT/'dist/data/reader-presentation.json';target.parent.mkdir(parents=True,exist_ok=True)
     view=display_view(data,ROOT,'reader-private-asset-provenance.json')
-    target.write_bytes(source.read_bytes())if view is data else target.write_text(json.dumps(view,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    target.write_bytes(source.read_bytes())if view is data else target.write_text(json.dumps(view,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({'reader_projection_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'records':len(data['records']),'materials':len(data['materials']),'scientific_values_modified':False}))
 if __name__=='__main__':main()

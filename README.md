@@ -4,6 +4,13 @@ MatterSyn organizes reviewed synthesis procedures, material characterization and
 
 [Open the atlas](https://cuiyist.github.io/mattersyn-site/) · [Review queue](https://cuiyist.github.io/mattersyn-site/progress.html)
 
+The project repository `cuiyist/mattersyn` is private at the owner's request. Code,
+project memory, skills and the cleaned working history are maintained there. The
+reviewed website, citations and its release controls remain public in
+`cuiyist/mattersyn-site`. The build instructions below require access to the project
+repository; complete papers, SI and raw extraction caches remain in the local
+research workspace.
+
 ## Reproduce a review candidate
 
 Use Python 3.11 or later with the dependencies pinned in [requirements-data.txt](recipe-atlas/requirements-data.txt). No GPU is needed to build the static website. The input snapshot binds reviewed files and record membership. The selected original source figures remain available in the reader at the user's explicit direction, with citations and supported sample attribution; that display choice does not mean publisher permission was verified. Original papers and SI, extracted full text/OCR, page renders and private working crops remain local.
@@ -33,7 +40,7 @@ Public citations are generated below from the same dataset snapshot used by the 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.34.0** · **42 primary source groups** · release `20260924-source-figures-restored`. Records are not independent experiments.
+Dataset **0.34.0** · **42 primary source groups** · release `20260924-review2-portable-build`. Records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 

@@ -136,7 +136,7 @@ def build_snapshot(ledger, titles, baseline, release, now=None, ledger_sha256=No
                 "Review scopes, document copies and DOI candidates are not verified unique-paper, synthesized-material or recipe totals.",
                 "Past publication is separate from this queue's evidence-gated completion. Existing papers require completeness re-audit.",
                 "Main-missing scopes are held for explicit limited-scope review, not discarded or counted as fully read papers."],
-            "regenerate_command": "C:\\Users\\jiacu\\miniforge3\\python.exe -X utf8 build_queue_report.py"}
+            "regenerate_command": "python -X utf8 build_queue_report.py"}
 
 
 def fmt(value):

@@ -1,10 +1,15 @@
 # Public release boundary tools
 
-These tools validate or project exact reviewed files for the MatterSyn source
-repository and website. The project-wide workflow is in `PUBLICATION.md` at the
-repository root. Scientific review, source-image rights and public delivery are
-separate gates: passing this boundary does not approve a scientific claim,
-sample-coordinate pair or training example.
+These tools validate or project exact reviewed files from the private MatterSyn
+project repository to the public website repository. The project-wide workflow is
+in `PUBLICATION.md` at the repository root. Project tooling, memory, skills, audit
+summaries and cleaned source history remain in the private repository. Complete
+sources, raw caches, detailed private audits and unreviewed candidates stay local;
+only the approved site artifact
+and reader-facing evidence needed by the public website are exported. Scientific
+review, source-image rights and public delivery are separate gates: passing this
+boundary does not approve a scientific claim, sample-coordinate pair or training
+example.
 
 ## Inputs and commands
 
@@ -49,6 +54,17 @@ figures available in the public reader with their citations, figure locators and
 supported sample mapping, even when publisher permission has not been verified.
 Preserve that unresolved permission status; the display choice is not a
 rights-clearance statement. Keep complete papers/SI, extracted text, page renders
+
+At the 2026-09-24 restoration checkpoint, 743 source figures were selected for
+display at the user's direction. Publisher permission remains unverified; the
+display choice is not rights clearance.
+
+The path-scrubbing tests cover Windows paths in ordinary spelling and in escaped or
+repeated separator forms embedded in source literals. Generated UTF-8 text is
+written with explicit LF newlines before cross-platform hashing. Scientific records,
+original image assets and CIF/SDF/XYZ coordinates retain their exact source bytes;
+they are never newline-normalized.
+
 and private working crops outside the public stage.
 
 Run the included bounded regression suite from this directory:

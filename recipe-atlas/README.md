@@ -69,6 +69,14 @@ Use the same snapshot for the project bibliography and website bibliography.
 Repository `.nojekyll` is a deliberate deployment adapter. Do not compare a dirty
 working tree to a public commit and call that a reproducible build.
 
+The public path scrubber recognizes Windows paths with ordinary, escaped or
+repeated separators, including doubled backslashes embedded in Python and JavaScript
+source literals. Keep regression coverage for these forms. Release writers serialize
+generated UTF-8 text with explicit LF newlines before hashing. Preserve canonical
+scientific records, selected source-figure bytes and CIF/SDF/XYZ coordinate files
+unchanged; line-ending normalization applies only to generated text.
+
+
 Publication remains a separate authorized action after content and source/Reader
 QA. The user's current instruction keeps selected original source figures available
 on the public reader with citation, page/figure locator and supported sample

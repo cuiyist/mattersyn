@@ -33,7 +33,7 @@ def stock_scope(stock,record_id):
 
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
-    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 def copy_verified_record(source,destination,record):
     """Preserve the audited bytes, including newline/Unicode serialization."""
     if json.loads(source.read_bytes())!=record:raise ValueError('Canonical record changed before publication copy')
@@ -161,7 +161,7 @@ def main():
         meta['collection']=r.get('collection','reviewed_literature')
         meta['components']=r['material'].get('components',[r['material']['formula']])
         copy_verified_record(ROOT/'data/records'/(rid+'.json'),public/'records'/(rid+'.json'),r)
-        (pages/(rid+'.html')).write_text(render_record(r,meta),encoding='utf-8')
+        (pages/(rid+'.html')).write_text(render_record(r,meta),encoding='utf-8',newline='\n')
         for task in tasks:
             if ee[task]['eligible']:
                 x=training_view(r,task, structure_policy);x['group_id']=meta['group_id'];x['split']=meta['split'];x['record_sha256']=meta['record_sha256'];exports[task].append(x)
@@ -184,10 +184,10 @@ def main():
         q=json.loads(queue.read_text(encoding='utf-8'));dump(public/'pilot-source-queue.json',q);report['queue_count']=len(q['candidates']);report['queue_families']=len({x['family'] for x in q['candidates']})
     dump(public/'measurement-display.json',DISPLAY)
     dump(public/'record.schema.json',SCHEMA);dump(public/'dataset-manifest.json',manifest);dump(public/'validation-report.json',report)
-    (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8')
+    (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8',newline='\n')
     for task,rows in exports.items():
-        path=public/'exports'/(task+'.jsonl');path.parent.mkdir(parents=True,exist_ok=True);path.write_text(''.join(json.dumps(row,ensure_ascii=False)+'\n' for row in rows),encoding='utf-8')
-    (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest),encoding='utf-8')
+        path=public/'exports'/(task+'.jsonl');path.parent.mkdir(parents=True,exist_ok=True);path.write_text(''.join(json.dumps(row,ensure_ascii=False)+'\n' for row in rows),encoding='utf-8',newline='\n')
+    (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest),encoding='utf-8',newline='\n')
     print(json.dumps(report,indent=2))
     return 0
 if __name__=='__main__':raise SystemExit(main())

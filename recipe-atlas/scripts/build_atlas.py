@@ -34,7 +34,7 @@ NAMES['CdSe/ZnS/siloxane']='Siloxane-coated CdSe/ZnS quantum dots'
 NAMES['CdS/polymer']='Cadmium sulfide nanocrystals in chelate polymer microparticles'
 
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
-def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
+def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
 def slug(f):return re.sub('[^a-z0-9]+','-',f.lower()).strip('-')+'-'+hashlib.sha256(f.encode()).hexdigest()[:6]
 def synthesis_route(r):
     return (r['collection']=='reviewed_literature' and r['record_type']!='procedure'

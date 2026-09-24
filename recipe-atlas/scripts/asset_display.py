@@ -47,5 +47,5 @@ def display_view(value,root,log_name):
     overrides=load_overrides(root)
     if not overrides:return value
     log=[];result=transform(value,overrides,log)
-    path=root/'private-build'/log_name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(log,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    path=root/'private-build'/log_name;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(log,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     return result

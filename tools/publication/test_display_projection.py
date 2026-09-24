@@ -2,7 +2,7 @@ import copy,hashlib,io,json,re,tempfile,unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
-from source_link_artifacts import main,project_display_json,rows
+from source_link_artifacts import main,project_display_json,rows,SCRIPT
 
 def restored_asset(path,raw):
     digest=hashlib.sha256(raw).hexdigest()
@@ -56,17 +56,22 @@ class DisplayProjectionTests(unittest.TestCase):
         changed=copy.deepcopy(asset);changed['delivery_paths'][1]['path']='private/figure.png'
         with self.assertRaisesRegex(RuntimeError,'user_directed_display_path_ineligible'):list(rows({'assets':[changed]}))
     def test_postbuild_keeps_restored_figure_bytes_and_scientific_metadata(self):
-        path='assets/figures/example/figure-2.png';raw=b'synthetic figure bytes';asset=restored_asset(path,raw)
+        path='assets/figures/example/figure-2.png';raw=b'\x89PNG\r\n\x1a\nsynthetic figure bytes';asset=restored_asset(path,raw)
         metadata={'original_figure_asset':{'file':path,'sha256':asset['asset_hash'],'source_pdf_sha256':'d'*64},
                   'public_asset':path,'public_asset_sha256':asset['asset_hash'],'sample':'sample-2','size_nm':4.2}
         with tempfile.TemporaryDirectory()as td:
             source=Path(td)/'atlas';dist=source/'dist';(dist/'data').mkdir(parents=True)
             image=dist/path;image.parent.mkdir(parents=True);image.write_bytes(raw)
-            target=dist/'data/figure.json';payload=(json.dumps(metadata,indent=2)+'\n').encode();target.write_bytes(payload)
+            target=dist/'data/figure.json';payload=(json.dumps(metadata,indent=2)+'\n').replace('\n','\r\n').encode();target.write_bytes(payload)
+            coordinate=dist/'assets/reference.cif';coordinate_raw=b'data_fixture\r\n_cell_length_a 4.2\r\n';coordinate.write_bytes(coordinate_raw)
+            record=dist/'data/records/example.json';record.parent.mkdir();record_raw=b'{\r\n  "value": 4.2\r\n}\r\n';record.write_bytes(record_raw)
             registry=Path(td)/'registry.json';registry.write_text(json.dumps({'assets':[asset]}),encoding='utf-8')
             with patch('sys.argv',['source_link_artifacts.py','--phase','postbuild','--root',str(dist),
                                    '--source-root',str(source),'--registry',str(registry)]),redirect_stdout(io.StringIO()):main()
             self.assertEqual(image.read_bytes(),raw);self.assertEqual(target.read_bytes(),payload)
+            self.assertEqual(coordinate.read_bytes(),coordinate_raw);self.assertEqual(record.read_bytes(),record_raw)
+            self.assertEqual((dist/'source-figure-links.mjs').read_bytes(),SCRIPT.encode('utf-8'))
+            self.assertNotIn(b'\r\n',(dist/'data/source-figure-links.json').read_bytes())
             overrides=json.loads((source/'private-build/asset-display-overrides.json').read_text())
             self.assertEqual(overrides['assets'],[])
             self.assertEqual(json.loads((dist/'data/source-figure-links.json').read_text())['assets'],{})

@@ -9,7 +9,7 @@ DATA=ROOT/'data/paper-reviews'
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def write(p,x):
     p.parent.mkdir(parents=True,exist_ok=True)
-    p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 def validate(c):
     errors=[]
     chars=c.get('characterization_inventory',[])

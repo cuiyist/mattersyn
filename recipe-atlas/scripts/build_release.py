@@ -52,10 +52,10 @@ def main():
         common={'source_commit':snapshot['source_commit'],'release_id':snapshot['release_id'],'display_override_sha256':sha(a.display_overrides)if a.display_overrides else None,'snapshot_sha256':sha(a.snapshot),'files':files,'metadata':metadata,'published':False}
         if a.candidate:
             candidate={'schema':'mattersyn-unapproved-build-candidate/1','status':'UNAPPROVED','release_eligible':False,'boundary_gate_passed':False,'scope':'Build/data checks only; inspect exact output and prepare a reviewed allowlist before a separate final clean rebuild.',**common}
-            (a.output/'candidate-manifest.json').write_text(json.dumps(candidate,indent=2)+'\n',encoding='utf-8')
+            (a.output/'candidate-manifest.json').write_text(json.dumps(candidate,indent=2)+'\n',encoding='utf-8',newline='\n')
         else:
             runs.append(execute([sys.executable,str(a.gate.resolve()),'--root',str((work/'dist').resolve()),'--policy',str(a.policy.resolve()),'--allowlist',str(a.allowlist.resolve()),'--registry',str(a.registry.resolve()),'--repo','mattersyn-site','--manifest-out',str((a.output/'boundary-manifest.json').resolve()),'--report-out',str((a.output/'boundary-report.json').resolve())],work))
             final={'schema':'mattersyn-reproducible-release/1','status':'BOUNDARY_GATE_PASSED_PENDING_PUBLICATION_APPROVAL','boundary_manifest_sha256':sha(a.output/'boundary-manifest.json'),**common}
-            (a.output/'release-manifest.json').write_text(json.dumps(final,indent=2)+'\n',encoding='utf-8')
-    finally:(a.output/'build-log.json').write_text(json.dumps(runs,indent=2)+'\n',encoding='utf-8')
+            (a.output/'release-manifest.json').write_text(json.dumps(final,indent=2)+'\n',encoding='utf-8',newline='\n')
+    finally:(a.output/'build-log.json').write_text(json.dumps(runs,indent=2)+'\n',encoding='utf-8',newline='\n')
 if __name__=='__main__':main()

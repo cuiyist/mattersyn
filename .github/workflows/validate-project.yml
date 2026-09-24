@@ -6,9 +6,20 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+env:
+  PYTHONUTF8: '1'
+  PYTHONIOENCODING: utf-8
+  PYTHONDONTWRITEBYTECODE: '1'
+defaults:
+  run:
+    shell: bash
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,11 +64,38 @@ jobs:
             --registry publication/asset-rights-registry.json \
             --artifact-transform tools/publication/source_link_artifacts.py
       - name: Retain test receipts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mattersyn-validation-${{ github.sha }}
+          name: mattersyn-validation-${{ github.sha }}-${{ matrix.os }}
           path: |
             ${{ runner.temp }}/source-manifest.json
             ${{ runner.temp }}/source-boundary.json
             ${{ runner.temp }}/candidate/candidate-manifest.json
+          retention-days: 7
+  compare-artifacts:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download both independently built manifests
+        uses: actions/download-artifact@v4
+        with:
+          pattern: mattersyn-validation-${{ github.sha }}-*
+          path: ${{ runner.temp }}/reproducibility
+      - name: Compare every artifact and frozen input binding
+        run: |
+          python recipe-atlas/scripts/compare_candidate_manifests.py \
+            --left "$RUNNER_TEMP/reproducibility/mattersyn-validation-${{ github.sha }}-ubuntu-latest/candidate/candidate-manifest.json" \
+            --right "$RUNNER_TEMP/reproducibility/mattersyn-validation-${{ github.sha }}-windows-latest/candidate/candidate-manifest.json" \
+            --report-out "$RUNNER_TEMP/cross-platform-comparison.json"
+      - name: Retain the exact cross-platform comparison
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattersyn-reproducibility-${{ github.sha }}
+          path: ${{ runner.temp }}/cross-platform-comparison.json
           retention-days: 7
