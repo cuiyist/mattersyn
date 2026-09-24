@@ -34,6 +34,10 @@ def stock_scope(stock,record_id):
 def dump(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+def copy_verified_record(source,destination,record):
+    """Preserve the audited bytes, including newline/Unicode serialization."""
+    if json.loads(source.read_bytes())!=record:raise ValueError('Canonical record changed before publication copy')
+    destination.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,destination)
 def esc(x):return html.escape(str(x),quote=True)
 def human(x):return x.replace('_',' ').replace('.',' · ')
 def reader_note(note):
@@ -91,7 +95,7 @@ def render_record(r,meta):
     s+=section('precursors','01','Precursors','Chemical identities, quantities and separately defined stocks',body)
     body=''
     if r['condition_options']:
-        body+='<div class="record-notice"><strong>Reported condition sets</strong><p>Each set retains its source-defined scope: an alternative, observation window, trajectory point or scale-up claim. Read its label before interpreting it; these entries do not establish independent batches.</p></div><div class="condition-options">'+''.join('<article><h3>'+esc(x['label'])+'</h3><dl>'+quantities(x['parameters'])+'</dl></article>' for x in r['condition_options'])+'</div>'
+        body+='<div class="record-notice"><strong>Reported condition sets</strong><p>Each card preserves a source-defined alternative, observation window, trajectory point or scale-up claim. Compare the claims with their source locators; these entries do not establish independent batches.</p></div><div class="condition-options">'+''.join('<article data-condition-option-id="'+esc(x.get('id',''))+'"><h3>'+esc(x['label'])+'</h3><dl>'+quantities(x['parameters'])+'</dl>'+('<button class="molecule-link condition-option-molecule" data-option-material-id="'+esc(x['chemical_material_id'])+'" type="button">Inspect chemical identity ↗</button>' if x.get('chemical_material_id') else '')+('<small class="evidence-label">'+evidence(x['evidence'])+'</small>' if x.get('evidence') else '')+'</article>' for x in r['condition_options'])+'</div>'
     body+='<div class="operation-list">'
     for i,o in enumerate(r['operations']):
         body+='<article class="operation-card"><div class="operation-index">'+str(i+1).zfill(2)+'</div><div class="operation-body"><span class="mini-label">'+esc(human(o['stage']))+(' · OPTIONAL BRANCH' if o['optional'] else '')+'</span><h3>'+esc(o['label'])+'</h3><p>'+esc(o['description'])+'</p><dl class="operation-parameters">'+quantities(o['parameters'])+'</dl><div class="operation-context"><span><strong>Environment:</strong> '+esc(fact_text(o['environment']))+'</span><span><strong>Endpoint:</strong> '+esc(fact_text(o['endpoint']))+'</span>'+('<span><strong>Retain:</strong> '+esc(o['retained_fraction'])+'</span>' if o['retained_fraction'] else '')+'</div><details class="material-flow"><summary>Material flow & source</summary><p>Inputs: '+esc(', '.join(o['inputs']) or 'Inputs not specified in this source')+(' (optional: '+esc(', '.join(o.get('optional_inputs',[])))+')' if o.get('optional_inputs') else '')+'</p><p>Outputs: '+esc(', '.join(o['outputs']))+'</p><p>Depends on: '+esc(', '.join(o['depends_on']) or 'Independent preparation / input state')+'</p><small>'+evidence(o['evidence'])+'</small></details></div></article>'
@@ -156,7 +160,7 @@ def main():
         rid=r['record_id'];ee=eligibility(r, structure_policy);meta={'record_id':rid,'title':r['title'],'formula':r['material']['formula'],'family':r['material']['family'],'method':r['method'],'record_type':r['record_type'],'source_year':r['sources'][0]['year'],'source_doi':r['sources'][0]['doi'],'revision':r['revision'],'record_sha256':digest(r),'recipe_signature':chemical_signature(r),'group_id':groups[rid],'split':assign[groups[rid]],'eligibility':ee,'record_url':'data/records/'+rid+'.json','page_url':'records/'+rid+'.html','missing_field_count':len(r['quality']['missing_fields'])};items.append(meta)
         meta['collection']=r.get('collection','reviewed_literature')
         meta['components']=r['material'].get('components',[r['material']['formula']])
-        dump(public/'records'/(rid+'.json'),r)
+        copy_verified_record(ROOT/'data/records'/(rid+'.json'),public/'records'/(rid+'.json'),r)
         (pages/(rid+'.html')).write_text(render_record(r,meta),encoding='utf-8')
         for task in tasks:
             if ee[task]['eligible']:

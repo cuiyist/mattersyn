@@ -7,15 +7,18 @@ from dataset_lib import ROOT,digest,OPTICAL_FEATURES
 
 class Page(HTMLParser):
     def __init__(self,text):
-        super().__init__();self.ids=[];self.links=[];self.feed(text)
+        super().__init__();self.ids=[];self.links=[];self.body_attrs={};self.feed(text)
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
+        if tag=='body':self.body_attrs=a
         if a.get('id'):self.ids.append(a['id'])
         for k in ['href','src']:
             if a.get(k):self.links.append(a[k])
 
 def main():
     dist=ROOT/'dist';errors=[];files=list(dist.rglob('*.html'))
+    # The shared material and method readers build these section anchors at runtime.
+    dynamic_reader_anchors=set(json.loads((dist/'data/reader-section-contract.json').read_text(encoding='utf-8'))['section_ids'])
     parsed={p:Page(p.read_text(encoding='utf-8')) for p in files}
     for p,page in parsed.items():
         if len(page.ids)!=len(set(page.ids)):errors.append(str(p)+' duplicate HTML ID')
@@ -26,7 +29,10 @@ def main():
             if not target.exists():errors.append(str(p.relative_to(dist))+' missing '+href);continue
             if u.fragment and target.suffix=='.html':
                 info=parsed.get(target) or Page(target.read_text(encoding='utf-8'))
-                if unquote(u.fragment) not in info.ids:errors.append(str(p.relative_to(dist))+' missing fragment '+href)
+                fragment=unquote(u.fragment)
+                dynamic_reader=info.body_attrs.get('data-reader-page') in {'material','record'}
+                if fragment not in info.ids and not (dynamic_reader and fragment in dynamic_reader_anchors):
+                    errors.append(str(p.relative_to(dist))+' missing fragment '+href)
     records=[json.loads(p.read_text(encoding='utf-8')) for p in (ROOT/'data/records').glob('*.json')]
     manifest=json.loads((dist/'data/dataset-manifest.json').read_text(encoding='utf-8'));meta={r['record_id']:r for r in manifest['records']}
     for r in records:

@@ -2,6 +2,7 @@
 import json, hashlib, re, shutil
 from pathlib import Path
 from review_scope import source_review_scope
+from asset_display import display_view
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/paper-reviews'
 
@@ -24,7 +25,10 @@ def validate(c):
         if not all(p.get('text_read') is True and p.get('visual_review') is True for p in pages):errors.append('Unread or visually unchecked page')
         if not re.fullmatch('[a-f0-9]{64}',d['sha256']):errors.append('Missing source hash')
     items=c['figures']+[f for category in ['tables','equations','schemes','source_notes'] for f in c.get(category,[]) if f.get('public_asset')]
-    items += [{'id':item['id'], 'public_asset':a['public_asset'], 'public_asset_sha256':a.get('sha256', a.get('public_asset_sha256'))} for s in c.get('reader_sections',[]) for item in s.get('items',[]) for a in item.get('original_assets',[])]
+    # Source-private page inventories may retain only a source hash/label.
+    # Validate every delivered asset; a pathless provenance object is not an
+    # image delivery and must not be converted into an invented public path.
+    items += [{'id':item['id'], 'public_asset':a['public_asset'], 'public_asset_sha256':a.get('public_asset_sha256', a.get('display_asset_sha256', a.get('sha256')))} for s in c.get('reader_sections',[]) for item in s.get('items',[]) for a in item.get('original_assets',[]) if a.get('public_asset')]
     for f in items:
         a=f.get('public_asset')
         if not a:errors.append('Missing figure asset: '+str(f.get('id')));continue
@@ -39,7 +43,7 @@ def validate(c):
 def main():
     index=[]
     for p in sorted(DATA.glob('*.json')):
-        c=read(p);errors=validate(c)
+        c=display_view(read(p),ROOT,p.stem+'-private-asset-provenance.json');errors=validate(c)
         if errors:raise ValueError(p.name+': '+repr(errors))
         scope=source_review_scope(c)
         c['review_scope_label']=scope['label']

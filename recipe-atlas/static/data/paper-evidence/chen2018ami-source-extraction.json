@@ -1,0 +1,4454 @@
+{
+  "schema": "mattersyn-private-source-extraction/1",
+  "status": "author_complete_pending_independent_audit",
+  "source": {
+    "paper_id": "legacy::10.1021_acsami.8b04556",
+    "status": "verified_content_pair",
+    "doi": "10.1021/acsami.8b04556",
+    "title": "Cs4PbBr6/CsPbBr3 Perovskite Composites with Near-Unity Luminescence Quantum Yield: Large-Scale Synthesis, Luminescence and Formation Mechanism, and White Light-Emitting Diode Application",
+    "authors": "Ya-Meng Chen; Yang Zhou; Qing Zhao; Jun-Ying Zhang; Ju-Ping Ma; Tong-Tong Xuan; Shao-Qiang Guo; Zi-Jun Yong; Jing Wang; Yoshihiro Kuroiwa; Chikako Moriyoshi; Hong-Tao Sun",
+    "year": 2018,
+    "journal": "ACS Applied Materials & Interfaces",
+    "volume": 10,
+    "printed_pages": "15905-15912",
+    "sources": [
+      {
+        "role": "main",
+        "file": "10.1021_acsami.8b04556.pdf",
+        "sha256": "f85d623c175baf82e59c01264bf9aa30c7ed8386b945a60dedd5fe470a300562",
+        "pages": 8
+      },
+      {
+        "role": "si",
+        "file": "10.1021_acsami.8b04556_si_1.pdf",
+        "sha256": "03e6302cd25829f2a33f95f9ee5ad8735616bdde0c7f9af55cc84fcd0b06b73d",
+        "pages": 10
+      }
+    ],
+    "evidence": [
+      "Main p1 DOI and full title; main p7 explicit same-DOI SI availability and content listing.",
+      "SI p1 full title and author list match; all SI figure/table references align with main article S1-S9/Tables S1-S3.",
+      "Both actual file SHA256 values match intake. SI generic metadata title was not used as pairing evidence."
+    ],
+    "completed_at": "2026-09-22T22:23:21.698674+00:00",
+    "canonical_source_id_proposal": "chen2018ami"
+  },
+  "scope": {
+    "main_pages_read": 8,
+    "si_pages_read": 10,
+    "visual_pages_inspected": 18,
+    "figure_count_main": 6,
+    "figure_count_si": 9,
+    "table_count_main": 2,
+    "table_count_si": 3,
+    "bibliography_entries": 46,
+    "full_original_pdf_local_only": true,
+    "raw_curves_digitized": false,
+    "new_downloads": false
+  },
+  "materials": [
+    {
+      "id": "csac",
+      "name": "cesium acetate",
+      "formula": "C2H3CsO2",
+      "role": "composite cesium precursor",
+      "specification": "99.999%",
+      "supplier": "Alfa",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "pbbr2",
+      "name": "lead(II) bromide",
+      "formula": "PbBr2",
+      "role": "composite and hot-injection lead precursor",
+      "specification": "99%",
+      "supplier": "Aladdin",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "hbr-aq",
+      "name": "aqueous hydrobromic acid",
+      "formula": "HBr/H2O",
+      "role": "composite acid/halide source; water cosolvent",
+      "specification": "48% by weight in H2O",
+      "supplier": "J&K",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "hbr-hac",
+      "name": "hydrobromic acid in acetic acid",
+      "formula": "HBr/C2H4O2",
+      "role": "water-series acid/halide adjustment",
+      "specification": "33% by weight in HAc",
+      "supplier": "J&K",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "dmso",
+      "name": "dimethyl sulfoxide",
+      "formula": "C2H6OS",
+      "role": "composite reaction and purification solvent",
+      "specification": "+99.7%",
+      "supplier": "Acros",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "ode",
+      "name": "octadecene (ODE)",
+      "formula": "C18H36",
+      "role": "hot-injection solvent; source does not specify double-bond position",
+      "specification": "90%",
+      "supplier": "Alfa",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "oa",
+      "name": "oleic acid",
+      "formula": "C18H34O2",
+      "role": "cesium oleate preparation and hot-injection ligand",
+      "specification": "90%",
+      "supplier": "Alfa",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "ola",
+      "name": "oleylamine",
+      "formula": "C18H37N",
+      "role": "hot-injection ligand",
+      "specification": "80-90%",
+      "supplier": "Acros",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "hexane",
+      "formula": "C6H14",
+      "role": "listed chemical; explicit operation not supplied",
+      "specification": ">=98.0% (GC)",
+      "supplier": "Aladdin",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "toluene",
+      "name": "toluene",
+      "formula": "C7H8",
+      "role": "hot-injection product redispersion and film casting",
+      "specification": "AR",
+      "supplier": "QS",
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": [
+        "Used without purification unless otherwise noted."
+      ]
+    },
+    {
+      "id": "cs2co3",
+      "name": "cesium carbonate",
+      "formula": "Cs2CO3",
+      "role": "cesium oleate stock precursor",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "water",
+      "name": "deionized water",
+      "formula": "H2O",
+      "role": "water-series adjustment",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "red-phosphor",
+      "name": "manganese(IV)-doped potassium hexafluorosilicate",
+      "formula": "K2SiF6:Mn4+",
+      "role": "WLED red phosphor",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2 / Figure 5 / WLED scope"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "silicone-a",
+      "name": "silicone gel A",
+      "formula": null,
+      "role": "WLED binder",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2 / Figure 5 / WLED scope"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "silicone-b",
+      "name": "silicone gel B",
+      "formula": null,
+      "role": "WLED binder",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2 / Figure 5 / WLED scope"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "blue-chip",
+      "name": "blue InGaN chip",
+      "formula": "InGaN",
+      "role": "WLED excitation device",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2 / Figure 5 / WLED scope"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.4 blue InGaN chip"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "green-reference",
+      "name": "commercial beta-SiAlON:Eu2+ phosphor",
+      "formula": null,
+      "role": "comparative optical standard",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "2.2 / Figure 5 / WLED scope"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "nitrogen",
+      "name": "nitrogen",
+      "formula": "N2",
+      "role": "glovebox/reaction atmosphere",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "glass-substrate",
+      "name": "glass substrate",
+      "formula": null,
+      "role": "support for dropcast CsPbBr3 NC film",
+      "specification": null,
+      "supplier": null,
+      "storage": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ],
+      "notes": [
+        "Substrate composition, dimensions and surface treatment are not supplied. Support, not a reaction precursor."
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "chen2018ami-cs-oleate",
+      "name": "Cesium oleate reaction solution",
+      "record_type": "upstream_stock_preparation",
+      "materials": [
+        {
+          "id": "cs2co3",
+          "amount": {
+            "value": 1.25,
+            "unit": "mmol",
+            "status": "reported",
+            "raw_text": "1.25",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        },
+        {
+          "id": "oa",
+          "amount": {
+            "value": 1.25,
+            "unit": "mL",
+            "status": "reported",
+            "raw_text": "1.25",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ode",
+          "amount": {
+            "value": 20,
+            "unit": "mL",
+            "status": "reported",
+            "raw_text": "20",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        }
+      ],
+      "operations": [
+        {
+          "action": "Load100mL three-neck flask and vacuum-dry",
+          "temperature": {
+            "value": 120,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "120",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": {
+            "value": 1,
+            "unit": "h",
+            "status": "reported",
+            "raw_text": "1",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "pressure": null
+        },
+        {
+          "action": "Keep under N2 until clear",
+          "temperature": {
+            "value": 150,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "150",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": null,
+          "endpoint": "clear"
+        }
+      ],
+      "concentration": {
+        "value": 0.117,
+        "unit": "mol/L",
+        "status": "reported",
+        "raw_text": "0.117",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": "Source-reported Cs-oleate solution concentration at injection; volume/molarity basis not independently measured here."
+      },
+      "injected_aliquot": {
+        "value": 0.4,
+        "unit": "mL",
+        "status": "reported",
+        "raw_text": "0.4",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ]
+      },
+      "storage": null,
+      "cited_upstream": {
+        "reference": 16,
+        "access": "Current paper supplies its implemented procedure; original Protesescu paper not opened or substituted during this extraction."
+      },
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    }
+  ],
+  "composite_common_operations": [
+    {
+      "id": "precursor-mix",
+      "action": "Combine/stir",
+      "inputs": [
+        "pbbr2",
+        "csac",
+        "dmso"
+      ],
+      "temperature": {
+        "value": null,
+        "unit": "degC",
+        "status": "reported",
+        "raw_text": "room temperature",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ],
+        "note": "No numerical room temperature for synthesis"
+      },
+      "duration": {
+        "value": 1,
+        "unit": "h",
+        "status": "reported",
+        "raw_text": "1",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "environment": "nitrogen-filled glovebox",
+      "equipment": null,
+      "endpoint": "source calls precursor solution; results retain white turbid incomplete-dissolution state",
+      "conflicts": [
+        "precursor-state"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.1"
+        }
+      ]
+    },
+    {
+      "id": "acid-add",
+      "action": "Slowly inject aqueous HBr with stirring",
+      "inputs": [
+        "hbr-aq"
+      ],
+      "duration": {
+        "value": null,
+        "unit": "s",
+        "status": "reported",
+        "raw_text": "slowly",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "temperature": {
+        "value": null,
+        "unit": "degC",
+        "status": "reported",
+        "raw_text": "room temperature",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "endpoint": "Immediate yellow-green precipitation",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        }
+      ]
+    },
+    {
+      "id": "maturation",
+      "action": "Stir mixed dispersion",
+      "temperature": {
+        "value": null,
+        "unit": "degC",
+        "status": "reported",
+        "raw_text": "room temperature",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "duration": {
+        "value": 12,
+        "unit": "h",
+        "status": "reported",
+        "raw_text": "12",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        }
+      ]
+    },
+    {
+      "id": "isolate",
+      "action": "Centrifuge",
+      "retained_fraction": "precipitate/pellet",
+      "discarded_fraction": "mother solution separated; disposal not described",
+      "speed": null,
+      "duration": null,
+      "temperature": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        }
+      ]
+    },
+    {
+      "id": "wash",
+      "action": "Wash isolated precipitate with variant-specific DMSO",
+      "inputs": [
+        "dmso"
+      ],
+      "cycles": null,
+      "postwash_separation_settings": null,
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "Collect powder and dry under vacuum",
+      "temperature": {
+        "value": 50,
+        "unit": "degC",
+        "status": "reported",
+        "raw_text": "50",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "duration": {
+        "value": null,
+        "unit": "h",
+        "status": "reported",
+        "raw_text": "overnight",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.1 composite synthesis"
+          }
+        ]
+      },
+      "pressure": null,
+      "equipment": "vacuum drying apparatus, model not reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        }
+      ]
+    }
+  ],
+  "protocols": [
+    {
+      "id": "chen2018ami-s1",
+      "record_type": "synthesis_variant",
+      "sample_id": "S1",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "inherited",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "calculated",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 50.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "50.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": 17.77,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "17.77",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": 60.16,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "60.16",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": 30.0,
+          "unit": "nm",
+          "status": "author_derived",
+          "raw_text": "30",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s1-1",
+      "record_type": "synthesis_variant",
+      "sample_id": "S1-1",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "inherited",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "calculated",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 200.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "200.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": 10.35,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "10.35",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": 92.77,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "92.77",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": 11.0,
+          "unit": "nm",
+          "status": "author_derived",
+          "raw_text": "11",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state",
+        "minus1-scale"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities",
+        "absolute scale of -1 measurement cohorts versus Figure S8 1.5x photographed preparations"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s2p5",
+      "record_type": "synthesis_variant",
+      "sample_id": "S2.5",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "inherited",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 0.55,
+            "unit": "mmol",
+            "status": "calculated",
+            "raw_text": "0.55",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 125.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "125.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": 51.82,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "51.82",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": 67.5,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "67.50",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": 32.0,
+          "unit": "nm",
+          "status": "author_derived",
+          "raw_text": "32",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s2p5-1",
+      "record_type": "synthesis_variant",
+      "sample_id": "S2.5-1",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "inherited",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 0.55,
+            "unit": "mmol",
+            "status": "calculated",
+            "raw_text": "0.55",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 200.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "200.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": 34.68,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "34.68",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": 95.29,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "95.29",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": 13.0,
+          "unit": "nm",
+          "status": "author_derived",
+          "raw_text": "13",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state",
+        "minus1-scale"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities",
+        "absolute scale of -1 measurement cohorts versus Figure S8 1.5x photographed preparations"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s4",
+      "record_type": "synthesis_route",
+      "sample_id": "S4",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "reported",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 0.88,
+            "unit": "mmol",
+            "status": "reported",
+            "raw_text": "0.88",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 200.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "200.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": 70.77,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "70.77",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": 95.25,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "95.25",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": 14.0,
+          "unit": "nm",
+          "status": "author_derived",
+          "raw_text": "14",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s4-1",
+      "record_type": "synthesis_variant",
+      "sample_id": "S4-1",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "inherited",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 0.88,
+            "unit": "mmol",
+            "status": "calculated",
+            "raw_text": "0.88",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 400.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "400.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": 52.27,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "52.27",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": 97.53,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "97.53",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": 13.0,
+          "unit": "nm",
+          "status": "author_derived",
+          "raw_text": "13",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state",
+        "minus1-scale",
+        "s4minus1-yield"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities",
+        "absolute scale of -1 measurement cohorts versus Figure S8 1.5x photographed preparations"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s5",
+      "record_type": "synthesis_variant",
+      "sample_id": "S5",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature precipitation and dissolution-crystallization",
+      "scope": "Named Table 1 formulation; source sample class, not an independently identified batch",
+      "inputs": [
+        {
+          "material_id": "pbbr2",
+          "quantity": {
+            "value": 0.22,
+            "unit": "mmol",
+            "status": "inherited",
+            "raw_text": "0.22",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              }
+            ],
+            "note": "Nominal main-protocol basis; -1 photographic scale ambiguity is separate"
+          }
+        },
+        {
+          "material_id": "csac",
+          "quantity": {
+            "value": 1.1,
+            "unit": "mmol",
+            "status": "calculated",
+            "raw_text": "1.1",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.1 composite synthesis"
+              },
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ],
+            "note": "For variants: 0.22 mmol PbBr2 multiplied by reported CsAc/PbBr2 ratio; this is nominal arithmetic, not a separately reported charge."
+          }
+        },
+        {
+          "material_id": "dmso",
+          "quantity": {
+            "value": 500.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "500.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        },
+        {
+          "material_id": "hbr-aq",
+          "quantity": {
+            "value": 100.0,
+            "unit": "uL",
+            "status": "reported",
+            "raw_text": "100.0",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 4,
+                "printed_page": "15908",
+                "item": "Table 1"
+              }
+            ]
+          }
+        }
+      ],
+      "purification_dmso": {
+        "value": 250.0,
+        "unit": "uL",
+        "status": "reported",
+        "raw_text": "250.0",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 4,
+            "printed_page": "15908",
+            "item": "Table 1"
+          }
+        ]
+      },
+      "operations_template": "composite-common-operations",
+      "outcomes": {
+        "product_yield": {
+          "value": null,
+          "unit": "percent",
+          "status": "not_reported",
+          "raw_text": null,
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ],
+          "note": "Source yield basis not defined."
+        },
+        "plqy": {
+          "value": null,
+          "unit": "percent",
+          "status": "not_reported",
+          "raw_text": null,
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            }
+          ]
+        },
+        "minority_CsPbBr3_scherrer_size": {
+          "value": null,
+          "unit": "nm",
+          "status": "not_reported",
+          "raw_text": null,
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 4,
+              "printed_page": "15908",
+              "item": "Table 1"
+            },
+            {
+              "document_role": "si",
+              "pdf_page": 4,
+              "printed_page": "S-4",
+              "item": "Figure S5 caption"
+            }
+          ],
+          "note": "Rough crystallite estimate from (101) FWHM; weak noisy peaks and 0.01 degree step; actual sizes may be smaller. Not an exact nanoparticle envelope."
+        }
+      },
+      "conflicts": [
+        "precursor-state"
+      ],
+      "missing": [
+        "numerical room temperature",
+        "centrifugation speed/time/temperature",
+        "wash cycles and postwash separation settings",
+        "vacuum pressure",
+        "numerical overnight duration",
+        "mixing speed",
+        "reaction vessel and reaction atmosphere beyond initial glovebox preparation",
+        "product-yield denominator and replicate identities"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso350-water77",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO350-H2O77",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 350.0,
+        "water_uL": 77.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 75.02,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "75.02",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 76.75,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "76.75",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso450-water77",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO450-H2O77",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 450.0,
+        "water_uL": 77.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 72.91,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "72.91",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 90.7,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "90.7",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso550-water77",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO550-H2O77",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 550.0,
+        "water_uL": 77.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 68.59,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "68.59",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 90.99,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "90.99",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso650-water77",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO650-H2O77",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 650.0,
+        "water_uL": 77.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 64.75,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "64.75",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 93.34,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "93.34",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso500-water57",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO500-H2O57",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 500.0,
+        "water_uL": 57.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 77.54,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "77.54",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 82.87,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "82.87",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso500-water72",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO500-H2O72",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 500.0,
+        "water_uL": 72.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 76.26,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "76.26",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 84.24,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "84.24",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso500-water82",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO500-H2O82",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 500.0,
+        "water_uL": 82.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 70.81,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "70.81",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 86.98,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "86.98",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-dmso500-water97",
+      "record_type": "synthesis_condition_control",
+      "sample_id": "table2-DMSO500-H2O97",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "Room-temperature solvent-balance control",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "inputs": {
+        "CsAc_PbBr2_molar_ratio": "4:1",
+        "PbBr2_mmol_nominal": 0.22,
+        "CsAc_mmol_nominal": 0.88,
+        "reaction_DMSO_uL": 500.0,
+        "water_uL": 97.0,
+        "aqueous_HBr_uL": null,
+        "HBr_in_HAc_uL": null,
+        "added_deionized_water_uL": null
+      },
+      "inheritance_scope": "Main says vary solvent amounts with bromide constant; common reaction framework inherited, acid-stock splits and separately quantified purification volume per row not given.",
+      "outcomes": {
+        "product_yield": {
+          "value": 69.83,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "69.83",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        },
+        "plqy": {
+          "value": 89.63,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "89.63",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 6,
+              "printed_page": "15910",
+              "item": "Table 2"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "aqueous HBr/HBr-in-HAc/deionized-water component volumes",
+        "constant bromide numeric amount",
+        "final acetic-acid content",
+        "row-specific purification volume",
+        "physical replicate/batch identity"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Table 2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3 solvent controls"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-s4-scale50",
+      "record_type": "synthesis_variant",
+      "sample_id": "S4-50x",
+      "material": "Cs4PbBr6/CsPbBr3",
+      "method": "50x room-temperature scale-up",
+      "operations_template": "composite-common-operations",
+      "inherited_from": "chen2018ami-s4",
+      "reported_multiplier": 50,
+      "scaled_inputs_calculated": {
+        "PbBr2_mmol": 11,
+        "CsAc_mmol": 44,
+        "reaction_DMSO_mL": 25,
+        "HBr_H2O_solution_mL": 5,
+        "wash_DMSO_mL": 10
+      },
+      "scale_basis": "Main explicitly says all reagent quantities increased 50x; listed numbers are arithmetic, not individually printed charges.",
+      "observed_product_mass": {
+        "value": 9.3,
+        "unit": "g",
+        "status": "reported",
+        "raw_text": "9.3",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 3,
+            "printed_page": "15907",
+            "item": "Figure 1b caption"
+          }
+        ]
+      },
+      "unassigned_results": [
+        "Do not transfer S4 95.25% PLQY or70.77% yield as independently measured scale50 outcomes."
+      ],
+      "missing": [
+        "scale-up vessel and centrifuge capacity",
+        "separate scale-up PLQY/yield",
+        "all common unreported settings"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "Figure1b"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-cspbbr3-nc",
+      "record_type": "synthesis_route",
+      "sample_id": "CsPbBr3-NC-solution",
+      "material": "CsPbBr3",
+      "method": "Hot injection",
+      "inputs": {
+        "PbBr2": {
+          "value": 0.188,
+          "unit": "mmol",
+          "status": "reported",
+          "raw_text": "0.188",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 2,
+              "printed_page": "15906",
+              "item": "2.1.2 colloidal CsPbBr3 comparator"
+            }
+          ]
+        },
+        "ODE": {
+          "value": 5,
+          "unit": "mL",
+          "status": "reported",
+          "raw_text": "5",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 2,
+              "printed_page": "15906",
+              "item": "2.1.2 colloidal CsPbBr3 comparator"
+            }
+          ]
+        },
+        "dried_OLA": {
+          "value": 0.5,
+          "unit": "mL",
+          "status": "reported",
+          "raw_text": "0.5",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 2,
+              "printed_page": "15906",
+              "item": "2.1.2 colloidal CsPbBr3 comparator"
+            }
+          ]
+        },
+        "dried_OA": {
+          "value": 0.5,
+          "unit": "mL",
+          "status": "reported",
+          "raw_text": "0.5",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 2,
+              "printed_page": "15906",
+              "item": "2.1.2 colloidal CsPbBr3 comparator"
+            }
+          ]
+        },
+        "Cs_oleate_stock": {
+          "value": 0.4,
+          "unit": "mL",
+          "status": "reported",
+          "raw_text": "0.4",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 2,
+              "printed_page": "15906",
+              "item": "2.1.2 colloidal CsPbBr3 comparator"
+            }
+          ]
+        }
+      },
+      "stock_id": "chen2018ami-cs-oleate",
+      "operations": [
+        {
+          "action": "Load ODE/PbBr2 in50mL three-neck flask; vacuum dry",
+          "temperature": {
+            "value": 120,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "120",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": {
+            "value": 1,
+            "unit": "h",
+            "status": "reported",
+            "raw_text": "1",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        },
+        {
+          "action": "Inject dried OLA and OA under N2; wait until PbBr2 dissolves",
+          "temperature": {
+            "value": 120,
+            "unit": "degC",
+            "status": "inherited",
+            "raw_text": "120",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": null
+        },
+        {
+          "action": "Raise temperature and rapidly inject Cs-oleate",
+          "temperature": {
+            "value": 170,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "170",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "injection_duration": null
+        },
+        {
+          "action": "Hold at growth temperature",
+          "temperature": {
+            "value": 170,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "170",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": {
+            "value": 5,
+            "unit": "s",
+            "status": "reported",
+            "raw_text": "5",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        },
+        {
+          "action": "Cool to room temperature in ice-water bath",
+          "duration": null,
+          "endpoint": "room temperature; numerical value not supplied"
+        },
+        {
+          "action": "Purify by centrifugation and redisperse in toluene",
+          "retained_fraction": "NC product; exact fractions/antisolvent cycles unspecified",
+          "centrifuge_settings": null,
+          "toluene_volume": null
+        }
+      ],
+      "outcomes": {
+        "PLQY_solution": {
+          "value": 86,
+          "unit": "percent",
+          "status": "reported",
+          "raw_text": "86",
+          "evidence": [
+            {
+              "document_role": "main",
+              "pdf_page": 2,
+              "printed_page": "15906",
+              "item": "2.1.2 colloidal CsPbBr3 comparator"
+            }
+          ]
+        }
+      },
+      "missing": [
+        "Cs2CO3 grade",
+        "separate drying protocols for OA/OLA",
+        "stock transfer temperature",
+        "centrifugation parameters and retained fraction sequence",
+        "purification cycles",
+        "toluene redispersion volume",
+        "yield"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    }
+  ],
+  "supporting_procedures": [
+    {
+      "id": "chen2018ami-cs-oleate",
+      "name": "Cesium oleate reaction solution",
+      "record_type": "upstream_stock_preparation",
+      "materials": [
+        {
+          "id": "cs2co3",
+          "amount": {
+            "value": 1.25,
+            "unit": "mmol",
+            "status": "reported",
+            "raw_text": "1.25",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        },
+        {
+          "id": "oa",
+          "amount": {
+            "value": 1.25,
+            "unit": "mL",
+            "status": "reported",
+            "raw_text": "1.25",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ode",
+          "amount": {
+            "value": 20,
+            "unit": "mL",
+            "status": "reported",
+            "raw_text": "20",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          }
+        }
+      ],
+      "operations": [
+        {
+          "action": "Load100mL three-neck flask and vacuum-dry",
+          "temperature": {
+            "value": 120,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "120",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": {
+            "value": 1,
+            "unit": "h",
+            "status": "reported",
+            "raw_text": "1",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "pressure": null
+        },
+        {
+          "action": "Keep under N2 until clear",
+          "temperature": {
+            "value": 150,
+            "unit": "degC",
+            "status": "reported",
+            "raw_text": "150",
+            "evidence": [
+              {
+                "document_role": "main",
+                "pdf_page": 2,
+                "printed_page": "15906",
+                "item": "2.1.2 colloidal CsPbBr3 comparator"
+              }
+            ]
+          },
+          "duration": null,
+          "endpoint": "clear"
+        }
+      ],
+      "concentration": {
+        "value": 0.117,
+        "unit": "mol/L",
+        "status": "reported",
+        "raw_text": "0.117",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": "Source-reported Cs-oleate solution concentration at injection; volume/molarity basis not independently measured here."
+      },
+      "injected_aliquot": {
+        "value": 0.4,
+        "unit": "mL",
+        "status": "reported",
+        "raw_text": "0.4",
+        "evidence": [
+          {
+            "document_role": "main",
+            "pdf_page": 2,
+            "printed_page": "15906",
+            "item": "2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ]
+      },
+      "storage": null,
+      "cited_upstream": {
+        "reference": 16,
+        "access": "Current paper supplies its implemented procedure; original Protesescu paper not opened or substituted during this extraction."
+      },
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-cspbbr3-film",
+      "record_type": "supporting_procedure",
+      "material": "CsPbBr3",
+      "parent_sample": "CsPbBr3-NC-solution",
+      "sample_id": "CsPbBr3-NC-film",
+      "operations": [
+        "Drop toluene dispersion onto glass substrate.",
+        "Dry at room temperature until residual solvent completely evaporates."
+      ],
+      "missing": [
+        "dispensed concentration/volume",
+        "substrate dimensions/treatment",
+        "film thickness",
+        "drying time"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-wled",
+      "record_type": "device_fabrication",
+      "sample_id": "WLED-composite-red-phosphor",
+      "operations": [
+        "Blend green composite and red K2SiF6:Mn4+ phosphors with silicone gels A and B.",
+        "Paint phosphor-in-silicone mixture directly onto blue InGaN chip.",
+        "Dry in vacuum oven."
+      ],
+      "missing": [
+        "whether chosen green batch is S4",
+        "phosphor/binder ratios and amounts",
+        "silicone cure conditions",
+        "vacuum oven temperature/time/pressure",
+        "chip dimensions/excitation peak",
+        "red-phosphor synthesis or supplier"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2 WLED preparation"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.4 WLED application"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-surface-scrape",
+      "record_type": "supporting_characterization_preparation",
+      "sample_id": "S2.5-surface-scraped",
+      "parent_sample": "S2.5",
+      "operations": [
+        "Scratch powder from surface layer of S2.5 for laboratory XRD."
+      ],
+      "missing": [
+        "scraping tool",
+        "quantity",
+        "separate conditioning"
+      ],
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 6,
+          "printed_page": "S-6",
+          "item": "Figure S8 caption"
+        }
+      ]
+    },
+    {
+      "id": "chen2018ami-homogenization",
+      "record_type": "supporting_characterization_preparation",
+      "sample_ids": [
+        "S1",
+        "S2.5",
+        "S4"
+      ],
+      "operations": [
+        "SI says obtained named samples mixed homogeneously before synchrotron XRD, luminescence and yield measurements."
+      ],
+      "scope": "Read as within-sample homogenization of each labeled preparation, not deliberate pooling of S1/S2.5/S4 into one new product; physical aliquot joins remain unknown.",
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 6,
+          "printed_page": "S-6",
+          "item": "Figure S8 caption"
+        }
+      ]
+    }
+  ],
+  "characterization": [
+    {
+      "id": "lab-xrd",
+      "instrument": "Bruker D2 PHASER",
+      "conditions": {
+        "temperature": "room temperature",
+        "wavelength_A": 1.5418
+      },
+      "scope": "Laboratory diffraction including precursor white precipitate and surface-scraped S2.5; cannot exclude minor CsPbBr3 merely from apparent host pattern.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2"
+        }
+      ]
+    },
+    {
+      "id": "synchrotron-xrd",
+      "instrument": "BL02B2, SPring-8",
+      "conditions": {
+        "temperature": "room temperature",
+        "wavelength_A": 0.413162,
+        "capillary_inner_diameters_mm": [
+          0.3,
+          0.5
+        ],
+        "capillary": "sealed Hilgenberg glass; rotated",
+        "step_2theta_deg": 0.01
+      },
+      "processing": "Rietveld refinement with GSAS; which capillary diameter belongs to each sample not reported.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 4,
+          "printed_page": "S-4",
+          "item": "Figure S5 caption"
+        }
+      ]
+    },
+    {
+      "id": "absorption",
+      "instrument": "Cary5000 UV-vis-NIR, Agilent; integrating sphere",
+      "processing": "Measured reflectance converted to pseudo-absorbance by Kubelka-Munk transformation.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2"
+        }
+      ]
+    },
+    {
+      "id": "steady-pl-ple",
+      "instrument": "FLS980 Edinburgh or Horiba iHR550 with Hamamatsu R928 PMT",
+      "processing": "Detector response corrected with a standard sample; identity and which instrument per spectrum unknown.",
+      "conditions": {
+        "S4_PLE_monitor_nm": 519,
+        "figure2b_and_S6_PL_excitation_nm": 365
+      },
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Figure2b"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 5,
+          "printed_page": "S-5",
+          "item": "Figure S6 caption"
+        }
+      ]
+    },
+    {
+      "id": "plqy",
+      "instrument": "Integrating sphere in Horiba FluoroLog,450W xenon lamp",
+      "conditions": {
+        "temperature": "room temperature"
+      },
+      "equation": "eta_IQE = I_S / (E_R - E_S)",
+      "definitions": "E_R reference excitation line; E_S sample excitation line; I_S sample emission; integrated signal regions not numerically specified.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2 continuation"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 7,
+          "printed_page": "S-7",
+          "item": "FigureS9"
+        }
+      ]
+    },
+    {
+      "id": "confocal",
+      "instrument": "Zeiss LSM880",
+      "conditions": {
+        "excitation_nm": 488,
+        "main_fig3_scale_bar_um": 5,
+        "SI_figS7_scale_bar_um": 10
+      },
+      "sample": "S4",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Figure3"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 5,
+          "printed_page": "S-5",
+          "item": "FigureS7"
+        }
+      ]
+    },
+    {
+      "id": "sem",
+      "instrument": "Hitachi S-4700",
+      "conditions": {
+        "accelerating_voltage_kV": 10,
+        "figureS2_scale_bar_um": 10
+      },
+      "sample": "S4",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 2,
+          "printed_page": "S-2",
+          "item": "FigureS2"
+        }
+      ]
+    },
+    {
+      "id": "trpl",
+      "instrument": "LifespecII, Edinburgh",
+      "conditions": {
+        "excitation_nm": 477,
+        "pulse": "picosecond; width unspecified",
+        "monitor_nm": 520
+      },
+      "fit": "tri-exponential; no author-reported average lifetime calculated here",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "Figure4a-b"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 10,
+          "printed_page": "S-10",
+          "item": "TableS3"
+        }
+      ]
+    },
+    {
+      "id": "photostability",
+      "conditions": {
+        "laser_nm": 453,
+        "power_density_mW_per_mm2": 6.11,
+        "times_min": [
+          0,
+          10,
+          20,
+          30,
+          40,
+          50,
+          60,
+          70,
+          80
+        ]
+      },
+      "samples": [
+        "composite-Fig4c",
+        "CsPbBr3-NC-film"
+      ],
+      "scope": "Time trace on irradiated specimens, not9 independent synthesis recipes. Composite caption not explicitly named S4.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "Figure4c-d"
+        }
+      ]
+    },
+    {
+      "id": "ambient-stability",
+      "conditions": {
+        "humidity_percent": 50,
+        "temperature_degC": 19.5,
+        "figure5_axis_ticks_days": [
+          0,
+          4,
+          8,
+          12,
+          16
+        ]
+      },
+      "scope": "PLQY monitored after ambient exposure; plotted values are retained graphically, not digitized. Listed axis ticks are not measurement times. Figure5 comparator described as NCs; solution versus film is unresolved.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "Figure5a"
+        }
+      ]
+    },
+    {
+      "id": "green-phosphor-comparison",
+      "conditions": {
+        "excitation_nm": 460
+      },
+      "samples": [
+        "S4",
+        "commercial-beta-SiAlON-Eu"
+      ],
+      "scope": "Identical optical conditions according to source; powder loading/concentration not specified. Comparable peak intensity is qualitative, not an absolute efficacy comparison.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "Figure5b"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.2 continuation"
+        }
+      ]
+    },
+    {
+      "id": "wled-test",
+      "instrument": "integrating sphere with analyzer system, model unspecified",
+      "conditions": {
+        "currents_mA": [
+          5,
+          10,
+          15,
+          20
+        ]
+      },
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "Figure6"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "white-precursor",
+      "sample": "pre-HBr turbid dispersion",
+      "kind": "phase_observation",
+      "value": "Dominant CsBr, plus marked unknown-phase reflections",
+      "status": "author_assignment",
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 2,
+          "printed_page": "S-2",
+          "item": "FigureS1"
+        }
+      ],
+      "limits": [
+        "White precursor is not isolated final composite; this result coexists with methods wording about dissolution."
+      ]
+    },
+    {
+      "id": "s4-morphology",
+      "sample": "S4",
+      "kind": "morphology",
+      "value": "Irregular micrometer-scale powder particles",
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "introduction method summary"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.1"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 2,
+          "printed_page": "S-2",
+          "item": "FigureS2"
+        }
+      ],
+      "limits": [
+        "SEM scale10um is not a measured particle diameter distribution. Embedded NC sizes are a different level. No TEM or SAED was supplied."
+      ]
+    },
+    {
+      "id": "s5-impurity",
+      "sample": "S5",
+      "kind": "phase",
+      "value": "Extra CsBr and unknown-phase peaks marked in Fig1c; impurity phases in text",
+      "status": "author_assignment",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "Figure1c/3.1"
+        }
+      ],
+      "limits": [
+        "No yield, PLQY or Scherrer size in Table1. Do not fill from S4."
+      ]
+    },
+    {
+      "id": "s4-optics",
+      "sample": "S4",
+      "kind": "optical",
+      "values": {
+        "absorption_onset_nm": 550,
+        "strong_absorption_peak_nm": 310,
+        "PL_peak_nm": 519,
+        "PL_FWHM_nm": 23.8,
+        "PLE_monitor_nm": 519,
+        "PL_excitation_nm": 365
+      },
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Figure2b"
+        }
+      ],
+      "limits": [
+        "Authors assign onset to CsPbBr3 and310nm peak to host; this is interpretation distinct from measured positions."
+      ]
+    },
+    {
+      "id": "s4-plqy-uncertainty",
+      "sample": "S4",
+      "kind": "PLQY",
+      "value": 95.25,
+      "plus_minus": 0.09,
+      "unit": "percent",
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 7,
+          "printed_page": "S-7",
+          "item": "FigureS9 plot annotation"
+        }
+      ],
+      "limits": [
+        "Uncertainty statistic and number of repeats not stated."
+      ]
+    },
+    {
+      "id": "emission-series",
+      "samples": [
+        "S1",
+        "S1-1",
+        "S2.5",
+        "S2.5-1",
+        "S4",
+        "S4-1"
+      ],
+      "kind": "PL_peak",
+      "values_nm": [
+        516.0,
+        516.0,
+        518.0,
+        519.0,
+        519.0,
+        518.5
+      ],
+      "FWHM_range_nm": [
+        20.5,
+        24.3
+      ],
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 5,
+          "printed_page": "S-5",
+          "item": "Figure S6 caption"
+        }
+      ],
+      "limits": [
+        "FWHM range is study series scope; individual widths except S4=23.8nm not separately printed."
+      ]
+    },
+    {
+      "id": "s4-confocal",
+      "sample": "S4-confocal-regions",
+      "kind": "spatial-emission",
+      "value": "Inhomogeneous green emission under488nm, with white regions in bright-field/overlay",
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Figure3a-c"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 5,
+          "printed_page": "S-5",
+          "item": "FigureS7"
+        }
+      ],
+      "limits": [
+        "Randomly distributed emitting species and white-host assignment are author interpretations; no chemical phase map acquired."
+      ]
+    },
+    {
+      "id": "surface-unpassivated",
+      "samples": [
+        "S1-surface",
+        "S2.5-surface"
+      ],
+      "kind": "source_context",
+      "value": "Surface material interpreted as poorly passivated CsPbBr3; S2.5 scraped surface XRD dominated by CsPbBr3",
+      "status": "author_assignment",
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 6,
+          "printed_page": "S-6",
+          "item": "Figure S8 caption"
+        }
+      ],
+      "limits": [
+        "Residual concentrated reaction liquid as origin is proposed; source distinguishes total Rietveld minority fraction from well-passivated emitting fraction."
+      ]
+    },
+    {
+      "id": "nc-comparator-solution",
+      "sample": "CsPbBr3-NC-solution",
+      "kind": "properties",
+      "values": {
+        "PLQY_percent": 86,
+        "PL_peak_nm": 500,
+        "edge_length_nm_approx": 9
+      },
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.2 colloidal CsPbBr3 comparator"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "Figure4caption"
+        }
+      ],
+      "limits": [
+        "Do not transfer86% solution PLQY to dried film. The cited11.8nm/516nm example is prior reference16, not a preparation in this paper."
+      ]
+    },
+    {
+      "id": "photostability-outcomes",
+      "samples": [
+        "composite-Fig4c",
+        "CsPbBr3-NC-film"
+      ],
+      "kind": "timecourse",
+      "values": {
+        "elapsed_min": 80,
+        "composite_remaining_intensity_percent_approx": 93,
+        "NC_film_remaining_intensity_percent_upper_bound": 45
+      },
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "photostability paragraph"
+        }
+      ],
+      "limits": [
+        "45% is less-than bound;93% approximate. No raw curves digitized."
+      ]
+    },
+    {
+      "id": "thermal-return",
+      "sample": "composite-unspecified",
+      "kind": "temperature_response",
+      "value": "PL decreases on warming and nearly recovers on cooling to room temperature",
+      "status": "qualitative_reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "paragraph after Figure5"
+        }
+      ],
+      "limits": [
+        "Temperature sequence, maximum temperature and dwell times not specified; not a numeric stability assay."
+      ]
+    },
+    {
+      "id": "wled-efficacy",
+      "sample": "WLED-composite-red-phosphor",
+      "kind": "luminous_efficacy",
+      "value": 73.8,
+      "unit": "lm/W",
+      "current_mA": 5,
+      "status": "reported",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.4"
+        }
+      ],
+      "limits": [
+        "Device outcome belongs to composite+red-phosphor+chip assembly. Not a bare-composite property. No CIE/CCT/CRI values supplied."
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "chen2018ami-dft-host",
+      "sample": "ideal Cs4PbBr6 model, not named synthesis specimen",
+      "type": "DFT band structure and partial DOS",
+      "software": "VASP",
+      "settings": {
+        "plane_wave_cutoff_eV": 450,
+        "method": "noncollinear PAW",
+        "XC_text": [
+          "local density-functional approximation",
+          "PBE generalized gradient approximation"
+        ],
+        "gamma_centered_k_mesh": [
+          2,
+          2,
+          2
+        ],
+        "max_force_eV_per_A_less_than": 0.01,
+        "energy_convergence_eV_per_atom": 0.0001
+      },
+      "results": {
+        "band_gap_eV": 3.84,
+        "upper_valence_character": "Br4p",
+        "conduction_character": "Pb6p"
+      },
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.3"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "3.2/Figure3d"
+        }
+      ],
+      "conflicts": [
+        "dft-functional-wording"
+      ],
+      "limits": [
+        "No input/output calculation files or coordinates supplied. Band gap is calculated, not a measured optical gap or label for an exact S4 structure."
+      ]
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "emission-origin",
+      "claim_type": "authors_interpretation",
+      "claim": "Green PL attributed to minority CsPbBr3 NCs protected by Cs4PbBr6; paper argues against host intrinsic/vacancy emission for these products.",
+      "support": [
+        "synchrotron minority phase identification",
+        "similar spectra across Cs/Pb and wash variations",
+        "DFT wide host gap",
+        "spatially inhomogeneous confocal emission"
+      ],
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.1-3.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "3.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "3.2"
+        }
+      ],
+      "limits": [
+        "This source-specific conclusion is not a universal resolution of all Cs4PbBr6 emission reports."
+      ]
+    },
+    {
+      "id": "formation",
+      "claim_type": "authors_proposed_mechanism",
+      "claim": "Dissolution-crystallization balance in water/DMSO permits passivated CsPbBr3 to survive in a Cs4PbBr6 framework.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "Figure1a"
+        }
+      ],
+      "limits": [
+        "No direct kinetic trajectory or in-situ mechanistic structural measurement supplied."
+      ]
+    },
+    {
+      "id": "wash-tradeoff",
+      "claim_type": "authors_interpretation",
+      "claim": "More DMSO removes poorly passivated CsPbBr3 and etches/dissolves host, increasing PLQY while decreasing yield for some samples.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "3.2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.3"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 6,
+          "printed_page": "S-6",
+          "item": "Figure S8 caption"
+        }
+      ],
+      "limits": [
+        "Total CsPbBr3 fraction is not the luminescent embedded fraction; do not use0.90/0.475wt% as protected-NC loading."
+      ]
+    },
+    {
+      "id": "multiexponential",
+      "claim_type": "authors_hypothesis",
+      "claim": "Multiple radiative CsPbBr3 species with different sizes could produce S4 multiexponential decay despite high PLQY.",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "decay discussion"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 10,
+          "printed_page": "S-10",
+          "item": "TableS3"
+        }
+      ],
+      "limits": [
+        "Fitted decay components are not uniquely measured size populations."
+      ]
+    },
+    {
+      "id": "reader-morphology",
+      "claim_type": "permitted_display_interpretation",
+      "claim": "S4 may use a labeled irregular micrometer-scale host/composite envelope with schematic inclusions.",
+      "evidence": [
+        {
+          "document_role": "si",
+          "pdf_page": 2,
+          "printed_page": "S-2",
+          "item": "FigureS2"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Figure3"
+        }
+      ],
+      "limits": [
+        "Inclusion positions, atomic interfaces, number, orientation and exact shapes are unknown. Do not depict atomistic reconstruction or transfer S4 morphology to every solvent-control specimen."
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "table-1",
+      "title": "Synthesis parameters and yielded-product properties",
+      "evidence": {
+        "document_role": "main",
+        "pdf_page": 4,
+        "printed_page": "15908",
+        "item": "Table 1"
+      },
+      "columns": [
+        "sample",
+        "CsAc/PbBr2 molar ratio",
+        "reaction DMSO uL",
+        "HBr/H2O solution uL",
+        "purification DMSO uL",
+        "product yield %",
+        "PLQY %",
+        "Scherrer CsPbBr3 size nm"
+      ],
+      "rows_raw": [
+        [
+          "S1",
+          "1:1",
+          "500",
+          "100",
+          "50",
+          "17.77",
+          "60.16",
+          "30"
+        ],
+        [
+          "S1-1",
+          "1:1",
+          "500",
+          "100",
+          "200",
+          "10.35",
+          "92.77",
+          "11"
+        ],
+        [
+          "S2.5",
+          "2.5:1",
+          "500",
+          "100",
+          "125",
+          "51.82",
+          "67.50",
+          "32"
+        ],
+        [
+          "S2.5-1",
+          "2.5:1",
+          "500",
+          "100",
+          "200",
+          "34.68",
+          "95.29",
+          "13"
+        ],
+        [
+          "S4",
+          "4:1",
+          "500",
+          "100",
+          "200",
+          "70.77",
+          "95.25",
+          "14"
+        ],
+        [
+          "S4-1",
+          "4:1",
+          "500",
+          "100",
+          "400",
+          "52.27",
+          "97.53",
+          "13"
+        ],
+        [
+          "S5",
+          "5:1",
+          "500",
+          "100",
+          "250",
+          null,
+          null,
+          null
+        ]
+      ],
+      "blank_cell_policy": "Null means printed blank, never zero.",
+      "notes": [
+        "Scherrer estimates are rough, noisy, and may exceed actual sizes; not TEM diameters.",
+        "Yield mass basis and replicate count not provided.",
+        "S4-1 yield conflict and -1 photograph scale context remain separate."
+      ]
+    },
+    {
+      "id": "table-2",
+      "title": "Solvent controls at CsAc/PbBr2=4:1",
+      "evidence": {
+        "document_role": "main",
+        "pdf_page": 6,
+        "printed_page": "15910",
+        "item": "Table 2"
+      },
+      "columns": [
+        "reaction DMSO uL",
+        "H2O uL",
+        "product yield %",
+        "PLQY %"
+      ],
+      "rows_raw": [
+        [
+          "350",
+          "77",
+          "75.02",
+          "76.75"
+        ],
+        [
+          "450",
+          "77",
+          "72.91",
+          "90.70"
+        ],
+        [
+          "500",
+          "77",
+          "70.77",
+          "95.25"
+        ],
+        [
+          "550",
+          "77",
+          "68.59",
+          "90.99"
+        ],
+        [
+          "650",
+          "77",
+          "64.75",
+          "93.34"
+        ],
+        [
+          "500",
+          "57",
+          "77.54",
+          "82.87"
+        ],
+        [
+          "500",
+          "72",
+          "76.26",
+          "84.24"
+        ],
+        [
+          "500",
+          "82",
+          "70.81",
+          "86.98"
+        ],
+        [
+          "500",
+          "97",
+          "69.83",
+          "89.63"
+        ]
+      ],
+      "notes": [
+        "H2O column is water quantity, not volume of HBr/H2O solution.",
+        "500/77 row reproduces S4 values; do not count it as a new independent experiment.",
+        "Amounts of aqueous HBr, deionized water, and HBr/HAc used to hold bromide constant are not separately specified for these rows."
+      ]
+    },
+    {
+      "id": "table-S3",
+      "title": "Tri-exponential lifetime parameters",
+      "evidence": {
+        "document_role": "si",
+        "pdf_page": 10,
+        "printed_page": "S-10",
+        "item": "Table S3"
+      },
+      "columns": [
+        "sample",
+        "A1",
+        "tau1 ns",
+        "A2",
+        "tau2 ns",
+        "A3",
+        "tau3 ns"
+      ],
+      "rows_raw": [
+        [
+          "S1",
+          "0.6716",
+          "3.7213",
+          "0.3268",
+          "15.7294",
+          "0.0218",
+          "100.4154"
+        ],
+        [
+          "S1-1",
+          "0.6357",
+          "3.3463",
+          "0.3420",
+          "14.4346",
+          "0.0393",
+          "77.8506"
+        ],
+        [
+          "S2.5",
+          "0.7373",
+          "4.3805",
+          "0.2420",
+          "19.1245",
+          "0.0350",
+          "103.7556"
+        ],
+        [
+          "S2.5-1",
+          "0.5072",
+          "3.4514",
+          "0.4363",
+          "15.9334",
+          "0.0588",
+          "90.4620"
+        ],
+        [
+          "S4",
+          "0.6917",
+          "4.2459",
+          "0.2907",
+          "21.3098",
+          "0.0358",
+          "161.3010"
+        ],
+        [
+          "S4-1",
+          "0.6090",
+          "3.6058",
+          "0.3365",
+          "17.4829",
+          "0.0388",
+          "130.1233"
+        ]
+      ],
+      "notes": [
+        "Amplitudes are transcribed as printed; do not renormalize or interpret them as population fractions.",
+        "No uncertainties or fit residuals provided. Lifetimes monitored at 520 nm with 477 nm pulsed excitation."
+      ]
+    }
+  ],
+  "structural_table_file": "structural-tables.json",
+  "conflicts": [
+    {
+      "id": "precursor-state",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.1"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 2,
+          "printed_page": "S-2",
+          "item": "Figure S1"
+        }
+      ],
+      "values": [
+        "Experimental section calls the stirred preparation a dissolved precursor solution.",
+        "Results describe white turbid dispersion with incomplete dissolution; SI S1 identifies dominant CsBr and marks unknown-phase peaks."
+      ],
+      "handling": "Keep the 1 h room-temperature stirring operation; describe the source-reported turbid/incompletely dissolved state rather than inventing a clarity endpoint."
+    },
+    {
+      "id": "minus1-scale",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 2,
+          "printed_page": "15906",
+          "item": "2.1.1 composite synthesis"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 6,
+          "printed_page": "S-6",
+          "item": "Figure S8 caption"
+        }
+      ],
+      "values": [
+        "Main synthesis says only CsAc amount changes relative to S4 apart from the enumerated wash amounts; Table 1 lists common 500 uL DMSO and 100 uL HBr/H2O.",
+        "SI Figure S8d photographic specimens S1-1, S2.5-1 and S4-1 are described as prepared with all reagents increased 1.5 times."
+      ],
+      "handling": "Retain Table 1 nominal formulations separately from the 1.5x photograph context. Do not assert that every -1 characterization specimen used the same absolute charge or that the photo scale supersedes Table 1."
+    },
+    {
+      "id": "s4minus1-yield",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 4,
+          "printed_page": "15908",
+          "item": "Table 1"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 6,
+          "printed_page": "S-6",
+          "item": "Figure S8 caption"
+        }
+      ],
+      "values": {
+        "table1_percent": "52.27",
+        "si_s8_percent": "52.57"
+      },
+      "handling": "Both preserved; no averaging or silent correction. Attach to S4-1 yield wherever exported."
+    },
+    {
+      "id": "s1-refinement-residuals",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.1 S1 Rietveld paragraph"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 8,
+          "printed_page": "S-8",
+          "item": "Table S1"
+        }
+      ],
+      "values": {
+        "main": {
+          "Rwp_percent": "4.75",
+          "Rp_percent": "6.73"
+        },
+        "si_table": {
+          "Rp_percent": "4.75",
+          "Rwp_percent": "6.73"
+        }
+      },
+      "handling": "Label swap unresolved. Preserve the table transcription and the main-text alternative."
+    },
+    {
+      "id": "dft-functional-wording",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "2.3 DFT Calculations"
+        }
+      ],
+      "values": [
+        "Source says local density-functional approximation.",
+        "Same paragraph specifies PBE generalized gradient approximation."
+      ],
+      "handling": "Preserve both statements; do not report an independently resolved XC setup."
+    },
+    {
+      "id": "s2p5-phase-rounding",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 3,
+          "printed_page": "15907",
+          "item": "3.1"
+        },
+        {
+          "document_role": "si",
+          "pdf_page": 9,
+          "printed_page": "S-9",
+          "item": "Table S2"
+        }
+      ],
+      "values": {
+        "main_CsPbBr3_wt_percent": "0.48",
+        "si_table_CsPbBr3_wt_percent": "0.475"
+      },
+      "handling": "Compatible source rounding, not a new measurement."
+    },
+    {
+      "id": "figure5-reference-formula",
+      "evidence": [
+        {
+          "document_role": "main",
+          "pdf_page": 5,
+          "printed_page": "15909",
+          "item": "Figure 5 caption"
+        },
+        {
+          "document_role": "main",
+          "pdf_page": 6,
+          "printed_page": "15910",
+          "item": "3.2 continuation"
+        }
+      ],
+      "values": [
+        "Caption text has beta-Si2AlON:Eu2+.",
+        "Panel legend/body use beta-SiAlON:Eu2+."
+      ],
+      "handling": "Commercial reference identity retained as beta-SiAlON:Eu2+, with source formula variation explicitly recorded; no inferred stoichiometry."
+    }
+  ],
+  "gaps": [
+    "No exact finite composite/NC atomic coordinates or interface positions.",
+    "No raw diffraction/intensity spectra/time curves supplied as numerical files; plots preserved, not digitized.",
+    "No TEM, SAED, Raman or measured per-particle3D envelope in supplied documents.",
+    "No physical batch/replicate mapping between characterization techniques beyond named sample formulations.",
+    "Independent audit, canonical integration, molecular binding, illustration, browser and publication gates remain outstanding."
+  ],
+  "public_export_policy": "Do not export original PDFs, full-page images or complete extracted article text. Selected source crops retain attribution/provenance and separate rights.",
+  "training_policy": "No tasks are admitted by this proposal; source review, input completeness, conflicts, phase-specific coordinate qualification and record-to-sample linkage require independent audit."
+}

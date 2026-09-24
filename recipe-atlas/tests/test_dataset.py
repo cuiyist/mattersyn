@@ -11,6 +11,7 @@ SITE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SITE / 'scripts'))
 from record_helpers import ev, fact, qty, source, record, material, operation, state, product, measurement
 from dataset_lib import validate_record, eligibility, training_view, build_groups, chemical_signature
+from build_dataset import render_record
 
 
 def fixture(record_id='test-a'):
@@ -96,6 +97,42 @@ class CanonicalRecordTests(unittest.TestCase):
         path = SITE / 'data/records/murray-1993-cdse-small-species.json'
         r = json.loads(path.read_text(encoding='utf-8-sig'))
         self.assertFalse(eligibility(r)['size_conditioned_recipe']['eligible'])
+
+
+class ConditionOptionChemicalIdentityTests(unittest.TestCase):
+    def test_mutually_exclusive_alkoxide_options_have_identity_controls_not_charge_cards(self):
+        # This UI/schema invariant must not depend on an unpublished paper.
+        # Explicitly synthetic alternatives preserve the tested identity/charge
+        # boundary without adding any source record to release membership.
+        r = fixture('synthetic-option-controls')
+        r['schema_version']='1.3.0'
+        r['collection']='reviewed_literature'
+        r['material'].update(elements=['Zn','O'],components=['ZnO'],architecture='single_material')
+        e = ev('synthetic-source','Synthetic mutually exclusive precursor choices')
+        r['condition_options'] = [
+            {'id':'fe-alkoxide-choice-1-of-2','label':'Synthetic ethoxide alternative','chemical_material_id':'fe-ethoxide','parameters':{'amount':qty(0.5,'mmol',e)},'evidence':e},
+            {'id':'fe-alkoxide-choice-2-of-2','label':'Synthetic isopropoxide alternative','chemical_material_id':'fe-isopropoxide','parameters':{'amount':qty(0.5,'mmol',e)},'evidence':e},
+        ]
+        options = {o['id']: o for o in r['condition_options']}
+        self.assertEqual('fe-ethoxide', options['fe-alkoxide-choice-1-of-2']['chemical_material_id'])
+        self.assertEqual('fe-isopropoxide', options['fe-alkoxide-choice-2-of-2']['chemical_material_id'])
+        self.assertEqual(0.5, options['fe-alkoxide-choice-1-of-2']['parameters']['amount']['value'])
+        self.assertEqual(0.5, options['fe-alkoxide-choice-2-of-2']['parameters']['amount']['value'])
+        self.assertFalse({'fe-ethoxide', 'fe-isopropoxide'} & {m['id'] for m in r['materials']})
+        self.assertEqual([], validate_record(r))
+
+        meta = {
+            'eligibility': {name: {'eligible': False, 'reason': 'test fixture'} for name in [
+                'precursor_selection', 'partial_protocol', 'size_conditioned_recipe',
+                'exact_structure_recipe', 'success_prediction', 'optical_outcome',
+            ]},
+            'group_id': 'synthetic-test-group', 'split': 'development', 'record_sha256': 'test-hash',
+        }
+        page = render_record(r, meta)
+        self.assertIn('data-option-material-id="fe-ethoxide"', page)
+        self.assertIn('data-option-material-id="fe-isopropoxide"', page)
+        self.assertNotIn('data-material-id="fe-ethoxide"', page)
+        self.assertNotIn('data-material-id="fe-isopropoxide"', page)
 
 
 class MissingnessAndStructureTests(unittest.TestCase):

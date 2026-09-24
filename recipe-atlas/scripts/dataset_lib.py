@@ -25,12 +25,15 @@ def validate_record(r):
     def fail(msg):errors.append(rid+': '+msg)
     if len(sources)!=len(r['sources']):fail('duplicate source IDs')
     if r['lineage']['source_group'] not in sources:fail('source group must resolve to a primary source')
-    for name in ['materials','stocks','material_states','operations','products','measurements','structure_assets']:
+    for name in ['materials','stocks','material_states','operations','condition_options','products','measurements','structure_assets']:
         key={'products':'sample_id'}.get(name,'id');ids=[x[key] for x in r[name]]
         if len(set(ids))!=len(ids):fail('duplicate '+name+' IDs')
         if any(not str(x).strip() for x in ids):fail('blank '+name+' ID')
     if not sources or any(not x.strip() for x in sources):fail('blank or absent source IDs')
     material_ids={m['id'] for m in r['materials']};stock_ids={s['id'] for s in r['stocks']};state_ids={s['id'] for s in r['material_states']}
+    for option in r['condition_options']:
+        chemical_id=option.get('chemical_material_id')
+        if chemical_id is not None and not chemical_id.strip():fail(option['id']+' has blank chemical_material_id')
     known=material_ids|stock_ids|state_ids
     if len(known)!=len(material_ids)+len(stock_ids)+len(state_ids):fail('material/stock/state IDs must be distinct')
     op_ids={o['id'] for o in r['operations']};sample_ids={p['sample_id'] for p in r['products']};measurement_ids={m['id'] for m in r['measurements']}

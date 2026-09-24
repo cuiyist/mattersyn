@@ -27,6 +27,7 @@ CRYSTALS = {
     "cofe2o4-spinel": (227, "cac0e1674371e05b06b58c22e6b518d0a38a218b2430207b54e5da7f87e58431", {"Co": 8, "Fe": 16, "O": 32}),
     "littau-1993-si-diamond-ideal-reference": (227, "1252db5c1bedea5e671a9995282b976002f67cb6418d296796c392eef8e8476f", {"Si": 8}),
 }
+ADDITIONAL_CRYSTALS = {p['id']:p for p in json.loads((Path(__file__).with_name('crystal_reference_pins.json')).read_text(encoding='utf-8'))['entries']}
 LITTAU_SI_ROUTES = {"littau-1993-si-aerosol-1p0", "littau-1993-si-aerosol-2p0", "littau-1993-si-aerosol-6p0"}
 HEATH_GE_SI_ROUTES = {"heath-1996-ge-100nm-wells", "heath-1996-ge-150nm-wells"}
 IDEAL_SI_ID = "littau-1993-si-diamond-ideal-reference"
@@ -193,7 +194,13 @@ class Audit:
         self.check(not bindings.get("unresolved"), "Unresolved chemical bindings remain")
         for rid, r in self.byid.items():
             bound = bindings["recordBindings"].get(rid, {})
-            self.check(set(bound) == {m["id"] for m in r["materials"]}, f"{rid}: missing/stale material bindings")
+            expected_binding_ids = {m["id"] for m in r["materials"]}
+            expected_binding_ids.update(
+                option["chemical_material_id"]
+                for option in r["condition_options"]
+                if option.get("chemical_material_id") is not None
+            )
+            self.check(set(bound) == expected_binding_ids, f"{rid}: missing/stale material or condition-option bindings")
             self.check(bindings["sourceRecordSha256"].get(rid) == sha(self.dist / "data/records" / (rid + ".json")), f"{rid}: chemical bindings built from stale canonical record")
             for mid, eid in bound.items():
                 self.check(eid in entries, f"{rid}/{mid}: chemical binding target absent")
@@ -222,7 +229,7 @@ class Audit:
     def crystals(self):
         base = self.dist / "assets/crystal-references"
         entries = {e["id"]: e for e in load(base / "registry.json")["entries"]}
-        self.check(set(entries) == set(CRYSTALS), "Pinned independently reviewed crystal reference set changed; review additions explicitly")
+        self.check(set(entries) == set(CRYSTALS) | set(ADDITIONAL_CRYSTALS), "Pinned independently reviewed crystal reference set changed; review additions explicitly")
         for cid, (sg, expected_hash, composition) in CRYSTALS.items():
             if not self.check(cid in entries, f"Missing crystal {cid}"):
                 continue
@@ -237,7 +244,8 @@ class Audit:
             elif cid == "sashchiuk-2004-pbse-ideal-reference":
                 self.check(e.get("finiteModelPeriodic") is False and e.get("structureAssetRole") == "illustrative", f"{cid}: registry finite/illustrative flags changed")
                 self.check(e.get("sourceUrl") == "https://doi.org/10.1021/nl0345116" and e.get("referenceType") == "locally_constructed_ideal_reference" and e.get("measuredSampleStructure") is False, f"{cid}: ideal reference scope changed")
-                self.check(set(e.get("record_ids",[])) == {"sashchiuk-2004-"+x for x in ["individual-low","sphere-intermediate","wire-intermediate","wire-high"]}, f"{cid}: wrong source scopes")
+                self.check(set(e.get("record_ids",[])) == {"sashchiuk-2004-"+x for x in ["individual-low","sphere-intermediate","wire-intermediate","wire-high"]} | {'evans-2010-pbse-qd'}, f"{cid}: wrong source scopes")
+                self.check(e.get('bindingScopes',{}).get('evans-2010-pbse-qd')=='Constructed rock-salt reference, optional comparison for Evans PbSe QDs only. It is not the atomic structure of Evans magic-size clusters.',f'{cid}: Evans optional comparison/magic-size exclusion changed')
                 self.check(e.get("prototypeSpaceGroupNumber") == 225 and e.get("spaceGroupNumber") == 1, f"{cid}: expanded P1 export/prototype confusion")
             else:
                 self.check(bool(e.get("scope")) and e.get("sourceUrl", "").startswith("https://www.crystallography.net/cod/"), f"{cid}: source/scope absent")
@@ -287,10 +295,30 @@ class Audit:
                 self.check(e["mixedOccupancy"] is True and len(positions) == 56 and sum(a["mixed_site"] for a in m["atoms"]) == 24, "Ferrite: mixed-site representation/count changed")
                 self.check(e["record_ids"] == ["saha-2019-coo-cofe2o4-seeded-growth"], "Ferrite reference attached to standalone CoO or unrelated protocol")
             if cid == "ir-fcc":
-                self.check(set(e["record_ids"]) == {"stowell-2005-ir-oa-oleylamine-290c", "shah-2001-ir"}, "FCC Ir reference assigned outside reviewed comparison contexts")
+                self.check(set(e["record_ids"]) == {"stowell-2005-ir-oa-oleylamine-290c", "shah-2001-ir",'stowell-2005-ir-toab-270c','stowell-2005-ir-top-290c','stowell-2005-ir-topb-270c'}, "FCC Ir reference assigned outside reviewed comparison contexts")
+                for rid in ['stowell-2005-ir-toab-270c','stowell-2005-ir-top-290c','stowell-2005-ir-topb-270c']:
+                    self.check(e.get('bindingScopes',{}).get(rid)=='Independent bulk FCC Ir reference. Additional Stowell precursor routes must not inherit the OA-only XRD/sample context.',f'{cid}/{rid}: OA-only evidence inherited')
                 self.check("does not establish the phase" in e.get("scope", "") and e.get("referenceOnly") is True and e.get("trainingEligible") is False, "Bulk Ir comparison must not become a measured Shah phase assignment or training label")
             if cid == "inp-zinc-blende":
                 self.check(e.get("sample_context_ids") == ["inp-reference-characterization-20min"] and "30 min" in e["scope"], "InP: 20-minute characterization confused with 30-minute recipe product")
+        for cid,pin in ADDITIONAL_CRYSTALS.items():
+            if not self.check(cid in entries,f'Missing qualified reference {cid}'):continue
+            e=entries[cid]
+            entry_sha=hashlib.sha256(json.dumps(e,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
+            self.check(entry_sha==pin['qualified_entry_semantic_sha256'],f'{cid}: independently qualified metadata/bindings changed')
+            self.check(e.get('referenceOnly')is True and e.get('trainingEligible')is False and e.get('defaultForSample')is False,f'{cid}: reference promoted to sample/training structure')
+            self.check(set(e.get('record_ids',[]))==set(pin['record_ids'])and set(e.get('record_ids',[]))<=set(self.byid),f'{cid}: source record scope changed')
+            self.check(e.get('spaceGroupNumber')==pin['space_group_number']and e.get('sourceUrl')==pin['source_url']and e.get('referenceType')==pin['reference_type']and e.get('displayPolicy')==pin['display_policy'],f'{cid}: reference qualifiers changed')
+            self.asset(base,e.get('cifPath'),pin['cif_sha256'],cid+'/qualified-CIF')
+            path=self.asset(base,e.get('modelPath'),pin['model_sha256'],cid+'/qualified-model')
+            if path:
+                model=load(path);counts=Counter()
+                self.check(model.get('training_eligible')is False and model.get('measured_sample_structure')is False,f'{cid}: model exclusion flags changed')
+                for atom in model.get('atoms',[]):
+                    self.check(all(isinstance(atom.get(k),(float,int))and math.isfinite(atom[k])for k in ('x','y','z')),f'{cid}: nonfinite coordinate')
+                    for component in atom.get('components',[{'element':atom['element'],'occupancy':atom.get('occupancy',1)}]):counts[component['element']]+=component['occupancy']
+                expected=pin['expected_occupancy_weighted_counts']
+                self.check(set(counts)==set(expected)and all(abs(counts[k]-v)<1e-5 for k,v in expected.items()),f'{cid}: qualified occupancy-weighted composition changed')
         self.counts["crystal_references"] = len(entries)
 
     def figures(self):

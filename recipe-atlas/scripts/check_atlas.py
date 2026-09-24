@@ -24,8 +24,11 @@ def main():
     figures=audit['figures']+[audit['related_paper_saed_check']['nakonechnyi2017']['saed']]
     for f in figures:
         assert f['eligible_training'] is False
-        a=f['original_figure_asset'];p=DIST/a['file'];assert p.exists()
+        a=f.get('display_asset')or f['original_figure_asset'];p=DIST/a['file'];assert p.exists()
         assert hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256']
+        if f.get('display_asset'):
+            assert a['kind']=='source_link'and a['source_url'].startswith('https://')
+            assert f['original_figure_asset'].get('redistribution_status')=='withheld'
     assert [p['product'] for p in figures[-1]['panels']]==['wz-CdSe/CdS','zb-CdSe/CdS','wz-CdSe/ZnSe','zb-CdSe/ZnSe']
     for p in (DIST/'data').rglob('*.json'):
         assert not re.search(r'C:[/\\]+Users',p.read_text(encoding='utf-8')),p

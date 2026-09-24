@@ -1,76 +1,31 @@
-# Site delivery, access and durable memory
+# MatterSyn publication and memory
 
-## Existing site or new site
+For this project, both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public. The website is https://cuiyist.github.io/mattersyn-site/. The original Sites address and old direct-copy helpers are historical. Follow the current project README and release configuration for authoring, building and publishing; do not infer the current checkout from an old absolute path in memory.
 
-Inspect `.openai/hosting.json` before any Sites lifecycle action. Reuse the existing project and architecture for edits. A local source snapshot does not authorize modifying its original hosted project. For a new site, use the current Sites creation workflow rather than copying another site's project ID.
+## Public project and private evidence
 
-Follow the available Sites building/hosting skills for previews, version packaging and publication. Use their current helper and tool contracts; do not freeze an old plugin version, port, token workflow or runtime path into a new project.
+Keep complete PDFs/SI, extracted/OCR text, snippet caches, source page renders, working crops, private source-path maps and unredacted evidence archives outside public Git. Preserve those originals and their hashes for research and audit. Public output contains reviewed structured records, citations, code, schemas, templates, approved visual assets, sanitized project memory/skills and audit summaries. An audit summary retains scope, source IDs/hashes, page/figure locators, findings and unresolved issues; its redacted bytes are not the original scientific audit artifact.
 
-For the original static MatterSyn site, `dist` is the authored static application, not disposable generated output. If a packaging helper is incompatible with this architecture or local shell, adapt staging to the current static archive contract. Do not replace a working architecture solely to satisfy a starter template. Validate archive contents and exclude `.git`, caches, credentials, downloaded paper collections and unrelated research data.
+Build an explicit, separately staged public projection using the reviewed content allowlist and exact image-clearance registry. Unknown source content remains private pending classification. A PDF extension blacklist, directory name, or absence of credentials is insufficient. Avoid broad recursive copies into a public Git checkout; source and destination must be distinct. Use document IDs/collection names in public provenance instead of personal computer paths. Preserve private ID-to-path mappings.
 
-Publishing invariants:
+Image clearance is per exact asset and source: retain the DOI, original source hash and locator, display hash, transformation, license or permission basis, attribution and reviewer. A citation alone, open download access or a redrawn copy is not clearance. For an uncleared image, retain the paper's independently summarized findings, sample boundaries and locators, and display an explicit source link or a clearly labeled independently authored explanatory illustration. Do not fabricate or redraw an unobserved measurement. Computational molecular/crystal models and apparatus/morphology illustrations keep their existing source and interpretation qualifications.
 
-- The source commit used to build/package the site must be the exact pushed state supplied when saving a version. Obtain the full SHA from the checkout after a successful push.
-- Keep repository credentials ephemeral and out of source, URLs, logs and memory.
-- Use the site's actual current audience to select deployment. Preserve an already public site across updates; do not silently privatize it or assume every site is owner-private.
-- Publishing a website and making it public are distinct actions. Change access only within the user's requested audience. Do not require redundant conversational approval when the session already authorizes the action; follow current tool/system permission requirements.
-- Verify deployment completion before claiming success. Reuse the site's existing browser tab for handoff when available.
+## One source and one release
 
-## MatterSyn GitHub publication choice
+Keep approved authoring records, templates and authored static assets in the source repository. Generate the deployable output from those inputs; inspect dependencies before moving legacy files, since older MatterSyn builders treated parts of `dist` as authored inputs. The publication repair migrates these inputs rather than discarding them. Integrate only scientifically and visually reviewed contributions. Unpublished candidates remain outside release inputs.
 
-The user's latest September 20 choice supersedes the former private-project arrangement. Both repositories are PUBLIC: `cuiyist/mattersyn` contains code, memory, skills, structured research data and audit history; `cuiyist/mattersyn-site` contains the website at `https://cuiyist.github.io/mattersyn-site/`. Original papers and SI remain local. The GitHub website is verified live; the old Sites deployment is historical.
+Use one release snapshot for canonical records, Reader views, training eligibility, the home-page fallback, progress data, and both repository bibliographies. Bind the artifact manifest to the source revision and file hashes; deploy the exact checked artifact. CI must block release when file classes, private-content checks, image permissions, canonical/public parity, local links or manifest hashes fail. Dynamic Reader anchors need browser checks that the destination exists and scrolls into view after rendering. Do not silence static warnings without checking actual behavior.
 
-Keep the website deployment and project publication checkouts separate from the complete local research corpus. Preserve the source commit history while excluding original documents, full-document text caches and complete page renderings, credentials and runtime dependencies from public history and future synchronization. Retain selected figure/equation crops, typed scientific data and audits with their original provenance. A prior private backup may contain excluded source equivalents: audit its history before changing visibility and preserve the unfiltered local history. Record an explicit publication filter and included/excluded manifest. Historical hash/path references can remain as provenance without exposing the excluded file.
+Keep source originals and immutable independent audits unchanged when producing a public projection. Record each publication transformation separately. Sanitizing an audit is not a new scientific review; an illustrative reference structure remains distinct from measured specimen coordinates. Progress-only changes and corrections to existing papers are not new completed publications.
 
-Generate the paper bibliography in both GitHub READMEs and `REFERENCES.md` from actually published canonical source metadata, including DOI links and main/SI review scope. Do not add every indexed paper or silently call a citation a full-source review. Keep memory, skills, references and labeled work in progress synchronized at meaningful milestones. Publish the progress dashboard at `progress.html` and the homepage summary from a sanitized projection, with actual update and corpus-scan timestamps. The page checks for new published snapshots every minute; this is not instantaneous live worker telemetry. Scientific additions still require their independent source, canonical, visual, browser and publication checks.
+## Git history and delivery
 
-Current helpers are `research-assets/build_reference_readmes.py` and `research-assets/incoming-paper-monitor/build_public_progress.py`; the latter reads the private queue plus `public-progress-editorial.json` and exports explicit public fields only. Regenerate them after meaningful progress and after scientific builds. Consult the latest project memory for the current publication checkout and synchronization helper; earlier private-only scripts are historical.
+`.gitignore` is a future staging aid; it does not remove tracked files or old history. A historical cleanup is a separate migration: preserve a verified private bundle and working changes first, build and inspect the filtered history in an isolated object store, preserve commit chronology and a private old-to-new mapping, and update only the explicitly authorized remote refs with an expected-head lease. Never reset a dirty scientific checkout or allow an old unfiltered clone to republish it. Routine releases do not rewrite history. Already distributed clones and cached views are outside this local cleanup's control.
 
-Verify repository visibility and destination before a first push. GitHub project Pages uses a path prefix: test material, paper and recipe routes, relative data/assets, downloads and interactive viewers under that prefix. Keep canonical scientific values and immutable audits unchanged when adapting presentation URLs; record publication-only transformations and audit their affected scope. Record exact pushed commits and completed Pages deployment, then verify anonymous access.
+Respect the user's existing publication authorization; do not ask again for each reviewed batch. A change in audience or history must be supported by the session's explicit authorization. Keep credentials in the existing credential mechanism, never in source, URLs, manifests or reports. Verify deployment completion and anonymous access, including file hashes, before reporting a release as live.
 
-## Anonymous access verification
+## Memory and continued curation
 
-When public access is requested, check the current site access mode and use the supported access-change tool. Verify the published root or intended route through an anonymous request with no cookies, Authorization header or bypass token. Check both final URL and actual page content; HTTP200 can still be a login page.
+Save durable progress and decisions in the GitHub project at meaningful milestones through the public export. Include current source scope, actual extraction/audit/publication status, evidence locations by stable ID, unresolved scientific claims, validated counts, release commits and reusable preferences. Do not publish raw paper prose, personal paths, credentials or unrelated app-settings discussion. Keep the full private evidence record separately.
 
-If the anonymous request redirects to authentication, resolve the access setting or hosting behavior before saying the site is public. If an old browser tab remains on a cached login screen after anonymous access succeeds, provide the direct site link and suggest reopening it in a fresh/private window. Do not ask the user to share credentials.
-
-## Memory update
-
-Use the project's existing memory file when present. Record decisions and durable results, not a transcript or command log:
-
-- Research intent and user design preferences.
-- Selected paper/DOI and precise method scope; main/SI availability and verification status.
-- Location of structured extraction, original sources, source code and scientific-model provenance.
-- Important unresolved quantities, inconsistent values, sample links or model limitations.
-- Latest site URL, publication outcome, current access and how access was verified.
-- Prior examples preserved and how to reach them.
-- Changes to reusable workflow preferences, such as stage-specific diagrams and adjacent condition cards.
-
-Keep website status current when changing papers or access. Distinguish accepted user choices from assistant suggestions. Do not include unrelated app settings, credentials, cookies, access bypasses or temporary command output. Never treat memory as authority over fresh access/tool state or the user's latest instruction.
-
-
-## Verified public GitHub delivery (September 20, 2026)
-
-Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public. The preserved unfiltered repositories are private under `mattersyn-source-archive-20260920` and `mattersyn-site-source-archive-20260920`; their old local checkouts point to these preservation names. The original authoring directory stays `[local path redacted] Current isolated publication copies are `[local path redacted] and `[local path redacted] Consult latest MEMORY.md if paths change.
-
-Use `research-assets/sync_github_public.py project` or `site`, which applies `public_projection_policy.py` before committing. The history builder preserved all32 earlier commits while filtering source-equivalent content; do not recreate repositories on routine future releases. `github_public_delivery.py preserve-and-create` was a one-time migration action, not part of normal synchronization. The obsolete `sync_github_private.py` is disabled. Never push the unfiltered authoring tree or preserved original checkout to the public destination.
-
-Store new complete-page previews under the policy-recognized `source-render` directory and check their relative paths with `exclude_path` before public synchronization. A directory named `private` alone does not establish exclusion. Selected figure crops and typed evidence use their separate allowlists.
-
-Deep Windows audit paths require extended filesystem paths for both traversal and file I/O, while public manifests keep ordinary relative paths. Do not resolve symlinks before the collector tests and excludes them. For projection cleanup, continue resolving and bounding each target to the isolated publication directory before deletion. The current synchronization helper has a separate long-path audit; preserve these properties when changing it.
-
-Run the citation/progress generators when their underlying milestones change; inspect the resulting public projection, commit/push the affected repository and verify the exact published commit anonymously. `verify_public_delivery.py` checks both public repositories, README DOI links, actual deployed bytes and the omitted complete-page asset. The expected citation count is read from the generated reference manifest and bound to the published dataset hash;31is the initial count, not a permanent requirement. Preserve scientific dataset publication time separately from a progress-only website redeployment. Synchronize memory, skills, proposal/audit artifacts and final verification after delivery, while keeping unfinished science labeled.
-
-The user requested a two-month fixed-collection target and authorized preparing an API pilot cost/capacity proposal. No paid pilot or production infrastructure is authorized yet. Preserve the current proposal and correction history under `research-assets/incoming-paper-monitor/deadline-20260920/`. A deliberately diverse QA sample does not establish corpus prevalence. Expanded capacity must preserve per-paper independent audits and be validated with an appropriately designed throughput test.
-
-Measure public asset growth and publication time during the pilot. GitHub Pages currently limits a published site to1GB and has a soft10builds/hour limit for the branch-based path; coalesce completed contributions/progress updates and reassess asset hosting before measured growth reaches that limit. Do not lower figure legibility or omit data to fit a deadline. Reference: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits . No alternative paid host has been chosen or purchased.
-
-## Reader inventory and publication metadata
-
-In the MatterSyn source reader, array lengths may include continued captions and embedded TEM crops. Call these figure/table **entries** unless numbered parent objects have been explicitly deduplicated. Keep selected asset counts, numbered figures/tables, source pages and physical samples distinct.
-
-A passed scientific extraction or integration audit need not be repeated solely to advance publication labels. Preserve the original immutable proposal and audit; compare a bounded metadata overlay against its exact baseline, and retain a separate delta receipt. A conditional publication-label transition requires a passed anonymous delivery proof for the exact deployed commit and bytes before application. Such labels cannot promote atomic structures, specimen joins or training eligibility. If only metadata changed, validate that delta rather than re-reading unchanged PDFs.
-
-Before freezing a MatterSyn reader proposal, exercise the actual `build_paper_reviews.validate` consumer contract in an isolated projection as well as scientific transport checks. For example, the current main/SI scope enum is `supplied_main_and_matched_si`; a semantically similar label can fail integration. If discovered after freeze, retain the original and apply a narrowly audited metadata revision. Do not describe a transport-only pass as proof that the website accepts or renders the reader.
-
-Treat every hash-bound package input as immutable, including ancillary reading notes. Continue later observations in a dated addendum; if a note was accidentally changed, restore only from an exact hash-matched historical copy and preserve the later text and a restoration receipt separately. Do not rewrite a passed freeze to conceal the mismatch.
+After publication repairs, resume the user's extraction, separate independent audit and CdSe-standard website integration on accepted screening documents. Preserve all variants and sample identities; multiple publications can contribute evidence to one pair without becoming duplicate training examples. Conflicting supported claims remain side by side with citations. Reuse passed unchanged evidence. New arrivals stay separate until their next authorized screening pass. No paid API/cloud run has been authorized. Report achieved throughput and whole-collection denominators rather than treating the 500-paper/day request as demonstrated capacity.

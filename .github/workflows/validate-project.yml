@@ -1,0 +1,63 @@
+name: MatterSyn source and build checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install build validator
+        run: python -m pip install -r requirements-publication.txt
+      - name: Test the publication boundary
+        working-directory: tools/mattersyn-release
+        run: python -m unittest discover -s tests -v
+      - name: Test publication and preservation helpers
+        run: python -m unittest discover -s tools/publication -p 'test_*.py' -v
+      - name: Check exact source manifest coverage
+        run: python tools/publication/check_project_manifest.py
+      - name: Validate the public source projection
+        run: |
+          python tools/mattersyn-release/export_release.py \
+            --source-root "$GITHUB_WORKSPACE" \
+            --destination "$RUNNER_TEMP/public-source" \
+            --allowlist publication/project-allowlist.json \
+            --registry publication/asset-rights-registry.json \
+            --policy publication/public-release-policy.json \
+            --repo mattersyn \
+            --manifest-out "$RUNNER_TEMP/source-manifest.json" \
+            --report-out "$RUNNER_TEMP/source-boundary.json"
+      - name: Bind the build to this clean source commit
+        run: |
+          python recipe-atlas/scripts/make_runtime_snapshot.py \
+            --root "$GITHUB_WORKSPACE" \
+            --blueprint publication/build-inputs.json \
+            --output "$RUNNER_TEMP/build-snapshot.json"
+      - name: Build and test the complete candidate
+        run: |
+          python recipe-atlas/scripts/build_release.py --candidate \
+            --output "$RUNNER_TEMP/candidate" \
+            --snapshot "$RUNNER_TEMP/build-snapshot.json" \
+            --registry publication/asset-rights-registry.json \
+            --artifact-transform tools/publication/source_link_artifacts.py
+      - name: Retain test receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: mattersyn-validation-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/source-manifest.json
+            ${{ runner.temp }}/source-boundary.json
+            ${{ runner.temp }}/candidate/candidate-manifest.json
+          retention-days: 7

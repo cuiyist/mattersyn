@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chen2018ami-cspbbr3-film",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Chen et al. (2018) · cspbbr3 film",
+  "material": {
+    "formula": "CsPbBr3",
+    "family": "lead-halide perovskite nanocrystals",
+    "elements": [
+      "Cs",
+      "Pb",
+      "Br"
+    ],
+    "components": [
+      "CsPbBr3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supporting preparation",
+  "sources": [
+    {
+      "id": "chen2018ami",
+      "doi": "10.1021/acsami.8b04556",
+      "title": "Cs4PbBr6/CsPbBr3 Perovskite Composites with Near-Unity Luminescence Quantum Yield: Large-Scale Synthesis, Luminescence and Formation Mechanism, and White Light-Emitting Diode Application",
+      "authors": "Ya-Meng Chen; Yang Zhou; Qing Zhao; Jun-Ying Zhang; Ju-Ping Ma; Tong-Tong Xuan; Shao-Qiang Guo; Zi-Jun Yong; Jing Wang; Yoshihiro Kuroiwa; Chikako Moriyoshi; Hong-Tao Sun",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acsami.8b04556",
+      "main_status": "Complete supplied 8-page main source-reviewed and independently audited",
+      "si_status": "Complete supplied matching 10-page SI source-reviewed and independently audited",
+      "reuse_status": "Factual extraction; original selected figure rights remain separate."
+    }
+  ],
+  "lineage": {
+    "source_group": "chen2018ami",
+    "recipe_family": "chen2018ami-colloidal-comparator",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CsPbBr3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "Main and SI, source-defined scope"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "Main and SI, source-defined scope"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "Main and SI, source-defined scope"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "toluene",
+      "name": "toluene",
+      "formula": "C7H8",
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Used without purification unless otherwise noted.",
+        "Specification: AR",
+        "Supplier: QS"
+      ],
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "main PDF p. 2 (printed 15906), 2.1 chemicals / 2.1.1 / 2.1.2"
+        }
+      ]
+    },
+    {
+      "id": "glass-substrate",
+      "name": "glass substrate",
+      "formula": null,
+      "role": "support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Substrate composition, dimensions and surface treatment are not supplied. Support, not a reaction precursor."
+      ],
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "source-material",
+      "name": "Source-defined input specimen, exact physical batch unspecified",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "step-1-state",
+      "name": "Drop toluene dispersion onto glass substrate.",
+      "kind": "product",
+      "parent_ids": [
+        "source-material",
+        "toluene",
+        "glass-substrate"
+      ]
+    },
+    {
+      "id": "step-2-state",
+      "name": "Dry at room temperature until residual solvent completely evaporates.",
+      "kind": "product",
+      "parent_ids": [
+        "step-1-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "step-1",
+      "action": "supporting_preparation",
+      "label": "Drop toluene dispersion onto glass substrate.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "source-material",
+        "toluene",
+        "glass-substrate"
+      ],
+      "outputs": [
+        "step-1-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drop toluene dispersion onto glass substrate. ",
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    },
+    {
+      "id": "step-2",
+      "action": "supporting_preparation",
+      "label": "Dry at room temperature until residual solvent completely evaporates.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "step-1"
+      ],
+      "inputs": [
+        "step-1-state"
+      ],
+      "outputs": [
+        "step-2-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry at room temperature until residual solvent completely evaporates. ",
+      "evidence": [
+        {
+          "source_id": "chen2018ami",
+          "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cspbbr3-nc-film",
+      "source_sample_label": "CsPbBr3-NC-film",
+      "batch_id": null,
+      "material_state_id": "step-2-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CsPbBr3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chen2018ami",
+            "locator": "main PDF p. 2 (printed 15906), 2.1.2 colloidal CsPbBr3 comparator"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "",
+        "Source-named formulation or context; physical batch identity and cross-technique aliquot identity are not established."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source extraction and canonical/Reader mapping independently audited. No unique physical batches asserted; training eligibility remains unapproved.",
+    "missing_fields": [
+      "dispensed concentration/volume",
+      "substrate dimensions/treatment",
+      "film thickness",
+      "drying time"
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Complete Chen et al. source review",
+      "url": "../paper-review.html?id=chen2018ami",
+      "relation": "source_evidence"
+    },
+    {
+      "label": "Frozen source extraction",
+      "url": "../data/paper-evidence/chen2018ami-source-extraction.json",
+      "relation": "full_source_extraction"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

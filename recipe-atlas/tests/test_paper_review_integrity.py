@@ -5,6 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from dataset_lib import eligibility,build_groups,fmt
 from build_paper_reviews import validate
+from asset_display import display_view
 def record(id):return json.loads((ROOT/'data/records'/(id+'.json')).read_text(encoding='utf-8'))
 def quantities(x):
     if isinstance(x,dict):
@@ -44,6 +45,7 @@ class ReviewIntegrity(unittest.TestCase):
             self.assertEqual(len({groups[r['record_id']]for r in records if r['lineage']['source_group']==source}),1)
     def test_incomplete_page_or_changed_figure_fails_coverage_check(self):
         c=json.loads((ROOT/'data/paper-reviews/fu2007.json').read_text(encoding='utf-8'))
+        c=display_view(c,ROOT,'test-review-private-provenance.json')
         self.assertEqual(validate(c),[])
         missing=copy.deepcopy(c);missing['documents'][0]['pages'].pop()
         self.assertTrue(validate(missing))
