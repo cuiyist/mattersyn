@@ -19,7 +19,9 @@ eligibility remain in reviewed data; a successful build is not a scientific audi
 The migration must first preserve all required inputs in a new isolated source
 tree. Do not delete the existing `dist` or use an incomplete committed checkout
 as the source for a release. The migration plan records both committed and dirty
-input hashes, excludes unpublished records, and holds uncleared files.
+input hashes, excludes unpublished records, holds unselected or unclassified source
+assets and private working materials, and preserves selected original source
+figures as exact cited website inputs under the user's current display preference.
 
 ## Build a release
 
@@ -67,9 +69,13 @@ Use the same snapshot for the project bibliography and website bibliography.
 Repository `.nojekyll` is a deliberate deployment adapter. Do not compare a dirty
 working tree to a public commit and call that a reproducible build.
 
-Publication remains a separate authorized action after content clearance and
-source/Reader QA. Original papers, extracted full text and uncleared journal crops
-are not made public by a successful build.
+Publication remains a separate authorized action after content and source/Reader
+QA. The user's current instruction keeps selected original source figures available
+on the public reader with citation, page/figure locator and supported sample
+provenance. This project display choice does not mean publisher permission was
+verified; keep each asset's permission status accurate. A successful build does not
+make original papers or SI, extracted full text/OCR, page renders, private working
+crops or unselected source assets public.
 
 Historical counts, former Sites instructions and old one-off build descriptions
 are retained in [CHANGELOG.md](CHANGELOG.md).

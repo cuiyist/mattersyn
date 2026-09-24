@@ -44,8 +44,12 @@ identities fail delivery. Structured quantities and approved coordinate payloads
 retain their evidence and values; nested JSON strings receive the same private
 content checks as ordinary JSON. An authored diagram or source-link card must
 retain that classification and must not be represented as a measured image.
-Pending source-image clearance is represented by citations and qualified source
-links while the original evidence remains private.
+The user's current project preference is to keep the selected original source
+figures available in the public reader with their citations, figure locators and
+supported sample mapping, even when publisher permission has not been verified.
+Preserve that unresolved permission status; the display choice is not a
+rights-clearance statement. Keep complete papers/SI, extracted text, page renders
+and private working crops outside the public stage.
 
 Run the included bounded regression suite from this directory:
 

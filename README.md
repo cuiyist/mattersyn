@@ -6,7 +6,7 @@ MatterSyn organizes reviewed synthesis procedures, material characterization and
 
 ## Reproduce a review candidate
 
-Use Python 3.11 or later with the dependencies pinned in [requirements-data.txt](recipe-atlas/requirements-data.txt). No GPU is needed to build the static website. The input snapshot binds reviewed files and record membership. Original papers, extracted full text and withheld source figures are not public build inputs.
+Use Python 3.11 or later with the dependencies pinned in [requirements-data.txt](recipe-atlas/requirements-data.txt). No GPU is needed to build the static website. The input snapshot binds reviewed files and record membership. The selected original source figures remain available in the reader at the user's explicit direction, with citations and supported sample attribution; that display choice does not mean publisher permission was verified. Original papers and SI, extracted full text/OCR, page renders and private working crops remain local.
 
 From a clean, committed repository root, first bind the portable blueprint to
 the current Git commit. Keep the generated runtime snapshot outside the checkout
@@ -22,7 +22,7 @@ Use a new output directory:
 python recipe-atlas/scripts/build_release.py --candidate --output ../build-candidate --snapshot ../mattersyn-runtime-snapshot.json --registry publication/asset-rights-registry.json --artifact-transform tools/publication/source_link_artifacts.py
 ```
 
-The committed publication registry binds the reviewed asset hashes. The hook generates display mappings during the isolated build; private source images are not required. This does not grant new asset permissions. The source-link hook also requires its `safe_paths.py` helper. The artifact appears in `build-candidate/project/recipe-atlas/dist`. This command runs scientific/data tests and site validators and emits an **UNAPPROVED** candidate manifest. It does not publish or authorize release. See [the detailed build guide](recipe-atlas/README.md) and [publication controls](PUBLICATION.md).
+The committed publication registry binds reviewed asset hashes and provenance. The hook generates display mappings during the isolated build. The selected original source figures are reader-facing assets under the user's explicit project preference; keep their recorded permission status unresolved unless specific evidence supports a clearance claim. Full papers/SI, extracted text/OCR, page renders and private working crops are not required as public build inputs. The source-link hook also requires its `safe_paths.py` helper. The artifact appears in `build-candidate/project/recipe-atlas/dist`. This command runs scientific/data tests and site validators and emits an **UNAPPROVED** candidate manifest. It does not publish or authorize release. See [the detailed build guide](recipe-atlas/README.md) and [publication controls](PUBLICATION.md).
 
 ## Release checks
 
@@ -33,7 +33,7 @@ Public citations are generated below from the same dataset snapshot used by the 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.34.0** · **42 primary source groups** · release `7e9c0abe1e76-repair`. Records are not independent experiments.
+Dataset **0.34.0** · **42 primary source groups** · release `20260924-source-figures-restored`. Records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 

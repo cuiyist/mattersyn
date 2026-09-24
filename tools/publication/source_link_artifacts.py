@@ -4,14 +4,31 @@ Never reads or edits the original raster image. Operates only in the new release
 artifact directory. Scientific records are retained byte-for-byte.
 """
 from pathlib import Path
-import argparse, copy, hashlib, html, json, re
+import argparse, copy, hashlib, html, importlib.util, json, re
+from functools import lru_cache
 from safe_paths import checked_path, preflight_tree
 
 TEXT={'.json','.jsonl','.html','.js','.mjs','.css','.md','.csv','.txt'}
 def sha(b):return hashlib.sha256(b).hexdigest()
 def save(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+@lru_cache(maxsize=1)
+def display_guard():
+    # One shared validator keeps build-time substitution and release gating in
+    # agreement. User direction is a display basis, not a copyright clearance.
+    path=Path(__file__).resolve().parents[1]/'mattersyn-release/public_release_guard.py'
+    spec=importlib.util.spec_from_file_location('mattersyn_display_guard',path)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    return module
+
 def rows(registry):
     for asset in registry.get('assets',[]):
+        if asset.get('rights',{}).get('status')=='user_directed_display':
+            locations=asset.get('delivery_paths',[])
+            if not locations:raise RuntimeError('user_directed_display_delivery_missing_or_ambiguous')
+            for location in locations:
+                reason=display_guard().user_directed_display_error(asset,location.get('repo'),location.get('path'))
+                if reason:raise RuntimeError(reason)
+            continue
         if asset.get('rights',{}).get('status') in {'not_source_derived','authored','license-cleared','license_cleared','permission-granted','permission_granted','approved','cleared'}:continue
         for location in asset.get('delivery_paths',[]):
             if location.get('repo')=='mattersyn-site':yield asset,location

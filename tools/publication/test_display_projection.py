@@ -1,5 +1,19 @@
-import copy,re,unittest
-from source_link_artifacts import project_display_json
+import copy,hashlib,io,json,re,tempfile,unittest
+from contextlib import redirect_stdout
+from pathlib import Path
+from unittest.mock import patch
+from source_link_artifacts import main,project_display_json,rows
+
+def restored_asset(path,raw):
+    digest=hashlib.sha256(raw).hexdigest()
+    return {'asset_hash':digest,'classification':'source_figure','source_bindings':[{'doi':'10.1000/example'}],
+            'delivery_paths':[{'repo':'mattersyn-site','path':path,'bytes':len(raw)},
+                              {'repo':'mattersyn','path':'recipe-atlas/static/'+path,'bytes':len(raw)}],
+            'rights':{'status':'user_directed_display','attribution':'DOI 10.1000/example, Figure 2',
+                      'copyright_permission_verified':False,
+                      'user_direction':{'record_id':'synthetic-explicit-direction','recorded_at':'2026-09-24T12:00:00Z',
+                                        'scope':'restore_previously_delivered_source_figures','asset_hash':digest,
+                                        'previous_delivery':[{'repo':'mattersyn-site','path':path,'commit':'a'*40,'asset_hash':digest}]}}}
 
 class DisplayProjectionTests(unittest.TestCase):
     def setUp(self):
@@ -27,5 +41,34 @@ class DisplayProjectionTests(unittest.TestCase):
         d={'temperature':{'value':280,'unit':'C'},'sample':'sample-1','source_sha256':'c'*64};out,private=self.apply(d);self.assertEqual(out,d);self.assertEqual(private,[])
     def test_idempotent_display_projection(self):
         d={'public_asset':'assets/figure.png','public_asset_sha256':'a'*64};once,_=self.apply(d);twice,private=self.apply(once);self.assertEqual(once,twice);self.assertEqual(private,[])
+    def test_user_directed_source_is_not_substituted_but_unknown_graphics_are(self):
+        asset=restored_asset('assets/figures/example/figure-2.png',b'synthetic')
+        unknown=[{'asset_hash':c*64,'classification':'unknown','rights':{'status':'withheld'},
+                  'delivery_paths':[{'repo':'mattersyn-site','path':p}]}for c,p in [('b','og.png'),('c','assets/flask.png')]]
+        registry={'assets':[asset]+unknown};before=copy.deepcopy(registry)
+        self.assertEqual([location['path']for _,location in rows(registry)],['og.png','assets/flask.png'])
+        self.assertEqual(registry,before)
+    def test_invalid_user_direction_fails_substitution_instead_of_silently_allowing(self):
+        asset=restored_asset('assets/figures/example/figure-2.png',b'synthetic')
+        for field,value in [('classification','unknown'),('rights',{'status':'user_directed_display'})]:
+            changed=copy.deepcopy(asset);changed[field]=value
+            with self.assertRaisesRegex(RuntimeError,'user_directed_display_'):list(rows({'assets':[changed]}))
+        changed=copy.deepcopy(asset);changed['delivery_paths'][1]['path']='private/figure.png'
+        with self.assertRaisesRegex(RuntimeError,'user_directed_display_path_ineligible'):list(rows({'assets':[changed]}))
+    def test_postbuild_keeps_restored_figure_bytes_and_scientific_metadata(self):
+        path='assets/figures/example/figure-2.png';raw=b'synthetic figure bytes';asset=restored_asset(path,raw)
+        metadata={'original_figure_asset':{'file':path,'sha256':asset['asset_hash'],'source_pdf_sha256':'d'*64},
+                  'public_asset':path,'public_asset_sha256':asset['asset_hash'],'sample':'sample-2','size_nm':4.2}
+        with tempfile.TemporaryDirectory()as td:
+            source=Path(td)/'atlas';dist=source/'dist';(dist/'data').mkdir(parents=True)
+            image=dist/path;image.parent.mkdir(parents=True);image.write_bytes(raw)
+            target=dist/'data/figure.json';payload=(json.dumps(metadata,indent=2)+'\n').encode();target.write_bytes(payload)
+            registry=Path(td)/'registry.json';registry.write_text(json.dumps({'assets':[asset]}),encoding='utf-8')
+            with patch('sys.argv',['source_link_artifacts.py','--phase','postbuild','--root',str(dist),
+                                   '--source-root',str(source),'--registry',str(registry)]),redirect_stdout(io.StringIO()):main()
+            self.assertEqual(image.read_bytes(),raw);self.assertEqual(target.read_bytes(),payload)
+            overrides=json.loads((source/'private-build/asset-display-overrides.json').read_text())
+            self.assertEqual(overrides['assets'],[])
+            self.assertEqual(json.loads((dist/'data/source-figure-links.json').read_text())['assets'],{})
 
 if __name__=='__main__':unittest.main()

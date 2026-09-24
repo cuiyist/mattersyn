@@ -12,8 +12,10 @@ import fnmatch
 import hashlib
 import json
 import re
+from datetime import datetime
 from pathlib import Path, PurePosixPath
 from typing import Any
+from urllib.parse import urlsplit
 
 
 POLICY_SCHEMA = "mattersyn-public-projection-policy/1"
@@ -254,6 +256,98 @@ def _indexes(config: dict[str, Any]) -> tuple[dict[tuple[str, str], list[dict[st
     return cached
 
 
+def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> str | None:
+    """Validate an exact restoration instruction, never copyright permission.
+
+    The recorded prior delivery is an evidence pin supplied by the release
+    reviewer; this offline guard does not independently query Git history.
+    Unknown graphics and private/full-document paths remain ineligible.
+    """
+    try:
+        normalize_repo(repo)
+        normalize_path(path)
+    except BoundaryError:
+        return "user_directed_display_path_invalid"
+    if _path_block_reason(path) or not _is_image(path):
+        return "user_directed_display_path_ineligible"
+    if asset.get("classification") not in {"source_figure", "source_page_crop"}:
+        return "user_directed_display_classification_ineligible"
+    digest = asset.get("asset_hash")
+    if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
+        return "user_directed_display_asset_hash_invalid"
+    rights = asset.get("rights", {})
+    if not isinstance(rights, dict) or rights.get("status") != "user_directed_display":
+        return "user_directed_display_status_invalid"
+    if rights.get("copyright_permission_verified") is not False:
+        return "user_directed_display_permission_qualification_missing"
+    if not isinstance(rights.get("attribution"), str) or not rights["attribution"].strip():
+        return "user_directed_display_attribution_missing"
+    bindings = asset.get("source_bindings")
+    source_identified = False
+    for binding in bindings if isinstance(bindings, list) else []:
+        if not isinstance(binding, dict):
+            continue
+        doi, url = binding.get("doi"), binding.get("url")
+        if isinstance(doi, str) and re.fullmatch(r"10\.\d{4,9}/\S+", doi):
+            source_identified = True
+        if isinstance(url, str) and not re.search(r"\s", url):
+            try:
+                parsed = urlsplit(url)
+                if parsed.scheme == "https" and parsed.hostname and not parsed.username and not parsed.password:
+                    source_identified = True
+            except ValueError:
+                pass
+    if not source_identified:
+        return "user_directed_display_source_binding_missing"
+    direction = rights.get("user_direction")
+    if not isinstance(direction, dict):
+        return "user_directed_display_instruction_missing"
+    if not isinstance(direction.get("record_id"), str) or not direction["record_id"].strip():
+        return "user_directed_display_instruction_missing"
+    if direction.get("scope") != "restore_previously_delivered_source_figures":
+        return "user_directed_display_scope_invalid"
+    if direction.get("asset_hash") != digest:
+        return "user_directed_display_instruction_hash_mismatch"
+    try:
+        timestamp = datetime.fromisoformat(direction.get("recorded_at", "").replace("Z", "+00:00"))
+        if timestamp.tzinfo is None:
+            return "user_directed_display_instruction_time_invalid"
+    except (TypeError, ValueError, AttributeError):
+        return "user_directed_display_instruction_time_invalid"
+    deliveries = asset.get("delivery_paths", [])
+    if not isinstance(deliveries, list) or len([
+        item for item in deliveries if isinstance(item, dict) and item.get("repo") == repo and item.get("path") == path
+    ]) != 1:
+        return "user_directed_display_delivery_missing_or_ambiguous"
+    site_path = path
+    if repo == "mattersyn":
+        prefix = "recipe-atlas/static/"
+        if not path.startswith(prefix):
+            return "user_directed_display_source_path_ineligible"
+        site_path = path[len(prefix):]
+    prior = direction.get("previous_delivery")
+    if not isinstance(prior, list) or not prior:
+        return "user_directed_display_previous_delivery_missing"
+    matches = []
+    for delivery in prior:
+        if not isinstance(delivery, dict):
+            return "user_directed_display_previous_delivery_invalid"
+        try:
+            prior_path = normalize_path(delivery.get("path"))
+        except BoundaryError:
+            return "user_directed_display_previous_delivery_invalid"
+        if (delivery.get("repo") != "mattersyn-site" or _path_block_reason(prior_path)
+                or not _is_image(prior_path) or delivery.get("asset_hash") != digest
+                or not isinstance(delivery.get("commit"), str)
+                or not re.fullmatch(r"[0-9a-f]{40}", delivery["commit"])):
+            return "user_directed_display_previous_delivery_invalid"
+        if prior_path == site_path:
+            matches.append(delivery)
+    if len(matches) != 1:
+        return "user_directed_display_previous_path_missing_or_ambiguous"
+    return None
+
+
 def _rights_result(path: str, raw: bytes, repo: str, registry: dict[str, Any], index=None) -> str | None:
     digest = sha256(raw)
     if index is None:
@@ -274,6 +368,10 @@ def _rights_result(path: str, raw: bytes, repo: str, registry: dict[str, Any], i
             return "asset_rights_evidence_incomplete"
         if classification in {"unknown", None}:
             return "asset_classification_unknown"
+    elif status == "user_directed_display":
+        reason = user_directed_display_error(asset, repo, path)
+        if reason:
+            return reason
     elif status == "not_source_derived":
         if classification not in _NON_SOURCE_DERIVED_CLASSES:
             return "asset_not_source_derived_status_not_qualified"

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import json
 import re
 import tempfile
@@ -19,6 +20,7 @@ from public_release_guard import (
     sha256,
     validate_allowlist_entry,
     validate_stage,
+    user_directed_display_error,
 )
 
 
@@ -106,7 +108,100 @@ def make_allowlist(files):
     }
 
 
+def user_directed_figure(path, raw):
+    return {
+        "asset_hash": sha256(raw),
+        "classification": "source_figure",
+        "source_bindings": [{"doi": "10.1000/example", "url": "https://doi.org/10.1000/example"}],
+        "delivery_paths": [
+            {"repo": "mattersyn-site", "path": path, "bytes": len(raw)},
+            {"repo": "mattersyn", "path": "recipe-atlas/static/" + path, "bytes": len(raw)},
+        ],
+        "rights": {
+            "status": "user_directed_display", "attribution": "Source: DOI 10.1000/example, Figure 2",
+            "copyright_permission_verified": False, "license_id": None, "license_evidence": [],
+            "user_direction": {
+                "record_id": "synthetic-explicit-user-direction", "recorded_at": "2026-09-24T12:00:00Z",
+                "scope": "restore_previously_delivered_source_figures", "asset_hash": sha256(raw),
+                "previous_delivery": [{"repo": "mattersyn-site", "path": path,
+                                       "commit": "a" * 40, "asset_hash": sha256(raw)}],
+            },
+        },
+    }
+
+
 class BoundaryGuardTests(unittest.TestCase):
+    def test_exact_user_directed_figure_passes_without_claiming_copyright_clearance(self):
+        path, raw = "assets/figures/example/figure-2.png", b"synthetic figure bytes"
+        asset = user_directed_figure(path, raw)
+        before = copy.deepcopy(asset)
+        for repo, target in [("mattersyn-site", path), ("mattersyn", "recipe-atlas/static/" + path)]:
+            with self.subTest(repo=repo):
+                cfg = make_config(registry_assets=[asset])
+                cfg["path_rules"][0].update(repo=repo, content_class="site_asset")
+                entry = allow_entry(target, raw, content_class="site_asset")
+                entry["repo"] = repo
+                projected, reason = validate_allowlist_entry(target, raw, entry, cfg, repo)
+                self.assertIsNone(reason)
+                self.assertEqual(projected, raw)
+                self.assertIsNone(history_exclude_path(repo, target, cfg))
+                self.assertEqual(history_project(repo, target, raw, cfg)["action"], "allow")
+        self.assertEqual(asset, before)
+        self.assertFalse(asset["rights"]["copyright_permission_verified"])
+        self.assertIsNone(asset["rights"]["license_id"])
+
+    def test_user_direction_metadata_is_required_and_exact(self):
+        path, raw = "assets/figures/example/figure-2.png", b"synthetic figure bytes"
+        base = user_directed_figure(path, raw)
+        mutations = [
+            ("unknown", lambda x: x.update(classification="unknown")),
+            ("working crop", lambda x: x.update(classification="private_working_crop")),
+            ("authored", lambda x: x.update(classification="authored_diagram")),
+            ("attribution", lambda x: x["rights"].update(attribution=" ")),
+            ("source", lambda x: x.update(source_bindings=[])),
+            ("local source URL", lambda x: x.update(source_bindings=[{"url": "file:" + "///synthetic"}])),
+            ("permission missing", lambda x: x["rights"].pop("copyright_permission_verified")),
+            ("permission claimed", lambda x: x["rights"].update(copyright_permission_verified=True)),
+            ("instruction", lambda x: x["rights"].pop("user_direction")),
+            ("record id", lambda x: x["rights"]["user_direction"].update(record_id="")),
+            ("scope", lambda x: x["rights"]["user_direction"].update(scope="all_images")),
+            ("time", lambda x: x["rights"]["user_direction"].update(recorded_at="2026-09-24")),
+            ("directive hash", lambda x: x["rights"]["user_direction"].update(asset_hash="f" * 64)),
+            ("prior delivery missing", lambda x: x["rights"]["user_direction"].update(previous_delivery=[])),
+            ("prior path", lambda x: x["rights"]["user_direction"]["previous_delivery"][0].update(path="assets/other.png")),
+            ("prior hash", lambda x: x["rights"]["user_direction"]["previous_delivery"][0].update(asset_hash="f" * 64)),
+            ("prior commit", lambda x: x["rights"]["user_direction"]["previous_delivery"][0].update(commit="HEAD")),
+            ("prior repo", lambda x: x["rights"]["user_direction"]["previous_delivery"][0].update(repo="mattersyn")),
+            ("prior duplicate", lambda x: x["rights"]["user_direction"]["previous_delivery"].append(copy.deepcopy(x["rights"]["user_direction"]["previous_delivery"][0]))),
+            ("delivery duplicate", lambda x: x["delivery_paths"].append(copy.deepcopy(x["delivery_paths"][0]))),
+        ]
+        for label, mutate in mutations:
+            with self.subTest(case=label):
+                asset = copy.deepcopy(base); mutate(asset)
+                self.assertIsNotNone(user_directed_display_error(asset, "mattersyn-site", path))
+
+    def test_user_direction_cannot_bypass_raw_document_or_private_path_rules(self):
+        paths = ["private/figure.png", "assets/private-working/figure.png", "assets/page-renders/figure.png",
+                 "assets/main-page3.png", "assets/figure.pdf", "assets/figure.txt", "assets/.cache/figure.png"]
+        for path in paths:
+            with self.subTest(path=path):
+                asset = user_directed_figure(path, b"synthetic")
+                self.assertEqual(user_directed_display_error(asset, "mattersyn-site", path),
+                                 "user_directed_display_path_ineligible")
+        path = "assets/figures/example/cropped-panel.png"
+        asset = user_directed_figure(path, b"synthetic")
+        asset["classification"] = "source_page_crop"
+        self.assertIsNone(user_directed_display_error(asset, "mattersyn-site", path))
+
+    def test_user_direction_still_requires_exact_image_bytes(self):
+        path, raw = "assets/figures/example/figure-2.png", b"synthetic figure bytes"
+        asset = user_directed_figure(path, raw)
+        cfg = make_config(registry_assets=[asset])
+        cfg["path_rules"][0]["content_class"] = "site_asset"
+        changed = raw + b"changed"
+        self.assertEqual(validate_allowlist_entry(path, changed, allow_entry(path, changed, content_class="site_asset"),
+                                                 cfg, "mattersyn-site")[1], "asset_rights_record_missing_or_ambiguous")
+
     def test_legacy_corpus_and_tracked_private_paths_stay_denied(self):
         cfg = make_config()
         paths = [
