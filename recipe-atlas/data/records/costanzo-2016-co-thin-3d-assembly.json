@@ -1,0 +1,606 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "costanzo-2016-co-thin-3d-assembly",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Costanzo et al. (2016) · thin three-dimensional Co nanocrystal assembly",
+  "material": {
+    "formula": "Co",
+    "family": "Cobalt nanocrystals and source-described particle assemblies",
+    "elements": [
+      "Co"
+    ],
+    "components": [
+      "Co"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Drop-cast assembly on HOPG grid supported by graphite",
+  "sources": [
+    {
+      "id": "costanzo2016co",
+      "doi": "10.1021/acs.jpcc.6b07293",
+      "title": "Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals",
+      "authors": "S. Costanzo; G. Simon; J. Richardi; Ph. Colomban; I. Lisiecki",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.jpcc.6b07293",
+      "main_status": "Complete supplied eight-page main article visually reviewed; independent source and canonical audit passed. SI remains unverified.",
+      "si_status": "SI not located or verified; absence is not established and no SI claim is used.",
+      "reuse_status": "Source-linked private candidate; original-figure rights remain unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "costanzo2016co",
+    "recipe_family": "costanzo2016co-thin-3d-assembly",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Co nanocrystals in thin 3D particle arrays",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), abstract"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1; Figure 1 and electron-diffraction discussion"
+        }
+      ],
+      "note": "Metallic cobalt nanocrystals are the stated product class; a specific crystalline phase is not definitively assigned."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Size is an outcome of the selected solvent/sample, not a single numerical target.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), abstract and article scope"
+        }
+      ],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1 morphology discussion"
+        }
+      ],
+      "note": "No single target particle shape is specified; the article describes a population-level shape trend."
+    }
+  },
+  "materials": [
+    {
+      "id": "co_nc_dispersion",
+      "name": "Colloidal cobalt nanocrystals",
+      "formula": "Co",
+      "role": "nanocrystal_dispersion",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source does not assign an exact growth batch to every assembly aliquot."
+      ],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5, Assembly Preparation"
+        }
+      ]
+    },
+    {
+      "id": "hopg",
+      "name": "Highly ordered pyrolytic graphite (HOPG)",
+      "formula": "C",
+      "role": "microscopy_support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    },
+    {
+      "id": "untreated_cu_grid",
+      "name": "Untreated copper TEM grid",
+      "formula": null,
+      "role": "microscopy_support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    },
+    {
+      "id": "graphite_support",
+      "name": "Graphite support",
+      "formula": "C",
+      "role": "evaporation_support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "co_nc_solution",
+      "name": "Co NC colloidal solution for thin 3D assembly",
+      "components": [
+        {
+          "material_id": "co_nc_dispersion",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "co_nc_concentration": {
+          "value": 5.5e-07,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source describes the concentration as 5.5×10⁻⁷ M; molar basis not defined.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "One drop deposited on HOPG TEM grid supported by graphite. No drop volume/time/temperature given.",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "hopg_grid",
+      "name": "HOPG layer on untreated copper TEM grid",
+      "kind": "mixture",
+      "parent_ids": [
+        "hopg",
+        "untreated_cu_grid"
+      ]
+    },
+    {
+      "id": "thin3d_array",
+      "name": "Thin ordered 3D nanocrystal assembly",
+      "kind": "product",
+      "parent_ids": [
+        "co_nc_solution",
+        "hopg_grid",
+        "graphite_support"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare_hopg_grid",
+      "action": "prepare_microscopy_support",
+      "label": "Prepare thin HOPG layer on copper grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hopg",
+        "untreated_cu_grid"
+      ],
+      "outputs": [
+        "hopg_grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source conditions for this operation are not separately specified."
+      },
+      "endpoint": {
+        "value": "HOPG layer thin enough for TEM; source gives no thickness.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    },
+    {
+      "id": "deposit_thin_3d",
+      "action": "drop_cast_and_evaporate",
+      "label": "Deposit one drop on HOPG TEM grid on graphite support",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare_hopg_grid"
+      ],
+      "inputs": [
+        "co_nc_solution",
+        "hopg_grid",
+        "graphite_support"
+      ],
+      "outputs": [
+        "thin3d_array"
+      ],
+      "parameters": {
+        "drop_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "evaporation_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source conditions for this operation are not separately specified."
+      },
+      "endpoint": {
+        "value": "Thin 3D ordered arrays; article describes a few/fewer than five monolayers without panel-specific counts.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.4 and Figure 4a–d"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slower evaporation is discussed qualitatively; no numerical evaporation duration or temperature is given.",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), §3.4 and Figure 4a–d"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "thin3d-s1",
+      "source_sample_label": "S1",
+      "batch_id": null,
+      "material_state_id": "thin3d_array",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cobalt nanocrystals (Co)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4a; caption identifies 3.9 nm context"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4a; caption identifies 3.9 nm context"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": "Thin three-dimensional ordered particle array; exact layer count is not assigned to this panel.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4a"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4a; caption identifies 3.9 nm context"
+          }
+        ],
+        "note": "Surface coverage and quantitative exchange completeness are not reported."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4a; caption identifies 3.9 nm context"
+        }
+      ],
+      "notes": [
+        "Figure label names a source sample/size context; exact physical batch and cross-technique aliquot identity are not stated."
+      ]
+    },
+    {
+      "sample_id": "thin3d-s6",
+      "source_sample_label": "S6",
+      "batch_id": null,
+      "material_state_id": "thin3d_array",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cobalt nanocrystals (Co)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4b; caption identifies 7.7 nm context"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4b; caption identifies 7.7 nm context"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": "Thin three-dimensional ordered particle array; exact layer count is not assigned to this panel.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4b"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4b; caption identifies 7.7 nm context"
+          }
+        ],
+        "note": "Surface coverage and quantitative exchange completeness are not reported."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), Figure 4, Figure 4b; caption identifies 7.7 nm context"
+        }
+      ],
+      "notes": [
+        "Figure label names a source sample/size context; exact physical batch and cross-technique aliquot identity are not stated."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "thin3d-s1-tem-superlattice-context",
+      "sample_id": "thin3d-s1",
+      "property": "particle_superlattice_order",
+      "technique": "TEM and selected-area Fourier transform; Figure 4",
+      "value": {
+        "value": "Source shows a thin 3D ordered array; Fourier transform is of a selected image region, not a separate acquired SAED pattern.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4 and caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Figure 4 panels a/b show images; panels c/d are Fourier transforms from selected marked regions.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), Figure 4 and caption"
+        }
+      ]
+    },
+    {
+      "id": "thin3d-s6-tem-superlattice-context",
+      "sample_id": "thin3d-s6",
+      "property": "particle_superlattice_order",
+      "technique": "TEM and selected-area Fourier transform; Figure 4",
+      "value": {
+        "value": "Source shows a thin 3D ordered array; Fourier transform is of a selected image region, not a separate acquired SAED pattern.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), Figure 4 and caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Figure 4 panels a/b show images; panels c/d are Fourier transforms from selected marked regions.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), Figure 4 and caption"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Full supplied main article, pp. 1–8, read and visually inspected; independent source/canonical audit passed. SI unverified. Exact physical-batch identity remains unresolved.",
+    "missing_fields": [
+      "Drop volume, evaporation time and temperature; exact number of monolayers in each Figure 4 panel; exact aliquot/batch links across microscopy contexts."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied-main paper review",
+      "url": "paper-review.html?id=costanzo2016co",
+      "relation": "source coverage and original-figure context"
+    },
+    {
+      "label": "Growth sample S1",
+      "url": "records/costanzo-2016-co-s1.html",
+      "relation": "Figure 4a source sample/size label; batch identity not asserted"
+    },
+    {
+      "label": "Growth sample S6",
+      "url": "records/costanzo-2016-co-s6.html",
+      "relation": "Figure 4b source sample/size label; batch identity not asserted"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

@@ -229,7 +229,35 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':88,'source_groups':29,'records':74,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':125,'source_groups':33,'records':106,'physical_samples_deduplicated':None},broad['counts'])
+        added_groups={'ramasamy2014cusb':16,'dhaene2022-main':2,'costanzo2016co':6,'yu1998cde':13}
+        added_rows=[row for row in broad['rows'] if row['source_group'] in added_groups]
+        self.assertEqual(37,len(added_rows))
+        self.assertEqual(added_groups,{group:sum(row['source_group']==group for row in added_rows) for group in added_groups})
+        self.assertEqual(32,len({row['record_id'] for row in added_rows}))
+        self.assertTrue(all(row['recipe_link']=='explicit' and row['recipe_link_evidence'] for row in added_rows))
+        self.assertTrue(all(row['cross_record_sample_deduplication']=='not_assessed' for row in added_rows))
+        by_group={group:[row for row in added_rows if row['source_group']==group] for group in added_groups}
+        # The Cu-Sb-S rows are the explicit 2 x 2 x 4 Figure 1 phase-map cells.
+        self.assertEqual(16,len({row['sample_id'] for row in by_group['ramasamy2014cusb']}))
+        self.assertTrue(all(row['sample_id'].endswith('-map-observation') for row in by_group['ramasamy2014cusb']))
+        self.assertTrue(all(row['structure_descriptor_v02']['observed_product']['structure']['phase']['status']=='reported' for row in by_group['ramasamy2014cusb']))
+        self.assertTrue(all(any(e['source_id']=='ramasamy2014cusb' and 'Figure 1 and caption' in e['locator'] for e in row['composition']['evidence']) for row in by_group['ramasamy2014cusb']))
+        # Dhaene includes one main/SI-linked structure sample and one separately linked SI TEM control.
+        self.assertEqual({('cdse-qd-octadecylphosphinate-300','cdse-oda-300-10min-structure'),('cdse-qd-phosphonate-control-300','cdse-phosphonate-300-10min')}, {(row['record_id'],row['sample_id']) for row in by_group['dhaene2022-main']})
+        self.assertTrue(any(any(e['source_id']=='dhaene2022-si' for e in row['recipe_link_evidence']) for row in by_group['dhaene2022-main']))
+        si_only=next(row for row in by_group['dhaene2022-main'] if row['record_id']=='cdse-qd-phosphonate-control-300')
+        self.assertEqual({'dhaene2022-si'},{e['source_id'] for e in si_only['recipe_link_evidence']})
+        self.assertTrue(any(e['locator']=='SI PDF p. 4, printed S4, FigS4' for e in si_only['recipe_link_evidence']))
+        # Costanzo Table 2 contributes six source-defined S1–S6 solvent-condition samples and two measurements each.
+        self.assertEqual({f'costanzo-2016-co-s{i}' for i in range(1,7)}, {row['record_id'] for row in by_group['costanzo2016co']})
+        self.assertTrue(all({m['property'] for m in row['structural_measurements']}=={'mean_diameter','relative_standard_deviation'} for row in by_group['costanzo2016co']))
+        # Yu's 13 rows retain separate ensemble/single-object and TEM/XRD contexts across eight variants.
+        self.assertEqual(8,len({row['record_id'] for row in by_group['yu1998cde']}))
+        self.assertEqual(13,len({row['sample_id'] for row in by_group['yu1998cde']}))
+        self.assertNotIn('yu1998-cde-general-140c-12h', {row['record_id'] for row in by_group['yu1998cde']})
+        self.assertTrue(all(row['doi']=='10.1021/cm980181s' for row in by_group['yu1998cde']))
+        self.assertTrue(all(all(e['source_id']=='yu1998cde' for e in row['recipe_link_evidence']) for row in by_group['yu1998cde']))
         li_rows=[row for row in broad['rows'] if row['source_group']=='li1998znga2o4']
         self.assertEqual(2,len(li_rows))
         self.assertEqual({'li-1998-znga2o4-hydrothermal-150c'},{row['record_id'] for row in li_rows})
@@ -244,8 +272,8 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         page=structure_coverage_html({'structure_recipe_coverage':strict,'structure_outcome_coverage':broad},html.escape,broad['rows'])
-        self.assertIn('Browse all 88 synthesis–structure rows',page)
-        self.assertEqual(88,page.count('Evidence and source locators'))
+        self.assertIn('Browse all 125 synthesis–structure rows',page)
+        self.assertEqual(125,page.count('Evidence and source locators'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))

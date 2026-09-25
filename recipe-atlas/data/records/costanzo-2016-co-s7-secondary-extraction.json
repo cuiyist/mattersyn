@@ -1,0 +1,563 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "costanzo-2016-co-s7-secondary-extraction",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Costanzo et al. (2016) · S7 secondary extraction from an S6 precipitate",
+  "material": {
+    "formula": "Co",
+    "family": "Cobalt nanocrystals and source-described particle assemblies",
+    "elements": [
+      "Co"
+    ],
+    "components": [
+      "Co"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Post-growth size fractionation by cyclohexane redispersion",
+  "sources": [
+    {
+      "id": "costanzo2016co",
+      "doi": "10.1021/acs.jpcc.6b07293",
+      "title": "Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals",
+      "authors": "S. Costanzo; G. Simon; J. Richardi; Ph. Colomban; I. Lisiecki",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.jpcc.6b07293",
+      "main_status": "Complete supplied eight-page main article visually reviewed; independent source and canonical audit passed. SI remains unverified.",
+      "si_status": "SI not located or verified; absence is not established and no SI claim is used.",
+      "reuse_status": "Source-linked private candidate; original-figure rights remain unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "costanzo2016co",
+    "recipe_family": "costanzo2016co-s7-fractionation",
+    "parent_record_id": "costanzo-2016-co-s6",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cobalt nanocrystals (Co)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), abstract"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1; Figure 1 and electron-diffraction discussion"
+        }
+      ],
+      "note": "Metallic cobalt nanocrystals are the stated product class; a specific crystalline phase is not definitively assigned."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Size is an outcome of the selected solvent/sample, not a single numerical target.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), abstract and article scope"
+        }
+      ],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1 morphology discussion"
+        }
+      ],
+      "note": "No single target particle shape is specified; the article describes a population-level shape trend."
+    }
+  },
+  "materials": [
+    {
+      "id": "s6_precipitate_context",
+      "name": "Remaining S6 precipitate after removing its first upper hexane phase",
+      "formula": "Co nanocrystal fraction",
+      "role": "fractionation_feed",
+      "stage": "fractionation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "S7 begins from only part of the remaining S6 precipitate; amount is not stated."
+      ],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+        }
+      ]
+    },
+    {
+      "id": "cyclohexane",
+      "name": "Cyclohexane",
+      "formula": "C₆H₁₂",
+      "role": "redispersion_solvent",
+      "stage": "fractionation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Used for the second extraction; source gives no volume."
+      ],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.1, Products"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "name": "Nitrogen",
+      "formula": "N₂",
+      "role": "environment_gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nitrogen glovebox is the growth environment; not specified as a condition of the post-growth S7 redispersion."
+      ],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s6_precipitate_feed",
+      "name": "Part of the precipitate left after S6 upper-phase removal",
+      "kind": "fraction",
+      "parent_ids": []
+    },
+    {
+      "id": "s7_cyclohexane_colloid",
+      "name": "S7 nanocrystal fraction redispersed in cyclohexane",
+      "kind": "fraction",
+      "parent_ids": [
+        "s6_precipitate_feed",
+        "cyclohexane"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "redisperse_s6_precipitate",
+      "action": "redispersion_fractionation",
+      "label": "Disperse part of the S6 precipitate in cyclohexane",
+      "stage": "fractionation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s6_precipitate_feed",
+        "cyclohexane"
+      ],
+      "outputs": [
+        "s7_cyclohexane_colloid"
+      ],
+      "parameters": {
+        "precipitate_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Source says a part; mass/fraction not reported.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "cyclohexane_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source conditions for this operation are not separately specified."
+      },
+      "endpoint": {
+        "value": "S7 colloidal solution; source states mean diameter 9.3 nm and a 4% volume fraction of cobalt relative to initially used cobalt.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), Table 2 and §3.1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "This is secondary extraction/fractionation from an S6 precipitate, not direct growth in cyclohexane. The remaining precipitate is described as mostly coalesced, with a minor aggregated-particle fraction that can be redispersed.",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), Table 2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "s6-remaining-precipitate-context",
+      "source_sample_label": "S6 precipitate remaining after first upper phase is removed",
+      "batch_id": null,
+      "material_state_id": "s6_precipitate_feed",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cobalt nanocrystal/coalesced-material precipitate; relative components not quantified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+          }
+        ],
+        "note": "Surface coverage and quantitative exchange completeness are not reported."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+        }
+      ],
+      "notes": [
+        "S7 feed is described as only part of this precipitate; no mass or aliquot ID is provided."
+      ]
+    },
+    {
+      "sample_id": "s7-cyclohexane-colloid",
+      "source_sample_label": "S7",
+      "batch_id": null,
+      "material_state_id": "s7_cyclohexane_colloid",
+      "parent_sample_id": "s6-remaining-precipitate-context",
+      "composition": {
+        "value": "Cobalt nanocrystals (Co)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1 and Table 2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1 and Table 2"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1 and Table 2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 second extraction"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1 and Table 2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "s7-table2-diameter",
+      "sample_id": "s7-cyclohexane-colloid",
+      "property": "mean_diameter",
+      "technique": "TEM size histogram; Table 2",
+      "value": {
+        "value": 9.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Mean diameter D_avg; at least 500 diameters per histogram.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), Table 2"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.3"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "S7 is the second extraction from part of the S6 precipitate using cyclohexane; sample/batch identity relative to other measurement contexts is not given.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), Table 2"
+        }
+      ]
+    },
+    {
+      "id": "s7-table2-relative-sd",
+      "sample_id": "s7-cyclohexane-colloid",
+      "property": "relative_standard_deviation",
+      "technique": "TEM size histogram; Table 2",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "percent",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source-defined σ_r; not an inter-experiment error bar.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), Table 2"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.3 and Eq. 1"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "At least 500 diameters per histogram.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), Table 2"
+        }
+      ]
+    },
+    {
+      "id": "s7-volume-fraction",
+      "sample_id": "s7-cyclohexane-colloid",
+      "property": "cobalt_volume_fraction",
+      "technique": "UV–vis spectroscopy",
+      "value": {
+        "value": 4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "percent",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source defines fraction as cobalt in colloidal solution divided by cobalt initially used; not gravimetric yield or conversion.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 discussion"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "UV–vis-based estimate; wavelength and calibration details not reported in the inspected pages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1, S7 discussion"
+        }
+      ]
+    },
+    {
+      "id": "s7-figure2a-label",
+      "sample_id": "s7-cyclohexane-colloid",
+      "property": "figure2a_mean_diameter_label",
+      "technique": "Printed Figure 2a histogram annotation",
+      "value": {
+        "value": 9.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "Source-printed mean marker; not a less-than bound.",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 4 (printed p. 22057), Figure 2a"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Figure 2a.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 4 (printed p. 22057), Figure 2a"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Full supplied main article, pp. 1–8, read and visually inspected; independent source/canonical audit passed. SI unverified. Exact physical-batch identity remains unresolved.",
+    "missing_fields": [
+      "Mass or fraction of the S6 precipitate dispersed, cyclohexane volume, redispersion time and separation settings.",
+      "UV–vis wavelength/calibration and exact physical aliquot identity; the 4% source-defined cobalt volume fraction is not a mass yield."
+    ],
+    "conflicts": [
+      "Figure 5a labels the S7 Raman trace 9.1 nm while Table 2 and Figure 2a give 9.3 nm; no source reconciliation is stated."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied-main paper review",
+      "url": "paper-review.html?id=costanzo2016co",
+      "relation": "source coverage and original-figure context"
+    },
+    {
+      "label": "S6 growth condition",
+      "url": "records/costanzo-2016-co-s6.html",
+      "relation": "source-described fractionation parent; no batch identifier"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

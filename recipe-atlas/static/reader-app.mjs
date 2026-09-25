@@ -6,7 +6,7 @@ import {quantityValue} from './quantity-value.mjs';
 
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.34.1';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.38.0';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.39.1';
 
 import {mountReaderStructures} from './reader-structures.mjs?v=0.36.0';
 
@@ -16,14 +16,14 @@ function json(path){if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cach
 
 export function formatQuantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',uL:'µL',umol:'µmol',angstrom:'Å',um:'µm',uM:'µM',volume_parts:'volume parts',mass_percent:'wt%',volume_percent:'vol%'})[q.unit]||q.unit||'';if(v===null)return q.raw_text||q.qualifier||'Not reported';return (q.approximate?'≈':'')+v+(unit?' '+unit:'');}
 
-function quantities(rows,compact=true){const dl=el('dl');for(const [key,q] of rows){const div=el('div');div.append(el('dt',human(key)),el('dd',formatQuantity(q)));if(!compact&&q.basis)div.append(el('small',q.basis));dl.append(div);}return dl;}
+function quantities(rows,compact=true,record=null){const dl=el('dl');for(const [key,q] of rows){const div=el('div');const separator=key.indexOf(':');const operationIndex=separator>=0?(record?.operations||[]).findIndex(o=>o.id===key.slice(0,separator)):-1;const label=operationIndex>=0?'Step '+(operationIndex+1)+' · '+human(key.slice(separator+1)):human(key);div.append(el('dt',label),el('dd',formatQuantity(q)));if(!compact&&q.qualifier&&quantityValue(q)!==null)div.append(el('small',q.qualifier));if(!compact&&q.basis)div.append(el('small',q.basis));dl.append(div);}return dl;}
 
 const normal=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.38.0');style.dataset.readerCss='true';document.head.append(style);}
-async function precursors(host,r){
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.39.1');style.dataset.readerCss='true';document.head.append(style);}
+async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
 
@@ -31,11 +31,12 @@ async function precursors(host,r){
 
   if(entry){const image=cardImage(entry);image.alt=m.name+' chemical structure';card.append(image,button(entry.model3dPath?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}else card.append(el('p','Chemical identity is retained in the source record.','reader-note'));
 
-  const qs=Object.entries(m.quantities||{}),known=qs.filter(([,q])=>quantityValue(q)!==null);known.sort(([a],[b])=>Number(/purity|grade/.test(a))-Number(/purity|grade/.test(b)));card.append(quantities(known.slice(0,3)));
+  const qs=Object.entries(m.quantities||{}),known=qs.filter(([,q])=>quantityValue(q)!==null);known.sort(([a],[b])=>Number(/purity|grade/.test(a))-Number(/purity|grade/.test(b)));card.append(quantities(known.slice(0,3),true,r));
 
-  if(qs.length>3||qs.some(([,q])=>quantityValue(q)===null))card.append(disclosure('All quantities and specifications',quantities(qs,false)));
+  if(qs.length>3||qs.some(([,q])=>quantityValue(q)===null||q.qualifier||q.basis))card.append(disclosure('All quantities and specifications',quantities(qs,false,r)));
 
-  const storage=(m.notes||[]).map(safeText).filter(x=>/stor|drybox|dry box/i.test(x));for(const note of storage)card.append(el('p',note,'reader-note'));
+  const notes=(m.notes||[]).map(safeText).filter(Boolean),storage=notes.filter(x=>/stor|drybox|dry box/i.test(x));for(const note of storage)card.append(el('p',note,'reader-note'));
+  const specifications=notes.filter(x=>!storage.includes(x));if(specifications.length)card.append(disclosure('Handling and source qualifications',...specifications.map(note=>el('p',note))));
 
   card.append(link('Source details →',recordURL(r.record_id)+'#precursors','reader-data-link'));grid.append(card);
 
@@ -54,7 +55,7 @@ async function precursors(host,r){
    card.append(link('Source details →',recordURL(r.record_id)+'#protocol','reader-data-link'));
    choiceGrid.append(card);
   }
-  host.append(el('p','These are mutually exclusive source-reported choices. The article does not identify which Fe(III) alkoxide was used for sample A.','reader-note'),choiceGrid);
+  host.append(el('p','Source-reported alternatives retain their individual conditions and qualifications. Do not combine alternatives unless the procedure explicitly calls for a mixture.','reader-note'),choiceGrid);
  }
 
  const contextData=await json('assets/chemical-registry/solution-components.json');if(!host.isConnected)return;const contexts=contextData.contexts.filter(c=>c.record_id===r.record_id),used=new Set(),stockList=el('div',undefined,'reader-stock-list');
@@ -77,6 +78,19 @@ async function precursors(host,r){
 
  if(stockList.children.length)host.append(el('h3','Stocks and solutions'),stockList);
 
+ const preparationLinks=(r.context_links||[]).filter(item=>item.relation==='source_reported_precursor_preparation'&&/^records\/[a-zA-Z0-9_-]+\.html$/.test(item.url||''));
+ if(preparationLinks.length){const related=el('div',undefined,'reader-stock-list');host.append(el('h3','Precursor preparation'),el('p','These linked procedures describe precursor preparation. Their conditions are separate from the nanocrystal synthesis below.','reader-note'));for(const item of preparationLinks)related.append(link(item.label+' →',item.url+'?view=reader','reader-data-link'));host.append(related);}
+
+ const products=presentation.precursorProductReferences||[];
+ if(products.length){const productsGrid=el('div',undefined,'reader-chemicals');host.append(el('h3','Precursor products'),el('p','Reference molecular connectivity for the products of these precursor procedures; these are separate from nanocrystal specimen structures.','reader-note'));
+  for(const product of products){const entry=data.entries.get(product.registry_id),card=el('article',undefined,'reader-chemical');card.append(el('h3',entry?.name||product.label),el('div',product.formula||entry?.displayFormula||entry?.formula||'','reader-formula'));
+   if(entry)card.append(cardImage(entry),button('Inspect structure ↗',()=>openChemical(entry),'molecule-link'));
+   card.append(el('p',product.label),el('p',product.caption,'reader-note'));
+   if(product.composition_evidence?.length)card.append(disclosure('Source evidence',...product.composition_evidence.map(e=>el('p',e.source_id+' · '+e.locator))));
+   productsGrid.append(card);
+  }host.append(productsGrid);
+ }
+
 }
 
 let figureDialog;
@@ -90,11 +104,11 @@ export function figureGallery(host,figures,r,category,presentation={}){
  const matches=f=>f.category===category||f.categories?.includes(category)||(category==='structure'&&(f.category==='composition'||f.categories?.includes('composition')));
  const unique=new Map();for(const f of figures.filter(x=>matches(x)&&(x.public_asset||x.asset)))unique.set((f.source_id||'')+'|'+f.id,f);const rows=[...unique.values()];const textOnly=figures.filter(f=>matches(f)&&!(f.public_asset||f.asset));for(const f of textOnly)host.append(disclosure((f.title||f.id)+' · original image unavailable',el('p',f.summary||''),link('Source evidence →',reviewURL(r,presentation),'reader-data-link')));if(!rows.length)return textOnly.length;
 
- const wrapper=el('div',undefined,'reader-figure-gallery'),tabs=el('div',undefined,'reader-figure-tabs'),display=el('div');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label',category==='property'?'Property figures':'Characterization figures');wrapper.append(tabs,display);host.append(wrapper);
+ const wrapper=el('div',undefined,'reader-figure-gallery'),tabs=el('div',undefined,'reader-figure-tabs'),display=el('div');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label',category==='property'?'Property figures':category==='precursor'?'Precursor characterization':'Characterization figures');wrapper.append(tabs,display);host.append(wrapper);
 
  function render(i){const f=rows[i];for(const [n,b] of [...tabs.children].entries())b.setAttribute('aria-selected',String(n===i));const figure=el('figure',undefined,'reader-figure'),img=el('img',undefined,'reader-figure-image');img.loading='lazy';img.src=siteURL(f.public_asset||f.asset);img.alt=f.display_kind==='source_link'?'Source-link card; original figure withheld':f.title||f.id;img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label',(f.display_kind==='source_link'?'Open source reference for ':'Enlarge ')+img.alt);img.onclick=()=>enlargeFigure(f);img.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();enlargeFigure(f);}};
 
-  const caption=el('figcaption',undefined,'reader-figure-caption');caption.append(el('h3',f.title||f.id));if(f.display_kind==='source_link')caption.append(el('p',f.display_note,'reader-note'),link('Read the source figure ↗',f.source_url));if(f.summary&&f.summary!==f.title){const first=f.summary.match(/^.*?[.!?](?=\s+[A-Z]|$)/s)?.[0]?.trim();if(first&&first.length<=300)caption.append(el('p',first));caption.append(disclosure('Full source caption and qualifications',el('p',f.summary)));}caption.append(badge(f.scope_label||f.scope||'Source figure · specimen scope retained','scope'));const source=f.source_id||r.lineage.source_group;const loc=f.source_locator||f.locator||'';if(loc){const locationText=typeof loc==='string'?loc:[loc.document_role,loc.page?'PDF p. '+loc.page:'',loc.figure].filter(Boolean).join(' · ');caption.append(el('small',locationText));}caption.append(link('Full figure evidence →',reviewURL(r,presentation,'#source-'+(category==='property'?'properties':'structures')),'reader-data-link'));figure.append(img,caption);display.replaceChildren(figure);
+  const caption=el('figcaption',undefined,'reader-figure-caption');caption.append(el('h3',f.title||f.id));if(f.display_kind==='source_link')caption.append(el('p',f.display_note,'reader-note'),link('Read the source figure ↗',f.source_url));if(f.summary&&f.summary!==f.title){const first=f.summary.match(/^.*?[.!?](?=\s+[A-Z]|$)/s)?.[0]?.trim();if(first&&first.length<=300)caption.append(el('p',first));caption.append(disclosure('Caption and source qualifications',el('p',f.summary)));}caption.append(badge(f.scope_label||f.scope||'Source figure · specimen scope retained','scope'));if(f.scope_note)caption.append(el('p',f.scope_note,'reader-note'));const source=f.source_id||r.lineage.source_group;const loc=f.source_locator||f.locator||'';if(loc){const locationText=typeof loc==='string'?loc:[loc.document_role,loc.page?'PDF p. '+loc.page:'',loc.figure].filter(Boolean).join(' · ');caption.append(el('small',locationText));}caption.append(link('Full figure evidence →',reviewURL(r,presentation,'#source-'+(category==='property'?'properties':category==='precursor'?'precursors':'structures')),'reader-data-link'));figure.append(img,caption);display.replaceChildren(figure);
 
  }rows.forEach((f,i)=>{const b=button(f.title||f.id,()=>render(i));b.setAttribute('role','tab');tabs.append(b);});render(0);return rows.length;
 
@@ -102,13 +116,13 @@ export function figureGallery(host,figures,r,category,presentation={}){
 
 function intuition(host,r,presentation){const items=presentation.intuition||presentation.chemical_intuition||[];if(!items.length){host.append(el('p','Interpretation is available with the original source and complete review.','reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return;}
  const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));}
-function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.length)return;const heading=el('h3','Source comparisons','reader-conflict-heading');heading.id='source-disagreements';host.append(heading,el('p','Each account retains its context and source locator. Unresolved discrepancies remain marked; distinct measurement bases are shown separately.','reader-conflict-intro'));for(const pair of pairs){if(!Array.isArray(pair.claims)||pair.claims.length<2)continue;const card=el('article',undefined,'reader-conflict');const top=el('div',undefined,'reader-conflict-top');top.append(el('h4',pair.topic||'Source disagreement'),badge(pair.status==='preserved_distinct'?'Distinct bases':'Unresolved','reader-conflict-status'));card.append(top);if(pair.context)card.append(el('p',pair.context,'reader-conflict-context'));const claims=el('div',undefined,'reader-conflict-claims');pair.claims.forEach((claim,index)=>{const item=el('section',undefined,'reader-conflict-claim');item.append(el('span',claim.label||`Report ${index+1}`,'reader-conflict-label'),el('p',claim.statement||'Claim text not supplied.'));if(claim.sourceLocator)item.append(el('small',claim.sourceLocator,'reader-conflict-locator'));const source=r.sources.find(s=>s.id===claim.sourceId);if(source)item.append(link(source.title+' ↗',sourceURL(source),'reader-data-link'));claims.append(item);});card.append(claims);host.append(card);}}
+function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.length)return;const heading=el('h3','Source comparisons','reader-conflict-heading');heading.id='source-disagreements';host.append(heading,el('p','Each account retains its context and source locator. Unresolved discrepancies remain marked; distinct measurement bases are shown separately.','reader-conflict-intro'));for(const pair of pairs){if(!Array.isArray(pair.claims)||pair.claims.length<2){if(pair.context){const note=el('article',undefined,'reader-conflict');note.append(el('h4',pair.topic||pair.field||'Source qualification'),el('p',safeText(pair.context)),link('Complete source qualification →',recordURL(r.record_id)+'#evidence','reader-data-link'));host.append(note);}continue;}const card=el('article',undefined,'reader-conflict');const top=el('div',undefined,'reader-conflict-top');top.append(el('h4',pair.topic||pair.field||'Source disagreement'),badge(pair.status==='preserved_distinct'?'Distinct bases':'Unresolved','reader-conflict-status'));card.append(top);if(pair.context)card.append(el('p',pair.context,'reader-conflict-context'));const claims=el('div',undefined,'reader-conflict-claims');pair.claims.forEach((claim,index)=>{const item=el('section',undefined,'reader-conflict-claim');item.append(el('span',claim.label||`Report ${index+1}`,'reader-conflict-label'),el('p',safeText(claim.statement)||safeText(claim.value)||safeText(claim.claim)||'Claim text not supplied.'));const locator=claim.sourceLocator||claim.source_locator;if(locator)item.append(el('small',safeText(locator),'reader-conflict-locator'));const source=r.sources.find(s=>s.id===(claim.sourceId||claim.source_id));if(source)item.append(link(source.title+' ↗',sourceURL(source),'reader-data-link'));claims.append(item);});card.append(claims);host.append(card);}}
 function dataSwitch(r,active='reader'){const nav=el('nav',undefined,'reader-switch');nav.setAttribute('aria-label','Reader or data view');nav.append(link('Reader',recordURL(r.record_id,'reader'),active==='reader'?'active':''),link('Data and evidence',recordURL(r.record_id,'data'),active==='data'?'active':''),link('Download JSON ↓','data/records/'+r.record_id+'.json'));return nav;}
 async function buildMethod(host,r,presentation){
 
  const sections=[section('precursors','01','Precursors'),section('protocol','02','Synthesis protocol'),section('structures','03','Final structures'),section('properties','04','Properties'),section('intuition','05','Chemical intuition')];host.append(...sections);
 
- const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r);sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
+ const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r,siteURL('./'));sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
 
  const structureHost=el('div');sections[2].append(structureHost);const figs=presentation.figures||[];figureGallery(sections[2],figs,r,'structure',presentation);
 
@@ -118,7 +132,9 @@ async function buildMethod(host,r,presentation){
 
  const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+source.year),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link('Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
  mountWuContext(host,sections,sources,r,presentation);
- await Promise.all([precursors(sections[0],r),mountReaderStructures(structureHost,r,presentation)]);
+ await Promise.all([precursors(sections[0],r,presentation),mountReaderStructures(structureHost,r,presentation)]);
+ const precursorFigures=figs.filter(f=>f.category==='precursor'||f.categories?.includes('precursor'));
+ if(precursorFigures.length){sections[0].append(el('h3','Precursor characterization'));figureGallery(sections[0],precursorFigures,r,'precursor',presentation);}
 
 }
 

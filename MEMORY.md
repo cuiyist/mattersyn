@@ -1,3 +1,13 @@
+## 2026-09-25 — Four-paper batch in final release review
+
+The next batch integrates Ramasamy (2014), Dhaene (2022), Costanzo (2016) and Yu (1998) into the shared reader and dataset. It adds 53 local canonical records: 17, 13, 14 and 9 respectively. Source reading and separate audits retain condition variants, observations, precursor procedures, source conflicts and unknown sample identity as distinct concepts. Ramasamy and Dhaene reuse inherited source work with current-field/additive checks; Costanzo and Yu were newly read during this trial. Main-only sources retain unverified SI. A source reader does not establish atomic-coordinate labels or model-training eligibility.
+
+The batch provides 58 selected original source images, source-bound molecular identities, precursor products, stage-specific illustrations and condition/sample-specific figure assignments. Original PDFs/SI, raw text, full page images, detailed audits and unreviewed work remain local. Public summaries contain scoped verdicts and evidence hashes. User-directed source-figure display does not claim publisher permission. No paid processing, new download or external document transfer was used.
+
+Bounded corrections addressed quantities and units, the Method I two-hour/three-hour conflict, its supported open-air condition, nonnumeric qualifiers, old source hashes, review-navigation links, and generic-vs-variant apparatus details. Independent source reviews are reused for unchanged content; changed claims and assignments receive targeted checks. Aggregate reader counts and hashes are rebuilt deterministically. Existing 748 published records must remain byte-identical with unchanged eligibility and split/group identities.
+
+Measured trial publication remains four distinct papers and45records until deployment and anonymous verification. The next existing screened-pass source, DOI10.1021/ja101908k, is being read privately; it must remain unfinished if it cannot complete the normal gates before13:50:12UTC. Stop new curation at that cutoff and await the user’s decision. The500-paper/day target remains unmet; no unattended execution is claimed.
+
 ## 2026-09-25 — Li2000 copper tin sulfide contribution published
 
 Li et al. (2000), DOI 10.1006/jssc.2000.8772, is live at the existing MatterSyn website. Source commit 073709b0f5f253ff2022d4145d0a507dea9a87fb passed workflow 36115238463; site commit a2bba2ca934e52377a3b21fdb6520cd4095cd43e passed Pages workflow 36115747464. Anonymous verification matched all 18 requested page/data/figure/module/reference hashes. The clean build passed 97 unit tests, 767 page checks, 748 canonical/public record comparisons and the publication boundary. All 747 prior scientific record digests and eligibility were preserved.

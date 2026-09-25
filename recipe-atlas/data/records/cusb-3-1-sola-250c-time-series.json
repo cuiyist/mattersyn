@@ -1,0 +1,626 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "cusb-3-1-sola-250c-time-series",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Cu–Sb–S time-series at Cu:Sb 3:1, S/OLA, 250 °C",
+  "material": {
+    "formula": "Cu3SbS4 → Cu12Sb4S13",
+    "family": "copper-antimony-sulfide nanocrystals",
+    "elements": [
+      "Cu",
+      "Sb",
+      "S"
+    ],
+    "components": [
+      "Cu3SbS4",
+      "Cu12Sb4S13"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Hot-injection condition from SI, represented as a time-series observation only",
+  "sources": [
+    {
+      "id": "ramasamy2014cusb",
+      "doi": "10.1021/cm5005642",
+      "title": "Selective Nanocrystal Synthesis and Calculated Electronic Structure of All Four Phases of Copper-Antimony-Sulfide",
+      "authors": "Karthik Ramasamy; Hunter Sims; William H. Butler; Arunava Gupta",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/cm5005642",
+      "main_status": "source-reviewed full article",
+      "si_status": "matched supplement available",
+      "reuse_status": "citation/source only"
+    },
+    {
+      "id": "ramasamy2014cusb-si",
+      "doi": "10.1021/cm5005642",
+      "title": "Selective Nanocrystal Synthesis and Calculated Electronic Structure of All Four Phases of Copper-Antimony-Sulfide — Supporting Information",
+      "authors": "Karthik Ramasamy; Hunter Sims; William H. Butler; Arunava Gupta",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/cm5005642",
+      "main_status": "paired to main article by matching title/authors/content",
+      "si_status": "source-reviewed supporting information",
+      "reuse_status": "citation/source only"
+    }
+  ],
+  "lineage": {
+    "source_group": "ramasamy2014cusb",
+    "recipe_family": "3-1-sola-time-series",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cu3SbS4-to-Cu12Sb4S13 phase evolution",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3, Figure S2"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4, Figure S3"
+        },
+        {
+          "source_id": "ramasamy2014cusb",
+          "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "Phase evolution reported; onset/fraction for each timepoint not stated",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3, Figure S2"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4, Figure S3"
+        },
+        {
+          "source_id": "ramasamy2014cusb",
+          "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "Not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "Not assigned to individual timepoints."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "time-series-sample-set",
+      "name": "250 °C reaction time-series samples/traces",
+      "kind": "sample_set",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "time-series-condition",
+      "action": "time_series_characterization",
+      "label": "Time-series XRD and normalized UV–vis",
+      "stage": "characterization",
+      "branch": "si-time-course",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "time-series-sample-set"
+      ],
+      "outputs": [
+        "time-series-sample-set"
+      ],
+      "parameters": {
+        "Cu_to_Sb_feed_ratio": {
+          "value": 3.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Cu:Sb feed molar ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Figure 1/Scheme 1 condition-map ratio; contrary Methods wording is retained in quality.conflicts.",
+          "raw_text": "3:1",
+          "evidence": [
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 3, Figure S2"
+            },
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 4, Figure S3"
+            },
+            {
+              "source_id": "ramasamy2014cusb",
+              "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_temperature": {
+          "value": 250,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "250 °C",
+          "evidence": [
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 3, Figure S2"
+            },
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 4, Figure S3"
+            },
+            {
+              "source_id": "ramasamy2014cusb",
+              "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "S/OLA; N2 reaction atmosphere inherited from general route, batch details not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3, Figure S2"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4, Figure S3"
+          },
+          {
+            "source_id": "ramasamy2014cusb",
+            "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "SI provides plotted time-series traces; exact phase assignment at each trace is not reported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3, Figure S2"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4, Figure S3"
+          },
+          {
+            "source_id": "ramasamy2014cusb",
+            "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SI Fig. S2 XRD and Fig. S3 normalized UV–vis at five times; whether traces represent separate batches or same-batch aliquots is not specified.",
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3, Figure S2"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4, Figure S3"
+        },
+        {
+          "source_id": "ramasamy2014cusb",
+          "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "reported-timepoints",
+      "label": "3:1 Cu:Sb; S/OLA; 250 °C; 2/5/10/15/30 min",
+      "parameters": {
+        "Cu_to_Sb_feed_ratio": {
+          "value": 3.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Cu:Sb feed molar ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Figure 1/Scheme 1 condition-map ratio; contrary Methods wording is retained in quality.conflicts.",
+          "raw_text": "3:1",
+          "evidence": [
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 3, Figure S2"
+            },
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 4, Figure S3"
+            },
+            {
+              "source_id": "ramasamy2014cusb",
+              "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_temperature": {
+          "value": 250,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "250 °C",
+          "evidence": [
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 3, Figure S2"
+            },
+            {
+              "source_id": "ramasamy2014cusb-si",
+              "locator": "SI PDF p. 4, Figure S3"
+            },
+            {
+              "source_id": "ramasamy2014cusb",
+              "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3, Figure S2"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4, Figure S3"
+        },
+        {
+          "source_id": "ramasamy2014cusb",
+          "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "time-series-sample-set",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": "time-series-sample-set",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu3SbS4 and Cu12Sb4S13 are discussed in the time evolution",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3, Figure S2"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4, Figure S3"
+          },
+          {
+            "source_id": "ramasamy2014cusb",
+            "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3, Figure S2"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4, Figure S3"
+          },
+          {
+            "source_id": "ramasamy2014cusb",
+            "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+          }
+        ],
+        "note": "Individual timepoint phase labels/fractions are not reported. The main text qualitatively describes Cu3SbS4-to-Cu12Sb4S13 evolution under this condition; no exact trace-to-phase assignment is made."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No timepoint morphology."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No timepoint surface evidence."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3, Figure S2"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4, Figure S3"
+        },
+        {
+          "source_id": "ramasamy2014cusb",
+          "locator": "main PDF p. 3 (printed p. 2893), Results discussion of time evolution"
+        }
+      ],
+      "notes": [
+        "Separate observation record, not a phase-specific training pair.",
+        "Physical batch versus aliquot relation is not stated."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "reported-timepoint-2-min",
+      "sample_id": "time-series-sample-set",
+      "property": "reported reaction-series timepoint",
+      "technique": "XRD and normalized UV–vis time-series labels",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "discrete plotted timepoint; no phase label or curve ordinate digitized",
+        "basis": "One of five labeled points in the 250 °C series; no physical sample/batch join asserted.",
+        "raw_text": "2 min",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cu:Sb 3:1; S/OLA; 250 °C. Reported timepoint label only; phase fractions, raw curve values, and batch-versus-aliquot identity are not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+        }
+      ]
+    },
+    {
+      "id": "reported-timepoint-5-min",
+      "sample_id": "time-series-sample-set",
+      "property": "reported reaction-series timepoint",
+      "technique": "XRD and normalized UV–vis time-series labels",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "discrete plotted timepoint; no phase label or curve ordinate digitized",
+        "basis": "One of five labeled points in the 250 °C series; no physical sample/batch join asserted.",
+        "raw_text": "5 min",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cu:Sb 3:1; S/OLA; 250 °C. Reported timepoint label only; phase fractions, raw curve values, and batch-versus-aliquot identity are not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+        }
+      ]
+    },
+    {
+      "id": "reported-timepoint-10-min",
+      "sample_id": "time-series-sample-set",
+      "property": "reported reaction-series timepoint",
+      "technique": "XRD and normalized UV–vis time-series labels",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "discrete plotted timepoint; no phase label or curve ordinate digitized",
+        "basis": "One of five labeled points in the 250 °C series; no physical sample/batch join asserted.",
+        "raw_text": "10 min",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cu:Sb 3:1; S/OLA; 250 °C. Reported timepoint label only; phase fractions, raw curve values, and batch-versus-aliquot identity are not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+        }
+      ]
+    },
+    {
+      "id": "reported-timepoint-15-min",
+      "sample_id": "time-series-sample-set",
+      "property": "reported reaction-series timepoint",
+      "technique": "XRD and normalized UV–vis time-series labels",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "discrete plotted timepoint; no phase label or curve ordinate digitized",
+        "basis": "One of five labeled points in the 250 °C series; no physical sample/batch join asserted.",
+        "raw_text": "15 min",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cu:Sb 3:1; S/OLA; 250 °C. Reported timepoint label only; phase fractions, raw curve values, and batch-versus-aliquot identity are not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+        }
+      ]
+    },
+    {
+      "id": "reported-timepoint-30-min",
+      "sample_id": "time-series-sample-set",
+      "property": "reported reaction-series timepoint",
+      "technique": "XRD and normalized UV–vis time-series labels",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "discrete plotted timepoint; no phase label or curve ordinate digitized",
+        "basis": "One of five labeled points in the 250 °C series; no physical sample/batch join asserted.",
+        "raw_text": "30 min",
+        "evidence": [
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+          },
+          {
+            "source_id": "ramasamy2014cusb-si",
+            "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cu:Sb 3:1; S/OLA; 250 °C. Reported timepoint label only; phase fractions, raw curve values, and batch-versus-aliquot identity are not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 3 (printed S3), Figure S2; labeled XRD timepoint"
+        },
+        {
+          "source_id": "ramasamy2014cusb-si",
+          "locator": "SI PDF p. 4 (printed S4), Figure S3; labeled normalized UV–vis timepoint"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Derived from the hash-bound inherited full main+SI extraction and current owner source notes. The current canonical projection and asset/Reader mapping are pending independent current-field audit; condition/sample joins remain limited to explicit source statements. Main PDF p. 2 (printed p. 2892), Materials paragraph states all chemicals were used as received; the same paragraph separately specifies molecular-sieve drying and high-purity Ar purging of solvents for 30 min before use. Elemental sulfur has no separately reported purity.",
+    "missing_fields": [
+      "phase identity/fraction at each time point",
+      "batch versus aliquot lineage",
+      "exact reaction hold/termination protocol",
+      "raw numerical XRD/UV–vis values",
+      "Molecular-sieve specification and amount are not reported.",
+      "Elemental sulfur purity is not separately reported; the main p. 2 Materials paragraph states chemicals were used as received and separately specifies solvent pretreatment."
+    ],
+    "conflicts": [
+      "Main text describes Cu3SbS4-to-Cu12Sb4S13 evolution but does not assign exact conversion time to each trace.",
+      "Methods text literally states a 1:3 Cu(acac)2:SbCl3·6H2O ratio for the tetrahedrite/skinnerite routes, while Scheme 1, Figure 1 and Results depict Cu:Sb = 3:1. This record encodes only the Figure 1/Scheme 1 condition-map ratio; absolute feed quantities remain unreported except where separately stated."
+    ],
+    "requested_tasks": [
+      "independent audit of current candidate records, sample/figure links, and source locators",
+      "keep condition-map rows distinct and preserve unresolved sample/measurement links"
+    ],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}

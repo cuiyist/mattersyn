@@ -785,16 +785,16 @@
     "Use elapsed wall time including setup, failures and rework; also record per-stage active worker time."
   ],
   "stage_counts": {
-    "new_extractions_completed": 2,
-    "new_independent_audits_passed": 2,
-    "new_integrations_passed": 4,
+    "new_extractions_completed": 4,
+    "new_independent_audits_passed": 5,
+    "new_integrations_passed": 8,
     "new_source_papers_published": 4,
     "new_records_published": 45,
     "existing_source_corrections_published": 0,
     "independent_delta_audits_passed": 3,
     "independent_canonical_mapping_audits_passed": 3,
-    "browser_qa_passed": 4,
-    "independent_integration_audits_passed": 4
+    "browser_qa_passed": 8,
+    "independent_integration_audits_passed": 8
   },
   "papers": [
     {
@@ -830,12 +830,17 @@
     {
       "doi": "10.1021/acsnano.1c08966",
       "source_id": "dhaene2022",
-      "stage": "Reader package and precursor-coverage corrections in progress; accepted unchanged audits reused",
+      "stage": "Source and independent integration checks passed; final batched publication checks in progress",
       "inherited_pretrial_work": true,
-      "pending": "R3 upstream precursor charges/branch corrections and independent changed-field review, then integration/deployment.",
+      "pending": "Final build, deployment and anonymous verification; not counted as published.",
       "canonical_mapping_audit_sha256": "ef481f616997aa1be1d527fa08a06e05e7e192a78ba146084f2c1bf960ffadca",
       "selected_figure_delta_audit_sha256": "59e80517966117871bf160bb29f3563f4d18f9b8e8fe353336b2a7ffdc0ab23b",
-      "additional_17_crops_delta_audit_sha256": "b6a924ce20e7c4e874337531e17ff3523f698161215342994c16e4694659393d"
+      "additional_17_crops_delta_audit_sha256": "b6a924ce20e7c4e874337531e17ff3523f698161215342994c16e4694659393d",
+      "r3_scientific_audit_sha256": "5f793bf26e57cd9d9fa3cc1e0c67c49df523f6989b7fe0f28f8c6a530b4356c5",
+      "reader_freeze_sha256": "a3fafd39e6da614579f94d09929fde7617fd2efcf18f0ae5e8584752922dcbb5",
+      "candidate_record_count": 13,
+      "selected_figure_count": 35,
+      "final_source_and_binding_audit_sha256": "6059f009009235c8d0edb0a31830af7dfd194a3da82cc96e10bf2aecd7ec9db2"
     },
     {
       "doi": "10.1021/cm970557m",
@@ -872,15 +877,52 @@
     {
       "source_id": "ramasamy2014cusb",
       "doi": "10.1021/cm5005642",
-      "stage": "Seventeen canonical records frozen for current-field audit; Reader assets in progress",
+      "stage": "Source and independent integration checks passed; final batched publication checks in progress",
       "inherited_pretrial_work": true,
       "candidate_record_count": 17,
       "condition_map_rows": 16,
       "time_series_observation_records": 1,
-      "authoritative_candidate": "throughput-trial-20260925/next-source-02/author-package-r1/canonical-freeze-r1",
-      "canonical_freeze_sha256": "2dbb04e07e46404c4e22badc5eae2238390e1c107fe3f8dc5d956db89e9db3e3",
+      "authoritative_candidate": "throughput-trial-20260925/next-source-02/author-package-r1/canonical-completeness-delta-r3",
+      "canonical_freeze_sha256": "1bfc5dd58558f347e1dcff2e3bff0874cfe7db0c23daa63a8753cdef641c707a",
       "source_pages_root_visually_read": 15,
-      "pending": "Independent current-field audit, completed Reader/figure/molecular integration, browser checks and verified deployment. Prior audit snapshot was not recovered; bounded route correction is not a full current audit."
+      "pending": "Final build, deployment and anonymous verification; not counted as published.",
+      "source_audit_sha256": "08e4a93ae1637677f9da83a84a88c736709ffdfa58250801c350bbb240742197",
+      "independent_integration_audit_sha256": "350a935eacce103d38a00ac3abd7fa185719da4bb5fcef2ce13cc10f87452a00",
+      "delivery_delta_audit_sha256": "b47c538676658c02197508a9f7e131bc95d88a6e292c43eb23d7163d4160816f"
+    },
+    {
+      "source_id": "costanzo2016co",
+      "doi": "10.1021/acs.jpcc.6b07293",
+      "stage": "Source and independent integration checks passed; final batched publication checks in progress",
+      "inherited_pretrial_work": false,
+      "candidate_record_count": 14,
+      "source_pages_root_visually_read": 8,
+      "si_status": "not located or verified",
+      "source_pdf_sha256": "dcb719e93e401fb73f738909fea0726a8f68c08b64a7123e281b72a411265b3d",
+      "canonical_freeze_sha256": "22ad9ea7b8096947b9a7ad9ce7e89c3cbc654efc79901cc8bac8bdc5582b8e5d",
+      "source_audit_sha256": "6d04e9104dade1fd99e0d93835e75b7263bb97d9aa45b4063ce8dcc4b256f54f",
+      "pending": "Final build, deployment and anonymous verification; not counted as published."
+    },
+    {
+      "source_id": "yu1998cde",
+      "doi": "10.1021/cm980181s",
+      "inherited_pretrial_work": false,
+      "stage": "Source and independent integration checks passed; browser QA passed; publication pending",
+      "candidate_record_count": 9,
+      "supplied_main_pages": 4,
+      "si_status": "not located or verified",
+      "source_audit_sha256": "5d82bc9e3e053e6db2450e289eab112df7e2ccdd3e6dea05f6de556c5807cebe",
+      "pending": "Final clean build, deployment and anonymous verification.",
+      "independent_integration_audit_sha256": "9fef47f16420b5d089d6b0c2a19b6f026ba3ea23f85f79bb830dbcff480aac57"
+    },
+    {
+      "source_id": "ja101908k-in-progress",
+      "doi": "10.1021/ja101908k",
+      "inherited_pretrial_work": false,
+      "stage": "Existing screened-pass main source reading and extraction in progress",
+      "source_pdf_sha256": "3ce8c6d86971ca1f31a4b986559f44ec3185b5b7672675b1dee0e4f50cabc0db",
+      "supplied_main_pages": 11,
+      "pending": "Source extraction, independent audit, integration and all publication checks; unfinished work must be held at cutoff."
     }
   ],
   "publication_events": [
@@ -952,7 +994,7 @@
     }
   ],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T09:03:39.726215+00:00",
+  "last_updated_at": "2026-09-25T12:28:04.950020+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,
@@ -1040,7 +1082,37 @@
       "source_id": "batch3",
       "finding": "Root passed the release guard library rather than gate.py as the final CLI. The library returned without producing a manifest, so publication stopped. Verified the final artifact matched all 8420 candidate files and the clean snapshot; reran the existing gate.py successfully without altering files or weakening checks.",
       "status": "corrected_exact_artifact_boundary_gate_passed"
+    },
+    {
+      "source_id": "ramasamy2014cusb",
+      "finding": "Public Scheme1 delivery name and SI document-role values normalized to the existing release contract without changing image or canonical bytes.",
+      "status": "corrected_independently_rechecked"
+    },
+    {
+      "source_id": "shared_reader",
+      "finding": "Temperature classification matched a duration name; record-page apparatus assets used a nested relative path; conflict renderer missed snake_case fields.",
+      "status": "corrected_browser_verified"
+    },
+    {
+      "source_id": "dhaene2022",
+      "finding": "Record-independent stock IDs collapsed14 stocks into7 contexts; new SVG metadata was inserted outside the root.",
+      "status": "author_corrected_frozen_independent_integration_audit_pending"
+    },
+    {
+      "source_id": "costanzo2016co",
+      "finding": "Added omitted approximately11% cobalt volume fraction and preserved4.5vs4.6nm S2 figure/table conflict.",
+      "status": "corrected_source_delta_independently_verified"
+    },
+    {
+      "source_id": "batch4",
+      "finding": "Independent checks caught stale per-record/review hashes, incomplete review navigation, incompatible main-only status enum, omitted display units and operation-specific condition scope. Corrected with bounded source/delta checks, preserving raw source conflicts.",
+      "status": "source_and_integration_corrections_checked_final_release_pending"
+    },
+    {
+      "source_id": "yu1998cde",
+      "finding": "Variant load label retained a Teflon autoclave assertion after variant vessel details were marked unreported. Reduced eight labels/action names to generic reaction vessel; typical method remains distinct.",
+      "status": "corrected_independently_rechecked_browser_verified"
     }
   ],
-  "checkpoint_note": "Four distinct source papers and 45 records have been newly deployed and anonymously verified. Wu and Williamson reused inherited source review; Li1998 and Li2000 were reviewed during this trial. Draft extraction and audit counts remain separate."
+  "checkpoint_note": "Four newly deployed and anonymously verified source papers /45records remain the measured publication count. Four further papers /53records are integrated locally and undergoing final release checks. One additional screened-pass source is being read privately. Trial deadline and after-trial curation hold are unchanged."
 }

@@ -76,7 +76,7 @@ bindings. A configured comparison is not evidence of success; check the complete
 run before claiming cross-platform reproducibility.
 
 Long reader explanations are not automatically verbatim paper quotations. The
-current collection contains 37 formal paper-review files; their structured text
+earlier repository-review checkpoint contained 37 formal paper-review files; their structured text
 retains claim types, sample scope and source locators. Assess wording against the
 source before shortening a passage; do not truncate scientific content by length.
 

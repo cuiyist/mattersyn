@@ -1,0 +1,844 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "costanzo-2016-co-thick3d-raman-assembly",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Costanzo et al. (2016) · thick 3D Co nanocrystal assemblies for Raman",
+  "material": {
+    "formula": "Co",
+    "family": "Cobalt nanocrystals and source-described particle assemblies",
+    "elements": [
+      "Co"
+    ],
+    "components": [
+      "Co"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Immersion/evaporation assembly on HOPG at 35 °C under N₂ flow",
+  "sources": [
+    {
+      "id": "costanzo2016co",
+      "doi": "10.1021/acs.jpcc.6b07293",
+      "title": "Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals",
+      "authors": "S. Costanzo; G. Simon; J. Richardi; Ph. Colomban; I. Lisiecki",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.jpcc.6b07293",
+      "main_status": "Complete supplied eight-page main article visually reviewed; independent source and canonical audit passed. SI remains unverified.",
+      "si_status": "SI not located or verified; absence is not established and no SI claim is used.",
+      "reuse_status": "Source-linked private candidate; original-figure rights remain unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "costanzo2016co",
+    "recipe_family": "costanzo2016co-thick3d-assembly",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Co nanocrystals in thick 3D particle assemblies",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), abstract"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1; Figure 1 and electron-diffraction discussion"
+        }
+      ],
+      "note": "Metallic cobalt nanocrystals are the stated product class; a specific crystalline phase is not definitively assigned."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Size is an outcome of the selected solvent/sample, not a single numerical target.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), abstract and article scope"
+        }
+      ],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 3 (printed p. 22056), §3.1 morphology discussion"
+        }
+      ],
+      "note": "No single target particle shape is specified; the article describes a population-level shape trend."
+    }
+  },
+  "materials": [
+    {
+      "id": "co_nc_dispersion",
+      "name": "Colloidal cobalt nanocrystals",
+      "formula": "Co",
+      "role": "nanocrystal_dispersion",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5, Assembly Preparation"
+        }
+      ]
+    },
+    {
+      "id": "hopg_substrate",
+      "name": "HOPG substrate",
+      "formula": "C",
+      "role": "microscopy_support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Substrate dimensions are 10×5 mm; HOPG is a support, not a Co product constituent."
+      ],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "name": "Nitrogen gas",
+      "formula": "N₂",
+      "role": "environment_gas",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Continuous nitrogen flow is reported only for thick 3D assembly solvent evaporation; flow rate is absent."
+      ],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "co_nc_solution",
+      "name": "Co NC colloidal solution for thick 3D assembly",
+      "components": [
+        {
+          "material_id": "co_nc_dispersion",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "co_nc_concentration": {
+          "value": 5.5e-07,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source describes Co NC concentration as 5.5×10⁻⁷ M; molar basis is not defined.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Source describes immersion in 200 µL for thick 3D Raman samples. Method text says S1–S4; later figure/traces show additional size/sample labels, retained as an unresolved linkage.",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "thick3d_assembly",
+      "name": "Thick 3D Co nanocrystal assembly on HOPG",
+      "kind": "product",
+      "parent_ids": [
+        "co_nc_solution",
+        "hopg_substrate",
+        "n2"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "immerse_hopg_substrate",
+      "action": "immerse_substrate",
+      "label": "Horizontally immerse 10×5 mm HOPG substrate in Co NC solution",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hopg_substrate",
+        "co_nc_solution"
+      ],
+      "outputs": [
+        "thick3d_assembly"
+      ],
+      "parameters": {
+        "substrate_length": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "substrate_width": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "solution_volume": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "co_nc_concentration": {
+          "value": 5.5e-07,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported concentration; molar basis unspecified.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source conditions for this operation are not separately specified."
+      },
+      "endpoint": {
+        "value": "HOPG substrate immersed horizontally in the colloidal solution.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        }
+      ]
+    },
+    {
+      "id": "evaporate_thick3d_under_n2",
+      "action": "evaporate_under_gas_flow",
+      "label": "Evaporate solvent at 35 °C under nitrogen flow",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "immerse_hopg_substrate"
+      ],
+      "inputs": [
+        "thick3d_assembly",
+        "n2"
+      ],
+      "outputs": [
+        "thick3d_assembly"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Assembly solvent-evaporation temperature, not the nanocrystal growth temperature.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "nitrogen_flow_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "evaporation_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "costanzo2016co",
+              "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Nitrogen flow during solvent evaporation; flow rate absent.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Source describes several tens of nanocrystal layers; exact thickness and evaporation endpoint are not reported.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.4, Raman assembly discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Assembly operation only; 35 °C is not a synthesis/reduction setpoint or the temperature of Raman measurement.",
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.5"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), §3.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "raman-thick3d-method-scope",
+      "source_sample_label": "Thick 3D assemblies prepared for Raman; Methods scope S1–S4",
+      "batch_id": null,
+      "material_state_id": "thick3d_assembly",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cobalt nanocrystals (Co)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.5, Assembly Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.5, Assembly Preparation"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": "Several tens of Co NC layers; exact thickness unreported.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.5, Assembly Preparation"
+          }
+        ],
+        "note": "Surface coverage and quantitative exchange completeness are not reported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "The method text names S1–S4 for Raman assembly; Figure 4e/f shows 3.9 and 7.7 nm optical assembly contexts, and Figure 5a labels S1/S2/S6/S7 spectra. No exact sample-to-method reconciliation is given."
+      ]
+    },
+    {
+      "sample_id": "raman-abstract-3p9nm-context",
+      "source_sample_label": "Abstract Raman endpoint at 3.9 nm",
+      "batch_id": null,
+      "material_state_id": "thick3d_assembly",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cobalt nanocrystals (Co)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract, low-wavenumber Raman size trend"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract, low-wavenumber Raman size trend"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract, low-wavenumber Raman size trend"
+          }
+        ],
+        "note": "Surface coverage and quantitative exchange completeness are not reported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "raman-abstract-9p3nm-context",
+      "source_sample_label": "Abstract Raman endpoint at 9.3 nm",
+      "batch_id": null,
+      "material_state_id": "thick3d_assembly",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cobalt nanocrystals (Co)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract, low-wavenumber Raman size trend"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract, low-wavenumber Raman size trend"
+          }
+        ],
+        "note": "The paper discusses tentative fcc-Co ring indexing but does not give a definitive sample-specific phase assignment."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract, low-wavenumber Raman size trend"
+          }
+        ],
+        "note": "Surface coverage and quantitative exchange completeness are not reported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "raman-9p3nm-quadrupolar",
+      "sample_id": "raman-abstract-9p3nm-context",
+      "property": "low_wavenumber_quadrupolar_mode",
+      "technique": "Low-wavenumber Raman; abstract summary and Lamb-model discussion",
+      "value": {
+        "value": 8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source gives an approximate endpoint; not digitized from Figure 5.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.5 and Figure 5"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "The paper assigns the lowest-frequency feature to ℓ=2 quadrupolar mode. Exact specimen/batch identity not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+        }
+      ]
+    },
+    {
+      "id": "raman-9p3nm-breathing",
+      "sample_id": "raman-abstract-9p3nm-context",
+      "property": "low_wavenumber_breathing_mode",
+      "technique": "Low-wavenumber Raman; abstract summary and Lamb-model discussion",
+      "value": {
+        "value": 17,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source prints ±0.1 cm⁻¹ with the approximate 9.3 nm endpoint; statistic meaning not defined.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Source associates the larger-diameter endpoint with approx. 8/17 cm⁻¹ mode pair; Figure 5 labels S7 at 9.1 nm, while Table 2 gives 9.3 nm.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), Figure 5a"
+        }
+      ]
+    },
+    {
+      "id": "raman-3p9nm-quadrupolar",
+      "sample_id": "raman-abstract-3p9nm-context",
+      "property": "low_wavenumber_quadrupolar_mode",
+      "technique": "Low-wavenumber Raman; abstract summary and Lamb-model discussion",
+      "value": {
+        "value": 12.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source gives an approximate endpoint; not digitized from Figure 5.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "The paper assigns the lowest-frequency feature to ℓ=2 quadrupolar mode. Exact specimen/batch identity not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+        }
+      ]
+    },
+    {
+      "id": "raman-3p9nm-breathing",
+      "sample_id": "raman-abstract-3p9nm-context",
+      "property": "low_wavenumber_breathing_mode",
+      "technique": "Low-wavenumber Raman; abstract summary and Lamb-model discussion",
+      "value": {
+        "value": 23,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source prints ±0.3 cm⁻¹ with the approximate 3.9 nm endpoint; statistic meaning not defined.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Source associates the smaller-diameter endpoint with approx. 12.5/23 cm⁻¹ mode pair.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 1 (printed p. 22054), Abstract"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+        }
+      ]
+    },
+    {
+      "id": "raman-acquisition-conditions",
+      "sample_id": "raman-thick3d-method-scope",
+      "property": "raman_acquisition_conditions",
+      "technique": "HR800 LabRam low-wavenumber Raman spectroscopy",
+      "value": {
+        "value": "514.5 nm excitation; 100× Olympus objective, NA 0.90; approx. 1 µm spot; approx. 100 µW at focus; instrument resolution approx. 1 cm⁻¹; straight-line background subtraction when needed; spectra normalized to the strongest band. Data average three experiments under the same conditions; regression error bars are fit errors.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 2 (printed p. 22055), §2.2, Apparatus"
+          },
+          {
+            "source_id": "costanzo2016co",
+            "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Acquisition time and measurement temperature are not specified; approx. 100 µW does not guarantee absence of local heating.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 2 (printed p. 22055), §2.2, Apparatus"
+        },
+        {
+          "source_id": "costanzo2016co",
+          "locator": "Main PDF p. 6 (printed p. 22059), §3.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Full supplied main article, pp. 1–8, read and visually inspected; independent source/canonical audit passed. SI unverified. Exact physical-batch identity remains unresolved.",
+    "missing_fields": [
+      "N₂ flow rate and evaporation duration; exact layer count/thickness; the methods S1–S4 Raman preparation scope is not reconciled to Figure 4e/f and Figure 5a sample labels.",
+      "Raman acquisition time and sample temperature; exact specimen/replicate identities for reported spectra; no numerical per-trace values are digitized."
+    ],
+    "conflicts": [
+      "§2.5 says the 35 °C thick 3D Raman procedure uses solutions S1–S4; Figure 4e/f depicts 3.9/7.7 nm thick-assembly contexts and Figure 5a labels S1, S2, S6, S7 spectra. Do not assert all these are the same batches or pick one scope.",
+      "Figure 5a S7 trace is labeled 9.1 nm; Table 2 and Figure 2a give 9.3 nm. The abstract endpoint is approximately 9.3 nm; no reconciliation is provided."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Complete supplied-main paper review",
+      "url": "paper-review.html?id=costanzo2016co",
+      "relation": "source coverage and original-figure context"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

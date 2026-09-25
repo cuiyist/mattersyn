@@ -11,7 +11,15 @@ SITE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SITE / 'scripts'))
 from record_helpers import ev, fact, qty, source, record, material, operation, state, product, measurement
 from dataset_lib import validate_record, eligibility, training_view, build_groups, chemical_signature
-from build_dataset import render_record
+from build_dataset import render_record, record_href
+
+
+class RecordNavigationTests(unittest.TestCase):
+    def test_atlas_paths_resolve_from_nested_record_pages(self):
+        for target in ['records/precursor.html', 'assets/structure.json', 'data/records/source.json']:
+            self.assertEqual('../'+target, record_href(target))
+        for target in ['https://doi.org/10.0000/test', '//example.org/source', '../paper-review.html?id=test', '#protocol']:
+            self.assertEqual(target, record_href(target))
 
 
 def fixture(record_id='test-a'):
