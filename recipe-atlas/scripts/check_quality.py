@@ -147,8 +147,10 @@ class Audit:
             self.check(len(hub["papers"]) == len(route_dois) == hub["paper_count"], f"{formula}: paper contribution count mismatch")
         # Concrete regressions established by the independently reviewed sources.
         ferrite = self.hubs.get("CoFe2O4", {})
-        self.check(ferrite.get("component_only") is True, "CoFe2O4: Saha shell contribution incorrectly promoted to pure-ferrite synthesis")
-        self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing reviewed Saha ferrite-shell contribution")
+        tirosh_direct = {"tirosh-2006-cofe2o4-method-a-230c", "tirosh-2006-cofe2o4-method-a-250c", "tirosh-2006-cofe2o4-method-a-270c"}
+        self.check(ferrite.get("component_only") is False and set(ferrite.get("direct_record_ids", [])) == tirosh_direct, "CoFe2O4: the three reviewed Tirosh Method-A temperature routes must be direct contributions")
+        self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing separately scoped Saha ferrite-shell contribution")
+        self.check("separately scoped" in ferrite.get("scope_note", "").lower() or "shell" in ferrite.get("scope_note", "").lower(), "CoFe2O4: composite-shell evidence lacks an explicit scope note")
         silicon = self.hubs.get("Si", {})
         self.check(silicon.get("component_only") is True and silicon.get("direct_record_ids") == [], "Si: Littau component contribution promoted to pure-material synthesis")
         stiger_routes = {"stiger-1999-electrodeposition"}
@@ -293,7 +295,8 @@ class Audit:
             self.check(set(counts) == set(composition) and all(abs(counts[k] - v) < 1e-5 for k, v in composition.items()), f"{cid}: occupancy-weighted stoichiometry changed")
             if cid == "cofe2o4-spinel":
                 self.check(e["mixedOccupancy"] is True and len(positions) == 56 and sum(a["mixed_site"] for a in m["atoms"]) == 24, "Ferrite: mixed-site representation/count changed")
-                self.check(e["record_ids"] == ["saha-2019-coo-cofe2o4-seeded-growth"], "Ferrite reference attached to standalone CoO or unrelated protocol")
+                self.check(set(e["record_ids"]) == {"saha-2019-coo-cofe2o4-seeded-growth", "tirosh-2006-cofe2o4-method-a-270c"}, "Ferrite reference attached outside reviewed CoFe2O4 contexts")
+                self.check(e.get("referenceOnly") is True and e.get("trainingEligible") is False and "not the measured" in e.get("bindingScopes", {}).get("tirosh-2006-cofe2o4-method-a-270c", "").lower(), "Ferrite bulk reference must remain separate from Tirosh sample coordinates and training labels")
             if cid == "ir-fcc":
                 self.check(set(e["record_ids"]) == {"stowell-2005-ir-oa-oleylamine-290c", "shah-2001-ir",'stowell-2005-ir-toab-270c','stowell-2005-ir-top-290c','stowell-2005-ir-topb-270c'}, "FCC Ir reference assigned outside reviewed comparison contexts")
                 for rid in ['stowell-2005-ir-toab-270c','stowell-2005-ir-top-290c','stowell-2005-ir-topb-270c']:

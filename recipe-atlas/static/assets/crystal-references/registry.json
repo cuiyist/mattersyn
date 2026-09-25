@@ -160,7 +160,8 @@
       "name": "Partially inverse CoFe2O4 bulk reference",
       "formula": "CoFe2O4",
       "record_ids": [
-        "saha-2019-coo-cofe2o4-seeded-growth"
+        "saha-2019-coo-cofe2o4-seeded-growth",
+        "tirosh-2006-cofe2o4-method-a-270c"
       ],
       "description": "Partially inverse CoFe2O4 bulk reference; external reference, not measured atomic coordinates of the synthesis sample.",
       "scope": "Saha2019 reports an inverse-spinel CoFe2O4 shell, without atomic-coordinate refinement or site occupancies. COD1533163 is an external partially inverse reference, with its own mixed-site occupancies and a=8.3806 angstrom rather than the paper shell value 8.373 angstrom.",
@@ -176,9 +177,14 @@
       "trainingEligible": false,
       "sample_context_ids": [
         "saha2019-core-shell-15min",
-        "saha2019-core-shell-30min"
+        "saha2019-core-shell-30min",
+        "tirosh06-sample-a-270c"
       ],
-      "component_role": "CoFe2O4 shell reference only; partially inverse occupancy is external"
+      "component_role": "CoFe2O4 shell reference only; partially inverse occupancy is external",
+      "sample_context_note": "Tirosh et al. report sample A at 270 °C with a=8.381 ± 0.002 Å (the ± statistic is undefined). COD 1533163 is an independent partially inverse bulk reference with a=8.3806 Å, used only for comparison; no sample coordinates, exact occupancy or particle reconstruction are implied. Earlier Saha sample contexts remain scoped to the CoO/CoFe2O4 composite.",
+      "bindingScopes": {
+        "tirosh-2006-cofe2o4-method-a-270c": "Independent partially inverse bulk CoFe2O4 reference for comparison with the source-reported sample-A lattice parameter only. It is not the measured nanocrystal structure and is not training eligible."
+      }
     },
     {
       "id": "littau-1993-si-diamond-ideal-reference",

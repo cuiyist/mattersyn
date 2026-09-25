@@ -306,8 +306,6 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         return "user_directed_display_instruction_missing"
     if not isinstance(direction.get("record_id"), str) or not direction["record_id"].strip():
         return "user_directed_display_instruction_missing"
-    if direction.get("scope") != "restore_previously_delivered_source_figures":
-        return "user_directed_display_scope_invalid"
     if direction.get("asset_hash") != digest:
         return "user_directed_display_instruction_hash_mismatch"
     try:
@@ -327,6 +325,31 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         if not path.startswith(prefix):
             return "user_directed_display_source_path_ineligible"
         site_path = path[len(prefix):]
+    if direction.get("scope") == "display_source_figures_for_reviewed_papers":
+        match = re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(figure|table)-([a-z0-9-]+)\.(?:png|jpe?g|webp)", site_path)
+        if asset.get("classification") != "source_figure" or not match:
+            return "user_directed_display_source_path_ineligible"
+        paper_id = direction.get("paper_id")
+        if not isinstance(paper_id, str) or paper_id != match.group(1):
+            return "user_directed_display_source_binding_missing"
+        expected_id = match.group(2) + "-" + match.group(3)
+        source_matches = []
+        for binding in bindings:
+            if not isinstance(binding, dict) or binding.get("doi") != direction.get("doi"):
+                continue
+            locators = binding.get("locators")
+            if (isinstance(locators, dict)
+                    and locators.get("document_role") in {"main", "supporting_information"}
+                    and isinstance(locators.get("page"), int) and locators["page"] > 0
+                    and locators.get("id") == expected_id):
+                source_matches.append(binding)
+        if len(source_matches) != 1 or not re.fullmatch(r"10\.\d{4,9}/\S+", str(direction.get("doi", ""))):
+            return "user_directed_display_source_binding_missing"
+        if direction.get("previous_delivery") not in (None, []):
+            return "user_directed_display_previous_delivery_invalid"
+        return None
+    if direction.get("scope") != "restore_previously_delivered_source_figures":
+        return "user_directed_display_scope_invalid"
     prior = direction.get("previous_delivery")
     if not isinstance(prior, list) or not prior:
         return "user_directed_display_previous_delivery_missing"

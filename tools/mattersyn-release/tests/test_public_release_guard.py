@@ -130,6 +130,39 @@ def user_directed_figure(path, raw):
     }
 
 
+def user_directed_review_figure(path, raw, *, locator_id="figure-1", page=3):
+    digest = sha256(raw)
+    return {
+        "asset_hash": digest,
+        "classification": "source_figure",
+        "source_bindings": [{
+            "doi": "10.1021/cm052401p",
+            "url": "https://doi.org/10.1021/cm052401p",
+            "locators": {"document_role": "main", "page": page, "id": locator_id},
+        }],
+        "delivery_paths": [
+            {"repo": "mattersyn-site", "path": path, "bytes": len(raw)},
+            {"repo": "mattersyn", "path": "recipe-atlas/static/" + path, "bytes": len(raw)},
+        ],
+        "rights": {
+            "status": "user_directed_display",
+            "attribution": "Tirosh et al., DOI 10.1021/cm052401p, Figure 1",
+            "copyright_permission_verified": False,
+            "license_id": None,
+            "license_evidence": [],
+            "user_direction": {
+                "record_id": "explicit-user-direction-to-retain-reviewed-source-figures",
+                "recorded_at": "2026-09-24T12:00:00Z",
+                "scope": "display_source_figures_for_reviewed_papers",
+                "paper_id": "tirosh2006",
+                "doi": "10.1021/cm052401p",
+                "asset_hash": digest,
+                "previous_delivery": [],
+            },
+        },
+    }
+
+
 class BoundaryGuardTests(unittest.TestCase):
     def test_exact_user_directed_figure_passes_without_claiming_copyright_clearance(self):
         path, raw = "assets/figures/example/figure-2.png", b"synthetic figure bytes"
@@ -192,6 +225,28 @@ class BoundaryGuardTests(unittest.TestCase):
         asset = user_directed_figure(path, b"synthetic")
         asset["classification"] = "source_page_crop"
         self.assertIsNone(user_directed_display_error(asset, "mattersyn-site", path))
+
+    def test_cited_figure_for_reviewed_paper_can_be_displayed_without_prior_delivery(self):
+        path, raw = "assets/paper-reviews/tirosh2006/figure-1.png", b"reviewed source figure"
+        asset = user_directed_review_figure(path, raw)
+        for repo, target in [("mattersyn-site", path), ("mattersyn", "recipe-atlas/static/" + path)]:
+            with self.subTest(repo=repo):
+                self.assertIsNone(user_directed_display_error(asset, repo, target))
+
+    def test_new_source_figure_scope_requires_exact_paper_path_and_locator(self):
+        raw = b"reviewed source figure"
+        cases = [
+            ("assets/paper-reviews/other-paper/figure-1.png", "figure-1", 3),
+            ("assets/paper-reviews/tirosh2006/figure-1.png", "figure-2", 3),
+            ("assets/paper-reviews/tirosh2006/table-1.png", "table-1", None),
+            ("assets/source-renders/tirosh2006/figure-1.png", "figure-1", 3),
+        ]
+        for path, locator_id, page in cases:
+            with self.subTest(path=path, locator=locator_id, page=page):
+                asset = user_directed_review_figure(path, raw, locator_id=locator_id, page=page)
+                if page is None:
+                    asset["source_bindings"][0]["locators"].pop("page")
+                self.assertIsNotNone(user_directed_display_error(asset, "mattersyn-site", path))
 
     def test_user_direction_still_requires_exact_image_bytes(self):
         path, raw = "assets/figures/example/figure-2.png", b"synthetic figure bytes"

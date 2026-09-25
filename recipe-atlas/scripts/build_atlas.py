@@ -100,6 +100,8 @@ def main():
         m['publication_status']='verified_synthesis_contribution'
         m['component_only']=not bool(m['direct_record_ids'])
         m['scope_note']='This material is a component of the explicitly named heterostructures below; these are not standalone pure-material syntheses.' if m['component_only'] else 'Each method is supported by a source-reviewed synthesis record. Unreviewed title matches are excluded from this page.'
+        if f == 'CoFe2O4' and not m['component_only']:
+            m['scope_note']='This page combines direct standalone CoFe2O4 Method-A routes with a separately scoped CoFe2O4 shell contribution in the CoO/CoFe2O4 composite. Shell structure and property observations remain attached to that composite sample and are not relabeled as results for the standalone nanocrystals.'
         m['benchmark_records']=sum(r['collection']=='published_benchmark' for r in related);m['paper_count']=len(m['paper_dois'])
         m['papers']=[]
         for p in library:

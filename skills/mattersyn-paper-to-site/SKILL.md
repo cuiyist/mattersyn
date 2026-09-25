@@ -41,6 +41,8 @@ When changing a structure descriptor or reporting synthesis–structure coverage
 
 The generated dataset must expose the source-located recipe/sample rows behind its broad count and state whether cross-record specimen deduplication is complete. Keep molecular structure depictions separate from measured nanocrystal-coordinate assets. Never count an optical-only outcome as structural evidence or imply that source-linked rows are independently reproduced runs.
 
+Keep the website's broad documented synthesis–structure count separate from exact-coordinate training readiness. For example, Tirosh et al. (2006) contributes one broad row for sample A from Method A at 270 °C because that recipe is explicitly linked to the reported CoFe2O4 phase and sample characterization; its 230 and 250 °C conditions remain route variants with MCD observations but no separately established structural outcome. Methods B–D are comparison observations without reproduced recipes. The paper contributes zero sample-coordinate training pairs because it supplies no sample-specific coordinate asset. Report the underlying canonical row, source-paper count and deduplication status together.
+
 ## Build the interactive explanation
 
 For a cross-material interface redesign or structure–recipe metric change, read [references/reader-and-training-views.md](references/reader-and-training-views.md). It defines the paired Reader/Data views and preserves specimen identity, unknown contexts, complete evidence and task-specific training admission.
