@@ -30,5 +30,66 @@
     "No draft, model result or retest counts as a new published paper.",
     "Independent source and sample/figure review remain mandatory."
   ],
-  "new_papers_credited": 0
+  "new_papers_credited": 0,
+  "separate_page_benchmark": {
+    "total_questions": 15,
+    "documents": 3,
+    "source_pages": 4,
+    "target_coverage_counts": {
+      "complete": 8,
+      "partial": 7,
+      "fail": 0
+    },
+    "numeric_grounding": {
+      "questions_passing": 15,
+      "questions_total": 15,
+      "definition": "Every numeric claim the model emitted was checked against the relevant source page and was correct in context. This does not reward omitted expected values; omissions are reflected in target_coverage."
+    },
+    "quote_span": {
+      "questions_passing": 7,
+      "questions_total": 15,
+      "definition": "Mechanical exact contiguous span after NFKC Unicode normalization and whitespace collapse. Quotes that use ellipses, paraphrase, or expand the source do not pass."
+    },
+    "quote_support": {
+      "counts": {
+        "pass": 14,
+        "partial": 1,
+        "fail": 0
+      },
+      "questions_total": 15,
+      "definition": "Manual check whether the quoted text supports the claims actually stated in the answer; kept distinct from exact-span matching and target completeness."
+    },
+    "page_locator": {
+      "questions_correct": 13,
+      "questions_total": 15,
+      "wrong_question_ids": [
+        "T05",
+        "T06"
+      ]
+    },
+    "latency": {
+      "per_call_seconds": {
+        "thomson2010_bi2s3": 15.204,
+        "cusb2014_four_phases": 14.327,
+        "dhaene2022_phosphinic_cdse": 15.86
+      },
+      "summed_call_seconds": 45.391,
+      "mean_seconds_per_call": 15.13,
+      "interpretation": "Local process wall time for three selected page-excerpt questionsets, including model/process startup; not a whole-paper or corpus throughput estimate."
+    },
+    "no_tuning_or_retries": true,
+    "paid_processing": false,
+    "external_source_transmission": false,
+    "SI_passed_to_model": false,
+    "preregistration_sha256": "28a3efe416070fb4d00dcaa3f909015109d214c4b20a28ba09c538caa6b707e5",
+    "private_evaluation_sha256": "82c5a21411c5e5edacb601092170fbbf7e94bd6df1e0c5a51912c18711839bcb",
+    "private_postrun_manifest_sha256": "3da2403a9ff7b734cd9f1acc06559f18d999e3c92bfab6a0880ca8368f307f77",
+    "sources": [
+      "10.1021/ja101908k",
+      "10.1021/cm5005642",
+      "10.1021/acsnano.1c08966"
+    ],
+    "qualification": "Three already reviewed sources, four selected pages; no paid processing, source upload, model tuning on these answers, new paper credit, or full-paper capacity inference. Numeric grounding is scored per answer and does not count omitted numbers as correct.",
+    "freeze_time_note": "The serialized preregistration timestamp predates the file modification time; the exact content hash was checked by the runner before inference. No frozen inputs changed after inference."
+  }
 }
