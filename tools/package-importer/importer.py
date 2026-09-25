@@ -187,6 +187,10 @@ def verify_evidence(evidence_root: Path, source_pdf: Path, contract: dict) -> di
 
 
 def verify_bundle(package_dir: Path, contract: dict) -> tuple[dict, dict]:
+    # Use one canonical spelling for traversal and relative-path comparison.
+    # Windows temporary directories may arrive as an 8.3 alias (RUNNER~1)
+    # while Path.resolve() expands the same directory to its long name.
+    package_dir = package_dir.resolve(strict=True)
     mf_rel = posix_relative(contract["paths"]["bundle_manifest"])
     mf_path = require_no_link_components(package_dir, mf_rel)
     assert_hash(mf_path, contract["package"]["bundle_manifest_sha256"], "frozen overlay manifest")
@@ -210,7 +214,7 @@ def verify_bundle(package_dir: Path, contract: dict) -> tuple[dict, dict]:
             raise ImportRejected(f"Frozen input hash mismatch: {key}")
         verified_files[key] = {"sha256": actual, "bytes": path.stat().st_size}
     actual_files = {
-        p.relative_to(package_dir.resolve()).as_posix()
+        p.relative_to(package_dir).as_posix()
         for p in package_dir.rglob("*")
         if p.is_file()
     }

@@ -107,6 +107,15 @@ class ImporterUnitTests(unittest.TestCase):
             contract = {"paths": {"bundle_manifest": "bundle-manifest.json"}, "package": {"bundle_manifest_sha256": IMPORTER.digest_bytes(manifest)}}
             _, files = IMPORTER.verify_bundle(root, contract)
             self.assertEqual(set(files), {"input.json"})
+            # A caller may supply a different spelling of the same directory,
+            # such as a parent segment or a Windows short-name temp path.
+            (root / "nested").mkdir()
+            _, alias_files = IMPORTER.verify_bundle(root / "nested" / "..", contract)
+            self.assertEqual(alias_files, files)
+            (root / "unexpected.json").write_bytes(b"{}\n")
+            with self.assertRaises(IMPORTER.ImportRejected):
+                IMPORTER.verify_bundle(root, contract)
+            (root / "unexpected.json").unlink()
             (root / "input.json").write_bytes(b"tampered")
             with self.assertRaises(IMPORTER.ImportRejected):
                 IMPORTER.verify_bundle(root, contract)

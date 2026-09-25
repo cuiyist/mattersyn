@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "active",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-25T16:51:19.402296+00:00",
+  "updated_at": "2026-09-25T17:13:28.483916+00:00",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -25,12 +25,6 @@
   },
   "active_papers": [
     {
-      "source_id": "thomson2010ja101908k",
-      "doi": "10.1021/ja101908k",
-      "stage": "Independent canonical/Reader integration and local browser checks passed; clean release and anonymous verification pending",
-      "inherited_work": true
-    },
-    {
       "source_id": "rusch-manna-2026",
       "doi": "10.1021/acs.chemmater.5c02845",
       "stage": "23-record Reader and chemical package independent audit passed with explicit integration notes; overlay preparation active",
@@ -38,9 +32,17 @@
     },
     {
       "source_id": "inp-triaryl-silyl-phosphine",
-      "stage": "Coverage correction delta independently passed; new private candidate revision and integration checklist in preparation",
+      "stage": "Coverage corrections independently passed and applied to frozen private r3 candidate; current-schema variant translation active",
       "inherited_work": true,
       "doi": "10.1021/cm500102q"
+    },
+    {
+      "source_id": "li2020acs-chemmater-0c00280",
+      "doi": "10.1021/acs.chemmater.0c00280",
+      "stage": "Screened-pass main source verified and absent from canonical contributions; local source extraction started",
+      "inherited_work": false,
+      "source_sha256": "d60b6e760ddee3ee416cdaca1a7c0cd5ecaf11ff644f45bf346645bcf5986704",
+      "si_scope": "Unavailable/unverified until a matching existing local file is found"
     }
   ],
   "engineering": [
@@ -60,11 +62,35 @@
       "task": "Review builder compatibility",
       "stage": "Text-only source notes supported; declared image hash validation retained; two regression tests added",
       "prepared_context_tests_passed": 108
+    },
+    {
+      "task": "Windows importer root spelling",
+      "stage": "Canonicalize bundle root before traversal; relative alias and extra-file regression checks passed locally",
+      "cause": "GitHub Windows temporary directory used a short-name alias; raw traversal paths were compared with a resolved long-name root",
+      "prior_workflow": 36164140782,
+      "prior_linux_result": "passed",
+      "prior_windows_result": "failed at importer test before website build",
+      "current_ci_rerun": "pending"
     }
   ],
-  "publication_events": [],
-  "newly_published_source_papers": 0,
-  "new_records_published": 0,
+  "publication_events": [
+    {
+      "source_id": "thomson2010ja101908k",
+      "doi": "10.1021/ja101908k",
+      "verified_at": "2026-09-25T17:09:54.363961+00:00",
+      "source_commit": "92b6650d4aa9ea65ff702099747d230846c29fdd",
+      "site_commit": "715b2a46f47ae31b540d60923823fba99e23f00d",
+      "records_added": 1,
+      "broad_structure_rows_added": 0,
+      "exact_pairs_added": 0,
+      "inherited_source_work": true,
+      "anonymous_receipt_sha256": "5abe01c27041c8ffd61d2b281109be611bb756b65630902976ac6f91de618517",
+      "url": "https://cuiyist.github.io/mattersyn-site/material.html?id=bi2s3-3c46b3&method=thomson-2010-bi2s3-ultrathin-nanowires",
+      "scope": "Main-only, independent scientific/integration checks and local complete build passed. Pages and anonymous file/browser checks passed. Windows source-workflow importer path-alias regression is repaired locally; cross-platform CI rerun remains separate."
+    }
+  ],
+  "newly_published_source_papers": 1,
+  "new_records_published": 1,
   "counting_rule": "Only newly deployed, anonymously verified distinct source contributions count; multiple records, old-page corrections and progress releases do not add paper throughput.",
   "measurement_rule": "Record stage timings and changed-input rework. Do not imply continuous work between scheduled runs.",
   "automation": {
@@ -119,6 +145,21 @@
       "receipt_sha256": "fc926946b2858d37f7fc799974506e894863f07b10340a19ef355e2f40c49a7e",
       "new_records_prepared": 1,
       "previous_records_preserved": 801
+    },
+    {
+      "at": "2026-09-25T17:09:54.363961+00:00",
+      "doi": "10.1021/ja101908k",
+      "stage": "publication",
+      "status": "deployed_and_anonymously_verified",
+      "records_added": 1,
+      "scope": "One inherited main-only source contribution; no additional broad or exact pair credit."
+    }
+  ],
+  "completed_papers": [
+    {
+      "source_id": "thomson2010ja101908k",
+      "stage": "Deployed and anonymously verified; source-workflow portability repair recorded separately",
+      "inherited_work": true
     }
   ]
 }

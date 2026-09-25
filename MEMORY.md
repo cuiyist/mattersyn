@@ -1,3 +1,11 @@
+## 2026-09-25 — Bi2S3 published; acceleration work continues
+
+Thomson (2010), DOI 10.1021/ja101908k, is deployed at the existing MatterSyn site. Source 92b6650d and site 715b2a46 bind the approved release; Pages run 36164470925 succeeded and anonymous data/page checks matched approved hashes at 2026-09-25T17:09:54.363961+00:00. Public browser verification confirmed all twelve precursor illustrations, the stock images and source-figure enlargement. This adds one inherited source contribution and one record after resumption: 802 records, 189 routes, 66 hubs, 52 source groups and 47 formal Readers. Broad structure-evidence rows remain 125; exact sample-coordinate pairs remain zero. The ten-hour trial stays frozen at its earlier result.
+
+The source workflow passed Linux but failed its Windows importer test because a temporary directory used an 8.3 alias. Resolving the root once before traversal fixes the inconsistent path comparison. The eight local synthetic tests now check equivalent directory spellings and reject extra package files as well as tampering. The next CI run will verify both platforms; this engineering repair does not count as another paper or source audit.
+
+Rusch’s 23-record Reader/chemical package passed its separate scoped audit and is being prepared as a private integration overlay. The InP coverage correction passed independently and is applied to a frozen r3 candidate; current-schema variant mapping is active. No new paid processing, downloads or source transfer were used. Four agents and five source claims remain the maximum; daily 8 a.m. reporting remains active.
+
 ## 2026-09-25 Thomson release preparation
 
 Thomson main-only Bi2S3 integration independently passed after the two identity-card additions and Reader binding correction. The original record remains unchanged; 801 prior scientific records and their group/split/eligibility decisions were preserved. The reviewed inventory is now 802 records, 189 routes, 66 hubs, 52 source groups and 47 scoped source readers; publication credit is still zero in the resumed run until deployment is anonymously verified. See the current run-state file and the safe Thomson integration summary. Rusch's 23-record Reader/chemical package and the InP coverage correction delta also passed their separate scoped audits; neither is site-integrated yet.
