@@ -9,6 +9,10 @@ Turn a verified synthesis into a beautiful, understandable interactive page whil
 
 For a focused edit, apply only the relevant parts of this workflow. Do not rebuild a site, re-extract unchanged papers, or add new records merely because this skill was invoked.
 
+## MatterSyn workspace placement
+
+For this project, keep generated builds, scripts and review folders inside the user's existing MatterSyn workspace. Use `repos/mattersyn` for the active source checkout and `repos/mattersyn-site` for the site checkout; keep private evidence and candidates under `research-assets`. Preserve older copies under `archive` when their uncommitted work has not been reconciled. Consult the local WORKSPACE.md after relocation rather than executing historical helper paths. Publish only approved project files through the existing release gate, never the entire local workspace.
+
 ## Locate the context and sources
 
 - Read the project's memory and instructions. Identify whether the user wants a new paper, a new site, an additional page, or an edit to an existing example. Preserve useful previous examples when replacing the featured page.

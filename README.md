@@ -13,6 +13,10 @@ public repository branch does not guarantee that every old GitHub object or cach
 URL has been removed; previously cited old raw source content was anonymously
 reachable again after the repository was made public on 2026-09-24.
 
+## Local workspace organization
+
+Keep the active source and site checkouts together under `repos/mattersyn` and `repos/mattersyn-site` in the existing local MatterSyn workspace. Private research files and temporary builds belong under that workspace's `research-assets`; preserved historical checkouts belong under `archive`. These paths describe the local workspace, not additional folders to upload. Current project memory and skills remain versioned in this source repository. The local WORKSPACE.md contains the historical move map.
+
 ## Reproduce a review candidate
 
 Use Python 3.11 or later with the dependencies pinned in [requirements-data.txt](recipe-atlas/requirements-data.txt). No GPU is needed to build the static website. The input snapshot binds reviewed files and record membership. The selected original source figures remain available in the reader at the user's explicit direction, with citations and supported sample attribution; that display choice does not mean publisher permission was verified. Original papers and SI, extracted full text/OCR, page renders and private working crops remain local.
