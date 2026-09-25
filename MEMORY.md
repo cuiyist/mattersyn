@@ -1,3 +1,15 @@
+## 2026-09-25 — Li2000 copper tin sulfide contribution published
+
+Li et al. (2000), DOI 10.1006/jssc.2000.8772, is live at the existing MatterSyn website. Source commit 073709b0f5f253ff2022d4145d0a507dea9a87fb passed workflow 36115238463; site commit a2bba2ca934e52377a3b21fdb6520cd4095cd43e passed Pages workflow 36115747464. Anonymous verification matched all 18 requested page/data/figure/module/reference hashes. The clean build passed 97 unit tests, 767 page checks, 748 canonical/public record comparisons and the publication boundary. All 747 prior scientific record digests and eligibility were preserved.
+
+The source adds one recipe and one broad synthesis–structure row for the explicitly stated 180°C/15h grain-size condition. The approximately 8nm XRD/TEM result remains a separate context with an unassigned exact synthesis temperature. All five figures are available with traceable scope: XRD, TEM, XPS, absorption and conductivity. Full four-page main reading, independent source checks, integration audit and desktop/mobile checks were completed. Supporting information remains unverified; no exact atomic-coordinate pair is added.
+
+Trial publication totals are four distinct source papers and 45 records, not 45 papers. Wu2008 and Williamson2021 reused inherited source reviews; Li1998 and Li2000 were newly reviewed during this trial. Website totals are 748 records, 147 routes, 56 material/component hubs, 47 primary sources and 42 formal readers. Broad source-checked structure rows total 88 across 29 sources and 74 records; physical-sample deduplication remains unresolved, and exact-coordinate pairs remain zero.
+
+A qualitative wash-count phrase was moved verbatim into the structured qualifier field to preserve it through the publication boundary. The numeric count remains unknown. The narrow scientific-representation and provenance changes were independently rechecked. No gate was weakened. Full PDFs/SI, raw text, page renders and detailed audits stay local; no paid processing or new downloads were used.
+
+Dhaene2022 expanded precursor coverage and Ramasamy2014 Cu–Sb–S curation continue separately. The trial still ends at 13:50:12 UTC / 08:50 Chicago and then pauses for user review. The 500-paper/day target is not achieved; only verified deployments count, and no unattended processing is claimed.
+
 ## 2026-09-25 — Li2000 integrated and independently checked; deployment pending
 
 The Cu2SnS3 contribution from Li et al. (2000), DOI10.1006/jssc.2000.8772, passed source corrections and separate integration review (969d8efd9f90f0d8060dca12f9b9ac3cb987de726909dc8c55e7f3df907f766a). All four supplied main pages were read and visually inspected. SI remains unverified. One canonical route preserves seven operations/branches and five original figures: XRD, TEM, XPS, absorption and conductivity. The explicitly reported180°C/15h grain-size context adds one broad synthesis–structure row; figures with unspecified batch conditions are not assigned that recipe. No exact-coordinate pair is added.

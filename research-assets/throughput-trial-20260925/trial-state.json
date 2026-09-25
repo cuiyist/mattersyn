@@ -788,8 +788,8 @@
     "new_extractions_completed": 2,
     "new_independent_audits_passed": 2,
     "new_integrations_passed": 4,
-    "new_source_papers_published": 3,
-    "new_records_published": 44,
+    "new_source_papers_published": 4,
+    "new_records_published": 45,
     "existing_source_corrections_published": 0,
     "independent_delta_audits_passed": 3,
     "independent_canonical_mapping_audits_passed": 3,
@@ -853,20 +853,21 @@
     {
       "doi": "10.1006/jssc.2000.8772",
       "source_id": "li2000cu2sns3",
-      "stage": "Independent source and integration audits and owner browser checks passed; deployment pending",
+      "stage": "Published and anonymously verified",
       "inherited_pretrial_work": false,
       "authoritative_candidate": "throughput-trial-20260925/next-source-01/r4-additive-final",
       "source_pdf_sha256": "152e23c36084f79c1bbb0490ed2ce9d9bca355128123f7273bb80291647ee6f9",
       "supplied_main_pages": 4,
       "screened_pass_verified": true,
-      "pending": "Reproducible release, deployment and anonymous verification.",
+      "pending": null,
       "year": 2000,
       "bibliographic_note": "Corrected provisional year against supplied main p1 before integration.",
       "r3_freeze_sha256": "454d1a1f4c43a13a035360af0b8f341c89cb102d4e4a083aeb08bca615c9cbcb",
       "independent_r3_delta_audit_sha256": "6233e761838bd3254cb70ebee949ef07a04843c10218e6853f33216e41da3e5a",
       "r4_freeze_sha256": "2083f701583415239af7b04716a389abe607e062ff049c48088c98bdbf3b6940",
       "source_audit_sha256": "d7f29f94188c0ce4b3c53f4db03bc373b7678fd99ce302d64c03195e66ccc385",
-      "independent_integration_audit_sha256": "969d8efd9f90f0d8060dca12f9b9ac3cb987de726909dc8c55e7f3df907f766a"
+      "independent_integration_audit_sha256": "969d8efd9f90f0d8060dca12f9b9ac3cb987de726909dc8c55e7f3df907f766a",
+      "site_commit": "a2bba2ca934e52377a3b21fdb6520cd4095cd43e"
     },
     {
       "source_id": "ramasamy2014cusb",
@@ -932,10 +933,26 @@
       "inherited_pretrial_source_review": false,
       "anonymous_verification_sha256": "83472ace06ed5c6938052c83e6eaae9a75c2328550dcf25853312e622d63f5e9",
       "url": "https://cuiyist.github.io/mattersyn-site/material.html?id=znga2o4-ff2407&method=li-1998-znga2o4-hydrothermal-150c"
+    },
+    {
+      "source_id": "li2000cu2sns3",
+      "doi": "10.1006/jssc.2000.8772",
+      "release_id": "20260925-li2000-reviewed-batch",
+      "verified_at": "2026-09-25T09:02:34.737532+00:00",
+      "source_commit": "073709b0f5f253ff2022d4145d0a507dea9a87fb",
+      "site_commit": "a2bba2ca934e52377a3b21fdb6520cd4095cd43e",
+      "new_source_papers": 1,
+      "new_records": 1,
+      "new_synthesis_routes": 1,
+      "new_source_checked_structure_rows": 1,
+      "new_exact_coordinate_pairs": 0,
+      "inherited_pretrial_source_review": false,
+      "anonymous_verification_sha256": "23bc9d62d9a8b038c597e20454d4f37acfdd1df4889f3006bc45ea11dbf27009",
+      "url": "https://cuiyist.github.io/mattersyn-site/material.html?id=cu2sns3-89db04&method=li2000-cu2sns3-ethylenediamine-solvothermal"
     }
   ],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T08:30:19.145452+00:00",
+  "last_updated_at": "2026-09-25T09:03:39.726215+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,
@@ -1013,7 +1030,17 @@
       "source_id": "batch3",
       "finding": "Private inventory helper initially used source-review status vocabulary instead of inventory vocabulary. Corrected explicit main-only mapping; inventory and page checks passed. An untransformed source-checkout figure test was rerun in the proper prebuild-transformed projection; all97 tests passed.",
       "status": "corrected_required_checks_passed"
+    },
+    {
+      "source_id": "li2000cu2sns3",
+      "finding": "Source publication projection would scrub a qualitative wash-count raw_text field. Moved the full statement verbatim to qualifier, kept numeric count unknown, and independently checked the two-field delta and all dependent hashes. The initial null representation failed the string schema and was corrected to an empty string before release.",
+      "status": "corrected_independently_checked_clean_build_and_public_verification_passed"
+    },
+    {
+      "source_id": "batch3",
+      "finding": "Root passed the release guard library rather than gate.py as the final CLI. The library returned without producing a manifest, so publication stopped. Verified the final artifact matched all 8420 candidate files and the clean snapshot; reran the existing gate.py successfully without altering files or weakening checks.",
+      "status": "corrected_exact_artifact_boundary_gate_passed"
     }
   ],
-  "checkpoint_note": "Published counts remain 3 distinct sources and 44 records. Extraction completion is not audit acceptance or publication. Cu–Sb–S inherited audit/hash reconciliation is a bounded next-source readiness check, not a completed source contribution."
+  "checkpoint_note": "Four distinct source papers and 45 records have been newly deployed and anonymously verified. Wu and Williamson reused inherited source review; Li1998 and Li2000 were reviewed during this trial. Draft extraction and audit counts remain separate."
 }
