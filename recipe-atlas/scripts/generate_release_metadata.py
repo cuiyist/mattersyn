@@ -3,6 +3,23 @@ from pathlib import Path
 import json,html,re,hashlib
 def load(path):return json.loads(path.read_text(encoding='utf-8-sig'))
 def dump(path,value):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+def synchronize_progress_counts(progress,manifest,records,reviews,materials,primary_count):
+    """Bind displayed inventory counts to this artifact, preserving review events."""
+    from build_atlas import synthesis_route
+    published=progress.setdefault('published',{})
+    published.update({
+        'dataset_version':manifest['dataset_version'],
+        'record_count':len(records),
+        'synthesis_route_count':sum(synthesis_route(r) for r in records),
+        'material_hub_count':len(materials),
+        'direct_material_hub_count':sum(not m.get('component_only',False) for m in materials),
+        'component_material_hub_count':sum(bool(m.get('component_only',False)) for m in materials),
+        'public_source_group_count':primary_count,
+        'formal_source_reader_count':len(reviews),
+        'exact_structure_recipe_count':sum(bool(r.get('eligibility',{}).get('exact_structure_recipe',{}).get('eligible')) for r in manifest['records']),
+        'count_basis':'Current artifact records, material index, review index and task eligibility; historical review events are preserved separately.'
+    })
+    return progress
 def progress_label(data):
     if data.get('estimate',{}).get('status')=='paused_for_joint_review':return 'Active papers are published. Work is paused for joint review; no new papers will start.'
     rows=data.get('current_work',[])
@@ -56,7 +73,9 @@ def generate(root,snapshot):
         (folder/'REFERENCES.md').write_text('# MatterSyn references\n\n'+body,encoding='utf-8',newline='\n')
         readme=folder/'README.md';intro=('# MatterSyn website'if folder==dist else'# MatterSyn')+'\n\n[Open the atlas](https://cuiyist.github.io/mattersyn-site/) · [Review progress](https://cuiyist.github.io/mattersyn-site/progress.html)\n\nMatterSyn organizes source-attributed synthesis, characterization and property records. Publication and task-specific training eligibility are separate approvals.\n'
         readme.write_text(readme_with_references(readme.read_text(encoding='utf-8')if readme.exists()else'',intro,body),encoding='utf-8',newline='\n')
-    progress=load(root/'data/release-progress.json');progress['updated_at']=snapshot['updated_at'];dump(dist/'data/review-progress.json',progress)
+    progress=load(root/'data/release-progress.json')
+    synchronize_progress_counts(progress,manifest,records,reviews,load(dist/'data/materials-index.json')['materials'],len(primary))
+    progress['updated_at']=snapshot['updated_at'];dump(dist/'data/review-progress.json',progress)
     home=dist/'index.html';home.write_text(render_banner(home.read_text(encoding='utf-8'),progress),encoding='utf-8',newline='\n')
     binding={'schema':'mattersyn-generated-release-metadata/1','release_id':snapshot['release_id'],'updated_at':snapshot['updated_at'],'source_commit':snapshot['source_commit'],'canonical_records':len(records),'primary_sources':len(primary),'manifest_sha256':hashlib.sha256((dist/'data/dataset-manifest.json').read_bytes()).hexdigest(),'progress_sha256':hashlib.sha256((dist/'data/review-progress.json').read_bytes()).hexdigest(),'bibliography_sha256':hashlib.sha256(body.encode()).hexdigest()}
     dump(dist/'data/release-snapshot.json',binding);return binding
