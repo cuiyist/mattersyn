@@ -45,9 +45,9 @@ async function precursors(host,r){
   host.append(el('h3','Source-reported precursor alternatives'));
   const choiceGrid=el('div',undefined,'reader-chemicals');
   for(const option of alternatives){
-   const material=r.materials.find(item=>item.id===option.chemical_material_id),entry=material&&chemicalEntry(data,r.record_id,material.id);
+   const material=r.materials.find(item=>item.id===option.chemical_material_id),entry=chemicalEntry(data,r.record_id,option.chemical_material_id);
    const card=el('article',undefined,'reader-chemical');
-   card.append(badge('Source-defined alternative','scope'),el('h3',material?.name||option.chemical_material_id),el('div',entry?.displayFormula||entry?.formula||material?.formula||'','reader-formula'),el('p',option.label,'reader-note'));
+   card.append(badge('Source-defined alternative','scope'),el('h3',material?.name||entry?.name||option.chemical_material_id),el('div',entry?.displayFormula||entry?.formula||material?.formula||'','reader-formula'),el('p',option.label,'reader-note'));
    if(entry){card.append(cardImage(entry),button(entry.model3dPath?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}
    const parameters=Object.entries(option.parameters||{});if(parameters.length)card.append(quantities(parameters,false));
    card.append(link('Source details →',recordURL(r.record_id)+'#protocol','reader-data-link'));
