@@ -229,15 +229,19 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':85,'source_groups':27,'records':72,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':87,'source_groups':28,'records':73,'physical_samples_deduplicated':None},broad['counts'])
+        li_rows=[row for row in broad['rows'] if row['source_group']=='li1998znga2o4']
+        self.assertEqual(2,len(li_rows))
+        self.assertEqual({'li-1998-znga2o4-hydrothermal-150c'},{row['record_id'] for row in li_rows})
+        self.assertFalse(any(row['source_group']=='williamson2021' for row in broad['rows']))
         tirosh_rows=[row for row in broad['rows'] if row['source_group']=='tirosh2006']
         self.assertEqual(['tirosh-2006-cofe2o4-method-a-270c'],[row['record_id'] for row in tirosh_rows])
         self.assertEqual(0,strict['counts']['exact_task_ready_records'])
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         page=structure_coverage_html({'structure_recipe_coverage':strict,'structure_outcome_coverage':broad},html.escape,broad['rows'])
-        self.assertIn('Browse all 85 synthesis–structure rows',page)
-        self.assertEqual(85,page.count('Evidence and source locators'))
+        self.assertIn('Browse all 87 synthesis–structure rows',page)
+        self.assertEqual(87,page.count('Evidence and source locators'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))
