@@ -1,3 +1,11 @@
+## 2026-09-25 — ACTIVE TEN-HOUR LOCAL TRIAL; updated user instruction
+
+The user extended the SAME trial to ten hours total. Retain the original 2026-09-25 03:50:12 UTC baseline; the new cutoff is 2026-09-25 13:50:12 UTC (September 25, 08:50 Chicago). This supersedes the three-hour cutoff below. Approximately 208 published distinct sources over ten hours would match 500/day; 209 whole papers would meet or exceed it. This remains an unproven target. Paid processing, external document uploads and new paper downloads remain prohibited. At the end pause curation for the user's website and throughput review. The temporary heartbeat and daily 8 a.m. report both honor the new cutoff; their existing IDs are retained.
+
+CoNi2S4 R6 passed its independent disclosure delta audit; 73 frozen files and unchanged prior assets verified. The integration proposal must call its 14 claim panels issue records, since interpretation uncertainty is not necessarily a contradiction. Cu2S and Dhaene CdSe/CdS current-schema integration packages are being prepared in parallel. Prior source review is inherited and not counted as newly performed trial work. A local Qwen3.5:9b mapping draft produced valid JSON in 9.75 seconds but attached a conflict to the wrong synthesis route; that attribution was rejected. Existing explicit protocol/sample identifiers are indexed deterministically instead. No new paper is published by this checkpoint.
+
+The artifact-derived progress correction passed 91 tests and site/atlas/quality checks. Its scientific record set is unchanged. Count progress and workflow changes as zero new contributions.
+
 ## 2026-09-25 — ACTIVE THREE-HOUR LOCAL TRIAL; stop for joint review afterward
 
 The user authorizes implementing the throughput changes and trying the500/day target for a few hours, explicitly prohibiting paid processing. Trial window:2026-09-25 03:50:12–06:50:12UTC (Chicago September24 22:50–September25 01:50). Target about63 newly published distinct paper contributions; no promise that local capacity reaches it. Baseline:703 records,143 routes,52 material hubs,43 primary source groups,38 formal source readers,85 broad source-linked structure rows and0 exact coordinate pairs. Trial state is research-assets/throughput-trial-20260925/trial-state.json. Count inherited pretrial work separately.

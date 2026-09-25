@@ -3,10 +3,9 @@
   "trial_id": "20260925-three-hour-local",
   "status": "running",
   "started_at": "2026-09-25T03:50:12Z",
-  "stop_at": "2026-09-25T06:50:12Z",
+  "stop_at": "2026-09-25T13:50:12Z",
   "timezone": "America/Chicago",
   "target_papers_per_day": 500,
-  "three_hour_target_papers": 63,
   "target_is_guarantee": false,
   "paid_processing_allowed": false,
   "external_document_transfer_allowed": false,
@@ -791,18 +790,21 @@
     "new_integrations_passed": 0,
     "new_source_papers_published": 0,
     "new_records_published": 0,
-    "existing_source_corrections_published": 0
+    "existing_source_corrections_published": 0,
+    "independent_delta_audits_passed": 1
   },
   "papers": [
     {
       "doi": "10.1021/acsnano.1c00502",
       "source_id": "williamson2021",
-      "stage": "author_correction",
+      "stage": "R6 independent delta audit passed; canonical integration proposal in preparation",
       "authoritative_candidate": "acsnano1c00502/site-candidate-r6",
       "previous_accepted_candidate": "acsnano1c00502/site-candidate-r5",
       "previous_manifest_sha256": "6aa640e4c77b2449ad96e2a6e1cac55714ce7fdd912a2aeddf9e7742b5b07ab1",
       "inherited_pretrial_work": true,
-      "pending": "Three claim disclosure corrections, independent delta audit, canonical mapping and shared Reader integration."
+      "pending": "Three claim disclosure corrections, independent delta audit, canonical mapping and shared Reader integration.",
+      "audit_report_sha256": "8762dc429cc2d6561d6f9aea3e828a6a45dc36cceae51fcf85b0a8a00e5385c6",
+      "remaining_correction": "Call the 14 panels issue records, because interpretation uncertainty is not necessarily a source disagreement."
     },
     {
       "doi": "10.1021/nl801817d",
@@ -815,12 +817,29 @@
     {
       "doi": "10.1021/acsnano.1c08966",
       "source_id": "dhaene2022",
-      "stage": "queued",
+      "stage": "Current-schema mapping and source-bound reader assets in preparation; prior audited extraction and locator correction reused.",
       "inherited_pretrial_work": true,
       "pending": "Reuse independently checked SI locator correction; canonical integration."
     }
   ],
   "publication_events": [],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T03:52:51.833559+00:00"
+  "last_updated_at": "2026-09-25T04:12:06.713161+00:00",
+  "original_planned_hours": 3,
+  "duration_hours": 10,
+  "original_target_papers": 63,
+  "target_papers": 209,
+  "target_equivalent_papers": 208.33333333333334,
+  "extension_authorized_at": "2026-09-25T04:12:06.713161+00:00",
+  "trial_id_note": "Original stable trial ID retained after user extended the same trial to ten hours.",
+  "local_draft_test": {
+    "model": "qwen3.5:9b",
+    "paid_processing": false,
+    "attempts": 2,
+    "valid_json_attempts": 1,
+    "second_attempt_seconds": 9.75,
+    "accepted_as_scientific_mapping": false,
+    "finding": "One conflict was assigned to the wrong synthesis route; rejected. Explicit existing protocol/sample ID joins can be indexed deterministically.",
+    "new_papers_published": 0
+  }
 }
