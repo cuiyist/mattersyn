@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "active",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-25T17:13:28.483916+00:00",
+  "updated_at": "2026-09-25T18:31:53.454873+00:00",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -27,22 +27,22 @@
     {
       "source_id": "rusch-manna-2026",
       "doi": "10.1021/acs.chemmater.5c02845",
-      "stage": "23-record Reader and chemical package independent audit passed with explicit integration notes; overlay preparation active",
+      "stage": "Independent integration passed; canonical contribution applied, complete reproducible release and anonymous verification pending.",
       "inherited_work": true
     },
     {
       "source_id": "inp-triaryl-silyl-phosphine",
-      "stage": "Coverage corrections independently passed and applied to frozen private r3 candidate; current-schema variant translation active",
+      "stage": "36 current-schema records frozen and schema-valid; independent translation audit pending. Separate Reader presentation preparation active.",
       "inherited_work": true,
       "doi": "10.1021/cm500102q"
     },
     {
       "source_id": "li2020acs-chemmater-0c00280",
       "doi": "10.1021/acs.chemmater.0c00280",
-      "stage": "Screened-pass main source verified and absent from canonical contributions; local source extraction started",
+      "stage": "Four main-only schema-valid records frozen; independent source comparison underway.",
       "inherited_work": false,
       "source_sha256": "d60b6e760ddee3ee416cdaca1a7c0cd5ecaf11ff644f45bf346645bcf5986704",
-      "si_scope": "Unavailable/unverified until a matching existing local file is found"
+      "si_scope": "Matching local SI identified in the unscreened legacy archive; not admitted or reviewed in this screened-pass main-document scope."
     }
   ],
   "engineering": [
@@ -65,12 +65,26 @@
     },
     {
       "task": "Windows importer root spelling",
-      "stage": "Canonicalize bundle root before traversal; relative alias and extra-file regression checks passed locally",
+      "stage": "Root-alias fix verified on Windows and Linux; Pages 36167049412 succeeded and anonymous verification matched on 2026-09-25T17:29:57.822995Z.",
       "cause": "GitHub Windows temporary directory used a short-name alias; raw traversal paths were compared with a resolved long-name root",
       "prior_workflow": 36164140782,
       "prior_linux_result": "passed",
       "prior_windows_result": "failed at importer test before website build",
-      "current_ci_rerun": "pending"
+      "current_ci_rerun": "passed: workflow 36166175190, Windows/Linux and artifact comparison"
+    },
+    {
+      "task": "Reduce repeated integration work",
+      "stage": "Reuse exact inherited scientific and identity audits, require complete package link/binding preflight, use additive CAS integration and batch publication; no separate routine status-only releases.",
+      "trial_target_demonstrated": false
+    },
+    {
+      "task": "Offline local-model extraction pilot",
+      "stage": "Completed first 24-field page test and same-page development retest; unsupported quantity in first run shows why independent audit remains required.",
+      "public_receipt": "research-assets/public-audits/local-gpu-draft-pilot-20260925.json",
+      "first_run_seconds": 19.22349520001444,
+      "first_run_values_correct": 23,
+      "fields": 24,
+      "paper_credit": 0
     }
   ],
   "publication_events": [
@@ -153,6 +167,15 @@
       "status": "deployed_and_anonymously_verified",
       "records_added": 1,
       "scope": "One inherited main-only source contribution; no additional broad or exact pair credit."
+    },
+    {
+      "at": "2026-09-25T18:31:53.454873+00:00",
+      "doi": "10.1021/acs.chemmater.5c02845",
+      "stage": "canonical_integration",
+      "status": "independent_integration_passed_pending_publication",
+      "records_added": 23,
+      "broad_rows_added": 18,
+      "receipt_sha256": "e052c3c3f0c3149cfc74a2753a6e5ebfd7168098411c2172bc26b54d12ea3f17"
     }
   ],
   "completed_papers": [
@@ -161,5 +184,15 @@
       "stage": "Deployed and anonymously verified; source-workflow portability repair recorded separately",
       "inherited_work": true
     }
-  ]
+  ],
+  "target_papers_per_hour": 20.833333333333332,
+  "capacity_assessment": {
+    "frozen_trial_papers": 8,
+    "frozen_trial_hours": 10,
+    "measured_trial_papers_per_hour": 0.8,
+    "target_papers_per_hour": 20.833333333333332,
+    "required_rate_multiple": 26.041666666666664,
+    "four_worker_minutes_available_per_completed_paper_at_target": 11.520000000000001,
+    "qualification": "Capacity arithmetic, not a measured speedup. No paid processing or reduced source-review standard authorized."
+  }
 }

@@ -229,7 +229,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':125,'source_groups':33,'records':106,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':143,'source_groups':34,'records':124,'physical_samples_deduplicated':None},broad['counts'])
         added_groups={'ramasamy2014cusb':16,'dhaene2022-main':2,'costanzo2016co':6,'yu1998cde':13}
         added_rows=[row for row in broad['rows'] if row['source_group'] in added_groups]
         self.assertEqual(37,len(added_rows))
@@ -272,8 +272,8 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         page=structure_coverage_html({'structure_recipe_coverage':strict,'structure_outcome_coverage':broad},html.escape,broad['rows'])
-        self.assertIn('Browse all 125 synthesis–structure rows',page)
-        self.assertEqual(125,page.count('Evidence and source locators'))
+        self.assertIn('Browse all 143 synthesis–structure rows',page)
+        self.assertEqual(143,page.count('Evidence and source locators'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))
