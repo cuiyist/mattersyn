@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "status": "integrated_curator_display_interpretations",
-  "scope": "Thirteen source-context-specific, additive morphology interpretations from existing reviewed records and seven linked figure crops.",
+  "scope": "Fifteen source-context-specific, additive morphology interpretations from existing reviewed records and eight linked figure crops.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
   "input_reader_presentation_sha256": "495f0104d0024d8253e549e76c30439e70e5241e38cb8d980cb00ab9e269f5d1",
   "entries": {
@@ -710,6 +710,47 @@
         "TEM size is reported separately as 8.2 ± 1.5 nm; the paper does not define the ± statistic.",
         "No atomic coordinates, ligand shell, exact shape parameters or sample-specific CIF are reconstructed."
       ]
+    },
+    "chen2018ami-s4:s4": {
+      "record_id": "chen2018ami-s4",
+      "sample_id": "s4",
+      "shape": "irregular",
+      "label": "Irregular S4 powder-grain schematic",
+      "status": "curator_interpretation",
+      "basis": "curator_visual_interpretation_of_existing_sem",
+      "rationale": "The SI Figure S2 SEM shows an ensemble of irregular, variably sized and partly faceted projected outlines for the S4 powder. One irregular faceted envelope is used as a qualitative visual cue; it does not reproduce the population distribution.",
+      "evidence": [
+        {
+          "record_id": "chen2018ami-s4",
+          "pointer": "/products/0/morphology",
+          "source_id": "chen2018ami",
+          "locator": "SI PDF p. 2 (printed S-2), Figure S2; caption identifies SEM of S4 powder",
+          "figure_id": "figure-S2"
+        },
+        {
+          "record_id": "chen2018ami-s4",
+          "data_path": "data/paper-reviews/chen2018ami.json",
+          "pointer": "/figures/8",
+          "source_id": "chen2018ami",
+          "locator": "SI PDF p. 2 (printed S-2), Figure S2; 10 um scale bar",
+          "figure_id": "figure-S2",
+          "public_asset": "assets/figures/chen2018ami/figure-S2.png",
+          "asset_sha256": "6e100f2d81b6cf7e897cfdbcf751202fb80d672ebc944fb605821d7537c7eb86"
+        }
+      ],
+      "limitations": [
+        "This is a qualitative interpretation of a 2D SEM field, not a 3D grain reconstruction, facet assignment or size distribution.",
+        "The 10 um scale bar is not an individual grain diameter or a measured particle-size distribution.",
+        "The schematic refers to micron-scale S4 powder grains; it does not represent the minority CsPbBr3 crystallites embedded in the composite.",
+        "Figure S2 is linked to the source-named S4 context, but exact physical batch and aliquot identity are unverified.",
+        "No atomic structure, atom positions or coordinates are inferred."
+      ],
+      "source_sha256": "960fc0348eac6aee5296c7cea7846b4281851922fb76b445425d303a5d55b9b7",
+      "source_hash_scope": "dist/data/records/chen2018ami-s4.json",
+      "recipe_link": "explicit",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Illustrative proportions only; no image-derived size or coordinate estimate."
     }
   },
   "additional_contexts": {
