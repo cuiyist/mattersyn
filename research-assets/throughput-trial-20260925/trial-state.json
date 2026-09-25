@@ -787,26 +787,30 @@
   "stage_counts": {
     "new_extractions_completed": 1,
     "new_independent_audits_passed": 1,
-    "new_integrations_passed": 1,
+    "new_integrations_passed": 3,
     "new_source_papers_published": 1,
     "new_records_published": 4,
     "existing_source_corrections_published": 0,
     "independent_delta_audits_passed": 1,
     "independent_canonical_mapping_audits_passed": 3,
-    "browser_qa_passed": 1
+    "browser_qa_passed": 3
   },
   "papers": [
     {
       "doi": "10.1021/acsnano.1c00502",
       "source_id": "williamson2021",
-      "stage": "39-record canonical mapping independently checked; source-linked Reader integration pending",
+      "stage": "Independent integration audit and owner browser checks passed; release and deployment pending",
       "authoritative_candidate": "acsnano1c00502/shared-reader-integration-proposal-r1",
       "previous_accepted_candidate": "acsnano1c00502/site-candidate-r5",
       "previous_manifest_sha256": "6aa640e4c77b2449ad96e2a6e1cac55714ce7fdd912a2aeddf9e7742b5b07ab1",
       "inherited_pretrial_work": true,
-      "pending": "Stage table sidecars, shared Reader/molecular/figure assets, material hub, full build and browser QA.",
+      "pending": "Clean reproducible release, deployment and anonymous verification.",
       "audit_report_sha256": "8762dc429cc2d6561d6f9aea3e828a6a45dc36cceae51fcf85b0a8a00e5385c6",
-      "canonical_proposal_freeze_sha256": "00259b1a664150aad9afad5dc12bd3c872e28dffe1cde11c42ead9b2196b5bf2"
+      "canonical_proposal_freeze_sha256": "00259b1a664150aad9afad5dc12bd3c872e28dffe1cde11c42ead9b2196b5bf2",
+      "local_canonical_record_count": 39,
+      "selected_public_figure_count": 13,
+      "private_methods_text_crop": true,
+      "independent_integration_audit_sha256": "2954a92a5b9d8c322a1a978bf0051b8fbfea747dc6ce129339b5bb29f5564160"
     },
     {
       "doi": "10.1021/nl801817d",
@@ -832,13 +836,27 @@
     {
       "doi": "10.1021/cm970557m",
       "source_id": "li1998znga2o4",
-      "stage": "Complete two-page source extraction and independent audit passed; Reader package in preparation",
+      "stage": "Independent integration audit and owner browser checks passed; release and deployment pending",
       "inherited_pretrial_work": false,
       "authoritative_candidate": "throughput-trial-20260925/li1998-znga2o4",
       "candidate_sha256": "dc653bae89faeef1cfa99cd3ffef01ea0c8fb6cee0d15e259fa1185f35081801",
       "source_audit_sha256": "ddadf090250c626e46789c495a412929c34974caea4b1b3f98e52fb3242391f3",
-      "pending": "Molecule/operation/particle illustrations, source figure provenance integration, independent mapping and website QA.",
-      "candidate_record_count": 1
+      "pending": "Clean reproducible release, deployment and anonymous verification.",
+      "candidate_record_count": 1,
+      "independent_integration_audit_sha256": "2954a92a5b9d8c322a1a978bf0051b8fbfea747dc6ce129339b5bb29f5564160"
+    },
+    {
+      "doi": "10.1006/jssc.2000.8772",
+      "source_id": "li2000cu2sns3",
+      "stage": "Fresh full-source extraction in progress",
+      "inherited_pretrial_work": false,
+      "authoritative_candidate": "throughput-trial-20260925/next-source-01",
+      "source_pdf_sha256": "152e23c36084f79c1bbb0490ed2ce9d9bca355128123f7273bb80291647ee6f9",
+      "supplied_main_pages": 4,
+      "screened_pass_verified": true,
+      "pending": "Complete extraction, independent audit, Reader integration and release gates.",
+      "year": 2000,
+      "bibliographic_note": "Corrected provisional year against supplied main p1 before integration."
     }
   ],
   "publication_events": [
@@ -861,7 +879,7 @@
     }
   ],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T05:28:24.603875+00:00",
+  "last_updated_at": "2026-09-25T06:31:53.251639+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,
@@ -894,6 +912,21 @@
       "source_id": "wu2008",
       "finding": "Original figures moved without byte changes to the existing source-figure publication path; explicit figure/record bindings preserved.",
       "status": "corrected"
+    },
+    {
+      "source_id": "li1998znga2o4",
+      "finding": "Reader numeric fact projection initially omitted units, approximation markers and lower bound. Restored from unchanged canonical quantities, including >95% Ga yield.",
+      "status": "corrected_and_integration_rechecked_pending_clean_release"
+    },
+    {
+      "source_id": "williamson2021",
+      "finding": "Selected figure filenames and SI role metadata did not match existing release gate schema. Renamed13 public delivery paths with identical image bytes; refreshed source bindings. Added compact public table index to resolve a missing context link.",
+      "status": "corrected_and_integration_rechecked_pending_clean_release"
+    },
+    {
+      "source_id": "batch2",
+      "finding": "Root accidentally copied an auxiliary package metadata-status-delta.json into canonical records; schema build rejected it. Removed only that auxiliary integration copy. Inventory also needed its distinct review-status vocabulary and an explicit38-row experimental category.",
+      "status": "corrected_and_integration_rechecked_pending_clean_release"
     }
   ]
 }

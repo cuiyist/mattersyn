@@ -1,14 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.36.0",
-  "record_count": 707,
-  "group_count": 44,
+  "dataset_version": "0.37.0",
+  "record_count": 747,
+  "group_count": 46,
   "families": [
     "Cadmium dithiocarbamate precursor and CdSe/CdS quantum belts",
     "Cassiterite tin dioxide colloids",
     "CdSe cores and CdSe/CdS giant quantum dots",
     "CdTe nanocrystals grown on oxidized multiwalled carbon nanotubes",
     "Ceria precipitation with triethanolamine",
+    "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
     "Colloidal semiconductor nanocrystals",
     "CsMnCl3 nanocrystal phase and luminescence",
     "FePt–CdS heterodimers and source-linked precursor/control contexts",
@@ -49,7 +50,8 @@
     "colloidal copper(I) sulfide nanocrystals",
     "lead-halide perovskite composites",
     "lead-halide perovskite nanocrystals",
-    "magnetic oxide nanocrystals"
+    "magnetic oxide nanocrystals",
+    "zinc gallate oxide nanocrystals"
   ],
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
   "records": [
@@ -17615,6 +17617,75 @@
       "components": [
         "In",
         "aluminosilicate zeolite X"
+      ]
+    },
+    {
+      "record_id": "li-1998-znga2o4-hydrothermal-150c",
+      "title": "Li et al. (1998): ZnGa2O4 hydrothermal synthesis at 150 °C",
+      "formula": "ZnGa2O4",
+      "family": "zinc gallate oxide nanocrystals",
+      "method": "Hydrothermal synthesis with metallic zinc regulation",
+      "record_type": "literature_protocol",
+      "source_year": 1998,
+      "source_doi": "10.1021/cm970557m",
+      "revision": 1,
+      "record_sha256": "6ae4a0b045db9dac73e9eefa099fb5af3bf3f31bdfe891d9aecde12abe5adf48",
+      "recipe_signature": "191e208673326adde2a0d1fc6325d06cc02077a8ebb4e2982e9804a58c29e7c9",
+      "group_id": "group-6456a4922c3d",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/li-1998-znga2o4-hydrothermal-150c.json",
+      "page_url": "records/li-1998-znga2o4-hydrothermal-150c.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnGa2O4"
       ]
     },
     {
@@ -47084,6 +47155,2697 @@
       "collection": "reviewed_literature",
       "components": [
         "CdS"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-hot-injection",
+      "title": "Williamson et al. (2021) · CoNi2S4 hot-injection route",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "Hot injection; design-of-experiments (DOE) source context",
+      "record_type": "literature_protocol",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "c377fe299397b849c63a234847848dd707d1f996831c4d391a9866e85b73c48a",
+      "recipe_signature": "5e60ca6ef015d5d4933788089389ac15bba12e4674d74a238c207c905332940a",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-hot-injection.json",
+      "page_url": "records/williamson-2021-coni2s4-hot-injection.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-1a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 1a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "149f514b0e8cab615f39e65c40e74cbbe54de387a8f41dfa60d05a2c831be4bc",
+      "recipe_signature": "e6e795ca0120de3aae396de7f1724441a86308a57340c0c5b713b6bfff8c1a94",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-1a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-1a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-1c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 1c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "0e264f2edca5ece367edad2f61e1466df3ae0b338ca127a55fe8236b57de0af4",
+      "recipe_signature": "2cdc049e00a217b31193fc587eeb0a60f8640d92b998e8273d0743e711a19b60",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-1c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-1c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-2a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 2a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "7ca729a3d3ec0f46e132b097d6de8ce751438339ea00397acc420b84e6cc6de0",
+      "recipe_signature": "1e2a8155affb97bc97d473cf36093f9b23cfcf0e058ac3e76006e32c08935ac4",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-2a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-2a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-2c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 2c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "6f65bc088b134ea9929209c2ecb8c7fda95b539a2612d35891236f9e14d1220d",
+      "recipe_signature": "74087d2485b5d1fea06ae3a7b45306f03ca425468be8e360076f539f17084192",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-2c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-2c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-3a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 3a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "7a8249b9701121ba5c387008cf8ea36cb82caf3d59f64e15b42873270de9b387",
+      "recipe_signature": "2cdc049e00a217b31193fc587eeb0a60f8640d92b998e8273d0743e711a19b60",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-3a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-3a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-3b",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 3b",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "ca9269efceff8efa9e6a5b6cdcf7ed28095dbe80c093be4a579aa65eb3b35add",
+      "recipe_signature": "2cdc049e00a217b31193fc587eeb0a60f8640d92b998e8273d0743e711a19b60",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-3b.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-3b.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-3c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 3c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "9011dac29dc83550835b71db0b938c2f9caa52f2bb149224183f496e61825f4a",
+      "recipe_signature": "e6e795ca0120de3aae396de7f1724441a86308a57340c0c5b713b6bfff8c1a94",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-3c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-3c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-3d",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 3d",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "aa1007cb7de14386fd00d80408cf974e3795fd5c762c9b191c8a5e221abe62ab",
+      "recipe_signature": "e6e795ca0120de3aae396de7f1724441a86308a57340c0c5b713b6bfff8c1a94",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-3d.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-3d.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-4a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 4a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "aa73653f8944c2edbe98c573d8bb64750372f0011bc538b6ae32774f1b13d1c1",
+      "recipe_signature": "74087d2485b5d1fea06ae3a7b45306f03ca425468be8e360076f539f17084192",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-4a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-4a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-4c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 4c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "4e3072ceb7aa408067f48cb2a3cbfe1e173e753eb342810e113646545d9128ee",
+      "recipe_signature": "1e2a8155affb97bc97d473cf36093f9b23cfcf0e058ac3e76006e32c08935ac4",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-4c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-4c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-5a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 5a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "24bb11c0d5b516ba395ce85fe01a9a9a4e1750f9b3d56c4c49c77c8502290dae",
+      "recipe_signature": "162e5ca9f4e3c0991c61078cef1cb69ad366abcd2549e5d52b47a596ff074ef1",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-5a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-5a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-5c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 5c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "ae75e10a8b3811a7e18225c3d0062e2a04c69376d9dfd94e376133723bd783e7",
+      "recipe_signature": "927ea627aac5ccc9dd512f2ee5ff18fd92cc718ad620d5fb35eb335df39e5313",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-5c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-5c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-5d",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 5d",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "d5cadd2e9f6006caae893d464d3a799b363c246d627b5e4b06c74f3cf8c75acf",
+      "recipe_signature": "927ea627aac5ccc9dd512f2ee5ff18fd92cc718ad620d5fb35eb335df39e5313",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-5d.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-5d.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-6a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 6a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "146b18853fb84e14d72885956ac1dc6b2c799aa1a56d23da755024c673a9ca02",
+      "recipe_signature": "f6e504227a3c49517cfcaee7d2646c55b021c0f1b891bda1edcee486ace76fe7",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-6a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-6a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-6c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 6c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "2888ea913c4f387a91ef860b8b685a2471e63c4322fedbf3838b59364728c33c",
+      "recipe_signature": "41ead4f6f7427b8c16c38f76b32c1273635da5cd6bd9d3098333a59d282d4db4",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-6c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-6c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-6d",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 6d",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "2954fc9bac5819f97e1a2426ecf5ba3c7dae07175d6221c7d6e72f162d87b39f",
+      "recipe_signature": "41ead4f6f7427b8c16c38f76b32c1273635da5cd6bd9d3098333a59d282d4db4",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-6d.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-6d.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-7a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 7a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "db27a64b432d7430615ca19ae7dde1c53d0f48835432bd9e62c4a10d0bf15558",
+      "recipe_signature": "41ead4f6f7427b8c16c38f76b32c1273635da5cd6bd9d3098333a59d282d4db4",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-7a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-7a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-7c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 7c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "4a8258c9bff4697a687a6888ad06cc514758736938ed970f0d99bdfe31ad501a",
+      "recipe_signature": "f6e504227a3c49517cfcaee7d2646c55b021c0f1b891bda1edcee486ace76fe7",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-7c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-7c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-8a",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 8a",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "4d4d91b16a5aa844b6068276e708b3574762ecfbe4ee3606a4a351f936933e98",
+      "recipe_signature": "927ea627aac5ccc9dd512f2ee5ff18fd92cc718ad620d5fb35eb335df39e5313",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-8a.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-8a.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-8b",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 8b",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "ec186de30991c862f31aac216cae127d2677a0db62a200614137b0e38ad072bc",
+      "recipe_signature": "927ea627aac5ccc9dd512f2ee5ff18fd92cc718ad620d5fb35eb335df39e5313",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-8b.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-8b.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-screen-8c",
+      "title": "Williamson et al. (2021) · screening Table 1/2 source-run row 8c",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "0a3ad33dbc65224370da1171bf87476d3bc5b8e49f8eabd9d4a074918a13cabd",
+      "recipe_signature": "162e5ca9f4e3c0991c61078cef1cb69ad366abcd2549e5d52b47a596ff074ef1",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-screen-8c.json",
+      "page_url": "records/williamson-2021-coni2s4-screen-8c.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-01",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 01",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "2c9cf5c7cc4647d5820ab28344e5e249df094bc687dbf5e9dd1f548401431a7d",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-01.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-01.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-02",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 02",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "a24504370992b0d3320a9a4bb7bb5464cc228d7dae6cb9ae3ea78c8807e1fc3a",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-02.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-02.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-03",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 03",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "aa6f8513e50a4701cb87d846d2fac292ebe62fedc17cfeb67cf747863152a9b1",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-03.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-03.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-04",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 04",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "a41063b352486ef9645ef3a4794ed5f6f40adbd81be08cd7e864be6db9ee6048",
+      "recipe_signature": "929ddfb54ed9420465032f0634276a46d9c17761d1d6487f910ae169d20498df",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-04.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-04.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-05",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 05",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "cccf045738325457601f100c36068d8f4d9b151a616096c76dd32a87c03c19da",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-05.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-05.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-06",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 06",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "01291d79a0e8ae09de2fa544325fb573ba621c8df16953c33ac1452a10c8afa5",
+      "recipe_signature": "4f2d308ff1c9d6ad039a10a7cd60f43e8c01cc97c015a1feefd03d7a7bd6417e",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-06.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-06.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-07",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 07",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "c5f20d95bc3d6e2e8f021cdf102b2d2bcae20f36976463cbdd435b98463422c6",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-07.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-07.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-08",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 08",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "f4733bcbda5f0116999527ab3b787db375713a4fa5a4f712f4a7fa94f6272660",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-08.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-08.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-09",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 09",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "550ebc211293da79cbae702b908b917262ef229005587bb3417b88b4d88af00d",
+      "recipe_signature": "4f2d308ff1c9d6ad039a10a7cd60f43e8c01cc97c015a1feefd03d7a7bd6417e",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-09.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-09.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-10",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 10",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "d9b39f8cd3b10ad9fe86452624fb3c46f791e29aab096ae76dc59fe6af084fca",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-10.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-10.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-11",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 11",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "40d5b8084445bbce5e1e77609801efda258d23c2d30e9afef79eba76e2b0ce2d",
+      "recipe_signature": "4f2d308ff1c9d6ad039a10a7cd60f43e8c01cc97c015a1feefd03d7a7bd6417e",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-11.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-11.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-12",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 12",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "f575a35aec83472cdc2cd8ef1113c29449b294b7c096c85951efdf79fa089abc",
+      "recipe_signature": "929ddfb54ed9420465032f0634276a46d9c17761d1d6487f910ae169d20498df",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-12.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-12.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-13",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 13",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "2cf955c8f88cb2b322f159937441f7ddf7a4f985c84f193edf630f02a33a2397",
+      "recipe_signature": "929ddfb54ed9420465032f0634276a46d9c17761d1d6487f910ae169d20498df",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-13.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-13.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-14",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 14",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "8703b8c34e2517e4a37bcac713c03076d3b79419005ee4e3f9d56f2085bbc526",
+      "recipe_signature": "929ddfb54ed9420465032f0634276a46d9c17761d1d6487f910ae169d20498df",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-14.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-14.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-15",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 15",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "c3e944ecce36c1463c00261962368f1892ae97770f875fa297e7a62f58157fd3",
+      "recipe_signature": "929ddfb54ed9420465032f0634276a46d9c17761d1d6487f910ae169d20498df",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-15.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-15.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-16",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 16",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "bb0a8e67f8dfbb5f57fad0ab138f122355c9c9c3c7ccbd3810dab1be043f8208",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-16.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-16.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
+      ]
+    },
+    {
+      "record_id": "williamson-2021-coni2s4-table3-17",
+      "title": "Williamson et al. (2021) · main Table 3 Doehlert real-setting row 17",
+      "formula": "CoNi2S4",
+      "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+      "method": "DOE hot-injection row; recipe-to-tabulated-response link only",
+      "record_type": "experiment",
+      "source_year": 2021,
+      "source_doi": "10.1021/acsnano.1c00502",
+      "revision": 1,
+      "record_sha256": "edb8403abb3c40b736b219d5121b6c35a8457e83ef5e036e0090e673865c01ec",
+      "recipe_signature": "db057ce2a7d927abe2dadc9e7fa578c648f113799648c0c21dd8ab6cebb50409",
+      "group_id": "group-4bdd7eff5f9b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/williamson-2021-coni2s4-table3-17.json",
+      "page_url": "records/williamson-2021-coni2s4-table3-17.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CoNi2S4"
       ]
     },
     {

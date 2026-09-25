@@ -3,7 +3,7 @@
   "status": "integrated_curator_display_interpretations",
   "scope": "Fifteen source-context-specific, additive morphology interpretations from existing reviewed records and eight linked figure crops.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
-  "input_reader_presentation_sha256": "0e08764dab562f67d86a29f5cd6565e18c55518f143721d240b386315ee86cc9",
+  "input_reader_presentation_sha256": "2b0813783556ce9d9fc430bfb19c27a74197a364e75a0f91c4139913b57d2abc",
   "entries": {
     "evans-2010-pbse-tem:pbse-tem-spheres": {
       "record_id": "evans-2010-pbse-tem",
@@ -775,6 +775,39 @@
         "Reported diameter is 5.4 ± 0.4 nm; the source does not define the uncertainty statistic or particle count.",
         "No morphology is assigned to the separate absorption or photoluminescence aliquots."
       ]
+    },
+    "li-1998-znga2o4-hydrothermal-150c:tem-context": {
+      "record_id": "li-1998-znga2o4-hydrothermal-150c",
+      "sample_id": "tem-context",
+      "shape": "sphere",
+      "label": "Conceptual spherical particle · source text reports mean ≈10 nm",
+      "status": "curator_interpretation",
+      "basis": "reported_description_to_schematic",
+      "rationale": "Source text describes nonagglomerative spherical particles averaging about 10 nm. The drawing is a conceptual envelope; the image is not used for size estimation.",
+      "evidence": [
+        {
+          "record_id": "li-1998-znga2o4-hydrothermal-150c",
+          "pointer": "/products/1/morphology",
+          "source_id": "li1998znga2o4",
+          "locator": "Main PDF p. 1 / printed p. 17, TEM paragraph; p. 2 / printed p. 18, Figure 2 caption",
+          "figure_id": "figure-2",
+          "panel": "full image",
+          "public_asset": "assets/paper-reviews/li1998znga2o4/figure-2.jpg",
+          "asset_sha256": "3257f9dd4a23bbe84d21c83473a2de4be65dbdcd6f2284033e26254881087bff"
+        }
+      ],
+      "limitations": [
+        "Conceptual, not to scale; ≈10 nm is a textual mean, not an image-derived diameter.",
+        "Figure 2 is 135 × 215 px with a 100 nm bar; native low resolution retained.",
+        "No particle count, uncertainty, size distribution, image-derived aggregation score, or physical batch link to XRD.",
+        "No facets, ligand shell, atomic coordinates or crystal cell are inferred."
+      ],
+      "source_sha256": "062508fd6e45b3f0cb7219da4b26261ea6e21a23ab4713afde1882864cff58df",
+      "source_hash_scope": "dist/data/records/li-1998-znga2o4-hydrothermal-150c.json",
+      "recipe_link": "explicit",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Illustrative proportions only; no image-derived dimension or coordinate estimate."
     }
   },
   "additional_contexts": {

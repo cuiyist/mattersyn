@@ -10,6 +10,55 @@ def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def write(p,x):
     p.parent.mkdir(parents=True,exist_ok=True)
     p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+from pathlib import PurePosixPath, PureWindowsPath
+
+def stage_reader_evidence(c):
+    """Copy declared CSVs and a matching reader sidecar within one paper's dist folder."""
+    paper_id=c.get('paper_id')
+    if not isinstance(paper_id,str) or not re.fullmatch(r'[a-z0-9-]+',paper_id):
+        raise ValueError('Invalid paper id for evidence sidecars')
+    rels={x.get('source_data_path') for x in c.get('tables',[]) if x.get('source_data_path')}
+    sidecar=PurePosixPath('data')/'paper-evidence'/paper_id/'reader-sidecar.json'
+    sidecar_src=ROOT.joinpath(*sidecar.parts)
+    if sidecar_src.is_file():rels.add(sidecar.as_posix())
+    source_root_path=ROOT.resolve()/'data'/'paper-evidence'/paper_id
+    source_root=source_root_path.resolve()
+    dist_root_path=ROOT.resolve()/'dist'/'data'/'paper-evidence'/paper_id
+    dist_root=dist_root_path.resolve()
+    dist_base=(ROOT.resolve()/'dist').resolve()
+    root_path=ROOT.resolve()
+    if not dist_base.is_relative_to(root_path):
+        raise ValueError('Generated dist root leaves the project root')
+    if source_root!=source_root_path or not source_root.is_relative_to((ROOT.resolve()/'data'/'paper-evidence').resolve()):
+        raise ValueError('Paper evidence source root leaves data/paper-evidence')
+    if dist_root!=dist_root_path or not dist_root.is_relative_to(dist_base):
+        raise ValueError('Paper evidence destination root leaves dist')
+    for raw in sorted(rels):
+        if not isinstance(raw,str) or not raw or '\\' in raw or '?' in raw or '#' in raw:
+            raise ValueError('Unsafe paper-evidence path syntax: '+str(raw))
+        posix=PurePosixPath(raw);win=PureWindowsPath(raw)
+        if posix.is_absolute() or win.is_absolute() or win.drive or win.root:
+            raise ValueError('Absolute paper-evidence path rejected: '+raw)
+        raw_parts=raw.split('/')
+        parts=posix.parts
+        if any(part in ('','.','..') for part in raw_parts) or any(part in ('','.','..') for part in parts):
+            raise ValueError('Traversal or empty paper-evidence path segment: '+raw)
+        if len(parts)<4 or parts[:3]!=('data','paper-evidence',paper_id):
+            raise ValueError('Sidecar must be under this paper id: '+raw)
+        if not all(re.fullmatch(r'[A-Za-z0-9._-]+',part) for part in parts):
+            raise ValueError('Unsupported paper-evidence path character: '+raw)
+        src=ROOT.joinpath(*parts).resolve()
+        if not src.is_relative_to(source_root) or not src.is_file():
+            raise ValueError('Unsafe or missing paper-evidence source: '+raw)
+        dst=dist_root.joinpath(*parts[3:])
+        dst.parent.mkdir(parents=True,exist_ok=True)
+        resolved_dst=dst.resolve()
+        if not resolved_dst.is_relative_to(dist_root):
+            raise ValueError('Paper-evidence destination leaves this paper folder: '+raw)
+        shutil.copy2(src,resolved_dst)
+        if hashlib.sha256(src.read_bytes()).hexdigest()!=hashlib.sha256(resolved_dst.read_bytes()).hexdigest():
+            raise ValueError('Evidence sidecar copy hash mismatch: '+raw)
+
 def validate(c):
     errors=[]
     chars=c.get('characterization_inventory',[])
@@ -43,7 +92,7 @@ def validate(c):
 def main():
     index=[]
     for p in sorted(DATA.glob('*.json')):
-        c=display_view(read(p),ROOT,p.stem+'-private-asset-provenance.json');errors=validate(c)
+        c=display_view(read(p),ROOT,p.stem+'-private-asset-provenance.json');stage_reader_evidence(c);errors=validate(c)
         if errors:raise ValueError(p.name+': '+repr(errors))
         scope=source_review_scope(c)
         c['review_scope_label']=scope['label']

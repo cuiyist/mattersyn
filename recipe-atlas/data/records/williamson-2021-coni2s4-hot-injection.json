@@ -1,0 +1,1724 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "williamson-2021-coni2s4-hot-injection",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Williamson et al. (2021) · CoNi2S4 hot-injection route",
+  "material": {
+    "formula": "CoNi2S4",
+    "family": "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
+    "elements": [
+      "Co",
+      "Ni",
+      "S"
+    ],
+    "components": [
+      "CoNi2S4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection; design-of-experiments (DOE) source context",
+  "sources": [
+    {
+      "id": "williamson2021",
+      "doi": "10.1021/acsnano.1c00502",
+      "title": "Statistical Multiobjective Optimization of Thiospinel CoNi2S4 Nanocrystal Synthesis via Design of Experiments",
+      "authors": "Williamson, E. M.; Tappan, B. A.; Mora-Tamez, L.; Barim, G.; Brutchey, R. L.",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsnano.1c00502",
+      "main_status": "All 12 supplied main-article pages were read and visually inspected in the hash-bound source review; R6 changes only bounded claim disclosures.",
+      "si_status": "DOI-linked SI reviewed as a separate 26-page source. Exact title differs from the article title by hyphenation only; author lists match; main PDF p10/printed p9431 supplies the DOI-specific Associated Content link.",
+      "reuse_status": "Citation and source-linked factual extraction. Original source-image display follows the user's project preference; this is not a license-clearance finding."
+    },
+    {
+      "id": "williamson2021-si",
+      "doi": null,
+      "title": "Statistical Multi-Objective Optimization of Thiospinel CoNi2S4 Nanocrystal Synthesis via Design of Experiments",
+      "authors": "Williamson, E. M.; Tappan, B. A.; Mora-Tamez, L.; Barim, G.; Brutchey, R. L.",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsnano.1c00502",
+      "main_status": "Supporting Information source document; its own PDF is separately source-hash bound.",
+      "si_status": "Main-linked SI; 26 pages reviewed. Exact printed SI cover title preserved.",
+      "reuse_status": "Citation and source-linked factual extraction. Original source-image display follows the user's project preference; this is not a license-clearance finding."
+    }
+  ],
+  "lineage": {
+    "source_group": "williamson2021",
+    "recipe_family": "williamson2021-coni2s4-doe",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoNi2S4 study target; per-row composition is not independently established",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p1 / printed p9422, article title and target study; see paper-review for full page map"
+        }
+      ],
+      "note": "Nominal target context, not a row-specific compositional measurement."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF pp2–9 / printed pp9423–9430; phase claims are cohort-specific and are not a route-wide specimen assignment"
+        }
+      ],
+      "note": "The paper reports multiple phase/characterization cohorts. Do not project the CoNi2S4 label onto every DOE row."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "No single intended size target for this table row"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "Nanocrystallites; row/group morphology and shape are cohort-specific",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p1 / printed p9422, title and abstract"
+        }
+      ],
+      "note": "The common route record does not assert a single morphology for all products."
+    }
+  },
+  "materials": [
+    {
+      "id": "cobalt-acac",
+      "name": "Cobalt(II) acetylacetonate",
+      "formula": "Co(acac)2",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": 2724216,
+        "smiles": "CC(=O)[CH-]C(=O)C.CC(=O)[CH-]C(=O)C.[Co+2]"
+      },
+      "quantities": {
+        "reported_mass_g": {
+          "value": null,
+          "minimum": 0.5,
+          "maximum": 1.5,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported mass range.",
+          "raw_text": "0.50–1.50 g",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, cobalt(II) acetylacetate charge"
+            }
+          ],
+          "derivation": null
+        },
+        "reported_amount_mmol": {
+          "value": null,
+          "minimum": 0.2,
+          "maximum": 0.6,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported amount range; conflicts with the named salt's reported mass.",
+          "raw_text": "0.20–0.60 mmol",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, cobalt(II) acetylacetate charge"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Source uses the spelling acetylacetate in Methods. Preserve the reported mass and mmol independently; do not correct their incompatibility or back-calculate a recipe."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "nickel-acac",
+      "name": "Nickel(II) acetylacetonate",
+      "formula": "Ni(acac)2",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": 9834912,
+        "smiles": "C/C(=C/C(=O)C)/[O-].C/C(=C/C(=O)C)/[O-].[Ni+2]"
+      },
+      "quantities": {
+        "reported_mass_g": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported mass.",
+          "raw_text": "0.50 g",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, nickel(II) acetylacetate charge"
+            }
+          ],
+          "derivation": null
+        },
+        "reported_amount_mmol": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported amount; conflicts with the named salt's reported mass.",
+          "raw_text": "0.20 mmol",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, nickel(II) acetylacetate charge"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Source uses the spelling acetylacetate in Methods. Mass and amount are preserved as separate source claims, not reconciled."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "oleylamine",
+      "name": "Oleylamine (commercial grade; isomer composition unreported)",
+      "formula": null,
+      "role": "reaction_medium_and_amine_ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": 5356789,
+        "smiles": "CCCCCCCC/C=C\\CCCCCCCCN"
+      },
+      "quantities": {
+        "screening_low_high_mL": {
+          "value": null,
+          "minimum": 4,
+          "maximum": 10,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Screening factor bounds.",
+          "raw_text": "4 and 10 mL factor levels",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p3 / printed p9424, Table 1"
+            }
+          ],
+          "derivation": null
+        },
+        "base_level_mL": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Separately described base level.",
+          "raw_text": "5 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p5 / printed p9426, DOE description"
+            }
+          ],
+          "derivation": null
+        },
+        "optimization_fixed_mL": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Fixed during DOE; described as midpoint between base 5 mL and high 10 mL.",
+          "raw_text": "7 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p5 / printed p9426, DOE description"
+            }
+          ],
+          "derivation": null
+        },
+        "general_method_range_mL": {
+          "value": null,
+          "minimum": 4,
+          "maximum": 10,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "General synthesis procedure.",
+          "raw_text": "4–10 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "The 4 mL factor low level, 5 mL base description, and 7 mL optimization setting are distinct source statements; their relationship is unresolved. Source grade is not a batch-purity/isomer-composition claim. Dried/degas at 120 °C for 5 h under vacuum; pressure unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "dodecanethiol",
+      "name": "1-Dodecanethiol (DDT)",
+      "formula": null,
+      "role": "sulfur_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": 8195,
+        "smiles": null
+      },
+      "quantities": {
+        "general_volume_range_mL": {
+          "value": null,
+          "minimum": 0.125,
+          "maximum": 1.0,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "General procedure range only; no row-specific injection volume or stock concentration.",
+          "raw_text": "0.125–1 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, DDT charge"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "No stock solution/concentration reported. Co:DDT factors are printed ratios; they are not converted to individual DDT charges."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "hexanes",
+      "name": "Hexanes (isomer/grade unspecified; n-hexane shown only as a reference drawing)",
+      "formula": null,
+      "role": "solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "post_reaction_dilution_mL": {
+          "value": null,
+          "minimum": 3,
+          "maximum": 8,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Post-reaction dilution.",
+          "raw_text": "3–8 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "wash_redispersion_mL": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Intermediate redispersion during workup.",
+          "raw_text": "5 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "final_redispersion_mL": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Final redispersion.",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "The source says hexanes; the n-hexane molecular depiction is only a reference structure and does not assign the source solvent isomer mixture."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol",
+      "formula": null,
+      "role": "antisolvent_and_wash",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": 702,
+        "smiles": null
+      },
+      "quantities": {
+        "first_wash_volume_mL": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "The first ethanol fill volume is not reported.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "second_wash_volume_mL": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Second wash.",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "First wash volume is unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": null,
+      "role": "wash_solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": 180,
+        "smiles": null
+      },
+      "quantities": {
+        "second_wash_volume_mL": {
+          "value": 35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Second wash.",
+          "raw_text": "35 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "third_wash_volume_mL": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Third wash.",
+          "raw_text": "45 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, workup"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen-reaction",
+      "name": "Nitrogen gas (reaction atmosphere)",
+      "formula": "N2",
+      "role": "reaction_atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": 947,
+        "smiles": null
+      },
+      "quantities": {
+        "flow_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Flow rate and pressure are not reported.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, synthesis under flowing N2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Reaction atmosphere. Do not conflate with nitrogen used for thermogravimetric analysis."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen-tga",
+      "name": "Nitrogen gas (TGA atmosphere; analytical only)",
+      "formula": "N2",
+      "role": "characterization_atmosphere",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": 947,
+        "smiles": null
+      },
+      "quantities": {
+        "flow_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Analytical atmosphere; not a synthesis reagent charge.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p3 / printed p9424, thermogravimetric-analysis methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Analytical/TGA context only; never include as a reaction step input."
+      ],
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "conditioned-ligand-mixture",
+      "name": "Oleylamine/DDT conditioned under vacuum",
+      "kind": "mixture",
+      "parent_ids": [
+        "oleylamine",
+        "dodecanethiol"
+      ]
+    },
+    {
+      "id": "precursor-charge",
+      "name": "Metal precursors and conditioned organic medium",
+      "kind": "mixture",
+      "parent_ids": [
+        "conditioned-ligand-mixture",
+        "cobalt-acac",
+        "nickel-acac"
+      ]
+    },
+    {
+      "id": "vacuum-heated-charge",
+      "name": "Charge after 120 °C vacuum hold",
+      "kind": "mixture",
+      "parent_ids": [
+        "precursor-charge"
+      ]
+    },
+    {
+      "id": "nucleated-charge",
+      "name": "Charge after N2 ramp/nucleation",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "vacuum-heated-charge",
+        "nitrogen-reaction"
+      ]
+    },
+    {
+      "id": "ddt-reaction-mixture",
+      "name": "Post-injection reaction mixture",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nucleated-charge",
+        "dodecanethiol"
+      ]
+    },
+    {
+      "id": "cooled-crude-mixture",
+      "name": "Naturally cooled crude product mixture",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "ddt-reaction-mixture"
+      ]
+    },
+    {
+      "id": "first-wash-precipitate",
+      "name": "Retained precipitate after first ethanol workup",
+      "kind": "fraction",
+      "parent_ids": [
+        "cooled-crude-mixture",
+        "hexanes",
+        "ethanol"
+      ]
+    },
+    {
+      "id": "second-wash-precipitate",
+      "name": "Retained precipitate after ethanol/acetone wash",
+      "kind": "fraction",
+      "parent_ids": [
+        "first-wash-precipitate",
+        "ethanol",
+        "acetone"
+      ]
+    },
+    {
+      "id": "third-wash-precipitate",
+      "name": "Retained precipitate after final acetone wash",
+      "kind": "fraction",
+      "parent_ids": [
+        "second-wash-precipitate",
+        "acetone"
+      ]
+    },
+    {
+      "id": "final-hexanes-dispersion",
+      "name": "Final product dispersion in hexanes",
+      "kind": "product",
+      "parent_ids": [
+        "third-wash-precipitate",
+        "hexanes"
+      ]
+    },
+    {
+      "id": "discarded-first-supernatant",
+      "name": "First centrifugation supernatant; discarded",
+      "kind": "waste",
+      "parent_ids": [
+        "cooled-crude-mixture",
+        "ethanol"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "step-1",
+      "action": "condition_reagents",
+      "label": "Dry and degas oleylamine and 1-dodecanethiol by heating under vacuum",
+      "stage": "precursor_preparation",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "oleylamine",
+        "dodecanethiol"
+      ],
+      "outputs": [
+        "conditioned-ligand-mixture"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general method; not assigned to a DOE row unless the row states it.",
+          "raw_text": "120 C",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 1"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general procedure.",
+          "raw_text": "5 h",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 1"
+          }
+        ],
+        "note": "pressure unspecified"
+      },
+      "endpoint": {
+        "value": "before reaction",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 1"
+          }
+        ],
+        "note": "pressure unspecified"
+      },
+      "retained_fraction": null,
+      "description": "Dry and degas oleylamine and 1-dodecanethiol by heating under vacuum. Source details/unknowns: pressure unspecified. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 1"
+        }
+      ]
+    },
+    {
+      "id": "step-2",
+      "action": "charge_precursors",
+      "label": "Charge 50 mL three-neck round-bottom flask with reflux condenser with Ni(acac)2 and Co(acac)2; add degassed oleylamine",
+      "stage": "synthesis",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-1"
+      ],
+      "inputs": [
+        "conditioned-ligand-mixture",
+        "cobalt-acac",
+        "nickel-acac",
+        "oleylamine"
+      ],
+      "outputs": [
+        "precursor-charge"
+      ],
+      "parameters": {
+        "nickel_mass": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported mass.",
+          "raw_text": "0.50 g",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "nickel_amount": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported amount; incompatible with mass.",
+          "raw_text": "0.20 mmol",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "cobalt_mass": {
+          "value": null,
+          "minimum": 0.5,
+          "maximum": 1.5,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported mass range.",
+          "raw_text": "0.50–1.50 g",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "cobalt_amount": {
+          "value": null,
+          "minimum": 0.2,
+          "maximum": 0.6,
+          "unit": "mmol",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Source-reported amount range; incompatible with mass.",
+          "raw_text": "0.20–0.60 mmol",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "oleylamine_volume": {
+          "value": null,
+          "minimum": 4,
+          "maximum": 10,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "General method range.",
+          "raw_text": "4–10 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Schlenk setup; air-free",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 2"
+          }
+        ],
+        "note": "mass/mole mismatch and ratio orientation conflict"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 2"
+          }
+        ],
+        "note": "mass/mole mismatch and ratio orientation conflict"
+      },
+      "retained_fraction": null,
+      "description": "Charge 50 mL three-neck round-bottom flask with reflux condenser with Ni(acac)2 and Co(acac)2; add degassed oleylamine. Source details/unknowns: mass/mole mismatch and ratio orientation conflict. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 2"
+        }
+      ]
+    },
+    {
+      "id": "step-3",
+      "action": "vacuum_hold",
+      "label": "Heat to 120 C and hold",
+      "stage": "synthesis",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-2"
+      ],
+      "inputs": [
+        "precursor-charge"
+      ],
+      "outputs": [
+        "vacuum-heated-charge"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general method; not assigned to a DOE row unless the row states it.",
+          "raw_text": "120 C",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general procedure.",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 3"
+          }
+        ],
+        "note": "vacuum pressure absent"
+      },
+      "endpoint": {
+        "value": "heat rate 10 C/min",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 3"
+          }
+        ],
+        "note": "vacuum pressure absent"
+      },
+      "retained_fraction": null,
+      "description": "Heat to 120 C and hold. Source details/unknowns: vacuum pressure absent. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 3"
+        }
+      ]
+    },
+    {
+      "id": "step-4",
+      "action": "ramp_and_nucleate",
+      "label": "Switch to flowing N2; raise to chosen reaction temperature; metal precursor nucleation around 155 C, colorless to black",
+      "stage": "synthesis",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-3"
+      ],
+      "inputs": [
+        "vacuum-heated-charge",
+        "nitrogen-reaction"
+      ],
+      "outputs": [
+        "nucleated-charge"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": 170.0,
+          "maximum": 190.0,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general method; not assigned to a DOE row unless the row states it.",
+          "raw_text": "170-190 C",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "flowing N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 4"
+          }
+        ],
+        "note": "heating-rate ambiguity"
+      },
+      "endpoint": {
+        "value": "says same rate as prior step and approx 14 C/min",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 4"
+          }
+        ],
+        "note": "heating-rate ambiguity"
+      },
+      "retained_fraction": null,
+      "description": "Switch to flowing N2; raise to chosen reaction temperature; metal precursor nucleation around 155 C, colorless to black. Source details/unknowns: heating-rate ambiguity. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 4"
+        }
+      ]
+    },
+    {
+      "id": "step-5",
+      "action": "inject_and_grow",
+      "label": "At final temperature inject degassed DDT, then hold at reaction temperature",
+      "stage": "synthesis",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-4"
+      ],
+      "inputs": [
+        "nucleated-charge",
+        "dodecanethiol"
+      ],
+      "outputs": [
+        "ddt-reaction-mixture"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": 170.0,
+          "maximum": 190.0,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general method; not assigned to a DOE row unless the row states it.",
+          "raw_text": "170-190 C",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 5"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general procedure.",
+          "raw_text": "1-5 h",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 5"
+            }
+          ],
+          "derivation": null
+        },
+        "ddt_volume": {
+          "value": null,
+          "minimum": 0.125,
+          "maximum": 1.0,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "General procedure range; per-row charge not specified.",
+          "raw_text": "0.125–1 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "flowing N2 (global Methods condition; step 5 does not restate the atmosphere)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and General Considerations; Nanocrystal Synthesis, steps 4–5"
+          }
+        ],
+        "note": "exact per-run absolute ratio amounts absent"
+      },
+      "endpoint": {
+        "value": "baseline narrative 180 C/2 h; optimization 2 h and 7 mL OAm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 5"
+          }
+        ],
+        "note": "exact per-run absolute ratio amounts absent"
+      },
+      "retained_fraction": null,
+      "description": "At final temperature inject degassed DDT, then hold at reaction temperature. Source details/unknowns: exact per-run absolute ratio amounts absent. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 5"
+        }
+      ]
+    },
+    {
+      "id": "step-6",
+      "action": "cool_naturally",
+      "label": "Remove flask from heat source and cool naturally to room temperature",
+      "stage": "synthesis",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-5"
+      ],
+      "inputs": [
+        "ddt-reaction-mixture"
+      ],
+      "outputs": [
+        "cooled-crude-mixture"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "not specified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 6"
+          }
+        ],
+        "note": "cooling rate/environment unspecified"
+      },
+      "endpoint": {
+        "value": "upon completion",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 6"
+          }
+        ],
+        "note": "cooling rate/environment unspecified"
+      },
+      "retained_fraction": null,
+      "description": "Remove flask from heat source and cool naturally to room temperature. Source details/unknowns: cooling rate/environment unspecified. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 6"
+        }
+      ]
+    },
+    {
+      "id": "step-7",
+      "action": "first_precipitation_wash",
+      "label": "In air dilute with hexanes and sonicate; split into two 50 mL tubes, fill with ethanol, centrifuge; discard supernatant; redisperse particles in hexanes and sonicate",
+      "stage": "workup",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-6"
+      ],
+      "inputs": [
+        "cooled-crude-mixture",
+        "hexanes",
+        "ethanol"
+      ],
+      "outputs": [
+        "first-wash-precipitate",
+        "discarded-first-supernatant"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general procedure.",
+          "raw_text": "sonicate 5 min; centrifuge 5 min; redisperse/sonicate 5 min",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 7"
+            }
+          ],
+          "derivation": null
+        },
+        "hexanes_dilution_volume": {
+          "value": null,
+          "minimum": 3,
+          "maximum": 8,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Post-reaction dilution range.",
+          "raw_text": "3–8 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "wash_sonication": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Wash procedure timing.",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "centrifugation": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Centrifugation time; RPM/RCF not reported.",
+          "raw_text": "5 min",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air during dilution",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 7"
+          }
+        ],
+        "note": "centrifuge rpm/RCF absent"
+      },
+      "endpoint": {
+        "value": "product retained in pellet",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 7"
+          }
+        ],
+        "note": "centrifuge rpm/RCF absent"
+      },
+      "retained_fraction": "first-wash-precipitate",
+      "description": "In air dilute with hexanes and sonicate; split into two 50 mL tubes, fill with ethanol, centrifuge; discard supernatant; redisperse particles in hexanes and sonicate. Source details/unknowns: centrifuge rpm/RCF absent. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 7"
+        }
+      ]
+    },
+    {
+      "id": "step-8",
+      "action": "second_wash",
+      "label": "Precipitate/wash and redisperse with ethanol and acetone",
+      "stage": "workup",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-7"
+      ],
+      "inputs": [
+        "first-wash-precipitate",
+        "ethanol",
+        "acetone"
+      ],
+      "outputs": [
+        "second-wash-precipitate"
+      ],
+      "parameters": {
+        "ethanol_wash_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Second ethanol wash.",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        },
+        "acetone_wash_volume": {
+          "value": 35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Second acetone wash.",
+          "raw_text": "35 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air? not restated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 8"
+          }
+        ],
+        "note": "fraction handling details partly inherited"
+      },
+      "endpoint": {
+        "value": "washing cycle 2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 8"
+          }
+        ],
+        "note": "fraction handling details partly inherited"
+      },
+      "retained_fraction": null,
+      "description": "Precipitate/wash and redisperse with ethanol and acetone. Source details/unknowns: fraction handling details partly inherited. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 8"
+        }
+      ]
+    },
+    {
+      "id": "step-9",
+      "action": "third_wash",
+      "label": "Wash with acetone",
+      "stage": "workup",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-8"
+      ],
+      "inputs": [
+        "second-wash-precipitate",
+        "acetone"
+      ],
+      "outputs": [
+        "third-wash-precipitate"
+      ],
+      "parameters": {
+        "acetone_wash_volume": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Third acetone wash.",
+          "raw_text": "45 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 9"
+          }
+        ],
+        "note": "fraction handling details partly inherited"
+      },
+      "endpoint": {
+        "value": "washing cycle 3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 9"
+          }
+        ],
+        "note": "fraction handling details partly inherited"
+      },
+      "retained_fraction": null,
+      "description": "Wash with acetone. Source details/unknowns: fraction handling details partly inherited. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 9"
+        }
+      ]
+    },
+    {
+      "id": "step-10",
+      "action": "final_redispersion",
+      "label": "Redisperse product in hexanes and sonicate",
+      "stage": "workup",
+      "branch": "reported-general-procedure",
+      "optional": false,
+      "depends_on": [
+        "step-9"
+      ],
+      "inputs": [
+        "third-wash-precipitate",
+        "hexanes"
+      ],
+      "outputs": [
+        "final-hexanes-dispersion"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "As reported in the general procedure.",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430, protocol step 10"
+            }
+          ],
+          "derivation": null
+        },
+        "hexanes_final_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Final dispersion.",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "williamson2021",
+              "locator": "Main PDF p9 / printed p9430"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 10"
+          }
+        ],
+        "note": "product mass/storage conditions not stated"
+      },
+      "endpoint": {
+        "value": "stable colloidal suspension for several months",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 10"
+          }
+        ],
+        "note": "product mass/storage conditions not stated"
+      },
+      "retained_fraction": null,
+      "description": "Redisperse product in hexanes and sonicate. Source details/unknowns: product mass/storage conditions not stated. Factor ratios are kept as source-table labels; no per-run absolute reagent charge is inferred.",
+      "evidence": [
+        {
+          "source_id": "williamson2021",
+          "locator": "Main PDF p9 / printed p9430, Materials and synthesis, step 10"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "route-product-context",
+      "source_sample_label": "General route/product context; not an author-assigned individual specimen",
+      "batch_id": null,
+      "material_state_id": "final-hexanes-dispersion",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoNi2S4 target system; composition varies or is unresolved across reported cohorts",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF title, abstract and group-specific characterization; see paper-review"
+          }
+        ],
+        "note": "Not a claim that every experimental row is phase-pure CoNi2S4."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main/SI phase assignments are cohort-specific; no universal route-level phase label"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Nanocrystals; individual group morphologies are recorded separately",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "Main PDF p1 / printed p9422, article title and abstract"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "williamson2021",
+            "locator": "No route-wide ligand coverage/speciation assignment"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "This route summarizes the shared procedure. DOE rows are separate records; group-level structural claims are not propagated to every row."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Hash-bound article/SI source review and targeted R6 disclosure audit; record maps only a source-linked table row. It is not a physical specimen identity, coordinate-to-recipe pairing, or laboratory replication.",
+    "missing_fields": [
+      "physical batch/specimen identity",
+      "run-specific precursor masses and DDT absolute charge",
+      "row-specific phase/crystal coordinates",
+      "row-resolved morphology beyond tabulated size statistics"
+    ],
+    "conflicts": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C8",
+      "C9",
+      "C10"
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Full paper review and evidence",
+      "url": "../paper-review.html?id=williamson2021",
+      "relation": "38 page source coverage, figures, sample groups, claim panels and review scope."
+    },
+    {
+      "label": "Audited dataset sidecars",
+      "url": "../data/paper-evidence/williamson2021/dataset-index.json",
+      "relation": "Distinct 21-run screening table, 17-row main Table 3, 13-row SI S9, 16-row SI S13; no positional crosswalk."
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

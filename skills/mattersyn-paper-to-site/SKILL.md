@@ -51,6 +51,8 @@ Read [references/visuals-and-models.md](references/visuals-and-models.md) when b
 
 Use the existing project architecture and current Sites building/hosting skills when they apply. Only the site-owning agent edits the site and performs its lifecycle operations. Delegate bounded extraction, model assets, or scientific review when useful; subagents return results outside the site checkout.
 
+For parallel contributions to the existing MatterSyn Reader, read [references/shared-reader-integration.md](references/shared-reader-integration.md). It defines the additive package and final source-binding checks needed to avoid repeating extraction during integration.
+
 When chemical identity assets are reused across papers, keep reusable molecular structure/identity separate from paper-specific stock composition, context and conditions. A shared molecule illustration must not carry another paper's experimental conditions into the current recipe; audit every binding and provenance link.
 
 The MatterSyn visual preference is an airy, polished scientific interface: strong typography, clear section numbers, restrained blue/teal/gold accents, substantial molecular/crystal views, and concise source labels. Adapt this to the user's chosen design rather than imposing a universal template.
