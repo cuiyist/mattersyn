@@ -4,9 +4,9 @@ const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefine
 
 const number=v=>new Intl.NumberFormat().format(v);
 
-const date=v=>new Intl.DateTimeFormat(undefined,{dateStyle:'medium',timeStyle:'short'}).format(new Date(v));
+const date=v=>{const d=new Date(v);if(!v||Number.isNaN(d.getTime()))return 'Timestamp not recorded';return new Intl.DateTimeFormat(undefined,/^\d{4}-\d{2}-\d{2}$/.test(v)?{dateStyle:'medium',timeZone:'UTC'}:{dateStyle:'medium',timeStyle:'short'}).format(d);};
 
-const statusNames={complete:'Complete within stated scope',in_progress:'In progress',pending:'Pending'};
+const statusNames={complete:'Complete within stated scope',in_progress:'In progress',pending:'Pending',paused:'Paused'};
 
 function safeLink(label,path){const a=el('a',label);const url=new URL(path,import.meta.url);if(url.origin!==location.origin||!url.pathname.startsWith(new URL('.',import.meta.url).pathname))throw Error('Unexpected progress link');a.href=url.href;return a;}
 
@@ -14,8 +14,8 @@ function metrics(host,items){host.replaceChildren(...items.map(([value,label])=>
 
 function render(data){
 
- const paused=data.estimate?.status==='paused_for_joint_review';
- if($('review-progress-brief')){$('review-progress-brief').textContent=paused?'Active papers are published. Work is paused for joint review; no new papers will start.':data.current_work.length?`${data.current_work[0].short_label}: ${data.current_work[0].stage.replace(/\.+$/,'')}.`:'No paper is currently under review.';$('review-progress-time').textContent=`Snapshot generated ${date(data.updated_at)} · checked for updates every minute`;}
+ const paused=['paused_for_joint_review','trial_finished_awaiting_user_review'].includes(data.estimate?.status);
+ if($('review-progress-brief')){$('review-progress-brief').textContent=paused?'Curation is paused for review. Completed contributions are published; unfinished work is retained.':data.current_work.length?`${data.current_work[0].short_label}: ${data.current_work[0].stage.replace(/\.+$/,'')}.`:'No paper is currently under review.';$('review-progress-time').textContent=`Snapshot generated ${date(data.updated_at)} · checked for updates every minute`;}
  if(!$('published-metrics'))return;
 
  $('progress-updated').textContent=`Snapshot generated ${date(data.updated_at)} · automatic update check every minute`;
@@ -40,14 +40,14 @@ function render(data){
  }
  const p=data.published;metrics($('published-metrics'),[[p.record_count,'Structured records'],[p.synthesis_route_count,'Synthesis routes / variants'],[p.material_hub_count,'Material / component collections'],[p.formal_source_reader_count,'Formal source readers']]);
  $('published-detail').textContent=`Dataset ${p.dataset_version} · ${p.direct_material_hub_count} direct material systems and ${p.component_material_hub_count} component collections. Records include procedures, observations and benchmark rows; they are not independent experiments. Exact structure–recipe pairs: ${p.exact_structure_recipe_count}.`;
- const t=data.daily_throughput;if(t){metrics($('throughput-metrics'),[[t.target_papers_per_day,'Paper contributions required per day'],[t.completed_papers_today,'Fully verified contributions today'],[t.deployed_pending_closeout,'Deployed; closeout still pending']]);$('throughput-detail').textContent=t.counting_rule;$('throughput-evidence').textContent=`Measured historical cohort: ${t.observed_pipeline.papers} completed papers over ${t.observed_pipeline.elapsed_hours.toFixed(2)} elapsed hours (${t.observed_pipeline.papers_per_hour.toFixed(2)}/hour; about ${t.observed_pipeline.arithmetic_per_24h.toFixed(1)}/day by arithmetic only). The cohort was selected and overlapping, so this is not a forecast. The 500/day target is ${t.observed_pipeline.target_gap_factor.toFixed(1)}× higher than that measured cadence. ${t.capacity_note} ${t.machine_stage_note}`;}
+ const t=data.daily_throughput;if(t){metrics($('throughput-metrics'),[[t.target_papers_per_day,'Paper contributions required per day'],[t.completed_papers_today,'Fully verified contributions today'],[t.deployed_pending_closeout,'Deployed; closeout still pending']]);$('throughput-detail').textContent=t.counting_rule;$('throughput-evidence').textContent=`Measured publication window: ${t.observed_pipeline.papers} completed papers over ${t.observed_pipeline.elapsed_hours.toFixed(2)} elapsed hours (${t.observed_pipeline.papers_per_hour.toFixed(2)}/hour; about ${t.observed_pipeline.arithmetic_per_24h.toFixed(1)}/day by arithmetic only). ${t.observed_pipeline.scope_note||'This selected observation is not a forecast.'} The 500/day target is ${t.observed_pipeline.target_gap_factor.toFixed(1)}× higher than that measured cadence. ${t.capacity_note} ${t.machine_stage_note}`;}
  $('batch-count').textContent=`${data.batch.published} / ${data.batch.total} papers published`;
 
  $('batch-list').replaceChildren(...data.batch.papers.map(paper=>{const n=el('article',undefined,'batch-card '+(paper.published?'complete':'pending'));n.append(el('span',paper.published?'Published':'In preparation','state-label'));n.append(paper.href?safeLink(paper.label,paper.href):el('strong',paper.label));n.append(el('small',paper.scope));return n;}));
 
- $('current-work').replaceChildren(...data.current_work.map(work=>{const n=el('article',undefined,'work-card');n.append(el('span',work.short_label,'eyebrow'),el('h3',work.title),el('p',work.stage,'work-current'),el('p',work.summary));const stages=el('ol',undefined,'work-stages');for(const stage of work.stages){const item=el('li',undefined,stage.status);item.append(el('strong',stage.label),el('small',statusNames[stage.status]||stage.status),el('small',stage.detail));stages.append(item);}n.append(stages);if(work.gaps?.length){const details=el('details',undefined,'source-gaps');details.append(el('summary','Unresolved source details retained in the record'));const list=el('ul');work.gaps.forEach(g=>list.append(el('li',g)));details.append(list);n.append(details);}return n;}));
+ $('current-work').replaceChildren(...data.current_work.map(work=>{const n=el('article',undefined,'work-card');n.append(el('span',work.short_label,'eyebrow'),el('h3',work.title),el('p',work.stage,'work-current'),el('p',work.summary));const stages=el('ol',undefined,'work-stages');for(const stage of work.stages||[]){const item=el('li',undefined,stage.status);item.append(el('strong',stage.label),el('small',statusNames[stage.status]||stage.status),el('small',stage.detail));stages.append(item);}n.append(stages);if(work.gaps?.length){const details=el('details',undefined,'source-gaps');details.append(el('summary','Unresolved source details retained in the record'));const list=el('ul');work.gaps.forEach(g=>list.append(el('li',g)));details.append(list);n.append(details);}return n;}));
 
- if(paused&&!data.current_work.length)$('current-work').append(el('p','Active papers are published and verified. Review is paused until you ask to resume.','work-current'));
+ if(paused&&!data.current_work.length)$('current-work').append(el('p','Curation is paused until you ask to resume. Completed and unfinished work retain separate status.','work-current'));
  const c=data.corpus;metrics($('queue-metrics'),[[c.present_files,'Document copies in both local collections'],[c.canonical_review_units,'Provisional review scopes'],[c.waiting_review_scopes,'Waiting review scopes'],[c.active_review_claims,'Active paper claims']]);
  if($('workflow-summary')){const w=data.workflow,host=$('workflow-summary');host.replaceChildren();if(w){host.append(el('p',w.summary),el('p',w.screening_scope,'progress-note'));const list=el('ol');for(const step of w.steps)list.append(el('li',step));host.append(list,el('p',w.capacity,'progress-note'),el('p',w.paid_processing,'progress-note'));}else{host.append(el('p','Workflow snapshot pending.'));}}
  $('corpus-note').textContent=`Last corpus scan: ${date(data.corpus_scanned_at)}. ${data.count_note} Incoming collection: ${number(c.source_document_copies.incoming)} copies; original collection: ${number(c.source_document_copies.legacy)} copies.`;
@@ -60,7 +60,7 @@ function render(data){
 
  for(const note of data.estimate.notes||[])estimate.append(el('p',note,'progress-note'));
 
- $('milestone-list').replaceChildren(...data.recent_milestones.map(m=>{const li=el('li'),time=el('time',date(m.at));time.dateTime=m.at;li.append(time,el('p',m.text));return li;}));$('update-policy').textContent=data.update_policy;
+ $('milestone-list').replaceChildren(...data.recent_milestones.map(m=>{const li=el('li'),time=el('time',date(m.at||m.date));if(m.at||m.date)time.dateTime=m.at||m.date;li.append(time,el('p',m.text));return li;}));$('update-policy').textContent=data.update_policy;
 
 }
 

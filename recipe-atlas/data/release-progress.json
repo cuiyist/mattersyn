@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-25T13:00:28.936839+00:00",
+  "updated_at": "2026-09-25T13:50:35.810020+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.39.1",
@@ -22,7 +22,7 @@
     },
     "canonical_review_units": 12729,
     "waiting_review_scopes": 12695,
-    "active_review_claims": 2,
+    "active_review_claims": 0,
     "confirmed_duplicate_main_aliases": 27
   },
   "count_note": "Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.",
@@ -51,7 +51,7 @@
   },
   "batch": {
     "total": 3,
-    "published": 2,
+    "published": 3,
     "papers": [
       {
         "label": "Tirosh et al. (2006)",
@@ -65,8 +65,8 @@
       },
       {
         "label": "Dhaene et al. (2022)",
-        "published": false,
-        "scope": "CdSe/CdS phosphinate · audited with matched SI; reader integration pending"
+        "published": true,
+        "scope": "CdSe/CdS phosphinate synthesis and precursor procedures; matched main/SI reviewed, independently checked, published and anonymously verified."
       }
     ]
   },
@@ -74,8 +74,8 @@
     {
       "short_label": "Ten-hour local throughput trial",
       "title": "Measured website production trial",
-      "stage": "Running through September 25, 08:50 Chicago time, then pause for user review.",
-      "summary": "Eight newly published sources/98records verified; four inherited source reviews and four fresh source reviews. Additional private work is not counted as publication.",
+      "stage": "Paused for user review after the ten-hour trial",
+      "summary": "Ten-hour trial ended: 8 distinct newly published sources, 98 records and 40 broad evidence rows. Awaiting user review; unfinished work stays local and is not counted as published.",
       "stages": [
         {
           "label": "Trial setup and queue",
@@ -84,15 +84,18 @@
         },
         {
           "label": "New source contributions published during trial",
-          "status": "in_progress",
-          "detail": "8 distinct newly published sources and98records. Pending drafts, old-page corrections and progress releases do not count."
+          "status": "paused",
+          "detail": "8 distinct newly published sources and98records. Pending drafts, old-page corrections and progress releases do not count.",
+          "status_at_trial_end": "in_progress"
         },
         {
           "label": "Finish and review",
-          "status": "pending",
-          "detail": "Stop at13:50 UTC, freeze actual results and wait for the user before continuing."
+          "status": "paused",
+          "detail": "Stop at13:50 UTC, freeze actual results and wait for the user before continuing.",
+          "status_at_trial_end": "pending"
         }
-      ]
+      ],
+      "stage_at_trial_end": "Running through September 25, 08:50 Chicago time, then pause for user review."
     },
     {
       "short_label": "ACS Nano · 10.1021/acsnano.1c00502",
@@ -100,6 +103,23 @@
       "stage": "Published and anonymously verified during the trial.",
       "summary": "One synthesis route,38 source-defined DOE rows and13 source figures are live. Main/SI scopes and conflicts remain explicit; no per-row composition or physical-batch identity is invented.",
       "stages": [
+        {
+          "label": "Scientific source review",
+          "status": "complete",
+          "detail": "The accepted source scope and independent checks are recorded in the published contribution; unresolved source details remain explicit."
+        },
+        {
+          "label": "Reader integration and browser validation",
+          "status": "complete",
+          "detail": "Shared records, figure/sample assignments, molecular references and protocol presentation passed their recorded integration checks."
+        },
+        {
+          "label": "Publication",
+          "status": "complete",
+          "detail": "Deployed and verified anonymously at 2026-09-25T06:49:23.073221+00:00; 39 new canonical records from this one source paper."
+        }
+      ],
+      "previous_stage_snapshot": [
         {
           "label": "Prior source extraction and scoped independent audits",
           "status": "complete",
@@ -125,7 +145,7 @@
     {
       "short_label": "Rusch/Manna · Chem. Mater. 2026",
       "title": "Source audit · DOI 10.1021/acs.chemmater.5c02845",
-      "stage": "Isolated reader candidate prepared; remaining molecular/solution graphics and independent integration/browser acceptance are queued. Figure 4 C12 remains on hold.",
+      "stage": "Paused for user review after the ten-hour trial",
       "summary": "The full source review covered all 34 supplied pages and 23 candidate records. Its correction package updates 17 comparison files across 13 records; 10 record snapshots are byte-identical. The separate correction delta audit passed 533 preservation assertions, 23 schema/graph checks and 197 supplemental hash/field/origin checks. The original audit history is retained; this is a correction-delta pass, not a new full-source audit. Figure 4 C12 assignment remains explicitly unresolved and source conflicts remain preserved. A reader integration candidate is now being prepared; no records are yet promoted.",
       "stages": [
         {
@@ -145,8 +165,9 @@
         },
         {
           "label": "Reader and dataset integration",
-          "status": "in_progress",
-          "detail": "Build an isolated reader/material contribution from the corrected 23-record package. Preserve all source conflicts and the C12 hold; do not alter training eligibility before full integration and browser QA."
+          "status": "paused",
+          "detail": "Build an isolated reader/material contribution from the corrected 23-record package. Preserve all source conflicts and the C12 hold; do not alter training eligibility before full integration and browser QA.",
+          "status_at_trial_end": "in_progress"
         }
       ],
       "gaps": [
@@ -154,7 +175,8 @@
         "Some rapid-product phase/morphology fields cite Methods rather than Results pages",
         "Bi stock material-family mapping is unsupported",
         "Figure 4 caption versus visible inset scope requires clarification"
-      ]
+      ],
+      "stage_at_trial_end": "Isolated reader candidate prepared; remaining molecular/solution graphics and independent integration/browser acceptance are queued. Figure 4 C12 remains on hold."
     },
     {
       "short_label": "Tirosh et al. (2006)",
@@ -173,8 +195,25 @@
       "short_label": "Wu et al. (2008)",
       "title": "Synthesis and photovoltaic application of copper(I) sulfide nanocrystals",
       "stage": "Published and anonymously verified during this trial.",
-      "summary": "One growth route and three separately labelled supporting stock/device procedures. Four original source figures retain distinct sample scopes. Source review is inherited pretrial; no new publication credited until public verification.",
+      "summary": "One growth route and three separately labelled supporting stock/device procedures are live, with four original source figures and distinct sample scopes. Inherited source review and current integration checks are retained; main-only scope, SI unverified.",
       "stages": [
+        {
+          "label": "Scientific source review",
+          "status": "complete",
+          "detail": "The accepted source scope and independent checks are recorded in the published contribution; unresolved source details remain explicit."
+        },
+        {
+          "label": "Reader integration and browser validation",
+          "status": "complete",
+          "detail": "Shared records, figure/sample assignments, molecular references and protocol presentation passed their recorded integration checks."
+        },
+        {
+          "label": "Publication",
+          "status": "complete",
+          "detail": "Deployed and verified anonymously at 2026-09-25T05:25:55.400447+00:00; 4 new canonical records from this one source paper."
+        }
+      ],
+      "previous_stage_snapshot": [
         {
           "label": "Inherited source review",
           "status": "complete",
@@ -204,6 +243,23 @@
       "summary": "Included in the independently reviewed four-paper release; source conflicts and main/SI coverage limits remain explicit.",
       "stages": [
         {
+          "label": "Scientific source review",
+          "status": "complete",
+          "detail": "The accepted source scope and independent checks are recorded in the published contribution; unresolved source details remain explicit."
+        },
+        {
+          "label": "Reader integration and browser validation",
+          "status": "complete",
+          "detail": "Shared records, figure/sample assignments, molecular references and protocol presentation passed their recorded integration checks."
+        },
+        {
+          "label": "Publication",
+          "status": "complete",
+          "detail": "Deployed and verified anonymously at 2026-09-25T12:59:33.553092+00:00; 13 new canonical records from this one source paper."
+        }
+      ],
+      "previous_stage_snapshot": [
+        {
           "label": "Source reading and extraction",
           "status": "complete",
           "detail": "Supplied main and 24-page SI extraction frozen with separate variants and evidence."
@@ -228,7 +284,7 @@
     {
       "short_label": "Saini et al. (2023)",
       "title": "Natural amine-targeted carbon quantum dots and nanoaminocatalysis",
-      "stage": "A previous complete independent audit requested DLS/NMR corrections. Author corrections are queued; no active worker is rereading the 119 unchanged pages.",
+      "stage": "Paused for user review after the ten-hour trial",
       "summary": "The complete 119-page independent audit was found and reconciled with the current frozen inputs. Integrity checks passed 287/287. DLS weighting qualification and three NMR text/plot conflicts still require an author addendum, followed by a targeted independent recheck. The source is not published. The earlier pending-first-audit label was stale.",
       "stages": [
         {
@@ -248,20 +304,24 @@
         },
         {
           "label": "Author corrections and targeted recheck",
-          "status": "pending",
-          "detail": "DLS weighting qualification and three NMR text/plot conflicts; preserve original audit history."
+          "status": "paused",
+          "detail": "DLS weighting qualification and three NMR text/plot conflicts; preserve original audit history.",
+          "status_at_trial_end": "pending"
         },
         {
           "label": "Reader and dataset integration",
-          "status": "pending",
-          "detail": "Queued after DLS/NMR corrections and targeted acceptance; no promotion."
+          "status": "paused",
+          "detail": "Queued after DLS/NMR corrections and targeted acceptance; no promotion.",
+          "status_at_trial_end": "pending"
         },
         {
           "label": "Publication",
-          "status": "pending",
-          "detail": "Not published."
+          "status": "paused",
+          "detail": "Not published.",
+          "status_at_trial_end": "pending"
         }
-      ]
+      ],
+      "stage_at_trial_end": "A previous complete independent audit requested DLS/NMR corrections. Author corrections are queued; no active worker is rereading the 119 unchanged pages."
     },
     {
       "short_label": "Chen et al. (2018)",
@@ -304,7 +364,7 @@
     {
       "short_label": "InP triaryl-silyl-phosphine synthesis",
       "title": "InP quantum-dot recipes, precursor preparation and sample evidence",
-      "stage": "Full 11-page main article and 16-page SI extraction frozen; 37 SI claim locators now include page and local caption/section/panel/sample heading. Targeted independent audit pending.",
+      "stage": "Paused for user review after the ten-hour trial",
       "summary": "A private source-linked extraction contains 20 protocol/branch candidates, 11 upstream precursor preparations, 14 sample candidates and 10 observations. The 37 SI claim locators have been made page- and caption-specific and structural link checks pass. An independent targeted re-audit is still required for all recipe variants, sample links, figures and source conflicts. No records are promoted.",
       "stages": [
         {
@@ -319,15 +379,18 @@
         },
         {
           "label": "Independent audit",
-          "status": "in_progress",
-          "detail": "Awaiting separate targeted re-audit of the frozen extraction and all 37 corrected SI locators; no canonical record or reader page is accepted yet."
+          "status": "paused",
+          "detail": "Awaiting separate targeted re-audit of the frozen extraction and all 37 corrected SI locators; no canonical record or reader page is accepted yet.",
+          "status_at_trial_end": "in_progress"
         },
         {
           "label": "Reader and dataset integration",
-          "status": "pending",
-          "detail": "Will follow the separate audit; no training admission is assigned."
+          "status": "paused",
+          "detail": "Will follow the separate audit; no training admission is assigned.",
+          "status_at_trial_end": "pending"
         }
-      ]
+      ],
+      "stage_at_trial_end": "Full 11-page main article and 16-page SI extraction frozen; 37 SI claim locators now include page and local caption/section/panel/sample heading. Targeted independent audit pending."
     },
     {
       "short_label": "Cu-Sb-S phase-map synthesis",
@@ -335,6 +398,23 @@
       "stage": "Published and anonymously verified during the trial.",
       "summary": "Included in the independently reviewed four-paper release; source conflicts and main/SI coverage limits remain explicit.",
       "stages": [
+        {
+          "label": "Scientific source review",
+          "status": "complete",
+          "detail": "The accepted source scope and independent checks are recorded in the published contribution; unresolved source details remain explicit."
+        },
+        {
+          "label": "Reader integration and browser validation",
+          "status": "complete",
+          "detail": "Shared records, figure/sample assignments, molecular references and protocol presentation passed their recorded integration checks."
+        },
+        {
+          "label": "Publication",
+          "status": "complete",
+          "detail": "Deployed and verified anonymously at 2026-09-25T12:59:33.553092+00:00; 17 new canonical records from this one source paper."
+        }
+      ],
+      "previous_stage_snapshot": [
         {
           "label": "Main/SI pairing and visual coverage",
           "status": "complete",
@@ -361,13 +441,27 @@
       "short_label": "Li et al. (1998) · ZnGa2O4",
       "title": "Hydrothermal zinc gallate synthesis",
       "stage": "Published and anonymously verified during the trial.",
-      "summary": "One hydrothermal route, original XRD/TEM figures, unit-aware outcomes and stage-specific apparatus are live. Supplied main-only source scope; SI unverified. No sample coordinates inferred."
+      "summary": "One hydrothermal route, original XRD/TEM figures, unit-aware outcomes and stage-specific apparatus are live. Supplied main-only source scope; SI unverified. No sample coordinates inferred.",
+      "stages": [
+        {
+          "label": "Publication",
+          "status": "complete",
+          "detail": "Source review, independent integration audit, browser validation and anonymous publication verification passed within the documented main-only scope."
+        }
+      ]
     },
     {
       "short_label": "Li et al. (2000) · Cu2SnS3",
       "title": "Solvothermal copper tin sulfide synthesis",
       "stage": "Published and anonymously verified during the trial.",
-      "summary": "One solvothermal route, five original source figures and distinct XRD/TEM, XPS, optical, conductivity and high-temperature grain contexts are live. Main-only source scope; SI remains unverified. One explicit condition–grain-size row; no exact atom coordinates."
+      "summary": "One solvothermal route, five original source figures and distinct XRD/TEM, XPS, optical, conductivity and high-temperature grain contexts are live. Main-only source scope; SI remains unverified. One explicit condition–grain-size row; no exact atom coordinates.",
+      "stages": [
+        {
+          "label": "Publication",
+          "status": "complete",
+          "detail": "Source review, independent integration audit, browser validation and anonymous publication verification passed within the documented main-only scope."
+        }
+      ]
     },
     {
       "short_label": "Costanzo et al. (2016)",
@@ -394,6 +488,31 @@
           "detail": "Exact approved artifact deployed and checked through anonymous requests."
         }
       ]
+    },
+    {
+      "short_label": "Thomson et al. (2010) · Bi2S3",
+      "title": "Ultrathin bismuth sulfide nanowires",
+      "stage": "Paused for user review after the ten-hour trial",
+      "summary": "All 11 supplied main pages were reviewed, with separate scientific and Reader-package audits. SI remains unverified. One private record and its assets await shared-site integration, browser checks and publication.",
+      "stages": [
+        {
+          "label": "Supplied main extraction and source audit",
+          "status": "complete",
+          "detail": "Main-only scope; source conflicts and missing sample assignments retained."
+        },
+        {
+          "label": "Reader package audit",
+          "status": "complete",
+          "detail": "The immutable package and its source, figure and chemical-reference dependencies passed bounded review."
+        },
+        {
+          "label": "Shared website integration and publication",
+          "status": "paused",
+          "detail": "Not performed or counted as a published contribution.",
+          "status_at_trial_end": "pending"
+        }
+      ],
+      "stage_at_trial_end": "Private integration handoff prepared; not published"
     }
   ],
   "recent_milestones": [
@@ -509,11 +628,14 @@
     "update_policy": "Progress is published at meaningful review milestones. Drafts and source-audit passes are not counted as website contributions; each published record must retain evidence locators and clear source/sample distinctions."
   },
   "estimate": {
-    "status": "bounded_local_throughput_trial",
-    "summary": "Target500/day; measuring actual accepted and published output during a ten-hour local-only trial. No credible whole-corpus finish date is established.",
-    "current_batch": "Eight trial contributions are published and anonymously verified. A Bi2S3 main-article candidate remains private pending complete Reader integration and publication checks; stop at the trial cutoff.",
+    "status": "trial_finished_awaiting_user_review",
+    "summary": "Ten-hour trial ended: 8 distinct newly published sources, 98 records and 40 broad evidence rows. Awaiting user review; unfinished work stays local and is not counted as published.",
+    "current_batch": "No active curation. Preserved private candidates await the user’s next decision.",
     "scenarios": [],
     "notes": [
+      "The fixed trial is complete. No active curation or whole-corpus completion forecast is asserted. Unfinished sources remain held for user review."
+    ],
+    "previous_notes": [
       "Frozen pass set: 5,539 distinct source contents in 5,587 copied files (48 duplicates); main articles and SI are separate screen units, not unique-paper or recipe counts.",
       "Screening pass indicates useful synthesis/preparation evidence plus structural, phase or morphology evidence; it is not an exact sample-pair, source audit or training admission.",
       "Keep every source-reported condition, sample and recipe variant separate. Several papers can contribute independently cited details to one material page.",
@@ -532,15 +654,15 @@
     "deployed_pending_closeout": 0,
     "counting_rule": "Count one source paper only after its scoped source reading, independent scientific audit, recipe/sample/figure checks, material-page integration and browser validation pass. Multiple recipe rows from one paper count once. Drafts and screening skips do not count as website papers built.",
     "observed_pipeline": {
-      "papers": 9,
-      "elapsed_hours": 12.8685,
-      "papers_per_hour": 0.69938,
-      "arithmetic_per_24h": 16.78512,
-      "target_gap_factor": 29.79,
-      "scope_note": "One selected 2026-09-20 concurrent cohort with overlapping work and pipeline fill/drain; this is an observed small-cohort rate, not a forecast."
+      "papers": 8,
+      "elapsed_hours": 10.0,
+      "papers_per_hour": 0.8,
+      "arithmetic_per_24h": 19.2,
+      "target_gap_factor": 26.041666666666668,
+      "scope_note": "Fixed ten-hour local-only trial, including four contributions with pre-trial work. Counts only distinct new source papers deployed and anonymously verified. This arithmetic rate is not a capacity forecast or a claim of continuous unattended work."
     },
     "machine_stage_note": "The local RTX 5090/Qwen3.5 runs produce drafts quickly, but the 27B cross-check missed a known source conflict. Machine drafts and model agreement are not independent scientific audit or completed website contributions.",
-    "capacity_note": "Eight distinct source papers and98records were newly deployed and anonymously verified during the ten-hour local-only trial. Four used inherited source work and four were newly read. The500/day target remains unmet; multiple records or figures do not multiply paper throughput.",
+    "capacity_note": "Ten-hour local-only trial: 8 newly published papers, 98 records, 40 broad structure evidence rows. The 500/day target was not achieved. Curation is paused for user review; this observed rate is not a corpus forecast.",
     "as_of_date": "2026-09-25",
     "date_timezone": "America/Chicago",
     "completed_paper_ledger": [
@@ -609,11 +731,21 @@
         "status": "published_anonymously_verified"
       }
     ],
-    "published_sources_today": 8
+    "published_sources_today": 8,
+    "previous_observations": [
+      {
+        "papers": 9,
+        "elapsed_hours": 12.8685,
+        "papers_per_hour": 0.69938,
+        "arithmetic_per_24h": 16.78512,
+        "target_gap_factor": 29.79,
+        "scope_note": "One selected 2026-09-20 concurrent cohort with overlapping work and pipeline fill/drain; this is an observed small-cohort rate, not a forecast."
+      }
+    ]
   },
   "throughput_trial": {
     "trial_id": "20260925-three-hour-local",
-    "status": "running",
+    "status": "awaiting_user_review",
     "start_at": "2026-09-25T03:50:12Z",
     "stop_at": "2026-09-25T13:50:12Z",
     "target_papers": 209,
@@ -623,7 +755,26 @@
     "baseline_records": 703,
     "after_trial": "awaiting_user_review",
     "duration_hours": 10,
-    "target_equivalent_papers": 208.33333333333334
+    "target_equivalent_papers": 208.33333333333334,
+    "ended_at": "2026-09-25T13:50:12Z",
+    "curation_hold": true,
+    "stage_counts": {
+      "new_extractions_completed": 5,
+      "new_independent_audits_passed": 6,
+      "new_integrations_passed": 8,
+      "new_source_papers_published": 8,
+      "new_records_published": 98,
+      "existing_source_corrections_published": 0,
+      "independent_delta_audits_passed": 3,
+      "independent_canonical_mapping_audits_passed": 3,
+      "browser_qa_passed": 8,
+      "independent_integration_audits_passed": 8,
+      "distinct_source_packages_extracted_or_reused": 9,
+      "distinct_source_audit_scopes_accepted_or_reused": 9,
+      "additional_private_reader_package_audits_passed": 1
+    },
+    "new_records_published": 98,
+    "new_broad_structure_evidence_rows": 40
   },
   "daily_throughput_history": [
     {

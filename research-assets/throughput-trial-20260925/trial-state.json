@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-bounded-throughput-trial/1",
   "trial_id": "20260925-three-hour-local",
-  "status": "running",
+  "status": "awaiting_user_review",
   "started_at": "2026-09-25T03:50:12Z",
   "stop_at": "2026-09-25T13:50:12Z",
   "timezone": "America/Chicago",
@@ -786,7 +786,7 @@
   ],
   "stage_counts": {
     "new_extractions_completed": 5,
-    "new_independent_audits_passed": 5,
+    "new_independent_audits_passed": 6,
     "new_integrations_passed": 8,
     "new_source_papers_published": 8,
     "new_records_published": 98,
@@ -794,7 +794,10 @@
     "independent_delta_audits_passed": 3,
     "independent_canonical_mapping_audits_passed": 3,
     "browser_qa_passed": 8,
-    "independent_integration_audits_passed": 8
+    "independent_integration_audits_passed": 8,
+    "distinct_source_packages_extracted_or_reused": 9,
+    "distinct_source_audit_scopes_accepted_or_reused": 9,
+    "additional_private_reader_package_audits_passed": 1
   },
   "papers": [
     {
@@ -923,15 +926,22 @@
       "source_id": "thomson2010ja101908k",
       "doi": "10.1021/ja101908k",
       "inherited_pretrial_work": false,
-      "stage": "Main-only author extraction frozen; bounded independent source audit passed; expanded scientific and Reader checks in progress",
+      "stage": "Paused at trial cutoff; awaiting user review",
       "source_pdf_sha256": "3ce8c6d86971ca1f31a4b986559f44ec3185b5b7672675b1dee0e4f50cabc0db",
       "supplied_main_pages": 11,
-      "pending": "Independent remaining scientific/Reader checks, root integration, browser QA and all publication gates. This private candidate is not counted as published.",
+      "pending": "Root shared-dataset integration, generated Reader browser checks and all publication gates. One private canonical record is not counted in published output; SI remains unverified.",
       "previous_queue_source_id": "ja101908k-in-progress",
-      "canonical_freeze_sha256": "1fbce54c1ff6cd9a764b07c117eb07c31033c43eea8205ae9c0d48ac16fdfec7",
+      "canonical_freeze_sha256": "140d2e08d5421d46eaafd0f91ba77753290b726f1bed2f8e8acbc9b1bec3ae9c",
       "candidate_record_count": 1,
       "bounded_source_audit_sha256": "4b2c338a664df7385cfecb6e6a182e6e2f6ae8a26f9d84e8a70a434947addd2a",
-      "si_status": "not located or verified"
+      "si_status": "not located or verified",
+      "expanded_main_source_audit_sha256": "3f6657ff8a7d203283232403da083645cb68af0d4e0825a45363237a6a226927",
+      "nmr_delta_audit_sha256": "672591b813fbdff43c1ad620f3cf62b7ceb4bc869b59c64ff41288aad87da105",
+      "reader_package_freeze_sha256": "b6153f0175d76bd9ccc1f92822e11878703b6790b2690bc09a3aa6a9d68502bf",
+      "reader_package_audit_sha256": "642b7057adfb8bec78e67f253593a68690e11955bb6ebbbe3aa5897f1fc0b1a7",
+      "private_staged_integration_bundle_sha256": "ffd3c944168a6627a0cdfdada24cabeaf3b7b86a64a87d9d047429df1a9c62a6",
+      "private_handoff_files_verified": 30,
+      "stage_at_cutoff": "Supplied-main scientific audit and bounded Reader package audit passed; exact private integration handoff verified. Shared integration, browser QA and publication remain pending."
     }
   ],
   "publication_events": [
@@ -1063,7 +1073,7 @@
     }
   ],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T13:01:39.471087+00:00",
+  "last_updated_at": "2026-09-25T13:50:35.810020+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,
@@ -1198,13 +1208,103 @@
       "status": "corrected_independently_accepted_and_published",
       "previous_status": "corrected_exact_asset_delivery_preflight_pending",
       "verified_release": "20260925-precursor-and-phase-batch"
+    },
+    {
+      "source_id": "thomson2010ja101908k",
+      "finding": "Source-specific NMR acquisition details were omitted from the first extraction. Added separate solvent, temperature, delay and standard-method contexts; independently checked against the main source without assigning them to unrelated spectra or growth.",
+      "status": "corrected_source_delta_independently_accepted_private_unpublished"
+    },
+    {
+      "source_id": "thomson2010ja101908k",
+      "finding": "A figure legend was clipped in a draft crop, and a Reader directory changed after its handoff hash. Corrected crops and moved final handoff to a new immutable revision; final integration verdict pending.",
+      "status": "corrected_immutable_reader_package_independently_accepted_private_unpublished"
+    },
+    {
+      "source_id": "thomson2010ja101908k",
+      "finding": "Reader metadata described new chemical references as existing registry entries; helper also needed consistent public asset paths and final review hashes. Independently accepted molecule identities are unchanged.",
+      "status": "reader_metadata_corrected_independent_package_pass_helper_preflight_pass_shared_integration_pending"
+    },
+    {
+      "source_id": "progress_reporting",
+      "finding": "A full-page render check found missing work-stage arrays and a date-only milestone crashing progress refresh. Corrected optional-stage handling, safe date display, both module cache versions and stale batch publication label; regression test passes, independent code review and deployment pending.",
+      "status": "corrected_independent_code_audit_and_renderer_regression_passed_deployment_pending"
     }
   ],
-  "checkpoint_note": "Eight distinct sources and98records newly deployed and anonymously verified. Four source reviews were inherited; four papers were newly read during this trial. One further screened-pass paper is being extracted/audited privately. Paper, record, source-row and independent physical sample counts are different metrics.",
+  "checkpoint_note": "Ten-hour trial ended: 8 distinct newly published sources, 98 records and 40 broad evidence rows. Awaiting user review; unfinished work stays local and is not counted as published.",
   "stage_count_notes": {
     "new_extractions_completed": "Five fresh main-paper author extractions completed during the trial, including one private candidate; four of these are published. Inherited draft/source work is separate.",
-    "new_independent_audits_passed": "Five completed new full/current-field source audits: Li1998, Li2000, Ramasamy, Costanzo, Yu. Bi2S3 currently has only a bounded PASS and is excluded here until expanded source review is frozen.",
+    "new_independent_audits_passed": "Six newly performed full/current-field main-source audits: Li1998, Li2000, Ramasamy, Costanzo, Yu and Thomson. Thomson includes the full R1 main audit plus targeted R2 NMR correction review. Its Reader and publication stages are still pending.",
     "independent_delta_audits_passed": "Legacy unique inherited-scope count; individual correction receipts are separately preserved, not counted as extra papers.",
-    "publication": "Only distinct new source contributions deployed and verified anonymously count. Integration, browser checks and corrections do not multiply paper throughput."
+    "publication": "Only distinct new source contributions deployed and verified anonymously count. Integration, browser checks and corrections do not multiply paper throughput.",
+    "distinct_source_packages_extracted_or_reused": "Nine distinct source packages: five fresh main extractions and four packages using pre-trial extraction/review work. These are not nine published papers.",
+    "distinct_source_audit_scopes_accepted_or_reused": "Nine distinct scoped scientific source checks, including three inherited/scoped-delta audits and six newly performed current-main audits. This does not assert SI was reviewed for main-only contributions.",
+    "additional_private_reader_package_audits_passed": "Thomson has a bounded immutable Reader package PASS, distinct from shared-site integration/browser acceptance; it remains unpublished."
+  },
+  "progress_code_audit_sha256": "3f13ad8d932e9851ea531935019e3c8e608a161d43406b3cdab20f940deeb148",
+  "frozen_at": "2026-09-25T13:50:35.810020+00:00",
+  "curation_hold": true,
+  "frozen_results": {
+    "trial_id": "20260925-three-hour-local",
+    "status": "awaiting_user_review",
+    "baseline_at": "2026-09-25T03:50:12Z",
+    "cutoff_at": "2026-09-25T13:50:12Z",
+    "frozen_at": "2026-09-25T13:50:35.810020+00:00",
+    "measurement_window_hours": 10.0,
+    "closeout_elapsed_hours": 10.006613894444444,
+    "newly_published_distinct_source_papers": 8,
+    "new_canonical_records": 98,
+    "new_broad_recipe_structure_evidence_rows": 40,
+    "new_exact_sample_coordinate_recipe_pairs": 0,
+    "published_papers_using_inherited_source_work": 4,
+    "published_papers_newly_read_in_trial": 4,
+    "arithmetic_daily_rate": 19.2,
+    "daily_rate_is_forecast": false,
+    "target_papers_per_day": 500,
+    "target_achieved": false,
+    "stage_counts": {
+      "new_extractions_completed": 5,
+      "new_independent_audits_passed": 6,
+      "new_integrations_passed": 8,
+      "new_source_papers_published": 8,
+      "new_records_published": 98,
+      "existing_source_corrections_published": 0,
+      "independent_delta_audits_passed": 3,
+      "independent_canonical_mapping_audits_passed": 3,
+      "browser_qa_passed": 8,
+      "independent_integration_audits_passed": 8,
+      "distinct_source_packages_extracted_or_reused": 9,
+      "distinct_source_audit_scopes_accepted_or_reused": 9,
+      "additional_private_reader_package_audits_passed": 1
+    },
+    "rework_issues_logged": 25,
+    "unfinished_sources": [
+      {
+        "source_id": "thomson2010ja101908k",
+        "doi": "10.1021/ja101908k",
+        "stage_at_cutoff": "Supplied-main scientific audit and bounded Reader package audit passed; exact private integration handoff verified. Shared integration, browser QA and publication remain pending.",
+        "pending": "Root shared-dataset integration, generated Reader browser checks and all publication gates. One private canonical record is not counted in published output; SI remains unverified."
+      }
+    ],
+    "paid_processing_used": false,
+    "new_downloads_used": false,
+    "worker_active_time": "Not instrumented; elapsed trial time is reported without a claim of continuous unattended processing.",
+    "representative_links": [
+      "https://cuiyist.github.io/mattersyn-site/records/cusb-3-1-sola-250c.html?view=reader",
+      "https://cuiyist.github.io/mattersyn-site/records/cdse-qd-octadecylphosphinate-300.html?view=reader",
+      "https://cuiyist.github.io/mattersyn-site/records/costanzo-2016-co-s1.html?view=reader",
+      "https://cuiyist.github.io/mattersyn-site/records/yu1998-cds-en-160c-12h.html?view=reader"
+    ],
+    "bottlenecks": [
+      "Source-specific scientific extraction and independent sample/figure assignment checks.",
+      "Mapping accepted scientific content into stable shared records, molecular assets and apparatus views.",
+      "Repeated provenance/schema/display corrections and exact publication gates."
+    ],
+    "hold": "Curation stays paused until a new explicit user decision; daily reports may report but cannot resume work."
+  },
+  "closeout": {
+    "temporary_automation_status": "PAUSED",
+    "pause_confirmed_via": "Codex automation_update",
+    "confirmed_at": "2026-09-25T13:51:07.350694+00:00",
+    "scope": "Administrative reporting and release closeout only; no scientific curation after cutoff."
   }
 }
