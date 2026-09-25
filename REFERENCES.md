@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.37.0** · **46 primary source groups** · release `20260925-williamson-li-reviewed-batch`. Records are not independent experiments.
+Dataset **0.38.0** · **47 primary source groups** · release `20260925-li2000-reviewed-batch`. Records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
@@ -25,6 +25,8 @@ Dataset **0.37.0** · **46 primary source groups** · release `20260925-williams
 - R. M. Stiger; S. Gorer; B. Craft; R. M. Penner (1999). Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100). *Langmuir*, 15, 790–798. [10.1021/la980800b](https://doi.org/10.1021/la980800b). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=stiger1999).
 
 - X. Peng; L. Manna; W. Yang; J. Wickham; E. Scher; A. Kadavanich; A. P. Alivisatos (2000). Shape control of CdSe nanocrystals. [10.1038/35003535](https://doi.org/10.1038/35003535). Review scope remains stated in the linked website records.
+
+- Bin Li, Yi Xie, Jiaxing Huang, and Yitai Qian (2000). Synthesis, Characterization, and Properties of Nanocrystalline Cu2SnS3. [10.1006/jssc.2000.8772](https://doi.org/10.1006/jssc.2000.8772). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2000cu2sns3).
 
 - Parag S. Shah; Shabbir Husain; Keith P. Johnston; Brian A. Korgel (2001). Nanocrystal Arrested Precipitation in Supercritical Carbon Dioxide. *Journal of Physical Chemistry B*, 105, 9433–9440. [10.1021/jp011815c](https://doi.org/10.1021/jp011815c). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=shah2001).
 

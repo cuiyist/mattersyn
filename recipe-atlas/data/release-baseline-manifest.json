@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.37.0",
-  "record_count": 747,
-  "group_count": 46,
+  "dataset_version": "0.38.0",
+  "record_count": 748,
+  "group_count": 47,
   "families": [
     "Cadmium dithiocarbamate precursor and CdSe/CdS quantum belts",
     "Cassiterite tin dioxide colloids",
@@ -51,6 +51,7 @@
     "lead-halide perovskite composites",
     "lead-halide perovskite nanocrystals",
     "magnetic oxide nanocrystals",
+    "triclinic ternary sulfide nanocrystals",
     "zinc gallate oxide nanocrystals"
   ],
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
@@ -17686,6 +17687,75 @@
       "collection": "reviewed_literature",
       "components": [
         "ZnGa2O4"
+      ]
+    },
+    {
+      "record_id": "li2000-cu2sns3-ethylenediamine-solvothermal",
+      "title": "Cu2SnS3 nanocrystals · Li et al. (2000)",
+      "formula": "Cu2SnS3",
+      "family": "triclinic ternary sulfide nanocrystals",
+      "method": "Solvothermal synthesis in ethylenediamine",
+      "record_type": "literature_protocol",
+      "source_year": 2000,
+      "source_doi": "10.1006/jssc.2000.8772",
+      "revision": 1,
+      "record_sha256": "d414a845d4d96559be96d10b99642ed3df035dc56238d554f64e250487c0b9d0",
+      "recipe_signature": "5606d7fce885d0d5415fd5b0d525de814aa59f734ceb7f095f933bd1e9bbb1de",
+      "group_id": "group-7e2cd2a04745",
+      "split": "test",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/li2000-cu2sns3-ethylenediamine-solvothermal.json",
+      "page_url": "records/li2000-cu2sns3-ethylenediamine-solvothermal.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "Cu2SnS3"
       ]
     },
     {
@@ -47168,7 +47238,7 @@
       "source_doi": "10.1021/acsnano.1c00502",
       "revision": 1,
       "record_sha256": "c377fe299397b849c63a234847848dd707d1f996831c4d391a9866e85b73c48a",
-      "recipe_signature": "5e60ca6ef015d5d4933788089389ac15bba12e4674d74a238c207c905332940a",
+      "recipe_signature": "9d57908bd61c668446f5058670a609a454dd5aca52ced9fe6f73254f37855721",
       "group_id": "group-4bdd7eff5f9b",
       "split": "train",
       "eligibility": {

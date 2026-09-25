@@ -8,6 +8,18 @@ import hashlib,json
 from pathlib import Path
 from asset_display import display_view
 ROOT=Path(__file__).resolve().parents[1]
+
+def validate_reader_view(rid,view):
+    # The browser consumes per-record figure objects, not figures_by_source.
+    # An explicit empty list is valid; a missing field otherwise silently hides
+    # reviewed figures while the source-level gallery remains populated.
+    if not isinstance(view.get('figures'),list):
+        raise ValueError('Reader requires an explicit per-record figure list: '+rid)
+    if any(not isinstance(f,dict) or not f.get('id') for f in view['figures']):
+        raise ValueError('Reader figures must be complete objects, not ID references: '+rid)
+    if not isinstance(view.get('scopeLabel'),str) or not view['scopeLabel'].strip():
+        raise ValueError('Reader requires a visible source/sample scope: '+rid)
+
 def main():
     source=ROOT/'data/reader-presentation-reviewed.json'
     if not source.is_file():raise SystemExit('Missing reviewed Reader sidecar; do not regenerate it from an older classification table.')
@@ -16,6 +28,7 @@ def main():
     for rid,view in data['records'].items():
         if rid not in records:raise ValueError('Unknown Reader record: '+rid)
         if view['source_id']!=records[rid]['lineage']['source_group']:raise ValueError('Reader source mismatch: '+rid)
+        validate_reader_view(rid,view)
     hubs={p.stem:json.loads(p.read_text(encoding='utf-8-sig'))for p in (ROOT/'dist/data/materials').glob('*.json')}
     if set(hubs)!=set(data['materials']):raise ValueError('Reviewed Reader material set differs from rebuilt atlas')
     for hid,view in data['materials'].items():

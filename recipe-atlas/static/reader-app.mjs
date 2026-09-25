@@ -6,7 +6,7 @@ import {quantityValue} from './quantity-value.mjs';
 
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.34.1';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.37.0-r1';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.38.0';
 
 import {mountReaderStructures} from './reader-structures.mjs?v=0.36.0';
 
@@ -22,7 +22,7 @@ const normal=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.35.0-conflict-pairs');style.dataset.readerCss='true';document.head.append(style);}
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.38.0');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
@@ -87,7 +87,8 @@ function reviewURL(r,p={},anchor=''){const base=p.data_links?.full_review||recor
 
 export function figureGallery(host,figures,r,category,presentation={}){
 
- const unique=new Map();for(const f of figures.filter(x=>(x.category===category||x.categories?.includes(category))&&(x.public_asset||x.asset)))unique.set((f.source_id||'')+'|'+f.id,f);const rows=[...unique.values()];const textOnly=figures.filter(f=>(f.category===category||f.categories?.includes(category))&&!(f.public_asset||f.asset));for(const f of textOnly)host.append(disclosure((f.title||f.id)+' · original image unavailable',el('p',f.summary||''),link('Source evidence →',reviewURL(r,presentation),'reader-data-link')));if(!rows.length)return textOnly.length;
+ const matches=f=>f.category===category||f.categories?.includes(category)||(category==='structure'&&(f.category==='composition'||f.categories?.includes('composition')));
+ const unique=new Map();for(const f of figures.filter(x=>matches(x)&&(x.public_asset||x.asset)))unique.set((f.source_id||'')+'|'+f.id,f);const rows=[...unique.values()];const textOnly=figures.filter(f=>matches(f)&&!(f.public_asset||f.asset));for(const f of textOnly)host.append(disclosure((f.title||f.id)+' · original image unavailable',el('p',f.summary||''),link('Source evidence →',reviewURL(r,presentation),'reader-data-link')));if(!rows.length)return textOnly.length;
 
  const wrapper=el('div',undefined,'reader-figure-gallery'),tabs=el('div',undefined,'reader-figure-tabs'),display=el('div');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label',category==='property'?'Property figures':'Characterization figures');wrapper.append(tabs,display);host.append(wrapper);
 
@@ -176,4 +177,3 @@ if(document.body.dataset.readerPage==='material'){
  const params=new URLSearchParams(location.search);try{await mountReader(document.querySelector('main'),{materialId:params.get('id')||document.body.dataset.materialId,recordId:params.get('method')||document.body.dataset.recordId||undefined});}catch(error){document.querySelector('main').replaceChildren(el('h1','Material reader'),el('p',error.message),link('Explore reviewed materials →','index.html'));console.error(error);}
 
 }
-

@@ -785,16 +785,16 @@
     "Use elapsed wall time including setup, failures and rework; also record per-stage active worker time."
   ],
   "stage_counts": {
-    "new_extractions_completed": 1,
-    "new_independent_audits_passed": 1,
-    "new_integrations_passed": 3,
+    "new_extractions_completed": 2,
+    "new_independent_audits_passed": 2,
+    "new_integrations_passed": 4,
     "new_source_papers_published": 3,
     "new_records_published": 44,
     "existing_source_corrections_published": 0,
-    "independent_delta_audits_passed": 1,
+    "independent_delta_audits_passed": 3,
     "independent_canonical_mapping_audits_passed": 3,
-    "browser_qa_passed": 3,
-    "independent_integration_audits_passed": 3
+    "browser_qa_passed": 4,
+    "independent_integration_audits_passed": 4
   },
   "papers": [
     {
@@ -830,10 +830,12 @@
     {
       "doi": "10.1021/acsnano.1c08966",
       "source_id": "dhaene2022",
-      "stage": "Independent 13-record mapping passed; public figure/display corrections in progress",
+      "stage": "Reader package and precursor-coverage corrections in progress; accepted unchanged audits reused",
       "inherited_pretrial_work": true,
-      "pending": "Replace private full-page assets with selected source figures, resolve two dictionary-string operation displays, integrate and verify Reader.",
-      "canonical_mapping_audit_sha256": "ef481f616997aa1be1d527fa08a06e05e7e192a78ba146084f2c1bf960ffadca"
+      "pending": "R3 upstream precursor charges/branch corrections and independent changed-field review, then integration/deployment.",
+      "canonical_mapping_audit_sha256": "ef481f616997aa1be1d527fa08a06e05e7e192a78ba146084f2c1bf960ffadca",
+      "selected_figure_delta_audit_sha256": "59e80517966117871bf160bb29f3563f4d18f9b8e8fe353336b2a7ffdc0ab23b",
+      "additional_17_crops_delta_audit_sha256": "b6a924ce20e7c4e874337531e17ff3523f698161215342994c16e4694659393d"
     },
     {
       "doi": "10.1021/cm970557m",
@@ -851,15 +853,33 @@
     {
       "doi": "10.1006/jssc.2000.8772",
       "source_id": "li2000cu2sns3",
-      "stage": "Fresh full-source extraction in progress",
+      "stage": "Independent source and integration audits and owner browser checks passed; deployment pending",
       "inherited_pretrial_work": false,
-      "authoritative_candidate": "throughput-trial-20260925/next-source-01",
+      "authoritative_candidate": "throughput-trial-20260925/next-source-01/r4-additive-final",
       "source_pdf_sha256": "152e23c36084f79c1bbb0490ed2ce9d9bca355128123f7273bb80291647ee6f9",
       "supplied_main_pages": 4,
       "screened_pass_verified": true,
-      "pending": "Complete extraction, independent audit, Reader integration and release gates.",
+      "pending": "Reproducible release, deployment and anonymous verification.",
       "year": 2000,
-      "bibliographic_note": "Corrected provisional year against supplied main p1 before integration."
+      "bibliographic_note": "Corrected provisional year against supplied main p1 before integration.",
+      "r3_freeze_sha256": "454d1a1f4c43a13a035360af0b8f341c89cb102d4e4a083aeb08bca615c9cbcb",
+      "independent_r3_delta_audit_sha256": "6233e761838bd3254cb70ebee949ef07a04843c10218e6853f33216e41da3e5a",
+      "r4_freeze_sha256": "2083f701583415239af7b04716a389abe607e062ff049c48088c98bdbf3b6940",
+      "source_audit_sha256": "d7f29f94188c0ce4b3c53f4db03bc373b7678fd99ce302d64c03195e66ccc385",
+      "independent_integration_audit_sha256": "969d8efd9f90f0d8060dca12f9b9ac3cb987de726909dc8c55e7f3df907f766a"
+    },
+    {
+      "source_id": "ramasamy2014cusb",
+      "doi": "10.1021/cm5005642",
+      "stage": "Seventeen canonical records frozen for current-field audit; Reader assets in progress",
+      "inherited_pretrial_work": true,
+      "candidate_record_count": 17,
+      "condition_map_rows": 16,
+      "time_series_observation_records": 1,
+      "authoritative_candidate": "throughput-trial-20260925/next-source-02/author-package-r1/canonical-freeze-r1",
+      "canonical_freeze_sha256": "2dbb04e07e46404c4e22badc5eae2238390e1c107fe3f8dc5d956db89e9db3e3",
+      "source_pages_root_visually_read": 15,
+      "pending": "Independent current-field audit, completed Reader/figure/molecular integration, browser checks and verified deployment. Prior audit snapshot was not recovered; bounded route correction is not a full current audit."
     }
   ],
   "publication_events": [
@@ -915,7 +935,7 @@
     }
   ],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T06:50:02.147997+00:00",
+  "last_updated_at": "2026-09-25T08:30:19.145452+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,
@@ -968,6 +988,32 @@
       "source_id": "batch2",
       "finding": "The release regression test retained the prior85 broad-row expectation. Updated reviewed fixture to87,28 sources,73 records with explicit Li two-context and Williamson exclusion assertions. All93 tests passed afterward.",
       "status": "corrected_clean_build_and_public_release_verified"
+    },
+    {
+      "source_id": "batch3",
+      "finding": "The source approval baseline retained one stale Williamson recipe signature. Compared all747 records against the exact deployed, allowlisted manifest; scientific digests, eligibility, groups and splits match. Reconciled the derived signature to the already published value and preserved the old snapshot.",
+      "status": "corrected_against_verified_published_manifest"
+    },
+    {
+      "source_id": "li2000cu2sns3",
+      "finding": "Reader omitted composition-category XPS figure. Characterization gallery now includes composition evidence without changing structural training labels.",
+      "status": "corrected_browser_verified"
+    },
+    {
+      "source_id": "li2000cu2sns3",
+      "finding": "Shared product facts inherited a flex row that compressed long descriptor labels. Scoped block layout and left alignment restore readable descriptors.",
+      "status": "corrected_desktop_mobile_verified"
+    },
+    {
+      "source_id": "li1998znga2o4",
+      "finding": "Fifteen source-figure and authored-illustration provenance bindings retained a pre-closeout record hash. Bound all to the existing published record; scientific fields and images unchanged.",
+      "status": "corrected_independently_rechecked"
+    },
+    {
+      "source_id": "batch3",
+      "finding": "Private inventory helper initially used source-review status vocabulary instead of inventory vocabulary. Corrected explicit main-only mapping; inventory and page checks passed. An untransformed source-checkout figure test was rerun in the proper prebuild-transformed projection; all97 tests passed.",
+      "status": "corrected_required_checks_passed"
     }
-  ]
+  ],
+  "checkpoint_note": "Published counts remain 3 distinct sources and 44 records. Extraction completion is not audit acceptance or publication. Cu–Sb–S inherited audit/hash reconciliation is a bounded next-source readiness check, not a completed source contribution."
 }

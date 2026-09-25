@@ -3,7 +3,7 @@
   "status": "integrated_curator_display_interpretations",
   "scope": "Fifteen source-context-specific, additive morphology interpretations from existing reviewed records and eight linked figure crops.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
-  "input_reader_presentation_sha256": "2b0813783556ce9d9fc430bfb19c27a74197a364e75a0f91c4139913b57d2abc",
+  "input_reader_presentation_sha256": "47208a263e1fc163ce6d8a3455c93d17e200ab0149db5d36e90cc93b60146b47",
   "entries": {
     "evans-2010-pbse-tem:pbse-tem-spheres": {
       "record_id": "evans-2010-pbse-tem",
@@ -808,6 +808,37 @@
       "measured_atomic_coordinates": false,
       "same_batch_asserted": false,
       "geometry_parameters": "Illustrative proportions only; no image-derived dimension or coordinate estimate."
+    },
+    "li2000-cu2sns3-ethylenediamine-solvothermal:xrd-tem-context": {
+      "record_id": "li2000-cu2sns3-ethylenediamine-solvothermal",
+      "sample_id": "xrd-tem-context",
+      "shape": "assembly",
+      "label": "Cu2SnS3 particle aggregation",
+      "status": "curator_interpretation",
+      "basis": "reported_description_to_schematic",
+      "rationale": "The source describes primary particles aggregating into larger secondary crystals and provides a TEM image. The shared assembly illustration conveys aggregation without assigning a unique primary-particle shape.",
+      "evidence": [
+        {
+          "record_id": "li2000-cu2sns3-ethylenediamine-solvothermal",
+          "pointer": "/products/0/morphology",
+          "source_id": "li2000cu2sns3",
+          "locator": "Main PDF p. 2, printed p. 171, Figure 2 and Results and Discussion TEM/aggregation paragraph",
+          "figure_id": "figure-2",
+          "public_asset": "assets/paper-reviews/li2000cu2sns3/figure-2.png"
+        }
+      ],
+      "limitations": [
+        "Illustrative particle arrangement, count and geometry; not a reconstruction from the TEM image.",
+        "No crystallographic facets, coordination model or measured atomic coordinates are assigned.",
+        "The approximately 8 nm particle size is the paper's reported value. The 60 nm image scale bar is not a particle diameter.",
+        "The paper does not identify the Figure 2 specimen with a particular temperature, independent physical batch or the separate 180 degree Celsius grain observation."
+      ],
+      "source_sha256": "578f5c120ef863de2e748849f583e7f8dab064b757b6e69821a31176fd92aad6",
+      "source_hash_scope": "dist/data/records/li2000-cu2sns3-ethylenediamine-solvothermal.json",
+      "recipe_link": "general_context",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Shared qualitative assembly geometry only; no image-derived dimensions or coordinates."
     }
   },
   "additional_contexts": {
