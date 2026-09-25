@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-25T18:06:38.300386+00:00",
+  "updated_at": "2026-09-25T21:42:44.368050+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.39.1",
-    "record_count": 802,
-    "synthesis_route_count": 189,
-    "material_hub_count": 66,
+    "record_count": 825,
+    "synthesis_route_count": 205,
+    "material_hub_count": 72,
     "direct_material_hub_count": 56,
     "component_material_hub_count": 10,
-    "public_source_group_count": 52,
-    "formal_source_reader_count": 47,
+    "public_source_group_count": 53,
+    "formal_source_reader_count": 48,
     "exact_structure_recipe_count": 0,
-    "last_verified_site_commit": "9ab4fcc106e4f88fad9eba5ea787c9e3ca5dc258"
+    "last_verified_site_commit": "202b66e0d9f3fde34ff6c185ac90c9407660f2e2"
   },
   "corpus": {
     "present_files": 17700,
@@ -74,8 +74,8 @@
     {
       "short_label": "Resumed local curation",
       "title": "Faster integration of independently reviewed papers",
-      "stage": "Active after the user reviewed the ten-hour trial",
-      "summary": "Rusch’s main and matched SI contribution adds 23 source-reviewed records and 16 routes in this release candidate; it is credited as a new live paper only after deployment and anonymous verification. InP has 36 frozen schema-valid candidate records awaiting translation audit. Li Cs3Cu2X5 has an independent 10-page main-source review, with author extraction comparison pending. The measured ten-hour trial was 0.8 papers/hour; the required 500/day rate (20.83/hour) is not demonstrated.",
+      "stage": "Reviewed Li/Gary contributions included; sulfide Reader and nickel hydroxychloride extraction active",
+      "summary": "This artifact includes 40 reviewed records, 19 synthesis routes and 25 source figures from Li 2020 and Gary/Glassy/Cossairt 2014. Independent source, scientific, chemical and integration audits passed. Distinct source contributions are credited in the verified publication ledger after deployment; the 500/day target remains unachieved.",
       "stages": [
         {
           "label": "Accepted-package importer",
@@ -84,8 +84,8 @@
         },
         {
           "label": "Independent source and integration review",
-          "status": "in_progress",
-          "detail": "Preserve each paper’s exact source, sample and figure scope; version mismatches are resolved before acceptance."
+          "status": "complete",
+          "detail": "Both contributions passed their separate scientific audits and a bounded aggregate audit, preserving all 825 prior record bytes."
         },
         {
           "label": "Batched publication",
@@ -142,8 +142,8 @@
     {
       "short_label": "Rusch/Manna · Chem. Mater. 2026",
       "title": "Source audit · DOI 10.1021/acs.chemmater.5c02845",
-      "stage": "Current Reader integration in progress",
-      "summary": "The supplied 10 main and 24 SI pages and 23-record source package retain their earlier scientific audits. The current Reader/chemistry package passed a separate scoped audit with integration notes. A private aggregate overlay, source-crop provenance, stock bindings and apparatus registration are in preparation. Figure 4 C12 assignment remains unresolved; no shared records are promoted yet.",
+      "stage": "Published and anonymously verified on 2026-09-25.",
+      "summary": "The main and matched SI contribution adds 23 records, 16 routes, six material hubs and 37 source figure/table assets. Source, Reader/chemical and independent integration checks passed; Pages and anonymous verification passed at 2026-09-25T18:44:42.004199+00:00. Figure 4 C12 sample assignment remains explicitly unresolved.",
       "stages": [
         {
           "label": "Main/SI source reading and visual coverage",
@@ -162,18 +162,18 @@
         },
         {
           "label": "Reader and dataset integration",
-          "status": "in_progress",
-          "detail": "Build an isolated reader/material contribution from the corrected 23-record package. Preserve all source conflicts and the C12 hold; do not alter training eligibility before full integration and browser QA.",
+          "status": "complete",
+          "detail": "Completed and publicly verified with source commit 7c20ec43007de9d84505a00349fedfbfdcdeb9a9 and site commit 202b66e0d9f3fde34ff6c185ac90c9407660f2e2. Source conflicts and the C12 hold remain visible.",
           "status_at_trial_end": "in_progress"
         }
       ],
-      "gaps": [
+      "stage_at_trial_end": "Isolated reader candidate prepared; remaining molecular/solution graphics and independent integration/browser acceptance are queued. Figure 4 C12 remains on hold.",
+      "historical_gaps_before_completed_integration": [
         "22/23 recipe-origin pointers are unresolved",
         "Some rapid-product phase/morphology fields cite Methods rather than Results pages",
         "Bi stock material-family mapping is unsupported",
         "Figure 4 caption versus visible inset scope requires clarification"
-      ],
-      "stage_at_trial_end": "Isolated reader candidate prepared; remaining molecular/solution graphics and independent integration/browser acceptance are queued. Figure 4 C12 remains on hold."
+      ]
     },
     {
       "short_label": "Tirosh et al. (2006)",
@@ -637,12 +637,13 @@
   "estimate": {
     "status": "active_capacity_measurement",
     "summary": "Curation resumed after user review. No whole-corpus finish date is asserted until the improved workflow has measured end-to-end output.",
-    "current_batch": "Thomson is deployed and verified. Rusch/Manna, InP and Li2020 Cs3Cu2X5 are active in separate local scopes.",
+    "current_batch": "Thomson and Rusch are already deployed. Li2020 and Gary/Cossairt2014 are in final integration; Ghezelbash/Korgel2005 is in independent audit/Reader preparation; Hu/Wang2010 source reading is preserved.",
     "scenarios": [],
     "notes": [
-      "The completed ten-hour trial remains frozen: 8 distinct newly published papers, including 4 with pretrial work.",
-      "No paid processing, new paper download or external transfer of local source documents is authorized.",
-      "The resumed run starts at 15:36:20 UTC on September 25. One inherited source contribution is newly deployed and verified; this does not establish 500 papers/day capacity."
+      "The completed ten-hour trial remains frozen at eight newly published source contributions.",
+      "The resumed run has two verified published sources before this release; pending candidates are not included.",
+      "No paid processing, new paper downloads or external transfer of local source documents.",
+      "No whole-corpus finish date is asserted from drafting speed; 500/day is not demonstrated."
     ],
     "previous_notes": [
       "Frozen pass set: 5,539 distinct source contents in 5,587 copied files (48 duplicates); main articles and SI are separate screen units, not unique-paper or recipe counts.",

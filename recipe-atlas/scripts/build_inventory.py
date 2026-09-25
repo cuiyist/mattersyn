@@ -31,10 +31,10 @@ def main():
     main_si_reviews = [r for r in reviews if r['review_scope']==MAIN_SI]
     main_only_reviews = [r for r in reviews if r['review_scope']==MAIN_ONLY]
     assert len(main_si_reviews)==summary['formal_full_main_and_matched_si_reviews']
-    assert {r['id'] for r in main_si_reviews}=={p['source_group'] for p in inventory['per_paper'] if p['review_status']=='full_supplied_main_and_matched_si_review'}, 'Inventory main-plus-SI review scopes changed'
+    assert {r['id'] for r in main_si_reviews}=={p.get('paper_id',p['source_group']) for p in inventory['per_paper'] if p['review_status']=='full_supplied_main_and_matched_si_review'}, 'Inventory main-plus-SI review scopes changed'
     assert sum(p['pages_read'] for p in main_si_reviews)==summary['formal_full_review_pages']
     assert len(main_only_reviews)==summary.get('formal_full_main_reviews_si_unverified',0)
-    assert {r['id'] for r in main_only_reviews}=={p['source_group'] for p in inventory['per_paper'] if p['review_status']=='full_supplied_main_review_si_unverified'}, 'Inventory main-only review scopes changed'
+    assert {r['id'] for r in main_only_reviews}=={p.get('paper_id',p['source_group']) for p in inventory['per_paper'] if p['review_status']=='full_supplied_main_review_si_unverified'}, 'Inventory main-only review scopes changed'
     assert sum(p['pages_read'] for p in main_only_reviews)==summary.get('formal_full_main_only_review_pages',0)
     library = read(ROOT/'dist/data/library-index.json')
     assert len(library['papers'])==summary['local_paper_groups_indexed']

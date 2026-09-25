@@ -38,7 +38,7 @@ def citation(s,review):
     if paper.get('journal'):line+=' *'+paper['journal']+'*'+(', '+str(paper['volume'])if paper.get('volume')else'')+(', '+str(paper['pages'])if paper.get('pages')else'')+'.'
     if s.get('doi'):line+=' ['+s['doi']+'](https://doi.org/'+s['doi']+').'
     elif s.get('url'):line+=' [Source]('+s['url']+').'
-    if review:line+=' [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id='+s['id']+').'
+    if review:line+=' [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id='+review.get('paper_id',s['id'])+').'
     else:line+=' Review scope remains stated in the linked website records.'
     return line.replace('\n',' ')
 def readme_with_references(existing,introduction,body):
@@ -54,15 +54,16 @@ def generate(root,snapshot):
     if {r['record_id']for r in records}!={r['record_id']for r in manifest['records']}:raise ValueError('Release record/manifest membership differs')
     if len(records)!=snapshot['record_count']:raise ValueError('Release record count differs from approved snapshot')
     reviews={r['paper_id']:r for r in (load(p)for p in (root/'data/paper-reviews').glob('*.json'))};primary={};other={}
+    reviews_by_source={r.get('source_group',pid):r for pid,r in reviews.items()}
     for r in records:
         for s in r['sources']:
             key=(s.get('doi')or s.get('url')or s['id']).lower();(primary if s['id']==r['lineage']['source_group']else other).setdefault(key,s)
     for key in primary:other.pop(key,None)
     refs=['## Papers used in the published website','',f"Dataset **{manifest['dataset_version']}** · **{len(primary)} primary source groups** · release `{snapshot['release_id']}`. Records are not independent experiments.",'']
-    for s in sorted(primary.values(),key=lambda s:(s.get('year')or 0,s['title'])):refs+=['- '+citation(s,reviews.get(s['id'],{})),'']
+    for s in sorted(primary.values(),key=lambda s:(s.get('year')or 0,s['title'])):refs+=['- '+citation(s,reviews_by_source.get(s['id'],reviews.get(s['id'],{}))),'']
     if other:
         refs+=['## Additional contextual sources','','These are contextual/upstream references, not extra reviewed synthesis contributions.','']
-        for s in sorted(other.values(),key=lambda s:(s.get('year')or 0,s['title'])):refs+=['- '+citation(s,reviews.get(s['id'],{})),'']
+        for s in sorted(other.values(),key=lambda s:(s.get('year')or 0,s['title'])):refs+=['- '+citation(s,reviews_by_source.get(s['id'],reviews.get(s['id'],{}))),'']
     registry=load(dist/'assets/crystal-references/registry.json')if (dist/'assets/crystal-references/registry.json').exists()else{'entries':[]};seen=set()
     refs+=['## Crystal reference models','','Reference structures are distinguished from sample-resolved synthesis targets. Provenance and qualifications remain in the website registry.','']
     for entry in registry['entries']:

@@ -43,6 +43,13 @@ def synthesis_route(r):
             and r['quality']['review_status']=='source_reviewed'
             and (role=='synthesis_route' or (role is None and 'precursor_selection' in r['quality']['requested_tasks']))
             and any(o['stage']=='synthesis' for o in r['operations']))
+
+def material_elements(r):
+    formula=r['material']['formula']
+    elements=r['material'].get('elements') or COMPONENT_ELEMENTS.get(formula,re.findall('[A-Z][a-z]?',formula))
+    if synthesis_route(r) and (not elements or not set(elements)<=SYMBOLS):
+        raise ValueError(f"Reviewed synthesis route {r['record_id']} needs an explicit valid element list for material {formula!r}; it must not disappear from the atlas.")
+    return elements
 def main():
     source=ROOT/'data/corpus/library-source.json'
     corpus=read(source) if source.exists() else {'summary':{},'papers':[]}
@@ -55,7 +62,7 @@ def main():
         if formula not in materials:materials[formula]={'id':slug(formula),'formula':formula,'name':NAMES.get(formula,formula+' literature collection'),'elements':list(dict.fromkeys(elements)),'url':'cdse.html' if formula=='CdSe' else 'material.html?id='+slug(formula),'record_ids':set(),'direct_record_ids':set(),'paper_dois':set(),'mentioned_paper_dois':set(),'architectures':set()}
         return materials[formula]
     for r in records:
-        f=r['material']['formula'];els=r['material'].get('elements') or COMPONENT_ELEMENTS.get(f,re.findall('[A-Z][a-z]?',f))
+        f=r['material']['formula'];els=material_elements(r)
         primary=next(s for s in r['sources'] if s['id']==r['lineage']['source_group']);doi=primary['doi'].lower()
         if doi not in papers:papers[doi]={'id':'paper-'+hashlib.sha256(doi.encode()).hexdigest()[:20],'doi':doi,'doiUrl':primary['url'],'title':primary['title'],'year':primary['year'],'documentIds':[],'coverage':{'localDocumentCount':None,'mainDocumentAvailable':True,'supportingDocumentAvailable':None,'extractionStatusCounts':{}},'materialTitleMentions':[],'titleComponentSystems':[]}
         papers[doi]['title']=primary['title'];papers[doi]['year']=primary['year'];papers[doi]['titleVerifiedFromSelectedRecord']=True

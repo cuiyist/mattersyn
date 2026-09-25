@@ -1,6 +1,6 @@
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
 import {mountWuContext} from './wu2008-reader-context.mjs';
-import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL} from './reader-utils.mjs';
+import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory} from './reader-utils.mjs?v=0.40.0';
 
 import {quantityValue} from './quantity-value.mjs';
 
@@ -101,7 +101,7 @@ function reviewURL(r,p={},anchor=''){const base=p.data_links?.full_review||recor
 
 export function figureGallery(host,figures,r,category,presentation={}){
 
- const matches=f=>f.category===category||f.categories?.includes(category)||(category==='structure'&&(f.category==='composition'||f.categories?.includes('composition')));
+ const matches=f=>figureMatchesCategory(f,category);
  const unique=new Map();for(const f of figures.filter(x=>matches(x)&&(x.public_asset||x.asset)))unique.set((f.source_id||'')+'|'+f.id,f);const rows=[...unique.values()];const textOnly=figures.filter(f=>matches(f)&&!(f.public_asset||f.asset));for(const f of textOnly)host.append(disclosure((f.title||f.id)+' · original image unavailable',el('p',f.summary||''),link('Source evidence →',reviewURL(r,presentation),'reader-data-link')));if(!rows.length)return textOnly.length;
 
  const wrapper=el('div',undefined,'reader-figure-gallery'),tabs=el('div',undefined,'reader-figure-tabs'),display=el('div');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label',category==='property'?'Property figures':category==='precursor'?'Precursor characterization':'Characterization figures');wrapper.append(tabs,display);host.append(wrapper);

@@ -1,0 +1,602 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li-2020-cs3cu2x5-optical-model-contexts",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Optical, mixed-emitter and DFT contexts for cesium copper halide nanocrystals",
+  "material": {
+    "formula": "Cs3Cu2X5 (X = Cl, Br, I) and CsCu2I3 contexts",
+    "family": "optical and calculated reference contexts",
+    "elements": [],
+    "components": [
+      "Cs3Cu2X5 (X = Cl, Br, I) and CsCu2I3 contexts"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Context record for a relative-ratio white-light calculation, DFT quantities and an unsuccessful composition attempt; these are not extra synthesized batches.",
+  "sources": [
+    {
+      "id": "li2020cs3cu2x5",
+      "doi": "10.1021/acs.chemmater.0c00280",
+      "title": "Room Temperature Synthesis of Stable, Printable Cs3Cu2X5 (X = I, Br/I, Br, Br/Cl, Cl) Colloidal Nanocrystals with Near-Unity Quantum Yield Green Emitters (X = Cl)",
+      "authors": "Yanyan Li; Parth Vashishtha; Zhicong Zhou; Zhi Li; Sunil B. Shivarudraiah; Chao Ma; Junkai Liu; Kam Sing Wong; Haibin Su; Jonathan E. Halpert",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.chemmater.0c00280",
+      "main_status": "Source-reviewed against the accepted main PDF only; independent source audit and R2 delta review passed. Reader integration, rights and release checks remain separate.",
+      "si_status": "Matching SI is present locally (SHA-256 c6afc558d42c61cc99d4e0f44321fef222ec93d3563d186e40a1d1487527a8f2) but is outside this review scope; it was not admitted, read, or used.",
+      "reuse_status": "User-directed display candidate only; permission is not independently verified and publication review remains pending."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2020cs3cu2x5",
+    "recipe_family": "li-2020-cs3cu2x5-context",
+    "parent_record_id": "li-2020-cs3cu2x5-antisolvent",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cs3Cu2X5 (X = Cl, Br, I) and CsCu2I3 contexts",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 2 / printed p. 5516"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No prospective size target; source size values are outcomes.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "white-mixture-context",
+      "name": "Relative-emitter-ratio white-light context; physical mixture status not stated",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "dft-br-context",
+      "name": "Calculated Cs3Cu2Br5 band structure",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "dft-cl-context",
+      "name": "Calculated Cs3Cu2Cl5 band structure",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "cl-optical-edge-context",
+      "name": "Cs3Cu2Cl5 absorption-edge-associated context",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "negative-cucx3-context",
+      "name": "Unsuccessful target-composition attempt",
+      "kind": "sample_set",
+      "parent_ids": []
+    }
+  ],
+  "operations": [],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "white-light-context",
+      "source_sample_label": "Relative-emission-ratio combination; no physical batch identified",
+      "batch_id": null,
+      "material_state_id": "white-mixture-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cs3Cu2Cl5:Cs3Cu2Br5:CsCu2I3 relative emitter ratio 2:7:5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "Article says white light can be simulated by combining emitters; not a separately synthesized mixed-phase sample."
+      ]
+    },
+    {
+      "sample_id": "br-dft-model",
+      "source_sample_label": "Calculated Cs3Cu2Br5 model context",
+      "batch_id": null,
+      "material_state_id": "dft-br-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cs3Cu2Br5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, DFT paragraph and Figure 4a/S8"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "DFT crystal model; not a measured nanocrystal batch",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, DFT paragraph and Figure 4a/S8"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "cl-dft-model",
+      "source_sample_label": "Calculated Cs3Cu2Cl5 model context",
+      "batch_id": null,
+      "material_state_id": "dft-cl-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cs3Cu2Cl5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, DFT paragraph and Figure 4a"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "DFT crystal model; not a measured nanocrystal batch",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, DFT paragraph and Figure 4a"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "cl-edge-model",
+      "source_sample_label": "Cs3Cu2Cl5 absorption-edge-associated statement",
+      "batch_id": null,
+      "material_state_id": "cl-optical-edge-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cs3Cu2Cl5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, absorption/DFT paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "The source’s approximately 4.4 eV wording is kept with the near-275-nm absorption-edge context; it is not merged with DFT gap values."
+      ]
+    },
+    {
+      "sample_id": "cs-cux3-failed",
+      "source_sample_label": "CsCu2X3 (X=Cl or Br) target not obtained by simple precursor-ratio adjustment",
+      "batch_id": null,
+      "material_state_id": "negative-cucx3-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CsCu2X3 (X = Cl or Br), target Cs:Cu:X = 1:2:3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "Negative result only; no specific batch, full recipe, or isolated product."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "white-cie",
+      "sample_id": "white-light-context",
+      "property": "CIE_coordinates",
+      "technique": "CIE color calculation",
+      "value": {
+        "value": "(0.2880, 0.3277)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+          }
+        ],
+        "note": "Calculated for a relative emitter ratio; no separate physical blend is identified."
+      },
+      "conditions": "Cs3Cu2Cl5:Cs3Cu2Br5:CsCu2I3 ratio 2:7:5, stated relative to PLQYs.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+        }
+      ]
+    },
+    {
+      "id": "white-cct",
+      "sample_id": "white-light-context",
+      "property": "correlated_color_temperature",
+      "technique": "CIE/CCT calculation",
+      "value": {
+        "value": 8005,
+        "minimum": null,
+        "maximum": null,
+        "unit": "K",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Same 2:7:5 relative-emitter context.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+        }
+      ]
+    },
+    {
+      "id": "white-cri",
+      "sample_id": "white-light-context",
+      "property": "color_rendering_index",
+      "technique": "Color-quality estimate",
+      "value": {
+        "value": 79.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Same 2:7:5 relative-emitter context.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+        }
+      ]
+    },
+    {
+      "id": "br-theoretical-gap",
+      "sample_id": "br-dft-model",
+      "property": "theoretical_band_gap",
+      "technique": "DFT band structure",
+      "value": {
+        "value": 2.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "About 2.3 eV; explicitly described as theoretical DFT gap.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, DFT discussion; Figure 4a/Figure S8"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "PBE first-principles calculation; not a measured optical gap. Main-text DFT method: PBE exchange-correlation, PAW pseudopotentials, primitive cell, 16×16×18 k-point grid and 600 eV cutoff (main PDF p. 7 / printed p. 5521, DFT Calculation).",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 4 / printed p. 5518, DFT discussion"
+        }
+      ]
+    },
+    {
+      "id": "cl-dft-relation",
+      "sample_id": "cl-dft-model",
+      "property": "theoretical_band_gap_relation",
+      "technique": "DFT band structure",
+      "value": {
+        "value": "Cs3Cu2Cl5 calculated theoretical gap described as about 0.3 eV below Cs3Cu2Br5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, DFT discussion"
+          }
+        ],
+        "note": "No stand-alone numeric Cl DFT gap is provided in the main text."
+      },
+      "conditions": " Main-text DFT method: PBE exchange-correlation, PAW pseudopotentials, primitive cell, 16×16×18 k-point grid and 600 eV cutoff (main PDF p. 7 / printed p. 5521, DFT Calculation).",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 4 / printed p. 5518, DFT discussion"
+        }
+      ]
+    },
+    {
+      "id": "cl-edge-energy",
+      "sample_id": "cl-edge-model",
+      "property": "absorption_edge_associated_energy",
+      "technique": "UV–vis/absorption-edge discussion",
+      "value": {
+        "value": 4.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Authors state “similar band gap” of approximately 4.4 eV in association with an absorption edge near 275 nm.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, absorption/DFT paragraph"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Stored separately from the DFT theoretical gaps; source does not reconcile their relationship.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 4 / printed p. 5518, absorption/DFT paragraph"
+        }
+      ]
+    },
+    {
+      "id": "cl-edge-wavelength",
+      "sample_id": "cl-edge-model",
+      "property": "absorption_edge_wavelength",
+      "technique": "UV–vis/absorption-edge discussion",
+      "value": {
+        "value": 275,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Near 275 nm, per article wording.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, absorption/DFT paragraph"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 4 / printed p. 5518, absorption/DFT paragraph"
+        }
+      ]
+    },
+    {
+      "id": "failed-target-ratio",
+      "sample_id": "cs-cux3-failed",
+      "property": "failed_target_composition",
+      "technique": "Precursor-ratio variation",
+      "value": {
+        "value": "CsCu2X3 (X=Cl or Br), target ratio Cs:Cu:X=1:2:3, could not be synthesized simply by altering precursor ratio",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 4 / printed p. 5518, Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Negative result; not an additional successful recipe.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 4 / printed p. 5518, Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "supplied_main_only_si_unverified",
+    "missing_fields": [
+      "The source supplies no stand-alone numeric calculated gap for Cs3Cu2Cl5, only a difference relative to the reported Br value.",
+      "The white-light ratio/CIE/CCT/CRI are presented as an appropriate spectral combination/simulation; no physical mixed batch preparation is reported.",
+      "Matching SI (SHA-256 c6afc558d42c61cc99d4e0f44321fef222ec93d3563d186e40a1d1487527a8f2) is present locally but unadmitted, unread, and unused; SI-dependent details remain unverified.",
+      "The main text does not settle the relationship between the approximately 4.4 eV absorption-edge-associated statement near 275 nm and the separately stated DFT theoretical gaps. Their bases are preserved separately pending independent classification; no gap correction is inferred."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}

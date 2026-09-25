@@ -1,0 +1,946 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li-2020-cs3cu2cl5-inkjet-processing",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Inkjet processing of Cs3Cu2Cl5 nanocrystals in a liquid-crystal-monomer matrix",
+  "material": {
+    "formula": "Cs3Cu2Cl5 NC/LCM composite array",
+    "family": "printed emissive nanocrystal composite",
+    "elements": [],
+    "components": [
+      "Cs3Cu2Cl5 NC/LCM composite array"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Functionalize silicon, prepare a nanocrystal/LCM ink, print an array and UV-polymerize the matrix.",
+  "sources": [
+    {
+      "id": "li2020cs3cu2x5",
+      "doi": "10.1021/acs.chemmater.0c00280",
+      "title": "Room Temperature Synthesis of Stable, Printable Cs3Cu2X5 (X = I, Br/I, Br, Br/Cl, Cl) Colloidal Nanocrystals with Near-Unity Quantum Yield Green Emitters (X = Cl)",
+      "authors": "Yanyan Li; Parth Vashishtha; Zhicong Zhou; Zhi Li; Sunil B. Shivarudraiah; Chao Ma; Junkai Liu; Kam Sing Wong; Haibin Su; Jonathan E. Halpert",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.chemmater.0c00280",
+      "main_status": "Source-reviewed against the accepted main PDF only; independent source audit and R2 delta review passed. Reader integration, rights and release checks remain separate.",
+      "si_status": "Matching SI is present locally (SHA-256 c6afc558d42c61cc99d4e0f44321fef222ec93d3563d186e40a1d1487527a8f2) but is outside this review scope; it was not admitted, read, or used.",
+      "reuse_status": "User-directed display candidate only; permission is not independently verified and publication review remains pending."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2020cs3cu2x5",
+    "recipe_family": "li-2020-cs3cu2x5-inkjet",
+    "parent_record_id": "li-2020-cs3cu2x5-antisolvent",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Cs3Cu2Cl5 NC/LCM composite array",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 2 / printed p. 5516"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No prospective size target; source size values are outcomes.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cl-nc-ipa",
+      "name": "Purified Cs3Cu2Cl5 NC IPA solution",
+      "formula": "Cs3Cu2Cl5",
+      "role": "emissive nanocrystal input",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "lcm",
+      "name": "Liquid crystal monomer",
+      "formula": "not specified",
+      "role": "polymer matrix precursor",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "dichlorobenzene",
+      "name": "Dichlorobenzene",
+      "formula": "C6H4Cl2",
+      "role": "ink solvent",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "silicon",
+      "name": "Silicon substrate",
+      "formula": "Si",
+      "role": "substrate",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "silane",
+      "name": "1H,1H,2H,2H-perfluorodecyltriethoxysilane",
+      "formula": "not specified in the main article",
+      "role": "surface functionalization reagent",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "purity": {
+          "value": 97,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Materials"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "micro90",
+      "name": "Micro-90 cleaning solution",
+      "formula": "mixture",
+      "role": "substrate cleaner",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Deionized water",
+      "formula": "H2O",
+      "role": "substrate cleaner",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "role": "substrate cleaner",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "ipa",
+      "name": "Isopropanol",
+      "formula": "C3H8O",
+      "role": "solvent/cleaner",
+      "stage": "processing",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "clean-substrate",
+      "name": "Cleaned silicon substrate",
+      "kind": "product",
+      "parent_ids": [
+        "silicon"
+      ]
+    },
+    {
+      "id": "functional-substrate",
+      "name": "Perfluorosilane-coated silicon substrate",
+      "kind": "product",
+      "parent_ids": [
+        "clean-substrate",
+        "silane"
+      ]
+    },
+    {
+      "id": "printing-ink",
+      "name": "LCM/dichlorobenzene/Cs3Cu2Cl5 NC ink",
+      "kind": "mixture",
+      "parent_ids": [
+        "lcm",
+        "dichlorobenzene",
+        "cl-nc-ipa"
+      ]
+    },
+    {
+      "id": "printed-array",
+      "name": "Inkjet-printed and UV-cured composite array",
+      "kind": "product",
+      "parent_ids": [
+        "functional-substrate",
+        "printing-ink"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "clean-substrate",
+      "action": "clean",
+      "label": "Ultrasonically clean silicon",
+      "stage": "workup",
+      "branch": "reported-main-route",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "silicon",
+        "micro90",
+        "water",
+        "acetone",
+        "ipa"
+      ],
+      "outputs": [
+        "clean-substrate"
+      ],
+      "parameters": {
+        "Micro90_concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "duration_per_liquid": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Not reported."
+      },
+      "endpoint": {
+        "value": "Ultrasonically clean with 10% Micro-90, DI water, acetone and IPA for 20 min each.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultrasonically clean with 10% Micro-90, DI water, acetone and IPA for 20 min each.",
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "coat-substrate",
+      "action": "coat",
+      "label": "Coat silicon with perfluorosilane",
+      "stage": "workup",
+      "branch": "reported-main-route",
+      "optional": false,
+      "depends_on": [
+        "clean-substrate"
+      ],
+      "inputs": [
+        "clean-substrate",
+        "silane"
+      ],
+      "outputs": [
+        "functional-substrate"
+      ],
+      "parameters": {
+        "vacuum_pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": 0.5,
+          "unit": "Torr",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Below 0.5 Torr.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": true
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Coat under vacuum below 0.5 Torr for 1 h.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Coat under vacuum below 0.5 Torr for 1 h.",
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "prepare-ink",
+      "action": "mix",
+      "label": "Prepare Cs3Cu2Cl5/LCM ink",
+      "stage": "precursor_preparation",
+      "branch": "reported-main-route",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "lcm",
+        "dichlorobenzene",
+        "cl-nc-ipa"
+      ],
+      "outputs": [
+        "printing-ink"
+      ],
+      "parameters": {
+        "LCM": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "dichlorobenzene": {
+          "value": 0.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "NC_solution": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Not reported."
+      },
+      "endpoint": {
+        "value": "Dissolve 40 mg LCM in 0.4 mL dichlorobenzene and add 0.1 mL Cs3Cu2Cl5 NC IPA solution.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve 40 mg LCM in 0.4 mL dichlorobenzene and add 0.1 mL Cs3Cu2Cl5 NC IPA solution.",
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    },
+    {
+      "id": "print-and-cure",
+      "action": "print",
+      "label": "Inkjet print array and polymerize LCM",
+      "stage": "workup",
+      "branch": "reported-main-route",
+      "optional": false,
+      "depends_on": [
+        "coat-substrate",
+        "prepare-ink"
+      ],
+      "inputs": [
+        "printing-ink",
+        "functional-substrate"
+      ],
+      "outputs": [
+        "printed-array"
+      ],
+      "parameters": {
+        "nozzle_label": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Source labels nozzle as 40 µL; transcribed as printed.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "drop_volume": {
+          "value": 27.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "pL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "drop_diameter": {
+          "value": 37.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "dot_step": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "UV_wavelength": {
+          "value": 365,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "UV_duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2020cs3cu2x5",
+              "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Ambient processing; no additional atmosphere stated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "UV exposure polymerizes LCM",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use a MacroFab Jetlab 4 system with a 40 µL nozzle; source reports 27.6 pL droplets and 37.5 µm surface diameter. Set dot step to 200 µm, then expose array to 365 nm UV for 60 s to polymerize LCM.",
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Inkjet Printing Process, Silicon Substrate Preparation and Ink Preparation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "printed-composite",
+      "source_sample_label": "Inkjet-printed Cs3Cu2Cl5 NC array trapped in polymerized LCM on functionalized silicon",
+      "batch_id": null,
+      "material_state_id": "printed-array",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cs3Cu2Cl5 NCs in LCM matrix on perfluorosilane-coated silicon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion and Experimental Section"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "NC phase is Cs3Cu2Cl5; composite phase otherwise not characterized",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion and Experimental Section"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Array pattern; reported 200 µm dot step and 37.5 µm drop diameter",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion and Experimental Section"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion and Experimental Section"
+        }
+      ],
+      "notes": [
+        "Downstream process, not a distinct NC synthesis recipe. No physical batch ID links the NC input to a named synthesis batch."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "printed-green",
+      "sample_id": "printed-composite",
+      "property": "emission_color",
+      "technique": "Optical image under UV",
+      "value": {
+        "value": "Bright green emission under 254 nm UV",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion; Figure 7c–g"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Figure 7 caption"
+        }
+      ]
+    },
+    {
+      "id": "printed-duration",
+      "sample_id": "printed-composite",
+      "property": "emission_persistence",
+      "technique": "Optical image time series",
+      "value": {
+        "value": null,
+        "minimum": 24,
+        "maximum": null,
+        "unit": "h",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Bright emission lasted longer than 24 h in air.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true,
+        "maximum_exclusive": false
+      },
+      "conditions": "Images at 0, 12 and 24 h after printing; later endpoint and numerical intensity retention not reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 7 / printed p. 5521, Results and Discussion; Figure 7e–g"
+        }
+      ]
+    },
+    {
+      "id": "printed-scale-bar",
+      "sample_id": "printed-composite",
+      "property": "image_scale_bar",
+      "technique": "Figure 7 optical array image",
+      "value": {
+        "value": 200,
+        "minimum": null,
+        "maximum": null,
+        "unit": "µm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2020cs3cu2x5",
+            "locator": "main PDF p. 6 / printed p. 5520, Figure 7 caption"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Scale bar belongs to the displayed printed-array images; not a measured dot-size value.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2020cs3cu2x5",
+          "locator": "main PDF p. 6 / printed p. 5520, Figure 7 caption"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "supplied_main_only_si_unverified",
+    "missing_fields": [
+      "No batch ID links the input NC solution to a named synthesis batch.",
+      "Printed-film PLQY, film thickness, drop count, and numerical emission-intensity retention are not reported.",
+      "Silane surface coverage and functional-group density are not reported.",
+      "Matching SI (SHA-256 c6afc558d42c61cc99d4e0f44321fef222ec93d3563d186e40a1d1487527a8f2) is present locally but unadmitted, unread, and unused; SI-dependent details remain unverified."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure"
+}

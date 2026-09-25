@@ -124,3 +124,14 @@ Before handing a paper to the integration owner, freeze one authoritative schema
 Reuse unchanged passed source audits; independently review changed claims and integration mappings. Batch completed contributions without relaxing any per-paper gate. Repeated progress-only deployments are not useful throughput. Report measured distinct published papers per elapsed hour, separate inherited work, and keep the 500/day requirement distinct from achieved capacity.
 
 For local-model draft extraction, score completeness independently from correctness of emitted values. Use explicit field keys for each quantity, unit/basis, intermediate condition, unknown value, and source page/span rather than treating a fluent answer to a compound question as complete. Page locators must be checked against the exact excerpt supplying the evidence. Preserve omitted fields and failed quote checks as review work; do not promote them by model agreement or quote normalization alone. A three-source excerpt pilot produced 8 complete and 7 partial answers in about 45 seconds; that is not a full-paper throughput measurement.
+
+### Source-bound fast-draft checks
+
+Use a fixed field inventory for local model drafting; retain failures and missingness instead of accepting a fluent open-ended summary as complete. Validate that an evidence quote appears on the claimed page and that the proposed number is adjacent to its claimed unit. A correct quoted sentence can still contain a volume wrongly assigned as an amount of substance. These mechanical checks never establish reagent/operation/sample identity or scientific approval; unsupported notation returns to review.
+
+Check each figure against its actual legend and caption before assigning variant records: a main-paper 1x/2x comparison does not support a 4x sample merely because a separate SI plot includes it. Bind a crop rectangle to the hash and dimensions of the actual render being cropped; keep a prior lower-resolution visual-audit hash separately named. Known molecular identities require source-matched illustrations even if no registry entry existed previously; uncertain mixtures, hydration, speciation and source conflicts retain their limits.
+
+
+## Quantity annotations and independent source identifiers
+
+Keep measurement or recipe annotations in qualifier/basis fields and reserve raw_text for short original numeric lexemes. Never silently drop uncertainty, particle counts or qualifiers during public projection. A lossless field relocation must preserve the original text, quantities, source evidence and eligibility, with dependent hashes rebound and the exact delta independently checked. Paper review IDs and primary source-group IDs may differ: resolve citations through the declared source group and link using the paper review ID. Preserve display filename changes as delivery metadata; they must not alter figure IDs, source assignments or image bytes.

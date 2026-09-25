@@ -11,3 +11,10 @@ export const isEquipment=m=>m.role==='apparatus'||/\b(burette|erlenmeyer|filter 
 export function shortMethod(s){return human(s).replace(/ with source-paired.*$/i,'').replace(/ with source-linked.*$/i,'');}
 export function sentence(text){const t=String(text||'').trim();const match=t.match(/^.*?[.!?](?=\s+[A-Z]|$)/s);return match?match[0]:t;}
 export function badge(text,cls=''){return el('span',text,'reader-badge '+cls);}
+// Older reviewed records used optical for measured absorption/emission figures.
+export function figureMatchesCategory(figure,category){
+ const normalize=value=>({optical:'property',properties:'property'})[value]||value;
+ const wanted=normalize(category);
+ const categories=[figure.category,...(Array.isArray(figure.categories)?figure.categories:[])].map(normalize);
+ return categories.includes(wanted)||(wanted==='structure'&&categories.includes('composition'));
+}

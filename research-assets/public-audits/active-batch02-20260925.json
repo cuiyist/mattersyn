@@ -1,0 +1,83 @@
+{
+  "schema": "mattersyn-public-scoped-audit-summary/1",
+  "at": "2026-09-25T21:55:02.581572+00:00",
+  "status": "independent_source_reader_and_integration_audits_passed_pending_release",
+  "new_publication_credit": 0,
+  "papers": [
+    {
+      "doi": "10.1021/acs.chemmater.0c00280",
+      "status": "Independent source, record, Reader, chemical-identity and crop checks passed; final shared integration and release pending.",
+      "records": 4,
+      "main_pages_read": 10,
+      "si_status": "Matching local SI identified but not admitted or reviewed in this screened-pass main-document scope.",
+      "corrections": [
+        "OA concentration denominator remains unreported.",
+        "Lattice a preserves 15.4510(3) angstrom precision.",
+        "Hot injection is a separate route, not a child batch of the room-temperature recipe."
+      ],
+      "scientific_delta_audit_sha256": "c07630a03f9b7c7a0ffced4e1bbcfb2e1f0f2835160ffc715e2eb4a668921c03",
+      "source_crop_audit_sha256": "a00ab76d5c90ba7addbbe6170b99f3423aaa863a7e3cb446b81b5474ec50cab5"
+    },
+    {
+      "doi": "10.1021/cm500102q",
+      "status": "Independent source, translation, Reader and chemical-identity checks passed; lossless quantity-annotation schema relocation under bounded integration audit.",
+      "source_crops_visually_checked": 17,
+      "required_reader_correction": "Main Figure5 contains 1x and 2x only; 4x remains assigned to supporting-information plots.",
+      "scientific_delta_audit_sha256": "d8471fdc51f06f712063494b6b1f6b9a81d69062150fcc44710b7c4b643a2245",
+      "records": 36
+    },
+    {
+      "doi": "10.1021/la051196p",
+      "status": "Thirteen main-source records independently accepted, including bounded corrections. Reader/chemical asset integration pending.",
+      "source_scope": "Main only; SI not admitted or verified.",
+      "source_read_sha256": "285a9e8782aaa326b066ff429ac7b9485562587866137dee65e8bef176592da3",
+      "draft_records": 13,
+      "independent_candidate_audit_sha256": "726c0c83be80e4b16b8975dd8e052249b76d9e3aed44d443770de3d209f6e4ae",
+      "source_crop_audit_sha256": "93f8091ddec4b44f34ddde55271b8ed19b33d7b9e6e9e95e5b57edbbbaca69fb"
+    }
+  ],
+  "local_draft_development": {
+    "source_doi": "10.1021/la051196p",
+    "fixed_fields": 31,
+    "seconds": 17.416,
+    "root_supported_fields": 28,
+    "rejected_fields": 3,
+    "failures": [
+      "Two reagent volumes were returned as millimole amounts.",
+      "One missing value was encoded as text instead of null."
+    ],
+    "prior_attempt": "An open-ended same-source draft repeated quantities and produced truncated invalid JSON.",
+    "coverage_note": "Same-source prompt development, not a held-out or full-paper accuracy benchmark.",
+    "guard": "Exact quote support plus adjacent number/unit checks; no scientific approval or completeness guarantee.",
+    "model": "Existing offline Qwen3-4B-Q8_0, existing GPU",
+    "source_transfer": false,
+    "paid_processing": false
+  },
+  "engineering_tests": {
+    "admission_guard_tests_passed": 5,
+    "draft_quantity_tests_passed": 7,
+    "independent_review_sha256": "359a1824218f43f2fba2fe076cf84d590dd81cc3cdd269bffab393f461199cf7",
+    "limits": [
+      "Element guard checks nonempty valid symbols, not completeness of an explicitly supplied element list.",
+      "Quantity guard intentionally sends unsupported notation to review rather than accepting it."
+    ],
+    "figure_category_node_tests_passed": 3,
+    "figure_category_audit": "passed",
+    "figure_category_audit_sha256": "3d595c85b8aa829a9f6fa61b7c7991845a935a8c432aec7495be1008fd55432f"
+  },
+  "target_papers_per_day": 500,
+  "target_demonstrated": false,
+  "stage_counts": {
+    "privately_staged_records": 40,
+    "li_routes": 2,
+    "inp_routes": 17,
+    "new_papers_published": 0,
+    "canonical_shared_science_changes": 40,
+    "records_staged": 40,
+    "source_contributions_staged": 2,
+    "source_figures": 25,
+    "unit_tests_passed": 123
+  },
+  "integration_audit_sha256": "44d33ea286e0a45af46e188248f67ba811706a19d94f984723dde3bf0a4b58d4",
+  "code_and_display_audit_sha256": "afa5adfdf06a78bbec4d2ee924dd1ae3b5f212189c86b65de21280fe5b3e7107"
+}
