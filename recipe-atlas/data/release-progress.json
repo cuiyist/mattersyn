@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-25T13:50:35.810020+00:00",
+  "updated_at": "2026-09-25T13:56:31.099836+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.39.1",
@@ -80,19 +80,17 @@
         {
           "label": "Trial setup and queue",
           "status": "complete",
-          "detail": "Local-only. One current candidate per paper; no paid processing or new source downloads."
+          "detail": "Existing screened-pass sources; no paid processing or new source download."
         },
         {
-          "label": "New source contributions published during trial",
-          "status": "paused",
-          "detail": "8 distinct newly published sources and98records. Pending drafts, old-page corrections and progress releases do not count.",
-          "status_at_trial_end": "in_progress"
+          "label": "Measured publication output",
+          "status": "complete",
+          "detail": "Eight distinct new papers,98records and40broad evidence rows deployed and verified within the fixed ten-hour window. The500/day target was not achieved."
         },
         {
-          "label": "Finish and review",
+          "label": "Further curation",
           "status": "paused",
-          "detail": "Stop at13:50 UTC, freeze actual results and wait for the user before continuing.",
-          "status_at_trial_end": "pending"
+          "detail": "The trial ended at13:50:12UTC. Frozen results and unfinished artifacts await the user’s decision."
         }
       ],
       "stage_at_trial_end": "Running through September 25, 08:50 Chicago time, then pause for user review."
@@ -146,7 +144,7 @@
       "short_label": "Rusch/Manna · Chem. Mater. 2026",
       "title": "Source audit · DOI 10.1021/acs.chemmater.5c02845",
       "stage": "Paused for user review after the ten-hour trial",
-      "summary": "The full source review covered all 34 supplied pages and 23 candidate records. Its correction package updates 17 comparison files across 13 records; 10 record snapshots are byte-identical. The separate correction delta audit passed 533 preservation assertions, 23 schema/graph checks and 197 supplemental hash/field/origin checks. The original audit history is retained; this is a correction-delta pass, not a new full-source audit. Figure 4 C12 assignment remains explicitly unresolved and source conflicts remain preserved. A reader integration candidate is now being prepared; no records are yet promoted.",
+      "summary": "The full source review covered all 34 supplied pages and 23 candidate records. Its correction package updates 17 comparison files across 13 records; 10 record snapshots are byte-identical. The separate correction delta audit passed 533 preservation assertions, 23 schema/graph checks and 197 supplemental hash/field/origin checks. The original audit history is retained; this is a correction-delta pass, not a new full-source audit. Figure 4 C12 assignment remains explicitly unresolved and source conflicts remain preserved. A private integration candidate is retained; work is paused and no records are promoted.",
       "stages": [
         {
           "label": "Main/SI source reading and visual coverage",
@@ -327,7 +325,7 @@
       "short_label": "Chen et al. (2018)",
       "title": "Cs₄PbBr₆/CsPbBr₃ composites: synthesis, luminescence and formation mechanism",
       "stage": "Published before this trial; preserved closeout work is deferred during the bounded trial.",
-      "summary": "Git history confirms23records/17routes were first added overnight. Source, reader-mapping, molecular/solution and browser receipts passed within their stated scopes; current public metadata still contains pending structural numerical-table and browser/apparatus flags. A bounded reconciliation is checking which flags are stale and which source scope remains unfinished. Count1first publication and0extra for later corrections; hold the fully closed counter pending that decision. No training or exact-coordinate approval is implied.",
+      "summary": "Git history confirms23records/17routes were first added overnight. Source, reader-mapping, molecular/solution and browser receipts passed within their stated scopes; current public metadata still contains pending structural numerical-table and browser/apparatus flags. A bounded reconciliation remains deferred; stale flags and any remaining source-scope gaps have not been resolved during this trial. Count1first publication and0extra for later corrections; hold the fully closed counter pending that decision. No training or exact-coordinate approval is implied.",
       "stages": [
         {
           "label": "Source reading and pairing",
@@ -356,8 +354,9 @@
         },
         {
           "label": "Completion-status reconciliation",
-          "status": "in_progress",
-          "detail": "Check pending numerical-table/source/browser flags against exact prior receipts; retain any real source-review gap."
+          "status": "paused",
+          "detail": "Check pending numerical-table/source/browser flags against exact prior receipts; retain any real source-review gap.",
+          "status_at_trial_end": "in_progress"
         }
       ]
     },
@@ -517,6 +516,10 @@
   ],
   "recent_milestones": [
     {
+      "at": "2026-09-25T13:50:12Z",
+      "text": "Ten-hour trial ended: eight newly published distinct papers,98records and40broad synthesis–structure evidence rows. Four published papers reused pre-trial work. One additional main-reviewed and Reader-package-audited contribution remains private. Curation and the temporary automation are paused for user review; no paid processing was used."
+    },
+    {
       "at": "2026-09-25T04:12:06.713161+00:00",
       "text": "User extended the same unpaid local throughput trial from three to ten hours total, ending 13:50 UTC / 08:50 Chicago on September 25. Original baseline retained. Approximately 208 new papers would match 500/day; target is unproven. Pause for user review afterward."
     },
@@ -603,7 +606,7 @@
       "Retain all screened candidates and gaps; external reference cells, simulations and molecular-precursor coordinates do not become measured product pairs.",
       "Build and publish academic material readers only after the selected paper’s source, data, figure and independent audit gates pass."
     ],
-    "capacity": "Ten-hour local-only throughput trial active. Target about 208 new published source papers; no target achieved claim. Reuse source-audited work, write current-schema records directly, independently check changed claims/bindings, and batch verified contributions. The original three-paper pilot is1/3 published (Tirosh); Wu and Dhaene remain pending.",
+    "capacity": "The ten-hour local-only trial ended with eight distinct source papers newly published and anonymously verified. The roughly208-paper target was not achieved. Curation is paused for user review. The retained three-paper pilot is3/3 published; Tirosh was published before the trial and is excluded from its new-paper count.",
     "paid_processing": "No paid API or cloud document processing is active; the user deferred the budget decision. Local RTX 5090/Qwen3.5 extraction and cross-model audit tests have run with cloud disabled; the distinct 27B audit still missed a known conflict. A page-wise quote-presence validator is now tested (14/16 quotes matched on one page) as a rejection filter, not a scientific audit. Source PDFs remain local; visual/source review and integration are still required.",
     "screened_at": "2026-09-22T18:34:17.771504-05:00",
     "fixed_pending_provisional_scopes": 9500,
@@ -625,7 +628,8 @@
       "contents_with_some_cached_text": 11925,
       "prior_review_reconciliation_required": true
     },
-    "update_policy": "Progress is published at meaningful review milestones. Drafts and source-audit passes are not counted as website contributions; each published record must retain evidence locators and clear source/sample distinctions."
+    "update_policy": "Progress is published at meaningful review milestones. Drafts and source-audit passes are not counted as website contributions; each published record must retain evidence locators and clear source/sample distinctions.",
+    "previous_capacity": "Ten-hour local-only throughput trial active. Target about 208 new published source papers; no target achieved claim. Reuse source-audited work, write current-schema records directly, independently check changed claims/bindings, and batch verified contributions. The original three-paper pilot is1/3 published (Tirosh); Wu and Dhaene remain pending."
   },
   "estimate": {
     "status": "trial_finished_awaiting_user_review",
