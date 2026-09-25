@@ -788,11 +788,11 @@
     "new_extractions_completed": 1,
     "new_independent_audits_passed": 1,
     "new_integrations_passed": 1,
-    "new_source_papers_published": 0,
-    "new_records_published": 0,
+    "new_source_papers_published": 1,
+    "new_records_published": 4,
     "existing_source_corrections_published": 0,
     "independent_delta_audits_passed": 1,
-    "independent_canonical_mapping_audits_passed": 2,
+    "independent_canonical_mapping_audits_passed": 3,
     "browser_qa_passed": 1
   },
   "papers": [
@@ -811,21 +811,23 @@
     {
       "doi": "10.1021/nl801817d",
       "source_id": "wu2008",
-      "stage": "Four-record integration and independent correction audit passed; clean release/deployment pending",
+      "stage": "Published and anonymously verified",
       "authoritative_candidate": "wu2008-cu2s/site-candidate-r2",
       "inherited_pretrial_work": true,
-      "pending": "Clean reproducible release, publication and anonymous access verification.",
+      "pending": null,
       "candidate_record_count": 4,
       "new_synthesis_routes": 1,
       "new_supporting_procedures": 3,
-      "independent_integration_audit_sha256": "c020b4fad70a4827531b7668c5e2d6627b8d1c85704d3a18660216b5dcea7c1f"
+      "independent_integration_audit_sha256": "c020b4fad70a4827531b7668c5e2d6627b8d1c85704d3a18660216b5dcea7c1f",
+      "site_commit": "27353ccb3c50d7e0a2317496b1adab775c760f0c"
     },
     {
       "doi": "10.1021/acsnano.1c08966",
       "source_id": "dhaene2022",
-      "stage": "13-record canonical proposal prepared; independent mapping audit pending",
+      "stage": "Independent 13-record mapping passed; public figure/display corrections in progress",
       "inherited_pretrial_work": true,
-      "pending": "Independent mapping and visual bindings review; shared Reader integration and publication."
+      "pending": "Replace private full-page assets with selected source figures, resolve two dictionary-string operation displays, integrate and verify Reader.",
+      "canonical_mapping_audit_sha256": "ef481f616997aa1be1d527fa08a06e05e7e192a78ba146084f2c1bf960ffadca"
     },
     {
       "doi": "10.1021/cm970557m",
@@ -839,9 +841,27 @@
       "candidate_record_count": 1
     }
   ],
-  "publication_events": [],
+  "publication_events": [
+    {
+      "source_id": "wu2008",
+      "doi": "10.1021/nl801817d",
+      "release_id": "20260925-wu2008-cu2s-review",
+      "verified_at": "2026-09-25T05:25:55.400447+00:00",
+      "source_commit": "243da1b6d03dd4302f0eadd78c35a1c13e4980d0",
+      "site_commit": "27353ccb3c50d7e0a2317496b1adab775c760f0c",
+      "new_source_papers": 1,
+      "new_records": 4,
+      "new_synthesis_routes": 1,
+      "new_supporting_procedures": 3,
+      "new_source_checked_structure_rows": 0,
+      "new_exact_coordinate_pairs": 0,
+      "inherited_pretrial_source_review": true,
+      "anonymous_verification_sha256": "f4da5c79681fe41426966d99d5a186fb90fea8829e89f19d0b751e6911ff3e71",
+      "url": "https://cuiyist.github.io/mattersyn-site/material.html?id=cu2s-af91f4&method=wu2008-cu2s-hot-injection"
+    }
+  ],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T05:12:03.014861+00:00",
+  "last_updated_at": "2026-09-25T05:28:24.603875+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,

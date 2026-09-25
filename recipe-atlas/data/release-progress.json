@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-25T05:12:03.014861+00:00",
+  "updated_at": "2026-09-25T05:28:24.603875+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
-    "dataset_version": "0.35.0",
-    "record_count": 703,
-    "synthesis_route_count": 143,
-    "material_hub_count": 52,
-    "direct_material_hub_count": 41,
+    "dataset_version": "0.36.0",
+    "record_count": 707,
+    "synthesis_route_count": 144,
+    "material_hub_count": 53,
+    "direct_material_hub_count": 42,
     "component_material_hub_count": 11,
-    "public_source_group_count": 43,
-    "formal_source_reader_count": 38,
+    "public_source_group_count": 44,
+    "formal_source_reader_count": 39,
     "exact_structure_recipe_count": 0,
-    "last_verified_site_commit": "475e2a6da2e6a1c51325d14c6f6680b3739c1ecb"
+    "last_verified_site_commit": "27353ccb3c50d7e0a2317496b1adab775c760f0c"
   },
   "corpus": {
     "present_files": 17700,
@@ -51,7 +51,7 @@
   },
   "batch": {
     "total": 3,
-    "published": 1,
+    "published": 2,
     "papers": [
       {
         "label": "Tirosh et al. (2006)",
@@ -60,8 +60,8 @@
       },
       {
         "label": "Wu et al. (2008)",
-        "published": false,
-        "scope": "Cu2S · audited source package; reader integration pending"
+        "published": true,
+        "scope": "Cu2S hot injection and three supporting stock/device procedures; main-only review, original figures, independent integration audit and public verification complete. SI unverified."
       },
       {
         "label": "Dhaene et al. (2022)",
@@ -85,7 +85,7 @@
         {
           "label": "New source contributions published during trial",
           "status": "in_progress",
-          "detail": "0 at trial initialization. Count only deployed, independently reviewed and anonymously verified source contributions."
+          "detail": "1 newly published distinct source, Wu2008, adding4 records. Its source review was inherited; integration and independent correction checks occurred during the trial."
         },
         {
           "label": "Finish and review",
@@ -513,7 +513,7 @@
   },
   "daily_throughput": {
     "target_papers_per_day": 500,
-    "completed_papers_today": 0,
+    "completed_papers_today": 1,
     "deployed_pending_closeout": 0,
     "counting_rule": "Count one source paper only after its scoped source reading, independent scientific audit, recipe/sample/figure checks, material-page integration and browser validation pass. Multiple recipe rows from one paper count once. Drafts and screening skips do not count as website papers built.",
     "observed_pipeline": {
@@ -525,11 +525,20 @@
       "scope_note": "One selected 2026-09-20 concurrent cohort with overlapping work and pipeline fill/drain; this is an observed small-cohort rate, not a forecast."
     },
     "machine_stage_note": "The local RTX 5090/Qwen3.5 runs produce drafts quickly, but the 27B cross-check missed a known source conflict. Machine drafts and model agreement are not independent scientific audit or completed website contributions.",
-    "capacity_note": "Two sources were first published on September24: Chen2018 and Tirosh2006. Tirosh publication is verified; Chen full numerical closeout remains separately qualified. The current ten-hour trial starts after both and counts neither as a new trial contribution. Corrections and progress releases add no new papers.",
+    "capacity_note": "The ten-hour local-only trial has published one new distinct source so far, using inherited source review. It is not evidence of500/day capacity. Drafts, record variants, corrections and progress releases do not count as additional papers.",
     "as_of_date": "2026-09-25",
     "date_timezone": "America/Chicago",
-    "completed_paper_ledger": [],
-    "published_sources_today": 0
+    "completed_paper_ledger": [
+      {
+        "doi": "10.1021/nl801817d",
+        "source_id": "wu2008",
+        "site_commit": "27353ccb3c50d7e0a2317496b1adab775c760f0c",
+        "verified_at": "2026-09-25T05:25:55.400447+00:00",
+        "status": "published_anonymously_verified",
+        "new_records": 4
+      }
+    ],
+    "published_sources_today": 1
   },
   "throughput_trial": {
     "trial_id": "20260925-three-hour-local",
@@ -537,7 +546,7 @@
     "start_at": "2026-09-25T03:50:12Z",
     "stop_at": "2026-09-25T13:50:12Z",
     "target_papers": 209,
-    "new_papers_published": 0,
+    "new_papers_published": 1,
     "paid_processing": false,
     "baseline_papers": 43,
     "baseline_records": 703,
