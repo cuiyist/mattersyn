@@ -1,4 +1,5 @@
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
+import {mountWuContext} from './wu2008-reader-context.mjs';
 import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL} from './reader-utils.mjs';
 
 import {quantityValue} from './quantity-value.mjs';
@@ -7,7 +8,7 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemi
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.34.1';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.34.1';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.36.0';
 
 const cache=new Map();
 
@@ -115,6 +116,7 @@ async function buildMethod(host,r,presentation){
  sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));intuition(sections[4],r,presentation);
 
  const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+source.year),link(source.doi+' ↗',sourceURL(source)),document.createTextNode(' · '),link('Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
+ mountWuContext(host,sections,sources,r,presentation);
  await Promise.all([precursors(sections[0],r),mountReaderStructures(structureHost,r,presentation)]);
 
 }

@@ -785,46 +785,63 @@
     "Use elapsed wall time including setup, failures and rework; also record per-stage active worker time."
   ],
   "stage_counts": {
-    "new_extractions_completed": 0,
-    "new_independent_audits_passed": 0,
-    "new_integrations_passed": 0,
+    "new_extractions_completed": 1,
+    "new_independent_audits_passed": 1,
+    "new_integrations_passed": 1,
     "new_source_papers_published": 0,
     "new_records_published": 0,
     "existing_source_corrections_published": 0,
-    "independent_delta_audits_passed": 1
+    "independent_delta_audits_passed": 1,
+    "independent_canonical_mapping_audits_passed": 2,
+    "browser_qa_passed": 1
   },
   "papers": [
     {
       "doi": "10.1021/acsnano.1c00502",
       "source_id": "williamson2021",
-      "stage": "R6 independent delta audit passed; canonical integration proposal in preparation",
-      "authoritative_candidate": "acsnano1c00502/site-candidate-r6",
+      "stage": "39-record canonical mapping independently checked; source-linked Reader integration pending",
+      "authoritative_candidate": "acsnano1c00502/shared-reader-integration-proposal-r1",
       "previous_accepted_candidate": "acsnano1c00502/site-candidate-r5",
       "previous_manifest_sha256": "6aa640e4c77b2449ad96e2a6e1cac55714ce7fdd912a2aeddf9e7742b5b07ab1",
       "inherited_pretrial_work": true,
-      "pending": "Three claim disclosure corrections, independent delta audit, canonical mapping and shared Reader integration.",
+      "pending": "Stage table sidecars, shared Reader/molecular/figure assets, material hub, full build and browser QA.",
       "audit_report_sha256": "8762dc429cc2d6561d6f9aea3e828a6a45dc36cceae51fcf85b0a8a00e5385c6",
-      "remaining_correction": "Call the 14 panels issue records, because interpretation uncertainty is not necessarily a source disagreement."
+      "canonical_proposal_freeze_sha256": "00259b1a664150aad9afad5dc12bd3c872e28dffe1cde11c42ead9b2196b5bf2"
     },
     {
       "doi": "10.1021/nl801817d",
       "source_id": "wu2008",
-      "stage": "current_schema_mapping",
+      "stage": "Four-record integration and independent correction audit passed; clean release/deployment pending",
       "authoritative_candidate": "wu2008-cu2s/site-candidate-r2",
       "inherited_pretrial_work": true,
-      "pending": "Prepare current-schema records and shared chemical/apparatus bindings; independent integration and browser checks."
+      "pending": "Clean reproducible release, publication and anonymous access verification.",
+      "candidate_record_count": 4,
+      "new_synthesis_routes": 1,
+      "new_supporting_procedures": 3,
+      "independent_integration_audit_sha256": "c020b4fad70a4827531b7668c5e2d6627b8d1c85704d3a18660216b5dcea7c1f"
     },
     {
       "doi": "10.1021/acsnano.1c08966",
       "source_id": "dhaene2022",
-      "stage": "Current-schema mapping and source-bound reader assets in preparation; prior audited extraction and locator correction reused.",
+      "stage": "13-record canonical proposal prepared; independent mapping audit pending",
       "inherited_pretrial_work": true,
-      "pending": "Reuse independently checked SI locator correction; canonical integration."
+      "pending": "Independent mapping and visual bindings review; shared Reader integration and publication."
+    },
+    {
+      "doi": "10.1021/cm970557m",
+      "source_id": "li1998znga2o4",
+      "stage": "Complete two-page source extraction and independent audit passed; Reader package in preparation",
+      "inherited_pretrial_work": false,
+      "authoritative_candidate": "throughput-trial-20260925/li1998-znga2o4",
+      "candidate_sha256": "dc653bae89faeef1cfa99cd3ffef01ea0c8fb6cee0d15e259fa1185f35081801",
+      "source_audit_sha256": "ddadf090250c626e46789c495a412929c34974caea4b1b3f98e52fb3242391f3",
+      "pending": "Molecule/operation/particle illustrations, source figure provenance integration, independent mapping and website QA.",
+      "candidate_record_count": 1
     }
   ],
   "publication_events": [],
   "exceptions": [],
-  "last_updated_at": "2026-09-25T04:12:06.713161+00:00",
+  "last_updated_at": "2026-09-25T05:12:03.014861+00:00",
   "original_planned_hours": 3,
   "duration_hours": 10,
   "original_target_papers": 63,
@@ -841,5 +858,22 @@
     "accepted_as_scientific_mapping": false,
     "finding": "One conflict was assigned to the wrong synthesis route; rejected. Explicit existing protocol/sample ID joins can be indexed deterministically.",
     "new_papers_published": 0
-  }
+  },
+  "errors_and_rework": [
+    {
+      "source_id": "wu2008",
+      "finding": "Record status-only changes left stale per-material and solution-context hashes; independent reviewer identified these and the root refreshed them.",
+      "status": "corrected_and_independently_rechecked"
+    },
+    {
+      "source_id": "wu2008",
+      "finding": "Local provenance paths in19 reused chemical models and registry entries; projected archive names while preserving all atom/bond arrays and source hashes.",
+      "status": "corrected_and_quality_gate_passed"
+    },
+    {
+      "source_id": "wu2008",
+      "finding": "Original figures moved without byte changes to the existing source-figure publication path; explicit figure/record bindings preserved.",
+      "status": "corrected"
+    }
+  ]
 }
