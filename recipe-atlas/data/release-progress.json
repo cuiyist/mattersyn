@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-09-25T13:56:31.099836+00:00",
+  "updated_at": "2026-09-25T16:51:19.402296+00:00",
   "corpus_scanned_at": "2026-09-22T23:15:44.572813+00:00",
   "published": {
     "dataset_version": "0.39.1",
@@ -12,7 +12,7 @@
     "public_source_group_count": 51,
     "formal_source_reader_count": 46,
     "exact_structure_recipe_count": 0,
-    "last_verified_site_commit": "aa05f1d7b1a4a24fd158a871b2f5276c13ba810d"
+    "last_verified_site_commit": "1c0f67e4121e8791fcf658459a1042f4b343959e"
   },
   "corpus": {
     "present_files": 17700,
@@ -22,7 +22,7 @@
     },
     "canonical_review_units": 12729,
     "waiting_review_scopes": 12695,
-    "active_review_claims": 0,
+    "active_review_claims": 3,
     "confirmed_duplicate_main_aliases": 27
   },
   "count_note": "Document copies include main papers, supplements and duplicates. Provisional review scopes are not a verified count of unique papers, synthesis recipes or materials.",
@@ -72,28 +72,27 @@
   },
   "current_work": [
     {
-      "short_label": "Ten-hour local throughput trial",
-      "title": "Measured website production trial",
-      "stage": "Paused for user review after the ten-hour trial",
-      "summary": "Ten-hour trial ended: 8 distinct newly published sources, 98 records and 40 broad evidence rows. Awaiting user review; unfinished work stays local and is not counted as published.",
+      "short_label": "Resumed local curation",
+      "title": "Faster integration of independently reviewed papers",
+      "stage": "Active after the user reviewed the ten-hour trial",
+      "summary": "Thomson Bi2S3 passed independent integration and local browser checks and is entering the clean release. The Rusch 23-record Reader package and InP coverage corrections passed separate scoped audits; their integration remains active. Newly published counts update only after anonymous verification.",
       "stages": [
         {
-          "label": "Trial setup and queue",
+          "label": "Accepted-package importer",
           "status": "complete",
-          "detail": "Existing screened-pass sources; no paid processing or new source download."
+          "detail": "Historical first-source importer and eight public synthetic tests passed; broader reuse remains to be tested."
         },
         {
-          "label": "Measured publication output",
-          "status": "complete",
-          "detail": "Eight distinct new papers,98records and40broad evidence rows deployed and verified within the fixed ten-hour window. The500/day target was not achieved."
+          "label": "Independent source and integration review",
+          "status": "in_progress",
+          "detail": "Preserve each paper’s exact source, sample and figure scope; version mismatches are resolved before acceptance."
         },
         {
-          "label": "Further curation",
-          "status": "paused",
-          "detail": "The trial ended at13:50:12UTC. Frozen results and unfinished artifacts await the user’s decision."
+          "label": "Batched publication",
+          "status": "in_progress",
+          "detail": "Thomson has passed local integration; the clean build, exact-file release gate and anonymous deployment check remain."
         }
-      ],
-      "stage_at_trial_end": "Running through September 25, 08:50 Chicago time, then pause for user review."
+      ]
     },
     {
       "short_label": "ACS Nano · 10.1021/acsnano.1c00502",
@@ -143,8 +142,8 @@
     {
       "short_label": "Rusch/Manna · Chem. Mater. 2026",
       "title": "Source audit · DOI 10.1021/acs.chemmater.5c02845",
-      "stage": "Paused for user review after the ten-hour trial",
-      "summary": "The full source review covered all 34 supplied pages and 23 candidate records. Its correction package updates 17 comparison files across 13 records; 10 record snapshots are byte-identical. The separate correction delta audit passed 533 preservation assertions, 23 schema/graph checks and 197 supplemental hash/field/origin checks. The original audit history is retained; this is a correction-delta pass, not a new full-source audit. Figure 4 C12 assignment remains explicitly unresolved and source conflicts remain preserved. A private integration candidate is retained; work is paused and no records are promoted.",
+      "stage": "Current Reader integration in progress",
+      "summary": "The full source review covered all 34 supplied pages and 23 candidate records. Its correction package updates 17 comparison files across 13 records; 10 record snapshots are byte-identical. The separate correction delta audit passed 533 preservation assertions, 23 schema/graph checks and 197 supplemental hash/field/origin checks. The original audit history is retained; this is a correction-delta pass, not a new full-source audit. Figure 4 C12 assignment remains explicitly unresolved and source conflicts remain preserved. The preserved 23-record candidate is being adapted to the current Reader contract. No shared records are promoted yet.",
       "stages": [
         {
           "label": "Main/SI source reading and visual coverage",
@@ -163,7 +162,7 @@
         },
         {
           "label": "Reader and dataset integration",
-          "status": "paused",
+          "status": "in_progress",
           "detail": "Build an isolated reader/material contribution from the corrected 23-record package. Preserve all source conflicts and the C12 hold; do not alter training eligibility before full integration and browser QA.",
           "status_at_trial_end": "in_progress"
         }
@@ -363,8 +362,8 @@
     {
       "short_label": "InP triaryl-silyl-phosphine synthesis",
       "title": "InP quantum-dot recipes, precursor preparation and sample evidence",
-      "stage": "Paused for user review after the ten-hour trial",
-      "summary": "A private source-linked extraction contains 20 protocol/branch candidates, 11 upstream precursor preparations, 14 sample candidates and 10 observations. The 37 SI claim locators have been made page- and caption-specific and structural link checks pass. An independent targeted re-audit is still required for all recipe variants, sample links, figures and source conflicts. No records are promoted.",
+      "stage": "Source coverage corrections drafted; separate delta review pending",
+      "summary": "The current InP quantities and assignments passed a scoped source check, but its structured extraction omitted NMR and kinetic results plus solvent handling, monitoring and workup details. Four observation additions, three operation supplements and explicit source qualifications are drafted privately. The original panel-reference inconsistency is preserved. Canonical/Reader integration remains on hold until the corrections pass separate review.",
       "stages": [
         {
           "label": "Main/SI pairing and visual coverage",
@@ -378,13 +377,13 @@
         },
         {
           "label": "Independent audit",
-          "status": "paused",
-          "detail": "Awaiting separate targeted re-audit of the frozen extraction and all 37 corrected SI locators; no canonical record or reader page is accepted yet.",
+          "status": "in_progress",
+          "detail": "Targeted locator/graph audit passed; supplemental field audit requires coverage additions. Current correction proposal is a private draft, not a full-source or website acceptance.",
           "status_at_trial_end": "in_progress"
         },
         {
           "label": "Reader and dataset integration",
-          "status": "paused",
+          "status": "pending",
           "detail": "Will follow the separate audit; no training admission is assigned.",
           "status_at_trial_end": "pending"
         }
@@ -491,7 +490,7 @@
     {
       "short_label": "Thomson et al. (2010) · Bi2S3",
       "title": "Ultrathin bismuth sulfide nanowires",
-      "stage": "Paused for user review after the ten-hour trial",
+      "stage": "Deterministic import preparation in progress",
       "summary": "All 11 supplied main pages were reviewed, with separate scientific and Reader-package audits. SI remains unverified. One private record and its assets await shared-site integration, browser checks and publication.",
       "stages": [
         {
@@ -506,8 +505,8 @@
         },
         {
           "label": "Shared website integration and publication",
-          "status": "paused",
-          "detail": "Not performed or counted as a published contribution.",
+          "status": "in_progress",
+          "detail": "Preparing the accepted package for shared integration; browser and publication checks remain pending.",
           "status_at_trial_end": "pending"
         }
       ],
@@ -515,6 +514,10 @@
     }
   ],
   "recent_milestones": [
+    {
+      "at": "2026-09-25T15:47:50.249911+00:00",
+      "text": "User resumed curation after reviewing the ten-hour trial. Three preserved paper packages are active; accepted-package import and stage timing are being improved. New publication count for this resumed run remains zero."
+    },
     {
       "at": "2026-09-25T13:50:12Z",
       "text": "Ten-hour trial ended: eight newly published distinct papers,98records and40broad synthesis–structure evidence rows. Four published papers reused pre-trial work. One additional main-reviewed and Reader-package-audited contribution remains private. Curation and the temporary automation are paused for user review; no paid processing was used."
@@ -606,7 +609,7 @@
       "Retain all screened candidates and gaps; external reference cells, simulations and molecular-precursor coordinates do not become measured product pairs.",
       "Build and publish academic material readers only after the selected paper’s source, data, figure and independent audit gates pass."
     ],
-    "capacity": "The ten-hour local-only trial ended with eight distinct source papers newly published and anonymously verified. The roughly208-paper target was not achieved. Curation is paused for user review. The retained three-paper pilot is3/3 published; Tirosh was published before the trial and is excluded from its new-paper count.",
+    "capacity": "The frozen ten-hour trial produced 8 new published papers, 98 records and 40 broad evidence rows. The user then resumed local curation and requested further acceleration. Three paper claims are active. The 500/day target remains unachieved; current work is measuring and reducing repeated integration work.",
     "paid_processing": "No paid API or cloud document processing is active; the user deferred the budget decision. Local RTX 5090/Qwen3.5 extraction and cross-model audit tests have run with cloud disabled; the distinct 27B audit still missed a known conflict. A page-wise quote-presence validator is now tested (14/16 quotes matched on one page) as a rejection filter, not a scientific audit. Source PDFs remain local; visual/source review and integration are still required.",
     "screened_at": "2026-09-22T18:34:17.771504-05:00",
     "fixed_pending_provisional_scopes": 9500,
@@ -632,12 +635,14 @@
     "previous_capacity": "Ten-hour local-only throughput trial active. Target about 208 new published source papers; no target achieved claim. Reuse source-audited work, write current-schema records directly, independently check changed claims/bindings, and batch verified contributions. The original three-paper pilot is1/3 published (Tirosh); Wu and Dhaene remain pending."
   },
   "estimate": {
-    "status": "trial_finished_awaiting_user_review",
-    "summary": "Ten-hour trial ended: 8 distinct newly published sources, 98 records and 40 broad evidence rows. Awaiting user review; unfinished work stays local and is not counted as published.",
-    "current_batch": "No active curation. Preserved private candidates await the user’s next decision.",
+    "status": "active_capacity_measurement",
+    "summary": "Curation resumed after user review. No whole-corpus finish date is asserted until the improved workflow has measured end-to-end output.",
+    "current_batch": "Thomson Bi2S3, Rusch/Manna and InP are active in disjoint scopes. Only publications that pass all gates will increase the completion count.",
     "scenarios": [],
     "notes": [
-      "The fixed trial is complete. No active curation or whole-corpus completion forecast is asserted. Unfinished sources remain held for user review."
+      "The completed ten-hour trial remains frozen: 8 distinct newly published papers, including 4 with pretrial work.",
+      "No paid processing, new paper download or external transfer of local source documents is authorized.",
+      "The current run starts at 15:36:20 UTC on September 25; no new publication has yet been verified in this run."
     ],
     "previous_notes": [
       "Frozen pass set: 5,539 distinct source contents in 5,587 copied files (48 duplicates); main articles and SI are separate screen units, not unique-paper or recipe counts.",
@@ -666,7 +671,7 @@
       "scope_note": "Fixed ten-hour local-only trial, including four contributions with pre-trial work. Counts only distinct new source papers deployed and anonymously verified. This arithmetic rate is not a capacity forecast or a claim of continuous unattended work."
     },
     "machine_stage_note": "The local RTX 5090/Qwen3.5 runs produce drafts quickly, but the 27B cross-check missed a known source conflict. Machine drafts and model agreement are not independent scientific audit or completed website contributions.",
-    "capacity_note": "Ten-hour local-only trial: 8 newly published papers, 98 records, 40 broad structure evidence rows. The 500/day target was not achieved. Curation is paused for user review; this observed rate is not a corpus forecast.",
+    "capacity_note": "Ten-hour local-only trial: 8 newly published papers, 98 records and 40 broad evidence rows. The user subsequently resumed curation. The 500/day target is not achieved; the trial arithmetic rate is not a corpus forecast.",
     "as_of_date": "2026-09-25",
     "date_timezone": "America/Chicago",
     "completed_paper_ledger": [
@@ -821,5 +826,11 @@
       ],
       "published_sources_today": 2
     }
-  ]
+  ],
+  "curation_control": {
+    "status": "active",
+    "resumed_at": "2026-09-25T15:36:20Z",
+    "historical_trial_unchanged": true,
+    "new_run_published_papers": 0
+  }
 }

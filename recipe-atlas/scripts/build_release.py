@@ -1,13 +1,21 @@
 """Build a new isolated artifact; no package installs, Git mutations or publication."""
 from pathlib import Path
-import argparse,hashlib,json,shutil,subprocess,sys,os
+import argparse,hashlib,json,shutil,subprocess,sys,os,time
 ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+class BuildCommandError(RuntimeError):
+    """Preserve the failed stage in the private build log."""
+    def __init__(self,run):
+        self.run=run
+        super().__init__('Command failed: '+str(run['command'])+'\n'+run['stdout']+'\n'+run['stderr'])
+
 def execute(command,cwd):
+    started=time.perf_counter()
     result=subprocess.run(command,cwd=cwd,text=True,capture_output=True,encoding='utf-8',errors='replace',env={**os.environ,'PYTHONIOENCODING':'utf-8','PYTHONDONTWRITEBYTECODE':'1'})
-    if result.returncode:raise RuntimeError('Command failed: '+str(command)+'\n'+result.stdout+'\n'+result.stderr)
-    return {'command':command,'stdout':result.stdout,'stderr':result.stderr,'returncode':result.returncode}
+    run={'command':command,'stdout':result.stdout,'stderr':result.stderr,'returncode':result.returncode,'elapsed_seconds':round(time.perf_counter()-started,6)}
+    if result.returncode:raise BuildCommandError(run)
+    return run
 def main():
     p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);p.add_argument('--snapshot',type=Path,required=True);p.add_argument('--gate',type=Path);p.add_argument('--allowlist',type=Path);p.add_argument('--policy',type=Path);p.add_argument('--registry',type=Path,required=True);p.add_argument('--display-overrides',type=Path);p.add_argument('--artifact-transform',type=Path);p.add_argument('--candidate',action='store_true',help='Build a review artifact only; never approve or emit release-manifest.json');a=p.parse_args()
     if not a.candidate and not all([a.gate,a.allowlist,a.policy]):raise SystemExit('Final release requires --gate, --allowlist and --policy; use --candidate for unapproved review output')
@@ -57,5 +65,8 @@ def main():
             runs.append(execute([sys.executable,str(a.gate.resolve()),'--root',str((work/'dist').resolve()),'--policy',str(a.policy.resolve()),'--allowlist',str(a.allowlist.resolve()),'--registry',str(a.registry.resolve()),'--repo','mattersyn-site','--manifest-out',str((a.output/'boundary-manifest.json').resolve()),'--report-out',str((a.output/'boundary-report.json').resolve())],work))
             final={'schema':'mattersyn-reproducible-release/1','status':'BOUNDARY_GATE_PASSED_PENDING_PUBLICATION_APPROVAL','boundary_manifest_sha256':sha(a.output/'boundary-manifest.json'),**common}
             (a.output/'release-manifest.json').write_text(json.dumps(final,indent=2)+'\n',encoding='utf-8',newline='\n')
+    except BuildCommandError as exc:
+        runs.append(exc.run)
+        raise
     finally:(a.output/'build-log.json').write_text(json.dumps(runs,indent=2)+'\n',encoding='utf-8',newline='\n')
 if __name__=='__main__':main()

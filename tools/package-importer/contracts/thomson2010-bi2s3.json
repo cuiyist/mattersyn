@@ -1,0 +1,105 @@
+{
+  "schema_version": "mattersyn-package-import-contract/1",
+  "purpose": "One exact-base importer fixture for the frozen Thomson 2010 Bi2S3 package. This proposal stages a private overlay only.",
+  "repository": {
+    "expected_head": "ce914cba20d868cffc4b35feef14b8fb539fe938",
+    "files": {
+      "recipe-atlas/scripts/schema_definition.py": "9511431d02e0ca5bf61a510bd608cf81cd907a8aca6eed53b4941fad6eaf508c",
+      "recipe-atlas/scripts/dataset_lib.py": "7bb085d629d9e0e138107154651772ef7b666f0463a006715a5f4a1dd1c63868",
+      "recipe-atlas/scripts/review_scope.py": "230e911c832366cef5d57398da5f5ec366943fc75152d190387d49092a544a45",
+      "recipe-atlas/scripts/build_reader_metadata.py": "2ff6368c8da07e28cafa876aae01e142aa00728af57dd228f2bed49ef5c4c56d",
+      "recipe-atlas/scripts/build_atlas.py": "21a28e5ea72f3d333720ecb5b17c0367b5191a766e4be8a84d81b1abffe60782",
+      "recipe-atlas/static/protocol-visuals.mjs": "ef86d1d3292bd1f12d6aeefa4806aff653d09cc1bc6f9358193c4f296d9581c6",
+      "recipe-atlas/data/reader-presentation-reviewed.json": "472b35f317dc6e5a6444de7bb2784cf15cb33949193cfd21c7ff41be93e0ce4e",
+      "recipe-atlas/static/assets/chemical-registry/registry.json": "0fc13bc73fb9442ee04d90b90789d71b3c9234808b42858facca70ee2043c5c2",
+      "recipe-atlas/static/assets/chemical-registry/bindings.json": "5630a11f1c0288ee4247a4170e0c447d2ce665a6db3e63173aaaa70e51a196ba",
+      "recipe-atlas/static/assets/chemical-registry/solution-components.json": "0879d05a1f3829903d400723a6b357a68d63320dc6be024a7aa7832b05c6302f",
+      "publication/asset-rights-registry.json": "b797e65704d0b15337878a716703f8d17f03ed87a6bed3c0f1e818d404868a94",
+      "publication/public-release-policy.json": "3e4d84325be56f3975f25511f5a86d22dc506819d5d9c9b156c8162c75cfb654",
+      "tools/mattersyn-release/public_release_guard.py": "3f033ae32ce2c82772f2918730827854d74244cd62b30bf1f42bdea1fa8822e2",
+      "recipe-atlas/data/corpus/library-source.json": "8e1dbb5229f2b88f4c92e7ce4fd279987ee293cec2d4ced733f1f7d386c2fb6d"
+    },
+    "operational_policy_delta": {
+      "path": "publication/public-release-policy.json",
+      "base_head": "ce914cba20d868cffc4b35feef14b8fb539fe938",
+      "base_sha256": "d8c8cfe1e8a41a5fb0795f909f1539b2b747c1be3ea3ede4f3e54a2402bf79b3",
+      "worktree_sha256": "3e4d84325be56f3975f25511f5a86d22dc506819d5d9c9b156c8162c75cfb654",
+      "added_rule_ids": [
+        "local-acceleration-run-20260925",
+        "current-curation-control"
+      ],
+      "added_rules": [
+        {
+          "rule_id": "local-acceleration-run-20260925",
+          "repo": "mattersyn",
+          "path_glob": "research-assets/acceleration-20260925/run-state.json",
+          "content_class": "audit_summary",
+          "decision": "allow",
+          "review_status": "approved",
+          "reviewer": "Codex root exact operational-status review under user publication authorization",
+          "requires_source_refs": false
+        },
+        {
+          "rule_id": "current-curation-control",
+          "repo": "mattersyn",
+          "path_glob": "research-assets/curation-control.json",
+          "content_class": "audit_summary",
+          "decision": "allow",
+          "review_status": "approved",
+          "reviewer": "Codex root exact operational-status review under user publication authorization",
+          "requires_source_refs": false
+        }
+      ]
+    }
+  },
+  "package": {
+    "bundle_manifest_sha256": "ffd3c944168a6627a0cdfdada24cabeaf3b7b86a64a87d9d047429df1a9c62a6",
+    "record_id": "thomson-2010-bi2s3-ultrathin-nanowires",
+    "paper_id": "thomson2010ja101908k",
+    "doi": "10.1021/ja101908k",
+    "source_pdf_sha256": "3ce8c6d86971ca1f31a4b986559f44ec3185b5b7672675b1dee0e4f50cabc0db",
+    "record_sha256": "7445fd9ff73a8abbff870c5e4c1b8302674d017269f941be4be6a28a341f7ca9",
+    "review_sha256": "9910d6465ace23e4fc99bcc617aa336f8caf57179ae73ccbcb4ebad267db55c6",
+    "author_freeze_sha256": "140d2e08d5421d46eaafd0f91ba77753290b726f1bed2f8e8acbc9b1bec3ae9c",
+    "reader_freeze_sha256": "b6153f0175d76bd9ccc1f92822e11878703b6790b2690bc09a3aa6a9d68502bf",
+    "chemical_freeze_sha256": "b289e8b684c864be4e26cc645e7c1000025879227b941ce8ba8108daadd779b1",
+    "audits": {
+      "expanded_main": {
+        "path": "independent-audit/expanded-main-source-audit-r1.md",
+        "sha256": "3f6657ff8a7d203283232403da083645cb68af0d4e0825a45363237a6a226927"
+      },
+      "nmr_r2": {
+        "path": "independent-audit/r2-nmr-targeted-audit.md",
+        "sha256": "672591b813fbdff43c1ad620f3cf62b7ceb4bc869b59c64ff41288aad87da105"
+      },
+      "chemical_identity": {
+        "path": "independent-audit/chemical-identity-check-r1.md",
+        "sha256": "0584f9ecedeb10da8bade03d294a2274e6927546c886316eaf70d4ebba9ab48e"
+      },
+      "reader_integration": {
+        "path": "independent-audit/reader-integration-audit-r3.md",
+        "sha256": "642b7057adfb8bec78e67f253593a68690e11955bb6ebbbe3aa5897f1fc0b1a7"
+      }
+    },
+    "source_filename": "10.1021_ja101908k.pdf"
+  },
+  "paths": {
+    "stage_root": "stages",
+    "bundle_manifest": "bundle-manifest.json",
+    "preflight": "integration-preflight.json",
+    "digest_bindings": "source-record-digest-bindings.json",
+    "rights_delta": "publication/asset-rights-registry.delta.json",
+    "presentation_delta": "integration-metadata/reader-presentation-reviewed.json",
+    "chemical_bindings": "integration-metadata/reader-chemical-bindings.json",
+    "chemical_registry_delta": "integration-metadata/chemical-registry-entries.delta.json",
+    "figure_map": "integration-metadata/reader-figure-map.json",
+    "apparatus_map": "integration-metadata/apparatus-stage-map.json",
+    "protocol_registration": "integration-metadata/protocol-visuals-registration.txt",
+    "protocol_module": "recipe-atlas/static/thomson2010-protocol.mjs"
+  },
+  "deferred": {
+    "release_path_policy": "Root must add exact reviewed path rules and run final release gate.",
+    "generated_indexes": "Run atlas, source-review, inventory and release builders after applying to private checkout.",
+    "browser_qa": "Not performed by importer; reader browser QA is inherited but post-apply browser QA remains required."
+  }
+}

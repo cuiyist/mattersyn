@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.39.1",
-  "record_count": 801,
-  "group_count": 51,
+  "record_count": 802,
+  "group_count": 52,
   "families": [
     "Cadmium dithiocarbamate precursor and CdSe/CdS quantum belts",
     "Cassiterite tin dioxide colloids",
@@ -43,6 +43,7 @@
     "Surface-functionalized II–VI quantum dots",
     "Surface-functionalized semiconductor nanocrystals",
     "Surface-oxidized silicon colloids",
+    "Ultrathin bismuth sulfide nanowires",
     "Ytterbium- and erbium-codoped lanthanum molybdate phosphors",
     "Zero-dimensional organic antimony halides",
     "ZnAl2O4 spinel hydrothermal synthesis",
@@ -48471,6 +48472,75 @@
       "collection": "reviewed_literature",
       "components": [
         "InP"
+      ]
+    },
+    {
+      "record_id": "thomson-2010-bi2s3-ultrathin-nanowires",
+      "title": "Thomson et al. (2010) · Ultrathin Bi2S3 nanowire synthesis and surface/core characterization",
+      "formula": "Bi2S3",
+      "family": "Ultrathin bismuth sulfide nanowires",
+      "method": "Sulfur-solution injection into bismuth citrate/oleylamine mixture; post-injection temperature sequence unresolved",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/ja101908k",
+      "revision": 1,
+      "record_sha256": "43e5b24f27016daaa7921e90628756708f28aa85597a9c1fae09ce7fc6740bc5",
+      "recipe_signature": "0443b312a997e1c7eef51dd8dc340a1e0f7d5d4a9f144a63c3f1b75925ca24fe",
+      "group_id": "group-d63850d248dc",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/thomson-2010-bi2s3-ultrathin-nanowires.json",
+      "page_url": "records/thomson-2010-bi2s3-ultrathin-nanowires.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Bi2S3"
       ]
     },
     {

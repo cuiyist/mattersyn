@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from dataset_lib import eligibility,build_groups,fmt
-from build_paper_reviews import validate
+from build_paper_reviews import validate,declared_review_assets
 from asset_display import display_view
 def record(id):return json.loads((ROOT/'data/records'/(id+'.json')).read_text(encoding='utf-8'))
 def quantities(x):
@@ -14,6 +14,29 @@ def quantities(x):
     elif isinstance(x,list):
         for v in x:yield from quantities(v)
 class ReviewIntegrity(unittest.TestCase):
+    def test_text_source_notes_do_not_hide_declared_asset_errors(self):
+        c=json.loads((ROOT/'data/paper-reviews/fu2007.json').read_text(encoding='utf-8'))
+        c=display_view(c,ROOT,'test-note-private-provenance.json')
+        c['source_notes']=['A textual source limitation.',copy.deepcopy(c['figures'][0])]
+        self.assertEqual(validate(c),[])
+        c['source_notes'][1]['public_asset_sha256']='0'*64
+        self.assertTrue(any('hash mismatch' in error for error in validate(c)))
+        del c['source_notes'][1]['public_asset_sha256']
+        self.assertTrue(any('hash mismatch' in error for error in validate(c)))
+
+    def test_malformed_structured_asset_entries_are_rejected(self):
+        for category in ('figures','tables','equations','schemes'):
+            with self.subTest(category=category):
+                errors=[]
+                declared_review_assets({category:['not a structured entry']},errors)
+                self.assertTrue(errors)
+        errors=[]
+        declared_review_assets({'source_notes':[42]},errors)
+        self.assertTrue(errors)
+        errors=[]
+        declared_review_assets({'source_notes':{'public_asset':'asset.png'}},errors)
+        self.assertTrue(errors)
+
     def test_unreported_numeric_temperature_preserves_room_temperature_note(self):
         from record_helpers import qty
         self.assertIn("Room temperature",fmt(qty(unit="C",qualifier="Room temperature; numerical value unspecified")))

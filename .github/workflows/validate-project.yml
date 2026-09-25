@@ -37,6 +37,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Test publication and preservation helpers
         run: python -m unittest discover -s tools/publication -p 'test_*.py' -v
+      - name: Test local package staging without private evidence
+        run: python -m unittest discover -s tools/package-importer/tests -v
       - name: Test browser condition classification
         run: node --test recipe-atlas/tests/protocol-conditions.test.mjs
       - name: Test source-scoped apparatus context

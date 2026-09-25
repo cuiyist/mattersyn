@@ -1,0 +1,124 @@
+{
+  "schema": "mattersyn-local-acceleration-run/1",
+  "status": "active",
+  "started_at": "2026-09-25T15:36:20Z",
+  "updated_at": "2026-09-25T16:51:19.402296+00:00",
+  "target_papers_per_day": 500,
+  "target_demonstrated": false,
+  "baseline": {
+    "source_commit": "ce914cba20d868cffc4b35feef14b8fb539fe938",
+    "site_commit": "1c0f67e4121e8791fcf658459a1042f4b343959e",
+    "record_count": 801,
+    "primary_source_groups": 51,
+    "formal_source_readers": 46,
+    "routes": 188,
+    "material_hubs": 65,
+    "broad_structure_evidence_rows": 125,
+    "exact_coordinate_pairs": 0
+  },
+  "constraints": {
+    "local_only": true,
+    "paid_processing": false,
+    "new_downloads": false,
+    "max_agents": 4,
+    "max_paper_claims": 5
+  },
+  "active_papers": [
+    {
+      "source_id": "thomson2010ja101908k",
+      "doi": "10.1021/ja101908k",
+      "stage": "Independent canonical/Reader integration and local browser checks passed; clean release and anonymous verification pending",
+      "inherited_work": true
+    },
+    {
+      "source_id": "rusch-manna-2026",
+      "doi": "10.1021/acs.chemmater.5c02845",
+      "stage": "23-record Reader and chemical package independent audit passed with explicit integration notes; overlay preparation active",
+      "inherited_work": true
+    },
+    {
+      "source_id": "inp-triaryl-silyl-phosphine",
+      "stage": "Coverage correction delta independently passed; new private candidate revision and integration checklist in preparation",
+      "inherited_work": true,
+      "doi": "10.1021/cm500102q"
+    }
+  ],
+  "engineering": [
+    {
+      "task": "Reusable frozen-package importer",
+      "stage": "First fixture preflight/staging and 8 synthetic tests passed; actual integration exposed review-link and chemical-coverage gaps. Public prototype and limitations prepared.",
+      "generalized_importer": false
+    },
+    {
+      "task": "Build and validation profiling",
+      "stage": "Read-only baseline complete; build-stage timers added; subprocess success/failure receipt tests passed",
+      "check_site_seconds_with_profiler": 15.323,
+      "check_quality_seconds_with_profiler": 6.743,
+      "interpretation": "Validation is not the dominant paper-throughput bottleneck; profiling adds overhead."
+    },
+    {
+      "task": "Review builder compatibility",
+      "stage": "Text-only source notes supported; declared image hash validation retained; two regression tests added",
+      "prepared_context_tests_passed": 108
+    }
+  ],
+  "publication_events": [],
+  "newly_published_source_papers": 0,
+  "new_records_published": 0,
+  "counting_rule": "Only newly deployed, anonymously verified distinct source contributions count; multiple records, old-page corrections and progress releases do not add paper throughput.",
+  "measurement_rule": "Record stage timings and changed-input rework. Do not imply continuous work between scheduled runs.",
+  "automation": {
+    "daily_report_status": "ACTIVE",
+    "daily_report_time": "08:00 America/Chicago",
+    "prompt_updated_to_current_control": true,
+    "completed_trial_automation_status": "PAUSED"
+  },
+  "stage_events": [
+    {
+      "at": "2026-09-25T15:49:00Z",
+      "doi": "10.1021/cm500102q",
+      "stage": "targeted_current_snapshot_audit",
+      "status": "passed_with_lineage_limitation",
+      "scope": "42 SI locator occurrences; current graph/sample joins and conflicts. Not full candidate/source or website acceptance.",
+      "receipt_sha256": "5b6094ae72b63a10847b8e42c181666bd23e9dabc483be5dbf7899f342cc7d5c"
+    },
+    {
+      "at": "2026-09-25T16:02:00Z",
+      "doi": "10.1021/cm500102q",
+      "stage": "supplemental_current_field_audit",
+      "status": "conditional_values_pass_completeness_hold",
+      "scope": "Current scientific fields checked against exact source pages; missing structured NMR/kinetics/model/solvent-handling/monitoring-workup coverage identified. No canonical/site acceptance.",
+      "receipt_sha256": "04d9911e494eb269afe6fc9820443a3664daa3c0dc9eb94e401d1a34cf3197ea"
+    },
+    {
+      "at": "2026-09-25T16:11:29.872550+00:00",
+      "doi": "10.1021/cm500102q",
+      "stage": "coverage_correction_draft",
+      "status": "private_draft_pending_independent_delta_audit",
+      "scope": "Four observation additions, three operational supplements and two source conflict/qualification entries; original extraction unchanged. This is not a new paper or publication."
+    },
+    {
+      "at": "2026-09-25T16:20:11Z",
+      "doi": "10.1021/ja101908k",
+      "stage": "canonical_import",
+      "status": "applied_pending_integration_gates",
+      "scope": "One existing source-audited record and Reader assets imported; 847 prior record/review files preserved."
+    },
+    {
+      "at": "2026-09-25T16:42:57.812881+00:00",
+      "doi": "10.1021/ja101908k",
+      "stage": "integration_rework",
+      "status": "corrections_under_independent_review",
+      "scope": "Text source-note compatibility, characterization Reader-card bindings, dependent hashes and two missing formula/identity cards. No scientific record values changed."
+    },
+    {
+      "at": "2026-09-25T16:51:19.402296+00:00",
+      "doi": "10.1021/ja101908k",
+      "stage": "independent_integration",
+      "status": "passed_pending_release",
+      "receipt_sha256": "fc926946b2858d37f7fc799974506e894863f07b10340a19ef355e2f40c49a7e",
+      "new_records_prepared": 1,
+      "previous_records_preserved": 801
+    }
+  ]
+}

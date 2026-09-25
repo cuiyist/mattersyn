@@ -59,6 +59,24 @@ def stage_reader_evidence(c):
         if hashlib.sha256(src.read_bytes()).hexdigest()!=hashlib.sha256(resolved_dst.read_bytes()).hexdigest():
             raise ValueError('Evidence sidecar copy hash mismatch: '+raw)
 
+def declared_review_assets(c, errors):
+    """Separate textual source notes from declared assets without skipping bad assets."""
+    assets=[]
+    for category in ('figures','tables','equations','schemes','source_notes'):
+        entries=c.get(category,[])
+        if not isinstance(entries,list):
+            errors.append('Unsupported '+category+' inventory format')
+            continue
+        for index,entry in enumerate(entries):
+            if category=='source_notes' and isinstance(entry,str):
+                continue
+            if not isinstance(entry,dict):
+                errors.append('Unsupported '+category+' entry: '+str(index))
+                continue
+            if category=='figures' or entry.get('public_asset'):
+                assets.append(entry)
+    return assets
+
 def validate(c):
     errors=[]
     chars=c.get('characterization_inventory',[])
@@ -73,7 +91,7 @@ def validate(c):
         if sorted(nums)!=list(range(1,d['page_count']+1)):errors.append('Incomplete or duplicate page inventory')
         if not all(p.get('text_read') is True and p.get('visual_review') is True for p in pages):errors.append('Unread or visually unchecked page')
         if not re.fullmatch('[a-f0-9]{64}',d['sha256']):errors.append('Missing source hash')
-    items=c['figures']+[f for category in ['tables','equations','schemes','source_notes'] for f in c.get(category,[]) if f.get('public_asset')]
+    items=declared_review_assets(c,errors)
     # Source-private page inventories may retain only a source hash/label.
     # Validate every delivered asset; a pathless provenance object is not an
     # image delivery and must not be converted into an invented public path.
@@ -83,7 +101,7 @@ def validate(c):
         if not a:errors.append('Missing figure asset: '+str(f.get('id')));continue
         p=(ROOT/'dist'/a).resolve()
         if not p.is_relative_to((ROOT/'dist').resolve()):errors.append('Asset path leaves publication directory: '+a);continue
-        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=f['public_asset_sha256']:errors.append('Figure hash mismatch: '+a)
+        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=f.get('public_asset_sha256'):errors.append('Figure hash mismatch: '+a)
     for item in c['recipe_inventory']:
         for rid in item.get('record_ids',[]):
             if not (ROOT/'data/records'/(rid+'.json')).is_file():errors.append('Unresolved recipe link: '+rid)
