@@ -1,12 +1,23 @@
-import {mountParticleContext} from './reader-particle.mjs?v=0.40.3';
+import {mountFigureMorphology} from './reader-figure-morphology.mjs?v=0.41.0';
+import {mountParticleContext} from './reader-particle.mjs?v=0.41.0';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
-import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.34.1';
+import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.41.0';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
-let registry;
+let registry,roles,availability;
 const colors=atomColors;
-export async function crystalReferences(r){registry??=fetch(siteURL('assets/crystal-references/registry.json'),{cache:'no-store'}).then(r=>r.json());return (await registry).entries.filter(x=>(x.record_ids||[]).includes(r.record_id)).map(ref=>ref.bindingScopes?.[r.record_id]?{...ref,scope:ref.bindingScopes[r.record_id],phaseScope:ref.bindingScopes[r.record_id],sample_context_note:null}:ref);}
+export async function crystalReferences(r){
+ registry??=fetch(siteURL('assets/crystal-references/registry.json'),{cache:'no-store'}).then(r=>r.json());
+ roles??=fetch(siteURL('assets/crystal-references/component-roles.json'),{cache:'no-store'}).then(r=>r.ok?r.json():{entries:{}});
+ const [data,labels]=await Promise.all([registry,roles]);
+ return data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id)).map(original=>referenceForRecord(original,r.record_id,labels.entries?.[original.id]));
+}
+export function referenceForRecord(original,recordId,roleLabels={}){
+ const ref={...original,sample_context_ids:Object.hasOwn(original,'sampleContextIdsByRecord')?(original.sampleContextIdsByRecord?.[recordId]||[]):original.sample_context_ids,roleByRecord:{...original.roleByRecord,...roleLabels}};
+ return ref.bindingScopes?.[recordId]?{...ref,scope:ref.bindingScopes[recordId],phaseScope:ref.bindingScopes[recordId],sample_context_note:null}:ref;
+}
 export function scopeKind(ref){
  const kind=[ref.sourceType,ref.referenceType,ref.name,ref.description].filter(Boolean).join(' ');
+ if(/partial/i.test(kind))return 'Partial structure reference';
  if(/comput|DFT|PBE/i.test(kind))return 'Computed reference';
  if(/construct|ideal_reference|ideal reference/i.test(kind))return 'Constructed reference';
  return 'Bulk reference';
@@ -40,34 +51,28 @@ export function referenceSampleChoices(entries,r){
  return (r.products||[]).filter(p=>p.sample_id&&(p.phase?.value||scopedIds.has(p.sample_id))).filter(p=>{if(seen.has(p.sample_id))return false;seen.add(p.sample_id);return true;});
 }
 async function mountReferenceChoices(panel,entries,r,finite){
- const contexts=referenceSampleChoices(entries,r),scopeNote=el('p',undefined,'reader-note reader-sample-scope'),choose=el('select',undefined,'reader-method-select'),display=el('div');
- let sampleSelect,activeEntries=[],generation=0;
+ const contexts=referenceSampleChoices(entries,r),scopeNote=el('p',undefined,'reader-note reader-sample-scope'),display=el('div',undefined,'reader-reference-grid');
+ let sampleSelect,generation=0;
  if(contexts.length){
   sampleSelect=el('select',undefined,'reader-method-select');sampleSelect.setAttribute('aria-label','Source specimen context for unit-cell comparison');
   for(const p of contexts){const opt=el('option',p.sample_id+(p.phase?.value?' · source reports '+p.phase.value:''));opt.value=p.sample_id;sampleSelect.append(opt);}
   panel.append(sampleSelect);
  }
- choose.setAttribute('aria-label',finite?'Choose a finite particle reference':'Choose a component and reference phase');
- panel.append(scopeNote,choose,display);
- const render=async()=>{
-  const token=++generation,ref=activeEntries.find(x=>x.id===choose.value);display.replaceChildren();
-  if(!ref){display.append(el('p',activeEntries.length?'Choose an independently sourced reference for comparison. This choice does not assign a phase to the synthesis specimen.':'No suitable unit-cell reference is supplied for this selected source context. Its reported phase remains source evidence, not a verified atomic reconstruction.','reader-note'));return;}
-  try{await drawReference(display,ref,finite);}catch(error){if(token===generation)display.replaceChildren(el('p','Structure unavailable: '+error.message,'reader-note'));}
- };
+ panel.append(scopeNote,display);
  const refresh=async()=>{
+  const token=++generation;
   const sample=contexts.find(p=>p.sample_id===sampleSelect?.value);
-  activeEntries=referencesForSample(entries,sample?.sample_id);
+  const activeEntries=referencesForSample(entries,sample?.sample_id);
   scopeNote.textContent=sample?'Selected source context: '+sample.sample_id+(sample.phase?.value?' · source reports '+sample.phase.value:'')+'. The reference does not independently verify that phase assignment.':'Independent reference comparison. Component unit cells do not reconstruct an interface or complete particle.';
-  choose.replaceChildren();
-  const requiresChoice=activeEntries.length>1;
-  if(requiresChoice){const prompt=el('option',finite?'Choose a finite reference':'Choose a component and reference phase');prompt.value='';prompt.disabled=true;prompt.selected=true;choose.append(prompt);}
-  const groups=new Map();
-  for(const ref of activeEntries){const formula=ref.formula||'Reference';if(!groups.has(formula)){const group=el('optgroup');group.label=formula+' · independent reference';groups.set(formula,group);choose.append(group);}const option=el('option',ref.name+' · '+scopeKind(ref));option.value=ref.id;groups.get(formula).append(option);}
-  choose.hidden=activeEntries.length===0;
-  if(!requiresChoice&&activeEntries.length)choose.value=activeEntries[0].id;
-  await render();
+  display.replaceChildren();
+  if(!activeEntries.length){display.append(el('p','No suitable unit-cell reference is supplied for this selected source context. Its reported phase remains source evidence, not a verified atomic reconstruction.','reader-note'));return;}
+  const cards=activeEntries.map(ref=>{
+   const card=el('article',undefined,'reader-reference-card'),role=ref.roleByRecord?.[r.record_id]||ref.componentRole||'Reference comparison',modelHost=el('div');
+   card.dataset.referenceId=ref.id;card.append(el('p',role+(ref.formula&&!role.includes(ref.formula)?' · '+ref.formula:''),'reader-reference-role'),modelHost);display.append(card);return {ref,modelHost};
+  });
+  await Promise.all(cards.map(async({ref,modelHost})=>{try{await drawReference(modelHost,ref,finite);}catch(error){if(token===generation)modelHost.replaceChildren(el('p','Structure unavailable: '+error.message,'reader-note'));}}));
  };
- choose.onchange=render;if(sampleSelect)sampleSelect.onchange=refresh;await refresh();
+ if(sampleSelect)sampleSelect.onchange=refresh;await refresh();
 }
 async function drawReference(host,ref,finite=false){
  host.replaceChildren();const badges=el('div',undefined,'reader-badges');badges.append(badge(finite?'Illustration':scopeKind(ref),'reference'),badge('Not a sample reconstruction','scope'));host.append(badges,el('h3',ref.name));
@@ -84,13 +89,19 @@ async function drawReference(host,ref,finite=false){
  const viewer=$3Dmol.createViewer(view,{backgroundColor:'#f7fafc'});let extent=1;
  function draw(n=1){viewer.clear();extent=n;if(finite){drawFiniteReference(viewer,model);caption.textContent=ref.finiteCaption||'Illustrative finite particle · reference lattice cropped to a declared envelope.';return;}
   const v=referenceCellVectors(model),point=(i,j,k)=>({x:i*v[0][0]+j*v[1][0]+k*v[2][0],y:i*v[0][1]+j*v[1][1]+k*v[2][1],z:i*v[0][2]+j*v[1][2]+k*v[2][2]});const aa=[];
-  for(let i=0;i<n;i++)for(let j=0;j<n;j++)for(let k=0;k<n;k++){const off=point(i,j,k);for(const a of model.atoms)aa.push({serial:aa.length,elem:a.element??a.elem,x:a.x+off.x,y:a.y+off.y,z:a.z+off.z,properties:a.properties});}
+  for(let i=0;i<n;i++)for(let j=0;j<n;j++)for(let k=0;k<n;k++){const off=point(i,j,k);for(const a of model.atoms)aa.push({serial:aa.length,elem:a.element??a.elem,x:a.x+off.x,y:a.y+off.y,z:a.z+off.z,properties:{...a.properties,display_occupancy:Object.hasOwn(a,'occupancy')?a.occupancy:1,components:a.components}});}
   viewer.addModel().addAtoms(aa);viewer.setStyle({},{sphere:{radius:.32,colorfunc:a=>colors[a.elem]||'#8497aa'}});
+  for(const a of aa){const occupancy=a.properties.display_occupancy;if(occupancy===null)viewer.setStyle({serial:a.serial},{cross:{radius:.22,linewidth:2,color:colors[a.elem]||'#966fa8'}});else if(occupancy>0&&occupancy<1)viewer.setStyle({serial:a.serial},{sphere:{radius:.32*Math.cbrt(occupancy),opacity:Math.max(.25,occupancy),color:colors[a.elem]||'#966fa8'}});}
   for(let axis=0;axis<3;axis++)for(const b of [0,n])for(const c of [0,n]){const start=[b,c];start.splice(axis,0,0);const end=[...start];end[axis]=n;viewer.addLine({start:point(...start),end:point(...end),color:'#7395a9',linewidth:1.5});}
   viewer.zoomTo();viewer.rotate(18,'y');viewer.rotate(-10,'x');viewer.zoom(1.2);viewer.render();
   caption.textContent=(ref.spaceGroup||'Reference cell')+' · a = '+model.cell.a+', b = '+model.cell.b+', c = '+model.cell.c+' Å; α = '+model.cell.alpha+'°, β = '+model.cell.beta+'°, γ = '+model.cell.gamma+'°. '+(n===1?'Unit cell.':'Repeated bulk cells, not a finite particle.')+' Drag to rotate; scroll to zoom.';
  }
- if(!finite){controls.append(button('Unit cell',()=>draw(1)),button('2 × 2 × 2 cells',()=>draw(2)));host.append(elementLegend(model.atoms.map(a=>a.element??a.elem).filter(x=>x!=='X')));if(ref.mixedOccupancy)host.append(el('p','Purple sites have mixed occupancy; they do not specify an ordered atom assignment.','reader-note'));}
+ if(!finite){controls.append(button('Unit cell',()=>draw(1)),button('2 × 2 × 2 cells',()=>draw(2)));host.append(elementLegend(model.atoms.flatMap(a=>a.components?.map(c=>c.element)||[a.element??a.elem]).filter(x=>x!=='X')));
+  const statistical=model.atoms.filter(a=>a.mixed_site||a.occupancy===null||Number.isFinite(a.occupancy)&&a.occupancy<1);
+  if(ref.mixedOccupancy||statistical.length){host.append(el('p','Site markers represent an average crystal model. Mixed sites are not resolved atom assignments; smaller, translucent markers indicate partial occupancy. Cross-shaped markers indicate explicitly unknown occupancy; their number is not an atom count.','reader-note'));
+   const info=disclosure('Site occupancies');const unique=new Set();for(const a of statistical){const label=(a.label||a.element||a.elem)+': '+(a.components?.map(c=>c.element+' '+(c.occupancy??'not reported')).join(' / ')||'occupancy '+(a.occupancy??'not reported'));if(!unique.has(label)){unique.add(label);info.append(el('p',label));}}host.append(info);
+  }
+ }
  controls.append(button('−',()=>{viewer.zoom(1/1.2);viewer.render();}),button('Reset',()=>draw(extent)),button('+',()=>{viewer.zoom(1.2);viewer.render();}));draw();
  view.onkeydown=e=>{const turns={ArrowLeft:[-12,'y'],ArrowRight:[12,'y'],ArrowUp:[-12,'x'],ArrowDown:[12,'x']}[e.key];if(turns)viewer.rotate(...turns);else if(e.key==='Home')draw(extent);else if(['+','='].includes(e.key))viewer.zoom(1.15);else if(e.key==='-')viewer.zoom(1/1.15);else return;e.preventDefault();viewer.render();};
  const observer=new ResizeObserver(()=>{if(!view.isConnected){viewer.clear();observer.disconnect();return;}if(view.clientWidth&&view.clientHeight){viewer.resize();viewer.render();}});observer.observe(view);
@@ -117,11 +128,14 @@ export async function mountReaderStructures(host,r,presentation={}){
  const options=[['cell','Unit cell'],['particle','Particle morphology'],...(finite.length?[['finite','Atomistic particle']]:[])];
  for(const [key,label] of options){const panel=el('div',undefined,'reader-structure-panel');panel.id='reader-structure-'+key;panel.setAttribute('role','tabpanel');panel.hidden=true;panels.append(panel);const b=button(label,()=>select(key));b.setAttribute('role','tab');b.setAttribute('aria-controls',panel.id);b.dataset.view=key;tabs.append(b);}
  async function select(key){for(const b of tabs.children)b.setAttribute('aria-selected',String(b.dataset.view===key));for(const p of panels.children)p.hidden=p.id!=='reader-structure-'+key;if(loaded.has(key))return;loaded.add(key);const panel=panels.querySelector('#reader-structure-'+key);
-  try{if(key==='particle'){await mountParticleContext(panel,r,presentation);return;}
+  try{if(key==='particle'){await mountParticleContext(panel,r,presentation);await mountFigureMorphology(panel,r,presentation);return;}
   const entries=key==='finite'?finite:refs;if(entries.length){await mountReferenceChoices(panel,entries,r,key==='finite');return;}
   if(key==='cell'&&r.lineage.source_group==='heo2003'){const {mountHeoAverage}=await import('./heo2003-average-viewer.mjs');if(await mountHeoAverage(panel,r))return;}
   if(key==='cell'&&r.lineage.source_group==='lian2021'){const {mountLianBulk,eligibleBulkContexts}=await import('./lian2021-bulk-viewer.mjs');if(eligibleBulkContexts(r).length){await mountLianBulk(panel,r);return;}}
-  panel.append(el('h3','Unit-cell reference not yet verified'),el('p','The reviewed source evidence remains available below. A phase-specific atomic model will be added when its coordinates and provenance can be verified.','reader-note'),link('Inspect structure evidence →',recordURL(r.record_id)+'#structures','reader-data-link'));
+  availability??=fetch(siteURL('assets/crystal-references/unit-cell-availability.json')).then(response=>response.ok?response.json():{record_exceptions:{}});
+  const exception=(await availability).record_exceptions?.[r.record_id];
+  panel.append(el('h3','Unit-cell coordinates unresolved'),el('p',exception?.note||'The source characterization is retained below. A suitable phase-specific coordinate model has not been verified for this specimen.','reader-note'),link('Inspect structure evidence →',recordURL(r.record_id)+'#structures','reader-data-link'));
+  for(const ref of exception?.reference_links||[])panel.append(link(ref.label||'Reference source ↗',ref.url||ref));
   }catch(error){panel.append(el('p','This structure view could not load. The complete evidence record remains available.','reader-note'));console.error(error);}
  }
  await select(refs.length?'cell':'particle');

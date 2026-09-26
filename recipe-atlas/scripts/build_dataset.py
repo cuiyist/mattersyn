@@ -75,7 +75,7 @@ def fact_text(f):return (str(f['value']) if f['value'] is not None else f['statu
 def head(title,prefix=''):
     return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+' · MatterSyn</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%23295888%27/%3E%3Ctext x=%2720%27 y=%2728%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27 font-size=%2726%27%3EM%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="'+prefix+'styles.css"><link rel="stylesheet" href="'+prefix+'academic.css"><link rel="stylesheet" href="'+prefix+'dataset.css"><link rel="stylesheet" href="'+prefix+'apparatus.css"><link rel="stylesheet" href="'+prefix+'illustrated-guide.css?v=0.34.0"></head>'
 def header(prefix=''):
-    return '<header class="site-header dataset-header"><a class="brand" href="'+prefix+'index.html"><span class="brand-mark">M</span>MatterSyn</a><nav aria-label="Dataset navigation"><a href="'+prefix+'index.html">Periodic table</a><a href="'+prefix+'library.html">Source library</a><a href="'+prefix+'dataset.html">Synthesis dataset</a><a href="'+prefix+'progress.html">Review progress</a></nav></header>'
+    return '<header class="site-header dataset-header"><a class="brand" href="'+prefix+'index.html"><span class="brand-mark">M</span>MatterSyn</a><nav aria-label="Dataset navigation"><a href="'+prefix+'index.html">Periodic table</a><a href="'+prefix+'library.html">Source library</a><a href="'+prefix+'dataset.html">Synthesis dataset</a></nav></header>'
 def section(id,number,title,subtitle,body):return '<section id="'+id+'" class="record-section"><div class="section-heading"><div><span class="section-number">'+number+'</span><h2>'+title+'<small>'+subtitle+'</small></h2></div></div>'+body+'</section>'
 
 def render_record(r,meta):
@@ -176,8 +176,8 @@ def main():
     stale=[str(p) for folder in [public/'records',pages] for p in folder.glob('*') if p.is_file() and p.stem not in expected]
     if stale:raise ValueError('Review and remove obsolete generated record files explicitly: '+', '.join(stale))
     families=sorted({r['material']['family'] for r in records if r['record_type']!='procedure'})
-    manifest={'schema_version':'1.0.0','dataset_version':'0.40.5','record_count':len(records),'group_count':len(unique_groups),'families':families,'split_policy':'Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.','records':items}
-    report={'status':'passed','dataset_version':'0.40.5','records':len(records),'recipe_records':sum(r['record_type']!='procedure' for r in records),'shared_procedures':sum(r['record_type']=='procedure' for r in records),'independent_experiment_count':None,'source_groups':len(unique_groups),'families':len(families),'eligible_by_task':{k:len(v) for k,v in exports.items()},'checks':['JSON Schema Draft 2020-12','Unique IDs and source references','Typed finite quantities and missing-value status','Operation dependencies and material-state graph','Product/measurement linkage','Illustrative-structure exclusion','Connected-component evaluation grouping','Allowlisted training inputs'],'warnings':['Source-checked synthesis–structure rows, measured-product coordinate assets and exact-coordinate task readiness are separate metrics; counts are not independent experimental batches.','Small seed collection; no general model-performance estimate.','No experimental failure-rate or reproducibility dataset yet.']}
+    manifest={'schema_version':'1.0.0','dataset_version':'0.41.0','record_count':len(records),'group_count':len(unique_groups),'families':families,'split_policy':'Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.','records':items}
+    report={'status':'passed','dataset_version':'0.41.0','records':len(records),'recipe_records':sum(r['record_type']!='procedure' for r in records),'shared_procedures':sum(r['record_type']=='procedure' for r in records),'independent_experiment_count':None,'source_groups':len(unique_groups),'families':len(families),'eligible_by_task':{k:len(v) for k,v in exports.items()},'checks':['JSON Schema Draft 2020-12','Unique IDs and source references','Typed finite quantities and missing-value status','Operation dependencies and material-state graph','Product/measurement linkage','Illustrative-structure exclusion','Connected-component evaluation grouping','Allowlisted training inputs'],'warnings':['Source-checked synthesis–structure rows, measured-product coordinate assets and exact-coordinate task readiness are separate metrics; counts are not independent experimental batches.','Small seed collection; no general model-performance estimate.','No experimental failure-rate or reproducibility dataset yet.']}
     report['curated_recipes']=sum(r['record_type'] in PROTOCOL_TYPES and r.get('collection')=='reviewed_literature' for r in records)
     report['contextual_observation_records']=sum(r['record_type']=='observation' for r in records)
     report['recipe_records']=sum(r['record_type'] in PROTOCOL_TYPES for r in records)
@@ -188,6 +188,14 @@ def main():
     dump(public / 'structure-recipe-coverage.json', structure_coverage)
     dump(public / 'structure-outcome-policy.json', structure_outcome_policy)
     dump(public / 'synthesis-structure-pairs.json', structure_outcome_coverage)
+    from reader_collection import collection_summary
+    reference_registry = json.loads((ROOT/'static/assets/crystal-references/registry.json').read_text(encoding='utf-8'))
+    collection = collection_summary(records, structure_outcome_coverage['rows'], reference_registry['entries'])
+    report['reader_collection'] = {k:v for k,v in collection.items() if k != 'pairs'}
+    dump(public/'reader-collection.json', collection)
+    pair_records = {row['record_id']:[] for row in collection['pairs']}
+    for row in collection['pairs']:pair_records[row['record_id']].append(row['pair_row_id'])
+    for item in items:item['pair_ids'] = pair_records.get(item['record_id'], [])
     queue=ROOT/'data/pilot-source-queue.json'
     if queue.exists():
         q=json.loads(queue.read_text(encoding='utf-8'));dump(public/'pilot-source-queue.json',q);report['queue_count']=len(q['candidates']);report['queue_families']=len({x['family'] for x in q['candidates']})
@@ -196,7 +204,7 @@ def main():
     (public/'records.jsonl').write_text(''.join(json.dumps(r,ensure_ascii=False)+'\n' for r in records),encoding='utf-8',newline='\n')
     for task,rows in exports.items():
         path=public/'exports'/(task+'.jsonl');path.parent.mkdir(parents=True,exist_ok=True);path.write_text(''.join(json.dumps(row,ensure_ascii=False)+'\n' for row in rows),encoding='utf-8',newline='\n')
-    (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest,structure_outcome_coverage['rows']),encoding='utf-8',newline='\n')
+    (ROOT/'dist/dataset.html').write_text(catalog_html(report,manifest,collection['pairs']),encoding='utf-8',newline='\n')
     print(json.dumps(report,indent=2))
     return 0
 if __name__=='__main__':raise SystemExit(main())

@@ -179,7 +179,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
     def test_catalog_distinguishes_unavailable_from_zero(self):
         self.assertIn('not been generated',structure_coverage_html({},html.escape))
         m=structure_recipe_coverage([self.record()]);rendered=structure_coverage_html({'structure_recipe_coverage':m},html.escape)
-        self.assertIn('—',rendered);self.assertIn('Exact-coordinate training-ready records',rendered)
+        self.assertIn('Unavailable counts are not zero',rendered);self.assertNotIn('Exact-coordinate training-ready records',rendered)
 
     def test_catalog_labels_molecular_representation(self):
         r=self.record();p=self.policy(r);p['task_profiles']={};p['asset_qualifications']['synthetic-source::sample-model']['representation']='molecular_structure'
@@ -187,7 +187,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(0,m['counts']['sample_coordinate_assets']);self.assertEqual(1,m['counts']['molecular_structure_assets'])
         self.assertEqual(0,m['counts']['exact_task_ready_records'])
         rendered=structure_coverage_html({'structure_recipe_coverage':m},html.escape)
-        self.assertIn('1 molecular structures',rendered);self.assertIn('not included in measured-product coordinate',rendered)
+        self.assertNotIn('Measured-product coordinate assets',rendered);self.assertNotIn('Exact-coordinate training-ready records',rendered)
 
     def test_one_sample_with_several_structural_measurements_is_one_pair_row(self):
         r=self.record()
@@ -279,9 +279,11 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(0,strict['counts']['exact_task_ready_records'])
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
-        page=structure_coverage_html({'structure_recipe_coverage':strict,'structure_outcome_coverage':broad},html.escape,broad['rows'])
-        self.assertIn('Browse all 160 synthesis–structure rows',page)
-        self.assertEqual(160,page.count('Evidence and source locators'))
+        from reader_collection import collection_summary
+        collection=collection_summary(records,broad['rows'],[])
+        page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
+        self.assertIn('Browse all 160 pairs',page)
+        self.assertEqual(160,page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))

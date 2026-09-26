@@ -253,8 +253,19 @@ class Audit:
                         self.check(all(isinstance(atom.get(k), (int, float)) and math.isfinite(atom[k]) for k in ("x", "y", "z")), f"{eid}/{key}: nonfinite/missing atom coordinate")
                     for bond in model.get("bonds", []):
                         self.check(all(isinstance(bond.get(k), int) and 0 <= bond[k] < len(atoms) for k in ("a", "b")), f"{eid}/{key}: bond endpoint outside atom list")
-                    for group in entry.get("functionalGroups", []):
-                        self.check(all(0 <= i < len(atoms) for i in group.get("atomIndices", [])), f"{eid}/{key}: functional-group atom outside model")
+                    # Registry-level group labels need not define atom indices.
+                    # Validate indexed groups against the model whose coordinates they describe.
+                    for group in model.get("functionalGroups", []):
+                        if not self.check(isinstance(group, dict), f"{eid}/{key}: malformed indexed functional group"):continue
+                        self.check(all(isinstance(i, int) and 0 <= i < len(atoms) for i in group.get("atomIndices", [])), f"{eid}/{key}: functional-group atom outside model")
+            for component in entry.get('component3dModels', []):
+                path=self.asset(base,component.get('model3dPath'),component.get('model3dSha256'),eid+'/separate-component')
+                if not path:continue
+                model=load(path);atoms=model.get('atoms',[])
+                self.check(bool(atoms) and bool(component.get('caption')),f'{eid}: separate component lacks atoms/scope')
+                for atom in atoms:self.check(all(isinstance(atom.get(k),(int,float)) and math.isfinite(atom[k]) for k in ('x','y','z')),f'{eid}: invalid component geometry')
+                for bond in model.get('bonds',[]):self.check(all(isinstance(bond.get(k),int) and 0<=bond[k]<len(atoms) for k in ('a','b')),f'{eid}: invalid component bond')
+                for group in model.get('functionalGroups',[]):self.check(isinstance(group,dict) and all(isinstance(i,int) and 0<=i<len(atoms) for i in group.get('atomIndices',[])),f'{eid}: invalid component group')
         self.counts["chemical_identities"] = len(entries)
 
     def crystals(self):
@@ -348,9 +359,19 @@ class Audit:
                 self.check(model.get('training_eligible')is False and model.get('measured_sample_structure')is False,f'{cid}: model exclusion flags changed')
                 for atom in model.get('atoms',[]):
                     self.check(all(isinstance(atom.get(k),(float,int))and math.isfinite(atom[k])for k in ('x','y','z')),f'{cid}: nonfinite coordinate')
-                    for component in atom.get('components',[{'element':atom['element'],'occupancy':atom.get('occupancy',1)}]):counts[component['element']]+=component['occupancy']
-                expected=pin['expected_occupancy_weighted_counts']
-                self.check(set(counts)==set(expected)and all(abs(counts[k]-v)<1e-5 for k,v in expected.items()),f'{cid}: qualified occupancy-weighted composition changed')
+                    if pin.get('occupancy_mode')=='unknown_geometric_markers':
+                        self.check(atom.get('occupancy','absent') is None,f'{cid}: unknown occupancy was filled')
+                        self.check(all(c.get('occupancy','absent') is None for c in atom.get('components',[])),f'{cid}: unknown component occupancy was filled')
+                        counts[atom['element']]+=1
+                    else:
+                        for component in atom.get('components',[{'element':atom['element'],'occupancy':atom.get('occupancy',1)}]):
+                            occupancy=component.get('occupancy')
+                            if self.check(isinstance(occupancy,(int,float)) and math.isfinite(occupancy) and 0<occupancy<=1,f'{cid}: invalid known occupancy'):counts[component['element']]+=occupancy
+                if pin.get('occupancy_mode')=='unknown_geometric_markers':
+                    self.check(pin.get('expected_occupancy_weighted_counts') is None,f'{cid}: missing occupancy incorrectly assigned a stoichiometry')
+                    expected=pin['expected_geometric_marker_counts']
+                else:expected=pin['expected_occupancy_weighted_counts']
+                self.check(set(counts)==set(expected)and all(abs(counts[k]-v)<1e-5 for k,v in expected.items()),f'{cid}: qualified composition/geometric-marker inventory changed')
         self.counts["crystal_references"] = len(entries)
 
     def figures(self):
@@ -401,7 +422,7 @@ def main():
             method(*values)
         except (OSError, ValueError, KeyError, TypeError, IndexError) as error:
             audit.errors.append(f"{method.__name__}: incomplete/malformed build: {type(error).__name__}: {error}")
-    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, seven pinned database CIFs plus two pinned ideal Si/PbSe references, mixed occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
+    report = {"passed": not audit.errors, "counts": dict(audit.counts), "errors": audit.errors, "warnings": audit.warnings, "scope": "Publication relevance, all canonical reagent bindings and assets, the complete independently pinned reference registry, mixed and unknown occupancy, nine selected original figures and exclusion from training labels. No network, source-PDF access, or Site writes."}
     print(json.dumps(report, indent=2, ensure_ascii=False))
     return 1 if audit.errors else 0
 

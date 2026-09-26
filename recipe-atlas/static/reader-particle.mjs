@@ -64,6 +64,9 @@ export function particleDescriptor(group,interpretations={}){
 
 function particleArt(descriptor){
  const host=el('div',undefined,'reader-product-illustration');
+ if(descriptor.inferred?.svg_path){
+  const image=el('img');image.src=siteURL(descriptor.inferred.svg_path);image.alt=descriptor.inferred.alt||descriptor.inferred.label||'Source-based interpretation of particle morphology';image.loading='lazy';image.style.width='100%';image.style.height='auto';host.append(image);return host;
+ }
  host.innerHTML=particleShapeSVG(descriptor.shape);
  const info=particleShapeInfo(descriptor.shape);
  if(info.legend?.length){const legend=el('div',undefined,'element-legend');for(const item of info.legend){const span=el('span'),dot=el('i');dot.style.background=item.color;span.append(dot,document.createTextNode(item.label));legend.append(span);}host.append(legend);}

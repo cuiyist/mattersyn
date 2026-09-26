@@ -1,4 +1,4 @@
-"""Generate both bibliographies and progress HTML/JSON from one fixed snapshot."""
+"""Generate source bibliographies and reader metadata from one fixed snapshot."""
 from pathlib import Path
 import json,html,re,hashlib
 def load(path):return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -24,13 +24,23 @@ def progress_label(data):
     if data.get('estimate',{}).get('status')=='paused_for_joint_review':return 'Active papers are published. Work is paused for joint review; no new papers will start.'
     rows=data.get('current_work',[])
     return (rows[0]['short_label']+': '+rows[0]['stage']).rstrip('.')+'.'if rows else'No paper is currently under review.'
-def render_banner(text,progress):
-    label=html.escape(progress_label(progress));timestamp=html.escape(progress['updated_at'])
-    widget='<!--review-progress-start--><section class="progress-teaser" aria-label="Current review progress"><div><span class="eyebrow">REVIEW PROGRESS</span><p id="review-progress-brief">'+label+'</p><small id="review-progress-time">Published snapshot '+timestamp+' · automatic update checks require JavaScript.</small></div><a href="progress.html">Open the review queue →</a></section><!--review-progress-end-->'
-    pattern=r'<!--review-progress-start-->.*?<!--review-progress-end-->'
-    if re.search(pattern,text,re.S):return re.sub(pattern,lambda _:widget,text,flags=re.S)
-    if '<div class="element-controls">'not in text:raise ValueError('Home progress insertion anchor missing')
-    return text.replace('<div class="element-controls">',widget+'<div class="element-controls">',1)
+def render_banner(text,progress=None):
+    """Owner progress is deliberately absent from the reader-facing website."""
+    return re.sub(r'<!--review-progress-start-->.*?<!--review-progress-end-->','',text,flags=re.S)
+
+def remove_public_progress(dist):
+    for page in dist.rglob('*.html'):
+        text=page.read_text(encoding='utf-8')
+        cleaned=render_banner(text)
+        cleaned=re.sub(r'<a\b[^>]*href=[\"\'][^\"\']*progress\.html[^\"\']*[\"\'][^>]*>.*?</a>','',cleaned,flags=re.S)
+        cleaned=re.sub(r'<script\b[^>]*src=[\"\'][^\"\']*progress\.mjs[^\"\']*[\"\'][^>]*>\s*</script>','',cleaned)
+        cleaned=re.sub(r'<link\b[^>]*href=[\"\'][^\"\']*progress\.css[^\"\']*[\"\'][^>]*>','',cleaned)
+        if cleaned!=text:page.write_text(cleaned,encoding='utf-8',newline='\n')
+    # Preserve a harmless old-link destination without exposing the owner's queue.
+    (dist/'progress.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=dataset.html"><title>MatterSyn synthesis dataset</title></head><body><p><a href="dataset.html">Open the synthesis dataset</a></p></body></html>\n',encoding='utf-8',newline='\n')
+    for name in ('progress.mjs','progress.css','data/review-progress.json','data/pilot-source-queue.json'):
+        path=dist/name
+        if path.is_file():path.unlink()
 def citation(s,review):
     paper=review.get('paper',{});authors=paper.get('authors')or s.get('authors')or'Authors unrecorded'
     if isinstance(authors,list):authors='; '.join(authors)
@@ -72,11 +82,8 @@ def generate(root,snapshot):
     refs+=['A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.',''];body='\n'.join(refs)
     for folder in [root.parent,dist]:
         (folder/'REFERENCES.md').write_text('# MatterSyn references\n\n'+body,encoding='utf-8',newline='\n')
-        readme=folder/'README.md';intro=('# MatterSyn website'if folder==dist else'# MatterSyn')+'\n\n[Open the atlas](https://cuiyist.github.io/mattersyn-site/) · [Review progress](https://cuiyist.github.io/mattersyn-site/progress.html)\n\nMatterSyn organizes source-attributed synthesis, characterization and property records. Publication and task-specific training eligibility are separate approvals.\n'
-        readme.write_text(readme_with_references(readme.read_text(encoding='utf-8')if readme.exists()else'',intro,body),encoding='utf-8',newline='\n')
-    progress=load(root/'data/release-progress.json')
-    synchronize_progress_counts(progress,manifest,records,reviews,load(dist/'data/materials-index.json')['materials'],len(primary))
-    progress['updated_at']=snapshot['updated_at'];dump(dist/'data/review-progress.json',progress)
-    home=dist/'index.html';home.write_text(render_banner(home.read_text(encoding='utf-8'),progress),encoding='utf-8',newline='\n')
-    binding={'schema':'mattersyn-generated-release-metadata/1','release_id':snapshot['release_id'],'updated_at':snapshot['updated_at'],'source_commit':snapshot['source_commit'],'canonical_records':len(records),'primary_sources':len(primary),'manifest_sha256':hashlib.sha256((dist/'data/dataset-manifest.json').read_bytes()).hexdigest(),'progress_sha256':hashlib.sha256((dist/'data/review-progress.json').read_bytes()).hexdigest(),'bibliography_sha256':hashlib.sha256(body.encode()).hexdigest()}
+        readme=folder/'README.md';intro=('# MatterSyn website'if folder==dist else'# MatterSyn')+'\n\n[Open the atlas](https://cuiyist.github.io/mattersyn-site/)\n\nMatterSyn organizes source-attributed synthesis, characterization and property records. Publication and task-specific training eligibility are separate approvals.\n'
+        readme.write_text(readme_with_references(readme.read_text(encoding='utf-8').replace(' · [Review progress](https://cuiyist.github.io/mattersyn-site/progress.html)','')if readme.exists()else'',intro,body),encoding='utf-8',newline='\n')
+    remove_public_progress(dist)
+    binding={'schema':'mattersyn-generated-release-metadata/1','release_id':snapshot['release_id'],'updated_at':snapshot['updated_at'],'source_commit':snapshot['source_commit'],'canonical_records':len(records),'primary_sources':len(primary),'manifest_sha256':hashlib.sha256((dist/'data/dataset-manifest.json').read_bytes()).hexdigest(),'progress_public':False,'progress_sha256':None,'bibliography_sha256':hashlib.sha256(body.encode()).hexdigest()}
     dump(dist/'data/release-snapshot.json',binding);return binding

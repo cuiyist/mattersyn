@@ -84,8 +84,7 @@ The user's display preference permits the selected source figures to remain on
 the public site while their rights status is unresolved. Preserve that status; do
 not describe the figures as cleared.
 
-Both README bibliographies come from the same approved source records. The homepage
-fallback and dynamic progress display use the same dated release snapshot. Several
+Both README bibliographies come from the same approved source records. Public collection counts and the homepage fallback use the same dated release snapshot. Owner-only review progress is excluded from the public interface and its progress endpoint redirects to the synthesis catalogue. Several
 completed contributions may be published together; screening, extraction, audit and
 building can proceed on different papers in parallel. Each contribution still needs
 its own review history. Throughput is reported from completed work, not inferred from

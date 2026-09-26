@@ -1,0 +1,106 @@
+{
+  "id": "matuhina2023-heavy-water-reference",
+  "name": "Heavy-water continuum generator",
+  "formula": "H2O",
+  "representation": "3d",
+  "has3D": true,
+  "allowRotation": true,
+  "indexConvention": "zero-based",
+  "coordinateUnits": "angstrom",
+  "modelType": "illustrative_computed_conformer",
+  "coordinateSource": "local-rdkit",
+  "computedBy": "RDKit 2026.03.6",
+  "caption": "Locally computed illustrative molecular conformer from reviewed connectivity. This is not a measured geometry, reaction-mixture species or surface-bound configuration. ETKDGv3 embedding followed by converged MMFF94s minimization.",
+  "canonicalSmiles": "[2H]O[2H]",
+  "atoms": [
+    {
+      "index": 0,
+      "element": "H",
+      "x": 0.761334,
+      "y": -0.206925,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 2
+    },
+    {
+      "index": 1,
+      "element": "O",
+      "x": 0.004183,
+      "y": 0.397793,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 0
+    },
+    {
+      "index": 2,
+      "element": "H",
+      "x": -0.765517,
+      "y": -0.190868,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 2
+    }
+  ],
+  "bonds": [
+    {
+      "a": 0,
+      "b": 1,
+      "order": 1.0
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "order": 1.0
+    }
+  ],
+  "functionalGroups": [
+    {
+      "label": "Heavy-water reference",
+      "atomIndices": [
+        0,
+        1,
+        2
+      ],
+      "bondIndices": [
+        0,
+        1
+      ]
+    }
+  ],
+  "generation": {
+    "software": "RDKit",
+    "version": "2026.03.6",
+    "embeddingMethod": "ETKDGv3",
+    "randomSeed": 181552990,
+    "numThreads": 1,
+    "minimization": {
+      "method": "MMFF94s",
+      "status": 0,
+      "converged": true
+    },
+    "connectivityInput": "models/matuhina2023-heavy-water-2d.json",
+    "connectivitySha256": "6896f3870c6c016573c1706196a34fdf85d7bf091482373a8bfeae0070a21c6c",
+    "retainedIdentityRegistryId": null,
+    "sourceUrls": [
+      "https://doi.org/10.1021/acsanm.2c04342"
+    ],
+    "measuredCoordinates": false,
+    "eligibleTrainingCoordinates": false
+  },
+  "validation": {
+    "elementCounts": {
+      "H": 2,
+      "O": 1
+    },
+    "formula": "H2O",
+    "atomCount": 3,
+    "bondCount": 2,
+    "fragmentCount": 1,
+    "minimumBondLengthAngstrom": 0.9689999889384308,
+    "maximumBondLengthAngstrom": 0.9690000439656332,
+    "minimumAtomSeparationAngstrom": 0.9689999889384308,
+    "finiteCoordinates": true,
+    "functionalGroupsIndicesValid": true,
+    "graphIdentityPreserved": true
+  }
+}

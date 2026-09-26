@@ -1,0 +1,101 @@
+{
+  "id": "friedfeld2019-labeled-co2-reference",
+  "name": "Carbon-13 dioxide",
+  "formula": "CO2",
+  "representation": "3d",
+  "has3D": true,
+  "allowRotation": true,
+  "indexConvention": "zero-based",
+  "coordinateUnits": "angstrom",
+  "modelType": "illustrative_computed_conformer",
+  "coordinateSource": "local-rdkit",
+  "computedBy": "RDKit 2026.03.6",
+  "caption": "Locally computed illustrative molecular conformer from reviewed connectivity. This is not a measured geometry, reaction-mixture species or surface-bound configuration. ETKDGv3 embedding followed by converged MMFF94s minimization.",
+  "canonicalSmiles": "O=[13C]=O",
+  "atoms": [
+    {
+      "index": 0,
+      "element": "O",
+      "x": 1.405,
+      "y": 0.00062,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 0
+    },
+    {
+      "index": 1,
+      "element": "C",
+      "x": 0.0,
+      "y": -0.0,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 13
+    },
+    {
+      "index": 2,
+      "element": "O",
+      "x": -1.405,
+      "y": -0.00062,
+      "z": 0.0,
+      "formalCharge": 0,
+      "isotope": 0
+    }
+  ],
+  "bonds": [
+    {
+      "a": 0,
+      "b": 1,
+      "order": 2.0
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "order": 2.0
+    }
+  ],
+  "functionalGroups": [
+    {
+      "label": "13C isotope label",
+      "atomIndices": [
+        1
+      ],
+      "bondIndices": []
+    }
+  ],
+  "generation": {
+    "software": "RDKit",
+    "version": "2026.03.6",
+    "embeddingMethod": "ETKDGv3",
+    "randomSeed": 112420548,
+    "numThreads": 1,
+    "minimization": {
+      "method": "MMFF94s",
+      "status": 0,
+      "converged": true
+    },
+    "connectivityInput": "models/friedfeld2019-labeled-co2-2d.json",
+    "connectivitySha256": "85505529b5c15191b410e3f0f830f5439601a44543eb69467d481c4aee7912c5",
+    "retainedIdentityRegistryId": null,
+    "sourceUrls": [
+      "https://doi.org/10.1021/acs.inorgchem.8b02945"
+    ],
+    "measuredCoordinates": false,
+    "eligibleTrainingCoordinates": false
+  },
+  "validation": {
+    "elementCounts": {
+      "C": 1,
+      "O": 2
+    },
+    "formula": "CO2",
+    "atomCount": 3,
+    "bondCount": 2,
+    "fragmentCount": 1,
+    "minimumBondLengthAngstrom": 1.4049997737817086,
+    "maximumBondLengthAngstrom": 1.4050001566489239,
+    "minimumAtomSeparationAngstrom": 1.4049997737817086,
+    "finiteCoordinates": true,
+    "functionalGroupsIndicesValid": true,
+    "graphIdentityPreserved": true
+  }
+}

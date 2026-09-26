@@ -138,6 +138,7 @@ def main():
             contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
         m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
+        m['experimental_series']=[{'record_id':r['record_id'],'title':r['title'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','scope':'Published recipe parameters and optical outcomes; row-specific particle structure and complete preparation are not supplied.'} for r in records if r['collection']=='published_benchmark' and r['material']['formula']==f]
         # Supporting evidence is explicitly curated per material, never inferred
         # from a paper title or promoted into a synthesis route.
         evidence_ids=set(m['record_ids']);m['evidence_scope_notes']=[]
@@ -155,7 +156,7 @@ def main():
         m['paper_dois']=sorted(m['paper_dois']);m['mentioned_paper_dois']=sorted(m['mentioned_paper_dois'])
         write(ROOT/'dist/data/materials'/(m['id']+'.json'),m)
         index.append({k:m[k] for k in ['id','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','component_architectures','publication_status','component_only']})
-    summary=corpus['summary'];coverage=f"{len(index)} material pages with verified synthesis contributions. {len(library):,} indexed paper groups remain searchable separately in the Source library; indexing does not create a material page."
+    summary=corpus['summary'];coverage=f"{len(index)} material and component pages with source-linked synthesis contributions. Explore contributing papers in the Source library."
     write(ROOT/'dist/data/materials-index.json',{'schema_version':'1.0','materials':index,'coverage':coverage})
     write(ROOT/'dist/data/library-index.json',{'summary':summary,'papers':library,'local_paper_groups':len(library),'scope':'Paper and supplement matching and material mentions are candidates until independently reviewed. Selected reviewed recipes do not imply full-paper curation.'})
     # Remove obsolete generated shards after the complete replacement registry exists.

@@ -43,6 +43,8 @@ jobs:
         run: node --test recipe-atlas/tests/protocol-conditions.test.mjs
       - name: Test source-scoped apparatus context
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
+      - name: Test reader specimen and figure isolation
+        run: node --test recipe-atlas/tests/reader-revision.test.mjs
       - name: Check exact source manifest coverage
         run: python tools/publication/check_project_manifest.py --pre-push
       - name: Validate the public source projection

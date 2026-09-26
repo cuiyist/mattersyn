@@ -2,7 +2,7 @@
 
 MatterSyn organizes reviewed synthesis procedures, material characterization and properties with source and sample attribution. The website is a view of the structured records. Reader publication does not imply that a record is eligible for model training or has sample-specific atomic coordinates.
 
-[Open the atlas](https://cuiyist.github.io/mattersyn-site/) · [Review queue](https://cuiyist.github.io/mattersyn-site/progress.html)
+[Open the atlas](https://cuiyist.github.io/mattersyn-site/) · [Synthesis catalogue](https://cuiyist.github.io/mattersyn-site/dataset.html)
 
 Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public at the owner's
 request. The project repository contains code, reviewed records, project memory,
@@ -46,7 +46,7 @@ Public citations are generated below from the same dataset snapshot used by the 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.40.5** · **60 primary source groups** · release `20260926-song-accepted-closeout`. Records are not independent experiments.
+Dataset **0.41.0** · **60 primary source groups** · release `20260926-site-wide-reader-revision`. Records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
@@ -231,6 +231,76 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 - [Si diamond cubic reference](https://www.crystallography.net/cod/9008565.html). literature bulk reference.
 
 - [Constructed zinc-blende CdSe reference](https://researchconnect.buffalo.edu/en/publications/growth-of-cubic-zinc-blende-cdse-by-molecular-beam-epitaxy/). constructed lattice reference.
+
+- [CdTe zinc blende (alternative phase) reference](https://www.crystallography.net/cod/9008840.html). literature bulk reference.
+
+- [ZnTe zinc-blende bulk reference](https://www.crystallography.net/cod/9008858.html). literature bulk reference.
+
+- [HgS metacinnabar (zinc-blende) reference](https://www.crystallography.net/cod/1011368.html). literature bulk reference.
+
+- [HgS cinnabar alternative bulk phase](https://www.crystallography.net/cod/9012082.html). literature bulk reference.
+
+- [Cs4PbBr6 rhombohedral bulk reference](https://www.crystallography.net/cod/1538416.html). literature bulk reference.
+
+- [Co face-centred cubic reference](https://www.crystallography.net/cod/9008466.html). literature bulk reference.
+
+- [Co hexagonal close-packed reference](https://www.crystallography.net/cod/9010967.html). literature bulk reference.
+
+- [CuSbS2 chalcostibite reference](https://www.crystallography.net/cod/9003580.html). literature bulk reference.
+
+- [Cu3SbS4 famatinite reference](https://www.crystallography.net/cod/8104122.html). literature bulk reference.
+
+- [Cu12Sb4S13 tetrahedrite reference](https://www.crystallography.net/cod/2101865.html). literature bulk reference.
+
+- [Cu3SbS3 monoclinic skinnerite reference](https://www.crystallography.net/cod/9004360.html). literature bulk reference.
+
+- [CuS covellite reference](https://www.crystallography.net/cod/9000523.html). literature bulk reference.
+
+- [Cu1.8S rhombohedral digenite reference](https://www.crystallography.net/cod/1536218.html). literature bulk reference.
+
+- [Cu2S high-chalcocite average reference](https://www.crystallography.net/cod/1529746.html). literature bulk reference.
+
+- [Ni3S4 polydymite reference](https://www.crystallography.net/cod/9009863.html). literature bulk reference.
+
+- [Metallic Ni FCC reference](https://www.crystallography.net/cod/9008476.html). literature bulk reference.
+
+- [NiS millerite reference](https://www.crystallography.net/cod/9004078.html). literature bulk reference.
+
+- [ZnGa2O4 bulk spinel reference](https://www.crystallography.net/cod/4001767.html). literature bulk reference.
+
+- [Bi2S3 bismuthinite reference at ambient pressure](https://www.crystallography.net/cod/9007398.html). literature bulk reference.
+
+- [CoNi2S4 neutron-refined spinel reference](https://www.crystallography.net/cod/9009852.html). literature bulk reference.
+
+- [CoS NiAs-type jaipurite reference](https://www.crystallography.net/cod/1011037.html). literature bulk reference.
+
+- [FePt ordered tetragonal alternative reference](https://www.crystallography.net/cod/9004222.html). literature bulk reference.
+
+- [Graphite 2H planar-layer reference](https://www.crystallography.net/cod/9011577.html). literature bulk reference.
+
+- [Cs3Cu2Cl5 Pnma alternative reference](https://www.crystallography.net/cod/7246298.html). literature bulk reference.
+
+- [Cu2SnS3 monoclinic alternative reference](https://www.crystallography.net/cod/1526187.html). literature bulk reference.
+
+- [La2(MoO4)3 monoclinic bulk alternative](https://www.crystallography.net/cod/2107003.html). literature bulk reference.
+
+- [Fe3O4 magnetite bulk comparator](https://www.crystallography.net/cod/9005812.html). literature bulk reference.
+
+- [Fe2O3 hematite bulk comparator](https://www.crystallography.net/cod/9000139.html). literature bulk reference.
+
+- [Fe2O3 maghemite average bulk comparator](https://www.crystallography.net/cod/9006316.html). literature bulk reference.
+
+- [PbI2 layered 2H bulk reference](https://www.crystallography.net/cod/9009114.html). literature bulk reference.
+
+- [FAPbI3 hexagonal non-H average reference](https://www.crystallography.net/cod/4335640.html). literature bulk reference.
+
+- [CsBr CsCl-type bulk reference](https://www.crystallography.net/cod/9008788.html). literature bulk reference.
+
+- [AlOOH boehmite non-H reference](https://www.crystallography.net/cod/9012252.html). literature bulk reference.
+
+- [CdTe wurtzite constructed reference](https://stars.library.ucf.edu/fsec/1898/). constructed reference.
+
+- [Calcined SSZ-48 partial Si/O framework](https://doi.org/10.1021/jp991389j). source table partial framework.
 
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
 

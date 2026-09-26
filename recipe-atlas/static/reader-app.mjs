@@ -4,17 +4,17 @@ import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipm
 
 import {quantityValue} from './quantity-value.mjs';
 
-import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.34.1';
+import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel} from './chemical-viewer.mjs?v=0.41.0';
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.2';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.40.2';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.0';
 
 const cache=new Map();
 
 function json(path){if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
 
-export function formatQuantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',uL:'µL',umol:'µmol',angstrom:'Å',um:'µm',uM:'µM',volume_parts:'volume parts',mass_percent:'wt%',volume_percent:'vol%'})[q.unit]||q.unit||'';if(v===null)return q.raw_text||q.qualifier||'Not reported';return (q.approximate?'≈':'')+v+(unit?' '+unit:'');}
+export function formatQuantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',uL:'µL',umol:'µmol',angstrom:'Å',um:'µm',uM:'µM',volume_parts:'volume parts',mass_percent:'wt%',volume_percent:'vol%'})[q.unit]||q.unit||'';if(v===null)return q.raw_text||q.qualifier||'Not reported';return (q.approximate?'≈':'')+v+(unit?' '+unit:'')+(['inferred','estimated','assumed'].includes(q.status)?' ('+q.status+')':'');}
 
 function quantities(rows,compact=true,record=null){const dl=el('dl');for(const [key,q] of rows){const div=el('div');const separator=key.indexOf(':');const operationIndex=separator>=0?(record?.operations||[]).findIndex(o=>o.id===key.slice(0,separator)):-1;const label=operationIndex>=0?'Step '+(operationIndex+1)+' · '+human(key.slice(separator+1)):human(key);div.append(el('dt',label),el('dd',formatQuantity(q)));if(!compact&&q.qualifier&&quantityValue(q)!==null)div.append(el('small',q.qualifier));if(!compact&&q.basis)div.append(el('small',q.basis));dl.append(div);}return dl;}
 
@@ -22,14 +22,14 @@ const normal=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.39.1');style.dataset.readerCss='true';document.head.append(style);}
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.0');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
 
  for(const m of chemicals){const card=el('article',undefined,'reader-chemical');card.dataset.materialId=m.id;const entry=chemicalEntry(data,r.record_id,m.id);card.append(el('small',human(m.role)),el('h3',m.name),el('div',entry?.displayFormula||entry?.formula||m.formula||'Source-defined composition','reader-formula'));
 
-  if(entry){const image=cardImage(entry);image.alt=m.name+' chemical structure';card.append(image,button(entry.model3dPath?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}else card.append(el('p','Chemical identity is retained in the source record.','reader-note'));
+  if(entry){const image=cardImage(entry);image.alt=m.name+' chemical structure';card.append(image,button(hasRotatableChemicalModel(entry)?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}else card.append(el('p','Chemical identity is retained in the source record.','reader-note'));
 
   const qs=Object.entries(m.quantities||{}),known=qs.filter(([,q])=>quantityValue(q)!==null);known.sort(([a],[b])=>Number(/purity|grade/.test(a))-Number(/purity|grade/.test(b)));card.append(quantities(known.slice(0,3),true,r));
 
@@ -52,7 +52,7 @@ async function precursors(host,r,presentation={}){
    const material=r.materials.find(item=>item.id===option.chemical_material_id),entry=chemicalEntry(data,r.record_id,option.chemical_material_id);
    const card=el('article',undefined,'reader-chemical');
    card.append(badge('Source-defined alternative','scope'),el('h3',material?.name||entry?.name||option.chemical_material_id),el('div',entry?.displayFormula||entry?.formula||material?.formula||'','reader-formula'),el('p',option.label,'reader-note'));
-   if(entry){card.append(cardImage(entry),button(entry.model3dPath?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}
+   if(entry){card.append(cardImage(entry),button(hasRotatableChemicalModel(entry)?'Rotate structure ↗':'Inspect structure ↗',()=>openChemical(entry),'molecule-link'));}
    const parameters=Object.entries(option.parameters||{});if(parameters.length)card.append(quantities(parameters,false));
    card.append(link('Source details →',recordURL(r.record_id)+'#protocol','reader-data-link'));
    choiceGrid.append(card);
@@ -180,6 +180,12 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=el('div',undefined,'reader-badges');badges.append(badge((presentation.method_label||shortMethod(r.method))),badge(r.sources[0].year+' · '+(r.sources[0].authors.split(/[,;]/)[0]+' et al.'||'Source'),'scope'));methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);await buildMethod(content,r,presentation);if(turn!==generation)return;document.title=baseTitle+' · '+(presentation.method_label||shortMethod(r.method))+' | MatterSyn';const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
 
+ if(data?.experimental_series?.length){
+  const series=el('section',undefined,'reader-section');series.id='experimental-series';series.append(el('h2','Experimental series'),el('p','Published recipe parameters and optical measurements from an additional source. These rows are part of this material collection; they do not establish row-specific particle structures or complete preparation protocols.','reader-note'));
+  const sources=new Map(data.experimental_series.map(row=>[row.doi,row]));for(const row of sources.values())series.append(link(row.year+' · '+row.doi,'https://doi.org/'+row.doi,'reader-data-link'));
+  const list=el('div',undefined,'reader-methods');for(const row of data.experimental_series.slice(0,6))list.append(link(row.title,row.page_url,'reader-method-card'));
+  series.append(list,link('Browse experimental series and other PbS records →','dataset.html?material='+encodeURIComponent(data.formula),'reader-data-link'));main.append(series);
+ }
  await select(active);return {material:data,recordId:active};
 
 }
