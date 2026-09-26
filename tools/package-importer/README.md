@@ -1,5 +1,17 @@
 # MatterSyn frozen-package importer (Thomson Bi2S3 fixture)
 
+## Shared new-paper preflight
+
+`preflight.py` is source-independent and checks an isolated additive candidate against a base checkout before the full build. The older `importer.py` remains the exact Thomson fixture described below; this new checker does not silently generalize its mutation rules.
+
+```powershell
+python -B tools/package-importer/preflight.py --candidate <private-candidate> --base <base-checkout> --new-records <private-record-id-array.json> --report <private-receipt.json>
+```
+
+The record-ID file is a JSON array. The receipt must be outside both checkouts. The command is read-only apart from that receipt and makes no network calls. It verifies the declared additive record set and preserves prior record bytes; checks schema, required collection/review status, exact reagent and process-state namespaces, registry IDs and record hashes; checks Reader views, source hashes, route-only hub membership and sample IDs; and validates document scope, page coverage and characterization links in both inventory formats. It returns nonzero with a consolidated error list. It does not infer missing scientific fields or approve source reading, image rights, eligibility changes, a full build, browser rendering or publication.
+
+Run `python -B -m unittest discover -s tools/package-importer/tests` from the repository root. The new regression tests cover the missing-collection, state/reagent mixing, stale-hash, wrong Reader-item, cross-paper and observation-as-route failures found during actual integration. The source-independent checker has passed a real 13-record candidate against 865 unchanged prior records; this is not an end-to-end throughput result.
+
 This prototype, operated entirely on local files, turns one independently reviewed paper package into a deterministic, hash-pinned repository overlay. It never applies files to the checkout, starts a website build, publishes, or marks a record training-eligible. The Thomson fixture is intentionally narrow: one new material hub, one source group, one source-reviewed synthesis route, a main-only paper review, 12 source figure/table crops, two authored apparatus diagrams, two authored molecular identities, one stock context, and exact dual-delivery rights rows.
 
 The importer verifies the frozen package inventory, source PDF and audit receipts; exact reviewed record and final Reader review bytes; target Git commit and every touched base-file hash; DOI/record/material/registry/path collisions; schema and route DAG; source-review scope; the two specifically reviewed operational release-policy additions; chemical and stock bindings; source and site image rights; and protocol-router registration. The canonical record and review are copied byte-for-byte. Aggregates are additive proposals produced against the exact base hashes. Scientific input and evidence files are not rewritten.

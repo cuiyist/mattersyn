@@ -87,6 +87,8 @@ Use discrete reported comparisons and qualitative feedback controls when support
 
 ## Validate, publish and remember
 
+For multi-paper throughput work, use [references/throughput-workflow.md](references/throughput-workflow.md). It defines a single accepted-record handoff, early compatibility checks and batched integration while retaining separate source audits and measured publication counts.
+
 Throughput reporting: keep screening, draft extraction, independent scientific audit, integration, browser QA and publication as separate counts. Benchmark complete end-to-end cycles before forecasting daily output; raw model calls or rapid rendering do not establish audited contribution throughput. Do not relax source, figure, sample-linkage or QA gates to satisfy a volume target.
 
 Read [references/delivery-and-memory.md](references/delivery-and-memory.md) for publication and handoff details.

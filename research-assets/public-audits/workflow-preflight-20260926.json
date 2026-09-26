@@ -1,0 +1,40 @@
+{
+  "schema": "mattersyn-safe-workflow-checkpoint/1",
+  "at": "2026-09-26T01:27:56.882975+00:00",
+  "status": "preflight_implemented_and_tested",
+  "requested_papers_per_hour": 20,
+  "measured_resume_rate": {
+    "measured_at": "2026-09-26T01:27:56.882975+00:00",
+    "elapsed_hours": 9.860245270833333,
+    "published_distinct_papers": 4,
+    "papers_per_elapsed_hour": 0.40566942202056827,
+    "includes_inherited_source_work": true,
+    "target_demonstrated": false,
+    "qualification": "Elapsed time includes interruptions, waiting and engineering; not measured continuous active processing time."
+  },
+  "validation": {
+    "tests_passed": 18,
+    "new_regression_tests": 10,
+    "candidate_records_checked": 13,
+    "unchanged_prior_records_checked": 865,
+    "preflight_elapsed_seconds": 5.326,
+    "detailed_private_receipt_sha256": "f373086efb89cd7d2c5f9274ae3ac57dc848f8708bab5ce2eac4a37f7842455c"
+  },
+  "new_publication_credit": 0,
+  "workflow_changes": [
+    "Authors produce canonical records and Reader additions together.",
+    "Independent audit remains separate; corrections are consolidated and accepted metadata is settled before hash generation.",
+    "Reusable read-only preflight catches record, Reader, review and reagent/state namespace errors before full builds.",
+    "Scientific audit binds paper-local immutable deltas; deterministic aggregate updates do not restart unchanged science reviews.",
+    "Integration and publication use ready batches and an exception queue."
+  ],
+  "limits": [
+    "Not evidence of20papers/hour.",
+    "No paid processing, cloud source transfer or new paper downloads.",
+    "Original source files and detailed audit receipts remain local."
+  ],
+  "code_sha256": {
+    "tools/package-importer/preflight.py": "08fde5b6fc1d765922fb21db0ac76d0021745ffd4da3ea9896c901f94c5c2066",
+    "tools/package-importer/tests/test_preflight.py": "7d674265e8aaae0843b00d8b9499b2d0c2d7e4d35397e953cd26df0b53b32bf2"
+  }
+}
