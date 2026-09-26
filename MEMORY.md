@@ -1,3 +1,7 @@
+## 2026-09-26 — Next batch presentation checkpoint
+
+The Wagner source and record-binding audits remain accepted with their limits, but root found a Reader presentation gap: identifiable reagents use formula-only cards. The contribution remains unpublished until molecular drawings, corrected static asset delivery, provenance, build and browser checks pass. Preserve the audited science and reuse suitable existing molecule assets. The zinc-chalcogenide and jaipurite contributions remain private drafts awaiting independent audit. This checkpoint adds no publication credit. Two-hour rate checks remain active.
+
 ## 2026-09-26 — Ghezelbash and Hu batch published
 
 Two distinct main-article contributions were deployed and anonymously verified at 2026-09-26T03:29:45.457042+00:00: Ghezelbash/Korgel (2005) (13 records, 12 routes, 8 original figures) and Hu/Wang (2010) (4 records, 1 route, 3 original figures). Live inventory: 882 records,57 primary source groups,52 formal Readers,237 routes,82 material hubs and 153 broad structure-evidence rows; exact coordinate pairs remain zero. Preserve SI-unverified scope, source conflicts and unverified figure permission. All 865 previous record bytes and 1,763 scientific assets remain unchanged. Separate source/Reader/integration audits, 129 tests, browser checks, final release gate and Windows/Linux CI passed. Source 6ba30167311adac0fab724b2adb2567163be7bd8; site 562a3ec4ec4337533d558edc11b6317f57d22338.
