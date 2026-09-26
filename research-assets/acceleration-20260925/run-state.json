@@ -1330,6 +1330,16 @@
           "new_broad_evidence_rows": 5,
           "old_records_preserved": 865,
           "old_scientific_assets_preserved": 1763
+        },
+        {
+          "at": "2026-09-26T05:08:59.695977Z",
+          "stage": "private_candidate_build_passed",
+          "doi": "10.1021/jp991389j",
+          "source_id": "wagner1999-ssz48",
+          "records_in_private_candidate": 885,
+          "published_sources": 0,
+          "candidate": "research-assets/acceleration-20260925/batch04/candidate04",
+          "scope": "Candidate-only build and validators passed after schema normalization and inventory test updates. Independent audit still requires correction of three reagent locators and the R4 audit-receipt hash; no release approval or site publication."
         }
       ],
       "publication_events": [
@@ -1377,7 +1387,7 @@
     "status": "active",
     "requested_at": "2026-09-26T03:03:21Z",
     "interval_hours": 2,
-    "last_report_at": null,
+    "last_report_at": "2026-09-26T05:04:41Z",
     "baseline_at": "2026-09-26T03:03:21Z",
     "baseline_live_inventory": {
       "records": 865,
@@ -1389,7 +1399,76 @@
       "exact_coordinate_pairs": 0
     },
     "baseline_resumed_publication_events": 4,
-    "reports": [],
+    "reports": [
+      {
+        "reported_at": "2026-09-26T05:04:41Z",
+        "interval_start": "2026-09-26T03:03:21Z",
+        "elapsed_seconds": 7280.0,
+        "new_distinct_source_papers": 2,
+        "papers_per_elapsed_hour": 0.989010989010989,
+        "counted_publication_events": [
+          {
+            "source_id": "ghezelbash2005",
+            "doi": "10.1021/la051196p",
+            "verified_at": "2026-09-26T03:29:45.457042+00:00",
+            "source_commit": "6ba30167311adac0fab724b2adb2567163be7bd8",
+            "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
+            "records_added": 13,
+            "broad_structure_rows_added": 4,
+            "receipt_sha256": "452a986603fd92480f4b685edda444b2280959fe1e0dad15579d4ca8ff514e5e"
+          },
+          {
+            "source_id": "hu-wang-2010-nickel-hydroxychloride",
+            "doi": "10.1021/ja103607q",
+            "verified_at": "2026-09-26T03:29:45.457042+00:00",
+            "source_commit": "6ba30167311adac0fab724b2adb2567163be7bd8",
+            "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
+            "records_added": 4,
+            "broad_structure_rows_added": 1,
+            "receipt_sha256": "452a986603fd92480f4b685edda444b2280959fe1e0dad15579d4ca8ff514e5e"
+          }
+        ],
+        "cumulative_live_inventory": {
+          "records": 882,
+          "primary_source_groups": 57,
+          "formal_readers": 52,
+          "routes": 237,
+          "material_hubs": 82,
+          "broad_structure_evidence_rows": 153,
+          "exact_coordinate_pairs": 0
+        },
+        "delta_from_baseline": {
+          "records": 17,
+          "primary_source_groups": 2,
+          "formal_readers": 2,
+          "routes": 13,
+          "material_hubs": 9,
+          "broad_structure_evidence_rows": 5,
+          "exact_coordinate_pairs": 0
+        },
+        "stages_at_checkpoint": {
+          "extraction_packages_frozen": 3,
+          "independent_audit": {
+            "pass_with_limits": 1,
+            "conditional_pass_needing_bounded_fixes": 1,
+            "hold_needing_bounded_fixes": 1,
+            "pending": 0
+          },
+          "site_integration": {
+            "private_candidate_under_build": 1,
+            "release_ready_unpublished": 0,
+            "new_publications": 2
+          },
+          "completed_candidate_build_attempts_stopped_by_errors": 7,
+          "paper_packages_blocked_on_corrections": 3
+        },
+        "model_preference": "User-selected GPT-6 Luna; runtime model and any speed effect not independently verified.",
+        "live_site": "https://cuiyist.github.io/mattersyn/",
+        "source_checkpoint_before_report": "94dd7aa158edda8bd90f4e09585958bb0b850eda",
+        "site_checkpoint": "562a3ec4ec4337533d558edc11b6317f57d22338",
+        "notes": "Publication events counted once by source_id. Both were carried-over extraction/integration work and were newly deployed inside this two-hour interval. No new paper publication from Wagner, IC4 or Zhan yet. Build attempts were private and did not touch the site."
+      }
+    ],
     "counting_rule": "New distinct source contributions deployed and anonymously verified after the previous report; use actual elapsed hours, identify inherited work, keep fixed twelve-hour measurement separate.",
     "reported_model_preference": "User says GPT-6 Luna is selected; actual runtime and performance are not independently verified."
   }
