@@ -78,7 +78,7 @@ async function drawReference(host,ref,finite=false){
  host.replaceChildren();const badges=el('div',undefined,'reader-badges');badges.append(badge(finite?'Illustration':scopeKind(ref),'reference'),badge('Not a sample reconstruction','scope'));host.append(badges,el('h3',ref.name));
  const view=el('div',undefined,'crystal-reference-view');view.tabIndex=0;view.setAttribute('aria-label',ref.name+' interactive crystal viewer');host.append(view);
  const controls=el('div',undefined,'protocol-controls'),caption=el('p',undefined,'reader-note');host.append(controls,caption);
- const downloads=el('div',undefined,'protocol-controls');downloads.append(link('Download CIF ↓','assets/crystal-references/'+ref.cifPath),link('Structure source ↗',ref.sourceUrl));for(const item of ref.additionalDownloads||[])downloads.append(link(item.label+' ↓','assets/crystal-references/'+item.path));host.append(downloads);
+ const downloads=el('div',undefined,'protocol-controls'),cif=link('Download CIF ↓','assets/crystal-references/'+ref.cifPath);cif.download=ref.cifPath.split('/').pop();downloads.append(cif,link('Structure source ↗',ref.sourceUrl));for(const item of ref.additionalDownloads||[]){const file=link(item.label+' ↓','assets/crystal-references/'+item.path);file.download=item.path.split('/').pop();downloads.append(file);}host.append(downloads);
  const phaseScope=ref.phaseScope||ref.scope||ref.description;
  if(phaseScope){const brief=phaseScope.match(/^.*?[.!?](?=\s+[A-Z]|$)/s)?.[0]?.trim();host.append(el('p',brief||phaseScope,'reader-note reader-phase-scope'));}
  if(ref.sample_context_note)host.append(el('p',ref.sample_context_note,'reader-note reader-sample-scope'));
@@ -93,8 +93,9 @@ async function drawReference(host,ref,finite=false){
   viewer.addModel().addAtoms(aa);viewer.setStyle({},{sphere:{radius:.32,colorfunc:a=>colors[a.elem]||'#8497aa'}});
   for(const a of aa){const occupancy=a.properties.display_occupancy;if(occupancy===null)viewer.setStyle({serial:a.serial},{cross:{radius:.22,linewidth:2,color:colors[a.elem]||'#966fa8'}});else if(occupancy>0&&occupancy<1)viewer.setStyle({serial:a.serial},{sphere:{radius:.32*Math.cbrt(occupancy),opacity:Math.max(.25,occupancy),color:colors[a.elem]||'#966fa8'}});}
   for(let axis=0;axis<3;axis++)for(const b of [0,n])for(const c of [0,n]){const start=[b,c];start.splice(axis,0,0);const end=[...start];end[axis]=n;viewer.addLine({start:point(...start),end:point(...end),color:'#7395a9',linewidth:1.5});}
-  viewer.zoomTo();viewer.rotate(18,'y');viewer.rotate(-10,'x');viewer.zoom(1.2);viewer.render();
-  caption.textContent=(ref.spaceGroup||'Reference cell')+' · a = '+model.cell.a+', b = '+model.cell.b+', c = '+model.cell.c+' Å; α = '+model.cell.alpha+'°, β = '+model.cell.beta+'°, γ = '+model.cell.gamma+'°. '+(n===1?'Unit cell.':'Repeated bulk cells, not a finite particle.')+' Drag to rotate; scroll to zoom.';
+  viewer.zoomTo();viewer.rotate(18,'y');viewer.rotate(-10,'x');viewer.zoom(.9);viewer.render();
+  const cellDisplay=value=>Number.isFinite(value)?Number(value.toPrecision(12)):'unreported';
+  caption.textContent=(ref.spaceGroup||'Reference cell')+' · a = '+cellDisplay(model.cell.a)+', b = '+cellDisplay(model.cell.b)+', c = '+cellDisplay(model.cell.c)+' Å; α = '+cellDisplay(model.cell.alpha)+'°, β = '+cellDisplay(model.cell.beta)+'°, γ = '+cellDisplay(model.cell.gamma)+'°. '+(n===1?'Unit cell.':'Repeated bulk cells, not a finite particle.')+' Drag to rotate; scroll to zoom.';
  }
  if(!finite){controls.append(button('Unit cell',()=>draw(1)),button('2 × 2 × 2 cells',()=>draw(2)));host.append(elementLegend(model.atoms.flatMap(a=>a.components?.map(c=>c.element)||[a.element??a.elem]).filter(x=>x!=='X')));
   const statistical=model.atoms.filter(a=>a.mixed_site||a.occupancy===null||Number.isFinite(a.occupancy)&&a.occupancy<1);

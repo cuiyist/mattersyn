@@ -10,6 +10,8 @@ Remove owner-only review progress from public navigation and generated progress 
 
 The fixed screening report covers 10,702 checked document contents: 5,539 pass, 1,666 on hold and 3,497 without a target preparation. Another 100 contents are unreviewed/access-blocked. Thus 51.8% of checked documents passed screening. Main articles and SI were separate screening units; this is not a final unique-paper integration yield, and 60 integrated source groups divided by 5,539 documents must not be presented as an acceptance ratio.
 
+The bounded morphology revision now has 26 new sample-context bindings, two repaired prior bindings and 64 separately attributed source-figure contexts. These do not modify sample identity or training admission. Salt components, parallel reference cells, unknown occupancy markers, mobile layouts, ordinary PbS catalogue filtering and the old progress redirect have passed representative browser interaction checks. All 87 default material pages received a separate browser sweep; the final figure additions require a final recount.
+
 Independent molecule, crystallographic and morphology audits are preserved privately; sanitized counts and hashes belong in research-assets/public-audits/site-wide-revision-20260926.json. Final clean build, browser validation, public-boundary checks, GitHub deployment and anonymous verification remain required before declaring the revision live. This checkpoint records implementation and user preferences, not completed publication.
 
 ## 2026-09-26 — Reconciled the authoritative release-progress source

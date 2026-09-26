@@ -86,7 +86,7 @@ export async function mountParticleContext(panel,r,presentation={}){
  if(preferred)choose.value=preferred.key;else if(groups.has(wanted))choose.value=wanted;
  panel.append(choose,display);
  function show(){const group=groups.get(choose.value)||groups.values().next().value,d=particleDescriptor(group,interpretations),layout=el('div',undefined,'reader-product-layout'),copy=el('div');
-  copy.append(badge(d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',d.caption,'reader-note'));
+  copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',d.caption,'reader-note'));
   if(d.inferred)copy.append(el('p','Interpretive schematic · dimensions, interfaces and atomic positions are not reconstructed.','reader-note'));
   const basis=disclosure('Illustration basis and limitations');
   if(d.morphology)basis.append(el('p','Source description: '+d.morphology));
@@ -98,7 +98,8 @@ export async function mountParticleContext(panel,r,presentation={}){
   if(!dl.children.length)dl.append(el('p','No non-null composition, phase, morphology or size facts are assigned to this context. Its source scope is retained.','reader-note'));
   if(group.facts.length>5){const extra=el('dl',undefined,'reader-product-facts');for(const f of group.facts.slice(5)){const row=el('div');row.append(el('dt',f.label),el('dd',text(f.value)));if(f.qualifier)row.append(el('small',f.qualifier));extra.append(row);}copy.append(disclosure('Additional specimen observations',extra));}copy.append(dl,link('Complete specimen evidence →',recordURL(group.recordId)+'#structures','reader-data-link'));
   const readableNotes=(group.context?.notes||group.product?.notes||[]).filter(n=>typeof n==='string'&&!/^Source context object:/.test(n));if(readableNotes.length)copy.append(disclosure('Specimen scope',...readableNotes.map(n=>el('p',n))));
-  layout.append(particleArt(d),copy);display.replaceChildren(layout);
+  if(d.shape==='neutral'){layout.style.gridTemplateColumns='1fr';layout.append(copy);}else layout.append(particleArt(d),copy);
+  display.replaceChildren(layout);
  }
  choose.onchange=show;show();return {groups,choose,display};
 }
