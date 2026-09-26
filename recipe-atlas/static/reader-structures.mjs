@@ -1,4 +1,4 @@
-import {mountParticleContext} from './reader-particle.mjs?v=0.40.2';
+import {mountParticleContext} from './reader-particle.mjs?v=0.40.3';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
 import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.34.1';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';

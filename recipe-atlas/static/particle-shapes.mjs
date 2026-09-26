@@ -6,7 +6,7 @@
  */
 
 export const PARTICLE_SHAPES = Object.freeze([
-  'sphere', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'ellipsoid', 'platelet', 'belt', 'star',
+  'sphere', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'ellipsoid', 'platelet', 'lamellar-stack', 'belt', 'star',
   'truncated-star', 'irregular', 'truncated-octahedron', 'assembly', 'sphere-assembly', 'wire-assembly', 'matrix',
   'nanotube-supported', 'core-shell', 'islands', 'layered-film', 'neutral',
 ]);
@@ -19,6 +19,7 @@ const LABELS = Object.freeze({
   rod: 'Schematic rod-shaped particle',
   ellipsoid: 'Schematic ellipsoidal particle',
   platelet: 'Schematic thin platelet',
+  'lamellar-stack': 'Schematic irregular lamellae; number and arrangement are illustrative',
   belt: 'Schematic belt-shaped structure',
   star: 'Schematic projection of an eight-arm star-shaped particle',
   'truncated-star': 'Schematic projection of an eight-arm star-shaped particle with truncated tips',
@@ -41,6 +42,7 @@ const LEGENDS = Object.freeze({
     { color: '#c5cec2', label: 'Center unresolved' },
   ],
   assembly: [{ color: '#268b89', label: 'Particles', note: 'Arrangement is illustrative.' }],
+  'lamellar-stack': [{ color: '#268b89', label: 'Irregular lamellae; count and arrangement are illustrative.' }],
   'sphere-assembly': [{ color: '#268b89', label: 'Constituent particles', note: 'Spherical assembly; constituent count, size, and arrangement are illustrative.' }],
   'wire-assembly': [{ color: '#268b89', label: 'Constituent particles', note: 'Wire-like assembly; constituent count, size, and arrangement are illustrative.' }],
   matrix: [
@@ -165,6 +167,20 @@ function body(shape, g) {
       + `<path d="M70 157L124 92L260 80L331 135V156L277 221L141 233L70 178Z" fill="#277479" stroke="#377c7d" stroke-width="1.2"/>
       <path d="M70 157L124 92L260 80L331 135L277 200L141 212Z" fill="url(#${g}-top)" stroke="#50988e" stroke-width="1.2"/>
       <path d="M70 157L141 212L277 200L331 135M141 212V232M277 200V220" fill="none" stroke="#b1d8c1" stroke-width="1.2"/>`;
+    case 'lamellar-stack': return ground(151,257)
+      + `<g transform="rotate(-13 200 150)">
+      <path d="M67 93C81 80 111 78 140 84L196 76C218 77 231 90 224 101L205 114L148 116L111 126L77 115Z" fill="#246e76" stroke="#3b777a" stroke-width="1.2"/>
+      <path d="M67 93C81 80 111 78 140 84L196 76C218 77 231 90 224 101L205 109L149 111L111 121L77 110Z" fill="url(#${g}-top)" stroke="#57958c" stroke-width="1.1"/>
+      <path d="M67 93L77 110M77 110L111 121L149 111L205 109L224 101" fill="none" stroke="#c5e1c7" stroke-width="1.1"/>
+      <path d="M235 151C251 138 278 141 302 135L332 145L322 162L291 171L250 169L231 162Z" fill="#246e76" stroke="#3b777a" stroke-width="1.2"/>
+      <path d="M235 151C251 138 278 141 302 135L332 145L322 156L291 165L250 163L231 156Z" fill="url(#${g}-top)" stroke="#57958c" stroke-width="1.1"/>
+      <path d="M235 151L231 156L250 163L291 165L322 156L332 145" fill="none" stroke="#c5e1c7" stroke-width="1.1"/>
+      <path d="M100 204C122 190 153 193 177 187L219 193L231 207L214 218L173 222L130 216L105 220Z" fill="#205e6b" stroke="#3b777a" stroke-width="1.25"/>
+      <path d="M100 204C122 190 153 193 177 187L219 193L231 207L214 213L173 217L130 211L105 215Z" fill="#78b7a5" stroke="#57958c" stroke-width="1.1"/>
+      <path d="M79 185C96 171 126 175 150 169L191 175L204 188L186 199L147 203L108 197L84 201Z" fill="#236a72" stroke="#3b777a" stroke-width="1.2"/>
+      <path d="M79 185C96 171 126 175 150 169L191 175L204 188L186 194L147 198L108 192L84 196Z" fill="url(#${g}-top)" stroke="#57958c" stroke-width="1.1"/>
+      <path d="M79 185L84 196L108 192L147 198L186 194L204 188" fill="none" stroke="#c5e1c7" stroke-width="1.1"/>
+      </g>`;
     case 'belt': return ground(143,247)
       + `<path d="M64 183L270 76L329 112V130L123 237L64 201Z" fill="#286f76" stroke="#347777" stroke-width="1.2"/>
       <path d="M64 183L270 76L329 112L123 219Z" fill="url(#${g}-top)" stroke="#55968d" stroke-width="1.2"/>

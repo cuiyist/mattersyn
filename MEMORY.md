@@ -2153,3 +2153,10 @@ No new extraction package or independent audit was completed during this interva
 ## 2026-09-26 — Public progress estimate correction
 
 The status-only site commit 80c9789909e4f05e05cdb5e79d627cc7b95cc0ee corrected the stale completion-estimate text following the 11:31 UTC two-hour report. GitHub Pages run 36240585765 succeeded. An anonymous request returned HTTP 200 for the progress JSON, and the rendered progress page now shows the measured 09:25:28–11:31:21 UTC interval at 0.477 papers/hour with no stale 11:25 estimate. This release adds zero papers or dataset rows. Receipt: `research-assets/progress-checkpoints/public-progress-textfix-20260926T120558Z.json` (SHA-256 b3f62adf5b4fc34e6797c05ed463b6dbb3b26980ec8c8d7864e64caae8ef3e20).
+
+
+## 2026-09-26 — Zhan Jaipurite records and morphology display
+
+Zhan et al. (1999), DOI 10.1006/jssc.1999.8299, is integrated locally as four main-article records. Its independent inventory/version audit passed at 13:50 UTC: dataset v0.40.4 contains 889 records and 59 source groups, with 156 broad source-reviewed structure–recipe rows; all 885 earlier records remained unchanged. The paper contributes two broad outcomes: crystalline Jaipurite and a separate hydrazine-free amorphous CoS control. No exact sample-coordinate or training-ready pair is established.
+
+An independently reviewed, authored lamellar-stack schematic is now tied only to the as-formed Jaipurite sample. Figure 2 and the text support a qualitative laminar/lamellar description with some stacking. The drawing is explicitly interpretive, unscaled, and does not encode dimensions, facets, atomic positions, batch identity, or an exact number of sheets. The ~20 nm value remains an XRD Scherrer average, separate from TEM morphology. SI remains unreviewed and publisher permission for the selected source figures remains unverified. A clean rebuild, final website boundary check, publication, and anonymous verification are still pending; do not count Zhan as live until those gates pass.

@@ -1,6 +1,6 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
 import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs';
-import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.2';
+import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.3';
 
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);
 const text=v=>v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
