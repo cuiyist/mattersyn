@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "active",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-26T03:44:18.222360+00:00",
+  "updated_at": "2026-09-26T07:15:24Z",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -28,20 +28,20 @@
       "source_id": "wagner1999ssz48",
       "doi": "10.1021/jp991389j",
       "inherited_work": false,
-      "stage": "Independent source/Reader-binding audits passed with limits. Asset delivery-path correction is staged privately. Reader presentation remains on hold for molecular drawings of identifiable reagents; formula-only placeholders are not accepted as complete. Canonical integration and publication pending."
+      "stage": "Candidate08 built and local checks passed after adding a source-linked qualitative morphology schematic; awaiting independent integration audit, then canonical integration and release gates."
     },
     {
       "source_id": "zinc-chalcogenide-2024-ic4c02738",
       "doi": "10.1021/acs.inorgchem.4c02738",
       "inherited_work": false,
-      "stage": "Eight schema-valid draft records after complete main-source reading; Reader/chemical/figure bindings in progress. Independent scientific audit pending; unpublished.",
+      "stage": "Eight main-only records and source/R2/R3 correction audits pass; integration-readiness HOLD on one stale Reader-to-review digest and audit-status metadata; SI unreviewed, unpublished.",
       "claimed_at": "2026-09-26T02:44:27.655675+00:00"
     },
     {
       "source_id": "zhan1999-jaipurite",
       "doi": "10.1006/jssc.1999.8299",
       "inherited_work": false,
-      "stage": "Three main pages read visually and as text; four-record draft and Reader overlay in progress. Source Table 1 anomaly retained. Independent audit pending; unpublished.",
+      "stage": "Four-record main-only extraction; bounded R2 correction audit PASS_WITH_LIMITS; SI unreviewed; Reader/site integration and release audit pending.",
       "claimed_at": "2026-09-26T03:07:24.160705+00:00"
     }
   ],
@@ -341,6 +341,18 @@
       "status": "wagner_molecular_illustration_gap",
       "new_papers_published": 0,
       "note": "Known reagent identities need molecular drawings rather than formula-only SVG cards. Source values and previously accepted audits are preserved."
+    },
+    {
+      "at": "2026-09-26T07:15:24Z",
+      "stage": "two_hour_progress_checkpoint",
+      "status": "zero_new_papers_since_previous_report",
+      "interval_start": "2026-09-26T05:04:41Z",
+      "elapsed_seconds": 7843.0,
+      "new_distinct_source_papers": 0,
+      "new_records": 0,
+      "broad_structure_evidence_rows_added": 0,
+      "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
+      "scope": "Actual elapsed interval recorded; three active source packages remain in private review/integration stages."
     }
   ],
   "completed_papers": [
@@ -1387,7 +1399,7 @@
     "status": "active",
     "requested_at": "2026-09-26T03:03:21Z",
     "interval_hours": 2,
-    "last_report_at": "2026-09-26T05:04:41Z",
+    "last_report_at": "2026-09-26T07:15:24Z",
     "baseline_at": "2026-09-26T03:03:21Z",
     "baseline_live_inventory": {
       "records": 865,
@@ -1467,6 +1479,72 @@
         "source_checkpoint_before_report": "94dd7aa158edda8bd90f4e09585958bb0b850eda",
         "site_checkpoint": "562a3ec4ec4337533d558edc11b6317f57d22338",
         "notes": "Publication events counted once by source_id. Both were carried-over extraction/integration work and were newly deployed inside this two-hour interval. No new paper publication from Wagner, IC4 or Zhan yet. Build attempts were private and did not touch the site."
+      },
+      {
+        "reported_at": "2026-09-26T07:15:24Z",
+        "interval_start": "2026-09-26T05:04:41Z",
+        "elapsed_seconds": 7843.0,
+        "new_distinct_source_papers": 0,
+        "papers_per_elapsed_hour": 0.0,
+        "counted_publication_events": [],
+        "new_records": 0,
+        "new_broad_structure_evidence_rows": 0,
+        "cumulative_live_inventory": {
+          "records": 882,
+          "primary_source_groups": 57,
+          "formal_readers": 52,
+          "routes": 237,
+          "material_hubs": 82,
+          "broad_structure_evidence_rows": 153,
+          "exact_coordinate_pairs": 0
+        },
+        "live_inventory_basis": {
+          "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
+          "status": "carried forward from last anonymously verified release; no later publication event is present in the source checkpoint"
+        },
+        "delta_since_previous_report": {
+          "distinct_papers": 0,
+          "records": 0,
+          "broad_structure_evidence_rows": 0,
+          "routes": 0,
+          "material_hubs": 0
+        },
+        "stages_at_checkpoint": {
+          "extraction": {
+            "frozen_paper_packages": 3,
+            "draft_records": 15,
+            "papers": [
+              "Wagner 1999 SSZ-48 (3 records)",
+              "Song et al. 2024 zinc chalcogenide (8 records)",
+              "Zhan et al. 1999 jaipurite (4 records)"
+            ]
+          },
+          "independent_source_audit": {
+            "wagner": "PASS_WITH_LIMITS; prior source/Reader audit accepted, candidate08 morphology delta awaits independent integration audit",
+            "song": "source and R2/R3 correction audits passed; separate integration-readiness audit HOLD for stale Reader-to-review digest and pending-status metadata",
+            "zhan": "R2 main-article correction audit PASS_WITH_LIMITS; SI not reviewed"
+          },
+          "integration": {
+            "candidate_build_passed_awaiting_independent_audit": 1,
+            "integration_readiness_hold": 1,
+            "integration_not_yet_audited": 1,
+            "release_ready_unpublished": 0
+          },
+          "publication": {
+            "new_distinct_papers": 0
+          },
+          "errors_and_rework": {
+            "new_build_or_test_errors": 0,
+            "open_integration_hold": 1,
+            "superseded_candidate_hold_addressed_in_new_candidate": 1
+          },
+          "pending_or_held_source_papers": 3
+        },
+        "model_preference": "User selected GPT-6 Luna; runtime model and any speed effect remain unverified.",
+        "live_site": "https://cuiyist.github.io/mattersyn-site/",
+        "source_checkpoint_before_report": "be1c832bf17bc42fb17701a67cc3351efde9d58c",
+        "site_checkpoint": "562a3ec4ec4337533d558edc11b6317f57d22338",
+        "notes": "Report is 10m43s later than the requested two-hour cadence; rate uses the actual 2h10m43s interval. Last anonymously verified live inventory is carried forward, not freshly rechecked. Wagner candidate08 build passed with the source-linked morphology interpretation but awaits independent integration review. Candidate07's morphology HOLD is superseded. Song remains held on a stale review digest/status metadata; Zhan's bounded main-only audit passed but integration is pending. No paid/cloud processing, new downloads, or external source transfer."
       }
     ],
     "counting_rule": "New distinct source contributions deployed and anonymously verified after the previous report; use actual elapsed hours, identify inherited work, keep fixed twelve-hour measurement separate.",

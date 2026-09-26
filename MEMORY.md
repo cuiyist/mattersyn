@@ -1,3 +1,9 @@
+## 2026-09-26 — Two-hour progress checkpoint
+
+From 2026-09-26T05:04:41Z to 2026-09-26T07:15:24Z UTC (2.1786 hours; 10m43s later than the requested two-hour cadence), zero distinct papers were newly published and anonymously verified: 0 papers/hour, 0 new records, and 0 new broad evidence rows. The last anonymously verified site inventory carried forward from commit 562a3ec4ec4337533d558edc11b6317f57d22338 is 882 records, 57 source groups, 52 formal Readers, 237 routes, 82 material hubs, 153 broad evidence rows, and 0 exact coordinate pairs; this inventory was not freshly rechecked during this interval.
+
+Three source packages (15 draft records total) remain unpublished. Wagner candidate08 passed its private build after adding a source-linked qualitative morphology schematic; independent integration review is pending. Song's source and correction audits passed, but integration readiness is held for one stale Reader review digest and pending-status metadata. Zhan's bounded main-only correction audit passed with limits; Reader/site integration remains pending and SI was not reviewed. No new build/test error was recorded; candidate07's morphology hold was superseded by candidate08. User selected GPT-6 Luna; runtime model and speed effect are unverified. See research-assets/acceleration-20260925/run-state.json. No unattended work is implied.
+
 ## 2026-09-26 — Next batch presentation checkpoint
 
 The Wagner source and record-binding audits remain accepted with their limits, but root found a Reader presentation gap: identifiable reagents use formula-only cards. The contribution remains unpublished until molecular drawings, corrected static asset delivery, provenance, build and browser checks pass. Preserve the audited science and reuse suitable existing molecule assets. The zinc-chalcogenide and jaipurite contributions remain private drafts awaiting independent audit. This checkpoint adds no publication credit. Two-hour rate checks remain active.
