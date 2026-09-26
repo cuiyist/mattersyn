@@ -235,9 +235,9 @@
   },
   "daily_throughput": {
     "target_papers_per_day": 500,
-    "completed_papers_today": 1,
+    "completed_papers_today": 2,
     "deployed_pending_closeout": 0,
-    "counting_rule": "Count one source paper only after its scoped source reading, independent scientific audit, recipe/sample/figure checks, material-page integration and browser validation pass. Multiple recipe rows from one paper count once. Drafts and screening skips do not count as website papers built.",
+    "counting_rule": "This dated pre-release tally includes Wagner and Zhan, verified by 14:59:27 UTC. Song is included in this release; its final anonymous-publication receipt and updated total are recorded in the source repository. Each distinct source counts once; multiple recipe rows, drafts and screening skips do not add paper credit.",
     "observed_pipeline": {
       "papers": 8,
       "elapsed_hours": 10.0,
@@ -247,7 +247,7 @@
       "scope_note": "Fixed ten-hour local-only trial, including four contributions with pre-trial work. Counts only distinct new source papers deployed and anonymously verified. This arithmetic rate is not a capacity forecast or a claim of continuous unattended work."
     },
     "machine_stage_note": "The local RTX 5090/Qwen3.5 runs produce drafts quickly, but the 27B cross-check missed a known source conflict. Machine drafts and model agreement are not independent scientific audit or completed website contributions.",
-    "capacity_note": "The ten-hour local-only trial remains frozen at 8 new papers. The separate revised-workflow twelve-hour measurement is active. Wagner et al. (1999) was deployed and anonymously verified at 11:10:37 UTC; Song and Zhan remain pending root aggregate integration. The 20-paper/hour target remains unachieved.",
+    "capacity_note": "Curation and recurring reports are paused. The ten-hour trial is frozen at eight newly published papers; the separate twelve-hour window ended at 14:03:41 UTC with three papers (0.25/hour). Wagner and Zhan were verified before this release; Song is included in this accepted-queue closeout. Final deployment receipts are retained in the source repository. The 20-paper/hour target was not achieved.",
     "as_of_date": "2026-09-26",
     "date_timezone": "America/Chicago",
     "completed_paper_ledger": [
@@ -336,9 +336,17 @@
         "exact_pairs_added": 0,
         "new_records": 3,
         "routes_added": 1
+      },
+      {
+        "doi": "10.1006/jssc.1999.8299",
+        "source_id": "zhan1999-jaipurite",
+        "site_commit": "ed3bdd91d8f533686b5336f4872cf6234c3a31fb",
+        "verified_at": "2026-09-26T14:59:27Z",
+        "new_records": 4,
+        "status": "published_anonymously_verified"
       }
     ],
-    "published_sources_today": 1,
+    "published_sources_today": 2,
     "previous_observations": [
       {
         "papers": 9,
@@ -350,14 +358,17 @@
       }
     ],
     "latest_two_hour_check": {
-      "interval_start": "2026-09-26T09:25:28Z",
-      "reported_at": "2026-09-26T11:31:21Z",
-      "elapsed_seconds": 7553,
-      "elapsed_hours": 2.0980555555555553,
-      "new_distinct_papers": 1,
-      "papers_per_hour": 0.47663180193300675,
-      "new_records": 3,
-      "new_broad_evidence_rows": 1,
+      "reported_at": "2026-09-26T13:31:23Z",
+      "interval_start": "2026-09-26T11:31:21Z",
+      "elapsed_seconds": 7202,
+      "elapsed_hours": 2.0005555555555556,
+      "new_distinct_source_papers": 0,
+      "papers_per_elapsed_hour": 0.0,
+      "counted_publication_events": [],
+      "new_records": 0,
+      "new_broad_structure_evidence_rows": 0,
+      "new_routes": 0,
+      "new_material_hubs": 0,
       "cumulative_live_inventory": {
         "records": 885,
         "primary_source_groups": 58,
@@ -367,19 +378,60 @@
         "broad_structure_evidence_rows": 154,
         "exact_coordinate_pairs": 0
       },
-      "counted_publication_events": [
-        {
-          "source_id": "wagner1999ssz48",
-          "doi": "10.1021/jp991389j",
-          "site_commit": "b9fac2f702a2fb64294c44ce3872fc86f9f7d36e",
-          "verified_at": "2026-09-26T11:10:37Z",
-          "new_records": 3,
-          "new_broad_structure_evidence_rows": 1,
-          "status": "published_anonymously_verified",
-          "carried_over_into_twelve_hour_window": true
+      "live_inventory_basis": {
+        "scientific_site_commit": "b9fac2f702a2fb64294c44ce3872fc86f9f7d36e",
+        "status": "Carried forward from the last anonymously verified Wagner release; not freshly fetched at this checkpoint."
+      },
+      "stages_at_checkpoint": {
+        "extraction": {
+          "new_packages_frozen_in_interval": 0,
+          "pending_frozen_source_packages": 2,
+          "pending_draft_records": 12,
+          "sources": [
+            "Song et al. (2024), DOI 10.1021/acs.inorgchem.4c02738",
+            "Zhan et al. (1999), DOI 10.1006/jssc.1999.8299"
+          ]
+        },
+        "independent_audit": {
+          "new_final_audits_completed_in_interval": 0,
+          "accepted_scoped_audits_current": 3,
+          "detail": "Song R5/R6 scoped audits and Zhan R5 source/integration audits remain accepted; Zhan inventory/version metadata closeout audit is pending final preservation/hash receipt."
+        },
+        "integration": {
+          "preflight_passed": 1,
+          "candidate_build_passed": 0,
+          "pending_root_aggregate_integrations": 2,
+          "release_ready_unpublished": 0,
+          "zhan_preflight": {
+            "status": "passed",
+            "new_records": 4,
+            "prior_records_checked": 885,
+            "errors": 0,
+            "receipt_sha256": "6b8c248e234707942d65a486cfddde8ac55e4fe0ca5da6cc2fb50676010030bb"
+          }
+        },
+        "publication": {
+          "new_distinct_papers": 0,
+          "new_records": 0,
+          "new_broad_structure_evidence_rows": 0
+        },
+        "errors_and_rework": {
+          "candidate_build_attempts_failed_and_recovered_or_pending": 3,
+          "details": "First attempts exposed missing jsonschema in default Python, Windows long-path output failure, and a candidate inventory assertion before the inventory delta was regenerated. Corrected environment/path; final inventory preflight now passes; full candidate build remains outstanding."
+        },
+        "blocked": {
+          "hard_blocked_source_papers": 0,
+          "pending_integration_source_papers": 2
         }
-      ],
-      "basis": "Counts carried forward from the anonymously verified Wagner site release and subsequent status-only progress release; the site was not freshly fetched during this report."
+      },
+      "model_preference": "User-selected GPT-6 Luna; runtime model and any speed effect are not independently verified.",
+      "target_papers_per_hour": 20,
+      "target_demonstrated": false,
+      "live_site": "https://cuiyist.github.io/mattersyn-site/",
+      "source_checkpoint_before_report": "4865d4ab91d9b0df084b68366c26dda10a89b074",
+      "candidate_commit": "6ef66ccf1f6d1c16ddcc56bae5ad1fd257fdd5f1",
+      "site_checkpoint": "536f5b0b2f3bb6def0d3e1feff7d338182877744",
+      "notes": "No newly deployed or anonymously verified paper in this interval. The last live inventory is carried forward, not freshly checked. The Zhan candidate includes four main-text records and a passed additive preflight; its dataset version and inventory metadata now consistently use 0.40.4. Final metadata audit, clean committed runtime snapshot, full build, release/asset-boundary checks, browser QA and anonymous publication remain pending. Song is ready for a new current-base aggregate integration, not publication."
     }
   },
   "throughput_trial": {
