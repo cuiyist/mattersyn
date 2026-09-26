@@ -1,3 +1,13 @@
+## 2026-09-26 — Song and Zhan integration holds; Wagner audit passes
+
+Wagner candidate08 passed its separate integration audit for the source-linked qualitative morphology illustration. The three main-only records and candidate are not released yet; final clean build, public-boundary, browser and anonymous-delivery gates remain. SI was not reviewed and source-figure permission remains unverified.
+
+Song et al. (2024), DOI 10.1021/acs.inorgchem.4c02738, remains blocked at R4: independent audit found 383 stale Reader record digests, an inconsistent declared payload-tree hash, six material-hub route-membership checks and six paper-review/source-group joins. The source records and eight recipe facts were not altered. R5 must refresh the complete fanout while keeping alloy routes distinct from binary component synthesis claims.
+
+Zhan et al. (1999), DOI 10.1006/jssc.1999.8299, has a frozen four-record main-only R3 correction, but it is not integration-ready. The scientific correction binds the CoS feed as amorphous with phase unassigned and adds seven SHA-keyed asset provenance rows while retaining unverified figure-permission status. Independent review identified 762 total derived product bindings, including 758 mappings for existing papers. That whole-collection expansion is held for a separate scope/audit; a paper correction should add only the four Zhan bindings unless the compatibility migration is independently approved. No new paper was published.
+
+See the active run state for current stage counts. Supporting Information remains unreviewed for these contributions.
+
 ## 2026-09-26 — Independent integration audits advance the next batch
 
 Wagner candidate08 passed its independent integration audit at 2026-09-26T07:40:51Z: the authored elongated-crystal schematic is explicitly interpretive, keeps the reported dimensions off crystallographic axes, and asserts no physical batch, recipe, facet, or coordinate join. The private candidate passed 13 build/check commands, including 129 tests; it is not yet released. Supporting Information remains unreviewed and source-figure permission remains unverified.
