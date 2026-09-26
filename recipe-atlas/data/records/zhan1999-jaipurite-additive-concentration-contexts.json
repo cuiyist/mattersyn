@@ -1,0 +1,693 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhan1999-jaipurite-additive-concentration-contexts",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Zhan et al. (1999) · Additive and precursor concentration observations",
+  "material": {
+    "formula": "CoS study context",
+    "family": "Jaipurite additive and precursor-concentration comparison contexts",
+    "elements": [],
+    "components": [
+      "CoS study context"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Source-level observations about ethylenediamine, low hydrazine and precursor-ion concentration; detailed batch protocols are not supplied.",
+  "sources": [
+    {
+      "id": "zhan1999jaipurite",
+      "doi": "10.1006/jssc.1999.8299",
+      "title": "Hydrazine-Assisted Low-Temperature Hydrothermal Preparation of Nanocrystalline Jaipurite",
+      "authors": "J. H. Zhan; Y. Xie; X. G. Yang; W. X. Zhang; Y. T. Qian",
+      "year": 1999,
+      "url": "https://doi.org/10.1006/jssc.1999.8299",
+      "main_status": "Independent main-only source-to-record audit passed (R2 audit SHA-256 c5c96bbeeaa6b6ea37696191acf994dd324f0add73fce89c0c383a0921191e4f); bounded R3/R4/R5 correction and integration checks preserve these reviewed claims. Site/release checks remain separate. SI was not used and remains unverified.",
+      "si_status": "SI not included in this claim; unreviewed and unused.",
+      "reuse_status": "Citation/source evidence only; no rights or publication approval."
+    }
+  ],
+  "lineage": {
+    "source_group": "zhan1999jaipurite",
+    "recipe_family": "jaipurite-control-observations",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoS study context",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 1 (printed p. 36), Abstract and Experimental"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ethylenediamine",
+      "name": "Ethylenediamine (additive-control context)",
+      "formula": "C2H8N2",
+      "role": "alternative additive",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "No concentration or charge amount reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ]
+    },
+    {
+      "id": "hydrazine-monohydrate",
+      "name": "Hydrazine monohydrate (threshold context)",
+      "formula": "N2H4·H2O",
+      "role": "mineralizer under concentration study",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Individual below-threshold concentrations are not listed."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "eda-xrd-data",
+      "name": "Ethylenediamine XRD control context",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "low-hydrazine-data",
+      "name": "Low-hydrazine crystallization outcome context",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "precursor-size-data",
+      "name": "Precursor concentration and size context",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "eda-control-observation",
+      "action": "xrd_control_observation",
+      "label": "Record XRD outcome in the ethylenediamine additive-control context",
+      "stage": "characterization",
+      "branch": "eda",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "eda-xrd-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "No phase detected in XRD patterns.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "No phase was detected in the source-described ethylenediamine additive-control case; the analyzed XRD specimen is not identified. Quantities and batch/specimen identity are unreported.",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ],
+      "optional_inputs": []
+    },
+    {
+      "id": "low-hydrazine-observation",
+      "action": "concentration_threshold_observation",
+      "label": "Record hydrazine threshold statement",
+      "stage": "characterization",
+      "branch": "low-hydrazine",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hydrazine-monohydrate"
+      ],
+      "outputs": [
+        "low-hydrazine-data"
+      ],
+      "parameters": {
+        "concentration": {
+          "value": null,
+          "minimum": null,
+          "maximum": 1.1,
+          "unit": "kmol m−3",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "below",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhan1999jaipurite",
+              "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": true
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "No crystalline Jaipurite below the source-stated threshold.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Below 1.1 kmol m−3, no crystalline Jaipurite can form; no individual samples are described.",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ],
+      "optional_inputs": []
+    },
+    {
+      "id": "precursor-concentration-observation",
+      "action": "annotate_condition",
+      "label": "Record precursor-ion concentration / size statement",
+      "stage": "characterization",
+      "branch": "precursor-range",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "precursor-size-data"
+      ],
+      "parameters": {
+        "concentration": {
+          "value": null,
+          "minimum": 0.01,
+          "maximum": 1,
+          "unit": "mol L−1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhan1999jaipurite",
+              "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "No considerable effect on final particle size reported.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Across source-reported 0.01–1 M precursor-ion concentration, no considerable final particle-size effect is reported; exact precursor ion and run mapping absent.",
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ],
+      "optional_inputs": []
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "ethylenediamine-control",
+      "label": "Ethylenediamine additive; exact conditions not reported",
+      "parameters": {},
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ],
+      "chemical_material_id": "ethylenediamine"
+    },
+    {
+      "id": "low-hydrazine-threshold",
+      "label": "Hydrazine concentration below 1.1 kmol m−3",
+      "parameters": {
+        "concentration": {
+          "value": null,
+          "minimum": null,
+          "maximum": 1.1,
+          "unit": "kmol m−3",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "below; individual values not reported",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhan1999jaipurite",
+              "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": true
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ],
+      "chemical_material_id": "hydrazine-monohydrate"
+    },
+    {
+      "id": "precursor-ion-range",
+      "label": "Precursor-ion concentration range; varying ion/sample unspecified",
+      "parameters": {
+        "concentration": {
+          "value": null,
+          "minimum": 0.01,
+          "maximum": 1,
+          "unit": "mol L−1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "reported study range; per-run ion and sample unassigned",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhan1999jaipurite",
+              "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ],
+      "chemical_material_id": null
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "eda-control-context",
+      "source_sample_label": "Ethylenediamine XRD additive context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": "No phase was detected; no phase name assigned."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "No amounts, temperature, duration or specimen ID are reported.",
+        "Ethylenediamine is the source-described additive condition; neat ethylenediamine is not asserted to be the specimen analyzed by XRD."
+      ]
+    },
+    {
+      "sample_id": "low-hydrazine-context",
+      "source_sample_label": "Low-hydrazine threshold context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": "No crystalline Jaipurite; alternative amorphous/other phase not specified."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "Not a batch-level sample or complete recipe."
+      ]
+    },
+    {
+      "sample_id": "precursor-concentration-context",
+      "source_sample_label": "Precursor-ion concentration vs size context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": "The source reports a qualitative particle-size effect as a measurement; it does not assign morphology in this context."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "Ion identity and per-run/sample linkage remain unreported."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "eda-no-phase",
+      "sample_id": "eda-control-context",
+      "property": "phase_detection_outcome",
+      "technique": "Powder X-ray diffraction",
+      "value": {
+        "value": "No phase detected in the ethylenediamine additive case.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ]
+    },
+    {
+      "id": "low-hydrazine-no-crystal",
+      "sample_id": "low-hydrazine-context",
+      "property": "crystallinity_threshold_outcome",
+      "technique": "Source-reported threshold",
+      "value": {
+        "value": "Below 1.1 kmol m−3 hydrazine concentration, no crystalline Jaipurite forms.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 3 (printed p. 38), Figure 3 and Results and Discussion"
+        }
+      ]
+    },
+    {
+      "id": "precursor-ion-size-effect",
+      "sample_id": "precursor-concentration-context",
+      "property": "qualitative_particle_size_effect",
+      "technique": "Source-reported comparison",
+      "value": {
+        "value": "0.01–1 M precursor-ion concentration reportedly had no considerable effect on final particle size; authors attribute this to instantaneous amorphous CoS precipitation.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhan1999jaipurite",
+            "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhan1999jaipurite",
+          "locator": "Main PDF p. 2 (printed p. 37), Figure 1, Table 1 and Results and Discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only context observations; physical samples and detailed conditions are unresolved. Independent main-only source-to-record audit passed (R2 audit SHA-256 c5c96bbeeaa6b6ea37696191acf994dd324f0add73fce89c0c383a0921191e4f); bounded R3/R4/R5 correction and restage checks preserve these reviewed claims. SI excluded and unverified. Main-only; SI excluded/unverified.",
+    "missing_fields": [
+      "Ethylenediamine amount/conditions; individual low-hydrazine levels and run conditions; which precursor ion varied at each 0.01–1 M point; physical sample/run IDs."
+    ],
+    "conflicts": [
+      "No branch-level batch linkage is asserted."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}
