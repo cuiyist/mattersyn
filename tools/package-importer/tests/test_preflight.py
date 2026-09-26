@@ -42,6 +42,11 @@ class PreflightTests(unittest.TestCase):
         hubs={'A+B':{'record_ids':['r']}}
         self.assertTrue(P.route_membership_errors(self.record,hubs,lambda r:False,lambda s:s))
         self.assertEqual([],P.route_membership_errors(self.record,{},lambda r:False,lambda s:s))
+    def test_review_id_and_source_group_require_an_explicit_join(self):
+        self.record['lineage']={'source_group':'source-group'}
+        self.assertTrue(P.review_link_errors(self.review,{'r':self.record}))
+        self.review['source_group']='source-group'
+        self.assertEqual([],P.review_link_errors(self.review,{'r':self.record}))
     def test_route_requires_whole_product_and_component_hubs(self):
         hubs={name:{'record_ids':['r']} for name in ('A+B','A','B')}
         self.assertEqual([],P.route_membership_errors(self.record,hubs,lambda r:True,lambda s:s))

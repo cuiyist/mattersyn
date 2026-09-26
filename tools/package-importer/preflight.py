@@ -72,6 +72,9 @@ def review_link_errors(review, records):
                     errors.append(paper+': unresolved record '+str(rid));continue
                 if review['doi'].lower() not in {s.get('doi','').lower() for s in records[rid]['sources']}:
                     errors.append(paper+': record belongs to a different source: '+rid)
+                group=records[rid].get('lineage',{}).get('source_group')
+                if group and review.get('source_group',paper)!=group:
+                    errors.append(paper+': missing or different source-group join: '+rid)
     return errors
 
 def route_membership_errors(record, materials, route, slug):

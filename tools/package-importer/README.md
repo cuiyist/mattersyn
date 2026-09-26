@@ -53,3 +53,7 @@ This is a first-source fixture, not a universal importer. It deliberately reject
 ## Current limits
 
 The first integration exposed two checks that this preflight did not cover: text-only source notes in the review builder, and measurement IDs incorrectly used as Reader-card IDs. The shared builder and Reader bindings were corrected through separate integration review. Full material-ID coverage also remains a mandatory downstream check, including formula cards for non-molecular materials. The importer does not replace those gates or establish end-to-end throughput. The supplied contract is a historical, exact-base fixture; it intentionally rejects a later checkout. Generalized multi-paper and existing-hub support is future work.
+
+## Declarative additive importer
+
+Use [merger.py](merger.py) with the source-independent contract described in [MERGER.md](MERGER.md) to stage new files, object keys and unique list entries. It preserves prior items and rejects conflicting identities, stale hashes and unsafe paths. It stages a private overlay and does not apply it or grant scientific/publication approval. Rights registries remain separately reviewed.

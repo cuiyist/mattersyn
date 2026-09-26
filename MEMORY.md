@@ -1,3 +1,9 @@
+## 2026-09-26 — Generic additive importer tested on the next batch
+
+The workflow now includes a reusable private-overlay merger with fourteen regression tests. It rejects stale bases, key/identity conflicts, tampered or unlisted files, unsafe paths and automatic rights-policy changes. A real four-record paper package produced sixteen deterministic overlay files in 0.607 seconds. The combined two-paper candidate (17 records) passed the reusable preflight against all 865 existing records in 1.952 seconds. These are integration mechanics; no new publication credit is added.
+
+Ghezelbash and Hu are privately integrated after separate source/Reader audits; final build, browser and publication gates remain. Wagner's three-record draft is frozen and awaits independent extraction/Reader audit. Scientific totals on the public website remain unchanged. At 2026-09-26T01:54:55.727257+00:00, the resumed run has four published sources at 0.388 papers per elapsed hour; interruptions and engineering are included. The 20/hour target remains unachieved. Use the updated workflow skill and the existing local screened set, with no paid processing or source transfer.
+
 ## 2026-09-26 — Throughput workflow revised; target remains unachieved
 
 The user explicitly required revising the workflow toward 20 published papers/hour. A reusable, source-independent read-only preflight now catches the repeated missing-collection, review-link, route-membership, reagent/state-namespace and stale-hash errors before the full build. Eighteen importer/preflight tests passed, including ten new regressions. The 13-record Ghezelbash candidate passed against 865 unchanged prior records in 5.326 seconds. This is compatibility-check performance, not paper throughput. The revised handoff and role allocation are saved in skills/mattersyn-paper-to-site/references/throughput-workflow.md.

@@ -1,13 +1,13 @@
 {
   "schema": "mattersyn-safe-workflow-checkpoint/1",
   "at": "2026-09-26T01:27:56.882975+00:00",
-  "status": "preflight_implemented_and_tested",
+  "status": "preflight_and_additive_importer_implemented_and_tested",
   "requested_papers_per_hour": 20,
   "measured_resume_rate": {
-    "measured_at": "2026-09-26T01:27:56.882975+00:00",
-    "elapsed_hours": 9.860245270833333,
+    "measured_at": "2026-09-26T01:54:55.727257+00:00",
+    "elapsed_hours": 10.309924238055554,
     "published_distinct_papers": 4,
-    "papers_per_elapsed_hour": 0.40566942202056827,
+    "papers_per_elapsed_hour": 0.38797569289940753,
     "includes_inherited_source_work": true,
     "target_demonstrated": false,
     "qualification": "Elapsed time includes interruptions, waiting and engineering; not measured continuous active processing time."
@@ -34,7 +34,32 @@
     "Original source files and detailed audit receipts remain local."
   ],
   "code_sha256": {
-    "tools/package-importer/preflight.py": "08fde5b6fc1d765922fb21db0ac76d0021745ffd4da3ea9896c901f94c5c2066",
-    "tools/package-importer/tests/test_preflight.py": "7d674265e8aaae0843b00d8b9499b2d0c2d7e4d35397e953cd26df0b53b32bf2"
-  }
+    "tools/package-importer/merger.py": "f84c52239c7f981735eed697ad260f15023b98a35ec049cd2baabcf176053cb7",
+    "tools/package-importer/tests/test_merger.py": "1eaee4cf0c4f0ce30d76e11f5f67a72db8d0ec2dd2a5e59329e045c412ae0bc8",
+    "tools/package-importer/preflight.py": "e198270e7863cda0ca259fa5a3eb45b5ba7ce8162ddfff486e958653130426a3",
+    "tools/package-importer/tests/test_preflight.py": "ef14a9f4ee9c6f7e9cbe7dfff5576e84f2e3118cc7a5109b197e308775c69d52"
+  },
+  "updated_at": "2026-09-26T01:54:55.727257+00:00",
+  "additive_importer": {
+    "code_sha256": "f84c52239c7f981735eed697ad260f15023b98a35ec049cd2baabcf176053cb7",
+    "freeze_sha256": "38fb4da5b975b44662531821c4c1a13919907387e592d6d218f75567e56709cd",
+    "regression_tests": 14,
+    "real_candidate_files": 16,
+    "real_candidate_elapsed_seconds": 0.6067911999998614,
+    "stage_output_identical": true,
+    "stage_replay_receipt_sha256": "03eb86b13f7351626d469145875ee45a498bcbb19776297fa1fc3dd967624dcf",
+    "changes_applied_to_public_science": 0,
+    "independent_code_audit_sha256": "291ccd1a33844788c63dd445fb764e7dab4cea38146f2895c368be534f34bee7"
+  },
+  "combined_candidate_preflight": {
+    "status": "passed",
+    "elapsed_seconds": 1.952,
+    "new_records": 17,
+    "new_primary_sources": 2,
+    "prior_records_checked": 865,
+    "receipt_sha256": "288bfaa753ac62d68ff237655a6128a9b070d2c13c523722684d1dd8d58ef51b"
+  },
+  "current_importer_preflight_test_count": 33,
+  "current_importer_preflight_tests_status": "passed",
+  "source_group_join_regression": "Explicit review/source-group join required when their IDs differ."
 }
