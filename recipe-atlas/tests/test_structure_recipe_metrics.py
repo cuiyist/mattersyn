@@ -229,7 +229,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':154,'source_groups':38,'records':131,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':156,'source_groups':39,'records':133,'physical_samples_deduplicated':None},broad['counts'])
         new_contexts={(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group'] in {'ghezelbash2005-main','hu-wang-2010-nickel-hydroxychloride'}}
         self.assertEqual({
             ('ghezelbash-2005-cu1p8s-variant','cu1p8s-reagent-adjusted'),
