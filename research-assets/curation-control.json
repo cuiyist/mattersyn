@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "paused",
-  "recorded_at": "2026-09-26T15:37:55.699958+00:00",
-  "authorization": "The user requested completion of already extracted and audited papers followed by a pause. The accepted queue is integrated; only final validation, publication and receipt closeout are authorized.",
-  "supersedes_hold": "Ten-hour trial ended2026-09-25T13:50:12Z; its frozen results remain unchanged. This newer authorization resumes curation.",
+  "recorded_at": "2026-09-26T16:33:13.460837+00:00",
+  "authorization": "User-authorized completion of already extracted and audited papers is finished. All curation and recurring reports remain paused until a newer explicit user instruction.",
+  "supersedes_hold": "The current user-requested pause is final after accepted-queue closeout. Earlier trial authorizations do not resume work.",
   "active_run": "research-assets/acceleration-20260925/run-state.json",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -12,10 +12,12 @@
   "maximum_concurrent_agents_including_root": 4,
   "maximum_active_paper_claims": 5,
   "daily_report_time": "08:00 America/Chicago",
-  "stop_rule": "No new curation or recurring reports. Resume only on an explicit later user instruction.",
+  "stop_rule": "Do not resume curation, screening, website changes or recurring reports without explicit user resumption.",
   "current_measurement_window": "20260926-revised-workflow-12h",
   "measurement_checkpoint_utc": "2026-09-26T14:03:41Z",
   "progress_report_interval_hours": 2,
   "progress_automation": "mattersyn-three-hour-local-throughput-trial",
-  "two_hour_reporting_authorized_at": "2026-09-26T03:03:21Z"
+  "two_hour_reporting_authorized_at": "2026-09-26T03:03:21Z",
+  "accepted_queue_closeout_receipt": "research-assets/public-audits/song2024-publication-20260926.json",
+  "recurring_reports_paused": true
 }

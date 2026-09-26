@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "paused",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-26T15:51:13.044548+00:00",
+  "updated_at": "2026-09-26T16:33:13.460837+00:00",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -23,15 +23,7 @@
     "max_agents": 4,
     "max_paper_claims": 5
   },
-  "active_papers": [
-    {
-      "source_id": "zinc-chalcogenide-2024-ic4c02738",
-      "doi": "10.1021/acs.inorgchem.4c02738",
-      "inherited_work": false,
-      "stage": "Accepted eight-record contribution integrated; final browser compatibility, clean build, publication and anonymous verification pending. No new source work authorized.",
-      "claimed_at": "2026-09-26T02:44:27.655675+00:00"
-    }
-  ],
+  "active_papers": [],
   "engineering": [
     {
       "task": "Reusable frozen-package importer",
@@ -310,17 +302,37 @@
       "anonymous_receipt_sha256": "f33b4bd6273beaf01d16ec2a1018ebae5ce7de8d9766309146f44d5d5278a85b",
       "public_receipt": "research-assets/public-audits/zhan1999-jaipurite-publication-20260926.json",
       "evidence": "Pages workflow succeeded; credential-free live reader, canonical record, pair index and Figure 2 checked; the record, pair index and Figure 2 matched deployed/local SHA-256 exactly."
+    },
+    {
+      "source_id": "song2024inorgchem4c02738",
+      "doi": "10.1021/acs.inorgchem.4c02738",
+      "verified_at": "2026-09-26T16:33:13.460837+00:00",
+      "source_commit": "d89c6a085d26da47154f33d460e64132377b0990",
+      "site_commit": "9f744a28e9e7fea382792a688739af4dad3639eb",
+      "records_added": 8,
+      "routes_added": 6,
+      "source_figures_added": 6,
+      "broad_structure_rows_added": 4,
+      "exact_pairs_added": 0,
+      "inherited_source_work": true,
+      "prior_extraction_and_audit_reused": true,
+      "published_after_frozen_twelve_hour_cutoff": true,
+      "counted_in_frozen_twelve_hour_window": false,
+      "anonymous_receipt_sha256": "9d11f518190ce1db372da312cffbeac76384e6d1bf61e6ac65339ba0b27709e1",
+      "public_receipt": "research-assets/public-audits/song2024-publication-20260926.json",
+      "public_receipt_sha256": "56f0c1ff3b9676012bdb01b57b4b5025a4da057da183f31921e71e78950fb429",
+      "evidence": "Successful Pages workflow and exact credential-free HTTP 200 hash/size checks of eight records, paper review, broad pair index, five source figures and Scheme 1."
     }
   ],
-  "newly_published_source_papers": 8,
-  "new_records_published": 88,
+  "newly_published_source_papers": 9,
+  "new_records_published": 96,
   "counting_rule": "Only newly deployed, anonymously verified distinct source contributions count; multiple records, old-page corrections and progress releases do not add paper throughput.",
   "measurement_rule": "Count only distinct new source contributions after deployment and anonymous verification. Ongoing foreground work is not evidence of unattended operation between runs.",
   "automation": {
     "daily_report_status": "PAUSED",
     "daily_report_time": "08:00 America/Chicago",
     "prompt_updated_to_current_control": true,
-    "completed_trial_automation_status": "PAUSED at user request; accepted contribution closeout only",
+    "completed_trial_automation_status": "PAUSED at user request; accepted contribution closeout completed",
     "progress_report_interval_hours": 2
   },
   "stage_events": [
@@ -566,6 +578,17 @@
       "new_papers_published": 0,
       "audit_receipt_sha256": "8263e42518ae46d5e2f69e290a4f392e460dd93bbebf63df82263eb2d257f772",
       "scope": "Authored unscaled morphology cue bound only to the source-described Jaipurite product. Irregular lamellae and loose overlaps are illustrative; no measured dimensions, facets, atomic positions or exact stack count. The ~20 nm XRD Scherrer estimate remains separate. Amorphous control remains neutral."
+    },
+    {
+      "at": "2026-09-26T16:33:13.460837+00:00",
+      "source_id": "song2024inorgchem4c02738",
+      "doi": "10.1021/acs.inorgchem.4c02738",
+      "stage": "publication_and_user_requested_pause",
+      "status": "deployed_and_anonymously_verified_then_paused",
+      "records_added": 8,
+      "new_papers": 1,
+      "broad_structure_rows_added": 4,
+      "outside_frozen_measurement_window": true
     }
   ],
   "completed_papers": [
@@ -613,6 +636,15 @@
       "site_commit": "ed3bdd91d8f533686b5336f4872cf6234c3a31fb",
       "verified_at": "2026-09-26T14:59:27Z",
       "receipt_sha256": "f33b4bd6273beaf01d16ec2a1018ebae5ce7de8d9766309146f44d5d5278a85b"
+    },
+    {
+      "source_id": "song2024inorgchem4c02738",
+      "doi": "10.1021/acs.inorgchem.4c02738",
+      "inherited_source_work": true,
+      "stage": "Eight main-only records published and anonymously verified; supporting information and publisher permission remain unverified.",
+      "site_commit": "9f744a28e9e7fea382792a688739af4dad3639eb",
+      "verified_at": "2026-09-26T16:33:13.460837+00:00",
+      "receipt_sha256": "56f0c1ff3b9676012bdb01b57b4b5025a4da057da183f31921e71e78950fb429"
     }
   ],
   "target_papers_per_hour": 20,
@@ -2162,5 +2194,18 @@
       "wagner1999ssz48@b9fac2f702a2fb64294c44ce3872fc86f9f7d36e"
     ]
   },
-  "pause_scope": "No new curation or recurring reports. Final validation and publication of the already extracted and independently audited Song package remain authorized; resume only after explicit user instruction."
+  "pause_scope": "All already accepted contributions are published and verified. No new curation, screening, website changes or recurring reports; explicit user resumption required.",
+  "live_inventory_at_pause": {
+    "dataset_version": "0.40.5",
+    "records": 897,
+    "primary_source_groups": 60,
+    "formal_paper_reviews": 55,
+    "routes": 245,
+    "material_hubs": 87,
+    "broad_recipe_structure_rows": 160,
+    "exact_sample_coordinate_pairs": 0,
+    "song_records_added": 8,
+    "song_routes_added": 6,
+    "song_broad_rows_added": 4
+  }
 }
