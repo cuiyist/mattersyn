@@ -24,7 +24,7 @@ export const sceneRecords={
 };
 export const hotBathStabilized={art:'hot',title:'STABILIZE UNDER ARGON',caption:'50 g TOPO · ready for precursor injection',conditions:[condition('Reaction temperature','≈300 °C'),condition('Stabilization duration',unset),condition('Pressure','≈1 atm'),condition('Atmosphere','Argon')],path:['Degassed TOPO','Stabilize under Ar','Ready to inject']};
 
-const flask='<img class="scene-flask" src="assets/flask.png" alt="Illustrative reaction flask">';
+const flask='<img class="scene-flask" src="assets/chemical-registry/svg/wu2008-three-neck-flask.svg" alt="Illustrative three-neck flask; geometry and fittings are not measured">';
 const bath='<div class="heating-bath" aria-hidden="true"><div class="bath-rim"></div><div class="bath-front"></div><div class="heater-base"><i></i><span>HEATING</span><b></b></div><div class="heat-lines"><i></i><i></i><i></i></div></div>';
 const syringe='<div class="scene-syringe" aria-hidden="true"><div class="plunger-top"></div><div class="plunger-stem"></div><div class="syringe-barrel"><i></i></div><div class="syringe-needle"></div></div>';
 function vial(label,kind='clear',extra=''){return '<div class="scene-vial '+kind+' '+extra+'"><div class="sv-cap"></div><div class="sv-glass"><div class="sv-liquid"></div><div class="sv-solid"></div></div><span>'+label+'</span></div>';}

@@ -1,0 +1,1354 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wagner1999-ssz48-as-made-ed",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Wagner et al. (1999) · As-synthesized SSZ-48 electron-diffraction context",
+  "material": {
+    "formula": "SSZ-48 as-synthesized context",
+    "family": "SSZ-48 borosilicate zeolite"
+  },
+  "method": "Electron diffraction, direct-methods model, refinement and HRTEM context for as-synthesized SSZ-48",
+  "sources": [
+    {
+      "id": "wagner1999",
+      "doi": "10.1021/jp991389j",
+      "title": "Electron Diffraction Structure Solution of a Nanocrystalline Zeolite at Atomic Resolution",
+      "authors": "Paul Wagner; Osamu Terasaki; Stephan Ritsch; Jose Geraldo Nery; Stacey I. Zones; Mark E. Davis; Kenji Hiraga",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/jp991389j",
+      "main_status": "Source translation audit PASS_WITH_LIMITS; audit SHA-256 25b35a83e9077989af75885db56daf07efa1880af146e363fffaa32779eb9b28.",
+      "si_status": "SI not located in the bounded local search; unverified and unreviewed.",
+      "reuse_status": "Source review passed with explicit limits; figure permission, browser QA, and publication remain pending."
+    }
+  ],
+  "lineage": {
+    "source_group": "wagner1999",
+    "recipe_family": "wagner1999-ssz48-source-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SSZ-48 as-synthesized context",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "um",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No target size specified before synthesis.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ssz48-as-made-context-material",
+      "name": "Borosilicate SSZ-48 (as-synthesized characterization context)",
+      "formula": null,
+      "role": "host_product",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Boron site occupancy is not resolved by the displayed atom tables."
+      ],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "as-made-ed-study-context",
+      "name": "As-synthesized SSZ-48 characterization context",
+      "kind": "sample_set",
+      "parent_ids": [
+        "ssz48-as-made-context-material"
+      ]
+    },
+    {
+      "id": "sda-in-framework-model-context",
+      "name": "Energy-minimized SDA-in-framework model used for diffraction simulation",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ssz48-as-made-context-material"
+      ]
+    },
+    {
+      "id": "as-made-microscopy-preparation",
+      "name": "Embedded and ultramicrotomed as-synthesized crystals on holey-carbon Cu grid",
+      "kind": "sample_set",
+      "parent_ids": [
+        "ssz48-as-made-context-material"
+      ]
+    },
+    {
+      "id": "ed-simulation-fit-context",
+      "name": "Dynamical-scattering simulation-fit context, not measured particle thickness",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ssz48-as-made-context-material"
+      ]
+    },
+    {
+      "id": "tga-occupancy-context",
+      "name": "Thermogravimetric-analysis context; no unique aliquot identifier reported",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ssz48-as-made-context-material"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-as-made-microscopy-specimen",
+      "action": "specimen_preparation",
+      "label": "Prepare as-synthesized SSZ-48 for electron microscopy",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ssz48-as-made-context-material"
+      ],
+      "outputs": [
+        "as-made-microscopy-preparation"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Embed crystals in epoxy, ultramicrotome, and transfer the thinly sliced crystal-embedded epoxy onto holey carbon foil supported by a Cu grid.",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ]
+    },
+    {
+      "id": "electron-diffraction-and-hrtem",
+      "action": "electron_microscopy",
+      "label": "Collect electron-diffraction and HRTEM data",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "as-made-microscopy-preparation"
+      ],
+      "outputs": [
+        "as-made-ed-study-context"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wagner1999",
+              "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+            }
+          ],
+          "derivation": null
+        },
+        "electron_diffraction_resolution": {
+          "value": 0.99,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Å",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Data collected to this stated resolution.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wagner1999",
+              "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "JEM-4000EX at 400 kV; ED slow-scan CCD detector; HRTEM point resolution 1.7 Å.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "ED data extracted from 11 zones; SEM collected at 5 kV on Hitachi S-3200.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The paper reports 600 ED reflections (326 unique); these data are not a sample-specific full-batch coordinate pairing.",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+        }
+      ]
+    },
+    {
+      "id": "energy-minimize-sda-model",
+      "action": "molecular_modeling",
+      "label": "Energy-minimize an SDA-in-framework model for scattering simulations",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ssz48-as-made-context-material"
+      ],
+      "outputs": [
+        "sda-in-framework-model-context"
+      ],
+      "parameters": {
+        "sda_per_two_unit_cells": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "SDA per 2 unit cells",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Author modeling assumption; kept distinct from the TGA result.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wagner1999",
+              "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Cerius2 open force field; Si/O framework and unit cell fixed; SDA orientation and position varied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Energy-minimized SDA model used for electron-diffraction intensity simulations.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "This is a modeled context, not an independently measured sample or a resolved physical occupancy.",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+        }
+      ]
+    },
+    {
+      "id": "fit-dynamical-scattering-thickness",
+      "action": "dynamical_scattering_simulation",
+      "label": "Fit simulated diffraction intensities against experimental zones",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sda-in-framework-model-context"
+      ],
+      "outputs": [
+        "ed-simulation-fit-context"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement; Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement; Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Table 3 thicknesses are simulation-fit parameters, not microscopy-measured particle dimensions.",
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement; Table 3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "source_sample_label": "As-synthesized SSZ-48 crystal cohort",
+      "batch_id": null,
+      "material_state_id": "as-made-ed-study-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Borosilicate SSZ-48; bulk SiO2/B2O3 ratio 63 by ICP is reported in the synthesis context.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Monoclinic P21 (No. 4) SSZ-48 structure from ED.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Typical crystal dimensions 0.05 × 0.25 × 10 μm; the three axes are not assigned.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), Results, electron-diffraction structure solution; Tables 1-3 on pp. 3-4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Article-level characterization context; exact physical batch ID and cross-assignment to other measurements are not reported."
+      ]
+    },
+    {
+      "sample_id": "sda-framework-computational-context",
+      "source_sample_label": "Energy-minimized SDA-in-framework model (computational context, not a specimen)",
+      "batch_id": null,
+      "material_state_id": "sda-in-framework-model-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SSZ-48 framework with energy-minimized N,N-diethyldecahydroquinolinium SDA model.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": "Not a physical specimen."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Author model uses one SDA per two unit cells; TGA separately indicates 0.8 SDA per two unit cells. Do not equate these two bases."
+      ]
+    },
+    {
+      "sample_id": "dynamical-simulation-context",
+      "source_sample_label": "Dynamical-scattering simulation-fit context (not measured crystal thickness)",
+      "batch_id": null,
+      "material_state_id": "ed-simulation-fit-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Simulated diffraction intensities compared with ED observations.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Table 3"
+          }
+        ],
+        "note": "Fit thickness is a simulation parameter, not a measured particle-size distribution."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Zone-specific best-fit thickness values are not experimental crystal dimensions."
+      ]
+    },
+    {
+      "sample_id": "tga-occupancy-study-context",
+      "source_sample_label": "TGA occupancy context (physical aliquot not identified)",
+      "batch_id": null,
+      "material_state_id": "tga-occupancy-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SSZ-48 framework / SDA occupancy analysis.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": "TGA specimen morphology not reported."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "The paper gives no unique TGA aliquot or physical batch ID; this context is kept separate from the ED specimen and computational model."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "typical-dimension-1",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unassigned_crystal_dimension",
+      "technique": "Low-resolution TEM / SEM",
+      "value": {
+        "value": 0.05,
+        "minimum": null,
+        "maximum": null,
+        "unit": "μm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "One of the three typical dimensions; axes are not assigned.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Paper reports dimensions as 0.05 × 0.25 × 10 μm; no axis map is given.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "typical-dimension-2",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unassigned_crystal_dimension",
+      "technique": "Low-resolution TEM / SEM",
+      "value": {
+        "value": 0.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "μm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "One of the three typical dimensions; axes are not assigned.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Paper reports dimensions as 0.05 × 0.25 × 10 μm; no axis map is given.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "typical-dimension-3",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unassigned_crystal_dimension",
+      "technique": "Low-resolution TEM / SEM",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "μm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "One of the three typical dimensions; axes are not assigned.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Paper reports dimensions as 0.05 × 0.25 × 10 μm; no axis map is given.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "ed-unit_cell_a",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unit_cell_a",
+      "technique": "Selected-area electron diffraction",
+      "value": {
+        "value": 11.19,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ED unit cell; distinct from calcined SPXRD parameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "ed-unit_cell_b",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unit_cell_b",
+      "technique": "Selected-area electron diffraction",
+      "value": {
+        "value": 4.99,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ED unit cell; distinct from calcined SPXRD parameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "ed-unit_cell_c",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unit_cell_c",
+      "technique": "Selected-area electron diffraction",
+      "value": {
+        "value": 13.65,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ED unit cell; distinct from calcined SPXRD parameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "ed-monoclinic_beta",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "monoclinic_beta",
+      "technique": "Selected-area electron diffraction",
+      "value": {
+        "value": 100.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ED unit cell; distinct from calcined SPXRD parameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "ed-unit_cell_volume",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unit_cell_volume",
+      "technique": "Selected-area electron diffraction",
+      "value": {
+        "value": 748.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å³",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ED unit cell; distinct from calcined SPXRD parameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), electron-diffraction structure solution"
+        }
+      ]
+    },
+    {
+      "id": "ed-electron_diffraction_refinement_Rf",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "electron_diffraction_refinement_Rf",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 0.3283,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fraction",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "ed-mean_Si_O_distance",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "mean_Si_O_distance",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 1.601,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "ed-mean_O_Si_O_angle",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "mean_O_Si_O_angle",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 109.47,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "ed-mean_Si_O_Si_angle",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "mean_Si_O_Si_angle",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 147.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "ed-unique_reflections",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "unique_reflections",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 326,
+        "minimum": null,
+        "maximum": null,
+        "unit": "reflections",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "ed-measured_reflections",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "measured_reflections",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 600,
+        "minimum": null,
+        "maximum": null,
+        "unit": "reflections",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "ed-refinement_variables",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "refinement_variables",
+      "technique": "Electron-diffraction least-squares refinement",
+      "value": {
+        "value": 94,
+        "minimum": null,
+        "maximum": null,
+        "unit": "variables",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "table1-initial-model-completeness",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "property": "initial_model_completeness",
+      "technique": "Direct-methods structure solution",
+      "value": {
+        "value": "Initial model contains 7 Si, 5 of 14 framework O, and 9 C positions attributed to occluded SDA density; remaining O atoms were located in the later distance-least-squares model.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 3 (printed p. 8247), Tables 1-2 and refinement"
+        }
+      ]
+    },
+    {
+      "id": "tga-sda-occupancy",
+      "sample_id": "tga-occupancy-study-context",
+      "property": "SDA_per_two_unit_cells",
+      "technique": "Thermogravimetric analysis",
+      "value": {
+        "value": 0.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "SDA per 2 unit cells",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "TGA result; physical aliquot and batch identifiers are not reported.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Separate TGA characterization context; no unique specimen linkage.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Dynamical Scattering Refinement"
+        }
+      ]
+    },
+    {
+      "id": "simulation-sda-loading",
+      "sample_id": "sda-framework-computational-context",
+      "property": "SDA_per_two_unit_cells",
+      "technique": "Energy-minimized molecular model",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "SDA per 2 unit cells",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Modeling assumption; source says it is consistent with separate TGA result.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Computational model basis, not measured occupancy.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+        }
+      ]
+    },
+    {
+      "id": "fit-thickness-001",
+      "sample_id": "dynamical-simulation-context",
+      "property": "simulation_fit_thickness",
+      "technique": "Dynamical-scattering simulation",
+      "value": {
+        "value": 55,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Best-fit simulation thickness; not particle-size measurement.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Table 3 zone [001]; 14 unique reflections; RF=0.224.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+        }
+      ]
+    },
+    {
+      "id": "fit-thickness-100",
+      "sample_id": "dynamical-simulation-context",
+      "property": "simulation_fit_thickness",
+      "technique": "Dynamical-scattering simulation",
+      "value": {
+        "value": 67,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Best-fit simulation thickness; not particle-size measurement.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Table 3 zone [100]; 14 unique reflections; RF=0.199.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+        }
+      ]
+    },
+    {
+      "id": "fit-thickness-010",
+      "sample_id": "dynamical-simulation-context",
+      "property": "simulation_fit_thickness",
+      "technique": "Dynamical-scattering simulation",
+      "value": {
+        "value": 25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Best-fit simulation thickness; not particle-size measurement.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Table 3 zone [010]; 105 unique reflections; RF=0.241.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+        }
+      ]
+    },
+    {
+      "id": "three-zone-overall-rf",
+      "sample_id": "dynamical-simulation-context",
+      "property": "overall_RF",
+      "technique": "Dynamical-scattering simulation",
+      "value": {
+        "value": 0.232,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fraction",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Overall fit for three zones and 133 reflections.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wagner1999",
+            "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 4 (printed p. 8248), Tables 2-3 and dynamical-scattering refinement"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only source translation independently audited PASS_WITH_LIMITS (audit SHA-256 25b35a83e9077989af75885db56daf07efa1880af146e363fffaa32779eb9b28; title erratum SHA-256 49b351f491b89597c3c017e1fd8d507b435c1ec601f572a756658041fe540870). SI is unverified; as-made ED and calcined SPXRD are not joined to one physical batch; the Table 5 CIF is a limited Si/O framework model, not complete borosilicate or particle geometry; Figures 1-5 crops omit captions, represented by source-located summaries; browser QA and publication-rights review remain pending.",
+    "missing_fields": [
+      "The exact physical batch/sample identifier is not reported; this is the article-level as-synthesized characterization context.",
+      "Boron occupancy is not provided in the Si/O/guest-coordinate tables.",
+      "The Table 1 direct-methods model is incomplete; do not substitute it for the later Table 2 refined model."
+    ],
+    "conflicts": [
+      "Table 1 is an initial partial model, while Table 2 is the later electron-diffraction refinement; these are sequential models, not distinct products."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source review candidate",
+      "url": "paper-review.html?id=wagner1999-ssz48",
+      "relation": "same_source_study_context"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}

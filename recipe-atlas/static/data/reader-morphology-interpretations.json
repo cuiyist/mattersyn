@@ -3,7 +3,7 @@
   "status": "integrated_curator_display_interpretations",
   "scope": "Source-context-specific display interpretations from reviewed records and linked figures; each entry retains its own source and limitations.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
-  "input_reader_presentation_sha256": "94350fdf1431f897c930940a5a50711033cdadcc32ce7900aac4ebc2c77c3d97",
+  "input_reader_presentation_sha256": "fe286483371820523ecf2545c363b540ccd8ec81af8941c0d02d83a4646c2ff5",
   "entries": {
     "evans-2010-pbse-tem:pbse-tem-spheres": {
       "record_id": "evans-2010-pbse-tem",
@@ -1150,6 +1150,41 @@
         "Not to scale. The reported approximate particle size and 0.56 nm spacing are not encoded geometrically.",
         "No atomic coordinates, crystallographic polyhedron, exact sample-batch link, or structure-training label is inferred."
       ]
+    },
+    "wagner1999-ssz48-as-made-ed:as-made-ssz48-ed-cohort": {
+      "record_id": "wagner1999-ssz48-as-made-ed",
+      "sample_id": "as-made-ssz48-ed-cohort",
+      "shape": "rod",
+      "label": "Elongated SSZ-48 crystallites · interpretive schematic",
+      "status": "curator_interpretation",
+      "basis": "source_dimensions_and_visual_interpretation_of_figure_1_sem_and_tem",
+      "rationale": "The article reports typical crystal dimensions of 0.05 × 0.25 × 10 μm and Figure 1 shows elongated as-made SSZ-48 crystals. A generic rod-like outline conveys the strong elongation only; it does not assign the three dimensions to crystallographic axes or resolve the cross-section.",
+      "evidence": [
+        {
+          "record_id": "wagner1999-ssz48-as-made-ed",
+          "pointer": "/products/0/morphology",
+          "source_id": "wagner1999",
+          "locator": "Main PDF p. 2 (printed p. 8246), Results / Crystal Size Determination; Figure 1 (a) SEM and (b) low-resolution TEM",
+          "figure_id": "figure-1",
+          "panel": "(a), (b)",
+          "data_path": "data/paper-reviews/wagner1999-ssz48.json",
+          "public_asset": "assets/paper-reviews/wagner1999/figure-1.png",
+          "asset_sha256": "0cf259cab1fe0a5c27d96d76ec0480aaacce66637ff36d73b102a8dc3fe6289f"
+        }
+      ],
+      "limitations": [
+        "The drawing is an authored schematic based on the source description and Figure 1; it is not a micrograph or image reconstruction.",
+        "The article reports 0.05 × 0.25 × 10 μm as typical dimensions but does not assign the dimensions to crystallographic axes; the schematic is not to scale and does not encode those ratios geometrically.",
+        "The source does not resolve a unique cross-section or facet assignment; none is inferred.",
+        "This is the as-synthesized electron-diffraction cohort. No physical batch identity or join to another measurement is asserted.",
+        "The schematic adds no atom coordinates, unit-cell geometry, surface chemistry, or training eligibility."
+      ],
+      "source_sha256": "94738d09d4c9489cdcc876ce6e92b82f2ac9170faabdf66061e796f419581ffe",
+      "source_hash_scope": "data/records/wagner1999-ssz48-as-made-ed.json",
+      "recipe_link": "general_context",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Qualitative rod-like envelope only; reported typical dimensions are shown in the linked source observation and are not used to scale or orient the schematic."
     }
   },
   "additional_contexts": {
