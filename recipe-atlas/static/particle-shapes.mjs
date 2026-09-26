@@ -6,7 +6,7 @@
  */
 
 export const PARTICLE_SHAPES = Object.freeze([
-  'sphere', 'faceted-outline', 'cube', 'rod', 'ellipsoid', 'platelet', 'belt', 'star',
+  'sphere', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'ellipsoid', 'platelet', 'belt', 'star',
   'truncated-star', 'irregular', 'truncated-octahedron', 'assembly', 'sphere-assembly', 'wire-assembly', 'matrix',
   'nanotube-supported', 'core-shell', 'islands', 'layered-film', 'neutral',
 ]);
@@ -14,6 +14,7 @@ export const PARTICLE_SHAPES = Object.freeze([
 const LABELS = Object.freeze({
   sphere: 'Schematic spherical particle',
   'faceted-outline': 'Schematic hexagonally faceted particle outline; thickness and facet indices are unspecified',
+  'nested-faceted': 'Schematic nested faceted particle; contour count is illustrative and center remains unresolved',
   cube: 'Schematic cubic particle',
   rod: 'Schematic rod-shaped particle',
   ellipsoid: 'Schematic ellipsoidal particle',
@@ -35,6 +36,10 @@ const LABELS = Object.freeze({
 });
 
 const LEGENDS = Object.freeze({
+  'nested-faceted': [
+    { color: '#397f7d', label: 'Nested contours' },
+    { color: '#c5cec2', label: 'Center unresolved' },
+  ],
   assembly: [{ color: '#268b89', label: 'Particles', note: 'Arrangement is illustrative.' }],
   'sphere-assembly': [{ color: '#268b89', label: 'Constituent particles', note: 'Spherical assembly; constituent count, size, and arrangement are illustrative.' }],
   'wire-assembly': [{ color: '#268b89', label: 'Constituent particles', note: 'Wire-like assembly; constituent count, size, and arrangement are illustrative.' }],
@@ -137,6 +142,12 @@ function body(shape, g) {
   const ball = (x,y,r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="url(#${g}-ball)" stroke="#367f7d" stroke-width=".85"/>`;
   const ground = (width = 94, y = 254) => `<ellipse cx="200" cy="${y}" rx="${width}" ry="9" fill="url(#${g}-shadow)"/>`;
   switch (shape) {
+    case 'nested-faceted': return ground(108,258)
+      + `<path d="M200 47L292 100V192L200 245L108 192V100Z" fill="#73ad9c" stroke="#326f74" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M200 70L272 111V181L200 222L128 181V111Z" fill="#acd0b4" stroke="#3f817e" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M200 93L252 122V170L200 199L148 170V122Z" fill="#e1e9d9" stroke="#548d86" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M200 116L231 134V158L200 176L169 158V134Z" fill="#f4f3eb" stroke="#81938c" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/>
+      <text x="200" y="153" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#52615d">?</text>`;
     case 'faceted-outline': return ground(92,254) + `<path d="M151 66H248L294 145L246 226H151L105 146Z" fill="url(#${g}-ball)" stroke="#367f7d" stroke-width="2"/><path d="M154 73H245L273 120" fill="none" stroke="#e0ecd2" stroke-width="3" opacity=".6"/>`;
     case 'sphere': return ground(92,254) + ball(200,145,89) + `<path d="M147 99C161 77 182 69 202 69" fill="none" stroke="#f1f8df" stroke-width="3.5" stroke-linecap="round" opacity=".5"/>`;
     case 'cube': return ground(116,260)

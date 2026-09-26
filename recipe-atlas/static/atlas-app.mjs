@@ -1,4 +1,5 @@
 import {elements} from './periodic-data.mjs';
+import {componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
 const $=id=>document.getElementById(id),selected=new Set(),tiles=new Map();let materials=[];
 const params=new URLSearchParams(location.search);
 for(const symbol of (params.get('elements')||'').split(','))if(elements.some(e=>e.symbol===symbol))selected.add(symbol);
@@ -18,7 +19,7 @@ function render(){
  const host=$('material-results');host.replaceChildren();$('material-count').textContent=matches.length+' material / component pages'+(selected.size?' containing '+[...selected].join(' + '):' in the collection');
  for(const m of matches.slice(0,60)){
   const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=m.reviewed_records?'Reviewed synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
-  const h=document.createElement('h3');h.textContent=m.formula;const p=document.createElement('p');p.textContent=m.component_only?'Component of reviewed heterostructures':m.name;const meta=document.createElement('div');meta.className='entry-meta';meta.textContent=`${m.paper_count} verified source contributions · ${m.reviewed_records} methods / variants`;
+  const h=document.createElement('h3');h.textContent=m.formula;const p=document.createElement('p');p.textContent=m.component_only?componentScopeLabel(m):m.name;const meta=document.createElement('div');meta.className='entry-meta';meta.textContent=`${m.paper_count} verified source contributions · ${m.reviewed_records} methods / variants`;
   const a=document.createElement('a');a.href=m.url;a.textContent='Open material →';card.append(status,h,p,meta,a);host.append(card);
  }
  if(!matches.length){const p=document.createElement('p');p.className='atlas-empty';p.textContent='No reviewed synthesis page matches this selection yet. Papers awaiting review remain in the Source library. This does not establish that synthesis methods do not exist.';host.append(p);}

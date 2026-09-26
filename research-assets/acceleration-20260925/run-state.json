@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "active",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-26T02:06:50.528042+00:00",
+  "updated_at": "2026-09-26T03:08:00.665884+00:00",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -28,19 +28,33 @@
       "source_id": "ghezelbash2005",
       "doi": "10.1021/la051196p",
       "inherited_work": false,
-      "stage": "Separate source and Reader audits passed; privately merged and compatibility preflight passed. Full release build, browser and publication gates remain; not published."
+      "stage": "Separate source and Reader audits passed;17record batch privately integrated. Display compatibility checks passed; final full release gates pending."
     },
     {
       "source_id": "hu-wang-2010-nickel-hydroxychloride",
       "doi": "10.1021/ja103607q",
       "inherited_work": false,
-      "stage": "Separate source and Reader audits passed; privately merged and compatibility preflight passed. Full release build, browser and publication gates remain; not published."
+      "stage": "Separate source and Reader audits passed;17record batch privately integrated. Display compatibility checks passed; final full release gates pending."
     },
     {
       "source_id": "wagner1999ssz48",
       "doi": "10.1021/jp991389j",
       "inherited_work": false,
-      "stage": "Three current-schema records, seven figures and Reader draft frozen locally; independent extraction and Reader audit pending; not published."
+      "stage": "Three-record source/Reader audit passed with limits and a separate title erratum; additive package pending canonical integration and release."
+    },
+    {
+      "source_id": "zinc-chalcogenide-2024-ic4c02738",
+      "doi": "10.1021/acs.inorgchem.4c02738",
+      "inherited_work": false,
+      "stage": "Existing screened-pass main source newly claimed for complete reading and current-schema Reader draft; independent scientific audit pending.",
+      "claimed_at": "2026-09-26T02:44:27.655675+00:00"
+    },
+    {
+      "source_id": "zhan1999-jaipurite",
+      "doi": "10.1006/jssc.1999.8299",
+      "inherited_work": false,
+      "stage": "Existing screened-pass three-page main source claimed for complete reading and combined canonical/Reader draft; independent audit pending.",
+      "claimed_at": "2026-09-26T03:07:24.160705+00:00"
     }
   ],
   "engineering": [
@@ -1224,11 +1238,62 @@
         "10.1021/jp991389j"
       ],
       "counting_rule": "Count each distinct source first deployed and anonymously verified within this fixed window once; records, variants, corrections, drafts and status releases are not papers. Separate carried-over work from work started within the window. Report new sources / 12 elapsed hours and separately describe actual active execution; do not claim unattended work.",
-      "stage_events": [],
+      "stage_events": [
+        {
+          "at": "2026-09-26T02:33:10.315237+00:00",
+          "stage": "private_integration_and_rework",
+          "source_dois": [
+            "10.1021/la051196p",
+            "10.1021/ja103607q"
+          ],
+          "new_records_staged": 17,
+          "source_review_status": "passed_existing_receipts",
+          "display_compatibility_status": "passed_with_final_morphology_delta_pending",
+          "published_sources": 0,
+          "scope": "Carried-over two-paper batch; no new source publication counted."
+        },
+        {
+          "recorded_at": "2026-09-26T02:45:10.040513+00:00",
+          "stage": "source_claim",
+          "doi": "10.1021/acs.inorgchem.4c02738",
+          "status": "claimed_existing_pass",
+          "completed_paper_credit": 0
+        },
+        {
+          "recorded_at": "2026-09-26T02:45:10.040513+00:00",
+          "stage": "independent_source_audit",
+          "doi": "10.1021/jp991389j",
+          "status": "passed_with_limits",
+          "receipt_sha256": "25b35a83e9077989af75885db56daf07efa1880af146e363fffaa32779eb9b28",
+          "erratum_sha256": "49b351f491b89597c3c017e1fd8d507b435c1ec601f572a756658041fe540870",
+          "carried_over_work": true,
+          "scope": "Current-schema extraction and Reader audit; integration and publication remain separate."
+        }
+      ],
       "publication_events": [],
       "report_sent": false,
       "after_report": "Freeze this window and continue authorized curation; this checkpoint is not a user-requested pause."
     }
   },
-  "current_measurement_window": "20260926-revised-workflow-12h"
+  "current_measurement_window": "20260926-revised-workflow-12h",
+  "two_hour_checks": {
+    "status": "active",
+    "requested_at": "2026-09-26T03:03:21Z",
+    "interval_hours": 2,
+    "last_report_at": null,
+    "baseline_at": "2026-09-26T03:03:21Z",
+    "baseline_live_inventory": {
+      "records": 865,
+      "primary_source_groups": 55,
+      "formal_readers": 50,
+      "routes": 224,
+      "material_hubs": 73,
+      "broad_structure_evidence_rows": 148,
+      "exact_coordinate_pairs": 0
+    },
+    "baseline_resumed_publication_events": 4,
+    "reports": [],
+    "counting_rule": "New distinct source contributions deployed and anonymously verified after the previous report; use actual elapsed hours, identify inherited work, keep fixed twelve-hour measurement separate.",
+    "reported_model_preference": "User says GPT-6 Luna is selected; actual runtime and performance are not independently verified."
+  }
 }

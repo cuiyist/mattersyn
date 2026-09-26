@@ -1,6 +1,6 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
 import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs';
-import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.36.0';
+import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.2';
 
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);
 const text=v=>v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
@@ -22,9 +22,9 @@ export function classifyMorphology(value){
  if(!m||/\b(unknown|unresolved|unassigned|not determined)\b/.test(m))return 'neutral';
  if(/\b(proposed|damage|not demonstrated|non[ -]spherical)\b/.test(m))return 'neutral';
  if(/\b(spher\w*|round)\b/.test(m)&&/\b(cubic|cube\w*)\b/.test(m))return 'neutral';
- if(/\b(?:no|not|without)\b(?:[\s-]+\w+){0,3}[\s-]+(?:spher\w*|round|cub\w*|rods?|nanorods?|islands?|plates?|shell\w*|stars?)\b/.test(m))return 'neutral';
- if(/\b(?:spher\w*|cub\w*|rods?|islands?)\s+(?:(?:were|are)\s+)?(?:not|never)\s+(?:observed|confirmed)/.test(m))return 'neutral';
- const primitiveShapes=[/\b(spher\w*|round)\b/,/\b(cubic shaped|cubes?|cuboidal)\b/,/\b(nanorods?|rods?|nanowires?)\b/,/\b(platelets?|nanoplates?)\b/,/\b(star\w*|octapods?)\b/].filter(re=>re.test(m));
+ if(/\b(?:no|not|without)\b(?:[\s-]+\w+){0,3}[\s-]+(?:spher\w*|round|cub\w*|rods?|nanorods?|islands?|plates?|disklike|nanodisks?|shell\w*|stars?)\b/.test(m))return 'neutral';
+ if(/\b(?:spher\w*|cub\w*|rods?|islands?|nanodisks?)\s+(?:(?:were|are)\s+)?(?:not|never)\s+(?:observed|confirmed)/.test(m))return 'neutral';
+ const primitiveShapes=[/\b(spher\w*|round)\b/,/\b(cubic shaped|cubes?|cuboidal)\b/,/\b(nanorods?|rods?|nanowires?)\b/,/\b(platelets?|nanoplates?|disklike|nanodisks?)\b/,/\b(star\w*|octapods?)\b/].filter(re=>re.test(m));
  if(primitiveShapes.length>1&&!/assembl|embedded|nanotube|core[\s/–-]+shell/.test(m))return 'neutral';
  if(/nanotubes?/.test(m))return 'nanotube-supported';
  if(/embedded|confined within|polymer microparticles/.test(m))return 'matrix';
@@ -36,7 +36,7 @@ export function classifyMorphology(value){
  if(/truncated.*star|smoothed.*star/.test(m))return 'truncated-star';
  if(/octapod|star/.test(m))return 'star';
  if(/belts?/.test(m))return 'belt';
- if(/platelets?|nanoplates?|sheets?/.test(m))return 'platelet';
+ if(/platelets?|nanoplates?|sheets?|\bdisklike\b|\bnanodisks?\b/.test(m))return 'platelet';
  if(/ellipsoid|oval|oblate|prolate/.test(m))return 'ellipsoid';
  if(/\b(nanorods?|rods?|nanowires?)\b/.test(m))return 'rod';
  if(/\b(cubes?|cuboidal|cubic shaped)\b/.test(m))return 'cube';

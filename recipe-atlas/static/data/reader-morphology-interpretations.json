@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "status": "integrated_curator_display_interpretations",
-  "scope": "Fifteen source-context-specific, additive morphology interpretations from existing reviewed records and eight linked figure crops.",
+  "scope": "Source-context-specific display interpretations from reviewed records and linked figures; each entry retains its own source and limitations.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
-  "input_reader_presentation_sha256": "3fe19b29ad2901b3ab53cf25af914473e4515ca0689512db7b9b57c622a4f7c3",
+  "input_reader_presentation_sha256": "94350fdf1431f897c930940a5a50711033cdadcc32ce7900aac4ebc2c77c3d97",
   "entries": {
     "evans-2010-pbse-tem:pbse-tem-spheres": {
       "record_id": "evans-2010-pbse-tem",
@@ -1125,6 +1125,31 @@
       "measured_atomic_coordinates": false,
       "same_batch_asserted": false,
       "geometry_parameters": "Qualitative outline only."
+    },
+    "hu-wang-2010-ni-cl-oh-typical-synthesis:hu2010-typical-if-dispersion": {
+      "record_id": "hu-wang-2010-ni-cl-oh-typical-synthesis",
+      "sample_id": "hu2010-typical-if-dispersion",
+      "shape": "nested-faceted",
+      "label": "Reported polyhedral IF particle with nested multilayers — conceptual schematic",
+      "status": "curator_interpretation",
+      "basis": "reported_description_and_source_TEM_HRTEM_to_schematic",
+      "rationale": "The accepted main text describes polyhedral, non-spherical IF nanoparticles by TEM and nested multilayers by HRTEM. The center is described as hollow or amorphous; this illustration leaves it unresolved.",
+      "evidence": [
+        {
+          "record_id": "hu-wang-2010-ni-cl-oh-typical-synthesis",
+          "pointer": "/products/0/morphology",
+          "source_id": "hu-wang-2010-nickel-hydroxychloride",
+          "locator": "Main PDF p. 1 (printed p. 9573), TEM/HRTEM discussion and Figure 1",
+          "figure_id": "figure-1",
+          "public_asset": "assets/paper-reviews/hu2010nichydroxychloride/figure-1.png"
+        }
+      ],
+      "limitations": [
+        "Three nested contours are a display choice only; the article reports nested multilayers but does not state their count or equal contour spacing.",
+        "The center remains unresolved: the source describes it as hollow or amorphous.",
+        "Not to scale. The reported approximate particle size and 0.56 nm spacing are not encoded geometrically.",
+        "No atomic coordinates, crystallographic polyhedron, exact sample-batch link, or structure-training label is inferred."
+      ]
     }
   },
   "additional_contexts": {

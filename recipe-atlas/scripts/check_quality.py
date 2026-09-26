@@ -52,6 +52,21 @@ def primary_doi(record):
     return (source or {}).get("doi", "").lower()
 
 
+def component_role_matches_architecture(architecture, contribution_role):
+    if architecture in (None, 'single_material'):
+        return False
+    expected = {
+        'phase_mixture':'component_of_phase_mixture',
+        'core_shell':'component_of_heterostructure',
+        'heterostructure':'component_of_heterostructure',
+        'composite':'component_of_product_system',
+        'alloy':'component_of_product_system',
+        'unresolved':'component_of_product_system',
+    }.get(architecture)
+    if expected is None:return False
+    return contribution_role == expected
+
+
 class Audit:
     def __init__(self, root):
         self.root = root.resolve()
@@ -130,13 +145,27 @@ class Audit:
                     self.check(stub["contribution_role"] == "direct_material", f"{formula}/{rid}: incorrect direct-material role")
                 else:
                     self.check(formula in r["material"].get("components", []), f"{formula}/{rid}: association unsupported by canonical components")
-                    self.check(stub["contribution_role"] == "component_of_heterostructure", f"{formula}/{rid}: component masquerades as pure-material synthesis")
-                    self.check(r["material"].get("architecture") not in (None, "single_material"), f"{formula}/{rid}: component link lacks composite architecture")
+                    architecture = r['material'].get('architecture')
+                    self.check(component_role_matches_architecture(architecture, stub.get('contribution_role')), f"{formula}/{rid}: component role does not match {architecture!r} architecture")
+                    self.check(architecture not in (None, "single_material"), f"{formula}/{rid}: component link lacks composite architecture")
                 route_dois.add(primary_doi(r))
+            expected_component_architectures = {
+                self.byid[rid]['material'].get('architecture', 'single_material')
+                for rid in route_ids
+                if formula != self.byid[rid]['material']['formula']
+                and formula in self.byid[rid]['material'].get('components', [])
+            }
+            self.check(set(hub.get('component_architectures', [])) == expected_component_architectures, f"{formula}: component architecture metadata mismatch")
             self.check(set(hub["direct_record_ids"]) == direct, f"{formula}: direct-route identity mismatch")
             self.check(hub["component_only"] == (not direct), f"{formula}: wrong component-only label")
             if not direct:
-                self.check("not standalone" in hub.get("scope_note", "").lower(), f"{formula}: component-only page lacks explicit scope")
+                scope_note = hub.get('scope_note', '').lower()
+                self.check("not standalone" in scope_note, f"{formula}: component-only page lacks explicit scope")
+                if 'phase_mixture' in expected_component_architectures:
+                    self.check("phase mixture" in scope_note or "phase-mixture" in scope_note, f"{formula}: phase-mixture component scope is missing")
+                    self.check("not establish a within-particle heterostructure" in scope_note, f"{formula}: phase mixture is described as an unsupported heterostructure")
+                elif not expected_component_architectures <= {'core_shell','heterostructure'}:
+                    self.check('explicitly named heterostructures' not in scope_note and 'does not establish a within-particle arrangement' in scope_note, f"{formula}: product component scope overstates particle architecture")
             self.check(set(d.lower() for d in hub["paper_dois"]) == route_dois, f"{formula}: source list not tied to canonical routes")
             for paper in hub["papers"]:
                 linked = set(paper.get("reviewedRecordIds", []))

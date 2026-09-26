@@ -1,4 +1,5 @@
 import {quantityValue} from './quantity-value.mjs';
+import {componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
 import {mountMaterialGuide} from './material-guide.mjs?v=0.34.1';
 const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);let id=params.get('id');
 function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}
@@ -16,7 +17,7 @@ try{
  if(document.body.dataset.material!=='CdSe'){
   document.title=data.formula+' · Synthesis, characterization and properties | MatterSyn';$('material-formula').textContent=data.formula;$('material-name').textContent=data.name;$('material-elements').textContent=data.elements.join(' · ');
   $('material-scope-note').textContent=data.scope_note+' '+data.reviewed_records+' reviewed method/variant records; this is not an independent-experiment count.';
-  if(data.component_only)$('material-formula').textContent=data.formula+' in heterostructures';
+  if(data.component_only)$('material-formula').textContent=data.formula+' · '+componentScopeLabel(data).toLowerCase();
   $('material-dataset').href='dataset.html?material='+encodeURIComponent(data.formula);
   const methods=$('material-methods');methods.replaceChildren();
   for(const r of data.records.filter(r=>r.is_synthesis_route&&r.collection!=='published_benchmark')){const a=link('',r.page_url);a.className='method-card';a.append(node('span',r.method.toUpperCase(),'mini-label'),node('h3',r.title),node('p',`${r.formula} · ${r.year} · ${r.architecture.replaceAll('_',' ')}`),node('span','Open synthesis record →','method-open'));methods.append(a);}

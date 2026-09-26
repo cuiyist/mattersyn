@@ -34,5 +34,5 @@ record['properties']['collection']={'enum':['reviewed_literature','published_ben
 record['properties']['reader_role']={'enum':['synthesis_route','supporting_procedure','contextual_observation']}
 record['properties']['material']['properties']['elements']=strings
 record['properties']['material']['properties']['components']=strings
-record['properties']['material']['properties']['architecture']={'enum':['single_material','core_shell','heterostructure','alloy','composite','unresolved']}
+record['properties']['material']['properties']['architecture']={'enum':['single_material','core_shell','heterostructure','alloy','composite','phase_mixture','unresolved']}
 SCHEMA={'$schema':'https://json-schema.org/draft/2020-12/schema','$id':'https://mattersyn-recipe-atlas.cuiy781513.chatgpt.site/data/record.schema.json','title':'MatterSyn source-linked synthesis record',**record,'$defs':{'quantity':quantity,'fact':fact,'quality':quality}}

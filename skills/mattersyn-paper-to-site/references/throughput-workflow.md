@@ -8,6 +8,8 @@ Keep at most four workers including the integration owner and five claimed paper
 
 Each author produces the canonical records and the Reader additions together, using current schema and shared components. A paper package contains all scoped variants and sample contexts, document coverage, evidence locators, figure assignments/crops, reagent and stock bindings, and unresolved information. Do not create a separate demo website or a new apparatus module when existing components express the operation. Reuse molecular identities; process states are not extra reagents. Keep sample context and source-specific conditions outside reusable molecular geometry.
 
+Match the current Reader consumer contract before freezing a package. Figure cards read `title`, `summary`, `scope_label`, `source_locator` and `source_id`; preserve richer source fields and derive compatible aliases from the same audited figure. For an operation that needs an authored apparatus illustration, `protocol_art` binds an exact record and operation to a registered asset path/hash, caption and source locator. This binding changes only the illustration: conditions still come from the canonical operation. Never copy one operation's temperature, pressure or duration into another stage to reuse its picture.
+
 ## One accepted record version
 
 1. Author prepares one complete package in the current shared format. Review metadata remains provisional until the independent source audit accepts it.
@@ -29,3 +31,6 @@ At four workers, 20 papers/hour allows 12 combined worker-minutes per paper. An 
 The initial reusable preflight was tested on the 13-record Ghezelbash candidate and all 865 prior canonical records in 5.326 seconds. Ten regression tests cover observed handoff failures. These measurements establish compatibility-check performance only; the 20-paper/hour publication rate remains unachieved.
 
 Use `tools/package-importer/merger.py` for compatible additive packages instead of a new merge implementation per paper. Supply immutable create-only files and a manifest of additions to pinned JSON bases. Existing keys and conflicting list identities must never be overwritten. Let the merger produce a private overlay; root applies it with exact base checks and then runs preflight. Do not auto-merge conflicting rights/provenance claims. A real four-record package produced 16 unchanged overlay outputs in 0.607 seconds, and the combined 17-record candidate preflight passed in 1.952 seconds. These are mechanical checks, not completed-paper throughput.
+
+
+The September26 reporting instruction requests a progress and publication-rate check every two hours. Preserve the fixed twelve-hour experiment separately and use actual report timestamps for each shorter interval. Count only anonymous-verified deployment events; record zero changes honestly. User-reported model selection is not evidence of a measured speedup.

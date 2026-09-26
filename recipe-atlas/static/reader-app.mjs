@@ -1,14 +1,14 @@
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
 import {mountWuContext} from './wu2008-reader-context.mjs';
-import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory} from './reader-utils.mjs?v=0.40.0';
+import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory,componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
 
 import {quantityValue} from './quantity-value.mjs';
 
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical} from './chemical-viewer.mjs?v=0.34.1';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.39.1';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.40.2';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.36.0';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.40.2';
 
 const cache=new Map();
 
@@ -122,7 +122,7 @@ async function buildMethod(host,r,presentation){
 
  const sections=[section('precursors','01','Precursors'),section('protocol','02','Synthesis protocol'),section('structures','03','Final structures'),section('properties','04','Properties'),section('intuition','05','Chemical intuition')];host.append(...sections);
 
- const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r,siteURL('./'));sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
+ const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r,siteURL('./'),presentation.protocol_art);sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
 
  const structureHost=el('div');sections[2].append(structureHost);const figs=presentation.figures||[];figureGallery(sections[2],figs,r,'structure',presentation);
 
@@ -168,7 +168,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span','Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
 
- const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));if(data?.component_only)heading.append(badge('Component within a heterostructure','scope'));main.append(heading);
+ const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
 
  const selector=el('section');selector.append(el('h2','Synthesis methods'));const cards=el('div',undefined,'reader-methods');
 

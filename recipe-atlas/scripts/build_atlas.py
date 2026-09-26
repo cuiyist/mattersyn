@@ -22,7 +22,7 @@ NAMES['CdTe/MWNT']='Cadmium telluride quantum dots on multiwalled carbon nanotub
 NAMES['CdTe']='Cadmium telluride · heterostructure-component context'
 NAMES['MWNT']='Multiwalled carbon nanotubes · host-component context'
 # Source-reviewed acronym: a carbon nanotube host, not an elemental formula.
-COMPONENT_ELEMENTS={'MWNT':['C'],'FAPbI3':['C','H','N','Pb','I']}
+COMPONENT_ELEMENTS={'MWNT':['C'],'FAPbI3':['C','H','N','Pb','I'],'SiOx':['Si','O']}
 NAMES['FAPbI3']='Formamidinium lead iodide quantum dots'
 NAMES['La2(MoO4)3:Yb,Er']='Ytterbium/erbium-codoped lanthanum molybdate'
 NAMES['PbS/glass']='PbS quantum dots in multicomponent oxide glass'
@@ -50,6 +50,21 @@ def material_elements(r):
     if synthesis_route(r) and (not elements or not set(elements)<=SYMBOLS):
         raise ValueError(f"Reviewed synthesis route {r['record_id']} needs an explicit valid element list for material {formula!r}; it must not disappear from the atlas.")
     return elements
+
+def component_contribution_role(architecture):
+    if architecture=='phase_mixture':return 'component_of_phase_mixture'
+    if architecture in ('core_shell','heterostructure'):return 'component_of_heterostructure'
+    return 'component_of_product_system'
+
+def component_scope_note(architectures):
+    architectures=set(architectures or [])
+    if 'phase_mixture' in architectures:
+        if architectures=={'phase_mixture'}:
+            return 'This material is a source-reported phase component in source-defined phase mixtures below. The phase-mixture association does not establish a within-particle heterostructure; these are not standalone pure-material syntheses.'
+        return 'This material is a component of source-reviewed product systems below. Phase-mixture links identify co-reported phases and do not establish a within-particle heterostructure; these are not standalone pure-material syntheses.'
+    if architectures and architectures <= {'core_shell','heterostructure'}:
+        return 'This material is a component of the explicitly named heterostructures below; these are not standalone pure-material syntheses.'
+    return 'This material is a component of the source-defined product systems below; these are not standalone pure-material syntheses. Component membership alone does not establish a within-particle arrangement.'
 def main():
     source=ROOT/'data/corpus/library-source.json'
     corpus=read(source) if source.exists() else {'summary':{},'papers':[]}
@@ -59,7 +74,7 @@ def main():
     materials={}
     def ensure(formula,elements):
         if not elements or not set(elements)<=SYMBOLS:return None
-        if formula not in materials:materials[formula]={'id':slug(formula),'formula':formula,'name':NAMES.get(formula,formula+' literature collection'),'elements':list(dict.fromkeys(elements)),'url':'cdse.html' if formula=='CdSe' else 'material.html?id='+slug(formula),'record_ids':set(),'direct_record_ids':set(),'paper_dois':set(),'mentioned_paper_dois':set(),'architectures':set()}
+        if formula not in materials:materials[formula]={'id':slug(formula),'formula':formula,'name':NAMES.get(formula,formula+' literature collection'),'elements':list(dict.fromkeys(elements)),'url':'cdse.html' if formula=='CdSe' else 'material.html?id='+slug(formula),'record_ids':set(),'direct_record_ids':set(),'paper_dois':set(),'mentioned_paper_dois':set(),'architectures':set(),'component_architectures':set()}
         return materials[formula]
     for r in records:
         f=r['material']['formula'];els=material_elements(r)
@@ -76,7 +91,9 @@ def main():
         m['record_ids'].add(r['record_id']);m['direct_record_ids'].add(r['record_id']);m['architectures'].add(r['material'].get('architecture','single_material'));m['paper_dois'].add(doi)
         for component in r['material'].get('components',[f]):
             c=ensure(component,COMPONENT_ELEMENTS.get(component,re.findall('[A-Z][a-z]?',component)))
-            if c:c['record_ids'].add(r['record_id']);c['paper_dois'].add(doi)
+            if c:
+                c['record_ids'].add(r['record_id']);c['paper_dois'].add(doi)
+                if component != f:c['component_architectures'].add(r['material'].get('architecture','single_material'))
     # Title matches remain library search metadata. They cannot create material
     # pages or attach a paper to a synthesis contribution.
     byid={r['record_id']:r for r in records};library=[]
@@ -104,11 +121,11 @@ def main():
             rec=byid[rid];review=full_reviews.get(rec['sources'][0]['doi'].lower(),{})
             ordered=[x for item in review.get('recipe_inventory',[]) for x in item.get('record_ids',[])]
             return (rid not in m['direct_record_ids'],rec['sources'][0].get('year') or 9999,ordered.index(rid) if rid in ordered else 9999,rid)
-        related=[byid[x] for x in sorted(m['record_ids'],key=reader_order)];m['record_ids']=sorted(m['record_ids']);m['direct_record_ids']=sorted(m['direct_record_ids']);m['architectures']=sorted(m['architectures'])
+        related=[byid[x] for x in sorted(m['record_ids'],key=reader_order)];m['record_ids']=sorted(m['record_ids']);m['direct_record_ids']=sorted(m['direct_record_ids']);m['architectures']=sorted(m['architectures']);m['component_architectures']=sorted(m['component_architectures'])
         m['reviewed_records']=sum(synthesis_route(r) for r in related)
         m['publication_status']='verified_synthesis_contribution'
         m['component_only']=not bool(m['direct_record_ids'])
-        m['scope_note']='This material is a component of the explicitly named heterostructures below; these are not standalone pure-material syntheses.' if m['component_only'] else 'Each method is supported by a source-reviewed synthesis record. Unreviewed title matches are excluded from this page.'
+        m['scope_note']=component_scope_note(m['component_architectures']) if m['component_only'] else 'Each method is supported by a source-reviewed synthesis record. Unreviewed title matches are excluded from this page.'
         if f == 'CoFe2O4' and not m['component_only']:
             m['scope_note']='This page combines direct standalone CoFe2O4 Method-A routes with a separately scoped CoFe2O4 shell contribution in the CoO/CoFe2O4 composite. Shell structure and property observations remain attached to that composite sample and are not relabeled as results for the standalone nanocrystals.'
         m['benchmark_records']=sum(r['collection']=='published_benchmark' for r in related);m['paper_count']=len(m['paper_dois'])
@@ -120,7 +137,7 @@ def main():
             contribution['benchmarkRecordIds']=[rid for rid in p['benchmarkRecordIds'] if rid in m['record_ids']]
             contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
-        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else 'component_of_heterostructure'} for r in related]
+        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
         # Supporting evidence is explicitly curated per material, never inferred
         # from a paper title or promoted into a synthesis route.
         evidence_ids=set(m['record_ids']);m['evidence_scope_notes']=[]
@@ -137,7 +154,7 @@ def main():
         m['evidence_records']=[{'record_id':rid,'record_type':byid[rid]['record_type'],'collection':byid[rid]['collection']} for rid in sorted(evidence_ids)]
         m['paper_dois']=sorted(m['paper_dois']);m['mentioned_paper_dois']=sorted(m['mentioned_paper_dois'])
         write(ROOT/'dist/data/materials'/(m['id']+'.json'),m)
-        index.append({k:m[k] for k in ['id','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','publication_status','component_only']})
+        index.append({k:m[k] for k in ['id','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','component_architectures','publication_status','component_only']})
     summary=corpus['summary'];coverage=f"{len(index)} material pages with verified synthesis contributions. {len(library):,} indexed paper groups remain searchable separately in the Source library; indexing does not create a material page."
     write(ROOT/'dist/data/materials-index.json',{'schema_version':'1.0','materials':index,'coverage':coverage})
     write(ROOT/'dist/data/library-index.json',{'summary':summary,'papers':library,'local_paper_groups':len(library),'scope':'Paper and supplement matching and material mentions are candidates until independently reviewed. Selected reviewed recipes do not imply full-paper curation.'})
