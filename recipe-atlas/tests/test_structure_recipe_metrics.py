@@ -280,8 +280,8 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         page=structure_coverage_html({'structure_recipe_coverage':strict,'structure_outcome_coverage':broad},html.escape,broad['rows'])
-        self.assertIn('Browse all 154 synthesis–structure rows',page)
-        self.assertEqual(154,page.count('Evidence and source locators'))
+        self.assertIn('Browse all 156 synthesis–structure rows',page)
+        self.assertEqual(156,page.count('Evidence and source locators'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))
