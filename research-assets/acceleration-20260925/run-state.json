@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "active",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-26T07:15:24Z",
+  "updated_at": "2026-09-26T07:40:51Z",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -28,20 +28,20 @@
       "source_id": "wagner1999ssz48",
       "doi": "10.1021/jp991389j",
       "inherited_work": false,
-      "stage": "Candidate08 built and local checks passed after adding a source-linked qualitative morphology schematic; awaiting independent integration audit, then canonical integration and release gates."
+      "stage": "Candidate08 passed its independent integration audit for the source-linked qualitative morphology schematic; build/preflight and presentation checks passed. Release approval remains pending; SI unreviewed and publisher permission unverified."
     },
     {
       "source_id": "zinc-chalcogenide-2024-ic4c02738",
       "doi": "10.1021/acs.inorgchem.4c02738",
       "inherited_work": false,
-      "stage": "Eight main-only records and source/R2/R3 correction audits pass; integration-readiness HOLD on one stale Reader-to-review digest and audit-status metadata; SI unreviewed, unpublished.",
+      "stage": "Eight main-only records; R1/R2/R3 source-correction work passed its bounded audits. R4 metadata-only correction is frozen (source-review status reconciliation, exact record digest fanout, Reader review pointer); separate independent audit pending. SI unreviewed, permission unverified, training false.",
       "claimed_at": "2026-09-26T02:44:27.655675+00:00"
     },
     {
       "source_id": "zhan1999-jaipurite",
       "doi": "10.1006/jssc.1999.8299",
       "inherited_work": false,
-      "stage": "Four-record main-only extraction; bounded R2 correction audit PASS_WITH_LIMITS; SI unreviewed; Reader/site integration and release audit pending.",
+      "stage": "Four-record main-only candidate passed source preflight but integration-readiness is HOLD: inherited merge contract replays R1 rather than R2, amorphous CoS feed is bound to a crystalline Jaipurite phase asset, and six assets lack rights/provenance rows. Additive R3 correction is being prepared privately. SI unreviewed.",
       "claimed_at": "2026-09-26T03:07:24.160705+00:00"
     }
   ],
@@ -353,6 +353,31 @@
       "broad_structure_evidence_rows_added": 0,
       "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
       "scope": "Actual elapsed interval recorded; three active source packages remain in private review/integration stages."
+    },
+    {
+      "at": "2026-09-26T07:40:51Z",
+      "stage": "wagner_candidate08_independent_integration_audit",
+      "status": "PASS_PENDING_RELEASE_GATES",
+      "candidate_sha256": "d727fc5f857807b8b9c008a208d992ba16effab62a95dec18855b2fa889fe9a8",
+      "audit_receipt_sha256": "cbd0341f6b5286334d7cf0324786e74efc077f53d482b8beca14b4e5bdb0a130",
+      "audit_freeze_sha256": "114d3bced4d4bb5c3c1df79b2d2de769bd372db83cca277fdbcf3c934566c19c",
+      "scope": "Morphology schematic source-checked; no axes/facets/coordinates/batch or recipe join. SI and source-figure permission remain unresolved."
+    },
+    {
+      "at": "2026-09-26T07:40:51Z",
+      "stage": "song_ic4c02738_r4_metadata_correction",
+      "status": "FROZEN_PENDING_SEPARATE_INDEPENDENT_AUDIT",
+      "freeze_manifest_sha256": "b7f39bf0ab037e393a1e39cb8bd19226ef3eddad75174129cc500f21b4605f87",
+      "scope": "Status metadata and dependent exact hashes only; source values unchanged; integration/publication remain pending."
+    },
+    {
+      "at": "2026-09-26T07:40:51Z",
+      "stage": "zhan1999_integration_readiness",
+      "status": "HOLD",
+      "audit_receipt_sha256": "e2e8a773d3481554e65a25e900a2fd6276e67cf4877a69b763cfd98d641b1b19",
+      "audit_freeze_sha256": "5a496d841ccf318380a0223b8067e8a5c6142f084b18ed9fc64f11b78ca9d980",
+      "new_papers_published": 0,
+      "scope": "R2 correction must replace inherited R1 merge replay; amorphous CoS feed needs phase-honest binding; add six asset provenance/rights rows without asserting permission."
     }
   ],
   "completed_papers": [

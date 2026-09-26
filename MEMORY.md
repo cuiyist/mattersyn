@@ -1,3 +1,11 @@
+## 2026-09-26 — Independent integration audits advance the next batch
+
+Wagner candidate08 passed its independent integration audit at 2026-09-26T07:40:51Z: the authored elongated-crystal schematic is explicitly interpretive, keeps the reported dimensions off crystallographic axes, and asserts no physical batch, recipe, facet, or coordinate join. The private candidate passed 13 build/check commands, including 129 tests; it is not yet released. Supporting Information remains unreviewed and source-figure permission remains unverified.
+
+Song et al. (2024) now has a frozen R4 metadata-only correction (eight record-status updates with exact dependent digest fanout, corrected Reader-to-review digest, and source/integration status reconciliation). Its independent audit is pending. SI remains unreviewed; permission is unverified; training remains false.
+
+Zhan et al. (1999) passed candidate preflight against 882 existing records, but integration readiness is held. The existing merge contract replays R1 instead of R2; an amorphous CoS feed is bound to a crystalline Jaipurite phase card; and six source/authored assets need provenance/rights rows with permission kept unverified. A separate private correction is underway. No new paper has been published in this checkpoint.
+
 ## 2026-09-26 — Two-hour progress checkpoint
 
 From 2026-09-26T05:04:41Z to 2026-09-26T07:15:24Z UTC (2.1786 hours; 10m43s later than the requested two-hour cadence), zero distinct papers were newly published and anonymously verified: 0 papers/hour, 0 new records, and 0 new broad evidence rows. The last anonymously verified site inventory carried forward from commit 562a3ec4ec4337533d558edc11b6317f57d22338 is 882 records, 57 source groups, 52 formal Readers, 237 routes, 82 material hubs, 153 broad evidence rows, and 0 exact coordinate pairs; this inventory was not freshly rechecked during this interval.
