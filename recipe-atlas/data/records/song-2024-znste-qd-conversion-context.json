@@ -1,0 +1,584 @@
+{
+  "schema_version": "1.3.0",
+  "collection": "reviewed_literature",
+  "record_id": "song-2024-znste-qd-conversion-context",
+  "revision": 1,
+  "record_type": "protocol_variant",
+  "reader_role": "synthesis_route",
+  "title": "Ternary ZnSTe MSC-to-QD conversion context",
+  "material": {
+    "formula": "ZnSTe",
+    "family": "Ternary alloyed zinc chalcogenide conversion",
+    "elements": [
+      "Zn",
+      "S",
+      "Te"
+    ],
+    "components": [
+      "ZnS",
+      "ZnTe"
+    ],
+    "architecture": "alloy"
+  },
+  "method": "The Zn/S/Te precursor ratio is 1:0.5:0.5; Results describes a 300 °C/30 min conversion, while variant-specific absolute charges are not supplied.",
+  "sources": [
+    {
+      "id": "song2024inorgchem4c02738",
+      "doi": "10.1021/acs.inorgchem.4c02738",
+      "title": "Alloyed Zinc Chalcogenide Magic-Sized Nanoclusters and Their Transformation to Alloyed Quantum Dots",
+      "authors": "Xuerong Song; Yue Qin; Qian Wang; Jiajia Ning",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acs.inorgchem.4c02738",
+      "main_status": "supplied_main_only_si_unverified",
+      "si_status": "Declared by article; not admitted, reviewed, or used in this contribution.",
+      "reuse_status": "Main-source audit passed; integration and asset review remain pending."
+    }
+  ],
+  "lineage": {
+    "source_group": "song2024inorgchem4c02738",
+    "recipe_family": "song2024-znste-qd-conversion",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnSTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "note": "Nominal ternary family label; no sample-specific ICP ratio provided here."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "note": "No family-wide phase assignment."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "No family-wide size target.",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "derivation": null,
+      "minimum_exclusive": false,
+      "maximum_exclusive": false
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "note": "No family-wide morphology target."
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "note": "No surface target."
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "note": "No substrate/host."
+    }
+  },
+  "materials": [
+    {
+      "id": "znste-msc-input",
+      "name": "Source-named ZnSTe MSC conversion precursor",
+      "formula": "ZnSTe",
+      "role": "intermediate_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Results calls this ZnSTe precursor “MSC-349”; an earlier section assigns MSC-349 to quaternary Zn15S1Se4Te6."
+      ],
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "znste-msc-state",
+      "name": "ZnSTe MSC precursor context",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "znste-qd-state",
+      "name": "ZnSTe QD product context",
+      "kind": "product",
+      "parent_ids": [
+        "znste-msc-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "convert-znste-to-qds",
+      "action": "heat_transform",
+      "label": "Heat ZnSTe MSC context to QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "znste-msc-input"
+      ],
+      "outputs": [
+        "znste-qd-state"
+      ],
+      "optional_inputs": [],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "environment": {
+        "value": "Exact per-example atmosphere/pressure is not repeated.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "The source reports ZnSTe QD absorption; no yield or numerical diameter is given.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "For the ZnSTe 1:0.5:0.5 example, Results describes gradient heating to 300 °C for 30 min. Exact chalcogen stock volumes and a physical batch ID are not given.",
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "znste-caption-150",
+      "label": "Figure 5b caption: ZnSTe MSC at 150 °C",
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b caption."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b caption."
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "znste-caption-200",
+      "label": "Figure 5b caption: ZnSTe MSC at 200 °C",
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b caption."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b caption."
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "znste-graph-230",
+      "label": "Figure 5b graph legend: ZnSTe MSC at 230 °C",
+      "parameters": {
+        "temperature": {
+          "value": 230,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b embedded graph legend."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b embedded graph legend."
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "znste-convert-300-30",
+      "label": "Results: heat the selected ZnSTe context to 300 °C for 30 min",
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "song2024inorgchem4c02738",
+              "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+            }
+          ],
+          "derivation": null,
+          "minimum_exclusive": false,
+          "maximum_exclusive": false
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "chemical_material_id": null
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "znste-msc-source-context",
+      "source_sample_label": "ZnSTe MSC precursor context, nominal Zn/S/Te = 1:0.5:0.5",
+      "batch_id": null,
+      "material_state_id": "znste-msc-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnSTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": "No indexed phase assignment for this precursor is supplied in the main Results paragraph."
+      },
+      "morphology": {
+        "value": "Figure 5b shows ZnSTe MSC absorption traces; no morphology measurement is stated for the MSC.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 5 / printed p. 17104, Figure 5b caption."
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": "Surface composition is not reported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "notes": [
+        "No author-issued physical batch ID is reported; no cross-record physical aliquot identity is inferred."
+      ]
+    },
+    {
+      "sample_id": "znste-qds-300c-30min-context",
+      "source_sample_label": "ZnSTe QD product after 300 °C / 30 min context",
+      "batch_id": null,
+      "material_state_id": "znste-qd-state",
+      "parent_sample_id": "znste-msc-source-context",
+      "composition": {
+        "value": "ZnS0.5Te0.5",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Cubic zinc-blende is asserted in main text; the supporting XRD pattern is in SI and not reviewed.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": "Main-text assertion only; SI plot not reviewed."
+      },
+      "morphology": {
+        "value": "Figure 5d TEM image has a 50 nm scale bar; no mean diameter is reported in main text.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 5 / printed p. 17104, Figure 5d caption."
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "note": "Surface composition is not reported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ],
+      "notes": [
+        "No physical batch ID; the figure and text provide condition-level context only.",
+        "50 nm bar is a scale marker, not a reported mean particle diameter.",
+        "The source reuses “MSC-349” for a ZnSTe precursor despite its earlier use for quaternary Zn15S1Se4Te6."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "znste-msc-peak",
+      "sample_id": "znste-msc-source-context",
+      "property": "absorption_peak",
+      "technique": "UV-vis",
+      "value": {
+        "value": 349,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "song2024inorgchem4c02738",
+            "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": false,
+        "maximum_exclusive": false
+      },
+      "conditions": "Results says the ZnSTe MSC peak appears at 150 °C.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "song2024inorgchem4c02738",
+          "locator": "Main PDF p. 6 / printed p. 17105, ternary QD Results; Figure 5b,d caption is on p. 5 / printed p. 17104."
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent source and field review passed for the supplied eight-page main article after corrections. The R5 review digest correction and R6 component-index audit passed within their stated scopes. Supporting Information is not admitted, reviewed, or used. Publication and exact-coordinate training eligibility are separate.",
+    "missing_fields": [
+      "No absolute per-stock charges or batch ID.",
+      "No quantitative QD diameter in main text; Figure 5d has a 50 nm scale bar only.",
+      "Detailed XRD cited in SI is outside this review."
+    ],
+    "conflicts": [
+      "Figure 5b caption gives 200 °C for a ZnSTe MSC trace; its embedded graph legend gives 230 °C. Both are retained.",
+      "The Results labels this ZnSTe precursor “MSC-349,” a label already assigned to quaternary Zn15S1Se4Te6."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": []
+}

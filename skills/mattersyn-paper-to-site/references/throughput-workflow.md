@@ -36,3 +36,12 @@ Use `tools/package-importer/merger.py` for compatible additive packages instead 
 
 
 The September26 reporting instruction requests a progress and publication-rate check every two hours. Preserve the fixed twelve-hour experiment separately and use actual report timestamps for each shorter interval. Count only anonymous-verified deployment events; record zero changes honestly. User-reported model selection is not evidence of a measured speedup.
+
+Release closeout: memory and progress changes are source inputs too. Refresh the
+reviewed build blueprint, commit the payload, then prepare and commit its exact
+source manifest. Run `python tools/publication/check_project_manifest.py --pre-push`
+on the clean closure before pushing. Do not push intermediate checkpoints with an
+older manifest; this caused repeated September26 CI failures. The checker does
+not replace scientific, public-boundary, build or browser validation. A request
+to finish already audited papers and then pause limits work to that accepted
+queue; leave drafts, correction requests and recurring automations paused.

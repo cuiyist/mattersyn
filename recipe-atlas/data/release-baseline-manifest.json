@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "dataset_version": "0.40.4",
-  "record_count": 889,
-  "group_count": 59,
+  "dataset_version": "0.40.5",
+  "record_count": 897,
+  "group_count": 60,
   "families": [
     "Ammonia-substitution control context",
     "Amorphous cobalt sulfide control in Jaipurite study",
@@ -47,6 +47,10 @@
     "Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals",
     "Polymer-stabilized CdS and related source procedures",
     "Precursor conversion control assay; not an InP product",
+    "Quaternary alloyed zinc chalcogenide magic-sized nanocluster family",
+    "Quaternary alloyed zinc chalcogenide magic-sized nanoclusters",
+    "Quaternary alloyed zinc chalcogenide mechanistic observation context",
+    "Quaternary alloyed zinc chalcogenide quantum-dot conversion",
     "SSZ-48 borosilicate zeolite",
     "Semiconductor quantum dots in ordered mesoporous silica",
     "Semiconductor quantum-dot quantum-well heterostructures",
@@ -54,6 +58,8 @@
     "Surface-functionalized II–VI quantum dots",
     "Surface-functionalized semiconductor nanocrystals",
     "Surface-oxidized silicon colloids",
+    "Ternary alloyed zinc chalcogenide MSC series",
+    "Ternary alloyed zinc chalcogenide conversion",
     "Ultrathin bismuth sulfide nanowires",
     "Ytterbium- and erbium-codoped lanthanum molybdate phosphors",
     "Zero-dimensional organic antimony halides",
@@ -52739,6 +52745,573 @@
       "collection": "reviewed_literature",
       "components": [
         "ZnAl2O4"
+      ]
+    },
+    {
+      "record_id": "song-2024-zinc-chalcogenide-ternary-ratio-series",
+      "title": "Ternary ZnSeTe, ZnSSe and ZnSTe MSC precursor-ratio series",
+      "formula": "ZnSeTe/ZnSSe/ZnSTe",
+      "family": "Ternary alloyed zinc chalcogenide MSC series",
+      "method": "Three UV-vis composition series; similar synthetic protocol is stated, but only relative feed ratios, temperature and time are specified per series.",
+      "record_type": "observation",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "e0a667d42bf396f6994e6dbdc6e63230521ba12c152117da26a80e475717d347",
+      "recipe_signature": "a8ce99936fd194a415c97053e1349271e661fa88c163e462df79352207f34df4",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-zinc-chalcogenide-ternary-ratio-series.json",
+      "page_url": "records/song-2024-zinc-chalcogenide-ternary-ratio-series.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znssete-direct-vs-staged-context",
+      "title": "Figure 3 direct versus staged ZnSSeTe precursor addition contexts",
+      "formula": "ZnSSeTe",
+      "family": "Quaternary alloyed zinc chalcogenide mechanistic observation context",
+      "method": "UV-vis observation of direct mixed injection versus a ZnEt2+Te first stage followed by S+Se addition; sample IDs/absolute charges for the comparison are not stated.",
+      "record_type": "observation",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "c40cc26074908ba647e033153013686f09d50d25339bcbcf2f2493f1058647b1",
+      "recipe_signature": "c1f3e4ab0a8a746849c50ef31a99990d888db69a83661a5a9eaaae1260132f14",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znssete-direct-vs-staged-context.json",
+      "page_url": "records/song-2024-znssete-direct-vs-staged-context.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znssete-msc-348-route",
+      "title": "Quaternary ZnSSeTe MSC synthesis and MSC-348 context",
+      "formula": "ZnSSeTe",
+      "family": "Quaternary alloyed zinc chalcogenide magic-sized nanoclusters",
+      "method": "Airless injection of ZnEt2 and mixed (Me2N)3P=X chalcogen stocks into OLA/ODE; heat to 300 °C; wash by ethanol/centrifugation and redisperse in n-hexane.",
+      "record_type": "literature_protocol",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "5dd0e39c142c82859b199da7c6cf7653c6bf04e844d3b061fc8261e485f1b6e1",
+      "recipe_signature": "1692ef3a8de4bf8b6bf9d8f9e054974a8087425877903cda1a30316f4065bc1e",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znssete-msc-348-route.json",
+      "page_url": "records/song-2024-znssete-msc-348-route.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znssete-msc-349",
+      "title": "Quaternary ZnSSeTe MSC-349 condition context",
+      "formula": "ZnSSeTe",
+      "family": "Quaternary alloyed zinc chalcogenide magic-sized nanocluster family",
+      "method": "Source says the other quaternary compositions follow the MSC procedure with changed added chalcogen ratio; absolute variant-specific stock charges are not stated.",
+      "record_type": "protocol_variant",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "e7e54dd1bf7e9cc0b3ce581555fac46f7a97df79292629db64f8e42249cd0166",
+      "recipe_signature": "891b9b65fd1ca7c019bd238d9c81f3f24e74f5395d30f38402a2271948da425d",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znssete-msc-349.json",
+      "page_url": "records/song-2024-znssete-msc-349.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znssete-msc-350",
+      "title": "Quaternary ZnSSeTe MSC-350 condition context",
+      "formula": "ZnSSeTe",
+      "family": "Quaternary alloyed zinc chalcogenide magic-sized nanocluster family",
+      "method": "Source says the other quaternary compositions follow the MSC procedure with changed added chalcogen ratio; absolute variant-specific stock charges are not stated.",
+      "record_type": "protocol_variant",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "98fa633af3f0a61dcca2601fc8bb7b44d4f202d404f487ad446d38a9ca8f7ea0",
+      "recipe_signature": "147cc4023ab3ec19c191887357914a8d1bdcf9090ba9fb044477029973f8c08d",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znssete-msc-350.json",
+      "page_url": "records/song-2024-znssete-msc-350.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znssete-msc-355",
+      "title": "Quaternary ZnSSeTe MSC-355 condition context",
+      "formula": "ZnSSeTe",
+      "family": "Quaternary alloyed zinc chalcogenide magic-sized nanocluster family",
+      "method": "Source says the other quaternary compositions follow the MSC procedure with changed added chalcogen ratio; absolute variant-specific stock charges are not stated.",
+      "record_type": "protocol_variant",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "55330dd0236e1d289a1275d6acf955e36fd2f4fe8318d4bf40fb8ec002d3f2bd",
+      "recipe_signature": "10786dd57cb33bafe7dc88975d2434849a4ca6243d396a4acfe5d92ee038cce5",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znssete-msc-355.json",
+      "page_url": "records/song-2024-znssete-msc-355.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znssete-qd-conversion-from-msc-348",
+      "title": "Quaternary ZnSSeTe QD conversion from selected MSC-348",
+      "formula": "ZnSSeTe",
+      "family": "Quaternary alloyed zinc chalcogenide quantum-dot conversion",
+      "method": "Heat selected Zn21S4Se3Te4 MSC-348 at 300 °C without purification; preserve the Results/Experimental hold-time discrepancy.",
+      "record_type": "protocol_variant",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "4bbcd9b9839554dcc0ffad16dbdebbbafdb7c044cf45404b9a647d0d6c6be309",
+      "recipe_signature": "dbb7e10cc19d6a845d249429cb55d30a23bd9bb80fec9c00c7a4eea652d3d478",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znssete-qd-conversion-from-msc-348.json",
+      "page_url": "records/song-2024-znssete-qd-conversion-from-msc-348.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnSe",
+        "ZnTe"
+      ]
+    },
+    {
+      "record_id": "song-2024-znste-qd-conversion-context",
+      "title": "Ternary ZnSTe MSC-to-QD conversion context",
+      "formula": "ZnSTe",
+      "family": "Ternary alloyed zinc chalcogenide conversion",
+      "method": "The Zn/S/Te precursor ratio is 1:0.5:0.5; Results describes a 300 °C/30 min conversion, while variant-specific absolute charges are not supplied.",
+      "record_type": "protocol_variant",
+      "source_year": 2024,
+      "source_doi": "10.1021/acs.inorgchem.4c02738",
+      "revision": 1,
+      "record_sha256": "b3ee3e2bd74f7ecf0b6e2b197d39aec460a32ba77ea09970aa45c454bb709482",
+      "recipe_signature": "a3a2984c7dc832c10943d2492d12df6d4b6f37a32b636522320c44301b5ecdbe",
+      "group_id": "group-ad0fc9833c61",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/song-2024-znste-qd-conversion-context.json",
+      "page_url": "records/song-2024-znste-qd-conversion-context.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "ZnS",
+        "ZnTe"
       ]
     },
     {

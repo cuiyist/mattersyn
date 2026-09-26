@@ -1,0 +1,24 @@
+{
+  "schema": "mattersyn-ci-repair/1",
+  "date": "2026-09-26",
+  "diagnosis": "Eleven consecutive source workflow runs failed because the exact release manifest no longer matched changed memory, progress, records or assets. The first failure was a stale source-commit binding; later failures included missing tracked files.",
+  "first_source_failure": "https://github.com/cuiyist/mattersyn/actions/runs/36219962162",
+  "latest_source_failure_at_diagnosis": "https://github.com/cuiyist/mattersyn/actions/runs/36245613596",
+  "separate_site_failure": {
+    "url": "https://github.com/cuiyist/mattersyn-site/actions/runs/36232980158",
+    "cause": "The progress JSON bytes changed after the approved site manifest was generated.",
+    "recovery": "https://github.com/cuiyist/mattersyn-site/actions/runs/36233613380",
+    "latest_success_at_diagnosis": "https://github.com/cuiyist/mattersyn-site/actions/runs/36250001241"
+  },
+  "repair": "The read-only source checker reports exact membership and hash mismatches. Its pre-push mode additionally validates a clean closure commit and bound build inputs. CI invokes this mode; PUBLICATION.md requires pushing only the fully reviewed manifest closure.",
+  "validation": {
+    "publication_helper_tests_passed": 21,
+    "new_regression_tests_included": 12,
+    "independent_extra_probes_passed": 9,
+    "independent_code_audit": "PASS",
+    "independent_audit_sha256": "265ccbbe5563ba466569858ad37a67a0b91fdc201dc203cff06c06428b6dd96c",
+    "new_remote_workflow_verification": "Pending final source push; not implied by local tests."
+  },
+  "gates_disabled": false,
+  "notification_settings_changed": false
+}

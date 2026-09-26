@@ -44,7 +44,7 @@ jobs:
       - name: Test source-scoped apparatus context
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Check exact source manifest coverage
-        run: python tools/publication/check_project_manifest.py
+        run: python tools/publication/check_project_manifest.py --pre-push
       - name: Validate the public source projection
         run: |
           python tools/mattersyn-release/export_release.py \
