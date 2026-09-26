@@ -10,6 +10,8 @@ Each author produces the canonical records and the Reader additions together, us
 
 Match the current Reader consumer contract before freezing a package. Figure cards read `title`, `summary`, `scope_label`, `source_locator` and `source_id`; preserve richer source fields and derive compatible aliases from the same audited figure. For an operation that needs an authored apparatus illustration, `protocol_art` binds an exact record and operation to a registered asset path/hash, caption and source locator. This binding changes only the illustration: conditions still come from the canonical operation. Never copy one operation's temperature, pressure or duration into another stage to reuse its picture.
 
+Put new public figure and coordinate assets under `recipe-atlas/static/assets/` in the source checkout; their website paths begin with `assets/`. The release builder does not copy `recipe-atlas/assets/`. Check both paths before freezing a package. A delivery-path correction should preserve the accepted scientific bytes and use a bounded compatibility audit rather than repeat source extraction.
+
 ## One accepted record version
 
 1. Author prepares one complete package in the current shared format. Review metadata remains provisional until the independent source audit accepts it.
