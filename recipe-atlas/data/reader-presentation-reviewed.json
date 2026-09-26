@@ -307291,7 +307291,13 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 1 · Quaternary MSC absorption, mass spectrum and TEM",
+          "summary": "Panel (a) is the absorption spectrum and identifies the 348 nm peak; panel (b) gives LDI-TOF MS near m/z 2249; panel (c) shows TEM with 20 nm scale bar. The reported mean diameter is discussed separately in the adjacent Results text.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "MSC-348 optical/mass/TEM context; recipe relationship is general context only and no physical batch identifier is stated.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 2 (printed p. 17101), Figure 1 caption and panels"
         },
         {
           "id": "scheme-1",
@@ -307329,14 +307335,49 @@
           "notes": [
             "Source scheme image; operation quantities and alternative/conflicted text are preserved in the linked canonical candidate.",
             "No publisher permission or license is asserted."
-          ]
+          ],
+          "title": "Scheme 1 · Typical MSC synthesis",
+          "summary": "The scheme summarizes the airless ZnSSeTe MSC procedure and its nominal material family. Exact operation quantities and conflicts are transcribed in the linked recipe record.",
+          "scope_label": "Source scheme",
+          "scope_note": "Source method schematic; not a physical batch record.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 2 (printed p. 17101), Scheme 1"
         }
       ],
       "tables": [],
       "conflictPairs": [
-        "Results gives 5 mL OLA + 5 mL ODE; Experimental gives 5 mL OLA + 40 mL ODE. No reconciliation is selected.",
-        "MSC-348 feed: Figure 1 caption and Experimental charge support 1:0.5:0.25:0.25; a later Results sentence calls 1:0.25:0.125:0.25 the “precursors” ratio. Product ICP ratio separately is 1:0.25:0.125:0.25.",
-        "Figure 1 is an aliquot/time-temperature series; it does not establish four independent physical batches."
+        {
+          "topic": "Solvent-volume statements",
+          "status": "preserved_unresolved",
+          "context": "Results gives 5 mL OLA + 5 mL ODE; Experimental gives 5 mL OLA + 40 mL ODE. No reconciliation is selected.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 2 (printed p. 17101), Results, typical MSC synthesis",
+            "Main PDF p. 6 (printed p. 17105), Experimental, typical quaternary MSC preparation"
+          ]
+        },
+        {
+          "topic": "MSC-348 precursor-ratio statements",
+          "status": "preserved_unresolved",
+          "context": "MSC-348 feed: Figure 1 caption and Experimental charge support 1:0.5:0.25:0.25; a later Results sentence calls 1:0.25:0.125:0.25 the “precursors” ratio. Product ICP ratio separately is 1:0.25:0.125:0.25.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 2 (printed p. 17101), Figure 1 caption and typical MSC synthesis",
+            "Main PDF p. 3 (printed p. 17102), Results, ICP-OES/MSC-348 discussion"
+          ]
+        },
+        {
+          "topic": "Figure 1 sample scope",
+          "status": "source_context",
+          "context": "Figure 1 is an aliquot/time-temperature series; it does not establish four independent physical batches.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 2 (printed p. 17101), Figure 1 caption and panels"
+          ]
+        }
       ],
       "productFacts": [
         {
@@ -311238,6 +311279,251 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
+      },
+      "method_label": "Airless precursor-injection MSC synthesis",
+      "precursor_card_quantities": {
+        "diethylzinc": {
+          "label": "MSC reaction charge",
+          "source_operation_id": "inject-zinc-chalcogen-stock",
+          "source_parameter_keys": [
+            "diethylzinc_amount"
+          ],
+          "quantities": {
+            "amount": {
+              "value": 1,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            }
+          }
+        },
+        "phosphine-sulfide-stock": {
+          "label": "MSC reaction charge",
+          "source_operation_id": "inject-zinc-chalcogen-stock",
+          "source_parameter_keys": [
+            "s_stock_volume",
+            "s_stock_amount",
+            "stock_concentration"
+          ],
+          "quantities": {
+            "volume": {
+              "value": 0.5,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            },
+            "amount": {
+              "value": 0.5,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            },
+            "concentration": {
+              "value": 1,
+              "minimum": null,
+              "maximum": null,
+              "unit": "M",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            }
+          }
+        },
+        "phosphine-selenide-stock": {
+          "label": "MSC reaction charge",
+          "source_operation_id": "inject-zinc-chalcogen-stock",
+          "source_parameter_keys": [
+            "se_stock_volume",
+            "se_stock_amount",
+            "stock_concentration"
+          ],
+          "quantities": {
+            "volume": {
+              "value": 0.25,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            },
+            "amount": {
+              "value": 0.25,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            },
+            "concentration": {
+              "value": 1,
+              "minimum": null,
+              "maximum": null,
+              "unit": "M",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            }
+          }
+        },
+        "phosphine-telluride-stock": {
+          "label": "MSC reaction charge",
+          "source_operation_id": "inject-zinc-chalcogen-stock",
+          "source_parameter_keys": [
+            "te_stock_volume",
+            "te_stock_amount",
+            "stock_concentration"
+          ],
+          "quantities": {
+            "volume": {
+              "value": 0.25,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            },
+            "amount": {
+              "value": 0.25,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            },
+            "concentration": {
+              "value": 1,
+              "minimum": null,
+              "maximum": null,
+              "unit": "M",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "",
+              "evidence": [
+                {
+                  "source_id": "song2024inorgchem4c02738",
+                  "locator": "Main PDF p. 6 / printed p. 17105, Experimental Section, Synthesis of Quaternary ZnSSeTe MSCs."
+                }
+              ],
+              "derivation": null,
+              "minimum_exclusive": false,
+              "maximum_exclusive": false
+            }
+          }
+        }
       }
     },
     "song-2024-znssete-msc-350": {
@@ -311299,12 +311585,27 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 2 · Quaternary MSC composition, absorption and mass spectra",
+          "summary": "Panels (a)–(c) show absorption comparisons for MSC-350, MSC-349 and MSC-355; panels (d)–(f) show experimental and simulated LDI-MS spectra. Figure 2e is captioned as 200 °C/30 min but is linked to the blue line in Figure 2b, whose legend labels that trace 220 °C/30 min; the LDI-MS temperature remains unresolved. Panel (c) also repeats blue for both 130 °C and 220 °C traces.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "The figure compares source-named quaternary compositions; the paper does not provide individual physical batch identifiers.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 3 (printed p. 17102), Figure 2 caption and panels"
         }
       ],
       "tables": [],
       "conflictPairs": [
-        "MSC-350 precursor ratio differs by printed precision: Figure 2 caption 1:0.33:0.33:0.33; Results prose 1:0.3:0.3:0.3. Both are preserved."
+        {
+          "topic": "MSC-350 feed-ratio precision",
+          "status": "preserved_unresolved",
+          "context": "MSC-350 precursor ratio differs by printed precision: Figure 2 caption 1:0.33:0.33:0.33; Results prose 1:0.3:0.3:0.3. Both are preserved.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 3 (printed p. 17102), Figure 2 caption and Results"
+          ]
+        }
       ],
       "productFacts": [
         {
@@ -312557,7 +312858,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "Quaternary MSC composition variant"
     },
     "song-2024-znssete-msc-349": {
       "source_id": "song2024inorgchem4c02738",
@@ -312618,12 +312920,28 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 2 · Quaternary MSC composition, absorption and mass spectra",
+          "summary": "Panels (a)–(c) show absorption comparisons for MSC-350, MSC-349 and MSC-355; panels (d)–(f) show experimental and simulated LDI-MS spectra. Figure 2e is captioned as 200 °C/30 min but is linked to the blue line in Figure 2b, whose legend labels that trace 220 °C/30 min; the LDI-MS temperature remains unresolved. Panel (c) also repeats blue for both 130 °C and 220 °C traces.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "The figure compares source-named quaternary compositions; the paper does not provide individual physical batch identifiers.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 3 (printed p. 17102), Figure 2 caption and panels"
         }
       ],
       "tables": [],
       "conflictPairs": [
-        "Figure 2e caption assigns the LDI-MS spectrum 200 °C/30 min and links it to Figure 2b’s blue line, labeled 220 °C/30 min; the spectrum temperature is unassigned and no second sample is created."
+        {
+          "topic": "Figure 2(e) LDI-MS temperature",
+          "status": "preserved_unresolved",
+          "context": "Figure 2e caption assigns the LDI-MS spectrum 200 °C/30 min and links it to Figure 2b’s blue line, labeled 220 °C/30 min; the spectrum temperature is unassigned and no second sample is created.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 3 (printed p. 17102), Figure 2 caption, panel (e)",
+            "Main PDF p. 3 (printed p. 17102), Figure 2(b) blue-trace legend"
+          ]
+        }
       ],
       "productFacts": [
         {
@@ -313787,7 +314105,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "Quaternary MSC composition variant"
     },
     "song-2024-znssete-msc-355": {
       "source_id": "song2024inorgchem4c02738",
@@ -313848,12 +314167,27 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 2 · Quaternary MSC composition, absorption and mass spectra",
+          "summary": "Panels (a)–(c) show absorption comparisons for MSC-350, MSC-349 and MSC-355; panels (d)–(f) show experimental and simulated LDI-MS spectra. Figure 2e is captioned as 200 °C/30 min but is linked to the blue line in Figure 2b, whose legend labels that trace 220 °C/30 min; the LDI-MS temperature remains unresolved. Panel (c) also repeats blue for both 130 °C and 220 °C traces.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "The figure compares source-named quaternary compositions; the paper does not provide individual physical batch identifiers.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 3 (printed p. 17102), Figure 2 caption and panels"
         }
       ],
       "tables": [],
       "conflictPairs": [
-        "Figure 2c caption labels both the 130 °C and 220 °C/30 min traces blue; the plot shows the 130 °C curve in a dark/black line. The caption-color mismatch is left unresolved."
+        {
+          "topic": "Figure 2(c) trace-color labels",
+          "status": "preserved_unresolved",
+          "context": "Figure 2c caption labels both the 130 °C and 220 °C/30 min traces blue; the plot shows the 130 °C curve in a dark/black line. The caption-color mismatch is left unresolved.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 3 (printed p. 17102), Figure 2c legend"
+          ]
+        }
       ],
       "productFacts": [
         {
@@ -314925,7 +315259,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "Quaternary MSC composition variant"
     },
     "song-2024-znssete-direct-vs-staged-context": {
       "source_id": "song2024inorgchem4c02738",
@@ -314980,7 +315315,13 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 3 · Direct and staged precursor-addition absorption contexts",
+          "summary": "Panel (a) shows mixed/direct precursor addition at 130 °C for 1, 3 and 30 min, followed by 150, 180 and 200 °C holds of 30 min. Panel (b) adds ZnEt2 and Te first, then S and Se, and shows the corresponding temperature/time series. The text describes a broad feature around 300–450 nm before sharper MSC features develop.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "Two distinct Figure 3 addition sequences; the paper supplies no physical batch identifiers or absolute batch charges for this comparison.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 4 (printed p. 17103), Figure 3 caption and panels"
         }
       ],
       "tables": [],
@@ -316997,25 +317338,17 @@
       },
       "intuition": [
         {
-          "id": "authors-incipient-complex-interpretation",
-          "title": "Authors’ proposed early complex context",
-          "summary": "The authors interpret the broad spectral feature after staged chalcogen addition as consistent with an incipient complex. This is an interpretation of UV–vis evolution, not an isolated or independently identified molecular intermediate.",
-          "scope": "Paper-level author interpretation for the Figure 3 comparison; sample/batch identity and exact intermediate composition are not established.",
+          "id": "possible-incipient-complex",
+          "title": "Possible early precursor complex",
+          "summary": "Authors interpret the broad Figure 3 UV–vis feature as consistent with an incipient complex; no isolated intermediate or formula is established.",
           "claim_type": "author_interpretation",
           "source_id": "song2024inorgchem4c02738",
-          "source": {
-            "data_path": "data/paper-reviews/song2024zincchalcogenide.json",
-            "json_pointer": "/chemical_intuition/0",
-            "input_sha256": "d29f3ab749a915b7d8ab4f89fe6b23c7cfe5b6fe401ba2c6bfb125a1078b5eb2"
-          },
-          "source_locator": [
-            {
-              "source_id": "song2024inorgchem4c02738",
-              "locator": "Main PDF p. 4 (printed p. 17103), Figure 3 and adjacent discussion"
-            }
+          "source_locator": "Main PDF p. 4 (printed p. 17103), Figure 3 discussion",
+          "record_id": "song-2024-znssete-direct-vs-staged-context",
+          "record_ids": [
+            "song-2024-znssete-direct-vs-staged-context"
           ],
-          "sample_id": null,
-          "record_id": "song-2024-znssete-direct-vs-staged-context"
+          "training_eligible": false
         }
       ],
       "source": {
@@ -317053,7 +317386,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "Direct-versus-staged precursor-addition comparison"
     },
     "song-2024-zinc-chalcogenide-ternary-ratio-series": {
       "source_id": "song2024inorgchem4c02738",
@@ -317107,7 +317441,13 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 4 · Ternary alloy composition-series absorption spectra",
+          "summary": "Panels compare ZnSeTe at 130 °C/1 h and ZnSSe at 200 °C/1 h across five stated feed ratios; ZnSTe at 150 °C/1 h is shown for four ratios. The text says these follow a similar protocol but does not repeat absolute reagent charges.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "Study-level ternary series with panel/curve composition contexts; no batch IDs, absolute charges or sample-specific structural measurements are assigned.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 5 (printed p. 17104), Figure 4 caption and panels"
         }
       ],
       "tables": [],
@@ -319545,7 +319885,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "Ternary MSC precursor-ratio series"
     },
     "song-2024-znssete-qd-conversion-from-msc-348": {
       "source_id": "song2024inorgchem4c02738",
@@ -319604,13 +319945,36 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 5 · Quaternary and ternary MSC-to-QD conversion contexts",
+          "summary": "Panel (a) compares quaternary MSC and QD optical spectra; panel (c) shows a QD TEM image with a 50 nm scale bar. Panels (b,d) concern ZnSTe: the caption marks MSC spectra at 150 and 200 °C, while the plot legend labels the red spectrum 230 °C. The Results text describes a 150 °C MSC-349 context and 300 °C/30 min QD conversion.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "Panels (a,c) are the quaternary MSC/QD context; panels (b,d) are a separately described ZnSTe QD context. No cross-series physical-batch identity is asserted.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 5 (printed p. 17104), Figure 5 caption and panels"
         }
       ],
       "tables": [],
       "conflictPairs": [
-        "Results gives 2 h at 300 °C for the selected MSC-348 conversion; the general Experimental method gives 3 h at 300 °C. Both are preserved, unresolved.",
-        "Nominal Figure 5 composition and measured ICP-OES ratio are different bases and retained separately."
+        {
+          "topic": "Quaternary MSC-to-QD conversion duration",
+          "status": "preserved_unresolved",
+          "context": "Results gives 2 h at 300 °C for the selected MSC-348 conversion; the general Experimental method gives 3 h at 300 °C. Both are preserved, unresolved.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 6 (printed p. 17105), Results, quaternary MSC-to-QD conversion",
+            "Main PDF p. 7 (printed p. 17106), Experimental, QD conversion"
+          ]
+        },
+        {
+          "topic": "Nominal and measured composition bases",
+          "status": "source_context",
+          "context": "Nominal Figure 5 composition and measured ICP-OES ratio are different bases and retained separately.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": []
+        }
       ],
       "productFacts": [
         {
@@ -321275,7 +321639,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "Quaternary MSC-to-QD thermal conversion"
     },
     "song-2024-znste-qd-conversion-context": {
       "source_id": "song2024inorgchem4c02738",
@@ -321334,13 +321699,39 @@
           "same_batch_asserted": false,
           "text_reviewed": true,
           "visual_reviewed": true,
-          "training_eligible": false
+          "training_eligible": false,
+          "title": "Figure 5 · Quaternary and ternary MSC-to-QD conversion contexts",
+          "summary": "Panel (a) compares quaternary MSC and QD optical spectra; panel (c) shows a QD TEM image with a 50 nm scale bar. Panels (b,d) concern ZnSTe: the caption marks MSC spectra at 150 and 200 °C, while the plot legend labels the red spectrum 230 °C. The Results text describes a 150 °C MSC-349 context and 300 °C/30 min QD conversion.",
+          "scope_label": "Captioned/source-named context only; physical batch identity is not asserted.",
+          "scope_note": "Panels (a,c) are the quaternary MSC/QD context; panels (b,d) are a separately described ZnSTe QD context. No cross-series physical-batch identity is asserted.",
+          "source_id": "song2024inorgchem4c02738",
+          "source_locator": "Main PDF p. 5 (printed p. 17104), Figure 5 caption and panels"
         }
       ],
       "tables": [],
       "conflictPairs": [
-        "Figure 5b caption gives 200 °C for a ZnSTe MSC trace; its embedded graph legend gives 230 °C. Both are retained.",
-        "The Results labels this ZnSTe precursor “MSC-349,” a label already assigned to quaternary Zn15S1Se4Te6."
+        {
+          "topic": "ZnSTe Figure 5 temperature labels",
+          "status": "preserved_unresolved",
+          "context": "Figure 5b caption gives 200 °C for a ZnSTe MSC trace; its embedded graph legend gives 230 °C. Both are retained.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 5 (printed p. 17104), Figure 5b caption and plotted legend",
+            "Main PDF p. 6 (printed p. 17105), Results, ZnSTe QD context"
+          ]
+        },
+        {
+          "topic": "MSC-349 label collision",
+          "status": "preserved_unresolved",
+          "context": "The Results labels this ZnSTe precursor “MSC-349,” a label already assigned to quaternary Zn15S1Se4Te6.",
+          "claims": [],
+          "source_id": "song2024inorgchem4c02738",
+          "source_locators": [
+            "Main PDF p. 3 (printed p. 17102), Results, quaternary MSC-349",
+            "Main PDF p. 6 (printed p. 17105), Results, ZnSTe conversion context"
+          ]
+        }
       ],
       "productFacts": [
         {
@@ -322735,7 +323126,8 @@
         "eligible": false,
         "exact_coordinate_eligible": false,
         "reason": "No independent source audit, task-specific eligibility decision, or exact measured coordinate pairing is complete; SI is not admitted or used."
-      }
+      },
+      "method_label": "ZnSTe MSC-to-QD conversion context"
     }
   },
   "materials": {

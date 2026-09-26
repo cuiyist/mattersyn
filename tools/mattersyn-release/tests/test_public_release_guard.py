@@ -233,6 +233,42 @@ class BoundaryGuardTests(unittest.TestCase):
             with self.subTest(repo=repo):
                 self.assertIsNone(user_directed_display_error(asset, repo, target))
 
+    def test_cited_scheme_for_reviewed_paper_preserves_exact_bytes_and_rights(self):
+        path, raw = "assets/paper-reviews/tirosh2006/scheme-1.png", b"synthetic reviewed reaction scheme"
+        asset = user_directed_review_figure(path, raw, locator_id="scheme-1", page=2)
+        asset["rights"]["attribution"] = "Synthetic cited source, DOI 10.1021/cm052401p, Scheme 1, page 2"
+        before = copy.deepcopy(asset)
+        for repo, target in [("mattersyn-site", path), ("mattersyn", "recipe-atlas/static/" + path)]:
+            with self.subTest(repo=repo):
+                self.assertIsNone(user_directed_display_error(asset, repo, target))
+                config = make_config(registry_assets=[asset])
+                config["path_rules"][0].update(repo=repo, content_class="site_asset")
+                entry = allow_entry(target, raw, content_class="site_asset")
+                entry["repo"] = repo
+                projected, reason = validate_allowlist_entry(target, raw, entry, config, repo)
+                self.assertIsNone(reason)
+                self.assertEqual(projected, raw)
+        self.assertEqual(asset, before)
+        self.assertFalse(asset["rights"]["copyright_permission_verified"])
+        self.assertIsNone(asset["rights"]["license_id"])
+
+    def test_scheme_requires_matching_paper_doi_and_scheme_locator(self):
+        path, raw = "assets/paper-reviews/tirosh2006/scheme-1.png", b"synthetic reviewed reaction scheme"
+        base = user_directed_review_figure(path, raw, locator_id="scheme-1", page=2)
+        mutations = [
+            ("different scheme id", lambda x: x["source_bindings"][0]["locators"].update(id="scheme-2")),
+            ("figure id instead of scheme", lambda x: x["source_bindings"][0]["locators"].update(id="figure-1")),
+            ("different paper", lambda x: x["rights"]["user_direction"].update(paper_id="other-paper")),
+            ("different source DOI", lambda x: x["source_bindings"][0].update(doi="10.1000/different")),
+            ("missing page", lambda x: x["source_bindings"][0]["locators"].pop("page")),
+        ]
+        for label, mutate in mutations:
+            with self.subTest(case=label):
+                asset = copy.deepcopy(base)
+                mutate(asset)
+                self.assertEqual(user_directed_display_error(asset, "mattersyn-site", path),
+                                 "user_directed_display_source_binding_missing")
+
     def test_new_source_figure_scope_requires_exact_paper_path_and_locator(self):
         raw = b"reviewed source figure"
         cases = [

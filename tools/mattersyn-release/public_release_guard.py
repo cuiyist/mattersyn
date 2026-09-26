@@ -326,7 +326,7 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
             return "user_directed_display_source_path_ineligible"
         site_path = path[len(prefix):]
     if direction.get("scope") == "display_source_figures_for_reviewed_papers":
-        match = re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(figure|table)-([a-z0-9-]+)\.(?:png|jpe?g|webp)", site_path)
+        match = re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(figure|table|scheme)-([a-z0-9-]+)\.(?:png|jpe?g|webp)", site_path)
         if asset.get("classification") != "source_figure" or not match:
             return "user_directed_display_source_path_ineligible"
         paper_id = direction.get("paper_id")
