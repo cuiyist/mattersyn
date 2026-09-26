@@ -1,3 +1,7 @@
+## 2026-09-26 — Reconciled the authoritative release-progress source
+
+The release builder obtains the live progress JSON from `recipe-atlas/data/release-progress.json` and synchronizes its published inventory from the exact dataset manifest. The static copy alone was not sufficient; the first generated artifact therefore carried stale daily counters and a stale queue note, despite its correct 885-record dataset. That artifact and its allowlists are superseded and were not deployed. The authoritative and static progress inputs are now reconciled to the same 0.40.3 counts, the latest 09:25 two-hour report, and the correct staged state of zero completed papers today and one release awaiting anonymous closeout. A fresh clean build and both boundary checks are required before any site change.
+
 ## 2026-09-26 — Wagner clean artifact passed the final boundary gate
 
 The source commit `c1ed9f1fb539a6dba7d1ded73c0dd5e905eb0f1e` rebuilt cleanly with the existing `ptyrad` environment. The exact 885-record artifact passed 129 unit tests, `check_site.py`, `check_atlas.py`, `check_quality.py` (48,140 assertions), and the independent public-boundary gate across all 9,197 files with zero failures. Its seven source figures remain available under the user's explicit display preference with publisher permission unverified. The full release manifest is `C:/Users/jiacu/Desktop/mattersyn/_tmp/w-release-final/release-manifest.json`; boundary manifest SHA-256 is `7e677ba5956d753aa4e85b12baaa46a77a4f4fd91e009e923edc89acffe55ab1`.
