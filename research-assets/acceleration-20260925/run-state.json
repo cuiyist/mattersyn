@@ -2,7 +2,7 @@
   "schema": "mattersyn-local-acceleration-run/1",
   "status": "active",
   "started_at": "2026-09-25T15:36:20Z",
-  "updated_at": "2026-09-26T13:31:23Z",
+  "updated_at": "2026-09-26T14:06:40Z",
   "target_papers_per_day": 500,
   "target_demonstrated": false,
   "baseline": {
@@ -609,7 +609,7 @@
   "measurement_windows": {
     "20260926-revised-workflow-12h": {
       "id": "20260926-revised-workflow-12h",
-      "status": "measuring",
+      "status": "frozen",
       "started_at": "2026-09-26T02:03:41Z",
       "ends_at": "2026-09-26T14:03:41Z",
       "timezone": "America/Chicago",
@@ -1620,8 +1620,138 @@
           "scope": "Main article only. SI unreviewed; publisher permission for the seven displayed source figures remains unverified."
         }
       ],
-      "report_sent": false,
-      "after_report": "Freeze this window and continue authorized curation; this checkpoint is not a user-requested pause."
+      "report_sent": true,
+      "after_report": {
+        "instruction": "Continue authorized curation; do not add later publications to the frozen 12-hour result. Report any later deployment in the next two-hour check as a post-cutoff event.",
+        "post_cutoff_publications_as_of_report": 0
+      },
+      "reported_at": "2026-09-26T14:06:40Z",
+      "report_lag_seconds": 179,
+      "final_report": {
+        "reported_at": "2026-09-26T14:06:40Z",
+        "window_start": "2026-09-26T02:03:41Z",
+        "window_end": "2026-09-26T14:03:41Z",
+        "report_lag_seconds": 179,
+        "elapsed_seconds": 43200,
+        "elapsed_hours": 12.0,
+        "new_distinct_source_papers": 3,
+        "papers_per_elapsed_hour": 0.25,
+        "target_papers_per_hour": 20,
+        "target_new_sources_over_window": 240,
+        "target_demonstrated": false,
+        "target_fraction": 0.0125,
+        "publication_events": [
+          {
+            "source_id": "ghezelbash2005",
+            "doi": "10.1021/la051196p",
+            "verified_at": "2026-09-26T03:29:45.457042+00:00",
+            "records_added": 13,
+            "broad_structure_rows_added": 4,
+            "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
+            "receipt_sha256": "452a986603fd92480f4b685edda444b2280959fe1e0dad15579d4ca8ff514e5e",
+            "carried_over_work": true
+          },
+          {
+            "source_id": "hu-wang-2010-nickel-hydroxychloride",
+            "doi": "10.1021/ja103607q",
+            "verified_at": "2026-09-26T03:29:45.457042+00:00",
+            "records_added": 4,
+            "broad_structure_rows_added": 1,
+            "site_commit": "562a3ec4ec4337533d558edc11b6317f57d22338",
+            "receipt_sha256": "452a986603fd92480f4b685edda444b2280959fe1e0dad15579d4ca8ff514e5e",
+            "carried_over_work": true
+          },
+          {
+            "source_id": "wagner1999ssz48",
+            "doi": "10.1021/jp991389j",
+            "verified_at": "2026-09-26T11:10:37Z",
+            "records_added": 3,
+            "broad_structure_rows_added": 1,
+            "site_commit": "b9fac2f702a2fb64294c44ce3872fc86f9f7d36e",
+            "receipt_sha256": "434dd5cae7265f05c7daa4d3c6762db70462be733c4864f7cfc9912171f41bc0",
+            "carried_over_work": true
+          }
+        ],
+        "all_window_publications_were_inherited_in_progress": true,
+        "new_records": 20,
+        "new_broad_structure_evidence_rows": 6,
+        "new_routes": 14,
+        "new_primary_source_groups": 3,
+        "baseline_live_inventory": {
+          "source_commit": "0c7e8330ec19225e26df87d31c23e2f50b1b8350",
+          "site_commit": "90b5ec58fca680dc0680c0eebad99aa225372496",
+          "dataset_manifest_sha256": "7efd7d0c4a1b1c0daf5bd285d78f17e039d2c85e9b66c3ef7d1ab5632352823e",
+          "record_count": 865,
+          "primary_source_groups": 55,
+          "formal_source_readers": 50,
+          "routes": 224,
+          "material_hubs": 73,
+          "broad_structure_evidence_rows": 148,
+          "exact_coordinate_pairs": 0,
+          "resumed_run_publication_event_count": 4
+        },
+        "ending_live_inventory": {
+          "records": 885,
+          "primary_source_groups": 58,
+          "formal_readers": 53,
+          "routes": 238,
+          "material_hubs": 83,
+          "broad_structure_evidence_rows": 154,
+          "exact_coordinate_pairs": 0,
+          "site_commit": "b9fac2f702a2fb64294c44ce3872fc86f9f7d36e",
+          "verification": "Carried forward from the last anonymous verification; no live site publication occurred after it by the cutoff."
+        },
+        "stage_counts_at_cutoff": {
+          "extraction": {
+            "new_source_packages_frozen_in_window": 0,
+            "frozen_packages_pending_publication": 2,
+            "candidate_records": 12,
+            "papers": [
+              "Song et al. (2024), DOI 10.1021/acs.inorgchem.4c02738 (8 records)",
+              "Zhan et al. (1999), DOI 10.1006/jssc.1999.8299 (4 records; main text only)"
+            ]
+          },
+          "independent_audit": {
+            "zhan_source_and_inventory_metadata_audit": "PASS_WITH_LIMITS",
+            "song_scoped_source_and_derived_index_audits": "PASS_WITH_LIMITS",
+            "si_status": "Zhan SI and Song SI remain unreviewed/unadmitted"
+          },
+          "integration": {
+            "zhan_additive_preflight": "passed (4 new records; 885 prior preserved)",
+            "zhan_full_candidate_build": "passed (all 13 build stages; 129 tests; site, atlas, and quality checks)",
+            "zhan_site_deployment": "pending",
+            "song_current_base_aggregate_integration": "pending"
+          },
+          "publication": {
+            "new_distinct_sources": 3,
+            "records": 20,
+            "broad_structure_evidence_rows": 6,
+            "anonymous_verification": "passed for the three listed publication events"
+          },
+          "errors_and_rework": {
+            "failed_private_candidate_build_attempts": 6,
+            "status": "All identified causes corrected: missing schema library in default Python, Windows long output path, stale inventory, release-baseline membership, generated broad-outcome count, and generated page-count assertion. Final Zhan candidate build passed."
+          },
+          "blocked": {
+            "hard_blocked_source_papers": 0,
+            "pending_integration_or_publication": 2
+          }
+        },
+        "new_candidate_at_cutoff": {
+          "source_id": "zhan1999jaipurite",
+          "source_commit": "56739f6e75f592bcaf486f65aa938f056c8d6eb2",
+          "dataset_version": "0.40.4",
+          "candidate_build": "passed_but_unapproved",
+          "candidate_snapshot_sha256": "7c8bccb88786781df5bfef9d208847f02553418282590e98aa540a6ea640d3c0",
+          "independent_metadata_audit_sha256": "b8624d827ba5c1756151306ca06064c4836e1387d7d162917d8605c2be4313cd",
+          "source_audit_limit": "Main article (3 PDF pages) reviewed; SI remains unreviewed; publisher permission for source figures unverified."
+        },
+        "public_site": "https://cuiyist.github.io/mattersyn-site/",
+        "public_site_changed_inside_window_after_last_verified_release": false,
+        "post_cutoff_publications_as_of_report": 0,
+        "notes": "The three credits are Ghezelbash (2005), Hu et al. (2010), and Wagner (1999); all three were already in progress at the window baseline. The Zhan contribution passed a complete local candidate build before cutoff but was not deployed and anonymously verified, so it earns zero paper credit in this fixed window. Report issued 179 seconds after the fixed cutoff; the denominator remains exactly 12 hours. Curation continues after this frozen measurement unless the user pauses it."
+      },
+      "frozen_at": "2026-09-26T14:06:40Z"
     }
   },
   "current_measurement_window": "20260926-revised-workflow-12h",
