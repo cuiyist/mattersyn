@@ -28,6 +28,14 @@ does not create a structural training pair.
 
 ## Work allocation and packages
 
+The owner's standing instruction authorizes routine implementation, integration
+and publication for this existing MatterSyn task without repeated permission
+requests. Continue within the established project scope and respect any newer
+pause or changed instruction. This authorization does not extend to paid
+processing, new downloads or external source transfers. Retain independent
+scientific review, exact source and sample attribution, privacy and release
+checks; use the existing authenticated local publication workflow.
+
 Rank the existing screened-pass collection by preparation and structural evidence,
 then group compatible work by family. Main and SI remain independent intake
 documents; link them only when source identity has been checked. Keep unknown

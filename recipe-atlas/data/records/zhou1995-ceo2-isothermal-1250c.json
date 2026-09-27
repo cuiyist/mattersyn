@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhou1995-ceo2-isothermal-1250c",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Zhou et al. (1995): nanocrystalline powder, isothermal 1250 °C",
+  "material": {
+    "formula": "CeO2",
+    "family": "Cerium oxide electrochemical powders and sintering contexts",
+    "elements": [
+      "Ce",
+      "O"
+    ],
+    "components": [
+      "CeO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Post-synthesis sintering",
+  "sources": [
+    {
+      "id": "zhou1995-ceo2-tb08425",
+      "doi": "10.1111/j.1151-2916.1995.tb08425.x",
+      "title": "Electrochemical Synthesis and Sintering of Nanocrystalline Cerium(IV) Oxide Powders",
+      "authors": "Yanchun Zhou; Richard J. Phillips; Jay A. Switzer",
+      "year": 1995,
+      "url": "https://doi.org/10.1111/j.1151-2916.1995.tb08425.x",
+      "main_status": "All 5 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Other documents and cited methods not inspected; their absence is not asserted.",
+      "reuse_status": "Selected source figures proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "zhou1995-ceo2-tb08425",
+    "recipe_family": "zhou1995-electrochemical-ceo2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CeO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 1–2, Experimental Procedure"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "powder",
+      "name": "Electrochemically produced CeO2 powder",
+      "formula": "CeO2",
+      "role": "powder compact feed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact electrochemical temperature and physical precursor batch not assigned."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "press-state",
+      "name": "Uniaxially press the powder output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sinter-state",
+      "name": "Sinter in air in a dilatometer output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "press-state"
+      ]
+    },
+    {
+      "id": "density-state",
+      "name": "Determine density output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sinter-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "press",
+      "action": "press",
+      "label": "Uniaxially press the powder",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "powder"
+      ],
+      "outputs": [
+        "press-state"
+      ],
+      "parameters": {
+        "pressure": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MPa",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhou1995-ceo2-tb08425",
+              "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+            }
+          ],
+          "derivation": null
+        },
+        "compact_diameter": {
+          "value": 6.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhou1995-ceo2-tb08425",
+              "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+            }
+          ],
+          "derivation": null
+        },
+        "second_compact_dimension": {
+          "value": 4.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhou1995-ceo2-tb08425",
+              "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Press in a tungsten-carbide die at approximately 50 MPa. Source compact dimensions after pressing are 6.5 mm diameter by 4.5 mm; the latter dimension is not explicitly named. Feed mass and dwell time are unreported.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+        }
+      ]
+    },
+    {
+      "id": "sinter",
+      "action": "sinter",
+      "label": "Sinter in air in a dilatometer",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "press"
+      ],
+      "inputs": [
+        "press-state"
+      ],
+      "outputs": [
+        "sinter-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1250,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhou1995-ceo2-tb08425",
+              "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Figure 7 plots through 120 min, while prose says prolonged firing; a unique duration for the prose maximum is not assigned.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou1995-ceo2-tb08425",
+            "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sinter in air with continuous shrinkage monitoring. The initial thermal approach to the isothermal dwell is not separately specified.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "action": "measure",
+      "label": "Determine density",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "sinter"
+      ],
+      "inputs": [
+        "sinter-state"
+      ],
+      "outputs": [
+        "density-state"
+      ],
+      "parameters": {
+        "reference_density": {
+          "value": 7.184,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g/cm3",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhou1995-ceo2-tb08425",
+              "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Determine density from green density and shrinkage; check final density by the Archimedes method. The theoretical X-ray reference density is 7.184 g/cm³.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2–4, Compaction and sintering methods/results"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhou1995-ceo2-isothermal-1250c-product",
+      "source_sample_label": "nanocrystalline powder, isothermal 1250 °C",
+      "batch_id": null,
+      "material_state_id": "density-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CeO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou1995-ceo2-tb08425",
+            "locator": "Main PDF p. 4, Figure 6–8 and sintering discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No specimen-specific phase assignment is inherited from another preparation."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No uniquely assigned particle or grain morphology for this exact processing condition."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 4, Figure 6–8 and sintering discussion"
+        }
+      ],
+      "notes": [
+        "Supporting processing/comparator context, not a new primary nanocrystal synthesis family. No exact electrochemical feed batch is assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "reported-max-density",
+      "sample_id": "zhou1995-ceo2-isothermal-1250c-product",
+      "property": "relative_density",
+      "technique": "Isothermal densification, source prose",
+      "value": {
+        "value": 92,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source prose maximum after prolonged firing; Figure 7 curve approaches approximately93% by120 min. Conflict retained.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "zhou1995-ceo2-tb08425",
+            "locator": "Main PDF p. 4, Figure 6–8 and sintering discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "No exact duration is assigned to the prose maximum.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 4, Figure 6–8 and sintering discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all 5 supplied main pages and the accepted correction revision passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Five supplied main pages only, read from scanned page renders; cited papers and other documents remain unreviewed.",
+      "Solution temperature is controlled; electrode-surface temperature is explicitly not measured.",
+      "Electrolyte volumes, immersed electrode area/wire diameter, cell voltage, stirring and a unique electrolysis stop time/charge are unreported.",
+      "Source TEM/BET powder is not tied to a unique numbered solution-temperature batch; do not assign all generic observations to each variant.",
+      "Crystallite coherence lengths, TEM particle diameters and sintered grain sizes have different meanings.",
+      "No measured coordinate file, refined atom positions or exact surface structure is supplied.",
+      "Detailed new apparatus/molecular/morphology illustrations remain presentation pending."
+    ],
+    "conflicts": [
+      "ZHOU95-01: Prose maximum density92% at1250 °C differs from the graph approaching~93%; neither value is silently substituted."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1111/j.1151-2916.1995.tb08425.x",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures, contexts and source limitations",
+      "url": "paper-review.html?id=zhou1995-ceo2-tb08425",
+      "relation": "source_review"
+    },
+    {
+      "label": "Characterization and control data",
+      "url": "data/paper-reviews/zhou1995-ceo2-tb08425/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

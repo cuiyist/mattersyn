@@ -1,0 +1,355 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "zhou1995-ceo2-tb08425",
+  "doi": "10.1111/j.1151-2916.1995.tb08425.x",
+  "scope": "Five scanned main pages visually read in full, including eight figures and nineteen references; embedded article text is not available. Other documents and cited sources unreviewed. No main tables.",
+  "source_inventory": {
+    "starting_salts": [
+      {
+        "name": "Cerium(III) nitrate hexahydrate",
+        "formula": "Ce(NO3)3·6H2O",
+        "purity_percent": 99.9,
+        "supplier": "Aldrich Chemical Company, Milwaukee, WI"
+      },
+      {
+        "name": "Ammonium nitrate",
+        "formula": "NH4NO3",
+        "purity_percent": 99.999,
+        "supplier": "Aldrich Chemical Company, Milwaukee, WI"
+      }
+    ],
+    "media": [
+      "Water for aqueous compartments",
+      "10 % methanol in water for TEM dispersion; percentage basis not specified"
+    ],
+    "hardware": [
+      "Platinum wire cathode, 40 mm long; diameter/area absent",
+      "Platinum mesh anode; area absent",
+      "Medium-porosity glass frit dividing cell compartments",
+      "Agate mortar and pestle",
+      "Tungsten-carbide pressing die",
+      "Holey carbon TEM film"
+    ],
+    "characterization_references": [
+      "Silicon NIST SRM640b instrumental broadening standard",
+      "N2 gas for flowing BET",
+      "Theoretical CeO2 X-ray density7.184 g/cm³"
+    ],
+    "commercial_comparator": "Cerac CeO2 powder, Milwaukee, WI; nominal0.6 µm, authors describe aggregates with ~100 nm primary crystallites. Commercial production recipe absent.",
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 1–3, Experimental Procedure and comparator description"
+      }
+    ]
+  },
+  "electrochemical_method": {
+    "catholyte_M": {
+      "CeIII_nitrate": 0.5,
+      "NH4NO3": 0.5
+    },
+    "anolyte_M": {
+      "NH4NO3": 0.5
+    },
+    "mode": "Galvanostatic",
+    "current_density_A_per_cm2": 1,
+    "wire_length_mm": 40,
+    "separator": "Medium-porosity glass frit",
+    "solution_temperature_degC_points": [
+      29,
+      40,
+      60,
+      80
+    ],
+    "surface_temperature": "Not measured; may exceed bulk solution temperature",
+    "high_current_context": "The paper notes local boiling near 10 A/cm² despite room-temperature bulk solution. This is not the1 A/cm² preparation setting or a new quantitatively characterized product.",
+    "dry_powder_rate_g_per_h_approx": 1.5,
+    "rate_scope": "Before passage of3000 C; not total product yield or a fixed run duration",
+    "workup": [
+      "Scrape powder from cathode",
+      "Air-dry at room temperature",
+      "Lightly grind in agate mortar/pestle"
+    ],
+    "not_added": [
+      "No washing recipe stated",
+      "No post-deposition heat treatment needed for crystallinity"
+    ],
+    "missing": [
+      "Compartment volumes",
+      "Immersed electrode area",
+      "Cell potential",
+      "Reference electrode",
+      "Stirring",
+      "Gas conditions",
+      "Specimen-specific stop charge/time",
+      "Drying duration"
+    ],
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 1–2, Experimental Procedure and synthesis results"
+      }
+    ]
+  },
+  "pH_charge_context": {
+    "figure": 1,
+    "curve_A": "0.5 M NH4NO3 +0.5 M Ce(NO3)3",
+    "curve_B": "0.5 M NH4NO3, without Ce(NO3)3",
+    "starting_pH_A": 4.5,
+    "precipitation_start_pH": 7.3,
+    "plateau_pH": [
+      7.3,
+      7.8
+    ],
+    "plateau_time_min": 60,
+    "precipitation_end_pH": 4.2,
+    "powder_rate_g_per_h_approx": 1.5,
+    "rate_before_charge_C": 3000,
+    "control_trend": "pH increases continuously with cathodic charge",
+    "qualification": "The60 min pH plateau and3000 C rate interval are observational contexts, not universal recipe endpoints. Plot values are not digitized into an exact table.",
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 2, Figure 1 and text"
+      }
+    ]
+  },
+  "as_produced_structure": {
+    "phase": "Cubic fluorite CeO2",
+    "lattice_parameter_nm": 0.5419,
+    "XRD_specimen": "Figure 2 explicitly identifies29 °C solution preparation at1 A/cm²",
+    "XRD_planes": [
+      "111",
+      "200",
+      "220",
+      "311",
+      "222",
+      "400",
+      "331",
+      "420",
+      "422"
+    ],
+    "crystallite_sizes": {
+      "29C_111_nm": 10,
+      "29C_all_reflections_nm": 10.4,
+      "all_reflections_reported_spread_nm": 0.9,
+      "all_reflections_spread_definition": "Error statistic not specified",
+      "80C_111_nm": 14,
+      "40C_plot_visual_estimate_nm_approx": 11,
+      "60C_plot_visual_estimate_nm_approx": 13.3,
+      "graph_qualification": "Intermediate values are curator visual estimates, not source-tabulated values; they remain inferred and excluded from verified numeric labels. The plotted endpoint precision differs from rounded prose."
+    },
+    "TEM": {
+      "figure": 4,
+      "scale_bar_nm": 20,
+      "morphology": "Faceted polyhedral; no extensive aggregation",
+      "distribution_figure": 5,
+      "particles_counted": "More than200",
+      "particle_range_nm": [
+        4,
+        20
+      ],
+      "mean_volume_based_particle_size_nm": 12,
+      "measurement": "Maximum diameter along a fixed direction on TEM images; mean reported from mean particle volume",
+      "distribution": "Near Gaussian",
+      "scope": "Caption says as-produced powder but does not identify a unique solution-temperature batch."
+    },
+    "BET": {
+      "surface_area_m2_per_g": 84,
+      "sample": "Powders made at room temperature, numerical temperature not independently specified here",
+      "model_diameter_nm": 10,
+      "model_assumptions": [
+        "Spherical",
+        "Uniformly sized",
+        "Nonaggregated"
+      ],
+      "qualification": "Model-derived diameter is not a claim that observed faceted particles are perfect spheres."
+    },
+    "coordinate_scope": "No atom-position file, refined coordinate set or source-supplied surface model.",
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 1–3, Abstract, Figures2–5 and structure discussion"
+      }
+    ]
+  },
+  "characterization_methods": {
+    "XRD": {
+      "instrument": "Scintag2000",
+      "radiation": "Cu Kα",
+      "pattern_scan_deg_per_min": 2,
+      "broadening_scan_deg_per_min": 0.5,
+      "size_equation": "D=0.9λ/(β cosθ)",
+      "instrument_correction": "β²=βm²−βs²",
+      "standard": "Silicon NIST SRM640b",
+      "basis": "Near-Gaussian sample and reference profiles; angle-independent broadening interpreted as size rather than nonuniform strain"
+    },
+    "TEM": {
+      "instrument": "Philips EM430",
+      "preparation": "Disperse in10 % methanol/water; drop on holey carbon film and dry",
+      "methanol_percentage_basis": "Not specified",
+      "size_analysis": "Maximum particle diameter along fixed direction; >200 particles for the displayed distribution"
+    },
+    "BET": {
+      "method": "Flowing BET withN2"
+    },
+    "sintering_density": {
+      "instrument": "Dilatometer; continuous shrinkage",
+      "calculation": "Green density and shrinkage",
+      "final_check": "Archimedes method",
+      "theoretical_reference_g_per_cm3": 7.184
+    },
+    "SEM": {
+      "instrument": "JSM-T330A",
+      "grain_method": "Intercept method",
+      "sample": "1300 °C/2 h fractured compact; no polishing or etching"
+    },
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 2–4, Experimental Procedure and sintering microscopy"
+      }
+    ]
+  },
+  "compaction_sintering": {
+    "compact_diameter_mm": 6.5,
+    "second_reported_dimension_mm": 4.5,
+    "dimension_qualification": "Source says6.5 mm diameter by4.5 mm; the second dimension is not explicitly labelled",
+    "uniaxial_pressure_MPa_approx": 50,
+    "die": "Tungsten carbide",
+    "atmosphere": "Air",
+    "nano_green_relative_density_percent": 59,
+    "ramp": {
+      "rate_degC_per_min": 10,
+      "nano_endpoint_degC": 1400,
+      "nano_density_percent": 97,
+      "commercial_comparator_endpoint_degC": 1650,
+      "commercial_density_percent_approx": 97,
+      "scope": "General method gives1400 °C; the separately identified comparator result/curve extends to1650 °C."
+    },
+    "onset_degC_approx": {
+      "nano": 750,
+      "commercial": 850
+    },
+    "completion_temperature_reduction_degC": [
+      200,
+      300
+    ],
+    "isothermal": {
+      "temperatures_degC": [
+        1250,
+        1300
+      ],
+      "plotted_duration_min": [
+        0,
+        120
+      ],
+      "1250C_prose_max_density_percent": 92,
+      "1250C_curve_near_end_percent_approx": 93,
+      "1250C_scope": "Prose prolonged-firing maximum and approximate curve reading retained as separate source descriptions",
+      "1300C_time_h": 2,
+      "1300C_density_percent": 99.8,
+      "1300C_grain_nm_approx": 350,
+      "1300C_grain_morphology": "Equiaxed with well-developed boundaries and low residual porosity",
+      "SEM_scale_um": 1.0
+    },
+    "lineage": "Exact electrochemical temperature/batch of the powder used to make each compact is not assigned. Sintered grain sizes are not original nanocrystal diameters.",
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 2–4, Compaction, Figures6–8 and sintering discussion"
+      }
+    ]
+  },
+  "mechanism_and_models": {
+    "electrode": "Cathodic reduction of water generates hydroxide near the electrode and hydrogen gas",
+    "hydrolysis": "Authors propose CeIII hydroxide or hydrous-oxide colloids from locally generated base",
+    "oxidation_candidates": [
+      "Dissolved molecular oxygen",
+      "Electrogenerated hydrogen peroxide"
+    ],
+    "unresolved": "The source explicitly says the oxidation mechanism is not understood and direct oxidation of dissolved CeIII byO2 is not thermodynamically allowed.",
+    "temperature_interpretation": "Constant imposed current gives nominally constant base-generation rate; downstream hydrolysis/condensation/crystallization accelerate with temperature.",
+    "sintering_scaling_context": "Introductory idealized grain-boundary-diffusion discussion states rate inversely proportional to fourth power of particle diameter; cited theoretical context, not a fitted rate law from this experiment.",
+    "outlook": [
+      "Electrohydrothermal synthesis proposed, not performed",
+      "Doped powders and CeIV oxide films under study, no recipes/products reported here"
+    ],
+    "evidence": [
+      {
+        "source_id": "zhou1995-ceo2-tb08425",
+        "locator": "Main PDF p. 1–4, Introduction and discussion"
+      }
+    ]
+  },
+  "references": {
+    "count": 19,
+    "pages": [
+      4,
+      5
+    ],
+    "scope": "Bibliographic list read; cited sources not inspected. Reference17 is described as unpublished work.",
+    "application_context": "Gas sensors and fuel cells motivate choice of ceria; device performance is not measured in this article."
+  },
+  "conflicts": [
+    {
+      "id": "ZHOU95-01",
+      "topic": "1250 °C relative-density prose and graph",
+      "claims": [
+        {
+          "label": "Main prose",
+          "statement": "The highest relative density at 1250 °C is described as 92% even after prolonged firing.",
+          "locator": "Main PDF p.4, isothermal sintering discussion"
+        },
+        {
+          "label": "Figure 7",
+          "statement": "The plotted 1250 °C curve approaches approximately 93% by 120 min (qualitative graph reading, not a tabulated exact result).",
+          "locator": "Main PDF p.4, Figure 7"
+        }
+      ],
+      "handling": "Retain the prose value and original curve together. Do not silently substitute a digitized value or assign the prose maximum to an exact unstated firing duration."
+    }
+  ],
+  "source_interpretation": [
+    {
+      "topic": "Local base generation and uncertain oxidation",
+      "text": "Cathodic water reduction is proposed to produce hydroxide near the electrode, allowing Ce(III) hydrolysis to a hydroxide or hydrous oxide. The authors discuss subsequent oxidation by dissolved oxygen or electrogenerated hydrogen peroxide but explicitly say the Ce(III)-to-Ce(IV) mechanism is unresolved. Their mechanism is not a validated balanced reaction or measured intermediate structure.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Electrochemical synthesis discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Temperature controls crystallization independently of the imposed current",
+      "text": "At fixed cathodic current density, the authors treat the base-generation rate as constant while hydrolysis, condensation and crystallization accelerate with solution temperature. They interpret the larger crystallites at higher solution temperature accordingly; lower deposition current is a proposed direction, not a separately quantified series here.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 3, Figure 3 and discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Nanopowders improve densification more than onset temperature",
+      "text": "The source compares nanocrystalline powder with a purchased coarser comparator. It finds a large improvement in densification rate and completion temperature, while sintering onset moves only about 100 °C. A dense 1300 °C compact has much larger grains than the as-produced crystallites, so grain growth remains part of the tradeoff.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 3–4, Sintering results, Figures6–8"
+        }
+      ]
+    },
+    {
+      "topic": "Future directions are not demonstrated recipes",
+      "text": "Electrohydrothermal processing, doped powders and oxide films are discussed as future work. The paper does not provide products or recipes for them. The authors note that hydrogen evolution could complicate a hydrothermal implementation.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 3–4, Outlook discussion and conclusions"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhou1995-nh4no3-electrochemical-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Zhou et al. (1995): Ce-free electrolyte pH control",
+  "material": {
+    "formula": "NH4NO3(aq)",
+    "family": "Cerium-free electrolyte control",
+    "elements": [
+      "N",
+      "H",
+      "O"
+    ],
+    "components": [
+      "NH4NO3(aq)"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Electrochemical pH control",
+  "sources": [
+    {
+      "id": "zhou1995-ceo2-tb08425",
+      "doi": "10.1111/j.1151-2916.1995.tb08425.x",
+      "title": "Electrochemical Synthesis and Sintering of Nanocrystalline Cerium(IV) Oxide Powders",
+      "authors": "Yanchun Zhou; Richard J. Phillips; Jay A. Switzer",
+      "year": 1995,
+      "url": "https://doi.org/10.1111/j.1151-2916.1995.tb08425.x",
+      "main_status": "All 5 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Other documents and cited methods not inspected; their absence is not asserted.",
+      "reuse_status": "Selected source figures proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "zhou1995-ceo2-tb08425",
+    "recipe_family": "zhou1995-electrochemical-ceo2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "NH4NO3(aq)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 1–2, Experimental Procedure"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nh4no3",
+      "name": "Ammonium nitrate",
+      "formula": "NH4NO3",
+      "role": "control electrolyte",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "formula": "H2O",
+      "role": "control medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "control-solution-state",
+      "name": "Prepare Ce-free control electrolyte output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "control-electrolysis-state",
+      "name": "Measure pH versus cathodic charge output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "control-solution-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "control-solution",
+      "action": "dissolve",
+      "label": "Prepare Ce-free control electrolyte",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nh4no3",
+        "water"
+      ],
+      "outputs": [
+        "control-solution-state"
+      ],
+      "parameters": {
+        "ammonium_nitrate_concentration": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "zhou1995-ceo2-tb08425",
+              "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use 0.5 M ammonium nitrate without cerium nitrate. No electrolyte volume or explicit complete separate cell configuration is given for this control.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+        }
+      ]
+    },
+    {
+      "id": "control-electrolysis",
+      "action": "electrolyze",
+      "label": "Measure pH versus cathodic charge",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "control-solution"
+      ],
+      "inputs": [
+        "control-solution-state"
+      ],
+      "outputs": [
+        "control-electrolysis-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure the Ce-free electrolyte pH as charge passes. Figure 1 curve B rises continuously; no exact pH-versus-charge table or CeO2 product is asserted.",
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhou1995-nh4no3-electrochemical-control-product",
+      "source_sample_label": "Figure 1 curve B electrolyte",
+      "batch_id": null,
+      "material_state_id": "control-electrolysis-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NH4NO3(aq)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou1995-ceo2-tb08425",
+            "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No specimen-specific phase assignment is inherited from another preparation."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No uniquely assigned particle or grain morphology for this exact processing condition."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+        }
+      ],
+      "notes": [
+        "Ce-free control; no nanocrystal product or synthesis–structure pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ph-trend",
+      "sample_id": "zhou1995-nh4no3-electrochemical-control-product",
+      "property": "pH_trend",
+      "technique": "pH versus cathodic charge",
+      "value": {
+        "value": "Continuously increasing solution pH",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou1995-ceo2-tb08425",
+            "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhou1995-ceo2-tb08425",
+          "locator": "Main PDF p. 2, Figure 1 curve B and discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all 5 supplied main pages and the accepted correction revision passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Five supplied main pages only, read from scanned page renders; cited papers and other documents remain unreviewed.",
+      "Solution temperature is controlled; electrode-surface temperature is explicitly not measured.",
+      "Electrolyte volumes, immersed electrode area/wire diameter, cell voltage, stirring and a unique electrolysis stop time/charge are unreported.",
+      "Source TEM/BET powder is not tied to a unique numbered solution-temperature batch; do not assign all generic observations to each variant.",
+      "Crystallite coherence lengths, TEM particle diameters and sintered grain sizes have different meanings.",
+      "No measured coordinate file, refined atom positions or exact surface structure is supplied.",
+      "Detailed new apparatus/molecular/morphology illustrations remain presentation pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1111/j.1151-2916.1995.tb08425.x",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures, contexts and source limitations",
+      "url": "paper-review.html?id=zhou1995-ceo2-tb08425",
+      "relation": "source_review"
+    },
+    {
+      "label": "Characterization and control data",
+      "url": "data/paper-reviews/zhou1995-ceo2-tb08425/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}
