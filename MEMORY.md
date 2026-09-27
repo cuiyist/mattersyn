@@ -1,3 +1,15 @@
+## 2026-09-27 — Nagy and Basel accepted for the next gold batch
+
+Continue the fastest validated workflow: independent paper lanes, additive canonical/Reader packages, accepted-audit reuse, early compatibility checks and ready-batch publication. Gold publication is independent of deferred silver calibration. Daily 08:00 America/Chicago reporting remains active; two-hour checks stay paused. Existing screened sources only; no paid processing or external source transfers.
+
+Nagy et al. (2012), DOI 10.1021/nn204886b, contributes 16 main-only records and three CdSe core-size pairs. Preserve the three core preparations separately from four ligand exchanges, cell culture, biological assays, TEM versus DLS estimands and unresolved source condition/label conflicts. All 15 main pages and the correction delta passed an independent audit. SI and cited prior methods remain unreviewed. Ten selected figure/table crops and three numeric downloads retain exact source locators.
+
+Basel et al. (2020), DOI 10.1021/acsomega.9b04448, contributes seven main-only records and six broad pairs across six nanocrystal chemistries. All ten main pages and the correction delta passed an independent audit. Keep the annealed InP film separate from the unassigned as-made colloid: the film phase cannot be copied to the colloid, and its supporting-evidence link does not create another nanocrystal synthesis route. Upstream carboxylate preparations, optimization rows and NMR blocks remain source-linked contexts. SI and cited methods remain unreviewed; missing reagent names and amounts remain unresolved. Ten selected source crops remain accessible.
+
+The private accepted batch adds 23 records and nine broad recipe–structure rows. Candidate totals are 934 records, 64 source groups, 263 routes, 79 direct material families, 91 material/component hubs and 177 broad pairs. All 911 prior canonical records, their eligibility and all 353 previous Reader record views remain unchanged. Presentation refinements remain pending and labelled; selected source figures retain unverified publisher-permission status. Final release/build/browser/deployment receipts determine live credit separately. Safe acceptance receipt: research-assets/public-audits/nagy-basel-gold-batch-20260927.json.
+
+The next private contribution is the 31-page standalone SI for DOI 10.1021/ja210312s, independently read in parallel with authoring. Its main article is unreviewed; it must not inherit a main-reviewed status. It contributes no live paper credit yet.
+
 ## 2026-09-27 — Saini and Yao contributions published and verified
 
 Two additional gold source contributions were deployed at site commit `7fc9d94a00324ad2955a4314dd78cffd86d6c326` from source `ec62a0519ab2a5dd6627bf300b83e3673cdb1b92` and verified anonymously at 2026-09-27T02:59:19.683375+00:00. All 28 checked pages, data files, source figures and modules matched the approved artifact. The release passed 147 dataset tests, 64,089 quality assertions and the exact 9,630-file publication boundary; source CI passed on Windows and Linux with matching output bytes.

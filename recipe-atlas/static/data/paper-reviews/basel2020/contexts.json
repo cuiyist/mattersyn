@@ -1,0 +1,2049 @@
+{
+  "schema_version": "mattersyn-upstream-contexts/1",
+  "source_id": "basel2020",
+  "doi": "10.1021/acsomega.9b04448",
+  "scope": "Main-only precursor and characterization contexts. These entries are not additional nanocrystal recipe–structure pairs. SI spectra are cited but not inspected.",
+  "general_precursor_method": {
+    "id": "method-a",
+    "inputs": [
+      {
+        "name": "Metal salt",
+        "mass_g": 0.1,
+        "equivalents": 1
+      },
+      {
+        "name": "Fatty acid",
+        "equivalents": 3
+      },
+      {
+        "name": "DBU",
+        "equivalents": 1,
+        "basis": "Ambiguous relative to Table 1 footnote; do not calculate absolute loading"
+      }
+    ],
+    "medium": {
+      "components": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "ratio": [
+        7,
+        4,
+        3
+      ],
+      "volume": null,
+      "ratio_basis": "not explicitly specified"
+    },
+    "steps": [
+      {
+        "action": "stir",
+        "temperature": "room temperature",
+        "duration_min": [
+          2,
+          3
+        ],
+        "apparatus": "round-bottom flask"
+      },
+      {
+        "action": "reflux",
+        "duration_h": 13,
+        "temperature_C": null
+      },
+      {
+        "action": "extract",
+        "retained_fraction": "nonpolar hexane layer"
+      },
+      {
+        "action": "vacuum dry",
+        "temperature_C": null,
+        "duration": null
+      }
+    ],
+    "evidence": [
+      {
+        "source_id": "basel2020",
+        "locator": "Main PDF p. 6, Section 7.2"
+      }
+    ]
+  },
+  "precursor_products": [
+    {
+      "id": "3a",
+      "name": "Indium(III) stearate",
+      "formula_as_table": "(C17H35CO2)3In",
+      "metal_salt_as_table": "InCl3",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 85,
+      "melting_range_C": [
+        145,
+        148
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.1"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, optimized entry 6"
+        }
+      ],
+      "notes": [
+        "White powder; yield and identity also discussed in the main text."
+      ],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.6,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.33,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.12,
+            22.7,
+            24.72,
+            29.08,
+            29.26,
+            29.37,
+            29.45,
+            29.69,
+            31.93,
+            33.95,
+            179.35
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3b",
+      "name": "Gallium(III) stearate",
+      "formula_as_table": "(C17H35CO2)3Ga",
+      "metal_salt_as_table": "GaCl3",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 90,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.2"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.63,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.31,
+            22.88,
+            24.85,
+            29.24,
+            29.43,
+            29.56,
+            29.62,
+            29.79,
+            29.84,
+            32.11,
+            34.27,
+            180.46
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3c",
+      "name": "Lead(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Pb",
+      "metal_salt_as_table": "Pb(NO3)2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 73,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.3"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.25,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.63,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.35,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.31,
+            22.88,
+            24.87,
+            29.24,
+            29.42,
+            29.54,
+            29.61,
+            29.77,
+            29.87,
+            32.1,
+            34.08,
+            179.4
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3d",
+      "name": "Silver(I) stearate",
+      "formula_as_table": "C17H35CO2Ag",
+      "metal_salt_as_table": "AgNO3",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 91,
+      "melting_range_C": [
+        204,
+        207
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.4"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.8,
+              "multiplicity": "m",
+              "reported_H": 3,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.21,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.53,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.32,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3/DMSO-d6 3:1",
+          "delta_ppm": [
+            14.31,
+            22.54,
+            24.95,
+            28.99,
+            29.14,
+            29.17,
+            29.34,
+            29.46,
+            31.74,
+            34.12,
+            174.94
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3e",
+      "name": "Aluminum(III) stearate",
+      "formula_as_table": "(C17H35CO2)3Al",
+      "metal_salt_as_table": "AlCl3",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 35,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.5"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.61,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.3,
+            22.88,
+            24.88,
+            29.26,
+            29.44,
+            29.55,
+            29.63,
+            29.79,
+            29.88,
+            30.02,
+            32.14,
+            34.23,
+            179.98
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3f",
+      "name": "Ferric(III) stearate",
+      "formula_as_table": "(C17H35CO2)3Fe",
+      "metal_salt_as_table": "FeCl3",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 90,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.6"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "3g",
+      "name": "Copper(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Cu",
+      "metal_salt_as_table": "CuCl2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 91,
+      "melting_range_C": [
+        248,
+        251
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.7"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "3h",
+      "name": "Cobalt(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Co",
+      "metal_salt_as_table": "CoCl2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 75,
+      "melting_range_C": [
+        110,
+        113
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.8"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "3i",
+      "name": "Zinc(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Zn",
+      "metal_salt_as_table": "ZnCl2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 87,
+      "melting_range_C": [
+        128,
+        130
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.9"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.3,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.62,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.35,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.31,
+            22.88,
+            24.87,
+            29.24,
+            29.42,
+            29.55,
+            29.62,
+            29.77,
+            29.87,
+            32.11,
+            34.05,
+            179.21
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3j",
+      "name": "Tin(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Sn",
+      "metal_salt_as_table": "SnCl2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 90,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.10"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.28,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.63,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.12,
+            22.7,
+            24.68,
+            29.07,
+            29.25,
+            29.37,
+            29.44,
+            29.69,
+            31.93,
+            34.02,
+            179.84
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3k",
+      "name": "Cadmium(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Cd",
+      "metal_salt_as_table": "CdCl2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 81,
+      "melting_range_C": [
+        132,
+        135
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.11"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.61,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.35,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.31,
+            22.88,
+            24.86,
+            29.24,
+            29.42,
+            29.54,
+            29.77,
+            29.87,
+            34.12,
+            179.62
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3l",
+      "name": "Potassium stearate",
+      "formula_as_table": "C17H35CO2K",
+      "metal_salt_as_table": "KNO3",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 85,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.12"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3/DMSO-d6 3:1",
+          "peaks": [
+            {
+              "delta_ppm": 0.78,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.16,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.49,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.16,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3/DMSO-d6 3:1",
+          "delta_ppm": [
+            14.4,
+            22.76,
+            25.11,
+            29.26,
+            29.4,
+            29.43,
+            29.57,
+            29.73,
+            31.97,
+            34.39,
+            175.66
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3m",
+      "name": "Indium(III) myristate",
+      "formula_as_table": "(C13H27CO2)3In",
+      "metal_salt_as_table": "InCl3",
+      "fatty_acid": "myristic acid",
+      "preparation": "method-a",
+      "yield_percent": 90,
+      "melting_range_C": [
+        142,
+        145
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.13"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 20,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.61,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.28,
+            22.88,
+            24.94,
+            29.28,
+            29.47,
+            29.56,
+            29.66,
+            29.85,
+            32.11,
+            34.44,
+            180.93
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3n",
+      "name": "Indium(III) palmitate",
+      "formula_as_table": "(C15H31CO2)3In",
+      "metal_salt_as_table": "InCl3",
+      "fatty_acid": "palmitic acid",
+      "preparation": "method-a",
+      "yield_percent": 60,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 7, Section 7.9.14"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.28,
+              "multiplicity": "m",
+              "reported_H": 24,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.62,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.31,
+            22.88,
+            24.85,
+            29.24,
+            29.43,
+            29.56,
+            29.62,
+            29.78,
+            29.87,
+            32.12,
+            34.3,
+            180.63
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3o",
+      "name": "Indium(III) laurate",
+      "formula_as_table": "(C11H23CO2)2In",
+      "metal_salt_as_table": "InCl3",
+      "fatty_acid": "lauric acid",
+      "preparation": "method-a",
+      "yield_percent": 75,
+      "melting_range_C": null,
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 8, Section 7.9.15"
+        }
+      ],
+      "notes": [
+        "Two-ligand printed formula conflicts with indium(III) name; BS-03."
+      ],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 16,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.61,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.28,
+            22.87,
+            24.92,
+            29.26,
+            29.45,
+            29.53,
+            29.64,
+            29.79,
+            32.09,
+            34.4,
+            180.91
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3p",
+      "name": "Lead(II) oleate",
+      "formula_as_table": "(C17H33CO2)2Pb",
+      "metal_salt_as_table": "Pb(NO3)2",
+      "fatty_acid": "oleic acid",
+      "preparation": "method-a",
+      "yield_percent": 90,
+      "melting_range_C": [
+        91,
+        94
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 8, Section 7.9.16"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.87,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.27,
+              "multiplicity": "m",
+              "reported_H": 18,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.62,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.01,
+              "multiplicity": "m",
+              "reported_H": 1,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 5.34,
+              "multiplicity": "dd",
+              "reported_H": 1,
+              "J_Hz": 4
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.29,
+            22.86,
+            25.0,
+            27.35,
+            29.2,
+            29.3,
+            29.39,
+            29.5,
+            29.7,
+            29.87,
+            32.08,
+            35.17,
+            129.88,
+            130.16,
+            180.67
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3q",
+      "name": "Magnesium(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Mg",
+      "metal_salt_as_table": "Mg(NO3)2",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 88,
+      "melting_range_C": [
+        118,
+        122
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 8, Section 7.9.17"
+        }
+      ],
+      "notes": [],
+      "nmr": {
+        "proton": {
+          "frequency_MHz": 400,
+          "solvent": "CDCl3",
+          "peaks": [
+            {
+              "delta_ppm": 0.88,
+              "multiplicity": "t",
+              "reported_H": 3,
+              "J_Hz": 8
+            },
+            {
+              "delta_ppm": 1.29,
+              "multiplicity": "m",
+              "reported_H": 28,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 1.62,
+              "multiplicity": "m",
+              "reported_H": 2,
+              "J_Hz": null
+            },
+            {
+              "delta_ppm": 2.34,
+              "multiplicity": "t",
+              "reported_H": 2,
+              "J_Hz": 8
+            }
+          ]
+        },
+        "carbon": {
+          "frequency_MHz": 100,
+          "solvent": "CDCl3",
+          "delta_ppm": [
+            14.31,
+            22.88,
+            22.89,
+            24.89,
+            29.25,
+            29.44,
+            29.55,
+            29.63,
+            29.78,
+            29.86,
+            32.11,
+            34.15,
+            179.52
+          ]
+        },
+        "scope": "Numeric assignments transcribed from main text. SI spectral plots not inspected; integrations preserved without stoichiometric normalization."
+      }
+    },
+    {
+      "id": "3r",
+      "name": "Manganese(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Mn",
+      "metal_salt_as_table": "MnCl2·4H2O",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 70,
+      "melting_range_C": [
+        108,
+        111
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 8, Section 7.9.18"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "3s",
+      "name": "Nickel(II) stearate",
+      "formula_as_table": "(C17H35CO2)2Ni",
+      "metal_salt_as_table": "NiCl2·6H2O",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 87,
+      "melting_range_C": [
+        84,
+        87
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 8, Section 7.9.19"
+        }
+      ],
+      "notes": [
+        "Preparation paragraph names zinc chloride; BS-04."
+      ]
+    },
+    {
+      "id": "3t",
+      "name": "Gadolinium(III) stearate",
+      "formula_as_table": "(C17H35CO2)3Gd",
+      "metal_salt_as_table": "GdCl3·6H2O",
+      "fatty_acid": "stearic acid",
+      "preparation": "method-a",
+      "yield_percent": 45,
+      "melting_range_C": [
+        107,
+        110
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 8, Section 7.9.20"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "optimization_rows": [
+    {
+      "entry": 1,
+      "target": "3a",
+      "base": "DABCO",
+      "base_equivalents_as_printed": 4,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 72,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 1"
+        }
+      ]
+    },
+    {
+      "entry": 2,
+      "target": "3a",
+      "base": "pyridine",
+      "base_equivalents_as_printed": 4,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 66,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 2"
+        }
+      ]
+    },
+    {
+      "entry": 3,
+      "target": "3a",
+      "base": "triethylamine",
+      "base_equivalents_as_printed": 4,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 32,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 3"
+        }
+      ]
+    },
+    {
+      "entry": 4,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 4,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 78,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 4"
+        }
+      ]
+    },
+    {
+      "entry": 5,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 3,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 80,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 5"
+        }
+      ]
+    },
+    {
+      "entry": 6,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 85,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 6"
+        }
+      ]
+    },
+    {
+      "entry": 7,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 0.5,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 66,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 7"
+        }
+      ]
+    },
+    {
+      "entry": 8,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": 25,
+      "duration_as_printed": "overnight",
+      "yield_percent": null,
+      "outcome": "no reaction",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 8"
+        }
+      ]
+    },
+    {
+      "entry": 9,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": 40,
+      "duration_as_printed": "overnight",
+      "yield_percent": 22,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 9"
+        }
+      ]
+    },
+    {
+      "entry": 10,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": 60,
+      "duration_as_printed": "overnight",
+      "yield_percent": 60,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 10"
+        }
+      ]
+    },
+    {
+      "entry": 11,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "6 h",
+      "yield_percent": 60,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 11"
+        }
+      ]
+    },
+    {
+      "entry": 12,
+      "target": "3a",
+      "base": "DBU",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "8 h",
+      "yield_percent": 58,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 12"
+        }
+      ]
+    },
+    {
+      "entry": 13,
+      "target": "3a",
+      "base": "DBN",
+      "base_equivalents_as_printed": 1,
+      "temperature_C_or_label": "reflux",
+      "duration_as_printed": "overnight",
+      "yield_percent": 82,
+      "outcome": "isolated product",
+      "medium_ratio": [
+        7,
+        4,
+        3
+      ],
+      "medium": [
+        "hexane",
+        "ethanol",
+        "water"
+      ],
+      "basis_note": "Acid 3 equivalents and InCl3 1 equivalent; base equivalence ambiguity BS-06. Overnight is not independently quantified in this table.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Table 1, entry 13"
+        }
+      ]
+    }
+  ],
+  "multigram_scale": {
+    "id": "zinc-stearate-multigram",
+    "ZnCl2_g": 5,
+    "stearic_acid_g": 20,
+    "DBU_mL": 5.5,
+    "product_g": 19.7,
+    "yield_percent": 86,
+    "conditions": "Optimized reflux conditions in hexane/ethanol/water 7:4:3; absolute solvent volume not reported. Hexane fraction isolated.",
+    "melting_range_C": [
+      128,
+      130
+    ],
+    "evidence": [
+      {
+        "source_id": "basel2020",
+        "locator": "Main PDF p. 4, Section 4"
+      },
+      {
+        "source_id": "basel2020",
+        "locator": "Main PDF p. 5, Figure 3"
+      }
+    ]
+  },
+  "conflicts": [
+    {
+      "id": "BS-01",
+      "topic": "Unidentified CsPbBr3 reagent",
+      "claims": [
+        {
+          "label": "Section 7.3",
+          "statement": "30 μL (0.6 mmol) is listed without a chemical name.",
+          "locator": "Main PDF p. 6, Section 7.3"
+        },
+        {
+          "label": "Materials / cited method",
+          "statement": "Bromine is in the materials list and reference 11 concerns molecular bromine; neither resolves the missing identity in this preparation.",
+          "locator": "Main PDF pp. 6 and 9, Section 7.1 and reference 11"
+        }
+      ],
+      "handling": "Retain an unknown reagent with its two reported quantities. Do not infer bromine identity or train a complete recipe from this route."
+    },
+    {
+      "id": "BS-02",
+      "topic": "Iron stearate oxidation state",
+      "claims": [
+        {
+          "label": "Table 3",
+          "statement": "The CuFeS2 precursor entry prints Fe(stearate)2.",
+          "locator": "Main PDF p. 5, Table 3"
+        },
+        {
+          "label": "Preparative identity",
+          "statement": "Table 2 and Section 7.9.6 describe ferric/iron(III) stearate 3f, made from ferric chloride. Section 7.8 uses iron stearate without a valence label.",
+          "locator": "Main PDF pp. 3, 6–7, Table 2 and Sections 7.8, 7.9.6"
+        }
+      ],
+      "handling": "Preserve both formula alternatives. Do not select a corrected oxidation state for the CuFeS2 input or create two experiments."
+    },
+    {
+      "id": "BS-03",
+      "topic": "Indium laurate formula",
+      "claims": [
+        {
+          "label": "Table 2",
+          "statement": "Entry 14 prints (C11H23CO2)2In.",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "label": "Section 7.9.15",
+          "statement": "The product is named indium(III) laurate.",
+          "locator": "Main PDF p. 8, Section 7.9.15"
+        }
+      ],
+      "handling": "Retain the printed formula and name separately; do not repair the ligand count."
+    },
+    {
+      "id": "BS-04",
+      "topic": "Nickel stearate starting salt",
+      "claims": [
+        {
+          "label": "Table 2",
+          "statement": "Entry 18 identifies NiCl2·6H2O and nickel stearate.",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "label": "Section 7.9.19",
+          "statement": "The nickel stearate paragraph names zinc chloride as its starting salt.",
+          "locator": "Main PDF p. 8, Section 7.9.19"
+        }
+      ],
+      "handling": "Do not silently correct the prose or count a second route."
+    },
+    {
+      "id": "BS-05",
+      "topic": "Hydration states of starting salts",
+      "claims": [
+        {
+          "label": "Table 2",
+          "statement": "MnCl2·4H2O and NiCl2·6H2O are listed; CuCl2, CoCl2, CdCl2 and SnCl2 are written without water.",
+          "locator": "Main PDF p. 3, Table 2"
+        },
+        {
+          "label": "Materials list",
+          "statement": "MnCl2 and NiCl2 lack waters; CuCl2·2H2O, CoCl2·6H2O, CdCl2·H2O and SnCl2·2H2O are listed.",
+          "locator": "Main PDF pp. 5–6, Section 7.1"
+        }
+      ],
+      "handling": "Store as-listed and table forms separately; do not calculate exact metal moles from the 0.1 g general method."
+    },
+    {
+      "id": "BS-06",
+      "topic": "DBU equivalence basis",
+      "claims": [
+        {
+          "label": "Method A",
+          "statement": "Metal salt 1 equivalent, fatty acid 3 equivalents and DBU 1 equivalent are given without an explicit common basis.",
+          "locator": "Main PDF p. 6, Section 7.2"
+        },
+        {
+          "label": "Table 1 footnote",
+          "statement": "The base-equivalent convention is stated relative to fatty acid for the default 4-equivalent cases.",
+          "locator": "Main PDF p. 3, Table 1 footnotes"
+        }
+      ],
+      "handling": "Retain literal equivalence values and ambiguity; do not compute an absolute DBU charge."
+    },
+    {
+      "id": "BS-07",
+      "topic": "InP as-made versus annealed structure",
+      "claims": [
+        {
+          "label": "Figure 5f",
+          "statement": "Red is as-synthesized InP; blue is an InP film annealed at 270 °C for 4 h. The caption identifies the annealed film as zinc-blende InP.",
+          "locator": "Main PDF p. 5, Figure 5f"
+        },
+        {
+          "label": "Figure 4f / Section 7.5",
+          "statement": "Optical absorption and the colloidal preparation refer to InP nanocrystals without the film anneal.",
+          "locator": "Main PDF pp. 5–6, Figure 4f and Section 7.5"
+        }
+      ],
+      "handling": "Keep separate as-made and annealed outcomes. Do not assign the film phase or optical spectrum across treatments."
+    }
+  ],
+  "characterization_contexts": [
+    {
+      "id": "indium-stearate-ftir",
+      "technique": "FTIR",
+      "reported_bands_cm-1": {
+        "product_carboxylate": 1525,
+        "acid_carbonyl": 1712,
+        "acid_OH_bend": 940,
+        "acid_COOH": 1296
+      },
+      "interpretation": "Authors associate the carbonyl shift and absence of acid bands in product with metal-carboxylate formation.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 2, Figure 1 and Section 2"
+        }
+      ]
+    },
+    {
+      "id": "indium-stearate-tga",
+      "technique": "TGA, author textual statement",
+      "weight_loss_percent_approx": 85,
+      "temperature_range_C": [
+        150,
+        500
+      ],
+      "residue_interpretation": "Authors assign residue above 500 °C to In2O3.",
+      "limitation": "SI Figure S1 is cited but its data were not inspected.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 2, Section 2"
+        }
+      ]
+    },
+    {
+      "id": "mechanism-ftir",
+      "technique": "FTIR / proposed mechanism",
+      "bands_cm-1": {
+        "DBU_C=N": 1608,
+        "stearic_acid": 1712,
+        "intermediate_A_protonated_DBU": 1647,
+        "intermediate_A_carboxylate": 1557,
+        "intermediate_B": 1650
+      },
+      "conditions": [
+        {
+          "sample": "intermediate A",
+          "duration_min": 5,
+          "temperature": "reaction temperature; no numeric value"
+        },
+        {
+          "sample": "intermediate B",
+          "fraction": "aqueous",
+          "duration_h": 13
+        }
+      ],
+      "interpretation": "Proposed proton transfer and anion exchange; molecular intermediates and catalytic turnover are author interpretations, not atom-resolved measurements.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 4, Figure 2 and Section 3"
+        }
+      ]
+    },
+    {
+      "id": "metal-carboxylate-series-ftir",
+      "technique": "FTIR, textual summary",
+      "band_range_cm-1": [
+        1510,
+        1650
+      ],
+      "interpretation": "Authors report absence of free-acid carbonyl above 1700 cm−1 and discuss multiple metal–oxygen coordination environments.",
+      "limitation": "Referenced SI Figures S5–S23 were not inspected.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 3, Section 2 continued"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 4, Section 2 continued"
+        }
+      ]
+    },
+    {
+      "id": "indium-stearate-nmr-internal-standard",
+      "technique": "1H NMR / author interpretation",
+      "sample": "Indium stearate 3a",
+      "internal_standard": "1,3,5-Trimethoxybenzene",
+      "standard_quantity": null,
+      "interpretation": "Authors interpret the internal-standard 1H NMR analysis as confirming three stearate groups per indium-stearate product.",
+      "limitations": [
+        "The cited SI Figure 4 was not inspected.",
+        "Internal-standard quantity, integration uncertainty and atomic coordination geometry are not reported in this main-text statement.",
+        "This qualitative author interpretation does not alter the separately transcribed Section 7.9 NMR assignments."
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 2, Section 2, internal-standard NMR discussion; cited SI Figure 4 unreviewed"
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "technique": "FTIR",
+      "instrument": "Bruker ALPHA-E 200396"
+    },
+    {
+      "technique": "TGA",
+      "instrument": "TA Instruments Q50"
+    },
+    {
+      "technique": "1H NMR",
+      "instrument": "Bruker ASCEND 400",
+      "solvents": [
+        "CDCl3",
+        "DMSO-d6"
+      ]
+    },
+    {
+      "technique": "UV-visible",
+      "instrument": "PerkinElmer LS55",
+      "note": "Instrument assignment retained as printed, not independently corrected."
+    },
+    {
+      "technique": "Photoluminescence",
+      "instrument": "HORIBA PTI-QM 510"
+    },
+    {
+      "technique": "PXRD",
+      "instrument": "PANalytical",
+      "radiation": "Cu Kα",
+      "wavelength_A": 1.54,
+      "voltage_kV": 40,
+      "current_mA": 30
+    }
+  ],
+  "instrument_evidence": [
+    {
+      "source_id": "basel2020",
+      "locator": "Main PDF p. 6, Section 7.1"
+    }
+  ],
+  "materials_metadata": {
+    "Sigma-Aldrich": [
+      [
+        "InCl3",
+        "99.99%"
+      ],
+      [
+        "GaCl3",
+        "99.99%"
+      ],
+      [
+        "lauric acid",
+        "98%"
+      ],
+      [
+        "palmitic acid",
+        "99%"
+      ],
+      [
+        "Cs2CO3",
+        "99.9%"
+      ],
+      [
+        "GdCl3·6H2O",
+        "99.9%"
+      ],
+      [
+        "Br2",
+        "≥99%"
+      ],
+      [
+        "oleylamine",
+        "technical grade"
+      ],
+      [
+        "1-octadecene",
+        "technical grade"
+      ],
+      [
+        "Se",
+        "≥99.5%"
+      ],
+      [
+        "trioctylphosphine",
+        "97%"
+      ],
+      [
+        "1,2-dimethoxyethane",
+        "99.5%"
+      ]
+    ],
+    "Merck": [
+      [
+        "Pb(NO3)2",
+        "99%"
+      ],
+      [
+        "FeCl3",
+        "96%"
+      ],
+      [
+        "CoCl2·6H2O",
+        "98%"
+      ],
+      [
+        "NiCl2",
+        "97%"
+      ],
+      [
+        "MnCl2",
+        "99%"
+      ],
+      [
+        "Mg(NO3)2",
+        "99%"
+      ],
+      [
+        "oleic acid",
+        "65–88%"
+      ]
+    ],
+    "Loba Chemie": [
+      [
+        "1-dodecanethiol",
+        "98%"
+      ]
+    ],
+    "Thomas Baker": [
+      [
+        "CuCl2·2H2O",
+        "99%"
+      ],
+      [
+        "ZnCl2",
+        "97%"
+      ],
+      [
+        "CdCl2·H2O",
+        "98%"
+      ],
+      [
+        "KNO3",
+        "99%"
+      ],
+      [
+        "SnCl2·2H2O",
+        null
+      ],
+      [
+        "stearic acid",
+        "90%"
+      ]
+    ],
+    "SRL": [
+      [
+        "myristic acid",
+        "95%"
+      ]
+    ],
+    "Rankem": [
+      [
+        "AgNO3",
+        "99.8%"
+      ]
+    ],
+    "Finar": [
+      [
+        "AlCl3",
+        "96%"
+      ]
+    ],
+    "not_reported": [
+      "DBU",
+      "DABCO",
+      "pyridine",
+      "triethylamine",
+      "DBN"
+    ],
+    "evidence": [
+      {
+        "source_id": "basel2020",
+        "locator": "Main PDF p. 5, Section 7.1"
+      },
+      {
+        "source_id": "basel2020",
+        "locator": "Main PDF p. 6, Section 7.1"
+      }
+    ]
+  }
+}

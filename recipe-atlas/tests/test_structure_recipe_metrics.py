@@ -229,7 +229,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':168,'source_groups':42,'records':145,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':177,'source_groups':44,'records':154,'physical_samples_deduplicated':None},broad['counts'])
         new_contexts={(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group'] in {'ghezelbash2005-main','hu-wang-2010-nickel-hydroxychloride'}}
         self.assertEqual({
             ('ghezelbash-2005-cu1p8s-variant','cu1p8s-reagent-adjusted'),
@@ -282,14 +282,22 @@ class StructureRecipeMetricsTests(unittest.TestCase):
                          'yao2015-cds-pbs-1-cycles','yao2015-cds-pbs-2-cycles','yao2015-cds-pbs-4-cycles',
                          'yao2015-cds-pbs-6-cycles','yao2015-planar-cds-pbs-6-cycles'},
                          {row['record_id'] for row in broad['rows'] if row['source_group']=='yao2015acsami'})
+        # Core-size recipes count separately; ligand/assay contexts do not multiply the core pairs.
+        self.assertEqual({(rid,rid+'-core') for rid in {'nagy2012-core-3nm','nagy2012-core-5nm','nagy2012-core-10nm'}},
+                         {(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group']=='nagy2012nn204886b'})
+        # The annealed InP film owns its phase evidence; the as-made colloid cannot inherit it.
+        self.assertEqual({(rid,rid+'-product') for rid in {'basel-2020-cspbbr3-hot-injection-200c','basel-2020-cdse-hot-injection-150c',
+                          'basel-2020-inp-film-annealed-270c-4h','basel-2020-pbs-hot-injection-80c',
+                          'basel-2020-ag2s-hot-injection-140c','basel-2020-cufes2-hot-injection-180c'}},
+                         {(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group']=='basel2020'})
         self.assertEqual(0,strict['counts']['exact_task_ready_records'])
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         from reader_collection import collection_summary
         collection=collection_summary(records,broad['rows'],[])
         page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
-        self.assertIn('Browse all 168 pairs',page)
-        self.assertEqual(168,page.count('<tr><td><a href="records/'))
+        self.assertIn('Browse all 177 pairs',page)
+        self.assertEqual(177,page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))

@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "basel-2020-inp-film-annealed-270c-4h",
+  "revision": 1,
+  "record_type": "protocol_variant",
+  "title": "Basel et al. (2020): InP film annealed at 270 °C",
+  "material": {
+    "formula": "InP",
+    "family": "Annealed InP film derived from nanocrystals",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "components": [
+      "InP"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Post-synthesis film annealing",
+  "sources": [
+    {
+      "id": "basel2020",
+      "doi": "10.1021/acsomega.9b04448",
+      "title": "DBU-Catalyzed One-Pot Synthesis of Nearly Any Metal Salt of Fatty Acid (M-FA): A Library of Metal Precursors to Semiconductor Nanocrystal Synthesis",
+      "authors": "Siddhant Basel; Karishma Bhardwaj; Sajan Pradhan; Anand Pariyar; Sudarsan Tamang",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsomega.9b04448",
+      "main_status": "All 10 main pages text-read and visually checked by the author; independent source audit pending.",
+      "si_status": "Cited but not inspected in this main-only contribution.",
+      "reuse_status": "Selected source crops proposed under user-directed display; publisher permission status remains unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "basel2020",
+    "recipe_family": "basel2020-inp",
+    "parent_record_id": "basel-2020-inp-as-made-hot-injection-270c",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP film",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 5, Figure 5f"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "Reported phase is an outcome, not a prospectively specified target."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "inp-film",
+      "name": "As-synthesized InP film",
+      "formula": "InP",
+      "role": "annealing input",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source compares an as-synthesized trace with an annealed film; film deposition, substrate and physical batch identity unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 5, Figure 5f"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anneal-state",
+      "name": "Anneal InP film output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "anneal",
+      "action": "anneal",
+      "label": "Anneal InP film",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 270,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "basel2020",
+              "locator": "Main PDF p. 5, Figure 5f"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "basel2020",
+              "locator": "Main PDF p. 5, Figure 5f"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal an InP film at 270 °C for 4 h. Atmosphere, film preparation, substrate, ramp and cooling are unreported.",
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 5, Figure 5f"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "basel-2020-inp-film-annealed-270c-4h-product",
+      "source_sample_label": "Annealed InP film, blue trace",
+      "batch_id": null,
+      "material_state_id": "anneal-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "basel2020",
+            "locator": "Main PDF p. 5, Figure 5f"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Zinc blende; JCPDS 96-101-0147",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "basel2020",
+            "locator": "Main PDF p. 5, Figure 5f"
+          }
+        ],
+        "note": "Powder-diffraction assignment by the authors; not refined sample coordinates."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No measured particle morphology in the inspected main article."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Ligand inputs do not establish measured final ligand coverage."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 5, Figure 5f"
+        },
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 5, Figure 5f"
+        }
+      ],
+      "notes": [
+        "Recipe-to-material context is explicit; physical batch/aliquot identity is not established.",
+        "No particle diameter or morphology is inferred from diffraction width."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "phase-assignment",
+      "sample_id": "basel-2020-inp-film-annealed-270c-4h-product",
+      "property": "phase",
+      "technique": "Powder XRD / author reference-pattern assignment",
+      "value": {
+        "value": "Zinc blende; JCPDS 96-101-0147",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "basel2020",
+            "locator": "Main PDF p. 5, Figure 5f"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "PANalytical Cu Kα, λ = 1.54 Å, 40 kV, 30 mA. No coordinate file or refinement supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "basel2020",
+          "locator": "Main PDF p. 5, Figure 5f"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent review of all 10 main pages and consolidated correction delta accepted. SI and cited prior methods unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Supporting information is cited by the main article but was not inspected in this main-only contribution.",
+      "No TEM image, particle-size distribution, morphology measurement, atomic coordinates or CIF is supplied in the inspected main article.",
+      "No physical batch identifier links the optical and diffraction aliquots; figure panels identify a material/route context.",
+      "Centrifugation rotor radius and relative centrifugal force are unreported.",
+      "Reference unit-cell assets, if shown elsewhere in the hub, are not measured coordinates from this paper.",
+      "Film preparation, substrate, atmosphere, ramp and cooling; inheritance of physical batch identity not established."
+    ],
+    "conflicts": [
+      "InP as-made versus annealed structure: Keep separate as-made and annealed outcomes. Do not assign the film phase or optical spectrum across treatments."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source paper",
+      "url": "https://doi.org/10.1021/acsomega.9b04448",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Precursor library and preparation details",
+      "url": "data/paper-reviews/basel2020/contexts.json",
+      "relation": "upstream_preparation"
+    },
+    {
+      "label": "Source figures, scope and conflicts",
+      "url": "paper-review.html?id=basel2020",
+      "relation": "source_review"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

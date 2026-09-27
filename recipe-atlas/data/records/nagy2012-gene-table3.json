@@ -1,0 +1,4082 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nagy2012-gene-table3",
+  "revision": 2,
+  "record_type": "observation",
+  "title": "Nagy et al. (2012) · Gene expression: 3 nm QDs, 0.5 µg/mL, 6 h (Table 3)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe quantum dots",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "BioMark real-time PCR",
+  "sources": [
+    {
+      "id": "nagy2012nn204886b",
+      "doi": "10.1021/nn204886b",
+      "title": "Comprehensive Analysis of the Effects of CdSe Quantum Dot Size, Surface Charge, and Functionalization on Primary Human Lung Cells",
+      "authors": "Amber Nagy; Andrea Steinbrück; Jun Gao; Norman Doggett; Jennifer A. Hollingsworth; Rashi Iyer",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/nn204886b",
+      "main_status": "All 15 supplied main pages read and visually inspected; independent audit pending.",
+      "si_status": "Mentioned by main article but not inspected in this main-only package.",
+      "reuse_status": "Private exact figure/table crops under owner display preference; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "nagy2012nn204886b",
+    "recipe_family": "nagy2012-core-surface-cell-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nhbe",
+      "name": "Primary normal human bronchial epithelial cells",
+      "formula": null,
+      "role": "biological_test_system",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Lonza; passage 3–7. Not a synthesis reactant."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "cdse-qd",
+      "name": "Surface-exchanged CdSe QDs",
+      "formula": "CdSe",
+      "role": "test_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-defined ligand/nominal-size groups; no physical batch join."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "begm",
+      "name": "Bronchial epithelial growth medium (BEGM)",
+      "formula": null,
+      "role": "culture_medium",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Clonetics Bullet Kit; exact formulation unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "rneasy",
+      "name": "RNeasy Mini-Kit",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Qiagen."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "rt-kit",
+      "name": "High-capacity cDNA reverse transcription kit",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Life Technologies/Applied Biosystems."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "taqman",
+      "name": "96 pooled TaqMan gene-expression assays",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Complete assay list in unreviewed SI; only main Tables 2/3 reported here."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "preamp",
+      "name": "TaqMan PreAmp master mix",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "te",
+      "name": "TE buffer",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Formulation not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "fast-master",
+      "name": "TaqMan Fast Universal master mix",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "ge-loading",
+      "name": "GE sample loading reagent",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "assay-loading",
+      "name": "Assay loading reagent",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nagy2012-gene-table3-aut",
+      "name": "3 nm AUT QDs; 0.5 µg/mL; 6 h",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "nagy2012-gene-table3-cyst",
+      "name": "3 nm CYST QDs; 0.5 µg/mL; 6 h",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "rna",
+      "action": "assay",
+      "label": "Extract and assess RNA",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nhbe",
+        "cdse-qd",
+        "rneasy",
+        "rt-kit"
+      ],
+      "outputs": [],
+      "parameters": {
+        "exposure": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "rna_input": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Expose cells for 6 h; isolate RNA using RNeasy Mini-Kit; assess quality and quantity using Agilent 2100 BioAnalyzer RNA Nano chip. Prepare first-strand cDNA from 1 µg RNA using high-capacity RT kit according to manufacturer instructions.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    },
+    {
+      "id": "preamp",
+      "action": "assay",
+      "label": "Preamplify cDNA",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "rna"
+      ],
+      "inputs": [
+        "taqman",
+        "preamp",
+        "te"
+      ],
+      "outputs": [],
+      "parameters": {
+        "assays": {
+          "value": 96,
+          "minimum": null,
+          "maximum": null,
+          "unit": "assays",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "each_assay_final": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "total_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "master_volume": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "master_strength": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "assay_volume": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cdna_volume": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cdna_mass": {
+          "value": 125,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ng",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "initial_temperature": {
+          "value": 95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "initial_duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cycles": {
+          "value": 14,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cycles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cycle_hot_temperature": {
+          "value": 95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cycle_hot_duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cycle_low_temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cycle_low_duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "dilution_as_printed": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fold",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Source reports literal 1:5 with TE buffer. The normalized dilution factor is unknown because the ratio convention is unspecified; no fivefold or sixfold interpretation is assigned.",
+          "basis": "",
+          "raw_text": "1:5 with TE buffer",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "storage_temperature": {
+          "value": -20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pool 96 TaqMan assays at final 0.2× each. Reaction total 10 µL: 5 µL 2× PreAmp master mix, 2.5 µL pooled assay mix (0.2×), 2.5 µL cDNA containing 125 ng. One cycle 95 °C/10 min, then 14 cycles 95 °C/15 s and 60 °C/4 min. Dilute product 1:5 with TE, store −20 °C.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    },
+    {
+      "id": "qpcr-preparation",
+      "action": "assay",
+      "label": "Prepare samples and assays",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "preamp"
+      ],
+      "inputs": [
+        "fast-master",
+        "ge-loading",
+        "taqman",
+        "assay-loading"
+      ],
+      "outputs": [],
+      "parameters": {
+        "premix_master_volume": {
+          "value": 3.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "premix_master_strength": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "premix_loading_volume": {
+          "value": 0.35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "premix_loading_strength": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "aliquot_of_premix": {
+          "value": 3.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "cdna_added": {
+          "value": 3.15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "single_assay_volume": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "single_assay_strength": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "assay_loading_volume": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "assay_loading_strength": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Per sample premix: 3.5 µL 2× Fast Universal master mix +0.35 µL 20× GE loading reagent. Source then aliquots 3.5 µL of this premix and adds 3.15 µL preamplified cDNA; preserve those distinct volumes without correcting arithmetic. Vortex, centrifuge and keep on ice. Separate assay plate: 3 µL 20× single assay +3 µL 2× assay loading reagent.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    },
+    {
+      "id": "qpcr-acquisition",
+      "action": "assay",
+      "label": "Acquire gene expression",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "qpcr-preparation"
+      ],
+      "inputs": [
+        "taqman"
+      ],
+      "outputs": [],
+      "parameters": {
+        "sample_per_inlet": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "assay_per_inlet": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prime 96.96 dynamic arrays with preset IFC Controller HX protocol; load 5 µL sample and 5 µL TaqMan assay per respective inlet; process with IFC Controller HX; BioMark HD software v3.0.2. Source describes ΔCt using media-only negative control, ΔΔCt using β-actin normalizer, and 18S rRNA endogenous control. Algorithm wording retained as printed.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nagy2012-gene-table3-aut",
+      "source_sample_label": "3 nm AUT QDs; 0.5 µg/mL; 6 h",
+      "batch_id": null,
+      "material_state_id": "nagy2012-gene-table3-aut",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NHBE cells exposed to source-defined CdSe QD conditions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ],
+      "notes": [
+        "Biological response context, not a newly synthesized nanocrystal specimen.",
+        "Source-defined context, not an identified physical batch."
+      ]
+    },
+    {
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "source_sample_label": "3 nm CYST QDs; 0.5 µg/mL; 6 h",
+      "batch_id": null,
+      "material_state_id": "nagy2012-gene-table3-cyst",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NHBE cells exposed to source-defined CdSe QD conditions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ],
+      "notes": [
+        "Biological response context, not a newly synthesized nanocrystal specimen.",
+        "Source-defined context, not an identified physical batch."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "t3-g1-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 12.03,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene BAD; reported ± 1.15; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BAD, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g1-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BAD, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g1-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.82,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene BAD; reported ± 0.1; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BAD, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g1-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BAD, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g2-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene BCL-2; reported ± 0.24; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BCL-2, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g2-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.24,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BCL-2, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g2-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.28,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene BCL-2; reported ± 0.39; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BCL-2, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g2-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.39,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, BCL-2, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g3-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CASP9; reported ± 0.35; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CASP9, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g3-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.35,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CASP9, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g3-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.35,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CASP9; reported ± 0.61; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CASP9, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g3-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.61,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CASP9, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g4-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.39,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene GADD45A; reported ± 0.16; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, GADD45A, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g4-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, GADD45A, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g4-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.82,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene GADD45A; reported ± 0.05; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, GADD45A, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g4-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.05,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, GADD45A, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway apoptosis and DNA damage response; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g5-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 8.32,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CCR3; reported ± 1.31; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR3, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g5-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.31,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR3, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g5-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.46,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CCR3; reported ± 0.16; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR3, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g5-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR3, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g6-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 8.26,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CCR4; reported ± 2.16; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR4, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g6-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR4, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g6-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.92,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CCR4; reported ± 0.6; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR4, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g6-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CCR4, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g7-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.19,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CSF2; reported ± 1.25; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CSF2, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g7-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CSF2, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g7-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CSF2; reported ± 0.01; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CSF2, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g7-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.01,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CSF2, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g8-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 3.54,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CXCL1; reported ± 0.12; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g8-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g8-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.35,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CXCL1; reported ± 0.09; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g8-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.09,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g9-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 10.99,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CXCL2; reported ± 0.6; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL2, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g9-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL2, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g9-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.93,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CXCL2; reported ± 0.05; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL2, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g9-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.05,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL2, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g10-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.55,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CXCL3; reported ± 0.64; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL3, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g10-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.64,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL3, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g10-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.32,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CXCL3; reported ± 0.02; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL3, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g10-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.02,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CXCL3, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g11-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 24.62,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene IL1α; reported ± 4.88; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1α, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g11-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.88,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1α, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g11-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 6.42,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene IL1α; reported ± 1.45; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1α, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g11-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.45,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1α, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g12-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.05,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene IL1β; reported ± 0.18; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1β, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g12-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.18,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1β, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g12-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 3.46,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene IL1β; reported ± 0.12; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1β, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g12-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL1β, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g13-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 6.43,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene IL6; reported ± 1.2; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL6, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g13-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL6, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g13-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.54,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene IL6; reported ± 0.06; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL6, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g13-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.06,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, IL6, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g14-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.79,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene VEGF; reported ± 0.17; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, VEGF, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g14-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.17,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, VEGF, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g14-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.83,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene VEGF; reported ± 0.14; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, VEGF, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g14-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, VEGF, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway cytokines and chemokines; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g15-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 3.59,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene ARNT; reported ± 0.29; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, ARNT, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g15-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.29,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, ARNT, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g15-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.51,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene ARNT; reported ± 0.12; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, ARNT, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g15-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, ARNT, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g16-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.32,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CYP1A1; reported ± 0.11; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1A1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g16-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1A1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g16-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 38.28,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CYP1A1; reported ± 4.75; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1A1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g16-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.75,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1A1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g17-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.29,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CYP1B1; reported ± 0.01; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1B1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g17-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.01,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1B1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g17-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 47.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene CYP1B1; reported ± 0.32; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1B1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g17-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.32,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, CYP1B1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g18-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.26,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene UCP3; reported ± 0.23; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, UCP3, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g18-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.23,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, UCP3, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g18-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.31,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene UCP3; reported ± 0.38; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, UCP3, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g18-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.38,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, UCP3, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway drug metabolism and mitochondrial function; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g19-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.97,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene MMP9; reported ± 0.3; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MMP9, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway invasion and adhesion; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g19-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MMP9, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway invasion and adhesion; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g19-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 2.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene MMP9; reported ± 0.27; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MMP9, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway invasion and adhesion; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g19-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.27,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MMP9, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway invasion and adhesion; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g20-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 10.78,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene JUN; reported ± 0.78; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, JUN, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g20-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.78,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, JUN, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g20-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.38,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene JUN; reported ± 0.02; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, JUN, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g20-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.02,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, JUN, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g21-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 4.26,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene MYC; reported ± 0.13; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MYC, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g21-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.13,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MYC, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g21-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 6.15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene MYC; reported ± 0.3; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MYC, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g21-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, MYC, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g22-aut",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 5.25,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene PIK3R1; reported ± 0.18; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, PIK3R1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g22-aut-uncertainty",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.18,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, PIK3R1, AUT"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm AUT QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g22-cyst",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "gene_expression_fold_change",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 1.21,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Gene PIK3R1; reported ± 0.11; table uncertainty statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, PIK3R1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "t3-g22-cyst-uncertainty",
+      "sample_id": "nagy2012-gene-table3-cyst",
+      "property": "reported_gene_expression_uncertainty",
+      "technique": "Real-time PCR",
+      "value": {
+        "value": 0.11,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fold",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed ± term; table statistic unspecified.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 9 (printed p. 4756), Table 3, PIK3R1, CYST"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "NHBE, nominal 3 nm CYST QDs, 0.5 µg/mL, 6 h; pathway signal transduction; Table 3. ± statistic not defined in table.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 9 (printed p. 4756), Table 3"
+        }
+      ]
+    },
+    {
+      "id": "gene-criterion",
+      "sample_id": "nagy2012-gene-table3-aut",
+      "property": "reported_selection_criterion",
+      "technique": "BioMark real-time PCR",
+      "value": {
+        "value": "Discussion p.11 identifies up- or down-regulation by 2-fold or greater; Methods p.13 calls significant changes increased greater than 2-fold. All main-table cells are retained, including values below one and below two; no filtering by either phrasing.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Gene Expression Analyses; p.11 Discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Gene Expression Analyses; p.11 Discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent review of all 15 main pages and consolidated correction delta accepted. SI and cited prior methods unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Supporting information not reviewed.",
+      "No atomic-coordinate asset or crystallographic phase assignment reported in the scoped main text.",
+      "This is a biological characterization context, not an additional CdSe synthesis or structural pair.",
+      "No numerical bar/curve digitization; exact plotted evidence is retained as source crops."
+    ],
+    "conflicts": [
+      "Negative MUA/MPA: 20, 80, 160 µg/mL. Positive dose labels differ by assay/panel: general methods 0.5, 5, 20 µg/mL; Figures 2B, 3D, 4B, 5B use 0.5, 3.5, 20; Figure 3B images and Figures 5D/6 use their explicit labels. Never merge 3.5 and 5.",
+      "Gene-selection wording differs: up/down ≥2-fold in discussion versus increased >2-fold in methods.",
+      "Discussion groups results across 20 and 0.5 µg/mL; tables retain their exact dose scope.",
+      "Discussion says CYP1A1/CYP1B1 over 40-fold for CYST; Table 3 CYP1A1 is 38.28 ±4.75, CYP1B1 47.60 ±0.32. Exact cells retained."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Main-only source review",
+      "url": "paper-review.html?id=nagy2012nn204886b",
+      "relation": "same_source_study_context"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}

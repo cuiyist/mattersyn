@@ -1,0 +1,782 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nagy2012-apoptosis-ao-elisa",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Nagy et al. (2012) · AO staining and histone ELISA apoptosis",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe quantum dots",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Fluorescence microscopy and histone ELISA",
+  "sources": [
+    {
+      "id": "nagy2012nn204886b",
+      "doi": "10.1021/nn204886b",
+      "title": "Comprehensive Analysis of the Effects of CdSe Quantum Dot Size, Surface Charge, and Functionalization on Primary Human Lung Cells",
+      "authors": "Amber Nagy; Andrea Steinbrück; Jun Gao; Norman Doggett; Jennifer A. Hollingsworth; Rashi Iyer",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/nn204886b",
+      "main_status": "All 15 supplied main pages read and visually inspected; independent audit pending.",
+      "si_status": "Mentioned by main article but not inspected in this main-only package.",
+      "reuse_status": "Private exact figure/table crops under owner display preference; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "nagy2012nn204886b",
+    "recipe_family": "nagy2012-core-surface-cell-study",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nhbe",
+      "name": "Primary normal human bronchial epithelial cells",
+      "formula": null,
+      "role": "biological_test_system",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Lonza; passage 3–7. Not a synthesis reactant."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "cdse-qd",
+      "name": "Surface-exchanged CdSe QDs",
+      "formula": "CdSe",
+      "role": "test_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-defined ligand/nominal-size groups; no physical batch join."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "begm",
+      "name": "Bronchial epithelial growth medium (BEGM)",
+      "formula": null,
+      "role": "culture_medium",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Clonetics Bullet Kit; exact formulation unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 12 (printed p. 4759), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "acridine-orange",
+      "name": "Acridine orange",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Stain; concentration unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "ethidium-unresolved",
+      "name": "Ethidium stain: bromide/iodide conflict",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Heading and captions say ethidium bromide; method sentence says ethidium iodide. Identity unresolved; no unique formula or molecule assigned."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "elisa-kit",
+      "name": "Cell death detection ELISA kit",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Roche Applied Science; mono-/oligonucleosome assay."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "camptothecin",
+      "name": "Camptothecin",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "control_concentration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "triton",
+      "name": "Triton-100",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "control_percentage": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "1% in media control; basis unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "dpbs",
+      "name": "Dulbecco phosphate-buffered saline",
+      "formula": null,
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact formulation unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "nac",
+      "name": "N-acetylcysteine",
+      "formula": "C5H9NO3S",
+      "role": "assay_material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nagy2012-apoptosis-ao-elisa-context",
+      "name": "AO staining and histone ELISA apoptosis",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "elisa",
+      "action": "assay",
+      "label": "Assess DNA fragmentation",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nhbe",
+        "cdse-qd",
+        "elisa-kit"
+      ],
+      "outputs": [],
+      "parameters": {
+        "exposure": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 5 (printed p. 4752), Figure 3C,D"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "After 24 h QD exposure, lyse cells and measure mono-/oligonucleosomes by Roche cell-death-detection ELISA. Source notes 180 bp apoptotic fragments as assay background, not a measured CdSe property.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    },
+    {
+      "id": "ao-staining",
+      "action": "assay",
+      "label": "Image stained cells",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nhbe",
+        "acridine-orange",
+        "ethidium-unresolved",
+        "triton",
+        "camptothecin"
+      ],
+      "outputs": [],
+      "parameters": {
+        "objective_magnification": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "×",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "camptothecin_control": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "triton_control": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dual-stain with acridine orange and ethidium stain (unresolved bromide/iodide wording); immediately image with 10× objective, Zeiss Axiophot, Pro Plus v6.2. Orange nuclei denote apoptotic cells and uniform green live cells. Controls: media, 1% Triton-100, 12 µM camptothecin.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    },
+    {
+      "id": "nac-viability",
+      "action": "assay",
+      "label": "NAC viability co-exposure",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nhbe",
+        "cdse-qd",
+        "begm",
+        "nac",
+        "dpbs"
+      ],
+      "outputs": [],
+      "parameters": {
+        "nac": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "dpbs_washes": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "washes",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "nagy2012nn204886b",
+              "locator": "Main PDF p. 13 (printed p. 4760), Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "For antioxidant viability comparison, expose in media containing 5 mM NAC for 24 h; wash twice with DPBS before AO staining. This differs from the short NAC/ROS protocol.",
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 13 (printed p. 4760), Biological methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nagy2012-apoptosis-ao-elisa-context",
+      "source_sample_label": "AO staining and histone ELISA apoptosis",
+      "batch_id": null,
+      "material_state_id": "nagy2012-apoptosis-ao-elisa-context",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "NHBE cells exposed to source-defined CdSe QD conditions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 5 (printed p. 4752), Figure 3; p.13 apoptosis methods"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 5 (printed p. 4752), Figure 3; p.13 apoptosis methods"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 5 (printed p. 4752), Figure 3; p.13 apoptosis methods"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 5 (printed p. 4752), Figure 3; p.13 apoptosis methods"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 5 (printed p. 4752), Figure 3; p.13 apoptosis methods"
+        }
+      ],
+      "notes": [
+        "Biological response context, not a newly synthesized nanocrystal specimen.",
+        "Source-defined context, not an identified physical batch."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "figure3-conditions",
+      "sample_id": "nagy2012-apoptosis-ao-elisa-context",
+      "property": "figure_conditions",
+      "technique": "Fluorescence microscopy and histone ELISA",
+      "value": {
+        "value": "Figure 3A: negative QDs 20/80/160 µg/mL, 24 h, 10×, representative of three independent experiments. Figure 3B images: AUT 3/5/10 nm and CYST 3 nm show 0.5/5/20; CYST 5/10 nm show 0.5/3.5 with no 20-dose image shown. Caption lists the union 0.5/3.5/5/20. Figure 3C negative histone ELISA 20/80/160, 24 h, mean ± SD, n=3 independent experiments, p < 0.01. Figure 3D positive ELISA 0.5/3.5/20, 24 h, mean ± SD, n=3, p < 0.025. The positive-QD bar panels list 0.5/3.5/20 µg/mL in their legends/captions, but 5 and 10 nm CYST groups show only two bars; a 20 µg/mL result is not inferred for those groups.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 5 (printed p. 4752), Figure 3 panels and caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 5 (printed p. 4752), Figure 3 panels and caption"
+        }
+      ]
+    },
+    {
+      "id": "apoptosis-result",
+      "sample_id": "nagy2012-apoptosis-ao-elisa-context",
+      "property": "source_response_summary",
+      "technique": "Fluorescence microscopy and histone ELISA",
+      "value": {
+        "value": "MPA induces no apoptotic response; MUA only at 10 nm/160 µg/mL in results prose. AUT response at 0.5 µg/mL is interpreted alongside overwhelming necrosis at higher doses; CYST 3 nm lacks apoptosis, 5/10 nm have modest responses in prose. Source Table 4 symbolic counts are retained independently and can differ from prose.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nagy2012nn204886b",
+            "locator": "Main PDF p. 4 (printed p. 4751), Results: apoptotic effects; Table 4"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nagy2012nn204886b",
+          "locator": "Main PDF p. 4 (printed p. 4751), Results: apoptotic effects; Table 4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent review of all 15 main pages and consolidated correction delta accepted. SI and cited prior methods unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Supporting information not reviewed.",
+      "No atomic-coordinate asset or crystallographic phase assignment reported in the scoped main text.",
+      "This is a biological characterization context, not an additional CdSe synthesis or structural pair.",
+      "No numerical bar/curve digitization; exact plotted evidence is retained as source crops.",
+      "The positive-QD bar panels list 0.5/3.5/20 µg/mL in their legends/captions, but 5 and 10 nm CYST groups show only two bars; a 20 µg/mL result is not inferred for those groups."
+    ],
+    "conflicts": [
+      "Negative MUA/MPA: 20, 80, 160 µg/mL. Positive dose labels differ by assay/panel: general methods 0.5, 5, 20 µg/mL; Figures 2B, 3D, 4B, 5B use 0.5, 3.5, 20; Figure 3B images and Figures 5D/6 use their explicit labels. Never merge 3.5 and 5.",
+      "Ethidium bromide (AO/EB heading, figure captions) versus ethidium iodide (p.13 method sentence) unresolved.",
+      "Results prose describes MUA apoptosis only 10 nm/160 µg/mL, while Table 4 summarizes positive counts for all three MUA sizes. Do not collapse table and prose into one claim."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Main-only source review",
+      "url": "paper-review.html?id=nagy2012nn204886b",
+      "relation": "same_source_study_context"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}

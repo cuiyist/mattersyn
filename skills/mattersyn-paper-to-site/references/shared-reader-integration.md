@@ -34,3 +34,7 @@ Keep characterization-method contexts separate from synthesis operations and fro
 Do not apply generic quantity-spacing rules to source compound IDs: labels such as 4g and 9h are not gram/hour quantities. Corrections must preserve genuine quantities and conflicting printed IDs. Reuse chemical model bytes separately from paper-specific captions. Use exact existing Reader item IDs in characterization ledgers; retain explanatory topic IDs separately. Source notes without public images remain accessible notes or downloads, not fictitious figure assets.
 
 For presentation-pending contributions, do not infer a whole heterojunction particle shape from a constituent word such as nanorod. Preserve the source figure and specimen facts until a source-bound interpretation is reviewed. Refresh module import versions with renderer changes so readers receive the current behavior.
+
+## Supporting products and minimal aggregate refresh
+
+A downstream annealed film can carry its own structural outcome without becoming a nanocrystal synthesis route. Use the existing material_evidence_records and route_evidence_contexts links; retain its own sample state and never transfer its phase to an as-made colloid. Rebind only changed review pointers and affected material-view hashes. Compare all old canonical and generated eligibility rows and preserve unrelated Reader records and material views verbatim.
