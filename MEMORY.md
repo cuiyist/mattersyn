@@ -1,3 +1,11 @@
+## 2026-09-27 — Zhou et al. 1995 CeO2 published and verified
+
+DOI 10.1111/j.1151-2916.1995.tb08425.x was deployed from source `a7cbf94e913941e1a582539f01155f8e93330808` at site `192e9ee87349f333a7841cdd75391ad332ee1f36` and anonymously verified at 2026-09-27T19:17:38.169017+00:00. Reviewed scope: Five scanned main-article pages reviewed visually; SI, other documents and cited methods unreviewed. All 48 selected files matched the release after exact-head source and site CI succeeded. Live totals: 1003 records, 71 sources, 83 direct families, 94 hubs, 302 routes and 210 broad pairs.
+
+Event `gold-20260927-zhou1995-ceo2-tb08425`: Adds one gold source, nine records, four direct electrochemical routes and two partial as-made structural outcomes. Five processing/comparator/control records remain supporting contexts. The inferred 40 and 60 degree C graph estimates remain excluded; generic TEM/BET evidence receives no invented exact thermal-batch assignment, and sintered grain sizes remain separate. All 994 prior records/eligibility and 208 prior pair rows remain unchanged. Refinements pending and labelled; eight exact source figures and seven authored identity cards available. Source crops retain unverified publisher permission. No measured-coordinate or silver admission is claimed.
+
+Preserve research-assets/public-audits/morning-checkpoint-20260927.json and all preceding publication receipts/events. This new event is outside that morning interval. Daily morning reporting remains active and two-hour checks retired. See research-assets/public-audits/zhou1995-ceo2-tb08425-publication-20260927.json for the verified milestone.
+
 ## 2026-09-27 — Li et al. 2009 CdS published and verified
 
 DOI 10.1021/nn9009455, independently audited across seven main pages, was deployed from source `e5782d47d08149604a5d683399d17c7abd539900` at site `832430c6e15b5f0854386befe5f8075beecff242` and anonymously verified at 2026-09-27T18:30:05.892548+00:00. All 69 selected files matched the release after exact-head source and site CI succeeded. Live totals: 994 records, 70 sources, 83 direct families, 94 hubs, 298 routes and 208 broad pairs.
@@ -6,7 +14,7 @@ Event `gold-20260927-li2009-nn9009455` adds one gold source, 22 preparation/cond
 
 Preserve research-assets/public-audits/morning-checkpoint-20260927.json and all preceding publication receipts/events. This new event is outside that morning interval. Daily morning reporting remains active and two-hour checks retired. See research-assets/public-audits/li2009-nn9009455-publication-20260927.json for the verified milestone.
 
-## Next accepted contribution — CeO2 electrochemical preparation
+## Historical CeO2 integration checkpoint — electrochemical preparation
 
 Zhou, Phillips and Switzer (1995), *Electrochemical Synthesis and Sintering of Nanocrystalline Cerium(IV) Oxide Powders*, DOI 10.1111/j.1151-2916.1995.tb08425.x, has passed independent review of all five supplied main pages and eight figures. The scanned pages were read visually because their embedded article text is unusable. Other documents and cited methods remain unreviewed.
 
