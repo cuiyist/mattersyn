@@ -1,0 +1,477 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "wehrenberg2002-jp021187e",
+  "doi": "10.1021/jp021187e",
+  "scope": "All seven supplied main pages and eleven figures read; SI and cited references not inspected. Exact source-to-specimen links are retained, and similarly named optical samples are not assumed identical.",
+  "source_inventory": {
+    "preparation_reagents": [
+      "Lead(II) acetate trihydrate",
+      "Phenyl ether (source wording; diphenyl ether reference)",
+      "Oleic acid",
+      "Trioctylphosphine",
+      "1 M TOPSe stock; carrier and preparation unspecified",
+      "Methanol",
+      "Argon"
+    ],
+    "characterization_media": [
+      "Chloroform",
+      "Toluene",
+      "2,2,4,4,6,8,8-Heptamethylnonane (HMN)"
+    ],
+    "standards": [
+      "IR#26, Lambdachrome no. 1080, CAS 76871-75-5",
+      "IR no. 1 and IR no. 5 comparison dyes; exact formulations not given"
+    ],
+    "apparatus_materials": [
+      "ZnS optical windows",
+      "Teflon spacer",
+      "AgGaS2 nonlinear optical crystal",
+      "HgCdTe detector",
+      "InGaAs photodiode"
+    ],
+    "qualification": "Standards and optical hardware are context, not nanocrystal precursors or new synthesized materials. Source reagent grades and suppliers are generally not stated.",
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 1–4, Experimental Section and quantum-yield comparison"
+      }
+    ]
+  },
+  "preparation_limits": {
+    "general_ranges": {
+      "injection_temperature_degC": [
+        180,
+        210
+      ],
+      "growth_temperature_degC": [
+        110,
+        130
+      ],
+      "growth_duration_min": [
+        1,
+        10
+      ]
+    },
+    "exact_examples": [
+      {
+        "injection_degC": 180,
+        "growth_degC": 110,
+        "growth_min_approx": 1,
+        "first_exciton_eV_approx": 1.03,
+        "TEM_diameter_nm": null
+      },
+      {
+        "injection_degC": 210,
+        "growth_degC": 130,
+        "growth_min": 3,
+        "first_exciton_eV": 0.53,
+        "TEM_diameter_nm": null
+      }
+    ],
+    "TEM_outcomes": [
+      {
+        "diameter_nm": 8.1,
+        "first_exciton_eV": 0.587,
+        "figure_scope": "Figure 2 main panel; approximately 5% size standard deviation without size-selective precipitation"
+      },
+      {
+        "diameter_nm": 7.1,
+        "first_exciton_eV": 0.688,
+        "figure_scope": "Figure 2 HRTEM inset; distinct from its main panel"
+      },
+      {
+        "diameter_nm": 5.8,
+        "first_exciton_eV": 0.865,
+        "figure_scope": "Diameter reported in text; no uniquely assigned main TEM panel"
+      }
+    ],
+    "crosswalk": "The two explicit temperature/time examples are not tied to these three TEM diameters. General method ranges do not establish individual sample set points.",
+    "storage": "Source says stored dry; detailed drying/storage conditions absent.",
+    "working_environment": "Authors state a hood can be used without a glovebox; full apparatus and safety conditions are not supplied.",
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 1–2, Experimental Section and continuation"
+      }
+    ]
+  },
+  "structure_context": {
+    "phase": "Powder XRD is said to confirm the bulk cubic crystal structure.",
+    "phase_scope": "Study-wide source statement; no displayed XRD pattern, sample-specific phase crosswalk, lattice constant or measured coordinate file.",
+    "lattice_fringes": "Regular fringes are reported; Figure 2 inset is the 0.688 eV sample. No numerical fringe spacing is reported.",
+    "morphology_interpretation": "The TEM main panel shows compact rounded/faceted projections. This is an authored qualitative reading, not a source-reported perfect spherical geometry or a coordinate reconstruction.",
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 2, TEM discussion and Figure 2"
+      }
+    ]
+  },
+  "characterization_methods": {
+    "linear_absorption": {
+      "instrument": "Fourier-transform infrared spectrometer; model unspecified",
+      "range_cm_inverse": [
+        2000,
+        11000
+      ]
+    },
+    "fluorescence": {
+      "media": [
+        "chloroform",
+        "toluene"
+      ],
+      "glass_cell_path_mm": 2,
+      "geometry": "front-face",
+      "excitation_um": 1.064,
+      "detectors": [
+        "cooled HgCdTe photovoltaic detector",
+        "InGaAs photodiode for increased sensitivity below 1.7 µm"
+      ],
+      "HgCdTe_pulse_response_ns": 30,
+      "monochromator": "Home-built 0.11 m Czerny–Turner",
+      "mirror_focal_length_cm": 11,
+      "mirror_diameter_cm": 5,
+      "grating_dimensions_cm": [
+        5,
+        5
+      ],
+      "grating_grooves_per_mm": 600,
+      "entrance_slit_mm": 1,
+      "detector_area_mm2": 1,
+      "wavelength_resolution_nm_approx": 20,
+      "resolution_range_um": [
+        1,
+        2
+      ],
+      "calibration": "Multiple orders of scattered 1.064 µm radiation"
+    },
+    "low_temperature": {
+      "medium": "HMN",
+      "windows": "Two ZnS windows",
+      "spacer": "Teflon, 0.75 mm",
+      "cryostat": "He flow",
+      "lowest_temperature_K": 7
+    },
+    "laser": {
+      "source": "Active-passive mode-locked Nd:YAG",
+      "repetition_Hz": 25,
+      "generated_single_pulse_ps": 8,
+      "fundamental_um": 1.064,
+      "OPO_output_um": [
+        1.2,
+        1.8
+      ],
+      "interband_amplified_pulse_uJ_approx": 10,
+      "mixing_crystal": "AgGaS2",
+      "intraband": "Difference-frequency output; separate delay lines control interband pump, intraband pump and probe",
+      "pulse_scope": "The 8 ps laser-generation description and the 11 ps pulses stated in the interband discussion are retained as different source contexts; neither is a synthesis duration."
+    },
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 1–2, Experimental Section"
+      },
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 4, Lifetime and interband sections"
+      }
+    ]
+  },
+  "linear_absorption_context": {
+    "relative_exciton_width_sigmaE_over_confinement_approx": 0.04,
+    "scope": "Best samples; no one exact recipe assigned.",
+    "second_exciton_confinement_ratio_approx": 1.4,
+    "third_exciton_confinement_ratio_approx": 1.9,
+    "fit": "Sum of two to four Gaussian peaks plus broad background, either broad high-energy Gaussian or power-law starting at band edge.",
+    "bulk_gap_formula": "Eg(meV) = 125 + sqrt(400 + 0.256 T^2), from cited reference 12; T in K.",
+    "temperature_context": "Discussion describes 298–80 K; plotted Figure 4 compares 300 and 80 K. Figure 3 caption covers 80–300 K.",
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 2–3, Linear absorption and Figures 1, 3–4"
+      }
+    ]
+  },
+  "fluorescence_context": {
+    "spectral_scope": "Five room-temperature samples; tunable 1.3/1.5 µm range and beyond 2 µm, excited at 1.064 µm.",
+    "solvent_features_um": [
+      1.7,
+      1.85
+    ],
+    "solvent_features_scope": "Chloroform absorption features, not new QD emission bands.",
+    "figure6_sample": {
+      "first_exciton_eV": 0.8,
+      "stokes_shift_meV": 22,
+      "stokes_shift_relative_to_confinement_approx": 0.04,
+      "lifetime_us": 0.88,
+      "fit": "Nearly single-exponential fluorescence decay",
+      "recipe_crosswalk": "No uniquely assigned injection/growth recipe or TEM diameter."
+    },
+    "quantum_yield": {
+      "reported_fraction": 0.85,
+      "classification": "Historical source-relative estimate; not independently recalibrated",
+      "standard": "IR#26",
+      "standard_reported_fraction": 0.005,
+      "relative_efficiency_approx": 180,
+      "matched_optical_density_approx": 0.3,
+      "comparison_dyes": [
+        "IR no. 1",
+        "IR no. 5"
+      ],
+      "standard_emission_um": [
+        1.1,
+        1.3
+      ],
+      "PbSe_comparison_emission_um": [
+        1.3,
+        1.5
+      ],
+      "corrections": [
+        "Monochromator resolution",
+        "Detector efficiency"
+      ],
+      "not_corrected": "Unknown grating efficiency",
+      "source_limit": "Authors request confirmation using calibrated sources."
+    },
+    "cooling": "To 80 K: no noticeable fluorescence-intensity increase; redshift and narrowing observed.",
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 3–4, Fluorescence section and Figures 5–6"
+      }
+    ]
+  },
+  "time_resolved_samples": [
+    {
+      "figure": 7,
+      "exciton_eV": 0.817,
+      "medium": "HMN",
+      "temperature_K_caption": 77,
+      "temperature_K_prose": 80,
+      "pump_um": 1.064,
+      "pump_mW_range": [
+        6.5,
+        35
+      ],
+      "fit_components_ps": [
+        85,
+        240
+      ],
+      "offset": "Long-lived component on the nanosecond plot",
+      "source_observed_fast_component_ps": {
+        "value": 85,
+        "uncertainty": 10
+      },
+      "source_low_power_description_ps_approx": 200,
+      "fit_scope": "Caption says 240 ps fit; text calls the low-power fast component approximately 200 ps. These are source descriptions, not separate synthesis outcomes.",
+      "threshold": "85 ps component required when initial bleach exceeds approximately 0.5; 240 ps amplitude approximately 50% of the offset."
+    },
+    {
+      "figure": 8,
+      "exciton_eV": 0.817,
+      "medium": "HMN",
+      "temperature_K": 7,
+      "pump_um": 1.064,
+      "pump_mW": [
+        7,
+        32,
+        80
+      ],
+      "fit_components_ps": [
+        15,
+        85,
+        240
+      ],
+      "offset": true
+    },
+    {
+      "figure": 9,
+      "exciton_eV": 0.812,
+      "medium": "HMN",
+      "temperature_K": 7,
+      "pump_um": 1.064,
+      "probe_eV": [
+        0.23,
+        0.35
+      ],
+      "fit_components_ps": [
+        15,
+        240
+      ],
+      "offset": true
+    },
+    {
+      "figure": 10,
+      "exciton_eV_panels": [
+        0.733,
+        0.812,
+        1.037
+      ],
+      "medium": "HMN",
+      "temperature_K": 7,
+      "pump_um": 1.064,
+      "delay_ps": [
+        10,
+        300
+      ],
+      "fit": "Two Gaussians at 10 ps; one narrower, slightly red-shifted Gaussian at 300 ps. Dashed reference is room-temperature linear absorption."
+    },
+    {
+      "figure": 11,
+      "exciton_eV": 0.812,
+      "first_exciton_optical_density": 0.8,
+      "medium": "HMN",
+      "temperature_K": 7,
+      "initial_excitation_um": 1.064,
+      "wait_ps": 350,
+      "intraband_pump_eV": 0.269,
+      "probe": "Resonant with intraband pump",
+      "bleach_fraction_approx": 0.04,
+      "lifetime_ps_upper_bound": 4,
+      "upper_bound_scope": "Below instrument resolution, not an exactly measured 4 ps decay.",
+      "additional_samples": "Larger dots gave similar results; smaller dots gave no detectable bleach. Sizes and recipe crosswalk are unreported."
+    }
+  ],
+  "time_resolved_scope": "Optical sample identities and temperatures are preserved as printed. Similar energies 0.8/0.812/0.817 eV are not merged into one physical sample. Pump-power, probe-energy and delay series are characterization conditions, not new nanocrystal-growth variants.",
+  "time_resolved_evidence": [
+    {
+      "source_id": "wehrenberg2002-jp021187e",
+      "locator": "Main PDF p. 4–6, Figures 7–11 and interband/intraband discussion"
+    }
+  ],
+  "theory_context": {
+    "effective_mass_confinement": "Infinite spherical potential; first three level factors 1 (1S), 2.04 (1P), 3.36 (1D).",
+    "transition_assignment": "Authors assign third exciton to 1Ph–1Pe and second to mixed 1Ph–1Se / 1Sh–1Pe; parity issue remains unresolved.",
+    "parity_alternatives": [
+      "Band anisotropy and state mixing",
+      "Polar shape asymmetry",
+      "Permanent dipole moment",
+      "Quadrupolar transitions"
+    ],
+    "radiative_model": {
+      "bulk_Kane_energy_eV_approx": {
+        "PbSe": 3,
+        "CdSe": 17.5
+      },
+      "illustrative_confinement_eV": 0.4,
+      "oscillator_strength_approx": {
+        "PbSe": 4,
+        "CdSe": 9
+      },
+      "chloroform_dielectric_approx": 2.1,
+      "unscreened_lifetime_ns_approx": {
+        "PbSe": 25,
+        "CdSe": 1
+      },
+      "semiconductor_optical_dielectric_approx": {
+        "PbSe": 23,
+        "CdSe": 6
+      },
+      "screened_lifetimes": {
+        "PbSe_us_approx": 0.4,
+        "CdSe_ns_approx": 3
+      },
+      "scope": "Calculated comparison using literature parameters; not extra measured products."
+    },
+    "Auger_model": {
+      "bulk_coefficient_cm6_per_s": 1.1e-28,
+      "coefficient_uncertainty": 3e-29,
+      "assumed_diameter_nm": 6.5,
+      "estimated_two_exciton_lifetime_ps": 47,
+      "estimated_uncertainty_ps": 13,
+      "formula": "1/tau = gamma (2/V)^2",
+      "scope": "Illustrative model diameter, not a reported TEM measurement for the 0.817 eV sample."
+    },
+    "effective_masses_m0_at_4K": {
+      "electron": 0.04,
+      "hole": 0.034
+    },
+    "intraband_model": "Long-lived component assigned to 1Se,h–1Pe,h; fast high-energy component to 1Pe,h–1De,h or 2S. Four to six electron–hole pairs are a model interpretation of the early 10–20 ps dynamics.",
+    "LO_phonon_meV": 17,
+    "remaining_questions": [
+      "Absence of observed phonon bottleneck despite sparse states",
+      "Optically allowed second exciton",
+      "Expected four-fold degeneracy not apparent in bleach data"
+    ],
+    "evidence": [
+      {
+        "source_id": "wehrenberg2002-jp021187e",
+        "locator": "Main PDF p. 3–6, Results, model discussion and conclusions"
+      }
+    ]
+  },
+  "conflicts": [
+    {
+      "id": "WEH-01",
+      "topic": "Interband bleach measurement temperature",
+      "claims": [
+        {
+          "label": "Main discussion",
+          "statement": "The Figure 7 interband bleach experiment is described at 80 K.",
+          "locator": "Main PDF p. 4, section III.C"
+        },
+        {
+          "label": "Figure 7 caption",
+          "statement": "The sample in HMN is labelled 77 K.",
+          "locator": "Main PDF p. 4, Figure 7"
+        }
+      ],
+      "handling": "Keep the two source temperatures with their locators; do not silently choose one or treat them as separate particle syntheses."
+    }
+  ],
+  "source_interpretation": [
+    {
+      "topic": "Growth control and surface capping",
+      "text": "The authors adapt an earlier two-flask synthesis and vary injection temperature, growth temperature and time to tune the first exciton. Oleic acid is the reported capping ligand. The source does not provide a calibrated process-to-diameter map or a complete ligand-speciation model.",
+      "evidence": [
+        {
+          "source_id": "wehrenberg2002-jp021187e",
+          "locator": "Main PDF p. 1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "topic": "Strong near-infrared fluorescence",
+      "text": "The authors interpret the small Stokes shift and high relative quantum yield as evidence of efficient surface passivation and limited trapping. They qualify the quantum-yield calibration because grating efficiency was not corrected; the historical 85% estimate is not a new absolute measurement.",
+      "evidence": [
+        {
+          "source_id": "wehrenberg2002-jp021187e",
+          "locator": "Main PDF p. 3–4, Fluorescence discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Electronic-transition assignments",
+      "text": "An effective-mass model, confinement-energy ratios and intraband spectra jointly motivate the authors’ transition assignments. The unexpectedly allowed second exciton and unresolved expected degeneracy remain open questions in this source. These are model interpretations, not atomistic structural measurements.",
+      "evidence": [
+        {
+          "source_id": "wehrenberg2002-jp021187e",
+          "locator": "Main PDF p. 3–6, Linear absorption, intraband spectra and conclusions"
+        }
+      ]
+    },
+    {
+      "topic": "Relaxation without an observed phonon bottleneck",
+      "text": "The authors find an unresolved intraband lifetime below 4 ps and discuss acoustic coupling or surface effects as possible explanations. Shape control, core–shell formation and doping are proposed future directions, not products synthesized in this article.",
+      "evidence": [
+        {
+          "source_id": "wehrenberg2002-jp021187e",
+          "locator": "Main PDF p. 6, Intraband relaxation and conclusions"
+        }
+      ]
+    }
+  ],
+  "references_scope": {
+    "count": 31,
+    "pages": [
+      6,
+      7
+    ],
+    "status": "Reference list read; referenced documents not inspected.",
+    "preparation_reference": {
+      "number": 11,
+      "citation": "Murray, Sun, Gaschler et al., IBM Journal of Research and Development 2001, 45, 47"
+    },
+    "outlook": "Shape control, core–shell structures and donor/acceptor or magnetic doping proposed, not demonstrated here."
+  }
+}

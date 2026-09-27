@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **68 primary source groups** · release `mattersyn-gold-li2011-20260927`. Records are not independent experiments.
+Dataset **0.41.2** · **69 primary source groups** · release `mattersyn-gold-wehrenberg2002-20260927`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -45,6 +45,8 @@ Dataset **0.41.2** · **68 primary source groups** · release `mattersyn-gold-li
 - Sophie Besson; Thierry Gacoin; Christian Ricolleau; Catherine Jacquiod; Jean-Pierre Boilot (2002). 3D Quantum Dot Lattice Inside Mesoporous Silica Films. *Nano Letters*, 2, 409–414. [10.1021/nl015685v](https://doi.org/10.1021/nl015685v). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=besson2002).
 
 - Noelio Oliveira Dantas; Fanyao Qu; R. S. Silva; Paulo César Morais (2002). Anti-Stokes Photoluminescence in Nanocrystal Quantum Dots. *Journal of Physical Chemistry B*, 106, 7453–7457. [10.1021/jp0208743](https://doi.org/10.1021/jp0208743). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=dantas2002).
+
+- Brian L. Wehrenberg; Congjun Wang; Philippe Guyot-Sionnest (2002). Interband and Intraband Optical Studies of PbSe Colloidal Quantum Dots. *Journal of Physical Chemistry B*, 106, 10634–10640. [10.1021/jp021187e](https://doi.org/10.1021/jp021187e). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wehrenberg2002-jp021187e).
 
 - Guangshun Yi; Baoquan Sun; Fengzhen Yang; Depu Chen; Yuxiang Zhou; Jing Cheng (2002). Synthesis and Characterization of High-Efficiency Nanocrystal Up-Conversion Phosphors: Ytterbium and Erbium Codoped Lanthanum Molybdate. *Chemistry of Materials*, 14, 2910–2914. [10.1021/cm0115416](https://doi.org/10.1021/cm0115416). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yi2002).
 

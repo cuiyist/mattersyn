@@ -1,3 +1,13 @@
+## 2026-09-27 — Wehrenberg PbSe main contribution accepted
+
+Wehrenberg, Wang and Guyot-Sionnest (2002), DOI 10.1021/jp021187e, has passed one consolidated independent scientific audit and its bounded reference-geometry metadata correction. All seven main pages and eleven selected source figures were reviewed. SI and cited documents remain unreviewed. Reuse this accepted scope rather than restarting unchanged source work.
+
+The candidate adds three preparation records and three partial broad recipe–structure rows to the existing PbSe hub. The 8.1, 7.1 and 5.8 nm TEM outcomes belong to the general method; their individual thermal set points and unique physical batch identities remain unknown. The two explicit thermal examples provide optical endpoints only and contribute no structural pairs. Keep Figure 2 main-panel/inset specimens distinct, study-level cubic-phase prose unassigned to individual samples, and the Figure 7 temperature conflict visible. Characterization series and theoretical predictions are not extra synthesis variants or measured coordinates.
+
+Candidate totals are 972 records, 69 contributing sources, 83 direct material families, 94 hubs, 276 routes and 207 broad pairs. All 969 prior canonical records, eligibility and 204 earlier broad rows are preserved. These totals are not live until all release gates and anonymous verification pass. Eleven selected source figures retain exact provenance and unverified publisher permission. Presentation refinements remain explicitly pending.
+
+Safe acceptance receipt: research-assets/public-audits/wehrenberg2002-gold-batch-20260927.json. Continue the fastest validated local gold workflow, retaining independent audits and existing screened-pass sources only. Silver remains disabled pending measured held-out calibration and independent approval. Daily 08:00 America/Chicago reporting remains active; two-hour checks remain retired. No uninterrupted work or target throughput is claimed.
+
 ## 2026-09-27 — Li 2011 published and verified
 
 The independently audited five-page main contribution for DOI 10.1021/ac2019014 was deployed from source `3008b445931f031e6c5f99bbe2258c6dc86ad3ed` at site `1b4cdf3d6e4891898882c4fa948bec87a3bf035f` and anonymously verified at 2026-09-27T13:33:23.580569+00:00. All 36 checked public files matched the approved release. Source Windows/Linux CI and exact build comparison passed, as did site build and deployment. Live totals are 969 records, 68 contributing sources, 83 direct material families, 94 material/component hubs, 273 routes and 204 broad recipe–structure pairs.
