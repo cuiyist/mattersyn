@@ -1,3 +1,11 @@
+## 2026-09-27 — Wehrenberg 2002 published and verified
+
+DOI 10.1021/jp021187e, independently audited across seven main pages, was deployed from source `cff0b4400d3b5315036377b5598cfe7d811a5408` at site `11f0d3a209b0a89855c5736daa61bdf65d8799cf` and anonymously verified at 2026-09-27T14:12:55.452132+00:00. All 32 selected public files matched the final release after source Windows/Linux/comparison CI and site build/deploy succeeded. Live totals: 972 records, 69 sources, 83 direct material families, 94 hubs, 276 routes and 207 broad pairs.
+
+This event `gold-20260927-wehrenberg2002-jp021187e` adds one gold source, three preparation records and three partial TEM-linked outcomes from the general method. Exact growth setpoints for those outcomes remain unknown; the two explicit thermal examples remain optical-only. All 969 earlier canonical records and eligibility and 204 earlier pair rows remain unchanged. SI and cited methods remain unreviewed; presentation refinements remain pending. Eleven source figures retain exact provenance and unverified publisher permission. No measured-coordinate or silver admission is claimed.
+
+Keep the nine-event morning boundary in research-assets/public-audits/morning-checkpoint-20260927.json and the separate Li event in research-assets/public-audits/li2011-publication-20260927.json unchanged. This later Wehrenberg event belongs to the next reporting interval. Daily morning reporting remains active and two-hour checks retired. See research-assets/public-audits/wehrenberg2002-publication-20260927.json for this verified milestone.
+
 ## 2026-09-27 — Wehrenberg PbSe main contribution accepted
 
 Wehrenberg, Wang and Guyot-Sionnest (2002), DOI 10.1021/jp021187e, has passed one consolidated independent scientific audit and its bounded reference-geometry metadata correction. All seven main pages and eleven selected source figures were reviewed. SI and cited documents remain unreviewed. Reuse this accepted scope rather than restarting unchanged source work.
