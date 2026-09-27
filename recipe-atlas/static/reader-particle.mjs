@@ -86,7 +86,11 @@ export async function mountParticleContext(panel,r,presentation={}){
  if(preferred)choose.value=preferred.key;else if(groups.has(wanted))choose.value=wanted;
  panel.append(choose,display);
  function show(){const group=groups.get(choose.value)||groups.values().next().value,d=particleDescriptor(group,interpretations),layout=el('div',undefined,'reader-product-layout'),copy=el('div');
-  copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',d.caption,'reader-note'));
+  // Pending Readers keep observations and source figures; only a reviewed
+  // specimen-specific interpretation may supply their morphology drawing.
+  if(presentation.presentation_status==='pending'&&!d.inferred)d.shape='neutral';
+  const caption=d.shape==='neutral'&&presentation.presentation_status==='pending'?'A morphology illustration has not yet been assigned to this specimen. Its available source-reported observations are retained below.':d.caption;
+  copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',caption,'reader-note'));
   if(d.inferred)copy.append(el('p','Interpretive schematic · dimensions, interfaces and atomic positions are not reconstructed.','reader-note'));
   const basis=disclosure('Illustration basis and limitations');
   if(d.morphology)basis.append(el('p','Source description: '+d.morphology));

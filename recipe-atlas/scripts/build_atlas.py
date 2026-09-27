@@ -33,6 +33,8 @@ NAMES['HgS']='Mercury sulfide · quantum-well component'
 NAMES['CdSe/ZnS/siloxane']='Siloxane-coated CdSe/ZnS quantum dots'
 NAMES['CdS/polymer']='Cadmium sulfide nanocrystals in chelate polymer microparticles'
 NAMES['CoNi2S4']='Cobalt–nickel thiospinel nanocrystals'
+NAMES['NAT-CQDs']='Biomass-derived amine-functionalized carbon quantum dots'
+NAMES['CdS/PbS']='Cadmium sulfide / lead sulfide heterojunctions · nanorod and planar architectures'
 
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')

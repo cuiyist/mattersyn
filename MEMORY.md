@@ -1,3 +1,15 @@
+## 2026-09-27 — Gold website building resumed with accepted source batches
+
+The latest user instruction prioritizes continued website building using the fastest validated workflow. Ready gold contributions proceed independently of deferred silver calibration. The daily 08:00 America/Chicago report is active; two-hour checks remain retired. Existing screened-pass sources only; no paid processing, new papers, external source transfers or status-only deployments.
+
+Saini et al. (2023), DOI 10.1021/acsami.3c08812, adds one biomass CQD route after reuse of the full main/SI audit and independent bounded corrections. Preserve TEM versus DLS measurement bases, the author-derived lattice model without atomic coordinates, unreported concentration conversion, 42 separate organic application products, and source conflicts. Twelve source crops and 110 additional source contexts remain accessible. Application products do not become CQD recipe pairs.
+
+Yao et al. (2015), DOI 10.1021/acsami.5b06857, adds 13 main-only records: two constituent syntheses, six CdS/PbS assembly variants, and five contextual observations. Its consolidated independent audit corrected planar rinse/dry operations, locators, transmittance normalization and reused chemical captions. The printed methane medium remains unresolved. Known SI is unreviewed. Seven source figures and Table 1 are source-linked; seven broad recipe–structure rows are supported, with no measured coordinate label.
+
+The combined candidate has 911 records, 62 contributing source groups, 254 routes, 77 direct material families, 89 material/component hubs and 168 broad recipe–structure rows. All 897 previous canonical records and their generated eligibility are unchanged. These are candidate totals until final clean build, public-boundary checks, deployment and anonymous verification pass; publication receipts are kept separately. Both contributions display presentation-pending labels. Original source figures remain visible with publisher permission unverified. Silver remains disabled.
+
+Safe scoped receipt: research-assets/public-audits/saini-yao-gold-batch-20260927.json. Private continuation receipts remain under the workspace research-assets/website-resume-20260927 folder. The next existing screened CdSe source, DOI 10.1021/nn204886b, is in private extraction and contributes zero live credit.
+
 ## 2026-09-26 — Remaining workflow revisions resumed; daily morning report restored
 
 The owner explicitly asked to continue the remaining scaling revisions, then resume website building using the new workflow and instructions. Restore the daily 08:00 America/Chicago report through `mattersyn-sequential-paper-review`; the two-hour automation remains paused. Report the actual interval, completed/pending revisions, separately verified gold and silver publications, pairs, calibration/audit state and blockers. This does not assert uninterrupted processing between scheduled runs. Do not create status-only website releases. Historical trial results remain frozen; new arrivals, paid APIs, source transfers, downloads and GPU purchases stay outside scope.

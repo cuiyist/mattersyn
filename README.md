@@ -72,7 +72,7 @@ Public citations are generated below from the same dataset snapshot used by the 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.0** · **60 primary source groups** · release `20260926-site-wide-reader-revision`. Records are not independent experiments.
+Dataset **0.41.1** · **62 primary source groups** · release `mattersyn-gold-saini-yao-20260927`. Records are not independent experiments.
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
@@ -158,6 +158,8 @@ Dataset **0.41.0** · **60 primary source groups** · release `20260926-site-wid
 
 - Mickael D. Tessier, Dorian Dupont, Kim De Nolf, Jonathan De Roo, Zeger Hens (2015). Economic and Size-Tunable Synthesis of InP/ZnE (E = S, Se) Colloidal Quantum Dots. [10.1021/acs.chemmater.5b02138](https://doi.org/10.1021/acs.chemmater.5b02138). Review scope remains stated in the linked website records.
 
+- Xudong Yao; Shangjing Liu; Yajing Chang; Guopeng Li; Longfei Mi; Xiaoming Wang; Yang Jiang (2015). PbS Quantum-Dot Depleted Heterojunction Solar Cells Employing CdS Nanorod Arrays as the Electron Acceptor with Enhanced Efficiency. *ACS Applied Materials & Interfaces*, 7, 23117–23123. [10.1021/acsami.5b06857](https://doi.org/10.1021/acsami.5b06857). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yao2015acsami).
+
 - S. Costanzo; G. Simon; J. Richardi; Ph. Colomban; I. Lisiecki (2016). Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals. [10.1021/acs.jpcc.6b07293](https://doi.org/10.1021/acs.jpcc.6b07293). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=costanzo2016co).
 
 - Calynn E. Morrison; Fudong Wang; Nigam P. Rath; Brian M. Wieliczka; Richard A. Loomis; William E. Buhro (2017). Cadmium Bis(phenyldithiocarbamate) as a Nanocrystal Shell-Growth Precursor. *Inorganic Chemistry*, 56, 12920–12929. [10.1021/acs.inorgchem.7b01711](https://doi.org/10.1021/acs.inorgchem.7b01711). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=morrison2017).
@@ -187,6 +189,8 @@ Dataset **0.41.0** · **60 primary source groups** · release `20260926-site-wid
 - Evert Dhaene; Rohan Pokratath; Olivia Aalling-Frederiksen; Kirsten M. Ø. Jensen; Philippe F. Smet; Klaartje De Buysser; Jonathan De Roo (2022). Monoalkyl Phosphinic Acids as Ligands in Nanocrystal Synthesis. *ACS Nano*, 16, 7361-7372. [10.1021/acsnano.1c08966](https://doi.org/10.1021/acsnano.1c08966). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=dhaene2022-main).
 
 - Anastasia Matuhina; G. Krishnamurthy Grandhi; Fang Pan; Maning Liu; Harri Ali-Löytty; Hussein M. Ayedh; Antti Tukiainen; Jan-Henrik Smått; Ville Vähänissi; Hele Savin; Jingrui Li; Patrick Rinke; Paola Vivo (2023). Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties. *ACS Applied Nano Materials*, 6, 953–965. [10.1021/acsanm.2c04342](https://doi.org/10.1021/acsanm.2c04342). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=matuhina2023).
+
+- Surendra Saini; Pratibha Saini; Krishan Kumar; Mukul Sethi; Priyanka Meena; Aditya Gurjar; Anshu Dandia; Tanya Dhuria; Vijay Parewa (2023). Unlocking the Molecular Behavior of Natural Amine-Targeted Carbon Quantum Dots for the Synthesis of Diverse Pharmacophore Scaffolds via an Unusual Nanoaminocatalytic Route. *ACS Applied Materials & Interfaces*, 15, 49083–49094. [10.1021/acsami.3c08812](https://doi.org/10.1021/acsami.3c08812). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=saini2023).
 
 - Xuerong Song; Yue Qin; Qian Wang; Jiajia Ning (2024). Alloyed Zinc Chalcogenide Magic-Sized Nanoclusters and Their Transformation to Alloyed Quantum Dots. *Inorganic Chemistry*, 63, 17100–17107. [10.1021/acs.inorgchem.4c02738](https://doi.org/10.1021/acs.inorgchem.4c02738). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=song2024zincchalcogenide).
 

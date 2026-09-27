@@ -1,5 +1,5 @@
 import {mountFigureMorphology} from './reader-figure-morphology.mjs?v=0.41.0';
-import {mountParticleContext} from './reader-particle.mjs?v=0.41.0';
+import {mountParticleContext} from './reader-particle.mjs?v=0.41.1';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
 import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.41.0';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';

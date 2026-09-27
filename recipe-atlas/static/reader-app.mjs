@@ -8,7 +8,7 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableCh
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.2';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.0';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.1';
 
 const cache=new Map();
 
@@ -122,6 +122,12 @@ function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.leng
 function dataSwitch(r,active='reader'){const nav=el('nav',undefined,'reader-switch');nav.setAttribute('aria-label','Reader or data view');nav.append(link('Reader',recordURL(r.record_id,'reader'),active==='reader'?'active':''),link('Data and evidence',recordURL(r.record_id,'data'),active==='data'?'active':''),link('Download JSON ↓','data/records/'+r.record_id+'.json'));return nav;}
 async function buildMethod(host,r,presentation){
 
+ if(presentation.presentation_status==='pending'){
+  const notice=el('aside',undefined,'reader-note');
+  notice.append(el('strong','Audited source data · presentation in progress'),el('p','Some molecular, unit-cell and morphology illustrations are still being prepared. Available measurements and source figures retain their stated sample scope.'));
+  host.append(notice);
+ }
+
  const sections=[section('precursors','01','Precursors'),section('protocol','02','Synthesis protocol'),section('structures','03','Final structures'),section('properties','04','Properties'),section('intuition','05','Chemical intuition')];host.append(...sections);
 
  const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r,siteURL('./'),presentation.protocol_art);sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
@@ -133,6 +139,7 @@ async function buildMethod(host,r,presentation){
  sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));intuition(sections[4],r,presentation);
 
  const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+source.year),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link('Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
+ if(/^data\/paper-reviews\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(presentation.data_links?.contexts||''))sources.append(link('Download additional source contexts ↓',presentation.data_links.contexts,'reader-data-link'));
  mountWuContext(host,sections,sources,r,presentation);
  await Promise.all([precursors(sections[0],r,presentation),mountReaderStructures(structureHost,r,presentation)]);
  const precursorFigures=figs.filter(f=>f.category==='precursor'||f.categories?.includes('precursor'));
