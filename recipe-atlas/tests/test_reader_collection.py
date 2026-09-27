@@ -34,13 +34,13 @@ class ReaderCollectionTests(unittest.TestCase):
         a=collection_summary(self.records,self.pairs,[])
         refs=[{'id':'generic-reference','record_ids':[r['record_id'] for r in self.records]}]
         b=collection_summary(self.records,self.pairs,refs)
-        self.assertEqual(160,b['synthesis_structure_pairs'])
-        self.assertEqual(60,b['contributing_papers'])
-        self.assertEqual(74,b['material_families'])
+        self.assertEqual(a['synthesis_structure_pairs'],b['synthesis_structure_pairs'])
+        self.assertEqual(a['contributing_papers'],b['contributing_papers'])
+        self.assertEqual(a['material_families'],b['material_families'])
         self.assertEqual([x['pair_row_id'] for x in a['pairs']],[x['pair_row_id'] for x in b['pairs']])
         self.assertEqual(before,json.dumps(self.records,sort_keys=True))
         self.assertFalse(any(x['source_group']=='voznyy2019' for x in b['pairs']))
-        self.assertEqual(160,b['more_comprehensive_pairs']+b['partial_pairs'])
+        self.assertEqual(a['synthesis_structure_pairs'],b['more_comprehensive_pairs']+b['partial_pairs'])
 
     def test_reference_for_another_specimen_does_not_fill_this_gap(self):
         row=self.pairs[0];record=next(r for r in self.records if r['record_id']==row['record_id'])

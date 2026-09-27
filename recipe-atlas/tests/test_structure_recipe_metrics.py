@@ -229,7 +229,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':160,'source_groups':40,'records':137,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':168,'source_groups':42,'records':145,'physical_samples_deduplicated':None},broad['counts'])
         new_contexts={(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group'] in {'ghezelbash2005-main','hu-wang-2010-nickel-hydroxychloride'}}
         self.assertEqual({
             ('ghezelbash-2005-cu1p8s-variant','cu1p8s-reagent-adjusted'),
@@ -276,14 +276,20 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual('high-temp-grain-context',li2000_rows[0]['sample_id'])
         tirosh_rows=[row for row in broad['rows'] if row['source_group']=='tirosh2006']
         self.assertEqual(['tirosh-2006-cofe2o4-method-a-270c'],[row['record_id'] for row in tirosh_rows])
+        # Accepted new source contexts: application products and electrical-only variants add no structure pair.
+        self.assertEqual({'saini-2023-nat-cqd-biomass-carbonization'}, {row['record_id'] for row in broad['rows'] if row['source_group']=='saini2023'})
+        self.assertEqual({'yao2015-pbs-hot-injection-120c','yao2015-cds-nanorods-200c-12h',
+                         'yao2015-cds-pbs-1-cycles','yao2015-cds-pbs-2-cycles','yao2015-cds-pbs-4-cycles',
+                         'yao2015-cds-pbs-6-cycles','yao2015-planar-cds-pbs-6-cycles'},
+                         {row['record_id'] for row in broad['rows'] if row['source_group']=='yao2015acsami'})
         self.assertEqual(0,strict['counts']['exact_task_ready_records'])
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         from reader_collection import collection_summary
         collection=collection_summary(records,broad['rows'],[])
         page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
-        self.assertIn('Browse all 160 pairs',page)
-        self.assertEqual(160,page.count('<tr><td><a href="records/'))
+        self.assertIn('Browse all 168 pairs',page)
+        self.assertEqual(168,page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))
