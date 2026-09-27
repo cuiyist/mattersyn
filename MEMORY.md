@@ -1,3 +1,13 @@
+## 2026-09-27 — Saini and Yao contributions published and verified
+
+Two additional gold source contributions were deployed at site commit `7fc9d94a00324ad2955a4314dd78cffd86d6c326` from source `ec62a0519ab2a5dd6627bf300b83e3673cdb1b92` and verified anonymously at 2026-09-27T02:59:19.683375+00:00. All 28 checked pages, data files, source figures and modules matched the approved artifact. The release passed 147 dataset tests, 64,089 quality assertions and the exact 9,630-file publication boundary; source CI passed on Windows and Linux with matching output bytes.
+
+Live totals are 911 records, 62 contributing source groups, 77 directly synthesized material families, 89 material/component hubs, 254 routes and 168 recipe–structure rows. This increment adds 14 records and eight pairs from two papers. Saini covers its main text and matched SI; Yao covers the main text only, with known SI unreviewed. Both display presentation-pending qualifications. Original source figures remain available with publisher permission unverified.
+
+The next CdSe ligand study has an author-frozen package undergoing independent audit; the metal-carboxylate/nanocrystal paper is in parallel extraction and source-first review. Neither has publication credit. Continue the existing screened-pass queue under workflow v2. Silver remains disabled pending held-out calibration; the daily 08:00 America/Chicago report remains active and two-hour reports remain paused. No uninterrupted processing or target throughput is claimed.
+
+Verified milestone: `research-assets/public-audits/saini-yao-publication-20260927.json`. Reusable release lesson: invoke `tools/mattersyn-release/gate.py` as the command-line boundary gate; `public_release_guard.py` is its implementation module and does not emit release receipts when executed directly.
+
 ## 2026-09-27 — Gold website building resumed with accepted source batches
 
 The latest user instruction prioritizes continued website building using the fastest validated workflow. Ready gold contributions proceed independently of deferred silver calibration. The daily 08:00 America/Chicago report is active; two-hour checks remain retired. Existing screened-pass sources only; no paid processing, new papers, external source transfers or status-only deployments.
