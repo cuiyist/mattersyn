@@ -56,6 +56,19 @@ gold contribution may be presentation-pending; its declared scientific scope
 still needs the consolidated independent audit. Automatic cross-repository
 publishing is not installed by this increment; the existing local handoff remains.
 
+Inventory totals and memberships are generated during the build from canonical
+records, source review metadata and atlas indexes. The authored
+`recipe-atlas/data/inventory-evidence.json` preserves scientific review scope and
+notes; it is not a place to hand-update totals. Source scope, DOI, page counts,
+record assignments and component relationships must reconcile before rendering.
+No scientific record or training eligibility is changed by this migration.
+
+The silver Reader defaults to hidden. Monitoring projections default to
+`publication_enabled:false` and cannot grant new admission. Complete calibration,
+genuine deployment/verification receipts, reviewed public-only manifests and
+separate release gates remain necessary before enabling either public silver
+data or accuracy claims. Synthetic test results are software checks only.
+
 Use the single build entry point documented in the project README. Authored static
 inputs live in `recipe-atlas/static`; generated `dist` is a build output. A committed
 input blueprint and an externally generated runtime snapshot bind each build to

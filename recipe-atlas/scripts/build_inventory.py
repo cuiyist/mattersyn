@@ -1,9 +1,10 @@
-"""Render an independently audited inventory; reject stale counts before publishing."""
+"""Derive inventory counts from reviewed inputs and render reconciled membership."""
 from pathlib import Path
 from collections import Counter
 import json, html, re
 from build_reader_views import shell
 from review_scope import MAIN_SI, MAIN_ONLY
+from derive_inventory import generate
 
 ROOT = Path(__file__).resolve().parents[1]
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
@@ -11,7 +12,7 @@ def esc(s): return html.escape(str(s))
 def link(label, url): return '<a href="'+esc(url)+'">'+esc(label)+'</a>'
 
 def main():
-    inventory = read(ROOT/'data/inventory-summary.json')
+    inventory = generate(ROOT)
     summary = inventory['summary']
     records = [read(p) for p in (ROOT/'data/records').glob('*.json')]
     byid = {r['record_id']:r for r in records}

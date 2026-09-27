@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "workflow_setup_and_calibration",
-  "recorded_at": "2026-09-27T00:37:03.034668+00:00",
-  "authorization": "Owner adopted the scaling plan and confirmed 98% / 95% / 90% field precision thresholds. Workflow implementation and local development/calibration are authorized; production silver publication requires calibration approval.",
-  "supersedes_hold": "New workflow adoption supersedes the implementation hold only. Historical throughput trials stay frozen; no automatic revival of earlier curation/report schedules.",
+  "status": "workflow_revision_then_curation",
+  "recorded_at": "2026-09-27T01:19:20.411627+00:00",
+  "authorization": "The owner explicitly resumed the remaining scaling workflow revisions, followed by website building with the revised workflow, and requested a progress report every morning.",
+  "supersedes_hold": "This authorization resumes revision work and subsequent screened-collection curation. Historical trials stay frozen; the two-hour automation remains paused.",
   "active_run": "research-assets/acceleration-20260925/run-state.json",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -11,15 +11,15 @@
   "source_scope": "Existing screened-pass documents only; new arrivals remain separate.",
   "maximum_concurrent_agents_including_root": 4,
   "maximum_active_paper_claims": 5,
-  "daily_report_time": null,
+  "daily_report_time": "08:00 America/Chicago",
   "stop_rule": "No uncalibrated silver publication. New arrivals and corpus screening remain paused. Existing data changes require the adopted lane-specific gates.",
   "current_measurement_window": "20260926-revised-workflow-12h",
   "measurement_checkpoint_utc": "2026-09-26T14:03:41Z",
   "progress_report_interval_hours": null,
-  "progress_automation": "mattersyn-three-hour-local-throughput-trial",
+  "progress_automation": "mattersyn-sequential-paper-review",
   "two_hour_reporting_authorized_at": "2026-09-26T03:03:21Z",
   "accepted_queue_closeout_receipt": "research-assets/public-audits/song2024-publication-20260926.json",
-  "recurring_reports_paused": true,
+  "recurring_reports_paused": false,
   "limited_revision_authorization": {
     "date": "2026-09-26",
     "scope": "User-requested all-material visual and catalogue revision only: molecular viewers, parallel reference cells, source-figure morphology, removal of public review progress, normal experimental-series integration and clear pair counts. Broader curation and recurring reports remain paused.",
@@ -41,9 +41,10 @@
     "target_silver_papers_per_day": 500,
     "target_demonstrated": false,
     "production_silver_enabled": false,
-    "reporting": "On request or material failure; no status-only deployments",
+    "reporting": "Daily at 08:00 America/Chicago and on request/material failure; no two-hour checks or status-only website deployments",
     "presentation": "Separate batched refinements; scoped data labelled presentation pending",
     "cross_repo_automatic_publication": "not installed; existing local reviewed handoff retained",
-    "current_phase": "Implemented tools under independent software review; scientific calibration pending"
-  }
+    "current_phase": "Remaining workflow revisions in progress; generated inventory, silver Reader and monitoring increments under validation; complete heldout calibration and automatic publishing still pending"
+  },
+  "continuation_checkpoint": "Local private research-assets/scaling-workflow-20260927/continuation.private.json"
 }

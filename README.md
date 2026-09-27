@@ -25,12 +25,19 @@ publication, not a measured result.
 
 - [Scoped packages and event metrics](tools/workflow/README.md)
 - [Local extraction and calibration](tools/silver/README.md)
+- [Silver sampling, error monitoring and stop rules](tools/silver/MONITORING.md)
+- [Separate silver Reader integration](recipe-atlas/scripts/SILVER_READER.md)
 - [Single-commit release preparation](tools/publication/SINGLE_COMMIT_RELEASE.md)
 
-Routine status-only deployments are retired. Current automations remain paused;
-the new workflow is in setup and calibration. Existing scientific records and
-reader pages are unchanged. Cross-repository automatic deployment, full generated
-aggregate migration, calibration and the silver pilot are subsequent rollout steps.
+Status-only deployments and two-hour checks are retired. At the owner's request,
+remaining workflow revisions are active, followed by website building, with a
+daily 08:00 America/Chicago report. Inventory counts and memberships now derive
+from reviewed inputs at build time; source review scopes remain authored evidence.
+The separate silver Reader and error monitor are implemented but production is
+disabled pending scientific calibration and release admission. Existing scientific
+records and live pages are unchanged. Automatic cross-repository deployment, the
+remaining aggregate migration, complete calibration and the measured silver pilot
+are subsequent rollout steps.
 
 ## Local workspace organization
 

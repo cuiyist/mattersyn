@@ -11,7 +11,7 @@ For a focused edit, apply only the relevant parts of this workflow. Do not rebui
 
 ## Active scaling workflow
 
-For work on the current screened collection, read [references/scaling-workflow-v2.md](references/scaling-workflow-v2.md) first. The owner adopted separate audited gold and explicitly unreviewed silver lanes, local models only, and 98% / 95% / 90% field-precision thresholds. This supersedes older 20 audited papers/hour targets, routine status reports and mandatory visual completion before scoped scientific publication. Calibration and public-boundary checks remain required; the adopted plan is not evidence that a target rate or automatic deployment has been achieved. Use one consolidated independent scientific audit and reuse unchanged accepted work. Keep presentation-pending data distinct from completed Readers.
+For work on the current screened collection, read [references/scaling-workflow-v2.md](references/scaling-workflow-v2.md) first. The owner adopted separate audited gold and explicitly unreviewed silver lanes, local models only, and 98% / 95% / 90% field-precision thresholds. This supersedes older 20 audited papers/hour targets, two-hour reports and mandatory visual completion before scoped scientific publication. The owner subsequently restored a daily 08:00 America/Chicago progress report and resumed remaining workflow revisions followed by website building. Calibration and public-boundary checks remain required; the adopted plan is not evidence that a target rate or automatic deployment has been achieved. Use one consolidated independent scientific audit and reuse unchanged accepted work. Keep presentation-pending data distinct from completed Readers.
 
 ## Workspace locations
 

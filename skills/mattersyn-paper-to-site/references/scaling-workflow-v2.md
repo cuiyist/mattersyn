@@ -122,9 +122,35 @@ variant, SI addition, correction or presentation pass is not another new paper.
 Report gold and silver separately. Do not infer active work from commit gaps or
 claim continuous unattended processing between runs.
 
-Report on request or on a material failure; routine two-hour and daily status
-messages are retired. Save concise memory and reusable changes with substantive
+The owner subsequently restored a daily progress report at 08:00 America/Chicago
+and resumed remaining workflow revisions followed by website building. Report the
+actual interval, completed and pending revisions, newly verified gold and silver
+papers, cumulative coverage, pairs, audit/calibration state, blockers and next work.
+Keep two-hour checks retired; report material failures when they occur. Save concise memory and reusable changes with substantive
 milestones, not a new commit/deployment for every checkpoint. Preserve historical
 trial receipts unchanged. New incoming papers remain outside the active screened
 snapshot until the owner resumes intake. No paid APIs, source-file transfers,
 model downloads or GPU purchases are authorized by this workflow.
+
+## Build-derived inventory and silver monitoring
+
+`recipe-atlas/data/inventory-evidence.json` retains authored source scopes, DOI
+bindings, notes and the fixed corpus snapshot. The build derives the inventory
+counts, record memberships and material relationships from current canonical
+records and generated source/atlas indexes. Never edit generated inventory totals
+or refresh an unrelated scientific audit merely because those totals changed.
+New source scope metadata still requires review. This migration covers inventory;
+other scientific presentation sidecars retain their existing audit boundaries.
+
+The separate silver Reader is disabled until a real calibrated public manifest
+passes release review. It does not fetch drafts or change gold counts/exports.
+See [Reader integration](../../../recipe-atlas/scripts/SILVER_READER.md).
+`tools/silver/monitor.py` selects a deterministic 5% daily sample of first verified
+silver source releases, retains every sampled claim, and proposes field/band
+suspensions from actual independent judgments. See
+[monitoring](../../../tools/silver/MONITORING.md). Preserve its private input
+chain; do not manufacture deployment or accuracy receipts from candidate counts.
+
+The code and synthetic tests establish software behavior, not scientific precision.
+Complete source-separated labels, measured calibration, independent approval,
+version-audit handling and a release-admitted silver pilot remain required.

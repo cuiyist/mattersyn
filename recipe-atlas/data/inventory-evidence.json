@@ -1,0 +1,1913 @@
+{
+  "schema": "mattersyn-inventory-evidence/1",
+  "baseline_inventory_sha256": "50722472316cf532ff12b4fc765bb80a658661d69172adec6e4439936b2221e8",
+  "scope": "Reviewed inventory derived from current canonical records and generated atlas. Source documents, complete recipes and independent experiments remain different counts. Incoming-folder monitoring counts are separate.",
+  "count_definitions": {
+    "paper_group": "Corpus DOI/document grouping. It is not a count of independently identity-verified primary papers; duplicate/mismatched payloads remain in the corpus metadata.",
+    "synthesis_route_variant": "Distinct reviewed canonical route or condition-variant used for publication, not necessarily a complete executable recipe, unique physical batch or independent experiment.",
+    "contextual_control": "Source-scoped controls or diagnostic variants, counted separately from synthesis routes, supporting procedures and observations; not automatically independent physical experiments.",
+    "procedure": "Precursor preparation, isolation, size-selection, ligand exchange, post-treatment, acquisition or assay records. Not additional material syntheses.",
+    "recipe_family": "Grouping identifiers used to connect related source protocols and procedures. They are not unique physical recipes or independent runs.",
+    "material_system": "Direct synthesis targets retain product architecture and unresolved composition; component-only hubs link the whole-system route without claiming an isolated component synthesis.",
+    "benchmark": "Published numeric rows from one external study, not 100 reviewed papers or 100 newly reconstructed laboratory protocols.",
+    "unknown_full_corpus_totals": "Unreviewed titles and keyword windows cannot establish whether a material was synthesized, the actual product, complete recipes, variants, controls or duplication. Do not extrapolate reviewed-subset counts.",
+    "contextual_observation": "Source-scoped characterization series, model interpretations or incomplete observations retained separately from synthesis routes. They do not create additional verified syntheses.",
+    "public_material_hub": "A locally generated public-facing material/component route. Existence is checked against generated files, not a remote deployment check. Shared canonical record IDs are counted once globally.",
+    "nonprocedure_literature": "All literature records except supporting procedures: synthesis routes, contextual controls and contextual observations. The observation is excluded from recipe_or_control_literature_records.",
+    "legacy_corpus_baseline": "The fixed indexed downloaded_papers corpus: 7,373 document files and 4,176 groups with local documents. Incoming-folder tracking is not added to these counts, including byte-duplicate incoming copies.",
+    "shared_wafer": "The two Heath template variants were prepared on the same wafer in one reported exposure. Individual wells and variant records are not independent synthesis runs.",
+    "danek_series": "Figure-defined particle sizes, shell ratios, optical aliquots and film-deposition categories are source-scoped observations. Their number must not be interpreted as fully specified independent synthesis recipes.",
+    "local_paper_groups_indexed": "Actual generated source-library groups, including reviewed incoming-folder sources absent from the earlier legacy index; not a full incoming-corpus count.",
+    "local_document_files_indexed": "Document-file count from the retained legacy corpus index snapshot; incoming-folder monitor totals are reported separately on the progress page.",
+    "reviewed_literature_experimental_row": "A source-defined table row with preserved input/output scope. It is not an additional fully specified synthesis route or a deduplicated physical experiment."
+  },
+  "corpus_snapshot": {
+    "candidate_groups_without_local_documents": 394,
+    "local_document_files_indexed": 7373,
+    "local_paper_groups_indexed": 4186,
+    "paper_candidate_groups_total": 4570,
+    "unique_document_content_hashes": 6857
+  },
+  "corpus_candidate_metadata": {
+    "title_material_mention_paper_groups": 1820,
+    "distinct_title_formula_tokens": 344,
+    "candidate_formula_status": "Unreviewed string matches, including possible catalysts/supports/analytes/products of testing and parsing errors. Not distinct synthesized-material count.",
+    "provisional_main_and_si_available_groups": 2567,
+    "document_role_mismatch_count": 23,
+    "main_si_exact_content_duplicate_groups": 38,
+    "text_extraction_status_counts": {
+      "extracted": 7171,
+      "unsupported_legacy_doc": 154,
+      "unsupported_mislabeled_payload": 44,
+      "no_extractable_text": 4
+    },
+    "first_page_doi_match_groups": 3441,
+    "scope_limit": "Indexing/extraction is not recipe curation. Title material mentions do not verify synthesis contributions. No OCR or legacy DOC conversion performed."
+  },
+  "benchmark_scope": {
+    "selected_rows": 100,
+    "selected_continuous_outcome_rows": 95,
+    "selected_failure_rows": 5,
+    "selected_recipe_family_ids": 97,
+    "full_source_dataset_rows": 2552,
+    "full_source_continuous_outcome_rows": 2529,
+    "full_source_failure_rows": 23,
+    "full_source_physical_recipe_groups_by_documented_input_rule": 1154,
+    "note": "These benchmark grouping counts are generated from the documented input rule; they are not the number of fully reconstructed synthesis protocols or independently reproduced experiments."
+  },
+  "review_priority_constraints": [
+    "Continue one paper at a time using the existing local main and matching SI.",
+    "Preserve distinctions between complete main+SI review, main-only review, selected recipe review and benchmark import.",
+    "Upgrade claims only after page/figure/recipe inventory and source/sample linkage review; no title-based material expansion."
+  ],
+  "per_paper": [
+    {
+      "source_group": "banerjee2003",
+      "doi": "10.1021/ja035980c",
+      "url": "https://doi.org/10.1021/ja035980c",
+      "title": "In Situ Quantum Dot Growth on Multiwalled Carbon Nanotubes",
+      "year": 2003,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All nine supplied main pages and the matched one-page SI text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Nanotube pretreatment, in situ CdTe growth, control populations, separated washings and analytical specimens retain distinct evidence scopes. Missing precursor amounts, Te stock speciation/concentration and final drying conditions remain explicit; cited external works not independently inspected.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 1,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/banerjee2003.json",
+      "paper_review_url": "paper-review.html?id=banerjee2003",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "One CdTe–MWNT growth route, nine supporting procedures and four observations; the source does not quantify every reagent or establish atomically resolved junction geometry.",
+        "All eight main figures and the matched SI infrared spectrum, plus six source excerpts preserve microscopy, EDS, XPS, XRD, Raman, UV-visible and IR evidence.",
+        "Bound CdTe, free/washings particles, no-tube comparison and oxidized MWNT precursor retain distinct sample scopes. The EDS caption unit discrepancy and literal TeO3 assignment remain explicit."
+      ]
+    },
+    {
+      "source_group": "besson2002",
+      "doi": "10.1021/nl015685v",
+      "url": "https://doi.org/10.1021/nl015685v",
+      "title": "3D Quantum Dot Lattice Inside Mesoporous Silica Films",
+      "year": 2002,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All six supplied main pages text and visually reviewed with independent source, canonical, reader, chemical and apparatus audits. Matching local SI not located or verified; cited upstream preparations and theory not independently inspected here.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/besson2002.json",
+      "paper_review_url": "paper-review.html?id=besson2002",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Silica-host preparation and two host-specific CdS loading routes preserve precursor composition, repeated impregnation/rinse/vacuum/H2S operations and incomplete copolymer preparation.",
+        "Original four figures and six methodological/source-note excerpts are retained. Optical, XRD, HRTEM, SIMS and silicon-wafer PL specimen scopes are separate.",
+        "Figure3d is an image Fourier power spectrum, not SAED. Mesostructure lattice parameters differ from atomic CdS blende-type fringes.",
+        "The Figure4 caption/prose conflict, optical pore-filling estimate and residual empty pores remain explicit. No measured atomic CIF or absent raw spectrum is invented."
+      ]
+    },
+    {
+      "source_group": "braun2001",
+      "doi": "10.1021/jp010002l",
+      "url": "https://doi.org/10.1021/jp010002l",
+      "title": "Variation of the Thickness and Number of Wells in the CdS/HgS/CdS Quantum Dot Quantum Well System",
+      "year": 2001,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All four supplied main pages text and visually reviewed with independent source, canonical, reader, chemical and apparatus audits. Matching local SI not located or verified; cited upstream preparations and theory not independently inspected here.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/braun2001.json",
+      "paper_review_url": "paper-review.html?id=braun2001",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Three CdS/HgS/CdS architectures retain A–B–C, A–B–C–B–C and A–B–C–C–C–B–C synthesis sequences. Surface exchange differs from adding a deposited layer.",
+        "Three acquisition procedures and three contextual observations preserve optical settings, sample architecture, author interpretation and uninspected cited context.",
+        "Four original figures and four experimental source excerpts are preserved. Missing counterions, stabilizer form, feed doses and core-size discrepancies remain explicit.",
+        "Architecture diagrams and cited morphology are not measured atomic coordinates; no sample CIF, missing microscopy, XRD, SAED or nanocrystal Raman spectrum is invented."
+      ]
+    },
+    {
+      "source_group": "chen2018ami",
+      "doi": "10.1021/acsami.8b04556",
+      "url": "https://doi.org/10.1021/acsami.8b04556",
+      "title": "Cs4PbBr6/CsPbBr3 Perovskite Composites with Near-Unity Luminescence Quantum Yield: Large-Scale Synthesis, Luminescence and Formation Mechanism, and White Light-Emitting Diode Application",
+      "year": 2018,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "source_extraction_passed; canonical_reader_changed_scope_pending",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 10,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/chen2018ami.json",
+      "paper_review_url": "paper-review.html?id=chen2018ami",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No Chen training task is admitted. Source-defined contexts are not independent experimental batches; source-average host tables are not exact composite atomic-coordinate labels.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "costanzo2016co",
+      "doi": "10.1021/acs.jpcc.6b07293",
+      "url": "https://doi.org/10.1021/acs.jpcc.6b07293",
+      "title": "Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals",
+      "year": 2016,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/costanzo2016co.json",
+      "paper_review_url": "paper-review.html?id=costanzo2016co",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "dabbousi1997",
+      "doi": "10.1021/jp971091y",
+      "url": "https://doi.org/10.1021/jp971091y",
+      "title": "(CdSe)ZnS Core–Shell Quantum Dots: Synthesis and Characterization of a Size Series of Highly Luminescent Nanocrystallites",
+      "year": 1997,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All13supplied main pages text/visually reviewed with independent source and canonical audits. Matching SI not located or verified; deployment checkpoint separate.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 13,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/dabbousi1997.json",
+      "paper_review_url": "paper-review.html?id=dabbousi1997",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "General ZnS and CdS overgrowth routes are separate; six note22 size-temperature pairs are condition choices, not six asserted independent runs.",
+        "Ten supporting procedures retain seed synthesis, sample preparation, acquisition and post-synthesis exposure.",
+        "Five observation records preserve optical, table/coverage, oxidation, solution-SAXS and CdS-comparison cohorts; exact recipe/outcome joins remain unresolved.",
+        "Sixteen original figures, Table1, five numbered equations and additional source notes/formulas are retained. Model dimensions and fitted parameters do not become experimental atomic structures."
+      ]
+    },
+    {
+      "source_group": "danek1996",
+      "doi": "10.1021/cm9503137",
+      "url": "https://doi.org/10.1021/cm9503137",
+      "title": "Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe",
+      "year": 1996,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Eight supplied main pages read and visually checked; independent supplied-main source audit complete. Matching SI not located or verified. Canonical record review and reader/publication acceptance are separate gates; prospective inventory promotion is conditional.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/danek1996.json",
+      "paper_review_url": "paper-review.html?id=danek1996",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Three routes: solution ZnSe overgrowth, matrix deposition with bare dots, and matrix deposition with pre-overcoated dots.",
+        "Four procedures include cited upstream preparation, delivery dispersion, characterization and the annealing diagnostic; only no-seed/no-DEZn are counted as control variants.",
+        "Three observation records preserve incomplete high-temperature overgrowth and multiple solution/film characterization cohorts.",
+        "Figure1 has an embedded four-row table, not four complete recipes; the article contains11figures, one embedded table, one unnumbered reaction and18 numbered references.",
+        "Product ratios, surface ratios, derived shell dimensions and absolute versus relative luminescence values retain distinct scopes."
+      ]
+    },
+    {
+      "source_group": "dantas2002",
+      "doi": "10.1021/jp0208743",
+      "url": "https://doi.org/10.1021/jp0208743",
+      "title": "Anti-Stokes Photoluminescence in Nanocrystal Quantum Dots",
+      "year": 2002,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All five supplied main pages text and visually reviewed with independent source, canonical, reader, chemical and apparatus audits. Matching local SI not located or verified; cited upstream preparations and theory not independently inspected here.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 5,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/dantas2002.json",
+      "paper_review_url": "paper-review.html?id=dantas2002",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Shared glass preparation and six annealing conditions preserve the upstream powder batch, sulfur-source uncertainty and separate optical/AFM specimen cohorts.",
+        "Seven original figures and procedural/source excerpts are retained. AFM height distributions, absorption, photoluminescence, excitation-power behavior and author model calculations retain their own sample scopes.",
+        "Optical size/radius ambiguity and questionable aluminum-crucible wording remain explicit. No measured atomic lattice, absent Raman spectrum or raw data are invented."
+      ]
+    },
+    {
+      "source_group": "dhaene2022-main",
+      "doi": "10.1021/acsnano.1c08966",
+      "url": "https://doi.org/10.1021/acsnano.1c08966",
+      "title": "Monoalkyl Phosphinic Acids as Ligands in Nanocrystal Synthesis",
+      "year": 2022,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main + matched SI review",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 12,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 24,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/dhaene2022-main.json",
+      "paper_review_url": "paper-review.html?id=dhaene2022-main",
+      "si_status": "matched_and_reviewed"
+    },
+    {
+      "source_group": "evans2010",
+      "doi": "10.1021/ja103805s",
+      "url": "https://doi.org/10.1021/ja103805s",
+      "title": "Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation",
+      "year": 2010,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied 3-page main article, matched 21-page SI and molecular-species-9 CIF read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Three QD/MSC synthesis families, supporting procedures and analytical contexts retain separate identities; record IDs are not replicate counts. Source discrepancies and unspecified sample joins remain explicit. No QD atomic coordinates or training eligibility is inferred.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 3,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 21,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/evans2010.json",
+      "paper_review_url": "paper-review.html?id=evans2010",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task is admitted. The supplied atomic coordinates are molecular species9; they do not describe CdSe or PbSe quantum dots. Context links are not physical specimen joins.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "feld2019",
+      "doi": "10.1021/acsnano.8b05032",
+      "url": "https://doi.org/10.1021/acsnano.8b05032",
+      "title": "Chemistry of Shape-Controlled Iron Oxide Nanocrystal Formation",
+      "year": 2019,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main and matching SI coverage ledger; missing methods, uncertain sample linkage and source conflicts still apply.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 11,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 19,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/feld2019.json",
+      "paper_review_url": "paper-review.html?id=feld2019"
+    },
+    {
+      "source_group": "friedfeld2019",
+      "doi": "10.1021/acs.inorgchem.8b02945",
+      "url": "https://doi.org/10.1021/acs.inorgchem.8b02945",
+      "title": "Conversion of InP Clusters to Quantum Dots",
+      "year": 2019,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All eight supplied main pages and 25 matched SI pages read and independently audited. Canonical records, corrected reader, molecular references and bindings, stage-specific apparatus and symbolic product contexts passed separate audits. Four conversion route/variant records, fifteen supporting procedures and eleven observation records retain their separate contexts. Source inconsistencies and unreported conditions remain explicit. No current-product atomic coordinates, exact structure–recipe pair or new training task is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 25,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/friedfeld2019.json",
+      "paper_review_url": "paper-review.html?id=friedfeld2019",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new task or exact structure–recipe training pair is admitted. Literature cluster formulas, local lattice fringes and calculated Scherrer domains do not supply current specimen atomic coordinates or verified cross-technique batch identity.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "fu2007",
+      "doi": "10.1021/ja075604i",
+      "url": "https://doi.org/10.1021/ja075604i",
+      "title": "Stable Aqueous Dispersion of ZnO Quantum Dots with Strong Blue Emission via Simple Solution Route",
+      "year": 2007,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main and matching SI coverage ledger; missing methods, uncertain sample linkage and source conflicts still apply.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 5,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/fu2007.json",
+      "paper_review_url": "paper-review.html?id=fu2007"
+    },
+    {
+      "source_group": "gary-cossairt-2014-main",
+      "paper_id": "gary-cossairt-2014",
+      "doi": "10.1021/cm500102q",
+      "url": "https://doi.org/10.1021/cm500102q",
+      "title": "Investigation of Indium Phosphide Quantum Dot Nucleation and Growth Utilizing Triarylsilylphosphine Precursors",
+      "year": 2014,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main + matched SI review",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 11,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 16,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/gary-cossairt-2014.json",
+      "paper_review_url": "paper-review.html?id=gary-cossairt-2014",
+      "si_status": "matched_and_reviewed"
+    },
+    {
+      "source_group": "gerion2001",
+      "doi": "10.1021/jp0105488",
+      "url": "https://doi.org/10.1021/jp0105488",
+      "title": "Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots",
+      "year": 2001,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All eleven supplied main pages text and visually reviewed with independent source, canonical, reader, chemical and apparatus audits. Explicitly announced HRTEM/AFM SI remains unlocated or unverified; deployment tracked separately.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 11,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/gerion2001.json",
+      "paper_review_url": "paper-review.html?id=gerion2001",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Two downstream CdSe/ZnS coating routes: siloxane growth and MPA ligand exchange. The optional undosed APS extension is a procedure, not a complete independent synthesis.",
+        "Sixteen supporting procedures and ten contextual observations preserve original sample scopes, controls, analytical acquisition and interpretation.",
+        "Seventeen original crops preserve seven figures, two tables and reagent/procedural notes. HRTEM and AFM supporting figures are declared but unavailable locally.",
+        "Color-cohort sizes and spectra do not supply exact recipe–specimen links, measured atomic coordinates or success labels. Named phosphonate identity, filter units, peak values and plotted sample-selection conflicts remain explicit."
+      ]
+    },
+    {
+      "source_group": "ghezelbash2005-main",
+      "paper_id": "ghezelbash2005-main",
+      "doi": "10.1021/la051196p",
+      "url": "https://doi.org/10.1021/la051196p",
+      "title": "Nickel Sulfide and Copper Sulfide Nanocrystal Synthesis and Polymorphism",
+      "year": 2005,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/ghezelbash2005-main.json",
+      "paper_review_url": "paper-review.html?id=ghezelbash2005-main",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "ghosh2012",
+      "doi": "10.1021/ja212032q",
+      "url": "https://doi.org/10.1021/ja212032q",
+      "title": "New Insights into the Complexities of Shell Growth and the Strong Influence of Particle Volume in Nonblinking “Giant” Core/Shell Nanocrystal Quantum Dots",
+      "year": 2012,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied ten-page main article and matched nine-page SI read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Two routes, three variants, ten supporting procedures and six observation contexts remain distinct. Missing precursor preparations, unresolved specimen joins and source-scoped comparisons are retained. No new training task or exact structure–recipe pair is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 10,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/ghosh2012.json",
+      "paper_review_url": "paper-review.html?id=ghosh2012",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task is admitted. TEM, PXRD and nominal layer accounting do not provide product atomic coordinates, exact cross-technique sample–recipe joins or DFT-ready inputs.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "gu2004",
+      "doi": "10.1021/ja0496423",
+      "url": "https://doi.org/10.1021/ja0496423",
+      "title": "Facile One-Pot Synthesis of Bifunctional Heterodimers of Nanoparticles: A Conjugate of Quantum Dot and Magnetic Nanoparticles",
+      "year": 2004,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All two main and three matched SI pages text-read and visually inspected. Independent source, canonical, reader, molecular, product, apparatus and task-eligibility audits. Stage identities, failed intermediate isolation, analytical/model contexts and the main/SI XRF discrepancy remain distinct. Cited external full texts are not claimed read.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 2,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 3,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/gu2004.json",
+      "paper_review_url": "paper-review.html?id=gu2004",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "One FePt/CdS heterodimer route plus a separate Cd(acac)2 precursor procedure; ten records are not ten independent syntheses.",
+        "All seven figures, one scheme and four excerpts retained as twelve original assets; actual final-product SAED Figure1D is supplied.",
+        "Exact atomic coordinates and numeric initial ether boiling point are not supplied. Formal chemical component diagrams and product-domain illustrations are excluded from measured-structure training targets."
+      ]
+    },
+    {
+      "source_group": "heath1996",
+      "doi": "10.1021/jp951903v",
+      "url": "https://doi.org/10.1021/jp951903v",
+      "title": "Spatially Confined Chemistry: Fabrication of Ge Quantum Dot Arrays",
+      "year": 1996,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Six supplied main pages read and visually inspected; independent source and bounded four-record scientific audits passed. Matching SI is not located or verified. Two template populations share one wafer/exposure. Canonical-to-reader audit and publication remain separate gates.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/heath1996.json",
+      "paper_review_url": "paper-review.html?id=heath1996",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "The 100 and 150 nm wells are two templates on the same substrate, not independent runs.",
+        "The unpatterned temperature/time series is contextual observation, not an additional complete recipe.",
+        "Raman and near-IR peaks are prose-only; AFM bounds, inferred pseudo-time and Figure 2 identity conflict remain explicit."
+      ]
+    },
+    {
+      "source_group": "heo2003",
+      "doi": "10.1021/jp0219348",
+      "url": "https://doi.org/10.1021/jp0219348",
+      "title": "Spatially Ordered Quantum Dot Array of Indium Nanoclusters in Fully Indium-Exchanged Zeolite X",
+      "year": 2003,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied 9-page main article and matched 14-page SI reviewed. Separate independent source, canonical/reader, reflection-table and molecular-binding audits passed. One synthesis route, three acquisition procedures and six analytical/model contexts retain their own sample identities. Average position/occupancy reconstruction is qualified separately; condition conflicts, two uncertain SI signs and unresolved physical sample links remain explicit. No exact ordered structure or training task is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 14,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/heo2003.json",
+      "paper_review_url": "paper-review.html?id=heo2003",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No training task is admitted. The average position/occupancy CIF is a qualified source reconstruction, not an exact ordered structure or DFT-ready model.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "hu-wang-2010-nickel-hydroxychloride",
+      "paper_id": "hu2010nichydroxychloride",
+      "doi": "10.1021/ja103607q",
+      "url": "https://doi.org/10.1021/ja103607q",
+      "title": "Fullerene-like Colloidal Nanocrystal of Nickel Hydroxychloride",
+      "year": 2010,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 3,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/hu2010nichydroxychloride.json",
+      "paper_review_url": "paper-review.html?id=hu2010nichydroxychloride",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "li1998znga2o4",
+      "doi": "10.1021/cm970557m",
+      "url": "https://doi.org/10.1021/cm970557m",
+      "title": "Self-Regulation Synthesis of Nanocrystalline ZnGa2O4 by Hydrothermal Reaction",
+      "year": 1998,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 2,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/li1998znga2o4.json",
+      "paper_review_url": "paper-review.html?id=li1998znga2o4",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "li2000cu2sns3",
+      "doi": "10.1006/jssc.2000.8772",
+      "url": "https://doi.org/10.1006/jssc.2000.8772",
+      "title": "Synthesis, Characterization, and Properties of Nanocrystalline Cu2SnS3",
+      "year": 2000,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/li2000cu2sns3.json",
+      "paper_review_url": "paper-review.html?id=li2000cu2sns3",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "li2020cs3cu2x5",
+      "paper_id": "li2020cs3cu2x5",
+      "doi": "10.1021/acs.chemmater.0c00280",
+      "url": "https://doi.org/10.1021/acs.chemmater.0c00280",
+      "title": "Room Temperature Synthesis of Stable, Printable Cs3Cu2X5 (X = I, Br/I, Br, Br/Cl, Cl) Colloidal Nanocrystals with Near-Unity Quantum Yield Green Emitters (X = Cl)",
+      "year": 2020,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 10,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/li2020cs3cu2x5.json",
+      "paper_review_url": "paper-review.html?id=li2020cs3cu2x5",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "lian2021",
+      "doi": "10.1021/acsami.1c18038",
+      "url": "https://doi.org/10.1021/acsami.1c18038",
+      "title": "Realizing Near-Unity Quantum Efficiency of Zero-Dimensional Antimony Halides through Metal Halide Structural Modulation",
+      "year": 2021,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied eight-page main article and matched 26-page SI read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Two routes, one protocol variant, six supporting procedures and seven observation contexts remain distinct. Printed conflicts, missing crystal ZIP/video and unresolved physical specimen joins are preserved. No new training task or exact structure–recipe pair is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 26,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/lian2021.json",
+      "paper_review_url": "paper-review.html?id=lian2021",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task is admitted. The printed bulk-crystal coordinate tables do not establish nanocrystal atomic coordinates, complete ordered hydrogen/occupancy models, exact sample–recipe joins or DFT-ready inputs.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "littau1993",
+      "doi": "10.1021/j100108a019",
+      "url": "https://doi.org/10.1021/j100108a019",
+      "title": "A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction",
+      "year": 1993,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All seven supplied main pages read and visually inspected with independent source and bounded record-join audits. Matching SI not located or verified. The three current-apparatus formulation records, nine supporting procedures and AKS41 observation retain unresolved specimen linkage, source conflicts and missing parameters. Final reader integration and publication are separate gates.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 7,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/littau1993.json",
+      "paper_review_url": "paper-review.html?id=littau1993",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "The 1.0, 2.0 and 6.0 labels are supplied 0.1%-disilane/He stock-mixture flows and formulation families, not independently identified physical batches.",
+        "AKS41 is a contextual observation from an earlier apparatus; no quantified synthesis is reconstructed and no training task is enabled.",
+        "Si/SiOx retains unresolved surface stoichiometry and the unconfirmed 1.0 crystallinity; Si is a component-only link, not a bare-silicon synthesis.",
+        "48 measurement entries are scoped separately across the 13 records; they are not 48 independent experiments."
+      ],
+      "has_local_corpus_group": true
+    },
+    {
+      "source_group": "matuhina2023",
+      "doi": "10.1021/acsanm.2c04342",
+      "url": "https://doi.org/10.1021/acsanm.2c04342",
+      "title": "Role of CsMnCl3 Nanocrystal Structure on Its Luminescence Properties",
+      "year": 2023,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied 13-page main article and 13-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. One hot-injection route with five explicitly paired conditions, thirteen supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved. Printed coordinate tables are retained but no atomistic model, exact structure-recipe pair or training task is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 13,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 13,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/matuhina2023.json",
+      "paper_review_url": "paper-review.html?id=matuhina2023",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task is admitted. Source coordinate tables require separate qualification; microscopy, diffraction and nominal preparation labels do not establish atomically resolved products or exact cross-technique sample-recipe joins.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "morrison2017",
+      "doi": "10.1021/acs.inorgchem.7b01711",
+      "url": "https://doi.org/10.1021/acs.inorgchem.7b01711",
+      "title": "Cadmium Bis(phenyldithiocarbamate) as a Nanocrystal Shell-Growth Precursor",
+      "year": 2017,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied 10-page main article and matched 17-page SI read and independently audited. Separate canonical/reader, molecular and apparatus audits passed. Two shell-growth routes, eight supporting procedures and eight observation contexts remain distinct. Printed conflicts and unresolved specimen joins are preserved. Precursor crystal coordinates are not CdSe/CdS product coordinates. No new training task or exact structure–recipe pair is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 10,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 17,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/morrison2017.json",
+      "paper_review_url": "paper-review.html?id=morrison2017",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task is admitted. The transcribed precursor crystal tables do not describe CdSe/CdS product coordinates or establish exact product–recipe pairs.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "murray1993",
+      "doi": "10.1021/ja00072a025",
+      "url": "https://doi.org/10.1021/ja00072a025",
+      "title": "Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites",
+      "year": 1993,
+      "has_local_corpus_group": true,
+      "review_status": "legacy_main_article_review_si_unverified",
+      "review_scope": "Legacy main-article methods/characterization work; matching SI not located or verified. Not counted among the five formal complete main+SI ledgers. Murray retains CdSe-selected canonical methods rather than every CdE route.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 10,
+          "legacy_inspection_documented": true
+        }
+      ],
+      "evidence_locator": "dist/data/paper-evidence/murray1993.json",
+      "paper_review_url": null
+    },
+    {
+      "source_group": "nagasaki2004",
+      "doi": "10.1021/la036034c",
+      "url": "https://doi.org/10.1021/la036034c",
+      "title": "Novel Molecular Recognition via Fluorescent Resonance Energy Transfer Using a Biotin-PEG/Polyamine Stabilized CdS Quantum Dot",
+      "year": 2004,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All five supplied main pages and all three content-matched SI pages completely read and visually inspected; independent source, canonical, reader, apparatus, component and product-context audits passed. Four source ambiguities, the incomplete biotin variant and all missing quantities remain explicit. The abstract size summary and optical-model size do not establish a TEM/XRD/biotin recipe-to-specimen join. No measured atomic coordinates are supplied.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 5,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 3,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/nagasaki2004.json",
+      "paper_review_url": "paper-review.html?id=nagasaki2004",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "2 precursor-selection and 5 partial-protocol task rows are admitted from this source. Supporting procedures and analytical/model contexts retain distinct records. Missing source details and specimen links remain explicit; no exact-structure, size-conditioned, optical-outcome or success-prediction task is admitted.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "nakonechnyi2017",
+      "doi": "10.1021/acs.chemmater.7b00354",
+      "url": "https://doi.org/10.1021/acs.chemmater.7b00354",
+      "title": "Mechanistic Insights in Seeded Growth Synthesis of Colloidal Core/Shell Quantum Dots",
+      "year": 2017,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main and matching SI coverage ledger; missing methods, uncertain sample linkage and source conflicts still apply.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 7,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/nakonechnyi2017.json",
+      "paper_review_url": "paper-review.html?id=nakonechnyi2017"
+    },
+    {
+      "source_group": "norberg2004",
+      "doi": "10.1021/ja048427j",
+      "url": "https://doi.org/10.1021/ja048427j",
+      "title": "Synthesis of Colloidal Mn2+:ZnO Quantum Dots and High-TC Ferromagnetic Nanocrystalline Thin Films",
+      "year": 2004,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All twelve supplied main pages and all four content-matched SI pages completely read and visually inspected; independent source, canonical, reader and private visual audits passed. Absolute recipe scale and multiple workup conditions remain unreported. Keep the 0.02% feed EPR series, 0.20 +/- 0.01% measured colloids, 1.1% TOPO/MCD specimen and optical/model contexts separate. Preserve SI statistical-notation and Figure S3/Table S4 D/F conflicts. Films A-C preparation does not supply missing D-F coat counts or annealing conditions. An external undoped ZnO cell is a reference, not measured Mn:ZnO coordinates.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 12,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/norberg2004.json",
+      "paper_review_url": "paper-review.html?id=norberg2004",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "1 precursor-selection and 4 partial-protocol task rows are admitted from this source. Supporting procedures and analytical/model contexts retain distinct records. Missing source details and specimen links remain explicit; no exact-structure, size-conditioned, optical-outcome or success-prediction task is admitted.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "pati2009",
+      "doi": "10.1021/la8031286",
+      "url": "https://doi.org/10.1021/la8031286",
+      "title": "Precipitation of Nanocrystalline CeO2 Using Triethanolamine",
+      "year": 2009,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied four-page main and four-page matched SI read and independently audited. Canonical/reader, molecular, apparatus and symbolic product-context audits passed. Three alcohol-specific precipitation routes, eleven supporting procedures and five observation records remain separate. As-prepared whole-powder identity is unresolved despite local CeO2 microscopy; calcination, DLS and XPS exposure histories retain their own scopes. Source conflicts are preserved. No atomic model, exact structure-recipe pair or new training task is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/pati2009.json",
+      "paper_review_url": "paper-review.html?id=pati2009",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task is admitted. No atomic coordinates are supplied, as-prepared whole composition remains unresolved and analytical surface fits are not bulk formulas or exact sample-recipe structure labels.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "peng1998",
+      "doi": "10.1021/ja9805425",
+      "url": "https://doi.org/10.1021/ja9805425",
+      "title": "Kinetics of II-VI and III-V Colloidal Semiconductor Nanocrystal Growth: “Focusing” of Size Distributions",
+      "year": 1998,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All two main and four matched SI PDF pages text and visually reviewed with independent audits; deployment tracked separately.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 2,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "supporting_information",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/peng1998.json",
+      "paper_review_url": "paper-review.html?id=peng1998",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "Two hot-injection routes for CdSe and InAs; sequential feed additions are correlated stages of each run.",
+        "Four preparation/analysis procedures and six observation/calibration/model records remain separate from synthesis route counts.",
+        "All 36 optical/TEM calibration rows are source evidence, not independent recipe outcomes.",
+        "Original figures, both SI tables, two equations and two procedural notes are preserved; no measured phase or atomic coordinates supplied."
+      ]
+    },
+    {
+      "source_group": "peng2000",
+      "doi": "10.1038/35003535",
+      "url": "https://doi.org/10.1038/35003535",
+      "title": "Shape control of CdSe nanocrystals",
+      "year": 2000,
+      "has_local_corpus_group": true,
+      "review_status": "legacy_main_article_review_si_unverified",
+      "review_scope": "Legacy three-page main-article extraction and figure inspection; matching SI not located or verified. Not counted among the five formal complete main+SI ledgers.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 3,
+          "legacy_inspection_documented": true
+        }
+      ],
+      "evidence_locator": "dist/data/paper-evidence/murray1993.json",
+      "paper_review_url": null
+    },
+    {
+      "source_group": "ramasamy2014cusb",
+      "doi": "10.1021/cm5005642",
+      "url": "https://doi.org/10.1021/cm5005642",
+      "title": "Selective Nanocrystal Synthesis and Calculated Electronic Structure of All Four Phases of Copper-Antimony-Sulfide",
+      "year": 2014,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main + matched SI review",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/ramasamy2014cusb.json",
+      "paper_review_url": "paper-review.html?id=ramasamy2014cusb",
+      "si_status": "matched_and_reviewed"
+    },
+    {
+      "source_group": "ribeiro2004",
+      "doi": "10.1021/jp0473669",
+      "url": "https://doi.org/10.1021/jp0473669",
+      "title": "Study of Synthesis Variables in the Nanocrystal Growth Behavior of Tin Oxide Processed by Controlled Hydrolysis",
+      "year": 2004,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All six supplied main pages completely read and visually inspected; independent source, canonical, reader and private visual audits passed. No matched supporting information was located or verified; SI existence remains unverified and no absence is inferred. Preserve the unspecified basis of the approximately 500:1 water/Sn ratio, acid-set treatment pH versus unreported final TBAOH measurement pH, and radius/diameter/model distinctions. XRD is mentioned but the inspected article supplies no trace, SAED or atomic coordinates.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/ribeiro2004.json",
+      "paper_review_url": "paper-review.html?id=ribeiro2004",
+      "si_status": "unverified",
+      "notes": [
+        "1 precursor-selection and 1 partial-protocol task rows are admitted from this source. Supporting procedures and analytical/model contexts retain distinct records. Missing source details and specimen links remain explicit; no exact-structure, size-conditioned, optical-outcome or success-prediction task is admitted.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "rusch2026",
+      "doi": "10.1021/acs.chemmater.5c02845",
+      "url": "https://doi.org/10.1021/acs.chemmater.5c02845",
+      "title": "Nanocrystal Synthesis Derived Approach to Silver Bismuth Iodide Layered Double Perovskites with Aliphatic Amines: (CnH(2n+1)NH3)4AgBiI8",
+      "year": 2026,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main + matched SI review",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 10,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 24,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/rusch2026.json",
+      "paper_review_url": "paper-review.html?id=rusch2026",
+      "si_status": "matched_and_reviewed"
+    },
+    {
+      "source_group": "saha2019",
+      "doi": "10.1021/acs.jpcc.8b11124",
+      "url": "https://doi.org/10.1021/acs.jpcc.8b11124",
+      "title": "Interface Modeling Leading to Giant Exchange Bias from the CoO/CoFe2O4 Quantum Dot Heterostructure",
+      "year": 2019,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main and matching SI coverage ledger; missing methods, uncertain sample linkage and source conflicts still apply.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 7,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 3,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/saha2019.json",
+      "paper_review_url": "paper-review.html?id=saha2019"
+    },
+    {
+      "source_group": "sashchiuk2004",
+      "doi": "10.1021/nl0345116",
+      "url": "https://doi.org/10.1021/nl0345116",
+      "title": "PbSe Nanocrystal Assemblies: Synthesis and Structural, Optical, and Electrical Characterization",
+      "year": 2004,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All seven supplied main pages text-read and visually inspected, including five figures, model equations and 67 references. Independent source, canonical, molecular, crystal, reader and apparatus audits preserve individual/assembly/device/model scopes. SI not located or verified; cited full texts not independently inspected.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 7,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/sashchiuk2004.json",
+      "paper_review_url": "paper-review.html?id=sashchiuk2004",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Four growth routes preserve mass-ratio and caption conflicts; stock amounts are not supplied.",
+        "All five source figures and eight excerpts retained, including original SAED, absorption and electrical data.",
+        "Ideal crystal references and author calculations are not measured sample atomic coordinates or exact-structure training targets."
+      ]
+    },
+    {
+      "source_group": "sasongko2025",
+      "doi": "10.1021/acs.jpcc.5c05144",
+      "url": "https://doi.org/10.1021/acs.jpcc.5c05144",
+      "title": "High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection",
+      "year": 2025,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All nine supplied main pages and 11 matched SI pages read and independently audited. The canonical records and reader, molecular/stock references, 21 operation illustrations and symbolic source sample contexts passed separate scoped audits. One synthesis route, seven supporting preparation/acquisition procedures and eleven observation records remain distinct. Nine paired comparison contexts do not establish independent replicate counts or shared physical aliquots. Source inconsistencies and missing conditions remain explicit. No current QD atomic coordinates or exact structure–recipe training pair is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 11,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/sasongko2025.json",
+      "paper_review_url": "paper-review.html?id=sasongko2025",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "No new training task or exact structure–recipe pair is admitted. Quoted literature cells, conceptual phase diagrams and local lattice-fringe annotations are not refined atomic coordinates of the current QDs. Source-scoped comparison labels do not establish cross-technique physical aliquot identity.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "schwartz2003",
+      "doi": "10.1021/ja036811v",
+      "url": "https://doi.org/10.1021/ja036811v",
+      "title": "Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals",
+      "year": 2003,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "All14 main pages and4 matched SI pages text-read and visually inspected, with independent source, canonical, molecular, apparatus and reader audits. Pure and doped ZnO routes, TOPO processing, surface-bound controls, aggregated magnetic specimens, measured spectra and theoretical models retain separate scopes. Source conflicts and missing quantities remain explicit; cited external works are not independently inspected.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 14,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/schwartz2003.json",
+      "paper_review_url": "paper-review.html?id=schwartz2003",
+      "si_status": "matched_and_reviewed",
+      "notes": [
+        "Three pure/Co-doped/Ni-doped ZnO synthesis routes with separately represented postprocessing, specimen preparation, measurements and theoretical interpretations.",
+        "All11 main figures, six SI figures, two tables, Scheme1, ten equation groups and source excerpts are retained. TEM and original electron-diffraction patterns are available; source-reported XRD conclusions have no supplied original trace.",
+        "Nominal dopant feeds, incorporated concentrations, deliberate surface-bound control, optical specimens and aggregate powder are distinct. Source concentration, equivalent, size and spectral-wording inconsistencies remain visible."
+      ]
+    },
+    {
+      "source_group": "shah2001",
+      "doi": "10.1021/jp011815c",
+      "url": "https://doi.org/10.1021/jp011815c",
+      "title": "Nanocrystal Arrested Precipitation in Supercritical Carbon Dioxide",
+      "year": 2001,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All eight supplied main pages text and visually reviewed with independent source, canonical, reader, chemical and apparatus audits; SI not located or verified; deployment tracked separately.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/shah2001.json",
+      "paper_review_url": "paper-review.html?id=shah2001",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Nine silver experiments A–I and two separate iridium/platinum conditions provide eleven source-linked synthesis variants.",
+        "Four common procedures and four contextual observations remain separate from experimental routes.",
+        "Twenty-one original source assets preserve eleven figures, Table 1, equations, definitions and procedural notes.",
+        "The platinum precursor remains as printed with unresolved identity. Figure 7 cohorts are not silently joined to same-size Table 1 rows. No measured atomic coordinates or exact-structure training labels supplied."
+      ]
+    },
+    {
+      "source_group": "sommer2020",
+      "doi": "10.1021/acs.cgd.9b01519",
+      "url": "https://doi.org/10.1021/acs.cgd.9b01519",
+      "title": "Atomic Scale Design of Spinel ZnAl2O4 Nanocrystal Synthesis",
+      "year": 2020,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied eleven-page main article read and independently audited. Declared SI remains locally unlocated and unverified. Canonical/reader, molecule and apparatus audits passed. Three laboratory routes, nine supporting procedures and seven observation records remain distinct. Source conflicts, unknown outcomes and unresolved specimen joins are preserved; no atomistic pair or training task is admitted.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 11,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/sommer2020.json",
+      "paper_review_url": "paper-review.html?id=sommer2020",
+      "si_status": "unverified",
+      "notes": [
+        "No new training task is admitted. Source diffraction, microscopy and nominal targets do not provide product atomic coordinates, exact cross-technique sample–recipe joins or DFT-ready inputs.",
+        "Source-specific original figures and independent reference illustrations retain their distinct roles. Records, protocols, characterization contexts and independent physical experiments are not interchangeable counts."
+      ]
+    },
+    {
+      "source_group": "song2024inorgchem4c02738",
+      "paper_id": "song2024zincchalcogenide",
+      "doi": "10.1021/acs.inorgchem.4c02738",
+      "url": "https://doi.org/10.1021/acs.inorgchem.4c02738",
+      "title": "Alloyed Zinc Chalcogenide Magic-Sized Nanoclusters and Their Transformation to Alloyed Quantum Dots",
+      "year": 2024,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All 8 supplied main pages text-read and visually reviewed; independent source review is recorded in the paper-review record. Supporting information was not admitted, reviewed, or used.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 8,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/song2024zincchalcogenide.json",
+      "paper_review_url": "paper-review.html?id=song2024zincchalcogenide",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "The eight admitted records preserve six route variants and two separate source-context observations; record totals do not count independent physical batches.",
+        "Main-article coverage only. Supporting information remains outside the admitted review scope.",
+        "Missing quantities, source conflicts and sample-linkage limits remain explicit in the records and paper review."
+      ]
+    },
+    {
+      "source_group": "stiger1999",
+      "doi": "10.1021/la980800b",
+      "url": "https://doi.org/10.1021/la980800b",
+      "title": "Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100)",
+      "year": 1999,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All nine supplied main pages text and visually reviewed with independent audits. Matching SI not located or verified; deployment tracked separately.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 9,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/stiger1999.json",
+      "paper_review_url": "paper-review.html?id=stiger1999",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "One Ag/Si pulsed-electrodeposition route with source-scoped pulse options; individual panel contexts are not asserted independent batches.",
+        "Two controls and four electrochemical/microscopy procedures remain separate from the synthesis route.",
+        "Nine original figures, actual SAED plus a separate indexing schematic, Table1 and three equations are preserved.",
+        "Source concentration, charge-unit, caption and kinetic-rate inconsistencies remain explicit. No measured atomic coordinates supplied."
+      ]
+    },
+    {
+      "source_group": "stowell2005",
+      "doi": "10.1021/nl050648f",
+      "url": "https://doi.org/10.1021/nl050648f",
+      "title": "Iridium Nanocrystal Synthesis and Surface Coating-Dependent Catalytic Activity",
+      "year": 2005,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main and matching SI coverage ledger; missing methods, uncertain sample linkage and source conflicts still apply.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 5,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/stowell2005.json",
+      "paper_review_url": "paper-review.html?id=stowell2005"
+    },
+    {
+      "source_group": "tessier2015",
+      "doi": "10.1021/acs.chemmater.5b02138",
+      "url": "https://doi.org/10.1021/acs.chemmater.5b02138",
+      "title": "Economic and Size-Tunable Synthesis of InP/ZnE (E = S, Se) Colloidal Quantum Dots.",
+      "year": 2015,
+      "has_local_corpus_group": true,
+      "review_status": "selected_recipe_and_figure_review",
+      "review_scope": "One selected recipe plus selected main/SI figures; no full-paper review claim.",
+      "documents": [],
+      "evidence_locator": "dist/data/recipe-figures/tessier2015.json",
+      "paper_review_url": null
+    },
+    {
+      "source_group": "thomson2010ja101908k",
+      "doi": "10.1021/ja101908k",
+      "url": "https://doi.org/10.1021/ja101908k",
+      "title": "Ultrathin Bi2S3 Nanowires: Surface and Core Structure at the Cluster-Nanocrystal Transition",
+      "year": 2010,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 11,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/thomson2010ja101908k.json",
+      "paper_review_url": "paper-review.html?id=thomson2010ja101908k",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "tirosh2006",
+      "doi": "10.1021/cm052401p",
+      "url": "https://doi.org/10.1021/cm052401p",
+      "title": "Optimizing Cobalt Ferrite Nanocrystal Synthesis Using a Magneto-optical Probe",
+      "year": 2006,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All six supplied main-article pages were text-read and visually reviewed, including Figures 1–7 and Table 1. Three distinct Method-A temperature records, observation-only B–D comparisons and a separate phase-unassigned cobalt-oxide control were checked against source labels. Targeted independent correction rechecks cover T1–T3 as described in the public review. SI was not located or verified.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/tirosh2006.json",
+      "paper_review_url": "paper-review.html?id=tirosh2006",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Method A has three reported temperature variants; the selected Fe(III) alkoxide and sample-A exact hold time remain unresolved.",
+        "B–D measurements are retained as observations without importing unreviewed synthesis recipes; the cobalt-oxide control is not a CoFe2O4 route.",
+        "All seven figures and Table 1 are linked with source locators. Sample A at 270 °C contributes one source-linked synthesis–structure row; no exact measured-coordinate/CIF pair is claimed."
+      ]
+    },
+    {
+      "source_group": "veinot1997",
+      "doi": "10.1021/cm970189m",
+      "url": "https://doi.org/10.1021/cm970189m",
+      "title": "Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot",
+      "year": 1997,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All6supplied main pages text/visually reviewed with independent source and canonical audits. Matching SI not located or verified; deployment checkpoint separate.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/veinot1997.json",
+      "paper_review_url": "paper-review.html?id=veinot1997",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "One phenolic CdS preparation and five surface-esterification variants; variants retain inherited framework and independently reported values.",
+        "Eleven supporting procedures preserve six molecular precursor preparations, reagent conditioning and four analytical methods. Organic products are not CdS synthesis targets.",
+        "One deliberate nonreactive control and three observation records remain distinct; no calibrated failure labels.",
+        "Six original figures, three complete tables, Scheme1 and compound illustration; all15references/notes and141source units inventoried. Typed qualitative observations preserve solubility and spectral behavior without numeric guesses."
+      ]
+    },
+    {
+      "source_group": "voznyy2019",
+      "doi": "10.1021/acsnano.9b03864",
+      "url": "https://doi.org/10.1021/acsnano.9b03864",
+      "title": "Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis",
+      "year": 2019,
+      "has_local_corpus_group": true,
+      "review_status": "published_numeric_benchmark",
+      "review_scope": "100 selected rows from one published 2,552-row dataset; benchmark import and numerical validation, not full article/SI recipe review.",
+      "documents": [],
+      "evidence_locator": "dist/data/baseline-report.json",
+      "paper_review_url": null
+    },
+    {
+      "source_group": "wagner1999",
+      "paper_id": "wagner1999-ssz48",
+      "doi": "10.1021/jp991389j",
+      "url": "https://doi.org/10.1021/jp991389j",
+      "title": "Electron Diffraction Structure Solution of a Nanocrystalline Zeolite at Atomic Resolution",
+      "year": 1999,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 6,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/wagner1999-ssz48.json",
+      "paper_review_url": "paper-review.html?id=wagner1999-ssz48",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "williamson2021",
+      "doi": "10.1021/acsnano.1c00502",
+      "url": "https://doi.org/10.1021/acsnano.1c00502",
+      "title": "Statistical Multiobjective Optimization of Thiospinel CoNi2S4 Nanocrystal Synthesis via Design of Experiments",
+      "year": 2021,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_and_matched_si_review",
+      "review_scope": "Complete supplied main + matched SI review The 38 source-defined experimental rows retain the source table formulations; S9 and S13 are not joined.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 12,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        },
+        {
+          "role": "si",
+          "page_count": 26,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/williamson2021.json",
+      "paper_review_url": "paper-review.html?id=williamson2021",
+      "si_status": "matched_and_reviewed"
+    },
+    {
+      "source_group": "wu2008",
+      "doi": "10.1021/nl801817d",
+      "url": "https://doi.org/10.1021/nl801817d",
+      "title": "Synthesis and Photovoltaic Application of Copper(I) Sulfide Nanocrystals",
+      "year": 2008,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied five-page main review with inherited independent source audit and targeted correction checks. SI remains unverified. One synthesis route; three supporting preparation/device procedures.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 5,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/wu2008.json",
+      "paper_review_url": "paper-review.html?id=wu2008",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "yao1998",
+      "doi": "10.1021/la970480g",
+      "url": "https://doi.org/10.1021/la970480g",
+      "title": "Electrolyte Effects on CdS Nanocrystal Formation in Chelate Polymer Particles: Optical and Distribution Properties",
+      "year": 1998,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All seven supplied main pages text and visually reviewed with independent audits. Matching SI not located or verified; deployment tracked separately.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 7,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/yao1998.json",
+      "paper_review_url": "paper-review.html?id=yao1998",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Two aqueous CdS/polymer routes retain the nominal NaCl and reaction-clock ambiguities.",
+        "Host conditioning and cadmium loading have stage-specific product identities; comparative electrolytes are incomplete qualitative observations, not additional full routes.",
+        "Host dimensions, regional nanocrystal sizes, dispersion-layer widths, XRD size estimates and author diffusion/potential models retain distinct measurement scopes.",
+        "Nine figures and three numbered equations are preserved. The supplied paper contains no original XRD plot, SAED image, Raman spectrum or measured atomic coordinates."
+      ]
+    },
+    {
+      "source_group": "yi2002",
+      "doi": "10.1021/cm0115416",
+      "url": "https://doi.org/10.1021/cm0115416",
+      "title": "Synthesis and Characterization of High-Efficiency Nanocrystal Up-Conversion Phosphors: Ytterbium and Erbium Codoped Lanthanum Molybdate",
+      "year": 2002,
+      "has_local_corpus_group": true,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All five supplied main pages text and visually reviewed with independent source, canonical, reader, chemical and apparatus audits. Matching local SI not located or verified; cited upstream preparations and theory not independently inspected here.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 5,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/yi2002.json",
+      "paper_review_url": "paper-review.html?id=yi2002",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "Five hydrothermal/annealing comparison conditions and one independently specified solid-state bulk method retain their preparation lineage and missing individual comparison charges.",
+        "All ten original figures and six source excerpts preserve XRD, TEM, intensity-based sizing, down-conversion, up-conversion, near-IR absorption, annealing/doping/power comparisons and proposed mechanisms.",
+        "Printed ammonium molybdate mass/mole and nominal feed/formula conflicts remain unresolved. No measured atomic coordinates, SAED, absolute quantum yield or unreported raw data are invented."
+      ]
+    },
+    {
+      "source_group": "yu1998cde",
+      "doi": "10.1021/cm980181s",
+      "url": "https://doi.org/10.1021/cm980181s",
+      "title": "A Novel Solventothermal Synthetic Route to Nanocrystalline CdE (E = S, Se, Te) and Morphological Control",
+      "year": 1998,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "Complete supplied main review; SI unverified",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 4,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/yu1998cde.json",
+      "paper_review_url": "paper-review.html?id=yu1998cde",
+      "si_status": "not_located_or_verified"
+    },
+    {
+      "source_group": "zhan1999jaipurite",
+      "paper_id": "zhan1999jaipurite",
+      "doi": "10.1006/jssc.1999.8299",
+      "url": "https://doi.org/10.1006/jssc.1999.8299",
+      "title": "Hydrazine-Assisted Low-Temperature Hydrothermal Preparation of Nanocrystalline Jaipurite",
+      "year": 1999,
+      "has_local_corpus_group": false,
+      "review_status": "full_supplied_main_review_si_unverified",
+      "review_scope": "All three supplied main pages text-read and visually reviewed. Independent main-only source, record, Reader, chemistry, figure and bounded integration audits passed with limits; supporting information was not reviewed or used.",
+      "documents": [
+        {
+          "role": "main",
+          "page_count": 3,
+          "all_text_read": true,
+          "all_visually_reviewed": true
+        }
+      ],
+      "evidence_locator": "data/paper-reviews/zhan1999jaipurite.json",
+      "paper_review_url": "paper-review.html?id=zhan1999jaipurite",
+      "si_status": "not_located_or_verified",
+      "notes": [
+        "One hydrazine-assisted hydrothermal CoS synthesis route, one hydrazine-free amorphous-CoS control, and two source-context observation records are kept distinct.",
+        "The paper reports Jaipurite phase assignment and laminar morphology; XRD/TEM source evidence remains linked to the supported source context.",
+        "SI was not reviewed. The source does not provide batch IDs, exact sample-matched atomic coordinates or a CIF; no exact structure–recipe training pair is claimed."
+      ]
+    },
+    {
+      "source_group": "zhang2019",
+      "doi": "10.1021/acs.chemmater.9b03529",
+      "url": "https://doi.org/10.1021/acs.chemmater.9b03529",
+      "title": "Alkyl Phosphonic Acids Deliver CsPbBr3 Nanocrystals with High Photoluminescence Quantum Yield and Truncated Octahedron Shape",
+      "year": 2019,
+      "has_local_corpus_group": true,
+      "review_status": "selected_recipe_and_figure_review",
+      "review_scope": "One selected recipe plus selected main/SI figures; no full-paper review claim.",
+      "documents": [],
+      "evidence_locator": "dist/data/recipe-figures/zhang2019.json",
+      "paper_review_url": null
+    }
+  ],
+  "material_notes": {
+    "(4-FPEA)4AgBiI8": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "(C10H21NH3)4AgBiI8": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "(C12H25NH3)4AgBiI8": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "(C12H28N)2SbCl5": [],
+    "(C12H28N)SbCl4": [],
+    "(C14H29NH3)4AgBiI8": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "A nanocrystals / BaMgAl10O17:Eu2+ / PS": [],
+    "A-based film contexts": [],
+    "Ag": [],
+    "Ag/Ir/Pt": [],
+    "Ag/Si": [],
+    "Ag–Bi layered halide study contexts": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Ag–Bi–I mixed products": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Antimony-halide A and B calculation contexts": [],
+    "Antimony-halide bulk A and B": [],
+    "Antimony-halide model contexts": [],
+    "Bi-containing oleate reaction solution": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Bi2S3": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Borosilicate SSZ-48; source does not give a complete empirical formula": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Bulk A and A composite/spin-coated films": [],
+    "C10H14CdO4": [],
+    "C12-amine silver bismuth bromide": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "C12-amine silver bismuth chloride": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "C14H12CdN2S4": [],
+    "C18H20CdN2OS4": [],
+    "C24H20P2PbSe4": [],
+    "C28H60O4P2Cd": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "C6–C18 monoalkyl phosphinic acids": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "C8/C18 monoalkyl phosphinic acids": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "CHO-PEG/PAMA": [],
+    "Calcined borosilicate SSZ-48; Si/O framework refinement only in Table 5 CIF": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cd precursor control": [],
+    "Cd precursor mixture": [],
+    "Cd precursor mixtures": [],
+    "Cd(C18H33O2)2": [],
+    "Cd(PTC)2 conversion": [],
+    "Cd/Chelex 100": [],
+    "CdE (E = S, Se, Te)": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "CdS": [
+      "Two no-seed control protocols carry this product identity in the canonical data, but are not published as independently complete synthesis routes. Public hub contributions are shell-growth components."
+    ],
+    "CdS/HgS/CdS": [],
+    "CdS/SiO2": [],
+    "CdS/polymer": [],
+    "CdSe": [
+      "Before the Danek1996 addition: Seven direct routes: Murray3, Peng2, Nakonechnyi2. Public hub count13 also includes six CdSe-core-containing shell-growth records; those are not extra bare-CdSe recipes.",
+      "Danek1996 adds three existing route IDs to this hub; the current route contribution count is 16. The shell-overgrowth route is distinct from the two matrix-film routes; component links do not create standalone CdSe or ZnSe synthesis recipes."
+    ],
+    "CdSe / PbSe": [],
+    "CdSe/CdS": [
+      "The low-OA control reports CdSe/CdS plus separately nucleated CdS; not a clean additional core/shell synthesis."
+    ],
+    "CdSe/CdS and precursor conversion": [],
+    "CdSe/InAs": [],
+    "CdSe/ZnS": [],
+    "CdSe/ZnS/siloxane": [],
+    "CdSe/ZnSe": [
+      "Danek1996 adds three existing route IDs to this hub; the current route contribution count is 7. The shell-overgrowth route is distinct from the two matrix-film routes; component links do not create standalone CdSe or ZnSe synthesis recipes."
+    ],
+    "CdTe": [],
+    "CdTe/MWNT": [],
+    "CeO2": [],
+    "Chelex 100": [],
+    "Co": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "CoFe2O4": [
+      "Three direct, source-reviewed Method-A temperature variants from Tirosh et al.; Saha et al. remains a separately scoped CoFe2O4 shell contribution in a CoO/CoFe2O4 composite."
+    ],
+    "CoNi2S4": [
+      "Source-scoped observations and source conflicts remain separate from completed synthesis routes."
+    ],
+    "CoO": [],
+    "CoO/CoFe2O4": [],
+    "CoS": [],
+    "CoS study context": [],
+    "Cobalt oxide (exact phase unresolved)": [],
+    "Cs-oleate stock": [],
+    "Cs3Cu2Cl5": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cs3Cu2Cl5 NC/LCM composite array": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cs3Cu2X5 (X = Cl, Br, I) and CsCu2I3 contexts": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cs4PbBr6": [],
+    "Cs4PbBr6/CsPbBr3": [],
+    "CsMnCl3": [],
+    "CsPbBr3": [],
+    "Cs–C–H–O": [],
+    "Cu1.8S": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu12Sb4S13": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu2S": [
+      "Supporting device/stock contexts remain separate from the Cu2S synthesis."
+    ],
+    "Cu2S / CdS separate dispersions": [
+      "Supporting device/stock contexts remain separate from the Cu2S synthesis."
+    ],
+    "Cu2S/CdS photovoltaic device": [
+      "Supporting device/stock contexts remain separate from the Cu2S synthesis."
+    ],
+    "Cu2SnS3": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu3SbS3": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu3SbS3 + Cu12Sb4S13": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu3SbS4": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu3SbS4 + Cu12Sb4S13": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu3SbS4 → Cu12Sb4S13": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Cu7S5": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "CuS": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "CuS + Cu1.8S": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "CuSbS2": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "FA-oleate": [],
+    "FAPbI3": [],
+    "FePt": [],
+    "FePt/CdS": [],
+    "Fe–C–H–O": [],
+    "Fe–O": [
+      "Material-system label only: exact stoichiometry and phase remain unresolved; do not count as verified FeO/Fe3O4/Fe2O3 formula."
+    ],
+    "Ge": [
+      "Component-only links to the same two substrate-supported Ge/Si variants; no separate colloidal or free-standing Ge synthesis is established."
+    ],
+    "Ge/Si": [
+      "Two template variants share one substrate and exposure; no independent-run count is inferred.",
+      "Substrate-supported Ge islands on Si(100); SiO2 defines the growth wells and is not a nanocrystal shell.",
+      "Shared characterization and incomplete unpatterned growth context remain separate from the two routes."
+    ],
+    "HgS": [],
+    "In": [],
+    "In66Si100Al92O384": [],
+    "InAs": [],
+    "InP": [],
+    "Ir": [],
+    "La2(MoO4)3:Yb,Er": [],
+    "MWNT": [],
+    "Mn:ZnO": [],
+    "NMR contexts": [],
+    "Ni": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Ni3S4": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Ni3S4 + Ni": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "NiCl0.78(OH)1.22·xH2O": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "NiS": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Observed compounds": [],
+    "P(SiPh3)3-containing NMR control mixture": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "PEG/PAMA": [],
+    "Pb": [],
+    "Pb precursor mixture": [],
+    "Pb(C18H33O2)2": [],
+    "PbS": [
+      "Numeric benchmark only, one source. 100 selected rows include95 optical outcomes and5 source-coded failures; no reviewed synthesis hub."
+    ],
+    "PbS/glass": [],
+    "PbSe": [],
+    "PbSe reaction context": [],
+    "PhCH2-13CO2H": [],
+    "Pt": [],
+    "Reagent inventory": [],
+    "SSZ-48 as-synthesized context": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "SeP(C2H5)3": [],
+    "SeP(C3H7)3": [],
+    "SeP(C6H5)3": [],
+    "SeP(C8H17)3": [],
+    "SePPh2H": [],
+    "Si": [
+      "Littau1993: Component-only cross-links to the same three surface-oxidized Si/SiOx formulations; no separate bare-Si synthesis is established.",
+      "Littau1993: Oxide-layer information remains within Si/SiOx; no standalone SiOx synthesis or separate oxide material page is counted.",
+      "Heath1996 adds two Ge/Si routes in which Si is the substrate. These do not become isolated Si syntheses or intrinsic Si property labels. The five component links refer to five existing route IDs across two sources."
+    ],
+    "Si/SiOx": [
+      "Three current-apparatus formulation variants; nine supporting procedures and one earlier-apparatus AKS41 observation are separate curation units, not additional synthesis routes.",
+      "The oxide stoichiometry is unresolved and 1.0 crystallinity is not directly established. Neither the slash label nor the illustrative lattice is a measured atomic-structure label."
+    ],
+    "SiO2": [],
+    "SiOx": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "SnO2": [],
+    "Source-specific InP synthesis/characterization context": [
+      "Reported source contexts retain their individual recipe and sample-link limits."
+    ],
+    "Study context": [],
+    "Study materials": [],
+    "Study source context": [],
+    "TBP mixture": [],
+    "TOP mixture": [],
+    "TOPSe mixture": [],
+    "Unidentified product from NH3 substitution": [],
+    "Zn-Al precursor context": [],
+    "ZnAl2O4": [],
+    "ZnGa2O4": [
+      "Source-scoped observations and source conflicts remain separate from completed synthesis routes."
+    ],
+    "ZnO": [],
+    "ZnO:Co": [],
+    "ZnO:Ni": [],
+    "ZnS": [
+      "Shell-component context only; this page does not claim an isolated ZnS synthesis."
+    ],
+    "ZnSSeTe": [],
+    "ZnSTe": [],
+    "ZnSe": [
+      "Before the Danek1996 addition: Two no-seed control protocols carry this product identity in the canonical data, but are not published as independently complete synthesis routes. Public hub contributions are shell-growth components.",
+      "Danek1996 adds three existing route IDs to this hub; the current route contribution count is 7. The shell-overgrowth route is distinct from the two matrix-film routes; component links do not create standalone CdSe or ZnSe synthesis recipes."
+    ],
+    "ZnSeTe/ZnSSe/ZnSTe": [],
+    "ZnTe": [],
+    "biotin-PEG/PAMA": []
+  },
+  "excluded_precursor_procedure_identities": [
+    "Fe–C–H–O",
+    "C10H14CdO4"
+  ]
+}

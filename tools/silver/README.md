@@ -6,6 +6,12 @@ The owner confirmed the proposed precision thresholds on September 26, 2026: hig
 
 ## Files and commands
 
+The separate [monitoring workflow](MONITORING.md) samples verified silver source
+releases and applies cumulative field/band stop rules. Its reports require actual
+independent judgments and cannot establish initial calibration or publish data.
+The [Reader integration](../../recipe-atlas/scripts/SILVER_READER.md) remains
+disabled until real candidates pass calibration and release review.
+
 `silver.py` is the library and CLI; `test_silver.py` contains synthetic regression tests. `extraction-prompt.txt` and `draft-example.json` describe the restricted draft interface. Examples are synthetic, not research evidence.
 
 `local_runner.py` is a separate development-only loopback Ollama client for the
