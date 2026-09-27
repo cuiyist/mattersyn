@@ -51,3 +51,7 @@ queue; leave drafts, correction requests and recurring automations paused.
 ### Pre-freeze relevance and Windows export paths
 
 After deriving a candidate dataset, atlas and Reader, run the current relevance/quality check before freezing release controls. Named-source membership assertions must be updated only for independently accepted additions, retaining excluded benchmark/procedure contexts. On Windows, keep isolated export destinations short enough that the longest approved relative path fits platform limits; check lengths before exporting. A path-length failure requires a new shorter private destination, not a boundary-policy relaxation.
+
+### Standalone SI admission
+
+An independently reviewed standalone supplement uses `supplied_si_only_main_unverified`, with exactly the `si` document role. Its inventory status is `full_supplied_si_review_main_unverified`; the generated reader/library status is `si_only_reviewed`. Keep the main article unverified and any unverified bibliographic fields null. Do not require main/SI matching to read an independent document, and do not imply main reading after accepting SI. Scope-adapter changes need independent compatibility review that preserves existing documents. Supporting adsorption/assay procedures stay accessible without becoming extra synthesis routes or inheriting parent measurements. Rebind all exact hashes after accepted review-status promotion; update only affected hub views and preserve unrelated views byte-for-byte.

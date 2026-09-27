@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import Counter
 import copy,hashlib,json
 from build_atlas import synthesis_route
-from review_scope import MAIN_SI,MAIN_ONLY
+from review_scope import MAIN_SI,MAIN_ONLY,SI_ONLY,source_review_scope
 
 PAPER_DERIVED={'canonical_record_count','synthesis_route_variant_count','contextual_control_count','contextual_observation_count','procedure_count','benchmark_row_count','measurement_entry_count','record_type_counts','canonical_recipe_family_ids','direct_route_material_systems','record_ids','record_urls','experimental_row_count','source_checked_synthesis_structure_rows'}
 CORPUS_SUMMARY={'local_document_files_indexed','local_paper_groups_indexed','paper_candidate_groups_total','candidate_groups_without_local_documents','unique_document_content_hashes'}
@@ -48,7 +48,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs):
     if groups!=set(metadata):raise ValueError('Each source needs independently reviewed scope metadata; no automatic review promotion')
     review_ids=[r['id'] for r in reviews]
     if len(set(review_ids))!=len(review_ids):raise ValueError('Duplicate formal source review')
-    formal_scopes={'full_supplied_main_and_matched_si_review':MAIN_SI,'full_supplied_main_review_si_unverified':MAIN_ONLY}
+    formal_scopes={'full_supplied_main_and_matched_si_review':MAIN_SI,'full_supplied_main_review_si_unverified':MAIN_ONLY,'full_supplied_si_review_main_unverified':SI_ONLY}
     formal_metadata=[(p.get('paper_id',sid),sid,p) for sid,p in metadata.items() if p['review_status'] in formal_scopes]
     expected_review_ids={rid for rid,_,_ in formal_metadata}
     if len(expected_review_ids)!=len(formal_metadata):raise ValueError('Ambiguous authored formal review identity')
@@ -57,6 +57,10 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs):
     for review in reviews:
       sid,p=review_metadata[review['id']]
       if review['review_scope']!=formal_scopes[p['review_status']]:raise ValueError('Formal review scope differs from authored evidence')
+      # Normalize only the known legacy inventory role for validation; retain
+      # authored metadata verbatim in the derived inventory. Unknown roles fail.
+      scope_documents=[dict(doc,role='si' if doc.get('role')=='supporting_information' else doc.get('role')) for doc in p['documents']]
+      source_review_scope({'review_scope':review['review_scope'],'documents':scope_documents})
       if review['doi'].casefold()!=p['doi'].casefold():raise ValueError('Formal review DOI differs from authored evidence')
       if type(review['pages_read']) is not int or review['pages_read']!=sum(d['page_count'] for d in p['documents']):raise ValueError('Formal review page count differs from authored evidence')
       reviewed_ids=review['record_ids']
@@ -123,7 +127,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs):
         'direct_route_recipe_family_ids':sorted({byid[rid]['lineage']['recipe_family'] for rid in direct})}
       materials.append(row)
     lit=[r for r in records if r['collection']=='reviewed_literature'];bench=[r for r in records if r['collection']=='published_benchmark']
-    cc=Counter(categories.values());main_si=[r for r in reviews if r['review_scope']==MAIN_SI];main_only=[r for r in reviews if r['review_scope']==MAIN_ONLY]
+    cc=Counter(categories.values());main_si=[r for r in reviews if r['review_scope']==MAIN_SI];main_only=[r for r in reviews if r['review_scope']==MAIN_ONLY];si_only=[r for r in reviews if r['review_scope']==SI_ONLY]
     corpus=seed['corpus_snapshot']
     if len(library['papers'])!=corpus['local_paper_groups_indexed'] or library['summary']['sourceDocumentCount']!=corpus['local_document_files_indexed']:raise ValueError('Corpus snapshot changed: review new intake separately')
     direct_formulas=sorted({byid[rid]['material']['formula'] for rid in route_ids})
@@ -132,6 +136,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs):
       'published_benchmark_rows':len(bench),'published_benchmark_source_groups':len({r['lineage']['source_group'] for r in bench}),
       'total_canonical_source_groups':len(groups),'formal_full_main_and_matched_si_reviews':len(main_si),'formal_full_review_pages':sum(p['pages_read'] for p in main_si),
       'formal_full_main_reviews_si_unverified':len(main_only),'formal_full_main_only_review_pages':sum(p['pages_read'] for p in main_only),
+      'formal_full_si_reviews_main_unverified':len(si_only),'formal_full_si_only_review_pages':sum(p['pages_read'] for p in si_only),
       'legacy_main_article_reviews_si_unverified':sum(p['review_status']=='legacy_main_article_review_si_unverified' for p in per_paper),
       'legacy_main_pages_inspected':sum(d['page_count'] for p in per_paper if p['review_status']=='legacy_main_article_review_si_unverified' for d in p['documents']),
       'selected_recipe_figure_review_sources':sum(p['review_status']=='selected_recipe_and_figure_review' for p in per_paper),

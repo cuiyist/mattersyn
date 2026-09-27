@@ -20,7 +20,7 @@ try{
   if(data.component_only)$('material-formula').textContent=data.formula+' · '+componentScopeLabel(data).toLowerCase();
   $('material-dataset').href='dataset.html?material='+encodeURIComponent(data.formula);
   const methods=$('material-methods');methods.replaceChildren();
-  for(const r of data.records.filter(r=>r.is_synthesis_route&&r.collection!=='published_benchmark')){const a=link('',r.page_url);a.className='method-card';a.append(node('span',r.method.toUpperCase(),'mini-label'),node('h3',r.title),node('p',`${r.formula} · ${r.year} · ${r.architecture.replaceAll('_',' ')}`),node('span','Open synthesis record →','method-open'));methods.append(a);}
+  for(const r of data.records.filter(r=>r.is_synthesis_route&&r.collection!=='published_benchmark')){const a=link('',r.page_url);a.className='method-card';a.append(node('span',r.method.toUpperCase(),'mini-label'),node('h3',r.title),node('p',`${r.formula} · ${r.year??'Year unverified'} · ${r.architecture.replaceAll('_',' ')}`),node('span','Open synthesis record →','method-open'));methods.append(a);}
   await mountMaterialGuide($('material-illustrated-guide'),data);
   const ids=(data.evidence_records||data.records).filter(r=>r.collection==='reviewed_literature');const details=await Promise.all(ids.map(async r=>(await fetch('data/records/'+r.record_id+'.json',{cache:'no-store'})).json()));
   for(const [hostId,isStructure] of [['material-structures',true],['material-properties',false]]){const host=$(hostId);host.replaceChildren();let count=0;

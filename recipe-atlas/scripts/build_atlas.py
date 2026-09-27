@@ -109,7 +109,7 @@ def main():
         if review:
             scope=source_review_scope(review)
             p['reviewStatus']=scope['review_status']
-            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'scope':scope['scope'],'label':scope['label'],'si_status':scope['si_status'],'pages':sum(d['page_count'] for d in review['documents']),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
+            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'scope':scope['scope'],'label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages':sum(d['page_count'] for d in review['documents']),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
         p['materials']=sorted({f for f,m in materials.items() if doi in m['paper_dois']})
         # Preserve the automatic indexing result as historical scope metadata;
         # current review and contribution statuses follow the reviewed records.

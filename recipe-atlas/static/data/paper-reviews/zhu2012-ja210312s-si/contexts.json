@@ -1,0 +1,1205 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "zhu2012-ja210312s-si",
+  "doi": "10.1021/ja210312s",
+  "scope": "All 31 supplied SI pages. Main article and cited references unreviewed. Optical excitation conditions, calibration samples, fitted parameters and model states are not separate synthesis recipes.",
+  "publication_year": null,
+  "bibliography_note": "Publication year is not supplied by the inspected SI. The source ID does not establish bibliographic year.",
+  "conflicts": [
+    {
+      "id": "ZH-01",
+      "topic": "Cadmium-stock nominal concentration and charge",
+      "claims": [
+        {
+          "label": "Nominal concentration",
+          "statement": "The source labels the cadmium precursor solution 0.1 M.",
+          "locator": "SI p. 3, Section 1A"
+        },
+        {
+          "label": "Recipe charges",
+          "statement": "The same paragraph uses 0.064 g CdO, 2.5 mL OA and 7 mL ODE, without a final solution volume. These charges do not straightforwardly reproduce the labelled concentration.",
+          "locator": "SI p. 3, Section 1A"
+        }
+      ],
+      "handling": "Keep the reported concentration and input charges side by side. Do not recalculate or repair the recipe, infer a final volume, or resolve the unexpanded OA abbreviation."
+    },
+    {
+      "id": "ZH-02",
+      "topic": "Hole-localization rate assignment",
+      "claims": [
+        {
+          "label": "400 nm prose",
+          "statement": "The text gives 1.61 ± 0.07 ps⁻¹ for 400 nm excitation and describes an approximately 0.7 ps timescale.",
+          "locator": "SI p. 13, paragraph before Table S1"
+        },
+        {
+          "label": "Table S1",
+          "statement": "The table assigns 1.61 ± 0.07 ps⁻¹ to the 495 nm hole-localization term and 1.50 ± 0.06 ps⁻¹ to the 400 nm term.",
+          "locator": "SI pp. 13–14, Table S1 and term definitions"
+        }
+      ],
+      "handling": "Display both source statements with their locators. Do not silently switch the excitation labels or refit the data."
+    },
+    {
+      "id": "ZH-03",
+      "topic": "CdS/MV Figure S8 panel labels",
+      "claims": [
+        {
+          "label": "Caption",
+          "statement": "Figure S8 calls panel A with MV²⁺ and panel B without MV²⁺.",
+          "locator": "SI pp. 19–20, Figure S8 caption"
+        },
+        {
+          "label": "Spectral and text context",
+          "statement": "Panel B contains the radical-band signal, and the accompanying discussion associates radical formation and accelerated bleach recovery with CdS–MV²⁺.",
+          "locator": "SI pp. 19–20, Figure S8 and CdS discussion"
+        }
+      ],
+      "handling": "Retain the published panel labels and state the inconsistency. Do not silently reverse the image labels or claim a resolved crosswalk."
+    },
+    {
+      "id": "ZH-04",
+      "topic": "Shell identity in the Burstein–Moss model caption",
+      "claims": [
+        {
+          "label": "Figure S11 caption",
+          "statement": "The caption refers once to a CdSe shell.",
+          "locator": "SI pp. 25–26, Figure S11 caption"
+        },
+        {
+          "label": "Preparation and architecture",
+          "statement": "The preparation and surrounding analysis describe a CdSe core with a CdS shell.",
+          "locator": "SI pp. 3–4, Section 1A; pp. 25–27, Section 9"
+        }
+      ],
+      "handling": "Preserve the caption discrepancy without changing the prepared architecture or creating a second specimen."
+    },
+    {
+      "id": "ZH-05",
+      "topic": "Measured particle diameter versus model diameter",
+      "claims": [
+        {
+          "label": "TEM result",
+          "statement": "The CdSe/CdS diameter is 6.9 ± 0.4 nm.",
+          "locator": "SI p. 4, Figure S1 and text"
+        },
+        {
+          "label": "Effective-mass calculation",
+          "statement": "The calculation uses a 6.8 nm diameter.",
+          "locator": "SI p. 11, Section 3"
+        }
+      ],
+      "handling": "Store measurement and model input in separate scopes. Do not average them or present the model diameter as another synthesis product."
+    },
+    {
+      "id": "ZH-06",
+      "topic": "Recombination exponential signs",
+      "claims": [
+        {
+          "label": "Printed equations",
+          "statement": "Equations S1a, S1b, S1c, S1d and S1f show positive t/τrec exponents.",
+          "locator": "SI pp. 12–13, Section 4"
+        },
+        {
+          "label": "Physical wording",
+          "statement": "The discussion treats recombination as decay and τrec as much longer than 1 ns.",
+          "locator": "SI pp. 12–14, Section 4 and Table S1"
+        }
+      ],
+      "handling": "Retain a source equation caveat. Do not silently repair signs or execute the equations as a validated kinetic model."
+    }
+  ],
+  "sample_contexts": [
+    {
+      "id": "core-tem",
+      "label": "CdSe core in Figure S1A,C",
+      "record_id": "zhu-ja210312s-cdse-core",
+      "diameter_nm": 2.4,
+      "reported_error_nm": 0.2,
+      "error_statistic": "not reported",
+      "phase": null,
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 4, Figure S1A,C and text"
+        }
+      ]
+    },
+    {
+      "id": "core-shell-tem",
+      "label": "CdSe/CdS in Figure S1B,C",
+      "record_id": "zhu-ja210312s-cdse-cds-six-ml",
+      "diameter_nm": 6.9,
+      "reported_error_nm": 0.4,
+      "error_statistic": "not reported",
+      "shell_thickness_nm_approx": 2.3,
+      "shell_monolayers_approx": 6,
+      "nm_per_monolayer": 0.35,
+      "phase": null,
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 4, Figure S1B,C and text"
+        }
+      ]
+    },
+    {
+      "id": "cdse540-calibrator",
+      "label": "Separate CdSe540 absorption calibrator",
+      "record_id": null,
+      "recipe_link": "not established",
+      "absorption_feature_nm": 540,
+      "diameter_nm": null,
+      "notes": [
+        "Do not inherit the 2.4 nm core TEM diameter or the CdSe500 comparator assignment. The cited calibration and biexciton analysis supply optical context, not another reviewed synthesis."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 8, Section 2 and Figure S3"
+        }
+      ]
+    },
+    {
+      "id": "cdse500-comparator",
+      "label": "CdSe comparison QDs with approximately 500 nm bleach",
+      "record_id": "zhu-ja210312s-cdse-mv-comparator",
+      "parent_physical_batch": null,
+      "diameter_nm": null,
+      "notes": [
+        "MV adsorption method is linked explicitly; parent core synthesis/batch and Figure S1 particle size are not assigned from optical similarity."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 17, Section 6"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 18, Figure S7"
+        }
+      ]
+    },
+    {
+      "id": "cds460-comparator",
+      "label": "CdS comparison QDs with 460 nm bleach",
+      "record_id": "zhu-ja210312s-cds-mv-comparator",
+      "parent_synthesis": "not supplied",
+      "diameter_nm": null,
+      "phase": null,
+      "notes": [
+        "Only the MV adsorption procedure is provided. CdS shell-growth steps cannot substitute for free-CdS synthesis."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 20, Section 7"
+        }
+      ]
+    },
+    {
+      "id": "model-core-shell",
+      "label": "Effective-mass model particle",
+      "record_id": null,
+      "model_diameter_nm": 6.8,
+      "classification": "theoretical model input",
+      "notes": [
+        "Separate from the 6.9 ±0.4 nm TEM distribution. No atomic coordinates or measured unit cell."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 11, Section 3"
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "technique": "UV-visible absorption",
+      "instrument": "Agilent 8453 diode-array spectrometer",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 6, Section 1B"
+        }
+      ]
+    },
+    {
+      "technique": "Emission",
+      "instrument": "FluoroMax 3 spectrofluorimeter",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 6, Section 1B"
+        }
+      ]
+    },
+    {
+      "technique": "TEM",
+      "instrument": "JEOL JEM-1400",
+      "accelerating_voltage_kV": 120,
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 6, Section 1B"
+        }
+      ]
+    },
+    {
+      "technique": "Femtosecond transient absorption",
+      "instrument": "Coherent regenerative-amplified Ti:sapphire laser and Helios (Ultrafast Systems)",
+      "laser": {
+        "wavelength_nm": 800,
+        "duration_fs": 130,
+        "energy_mJ_per_pulse": 3,
+        "repetition_Hz": 1000,
+        "first_beamsplitter_percent": 50
+      },
+      "excitation_generation": {
+        "OPA": "Coherent Opera",
+        "OPA_range_um": [
+          1.1,
+          2.5
+        ],
+        "sum_frequency_excitation_nm": [
+          495,
+          565
+        ],
+        "mixing_crystal": "type I β-BBO",
+        "second_branch_energy_mJ_per_pulse_approx": 1.35,
+        "frequency_doubled_excitation_nm": 400
+      },
+      "probe": {
+        "continuum_medium": "sapphire window",
+        "diameter_um_approx": 150,
+        "reference_beam": true,
+        "detector": "fiber-coupled multichannel spectrometer with CMOS sensors",
+        "detection_Hz": 1000
+      },
+      "pump_diameter_um_approx": 360,
+      "pump_control": "variable neutral-density filter wheel",
+      "chopper_Hz": 500,
+      "delay_control": "motorized delay stage",
+      "sample_cuvette_mm": 1,
+      "sample_handling": "Constant magnetic stirring to limit photodegradation.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 6, Section 1C"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 7, Section 1C"
+        }
+      ]
+    },
+    {
+      "technique": "Nanosecond transient absorption",
+      "instrument": "EOS (Ultrafast Systems)",
+      "measurement_window": {
+        "lower": 0.5,
+        "lower_unit": "ns",
+        "upper": 1,
+        "upper_unit": "µs"
+      },
+      "pump_nm": 400,
+      "probe": {
+        "range_nm": [
+          380,
+          1700
+        ],
+        "pulse_width_ns": 0.5,
+        "repetition_Hz": 20000,
+        "generation": "Nd:YAG laser focused into a photonic-crystal fiber"
+      },
+      "delay_generator": "CNT-90, Pendulum Instruments",
+      "fs_ns_scaling_overlap_ns": [
+        0.6,
+        1.4
+      ],
+      "scaling_scope": "ns amplitudes slightly rescaled to overlap the fs traces under single-exciton conditions; not independent absolute-intensity calibration.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 7, Section 1C"
+        }
+      ]
+    }
+  ],
+  "optical_calibration": {
+    "id": "extinction-calibration",
+    "classification": "author-derived calibration",
+    "CdSe540_EC540": {
+      "value": 179000,
+      "unit": "cm^-1 M^-1",
+      "origin": "cited reference 4"
+    },
+    "CdSe540_EC400": {
+      "value": 290000.0,
+      "unit": "cm^-1 M^-1",
+      "origin": "absorption spectrum"
+    },
+    "core_shell_to_CdSe_cross_section_ratio_approx": 20,
+    "CdSeCdS_EC400": {
+      "value": 5800000.0,
+      "unit": "cm^-1 M^-1",
+      "origin": "author estimate"
+    },
+    "CdSe540_biexciton_lifetime_ps_approx": 14,
+    "transient_comparison_delays_ps": [
+      1,
+      150
+    ],
+    "normalized_intensity_independence_after_ps": 80,
+    "CdSe540_intensity_range_as_plotted": {
+      "minimum": 83.125,
+      "maximum": 18462.5,
+      "unit": "µW/cm²",
+      "unit_note": "Retain printed source unit; do not reinterpret as fluence."
+    },
+    "MV_EC257": {
+      "value": 21000.0,
+      "unit": "cm^-1 M^-1",
+      "origin": "cited reference 3"
+    },
+    "MV_per_core_shell_QD_approx": 60,
+    "limitations": [
+      "Coverage is an average calculated from optical absorption, not a direct particle-by-particle count.",
+      "No numeric solution concentration is supplied for the prepared QD samples."
+    ],
+    "evidence": [
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 5, Figure S2 and coverage estimate"
+      },
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 8, Section 2 and Figure S3"
+      },
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 9, Section 2"
+      }
+    ]
+  },
+  "effective_mass_model": {
+    "classification": "source theoretical model, not atomic coordinates",
+    "relative_effective_masses": {
+      "CdSe_electron": 0.13,
+      "CdSe_hole": 0.45,
+      "CdS_electron": 0.2,
+      "CdS_hole": 0.7
+    },
+    "bulk_gap_eV": {
+      "CdSe": 1.7,
+      "CdS": 2.5
+    },
+    "band_levels_as_printed": {
+      "unit": "V relative to vacuum, source convention",
+      "CdSe_CB": -4,
+      "CdSe_VB": -5.7,
+      "organic_CB": 0,
+      "organic_VB": -8.4,
+      "CdS_CB_for_zero_offset": -4,
+      "CdS_VB_for_zero_offset": -6.5
+    },
+    "conduction_offset_range_eV": [
+      0,
+      0.3
+    ],
+    "confinement_energy_eV": {
+      "1Se": 0.1,
+      "1Sh": 0.3
+    },
+    "confined_levels_eV": {
+      "electron": -3.9,
+      "hole": -6.0
+    },
+    "transition_comparison_eV": [
+      {
+        "label": "T0",
+        "calculated": 2.1,
+        "measured": 2.15
+      },
+      {
+        "label": "T1",
+        "calculated": 2.6,
+        "measured": 2.61
+      }
+    ],
+    "offset_0p3_effect_eV": {
+      "T0_decrease": 0.06,
+      "T1_decrease": 0.15
+    },
+    "interpretation": "Authors describe an electron wave function spread across core and shell and a more core-localized hole, motivating quasi-type-II charge-separation behavior.",
+    "limitations": [
+      "Model diameter 6.8 nm is distinct from measured 6.9 ±0.4 nm.",
+      "No computed or refined atomistic specimen coordinates are supplied."
+    ],
+    "evidence": [
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 10, Section 3"
+      },
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 11, Section 3"
+      }
+    ]
+  },
+  "kinetic_tables": [
+    {
+      "id": "table-s1",
+      "title": "Band-edge bleach formation fits",
+      "figure": "Figure S4",
+      "parameters": {
+        "a_e": {
+          "value": 0.56,
+          "reported_error": 0.02,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k_er": {
+          "value": 1.97,
+          "reported_error": 0.08,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k_hr_prime_495nm": {
+          "value": 1.61,
+          "reported_error": 0.07,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k_hr_doubleprime_400nm": {
+          "value": 1.5,
+          "reported_error": 0.06,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "tau_rec": {
+          "relation": "much greater than",
+          "value": 1,
+          "unit": "ns"
+        }
+      },
+      "derived_timescale_context": {
+        "electron_relaxation_ps_approx": 0.5,
+        "hole_localization_ps_approx": 0.7
+      },
+      "conflict": "ZH-02: 400 nm prose gives the table’s 495 nm rate.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 13, Table S1 header and preceding text"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 14, Table S1 values"
+        }
+      ]
+    },
+    {
+      "id": "table-s2",
+      "title": "CdSe/CdS–MV⁺ radical rise and decay",
+      "record_id": "zhu-ja210312s-cdse-cds-mv",
+      "parameters": {
+        "A_MV": {
+          "value": 0.49,
+          "reported_error": 0.02,
+          "unit": "mOD",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "a": {
+          "value": 0.69,
+          "reported_error": 0.03,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k1": {
+          "value": 6.2,
+          "reported_error": 0.3,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k2": {
+          "value": 0.6,
+          "reported_error": 0.1,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "tau": {
+          "value": 875,
+          "reported_error": 19,
+          "unit": "ns",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "alpha": {
+          "value": 0.52,
+          "reported_error": 0.02,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        }
+      },
+      "model": "Biexponential radical formation multiplied by stretched-exponential decay. τ is not a half-life.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Table S2"
+        }
+      ]
+    },
+    {
+      "id": "table-s3",
+      "title": "CdSe–MV⁺ radical rise and decay",
+      "record_id": "zhu-ja210312s-cdse-mv-comparator",
+      "parameters": {
+        "A_MV": {
+          "value": 0.47,
+          "reported_error": 0.02,
+          "unit": "mOD",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "a": {
+          "value": 0.74,
+          "reported_error": 0.03,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k1": {
+          "value": 6.4,
+          "reported_error": 0.3,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k2": {
+          "value": 0.9,
+          "reported_error": 0.1,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "tau": {
+          "value": 600,
+          "reported_error": 40,
+          "unit": "ps",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "alpha": {
+          "value": 0.59,
+          "reported_error": 0.03,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        }
+      },
+      "model": "Same fit form as Table S2; τ is not the 390 ±30 ps half-life.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 19, Table S3"
+        }
+      ]
+    },
+    {
+      "id": "table-s4",
+      "title": "CdS–MV⁺ radical rise and decay",
+      "record_id": "zhu-ja210312s-cds-mv-comparator",
+      "parameters": {
+        "A_MV": {
+          "value": 0.58,
+          "reported_error": 0.03,
+          "unit": "mOD",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "a": {
+          "value": 0.53,
+          "reported_error": 0.02,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k1": {
+          "value": 1.1,
+          "reported_error": 0.1,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "k2": {
+          "value": 0.09,
+          "reported_error": 0.02,
+          "unit": "ps^-1",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "tau": {
+          "value": 18.9,
+          "reported_error": 0.2,
+          "unit": "ns",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        },
+        "alpha": {
+          "value": 0.22,
+          "reported_error": 0.03,
+          "unit": "dimensionless",
+          "classification": "source fitted parameter",
+          "error_statistic": "not defined in the SI"
+        }
+      },
+      "model": "Same fit form as Table S2; τ is not the 8.3 ±0.4 ns half-life.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 20, Table S4"
+        }
+      ]
+    },
+    {
+      "id": "table-s5",
+      "title": "Multiexciton lifetimes in the sequential-annihilation model",
+      "classification": "model-derived series, not 20 independent measurements or recipes",
+      "scaling_law": "tau_n^-1 proportional to n²(n−1)",
+      "only_fitted_multiexciton_parameter": "biexciton lifetime tau2",
+      "values": [
+        {
+          "n": 1,
+          "value": 30,
+          "unit": "ns",
+          "origin": "single-exciton lifetime context"
+        },
+        {
+          "n": 2,
+          "value": 440,
+          "unit": "ps",
+          "origin": "fitted biexciton parameter"
+        },
+        {
+          "n": 3,
+          "value": 97,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 4,
+          "value": 36,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 5,
+          "value": 17,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 6,
+          "value": 10,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 7,
+          "value": 6,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 8,
+          "value": 3.9,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 9,
+          "value": 2.7,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 10,
+          "value": 2,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 11,
+          "value": 1.5,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 12,
+          "value": 1.1,
+          "unit": "ps",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 13,
+          "value": 858,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 14,
+          "value": 683,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 15,
+          "value": 552,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 16,
+          "value": 453,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 17,
+          "value": 376,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 18,
+          "value": 316,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 19,
+          "value": 270,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        },
+        {
+          "n": 20,
+          "value": 230,
+          "unit": "fs",
+          "origin": "calculated from statistical scaling law"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 28, Section 11 and Table S5 caption"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 29, Table S5 values"
+        }
+      ]
+    }
+  ],
+  "excitation_and_trace_contexts": [
+    {
+      "id": "s4-low-intensity",
+      "figure": "Figure S4",
+      "excitation_nm": [
+        565,
+        495,
+        400
+      ],
+      "intensity_approx": 27,
+      "intensity_unit": "µW/cm² as printed",
+      "probe_bands_nm": {
+        "T0": 575,
+        "T1": 475
+      },
+      "565_nm_rise_time_upper_fs": 50,
+      "interpretation": "565 nm directly populates band-edge features; 495 nm T0 formation includes hole localization; 400 nm T1 evolves with hot-electron relaxation.",
+      "equation_note": "Printed Equations S1a–d,f have positive recombination exponents; no sign correction or refit performed.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 11, Section 4"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 12, Section 4"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 13, Section 4"
+        }
+      ]
+    },
+    {
+      "id": "s5-single-exciton",
+      "figure": "Figure S5",
+      "excitation_nm": 400,
+      "intensity_approx": 27,
+      "intensity_unit": "µW/cm² as printed",
+      "free_QD_decay_percent_approx_at_1p4ns": 10,
+      "free_QD_half_life_ns_approx": 30,
+      "MV_radical_probe_nm": 630,
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 14, Figure S5"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5"
+        }
+      ]
+    },
+    {
+      "id": "s6-bq-control",
+      "figure": "Figure S6",
+      "excitation_nm": 400,
+      "bands_nm": {
+        "T1": 475,
+        "PA1": 630,
+        "PA2": 825
+      },
+      "PA_ranges_nm": {
+        "PA1": [
+          600,
+          700
+        ],
+        "PA2": [
+          700,
+          850
+        ]
+      },
+      "delay_windows_ps": [
+        [
+          0.5,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          30,
+          50
+        ],
+        [
+          70,
+          150
+        ],
+        [
+          200,
+          600
+        ],
+        [
+          800,
+          1400
+        ]
+      ],
+      "interpretation": "BQ accelerates the T1 bleach recovery but leaves PA1/PA2 kinetics similar; authors assign these PA bands to hole transitions. BQ absorption is mentioned but not shown.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 16, Figure S6"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 17, Section 5"
+        }
+      ]
+    },
+    {
+      "id": "s7-cdse-comparator",
+      "figure": "Figure S7",
+      "free_CdSe_bleach_nm_approx": 500,
+      "MV_radical_band_nm": [
+        570,
+        700
+      ],
+      "radical_visible_within_ps": 2,
+      "charge_separation_half_life_ps": 0.16,
+      "charge_separation_error_ps": 0.02,
+      "charge_recombination_half_life_ps": 390,
+      "charge_recombination_error_ps": 30,
+      "limitations": [
+        "Different from CdSe540 calibrator; physical batch and 2.4 nm TEM linkage are not established."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 17, Section 6"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 18, Figure S7"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 19, Section 6"
+        }
+      ]
+    },
+    {
+      "id": "s8-cds-comparator",
+      "figure": "Figure S8",
+      "free_CdS_bleach_nm": 460,
+      "free_bleach_recovery": "negligible within 1.4 ns",
+      "MV_radical_band_nm": [
+        500,
+        700
+      ],
+      "charge_separation_half_life_ps": 2.9,
+      "charge_separation_error_ps": 0.2,
+      "charge_recombination_half_life_ns": 8.3,
+      "charge_recombination_error_ns": 0.4,
+      "limitations": [
+        "Figure caption with/without-MV panel labels conflict with spectral/text context, see ZH-03.",
+        "CdS parent synthesis and size absent."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 19, Figure S8"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 20, Section 7"
+        }
+      ]
+    },
+    {
+      "id": "s9-intensity-series",
+      "figure": "Figure S9",
+      "excitation_nm": 400,
+      "intensities": [
+        27,
+        85,
+        225,
+        385,
+        700,
+        1250,
+        1970,
+        2760,
+        3450,
+        4250
+      ],
+      "intensity_unit": "µW/cm² as printed",
+      "left_panels": "free CdSe/CdS QDs",
+      "right_panels": "CdSe/CdS–MV²⁺",
+      "delay_windows_ps": [
+        [
+          0.5,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          30,
+          50
+        ],
+        [
+          70,
+          150
+        ],
+        [
+          200,
+          600
+        ],
+        [
+          800,
+          1400
+        ]
+      ],
+      "recipe_variant": false,
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 21, Figure S9 first part"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 22, Figure S9 second part"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 23, Figure S9 caption"
+        }
+      ]
+    },
+    {
+      "id": "s10-ns-series",
+      "figure": "Figure S10",
+      "excitation_nm": 400,
+      "intensities": [
+        30.5,
+        105,
+        220,
+        375,
+        762.5,
+        1525,
+        2837.5,
+        4250
+      ],
+      "intensity_unit": "µW/cm² as printed",
+      "time_resolution_ps": 500,
+      "normalization_delay_ns": 1.4,
+      "lowest_pulse_energy_separately_reported_nJ": 12.2,
+      "free_QD_result": "Normalized free-QD recovery curves agree after 1.4 ns.",
+      "MV_result": "MV radical decay becomes stronger and faster with increasing excitation.",
+      "unit_note": "Keep separately reported pulse energy and intensity units; no conversion inferred.",
+      "recipe_variant": false,
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 23, Figure S10"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 24, Section 8"
+        }
+      ]
+    },
+    {
+      "id": "s12-PA-overlap",
+      "figure": "Figure S12",
+      "T0_probe_nm": 570,
+      "PA1_probe_nm": 640,
+      "PA_scale_factor": 0.65,
+      "saturation_energy_nJ_per_pulse_approx": 500,
+      "high_intensity_range_as_printed": [
+        1970,
+        4250
+      ],
+      "intensity_unit": "µW/cm²",
+      "interpretation": "Authors subtract scaled PA1 to compensate its overlap with the T0 bleach. This is an analytical correction, not an additional specimen.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 27, Section 10"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 28, Figure S12 caption"
+        }
+      ]
+    },
+    {
+      "id": "s13-radical-PA-correction",
+      "figure": "Figure S13",
+      "probe_nm": 630,
+      "QD_MV_average_window_ps": [
+        8,
+        10
+      ],
+      "free_QD_maximum_PA_delay_ps": 0.3,
+      "PA_fraction_percent_range": [
+        14,
+        18
+      ],
+      "interpretation": "Subtract free-QD PA from the QD–MV signal to estimate the radical amplitude. Raw radical kinetic traces were not PA-corrected; authors note potential effects on formation kinetics but argue recombination conclusions are unchanged.",
+      "limitation": "Correction applies to signal interpretation, not source measured morphology or a new reaction variant.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 29, Figure S13"
+        },
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 30, Section 12"
+        }
+      ]
+    }
+  ],
+  "burstein_moss_model": {
+    "classification": "source spectral model",
+    "occupation_model": "Fermi–Dirac occupation with density-dependent quasi-Fermi level",
+    "relationships_as_source": [
+      "ΔE = (Eprobe − Eg)/(1 + me/mh)",
+      "density of states proportional to sqrt(E − Eg)",
+      "A(Eprobe) = A0 sqrt(E − Eg) f(Eprobe)"
+    ],
+    "scope": "Dynamic Burstein–Moss shifts and transient absorption shape; no DFT structure or atomic coordinates.",
+    "limitations": [
+      "One caption says CdSe shell despite the CdS-shell preparation (ZH-04).",
+      "Equations are preserved as source concepts and not numerically refitted."
+    ],
+    "evidence": [
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 25, Section 9 and Figure S11"
+      },
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 26, Figure S11 caption and model"
+      },
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 27, Section 9"
+      }
+    ]
+  },
+  "references_scope": {
+    "reference_count": 23,
+    "pages": [
+      30,
+      31
+    ],
+    "status": "Reference list read; cited documents not downloaded or reviewed.",
+    "selected_references": [
+      {
+        "number": 1,
+        "citation": "Li, J. J. et al., J. Am. Chem. Soc. 2003, 125, 12567–12575.",
+        "role": "Core synthesis and SILAR context; not independently reviewed."
+      },
+      {
+        "number": 2,
+        "citation": "Yu, W. W.; Qu, L.; Guo, W.; Peng, X., Chem. Mater. 2003, 15, 2854–2860.",
+        "role": "CdSe absorption size/concentration calibration; not independently reviewed."
+      },
+      {
+        "number": 4,
+        "citation": "Jasieniak, J. et al., J. Phys. Chem. C 2009, 113, 19468–19474.",
+        "role": "CdSe extinction calibration; not independently reviewed."
+      }
+    ],
+    "evidence": [
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 30, References"
+      },
+      {
+        "source_id": "zhu2012-ja210312s-si",
+        "locator": "SI p. 31, References continued"
+      }
+    ]
+  },
+  "unreviewed_main_links": "References to main figures and main equations are retained as source context, not reconstructed. The title alone is not extracted as a verified nineteen-electron yield measurement."
+}

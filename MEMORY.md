@@ -1,3 +1,13 @@
+## 2026-09-27 — Standalone Zhu SI accepted for publication
+
+The next gold contribution is the existing 31-page supporting information for DOI 10.1021/ja210312s, independently reviewed in full with a bounded precursor-identity correction. The main article and cited synthesis references remain unreviewed; publication year is not verified in the supplied document and stays null. Six accepted records contain two direct CdSe/CdSe-CdS preparations and four separately scoped electron-acceptor adsorption procedures. The latter do not inherit parent TEM measurements or create extra synthesis–structure pairs. Retain the nominal cadmium-stock concentration/charge conflict and all other attributed discrepancies.
+
+The independently reviewed SI-only adapter preserves separate main/SI document roles in inventory, library and source review. It does not promote SI reading into main-paper review. The private candidate adds six records and two broad pairs: 940 records, 65 contributing sources, 79 direct material families, 91 hubs, 265 routes and 179 broad pairs. All 934 earlier records and their eligibility remain identical. Only three affected hub views are refreshed; the other 88 are unchanged. These are candidate counts until deployment and anonymous verification.
+
+Twenty-four selected source crops and ten authored identity/context cards retain exact provenance. Publisher permission remains unverified. Molecular and particle presentation refinements remain explicitly pending; no measured-coordinate or new training-readiness claim is made. Scientific audit SHA256: 95f5fa2d60c5309430533805329cb5397cd626c94979b7c887d2edc5b4e8f1e0. Independent SI-scope engineering audit SHA256: 5fed59d9cc425bdfb659d270d564b7d3ae3154d1d8204882e945945c4a1bb0d8.
+
+Continue parallel source authoring and independent review for Zheng Cr-doped ZnSe and Lee ITO. Preserve their accepted work and resolve bounded findings before admission. Existing screened sources only, no paid processing or external source transfers. Silver remains disabled pending calibration. Daily 08:00 Chicago reports continue; two-hour checks remain paused. No target rate is claimed.
+
 ## 2026-09-27 — Nagy and Basel published and anonymously verified
 
 Two more gold source contributions were deployed from source `62c8170f4e633162a2cb412cb2eccebd60d65302` at site `8045fce0e13a417449ce294b8dff6fb23ad46bcb` and anonymously verified at 2026-09-27T03:52:20.551614+00:00. All 64 checked pages, records, aggregates, selected figures and downloads matched the approved artifact. The release passed 147 dataset tests, 65,132 quality assertions and the 9,766-file website boundary. Source CI passed Windows/Linux builds and byte comparison; website deployment passed.

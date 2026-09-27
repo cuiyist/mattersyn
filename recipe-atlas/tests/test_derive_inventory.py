@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 sys.dont_write_bytecode = True
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from derive_inventory import derive,reviewed_seed,MAIN_SI,MAIN_ONLY
+from derive_inventory import derive,reviewed_seed,MAIN_SI,MAIN_ONLY,SI_ONLY
 
 
 def fixture():
@@ -69,6 +69,41 @@ class InventoryDerivationTests(unittest.TestCase):
         zns=next(row for row in result['per_material'] if row['material_system']=='ZnS')
         self.assertEqual(zns['direct_synthesis_route_variant_count'],0)
         self.assertEqual(zns['component_route_record_ids'],['route-b'])
+
+    def test_si_only_is_separately_counted_without_main_promotion(self):
+        data=fixture()
+        data['seed']['per_paper'][1]['review_status']='full_supplied_si_review_main_unverified'
+        data['seed']['per_paper'][1]['documents']=[{'role':'si','page_count':5}]
+        data['reviews'][1]['review_scope']=SI_ONLY
+        result=derive(**data)
+        self.assertEqual(result['summary']['formal_full_si_reviews_main_unverified'],1)
+        self.assertEqual(result['summary']['formal_full_si_only_review_pages'],5)
+        self.assertEqual(result['summary']['formal_full_main_reviews_si_unverified'],0)
+        self.assertEqual(result['summary']['formal_full_main_and_matched_si_reviews'],1)
+        self.assertEqual(result['summary']['formal_full_review_pages'],6)
+        self.assertEqual(result['per_paper'][1]['documents'],[{'role':'si','page_count':5}])
+
+    def test_inventory_si_scope_rejects_main_document_even_if_counts_match(self):
+        data=fixture()
+        data['seed']['per_paper'][1]['review_status']='full_supplied_si_review_main_unverified'
+        data['reviews'][1]['review_scope']=SI_ONLY
+        with self.assertRaisesRegex(ValueError,'SI-only scope'):derive(**data)
+
+    def test_legacy_si_role_is_normalized_only_for_inventory_validation(self):
+        data=fixture();data['seed']['per_paper'][0]['documents'][1]['role']='supporting_information'
+        before=copy.deepcopy(data);result=derive(**data)
+        self.assertEqual(data,before)
+        self.assertEqual(result['per_paper'][0]['documents'][1]['role'],'supporting_information')
+        self.assertEqual(result['summary']['formal_full_main_and_matched_si_reviews'],1)
+        self.assertEqual(result['summary']['formal_full_review_pages'],6)
+
+    def test_unknown_inventory_role_cannot_claim_any_formal_scope(self):
+        for scope,status,roles in [(MAIN_ONLY,'full_supplied_main_review_si_unverified',['main','unknown']),(MAIN_SI,'full_supplied_main_and_matched_si_review',['main','si','unknown']),(SI_ONLY,'full_supplied_si_review_main_unverified',['si','unknown'])]:
+            with self.subTest(scope=scope):
+                data=fixture();p=data['seed']['per_paper'][1];p['review_status']=status
+                p['documents']=[{'role':r,'page_count':1} for r in roles]
+                data['reviews'][1]['review_scope']=scope;data['reviews'][1]['pages_read']=len(roles)
+                with self.assertRaises(ValueError):derive(**data)
 
     def test_seed_retains_authored_evidence_and_historical_metadata_not_cached_counts(self):
         data=fixture();inventory=derive(**data);before=copy.deepcopy(inventory)

@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhu-ja210312s-cdse-cds-bq",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Zhu et al.: Benzoquinone adsorption on CdSe/CdS",
+  "material": {
+    "formula": "CdSe/CdS",
+    "family": "CdSe/CdS quantum dots and electron-acceptor complexes",
+    "elements": [
+      "Cd",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "CdSe",
+      "CdS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Post-synthesis electron-acceptor adsorption",
+  "sources": [
+    {
+      "id": "zhu2012-ja210312s-si",
+      "doi": "10.1021/ja210312s",
+      "title": "Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information",
+      "authors": "Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian",
+      "year": null,
+      "url": "https://doi.org/10.1021/ja210312s",
+      "main_status": "Not inspected in this standalone-SI contribution.",
+      "si_status": "All 31 SI pages text-read and visually checked by author; separate source audit pending.",
+      "reuse_status": "Exact selected source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "zhu2012-ja210312s-si",
+    "recipe_family": "zhu-ja210312s-cdse/cds",
+    "parent_record_id": "zhu-ja210312s-cdse-cds-six-ml",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "qd-input",
+      "name": "CdSe/CdS quantum-dot solution",
+      "formula": "CdSe/CdS",
+      "role": "nanocrystal adsorption substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Solution medium is not restated for the BQ procedure; no charge or numeric concentration supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ]
+    },
+    {
+      "id": "bq",
+      "name": "Benzoquinone (BQ), isomer unspecified",
+      "formula": "C6H4O2",
+      "role": "electron-acceptor adsorbate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "The SI does not identify an isomer or supplier. No para-benzoquinone molecular graph is imposed."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "add-bq-state",
+      "name": "Add benzoquinone output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sonicate-state",
+      "name": "Sonicate the mixture output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "add-bq-state"
+      ]
+    },
+    {
+      "id": "filter-state",
+      "name": "Filter the QD–BQ solution output",
+      "kind": "fraction",
+      "parent_ids": [
+        "sonicate-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "add-bq",
+      "action": "add",
+      "label": "Add benzoquinone",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qd-input",
+        "bq"
+      ],
+      "outputs": [
+        "add-bq-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add benzoquinone to the QD solution; dose and concentration are absent.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ]
+    },
+    {
+      "id": "sonicate",
+      "action": "sonicate",
+      "label": "Sonicate the mixture",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "add-bq"
+      ],
+      "inputs": [
+        "add-bq-state"
+      ],
+      "outputs": [
+        "sonicate-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sonicate; duration, temperature and power are absent.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "action": "filter",
+      "label": "Filter the QD–BQ solution",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "sonicate"
+      ],
+      "inputs": [
+        "sonicate-state"
+      ],
+      "outputs": [
+        "filter-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "filter-state",
+      "description": "Filter the mixture. Filter details and concentration are unreported.",
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zhu-ja210312s-cdse-cds-bq-product",
+      "source_sample_label": "CdSe/CdS–BQ complexes",
+      "batch_id": null,
+      "material_state_id": "filter-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2012-ja210312s-si",
+            "locator": "SI p. 15, Section 5, BQ experiment"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No measured crystal-phase assignment in the inspected SI."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Morphology of this treated product is not separately measured."
+      },
+      "surface": {
+        "value": "Adsorbed BQ, as assigned by authors",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhu2012-ja210312s-si",
+            "locator": "SI p. 15, Section 5, BQ experiment"
+          }
+        ],
+        "note": "UV-visible evidence is stated but not shown; no measured binding geometry."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 15, Section 5, BQ experiment"
+        }
+      ],
+      "notes": [
+        "Source preparation-to-material context is explicit; a physical batch identifier is not supplied."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bq-transient-interpretation",
+      "sample_id": "zhu-ja210312s-cdse-cds-bq-product",
+      "property": "photoinduced_absorption_assignment",
+      "technique": "Transient absorption / author interpretation",
+      "value": {
+        "value": "The T1 bleach recovers faster with BQ; PA1 and PA2 kinetics remain similar to free QDs and are assigned to hole transitions.",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "zhu2012-ja210312s-si",
+            "locator": "SI p. 16, Figure S6 and Section 5"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "400 nm excitation; T1 = 475 nm, PA1 = 630 nm, PA2 = 825 nm. No numerical electron-transfer rate is supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhu2012-ja210312s-si",
+          "locator": "SI p. 16, Figure S6 and Section 5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all 31 supplied SI pages and the bounded identity correction accepted. Main article and cited synthesis references unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Only the supplied 31-page supporting information is inspected; the main article and cited synthesis references are not reviewed in this contribution.",
+      "Publication year is not printed in the inspected SI and remains null; the source identifier is not bibliographic proof of year.",
+      "No measured crystal phase, atomic positions, CIF, lattice refinement or interface coordinates are supplied in this SI.",
+      "Source optical models and reference material constants are not measured specimen coordinates.",
+      "Physical batch IDs and independent microscopy of the adsorbate-modified products are not reported.",
+      "BQ isomer, supplier, quantity; QD-medium specification, concentration; sonication and filtration settings."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article DOI",
+      "url": "https://doi.org/10.1021/ja210312s",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Photophysics, fit tables, calibration and source conflicts",
+      "url": "data/paper-reviews/zhu2012-ja210312s-si/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source figures and reviewed scope",
+      "url": "paper-review.html?id=zhu2012-ja210312s-si",
+      "relation": "source_review"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

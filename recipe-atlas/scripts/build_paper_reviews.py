@@ -115,7 +115,7 @@ def main():
         scope=source_review_scope(c)
         c['review_scope_label']=scope['label']
         write(ROOT/'dist/data/paper-reviews'/p.name,c)
-        index.append({'id':c['paper_id'],'doi':c['doi'],'title':c['title'],'review_scope':scope['scope'],'review_scope_label':scope['label'],'si_status':scope['si_status'],'pages_read':sum(d['page_count'] for d in c['documents']),'figures':len(c['figures']),'tables':len(c.get('tables',[])),'record_ids':sorted({rid for x in c['recipe_inventory'] for rid in x.get('record_ids',[])}),'independent_audit':c.get('independent_audit','pending'),'url':'paper-review.html?id='+c['paper_id']})
+        index.append({'id':c['paper_id'],'doi':c['doi'],'title':c['title'],'review_scope':scope['scope'],'review_scope_label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages_read':sum(d['page_count'] for d in c['documents']),'figures':len(c['figures']),'tables':len(c.get('tables',[])),'record_ids':sorted({rid for x in c['recipe_inventory'] for rid in x.get('record_ids',[])}),'independent_audit':c.get('independent_audit','pending'),'url':'paper-review.html?id='+c['paper_id']})
     write(ROOT/'dist/data/paper-review-index.json',{'schema_version':'1.0','papers':index,'scope':'Full supplied-document reading and visual coverage; omitted experimental details and raw-data gaps remain explicit. This status is not an exact-structure training eligibility label.'})
     print('Validated and published coverage ledgers:',len(index))
 if __name__=='__main__':main()

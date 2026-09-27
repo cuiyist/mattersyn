@@ -339,3 +339,5 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
 
 <!-- mattersyn-generated-references:end -->
+
+- Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian. *Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot*. Journal of the American Chemical Society. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Standalone SI source review](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si). Supplied 31-page SI reviewed; main article and publication year unverified in that document.
