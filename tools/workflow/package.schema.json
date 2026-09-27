@@ -1,0 +1,458 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:mattersyn:schema:gold-paper-package:1",
+  "title": "MatterSyn scoped additive gold paper package v1",
+  "description": "Structural validation does not establish scientific acceptance, source permissions or publication approval.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "mattersyn-gold-paper-package/1"
+    },
+    "package_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "primary_source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identity_status": {
+          "enum": [
+            "verified",
+            "document_only"
+          ]
+        },
+        "doi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "primary_source_id",
+        "identity_status",
+        "doi",
+        "title"
+      ]
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "enum": [
+              "main",
+              "si",
+              "unknown"
+            ]
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "screened_pass_receipt_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coverage": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "reviewed_scoped",
+                  "partial",
+                  "not_reviewed"
+                ]
+              },
+              "reviewed_pages": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "page_count": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 1
+              },
+              "exclusions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "status",
+              "reviewed_pages",
+              "page_count",
+              "exclusions"
+            ]
+          }
+        },
+        "required": [
+          "document_id",
+          "role",
+          "sha256",
+          "screened_pass_receipt_id",
+          "coverage"
+        ]
+      },
+      "minItems": 1
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "record_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "record_id",
+          "path",
+          "sha256"
+        ]
+      },
+      "minItems": 1
+    },
+    "locators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "record_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "field_pointer": {
+            "type": "string",
+            "pattern": "^/"
+          },
+          "source_locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "quote_check": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "status": {
+                "enum": [
+                  "passed",
+                  "not_required_nontext"
+                ]
+              },
+              "receipt_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "status",
+              "receipt_id"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "document_id",
+          "record_id",
+          "field_pointer",
+          "source_locator",
+          "page",
+          "quote_check"
+        ]
+      },
+      "minItems": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "kind": {
+            "enum": [
+              "source_figure",
+              "molecular",
+              "coordinate",
+              "authored_illustration"
+            ]
+          },
+          "document_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "rights_status": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "kind",
+          "document_id",
+          "source_locator",
+          "record_ids",
+          "rights_status"
+        ]
+      }
+    },
+    "reagent_bindings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ]
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "enum": [
+            "main_text",
+            "si_standalone",
+            "mixed_scoped"
+          ]
+        },
+        "omissions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "companion_required": {
+          "const": false
+        }
+      },
+      "required": [
+        "unit",
+        "omissions",
+        "companion_required"
+      ]
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "author_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "changes_requested",
+            "accepted"
+          ]
+        },
+        "scientific_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "base_scientific_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope": {
+          "enum": [
+            "entire_scoped_package",
+            "scientific_diff"
+          ]
+        },
+        "checklist": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "receipt_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "author_id",
+        "reviewer_id",
+        "status",
+        "scientific_sha256",
+        "base_scientific_sha256",
+        "scope",
+        "checklist",
+        "receipt_id"
+      ]
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "state": {
+          "enum": [
+            "pending",
+            "complete"
+          ]
+        },
+        "missing_components": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "state",
+        "missing_components"
+      ]
+    },
+    "derived_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "derived_from_science": {
+            "const": true
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "derived_from_science"
+        ]
+      },
+      "maxItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "package_id",
+    "revision",
+    "source",
+    "documents",
+    "records",
+    "locators",
+    "assets",
+    "reagent_bindings",
+    "scope",
+    "audit",
+    "presentation",
+    "derived_files"
+  ]
+}

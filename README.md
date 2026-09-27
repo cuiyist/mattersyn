@@ -13,6 +13,25 @@ public repository branch does not guarantee that every old GitHub object or cach
 URL has been removed; previously cited old raw source content was anonymously
 reachable again after the repository was made public on 2026-09-24.
 
+## Scaling workflow
+
+The [adopted workflow](skills/mattersyn-paper-to-site/references/scaling-workflow-v2.md)
+separates independently audited **gold** contributions from local machine-extracted
+**silver** candidates. Silver publication requires held-out field calibration at
+98% / 95% / 90% precision thresholds for the three family-frequency bands and
+independent calibration approval; no silver contribution has been released by this
+implementation checkpoint. The 500/day figure is a target for verified silver
+publication, not a measured result.
+
+- [Scoped packages and event metrics](tools/workflow/README.md)
+- [Local extraction and calibration](tools/silver/README.md)
+- [Single-commit release preparation](tools/publication/SINGLE_COMMIT_RELEASE.md)
+
+Routine status-only deployments are retired. Current automations remain paused;
+the new workflow is in setup and calibration. Existing scientific records and
+reader pages are unchanged. Cross-repository automatic deployment, full generated
+aggregate migration, calibration and the silver pilot are subsequent rollout steps.
+
 ## Local workspace organization
 
 Keep the active source and site checkouts together under `repos/mattersyn` and `repos/mattersyn-site` in the existing local MatterSyn workspace. Private research files and temporary builds belong under that workspace's `research-assets`; preserved historical checkouts belong under `archive`. These paths describe the local workspace, not additional folders to upload. Current project memory and skills remain versioned in this source repository. The local WORKSPACE.md contains the historical move map.

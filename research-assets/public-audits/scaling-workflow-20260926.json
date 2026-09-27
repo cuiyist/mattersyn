@@ -1,0 +1,74 @@
+{
+  "schema": "mattersyn-scaling-workflow-implementation/1",
+  "date": "2026-09-26",
+  "owner_confirmed_thresholds": {
+    "high": 0.98,
+    "medium": 0.95,
+    "low": 0.9
+  },
+  "software_validation": {
+    "scoped_package_tests": 60,
+    "publication_helper_tests_including_legacy": 45,
+    "silver_and_local_runner_tests": 68,
+    "independent_silver_adversarial_probes": 19,
+    "scientific_calibration_performed": false
+  },
+  "queue_ranking": {
+    "unique_screened_document_contents": 5539,
+    "ranking_seconds": 0.37,
+    "extraction_performed_by_ranking": false,
+    "primary_source_identity_still_incomplete": true
+  },
+  "development_smoke": {
+    "schema": "mattersyn-development-smoke-summary/1",
+    "not_heldout": true,
+    "development_source_excluded_from_calibration": true,
+    "scope": "One cached methods page; two unexposed local model passes. Forced high band is a development stress test, not a measured popularity assignment.",
+    "models": [
+      "qwen3.5:9b",
+      "qwen3.5:27b"
+    ],
+    "elapsed_model_seconds": [
+      17.705,
+      30.922
+    ],
+    "draft_claim_counts": [
+      14,
+      11
+    ],
+    "reconciled_states": {
+      "withheld": 18
+    },
+    "pipeline_sha256": "e6a1828c618345046676fa15ec9efae69b4cd6bb13038c45d0e1eca3e431c2aa",
+    "calibrated": false,
+    "silver_papers_published": 0,
+    "end_to_end_papers_per_day": null,
+    "source_text_transferred_externally": false
+  },
+  "scientific_records_changed": 0,
+  "new_gold_papers_published": 0,
+  "new_silver_papers_published": 0,
+  "implemented": [
+    "Scoped package and independent audit contract",
+    "Narrow scientific-diff audit reuse",
+    "Screened queue ranking",
+    "Idempotent event metrics",
+    "One-commit source controls with final-HEAD runtime binding",
+    "Pinned Python build dependencies",
+    "Loopback model runner",
+    "Evidence reconciliation and calibrated public projection"
+  ],
+  "rollout_pending": [
+    "Complete heldout truth and normalized family bands",
+    "Independent scientific calibration approval",
+    "Public silver cards and accuracy dashboard",
+    "50-per-day pilot and actual error monitoring",
+    "Cross-repository CI-only publication and merge queue",
+    "Full aggregate generation migration",
+    "Demonstrated 500-per-day end-to-end publication"
+  ],
+  "release_validation": "Software tests passed locally; exact source boundary, clean candidate build and GitHub CI remain required before remote release.",
+  "no_status_only_website_release": true,
+  "recurring_reports": "paused; report on request or material failure",
+  "private_evidence_excluded": true
+}

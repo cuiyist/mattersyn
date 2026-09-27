@@ -9,7 +9,11 @@ Turn a verified synthesis into a beautiful, understandable interactive page whil
 
 For a focused edit, apply only the relevant parts of this workflow. Do not rebuild a site, re-extract unchanged papers, or add new records merely because this skill was invoked.
 
-## MatterSyn workspace placement
+## Active scaling workflow
+
+For work on the current screened collection, read [references/scaling-workflow-v2.md](references/scaling-workflow-v2.md) first. The owner adopted separate audited gold and explicitly unreviewed silver lanes, local models only, and 98% / 95% / 90% field-precision thresholds. This supersedes older 20 audited papers/hour targets, routine status reports and mandatory visual completion before scoped scientific publication. Calibration and public-boundary checks remain required; the adopted plan is not evidence that a target rate or automatic deployment has been achieved. Use one consolidated independent scientific audit and reuse unchanged accepted work. Keep presentation-pending data distinct from completed Readers.
+
+## Workspace locations
 
 For this project, keep generated builds, scripts and review folders inside the user's existing MatterSyn workspace. Use `repos/mattersyn` for the active source checkout and `repos/mattersyn-site` for the site checkout; keep private evidence and candidates under `research-assets`. Preserve older copies under `archive` when their uncommitted work has not been reconciled. Consult the local WORKSPACE.md after relocation rather than executing historical helper paths. Publish only approved project files through the existing release gate, never the entire local workspace.
 

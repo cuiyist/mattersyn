@@ -1,5 +1,7 @@
 # Reusable paper-to-website workflow
 
+**Superseded where noted:** the owner adopted [scaling-workflow-v2.md](scaling-workflow-v2.md) on September 26, 2026. Its gold/silver lanes, calibrated silver target, request-only reports, scoped audit reuse and presentation batches take precedence over the historical target, reporting cadence and presentation holds below. The earlier measurements remain historical evidence; do not restart their automations.
+
 Use this workflow for the existing screened-pass MatterSyn collection. The user requires 20 published papers/hour while retaining the scientific and Reader standard and forbids paid processing. This is a target, not demonstrated capacity. New arrivals remain outside the active screened set.
 
 ## Work allocation

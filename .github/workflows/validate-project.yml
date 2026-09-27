@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install build validator
-        run: python -m pip install -r requirements-publication.txt
+        run: python -m pip install -r requirements-build-lock.txt
       - name: Test the publication boundary
         working-directory: tools/mattersyn-release
         run: python -m unittest discover -s tests -v
@@ -39,6 +39,10 @@ jobs:
         run: python -m unittest discover -s tools/publication -p 'test_*.py' -v
       - name: Test local package staging without private evidence
         run: python -m unittest discover -s tools/package-importer/tests -v
+      - name: Test scoped packages and event metrics
+        run: python -m unittest discover -s tools/workflow/tests -v
+      - name: Test local extraction and silver admission boundaries
+        run: python -m unittest discover -s tools/silver -p 'test_*.py' -v
       - name: Test browser condition classification
         run: node --test recipe-atlas/tests/protocol-conditions.test.mjs
       - name: Test source-scoped apparatus context
@@ -49,10 +53,12 @@ jobs:
         run: python tools/publication/check_project_manifest.py --pre-push
       - name: Validate the public source projection
         run: |
+          python tools/publication/bind_source_allowlist.py \
+            --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/source-allowlist.json"
           python tools/mattersyn-release/export_release.py \
             --source-root "$GITHUB_WORKSPACE" \
             --destination "$RUNNER_TEMP/public-source" \
-            --allowlist publication/project-allowlist.json \
+            --allowlist "$RUNNER_TEMP/source-allowlist.json" \
             --registry publication/asset-rights-registry.json \
             --policy publication/public-release-policy.json \
             --repo mattersyn \

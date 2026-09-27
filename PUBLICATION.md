@@ -46,6 +46,16 @@ status while retaining the selected figures under the current project preference
 
 ## Build and release
 
+The September 26 scaling workflow uses a single source commit with generated,
+content-bound controls. Follow [the single-commit guide](tools/publication/SINGLE_COMMIT_RELEASE.md): stage reviewed payloads, prepare the blueprint and manifest together, then bind the committed manifest to clean HEAD outside the repository before export. CI uses that runtime allowlist. This removes the follow-up closure commit without removing exact public-file review or scientific evidence checks.
+
+Machine-extracted silver contributions remain separately labelled and cannot
+enter the public dataset until frozen-pipeline calibration and independent
+calibration approval pass. Quotes and model drafts remain private. A scoped
+gold contribution may be presentation-pending; its declared scientific scope
+still needs the consolidated independent audit. Automatic cross-repository
+publishing is not installed by this increment; the existing local handoff remains.
+
 Use the single build entry point documented in the project README. Authored static
 inputs live in `recipe-atlas/static`; generated `dist` is a build output. A committed
 input blueprint and an externally generated runtime snapshot bind each build to

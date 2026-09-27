@@ -10,6 +10,8 @@ import json
 import re
 import subprocess
 
+from prepare_source_release import payload_binding, index_files
+
 
 class ManifestError(RuntimeError):
     pass
@@ -87,9 +89,25 @@ def check(root, manifest='publication/project-allowlist.json', pre_push=False, b
         raise ManifestError('Source manifest must exclude itself')
     if len(listed) != len(data['files']):
         raise ManifestError('Duplicate source manifest paths')
-    changed = names(git(root, 'diff', '--name-only', '-z', data['source_commit'], 'HEAD')) - {manifest}
-    if changed:
-        fail_paths('Source changed since its approved manifest commit', changed)
+    binding = data.get('source_payload_binding')
+    if binding is not None:
+        if data.get('source_commit_role') != 'preparation_base':
+            raise ManifestError('Content-bound source manifest must identify its preparation base')
+        if binding != payload_binding(data['files']):
+            raise ManifestError('Source payload content binding mismatch')
+        # Exact path/hash/mode membership, not a second commit, closes this
+        # manifest. The base still must be an ancestor of the committed tree.
+        git(root, 'merge-base', '--is-ancestor', data['source_commit'], 'HEAD')
+        staged = index_files(root)
+        wrong_modes = {row['path'] for row in data['files'] if row.get('git_mode') != staged[row['path']]['mode']}
+        if wrong_modes:
+            fail_paths('Source manifest mode mismatch', wrong_modes)
+    else:
+        if data.get('source_commit_role') == 'preparation_base':
+            raise ManifestError('Missing source payload content binding')
+        changed = names(git(root, 'diff', '--name-only', '-z', data['source_commit'], 'HEAD')) - {manifest}
+        if changed:
+            fail_paths('Source changed since its approved manifest commit', changed)
     verify_rows(root, data['files'], 'Source manifest')
     result = {'tracked_files': len(tracked), 'approved_payload_files': len(listed), 'manifest_self_exclusion': manifest, 'status': 'passed'}
     if pre_push:
