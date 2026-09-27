@@ -1,3 +1,23 @@
+## 2026-09-27 — Li 2011 published and verified
+
+The independently audited five-page main contribution for DOI 10.1021/ac2019014 was deployed from source `3008b445931f031e6c5f99bbe2258c6dc86ad3ed` at site `1b4cdf3d6e4891898882c4fa948bec87a3bf035f` and anonymously verified at 2026-09-27T13:33:23.580569+00:00. All 36 checked public files matched the approved release. Source Windows/Linux CI and exact build comparison passed, as did site build and deployment. Live totals are 969 records, 68 contributing sources, 83 direct material families, 94 material/component hubs, 273 routes and 204 broad recipe–structure pairs.
+
+This increment adds one gold source, six records and two diameter-linked pairs: main-reported 3.8 nm CdSe/ZnS and 3 nm Au preparations. The two DNA functionalizations and two assay formulations remain supporting contexts and inherit no particle structure. All 963 earlier canonical records and eligibility and all 202 earlier pair rows remain unchanged. SI and cited upstream methods remain unreviewed. Preserve partial Au preparation, unspecified shell doses/times, ambiguous ODA identity and input-water ICPMS separation. No measured phase, morphology or atomic-coordinate claim is made. Presentation refinements remain labelled pending; six selected source figures retain provenance and unverified publisher permission.
+
+The saved morning checkpoint covers 2026-09-26T13:31:23Z through 2026-09-27T13:01:47Z: nine distinct gold sources, zero silver sources, 78 records and 48 broad pairs added over 23 hours 30 minutes 24 seconds, ending at 963 records, 67 sources and 202 pairs. Its baseline is the recorded 08:31:23 Chicago morning checkpoint; the exact previous daily-heartbeat report timestamp was not established. Li was verified after that interval and is a separate event `gold-20260927-li2011-ac2019014` for the next report. Retain these previously counted event IDs to prevent recounting:
+
+- `zhan1999-jaipurite@ed3bdd91d8f533686b5336f4872cf6234c3a31fb`
+- `song2024inorgchem4c02738@9f744a28e9e7fea382792a688739af4dad3639eb`
+- `gold-20260927-3c08812`
+- `gold-20260927-5b06857`
+- `gold-20260927-nagy2012nn204886b`
+- `gold-20260927-basel2020`
+- `gold-20260927-zhu2012-ja210312s-si`
+- `gold-20260927-zheng2012-ja210285p`
+- `gold-20260927-lee2012-ja3044807`
+
+Use research-assets/public-audits/morning-checkpoint-20260927.json for the exact reporting boundary and research-assets/public-audits/li2011-publication-20260927.json for this publication. Keep daily 08:00 America/Chicago reports active and two-hour checks retired. Continue the fastest validated local gold workflow using existing screened-pass sources; silver remains disabled until actual heldout calibration and independent approval. No uninterrupted execution or target-rate attainment is claimed.
+
 ## 2026-09-27 — Li 2011 accepted for the next gold release
 
 Continue the fastest validated local workflow. Li et al. (2011), DOI 10.1021/ac2019014, has six independently audited records from the five-page main article: two particle preparations, two DNA conjugations and two sensing formulations. Only the reported 3.8 nm CdSe/ZnS and 3 nm Au outcomes contribute broad recipe–structure rows. The supporting procedures do not inherit particle measurements or become new growth routes. SI and cited upstream methods remain unreviewed; preserve missing Au conditions, shell dosing, ambiguous ODA identity and the separation of input-water ICPMS from the final assay.
