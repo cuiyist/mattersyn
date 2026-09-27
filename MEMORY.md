@@ -1,3 +1,17 @@
+## 2026-09-27 — Li et al. 2009 CdS published and verified
+
+DOI 10.1021/nn9009455, independently audited across seven main pages, was deployed from source `e5782d47d08149604a5d683399d17c7abd539900` at site `832430c6e15b5f0854386befe5f8075beecff242` and anonymously verified at 2026-09-27T18:30:05.892548+00:00. All 69 selected files matched the release after exact-head source and site CI succeeded. Live totals: 994 records, 70 sources, 83 direct families, 94 hubs, 298 routes and 208 broad pairs.
+
+Event `gold-20260927-li2009-nn9009455` adds one gold source, 22 preparation/condition records and one partial generic Family378 structural outcome. Nineteen trajectory aliquots retain shared-batch lineage; optical-only rows inherit no XRD/TEM/DOSY properties. The generic specimen has unknown exact thermal-batch identity. Different measurement-state sizes and the source acid-label conflict remain separate and qualified. All 972 prior records/eligibility and 207 prior pair rows remain unchanged. SI/cited methods and presentation refinements remain unreviewed or pending; six source crops retain unverified publisher permission. No physical-replicate, measured-coordinate or silver admission is claimed.
+
+Preserve research-assets/public-audits/morning-checkpoint-20260927.json and all preceding publication receipts/events. This new event is outside that morning interval. Daily morning reporting remains active and two-hour checks retired. See research-assets/public-audits/li2009-nn9009455-publication-20260927.json for the verified milestone.
+
+## Next accepted contribution — CeO2 electrochemical preparation
+
+DOI 10.1111/j.1151-2916.1995.tb08425.x has passed the independent corrected main-text audit. Nine canonical records comprise four direct synthesis routes and five supporting procedures or controls; eight source figures and fourteen measurements are preserved. Two partial powder structure outcomes are provisionally accepted for the next build. The purchased comparison powder now has separate provenance from electrochemically prepared powder. Integration, build, browser and publication gates remain: assign zero live paper credit until deployment and anonymous verification. Reuse the frozen accepted correction and source audit; do not restart unchanged reading. Keep the three existing Pati CeO2 routes intact.
+
+The private importer revision now separates complete record membership from direct-route membership, with ten passing engineering tests and separate root review. It has not yet been applied to this paper. Use fresh source/site baselines for integration. Silver remains disabled; daily morning reporting continues and two-hour checks remain retired.
+
 ## 2026-09-27 — Li2009 CdS main contribution accepted
 
 Li et al., CdS Magic-Sized Nanocrystals Exhibiting Bright Band Gap Photoemission via Thermodynamically Driven Formation, DOI 10.1021/nn9009455, has passed independent review of all seven supplied main pages, six figures and a bounded correction revision. SI and cited papers remain unreviewed. Reuse unchanged accepted source work.
