@@ -38,3 +38,7 @@ For presentation-pending contributions, do not infer a whole heterojunction part
 ## Supporting products and minimal aggregate refresh
 
 A downstream annealed film can carry its own structural outcome without becoming a nanocrystal synthesis route. Use the existing material_evidence_records and route_evidence_contexts links; retain its own sample state and never transfer its phase to an as-made colloid. Rebind only changed review pointers and affected material-view hashes. Compare all old canonical and generated eligibility rows and preserve unrelated Reader records and material views verbatim.
+
+## Film and etch outcomes in broad pair counts
+
+A supporting procedure may have its own qualified structural outcome without becoming a direct nanocrystal-growth route. Keep its own sample state, thickness/coherence measurements and missing fields; do not borrow parent particle phase, diameter or morphology. Count the same film characterized in a figure and a table once. Preserve source-series interpretations separately from specimen measurements.

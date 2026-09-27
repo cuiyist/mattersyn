@@ -671,7 +671,7 @@ def _unique_json_object(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
     return out
 
 
-def _sanitize_content(path: str, raw: bytes, config: dict[str, Any] | None = None, repo: str | None = None) -> tuple[bytes | None, str, dict[str, int]]:
+def _sanitize_content_uncached(path: str, raw: bytes, config: dict[str, Any] | None = None, repo: str | None = None) -> tuple[bytes | None, str, dict[str, int]]:
     ext = PurePosixPath(path).suffix.casefold()
     if raw.lstrip().startswith(b"%PDF-"):
         return None, "original_source_document_or_archive", {}
@@ -731,6 +731,93 @@ def _sanitize_content(path: str, raw: bytes, config: dict[str, Any] | None = Non
     if not _is_image(path):
         return None, "unclassified_binary_content", stats
     return raw, "unchanged", stats
+
+
+
+# This memo stores pure sanitation results, never release or review approvals.
+# Membership, byte hashes, staged modes, review rows and rights remain checked
+# by every caller. No cache is read from or written to disk.
+from collections import OrderedDict
+from threading import RLock
+
+_SANITATION_GUARD_VERSION = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+_SANITATION_MEMO = OrderedDict()
+_SANITATION_MEMO_LOCK = RLock()
+_SANITATION_MEMO_MAX_ENTRIES = 16384
+_SANITATION_MEMO_MAX_OUTPUT_BYTES = 16 * 1024 * 1024
+_SANITATION_MEMO_OUTPUT_BYTES = 0
+_SANITATION_MEMO_ENABLED = True
+_SANITATION_MEMO_HITS = 0
+_SANITATION_MEMO_MISSES = 0
+
+
+def sanitation_memo_state(*, clear=False, enabled=None):
+    """Local diagnostic/test control; changing it never approves a payload."""
+    global _SANITATION_MEMO_ENABLED, _SANITATION_MEMO_HITS
+    global _SANITATION_MEMO_MISSES, _SANITATION_MEMO_OUTPUT_BYTES
+    with _SANITATION_MEMO_LOCK:
+        if enabled is not None:
+            _SANITATION_MEMO_ENABLED = bool(enabled)
+        if clear:
+            _SANITATION_MEMO.clear()
+            _SANITATION_MEMO_HITS = _SANITATION_MEMO_MISSES = 0
+            _SANITATION_MEMO_OUTPUT_BYTES = 0
+        return {"enabled": _SANITATION_MEMO_ENABLED, "entries": len(_SANITATION_MEMO),
+                "hits": _SANITATION_MEMO_HITS, "misses": _SANITATION_MEMO_MISSES,
+                "retained_output_bytes": _SANITATION_MEMO_OUTPUT_BYTES}
+
+
+def _sanitation_context(config):
+    # Memoized JSON sanitation has no configuration-dependent behavior. These
+    # current pins only separate contexts further; every policy/rights gate is
+    # still evaluated outside the memo. Coordinate/text formats are uncached.
+    return None if config is None else (config.get("policy_sha256"),
+                                       config.get("asset_rights_registry_sha256"))
+
+
+def _sanitize_content(path, raw, config=None, repo=None):
+    global _SANITATION_MEMO_HITS, _SANITATION_MEMO_MISSES
+    global _SANITATION_MEMO_OUTPUT_BYTES
+    if not _SANITATION_MEMO_ENABLED or not isinstance(raw, bytes):
+        return _sanitize_content_uncached(path, raw, config, repo)
+    # Restrict the memo to the configuration-independent JSON branch. In
+    # particular CIF/SDF/XYZ with mutable exact COD exceptions always execute
+    # the original sanitizer: no raced or type-collapsed exception verdict can
+    # enter the memo or be inherited by a later call.
+    if PurePosixPath(path).suffix.casefold() not in {".json", ".jsonl", ".ndjson"}:
+        return _sanitize_content_uncached(path, raw, config, repo)
+    context = _sanitation_context(config)
+    try:
+        key = (_SANITATION_GUARD_VERSION, repo, path, sha256(raw), len(raw), context)
+        hash(key)
+    except TypeError:
+        return _sanitize_content_uncached(path, raw, config, repo)
+    with _SANITATION_MEMO_LOCK:
+        hit = _SANITATION_MEMO.get(key)
+        if hit is not None:
+            _SANITATION_MEMO.move_to_end(key)
+            _SANITATION_MEMO_HITS += 1
+            unchanged, output, reason, stats = hit
+            return (raw if unchanged else output), reason, dict(stats)
+        _SANITATION_MEMO_MISSES += 1
+    output, reason, stats = _sanitize_content_uncached(path, raw, config, repo)
+    unchanged = output is raw or output == raw
+    retained = None if unchanged else output
+    weight = len(retained) if isinstance(retained, bytes) else 0
+    if weight <= _SANITATION_MEMO_MAX_OUTPUT_BYTES:
+        value = (unchanged, retained, reason, tuple(stats.items()))
+        with _SANITATION_MEMO_LOCK:
+            former = _SANITATION_MEMO.pop(key, None)
+            if former and isinstance(former[1], bytes):
+                _SANITATION_MEMO_OUTPUT_BYTES -= len(former[1])
+            _SANITATION_MEMO[key] = value
+            _SANITATION_MEMO_OUTPUT_BYTES += weight
+            while (len(_SANITATION_MEMO) > _SANITATION_MEMO_MAX_ENTRIES
+                   or _SANITATION_MEMO_OUTPUT_BYTES > _SANITATION_MEMO_MAX_OUTPUT_BYTES):
+                _, evicted = _SANITATION_MEMO.popitem(last=False)
+                if isinstance(evicted[1], bytes):
+                    _SANITATION_MEMO_OUTPUT_BYTES -= len(evicted[1])
+    return output, reason, dict(stats)
 
 
 def history_project(kind: str, path: str, raw: bytes, config: dict[str, Any]) -> dict[str, Any]:
