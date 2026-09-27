@@ -47,3 +47,7 @@ older manifest; this caused repeated September26 CI failures. The checker does
 not replace scientific, public-boundary, build or browser validation. A request
 to finish already audited papers and then pause limits work to that accepted
 queue; leave drafts, correction requests and recurring automations paused.
+
+### Pre-freeze relevance and Windows export paths
+
+After deriving a candidate dataset, atlas and Reader, run the current relevance/quality check before freezing release controls. Named-source membership assertions must be updated only for independently accepted additions, retaining excluded benchmark/procedure contexts. On Windows, keep isolated export destinations short enough that the longest approved relative path fits platform limits; check lengths before exporting. A path-length failure requires a new shorter private destination, not a boundary-policy relaxation.
