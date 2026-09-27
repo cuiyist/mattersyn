@@ -1,3 +1,13 @@
+## 2026-09-27 — Li2009 CdS main contribution accepted
+
+Li et al., CdS Magic-Sized Nanocrystals Exhibiting Bright Band Gap Photoemission via Thermodynamically Driven Formation, DOI 10.1021/nn9009455, has passed independent review of all seven supplied main pages, six figures and a bounded correction revision. SI and cited papers remain unreviewed. Reuse unchanged accepted source work.
+
+The candidate adds 22 source-scoped preparation/condition records to the existing CdS hub. Nineteen describe shared-batch time-course aliquots; do not count them as independent physical batches. Only the general Family378 context contributes one partial structural row with unknown exact thermal-batch assignment. Optical-only conditions do not inherit generic structural measurements. Keep DOSY, dried TEM, diffraction and optical-calibration sizes distinct, preserve the acid-name conflict, and label the four-step proposed mechanism as interpretation.
+
+Build-derived candidate totals: 994 records, 70 contributing sources, 83 direct material families, 94 hubs, 298 routes and 208 broad pairs. All 972 earlier canonical records/eligibility and 207 earlier pair objects remain unchanged. Final release and anonymous verification are still required. Six source figures retain provenance and unverified publisher permission; presentation refinements remain pending. No atomic-coordinate or silver admission is claimed.
+
+Safe acceptance receipt: research-assets/public-audits/li2009-cds-gold-batch-20260927.json. Existing screened sources only; no paid processing, new downloads or external source transfers. Continue parallel authoring and independent audit, ready-batch publication and daily 08:00 Chicago reports. Two-hour checks remain retired; silver remains disabled pending calibrated field accuracy and independent approval.
+
 ## 2026-09-27 — Wehrenberg 2002 published and verified
 
 DOI 10.1021/jp021187e, independently audited across seven main pages, was deployed from source `cff0b4400d3b5315036377b5598cfe7d811a5408` at site `11f0d3a209b0a89855c5736daa61bdf65d8799cf` and anonymously verified at 2026-09-27T14:12:55.452132+00:00. All 32 selected public files matched the final release after source Windows/Linux/comparison CI and site build/deploy succeeded. Live totals: 972 records, 69 sources, 83 direct material families, 94 hubs, 276 routes and 207 broad pairs.

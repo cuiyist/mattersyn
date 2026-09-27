@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **69 primary source groups** · release `mattersyn-gold-wehrenberg2002-20260927`. Records are not independent experiments.
+Dataset **0.41.2** · **70 primary source groups** · release `mattersyn-gold-li2009-cds-20260927`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -75,6 +75,8 @@ Dataset **0.41.2** · **69 primary source groups** · release `mattersyn-gold-we
 - Ying-Song Fu; Xi-Wen Du; Sergei A. Kulinich; Jian-Sheng Qiu; Wen-Jing Qin; Rui Li; Jing Sun; Jim Liu (2007). Stable Aqueous Dispersion of ZnO Quantum Dots with Strong Blue Emission via Simple Solution Route. [10.1021/ja075604i](https://doi.org/10.1021/ja075604i). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=fu2007).
 
 - Yue Wu, Cyrus Wadia, Wanli Ma, Bryce Sadtler, A. Paul Alivisatos (2008). Synthesis and Photovoltaic Application of Copper(I) Sulfide Nanocrystals. [10.1021/nl801817d](https://doi.org/10.1021/nl801817d). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wu2008).
+
+- Minjie Li; Jianying Ouyang; Christopher I. Ratcliffe; Laetitia Pietri; Xiaohua Wu; Donald M. Leek; Igor Moudrakovski; Quan Lin; Bai Yang; Kui Yu (2009). CdS Magic-Sized Nanocrystals Exhibiting Bright Band Gap Photoemission via Thermodynamically Driven Formation. *ACS Nano*, 3, 3832–3838. [10.1021/nn9009455](https://doi.org/10.1021/nn9009455). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2009-nn9009455).
 
 - Ranjan K. Pati; Ivan C. Lee; Karen J. Gaskell; Sheryl H. Ehrman (2009). Precipitation of Nanocrystalline CeO2 Using Triethanolamine. *Langmuir*, 25, 67–70. [10.1021/la8031286](https://doi.org/10.1021/la8031286). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=pati2009).
 
