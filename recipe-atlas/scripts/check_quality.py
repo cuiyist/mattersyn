@@ -202,10 +202,11 @@ class Audit:
         dantas_routes = {"dantas-2002-" + sample for sample in ("sg1", "sg2", "sg3", "sg4", "afm1", "afm2")}
         lead_sulfide = self.hubs.get("PbS", {})
         yao_direct = {"yao2015-pbs-hot-injection-120c"}
+        basel_direct = {"basel-2020-pbs-hot-injection-80c"}
         yao_assemblies = {f"yao2015-cds-pbs-{n}-cycles" for n in (1, 2, 4, 6, 7)} | {"yao2015-planar-cds-pbs-6-cycles"}
-        self.check(lead_sulfide.get("component_only") is False and set(lead_sulfide.get("direct_record_ids", [])) == yao_direct, "PbS: only the reviewed isolated-QD preparation is a direct route; glass and device assemblies remain component contributions")
-        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies, "PbS: route membership differs from reviewed Dantas glass and Yao QD/assembly scopes; benchmark and contextual rows remain excluded")
-        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
+        self.check(lead_sulfide.get("component_only") is False and set(lead_sulfide.get("direct_record_ids", [])) == yao_direct | basel_direct, "PbS: only reviewed Yao/Basel isolated-QD preparations are direct routes; glass and device assemblies remain component contributions")
+        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies | basel_direct, "PbS: route membership differs from reviewed Dantas glass, Yao QD/assembly and Basel QD scopes; benchmark and contextual rows remain excluded")
+        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
         self.check(set(self.hubs.get("PbS/glass", {}).get("direct_record_ids", [])) == dantas_routes, "PbS/glass: six reviewed annealing variants must remain direct composite routes")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "PbS/glass" for rid in dantas_routes), "PbS/glass: whole-composite identity was erased")
         dantas_review = load(self.root / "data/paper-reviews/dantas2002.json")
