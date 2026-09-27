@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2011-au-dna-probe-b",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Li et al. (2011): Probe B DNA-functionalized particles",
+  "material": {
+    "formula": "Au",
+    "family": "QD/DNA/Au nanosensor constituents and assay contexts",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "DNA functionalization",
+  "sources": [
+    {
+      "id": "li2011-ac2019014",
+      "doi": "10.1021/ac2019014",
+      "title": "Detection of Mercury(II) by Quantum Dot/DNA/Gold Nanoparticle Ensemble Based Nanosensor Via Nanometal Surface Energy Transfer",
+      "authors": "Ming Li; Qiaoyi Wang; Xiaodong Shi; Lawrence A. Hornak; Nianqiang Wu",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/ac2019014",
+      "main_status": "All five supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Cited SI Figures S1–S9, including TEM/XPS, were not inspected.",
+      "reuse_status": "Selected source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2011-ac2019014",
+    "recipe_family": "li2011-qd-dna-au",
+    "parent_record_id": "li2011-au-nabh4",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "parent-au",
+      "name": "Au nanoparticles",
+      "formula": "Au",
+      "role": "particle substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Particle amount and concentration unreported for conjugation. Parent nominal size is context only; no new post-conjugation size measurement."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ]
+    },
+    {
+      "id": "dna-b",
+      "name": "5′-HS-GTCCTTTCTG-3′",
+      "formula": null,
+      "role": "thiolated DNA recognition strand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact ten-base source sequence; linker/spacer chemistry, terminal details, dose and purification are unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "functionalize-state",
+      "name": "Functionalize with the thiolated DNA strand output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "functionalize",
+      "action": "functionalize",
+      "label": "Functionalize with the thiolated DNA strand",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "parent-au",
+        "dna-b"
+      ],
+      "outputs": [
+        "functionalize-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Attach the stated thiolated ssDNA to the particle surface following cited references 33 and 34. No concentrations, buffer, salt-aging, time, temperature or purification are provided here.",
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2011-au-dna-probe-b-product",
+      "source_sample_label": "Probe B",
+      "batch_id": null,
+      "material_state_id": "functionalize-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2011-ac2019014",
+            "locator": "Main PDF p. 2, Preparation: DNA probes and average DNA loadings"
+          }
+        ],
+        "note": "Source constituent identity; no atom-resolved stoichiometry or occupancy model."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No product crystal-phase assignment in the supplied main article."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "The main sensor schematic is not a particle-morphology measurement. SI TEM was not inspected."
+      },
+      "surface": {
+        "value": "5′-thiolated DNA: GTCCTTTCTG",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2011-ac2019014",
+            "locator": "Main PDF p. 2, Preparation: DNA probes and average DNA loadings"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation: DNA probes and average DNA loadings"
+        }
+      ],
+      "notes": [
+        "Physical batch identity is unspecified; the record preserves only its own reported product context."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "dna-loading",
+      "sample_id": "li2011-au-dna-probe-b-product",
+      "property": "dna_molecules_per_particle",
+      "technique": "Optical absorption estimate reported in main",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "DNA/particle",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source average loading; no uncertainty or raw calibration supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2011-ac2019014",
+            "locator": "Main PDF p. 2, Preparation: DNA probes and average DNA loadings"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation: DNA probes and average DNA loadings"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all five supplied main pages and the bounded R2 corrections accepted. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Five-page main only; cited SI and upstream references unreviewed.",
+      "No measured atomic coordinates or named product crystal phases reported in this scope.",
+      "Particle sizes are stated in main text; the underlying SI TEM images were not inspected. No measured morphology is inferred from the sensor cartoon.",
+      "No physical batch identifiers supplied. Supporting conjugation/assay records do not inherit particle structural measurements.",
+      "Molecular, unit-cell and apparatus presentation refinements remain pending where explicitly labelled.",
+      "Complete DNA conjugation protocol and post-conjugation structural characterization absent from supplied main."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/ac2019014",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Methods, assay series and source context",
+      "url": "data/paper-reviews/li2011-ac2019014/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source figures and reading scope",
+      "url": "paper-review.html?id=li2011-ac2019014",
+      "relation": "source_review"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

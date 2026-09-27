@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2011-au-nabh4",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Li et al. (2011): 3 nm Au nanoparticles by borohydride reduction",
+  "material": {
+    "formula": "Au",
+    "family": "QD/DNA/Au nanosensor constituents and assay contexts",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Borohydride reduction",
+  "sources": [
+    {
+      "id": "li2011-ac2019014",
+      "doi": "10.1021/ac2019014",
+      "title": "Detection of Mercury(II) by Quantum Dot/DNA/Gold Nanoparticle Ensemble Based Nanosensor Via Nanometal Surface Energy Transfer",
+      "authors": "Ming Li; Qiaoyi Wang; Xiaodong Shi; Lawrence A. Hornak; Nianqiang Wu",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/ac2019014",
+      "main_status": "All five supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Cited SI Figures S1–S9, including TEM/XPS, were not inspected.",
+      "reuse_status": "Selected source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2011-ac2019014",
+    "recipe_family": "li2011-qd-dna-au",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "haucl4",
+      "name": "Chloroauric acid trihydrate",
+      "formula": "HAuCl4·3H2O",
+      "role": "gold precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source explicitly names this hydrate; charge and concentration are unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ]
+    },
+    {
+      "id": "nabh4",
+      "name": "Sodium borohydride",
+      "formula": "NaBH4",
+      "role": "reductant",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source grade 98%; amount and solution preparation unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "reduce-state",
+      "name": "Reduce the gold precursor output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "reduce",
+      "action": "react",
+      "label": "Reduce the gold precursor",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "haucl4",
+        "nabh4"
+      ],
+      "outputs": [
+        "reduce-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reduce HAuCl4·3H2O using NaBH4, following cited reference 32. This main supplies no reagent amounts, solvent, stabilizer, addition order, temperature, time or isolation details; cited method not read.",
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of DNA-functionalized CdSe/ZnS QDs and Au NPs"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2011-au-nabh4-product",
+      "source_sample_label": "3 nm Au NPs used for DNA functionalization",
+      "batch_id": null,
+      "material_state_id": "reduce-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2011-ac2019014",
+            "locator": "Main PDF p. 2, Preparation of Au NPs and Results: 3 nm Au NPs"
+          }
+        ],
+        "note": "Source constituent identity; no atom-resolved stoichiometry or occupancy model."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No product crystal-phase assignment in the supplied main article."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "The main sensor schematic is not a particle-morphology measurement. SI TEM was not inspected."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of Au NPs and Results: 3 nm Au NPs"
+        }
+      ],
+      "notes": [
+        "Physical batch identity is unspecified; the record preserves only its own reported product context."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "diameter",
+      "sample_id": "li2011-au-nabh4-product",
+      "property": "diameter",
+      "technique": "TEM size reported in main text; SI image unreviewed",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "No uncertainty, detailed morphology or phase assignment supplied in main.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2011-ac2019014",
+            "locator": "Main PDF p. 2, Preparation of Au NPs and Results: 3 nm Au NPs"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2011-ac2019014",
+          "locator": "Main PDF p. 2, Preparation of Au NPs and Results: 3 nm Au NPs"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all five supplied main pages and the bounded R2 corrections accepted. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Five-page main only; cited SI and upstream references unreviewed.",
+      "No measured atomic coordinates or named product crystal phases reported in this scope.",
+      "Particle sizes are stated in main text; the underlying SI TEM images were not inspected. No measured morphology is inferred from the sensor cartoon.",
+      "No physical batch identifiers supplied. Supporting conjugation/assay records do not inherit particle structural measurements.",
+      "Molecular, unit-cell and apparatus presentation refinements remain pending where explicitly labelled.",
+      "This is a partial source preparation; full cited reference 32 is unreviewed. Gold and reductant charges, solvent, ligand, time, temperature and workup are all unreported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/ac2019014",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Methods, assay series and source context",
+      "url": "data/paper-reviews/li2011-ac2019014/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source figures and reading scope",
+      "url": "paper-review.html?id=li2011-ac2019014",
+      "relation": "source_review"
+    }
+  ],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

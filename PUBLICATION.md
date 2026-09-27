@@ -117,14 +117,12 @@ GitHub Pages deploys only the artifact validated by the site workflow. The old
 same-directory synchronization command is retired. A failed validation must not be
 bypassed by uploading the repository root or switching back to branch publication.
 
-Before pushing a source update, refresh the build blueprint for all reviewed
-changes, commit the payload, and prepare the exact source allowlist from that
-commit. Commit the allowlist as its own closure commit. Run
-`python tools/publication/check_project_manifest.py --pre-push` from the clean
-checkout, followed by the required boundary and build checks. Push only the
-completed closure; intermediate memory, progress, and asset commits must not be
-pushed with stale manifests. This check reports missing paths, changed hashes,
-and omitted build inputs without approving files or changing any scientific gate.
+Before pushing a source update, use the current single-commit preparer described
+above. It stages the reviewed payload and generated controls together. Commit
+once, check the clean manifest, bind it to final HEAD outside the checkout, and
+run the required source boundary and clean build checks. Do not push intermediate
+memory, asset or data changes with stale controls. The earlier separate closure
+commit procedure is retired for current content-bound manifests.
 
 ## Historical preservation
 

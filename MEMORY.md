@@ -1,3 +1,11 @@
+## 2026-09-27 — Li 2011 accepted for the next gold release
+
+Continue the fastest validated local workflow. Li et al. (2011), DOI 10.1021/ac2019014, has six independently audited records from the five-page main article: two particle preparations, two DNA conjugations and two sensing formulations. Only the reported 3.8 nm CdSe/ZnS and 3 nm Au outcomes contribute broad recipe–structure rows. The supporting procedures do not inherit particle measurements or become new growth routes. SI and cited upstream methods remain unreviewed; preserve missing Au conditions, shell dosing, ambiguous ODA identity and the separation of input-water ICPMS from the final assay.
+
+The accepted candidate adds six records and two broad pairs, with 969 records, 68 contributing sources, 83 direct material families, 94 hubs, 273 routes and 204 pairs. These remain candidate totals until deployment and anonymous verification. All 963 earlier canonical records and eligibility remain unchanged. Only four affected material views are refreshed. Six original source figures retain provenance and unverified publisher permission. Presentation refinements remain labelled pending; no new measured phase, morphology or coordinate claim is made.
+
+Safe acceptance receipt: research-assets/public-audits/li2011-gold-batch-20260927.json. Reuse the accepted scientific audit and its bounded integration check. Daily 08:00 America/Chicago reporting remains active; two-hour checks remain retired. Existing screened sources only, local processing only, silver disabled pending held-out calibration. No uninterrupted processing or target-rate attainment is claimed.
+
 ## 2026-09-27 — Zheng ZnSe and Lee ITO published and verified
 
 Two independently audited main-article contributions were deployed from source `b934b9f90fce924bb61298352a3e31bd79cef3c1` at site `dcdafec6800c1c271e09374bbb3fb1b03d22c4f5` and anonymously verified at 2026-09-27T05:43:08.205252+00:00. All 77 checked files matched the approved artifact. Source Windows/Linux builds and exact output comparison passed, as did website deployment. Live totals are 963 records, 67 contributing sources, 82 direct material families, 93 material/component hubs, 271 routes and 202 broad recipe–structure pairs.

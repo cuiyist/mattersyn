@@ -72,7 +72,7 @@ Public citations are generated below from the same dataset snapshot used by the 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **67 primary source groups** · release `mattersyn-gold-zheng-lee-20260927`. Records are not independent experiments.
+Dataset **0.41.2** · **68 primary source groups** · release `mattersyn-gold-li2011-20260927`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -151,6 +151,8 @@ Dataset **0.41.2** · **67 primary source groups** · release `mattersyn-gold-zh
 - Christopher M. Evans; Meagan E. Evans; Todd D. Krauss (2010). Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation. *Journal of the American Chemical Society*, 132, 10973–10975. [10.1021/ja103805s](https://doi.org/10.1021/ja103805s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=evans2010).
 
 - Jordan W. Thomson; Ludovico Cademartiri; Mark MacDonald; Srebri Petrov; Gianluca Calestani; Peng Zhang; Geoffrey A. Ozin (2010). Ultrathin Bi2S3 Nanowires: Surface and Core Structure at the Cluster-Nanocrystal Transition. [10.1021/ja101908k](https://doi.org/10.1021/ja101908k). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=thomson2010ja101908k).
+
+- Ming Li; Qiaoyi Wang; Xiaodong Shi; Lawrence A. Hornak; Nianqiang Wu (2011). Detection of Mercury(II) by Quantum Dot/DNA/Gold Nanoparticle Ensemble Based Nanosensor Via Nanometal Surface Energy Transfer. *Analytical Chemistry*, 83, 7061–7065. [10.1021/ac2019014](https://doi.org/10.1021/ac2019014). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2011-ac2019014).
 
 - Jonghun Lee; Sunghwan Lee; Guanglai Li; Melissa A. Petruska; David C. Paine; Shouheng Sun (2012). A Facile Solution-Phase Approach to Transparent and Conducting ITO Nanocrystal Assemblies. *Journal of the American Chemical Society*, 134, 13410–13414. [10.1021/ja3044807](https://doi.org/10.1021/ja3044807). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lee2012-ja3044807).
 
