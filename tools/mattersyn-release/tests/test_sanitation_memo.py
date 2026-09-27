@@ -77,10 +77,18 @@ class MemoTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as td:
    root=Path(td)/'stage';root.mkdir();c,p,al=self.fixture_stage(root);g.validate_stage(root,al,c,'mattersyn-site');(root/'extra.txt').write_text('unlisted');self.assertEqual(g.validate_stage(root,al,c,'mattersyn-site')[1]['status'],'failed');(root/'extra.txt').unlink();p.unlink();self.assertEqual(g.validate_stage(root,al,c,'mattersyn-site')[1]['status'],'failed')
  def test_warm_stage_symlink_gate_is_not_cached(self):
-  with tempfile.TemporaryDirectory() as td:
-   root=Path(td)/'stage';root.mkdir();c,p,al=self.fixture_stage(root);g.validate_stage(root,al,c,'mattersyn-site');original=Path.is_symlink
-   with patch.object(Path,'is_symlink',lambda path: True if path==p else original(path)):
-    with self.assertRaisesRegex(g.BoundaryError,'symlink_not_allowed'):g.validate_stage(root,al,c,'mattersyn-site')
+  for lexical_alias in (False,True):
+   with self.subTest(lexical_alias=lexical_alias),tempfile.TemporaryDirectory() as td:
+    top=Path(td)
+    if lexical_alias:
+     (top/'alias-parent').mkdir();top=top/'alias-parent'/'..'
+    root=top/'stage';root.mkdir();c,p,al=self.fixture_stage(root)
+    self.assertEqual(g.validate_stage(root,al,c,'mattersyn-site')[1]['status'],'passed')
+    # The guard resolves its root; the mock must match the same file identity.
+    # This also handles a Windows temporary directory with a short path name.
+    p=p.resolve(strict=True);original=Path.is_symlink
+    with patch.object(Path,'is_symlink',lambda path: True if path==p else original(path)):
+     with self.assertRaisesRegex(g.BoundaryError,'symlink_not_allowed'):g.validate_stage(root,al,c,'mattersyn-site')
  def test_export_then_verify_same_byte_scan_reuse_and_exact_receipts(self):
   with tempfile.TemporaryDirectory() as td:
    top=Path(td);source=top/'source';source.mkdir();c,p,al=self.fixture_stage(source);g.sanitation_memo_state(enabled=False);cold=g.export_public_release(source,top/'cold',al,c,'mattersyn-site',top/'cm.json',top/'cr.json');g.sanitation_memo_state(clear=True,enabled=True);warm=g.export_public_release(source,top/'warm',al,c,'mattersyn-site',top/'wm.json',top/'wr.json');self.assertEqual(cold,warm);self.assertEqual((top/'cold/index.html').read_bytes(),(top/'warm/index.html').read_bytes());self.assertEqual(g.sanitation_memo_state()['misses'],1);self.assertGreaterEqual(g.sanitation_memo_state()['hits'],1)
