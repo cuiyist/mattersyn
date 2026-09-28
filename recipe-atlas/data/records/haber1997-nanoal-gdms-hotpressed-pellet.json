@@ -1,0 +1,357 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "haber1997-nanoal-gdms-hotpressed-pellet",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Haber et al. (1997): Hot-pressed nano-Al analytical pellet",
+  "material": {
+    "formula": "Al",
+    "family": "Aluminum nanocrystals",
+    "elements": [
+      "Al"
+    ],
+    "components": [
+      "Al"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Analytical pellet preparation",
+  "sources": [
+    {
+      "id": "haber1997-aln",
+      "doi": "10.1021/ja963368y",
+      "title": "Morphological Control of Nanocrystalline Aluminum Nitride: Aluminum Chloride-Assisted Nanowhisker Growth",
+      "authors": "Joel A. Haber; Patrick C. Gibbons; William E. Buhro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/ja963368y",
+      "main_status": "All 2 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Six-page supporting information is mentioned but not inspected. Cited full sources are unreviewed.",
+      "reuse_status": "Two source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "haber1997-aln",
+    "recipe_family": "haber1997-al-aln",
+    "parent_record_id": "haber1997-nanoal-0p5molpct-28nm",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Al",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 6"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nanoal28",
+      "name": "28 nm nano-Al analytical feed",
+      "formula": "Al",
+      "role": "pellet precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source states 0.5 mol% catalyst for this input. The reported 28 nm size belongs to powder before pressing."
+      ],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 6"
+        }
+      ]
+    },
+    {
+      "id": "argon",
+      "name": "Argon",
+      "formula": "Ar",
+      "role": "glove-box gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "press-state",
+      "name": "Hot press the analytical pellet output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "press",
+      "action": "press",
+      "label": "Hot press the analytical pellet",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nanoal28",
+        "argon"
+      ],
+      "outputs": [
+        "press-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "haber1997-aln",
+              "locator": "Main PDF p. 1, Footnote 6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "haber1997-aln",
+              "locator": "Main PDF p. 1, Footnote 6"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": 350,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MPa",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "haber1997-aln",
+              "locator": "Main PDF p. 1, Footnote 6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar-filled glovebox",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Footnote 6"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hot press the 28 nm nano-Al at 100 °C for 1 h under 350 MPa in an Ar-filled glovebox. Dimensions, charge and post-press structure are unreported.",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "haber1997-nanoal-gdms-hotpressed-pellet-product",
+      "source_sample_label": "Hot-pressed pellet submitted for GDMS",
+      "batch_id": null,
+      "material_state_id": "press-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Al",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Footnote 6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No named polymorph assigned to this specimen in the scoped main."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 6"
+        }
+      ],
+      "notes": [
+        "Analytical preparation only. No post-press nanocrystal size or morphology measurement; no extra structural pair inferred."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "gdms-purity",
+      "sample_id": "haber1997-nanoal-gdms-hotpressed-pellet-product",
+      "property": "elemental_mass_fraction_Al",
+      "technique": "Glow discharge mass spectrometry / by difference",
+      "value": {
+        "value": 99.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "wt%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Footnote 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Al by difference after measuring 25 impurity elements. Full impurity table preserved in source contexts; value not transferred to every powder batch.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of both complete main pages, both figures and all 17 numbered references/footnotes passed; bounded R2 source/sample and R3 nitrogen-admission scope corrections passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied two-page main only; six-page SI and cited full texts unreviewed.",
+      "Absolute synthesis reagent charges, precursor purity, detailed ramp/hold schedules for most image specimens, cooling and workup are unreported.",
+      "Source groups and analytical examples may overlap physically; absent batch IDs are not invented, and records are not asserted to be independently repeated experiments.",
+      "AlCl3 mass fractions 9.3%, 10%, 13% and 93% belong to distinct source contexts; the weight-percent denominator is not explicitly defined.",
+      "No measured atomic coordinates, exact unit cell, functional-property tests or lattice refinement supplied in this main.",
+      "Source-specific molecular and morphology refinements remain presentation pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/ja963368y",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=haber1997-aln",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample comparisons, analysis and proposed mechanism",
+      "url": "data/paper-reviews/haber1997-aln/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,525 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "haber1997-aln-nominal20-alcl3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Haber et al. (1997): Nominal 20 µm commercial Al with AlCl3",
+  "material": {
+    "formula": "AlN",
+    "family": "Aluminum nitride nanocrystals",
+    "elements": [
+      "Al",
+      "N"
+    ],
+    "components": [
+      "AlN"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Thermal nitridation",
+  "sources": [
+    {
+      "id": "haber1997-aln",
+      "doi": "10.1021/ja963368y",
+      "title": "Morphological Control of Nanocrystalline Aluminum Nitride: Aluminum Chloride-Assisted Nanowhisker Growth",
+      "authors": "Joel A. Haber; Patrick C. Gibbons; William E. Buhro",
+      "year": 1997,
+      "url": "https://doi.org/10.1021/ja963368y",
+      "main_status": "All 2 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Six-page supporting information is mentioned but not inspected. Cited full sources are unreviewed.",
+      "reuse_status": "Two source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "haber1997-aln",
+    "recipe_family": "haber1997-al-aln",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "AlN",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "commercial20",
+      "name": "Commercial nominal 20 µm Al (Aldrich)",
+      "formula": "Al",
+      "role": "aluminum feed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nominal 20 µm; source SEM range 2–75 µm."
+      ],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+        }
+      ]
+    },
+    {
+      "id": "aluminum-chloride",
+      "name": "Aluminum chloride additive",
+      "formula": "AlCl3",
+      "role": "volatile chloride transport additive",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Weight-percent denominator is not explicitly defined; no absolute mass, hydration or measured molecular geometry supplied.",
+        "Addition is source-reported qualitatively; the amount is not given for this commercial comparison."
+      ],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen",
+      "formula": "N2",
+      "role": "nitriding atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "load-state",
+      "name": "Load the magnesium oxide reaction tube output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "assemble-state",
+      "name": "Assemble in a glovebox and position in furnace output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "load-state"
+      ]
+    },
+    {
+      "id": "purge-state",
+      "name": "Purge connecting lines and admit nitrogen output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "assemble-state"
+      ]
+    },
+    {
+      "id": "nitridate-state",
+      "name": "Heat under nitrogen output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "purge-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "load",
+      "action": "mix",
+      "label": "Load the magnesium oxide reaction tube",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "commercial20",
+        "aluminum-chloride"
+      ],
+      "outputs": [
+        "load-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Load Commercial nominal 20 µm Al (Aldrich) with AlCl3. The absolute charge is not supplied. Place the MgO tube inside a fused-silica tube sealed at one end and fitted with an Ultratorr valve at the other.",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+        },
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 8, apparatus and general nitridation"
+        }
+      ]
+    },
+    {
+      "id": "assemble",
+      "action": "transfer",
+      "label": "Assemble in a glovebox and position in furnace",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "load"
+      ],
+      "inputs": [
+        "load-state"
+      ],
+      "outputs": [
+        "assemble-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Glovebox assembly; glovebox gas unspecified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Assemble the apparatus in a glovebox, remove it, and position the MgO tube in the tube furnace. The glovebox gas, tube dimensions and reaction-tube volume are not reported.",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 8, apparatus and general nitridation"
+        }
+      ]
+    },
+    {
+      "id": "purge",
+      "action": "purge",
+      "label": "Purge connecting lines and admit nitrogen",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "assemble"
+      ],
+      "inputs": [
+        "assemble-state",
+        "nitrogen"
+      ],
+      "outputs": [
+        "purge-state"
+      ],
+      "parameters": {
+        "pressure": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "atm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "haber1997-aln",
+              "locator": "Main PDF p. 1, Footnote 8, apparatus and general nitridation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2 at 1 atm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+          }
+        ],
+        "note": "The source reports N2 at 1 atm; flow rate, purity and pressure-control details are not supplied."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purge connecting lines and open the valve to nitrogen at 1 atm. Flow rate and gas purity are not supplied.",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Footnote 8, apparatus and general nitridation"
+        }
+      ]
+    },
+    {
+      "id": "nitridate",
+      "action": "heat",
+      "label": "Heat under nitrogen",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "purge"
+      ],
+      "inputs": [
+        "purge-state"
+      ],
+      "outputs": [
+        "nitridate-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2; valve opened to N2 at 1 atm before heating",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+          },
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Footnote 8, nitrogen admission followed by furnace heating"
+          }
+        ],
+        "note": "1 atm is reported at nitrogen admission; pressure during heating and pressure-control details are not separately specified."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the reaction tube under nitrogen. A specimen-specific heating rate is not supplied. No individual endpoint temperature is supplied. No individual hold duration is supplied. The general footnote-8 method spans 900–1100 °C and 15 min–10 h; these are not an assigned schedule for this specimen. Cooling, separation and workup are unreported.",
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison; footnotes 8 and 10–11"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "haber1997-aln-nominal20-alcl3-product",
+      "source_sample_label": "Commercial-feed AlN comparison, nominal20, AlCl3 added",
+      "batch_id": null,
+      "material_state_id": "nitridate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "AlN",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No named polymorph assigned to this specimen in the scoped main."
+      },
+      "morphology": {
+        "value": "Mixed morphological population including nanowhiskers",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+        }
+      ],
+      "notes": [
+        "General commercial-feed comparison; size/rate/temperature matrix and batch-specific structure fractions are not given. No assigned source TEM panel. Physical overlap with the separate 2–3 µm mean analytical example is unresolved."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "conversion",
+      "sample_id": "haber1997-aln-nominal20-alcl3-product",
+      "property": "conversion_observation",
+      "technique": "Source comparison",
+      "value": {
+        "value": "Incomplete nitridation; lower whisker fractions than nano-Al under comparable conditions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Qualitative source-series observation; no exact numerical fraction or sample-specific residual-Al mass given.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+        }
+      ]
+    },
+    {
+      "id": "chloride-effect",
+      "sample_id": "haber1997-aln-nominal20-alcl3-product",
+      "property": "morphology_observation",
+      "technique": "Microscopy / source comparison",
+      "value": {
+        "value": "AlCl3 increases whisker fraction",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "haber1997-aln",
+            "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Amount and sample-specific fraction unreported; no 10, 13 or 93 wt% dose assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "haber1997-aln",
+          "locator": "Main PDF p. 1, Commercial-feed comparison and footnotes 10–11"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of both complete main pages, both figures and all 17 numbered references/footnotes passed; bounded R2 source/sample and R3 nitrogen-admission scope corrections passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied two-page main only; six-page SI and cited full texts unreviewed.",
+      "Absolute synthesis reagent charges, precursor purity, detailed ramp/hold schedules for most image specimens, cooling and workup are unreported.",
+      "Source groups and analytical examples may overlap physically; absent batch IDs are not invented, and records are not asserted to be independently repeated experiments.",
+      "AlCl3 mass fractions 9.3%, 10%, 13% and 93% belong to distinct source contexts; the weight-percent denominator is not explicitly defined.",
+      "No measured atomic coordinates, exact unit cell, functional-property tests or lattice refinement supplied in this main.",
+      "Source-specific molecular and morphology refinements remain presentation pending.",
+      "Footnote 8 states a general method range of 900–1100 °C for 15 min–10 h. These ranges do not supply missing individual specimen schedules."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/ja963368y",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=haber1997-aln",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample comparisons, analysis and proposed mechanism",
+      "url": "data/paper-reviews/haber1997-aln/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}
