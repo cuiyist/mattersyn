@@ -1,0 +1,476 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "yang2005-anie200502279",
+  "doi": "10.1002/anie.200502279",
+  "scope": "All four supplied main pages, five figures and nine numbered reference groups read. SI and cited preparation/calibration sources remain unreviewed.",
+  "source_inventory": {
+    "precursor_preparation": [
+      "Cadmium nitrate (hydration unspecified)",
+      "Sodium myristate",
+      "Methanol, including two washes"
+    ],
+    "particle_synthesis": [
+      "Cadmium myristate",
+      "Selenium powder, 100 mesh, Aldrich",
+      "1-Octadecene (ODE)",
+      "Argon",
+      "Oleic acid (OA)",
+      "Tributylphosphine selenide (TBPSe)",
+      "Tributylphosphine (TBP)",
+      "Cadmium oxide",
+      "Octadecylphosphonic acid",
+      "Tributylphosphine telluride (TBPTe)"
+    ],
+    "apparatus": [
+      "Three-neck flask",
+      "Vacuum degassing",
+      "Flowing argon",
+      "Stirring/heating; bath type not specified",
+      "Serial aliquot collection"
+    ],
+    "unknowns": [
+      "Cadmium nitrate hydration",
+      "TBPSe/TBPTe preparation details and purity",
+      "Molecular coordination of dissolved cadmium phosphonate",
+      "Final particle isolation, washing and storage"
+    ],
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 3, Experimental Section"
+      }
+    ]
+  },
+  "precursor_preparation": {
+    "cadmium_nitrate_solution": {
+      "volume_mL": 40,
+      "concentration_M": 0.05,
+      "solvent": "Methanol"
+    },
+    "sodium_myristate_solution": {
+      "volume_mL": 240,
+      "concentration_M": 0.025,
+      "solvent": "Methanol"
+    },
+    "addition_order": "Add the cadmium nitrate solution to the sodium myristate solution",
+    "product": "White cadmium myristate precipitate",
+    "workup": [
+      "Wash twice with methanol",
+      "Dry under vacuum overnight"
+    ],
+    "missing": [
+      "Hydration",
+      "Addition rate",
+      "Temperature",
+      "Isolation technique",
+      "Wash volumes",
+      "Drying temperature/pressure",
+      "Exact drying hours",
+      "Isolated yield"
+    ],
+    "formula_qualification": "C28H54CdO4 is a formal salt identity, not a measured molecular coordination structure.",
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 3, Experimental Section: cadmium myristate"
+      }
+    ]
+  },
+  "spherical_method": {
+    "selenium_mmol": 0.05,
+    "cadmium_myristate_mmol": 0.1,
+    "ode_g": 5.0,
+    "degas": {
+      "temperature": "Room temperature",
+      "duration_min": 10,
+      "pressure_Torr_approx": 0.03
+    },
+    "heating_rate_K_per_min": 25,
+    "growth_temperature_degC": 240,
+    "atmosphere": "Flowing Ar",
+    "time_zero": "Reaching 240 °C",
+    "general_kinetic_aliquot_uL": 50,
+    "oleic_acid_stock": {
+      "concentration_M": 0.05,
+      "solvent": "ODE",
+      "added_solution_mL": 1.0,
+      "addition": "Dropwise",
+      "trigger_diameter_nm_approx": 3.0,
+      "trigger_absorption_nm": 550,
+      "trigger_time": "Not reported"
+    },
+    "scope": "Aliquot volume is the general kinetic sampling statement, not a uniquely reported Figure 3/4 physical specimen aliquot. The source reports no size sorting.",
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 2–3, Oleic-acid discussion and Experimental Section"
+      }
+    ]
+  },
+  "tetrahedral_method": {
+    "substitution": "0.05 mmol TBPSe replaces elemental selenium",
+    "tbpse_mmol": 0.05,
+    "tbp_g": 0.012,
+    "stock_ode_g": 0.5,
+    "cadmium_myristate_mmol": 0.1,
+    "shared_protocol": "The source explicitly says a similar protocol; base ODE, degassing and ramp are inherited context, not separately repeated measurements.",
+    "oa_scope": "The spherical OA addition trigger is not separately confirmed for tetrahedra.",
+    "outcome": {
+      "time_min": 30,
+      "edge_length_nm": 5.0,
+      "relative_standard_deviation_percent": 7,
+      "initial_nuclei_reduction_percent_approx": 75
+    },
+    "assembly": "Triangular close-packed patterns on TEM grids",
+    "phase_scope": "Zinc-blende morphology is discussed, but no separate Figure 4 diffraction assignment is supplied.",
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 3, Figure 4, tetrahedral-growth paragraph and Experimental Section"
+      }
+    ]
+  },
+  "cdte_method": {
+    "cadmium_oxide_mmol": 0.1,
+    "octadecylphosphonic_acid_mmol": 0.22,
+    "ode_g": 5.0,
+    "precursor_temperature_degC": 300,
+    "precursor_endpoint": "Colorless solution",
+    "then": "Cool to room temperature before adding TBPTe mixture",
+    "tbpte_mmol": 0.2,
+    "tbp_g": 0.19,
+    "degas": "Specified without numerical temperature, pressure or duration",
+    "heating_rate_K_per_min": 25,
+    "growth_temperature_degC": 240,
+    "atmosphere": "Flowing Ar with stirring",
+    "oleic_acid": "Explicitly unnecessary",
+    "figure5b_absorption_nm": 625,
+    "missing": [
+      "Absolute specimen diameter",
+      "Exact specimen time",
+      "Phase",
+      "Coordinates",
+      "Complete purification/storage",
+      "Phosphonate species/coordination"
+    ],
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 3, CdTe discussion, Figure 5 and Experimental Section"
+      }
+    ]
+  },
+  "kinetic_series": [
+    {
+      "id": "figure1-cdse",
+      "material": "CdSe",
+      "source_figure": "Figure 1",
+      "labels": [
+        {
+          "temperature_degC": 200,
+          "elapsed_growth_min": null,
+          "stage": "Heating ramp"
+        },
+        {
+          "temperature_degC": 210,
+          "elapsed_growth_min": null,
+          "stage": "Heating ramp"
+        },
+        {
+          "temperature_degC": 220,
+          "elapsed_growth_min": null,
+          "stage": "Heating ramp"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 0,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 1,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 5,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 14,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 30,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 120,
+          "stage": "Growth after reaching 240 °C"
+        }
+      ],
+      "size_concentration_basis": "Source optical calibrations from references 2b/3b; no re-digitized exact size/concentration array",
+      "observations": {
+        "nuclei_appearance_degC": 210,
+        "initial_particle_disappearance_percent_approx": 72,
+        "interval_h": 2,
+        "distribution": "Narrows during growth"
+      },
+      "scope": "Each trace is retained, but no unique Figure 3 specimen/TEM crosswalk is invented. FWHM and concentration plots remain visible in the original figure.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 1–2, Figure 1 and discussion"
+        }
+      ]
+    },
+    {
+      "id": "figure5-cdte",
+      "material": "CdTe",
+      "source_figure": "Figure 5a",
+      "labels": [
+        {
+          "temperature_degC": 190,
+          "elapsed_growth_min": null,
+          "stage": "Heating ramp"
+        },
+        {
+          "temperature_degC": 200,
+          "elapsed_growth_min": null,
+          "stage": "Heating ramp"
+        },
+        {
+          "temperature_degC": 220,
+          "elapsed_growth_min": null,
+          "stage": "Heating ramp"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 0,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 4,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 10,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 25,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 45,
+          "stage": "Growth after reaching 240 °C"
+        },
+        {
+          "temperature_degC": 240,
+          "elapsed_growth_min": 80,
+          "stage": "Growth after reaching 240 °C"
+        }
+      ],
+      "scope": "Figure 5b is identified by 625 nm absorption, not a unique time from this series; no time-to-TEM crosswalk is inferred.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 3, Figure 5 caption"
+        }
+      ]
+    }
+  ],
+  "oleic_acid_comparison": {
+    "figure": 2,
+    "times_min": [
+      16,
+      60
+    ],
+    "line_styles": {
+      "solid": "With oleic acid",
+      "dotted": "Without oleic acid"
+    },
+    "without_oa": "Enhanced low-energy tail, followed by broader absorption",
+    "with_oa": "Reversal/narrower features after adding oleic acid",
+    "interpretation": "Authors interpret reversible broadening as aggregation",
+    "growth_stability_h_at_least": 16,
+    "qualification": "Four condition views preserve the two times and presence/absence. They are not four automatically sample-resolved structural pairs, and independent physical replicate identities are unspecified.",
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 2, Figure 2 and text"
+      }
+    ]
+  },
+  "structure_and_properties": {
+    "figure3": {
+      "own_sample": "4.0 nm zinc-blende CdSe",
+      "XRD": {
+        "400_2theta_deg": 61.0,
+        "620_2theta_deg": 106.2,
+        "qualitative": "Deep valley between (220) and (311)"
+      },
+      "HRTEM": {
+        "inset_field_of_view_nm": [
+          5,
+          5
+        ],
+        "fringe_spacing_nm": 0.22,
+        "plane": "(220)",
+        "instrument": "JEOL-JEM 2010",
+        "voltage_kV": 200
+      },
+      "own_panels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "comparator_panels": [
+        "c",
+        "e"
+      ],
+      "comparator": "Wurtzite CdSe from the referenced injection method 3a; upstream recipe unreviewed",
+      "TEM_scale_nm": 10,
+      "time": "Exact elapsed growth time for the 4.0 nm sample not supplied"
+    },
+    "generic_cdse": {
+      "size_RSD_percent_less_than": 5,
+      "PL_quantum_yield_percent_approx": [
+        30,
+        40
+      ],
+      "qualification": "Typical source results, not automatically assigned to the exact Figure 3a specimen."
+    },
+    "figure4": {
+      "morphology": "Tetrahedral",
+      "edge_nm": 5.0,
+      "sigma_percent": 7,
+      "growth_min": 30,
+      "TEM_scale_nm": 20,
+      "assembly": "Triangular close-packed grid patterns"
+    },
+    "figure5b": {
+      "material": "CdTe",
+      "first_absorption_nm": 625,
+      "TEM_scale_nm": 15,
+      "absolute_diameter": "Not supplied",
+      "phase": "Not supplied"
+    },
+    "generic_cdte": {
+      "size_RSD_percent_less_than": 5,
+      "resolved_exciton_bands_up_to": 5,
+      "qualification": "Typical source statement; no exact particle diameter or coordinate structure."
+    },
+    "coordinate_scope": "No sample-measured coordinate file or atomic surface model is supplied.",
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 2–3, Figures 3–5 and text"
+      }
+    ]
+  },
+  "failed_alternatives": [
+    {
+      "combination": "Cadmium myristate plus tellurium powder",
+      "result": "Reactivity too low",
+      "recipe_completeness": "Qualitative comparison only; no full quantities/conditions/outcome measurements"
+    },
+    {
+      "combination": "Cadmium myristate plus TBPTe",
+      "result": "Reactivity too high",
+      "recipe_completeness": "Qualitative comparison only; no full quantities/conditions/outcome measurements"
+    }
+  ],
+  "thermal_context": {
+    "cadmium_myristate_decomposition_degC_approx": 226,
+    "selenium_melting_degC": 221,
+    "selenium_in_ode": "Insoluble at room temperature; slightly soluble above 190 °C",
+    "selenium_reactivity": "Unreactive with cadmium myristate up to 200 °C",
+    "qualification": "Main-reported observations refer to supporting information, which is not inspected. They are neither new preparation variants nor independently verified thermal datasets.",
+    "evidence": [
+      {
+        "source_id": "yang2005-anie200502279",
+        "locator": "Main PDF p. 1–2, Precursor-selection discussion"
+      }
+    ]
+  },
+  "references": {
+    "numbered_groups": 9,
+    "pages": [
+      4
+    ],
+    "cited_preparation": "TBPSe reference 2; TBPTe reference 2a; wurtzite comparator reference 3a",
+    "calibration": "Diameter/concentration use references 2b and 3b",
+    "scope": "Bibliographic entries read; cited documents and supporting information unreviewed."
+  },
+  "conflicts": [],
+  "source_interpretation": [
+    {
+      "topic": "Match precursor reactivity during heating",
+      "text": "The authors use a relatively stable cadmium carboxylate and selenium powder so that productive reaction begins during heating rather than at a hot injection event. Main-reported, SI-supported observations place cadmium myristate decomposition near 226 °C, selenium melting at 221 °C, and low selenium reactivity up to 200 °C. These thermal observations are source context: the supporting measurements were not inspected here.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 1–2, Precursor selection and nucleation discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Growth and declining particle concentration",
+      "text": "The source-derived particle concentration declines by about 72% over two hours as the distribution narrows. The authors discuss growth behavior that does not follow the simple expectation they describe for diffusion-limited growth, but explicitly leave the detailed mechanism unresolved. Optical calibrations depend on cited literature, which is unreviewed in this scope.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 1–2, Figure 1 and growth discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Oleic acid and reversible aggregation",
+      "text": "Beyond roughly 3 nm, spectra broaden without added oleic acid. Reversal after oleic-acid addition supports the authors’ aggregation interpretation. This comparison does not establish a measured surface-ligand bonding structure, nor does it assign the Figure 3 TEM size to every optical trace.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 2, Figure 2 and oleic-acid discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Tetrahedral growth after precursor substitution",
+      "text": "Replacing elemental selenium with tributylphosphine selenide produces about 75% fewer initial nuclei. The authors associate fewer nuclei and faster precursor reaction with higher chemical potential per growing particle and tetrahedral growth. The 5.0 nm value is an edge length; triangular ordering on TEM grids describes assembly, not a distinct crystal phase.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 3, Figure 4 and tetrahedral-growth discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Reducing cadmium precursor reactivity for CdTe",
+      "text": "Cadmium myristate with tellurium powder is described as insufficiently reactive, whereas cadmium myristate with tributylphosphine telluride is too reactive. The authors instead form a less reactive cadmium octadecylphosphonate precursor. These failed alternatives lack complete experimental details and are retained as qualitative comparisons rather than invented recipes.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 3, CdTe discussion and Experimental Section"
+        }
+      ]
+    },
+    {
+      "topic": "Potential scale-up is an outlook",
+      "text": "Heating a mixture without rapid precursor injection could simplify process control and scaling, according to the authors. The article does not demonstrate an industrial production run, a scale-up yield, or a validated manufacturing cost.",
+      "evidence": [
+        {
+          "source_id": "yang2005-anie200502279",
+          "locator": "Main PDF p. 1, 3, Motivation and conclusion"
+        }
+      ]
+    }
+  ]
+}

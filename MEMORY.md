@@ -1,3 +1,17 @@
+## 2026-09-28 — Continued work and experimental silver authorization
+
+The owner explicitly requests continued work until asked to pause and renews the20 distinct published papers/hour target. Do not treat a progress report or a publication milestone as permission to stop. The prior continuation automation was found paused; it has been repurposed as an active20-minute continuation heartbeat. The owner subsequently disabled the morning check: both morning and two-hour scheduled reports are off. Progress is reported on request; quiet website-building continuation remains active. Scheduled continuation is not proof of uninterrupted execution or achieved capacity. Preserve historical trial measurements.
+
+The latest request also authorizes publication of a separate silver collection. Implement a clearly labelled machine-extracted, not independently reviewed display lane; until actual heldout calibration succeeds, accuracy is unmeasured and the records are excluded from training-ready exports. This changes display authorization, not the confirmed98%/95%/90% criteria for calibrated admission. Evidence, source identity, schema, privacy and release checks remain necessary; no fabricated review or accuracy result. No paid processing, source transfers or new downloads are authorized.
+
+## Next accepted contribution — Yang CdSe and CdTe noninjection synthesis
+
+Yang et al.(2005), Synthesis of CdSe and CdTe Nanocrystals without Precursor Injection, DOI10.1002/anie.200502279, passed independent review of four main pages and a bounded correction. Eight records cover six CdSe growth/condition views, one CdTe route and one supporting cadmium-myristate preparation. Only spherical and tetrahedral CdSe contribute accepted partial structural pairs; no optical-to-TEM crosswalk or CdTe phase/size is invented. Preserve tetrahedral OA uncertainty and elapsed-growth timing. Five original figures remain available with unverified publisher permission; SI, cited methods and presentation refinements remain unreviewed or pending.
+
+The private generated build preserves1003 existing canonical records/eligibility and210 pair objects. Candidate totals are1011 records,72 sources,83 direct families,94 hubs,309 routes and212 broad pairs. These are not live totals until publication and anonymous verification. Safe acceptance receipt:research-assets/public-audits/yang2005-acceptance-20260928.json.
+
+A separately audited pure JSON-key cache is adopted without caching scientific, privacy, rights or publication decisions. Independent checks passed81 tests and reproduced a100-file validation-only median9.523s to6.930s with identical outputs. This is not a measured paper-throughput increase. Normal source/build/privacy/CI gates remain required.
+
 ## 2026-09-27 — Zhou et al. 1995 CeO2 published and verified
 
 DOI 10.1111/j.1151-2916.1995.tb08425.x was deployed from source `a7cbf94e913941e1a582539f01155f8e93330808` at site `192e9ee87349f333a7841cdd75391ad332ee1f36` and anonymously verified at 2026-09-27T19:17:38.169017+00:00. Reviewed scope: Five scanned main-article pages reviewed visually; SI, other documents and cited methods unreviewed. All 48 selected files matched the release after exact-head source and site CI succeeded. Live totals: 1003 records, 71 sources, 83 direct families, 94 hubs, 302 routes and 210 broad pairs.

@@ -162,3 +162,11 @@ chain; do not manufacture deployment or accuracy receipts from candidate counts.
 The code and synthetic tests establish software behavior, not scientific precision.
 Complete source-separated labels, measured calibration, independent approval,
 version-audit handling and a release-admitted silver pilot remain required.
+
+## September28 continuation and experimental silver display
+
+The owner now requests continued work until explicitly paused and reasserts the20 papers/hour target. Use the active20-minute continuation heartbeat separately from the daily08:00 report; do not restore the retired two-hour reports or reopen historical trial windows. Count only actually deployed and anonymously verified distinct source contributions.
+
+The latest instruction explicitly requests silver publication. A separate experimental display may expose evidence-validated machine-extracted records labelled not independently reviewed, with accuracy unmeasured until calibration. Exclude these records from training-ready exports and gold counts; do not claim the earlier calibration thresholds passed. The98%/95%/90% thresholds and independent calibration approval remain required for calibrated silver admission. Preserve privacy, source identity, exact evidence, schema and public-release checks. Routine decisions within this scope need no repeated permission.
+
+The owner subsequently disabled the morning check. Both morning and two-hour reporting are off; provide progress on request. Quiet continuation remains active and this reporting change does not pause curation.
