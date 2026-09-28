@@ -72,6 +72,10 @@ Public citations are generated below from the same dataset snapshot used by the 
 
 ## Reviewed source scopes and experimental evidence
 
+- Li, B.; Xie, Y.; Liu, Y.; Huang, J.; Qian, Y. (2001). *Sonochemical Synthesis of Nanocrystalline Silver Tellurides Ag2Te and Ag7Te4*. Journal of Solid State Chemistry 158,260–263. [DOI 10.1006/jssc.2001.9103](https://doi.org/10.1006/jssc.2001.9103). Experimental partial display of eight reagent-amount fields from two method excerpts. Not a full-paper scientific review or complete recipe–structure pair; accuracy unmeasured and training excluded.
+
+- Lu et al. (1999). *A Low Temperature Nitridation Route for Nanocrystalline AlN*. [DOI 10.1246/cl.1999.1239](https://doi.org/10.1246/cl.1999.1239). Both supplied main pages independently audited; four recipe/outcome variants, twelve measurements and four source figures. SI and cited methods unreviewed; visual refinements pending.
+
 - Jinke Tang; Kai-Ying Wang; Weilie Zhou (2001). *Magnetic properties of nanocrystalline Fe3O4 films*. [DOI 10.1063/1.1358350](https://doi.org/10.1063/1.1358350). Four supplied PDF pages, including the publisher cover and three article pages, independently source-audited; SI and cited references remain unreviewed.
 - Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu (1999). *The Solvothermal Synthesis for Nanocrystalline FeIn2S4 at Low Temperature*. [DOI 10.1246/cl.1999.481](https://doi.org/10.1246/cl.1999.481). All 2 supplied main pages independently source-audited; SI and cited references remain unreviewed.
 

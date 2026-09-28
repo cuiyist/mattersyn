@@ -40,7 +40,7 @@ function el(doc,tag,textValue,className){const node=doc.createElement(tag);if(te
 export function renderExperimental(host,view){
   host.replaceChildren();const doc=host.ownerDocument;
   if(view.status!=='ready'){host.append(el(doc,'p','Experimental evidence is unavailable.'));return;}
-  host.append(el(doc,'p',`${view.distinct_sources} source evidence note · 0 complete recipes · 0 synthesis–structure pairs`,'summary'));
+  host.append(el(doc,'p',`${view.distinct_sources} source evidence ${view.distinct_sources===1?'note':'notes'} · 0 complete recipes · 0 synthesis–structure pairs`,'summary'));
   for(const entry of view.entries){
     const card=el(doc,'article');card.append(el(doc,'p','Experimental silver · Machine-extracted · Not reviewed','badge'));card.append(el(doc,'h2',entry.title));
     card.append(el(doc,'p',entry.citation));const link=el(doc,'a','Open source DOI');link.href=entry.url;link.target='_blank';link.rel='noopener noreferrer';card.append(link);
@@ -48,7 +48,7 @@ export function renderExperimental(host,view){
     const s=entry.source_scope;card.append(el(doc,'p',`Input pages: ${s.input_pages.join(', ')} of ${s.source_pages}. At most four fields per extraction call; a page may be processed in multiple calls. Completeness is unassessed; figures and SI were not reviewed.`));
     const table=el(doc,'table'),head=el(doc,'tr');for(const label of ['Source method label','Extracted field','Value','Page'])head.append(el(doc,'th',label));table.append(head);
     for(const f of entry.fields){const row=el(doc,'tr');for(const val of [f.recipe_id,`${f.field.replaceAll('_',' ')} (${f.slot_id})`,`${f.value}${f.unit?' '+f.unit:''}`,String(f.page)])row.append(el(doc,'td',val));table.append(row);}card.append(table);
-    card.append(el(doc,'p',`${entry.withheld_claim_count} model claims withheld. Displayed values passed automatic quote/value/unit checks; that does not establish scientific correctness or semantic sample linkage.`));
+    card.append(el(doc,'p',`${entry.withheld_claim_count} claims withheld from this displayed extraction batch. Displayed values passed automatic quote/value/unit checks; that does not establish scientific correctness or semantic sample linkage.`));
     for(const note of entry.limitations)card.append(el(doc,'p',note));host.append(card);
   }
 }

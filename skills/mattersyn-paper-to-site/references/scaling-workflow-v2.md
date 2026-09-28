@@ -190,3 +190,7 @@ approvals or add publication credit before verification. Use the normal full
 standalone transaction when an urgent public update is needed or no suitable
 batch is ready. This operator sequencing change does not cache decisions or
 weaken any calibrated, gold or training gate.
+
+## Exact excerpt experiments
+
+For damaged PDF text, try bounded method-specific source excerpts with field-specific unit choices and an explicit omission option. Keep original page offsets and hashes, literal source labels, raw model responses and rejected attempts. Do not repair model values, join damaged source symbols or reassign units to satisfy a schema. If humans select spans or reagent slots, state that assistance; scalar extraction is not autonomous recipe discovery. Measure preparation, failed attempts, review and publication as well as model-call time. Unmeasured partial experimental fields retain zero complete-paper/pair/training credit.

@@ -10,7 +10,7 @@
   "structure_pair_count_contribution": 0,
   "completed_paper_count_contribution": 0,
   "usable_complete_recipes": 0,
-  "distinct_sources": 1,
+  "distinct_sources": 2,
   "entries": [
     {
       "source_id": "exp-wang1999-cm990228p",
@@ -260,6 +260,209 @@
         "Uncalibrated machine extraction is not a complete laboratory protocol.",
         "MCM-48 support preparation and loading quantities remain distinct from the AST thermal-treatment/product context. No independently reviewed linkage or synthesis–structure pair is claimed.",
         "Spelled-out volumes, approximate particle width/gaps, full reagent inventory and ordered operation graph are not supported by this scalar pilot and are incomplete."
+      ]
+    },
+    {
+      "source_id": "exp-li2001-jssc9103",
+      "doi": "10.1006/jssc.2001.9103",
+      "title": "Sonochemical Synthesis of Nanocrystalline Silver Tellurides Ag2Te and Ag7Te4",
+      "citation": "Li, B.; Xie, Y.; Liu, Y.; Huang, J.; Qian, Y. Journal of Solid State Chemistry 158, 260–263 (2001).",
+      "url": "https://doi.org/10.1006/jssc.2001.9103",
+      "document_sha256": "270ebc46b37e246c66fe15ccada909f3784434441dcd1dd250d813052dfb1765",
+      "tier": "experimental_silver",
+      "scientific_review": "not_performed",
+      "calibration_state": "unmeasured",
+      "precision": null,
+      "recall": null,
+      "training_ready": false,
+      "training_weight": 0,
+      "excluded_from": [
+        "gold",
+        "calibrated_silver",
+        "training_exports",
+        "gold_evaluation",
+        "structure_recipe_pair_counts"
+      ],
+      "source_scope": {
+        "role": "main",
+        "source_pages": 4,
+        "input_pages": [
+          1,
+          2
+        ],
+        "full_paper_extraction": false,
+        "figures_visually_reviewed": false,
+        "si_reviewed": false
+      },
+      "extraction": {
+        "model": "qwen3.5:9b",
+        "model_sha256": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "prompt_sha256": "944026e2d068b674ea7ce541e49c610e35af5b9d1a84fe699cbc5d17b7c758d8",
+        "pipeline_sha256": "1ef96630895cf1056dd2ffaf3c3664434ba233f973357cbfc0d38ae9cb68ed9f",
+        "validator_sha256": "43ad5f3296f9ffdc9e3b12a55798b4e7c2613277b2442b1dafcb469b0bfabc2a",
+        "passes": 1,
+        "model_agreement_claimed": false,
+        "chunks": 2,
+        "maximum_claims_per_chunk": 4,
+        "configuration_binding": "aggregate_of_chunk_fingerprints",
+        "chunk_configurations": [
+          {
+            "input_pages": [
+              1
+            ],
+            "input_sha256": "6192741d66021b963b691e63c3151e80a2fa8a3b3f314e33ce09aaf6d5764d84",
+            "prompt_sha256": "cc05eb17768fa4576e3b9b147b8dd345c178041f500994ad1b9024096ef717d1",
+            "pipeline_sha256": "d4eb8c68cf5b4106a14630346e571d2bf6e014548bfca2c9b7709b7f0bb6b518"
+          },
+          {
+            "input_pages": [
+              2
+            ],
+            "input_sha256": "7b6fac19da7773ba85dd827b5f9b449bb00c04632f31ef2c991eac3d3b68cf28",
+            "prompt_sha256": "cc05eb17768fa4576e3b9b147b8dd345c178041f500994ad1b9024096ef717d1",
+            "pipeline_sha256": "2f7ac43348ac0e5f5f4190b8bb5cd0b76324602b01ee1a9931bc92eccac869ff"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "recipe_id": "ethylenediamine",
+          "sample_id": null,
+          "slot_id": "tellurium-mass",
+          "field": "precursor_amount",
+          "value": 0.3,
+          "unit": "g",
+          "document_id": "main",
+          "page": 1,
+          "link_page": 1,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethylenediamine",
+          "sample_id": null,
+          "slot_id": "tellurium-molar-amount",
+          "field": "precursor_amount",
+          "value": 2.34,
+          "unit": "mmol",
+          "document_id": "main",
+          "page": 1,
+          "link_page": 1,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethylenediamine",
+          "sample_id": null,
+          "slot_id": "silver-nitrate-mass",
+          "field": "precursor_amount",
+          "value": 0.795,
+          "unit": "g",
+          "document_id": "main",
+          "page": 1,
+          "link_page": 1,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethylenediamine",
+          "sample_id": null,
+          "slot_id": "silver-nitrate-molar-amount",
+          "field": "precursor_amount",
+          "value": 4.68,
+          "unit": "mmol",
+          "document_id": "main",
+          "page": 1,
+          "link_page": 1,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethanol",
+          "sample_id": null,
+          "slot_id": "tellurium-mass",
+          "field": "precursor_amount",
+          "value": 0.205,
+          "unit": "g",
+          "document_id": "main",
+          "page": 2,
+          "link_page": 2,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethanol",
+          "sample_id": null,
+          "slot_id": "tellurium-molar-amount",
+          "field": "precursor_amount",
+          "value": 1.6,
+          "unit": "mmol",
+          "document_id": "main",
+          "page": 2,
+          "link_page": 2,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethanol",
+          "sample_id": null,
+          "slot_id": "silver-nitrate-mass",
+          "field": "precursor_amount",
+          "value": 0.476,
+          "unit": "g",
+          "document_id": "main",
+          "page": 2,
+          "link_page": 2,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        },
+        {
+          "recipe_id": "ethanol",
+          "sample_id": null,
+          "slot_id": "silver-nitrate-molar-amount",
+          "field": "precursor_amount",
+          "value": 2.8,
+          "unit": "mmol",
+          "document_id": "main",
+          "page": 2,
+          "link_page": 2,
+          "technique": null,
+          "status": "machine_extracted_not_reviewed",
+          "mechanical_checks": "passed",
+          "training_ready": false,
+          "training_weight": 0
+        }
+      ],
+      "withheld_claim_count": 0,
+      "limitations": [
+        "Automatic quote/value/unit checks do not establish scientific correctness, completeness or sample linkage.",
+        "Only the declared input pages were supplied to this draft; SI, figures and omitted fields were not reviewed.",
+        "Uncalibrated machine extraction is not a complete laboratory protocol.",
+        "This assisted extraction uses human-selected exact method excerpts, reagent quote spans, solvent labels and mass/molar-amount slots. The model supplies the scalar values; it does not discover the method inventory.",
+        "Only tellurium and silver-nitrate mass/molar-amount fields from two solvent routes are covered. Temperatures, operations, product structure, full-page and full-paper coverage remain incomplete.",
+        "The solvent labels keep two method contexts separate and do not establish independently verified recipe/product linkage. No complete recipe, reviewed paper, synthesis–structure pair or training credit is claimed.",
+        "This candidate uses two bounded calls after two failed full-document attempts on the same source. Failed claims remain private and excluded; no accuracy or document-throughput claim is made."
       ]
     }
   ]
