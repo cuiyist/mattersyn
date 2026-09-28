@@ -192,8 +192,9 @@ class Audit:
         self.check(set(self.hubs.get("Ge/Si", {}).get("direct_record_ids", [])) == HEATH_GE_SI_ROUTES, "Ge/Si: both reviewed template variants must remain direct routes")
         silver = self.hubs.get("Ag", {})
         shah_ag_routes = {"shah-2001-ag-" + letter for letter in "abcdefghi"}
-        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes, "Ag: nine reviewed Shah colloidal experiments must remain direct synthesis routes")
-        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | stiger_routes, "Ag: retain the supported Stiger contribution alongside the separate colloidal routes")
+        qiu_ag_routes = {"qiu2006-ag-superlattice-150c"}
+        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes, "Ag: exactly nine reviewed Shah experiments and the reviewed Qiu route must remain direct synthesis routes")
+        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | stiger_routes, "Ag: retain exactly the reviewed Shah and Qiu colloidal routes plus the supported Stiger contribution")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
         self.check(self.byid.get("stiger-1999-electrodeposition", {}).get("material", {}).get("formula") == "Ag/Si", "Ag/Si: supported-product identity was erased")
         stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")
