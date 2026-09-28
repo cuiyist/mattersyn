@@ -1,10 +1,18 @@
+## 2026-09-28 — Yang et al. 2005 noninjection CdSe/CdTe published and verified
+
+DOI 10.1002/anie.200502279 was deployed from source `588c5171ca0fc1166ff830ee31b8d29883fe8e5c` at site `2236d19a27f6507e5dff92fae6206338025050bb` and anonymously verified at 2026-09-28T04:16:53.951409+00:00. Reviewed scope: Four supplied main-article pages independently reviewed; SI and cited methods/calibrations unreviewed. All 42 selected files matched the release after exact-head source and site CI succeeded. Live totals: 1011 records, 72 sources, 83 direct families, 94 hubs, 309 routes and 212 broad pairs.
+
+Event `gold-20260928-yang2005-anie200502279`: Adds one gold source and eight records: six CdSe route/condition views, one CdTe route and one supporting cadmium-myristate preparation. Only the spherical and tetrahedral CdSe products contribute two partial structural outcomes. Optical condition views and CdTe inherit no unsupported Figure 3 structure. Tetrahedral OA presence remains unconfirmed and 30 min is elapsed growth time. All 1003 prior records/eligibility and 210 prior pair rows remain unchanged. Refinements pending and labelled; five exact source figures and five authored identity cards available. Source crops retain unverified publisher permission. No measured-coordinate or silver admission is claimed.
+
+Preserve research-assets/public-audits/morning-checkpoint-20260927.json and all preceding publication receipts/events. This new event is outside that morning interval. Automated morning reports and two-hour checks are disabled. Progress reports are provided on request; continuation work remains enabled. See research-assets/public-audits/yang2005-anie200502279-publication-20260928.json for the verified milestone.
+
 ## 2026-09-28 — Continued work and experimental silver authorization
 
 The owner explicitly requests continued work until asked to pause and renews the20 distinct published papers/hour target. Do not treat a progress report or a publication milestone as permission to stop. The prior continuation automation was found paused; it has been repurposed as an active20-minute continuation heartbeat. The owner subsequently disabled the morning check: both morning and two-hour scheduled reports are off. Progress is reported on request; quiet website-building continuation remains active. Scheduled continuation is not proof of uninterrupted execution or achieved capacity. Preserve historical trial measurements.
 
 The latest request also authorizes publication of a separate silver collection. Implement a clearly labelled machine-extracted, not independently reviewed display lane; until actual heldout calibration succeeds, accuracy is unmeasured and the records are excluded from training-ready exports. This changes display authorization, not the confirmed98%/95%/90% criteria for calibrated admission. Evidence, source identity, schema, privacy and release checks remain necessary; no fabricated review or accuracy result. No paid processing, source transfers or new downloads are authorized.
 
-## Next accepted contribution — Yang CdSe and CdTe noninjection synthesis
+## Historical Yang CdSe and CdTe integration checkpoint
 
 Yang et al.(2005), Synthesis of CdSe and CdTe Nanocrystals without Precursor Injection, DOI10.1002/anie.200502279, passed independent review of four main pages and a bounded correction. Eight records cover six CdSe growth/condition views, one CdTe route and one supporting cadmium-myristate preparation. Only spherical and tetrahedral CdSe contribute accepted partial structural pairs; no optical-to-TEM crosswalk or CdTe phase/size is invented. Preserve tetrahedral OA uncertainty and elapsed-growth timing. Five original figures remain available with unverified publisher permission; SI, cited methods and presentation refinements remain unreviewed or pending.
 
