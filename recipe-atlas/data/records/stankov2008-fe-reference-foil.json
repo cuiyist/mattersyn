@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "stankov2008-fe-reference-foil",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Stankov et al. (2008): Bulk α-Fe foil spectroscopy reference",
+  "material": {
+    "formula": "Fe",
+    "family": "Iron reference foil",
+    "elements": [
+      "Fe"
+    ],
+    "components": [
+      "Fe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Nuclear inelastic scattering reference measurement",
+  "sources": [
+    {
+      "id": "stankov2008-fe90zr7b3",
+      "doi": "10.1103/PhysRevLett.100.235503",
+      "title": "Vibrational Properties of Nanograins and Interfaces in Nanocrystalline Materials",
+      "authors": "S. Stankov; Y. Z. Yue; M. Miglierini; B. Sepiol; I. Sergueev; A. I. Chumakov; L. Hu; P. Svec; R. Rüffer",
+      "year": 2008,
+      "url": "https://doi.org/10.1103/PhysRevLett.100.235503",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No SI inspected; all cited full sources unreviewed.",
+      "reuse_status": "Five exact source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "stankov2008-fe90zr7b3",
+    "recipe_family": "stankov2008-fe-zr-b",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 2, Nuclear inelastic scattering method and α-Fe reference foil"
+        }
+      ],
+      "note": "Bulk α-Fe measurement reference; no foil preparation is given."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "fe-foil",
+      "name": "α-Fe reference foil",
+      "formula": "Fe",
+      "role": "spectroscopy reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "The source measures an α-Fe foil for comparison. Foil supplier, thickness, isotope enrichment and preparation are not given; alloy63% enrichment is not transferred to this reference."
+      ],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 2, Nuclear inelastic scattering method and reference foil"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "measure-reference-state",
+      "name": "Measure the iron reference DOS output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "measure-reference",
+      "action": "measure",
+      "label": "Measure the iron reference DOS",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "fe-foil"
+      ],
+      "outputs": [
+        "measure-reference-state"
+      ],
+      "parameters": {
+        "energy_resolution": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "meV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stankov2008-fe90zr7b3",
+              "locator": "Main PDF p. 2, Nuclear inelastic scattering method and reference foil"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Room temperature",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 2, Nuclear inelastic scattering method and reference foil"
+          }
+        ],
+        "note": "No exact Celsius/Kelvin value, pressure or environment specified."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure the iron-partial density of phonon states by nuclear inelastic scattering at ESRF ID18 at room temperature with 1.0 meV resolution. No foil synthesis method is provided.",
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 2, Nuclear inelastic scattering method and reference foil"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "stankov2008-fe-reference-foil-product",
+      "source_sample_label": "Bulk α-Fe foil comparator",
+      "batch_id": null,
+      "material_state_id": "measure-reference-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 2,4, Figure 2a and Figure 5"
+          }
+        ],
+        "note": "Bulk α-Fe reference foil; no alloy nanograin or interface composition is assigned to this comparator."
+      },
+      "phase": {
+        "value": "α-Fe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 2,4, Figure 2a and Figure 5"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "The reference is described as a foil; foil thickness, microstructure and grain morphology are not reported."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 2,4, Figure 2a and Figure 5"
+        }
+      ],
+      "notes": [
+        "Measurement-only reference context, not a new synthesis recipe or structural pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "reference-debye",
+      "sample_id": "stankov2008-fe-reference-foil-product",
+      "property": "normalized_low_energy_coefficient",
+      "technique": "Nuclear inelastic scattering / fit normalization",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Reference normalization α/α0=1 for bulkFe at XIC=0, not an independently fitted absolute coefficient.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 4, Figure 5b"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Bulk reference point; the interface-only extrapolated ratio2.9 is a model context, not this reference specimen.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 4, Figure 5b"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all four supplied main pages, five figures, Table I and all numbered references/notes passed; bounded R2 foil/overall-alloy scope corrections passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Bulk α-Fe foil comparator only; supplier, thickness, isotope enrichment and preparation are not supplied. No Fe90Zr7B3 alloy or ribbon descriptors are assigned to this reference.",
+      "No exact room-temperature value or numerical DOS array supplied.",
+      "All cited full sources unreviewed."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper",
+      "url": "https://doi.org/10.1103/PhysRevLett.100.235503",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and review scope",
+      "url": "paper-review.html?id=stankov2008-fe90zr7b3",
+      "relation": "source_review"
+    },
+    {
+      "label": "Table I and vibrational-model contexts",
+      "url": "data/paper-reviews/stankov2008-fe90zr7b3/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "stankov2008-a",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Stankov et al. (2008): Sample A: 753 K for 10 min",
+  "material": {
+    "formula": "Fe90Zr7B3",
+    "family": "Fe–Zr–B nanocrystalline alloy ribbons",
+    "elements": [
+      "Fe",
+      "Zr",
+      "B"
+    ],
+    "components": [
+      "Fe90Zr7B3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Vacuum annealing",
+  "sources": [
+    {
+      "id": "stankov2008-fe90zr7b3",
+      "doi": "10.1103/PhysRevLett.100.235503",
+      "title": "Vibrational Properties of Nanograins and Interfaces in Nanocrystalline Materials",
+      "authors": "S. Stankov; Y. Z. Yue; M. Miglierini; B. Sepiol; I. Sergueev; A. I. Chumakov; L. Hu; P. Svec; R. Rüffer",
+      "year": 2008,
+      "url": "https://doi.org/10.1103/PhysRevLett.100.235503",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No SI inspected; all cited full sources unreviewed.",
+      "reuse_status": "Five exact source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "stankov2008-fe90zr7b3",
+    "recipe_family": "stankov2008-fe-zr-b",
+    "parent_record_id": "stankov2008-as-quenched",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe90Zr7B3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "as-quenched-ribbon",
+      "name": "As-quenched Fe90Zr7B3 ribbon",
+      "formula": "Fe90Zr7B3",
+      "role": "annealing input",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "iron_57_isotope_enrichment": {
+          "value": 63,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Fraction of iron enriched in 57Fe, not total alloy mass fraction. Exact isotope-analysis method is not stated.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stankov2008-fe90zr7b3",
+              "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+            }
+          ],
+          "derivation": null
+        },
+        "ribbon_thickness": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Reported thickness of the melt-spun input ribbon; not a separate measurement after annealing.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stankov2008-fe90zr7b3",
+              "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Overall source composition; individual elemental reagents, alloying recipe and feed mass are not provided. Iron is 63% enriched in the 57Fe isotope; this is an iron-isotope fraction, not 63% of total material."
+      ],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anneal-state",
+      "name": "Vacuum anneal the as-quenched ribbon output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "anneal",
+      "action": "heat",
+      "label": "Vacuum anneal the as-quenched ribbon",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "as-quenched-ribbon"
+      ],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 753,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stankov2008-fe90zr7b3",
+              "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stankov2008-fe90zr7b3",
+              "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": 1.6e-06,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mbar",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "stankov2008-fe90zr7b3",
+              "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Vacuum, 1.6 × 10⁻⁶ mbar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+          }
+        ],
+        "note": "Reported annealing vacuum. Pump, gauge, residual-gas composition and control details are not stated."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal the as-quenched ribbon at 753 K for 10 min in a vacuum of 1.6 × 10⁻⁶ mbar. The source assigns this schedule to sample A. Furnace type, heating rate, cooling history and sample charge are unreported.",
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Preparation paragraph and Table I"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "stankov2008-a-product",
+      "source_sample_label": "A",
+      "batch_id": null,
+      "material_state_id": "anneal-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe90Zr7B3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Table I and diffraction/phase discussion"
+          }
+        ],
+        "note": "Overall source material composition; not a refined composition of every nanograin or interface."
+      },
+      "phase": {
+        "value": "α-Fe nanograins and intercrystalline regions in the overall Fe90Zr7B3 alloy",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Table I and diffraction/phase discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Nanograins in a ribbon are reported; individual grain shape and morphology distribution are not specified."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Table I and diffraction/phase discussion"
+        }
+      ],
+      "notes": [
+        "No oxide or additional crystalline phase was detected by the reported diffraction analysis; this does not provide detection limits or atomic compositions of the intercrystalline regions.",
+        "The mean grain size and lattice constant belong to the α-Fe nanograins, not a 90:7:3 unit cell. Parent recipe lineage identifies the as-quenched preparation; no unique physical parent batch is asserted."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "grain-size",
+      "sample_id": "stankov2008-a-product",
+      "property": "grain_size",
+      "technique": "XRD / Rietveld refinement; confirmed by TEM",
+      "value": {
+        "value": 10.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported uncertainty ±0.5 nm; uncertainty convention is not defined. Mean nanograin size; reported parenthetic uncertainty is retained, not treated as a size-distribution width or specified confidence interval.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Mean nanograin size; reported parenthetic uncertainty is retained, not treated as a size-distribution width or specified confidence interval.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+        }
+      ]
+    },
+    {
+      "id": "lattice-constant",
+      "sample_id": "stankov2008-a-product",
+      "property": "lattice_parameter_a",
+      "technique": "XRD / Rietveld refinement",
+      "value": {
+        "value": 2.8662,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported uncertainty ±0.0001 angstrom; uncertainty convention is not defined. Lattice constant of α-Fe nanograins; no measured atom coordinates or full interface structure.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Lattice constant of α-Fe nanograins; no measured atom coordinates or full interface structure.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+        }
+      ]
+    },
+    {
+      "id": "interface-thickness",
+      "sample_id": "stankov2008-a-product",
+      "property": "mean_interface_thickness",
+      "technique": "Author calculation from grain size and CEMS interface fraction",
+      "value": {
+        "value": 2.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Reported uncertainty ±0.5 nm; uncertainty convention is not defined. Model-derived mean thickness, not TEM-layer thickness; model depends on ratio of grain size and interface fraction (reference18 and note19).",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+          },
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 2,4, Interface-thickness derivation paragraph and note 19"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Model-derived mean thickness, not TEM-layer thickness; model depends on ratio of grain size and interface fraction (reference18 and note19).",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+        },
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 2,4, Interface-thickness derivation paragraph and note 19"
+        }
+      ]
+    },
+    {
+      "id": "interface-fraction",
+      "sample_id": "stankov2008-a-product",
+      "property": "interface_atomic_fraction",
+      "technique": "Conversion electron Mössbauer spectroscopy / component fit",
+      "value": {
+        "value": 0.51,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fraction",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported uncertainty ±0.02 fraction; uncertainty convention is not defined. Relative atomic fraction of interfaces from the fitted CEMS components; not a weight fraction or an assigned volume fraction.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Relative atomic fraction of interfaces from the fitted CEMS components; not a weight fraction or an assigned volume fraction.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 1, Table I; XRD and CEMS methods"
+        }
+      ]
+    },
+    {
+      "id": "debye-behavior",
+      "sample_id": "stankov2008-a-product",
+      "property": "low_energy_vibrational_response",
+      "technique": "Nuclear inelastic scattering / parabolic fit",
+      "value": {
+        "value": "No observed deviation from quadratic Debye behavior in the fitted low-energy range",
+        "status": "author_derived",
+        "evidence": [
+          {
+            "source_id": "stankov2008-fe90zr7b3",
+            "locator": "Main PDF p. 3–4, Figure 5a and low-energy fit discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Fe-projected DOS, measured at room temperature with 1.0 meV resolution; fitted over 2–12 meV. No individual fit coefficient is numerically tabulated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "stankov2008-fe90zr7b3",
+          "locator": "Main PDF p. 3–4, Figure 5a and low-energy fit discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all four supplied main pages, five figures, Table I and all numbered references/notes passed; bounded R2 foil/overall-alloy scope corrections passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete four-page main only; cited full sources and any SI unreviewed.",
+      "Raw alloy preparation, individual elemental charges, suppliers, melt-spinning temperature, wheel speed, atmosphere and cooling rate are not reported.",
+      "Anneal ramp/cooling history, specimen dimensions beyond the precursor ribbon thickness, vacuum equipment and physical batch identifiers are not reported.",
+      "The material composition is Fe90Zr7B3, with α-Fe nanograins and intercrystalline regions. No phase-pure Fe90Zr7B3 crystal or measured interface atom coordinates are asserted.",
+      "Mean grain sizes are diffraction/Rietveld quantities confirmed by TEM; no TEM image, particle-shape distribution, ligand or isolated colloidal-particle diameter is supplied.",
+      "Interface thickness and separated phonon spectra depend on author models and assumptions; they are not direct atomic images.",
+      "Source-specific morphology and unit-cell illustrations remain presentation pending; no measured coordinate asset supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper",
+      "url": "https://doi.org/10.1103/PhysRevLett.100.235503",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and review scope",
+      "url": "paper-review.html?id=stankov2008-fe90zr7b3",
+      "relation": "source_review"
+    },
+    {
+      "label": "Table I and vibrational-model contexts",
+      "url": "data/paper-reviews/stankov2008-fe90zr7b3/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

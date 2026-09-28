@@ -72,6 +72,8 @@ Public citations are generated below from the same dataset snapshot used by the 
 
 ## Reviewed source scopes and experimental evidence
 
+- S. Stankov; Y. Z. Yue; M. Miglierini; B. Sepiol; I. Sergueev; A. I. Chumakov; L. Hu; P. Svec; R. Rüffer (2008). *Vibrational Properties of Nanograins and Interfaces in Nanocrystalline Materials*. Physical Review Letters 100, 235503. [DOI 10.1103/PhysRevLett.100.235503](https://doi.org/10.1103/PhysRevLett.100.235503). All four supplied main pages independently audited through R2, including five figures and Table I; five preparation outcomes and a separate supporting Fe-foil comparator. Grain size and modeled interface thickness remain distinct; overall alloy composition is not an interface-composition measurement. SI and cited full texts unreviewed; presentation refinements pending.
+
 - Haber, J. A.; Gibbons, P. C.; Buhro, W. E. (1997). *Morphological Control of Nanocrystalline Aluminum Nitride: Aluminum Chloride-Assisted Nanowhisker Growth*. [DOI 10.1021/ja963368y](https://doi.org/10.1021/ja963368y). Both supplied main pages independently audited through R3; fourteen source-scoped records, thirteen preparation views and two source figures. Nitrogen admission at 1 atm before heating is distinct from unreported hot pressure. SI and cited full texts unreviewed; presentation refinements pending.
 
 - Qiu et al. (2006). *Silver nanocrystal superlattices: Self-assembly and optical emission*. [DOI 10.1063/1.2192645](https://doi.org/10.1063/1.2192645). All four supplied pages, including cover and three main article pages, independently audited; one synthesis record and three source figures. SI and cited full texts unreviewed; presentation refinements pending.
