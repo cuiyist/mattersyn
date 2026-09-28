@@ -377,3 +377,5 @@ A citation does not grant reuse rights to third-party figures or source text. Th
 <!-- mattersyn-generated-references:end -->
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian. *Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot*. Journal of the American Chemical Society. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Standalone SI source review](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si). Supplied 31-page SI reviewed; main article and publication year unverified in that document.
+
+- Hua Yang; Lizhu Song; Fengqing Wu; Zichen Wang; Jianping Wang; Helie Luo. *Preparation and magnetic properties of nanocrystalline LiFe5O8*. Journal of Materials Science Letters 13, 256–257 (1994). [10.1007/BF00571768](https://doi.org/10.1007/BF00571768). Two supplied main pages independently reviewed; SI and cited full papers unreviewed.
