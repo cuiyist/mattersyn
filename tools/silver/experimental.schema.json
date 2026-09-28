@@ -1,0 +1,415 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experimental uncalibrated source evidence; no reviewed/training admission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "status",
+    "calibration_state",
+    "measured_accuracy",
+    "training_ready",
+    "publication_enabled",
+    "gold_count_contribution",
+    "calibrated_silver_count_contribution",
+    "structure_pair_count_contribution",
+    "completed_paper_count_contribution",
+    "usable_complete_recipes",
+    "distinct_sources",
+    "entries"
+  ],
+  "properties": {
+    "schema": {
+      "const": "mattersyn-experimental-silver/1"
+    },
+    "status": {
+      "const": "experimental_machine_extraction_not_reviewed"
+    },
+    "calibration_state": {
+      "const": "unmeasured"
+    },
+    "measured_accuracy": {
+      "const": null
+    },
+    "training_ready": {
+      "const": false
+    },
+    "publication_enabled": {
+      "const": false
+    },
+    "gold_count_contribution": {
+      "const": 0
+    },
+    "calibrated_silver_count_contribution": {
+      "const": 0
+    },
+    "structure_pair_count_contribution": {
+      "const": 0
+    },
+    "completed_paper_count_contribution": {
+      "const": 0
+    },
+    "usable_complete_recipes": {
+      "const": 0
+    },
+    "distinct_sources": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "doi",
+          "title",
+          "citation",
+          "url",
+          "document_sha256",
+          "tier",
+          "scientific_review",
+          "calibration_state",
+          "precision",
+          "recall",
+          "training_ready",
+          "training_weight",
+          "excluded_from",
+          "source_scope",
+          "extraction",
+          "fields",
+          "withheld_claim_count",
+          "limitations"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:+/() -]{0,119}$"
+          },
+          "doi": {
+            "type": "string",
+            "pattern": "^10\\.\\d{4,9}/[^\\s?#]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "citation": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://doi\\.org/10\\.\\d{4,9}/[^\\s?#]+$"
+          },
+          "document_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "tier": {
+            "const": "experimental_silver"
+          },
+          "scientific_review": {
+            "const": "not_performed"
+          },
+          "calibration_state": {
+            "const": "unmeasured"
+          },
+          "precision": {
+            "const": null
+          },
+          "recall": {
+            "const": null
+          },
+          "training_ready": {
+            "const": false
+          },
+          "training_weight": {
+            "const": 0
+          },
+          "excluded_from": {
+            "const": [
+              "gold",
+              "calibrated_silver",
+              "training_exports",
+              "gold_evaluation",
+              "structure_recipe_pair_counts"
+            ]
+          },
+          "source_scope": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "role",
+              "source_pages",
+              "input_pages",
+              "full_paper_extraction",
+              "figures_visually_reviewed",
+              "si_reviewed"
+            ],
+            "properties": {
+              "role": {
+                "const": "main"
+              },
+              "source_pages": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "input_pages": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "full_paper_extraction": {
+                "const": false
+              },
+              "figures_visually_reviewed": {
+                "const": false
+              },
+              "si_reviewed": {
+                "const": false
+              }
+            }
+          },
+          "extraction": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "model",
+              "model_sha256",
+              "prompt_sha256",
+              "pipeline_sha256",
+              "validator_sha256",
+              "passes",
+              "model_agreement_claimed",
+              "chunks",
+              "maximum_claims_per_chunk",
+              "configuration_binding",
+              "chunk_configurations"
+            ],
+            "properties": {
+              "model": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1000
+              },
+              "model_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "prompt_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "pipeline_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "validator_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "passes": {
+                "const": 1
+              },
+              "model_agreement_claimed": {
+                "const": false
+              },
+              "chunks": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "maximum_claims_per_chunk": {
+                "const": 4
+              },
+              "configuration_binding": {
+                "const": "aggregate_of_chunk_fingerprints"
+              },
+              "chunk_configurations": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "input_pages",
+                    "input_sha256",
+                    "prompt_sha256",
+                    "pipeline_sha256"
+                  ],
+                  "properties": {
+                    "input_pages": {
+                      "type": "array",
+                      "minItems": 1,
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    },
+                    "input_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "prompt_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "pipeline_sha256": {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "fields": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 100,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "recipe_id",
+                "sample_id",
+                "slot_id",
+                "field",
+                "value",
+                "unit",
+                "document_id",
+                "page",
+                "link_page",
+                "technique",
+                "status",
+                "mechanical_checks",
+                "training_ready",
+                "training_weight"
+              ],
+              "properties": {
+                "recipe_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:+/() -]{0,119}$"
+                },
+                "sample_id": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:+/() -]{0,119}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "slot_id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:+/() -]{0,119}$"
+                },
+                "field": {
+                  "enum": [
+                    "reaction_temperature",
+                    "duration",
+                    "precursor_amount",
+                    "solvent_volume",
+                    "concentration",
+                    "particle_diameter",
+                    "core_diameter",
+                    "shell_thickness",
+                    "hydrodynamic_diameter",
+                    "crystallite_size",
+                    "phase",
+                    "morphology",
+                    "precursor_identity"
+                  ]
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1000
+                    }
+                  ]
+                },
+                "unit": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "document_id": {
+                  "const": "main"
+                },
+                "page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "link_page": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "technique": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "status": {
+                  "const": "machine_extracted_not_reviewed"
+                },
+                "mechanical_checks": {
+                  "const": "passed"
+                },
+                "training_ready": {
+                  "const": false
+                },
+                "training_weight": {
+                  "const": 0
+                }
+              }
+            }
+          },
+          "withheld_claim_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limitations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            }
+          }
+        }
+      }
+    }
+  }
+}

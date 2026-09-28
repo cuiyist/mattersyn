@@ -229,7 +229,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':212,'source_groups':52,'records':187,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':217,'source_groups':54,'records':192,'physical_samples_deduplicated':None},broad['counts'])
         new_contexts={(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group'] in {'ghezelbash2005-main','hu-wang-2010-nickel-hydroxychloride'}}
         self.assertEqual({
             ('ghezelbash-2005-cu1p8s-variant','cu1p8s-reagent-adjusted'),
@@ -296,8 +296,8 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         from reader_collection import collection_summary
         collection=collection_summary(records,broad['rows'],[])
         page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
-        self.assertIn('Browse all 212 pairs',page)
-        self.assertEqual(212,page.count('<tr><td><a href="records/'))
+        self.assertIn('Browse all 217 pairs',page)
+        self.assertEqual(217,page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))

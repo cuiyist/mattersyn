@@ -49,9 +49,16 @@ status while retaining the selected figures under the current project preference
 The September 26 scaling workflow uses a single source commit with generated,
 content-bound controls. Follow [the single-commit guide](tools/publication/SINGLE_COMMIT_RELEASE.md): stage reviewed payloads, prepare the blueprint and manifest together, then bind the committed manifest to clean HEAD outside the repository before export. CI uses that runtime allowlist. This removes the follow-up closure commit without removing exact public-file review or scientific evidence checks.
 
-Machine-extracted silver contributions remain separately labelled and cannot
-enter the public dataset until frozen-pipeline calibration and independent
-calibration approval pass. Quotes and model drafts remain private. A scoped
+Calibrated silver contributions require frozen-pipeline calibration and independent
+calibration approval. The owner's September 28 authorization also permits a separate
+experimental display of partial machine-extracted evidence before calibration.
+That display must say machine-extracted, not reviewed and accuracy unmeasured;
+retain explicit input-page and incomplete-recipe scope; pass deterministic evidence
+checks, privacy review and the ordinary release/anonymous-verification gates; and
+withhold rejected claims. It adds no gold, calibrated-silver, completed-paper,
+usable-complete-recipe, verified structure-pair or training-ready credit. Quotes,
+source text and model responses remain private. Experimental display is not
+calibration approval. A scoped
 gold contribution may be presentation-pending; its declared scientific scope
 still needs the consolidated independent audit. Automatic cross-repository
 publishing is not installed by this increment; the existing local handoff remains.
@@ -63,11 +70,15 @@ notes; it is not a place to hand-update totals. Source scope, DOI, page counts,
 record assignments and component relationships must reconcile before rendering.
 No scientific record or training eligibility is changed by this migration.
 
-The silver Reader defaults to hidden. Monitoring projections default to
-`publication_enabled:false` and cannot grant new admission. Complete calibration,
-genuine deployment/verification receipts, reviewed public-only manifests and
-separate release gates remain necessary before enabling either public silver
-data or accuracy claims. Synthetic test results are software checks only.
+The calibrated silver Reader remains hidden until its existing admission gates
+pass. Experimental evidence uses its own schema, page and counts; it must not be
+routed through a fabricated calibration receipt or mixed into reviewed/training
+exports. Its measured accuracy remains unknown and all training weights remain
+zero. Candidate/monitoring projections keep `publication_enabled:false` and cannot
+authorize deployment. Actual source credit requires a successful controlled release
+and anonymous verification; partial evidence does not establish a complete paper.
+Calibration and independent approval remain necessary for calibrated admission and
+measured accuracy claims. Synthetic tests establish software behavior only.
 
 Use the single build entry point documented in the project README. Authored static
 inputs live in `recipe-atlas/static`; generated `dist` is a build output. A committed

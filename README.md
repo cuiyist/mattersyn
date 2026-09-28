@@ -16,12 +16,13 @@ reachable again after the repository was made public on 2026-09-24.
 ## Scaling workflow
 
 The [adopted workflow](skills/mattersyn-paper-to-site/references/scaling-workflow-v2.md)
-separates independently audited **gold** contributions from local machine-extracted
-**silver** candidates. Silver publication requires held-out field calibration at
-98% / 95% / 90% precision thresholds for the three family-frequency bands and
-independent calibration approval; no silver contribution has been released by this
-implementation checkpoint. The 500/day figure is a target for verified silver
-publication, not a measured result.
+separates independently audited **gold**, **calibrated silver**, and an explicitly
+unreviewed **experimental silver display**. Calibrated silver still requires
+held-out 98% / 95% / 90% field thresholds and independent calibration approval.
+Experimental display carries partial machine-extracted evidence with accuracy
+unmeasured and training excluded; it earns no complete-paper, complete-recipe,
+gold or verified-pair credit. Publication requires the normal evidence, privacy,
+build, CI and anonymous-access checks. Output-rate targets are not measured results.
 
 - [Scoped packages and event metrics](tools/workflow/README.md)
 - [Local extraction and calibration](tools/silver/README.md)
@@ -29,15 +30,15 @@ publication, not a measured result.
 - [Separate silver Reader integration](recipe-atlas/scripts/SILVER_READER.md)
 - [Single-commit release preparation](tools/publication/SINGLE_COMMIT_RELEASE.md)
 
-Status-only deployments and two-hour checks are retired. At the owner's request,
-remaining workflow revisions are active, followed by website building, with a
-daily 08:00 America/Chicago report. Inventory counts and memberships now derive
-from reviewed inputs at build time; source review scopes remain authored evidence.
-The separate silver Reader and error monitor are implemented but production is
-disabled pending scientific calibration and release admission. Existing scientific
-records and live pages are unchanged. Automatic cross-repository deployment, the
-remaining aggregate migration, complete calibration and the measured silver pilot
-are subsequent rollout steps.
+Morning and two-hour reports are disabled; progress is on request while quiet
+continuation remains active. Inventory counts and memberships derive from reviewed
+inputs at build time. The calibrated silver Reader/monitor remain disabled pending
+calibration and admission; the separately labelled experimental display has its own
+release path and never changes gold or training eligibility. Batch safe public
+postpublication administrative updates with the next ready substantive source
+transaction, preserving exact private proof events immediately and running all
+fresh checks on the combined payload. No automatic publication or capacity claim
+follows from this sequencing change.
 
 ## Local workspace organization
 
@@ -68,6 +69,13 @@ The committed publication registry binds reviewed asset hashes and provenance. T
 The candidate must be inspected before preparing its exact output allowlist. A final clean build requires `--gate`, `--policy`, `--allowlist` and `--registry` instead of `--candidate`; publication is a separate action. The final source and artifact gates must reject unlisted files as well as mismatched hashes. Snapshot validation checks listed input hashes; it is not, by itself, an exact directory-membership approval. The final artifact must match the reviewed release snapshot and pass the public content and asset-rights boundary.
 
 Public citations are generated below from the same dataset snapshot used by the website. Earlier operational notes are retained in [CHANGELOG.md](recipe-atlas/CHANGELOG.md).
+
+## Reviewed source scopes and experimental evidence
+
+- Jinke Tang; Kai-Ying Wang; Weilie Zhou (2001). *Magnetic properties of nanocrystalline Fe3O4 films*. [DOI 10.1063/1.1358350](https://doi.org/10.1063/1.1358350). Four supplied PDF pages, including the publisher cover and three article pages, independently source-audited; SI and cited references remain unreviewed.
+- Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu (1999). *The Solvothermal Synthesis for Nanocrystalline FeIn2S4 at Low Temperature*. [DOI 10.1246/cl.1999.481](https://doi.org/10.1246/cl.1999.481). All 2 supplied main pages independently source-audited; SI and cited references remain unreviewed.
+
+Experimental silver only: Wang, L.-Z.; Shi, J.-L.; Zhang, W.-H.; Ruan, M.-L.; Yu, J.; Yan, D.-S. Chem. Mater. 1999, 11, 3015–3017. *Self-Organization of Ordered Silver Nanocrystal Arrays on Cubic Mesoporous Silica Surfaces*. [DOI 10.1021/cm990228p](https://doi.org/10.1021/cm990228p). Partial Ag/MCM-48 evidence from three supplied main-text pages; not independently scientifically reviewed, completeness unassessed, accuracy unmeasured, figures/SI unreviewed and training excluded. Engineering/privacy review passed; this partial evidence adds no reviewed-paper, complete-recipe or verified-pair credit.
 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website

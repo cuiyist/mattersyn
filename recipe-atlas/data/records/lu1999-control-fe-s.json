@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lu1999-control-fe-s",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Lu et al. (1999): elemental Fe plus sulfur control",
+  "material": {
+    "formula": "Fe-S",
+    "family": "Solvothermal iron indium sulfide",
+    "elements": [
+      "Fe",
+      "S"
+    ],
+    "components": [
+      "Fe-S"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Mechanistic control",
+  "sources": [
+    {
+      "id": "lu1999-fein2s4",
+      "doi": "10.1246/cl.1999.481",
+      "title": "The Solvothermal Synthesis for Nanocrystalline FeIn2S4 at Low Temperature",
+      "authors": "Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu",
+      "year": 1999,
+      "url": "https://doi.org/10.1246/cl.1999.481",
+      "main_status": "All 2 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No supporting information verified; cited sources unreviewed.",
+      "reuse_status": "Two source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "lu1999-fein2s4",
+    "recipe_family": "lu1999-fein2s4",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "FeIn2S4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 1, Typical synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "iron-metal",
+      "name": "Elemental iron",
+      "formula": "Fe",
+      "role": "control iron reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Particle size, purity and amount unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ]
+    },
+    {
+      "id": "sulfur",
+      "name": "Elemental sulfur",
+      "formula": "S",
+      "role": "control sulfur reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ]
+    },
+    {
+      "id": "benzene",
+      "name": "Benzene",
+      "formula": "C6H6",
+      "role": "control solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Reaction solvent, temperature and time are described as unchanged; precursor quantities/ratios are not restated."
+      ],
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "charge-state",
+      "name": "Change the control reactants output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "react-state",
+      "name": "Use the same solvent, temperature and time output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "charge-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "charge",
+      "action": "mix",
+      "label": "Change the control reactants",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "iron-metal",
+        "sulfur",
+        "benzene"
+      ],
+      "outputs": [
+        "charge-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use only the named reactant combination in benzene. No control-specific absolute quantities or stoichiometric ratios are reported.",
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ]
+    },
+    {
+      "id": "react",
+      "action": "heat",
+      "label": "Use the same solvent, temperature and time",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "charge"
+      ],
+      "inputs": [
+        "charge-state"
+      ],
+      "outputs": [
+        "react-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 280,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "inherited",
+          "approximate": false,
+          "qualifier": "Source explicitly describes unchanged solvent, reaction temperature and time in this comparison.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lu1999-fein2s4",
+              "locator": "Main PDF p. 2, Mechanistic reactant controls"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "inherited",
+          "approximate": false,
+          "qualifier": "Source explicitly describes unchanged solvent, reaction temperature and time in this comparison.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lu1999-fein2s4",
+              "locator": "Main PDF p. 2, Mechanistic reactant controls"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Solvothermal conditions; pressure unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu1999-fein2s4",
+            "locator": "Main PDF p. 2, Mechanistic reactant controls"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The source states that solvent, reaction temperature and time were unchanged for the reactant-comparison experiments. Preserve 280 °C / 12 h as inherited method conditions, not independently repeated numerical entries.",
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lu1999-control-fe-s-product",
+      "source_sample_label": "Iron sulfide from the control",
+      "batch_id": null,
+      "material_state_id": "react-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Iron sulfide, stoichiometry unspecified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu1999-fein2s4",
+            "locator": "Main PDF p. 2, Mechanistic reactant controls"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ],
+      "notes": [
+        "No formula, crystal phase, size or morphology assigned. No iron-sulfide material hub is created from this supporting control."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "outcome",
+      "sample_id": "lu1999-control-fe-s-product",
+      "property": "control_outcome",
+      "technique": "Source mechanistic comparison",
+      "value": {
+        "value": "Iron sulfide formed; stoichiometry/phase unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lu1999-fein2s4",
+            "locator": "Main PDF p. 2, Mechanistic reactant controls"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Controls do not establish separate quantitative structural outcomes or complete workup methods.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lu1999-fein2s4",
+          "locator": "Main PDF p. 2, Mechanistic reactant controls"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of both scanned main pages through visual reading and the accepted correction revision passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Two-page scanned main fully read visually; embedded/cache article text is unavailable. SI and cited sources remain unreviewed.",
+      "Absolute precursor masses/mmol, solvent grade, reaction pressure, ramp/cooling rates and yield are not reported.",
+      "Theoretical feed proportions are derived from the displayed equation, not fabricated absolute charges.",
+      "The wash reagent is called absolute alcohol without explicit molecular identity; no ethanol assignment is made. Wash volumes/count, drying and storage are absent.",
+      "Only the benzene product has the displayed XRD/TEM panels. Do not transfer its sizes, lattice parameter or spherical morphology to alternative solvents or controls.",
+      "No sample-measured atomic coordinates or refined site occupancy are supplied.",
+      "Precursor, apparatus and morphology illustrations remain presentation pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1246/cl.1999.481",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=lu1999-fein2s4",
+      "relation": "source_review"
+    },
+    {
+      "label": "Variant trends and interpretation",
+      "url": "data/paper-reviews/lu1999-fein2s4/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

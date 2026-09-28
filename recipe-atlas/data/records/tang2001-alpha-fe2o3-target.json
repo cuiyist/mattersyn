@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tang2001-alpha-fe2o3-target",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Tang et al. (2001): pressed and sintered alpha-Fe2O3 ablation target",
+  "material": {
+    "formula": "Fe2O3",
+    "family": "Iron oxide films and PLD target preparation",
+    "elements": [
+      "Fe",
+      "O"
+    ],
+    "components": [
+      "Fe2O3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Target preparation",
+  "sources": [
+    {
+      "id": "tang2001-fe3o4-pld",
+      "doi": "10.1063/1.1358350",
+      "title": "Magnetic properties of nanocrystalline Fe3O4 films",
+      "authors": "Jinke Tang; Kai-Ying Wang; Weilie Zhou",
+      "year": 2001,
+      "url": "https://doi.org/10.1063/1.1358350",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No supporting document verified in this scope; cited sources unreviewed.",
+      "reuse_status": "Selected source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "tang2001-fe3o4-pld",
+    "recipe_family": "tang2001-fe3o4-pld",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Fe2O3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2, Preparation"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hematite-powder",
+      "name": "High-purity alpha-Fe2O3 powder",
+      "formula": "Fe2O3",
+      "role": "laser-target feedstock",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "99.998% purity. Starting powder identity; no source-measured atomic coordinates or particle size."
+      ],
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "press-state",
+      "name": "Press the target pellet output",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "sinter-state",
+      "name": "Sinter the alpha-Fe2O3 target output",
+      "kind": "stock",
+      "parent_ids": [
+        "press-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "press",
+      "action": "press",
+      "label": "Press the target pellet",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hematite-powder"
+      ],
+      "outputs": [
+        "press-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Press 99.998% alpha-Fe2O3 powder into a pellet. Powder mass, pressing pressure, die and pellet dimensions are not given.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+        }
+      ]
+    },
+    {
+      "id": "sinter",
+      "action": "anneal",
+      "label": "Sinter the alpha-Fe2O3 target",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "press"
+      ],
+      "inputs": [
+        "press-state"
+      ],
+      "outputs": [
+        "sinter-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tang2001-fe3o4-pld",
+              "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tang2001-fe3o4-pld",
+              "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sinter the pressed target at 1000 °C for 2 h. Furnace atmosphere, heating/cooling rates and post-sinter handling are not reported.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tang2001-alpha-fe2o3-target-product",
+      "source_sample_label": "Sintered alpha-Fe2O3 laser-ablation target",
+      "batch_id": null,
+      "material_state_id": "sinter-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Fe2O3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "tang2001-fe3o4-pld",
+            "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2, Preparation, printed p.7690"
+        }
+      ],
+      "notes": [
+        "Source-named target, not a measured nanocrystal synthesis outcome. Starting alpha identity is not promoted to a new diffraction refinement."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all four supplied pages (one publisher cover and three main article pages) and the accepted correction revision passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Supplied main only: one publisher cover plus three article pages. Cited sources and any SI remain unreviewed.",
+      "Target mass, pressing pressure, die, sintering atmosphere/ramp/cooling are unreported.",
+      "Substrate dimensions, laser pulse energy/fluence, spot size, deposition duration, target–substrate distance and deposition gas/pressure are unreported.",
+      "The 3 × 10^-6 Torr pressure belongs to substrate cleaning; deposition pressure is not silently inherited.",
+      "Nanocrystalline grain diameter, film thickness and unmeasured antiphase-domain size are distinct.",
+      "No sample-measured atomic coordinates or exact antiphase-boundary structure is supplied.",
+      "Source-qualified molecular/solid cards, deposition apparatus and film morphology refinements remain presentation pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1063/1.1358350",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=tang2001-fe3o4-pld",
+      "relation": "source_review"
+    },
+    {
+      "label": "Measurement series and interpretation",
+      "url": "data/paper-reviews/tang2001-fe3o4-pld/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

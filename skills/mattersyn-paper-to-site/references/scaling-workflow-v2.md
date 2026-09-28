@@ -1,9 +1,10 @@
 # MatterSyn workflow v2: audited and machine-extracted contributions
 
-Adopted September 26, 2026 from the owner's scaling plan. This supersedes the
-earlier 20 audited papers/hour target, two-hour reporting cadence and mandatory
-per-paper presentation hold. The owner confirmed field-precision thresholds of
-98%, 95% and 90% for high-, medium- and low-frequency material families.
+Adopted September 26, 2026, with the September 28 experimental-display and
+reporting instructions below. Calibrated field-precision thresholds remain
+98%, 95% and 90% for high-, medium- and low-frequency material families. The
+renewed 20-papers/hour target is not an achieved rate; partial experimental
+evidence is not a completed paper. Morning and two-hour reports are disabled.
 
 ## Two separate lanes
 
@@ -15,12 +16,22 @@ or unavailable SI explicitly. Later SI is a versioned addition, not a reason to
 claim the earlier contribution covered it. Do not omit difficult variants within
 the declared scope just to finish a package. No automatic tier promotion.
 
-**Silver:** local machine extraction, two separate passes that never see one
+**Calibrated silver:** local machine extraction, two separate passes that never see one
 another's answers, deterministic evidence checks and calibrated field admission.
 The public badge is **Machine-extracted, not reviewed**. The 500/day target now
 means distinct silver source contributions actually deployed and anonymously
 verified. Keep gold/silver counts, record counts and pair counts separate.
 Neither model agreement nor a quote match is a scientific audit.
+
+**Experimental silver display:** a separate owner-authorized view of partial
+machine-extracted evidence may publish after exact source identity, original
+model-output binding, deterministic evidence/schema checks, independent
+engineering/privacy review and ordinary release checks. Label it unreviewed,
+accuracy unmeasured and training excluded. A single extraction pass is not
+two-pass agreement or calibration. Keep withheld claims private; unsupported
+notation is not repaired into a supported fact. Count a distinct experimental
+display only after deployment and anonymous verification, separately from
+completed papers, complete recipes, gold, calibrated silver and verified pairs.
 
 Existing Reader pages retain their scoped review history; do not relabel all of
 their fields as complete calibration answers. A method card or optical-only record
@@ -74,9 +85,9 @@ with stale release controls. Never remove privacy/provenance checks to reduce
 bookkeeping. Full PDFs/SI, raw text, evidence quotes, page renders, private audits,
 drafts and model responses stay local.
 
-No status-only website releases. Batch accepted silver contributions daily after
-calibration, and release ready gold contributions without waiting for blocked
-papers. Do not silently introduce a cross-repository token or broaden permissions;
+No status-only website releases. Batch accepted calibrated silver contributions after
+calibration, and release ready gold or separately labelled experimental display
+payloads after their applicable checks without waiting for blocked papers. Do not silently introduce a cross-repository token or broaden permissions;
 use the established authenticated local release bridge until a CI transport is
 explicitly configured and tested. A merge alone is not publication credit.
 
@@ -130,12 +141,12 @@ variant, SI addition, correction or presentation pass is not another new paper.
 Report gold and silver separately. Do not infer active work from commit gaps or
 claim continuous unattended processing between runs.
 
-The owner subsequently restored a daily progress report at 08:00 America/Chicago
-and resumed remaining workflow revisions followed by website building. Report the
-actual interval, completed and pending revisions, newly verified gold and silver
-papers, cumulative coverage, pairs, audit/calibration state, blockers and next work.
-Keep two-hour checks retired; report material failures when they occur. Save concise memory and reusable changes with substantive
-milestones, not a new commit/deployment for every checkpoint. Preserve historical
+The owner subsequently disabled morning reports; two-hour reports also remain
+disabled. Report progress on request, separating actual verified gold,
+calibrated silver and partial experimental display, with truthful scope and
+publication intervals. Quiet continuation remains active. Save concise memory
+and reusable changes with substantive milestones, not a deployment for every
+checkpoint. Preserve historical
 trial receipts unchanged. New incoming papers remain outside the active screened
 snapshot until the owner resumes intake. No paid APIs, source-file transfers,
 model downloads or GPU purchases are authorized by this workflow.
@@ -150,7 +161,7 @@ or refresh an unrelated scientific audit merely because those totals changed.
 New source scope metadata still requires review. This migration covers inventory;
 other scientific presentation sidecars retain their existing audit boundaries.
 
-The separate silver Reader is disabled until a real calibrated public manifest
+The separate calibrated silver Reader is disabled until a real calibrated public manifest
 passes release review. It does not fetch drafts or change gold counts/exports.
 See [Reader integration](../../../recipe-atlas/scripts/SILVER_READER.md).
 `tools/silver/monitor.py` selects a deterministic 5% daily sample of first verified
@@ -163,10 +174,19 @@ The code and synthetic tests establish software behavior, not scientific precisi
 Complete source-separated labels, measured calibration, independent approval,
 version-audit handling and a release-admitted silver pilot remain required.
 
-## September28 continuation and experimental silver display
+## Current continuation and administrative batching
 
-The owner now requests continued work until explicitly paused and reasserts the20 papers/hour target. Use the active20-minute continuation heartbeat separately from the daily08:00 report; do not restore the retired two-hour reports or reopen historical trial windows. Count only actually deployed and anonymously verified distinct source contributions.
+Continue until the owner explicitly pauses. Morning and two-hour reporting are
+off; provide progress on request and keep quiet continuation separate from
+reporting. A scheduled heartbeat is not evidence of continuous execution.
 
-The latest instruction explicitly requests silver publication. A separate experimental display may expose evidence-validated machine-extracted records labelled not independently reviewed, with accuracy unmeasured until calibration. Exclude these records from training-ready exports and gold counts; do not claim the earlier calibration thresholds passed. The98%/95%/90% thresholds and independent calibration approval remain required for calibrated silver admission. Preserve privacy, source identity, exact evidence, schema and public-release checks. Routine decisions within this scope need no repeated permission.
-
-The owner subsequently disabled the morning check. Both morning and two-hour reporting are off; provide progress on request. Quiet continuation remains active and this reporting change does not pause curation.
+After actual publication and anonymous verification, retain exact successful
+CI, public-byte proofs, source/site commits and idempotent event IDs privately
+immediately. Batch the sanitized public memory/control/receipt updates into the
+next ready substantive source transaction. Rebase exact before-images and run
+all fresh source, policy, rights, privacy, build, output and CI checks for that
+combined payload. Do not mark a private overlay public, reuse changed-input
+approvals or add publication credit before verification. Use the normal full
+standalone transaction when an urgent public update is needed or no suitable
+batch is ready. This operator sequencing change does not cache decisions or
+weaken any calibrated, gold or training gate.

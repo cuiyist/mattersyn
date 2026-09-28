@@ -1,0 +1,314 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "tang2001-fe3o4-pld",
+  "doi": "10.1063/1.1358350",
+  "scope": "Four supplied PDF pages: a publisher cover and the complete three-page article, printed 7690–7692. Six figures and eighteen references read; cited sources and any SI remain unreviewed.",
+  "source_inventory": {
+    "feedstock": {
+      "identity": "Alpha-Fe2O3 powder",
+      "purity_percent": 99.998,
+      "mass": "Not reported"
+    },
+    "target": "Pressed and sintered alpha-Fe2O3 pellet",
+    "substrate": {
+      "identity": "Silicon",
+      "orientation": "(100)",
+      "size_doping_native_oxide": "Not reported"
+    },
+    "laser": "KrF excimer laser; KrF describes the laser medium rather than an introduced reaction precursor",
+    "media": "No liquid solvent, ligand or gas recipe is reported for deposition. Do not infer an oxygen flow or transfer the cleaning pressure.",
+    "evidence": [
+      {
+        "source_id": "tang2001-fe3o4-pld",
+        "locator": "Supplied PDF p. 2, Preparation"
+      }
+    ]
+  },
+  "target_preparation": {
+    "press": "Powder pressed into a pellet; load/die/dimensions absent",
+    "sinter_temperature_degC": 1000,
+    "sinter_duration_h": 2,
+    "unknown": [
+      "Mass",
+      "Pressure",
+      "Atmosphere",
+      "Ramp",
+      "Cooling",
+      "Target density"
+    ],
+    "scope": "Supporting target preparation only; not independently characterized as a new nanocrystal outcome.",
+    "evidence": [
+      {
+        "source_id": "tang2001-fe3o4-pld",
+        "locator": "Supplied PDF p. 2, Preparation"
+      }
+    ]
+  },
+  "film_preparation": {
+    "substrate": "Si(100)",
+    "cleaning": {
+      "action": "Raster unfocused laser across substrate",
+      "pressure_Torr": 3e-06,
+      "duration": "Not reported",
+      "scope": "Pressure assigned to pre-deposition cleaning only"
+    },
+    "deposition": {
+      "beam": "Focused KrF excimer",
+      "wavelength_nm": 248,
+      "repetition_Hz": 12,
+      "substrate_temperature_degC": 350,
+      "thickness_nm_approx": 180,
+      "unknown": [
+        "Laser pulse energy/fluence",
+        "Spot size",
+        "Deposition duration",
+        "Gas/pressure",
+        "Target–substrate distance",
+        "Substrate area",
+        "Ramp/cooling/post-treatment"
+      ]
+    },
+    "evidence": [
+      {
+        "source_id": "tang2001-fe3o4-pld",
+        "locator": "Supplied PDF p. 2, Preparation"
+      }
+    ]
+  },
+  "structure": {
+    "phase": "Magnetite Fe3O4 from glancing-angle XRD",
+    "lattice_parameter_a_nm": 0.8392,
+    "lattice_parameter_reported_notation": "0.8392(2) nm",
+    "uncertainty_scope": "Parenthetical notation preserved; confidence level is not specified",
+    "reference_card": "19-629",
+    "XRD_planes": [
+      "111",
+      "220",
+      "311",
+      "400",
+      "422",
+      "511",
+      "440"
+    ],
+    "XRD_instrument": "Philips X’Pert, Cu K-alpha",
+    "TEM_instrument": "JEOL Model 2010",
+    "TEM": {
+      "mean_grain_nm": 50,
+      "figure2_top": "Plane-view grains;50 nm scale",
+      "figure2_bottom": "Contrast using (220) reflection shows antiphase domains within grains;50 nm scale;image label200 kV",
+      "domain_size": "Not reported",
+      "morphology_scope": "Nanocrystalline film grain structure, not a dispersed-particle synthesis"
+    },
+    "temperature_phase_context": "Cubic-to-monoclinic change at the Verwey transition is cited as an interpretation; no low-temperature lattice refinement or atomic coordinate file is supplied.",
+    "evidence": [
+      {
+        "source_id": "tang2001-fe3o4-pld",
+        "locator": "Supplied PDF p. 2–3, Figures 1–2 and structural discussion"
+      }
+    ]
+  },
+  "measurement_series": {
+    "magnetization_temperature": {
+      "figure": 3,
+      "instrument": "Quantum Design SQUID",
+      "field_Oe": 500,
+      "protocols": [
+        "ZFC",
+        "FC"
+      ],
+      "ZFC_transition_K_approx": 120,
+      "FC_response": "Sharp transition drop absent at 500 Oe",
+      "scope": "Original curve retained without numeric digitization"
+    },
+    "resistance_temperature": {
+      "figure": 3,
+      "method": "Standard four-probe",
+      "own_film": "Triangle symbols",
+      "external_comparator": "Solid curve from cited reference 7,660 nm film; not own synthesis",
+      "response": "Broader transition than some bulk/single-crystal/thick-film comparisons"
+    },
+    "remanence_coercivity": {
+      "figure": 4,
+      "rows": [
+        {
+          "temperature_K": 300,
+          "remanence_emu_per_cm3": 140,
+          "coercivity_Oe": 275
+        },
+        {
+          "temperature_K": 5,
+          "remanence_emu_per_cm3": 195,
+          "coercivity_Oe": 750
+        }
+      ],
+      "trends": [
+        "Remanence plateau just below transition",
+        "Coercivity changes slowly 300→120 K then rises rapidly"
+      ],
+      "scope": "Measurement temperatures, not synthesis temperatures or separate batches"
+    },
+    "hysteresis": {
+      "figure": 5,
+      "main_temperature_K": 120,
+      "main_range_Oe": [
+        0,
+        20000
+      ],
+      "observations": [
+        "Magnetization remains unsaturated at the 2 T displayed limit.",
+        "High-field hysteresis persists through the displayed range: prose places closure only at the 2 T limit, while the Figure 5 caption describes an open loop at 20 kOe. An exact closure field is not established."
+      ],
+      "inset_temperatures_K": [
+        100,
+        120,
+        140
+      ],
+      "inset_field_Oe_approx": [
+        -3000,
+        3000
+      ],
+      "decreasing_field_overlap_threshold_Oe": 500,
+      "scope": "The prose and Figure 5 caption are preserved together; the upper 2 T / 20 kOe test range is not an established exact closure field. Do not infer numerical Ms from the normalized axis or a measured boundary anisotropy constant.",
+      "field_extent_T": 2
+    },
+    "magnetoresistance": {
+      "figure": 6,
+      "instrument": "Quantum Design PPMS",
+      "definition": "[R(H)-R(0)]/R(0)",
+      "field_orientation": "Perpendicular to film",
+      "maximum_field_T": 9,
+      "temperature_curves_K": [
+        90,
+        130,
+        300
+      ],
+      "reported_summary": [
+        {
+          "temperature_context": "300 K",
+          "MR_percent_approx": -5
+        },
+        {
+          "temperature_context": "Near Verwey transition",
+          "MR_percent_approx": -12
+        }
+      ],
+      "temperature_qualification": "The abstract says near 120 K; the displayed near-transition curve is 130 K. Preserve both statements without inventing an exact 120 K/-12 % datum.",
+      "ninety_K_value": "No separate numerical text value; original curve available."
+    },
+    "evidence": [
+      {
+        "source_id": "tang2001-fe3o4-pld",
+        "locator": "Supplied PDF p. 3–4, Figures 3–6 and measurement discussion"
+      }
+    ]
+  },
+  "external_comparisons": {
+    "bulk_like_film": {
+      "thickness_nm": 660,
+      "source": "Reference7",
+      "scope": "Only reproduced resistance comparison; original method unreviewed"
+    },
+    "sputtered_film": {
+      "grain_size_um": [
+        1,
+        2
+      ],
+      "MR_percent_magnitude_approx": 1.0,
+      "temperature": "Room temperature",
+      "field_T": 0.5,
+      "source": "Reference8",
+      "scope": "Cited external results, not a new own recipe or specimen"
+    },
+    "spin_polarization": "Approximately100% is a proposed/theoretical background property of magnetite in the introduction, not measured polarization of this film.",
+    "substrates_in_prior_work": [
+      "MgO",
+      "SrTiO3",
+      "alpha-Al2O3"
+    ],
+    "scope": "Prior methods and theory are background; do not add their material inputs to the current PLD protocol.",
+    "evidence": [
+      {
+        "source_id": "tang2001-fe3o4-pld",
+        "locator": "Supplied PDF p. 2–4, Introduction and discussion"
+      }
+    ]
+  },
+  "references": {
+    "count": 18,
+    "pages": [
+      4
+    ],
+    "scope": "Bibliographic entries inspected; cited sources unreviewed. Reference 12 is a proceedings contribution, not a supplied companion source."
+  },
+  "conflicts": [
+    {
+      "id": "TANG01-HIGHFIELD-01",
+      "topic": "Hysteresis at the upper field limit",
+      "claims": [
+        {
+          "label": "High-field discussion",
+          "statement": "The prose places loop closure only at the upper 2 T field limit.",
+          "locator": "Supplied PDF p. 4, high-field discussion"
+        },
+        {
+          "label": "Figure 5 caption",
+          "statement": "The caption describes an open loop and unsaturated magnetization at 20 kOe.",
+          "locator": "Supplied PDF p. 4, Figure 5 caption"
+        }
+      ],
+      "handling": "Show the prose and caption together. Keep 2 T / 20 kOe as the measurement/display extent; no exact closure field or fitted threshold is asserted."
+    }
+  ],
+  "source_interpretation": [
+    {
+      "topic": "Pulsed laser deposition from an oxide target",
+      "text": "The article uses a sintered alpha-Fe2O3 target to produce a magnetite Fe3O4 film on heated silicon. The starting-target composition must not be equated with the final film phase. The paper does not specify the deposition atmosphere or explain a complete reduction pathway, so those fields remain unresolved.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2, Preparation and Figure 1"
+        }
+      ]
+    },
+    {
+      "topic": "Antiphase boundaries and high-field magnetism",
+      "text": "TEM directly shows antiphase domains within grains. The authors associate high-field nonsaturation and an open hysteresis loop with altered exchange coupling and additional anisotropy at boundaries. The magnetic mechanism is an interpretation supported by the observations, not a solved atomic boundary model.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 2–4, Figure 2 and Figure 5 discussion"
+        }
+      ]
+    },
+    {
+      "topic": "The missing field-cooled anomaly",
+      "text": "At 500 Oe the FC curve lacks the sharp Verwey-transition drop visible in the ZFC curve. The source relates this behavior to nearly overlapping decreasing-field hysteresis curves at 100, 120 and 140 K above 500 Oe. This does not establish that the anomaly is absent under all field protocols.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 3–4, Figures 3 and 5"
+        }
+      ]
+    },
+    {
+      "topic": "Broad resistance transition has several possible causes",
+      "text": "Strain, size effects and small departures from exact Fe3O4 stoichiometry are suggested explanations for the broadened resistive transition. The paper does not quantify strain or composition deviations in this film. A cited 660 nm comparison film is not another product of the reported synthesis.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 3, Figure 3 and resistance discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Magnetoresistance mechanism remains open",
+      "text": "The authors explicitly do not determine whether spin-dependent intergranular transport dominates the negative magnetoresistance. They propose exploring connections to antiphase domains and pinned magnetic domain walls. The predicted influence of narrow walls is an outlook, not a demonstrated device or a fitted transport model here.",
+      "evidence": [
+        {
+          "source_id": "tang2001-fe3o4-pld",
+          "locator": "Supplied PDF p. 4, Figure 6 and concluding discussion"
+        }
+      ]
+    }
+  ]
+}
