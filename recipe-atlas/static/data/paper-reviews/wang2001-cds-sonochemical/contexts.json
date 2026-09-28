@@ -1,0 +1,230 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "wang2001-cds-sonochemical",
+  "doi": "10.1246/cl.2001.344",
+  "scope": "Both supplied main pages (344–345), both figures, all five proposed equations and24references read; SI/cited full texts unreviewed.",
+  "bibliographic_scope": {
+    "title": "Sonochemical Synthesis and Phase Control of Nanocrystalline CdS",
+    "authors": "Guozhong Wang; Guanghai Li; Changhao Liang; Lide Zhang",
+    "journal": "Chemistry Letters",
+    "year": 2001,
+    "pages": "344–345",
+    "received": "25 December 2000",
+    "manuscript_id": "CL-001162",
+    "references": 24
+  },
+  "branch_mapping": [
+    {
+      "record_id": "wang2001-cds-sonochemical-a-water",
+      "sample_label": "A",
+      "solution": "Water only",
+      "figure_1_panel": "a",
+      "figure_2_panel": "a",
+      "phase_from_detailed_results": "Hexagonal CdS",
+      "basis": "Detailed procedure and A/B paragraph with matching figure captions; conflicting conclusion retained separately"
+    },
+    {
+      "record_id": "wang2001-cds-sonochemical-b-isopropanol-water",
+      "sample_label": "B",
+      "solution": "Isopropyl alcohol/water",
+      "figure_1_panel": "b",
+      "figure_2_panel": "b",
+      "phase_from_detailed_results": "Cubic beta-CdS",
+      "basis": "Detailed procedure and A/B paragraph with matching figure captions; conflicting conclusion retained separately"
+    }
+  ],
+  "preparation": {
+    "common_reagents": {
+      "cadmium_chloride_2p5hydrate_g": 1.142,
+      "sodium_thiosulfate_pentahydrate_g": 2.482,
+      "grade": "AR for both salts"
+    },
+    "solution_A": {
+      "doubly_distilled_water_mL": 100
+    },
+    "solution_B": {
+      "isopropyl_alcohol_mL": 23,
+      "isopropyl_alcohol_purity_percent": 99,
+      "purity_basis": "Not stated",
+      "doubly_distilled_water_mL": 77,
+      "total_mixture_volume": "Not asserted by volume additivity"
+    },
+    "apparatus": "Separate covered conical flasks in a sonication bath; vessel capacity and cover construction unreported",
+    "oxygen_removal": "Ar purge before irradiation; duration/flow and continuous irradiation gas flow unreported",
+    "sonication": {
+      "frequency_kHz": 40,
+      "reported_output_power_W": 100,
+      "duration_h": 7,
+      "temperature": "Room temperature; no numeric value",
+      "pressure": "Ambient pressure; no numeric value",
+      "cooling": "Flowing water cools the glass vessel in the bath; coolant settings unreported"
+    },
+    "workup": [
+      "Collect precipitates; method unspecified",
+      "Wash with distilled water",
+      "Wash next with ethanol",
+      "Vacuum dry yellow product at50°C for2h"
+    ],
+    "vacuum_pressure": "Unreported",
+    "yield": "Unreported",
+    "evidence": [
+      {
+        "source_id": "wang2001-cds-sonochemical",
+        "locator": "Supplied PDF p. 1, Typical procedure"
+      }
+    ]
+  },
+  "instrument_contexts": {
+    "XRD": {
+      "instrument": "MXP18AHF",
+      "sample_context": "A/B dried products; exact holder/loading, wavelength and acquisition settings unreported"
+    },
+    "TEM": {
+      "instrument": "Hitachi Model H-800",
+      "sample_context": "As-prepared A/B particles; grid/support, dispersion/preparation and accelerating voltage unreported",
+      "scale_bars": {
+        "figure2a_nm": 100,
+        "figure2b_nm": 50
+      }
+    },
+    "XPS": {
+      "instrument": "VG-ESCALAB-MK-II",
+      "data_visibility": "Not shown",
+      "result": "Qualitative fairly pure composition close to CdS",
+      "numerical_atomic_ratio": null
+    }
+  },
+  "structure": {
+    "sample_A": {
+      "phase": "Hexagonal CdS",
+      "JCPDS_as_printed": "41-1049",
+      "a_angstrom": 4.14,
+      "a_source_precision": "4.140",
+      "c_angstrom": 6.726,
+      "impurity_peaks": "None detected in reported XRD",
+      "figure1a_indices": [
+        "100",
+        "002",
+        "101",
+        "110",
+        "103",
+        "112"
+      ],
+      "Scherrer_size_nm": 5.3,
+      "TEM_size_nm": 8,
+      "TEM_size_qualifier": "about",
+      "aggregation": "More significant than in mixed solvent"
+    },
+    "sample_B": {
+      "phase": "Cubic beta-CdS",
+      "JCPDS_as_printed": "10-454",
+      "textual_peak_2theta_deg": [
+        26.72,
+        44.06,
+        51.98
+      ],
+      "peak_position_qualifier": "about",
+      "figure1b_indices": [
+        "111",
+        "220",
+        "311"
+      ],
+      "other_phase_peaks": "None observed",
+      "absent_hexagonal_characteristic_peak_positions_deg": [
+        24.828,
+        28.216,
+        47.885
+      ],
+      "Scherrer_size_nm": 3.5,
+      "TEM_size_nm": 5,
+      "TEM_size_qualifier": "around",
+      "aggregation": "Relatively well dispersed with narrower distribution; no numerical width"
+    },
+    "Scherrer_relation": {
+      "coefficient": 0.94,
+      "relation": "d=0.94*lambda/(B*cos(theta_B))",
+      "lambda": "X-ray wavelength; numerical value unreported",
+      "B": "Diffraction-peak full width at half maximum; numerical values unreported",
+      "theta_B": "Half-angle on the2theta scale",
+      "scope": "Source calculation definition, not a recalculation or TEM diameter equivalence"
+    },
+    "measured_coordinates": false,
+    "figure_curves_digitized": false
+  },
+  "proposed_mechanism": {
+    "status": "Author hypothesis with literature context; intermediates and rates unmeasured",
+    "equations": [
+      {
+        "id": 1,
+        "interpretation": "Water sonication produces hydrogen and hydroxyl radicals inside collapsing bubbles."
+      },
+      {
+        "id": 2,
+        "interpretation": "In the aqueous branch the source proposes radical-mediated thiosulfate reduction producing sulfide, sulfate and water; the text calls both radicals reducing."
+      },
+      {
+        "id": 3,
+        "interpretation": "Isopropyl alcohol scavenges hydroxyl radicals by hydrogen abstraction, yielding a secondary alcohol-derived radical and water."
+      },
+      {
+        "id": 4,
+        "interpretation": "The alcohol-derived radical is proposed to reduce thiosulfate to sulfide, with sulfite and acetone among the written products."
+      },
+      {
+        "id": 5,
+        "interpretation": "Cadmium ions and sulfide ions form CdS."
+      }
+    ],
+    "reaction_order": "The source associates the aqueous reaction2 pathway with hexagonal CdS and the alcohol-containing reaction4 pathway with cubic CdS, through reaction5.",
+    "qualitative_kinetics": "Authors state hexagonal formation is faster, attributing this to the sulfur-producing routes; no time-resolved rate or conversion curve is supplied.",
+    "caution": "These equations describe a proposed chemical pathway, not additional charged materials, measured intermediates or separately performed synthesis recipes.",
+    "evidence": [
+      {
+        "source_id": "wang2001-cds-sonochemical",
+        "locator": "Supplied PDF p. 2, Equations1–5 and mechanism discussion"
+      }
+    ]
+  },
+  "cited_context": {
+    "above_300C_statement": "Introductory phase-transition discussion referring to prior literature; not a current thermal treatment or product series",
+    "extension_to_other_sulfides": "Prediction in the conclusion, not a prepared current-source material",
+    "full_texts_inspected": false
+  },
+  "source_conflicts": [
+    "The concluding sentence on p. 345 reverses the with/without-isopropyl-alcohol order relative to the explicit A/B preparation, Figure 1 caption and detailed phase assignments. Preserve sample A = water = hexagonal and sample B = water/isopropyl alcohol = cubic from the detailed sample-linked evidence; retain this conclusion conflict rather than silently correcting the source."
+  ],
+  "source_interpretation": [
+    {
+      "title": "Use the detailed A/B labels and retain the summary conflict",
+      "text": "The concluding sentence on p. 345 reverses the with/without-isopropyl-alcohol order relative to the explicit A/B preparation, Figure 1 caption and detailed phase assignments. Preserve sample A = water = hexagonal and sample B = water/isopropyl alcohol = cubic from the detailed sample-linked evidence; retain this conclusion conflict rather than silently correcting the source.",
+      "source_locator": "Supplied PDF pp. 1–2, detailed A/B assignments, Figures 1–2 captions and concluding sentence"
+    },
+    {
+      "title": "Crystallite and particle sizes describe different measurements",
+      "text": "Sample A has a reported Scherrer crystallite size of 5.3 nm and a TEM particle size of about 8 nm; sample B has 3.5 nm and around 5 nm, respectively. The source initially calls these consistent and later notes the TEM values are slightly larger. No exact equivalence, combined average, confidence interval or numerical distribution width is inferred.",
+      "source_locator": "Supplied PDF p. 1, Scherrer paragraph; p. 2, TEM paragraph"
+    },
+    {
+      "title": "Solvent effects and radical pathways are proposed",
+      "text": "The authors associate isopropyl alcohol with reduced aggregation and altered CdS phase selection, and propose different radical-mediated routes to sulfide from thiosulfate. The reaction equations and kinetic explanation are source interpretation. No measured radical concentration, intermediate yield or comparative rate constant is supplied.",
+      "source_locator": "Supplied PDF p. 2, proposed reactions 1–5 and mechanism"
+    },
+    {
+      "title": "XPS is a qualitative statement without displayed data",
+      "text": "The paper reports fairly pure samples with composition close to CdS, but explicitly omits the XPS spectra for space. No atomic ratio, numerical purity or impurity detection threshold is inferred.",
+      "source_locator": "Supplied PDF p. 2, XPS paragraph"
+    }
+  ],
+  "missingness": [
+    "Both supplied main article pages, two figures, five proposed reaction equations and twenty-four references read. SI and cited full texts unreviewed.",
+    "Room temperature and ambient pressure are reported qualitatively; no numerical temperature/pressure is assigned. Flasks have covers; no sealed-pressure reactor or hydrothermal operation is asserted.",
+    "Conical-flask capacity, cover design, sonication-bath make/model, actual delivered acoustic intensity, cooling-water flow/temperature, purge duration/flow, mixing, pH and reaction yield are unreported. Ar purging occurs before irradiation; a continuous Ar atmosphere during all seven hours is not asserted.",
+    "Precipitate collection method, wash volumes/cycle counts, vacuum level, product storage and exact physical aliquot identities across measurements are unreported.",
+    "Scherrer crystallite sizes (5.3 nm A, 3.5 nm B) and approximate TEM particle sizes (8 nm A, 5 nm B) are separate method-specific quantities. No uncertainty, numerical size-distribution width or statistical sample count is supplied.",
+    "XPS composition and purity are qualitative; spectra are explicitly not shown and no stoichiometric ratio or impurity limit is reported.",
+    "The source mechanism is proposed and includes literature-based radical chemistry; intermediates, rates and solution speciation are not measured. No model coordinates or current optical/electronic property measurements are supplied.",
+    "Exact molecular, particle and crystal presentation remains pending; any generic molecular references and authored apparatus are explanatory, not source-measured geometry.",
+    "The concluding sentence on p. 345 reverses the with/without-isopropyl-alcohol order relative to the explicit A/B preparation, Figure 1 caption and detailed phase assignments. Preserve sample A = water = hexagonal and sample B = water/isopropyl alcohol = cubic from the detailed sample-linked evidence; retain this conclusion conflict rather than silently correcting the source."
+  ],
+  "raw_source_text_included": false
+}
