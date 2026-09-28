@@ -194,3 +194,7 @@ weaken any calibrated, gold or training gate.
 ## Exact excerpt experiments
 
 For damaged PDF text, try bounded method-specific source excerpts with field-specific unit choices and an explicit omission option. Keep original page offsets and hashes, literal source labels, raw model responses and rejected attempts. Do not repair model values, join damaged source symbols or reassign units to satisfy a schema. If humans select spans or reagent slots, state that assistance; scalar extraction is not autonomous recipe discovery. Measure preparation, failed attempts, review and publication as well as model-call time. Unmeasured partial experimental fields retain zero complete-paper/pair/training credit.
+
+## Strict numeric bounds
+
+For source inequalities, set `minimum_exclusive` or `maximum_exclusive` on the existing quantity object; a prose qualifier alone does not preserve the boundary in machine exports or displayed conditions. Keep the bound value and source locator, and verify the displayed relation after building. For a bounded correction, reuse unchanged source audits, independently check the corrected relation, and refresh the dependent record, molecule, apparatus and figure provenance hashes without changing asset content.

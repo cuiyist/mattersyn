@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "xie1999-pbse-gamma-tetrahydrofuran-control",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Xie et al. (1999): unsuccessful tetrahydrofuran solvent control",
+  "material": {
+    "formula": "PbSe",
+    "family": "Unsuccessful PbSe-target solvent control",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [],
+    "architecture": "unresolved"
+  },
+  "method": "Qualitative negative solvent control",
+  "sources": [
+    {
+      "id": "xie1999-pbse-gamma",
+      "doi": "10.1246/cl.1999.875",
+      "title": "γ-Irradiation Route to Nanocrystalline Lead Selenide",
+      "authors": "Yi Xie; Zhengping Qiao; Meng Chen; Yingjie Zhu; Yitai Qian",
+      "year": 1999,
+      "url": "https://doi.org/10.1246/cl.1999.875",
+      "main_status": "Both complete supplied main pages independently source-audited. SI and cited full texts remain unreviewed.",
+      "si_status": "Supporting information and cited full texts not verified or read.",
+      "reuse_status": "Two selected source figures proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "xie1999-pbse-gamma",
+    "recipe_family": "xie1999-pbse-gamma",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xie1999-pbse-gamma",
+          "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+        }
+      ],
+      "note": "Target only; no PbSe obtained in this control."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "xie1999-pbse-gamma",
+          "locator": "Supplied main PDF p. 1, printed p. 875, abstract and current-method discussion"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "selenium",
+      "name": "Elemental selenium powder",
+      "formula": "Se",
+      "role": "solubility-test selenium precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source states this solvent does not dissolve selenium powder. No amount or selenium phase specified."
+      ],
+      "evidence": [
+        {
+          "source_id": "xie1999-pbse-gamma",
+          "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+        }
+      ]
+    },
+    {
+      "id": "tetrahydrofuran",
+      "name": "Tetrahydrofuran",
+      "formula": "C4H8O",
+      "role": "alternative solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Qualitative solvent comparison only; no homogeneous solution or PbSe obtained. Volume, purity, exact other charges and exposure conditions are not individually reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "xie1999-pbse-gamma",
+          "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nonhomogeneous-mixture",
+      "name": "Test selenium dissolution in tetrahydrofuran output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "control-observation",
+      "name": "Observe the irradiation outcome output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "nonhomogeneous-mixture"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "attempt-dissolution",
+      "action": "mix",
+      "label": "Test selenium dissolution in tetrahydrofuran",
+      "stage": "synthesis",
+      "branch": "negative-solvent-control",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "selenium",
+        "tetrahydrofuran"
+      ],
+      "outputs": [
+        "nonhomogeneous-mixture"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "No homogeneous solution formed; selenium powder does not dissolve",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xie1999-pbse-gamma",
+            "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The source states that tetrahydrofuran cannot dissolve selenium powder, so a homogeneous solution does not form. Exact mixture charges, other reagents, temperature and mixing conditions are not individually specified.",
+      "evidence": [
+        {
+          "source_id": "xie1999-pbse-gamma",
+          "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+        }
+      ]
+    },
+    {
+      "id": "irradiate-control",
+      "action": "irradiate",
+      "label": "Observe the irradiation outcome",
+      "stage": "synthesis",
+      "branch": "negative-solvent-control",
+      "optional": false,
+      "depends_on": [
+        "attempt-dissolution"
+      ],
+      "inputs": [
+        "nonhomogeneous-mixture"
+      ],
+      "outputs": [
+        "control-observation"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "No PbSe obtained under gamma irradiation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xie1999-pbse-gamma",
+            "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The solvent-comparison paragraph reports no PbSe obtained under gamma irradiation. The successful ethylenediamine route dose/activity/time/workup are not assigned to this control; no product identity or characterized solid is invented.",
+      "evidence": [
+        {
+          "source_id": "xie1999-pbse-gamma",
+          "locator": "Supplied main PDF p. 2, printed p. 876, solvent comparison and ethylenediamine interpretation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of both complete supplied main pages, both source figures and the bounded R2 caption correction passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Both supplied main pages (875–876), both figures, full preparation/continuation, solvent controls, proposed interpretation and twelve references visually read. SI and cited full papers unreviewed. The scanned source has no verified text cache.",
+      "Lead acetate hydration, absolute precursor masses, solvent volume, numerical selenium saturation concentration, mixing/dissolution duration and addition order are unreported. The typical XRD/TEM sample is specifically tied to 0.05 kmol/m³ lead acetate in selenium-saturated ethylenediamine.",
+      "The 60Co source activity is 2.59×10^15 Bq and irradiation dose is 3.0×10^4 Gy. Irradiation duration, dose rate, source distance, energy spectrum, vessel and oxygen/purge conditions are unreported; no exposure time is derived.",
+      "Room temperature and ambient pressure are qualitative. The general ambient-pressure wording does not override the explicitly reported vacuum drying step. Several hours of post-irradiation standing is qualitative; only the vacuum drying time is numerically 4 h.",
+      "Collection technique, wash amounts/repetitions, dilute-acetic-acid concentration, vacuum level, drying apparatus, yield and storage are unreported. Wash order is absolute ethanol, distilled water, dilute acetic acid, then acetone.",
+      "Figure 2 explicitly depicts the same sample as Figure 1. No physical batch identifier, TEM specimen preparation/grid, XRD holder, particle-count statistic, size uncertainty or distribution width is given. Average TEM particle size is 30 nm; no XRD crystallite size is reported.",
+      "Benzene and tetrahydrofuran controls give neither a homogeneous selenium-containing solution nor PbSe under irradiation. Their charges, irradiation dose/time and subsequent processing are not individually stated and are not copied from the successful ethylenediamine route.",
+      "Formation chemistry is explicitly unknown and the solvent/solvated-electron explanation is proposed. No intermediate, kinetic rate, product atomic coordinates or current optical/electronic property measurement is supplied.",
+      "Generic molecular references and source-bound apparatus concepts are not measured solution, particle or apparatus geometry. Full molecular/crystal/presentation refinements remain pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_failure"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1246/cl.1999.875",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Full source review",
+      "url": "paper-review.html?id=xie1999-pbse-gamma",
+      "relation": "source_review"
+    },
+    {
+      "label": "Source contexts and interpretation",
+      "url": "data/paper-reviews/xie1999-pbse-gamma/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}
