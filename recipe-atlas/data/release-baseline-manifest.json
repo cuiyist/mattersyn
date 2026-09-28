@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1058,
-  "group_count": 82,
+  "record_count": 1059,
+  "group_count": 83,
   "families": [
     "Ag2S nanocrystals",
     "Aluminum nanocrystals",
@@ -29,6 +29,7 @@
     "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
     "Colloidal fullerene-like nickel hydroxychloride; empirical hydration x is unspecified.",
     "Colloidal indium phosphide quantum dots; no refined atomic structure supplied",
+    "Colloidal lead selenide quantum dots",
     "Colloidal semiconductor nanocrystals",
     "Contextual evidence associated with the InP quantum-dot study",
     "Cr-doped ZnSe quantum dots",
@@ -11088,6 +11089,80 @@
       "collection": "reviewed_literature",
       "components": [],
       "pair_ids": []
+    },
+    {
+      "record_id": "du2002-pbse-general-route",
+      "title": "Du et al. (2002): single-injection PbSe synthesis and three explicitly sized characterization contexts",
+      "formula": "PbSe",
+      "family": "Colloidal lead selenide quantum dots",
+      "method": "Single-injection colloidal synthesis",
+      "record_type": "literature_protocol",
+      "source_year": 2002,
+      "source_doi": "10.1021/nl025785g",
+      "revision": 1,
+      "record_sha256": "028f7e1a23786a34c1b07b022c0a25d8afbf50b89d62d723935b82adccd0c14d",
+      "recipe_signature": "e436acc5620f6561394d5895a5a7f2d9cebcba945f55eb42ae79eaa74d9e5ea8",
+      "group_id": "group-bc310ce95783",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/du2002-pbse-general-route.json",
+      "page_url": "records/du2002-pbse-general-route.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbSe"
+      ],
+      "pair_ids": [
+        "du2002-pbse-general-route::du2002-pbse-general-route-3nm",
+        "du2002-pbse-general-route::du2002-pbse-general-route-7nm",
+        "du2002-pbse-general-route::du2002-pbse-general-route-8nm"
+      ]
     },
     {
       "record_id": "evans-2010-cd-oleate",
