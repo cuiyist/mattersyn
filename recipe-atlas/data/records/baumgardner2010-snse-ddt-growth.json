@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "baumgardner2010-snse-ddt-growth",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Baumgardner et al. (2010): Dodecanethiol-modified anisotropic growth",
+  "material": {
+    "formula": "SnSe",
+    "family": "Tin selenide nanocrystals",
+    "elements": [
+      "Sn",
+      "Se"
+    ],
+    "components": [
+      "SnSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Colloidal hot-injection synthesis",
+  "sources": [
+    {
+      "id": "baumgardner2010-snse-ja1013745",
+      "doi": "10.1021/ja1013745",
+      "title": "SnSe Nanocrystals: Synthesis, Structure, Optical Properties, and Surface Chemistry",
+      "authors": "William J. Baumgardner; Joshua J. Choi; Yee-Fun Lim; Tobias Hanrath",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/ja1013745",
+      "main_status": "All 3 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Detailed protocols and Figures S1–S7 are referred to but not supplied or reviewed in this main-only contribution; cited full sources unreviewed.",
+      "reuse_status": "User-requested source figures; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "baumgardner2010-snse-ja1013745",
+    "recipe_family": "baumgardner2010-snse-ja1013745",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Dodecanethiol-modified synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ddt",
+      "name": "Dodecanethiol, positional isomer not separately stated",
+      "formula": "C12H26S",
+      "role": "replacement growth ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source says dodecanethiol; 1-dodecanethiol is a qualified generic reference. Dose and exact optimized conditions are in unreviewed SI, not reconstructed."
+      ],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Dodecanethiol-modified synthesis"
+        }
+      ]
+    },
+    {
+      "id": "snse-growth",
+      "name": "SnSe growth mixture, formulation not restated",
+      "formula": "SnSe",
+      "role": "modified synthesis context",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Shared-system identity only. Numeric amounts, temperature and ligand-addition schedule are not independently stated for this branch."
+      ],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Dodecanethiol-modified synthesis"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ddt-grow-state",
+      "name": "Grow SnSe using the thiol-ligand modification output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "ddt-grow",
+      "action": "react",
+      "label": "Grow SnSe using the thiol-ligand modification",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ddt",
+        "snse-growth"
+      ],
+      "outputs": [
+        "ddt-grow-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Replace the oleic-acid growth ligand with dodecanethiol and tune conditions, as described by the authors. Exact dosage, timing, temperature, workup and branch-by-branch recipe are absent in the supplied main.",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Dodecanethiol-modified synthesis"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "baumgardner2010-snse-ddt-growth-product",
+      "source_sample_label": "Dodecanethiol-grown anisotropic SnSe, main-text report",
+      "batch_id": null,
+      "material_state_id": "ddt-grow-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No separate specimen phase assignment supplied."
+      },
+      "morphology": {
+        "value": "Complex elongated nanocrystals including branched superstructures",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": "Reported in the main with Figure S6 referenced but unreviewed; no dimensions, morphology fractions or measured 3D geometry supplied."
+      },
+      "surface": {
+        "value": "Dodecanethiol used as replacement growth ligand",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+        }
+      ],
+      "notes": [
+        "One explicitly described modified-synthesis outcome; detailed SI variations are not invented."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 source audit of all three supplied main pages, four source figures and the 26-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Three-page supplied main only; SI protocols, Figures S1–S7 and cited full sources are unreviewed.",
+      "Inert-gas identity, vessel, degassing conditions, pressure, quench method and workup volumes/settings are not specified.",
+      "Exact delay between nucleation and oleic-acid injection is not stated for the standard route; the two-minute quench clock origin is not more precisely defined.",
+      "No measured atomic coordinates, refined cell parameters, batch IDs or atom-resolved ligand geometry are supplied.",
+      "Temperature-series points in plots are retained in source figures without unreported exact values or temperature-to-size crosswalks.",
+      "Optional molecular or particle presentation remains pending where not yet supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja1013745",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures and full scoped review",
+      "url": "paper-review.html?id=baumgardner2010-snse-ja1013745",
+      "relation": "source_review"
+    },
+    {
+      "label": "Series, controls, interpretation and missingness",
+      "url": "data/paper-reviews/baumgardner2010-snse-ja1013745/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

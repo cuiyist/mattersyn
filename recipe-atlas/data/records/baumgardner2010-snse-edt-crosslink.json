@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "baumgardner2010-snse-edt-crosslink",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Baumgardner et al. (2010): Surface treatment with Ethanedithiol (EDT)",
+  "material": {
+    "formula": "SnSe",
+    "family": "Tin selenide nanocrystals",
+    "elements": [
+      "Sn",
+      "Se"
+    ],
+    "components": [
+      "SnSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Surface treatment with Ethanedithiol (EDT)",
+  "sources": [
+    {
+      "id": "baumgardner2010-snse-ja1013745",
+      "doi": "10.1021/ja1013745",
+      "title": "SnSe Nanocrystals: Synthesis, Structure, Optical Properties, and Surface Chemistry",
+      "authors": "William J. Baumgardner; Joshua J. Choi; Yee-Fun Lim; Tobias Hanrath",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/ja1013745",
+      "main_status": "All 3 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Detailed protocols and Figures S1–S7 are referred to but not supplied or reviewed in this main-only contribution; cited full sources unreviewed.",
+      "reuse_status": "User-requested source figures; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "baumgardner2010-snse-ja1013745",
+    "recipe_family": "baumgardner2010-snse-ja1013745",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Ligand-exchange discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "snse-input",
+      "name": "Oleate-capped SnSe nanocrystals",
+      "formula": "SnSe",
+      "role": "ligand-exchange substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Input batch, size, concentration and amount unspecified; no inheritance from a particular temperature specimen."
+      ],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Ligand-exchange discussion"
+        }
+      ]
+    },
+    {
+      "id": "ligand",
+      "name": "Ethanedithiol (EDT)",
+      "formula": "C2H6S2",
+      "role": "exchange ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Dose, medium, duration, temperature and workup are unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Ligand-exchange discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "exchange-state",
+      "name": "Exchange the surface ligand output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "exchange",
+      "action": "ligand_exchange",
+      "label": "Exchange the surface ligand",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "snse-input",
+        "ligand"
+      ],
+      "outputs": [
+        "exchange-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Displace surface-bound oleate with Ethanedithiol (EDT). The source reports snse material insoluble in organic and aqueous solvents. Dose, solvent and treatment/workup settings are not specified.",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Ligand-exchange discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "baumgardner2010-snse-edt-crosslink-product",
+      "source_sample_label": "SnSe material insoluble in organic and aqueous solvents",
+      "batch_id": null,
+      "material_state_id": "exchange-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No separate specimen phase assignment supplied."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No separately assigned morphology supplied."
+      },
+      "surface": {
+        "value": "Ethanedithiol (EDT) treatment",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": "No measured ligand coverage/binding geometry or independent post-treatment particle size."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+        }
+      ],
+      "notes": [
+        "Supporting surface-treatment context; no independent newly sized structural specimen."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "solubility",
+      "sample_id": "baumgardner2010-snse-edt-crosslink-product",
+      "property": "solubility",
+      "technique": "Source-reported qualitative observation",
+      "value": {
+        "value": "SnSe material insoluble in organic and aqueous solvents",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 source audit of all three supplied main pages, four source figures and the 26-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Three-page supplied main only; SI protocols, Figures S1–S7 and cited full sources are unreviewed.",
+      "Inert-gas identity, vessel, degassing conditions, pressure, quench method and workup volumes/settings are not specified.",
+      "Exact delay between nucleation and oleic-acid injection is not stated for the standard route; the two-minute quench clock origin is not more precisely defined.",
+      "No measured atomic coordinates, refined cell parameters, batch IDs or atom-resolved ligand geometry are supplied.",
+      "Temperature-series points in plots are retained in source figures without unreported exact values or temperature-to-size crosswalks.",
+      "Optional molecular or particle presentation remains pending where not yet supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja1013745",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures and full scoped review",
+      "url": "paper-review.html?id=baumgardner2010-snse-ja1013745",
+      "relation": "source_review"
+    },
+    {
+      "label": "Series, controls, interpretation and missingness",
+      "url": "data/paper-reviews/baumgardner2010-snse-ja1013745/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

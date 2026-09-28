@@ -1,0 +1,272 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "baumgardner2010-snse-early-oa-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Baumgardner et al. (2010): Oleic acid before tin injection inhibits nucleation",
+  "material": {
+    "formula": "SnSe",
+    "family": "Tin selenide nanocrystals",
+    "elements": [
+      "Sn",
+      "Se"
+    ],
+    "components": [
+      "SnSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Oleic acid before tin injection inhibits nucleation",
+  "sources": [
+    {
+      "id": "baumgardner2010-snse-ja1013745",
+      "doi": "10.1021/ja1013745",
+      "title": "SnSe Nanocrystals: Synthesis, Structure, Optical Properties, and Surface Chemistry",
+      "authors": "William J. Baumgardner; Joshua J. Choi; Yee-Fun Lim; Tobias Hanrath",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/ja1013745",
+      "main_status": "All 3 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Detailed protocols and Figures S1–S7 are referred to but not supplied or reviewed in this main-only contribution; cited full sources unreviewed.",
+      "reuse_status": "User-requested source figures; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "baumgardner2010-snse-ja1013745",
+    "recipe_family": "baumgardner2010-snse-ja1013745",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Oleic-acid injection-order comparison"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "oa",
+      "name": "Oleic acid",
+      "formula": "C18H34O2",
+      "role": "ligand present before tin injection",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Control dose and exact time are not separately supplied; do not inherit 3 mL from standard procedure."
+      ],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Oleic-acid injection-order comparison"
+        }
+      ]
+    },
+    {
+      "id": "tin-amide",
+      "name": "Bis[bis(trimethylsilyl)amino]tin(II)",
+      "formula": "C12H36N2Si4Sn",
+      "role": "tin precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Control dose, temperature and stock dilution are not separately supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Oleic-acid injection-order comparison"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "early-oa-state",
+      "name": "Place oleic acid before tin injection output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "tin-injection-state",
+      "name": "Inject tin precursor into the early-ligand environment output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "early-oa-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "early-oa",
+      "action": "add",
+      "label": "Place oleic acid before tin injection",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "oa"
+      ],
+      "outputs": [
+        "early-oa-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Preserve the reported addition-order control. Exact early oleic-acid amount and timing are not given.",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Oleic-acid injection-order comparison"
+        }
+      ]
+    },
+    {
+      "id": "tin-injection",
+      "action": "inject",
+      "label": "Inject tin precursor into the early-ligand environment",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "early-oa"
+      ],
+      "inputs": [
+        "early-oa-state",
+        "tin-amide"
+      ],
+      "outputs": [
+        "tin-injection-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Nucleation inhibited",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "baumgardner2010-snse-ja1013745",
+            "locator": "Main PDF p. 3, Surface chemistry and transport discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The authors report inhibited nucleation when oleic acid is already present before injection of the tin precursor. A negative control is not a prepared nanocrystal specimen.",
+      "evidence": [
+        {
+          "source_id": "baumgardner2010-snse-ja1013745",
+          "locator": "Main PDF p. 3, Oleic-acid injection-order comparison"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 source audit of all three supplied main pages, four source figures and the 26-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Three-page supplied main only; SI protocols, Figures S1–S7 and cited full sources are unreviewed.",
+      "Inert-gas identity, vessel, degassing conditions, pressure, quench method and workup volumes/settings are not specified.",
+      "Exact delay between nucleation and oleic-acid injection is not stated for the standard route; the two-minute quench clock origin is not more precisely defined.",
+      "No measured atomic coordinates, refined cell parameters, batch IDs or atom-resolved ligand geometry are supplied.",
+      "Temperature-series points in plots are retained in source figures without unreported exact values or temperature-to-size crosswalks.",
+      "Optional molecular or particle presentation remains pending where not yet supplied.",
+      "No isolated product or measured particle size is reported for this inhibited control."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_failure"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja1013745",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures and full scoped review",
+      "url": "paper-review.html?id=baumgardner2010-snse-ja1013745",
+      "relation": "source_review"
+    },
+    {
+      "label": "Series, controls, interpretation and missingness",
+      "url": "data/paper-reviews/baumgardner2010-snse-ja1013745/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

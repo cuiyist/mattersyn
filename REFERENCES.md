@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **88 primary source groups** · release `mattersyn-mathur-foos-batch-20260928`. Records are not independent experiments.
+Dataset **0.41.2** · **91 primary source groups** · release `mattersyn-watt-baum-iwasaki-20260928`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -27,6 +27,8 @@ Dataset **0.41.2** · **88 primary source groups** · release `mattersyn-mathur-
 - Shu-Hong Yu; Yong-Sheng Wu; Jian Yang; Zhao-Hui Han; Yi Xie; Yi-Tai Qian; Xian-Ming Liu (1998). A Novel Solventothermal Synthetic Route to Nanocrystalline CdE (E = S, Se, Te) and Morphological Control. *Chemistry of Materials*, 10, 2309–2312. [10.1021/cm980181s](https://doi.org/10.1021/cm980181s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yu1998cde).
 
 - Hiroshi Yao; Yukako Takada; Noboru Kitamura (1998). Electrolyte Effects on CdS Nanocrystal Formation in Chelate Polymer Particles: Optical and Distribution Properties. *Langmuir*, 14, 595–601. [10.1021/la970480g](https://doi.org/10.1021/la970480g). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yao1998).
+
+- M. Iwasaki; M. Hara; S. Ito (1998). Facile synthesis of nanocrystalline anatase particles from titanyl sulfate. *Journal of Materials Science Letters*, 1769–1771. [10.1023/A:1006660209934](https://doi.org/10.1023/A:1006660209934). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=iwasaki1998-tio2-a1006660209934).
 
 - Xiaogang Peng; J. Wickham; A. P. Alivisatos (1998). Kinetics of II-VI and III-V Colloidal Semiconductor Nanocrystal Growth: “Focusing” of Size Distributions. *Journal of the American Chemical Society*, 120, 5343–5344. [10.1021/ja9805425](https://doi.org/10.1021/ja9805425). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=peng1998).
 
@@ -84,6 +86,8 @@ Dataset **0.41.2** · **88 primary source groups** · release `mattersyn-mathur-
 
 - Nam Ho Heo; Jong Sam Park; Young Joo Kim; Woo Taik Lim; Sung Wook Jung; Karl Seff (2003). Spatially Ordered Quantum Dot Array of Indium Nanoclusters in Fully Indium-Exchanged Zeolite X. *Journal of Physical Chemistry B*, 107, 1120–1128. [10.1021/jp0219348](https://doi.org/10.1021/jp0219348). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=heo2003).
 
+- Andrew Watt; Elizabeth Thomsen; Paul Meredith; Halina Rubinsztein-Dunlop (2004). A new approach to the synthesis of conjugated polymer–nanocrystal composites for heterojunction optoelectronics. *Chemical Communications*, 2334–2335. [10.1039/b406060a](https://doi.org/10.1039/b406060a). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=watt2004-pbs-mehppv-b406060a).
+
 - Hongwei Gu; Rongkun Zheng; XiXiang Zhang; Bing Xu (2004). Facile One-Pot Synthesis of Bifunctional Heterodimers of Nanoparticles: A Conjugate of Quantum Dot and Magnetic Nanoparticles. *Journal of the American Chemical Society*, 126, 5664–5665. [10.1021/ja0496423](https://doi.org/10.1021/ja0496423). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=gu2004).
 
 - Yukio Nagasaki; Takehiko Ishii; Yuka Sunaga; Yousuke Watanabe; Hidenori Otsuka; Kazunori Kataoka (2004). Novel Molecular Recognition via Fluorescent Resonance Energy Transfer Using a Biotin-PEG/Polyamine Stabilized CdS Quantum Dot. *Langmuir*, 20, 6396-6400. [10.1021/la036034c](https://doi.org/10.1021/la036034c). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=nagasaki2004).
@@ -119,6 +123,8 @@ Dataset **0.41.2** · **88 primary source groups** · release `mattersyn-mathur-
 - Shi Hu; Xun Wang (2010). Fullerene-like Colloidal Nanocrystal of Nickel Hydroxychloride. *Journal of the American Chemical Society*, 132, 9573–9575. [10.1021/ja103607q](https://doi.org/10.1021/ja103607q). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=hu2010nichydroxychloride).
 
 - Christopher M. Evans; Meagan E. Evans; Todd D. Krauss (2010). Mysteries of TOPSe Revealed: Insights into Quantum Dot Nucleation. *Journal of the American Chemical Society*, 132, 10973–10975. [10.1021/ja103805s](https://doi.org/10.1021/ja103805s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=evans2010).
+
+- William J. Baumgardner; Joshua J. Choi; Yee-Fun Lim; Tobias Hanrath (2010). SnSe Nanocrystals: Synthesis, Structure, Optical Properties, and Surface Chemistry. *Journal of the American Chemical Society*, 132, 9519–9521. [10.1021/ja1013745](https://doi.org/10.1021/ja1013745). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=baumgardner2010-snse-ja1013745).
 
 - Jordan W. Thomson; Ludovico Cademartiri; Mark MacDonald; Srebri Petrov; Gianluca Calestani; Peng Zhang; Geoffrey A. Ozin (2010). Ultrathin Bi2S3 Nanowires: Surface and Core Structure at the Cluster-Nanocrystal Transition. [10.1021/ja101908k](https://doi.org/10.1021/ja101908k). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=thomson2010ja101908k).
 

@@ -23,6 +23,8 @@ NAMES['CdTe']='Cadmium telluride · heterostructure-component context'
 NAMES['MWNT']='Multiwalled carbon nanotubes · host-component context'
 # Source-reviewed acronym: a carbon nanotube host, not an elemental formula.
 COMPONENT_ELEMENTS={'MWNT':['C'],'FAPbI3':['C','H','N','Pb','I'],'SiOx':['Si','O']}
+# Watt et al. (10.1039/b406060a): named polymer component, not a repeat-unit formula.
+COMPONENT_ELEMENTS['MEH-PPV']=['C','H','O']
 NAMES['FAPbI3']='Formamidinium lead iodide quantum dots'
 NAMES['La2(MoO4)3:Yb,Er']='Ytterbium/erbium-codoped lanthanum molybdate'
 NAMES['PbS/glass']='PbS quantum dots in multicomponent oxide glass'

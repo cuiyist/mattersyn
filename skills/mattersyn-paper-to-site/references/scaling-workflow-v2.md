@@ -211,3 +211,8 @@ After an exact artifact is copied into the site checkout, committed and pushed, 
 Reuse prior exact file-review objects during allowlist preparation when bytes, size and current path/content-class approval still match. Check current allowed classes and any required exact-blob approval. Run the final full boundary under current rights/policy for all files; the prior guard verdict is not cached. This avoids repeating sanitation during approval preparation. Independent science and changed figure/sample bindings remain required.
 
 Use fixed start/end times and a verified live baseline when the owner requests a throughput trial. Record carried-over work separately and never silently extend the denominator, count record variants as papers, or call an unachieved throughput target demonstrated.
+
+
+### Early delivered-asset completeness
+
+Before the first full batch build, validate every declared public_asset and its exact public_asset_sha256 across figure, table, scheme, equation and Reader original_assets entries. A duplicate table descriptor still requires its own hash even when the same image is correctly listed under figures. Check all occurrences against delivered bytes during package preflight; reuse that acceptance if those bytes and assignments stay unchanged. A missing metadata checksum may be corrected against the already accepted identical asset without restarting scientific reading.
