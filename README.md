@@ -105,13 +105,15 @@ Experimental silver only: Wang, L.-Z.; Shi, J.-L.; Zhang, W.-H.; Ruan, M.-L.; Yu
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **72 primary source groups** · release `mattersyn-gold-yang2005-20260928`. Records are not independent experiments.
+Dataset **0.41.2** · **88 primary source groups** · release `mattersyn-mathur-foos-batch-20260928`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
 - K. A. Littau; P. J. Szajowski; A. J. Muller; A. R. Kortan; L. E. Brus (1993). A Luminescent Silicon Nanocrystal Colloid via a High-Temperature Aerosol Reaction. *The Journal of Physical Chemistry*, 97, 1224–1230. [10.1021/j100108a019](https://doi.org/10.1021/j100108a019). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=littau1993).
 
 - C. B. Murray; D. J. Norris; M. G. Bawendi (1993). Synthesis and Characterization of Nearly Monodisperse CdE (E = S, Se, Te) Semiconductor Nanocrystallites. [10.1021/ja00072a025](https://doi.org/10.1021/ja00072a025). Review scope remains stated in the linked website records.
+
+- Hua Yang; Lizhu Song; Fengqing Wu; Zichen Wang; Jianping Wang; Helie Luo (1994). Preparation and magnetic properties of nanocrystalline LiFe5O8. *Journal of Materials Science Letters*, 13, 256–257. [10.1007/BF00571768](https://doi.org/10.1007/BF00571768). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yang1994-life5o8-bf00571768).
 
 - Yanchun Zhou; Richard J. Phillips; Jay A. Switzer (1995). Electrochemical Synthesis and Sintering of Nanocrystalline Cerium(IV) Oxide Powders. *Journal of the American Ceramic Society*, 78, 981–985. [10.1111/j.1151-2916.1995.tb08425.x](https://doi.org/10.1111/j.1151-2916.1995.tb08425.x). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhou1995-ceo2-tb08425).
 
@@ -120,6 +122,8 @@ Dataset **0.41.2** · **72 primary source groups** · release `mattersyn-gold-ya
 - Michal Danek; Klavs F. Jensen; Chris B. Murray; Moungi G. Bawendi (1996). Synthesis of Luminescent Thin-Film CdSe/ZnSe Quantum Dot Composites Using CdSe Quantum Dots Passivated with an Overlayer of ZnSe. *Chemistry of Materials*, 8, 173–180. [10.1021/cm9503137](https://doi.org/10.1021/cm9503137). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=danek1996).
 
 - B. O. Dabbousi; J. Rodriguez-Viejo; F. V. Mikulec; J. R. Heine; H. Mattoussi; R. Ober; K. F. Jensen; M. G. Bawendi (1997). (CdSe)ZnS Core–Shell Quantum Dots: Synthesis and Characterization of a Size Series of Highly Luminescent Nanocrystallites. *The Journal of Physical Chemistry B*, 101, 9463–9475. [10.1021/jp971091y](https://doi.org/10.1021/jp971091y). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=dabbousi1997).
+
+- Joel A. Haber; Patrick C. Gibbons; William E. Buhro (1997). Morphological Control of Nanocrystalline Aluminum Nitride: Aluminum Chloride-Assisted Nanowhisker Growth. *Journal of the American Chemical Society*, 119, 5455–5456. [10.1021/ja963368y](https://doi.org/10.1021/ja963368y). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=haber1997-aln).
 
 - Jonathan G. C. Veinot; Madlen Ginzburg; William J. Pietro (1997). Surface Functionalization of Cadmium Sulfide Quantum-Confined Nanoclusters. 3. Formation and Derivatives of a Surface Phenolic Quantum Dot. *Chemistry of Materials*, 9, 2117–2122. [10.1021/cm970189m](https://doi.org/10.1021/cm970189m). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=veinot1997).
 
@@ -131,17 +135,31 @@ Dataset **0.41.2** · **72 primary source groups** · release `mattersyn-gold-ya
 
 - Yadong Li; Xiangfeng Duan; Hongwei Liao; Yitai Qian (1998). Self-Regulation Synthesis of Nanocrystalline ZnGa2O4 by Hydrothermal Reaction. *Chemistry of Materials*, 10, 17–18. [10.1021/cm970557m](https://doi.org/10.1021/cm970557m). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li1998znga2o4).
 
+- Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu; Jinyun Xing (1999). A Low Temperature Nitridation Route for Nanocrystalline AlN. *Chemistry Letters*, 1239–1240. [10.1246/cl.1999.1239](https://doi.org/10.1246/cl.1999.1239). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lu1999-aln).
+
 - Paul Wagner; Osamu Terasaki; Stephan Ritsch; Jose Geraldo Nery; Stacey I. Zones; Mark E. Davis; Kenji Hiraga (1999). Electron Diffraction Structure Solution of a Nanocrystalline Zeolite at Atomic Resolution. *The Journal of Physical Chemistry B*, 103, 8245-8250. [10.1021/jp991389j](https://doi.org/10.1021/jp991389j). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wagner1999-ssz48).
 
 - J. H. Zhan; Y. Xie; X. G. Yang; W. X. Zhang; Y. T. Qian (1999). Hydrazine-Assisted Low-Temperature Hydrothermal Preparation of Nanocrystalline Jaipurite. [10.1006/jssc.1999.8299](https://doi.org/10.1006/jssc.1999.8299). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhan1999jaipurite).
 
 - R. M. Stiger; S. Gorer; B. Craft; R. M. Penner (1999). Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100). *Langmuir*, 15, 790–798. [10.1021/la980800b](https://doi.org/10.1021/la980800b). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=stiger1999).
 
+- Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu (1999). The Solvothermal Synthesis for Nanocrystalline FeIn2S4 at Low Temperature. *Chemistry Letters*, 481–482. [10.1246/cl.1999.481](https://doi.org/10.1246/cl.1999.481). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lu1999-fein2s4).
+
+- Yi Xie; Zhengping Qiao; Meng Chen; Yingjie Zhu; Yitai Qian (1999). γ-Irradiation Route to Nanocrystalline Lead Selenide. *Chemistry Letters*, 875–876. [10.1246/cl.1999.875](https://doi.org/10.1246/cl.1999.875). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=xie1999-pbse-gamma).
+
 - X. Peng; L. Manna; W. Yang; J. Wickham; E. Scher; A. Kadavanich; A. P. Alivisatos (2000). Shape control of CdSe nanocrystals. [10.1038/35003535](https://doi.org/10.1038/35003535). Review scope remains stated in the linked website records.
 
 - Bin Li, Yi Xie, Jiaxing Huang, and Yitai Qian (2000). Synthesis, Characterization, and Properties of Nanocrystalline Cu2SnS3. [10.1006/jssc.2000.8772](https://doi.org/10.1006/jssc.2000.8772). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2000cu2sns3).
 
+- T. Igarashi; M. Ihara; T. Kusunoki; K. Ohno; T. Isobe; M. Senna (2001). Characterization of Mn2+ coordination states in ZnS nanocrystal by EPR spectroscopy and related photoluminescence properties. *Journal of Nanoparticle Research*, 3, 51–56. [10.1023/A:1011445009443](https://doi.org/10.1023/A:1011445009443). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=igarashi2001-zns-mn-a1011445009443).
+
+- Jinke Tang; Kai-Ying Wang; Weilie Zhou (2001). Magnetic properties of nanocrystalline Fe3O4 films. *Journal of Applied Physics*, 89, 7690–7692. [10.1063/1.1358350](https://doi.org/10.1063/1.1358350). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=tang2001-fe3o4-pld).
+
 - Parag S. Shah; Shabbir Husain; Keith P. Johnston; Brian A. Korgel (2001). Nanocrystal Arrested Precipitation in Supercritical Carbon Dioxide. *Journal of Physical Chemistry B*, 105, 9433–9440. [10.1021/jp011815c](https://doi.org/10.1021/jp011815c). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=shah2001).
+
+- Guozhong Wang; Guanghai Li; Changhao Liang; Lide Zhang (2001). Sonochemical Synthesis and Phase Control of Nanocrystalline CdS. *Chemistry Letters*, 344–345. [10.1246/cl.2001.344](https://doi.org/10.1246/cl.2001.344). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wang2001-cds-sonochemical).
+
+- Edward E. Foos; Rhonda M. Stroud; Alan D. Berry (2001). Synthesis and Characterization of Nanocrystalline Bismuth Telluride. *Nano Letters*, 1, 693–695. [10.1021/nl0156179](https://doi.org/10.1021/nl0156179). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=foos2001-bi2te3-nl0156179).
 
 - Daniele Gerion; Fabien Pinaud; Shara C. Williams; Wolfgang J. Parak; Daniela Zanchet; Shimon Weiss; A. Paul Alivisatos (2001). Synthesis and Properties of Biocompatible Water-Soluble Silica-Coated CdSe/ZnS Semiconductor Quantum Dots. *Journal of Physical Chemistry B*, 105, 8861–8871. [10.1021/jp0105488](https://doi.org/10.1021/jp0105488). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=gerion2001).
 
@@ -151,9 +169,17 @@ Dataset **0.41.2** · **72 primary source groups** · release `mattersyn-gold-ya
 
 - Noelio Oliveira Dantas; Fanyao Qu; R. S. Silva; Paulo César Morais (2002). Anti-Stokes Photoluminescence in Nanocrystal Quantum Dots. *Journal of Physical Chemistry B*, 106, 7453–7457. [10.1021/jp0208743](https://doi.org/10.1021/jp0208743). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=dantas2002).
 
+- Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller (2002). Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals. *Journal of the American Chemical Society*, 124, 11480–11485. [10.1021/ja025976l](https://doi.org/10.1021/ja025976l). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=shevchenko2002-copt3-ja025976l).
+
 - Brian L. Wehrenberg; Congjun Wang; Philippe Guyot-Sionnest (2002). Interband and Intraband Optical Studies of PbSe Colloidal Quantum Dots. *Journal of Physical Chemistry B*, 106, 10634–10640. [10.1021/jp021187e](https://doi.org/10.1021/jp021187e). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wehrenberg2002-jp021187e).
 
+- Sanjay Mathur; Hao Shen; Nicolas Lecerf; Arne Kjekshus; Helmer Fjellvåg; Gerardo F. Goya (2002). Nanocrystalline Orthoferrite GdFeO3 from a Novel Heterobimetallic Precursor. *Advanced Materials*, 14, 1405–1409. [10.1002/1521-4095(20021002)14:19<1405::AID-ADMA1405>3.0.CO;2-B](https://doi.org/10.1002/1521-4095(20021002)14:19<1405::AID-ADMA1405>3.0.CO;2-B). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=mathur2002-gdfeo3-adma1405).
+
+- Hui Du; Chialing Chen; Rishikesh Krishnan; Todd D. Krauss; Jeffrey M. Harbold; Frank W. Wise; Malcolm G. Thomas; John Silcox (2002). Optical Properties of Colloidal PbSe Nanocrystals. *Nano Letters*, 2, 1321–1324. [10.1021/nl025785g](https://doi.org/10.1021/nl025785g). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=du2002-pbse-nl025785g).
+
 - Guangshun Yi; Baoquan Sun; Fengzhen Yang; Depu Chen; Yuxiang Zhou; Jing Cheng (2002). Synthesis and Characterization of High-Efficiency Nanocrystal Up-Conversion Phosphors: Ytterbium and Erbium Codoped Lanthanum Molybdate. *Chemistry of Materials*, 14, 2910–2914. [10.1021/cm0115416](https://doi.org/10.1021/cm0115416). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yi2002).
+
+- Daniela Kovacheva; Hristo Gadjov; Kostadin Petrov; Sankar Mandal; Mónica G. Lazarraga; Laura Pascual; J. Manuel Amarilla; Rosa M. Rojas; Pilar Herrero; José M. Rojo (2002). Synthesizing nanocrystalline LiMn2O4 by a combustion route. *Journal of Materials Chemistry*, 12, 1184–1188. [10.1039/b107669h](https://doi.org/10.1039/b107669h). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=kovacheva2002-limn2o4-b107669h).
 
 - Sarbajit Banerjee; Stanislaus S. Wong (2003). In Situ Quantum Dot Growth on Multiwalled Carbon Nanotubes. *Journal of the American Chemical Society*, 125, 10342–10350. [10.1021/ja035980c](https://doi.org/10.1021/ja035980c). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=banerjee2003).
 
@@ -179,9 +205,15 @@ Dataset **0.41.2** · **72 primary source groups** · release `mattersyn-gold-ya
 
 - Einat Tirosh; Gabriel Shemer; Gil Markovich (2006). Optimizing Cobalt Ferrite Nanocrystal Synthesis Using a Magneto-optical Probe. *Chemistry of Materials*, 18, 465–470. [10.1021/cm052401p](https://doi.org/10.1021/cm052401p). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=tirosh2006).
 
+- T. Qiu; X. L. Wu; Y. C. Cheng; G. G. Siu; Paul K. Chu (2006). Silver nanocrystal superlattices: Self-assembly and optical emission. *Applied Physics Letters*, 88. [10.1063/1.2192645](https://doi.org/10.1063/1.2192645). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=qiu2006-ag-superlattice).
+
 - Ying-Song Fu; Xi-Wen Du; Sergei A. Kulinich; Jian-Sheng Qiu; Wen-Jing Qin; Rui Li; Jing Sun; Jim Liu (2007). Stable Aqueous Dispersion of ZnO Quantum Dots with Strong Blue Emission via Simple Solution Route. [10.1021/ja075604i](https://doi.org/10.1021/ja075604i). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=fu2007).
 
+- Jianping Ge; Yongxing Hu; Maurizio Biasini; Ward P. Beyermann; Yadong Yin (2007). Superparamagnetic Magnetite Colloidal Nanocrystal Clusters. *Angewandte Chemie International Edition*, 46, 4342–4345. [10.1002/anie.200700197](https://doi.org/10.1002/anie.200700197). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ge2007-magnetite-anie200700197).
+
 - Yue Wu, Cyrus Wadia, Wanli Ma, Bryce Sadtler, A. Paul Alivisatos (2008). Synthesis and Photovoltaic Application of Copper(I) Sulfide Nanocrystals. [10.1021/nl801817d](https://doi.org/10.1021/nl801817d). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wu2008).
+
+- S. Stankov; Y. Z. Yue; M. Miglierini; B. Sepiol; I. Sergueev; A. I. Chumakov; L. Hu; P. Svec; R. Rüffer (2008). Vibrational Properties of Nanograins and Interfaces in Nanocrystalline Materials. *Physical Review Letters*, 100, 235503. [10.1103/PhysRevLett.100.235503](https://doi.org/10.1103/PhysRevLett.100.235503). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=stankov2008-fe90zr7b3).
 
 - Minjie Li; Jianying Ouyang; Christopher I. Ratcliffe; Laetitia Pietri; Xiaohua Wu; Donald M. Leek; Igor Moudrakovski; Quan Lin; Bai Yang; Kui Yu (2009). CdS Magic-Sized Nanocrystals Exhibiting Bright Band Gap Photoemission via Thermodynamically Driven Formation. *ACS Nano*, 3, 3832–3838. [10.1021/nn9009455](https://doi.org/10.1021/nn9009455). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2009-nn9009455).
 
@@ -314,76 +346,6 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 - [Si diamond cubic reference](https://www.crystallography.net/cod/9008565.html). literature bulk reference.
 
 - [Constructed zinc-blende CdSe reference](https://researchconnect.buffalo.edu/en/publications/growth-of-cubic-zinc-blende-cdse-by-molecular-beam-epitaxy/). constructed lattice reference.
-
-- [CdTe zinc blende (alternative phase) reference](https://www.crystallography.net/cod/9008840.html). literature bulk reference.
-
-- [ZnTe zinc-blende bulk reference](https://www.crystallography.net/cod/9008858.html). literature bulk reference.
-
-- [HgS metacinnabar (zinc-blende) reference](https://www.crystallography.net/cod/1011368.html). literature bulk reference.
-
-- [HgS cinnabar alternative bulk phase](https://www.crystallography.net/cod/9012082.html). literature bulk reference.
-
-- [Cs4PbBr6 rhombohedral bulk reference](https://www.crystallography.net/cod/1538416.html). literature bulk reference.
-
-- [Co face-centred cubic reference](https://www.crystallography.net/cod/9008466.html). literature bulk reference.
-
-- [Co hexagonal close-packed reference](https://www.crystallography.net/cod/9010967.html). literature bulk reference.
-
-- [CuSbS2 chalcostibite reference](https://www.crystallography.net/cod/9003580.html). literature bulk reference.
-
-- [Cu3SbS4 famatinite reference](https://www.crystallography.net/cod/8104122.html). literature bulk reference.
-
-- [Cu12Sb4S13 tetrahedrite reference](https://www.crystallography.net/cod/2101865.html). literature bulk reference.
-
-- [Cu3SbS3 monoclinic skinnerite reference](https://www.crystallography.net/cod/9004360.html). literature bulk reference.
-
-- [CuS covellite reference](https://www.crystallography.net/cod/9000523.html). literature bulk reference.
-
-- [Cu1.8S rhombohedral digenite reference](https://www.crystallography.net/cod/1536218.html). literature bulk reference.
-
-- [Cu2S high-chalcocite average reference](https://www.crystallography.net/cod/1529746.html). literature bulk reference.
-
-- [Ni3S4 polydymite reference](https://www.crystallography.net/cod/9009863.html). literature bulk reference.
-
-- [Metallic Ni FCC reference](https://www.crystallography.net/cod/9008476.html). literature bulk reference.
-
-- [NiS millerite reference](https://www.crystallography.net/cod/9004078.html). literature bulk reference.
-
-- [ZnGa2O4 bulk spinel reference](https://www.crystallography.net/cod/4001767.html). literature bulk reference.
-
-- [Bi2S3 bismuthinite reference at ambient pressure](https://www.crystallography.net/cod/9007398.html). literature bulk reference.
-
-- [CoNi2S4 neutron-refined spinel reference](https://www.crystallography.net/cod/9009852.html). literature bulk reference.
-
-- [CoS NiAs-type jaipurite reference](https://www.crystallography.net/cod/1011037.html). literature bulk reference.
-
-- [FePt ordered tetragonal alternative reference](https://www.crystallography.net/cod/9004222.html). literature bulk reference.
-
-- [Graphite 2H planar-layer reference](https://www.crystallography.net/cod/9011577.html). literature bulk reference.
-
-- [Cs3Cu2Cl5 Pnma alternative reference](https://www.crystallography.net/cod/7246298.html). literature bulk reference.
-
-- [Cu2SnS3 monoclinic alternative reference](https://www.crystallography.net/cod/1526187.html). literature bulk reference.
-
-- [La2(MoO4)3 monoclinic bulk alternative](https://www.crystallography.net/cod/2107003.html). literature bulk reference.
-
-- [Fe3O4 magnetite bulk comparator](https://www.crystallography.net/cod/9005812.html). literature bulk reference.
-
-- [Fe2O3 hematite bulk comparator](https://www.crystallography.net/cod/9000139.html). literature bulk reference.
-
-- [Fe2O3 maghemite average bulk comparator](https://www.crystallography.net/cod/9006316.html). literature bulk reference.
-
-- [PbI2 layered 2H bulk reference](https://www.crystallography.net/cod/9009114.html). literature bulk reference.
-
-- [FAPbI3 hexagonal non-H average reference](https://www.crystallography.net/cod/4335640.html). literature bulk reference.
-
-- [CsBr CsCl-type bulk reference](https://www.crystallography.net/cod/9008788.html). literature bulk reference.
-
-- [AlOOH boehmite non-H reference](https://www.crystallography.net/cod/9012252.html). literature bulk reference.
-
-- [CdTe wurtzite constructed reference](https://stars.library.ucf.edu/fsec/1898/). constructed reference.
-
-- [Calcined SSZ-48 partial Si/O framework](https://doi.org/10.1021/jp991389j). source table partial framework.
 
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
 

@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "foos2001-bi2te3-anneal230",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Foos et al. (2001): w = 5 powder annealed at230°C in He",
+  "material": {
+    "formula": "Bi2Te3",
+    "family": "Bismuth telluride nanocrystals",
+    "elements": [
+      "Bi",
+      "Te"
+    ],
+    "components": [
+      "Bi2Te3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "w = 5 powder annealed at230°C in He",
+  "sources": [
+    {
+      "id": "foos2001-bi2te3-nl0156179",
+      "doi": "10.1021/nl0156179",
+      "title": "Synthesis and Characterization of Nanocrystalline Bismuth Telluride",
+      "authors": "Edward E. Foos; Rhonda M. Stroud; Alan D. Berry",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/nl0156179",
+      "main_status": "All 3 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Supporting Information and all cited full sources unreviewed.",
+      "reuse_status": "Four source figures proposed for user-directed display; publisher permission unverified. Source footer states article not subject to U.S. copyright; no broader legal permission claim inferred."
+    }
+  ],
+  "lineage": {
+    "source_group": "foos2001-bi2te3-nl0156179",
+    "recipe_family": "foos2001-bi2te3-nl0156179",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Bi2Te3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "foos2001-bi2te3-nl0156179",
+          "locator": "Main PDF p. 1–2, Typical w = 5 preparation and workup"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "powder",
+      "name": "Unannealed w = 5 Bi2Te3 powder",
+      "formula": "Bi2Te3",
+      "role": "annealing input",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Unannealed w = 5 source powder; exact physical aliquot/mass unspecified."
+      ],
+      "evidence": [
+        {
+          "source_id": "foos2001-bi2te3-nl0156179",
+          "locator": "Main PDF p. 2, Figure2b"
+        }
+      ]
+    },
+    {
+      "id": "helium",
+      "name": "Helium",
+      "formula": "He",
+      "role": "annealing atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "foos2001-bi2te3-nl0156179",
+          "locator": "Main PDF p. 2, Figure2b"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anneal-state",
+      "name": "Anneal powder output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "anneal",
+      "action": "anneal",
+      "label": "Anneal powder",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "powder",
+        "helium"
+      ],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 230,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "foos2001-bi2te3-nl0156179",
+              "locator": "Main PDF p. 2, Figure2b"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "foos2001-bi2te3-nl0156179",
+              "locator": "Main PDF p. 2, Figure2b"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "He",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "foos2001-bi2te3-nl0156179",
+            "locator": "Main PDF p. 2, Figure2b"
+          }
+        ],
+        "note": "Environment applies only to this stage; flow and absolute pressure are unreported unless separately quantified."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal w = 5 powder under He at230°C for4h; ramp, cooling, pressure, flow and vessel unreported.",
+      "evidence": [
+        {
+          "source_id": "foos2001-bi2te3-nl0156179",
+          "locator": "Main PDF p. 2, Figure2b"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "foos2001-bi2te3-anneal230-product",
+      "source_sample_label": "Annealed w = 5 powder",
+      "batch_id": null,
+      "material_state_id": "anneal-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Bi2Te3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "foos2001-bi2te3-nl0156179",
+            "locator": "Main PDF p. 2, Figure2b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Bi2Te3, diffraction peaks sharpened",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "foos2001-bi2te3-nl0156179",
+            "locator": "Main PDF p. 2, Figure2b"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "foos2001-bi2te3-nl0156179",
+          "locator": "Main PDF p. 2, Figure2b"
+        }
+      ],
+      "notes": [
+        "No annealed particle size reported. The commercial reference trace is not this product."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 source audit of all three supplied main pages, four figures and the 18-entry bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied three-page main, all four figures and bibliography entries 1–18 read; SI and cited full sources unreviewed.",
+      "Exact w = 3 charges and changes from the detailed w = 5 example are not reported. The w ratio is retained without calculating a water charge or silently copying w = 5 amounts.",
+      "TEM averages are based on only 21 and 28 particles for w = 3 and w = 5; distributions cannot be accurately reported because of agglomeration. Estimated average-size uncertainty is strictly less than 10%, not a measured standard deviation.",
+      "The source does not specify growth temperature, reactant-solution preparation, water partition or complete dropwise/air-control recipes. Ambient temperature is stated for the washing sonication only.",
+      "No measured atomic coordinates or numerical unit-cell parameters are supplied; thermoelectric performance is future work, not a measured current product property.",
+      "Independent source comparison and molecular/particle/reference-cell presentation remain pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/nl0156179",
+      "relation": "primary_source"
+    },
+    {
+      "label": "All source figures and scope",
+      "url": "paper-review.html?id=foos2001-bi2te3-nl0156179",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete study context and unassigned measurements",
+      "url": "data/paper-reviews/foos2001-bi2te3-nl0156179/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

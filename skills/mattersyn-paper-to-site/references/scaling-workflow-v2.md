@@ -202,3 +202,12 @@ For source inequalities, set `minimum_exclusive` or `maximum_exclusive` on the e
 ## September 28: remove duplicate release work
 
 Use two source-scoped extractors, one independent auditor and one integration owner within the four-worker limit. Author canonical records and Reader bindings together with the generic importer; keep five or fewer claimed papers. The accepted queue feeds ready batches without waiting for blocked papers. Run one clean full batch build through `tools/publication/one_build.py`, then reuse its sealed output via a fresh boundary gate rather than repeat the entire build. Follow `tools/publication/ONE_BUILD_RELEASE.md`; never invent science or browser receipts. Reuse unchanged independent audits and exact artifact checks. The 20 distinct verified papers/hour objective requires two extractors averaging six active minutes per paper each and one auditor averaging three minutes per paper, before integration constraints. Those are capacity targets, not timeouts or demonstrated performance. Measure each stage and rework; count only distinct deployed and anonymously verified source contributions.
+
+
+### Ready-batch overlap and unchanged-review reuse
+
+After an exact artifact is copied into the site checkout, committed and pushed, the next source batch may be prepared while Pages deploys. Keep the earlier artifact, source commit, CI, boundary and anonymous checks separately bound; a changing later checkout is not a reason to rebuild the earlier release. Do not count either batch before its own deployment verification.
+
+Reuse prior exact file-review objects during allowlist preparation when bytes, size and current path/content-class approval still match. Check current allowed classes and any required exact-blob approval. Run the final full boundary under current rights/policy for all files; the prior guard verdict is not cached. This avoids repeating sanitation during approval preparation. Independent science and changed figure/sample bindings remain required.
+
+Use fixed start/end times and a verified live baseline when the owner requests a throughput trial. Record carried-over work separately and never silently extend the denominator, count record variants as papers, or call an unachieved throughput target demonstrated.
