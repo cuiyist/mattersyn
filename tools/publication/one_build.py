@@ -82,7 +82,33 @@ def no_link(path):
     return path
 
 
+def runtime_binding(path):
+    # Only the operator-managed Python executable may traverse runtime links.
+    # Bind the invoked spelling, every ancestor identity, and the resolved target;
+    # source/artifact callers continue through no_link without this exception.
+    invoked = Path(os.path.abspath(path))
+    require(invoked == Path(os.path.abspath(sys.executable)), 'not_trusted_runtime_executable')
+    resolved = invoked.resolve(strict=True)
+    ancestry = []
+    for member in (invoked, *invoked.parents):
+        s = member.lstat()
+        attrs = getattr(s, 'st_file_attributes', 0)
+        row = {'path': str(member), 'identity': [s.st_dev, s.st_ino, s.st_mode, attrs]}
+        if stat.S_ISLNK(s.st_mode) or attrs & 0x400:
+            row['link_identity'] = [s.st_size, s.st_mtime_ns, s.st_ctime_ns]
+        ancestry.append(row)
+    target = no_link(resolved).stat()
+    require(stat.S_ISREG(target.st_mode), 'not_regular_runtime_executable')
+    return {'invoked_path': str(invoked), 'resolved_path': str(resolved),
+            'ancestry': ancestry,
+            'target_identity': [target.st_dev, target.st_ino, target.st_size,
+                                target.st_mtime_ns, target.st_ctime_ns]}
+
+
 def stable_bytes(path, *, runtime_executable=False):
+    runtime = runtime_binding(path) if runtime_executable else None
+    if runtime is not None:
+        path = runtime['resolved_path']
     path = no_link(path)
     before = path.stat()
     require(stat.S_ISREG(before.st_mode) and (runtime_executable or before.st_nlink == 1), 'not_unique_regular_file')
@@ -100,6 +126,8 @@ def stable_bytes(path, *, runtime_executable=False):
             key(before)[:-1] == key(opened)[:-1] and raw == confirm and len(raw) == after.st_size,
             'file_changed_during_read')
     no_link(path)
+    if runtime is not None:
+        require(runtime_binding(runtime['invoked_path']) == runtime, 'runtime_identity_changed_during_read')
     return raw
 
 
@@ -219,9 +247,11 @@ def runtime_state():
     # Runtime is a trusted operator-managed environment, not a hermetic sandbox.
     # Versions/executable/env are bound to detect ordinary changes. Fresh guard
     # executes again; no runtime-dependent policy verdict is reused.
-    # Conda legitimately hardlinks its installed executable into the package
-    # cache. This exception is only for the trusted runtime, never inputs/assets.
-    return {'python_sha256': digest(stable_bytes(sys.executable, runtime_executable=True)), 'python_version': sys.version,
+    # Conda hardlinks and hosted Linux symlinks are allowed only for this runtime.
+    runtime = runtime_binding(sys.executable)
+    executable_sha256 = digest(stable_bytes(sys.executable, runtime_executable=True))
+    require(runtime_binding(sys.executable) == runtime, 'runtime_identity_changed_during_read')
+    return {'python_sha256': executable_sha256, 'python_executable': runtime, 'python_version': sys.version,
             'prefix': sys.prefix, 'platform': sys.platform,
             'packages': sorted([d.metadata.get('Name', ''), d.metadata.get('Version', '')]
                                for d in importlib.metadata.distributions()),

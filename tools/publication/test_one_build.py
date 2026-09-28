@@ -4,8 +4,10 @@ import json
 import os
 from pathlib import Path
 import shutil
+import stat
 import subprocess
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -75,6 +77,67 @@ class PrimitiveTests(unittest.TestCase):
             os.link(a, b)
             with self.assertRaisesRegex(p.Rejected, 'unique_regular'):
                 p.stable_bytes(a)
+
+    def test_runtime_link_resolution_is_scoped_and_pinned(self):
+        # Model leaf/ancestor symlinks and Windows reparse paths portably; the
+        # resolved executable is read for real, without requiring link privileges.
+        with tempfile.TemporaryDirectory() as temp:
+            top = Path(temp).resolve()
+            real = top / 'runtime'; real.mkdir()
+            target = real / 'python'; target.write_bytes(b'trusted runtime')
+            alias = top / 'alias'; alias.mkdir()
+            invoked = alias / 'python'; invoked.write_bytes(b'not the target')
+            original_resolve, original_lstat = Path.resolve, Path.lstat
+            for linked, reparse in ((invoked, False), (alias, False), (alias, True)):
+                def resolve(path, *args, **kwargs):
+                    return target if path == invoked else original_resolve(path, *args, **kwargs)
+                def lstat(path, *args, **kwargs):
+                    s = original_lstat(path, *args, **kwargs)
+                    if path != linked:
+                        return s
+                    fields = {key: getattr(s, key) for key in
+                              ('st_dev', 'st_ino', 'st_mode', 'st_size', 'st_mtime_ns', 'st_ctime_ns')}
+                    fields['st_mode'] = s.st_mode if reparse else stat.S_IFLNK | 0o777
+                    fields['st_file_attributes'] = 0x400 if reparse else 0
+                    return SimpleNamespace(**fields)
+                with self.subTest(linked=linked.name, reparse=reparse), \
+                     patch.object(p.sys, 'executable', str(invoked)), \
+                     patch.object(Path, 'resolve', resolve), patch.object(Path, 'lstat', lstat):
+                    state = p.runtime_state()
+                    self.assertEqual(state['python_sha256'], p.digest(b'trusted runtime'))
+                    self.assertEqual(state['python_executable']['invoked_path'], str(invoked))
+                    self.assertEqual(state['python_executable']['resolved_path'], str(target))
+                    self.assertEqual(state['python_executable']['target_identity'][1], target.stat().st_ino)
+                    self.assertTrue(any('link_identity' in row for row in state['python_executable']['ancestry']))
+                    with self.assertRaisesRegex(p.Rejected, 'symlink_or_reparse'):
+                        p.stable_bytes(invoked)
+                    with self.assertRaisesRegex(p.Rejected, 'not_trusted_runtime'):
+                        p.stable_bytes(target, runtime_executable=True)
+
+    def test_runtime_same_bytes_retarget_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            top = Path(temp).resolve()
+            invoked = top / 'python'; invoked.write_bytes(b'same')
+            other = top / 'other'; other.write_bytes(b'same')
+            original_resolve = Path.resolve
+            calls = []
+            def resolve(path, *args, **kwargs):
+                if path == invoked:
+                    calls.append(path)
+                    return invoked if len(calls) == 1 else other
+                return original_resolve(path, *args, **kwargs)
+            with patch.object(p.sys, 'executable', str(invoked)), patch.object(Path, 'resolve', resolve):
+                with self.assertRaisesRegex(p.Rejected, 'runtime_identity_changed'):
+                    p.stable_bytes(invoked, runtime_executable=True)
+
+    def test_runtime_hardlink_exception_cannot_be_used_for_inputs(self):
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp).resolve() / 'python'; target.write_bytes(b'runtime')
+            os.link(target, target.with_name('package-cache-copy'))
+            with patch.object(p.sys, 'executable', str(target)):
+                self.assertEqual(p.stable_bytes(target, runtime_executable=True), b'runtime')
+                with self.assertRaisesRegex(p.Rejected, 'unique_regular'):
+                    p.stable_bytes(target)
 
 
 class TransactionTests(unittest.TestCase):
