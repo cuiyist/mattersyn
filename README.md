@@ -72,6 +72,8 @@ Public citations are generated below from the same dataset snapshot used by the 
 
 ## Reviewed source scopes and experimental evidence
 
+- Qiu et al. (2006). *Silver nanocrystal superlattices: Self-assembly and optical emission*. [DOI 10.1063/1.2192645](https://doi.org/10.1063/1.2192645). All four supplied pages, including cover and three main article pages, independently audited; one synthesis record and three source figures. SI and cited full texts unreviewed; presentation refinements pending.
+
 - Li, B.; Xie, Y.; Liu, Y.; Huang, J.; Qian, Y. (2001). *Sonochemical Synthesis of Nanocrystalline Silver Tellurides Ag2Te and Ag7Te4*. Journal of Solid State Chemistry 158,260–263. [DOI 10.1006/jssc.2001.9103](https://doi.org/10.1006/jssc.2001.9103). Experimental partial display of eight reagent-amount fields from two method excerpts. Not a full-paper scientific review or complete recipe–structure pair; accuracy unmeasured and training excluded.
 
 - Lu et al. (1999). *A Low Temperature Nitridation Route for Nanocrystalline AlN*. [DOI 10.1246/cl.1999.1239](https://doi.org/10.1246/cl.1999.1239). Both supplied main pages independently audited; four recipe/outcome variants, twelve measurements and four source figures. SI and cited methods unreviewed; visual refinements pending.

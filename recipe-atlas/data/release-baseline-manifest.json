@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1025,
-  "group_count": 75,
+  "record_count": 1026,
+  "group_count": 76,
   "families": [
     "Ag2S nanocrystals",
     "Aluminum nitride nanocrystals",
@@ -76,6 +76,7 @@
     "SSZ-48 borosilicate zeolite",
     "Semiconductor quantum dots in ordered mesoporous silica",
     "Semiconductor quantum-dot quantum-well heterostructures",
+    "Silver nanocrystals and self-assembled monolayers",
     "Solvothermal iron indium sulfide",
     "Supported group-IV quantum-dot arrays",
     "Surface-functionalized II–VI quantum dots",
@@ -49568,6 +49569,78 @@
         "CdSe"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "qiu2006-ag-superlattice-150c",
+      "title": "Qiu et al. (2006): silver nanocrystals by hydrothermal phase transfer",
+      "formula": "Ag",
+      "family": "Silver nanocrystals and self-assembled monolayers",
+      "method": "Hydrothermal phase-transfer synthesis",
+      "record_type": "literature_protocol",
+      "source_year": 2006,
+      "source_doi": "10.1063/1.2192645",
+      "revision": 1,
+      "record_sha256": "26e281b313654a0b3e59850f1ca82829cfa3e0edeca996eab4c755b3a0d0080c",
+      "recipe_signature": "dc813f520d1e901a2848532a63a598ab76a3f8f4eb44e049e29b5c561986f384",
+      "group_id": "group-81955814c6e4",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/qiu2006-ag-superlattice-150c.json",
+      "page_url": "records/qiu2006-ag-superlattice-150c.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag"
+      ],
+      "pair_ids": [
+        "qiu2006-ag-superlattice-150c::qiu2006-ag-superlattice-150c-product"
+      ]
     },
     {
       "record_id": "ribeiro-2004-concentration-structure",
