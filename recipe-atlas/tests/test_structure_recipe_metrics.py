@@ -202,6 +202,42 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual('wurtzite',descriptor['observed_product']['structure']['phase']['value'])
         self.assertEqual(2,len(descriptor['observed_product']['structure']['measurement_refs']))
 
+    def test_author_derived_composition_retains_its_qualified_evidence(self):
+        r = self.record()
+        r['products'][0]['composition'].update(status='author_derived', note='Source author estimate, not a directly measured composition.')
+        result = recipe_structure_outcome_coverage([r], {'measurement_properties': ['diameter']})
+        self.assertEqual(1, len(result['rows']))
+        self.assertEqual(r['products'][0]['composition'], result['rows'][0]['composition'])
+        self.assertEqual(r['products'][0]['composition'], result['rows'][0]['structure_descriptor_v02']['observed_product']['composition'])
+        # Broad evidence visibility never confers task-specific coordinate readiness.
+        self.assertFalse(assess_structure_recipe(r)['eligible'])
+
+
+    def test_author_derived_composition_cannot_bypass_evidence_or_review(self):
+        for failure in ['no_evidence', 'wrong_source', 'empty_locator', 'unreviewed', 'general_link']:
+            with self.subTest(failure=failure):
+                r = self.record()
+                comp = r['products'][0]['composition']
+                comp['status'] = 'author_derived'
+                if failure == 'no_evidence': comp['evidence'] = []
+                elif failure == 'wrong_source': comp['evidence'] = [{'source_id': 'unrelated', 'locator': 'Unrelated source'}]
+                elif failure == 'empty_locator': comp['evidence'] = [{'source_id': 'synthetic-source', 'locator': ' '}]
+                elif failure == 'unreviewed': r['quality']['review_status'] = 'metadata_only'
+                elif failure == 'general_link': r['products'][0]['recipe_link'] = 'general_context'
+                self.assertEqual([], recipe_structure_outcome_coverage([r], {'measurement_properties': ['diameter']})['rows'])
+
+
+    def test_inferred_composition_and_author_derived_composition_only_are_not_pairs(self):
+        r = self.record()
+        r['products'][0]['composition']['status'] = 'inferred'
+        self.assertEqual([], recipe_structure_outcome_coverage([r], {'measurement_properties': ['diameter']})['rows'])
+        r['products'][0]['composition']['status'] = 'author_derived'
+        r['products'][0]['phase'] = {'status': 'not_reported', 'value': None, 'evidence': []}
+        r['products'][0]['morphology'] = {'status': 'not_reported', 'value': None, 'evidence': []}
+        r['measurements'] = []
+        self.assertEqual([], recipe_structure_outcome_coverage([r], {'measurement_properties': ['diameter']})['rows'])
+
+
     def test_optical_only_outcome_is_not_a_structure_pair(self):
         r=self.record();r['products'][0]['phase']={'status':'not_reported','value':None,'evidence':[]}
         r['measurements']=[{'id':'absorption','sample_id':'sample-a','property':'absorption_peak','value':r['quality'] and {'status':'reported','value':650,'evidence':[{'source_id':'synthetic-source','locator':'Synthetic optical result'}]},'technique':'Optical absorption','conditions':'Synthetic fixture','evidence':[{'source_id':'synthetic-source','locator':'Synthetic optical result'}]}]
@@ -229,7 +265,7 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
         strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':283,'source_groups':64,'records':244,'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual({'recipe_structure_rows':291,'source_groups':66,'records':252,'physical_samples_deduplicated':None},broad['counts'])
         new_contexts={(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group'] in {'ghezelbash2005-main','hu-wang-2010-nickel-hydroxychloride'}}
         self.assertEqual({
             ('ghezelbash-2005-cu1p8s-variant','cu1p8s-reagent-adjusted'),
@@ -296,8 +332,8 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         from reader_collection import collection_summary
         collection=collection_summary(records,broad['rows'],[])
         page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
-        self.assertIn('Browse all 283 pairs',page)
-        self.assertEqual(283,page.count('<tr><td><a href="records/'))
+        self.assertIn('Browse all 291 pairs',page)
+        self.assertEqual(291,page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))

@@ -332,7 +332,7 @@ def recipe_structure_outcome_coverage(records, property_policy):
         for sample in record['products']:
             if sample.get('recipe_link') != 'explicit' or not _supported_evidence(sample.get('link_evidence', []), source_ids):
                 continue
-            if not _supported_fact(sample.get('composition'), source_ids, {'reported', 'calculated', 'inherited'}):
+            if not _supported_fact(sample.get('composition'), source_ids, {'reported', 'calculated', 'author_derived', 'inherited'}):
                 continue
             structure = []
             for field in ('phase', 'morphology'):

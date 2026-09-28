@@ -34,11 +34,17 @@ Morning and two-hour reports are disabled; progress is on request while quiet
 continuation remains active. Inventory counts and memberships derive from reviewed
 inputs at build time. The calibrated silver Reader/monitor remain disabled pending
 calibration and admission; the separately labelled experimental display has its own
-release path and never changes gold or training eligibility. Batch safe public
-postpublication administrative updates with the next ready substantive source
-transaction, preserving exact private proof events immediately and running all
-fresh checks on the combined payload. No automatic publication or capacity claim
-follows from this sequencing change.
+release path and never changes gold or training eligibility. Use two extraction
+lanes, one independent auditor and one integration/publication owner, with at most
+four active agents and five paper claims. Publish ready contributions in batches
+with one shared release check. Reuse unchanged accepted source and apparatus audits
+and exact unchanged gate receipts; rerun only changed or failed checks and their
+affected dependencies. Required scientific, privacy, build, browser, CI and anonymous
+verification gates remain in force. Preserve exact private publication proofs
+immediately and batch safe public administrative updates with the next substantive
+transaction. The 20 completed papers/hour and six active author-minutes/paper targets
+are unproven capacity targets; record active author time separately from elapsed
+publication throughput without reducing the scoped scientific work.
 
 ## Local workspace organization
 
@@ -66,13 +72,15 @@ The committed publication registry binds reviewed asset hashes and provenance. T
 
 ## Release checks
 
-The candidate must be inspected before preparing its exact output allowlist. A final clean build requires `--gate`, `--policy`, `--allowlist` and `--registry` instead of `--candidate`; publication is a separate action. The final source and artifact gates must reject unlisted files as well as mismatched hashes. Snapshot validation checks listed input hashes; it is not, by itself, an exact directory-membership approval. The final artifact must match the reviewed release snapshot and pass the public content and asset-rights boundary.
+Run the full clean build and validators once per ready batch using [sealed build and promotion](tools/publication/ONE_BUILD_RELEASE.md). Reuse that exact successful artifact after independent scientific and browser acceptance, exact source CI and reproducibility checks; then run the public boundary gate once before upload. Do not repeat an unchanged successful build as a separate final build. Changed or failed inputs invalidate reuse and require the affected checks. Unsealed historical candidates use the legacy clean final-build path. Publication remains a separate action, and unlisted files or mismatched bytes must fail. A snapshot alone is not directory-membership approval.
 
 Public citations are generated below from the same dataset snapshot used by the website. Earlier operational notes are retained in [CHANGELOG.md](recipe-atlas/CHANGELOG.md).
 
 ## Reviewed source scopes and experimental evidence
 
-- Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller (2002). *Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals*. Journal of the American Chemical Society 124, 11480–11485. [DOI 10.1021/ja025976l](https://doi.org/10.1021/ja025976l). Six supplied main pages, six figures, Table 1 and twenty bibliography entries independently audited. Twelve direct growth routes and ten supporting contexts retain 27 qualified partial outcomes, source conflicts and missing conditions. SI and cited full texts unreviewed; presentation refinements pending. Accepted for integration; publication has not yet been verified.
+- T. Igarashi; M. Ihara; T. Kusunoki; K. Ohno; T. Isobe; M. Senna (2001). *Characterization of Mn2+ coordination states in ZnS nanocrystal by EPR spectroscopy and related photoluminescence properties*. [DOI 10.1023/A:1011445009443](https://doi.org/10.1023/A:1011445009443). Six supplied main pages, seven figures, two tables and 26 bibliography entries independently audited; SI and cited full texts unreviewed. Two preparation records retain two qualified partial structural outcomes. Independently accepted; publication and presentation refinements pending.
+- Kovacheva et al. (2002). *Synthesizing nanocrystalline LiMn2O4 by a combustion route*. [DOI 10.1039/b107669h](https://doi.org/10.1039/b107669h). Five supplied main pages, seven figures, three equations and forty bibliography entries independently audited. Six powder preparation outcomes and two supporting property-specimen procedures retain six qualified partial pairs, source-derived composition estimates, impurities and missing recipe details. SI and cited full texts unreviewed; presentation refinements pending. Accepted for integration; publication has not yet been verified.
+- Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller (2002). *Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals*. Journal of the American Chemical Society 124, 11480–11485. [DOI 10.1021/ja025976l](https://doi.org/10.1021/ja025976l). Six supplied main pages, six figures, Table 1 and twenty bibliography entries independently audited. Twelve direct growth routes and ten supporting contexts retain 27 qualified partial outcomes, source conflicts and missing conditions. SI and cited full texts unreviewed; presentation refinements pending. Published and anonymously verified; see the versioned publication receipt.
 - Hui Du; Chialing Chen; Rishikesh Krishnan; Todd D. Krauss; Jeffrey M. Harbold; Frank W. Wise; Malcolm G. Thomas; John Silcox (2002). *Optical Properties of Colloidal PbSe Nanocrystals*. Nano Letters 2(11), 1321–1324. [DOI 10.1021/nl025785g](https://doi.org/10.1021/nl025785g). Four supplied main pages, six figures and the 28-entry bibliography independently audited through R4. One common preparation and three partial size-context outcomes retain unspecified per-size schedules and unresolved specimen preparation; optical-only series and theory are contextual. SI and cited full texts unreviewed; presentation refinements pending. Published and anonymously verified; see the versioned publication receipt.
 - Jianping Ge; Yongxing Hu; Maurizio Biasini; Ward P. Beyermann; Yadong Yin (2007). *Superparamagnetic Magnetite Colloidal Nanocrystal Clusters*. Angewandte Chemie International Edition 46, 4342–4345. [DOI 10.1002/anie.200700197](https://doi.org/10.1002/anie.200700197). Four supplied main pages, five figures and the 21-entry bibliography independently audited through R2. Six stock-volume/cluster-size preparations and six partial structural outcomes preserve cluster/crystallite and recipe/analytical distinctions. SI and cited full texts unreviewed; presentation refinements pending. Published and anonymously verified; see the versioned publication receipt.
 - Yi Xie; Zhengping Qiao; Meng Chen; Yingjie Zhu; Yitai Qian (1999). *γ-Irradiation Route to Nanocrystalline Lead Selenide*. Chemistry Letters 28, 875–876. [DOI 10.1246/cl.1999.875](https://doi.org/10.1246/cl.1999.875). Both supplied main pages and both figures independently audited through R2. One successful ethylenediamine method and two separately scoped negative solvent controls; one partial recipe–structure outcome. Source activity is distinct from absorbed dose, and irradiation duration remains unknown. SI and cited full texts unreviewed; presentation refinements pending. Published and anonymously verified; see the versioned publication receipt.

@@ -1,0 +1,573 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kovacheva2002-2a-impedance-pellet",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Kovacheva et al. (2002): 2A-derived impedance pellet and transport fits",
+  "material": {
+    "formula": "LiMn2O4",
+    "family": "Lithium manganese oxide spinel",
+    "elements": [
+      "Li",
+      "Mn",
+      "O"
+    ],
+    "components": [
+      "LiMn2O4"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Preparation for property measurement",
+  "sources": [
+    {
+      "id": "kovacheva2002-limn2o4-b107669h",
+      "doi": "10.1039/b107669h",
+      "title": "Synthesizing nanocrystalline LiMn2O4 by a combustion route",
+      "authors": "Daniela Kovacheva; Hristo Gadjov; Kostadin Petrov; Sankar Mandal; Mónica G. Lazarraga; Laura Pascual; J. Manuel Amarilla; Rosa M. Rojas; Pilar Herrero; José M. Rojo",
+      "year": 2002,
+      "url": "https://doi.org/10.1039/b107669h",
+      "main_status": "All 5 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Any SI and cited full sources unreviewed.",
+      "reuse_status": "Seven exact source figures proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "kovacheva2002-limn2o4-b107669h",
+    "recipe_family": "kovacheva2002-limn2o4-b107669h",
+    "parent_record_id": "kovacheva2002-limn2o4-2a",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Nominal LiMn2O4",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 1–2, Experimental combustion preparation and sample nomenclature"
+        }
+      ],
+      "note": "Starting nominal stoichiometry; source-derived lithium-rich composition estimates are retained separately."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "No separate post-sintering phase/particle measurement of this pellet."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "powder-2a",
+      "name": "2A spinel powder",
+      "formula": "LiMn2O4",
+      "role": "powder input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nominal family identity; source analyses infer lithium excess. No feed mass or separately identified batch."
+      ],
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    },
+    {
+      "id": "silver-electrode",
+      "name": "Silver electrodes",
+      "formula": "Ag",
+      "role": "measurement contacts",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Electrode geometry, deposition method, thickness and area unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Dry nitrogen",
+      "formula": "N2",
+      "role": "electrical measurement environment",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Still dry N2, not a reported flowing gas or pressure-controlled environment."
+      ],
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "cold-press-state",
+      "name": "Cold-press a cylindrical pellet output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sinter-state",
+      "name": "Sinter the measurement pellet output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cold-press-state"
+      ]
+    },
+    {
+      "id": "mount-state",
+      "name": "Fit silver electrodes and mount in cryostat output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "sinter-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "cold-press",
+      "action": "press",
+      "label": "Cold-press a cylindrical pellet",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "powder-2a"
+      ],
+      "outputs": [
+        "cold-press-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cold-press the spinel powder; pressure, duration and dimensions are not stated.",
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    },
+    {
+      "id": "sinter",
+      "action": "sinter",
+      "label": "Sinter the measurement pellet",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cold-press"
+      ],
+      "inputs": [
+        "cold-press-state"
+      ],
+      "outputs": [
+        "sinter-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kovacheva2002-limn2o4-b107669h",
+              "locator": "Main PDF p. 2, Two-probe impedance methods"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kovacheva2002-limn2o4-b107669h",
+              "locator": "Main PDF p. 2, Two-probe impedance methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sinter at 700 °C for 3 h. This is a separate three-hour pellet treatment, not the one-hour powder anneal; atmosphere is not independently specified in this paragraph.",
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    },
+    {
+      "id": "mount",
+      "action": "assemble",
+      "label": "Fit silver electrodes and mount in cryostat",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "sinter"
+      ],
+      "inputs": [
+        "sinter-state",
+        "silver-electrode",
+        "nitrogen"
+      ],
+      "outputs": [
+        "mount-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use silver electrodes and mount the pellet in an Oxford cryostat. No separate post-sintering structure measurement is given.",
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "electrical-range",
+      "label": "Electrical measurement sweep (not synthesis variants)",
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": -150,
+          "maximum": 80,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kovacheva2002-limn2o4-b107669h",
+              "locator": "Main PDF p. 2, Two-probe impedance methods"
+            }
+          ],
+          "derivation": null
+        },
+        "frequency": {
+          "value": null,
+          "minimum": 5,
+          "maximum": 1000000.0,
+          "unit": "Hz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kovacheva2002-limn2o4-b107669h",
+              "locator": "Main PDF p. 2, Two-probe impedance methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2, Two-probe impedance methods"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "kovacheva2002-2a-impedance-pellet-product",
+      "source_sample_label": "2A-derived impedance pellet",
+      "batch_id": null,
+      "material_state_id": "mount-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "2A-derived lithium manganese oxide pellet",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kovacheva2002-limn2o4-b107669h",
+            "locator": "Main PDF p. 2–3, Impedance preparation and 2A conductivity"
+          }
+        ],
+        "note": "Inherited powder identity only; sintered-pellet composition and crystal structure not independently measured."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 2–3, Two-probe methods and explicit 2A electrical characterization"
+        }
+      ],
+      "notes": [
+        "Supporting measurement specimen; no borrowed TEM diameter or powder lattice parameter.",
+        "External parent sample kovacheva2002-limn2o4-2a-product (source label 2A) is in record kovacheva2002-limn2o4-2a from Kovacheva et al. (2002), DOI 10.1039/b107669h. The local-only parent_sample_id is null; the parent_sample context link preserves this cross-record relationship. Parent measurements are not inherited."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hopping-energy",
+      "sample_id": "kovacheva2002-2a-impedance-pellet-product",
+      "property": "hopping_activation_energy",
+      "technique": "Source conductivity-model fit",
+      "value": {
+        "value": 0.37,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kovacheva2002-limn2o4-b107669h",
+            "locator": "Main PDF p. 3, Figure 4 caption and conductivity models"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "2A-derived pellet; >180 K nearest-neighbor model for W and <180 K variable-range model for alpha/N(EF).",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 3, Figure 4 caption and conductivity models"
+        }
+      ]
+    },
+    {
+      "id": "localization-alpha",
+      "sample_id": "kovacheva2002-2a-impedance-pellet-product",
+      "property": "localization_inverse_length",
+      "technique": "Source conductivity-model fit",
+      "value": {
+        "value": 0.27,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom^-1",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kovacheva2002-limn2o4-b107669h",
+            "locator": "Main PDF p. 3, Figure 4 caption and conductivity models"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "2A-derived pellet; >180 K nearest-neighbor model for W and <180 K variable-range model for alpha/N(EF).",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 3, Figure 4 caption and conductivity models"
+        }
+      ]
+    },
+    {
+      "id": "density-fermi",
+      "sample_id": "kovacheva2002-2a-impedance-pellet-product",
+      "property": "density_of_states_at_fermi_level",
+      "technique": "Source conductivity-model fit",
+      "value": {
+        "value": 8.8e+17,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV^-1 cm^-3",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kovacheva2002-limn2o4-b107669h",
+            "locator": "Main PDF p. 3, Figure 4 caption and conductivity models"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "2A-derived pellet; >180 K nearest-neighbor model for W and <180 K variable-range model for alpha/N(EF).",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kovacheva2002-limn2o4-b107669h",
+          "locator": "Main PDF p. 3, Figure 4 caption and conductivity models"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent source audit of all five supplied main pages, seven figures, three equations and the 40-entry bibliography passed, including bounded R3 stock-basis, supplied-electrolyte, characterization-stage and averaging-qualifier corrections. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied five-page main only; SI and all cited full sources remain unreviewed.",
+      "Individual precursor and sucrose masses are not printed; source computes charges for a nominal 3 g LiMn2O4 target. No reagent masses or actual product yield are calculated here.",
+      "F:O is the total fuel/oxidizer redox-valence ratio, not a molar reagent ratio. LiNO3 in the formal reaction equation is not a separately reported purchased reagent charge.",
+      "Minimum dilute HNO3 volume/concentration, combustion duration and peak temperature, ignition source, cooling and powder collection are unreported. The 120 °C value is the electric-heater preparation condition, not an observed combustion temperature.",
+      "For annealing, portion mass/fraction, furnace geometry, heating/cooling rates and post-treatment handling are not stated. Physical batch IDs are absent.",
+      "Lattice parameters and source-inferred cation occupancies do not supply atom coordinates or refined measured atomic structures.",
+      "Molecular, unit-cell and particle illustrations remain presentation pending where not separately supplied.",
+      "Pellet mass, dimensions, pressing pressure/time and post-sintering particle-size/phase measurements are unreported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1039/b107669h",
+      "relation": "primary_source"
+    },
+    {
+      "label": "All source figures and scope",
+      "url": "paper-review.html?id=kovacheva2002-limn2o4-b107669h",
+      "relation": "source_review"
+    },
+    {
+      "label": "Analytical methods, composition alternatives and theory",
+      "url": "data/paper-reviews/kovacheva2002-limn2o4-b107669h/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Parent sample 2A — Kovacheva et al. (2002); kovacheva2002-limn2o4-2a-product",
+      "url": "data/records/kovacheva2002-limn2o4-2a.json#/products/0",
+      "relation": "parent_sample"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

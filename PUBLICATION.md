@@ -151,3 +151,7 @@ visibility choice does not prove old objects, caches or copies have been erased.
 GitHub Support may or may not remove retained objects; no purge is guaranteed. No
 further history rewrite is planned, and no support request is to be submitted
 without separate explicit user authorization.
+
+## Reuse one successful batch build
+
+The integration owner has adopted the tested [sealed one-build workflow](tools/publication/ONE_BUILD_RELEASE.md). Build and run the complete checks once on clean committed batch inputs. Promote only those identical files after the required science, browser, source-export and exact-head CI evidence is verified; run the public artifact boundary once. A promoted-artifact receipt is not a publication receipt. Site CI and anonymous verification still precede paper credit. Any changed or failed dependency invalidates reuse. Do not create per-paper publishing scripts or rerun a passing unchanged release merely to produce another status report.
