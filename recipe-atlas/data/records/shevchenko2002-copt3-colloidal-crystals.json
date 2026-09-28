@@ -1,0 +1,569 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shevchenko2002-copt3-colloidal-crystals",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shevchenko et al. (2002): Three-layer controlled-oversaturation crystallization",
+  "material": {
+    "formula": "CoPt3",
+    "family": "Cobalt–platinum nanocrystals and source-scoped assemblies",
+    "elements": [
+      "Co",
+      "Pt"
+    ],
+    "components": [
+      "CoPt3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Three-layer controlled-oversaturation crystallization",
+  "sources": [
+    {
+      "id": "shevchenko2002-copt3-ja025976l",
+      "doi": "10.1021/ja025976l",
+      "title": "Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals",
+      "authors": "Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/ja025976l",
+      "main_status": "All 6 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Supporting Information and all cited full sources unreviewed.",
+      "reuse_status": "Six source figures and Table 1 proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "shevchenko2002-copt3-ja025976l",
+    "recipe_family": "shevchenko2002-copt3-ja025976l",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoPt3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 1–2, Experimental Section, Chemicals and Synthesis of CoPt3 Nanocrystals"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nc-input",
+      "name": "Washed HDA/diphenyl-ether-route CoPt3 nanocrystals",
+      "formula": "CoPt3",
+      "role": "colloidal building blocks",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Monodisperse starting size and exact growth parent not named for Figure5."
+      ],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    },
+    {
+      "id": "toluene",
+      "name": "Toluene",
+      "formula": "C7H8",
+      "role": "crystallization solvent layer",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    },
+    {
+      "id": "ipa",
+      "name": "Propanol-2",
+      "formula": "C3H8O",
+      "role": "crystallization solvent layer",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "crystallization solvent layer",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "disperse-state",
+      "name": "Prepare washed colloid output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "layer-state",
+      "name": "Add the three solvent layers output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "disperse-state"
+      ]
+    },
+    {
+      "id": "crystallize-state",
+      "name": "Allow controlled oversaturation output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "layer-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "disperse",
+      "action": "disperse",
+      "label": "Prepare washed colloid",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-input",
+        "toluene"
+      ],
+      "outputs": [
+        "disperse-state"
+      ],
+      "parameters": {
+        "concentration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg/mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "Approximate mass concentration of nanocrystals",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thoroughly remove excess organics and disperse particles in toluene at about2mg/mL.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    },
+    {
+      "id": "layer",
+      "action": "layer",
+      "label": "Add the three solvent layers",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "disperse"
+      ],
+      "inputs": [
+        "disperse-state",
+        "ipa",
+        "methanol"
+      ],
+      "outputs": [
+        "layer-state"
+      ],
+      "parameters": {
+        "tube_length": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        },
+        "tube_diameter": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        },
+        "colloid_height": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        },
+        "ipa_height": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        },
+        "methanol_height": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use a glass tube30cm long and0.5cm diameter:15cm colloidal solution, then7cm propanol-2 and7cm methanol carefully layered above. No layer volumes calculated and no internal-versus-external diameter inferred.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    },
+    {
+      "id": "crystallize",
+      "action": "age",
+      "label": "Allow controlled oversaturation",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "layer"
+      ],
+      "inputs": [
+        "layer-state"
+      ],
+      "outputs": [
+        "crystallize-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": null,
+          "minimum": 2,
+          "maximum": 3,
+          "unit": "week",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Allow colloidal crystallization for approximately2–3weeks; ambient temperature and enclosure details not specified.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shevchenko2002-copt3-colloidal-crystals-crystals",
+      "source_sample_label": "Figure5 colloidal crystals",
+      "batch_id": null,
+      "material_state_id": "crystallize-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Particle superlattice; no measured atomic coordinate model",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Facetted hexagonal, triangular and pyramid-like colloidal crystals",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ],
+      "notes": [
+        "Shapes coexist in the reported population; not three independent synthesis records."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "crystal-size",
+      "sample_id": "shevchenko2002-copt3-colloidal-crystals-crystals",
+      "property": "particle_size",
+      "technique": "SEM and source Summary",
+      "value": {
+        "value": null,
+        "minimum": 10,
+        "maximum": 20,
+        "unit": "um",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Whole colloidal crystal dimensions, distinct from individual nanocrystal building-block diameters.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 6, Growing the Colloidal Crystals; Figure 5 and Summary"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all six supplied main pages, six figures, Table 1 and bibliography entries 1–20, including bounded R2 corrections, passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "All six supplied main pages, six figures, Table 1 and bibliography entries 1–20 read; SI and cited full sources unreviewed.",
+      "Table 1 visibly prints approximately 46, 35 and 1.52 nm without clear range separators; the adjacent prose separately reports 4–5.5, 3–5 and 1.5–2 nm. These are preserved side by side, not silently repaired.",
+      "Table 1 has blank continuation cells. Filled values are source reported; continued group settings are labelled inherited rather than independently reported for that row.",
+      "Physical batch identities and many links between size-labelled figures and individual temperature/time rows are not supplied. Equal sizes do not establish a common batch.",
+      "No source coordinates, measured atomic unit cell, lattice-parameter number or unique ligand conformation are supplied. Chemically disordered fcc CoPt3 is distinct from particle superlattice packing.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja025976l",
+      "relation": "primary_source"
+    },
+    {
+      "label": "All source figures, table and scope",
+      "url": "paper-review.html?id=shevchenko2002-copt3-ja025976l",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete study context and unassigned measurements",
+      "url": "data/paper-reviews/shevchenko2002-copt3-ja025976l/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shevchenko2002-copt3-binary-ab5",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shevchenko et al. (2002): Binary-size AB5-like self-assembly",
+  "material": {
+    "formula": "CoPt3",
+    "family": "Cobalt–platinum nanocrystals and source-scoped assemblies",
+    "elements": [
+      "Co",
+      "Pt"
+    ],
+    "components": [
+      "CoPt3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Binary-size AB5-like self-assembly",
+  "sources": [
+    {
+      "id": "shevchenko2002-copt3-ja025976l",
+      "doi": "10.1021/ja025976l",
+      "title": "Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals",
+      "authors": "Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/ja025976l",
+      "main_status": "All 6 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Supporting Information and all cited full sources unreviewed.",
+      "reuse_status": "Six source figures and Table 1 proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "shevchenko2002-copt3-ja025976l",
+    "recipe_family": "shevchenko2002-copt3-ja025976l",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoPt3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 1–2, Experimental Section, Chemicals and Synthesis of CoPt3 Nanocrystals"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "large",
+      "name": "4.5nm CoPt3 nanocrystal colloid",
+      "formula": "CoPt3",
+      "role": "assembly building blocks",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Parent synthesis/batch, colloid concentration, amount and mixing ratio not provided."
+      ],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ]
+    },
+    {
+      "id": "small",
+      "name": "2.6nm CoPt3 nanocrystal colloid",
+      "formula": "CoPt3",
+      "role": "assembly building blocks",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Parent synthesis/batch, colloid concentration, amount and mixing ratio not provided."
+      ],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mix-state",
+      "name": "Mix two colloid sizes output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "evaporate-state",
+      "name": "Slowly evaporate solvent output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mix-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "mix",
+      "action": "mix",
+      "label": "Mix two colloid sizes",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "large",
+        "small"
+      ],
+      "outputs": [
+        "mix-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix the4.5nm and2.6nm CoPt3 colloids; relative quantities and carrier solvent not specified for this experiment.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ]
+    },
+    {
+      "id": "evaporate",
+      "action": "dry",
+      "label": "Slowly evaporate solvent",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "mix"
+      ],
+      "inputs": [
+        "mix-state"
+      ],
+      "outputs": [
+        "evaporate-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slow carrier evaporation gives a three-layer assembly interpreted as CaCu5-type AB5 packing; temperature, duration and substrate details not fixed.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shevchenko2002-copt3-binary-ab5-assembly",
+      "source_sample_label": "Figure4 binary-size assembly",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "AB5 (CaCu5-type) nanoparticle packing, not CaCu5 chemical composition",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Three-layer binary-size nanoparticle superlattice",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ],
+      "notes": [
+        "Both building blocks are CoPt3; no Ca or Cu reagent/material introduced. First/third planes repeat; second-plane small-particle hexagons rotate30° relative to first."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "large-diameter",
+      "sample_id": "shevchenko2002-copt3-binary-ab5-assembly",
+      "property": "constituent_particle_diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 4.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "large CoPt3 building blocks; not another recipe outcome.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ]
+    },
+    {
+      "id": "small-diameter",
+      "sample_id": "shevchenko2002-copt3-binary-ab5-assembly",
+      "property": "constituent_particle_diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 2.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "small CoPt3 building blocks; not another recipe outcome.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5–6, Figure 4 and binary assembly discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all six supplied main pages, six figures, Table 1 and bibliography entries 1–20, including bounded R2 corrections, passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "All six supplied main pages, six figures, Table 1 and bibliography entries 1–20 read; SI and cited full sources unreviewed.",
+      "Table 1 visibly prints approximately 46, 35 and 1.52 nm without clear range separators; the adjacent prose separately reports 4–5.5, 3–5 and 1.5–2 nm. These are preserved side by side, not silently repaired.",
+      "Table 1 has blank continuation cells. Filled values are source reported; continued group settings are labelled inherited rather than independently reported for that row.",
+      "Physical batch identities and many links between size-labelled figures and individual temperature/time rows are not supplied. Equal sizes do not establish a common batch.",
+      "No source coordinates, measured atomic unit cell, lattice-parameter number or unique ligand conformation are supplied. Chemically disordered fcc CoPt3 is distinct from particle superlattice packing.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja025976l",
+      "relation": "primary_source"
+    },
+    {
+      "label": "All source figures, table and scope",
+      "url": "paper-review.html?id=shevchenko2002-copt3-ja025976l",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete study context and unassigned measurements",
+      "url": "data/paper-reviews/shevchenko2002-copt3-ja025976l/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

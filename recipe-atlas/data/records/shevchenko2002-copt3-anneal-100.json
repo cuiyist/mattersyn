@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shevchenko2002-copt3-anneal-100",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shevchenko et al. (2002): Annealing at100°C inair",
+  "material": {
+    "formula": "CoPt3",
+    "family": "Cobalt–platinum nanocrystals and source-scoped assemblies",
+    "elements": [
+      "Co",
+      "Pt"
+    ],
+    "components": [
+      "CoPt3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Annealing at100°C inair",
+  "sources": [
+    {
+      "id": "shevchenko2002-copt3-ja025976l",
+      "doi": "10.1021/ja025976l",
+      "title": "Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals",
+      "authors": "Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/ja025976l",
+      "main_status": "All 6 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Supporting Information and all cited full sources unreviewed.",
+      "reuse_status": "Six source figures and Table 1 proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "shevchenko2002-copt3-ja025976l",
+    "recipe_family": "shevchenko2002-copt3-ja025976l",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoPt3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 1–2, Experimental Section, Chemicals and Synthesis of CoPt3 Nanocrystals"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nc-input",
+      "name": "As-prepared CoPt3 nanocrystals, parent unidentified",
+      "formula": "CoPt3",
+      "role": "annealing specimen",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Initial particle size, quantity, growth recipe and physical batch not specified for Figure6."
+      ],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anneal-state",
+      "name": "Anneal the nanocrystal sample output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "anneal",
+      "action": "anneal",
+      "label": "Anneal the nanocrystal sample",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-input"
+      ],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "shevchenko2002-copt3-ja025976l",
+              "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+          }
+        ],
+        "note": "Environment is scoped to this operation; pressure, gas flow and apparatus dimensions are not quantified unless stated separately."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Apply the source-labelled anneal. Heating ramp, specimen holder, pressure and vacuum duration are not stated. The2h statement belongs to the air series and is not silently transferred to vacuum.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shevchenko2002-copt3-anneal-100-product",
+      "source_sample_label": "Figure6 100°C air",
+      "batch_id": null,
+      "material_state_id": "anneal-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 retained; no crystalline oxide detected by XRD",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 6, Temporal Stability and Thermostability; Figure 6"
+        }
+      ],
+      "notes": [
+        "The Figure6 Co3O4 and CoO stick marks are references, not proof that both oxides formed. Source narrative tentatively assigns CoO at300°C.",
+        "No post-anneal diameter or particle morphology is reported."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all six supplied main pages, six figures, Table 1 and bibliography entries 1–20, including bounded R2 corrections, passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "All six supplied main pages, six figures, Table 1 and bibliography entries 1–20 read; SI and cited full sources unreviewed.",
+      "Table 1 visibly prints approximately 46, 35 and 1.52 nm without clear range separators; the adjacent prose separately reports 4–5.5, 3–5 and 1.5–2 nm. These are preserved side by side, not silently repaired.",
+      "Table 1 has blank continuation cells. Filled values are source reported; continued group settings are labelled inherited rather than independently reported for that row.",
+      "Physical batch identities and many links between size-labelled figures and individual temperature/time rows are not supplied. Equal sizes do not establish a common batch.",
+      "No source coordinates, measured atomic unit cell, lattice-parameter number or unique ligand conformation are supplied. Chemically disordered fcc CoPt3 is distinct from particle superlattice packing.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending.",
+      "100/200°C samples remain soluble;300°C becomes insoluble. These are observations, not extra recipes."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja025976l",
+      "relation": "primary_source"
+    },
+    {
+      "label": "All source figures, table and scope",
+      "url": "paper-review.html?id=shevchenko2002-copt3-ja025976l",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete study context and unassigned measurements",
+      "url": "data/paper-reviews/shevchenko2002-copt3-ja025976l/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

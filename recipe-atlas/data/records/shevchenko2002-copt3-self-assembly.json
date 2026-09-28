@@ -1,0 +1,1016 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "shevchenko2002-copt3-self-assembly",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shevchenko et al. (2002): Evaporative one-size self-assembly",
+  "material": {
+    "formula": "CoPt3",
+    "family": "Cobalt–platinum nanocrystals and source-scoped assemblies",
+    "elements": [
+      "Co",
+      "Pt"
+    ],
+    "components": [
+      "CoPt3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Evaporative one-size self-assembly",
+  "sources": [
+    {
+      "id": "shevchenko2002-copt3-ja025976l",
+      "doi": "10.1021/ja025976l",
+      "title": "Colloidal Synthesis and Self-Assembly of CoPt3 Nanocrystals",
+      "authors": "Elena V. Shevchenko; Dmitri V. Talapin; Andrey L. Rogach; Andreas Kornowski; Markus Haase; Horst Weller",
+      "year": 2002,
+      "url": "https://doi.org/10.1021/ja025976l",
+      "main_status": "All 6 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "Supporting Information and all cited full sources unreviewed.",
+      "reuse_status": "Six source figures and Table 1 proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "shevchenko2002-copt3-ja025976l",
+    "recipe_family": "shevchenko2002-copt3-ja025976l",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CoPt3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 1–2, Experimental Section, Chemicals and Synthesis of CoPt3 Nanocrystals"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nc-input",
+      "name": "Source CoPt3 nanocrystal dispersions",
+      "formula": "CoPt3",
+      "role": "assembly building blocks",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "4.8,3.6,4.0 or4.5nm particles in named figure panels. Exact parent growth run, amounts, concentration and individual deposition schedule not crosswalked."
+      ],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 4–5, TEM preparation and Self-Assembly; Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "toluene",
+      "name": "Toluene",
+      "formula": "C7H8",
+      "role": "alternative TEM carrier",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, Apparatus"
+        }
+      ]
+    },
+    {
+      "id": "hexane",
+      "name": "n-Hexane",
+      "formula": "C6H14",
+      "role": "alternative TEM carrier",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, Apparatus"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "deposit-state",
+      "name": "Deposit dispersion on a substrate output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "evaporate-state",
+      "name": "Evaporate carrier solvent output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "deposit-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "deposit",
+      "action": "deposit",
+      "label": "Deposit dispersion on a substrate",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-input"
+      ],
+      "outputs": [
+        "deposit-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Air for TEM-grid drying",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 2, 4–5, TEM preparation and Self-Assembly; Figure 3"
+          }
+        ],
+        "note": "Environment is scoped to this operation; pressure, gas flow and apparatus dimensions are not quantified unless stated separately."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spread a colloidal dispersion onto a substrate. TEM preparation uses a drop on carbon-coated copper grids, wicks excess solvent with filter paper and dries in air. The self-assembly discussion says slow carrier evaporation; exact panel-specific evaporation conditions are not supplied.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 4–5, TEM preparation and Self-Assembly; Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "evaporate",
+      "action": "dry",
+      "label": "Evaporate carrier solvent",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "deposit"
+      ],
+      "inputs": [
+        "deposit-state"
+      ],
+      "outputs": [
+        "evaporate-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slow solvent evaporation produces the reported layer assemblies. Concentration, surface loading, evaporation time and temperature are unreported for each panel.",
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 2, 4–5, TEM preparation and Self-Assembly; Figure 3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-a",
+      "source_sample_label": "Figure 3a",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3a and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 nanocrystal constituents; particle packing separately described",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3a and caption"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Close-packed monolayer",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3a and caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3a and caption"
+        }
+      ],
+      "notes": [
+        "Distinct pictured assembly context; equality of building-block size does not prove a common growth batch.",
+        "The assembly protocol is incompletely specified and not a separate newly reconstructed nanocrystal-growth recipe."
+      ]
+    },
+    {
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-b",
+      "source_sample_label": "Figure 3b",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3b and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 nanocrystal constituents; particle packing separately described",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3b and caption"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Two-layer nanoparticle assembly",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3b and caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3b and caption"
+        }
+      ],
+      "notes": [
+        "Distinct pictured assembly context; equality of building-block size does not prove a common growth batch.",
+        "The assembly protocol is incompletely specified and not a separate newly reconstructed nanocrystal-growth recipe."
+      ]
+    },
+    {
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-c",
+      "source_sample_label": "Figure 3c",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3c and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 nanocrystal constituents; particle packing separately described",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3c and caption"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Two-layer nanoparticle assembly",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3c and caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3c and caption"
+        }
+      ],
+      "notes": [
+        "Distinct pictured assembly context; equality of building-block size does not prove a common growth batch.",
+        "The assembly protocol is incompletely specified and not a separate newly reconstructed nanocrystal-growth recipe."
+      ]
+    },
+    {
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-d",
+      "source_sample_label": "Figure 3d",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3d and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 nanocrystal constituents; particle packing separately described",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3d and caption"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Three-layer cubic-close-packed-like nanoparticle assembly",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3d and caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3d and caption"
+        }
+      ],
+      "notes": [
+        "Distinct pictured assembly context; equality of building-block size does not prove a common growth batch.",
+        "The assembly protocol is incompletely specified and not a separate newly reconstructed nanocrystal-growth recipe."
+      ]
+    },
+    {
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-e",
+      "source_sample_label": "Figure 3e",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3e and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 nanocrystal constituents; particle packing separately described",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3e and caption"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "Three-layer cubic-close-packed-like nanoparticle assembly",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3e and caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3e and caption"
+        }
+      ],
+      "notes": [
+        "Distinct pictured assembly context; equality of building-block size does not prove a common growth batch.",
+        "The assembly protocol is incompletely specified and not a separate newly reconstructed nanocrystal-growth recipe."
+      ]
+    },
+    {
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-f",
+      "source_sample_label": "Figure 3f",
+      "batch_id": null,
+      "material_state_id": "evaporate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CoPt3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3f and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "CoPt3 nanocrystal constituents; particle packing separately described",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3f and caption"
+          }
+        ],
+        "note": "Atomic phase and nanoparticle packing are distinct; no measured coordinates assigned."
+      },
+      "morphology": {
+        "value": "More-than-five-layer three-dimensional nanoparticle superlattice",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3f and caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3f and caption"
+        }
+      ],
+      "notes": [
+        "Distinct pictured assembly context; equality of building-block size does not prove a common growth batch.",
+        "The assembly protocol is incompletely specified and not a separate newly reconstructed nanocrystal-growth recipe."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "building-block-a",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-a",
+      "property": "diameter",
+      "technique": "TEM, source Figure 3 caption",
+      "value": {
+        "value": 4.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3a and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Building-block nanocrystal diameter, not overall assembly size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3a and caption"
+        }
+      ]
+    },
+    {
+      "id": "layers-a",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-a",
+      "property": "layer_count",
+      "technique": "TEM",
+      "value": {
+        "value": 1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "layers",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3a and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported layer count; not atomic crystal planes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3a and caption"
+        }
+      ]
+    },
+    {
+      "id": "building-block-b",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-b",
+      "property": "diameter",
+      "technique": "TEM, source Figure 3 caption",
+      "value": {
+        "value": 3.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3b and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Building-block nanocrystal diameter, not overall assembly size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3b and caption"
+        }
+      ]
+    },
+    {
+      "id": "layers-b",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-b",
+      "property": "layer_count",
+      "technique": "TEM",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "layers",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3b and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported layer count; not atomic crystal planes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3b and caption"
+        }
+      ]
+    },
+    {
+      "id": "building-block-c",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-c",
+      "property": "diameter",
+      "technique": "TEM, source Figure 3 caption",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3c and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Building-block nanocrystal diameter, not overall assembly size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3c and caption"
+        }
+      ]
+    },
+    {
+      "id": "layers-c",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-c",
+      "property": "layer_count",
+      "technique": "TEM",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "layers",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3c and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported layer count; not atomic crystal planes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3c and caption"
+        }
+      ]
+    },
+    {
+      "id": "building-block-d",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-d",
+      "property": "diameter",
+      "technique": "TEM, source Figure 3 caption",
+      "value": {
+        "value": 3.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3d and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Building-block nanocrystal diameter, not overall assembly size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3d and caption"
+        }
+      ]
+    },
+    {
+      "id": "layers-d",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-d",
+      "property": "layer_count",
+      "technique": "TEM",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "layers",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3d and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported layer count; not atomic crystal planes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3d and caption"
+        }
+      ]
+    },
+    {
+      "id": "building-block-e",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-e",
+      "property": "diameter",
+      "technique": "TEM, source Figure 3 caption",
+      "value": {
+        "value": 4.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3e and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Building-block nanocrystal diameter, not overall assembly size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3e and caption"
+        }
+      ]
+    },
+    {
+      "id": "layers-e",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-e",
+      "property": "layer_count",
+      "technique": "TEM",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "layers",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3e and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported layer count; not atomic crystal planes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3e and caption"
+        }
+      ]
+    },
+    {
+      "id": "building-block-f",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-f",
+      "property": "diameter",
+      "technique": "TEM, source Figure 3 caption",
+      "value": {
+        "value": 4.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3f and caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Building-block nanocrystal diameter, not overall assembly size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3f and caption"
+        }
+      ]
+    },
+    {
+      "id": "layers-f",
+      "sample_id": "shevchenko2002-copt3-self-assembly-panel-f",
+      "property": "layer_count",
+      "technique": "TEM",
+      "value": {
+        "value": null,
+        "minimum": 5,
+        "maximum": null,
+        "unit": "layers",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Strictly more than five layers; lower bound is exclusive.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "shevchenko2002-copt3-ja025976l",
+            "locator": "Main PDF p. 5, Figure 3f and caption"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "Figure3f caption: more than five layers.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "shevchenko2002-copt3-ja025976l",
+          "locator": "Main PDF p. 5, Figure 3f and caption"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific audit of all six supplied main pages, six figures, Table 1 and bibliography entries 1–20, including bounded R2 corrections, passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "All six supplied main pages, six figures, Table 1 and bibliography entries 1–20 read; SI and cited full sources unreviewed.",
+      "Table 1 visibly prints approximately 46, 35 and 1.52 nm without clear range separators; the adjacent prose separately reports 4–5.5, 3–5 and 1.5–2 nm. These are preserved side by side, not silently repaired.",
+      "Table 1 has blank continuation cells. Filled values are source reported; continued group settings are labelled inherited rather than independently reported for that row.",
+      "Physical batch identities and many links between size-labelled figures and individual temperature/time rows are not supplied. Equal sizes do not establish a common batch.",
+      "No source coordinates, measured atomic unit cell, lattice-parameter number or unique ligand conformation are supplied. Chemically disordered fcc CoPt3 is distinct from particle superlattice packing.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja025976l",
+      "relation": "primary_source"
+    },
+    {
+      "label": "All source figures, table and scope",
+      "url": "paper-review.html?id=shevchenko2002-copt3-ja025976l",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete study context and unassigned measurements",
+      "url": "data/paper-reviews/shevchenko2002-copt3-ja025976l/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}
