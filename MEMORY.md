@@ -1,3 +1,11 @@
+## 2026-09-29 reader-first batch preparation
+
+The owner reiterated20actuallypublishedpapers/hour and clean, friendly reader pages. Keep concise academic method labels, usable figures and clear sample/measurement distinctions; owner progress, drafts and skips do not belong in the public paper counter. This rate remains a target, not achieved capacity.
+
+Cölfen (2003), DOI10.1021/la0347051, is integrated locally with two acid-specific TiO2 recipes, two partial recipe–structure pairs, six source crops and nine stage diagrams. All six main pages and18measurement values passed independent source review; subsequent metadata and apparatus bindings were checked separately. TTIP molecular3D and some visual enrichment remain explicitly incomplete. The batch also carries accepted Ivanov CeO2 work and retirement of public preliminary pages. Neither contribution has publication credit until deployment and anonymous verification.
+
+Release failures exposed two engineering assumptions: a frozen intake count had been used for a growing curated library, and a current-collection regression hardcoded old paper/pair totals. Intake now remains content-pinned while canonical primary sources may extend its public view. Legacy313pairs retain their fixed regression cohort; current display totals are derived. No scientific records or prior audit outcomes were relaxed.
+
 ## 2026-09-29 ordinary contribution integration
 
 Ivanov (2009), DOI10.1134/s0012500809060056, is integrated with seven accepted records and six source-linked recipe/outcome variants; source audit and accepted art bindings are reused unchanged. Build, browser, CI and publication remain pending; no new paper credit is claimed yet. The retired preliminary page no longer contributes to reader totals. Its old template test was corrected to assert redirect and absence of public candidates; all ten focused tests pass. Cölfen TiO2 and Mg-mediated calcite extraction and source reviews continue privately.

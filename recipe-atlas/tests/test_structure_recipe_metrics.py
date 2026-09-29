@@ -13,6 +13,104 @@ from dataset_lib import eligibility, training_view
 from structure_recipe_metrics import assess_structure_recipe, structure_recipe_coverage, recipe_structure_outcome_coverage, load_structure_policy, typed_fields, digest
 from catalog_view import structure_coverage_html
 
+# Fixed WBI regression cohort: 1130 canonical records, 313 broad rows.
+# New sources exercise current-collection invariants without changing this baseline.
+LEGACY_BROAD_SOURCE_GROUPS = frozenset({
+    'banerjee2003',
+    'basel2020',
+    'baumgardner2010-snse-ja1013745',
+    'besson2002',
+    'braun2001',
+    'chen2018ami',
+    'costanzo2016co',
+    'dabbousi1997',
+    'danek1996',
+    'dantas2002',
+    'dhaene2022-main',
+    'du2002-pbse-nl025785g',
+    'foos2001-bi2te3-nl0156179',
+    'fu2007',
+    'ge2007-magnetite-anie200700197',
+    'ghezelbash2005-main',
+    'ghosh2012',
+    'gu2004',
+    'haber1997-aln',
+    'heath1996',
+    'hu-wang-2010-nickel-hydroxychloride',
+    'igarashi2001-zns-mn-a1011445009443',
+    'iwasaki1998-tio2-a1006660209934',
+    'kovacheva2002-limn2o4-b107669h',
+    'lee2012-ja3044807',
+    'li1998znga2o4',
+    'li2000cu2sns3',
+    'li2009-nn9009455',
+    'li2011-ac2019014',
+    'li2020cs3cu2x5',
+    'lian2021',
+    'lu1999-aln',
+    'lu1999-fein2s4',
+    'mathur2002-gdfeo3-adma1405',
+    'matuhina2023',
+    'murray1993',
+    'nagy2012nn204886b',
+    'nakonechnyi2017',
+    'qiu2006-ag-superlattice',
+    'ramasamy2014cusb',
+    'ribeiro2004',
+    'rusch2026',
+    'saha2019',
+    'saini2023',
+    'sashchiuk2004',
+    'schwartz2003',
+    'shah2001',
+    'shevchenko2002-copt3-ja025976l',
+    'song2024inorgchem4c02738',
+    'stankov2008-fe90zr7b3',
+    'stiger1999',
+    'tang2001-fe3o4-pld',
+    'tessier2015',
+    'tirosh2006',
+    'veinot1997',
+    'wagner1999',
+    'wang2001-cds-sonochemical',
+    'watt2004-pbs-mehppv-b406060a',
+    'wehrenberg2002-jp021187e',
+    'xie1999-pbse-gamma',
+    'yang1994-life5o8-bf00571768',
+    'yang2005-anie200502279',
+    'yao1998',
+    'yao2015acsami',
+    'yi2002',
+    'yu1998cde',
+    'zhan1999jaipurite',
+    'zhang2019',
+    'zheng2012-ja210285p',
+    'zhou1995-ceo2-tb08425',
+    'zhu2012-ja210312s-si',
+})
+LEGACY_SOURCE_GROUPS = LEGACY_BROAD_SOURCE_GROUPS | frozenset({
+    'evans2010',
+    'feld2019',
+    'friedfeld2019',
+    'gary-cossairt-2014-main',
+    'gerion2001',
+    'heo2003',
+    'littau1993',
+    'morrison2017',
+    'nagasaki2004',
+    'norberg2004',
+    'pati2009',
+    'peng1998',
+    'peng2000',
+    'sasongko2025',
+    'sommer2020',
+    'stowell2005',
+    'thomson2010ja101908k',
+    'voznyy2019',
+    'williamson2021',
+    'wu2008',
+})
+
 
 class StructureRecipeMetricsTests(unittest.TestCase):
     def setUp(self):
@@ -264,8 +362,19 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(set(policy['measurement_properties']),set(policy['measurement_fields']))
         broad=recipe_structure_outcome_coverage(records,policy)
         strict_policy=load_structure_policy(root);strict_policy['_asset_root']=str(root/'static')
-        strict=structure_recipe_coverage(records,strict_policy,root/'static')
-        self.assertEqual({'recipe_structure_rows':313,'source_groups':71,'records':274,'physical_samples_deduplicated':None},broad['counts'])
+        legacy_records=[r for r in records if r['lineage']['source_group'] in LEGACY_SOURCE_GROUPS]
+        self.assertEqual(LEGACY_SOURCE_GROUPS,{r['lineage']['source_group'] for r in legacy_records})
+        legacy_broad=recipe_structure_outcome_coverage(legacy_records,policy)
+        self.assertEqual({'recipe_structure_rows':313,'source_groups':71,'records':274,'physical_samples_deduplicated':None},legacy_broad['counts'])
+        self.assertEqual(LEGACY_BROAD_SOURCE_GROUPS,{row['source_group'] for row in legacy_broad['rows']})
+        # Exact-coordinate and molecular-reference regression is scoped to the same fixed cohort.
+        strict=structure_recipe_coverage(legacy_records,strict_policy,root/'static')
+        rows=broad['rows']
+        self.assertEqual({'recipe_structure_rows':len(rows),
+                          'source_groups':len({row['source_group'] for row in rows}),
+                          'records':len({row['record_id'] for row in rows}),
+                          'physical_samples_deduplicated':None},broad['counts'])
+        self.assertEqual(len(rows),len({(row['record_id'],row['sample_id']) for row in rows}))
         new_contexts={(row['record_id'],row['sample_id']) for row in broad['rows'] if row['source_group'] in {'ghezelbash2005-main','hu-wang-2010-nickel-hydroxychloride'}}
         self.assertEqual({
             ('ghezelbash-2005-cu1p8s-variant','cu1p8s-reagent-adjusted'),
@@ -332,8 +441,8 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         from reader_collection import collection_summary
         collection=collection_summary(records,broad['rows'],[])
         page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
-        self.assertIn('Browse all 313 pairs',page)
-        self.assertEqual(313,page.count('<tr><td><a href="records/'))
+        self.assertIn(f"Browse all {broad['counts']['recipe_structure_rows']} pairs",page)
+        self.assertEqual(broad['counts']['recipe_structure_rows'],page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))
