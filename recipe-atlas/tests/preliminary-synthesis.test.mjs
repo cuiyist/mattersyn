@@ -33,12 +33,24 @@ function documentFixture(){
 }
 const render=data=>{const doc=documentFixture();renderPreliminary(doc.getElementById('preliminary-results'),preparePreliminary(data));return doc;};
 
-test('public catalogue starts empty and states no preliminary publication',()=>{
- const raw=JSON.parse(readFileSync(new URL('../static/data/preliminary-synthesis.json',import.meta.url),'utf8'));
- assert.deepEqual(raw,{schema:SCHEMA,entries:[]});
+test('empty catalogue states no preliminary publication',()=>{
+ const raw={schema:SCHEMA,entries:[]};
  const doc=render(raw);assert.match(doc.root.textContent,/No preliminary contributions have been published yet/);
  assert.equal(descendants(doc.root).filter(n=>n.tagName==='ARTICLE').length,0);
  assert.match(doc.root.textContent,/Separate from reviewed dataset and verified pair counts/);
+});
+test('actual public catalogue validates and excludes synthetic fixtures',()=>{
+ const raw=JSON.parse(readFileSync(new URL('../static/data/preliminary-synthesis.json',import.meta.url),'utf8'));
+ const view=preparePreliminary(raw);
+ assert.equal(view.status,raw.entries.length?'ready':'empty');
+ assert.equal(view.entries.length,raw.entries.length);
+ for(const entry of view.entries){
+  assert.doesNotMatch(entry.doi,/synthetic-fixture/);
+  assert.doesNotMatch(entry.title,/Synthetic fixture/);
+  assert.equal(entry.review.independent_audit,'pending');
+  assert.equal(entry.review.accuracy,'unmeasured');
+  assert.equal(entry.review.training_ready,false);
+ }
 });
 test('synthetic nonempty display retains scope, null amount, ordered method and exact locators',()=>{
  const data=fixture(),doc=render(data),text=doc.root.textContent;

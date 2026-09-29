@@ -50,6 +50,19 @@ class PublicTests(unittest.TestCase):
         e=entry();e['material']['existing_hub_id']='../secret';self.bad(e)
 
 class AnchorTests(unittest.TestCase):
+    def test_ampere_literal_and_pulse_context(self):
+        e=entry();e['operations'][1]['conditions'][0]={'parameter':'Activation current','reported':'750 A'};ev,t=evidence(e)
+        c=next(c for c in ev['claims'] if c['pointer']=='/operations/1/conditions/0/reported')
+        c['quote']='The activation pulse was 30 V/750 A for 30 s.';t[1]+=' '+c['quote']
+        p.validate_claims(e,ev,t)
+        self.assertFalse(p._token_in_quote('A','750 mA'))
+    def test_ampere_requires_same_literal_unit_association(self):
+        for source in ['Current 750 mA.','Voltage 750 V.','Voltage 750 V and current 30 A.','Current 750 mA and another current 30 A.']:
+            with self.subTest(source=source):
+                e=entry();e['operations'][1]['conditions'][0]={'parameter':'Activation current','reported':'750 A'};ev,t=evidence(e)
+                c=next(c for c in ev['claims'] if c['pointer']=='/operations/1/conditions/0/reported');c['quote']=source;t[1]+=' '+source
+                with self.assertRaises(ValueError):p.validate_claims(e,ev,t)
+
     def test_doi_case_is_metadata_not_seconds(self):
         e=entry();e['doi']='10.9999/s003';ev,t=evidence(e)
         claim=next(c for c in ev['claims'] if c['pointer']=='/doi');claim['quote']='DOI: 10.9999/S003';t[1]+=' '+claim['quote']
