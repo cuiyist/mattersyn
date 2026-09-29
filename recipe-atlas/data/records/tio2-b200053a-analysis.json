@@ -1,0 +1,877 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "tio2-b200053a-analysis",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Wilson et al. (2002): Common characterization methods",
+  "material": {
+    "formula": "TiO2",
+    "family": "Titanium dioxide",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Common analytical specimen preparation and characterization",
+  "sources": [
+    {
+      "id": "tio2-b200053a",
+      "doi": "10.1039/b200053a",
+      "title": "Efficient microwave hydrothermal preparation of nanocrystalline anatase TiO2 colloids",
+      "authors": "Gregory J. Wilson; Geoffrey D. Will; Ray L. Frost; Simon A. Montgomery",
+      "year": 2002,
+      "url": "https://doi.org/10.1039/b200053a",
+      "main_status": "All 5 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No distinct matched SI read; main-only declared scope.",
+      "reuse_status": "Selected source crops proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "tio2-b200053a",
+    "recipe_family": "tio2-b200053a-analysis",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental and Table 1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sample",
+      "name": "Preformed TiO2 sample",
+      "formula": "TiO2",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source S1–S4 identity follows the bound preparation; no shared numerical size or physical batch identity."
+      ],
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "role": "analytical dilution/presentation liquid",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Minimum amount for XRD and unspecified dilution for TEM; purity and volume not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "analysis-half-state",
+      "name": "Prepare the analytical half output",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "raman-pack-state",
+      "name": "Pack the Raman specimen output",
+      "kind": "product",
+      "parent_ids": [
+        "analysis-half-state"
+      ]
+    },
+    {
+      "id": "raman-measure-state",
+      "name": "Measure Raman spectra output",
+      "kind": "product",
+      "parent_ids": [
+        "raman-pack-state"
+      ]
+    },
+    {
+      "id": "xrd-prepare-state",
+      "name": "Prepare the XRD film output",
+      "kind": "product",
+      "parent_ids": [
+        "analysis-half-state"
+      ]
+    },
+    {
+      "id": "xrd-measure-state",
+      "name": "Measure X-ray diffraction output",
+      "kind": "product",
+      "parent_ids": [
+        "xrd-prepare-state"
+      ]
+    },
+    {
+      "id": "tem-prepare-state",
+      "name": "Prepare the TEM grid output",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-measure-state",
+      "name": "Acquire TEM and electron diffraction output",
+      "kind": "product",
+      "parent_ids": [
+        "tem-prepare-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "analysis-half",
+      "action": "dry",
+      "label": "Prepare the analytical half",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample"
+      ],
+      "outputs": [
+        "analysis-half-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "sample_fraction": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "One equal half",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "analysis-half-state",
+      "description": "Divide each sample equally and dehydrate one half at 80°C for 3 h in an oven.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "raman-pack",
+      "action": "prepare",
+      "label": "Pack the Raman specimen",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [
+        "analysis-half"
+      ],
+      "inputs": [
+        "analysis-half-state"
+      ],
+      "outputs": [
+        "raman-pack-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pack dehydrated material into a polycrystalline receptacle; dimensions unspecified.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "raman-measure",
+      "action": "measure",
+      "label": "Measure Raman spectra",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [
+        "raman-pack"
+      ],
+      "inputs": [
+        "raman-pack-state"
+      ],
+      "outputs": [
+        "raman-measure-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 1064,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "shift_range": {
+          "value": null,
+          "minimum": 200,
+          "maximum": 3800,
+          "unit": "cm-1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Source lists 3800–200 cm−1",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "instrument_resolution": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm-1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "laser_power": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "coadded_scans": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Perkin Elmer 2000 FT-IR Raman; quartz beam splitter, InGaAs detector; SL301 Nd–YAG excitation. No source absorption correction or new peak fitting performed here.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "xrd-prepare",
+      "action": "prepare",
+      "label": "Prepare the XRD film",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [
+        "analysis-half"
+      ],
+      "inputs": [
+        "analysis-half-state",
+        "ethanol"
+      ],
+      "outputs": [
+        "xrd-prepare-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mechanically treat dehydrated material and present on a thin glass plate using minimum ethanol. Source says dissolved; no molecular dissolution mechanism is asserted.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "xrd-measure",
+      "action": "measure",
+      "label": "Measure X-ray diffraction",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [
+        "xrd-prepare"
+      ],
+      "inputs": [
+        "xrd-prepare-state"
+      ],
+      "outputs": [
+        "xrd-measure-state"
+      ],
+      "parameters": {
+        "voltage": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "current": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mA",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "divergence_slit": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "anti_scatter_slit": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "receiving_slit": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "two_theta_range": {
+          "value": null,
+          "minimum": 12,
+          "maximum": 65,
+          "unit": "deg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "step_size": {
+          "value": 0.02,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_speed": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "PHILIPS PW1050 Long Fine Focus Co-Kα, one set of source-described solar slits; Traces 6.1.3 analysis/refinement. No measured coordinates provided.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "tem-prepare",
+      "action": "prepare",
+      "label": "Prepare the TEM grid",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample",
+        "ethanol"
+      ],
+      "outputs": [
+        "tem-prepare-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dilute the source sample with ethanol and present on a copper grid. The text does not expressly identify whether this TEM aliquot uses the wet or dried half; no forced branch identity.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    },
+    {
+      "id": "tem-measure",
+      "action": "measure",
+      "label": "Acquire TEM and electron diffraction",
+      "stage": "characterization",
+      "branch": "tio2-b200053a-analysis",
+      "optional": false,
+      "depends_on": [
+        "tem-prepare"
+      ],
+      "inputs": [
+        "tem-prepare-state"
+      ],
+      "outputs": [
+        "tem-measure-state"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "tio2-b200053a",
+              "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "PHILIPS CM200 analytical scanning TEM, 200 kV. Obtain electron-diffraction patterns following TEM; no camera length or exposure supplied.",
+      "evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tio2-b200053a-analysis-product",
+      "source_sample_label": "Source-assigned analytical specimen",
+      "batch_id": null,
+      "material_state_id": "tem-measure-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Common characterization context; no new synthesized product."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "tio2-b200053a",
+          "locator": "Supplied main PDF p. 2, Experimental, characterization paragraphs"
+        }
+      ],
+      "notes": [
+        "Exact physical batch unknown; source-labeled condition association only. Analytical results use the separately described aliquot/specimen procedure."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete five-page main scientific audit passed for all seven figures, three tables, equation and eleven references. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied five-page main read textually and visually. Cited full texts and distinct SI unreviewed. Independent scientific comparison passed; presentation pending.",
+      "Nitric acid is 69% but the percentage basis is unspecified. No density, moles, final mixture volume or additive-volume calculation is introduced.",
+      "Vigorous/continuous stirring speeds, addition temperature, heating ramps, gas atmosphere, storage duration and vessel closure are unknown unless explicitly stated. Room temperature remains qualitative.",
+      "Microwave vessel capacity and cooling/workup are unspecified. Its temperatures are correlations from vaporization enthalpy tables, not measured probe temperatures. TAP is the source abbreviation; its expansion is not defined.",
+      "The 2 h cooling and 24 h standing belong only to S2 convection treatment. They are not inherited by S3 or S4.",
+      "All samples are split equally; only one half is dried at 80°C for 3 h for analysis. The entire colloidal preparation is not silently converted to dried powder. Exact independent physical batches are unknown.",
+      "Scherrer crystallite sizes, TEM particle distributions, Raman peak heights and normalized half-height widths remain distinct. No absolute crystallinity, refined unit cell, atom coordinates or measured CIF is supplied.",
+      "Table 3 peak-height units are not printed. Values are retained as source-relative peak heights with unit unknown, not an invented intensity calibration.",
+      "Figure 1/7 labels, Figure 6 specimen and brookite reference conflicts remain unresolved. No curve digitization or image-derived size measurement performed.",
+      "Source figures have publisher permission unverified; artwork is conceptual. Bibliography identification does not imply reading cited full texts."
+    ],
+    "conflicts": [
+      "Table 1 explicitly assigns S3 to 30 psi, correlated 121.5°C and TAP 10 min, and S4 to 60 psi, correlated 145°C and TAP 5 min. Figure 1 and Figure 7 plot keys instead print microwave 5 min at 30 PSI and 10 min at 60 PSI. Table-labeled canonical conditions are preserved alongside the contradictory plot keys; no guessed reconciliation.",
+      "Figure 1 caption assigns a=S1 and b=S2, while its plot key labels a=hydrothermally treated and b=colloidal TiO2. Panel-specific sample identity is therefore unresolved; the caption and key remain separate.",
+      "Figure 7 caption assigns a=S1, b=S4, c=S3, d=S2; its plot key instead labels a=microwave 5 min 30 PSI, b=microwave 10 min 60 PSI, c=colloidal TiO2, d=hydrothermally treated. No exact curve-to-recipe mapping is silently inferred.",
+      "Main p.4 prose identifies the microwave electron-diffraction specimen as S3, but Figure 6 caption identifies S4. Figure 6 is shared ambiguous microwave context and not evidence of a separately identified S3 or S4 physical batch.",
+      "Brookite reference is PDF 29-1360 in p.2 prose but PDF 26-1360 in Figure 5 caption. Both printed designations remain visible; no corrected reference number or measured crystallographic file is supplied.",
+      "Main p.4 compares 544 W microwave for 12 min with 1300 W convection for 15 h. Methods specify 630 ± 50 W nominal oven power at 80%, 2 min ramp and the Table 1 TAP times. The comparison is attributed source prose, not a substituted power setting or recomputed energy.",
+      "The p.3 XRD peak-intensity/defect-plane explanation is preserved as author interpretation. It is not used to infer an absolute defect density or crystallinity percentage."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1039/b200053a",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Complete main-source review",
+      "url": "paper-review.html?id=tio2-b200053a",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample crosswalk, tables and unresolved labels",
+      "url": "data/paper-reviews/tio2-b200053a/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source S1 preparation",
+      "url": "records/tio2-b200053a-s1.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source S2 preparation",
+      "url": "records/tio2-b200053a-s2.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source S3 preparation",
+      "url": "records/tio2-b200053a-s3.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source S4 preparation",
+      "url": "records/tio2-b200053a-s4.html",
+      "relation": "preparation_context"
+    }
+  ]
+}

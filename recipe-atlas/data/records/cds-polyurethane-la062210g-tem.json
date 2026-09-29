@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "cds-polyurethane-la062210g-tem",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Chen et al. (2007): TEM specimen preparation",
+  "material": {
+    "formula": "CdS",
+    "family": "Cadmium sulfide",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Room-temperature solution precipitation",
+  "sources": [
+    {
+      "id": "cds-polyurethane-la062210g",
+      "doi": "10.1021/la062210g",
+      "title": "Synthesis of Nanocrystal–Polymer Transparent Hybrids via Polyurethane Matrix Grafted onto Functionalized CdS Nanocrystals",
+      "authors": "Su Chen; Jia Zhu; Yongfeng Shen; Chunhui Hu; Li Chen",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/la062210g",
+      "main_status": "All 5 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No identity-matched local SI located or verified; cited full works unreviewed.",
+      "reuse_status": "Selected source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "cds-polyurethane-la062210g",
+    "recipe_family": "cds-polyurethane-la062210g",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "specimen",
+      "name": "Selected CdS or hybrid characterization specimen",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact physical batch unassigned. Source figure assignments remain separately qualified."
+      ],
+      "evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ]
+    },
+    {
+      "id": "dmf",
+      "name": "N,N-Dimethylformamide",
+      "formula": "C3H7NO",
+      "role": "TEM dispersion solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ]
+    },
+    {
+      "id": "grid",
+      "name": "Copper TEM grid",
+      "formula": "Cu",
+      "role": "TEM support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "disperse-state",
+      "name": "Disperse in DMF output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "deposit-state",
+      "name": "Place a drop on the copper grid output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "disperse-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "disperse",
+      "action": "disperse",
+      "label": "Disperse in DMF",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "specimen",
+        "dmf"
+      ],
+      "outputs": [
+        "disperse-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Disperse the selected specimen in DMF; concentration and dispersion settings are unspecified.",
+      "evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ]
+    },
+    {
+      "id": "deposit",
+      "action": "deposit",
+      "label": "Place a drop on the copper grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "disperse"
+      ],
+      "inputs": [
+        "disperse-state",
+        "grid"
+      ],
+      "outputs": [
+        "deposit-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Place a drop on the copper grid and leave it to dry before loading the microscope. Drop volume and drying conditions are not stated.",
+      "evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cds-polyurethane-la062210g-tem-product",
+      "source_sample_label": "TEM specimen preparation",
+      "batch_id": null,
+      "material_state_id": "deposit-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Selected analytical specimen; no separately identified chemical product generated by this context."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "cds-polyurethane-la062210g",
+          "locator": "Main PDF p. 2, Characterizations"
+        }
+      ],
+      "notes": [
+        "Analytical context only; does not establish a new growth route, physical replicate or independent structural sample."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent root R2 scientific and apparatus audit of all five supplied main pages, Scheme 1, Figures 1–8 and the 34-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied five-page main; matching local SI not located or verified, cited full texts unreviewed.",
+      "Source conditions are kept within their separately identified typical, ligand-series, solvent-series and polymer-loading scopes; matching a nominal ratio does not establish the same physical specimen.",
+      "Salt/water removal procedure, wash volumes and repetitions, final nanocrystal concentration, isolation yield and storage are unspecified.",
+      "Polymerization gives BG:PPG:TDI = 1:1:1.6 and 50 wt% DMF but no absolute monomer, nanocrystal or catalyst charges, unambiguous50 wt% denominator, gas flow or film casting/curing recipe.",
+      "Atomic coordinates, refined lattice constants and sample-specific unit cells are unavailable; illustrative molecular and apparatus views do not supply measured structures.",
+      "Source conflicts in duration, ligand-size trends, TGA labels and IR wavenumber are retained without correction.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [
+      "The detailed CdS procedure specifies an additional 4 h at room temperature, Scheme 1 and Figures1–5 specify2 h, and the discussion claims preparation in 20 min. These are separately retained, not harmonized.",
+      "The text reports Brus-model diameters3.88 nm at ME/Cd2+=0.5,4.34 nm at 1, and 5.02 nm at 2, while its narrative says increasing ligand produces a blue shift and smaller size. Explicit size assignments are retained; the396/400/410 nm list is not silently reassigned to repair the trend.",
+      "Figure 5 caption assigns(a) without ME and(b) with ME; adjacent text reverses the labels. Caption assignment is used for the displayed panel with the text conflict disclosed.",
+      "Figure 6a labels 2960 cm−1, whereas the prose gives 2926 cm−1; both are retained with their locators."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/la062210g",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures and scope",
+      "url": "paper-review.html?id=cds-polyurethane-la062210g",
+      "relation": "source_review"
+    },
+    {
+      "label": "Source interpretations and analytical context",
+      "url": "data/paper-reviews/cds-polyurethane-la062210g/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

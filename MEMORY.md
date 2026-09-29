@@ -1,3 +1,19 @@
+Two source-bound conceptual BaTiO3 drawings now distinguish the mixed air-prepared population from glovebox-prepared nanocubes. The source figure and all measured size scopes are retained. Particle illustrations align with the top of the adjacent evidence column, avoiding a blank area beside long measurement lists. The reader navigation remains Periodic table, Source library and Synthesis dataset; no preliminary or owner-progress collection is displayed. These presentation changes add no contributing-paper or pair credit.
+
+
+### Verified BaTiO3/ScSZ publication and the next accepted source batch
+
+The BaTiO3 and ScSZ batch was deployed and anonymously verified on 29 September 2026 at 11:57:35 UTC. That verified release contains 112 ordinary contributing primary sources, 1341 canonical records and 399 broad recipe-structure pairs; public preliminary synthesis remains retired. Its two source contributions and the separately reviewed morphology illustrations retain their original evidence scope and presentation limits.
+
+The next local batch contains three independently source-reviewed contributions awaiting ordinary publication. CdS/polyurethane (DOI 10.1021/la062210g) retains all five main pages, eight CdS solution variants, three hybrid routes and eight supporting contexts. The 4 h recipe, 2 h figure preparations, source size-trend conflicts and distinct Figure 7/Figure 8 interpretations are not merged. The 0.5 h polyol stage is distinct from an unreported addition duration. Identity-only molecular cards remain presentation-pending.
+
+TiO2 (DOI 10.1039/b200053a) retains the complete five-page main, four Table 1 routes and one supporting analytical context. Table/figure label conflicts, the strict brookite bound, unknown peak-height units and distinct wet/dried specimen scopes remain qualified. Au/silica (DOI 10.1002/adfm.200500603) retains the five-page main, one direct Au-core route and three TEOS routes; seven micelle, BTEE, analytical and processing contexts stay supporting. Missing BTEE dose and acid/specimen assignments remain unknown. Its Au/SiO2 routes add only component contributions to the Au and SiO2 hubs.
+
+Together these accepted local packages add 35 records, 19 direct routes, 17 partial broad recipe-structure rows and two new material hubs. Local integration is not publication credit. All three sources retain main-only scope, unreviewed SI and full cited works, source-figure permission limits and no measured-coordinate or training admission. Two additional BaTiO3 sketches are separately accepted B17 display additions, still awaiting browser review and publication; they are not part of the preceding verified milestone or these new source counts. The target of twenty distinct published primary sources per hour remains unachieved; reports are on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T11:57:35.771846+00:00 (source `e5e7a2c3dd778758ff0aaa692fa29c28ea083f2e`, site `d8c62eeedeb61087d0e0902a786bc09158898c77`). Its verified website contains 112 primary sources, 1341 canonical records and 399 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 Three original morphology illustrations now distinguish source-linked CdSe teardrops, CdSe/CdS head–tail particles and the specific ScSZ sample with TEM evidence. These are labelled conceptual drawings, not measured contours or coordinates. Source figure content remains available separately. The public navigation remains reader-focused, without preliminary or owner-progress sections.
 
 
