@@ -21,7 +21,7 @@ export function sentence(text){const t=String(text||'').trim();const match=t.mat
 export function badge(text,cls=''){return el('span',text,'reader-badge '+cls);}
 // Older reviewed records used optical for measured absorption/emission figures.
 export function figureMatchesCategory(figure,category){
- const normalize=value=>({optical:'property',properties:'property'})[value]||value;
+ const normalize=value=>({optical:'property',properties:'property',structures:'structure'})[value]||value;
  const wanted=normalize(category);
  const categories=[figure.category,...(Array.isArray(figure.categories)?figure.categories:[])].map(normalize);
  return categories.includes(wanted)||(wanted==='structure'&&categories.includes('composition'));

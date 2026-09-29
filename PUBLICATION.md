@@ -72,6 +72,17 @@ status while retaining the selected figures under the current project preference
 
 ## Build and release
 
+Source and site pushes are separate steps. After the reviewed source commit
+passes the existing local source-boundary and complete-build checks, push that
+exact clean commit to `cuiyist/mattersyn`. This starts validation-only source CI;
+it does not deploy the website. The exact source-head CI result necessarily
+follows that source push and must pass before site promotion. Keep the candidate
+unapproved until the existing science, browser, source-export and exact-head CI
+requirements are satisfied; then promote the identical artifact through the
+fresh public boundary and push the approved site commit. Site CI and anonymous
+verification still precede publication credit. This clarifies the existing
+sequence without adding a gate or approval.
+
 The September 26 scaling workflow uses a single source commit with generated,
 content-bound controls. Follow [the single-commit guide](tools/publication/SINGLE_COMMIT_RELEASE.md): stage reviewed payloads, prepare the blueprint and manifest together, then bind the committed manifest to clean HEAD outside the repository before export. CI uses that runtime allowlist. This removes the follow-up closure commit without removing exact public-file review or scientific evidence checks.
 

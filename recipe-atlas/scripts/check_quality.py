@@ -206,12 +206,13 @@ class Audit:
         lead_sulfide = self.hubs.get("PbS", {})
         yao_direct = {"yao2015-pbs-hot-injection-120c"}
         basel_direct = {"basel-2020-pbs-hot-injection-80c"}
+        choi_direct = {"choi2006-pbs-aptamer-ja066506k-tae"}
         yao_assemblies = {f"yao2015-cds-pbs-{n}-cycles" for n in (1, 2, 4, 6, 7)} | {"yao2015-planar-cds-pbs-6-cycles"}
         watt_composite = {"watt2004-pbs-mehppv-one-pot"}
         ratanatawanate_composites = {"ratanatawanate2009-pbs-tio2-inside", "ratanatawanate2009-pbs-tio2-both"}
-        self.check(lead_sulfide.get("component_only") is False and set(lead_sulfide.get("direct_record_ids", [])) == yao_direct | basel_direct, "PbS: only reviewed Yao/Basel isolated-QD preparations are direct routes; glass and device assemblies remain component contributions")
-        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies | basel_direct | watt_composite | ratanatawanate_composites, "PbS: exact Dantas, Yao, Basel, Watt and Ratanatawanate memberships required; benchmark and contextual rows remain excluded")
-        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448", "10.1039/b406060a", "10.1021/jp903050h"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
+        self.check(lead_sulfide.get("component_only") is False and set(lead_sulfide.get("direct_record_ids", [])) == yao_direct | basel_direct | choi_direct, "PbS: only reviewed Yao/Basel isolated-QD and Choi TAE preparations are direct routes; glass and device assemblies remain component contributions")
+        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies | basel_direct | watt_composite | ratanatawanate_composites | choi_direct, "PbS: exact Dantas, Yao, Basel, Watt, Ratanatawanate and Choi memberships required; benchmark and contextual rows remain excluded")
+        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448", "10.1039/b406060a", "10.1021/jp903050h", "10.1021/ja066506k"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
         watt_hub = self.hubs.get("PbS/MEH-PPV", {})
         polymer_hub = self.hubs.get("MEH-PPV", {})
         self.check(set(watt_hub.get("record_ids", [])) == set(watt_hub.get("direct_record_ids", [])) == watt_composite and watt_hub.get("component_only") is False and set(watt_hub.get("elements", [])) == {"Pb", "S", "C", "H", "O"}, "Watt: exact composite route and declared elemental composition required")
