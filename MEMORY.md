@@ -2959,3 +2959,8 @@ The Alam CdSe/CdS and Bellato InAs batch remains unpublished while a build compa
 ## 2026-09-29 — Parent preparation link correction
 
 The next two-source TiO2/Nd2O3 batch failed a local build because six film records linked to a root Reader from the nested records directory. The shared renderer now resolves those links correctly. Independent engineering review checked all six actual renders: only the parent-link path changed, and three focused regression tests passed. Scientific records and source-figure assignments are unchanged. The failed artifact remains preserved locally; the corrected batch requires a new successful build before publication. This correction adds no paper or pair credit. The last anonymously verified website contains 123 contributing papers and 439 broad recipe–structure rows.
+
+
+## 2026-09-29 — Resolve legacy preparation links to actual pages
+
+The corrected local batch exposed a second link issue: the old reader.html endpoint no longer exists. The shared record renderer now translates a valid legacy record link to the existing sibling record page, preserving its section anchor. Ambiguous or invalid targets are left for link validation to reject. Independent engineering review checks the actual generated target and its record binding, in addition to rendered link text. Five focused regression tests pass. Both failed local artifacts are retained; neither was pushed. The atlas and 86,979 data-quality checks passed separately, and scientific records remain unchanged. Publication still requires a fresh successful corrected build and anonymous verification.
