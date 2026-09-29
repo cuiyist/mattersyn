@@ -1,0 +1,804 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2010-sno2-graphene-jp1050047-go-reference",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Li et al. (2010): GO input and analytical reference",
+  "material": {
+    "formula": "GO",
+    "family": "Tin dioxide / graphene nanosheet composites",
+    "elements": [
+      "C",
+      "O"
+    ],
+    "components": [
+      "GO"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Source-reported analytical or electrode context",
+  "sources": [
+    {
+      "id": "li2010-sno2-graphene-jp1050047",
+      "doi": "10.1021/jp1050047",
+      "title": "Preparation of SnO2-Nanocrystal/Graphene-Nanosheets Composites and Their Lithium Storage Ability",
+      "authors": "Yueming Li; Xiaojun Lv; Jin Lu; Jinghong Li",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jp1050047",
+      "main_status": "All five supplied main pages independently source-audited; complete matched SI reviewed. Cited full sources remain unreviewed.",
+      "si_status": "Complete identity-matched two-page SI independently source-audited; no separate strict-screen PASS is claimed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2010-sno2-graphene-jp1050047",
+    "recipe_family": "li2010-sno2-graphene-jp1050047",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "GO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.1"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO reference results"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "SI PDF p. 1, Figure S1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "go-reference",
+      "name": "Graphene / graphite oxide reference, source GO",
+      "formula": "",
+      "role": "upstream input and analytical reference",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Hummers-related synthesis delegated to references 24 and 25. Composition, oxidation level and full upstream protocol not supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.1"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO reference results"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "SI PDF p. 1, Figure S1"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "formula": "H2O",
+      "role": "exfoliation medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.1"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO reference results"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "SI PDF p. 1, Figure S1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "upstream-context-state",
+      "name": "Retain the cited GO preparation output",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "reference-analysis-state",
+      "name": "Characterize the GO reference output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "upstream-context-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "upstream-context",
+      "action": "other",
+      "label": "Retain the cited GO preparation",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "go-reference",
+        "water"
+      ],
+      "outputs": [
+        "upstream-context-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "GO obtained by a Hummer method, followed by ultrasonication in water. No reagent charges or ultrasound settings are given; cited recipes are not reconstructed.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.1"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO reference results"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "SI PDF p. 1, Figure S1"
+        }
+      ]
+    },
+    {
+      "id": "reference-analysis",
+      "action": "measure",
+      "label": "Characterize the GO reference",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "upstream-context"
+      ],
+      "inputs": [
+        "upstream-context-state"
+      ],
+      "outputs": [
+        "reference-analysis-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Retain the GO reference XRD, TEM, FTIR, Raman and XPS. Figure S1 gives a 0.5 µm image scale, not a measured sheet dimension.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.1"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO reference results"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "SI PDF p. 1, Figure S1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "source_sample_label": "GO reference",
+      "batch_id": null,
+      "material_state_id": "reference-analysis-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Graphene / graphite oxide, oxygen stoichiometry unspecified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 1, Section 2.1"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, GO reference results"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "SI PDF p. 1, Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Exfoliated sheets",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 1, Section 2.1"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, GO reference results"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "SI PDF p. 1, Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.1"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO reference results"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "SI PDF p. 1, Figure S1"
+        }
+      ],
+      "notes": [
+        "Analytical input reference only; neither an admitted standalone GO synthesis nor a quantified sheet-size measurement."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "go-xrd",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "diffraction_peak_position",
+      "technique": "XRD",
+      "value": {
+        "value": 10.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "2θ position of characteristic GO peak.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, Figure 1 and GO results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "2θ position of characteristic GO peak.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, Figure 1 and GO results"
+        }
+      ]
+    },
+    {
+      "id": "go-spacing",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "interlayer_spacing",
+      "technique": "XRD",
+      "value": {
+        "value": 0.85,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source-reported spacing; no unit-cell refinement.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, GO results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source-reported spacing; no unit-cell refinement.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, GO results"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1401",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "ftir_band_position",
+      "technique": "FTIR",
+      "value": {
+        "value": 1401,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "O–H deformation in GO. Source assignments retained without independent vibrational calculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, FTIR discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 3d"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "O–H deformation in GO. Source assignments retained without independent vibrational calculation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, FTIR discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 3d"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1735",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "ftir_band_position",
+      "technique": "FTIR",
+      "value": {
+        "value": 1735,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "COOH in GO. Source assignments retained without independent vibrational calculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, FTIR discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 3d"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "COOH in GO. Source assignments retained without independent vibrational calculation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, FTIR discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 3d"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1220",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "ftir_band_position",
+      "technique": "FTIR",
+      "value": {
+        "value": 1220,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "C–OH stretching in GO. Source assignments retained without independent vibrational calculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, FTIR discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 3d"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "C–OH stretching in GO. Source assignments retained without independent vibrational calculation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, FTIR discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 3d"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1052",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "ftir_band_position",
+      "technique": "FTIR",
+      "value": {
+        "value": 1052,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "C–O stretching in GO. Source assignments retained without independent vibrational calculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, FTIR discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 3d"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "C–O stretching in GO. Source assignments retained without independent vibrational calculation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, FTIR discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 3d"
+        }
+      ]
+    },
+    {
+      "id": "ftir-827",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "ftir_band_position",
+      "technique": "FTIR",
+      "value": {
+        "value": 827,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "O–C=O, as printed in GO. Source assignments retained without independent vibrational calculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, FTIR discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 3d"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "O–C=O, as printed in GO. Source assignments retained without independent vibrational calculation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, FTIR discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 3d"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1620",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "ftir_band_position",
+      "technique": "FTIR",
+      "value": {
+        "value": 1620,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "remaining sp2 character in GO. Source assignments retained without independent vibrational calculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, FTIR discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 3d"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "remaining sp2 character in GO. Source assignments retained without independent vibrational calculation.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, FTIR discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 3d"
+        }
+      ]
+    },
+    {
+      "id": "raman-G",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "raman_band_position",
+      "technique": "Raman",
+      "value": {
+        "value": 1591.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "G band in GO, not the composite-series D/G ratio.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, Raman discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "G band in GO, not the composite-series D/G ratio.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, Raman discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "raman-D",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "raman_band_position",
+      "technique": "Raman",
+      "value": {
+        "value": 1365.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "D band in GO, not the composite-series D/G ratio.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 2, Raman discussion"
+          },
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, Figure 4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "D band in GO, not the composite-series D/G ratio.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 2, Raman discussion"
+        },
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, Figure 4"
+        }
+      ]
+    },
+    {
+      "id": "c-epoxy",
+      "sample_id": "li2010-sno2-graphene-jp1050047-go-reference-product",
+      "property": "xps_binding_energy",
+      "technique": "XPS",
+      "value": {
+        "value": 286.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "GO epoxy/ether feature; decreases on reduction. No numeric intensity change assigned.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 3, XPS discussion and Figure 5C"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "GO epoxy/ether feature; decreases on reduction. No numeric intensity change assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 3, XPS discussion and Figure 5C"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied five-page main and identity-matched two-page SI independently source-audited. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied main (5 pages) and matched SI (2 pages) author-read; cited full papers unreviewed.",
+      "Independent source audit passed; presentation remains pending.",
+      "Upstream graphene-oxide preparation is cited to references 24 and 25, not reproduced. Scope begins with the reported aqueous GO input; no upstream synthesis is invented.",
+      "Reagent purity/supplier, mixing order/rate, vessel geometry, centrifugation settings, wash repetitions/volumes and drying duration/atmosphere are unreported. Room temperature is not converted into an invented numerical set point.",
+      "Electrode loading, area, coating thickness, electrolyte volume, cell geometry and separator dimensions are unreported. No new nanoparticle synthesis or measured electrode structure is inferred from cell processing.",
+      "Scherrer domain sizes, TEM dimensions, spectral features, TGA composition and cell capacities retain their separate methods and sample scopes.",
+      "No atomic coordinates, refined lattice constants or molecular conformation measurements supplied. Identity cards and morphology/reference-cell presentation remain pending."
+    ],
+    "conflicts": [
+      "Main p. 2 cites Figure 2a/2b for the 0.3 specimen TEM discussion; the 0.34 nm annotations themselves appear in Figure 3a–c. Figure locators and sample assignments are kept distinct.",
+      "Main p. 2 refers to Figure 6 for the Sn 3d doublet, while the actual doublet appears in Figure 5B; Figure 6 is TGA.",
+      "Figure 3d labels the horizontal axis Wavelength (cm−1). Printed axis text is retained; wavenumber-valued FTIR positions are reported without altering the source image.",
+      "Main uses both graphite oxide and graphene oxide (GO); source wording is retained without assigning a unique oxygen stoichiometry or treating them as distinct measured batches.",
+      "The source prose calls the 0.3 sample size less than 10 nm; the three XRD domain sizes and Figure 3 fringe labels are separately sample-resolved. The size bound is not copied to the other two samples."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/jp1050047",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=li2010-sno2-graphene-jp1050047",
+      "relation": "source_review"
+    },
+    {
+      "label": "Interpretations and source limits",
+      "url": "data/paper-reviews/li2010-sno2-graphene-jp1050047/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

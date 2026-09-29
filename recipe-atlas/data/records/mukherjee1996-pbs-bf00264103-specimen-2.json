@@ -1,0 +1,704 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "mukherjee1996-pbs-bf00264103-specimen-2",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Mukherjee et al. (1996): supporting electrical specimen 2",
+  "material": {
+    "formula": "PbS",
+    "family": "Chemically precipitated lead sulfide and analytical comparisons",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Supporting characterization or reference preparation",
+  "sources": [
+    {
+      "id": "mukherjee1996-pbs-bf00264103",
+      "doi": "10.1007/bf00264103",
+      "title": "Synthesis of nanocrystalline PbS by a chemical route",
+      "authors": "M. Mukherjee; A. Datta; S. K. Pradhan; D. Chakravorty",
+      "year": 1996,
+      "url": "https://doi.org/10.1007/bf00264103",
+      "main_status": "Complete four-page main independently source-audited; four figures, three tables, three equations and ten printed bibliography entries retained; SI and cited full sources unreviewed.",
+      "si_status": "SI and cited full sources unreviewed.",
+      "reuse_status": "Source figure/table display proposed under user direction; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "mukherjee1996-pbs-bf00264103",
+    "recipe_family": "mukherjee1996-pbs-bf00264103",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbs-input",
+      "name": "Source PbS powder specimen",
+      "formula": "PbS",
+      "role": "electrical specimen powder",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Parent recipe row and powder mass are unknown. Per-specimen outcomes stay in this record."
+      ],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "silver-paint",
+      "name": "Electrodag 1415 silver paint",
+      "formula": null,
+      "role": "electrical contact material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Acheson Colloiden, The Netherlands; formulation and applied amount unreported. No pure Ag formula assigned."
+      ],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "cold-press-state",
+      "name": "Cold-press PbS pellet output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "electrodes-state",
+      "name": "Apply electrical contacts output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "cold-press-state"
+      ]
+    },
+    {
+      "id": "resistivity-state",
+      "name": "Measure d.c. resistance output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "electrodes-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "cold-press",
+      "action": "press",
+      "label": "Cold-press PbS pellet",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbs-input"
+      ],
+      "outputs": [
+        "cold-press-state"
+      ],
+      "parameters": {
+        "pellet_area": {
+          "value": 1.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm2",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "mukherjee1996-pbs-bf00264103",
+              "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+            }
+          ],
+          "derivation": null
+        },
+        "pellet_thickness": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "mukherjee1996-pbs-bf00264103",
+              "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cold-press the source PbS powder into a pellet with area approximately 1.5 cm² and thickness approximately 2 mm. Pressure, dwell and powder mass are unreported.",
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "electrodes",
+      "action": "coat",
+      "label": "Apply electrical contacts",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cold-press"
+      ],
+      "inputs": [
+        "cold-press-state",
+        "silver-paint"
+      ],
+      "outputs": [
+        "electrodes-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Apply silver-paint Electrodag 1415 contacts to the two opposite pellet faces; amount and drying/cure conditions are not supplied.",
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "resistivity",
+      "action": "measure",
+      "label": "Measure d.c. resistance",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "electrodes"
+      ],
+      "inputs": [
+        "electrodes-state"
+      ],
+      "outputs": [
+        "resistivity-state"
+      ],
+      "parameters": {
+        "measurement_temperature": {
+          "value": null,
+          "minimum": 90,
+          "maximum": 450,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "mukherjee1996-pbs-bf00264103",
+              "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+            }
+          ],
+          "derivation": null
+        },
+        "low_temperature_region_upper": {
+          "value": 170,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Activation-energy fit described below 170 K, not a synthesis temperature.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "mukherjee1996-pbs-bf00264103",
+              "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure resistance with a Keithley 617 electrometer over 90–450 K. Derive the high-temperature band gap and activation energy below 170 K as reported; graph values are not independently digitized.",
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "source_sample_label": "Source electrical specimen 2",
+      "batch_id": null,
+      "material_state_id": "electrodes-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 1–3, Electrical measurement preparation; Tables II–III specimen 2"
+        }
+      ],
+      "notes": [
+        "TEM/XRD values characterize source powder associated with this numbered specimen; no new pellet lattice refinement is asserted.",
+        "Numerical theoretical/model quantities remain separated from measured or experimentally derived outcomes."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tem-median",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "particle_size",
+      "technique": "TEM / log-normal distribution fit",
+      "value": {
+        "value": 14.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Median diameter x̄ in Table II, not an arithmetic mean.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 2, Table II specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Median diameter x̄ in Table II, not an arithmetic mean.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 2, Table II specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "tem-gsd",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "particle_size_geometric_standard_deviation",
+      "technique": "TEM / log-normal distribution fit",
+      "value": {
+        "value": 1.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "1",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Geometric standard deviation σ, dimensionless; not a ±nm error.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 2, Table II specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Geometric standard deviation σ, dimensionless; not a ±nm error.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 2, Table II specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "xrd-size",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "crystallite_size",
+      "technique": "X-ray line broadening",
+      "value": {
+        "value": 20.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Table II comparison; does not establish an exact Table I recipe assignment.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 2, Table II specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Table II comparison; does not establish an exact Table I recipe assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 2, Table II specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "band-gap",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "electrical_band_gap",
+      "technique": "High-temperature d.c. resistivity slope",
+      "value": {
+        "value": 1.87,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Experimental estimate, not optical absorption.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 3, Table III specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Experimental estimate, not optical absorption.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 3, Table III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "theory-gap",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "theoretical_band_gap",
+      "technique": "Source hyperbolic band model, equation 2",
+      "value": {
+        "value": 0.54,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Theoretical prediction for the TEM size, not a measured band gap.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 3, Table III specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Theoretical prediction for the TEM size, not a measured band gap.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 3, Table III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "low-activation",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "electrical_activation_energy",
+      "technique": "Resistivity slope below 170 K",
+      "value": {
+        "value": 0.021,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source experimental activation-energy estimate.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 3, Table III specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Source experimental activation-energy estimate.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 3, Table III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "separation",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "calculated_interparticle_separation",
+      "technique": "Source tunnelling model, equation 3",
+      "value": {
+        "value": 0.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Calculated using dielectric constant 1 and TEM radius; not directly imaged spacing.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 3, Table III specimen 2"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Calculated using dielectric constant 1 and TEM radius; not directly imaged spacing.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 3, Table III specimen 2"
+        }
+      ]
+    },
+    {
+      "id": "model-diameter",
+      "sample_id": "mukherjee1996-pbs-bf00264103-specimen-2-product",
+      "property": "model_equivalent_particle_diameter",
+      "technique": "Source inverse hyperbolic band model, equation 2",
+      "value": {
+        "value": 2.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Calculated diameter corresponding to measured electrical gap; not a TEM particle diameter. Text subsequently summarizes 3–5 nm, without reconciling the 2.0/2.9/5.3 nm list.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "mukherjee1996-pbs-bf00264103",
+            "locator": "Main PDF p. 3, Table III specimen 2; equation 2 discussion"
+          }
+        ],
+        "derivation": "Source-reported analysis; no new calculation."
+      },
+      "conditions": "Source specimen 2; parent preparation unresolved. Calculated diameter corresponding to measured electrical gap; not a TEM particle diameter. Text subsequently summarizes 3–5 nm, without reconciling the 2.0/2.9/5.3 nm list.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "mukherjee1996-pbs-bf00264103",
+          "locator": "Main PDF p. 3, Table III specimen 2; equation 2 discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete four-page main, Reader, figure and integrated apparatus audit passed. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied four-page main, four figures, three tables, three equations and ten bibliography entries. SI and cited full sources unreviewed.",
+      "Thirteen Table I preparation rows are retained separately; these are source-reported variants, not independently reproduced runs.",
+      "H2S gas amount/flow/purity, passage duration, vessel geometry/capacity and stirring rate are unreported. No gas-volume or stoichiometric charge is inferred.",
+      "For six first rows pH is variable, with source footnote stating that it changes with introduced H2S. Numerical pH-adjusting chemicals or quantities are not supplied for fixed-pH rows.",
+      "Ultrasonic treatment is a yes/no preparation distinction; frequency, power, duration and timing are unreported. The source prints 290 K for the first ultrasonic row and 271 K for the pH 14 row; neither is silently corrected.",
+      "Spraying uses a closed chamber filled/flushed with H2S and continuous solution recycling. Spray rate, nozzle, chamber volume, recycling flow/duration and pH are unreported.",
+      "Filter hardware and vacuum-desiccator pressure/temperature are unreported; source residue storage/drying is two days. No wash step or yield is invented.",
+      "Figure 1 and Figure 2/text identify pH 12; Table I instead prints pH 14 for its 12.9 nm row. Table II gives specimen 1 XRD size 12.9 nm. Equal size is not sufficient to resolve this pH or batch-assignment discrepancy; microscopy/electrical specimens remain separate supporting contexts.",
+      "Table II/III specimens have measured TEM/XRD/electrical outcomes, but their exact Table I recipe rows are not uniquely linked by explicit source labels. Specimen 2/3 recipes are not inferred by matching diameters.",
+      "TEM specimen preparation is deferred to cited reference 8, not read. Cold-press pressure/dwell and individual powder mass are unreported; silver paint formulation is a named commercial material, not pure elemental silver.",
+      "Theoretical band gaps, model-equivalent particle diameters and calculated interparticle separations are author calculations, distinct from TEM dimensions and electrical estimates. The text lists 2.0/2.9/5.3 nm and then summarizes 3–5 nm; both source statements remain without reconciliation.",
+      "No measured atomic coordinates or complete coordinate-based training readiness. Independent source comparison passed; molecular/particle presentation remains pending."
+    ],
+    "conflicts": [
+      "Figure 1 and Figure 2/text identify pH 12; Table I instead prints pH 14 for its 12.9 nm row. Table II gives specimen 1 XRD size 12.9 nm. Equal size is not sufficient to resolve this pH or batch-assignment discrepancy; microscopy/electrical specimens remain separate supporting contexts."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1007/bf00264103",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures, tables and full review",
+      "url": "paper-review.html?id=mukherjee1996-pbs-bf00264103",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete source context",
+      "url": "data/paper-reviews/mukherjee1996-pbs-bf00264103/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

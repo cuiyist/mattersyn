@@ -1,0 +1,775 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2010-sno2-graphene-jp1050047-analytical-procedures",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Li et al. (2010): Common composite characterization procedures",
+  "material": {
+    "formula": "SnO2/graphene",
+    "family": "Tin dioxide / graphene nanosheet composites",
+    "elements": [
+      "Sn",
+      "O",
+      "C"
+    ],
+    "components": [
+      "SnO2",
+      "C"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Source-reported analytical or electrode context",
+  "sources": [
+    {
+      "id": "li2010-sno2-graphene-jp1050047",
+      "doi": "10.1021/jp1050047",
+      "title": "Preparation of SnO2-Nanocrystal/Graphene-Nanosheets Composites and Their Lithium Storage Ability",
+      "authors": "Yueming Li; Xiaojun Lv; Jin Lu; Jinghong Li",
+      "year": 2010,
+      "url": "https://doi.org/10.1021/jp1050047",
+      "main_status": "All five supplied main pages independently source-audited; complete matched SI reviewed. Cited full sources remain unreviewed.",
+      "si_status": "Complete identity-matched two-page SI independently source-audited; no separate strict-screen PASS is claimed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2010-sno2-graphene-jp1050047",
+    "recipe_family": "li2010-sno2-graphene-jp1050047",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2/graphene",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sample",
+      "name": "Selected composite analytical aliquot",
+      "formula": "SnO2/graphene",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "kbr",
+      "name": "Potassium bromide",
+      "formula": "KBr",
+      "role": "FTIR matrix",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "tem-grid",
+      "name": "Carbon-coated TEM grid, support metal unspecified",
+      "formula": "",
+      "role": "microscopy support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "air",
+      "name": "Air, composition unspecified",
+      "formula": "",
+      "role": "drying and TGA atmosphere",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "xrd-state",
+      "name": "Record powder diffraction output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "ftir-state",
+      "name": "Record the KBr-matrix FTIR spectrum output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-cast-state",
+      "name": "Drop-cast the TEM aliquot output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-dry-state",
+      "name": "Air-dry the TEM grid output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tem-cast-state"
+      ]
+    },
+    {
+      "id": "tem-image-state",
+      "name": "Image the prepared grid output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "tem-dry-state"
+      ]
+    },
+    {
+      "id": "xps-state",
+      "name": "Record photoelectron spectra output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "tga-state",
+      "name": "Run thermogravimetry output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "xrd",
+      "action": "measure",
+      "label": "Record powder diffraction",
+      "stage": "characterization",
+      "branch": "xrd",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample"
+      ],
+      "outputs": [
+        "xrd-state"
+      ],
+      "parameters": {
+        "wavelength": {
+          "value": 1.5406,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Å",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_min": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_max": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "scan_rate": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "deg/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Bruker D8-Advance with graphite monochromator, Cu Kα radiation. Scan 2θ from 5 to 80° at 8°/min.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "ftir",
+      "action": "measure",
+      "label": "Record the KBr-matrix FTIR spectrum",
+      "stage": "characterization",
+      "branch": "ftir",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample",
+        "kbr"
+      ],
+      "outputs": [
+        "ftir-state"
+      ],
+      "parameters": {
+        "minimum_wavenumber": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm^-1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "maximum_wavenumber": {
+          "value": 4000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm^-1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use a Perkin-Elmer spectrophotometer and KBr matrix over 400–4000 cm−1. Sample/KBr amounts and preparation settings unreported.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "tem-cast",
+      "action": "coat",
+      "label": "Drop-cast the TEM aliquot",
+      "stage": "characterization",
+      "branch": "tem",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample",
+        "tem-grid"
+      ],
+      "outputs": [
+        "tem-cast-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drop-cast as-prepared sample dispersions on carbon-coated TEM grids. Dispersion solvent, dilution, grid metal and aliquot volume unreported.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "tem-dry",
+      "action": "dry",
+      "label": "Air-dry the TEM grid",
+      "stage": "characterization",
+      "branch": "tem",
+      "optional": false,
+      "depends_on": [
+        "tem-cast"
+      ],
+      "inputs": [
+        "tem-cast-state",
+        "air"
+      ],
+      "outputs": [
+        "tem-dry-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry in air; duration and numerical temperature unreported.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "tem-image",
+      "action": "measure",
+      "label": "Image the prepared grid",
+      "stage": "characterization",
+      "branch": "tem",
+      "optional": false,
+      "depends_on": [
+        "tem-dry"
+      ],
+      "inputs": [
+        "tem-dry-state"
+      ],
+      "outputs": [
+        "tem-image-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use JEOL JEM 2010 for TEM/HRTEM. Acceleration voltage and quantitative particle-counting procedure unreported.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "xps",
+      "action": "measure",
+      "label": "Record photoelectron spectra",
+      "stage": "characterization",
+      "branch": "xps",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample"
+      ],
+      "outputs": [
+        "xps-state"
+      ],
+      "parameters": {
+        "energy_minimum": {
+          "value": 0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "energy_maximum": {
+          "value": 1100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "AXIS Ultra instrument from Kratos Analytical over 0–1100 eV. Calibration and fitting details unreported.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    },
+    {
+      "id": "tga",
+      "action": "measure",
+      "label": "Run thermogravimetry",
+      "stage": "characterization",
+      "branch": "tga",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample",
+        "air"
+      ],
+      "outputs": [
+        "tga-state"
+      ],
+      "parameters": {
+        "start_temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "end_temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2010-sno2-graphene-jp1050047",
+              "locator": "Main PDF p. 1, Section 2.2 characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "li2010-sno2-graphene-jp1050047",
+            "locator": "Main PDF p. 1, Section 2.2 characterization"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TGAQ5000 IR, TA Instruments, from 100 to 800 °C at 10 °C/min under air. Sample amount unreported; measurement is destructive and not another synthesis.",
+      "evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2010-sno2-graphene-jp1050047-analytical-procedures-product",
+      "source_sample_label": "Common analytical method context",
+      "batch_id": null,
+      "material_state_id": "tga-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2010-sno2-graphene-jp1050047",
+          "locator": "Main PDF p. 1, Section 2.2 characterization"
+        }
+      ],
+      "notes": [
+        "Methods apply to the reported sample series; no single new physical batch or additional structural outcome is inferred. Quantitative results reside with the named specimen records."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied five-page main and identity-matched two-page SI independently source-audited. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied main (5 pages) and matched SI (2 pages) author-read; cited full papers unreviewed.",
+      "Independent source audit passed; presentation remains pending.",
+      "Upstream graphene-oxide preparation is cited to references 24 and 25, not reproduced. Scope begins with the reported aqueous GO input; no upstream synthesis is invented.",
+      "Reagent purity/supplier, mixing order/rate, vessel geometry, centrifugation settings, wash repetitions/volumes and drying duration/atmosphere are unreported. Room temperature is not converted into an invented numerical set point.",
+      "Electrode loading, area, coating thickness, electrolyte volume, cell geometry and separator dimensions are unreported. No new nanoparticle synthesis or measured electrode structure is inferred from cell processing.",
+      "Scherrer domain sizes, TEM dimensions, spectral features, TGA composition and cell capacities retain their separate methods and sample scopes.",
+      "No atomic coordinates, refined lattice constants or molecular conformation measurements supplied. Identity cards and morphology/reference-cell presentation remain pending."
+    ],
+    "conflicts": [
+      "Main p. 2 cites Figure 2a/2b for the 0.3 specimen TEM discussion; the 0.34 nm annotations themselves appear in Figure 3a–c. Figure locators and sample assignments are kept distinct.",
+      "Main p. 2 refers to Figure 6 for the Sn 3d doublet, while the actual doublet appears in Figure 5B; Figure 6 is TGA.",
+      "Figure 3d labels the horizontal axis Wavelength (cm−1). Printed axis text is retained; wavenumber-valued FTIR positions are reported without altering the source image.",
+      "Main uses both graphite oxide and graphene oxide (GO); source wording is retained without assigning a unique oxygen stoichiometry or treating them as distinct measured batches.",
+      "The source prose calls the 0.3 sample size less than 10 nm; the three XRD domain sizes and Figure 3 fringe labels are separately sample-resolved. The size bound is not copied to the other two samples."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/jp1050047",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=li2010-sno2-graphene-jp1050047",
+      "relation": "source_review"
+    },
+    {
+      "label": "Interpretations and source limits",
+      "url": "data/paper-reviews/li2010-sno2-graphene-jp1050047/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

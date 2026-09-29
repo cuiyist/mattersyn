@@ -1,4 +1,20 @@
 
+### Owen, Li and Mukherjee additions awaiting publication
+
+The preceding Zhu TiO2 and Que Nd2O3 batch was deployed and anonymously verified at 2026-09-29T16:52:48.727289+00:00 (source fca3ba338f0a22c0303961e81600b5be27c61a54; site 9ed0766351cd0edbdb8630da326f9dc45a811711). It contains 125 ordinary primary papers, 1472 canonical records and 443 broad recipe-structure rows.
+
+Owen retains all three main and twenty-four matched SI pages. One CdSe core route and one structural row remain separate from twenty supporting shell, exchange, purification, molecular-model and analytical contexts. Printed stock/unit conflicts and unavailable seed charges remain explicit.
+
+Li retains the full accepted main and matched SI scope. Eight records include three direct SnO2/graphene-related preparations and five supporting contexts; source-linked component and direct hub roles, sample assignments and three partial structural rows remain distinct.
+
+Mukherjee retains the complete four-page main, four figures, three tables, three equations and ten references. Thirteen Table I variants contribute thirteen partial rows; three electrical specimens and the KCl reference remain supporting. The pH14 versus pH12 conflict, printed290K/271K values and specimen-parent ambiguity remain unresolved, without inferred wash steps, gas charges or sonication settings.
+
+These three independently accepted papers add forty-six records, seventeen direct routes and seventeen partial structural rows. All prior443 broad rows remain exact. Source-specific identity cards and conceptual apparatus remain qualified; source-figure permission is unverified and missing measured coordinates are not invented. The separate independently reviewed correction changes only two Li scope-label suffixes to reflect accepted independent audit and extends the exact PbS historical-membership guard. It must be applied after core data metadata preparation before source controls. Its private tests do not change the public187-test build contract. Publication remains pending until deployment and anonymous verification. The twenty published primary papers/hour target remains unmet; progress reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T16:52:48.727289+00:00 (source `fca3ba338f0a22c0303961e81600b5be27c61a54`, site `9ed0766351cd0edbdb8630da326f9dc45a811711`). Its verified website contains 125 primary sources, 1472 canonical records and 443 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
+
 ### Zhu TiO2 and Que Nd2O3 additions awaiting publication
 
 The preceding Kim Bi4Ti3O12, Cu7Te4 and aqueous CdSe batch was deployed and anonymously verified at 2026-09-29T15:40:03.681133+00:00 (source ee19a910f096ba4c3ba27bd8660ddcec531be4f7; site 8580fd858c0e3a40f716cbbb183b86c73cd32cf2). It contains 123 contributing ordinary primary papers, 1441 canonical records and 439 broad recipe-structure rows.
