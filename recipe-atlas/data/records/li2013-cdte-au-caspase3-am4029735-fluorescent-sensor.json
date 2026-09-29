@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2013-cdte-au-caspase3-am4029735-fluorescent-sensor",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Li et al. (2013): Au-Ps / CdTe caspase fluorescence assay",
+  "material": {
+    "formula": "Au/CdTe",
+    "family": "CdTe quantum dots and peptide-functionalized gold probes",
+    "elements": [
+      "Au",
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "Au",
+      "CdTe"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Supporting optical / enzymatic assay",
+  "sources": [
+    {
+      "id": "li2013-cdte-au-caspase3-am4029735",
+      "doi": "10.1021/am4029735",
+      "title": "Highly Sensitive Detection of Caspase-3 Activities via a Nonconjugated Gold Nanoparticle–Quantum Dot Pair Mediated by an Inner-Filter Effect",
+      "authors": "Jingwen Li; Xinming Li; Xiujuan Shi; Xuewen He; Wei Wei; Nan Ma; Hong Chen",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/am4029735",
+      "main_status": "All five screened main pages author-read textually and visually; independent audit pending.",
+      "si_status": "Same-DOI SI outside the screened-pass set is excluded and unread. Main references to Figures S1–S6 are not supplied evidence.",
+      "reuse_status": "Exact selected main-article crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2013-cdte-au-caspase3-am4029735",
+    "recipe_family": "li2013-cdte-au-caspase3-am4029735",
+    "parent_record_id": "li2013-cdte-au-caspase3-am4029735-caspase-aggregation",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au/CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "au-p-feed",
+      "name": "Peptide-modified Au-Ps feed",
+      "formula": "Au",
+      "role": "assay absorber",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Upstream peptide-Au recipe; no new synthesis batch asserted."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+        }
+      ]
+    },
+    {
+      "id": "cdte-feed",
+      "name": "GSH-capped CdTe feed",
+      "formula": "CdTe",
+      "role": "assay fluorophore",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 1.14e-08,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Source assay concentration; no invented dilution recipe.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "No measured CdTe morphology in the inspected main."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mix-sensor-state",
+      "name": "Combine reacted Au-Ps with CdTe output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "read-sensor-state",
+      "name": "Measure enzyme-dependent fluorescence output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mix-sensor-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "mix-sensor",
+      "action": "mix",
+      "label": "Combine reacted Au-Ps with CdTe",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "au-p-feed",
+        "cdte-feed"
+      ],
+      "outputs": [
+        "mix-sensor-state"
+      ],
+      "parameters": {
+        "reacted_au_p_volume": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "nominal_au_p_to_cdte": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Methods molar ratio 1:1; not reconciled with caption concentrations.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Take 100 µL Au-Ps solution after the enzymatic reaction and mix with CdTe QDs at stated 1.14 × 10−8 M, with stated Au-Ps:CdTe = 1:1. QD aliquot and final volume unreported. Figure 5 concentration labels are inconsistent with the nominal 1:1 ratio.",
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+        }
+      ]
+    },
+    {
+      "id": "read-sensor",
+      "action": "measure",
+      "label": "Measure enzyme-dependent fluorescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "mix-sensor"
+      ],
+      "inputs": [
+        "mix-sensor-state"
+      ],
+      "outputs": [
+        "read-sensor-state"
+      ],
+      "parameters": {
+        "excitation": {
+          "value": 405,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "observation_wavelength": {
+          "value": 520,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Excite at 405 nm and plot relative fluorescence F/F0 at 520 nm versus the stated caspase-3 series. F0 is the no-enzyme reference; no graph points are digitized.",
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2013-cdte-au-caspase3-am4029735-fluorescent-sensor-product",
+      "source_sample_label": "Unconjugated Au-Ps / CdTe fluorescent assay",
+      "batch_id": null,
+      "material_state_id": "read-sensor-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Enzymatic Assays, final paragraph"
+        }
+      ],
+      "notes": [
+        "Optical assay, not a synthesized Au–CdTe composite. No structural measurement of the combined probe inferred."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "linear-range",
+      "sample_id": "li2013-cdte-au-caspase3-am4029735-fluorescent-sensor-product",
+      "property": "assay_linear_concentration_range",
+      "technique": "Fluorescence assay",
+      "value": {
+        "value": null,
+        "minimum": 27.68,
+        "maximum": 129.15,
+        "unit": "pM",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported caspase-3 range for F/F0 versus concentration; dilution basis ambiguity retained.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2013-cdte-au-caspase3-am4029735",
+            "locator": "Main PDF p. 4, Figure 5C and Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported caspase-3 range for F/F0 versus concentration; dilution basis ambiguity retained.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 4, Figure 5C and Results"
+        }
+      ]
+    },
+    {
+      "id": "detection-limit",
+      "sample_id": "li2013-cdte-au-caspase3-am4029735-fluorescent-sensor-product",
+      "property": "detection_limit",
+      "technique": "Fluorescence assay",
+      "value": {
+        "value": 18,
+        "minimum": null,
+        "maximum": null,
+        "unit": "pM",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported detection limit; definition and calculation details not provided in inspected main.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2013-cdte-au-caspase3-am4029735",
+            "locator": "Main PDF p. 4, Results"
+          },
+          {
+            "source_id": "li2013-cdte-au-caspase3-am4029735",
+            "locator": "Main PDF p. 5, Conclusions"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Reported detection limit; definition and calculation details not provided in inspected main.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 4, Results"
+        },
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 5, Conclusions"
+        }
+      ]
+    },
+    {
+      "id": "fit-r2",
+      "sample_id": "li2013-cdte-au-caspase3-am4029735-fluorescent-sensor-product",
+      "property": "linear_fit_r_squared",
+      "technique": "Linear fit",
+      "value": {
+        "value": 0.9967,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Printed Figure 5C fit Y = 0.0039X + 1.0376; coefficients remain context, not newly fitted.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2013-cdte-au-caspase3-am4029735",
+            "locator": "Main PDF p. 4, Figure 5C annotation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Printed Figure 5C fit Y = 0.0039X + 1.0376; coefficients remain context, not newly fitted.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 4, Figure 5C annotation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific source audit passed for the five-page main article (SI excluded); source ambiguities and unresolved physical sample links remain as recorded. Presentation, publisher permissions, and training admission are separate.",
+    "missing_fields": [
+      "Screened main article only, five pages; excluded SI and cited full texts unreviewed. Independent source audit pending.",
+      "CdTe size, morphology and crystal phase are not supplied in the inspected main; its TEM characterization is directed to excluded Figure S1. Au-Ps TEM must not be assigned to CdTe.",
+      "Bare Au TEM and UV–vis are directed to excluded Figure S2. The main about-18 nm TEM statement explicitly describes peptide-modified Au-Ps, not an independently measured bare-Au batch.",
+      "No specimen atomic coordinates, refined lattice constants or crystal model supplied. New identity cards and morphology/unit-cell presentation remain pending.",
+      "Physical batch IDs, synthesis yields and particle counts are not reported. Assay comparisons do not establish separate synthesis batches.",
+      "Room temperature, boiling, initial redispersion volume and 1% citrate denominator remain as reported; no numerical values or percentage basis are inferred.",
+      "Glovebox gas, oxygen/water limits, reaction vessel geometry, heating ramps and CdTe purification/storage are unreported.",
+      "Figure 4C depicts aggregated Au-Ps after caspase-3, without naming the enzyme concentration or TEM aliquot. No dose-specific measured aggregate dimension is inferred."
+    ],
+    "conflicts": [
+      "Main p. 3 Figure 3 gives Au-Ps concentrations K × 10−9 M, CdTe 1.14 × 10−8 M, and nominal Au-Ps:CdTe ratios 0–3. The stated concentrations and listed ratios differ by about a factor of ten. Keep both as printed; do not repair concentrations or calculate mixing volumes.",
+      "Main p. 3 body prints CdTe concentration as 1.14 × 10− M with a missing exponent in the quenching example; Figure 3 caption and Methods give 1.14 × 10−8 M. Preserve the incomplete body notation separately.",
+      "Main p. 2 fluorescent-assay Methods specify a 1:1 Au-Ps:CdTe molar ratio, while Figure 5 states 1.12 × 10−9 M Au-Ps and 1.14 × 10−8 M CdTe. These are not numerically 1:1; do not resolve silently.",
+      "Methods describe the stated enzyme concentrations as dilutions before mixing 20 µL with 100 µL Au-Ps; Figures 4–5 label the assay curves with the same concentration list. The pre-mixing versus final-mixture concentration basis remains unresolved.",
+      "The CdCl2–GSH stock is labelled 1.25 mM CdCl2 and 1.05 mM GSH, alongside 1.2 mg CdCl2 and 1.6 mg GSH in 5 mL water. Preserve nominal labels and masses without substituting recalculated concentrations.",
+      "Main p. 4 text cites Figure 5B for the linear concentration relationship and Figure 5C for sensitivity comparison; actual Figure 5C is the linear fit. Retain the actual panel identities.",
+      "Centrifugation is described once and then as repeated three times; whether this means three total cycles or three repeats after the first is not made explicit."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/am4029735",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=li2013-cdte-au-caspase3-am4029735",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample assignments, assay series and source limits",
+      "url": "data/paper-reviews/li2013-cdte-au-caspase3-am4029735/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

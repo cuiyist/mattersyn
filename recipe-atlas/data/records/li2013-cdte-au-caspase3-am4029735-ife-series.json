@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "li2013-cdte-au-caspase3-am4029735-ife-series",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Li et al. (2013): Au-Ps / CdTe concentration series",
+  "material": {
+    "formula": "Au/CdTe",
+    "family": "CdTe quantum dots and peptide-functionalized gold probes",
+    "elements": [
+      "Au",
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "Au",
+      "CdTe"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "Supporting optical / enzymatic assay",
+  "sources": [
+    {
+      "id": "li2013-cdte-au-caspase3-am4029735",
+      "doi": "10.1021/am4029735",
+      "title": "Highly Sensitive Detection of Caspase-3 Activities via a Nonconjugated Gold Nanoparticle–Quantum Dot Pair Mediated by an Inner-Filter Effect",
+      "authors": "Jingwen Li; Xinming Li; Xiujuan Shi; Xuewen He; Wei Wei; Nan Ma; Hong Chen",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/am4029735",
+      "main_status": "All five screened main pages author-read textually and visually; independent audit pending.",
+      "si_status": "Same-DOI SI outside the screened-pass set is excluded and unread. Main references to Figures S1–S6 are not supplied evidence.",
+      "reuse_status": "Exact selected main-article crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "li2013-cdte-au-caspase3-am4029735",
+    "recipe_family": "li2013-cdte-au-caspase3-am4029735",
+    "parent_record_id": "li2013-cdte-au-caspase3-am4029735-peptide-au",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au/CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 2, Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "au-p-feed",
+      "name": "Peptide-modified Au-Ps feed",
+      "formula": "Au",
+      "role": "assay absorber",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Upstream peptide-Au recipe; no new synthesis batch asserted."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+        }
+      ]
+    },
+    {
+      "id": "cdte-feed",
+      "name": "GSH-capped CdTe feed",
+      "formula": "CdTe",
+      "role": "assay fluorophore",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 1.14e-08,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Source assay concentration; no invented dilution recipe.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "No measured CdTe morphology in the inspected main."
+      ],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "mix-ife-state",
+      "name": "Prepare the absorber concentration series output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "measure-ife-state",
+      "name": "Record the fluorescence series output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "mix-ife-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "mix-ife",
+      "action": "mix",
+      "label": "Prepare the absorber concentration series",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "au-p-feed",
+        "cdte-feed"
+      ],
+      "outputs": [
+        "mix-ife-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Incubate CdTe QDs at stated 1.14 × 10−8 M with Au-Ps at K × 10−9 M, K = 0, 0.22, 0.45, 0.56, 0.67, 0.78, 0.90, 1.12, 1.68, 2.24, 3.36. Figure 3 separately labels nominal ratios 0, 0.2, 0.4, 0.5, 0.6, 0.7, 0.8, 1, 1.5, 2, 3; concentration/ratio discrepancy is unresolved. Volumes and incubation time unreported.",
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+        }
+      ]
+    },
+    {
+      "id": "measure-ife",
+      "action": "measure",
+      "label": "Record the fluorescence series",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "mix-ife"
+      ],
+      "inputs": [
+        "mix-ife-state"
+      ],
+      "outputs": [
+        "measure-ife-state"
+      ],
+      "parameters": {
+        "excitation": {
+          "value": 405,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "li2013-cdte-au-caspase3-am4029735",
+              "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Record fluorescence with 405 nm excitation. The main attributes quenching to IFE, not to a physically conjugated Au–CdTe particle.",
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "li2013-cdte-au-caspase3-am4029735-ife-series-product",
+      "source_sample_label": "Unconjugated Au-Ps / CdTe optical mixtures",
+      "batch_id": null,
+      "material_state_id": "measure-ife-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+        }
+      ],
+      "notes": [
+        "Assay series only. No morphology, phase or aggregate dimension measured for these mixtures."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "quenching",
+      "sample_id": "li2013-cdte-au-caspase3-am4029735-ife-series-product",
+      "property": "fluorescence_quenching",
+      "technique": "Fluorescence",
+      "value": {
+        "value": null,
+        "minimum": 60,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source says more than 60% quenching at 1.12 × 10−9 M Au-Ps; accompanying CdTe exponent is incomplete in prose. Caption gives 1.14 × 10−8 M; concentration/ratio conflict retained.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "li2013-cdte-au-caspase3-am4029735",
+            "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+          }
+        ],
+        "derivation": null,
+        "minimum_exclusive": true
+      },
+      "conditions": "Source says more than 60% quenching at 1.12 × 10−9 M Au-Ps; accompanying CdTe exponent is incomplete in prose. Caption gives 1.14 × 10−8 M; concentration/ratio conflict retained.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "li2013-cdte-au-caspase3-am4029735",
+          "locator": "Main PDF p. 3, Figure 3 and IFE discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scientific source audit passed for the five-page main article (SI excluded); source ambiguities and unresolved physical sample links remain as recorded. Presentation, publisher permissions, and training admission are separate.",
+    "missing_fields": [
+      "Screened main article only, five pages; excluded SI and cited full texts unreviewed. Independent source audit pending.",
+      "CdTe size, morphology and crystal phase are not supplied in the inspected main; its TEM characterization is directed to excluded Figure S1. Au-Ps TEM must not be assigned to CdTe.",
+      "Bare Au TEM and UV–vis are directed to excluded Figure S2. The main about-18 nm TEM statement explicitly describes peptide-modified Au-Ps, not an independently measured bare-Au batch.",
+      "No specimen atomic coordinates, refined lattice constants or crystal model supplied. New identity cards and morphology/unit-cell presentation remain pending.",
+      "Physical batch IDs, synthesis yields and particle counts are not reported. Assay comparisons do not establish separate synthesis batches.",
+      "Room temperature, boiling, initial redispersion volume and 1% citrate denominator remain as reported; no numerical values or percentage basis are inferred.",
+      "Glovebox gas, oxygen/water limits, reaction vessel geometry, heating ramps and CdTe purification/storage are unreported.",
+      "Figure 4C depicts aggregated Au-Ps after caspase-3, without naming the enzyme concentration or TEM aliquot. No dose-specific measured aggregate dimension is inferred."
+    ],
+    "conflicts": [
+      "Main p. 3 Figure 3 gives Au-Ps concentrations K × 10−9 M, CdTe 1.14 × 10−8 M, and nominal Au-Ps:CdTe ratios 0–3. The stated concentrations and listed ratios differ by about a factor of ten. Keep both as printed; do not repair concentrations or calculate mixing volumes.",
+      "Main p. 3 body prints CdTe concentration as 1.14 × 10− M with a missing exponent in the quenching example; Figure 3 caption and Methods give 1.14 × 10−8 M. Preserve the incomplete body notation separately.",
+      "Main p. 2 fluorescent-assay Methods specify a 1:1 Au-Ps:CdTe molar ratio, while Figure 5 states 1.12 × 10−9 M Au-Ps and 1.14 × 10−8 M CdTe. These are not numerically 1:1; do not resolve silently.",
+      "Methods describe the stated enzyme concentrations as dilutions before mixing 20 µL with 100 µL Au-Ps; Figures 4–5 label the assay curves with the same concentration list. The pre-mixing versus final-mixture concentration basis remains unresolved.",
+      "The CdCl2–GSH stock is labelled 1.25 mM CdCl2 and 1.05 mM GSH, alongside 1.2 mg CdCl2 and 1.6 mg GSH in 5 mL water. Preserve nominal labels and masses without substituting recalculated concentrations.",
+      "Main p. 4 text cites Figure 5B for the linear concentration relationship and Figure 5C for sensitivity comparison; actual Figure 5C is the linear fit. Retain the actual panel identities.",
+      "Centrifugation is described once and then as repeated three times; whether this means three total cycles or three repeats after the first is not made explicit."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/am4029735",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=li2013-cdte-au-caspase3-am4029735",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample assignments, assay series and source limits",
+      "url": "data/paper-reviews/li2013-cdte-au-caspase3-am4029735/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}
