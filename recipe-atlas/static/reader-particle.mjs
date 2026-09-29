@@ -13,6 +13,17 @@ export function particleGroups(r,presentation={}){
  for(const context of presentation.productContexts||[])ensure(sourceRecord(context,r.record_id),context.sample_id,context.label).context=context;
  for(const product of r.products||[]){const g=ensure(r.record_id,product.sample_id,product.source_sample_label||product.sample_id);g.product=product;}
  for(const fact of presentation.allProductFacts||presentation.productFacts||[]){const g=ensure(fact.record_id||r.record_id,fact.sample_id||'unassigned',fact.scope);g.facts.push(fact);}
+ // Some scoped Readers list measurements only. Retain the canonical product's
+ // qualitative observations without borrowing another record or specimen.
+ for(const group of groups.values())for(const kind of ['composition','phase','morphology','surface']){
+  const field=group.product?.[kind];
+  if(!field||!knownStatus.has(field.status)||!text(field.value))continue;
+  if(group.facts.some(f=>f.kind===kind&&knownStatus.has(f.status)&&text(f.value)))continue;
+  group.facts.push({kind,label:kind[0].toUpperCase()+kind.slice(1),value:field.value,status:field.status,
+   record_id:group.recordId,sample_id:group.sampleId,scope:group.label,
+   qualifier:[field.status==='reported'?'':field.status.replaceAll('_',' '),field.note].filter(Boolean).join(' · '),
+   source_locator:field.evidence||[]});
+ }
  if(!groups.size)ensure(r.record_id,'unassigned','Specimen not assigned');
  return groups;
 }
