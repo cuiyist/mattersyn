@@ -11,7 +11,7 @@ DOI = re.compile(r'10\.\d{4,9}/[^\s<>"' + chr(92)*2 + r'?#]+\Z')
 SHA = re.compile(r'[a-f0-9]{64}\Z')
 PRIVATE = re.compile(r'(?:[a-zA-Z]:[\\/]|file:|\\\\|/(?:Users|home|tmp|research-assets)/|(?:^|\s)\.\.[\\/])')
 NUMBER = re.compile(r'(?<![A-Za-z0-9.])[-+−]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?')
-UNITS = re.compile(r'(?<![A-Za-z])(?:°C|℃|°(?!\s*[A-Za-z](?![A-Za-z]))|K|mL|µL|μL|uL|L|mmol|µmol|μmol|mol|mg|µg|μg|kg|g|nm|µm|μm|mm|cm|m|s|min|h|rpm|GPa|MPa|kPa|Pa|torr|atm|bar|eV|keV|V|mV|A|Å|wt%|%|mM|M|µM|μM|uM|nM|hours|minutes|seconds|days|particles|cycles|layers)(?![A-Za-z])')
+UNITS = re.compile(r'(?<![A-Za-z])(?:°C|℃|°(?!\s*[A-Za-z](?![A-Za-z]))|K|mTorr|slm|sccm|GHz|MHz|mW|W|mA|mL|µL|μL|uL|L|mmol|µmol|μmol|mol|mg|µg|μg|kg|g|nm|µm|μm|mm|cm|m|s|min|h|rpm|GPa|MPa|kPa|Pa|torr|atm|bar|eV|keV|V|mV|A|Å|wt%|%|mM|M|µM|μM|uM|nM|hours|minutes|seconds|days|particles|cycles|layers)(?![A-Za-z])')
 REVIEW = {'tier':'preliminary','author_source_checked':True,'independent_audit':'pending','accuracy':'unmeasured','training_ready':False}
 ENTRY_KEYS = set('source_id doi title citation document_sha256 document_role source_pages inspected_pages material method_label scope deferred precursors operations outcome missing_fields review extraction evidence_fingerprint'.split())
 

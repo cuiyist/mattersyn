@@ -56,7 +56,7 @@ class AnchorTests(unittest.TestCase):
                 e=entry();e['outcome']['descriptors'][0].update(kind='phase',reported=formula+' secondary phase',technique='XRD');ev,t=evidence(e)
                 p.validate_claims(e,ev,t)
     def test_unsupported_units_still_reject_after_formula(self):
-        for value in ['Ti3O5; 3 furlong','Ti3O5; 750 mA','Ti3O5; 1sccm']:
+        for value in ['Ti3O5; 3 furlong','Ti3O5; 750 kA','Ti3O5; 1ksccm']:
             with self.subTest(value=value):
                 e=entry();e['outcome']['descriptors'][0]['reported']=value;ev,t=evidence(e)
                 with self.assertRaisesRegex(ValueError,'unsupported quantity'):p.validate_claims(e,ev,t)
@@ -115,7 +115,7 @@ class AnchorTests(unittest.TestCase):
         with self.assertRaises(ValueError):p.validate_claims(e,ev,t)
         e=entry();e['precursors'][0]['amount']='.1 g';ev,t=evidence(e);p.validate_claims(e,ev,t)
     def test_attached_unsupported_unit_fails(self):
-        e=entry();e['precursors'][0]['amount']='1sccm';ev,t=evidence(e);c=next(c for c in ev['claims'] if c['pointer']=='/precursors/0/amount');c['quote']='Charge 1 g.';t[1]+=' '+c['quote']
+        e=entry();e['precursors'][0]['amount']='1ksccm';ev,t=evidence(e);c=next(c for c in ev['claims'] if c['pointer']=='/precursors/0/amount');c['quote']='Charge 1 g.';t[1]+=' '+c['quote']
         with self.assertRaisesRegex(ValueError,'unsupported quantity'):p.validate_claims(e,ev,t)
     def test_molar_unit_and_unknown_units(self):
         e=entry();e['precursors'][0]['amount']='1 M';ev,t=evidence(e);c=next(c for c in ev['claims'] if c['pointer']=='/precursors/0/amount');c['quote']='The charge was 1 g.';c['value_tokens']=['1'];t[1]+=' '+c['quote']

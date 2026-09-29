@@ -1,5 +1,7 @@
 # Preliminary publication first
 
+**Superseded:** the owner retired public preliminary publication and changed the target to processed papers, including evidenced skips. Follow [processing-workflow-v4.md](processing-workflow-v4.md). The following text is retained as historical workflow context, not current publication permission.
+
 Adopted at the owner's September 28 request to pause, revise both workflow and
 first-publication quality, then resume toward 20 distinct published papers/hour.
 This supersedes the older requirement to finish an independent full-source audit
@@ -147,3 +149,5 @@ transfer, external paper/model acquisition or GPU purchases are authorized.
 ## Reader discovery and count clarity
 
 Homepage, source library, inventory and dataset must expose the union of reviewed and preliminary primary papers, with separately labelled tier counts and a direct link to preliminary recipes. Preserve reviewed material-family and verified-pair fields. Source upgrades count once; a preliminary source must not disappear from public discovery merely because its independent audit is pending. Build these totals from records and the validated catalogue, never by manually inserting a number.
+
+Preliminary recipes also belong in the normal periodic-table discovery and material browsing. A separate collection link and a higher homepage counter are not sufficient integration. Attach a preliminary method to an existing material only through its explicit source-checked hub binding; otherwise expose a source-scoped material entry without guessing that two compositions or specimens are equivalent. Preserve review labels, missingness, recipe-to-product links and training exclusion in both paths. Reader discovery does not upgrade scientific review status or create additional paper or verified-pair credit.

@@ -105,35 +105,33 @@ class SourceCoverageTests(unittest.TestCase):
         self.assertEqual(2, new['source_coverage']['total_contributing_papers'])
         self.assertEqual(before, (records,catalog))
 
-    def test_shared_main_and_inventory_cards_show_union_and_scope(self):
+    def test_shared_cards_exclude_retired_preliminary_counts(self):
         collection = collection_summary([record()], [], [], preliminary('10.9999/paper-b'))
         page = collection_metrics_html(collection)
-        self.assertIn('<strong>2</strong><span>Papers across all tiers</span>', page)
-        self.assertIn('1 reviewed-collection papers', page)
-        self.assertIn('1 additional preliminary papers', page)
+        self.assertIn('<strong>1</strong><span>Contributing papers</span>', page)
+        self.assertNotIn('Papers across all tiers', page)
+        self.assertNotIn('additional preliminary papers', page)
         self.assertIn('Reviewed material families', page)
         self.assertIn('Reviewed recipe–structure pairs', page)
-        self.assertIn('preliminary-synthesis.html', page)
-        self.assertIn('excluded from training', page)
+        self.assertNotIn('preliminary-synthesis.html', page)
+        self.assertIn('Each contributing primary paper counts once', page)
 
-    def test_dataset_page_counts_union_but_lists_reviewed_records(self):
+    def test_dataset_counts_only_regular_published_records(self):
         collection = collection_summary([record()], [], [], preliminary('10.9999/paper-b'))
         page = render({'reader_collection':collection}, {'records':[]},
                       lambda title:'<html><head></head>', lambda:'', html.escape, str)
-        self.assertIn('<strong>2</strong><span>Papers across all tiers</span>', page)
+        self.assertIn('<strong>1</strong><span>Contributing papers</span>', page)
         self.assertIn('Explore reviewed synthesis and evidence records', page)
         self.assertIn('Reviewed synthesis recipe–structure pairs', page)
-        self.assertNotIn('<span>Contributing papers</span>', page)
+        self.assertNotIn('preliminary', page.lower())
 
-    def test_library_total_is_distinct_from_searchable_reviewed_list(self):
+    def test_library_has_no_retired_preliminary_section(self):
         collection = collection_summary([record()], [], [], preliminary('10.9999/paper-b'))
         page = library_body(collection)
-        self.assertIn('<strong>2</strong><span>Papers across all tiers</span>', page)
+        self.assertIn('<strong>1</strong><span>Contributing papers</span>', page)
         self.assertIn('Papers in the reviewed list', page)
         self.assertIn('The searchable list below contains reviewed-collection papers', page)
-        self.assertIn('Preliminary-only papers are listed', page)
-        self.assertIn('preliminary-synthesis.html', page)
-        self.assertNotIn('<span>Contributing papers</span>', page)
+        self.assertNotIn('preliminary', page.lower())
 
 
 if __name__ == '__main__':

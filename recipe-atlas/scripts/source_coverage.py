@@ -26,23 +26,15 @@ def source_coverage(records, preliminary=None):
 
 
 def coverage_note_html(coverage):
-    reviewed = coverage['reviewed_contributing_papers']
-    extra = coverage['additional_preliminary_papers']
-    overlap = coverage['overlapping_preliminary_papers']
-    note = (f'<p class="coverage-note"><strong>{reviewed:,} reviewed-collection papers</strong>'
-            f' + <strong>{extra:,} additional preliminary papers</strong>. '
-            '<a href="preliminary-synthesis.html">Explore preliminary synthesis contributions →</a>. '
-            'Sources appearing in both tiers count once. ')
-    if overlap:
-        note += f'{overlap:,} preliminary source(s) also appear in the reviewed collection. '
-    return note + ('Preliminary contributions await independent audit, have unmeasured accuracy and are excluded from training. '
-                   'Material-family and recipe–structure-pair counts below refer only to the reviewed collection.</p>')
+    return ('<p class="coverage-note">Each contributing primary paper counts once, '
+            'irrespective of its number of recipes. Individual source scopes and '
+            'missing information are retained with the published records.</p>')
 
 
 def collection_metrics_html(collection, css_class='library-summary inventory-metrics'):
     """Shared index/dataset/inventory cards with a separately qualified tier breakdown."""
     coverage = collection['source_coverage']
-    metrics = [(coverage['total_contributing_papers'], 'Papers across all tiers'),
+    metrics = [(coverage['reviewed_contributing_papers'], 'Contributing papers'),
                (collection['material_families'], 'Reviewed material families'),
                (collection['synthesis_structure_pairs'], 'Reviewed recipe–structure pairs')]
     cards = '<div class="' + escape(css_class, quote=True) + '">'
@@ -53,9 +45,7 @@ def collection_metrics_html(collection, css_class='library-summary inventory-met
 def source_metrics_html(collection):
     """Library overview; the searchable reviewed list remains a separate collection."""
     coverage = collection['source_coverage']
-    metrics = [('total_contributing_papers', 'Papers across all tiers'),
-               ('reviewed_contributing_papers', 'Reviewed-collection papers'),
-               ('additional_preliminary_papers', 'Additional preliminary papers')]
+    metrics = [('reviewed_contributing_papers', 'Contributing papers')]
     cards = '<div class="library-summary">'
     cards += ''.join(f'<div><strong>{coverage[key]:,}</strong><span>{label}</span></div>' for key, label in metrics)
     return cards + '</div>' + coverage_note_html(coverage)

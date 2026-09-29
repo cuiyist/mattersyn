@@ -129,8 +129,8 @@ class LiteralStandardUnits(unittest.TestCase):
     def test_unrelated_typography_and_unknown_units_remain_held(self):
         self.rejects([('0.7 µm', 'A 0.7- µm-thick film.'),
                       ('20 kg/cm²', 'Pressure 20 kg/cm 2.'),
-                      ('2 sccm', 'Flow 2 sccm.'),
-                      ('2 mTorr', 'Pressure 2 mTorr.')])
+                      ('2 ksccm', 'Flow 2 ksccm.'),
+                      ('2 mtorr', 'Pressure 2 mtorr.')])
 
     def test_raw_source_quote_anchor_remains_exact(self):
         e = entry()
