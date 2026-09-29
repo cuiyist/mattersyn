@@ -47,7 +47,7 @@ the extractor must still check which specimen each number describes.
 
 ## Tests and practical limits
 
-Run `python -m unittest discover -s tools/preliminary -p 'test_*.py'`. Pure schema/anchor tests use the standard library. Three additional synthetic real-PDF checks run when local pypdf is installed and otherwise are explicitly skipped; they grant no source or publication credit. No dependency is downloaded. The public build imports only `preliminary_contract`.
+Run `python -m unittest discover -s tools/preliminary -p 'test_*.py'`. Pure schema/anchor tests use the standard library. Install the pinned build requirements before running the complete suite: real-PDF and glyph regression tests require pypdf. CI installs this dependency and runs the full suite; synthetic tests grant no source or publication credit. The public build imports only `preliminary_contract` and does not process source PDFs.
 
 This tooling intentionally does not generate custom figures, molecules, coordinates, audit approvals, or per-paper release scripts. Source interpretation, unresolved sample links and visual evidence still require the extractor's judgment; an independent audit remains deferred and labelled pending.
 
