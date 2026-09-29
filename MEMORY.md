@@ -2954,3 +2954,8 @@ The three supplied main texts are the declared reviewed scope. Presentation limi
 ## 2026-09-29 — Explicit selected-SI coverage compatibility
 
 The Alam CdSe/CdS and Bellato InAs batch remains unpublished while a build compatibility correction is applied. Bellato covers all six main pages and fourteen identified SI pages; the other forty-two SI pages remain explicitly unreviewed. Shared validators, inventory and source-library displays now count twenty reviewed pages rather than sixty-two supplied pages. Existing full-document guards and all scientific records, figures and recipe–structure rows are preserved. Independent root review reproduced forty focused tests and four renderer checks. The corrected batch will use one successful clean build; source pushes follow a passing local build and browser review. This correction adds no paper or pair credit by itself. The twenty published papers/hour target remains unmet; reader navigation and counts exclude retired preliminary pages and skipped sources.
+
+
+## 2026-09-29 — Parent preparation link correction
+
+The next two-source TiO2/Nd2O3 batch failed a local build because six film records linked to a root Reader from the nested records directory. The shared renderer now resolves those links correctly. Independent engineering review checked all six actual renders: only the parent-link path changed, and three focused regression tests passed. Scientific records and source-figure assignments are unchanged. The failed artifact remains preserved locally; the corrected batch requires a new successful build before publication. This correction adds no paper or pair credit. The last anonymously verified website contains 123 contributing papers and 439 broad recipe–structure rows.

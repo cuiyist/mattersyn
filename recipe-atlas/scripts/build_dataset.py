@@ -3,6 +3,7 @@ from structure_recipe_metrics import load_structure_policy, structure_recipe_cov
 import argparse,json,html,sys,shutil
 from pathlib import Path
 from collections import Counter
+from urllib.parse import urlsplit
 from dataset_lib import ROOT,SCHEMA,validate_record,eligibility,build_groups,training_view,digest,chemical_signature,fmt
 from review_scope import source_review_scope
 
@@ -66,6 +67,9 @@ def record_href(url):
     if url.startswith('/') and not url.startswith('//'):
         return '../'+url.lstrip('/')
     if url.startswith(('records/','assets/','data/')):
+        return '../'+url
+    parsed=urlsplit(url)
+    if not parsed.scheme and not parsed.netloc and parsed.path in {'reader.html','material.html','paper-review.html'}:
         return '../'+url
     return url
 def evidence(items):return '; '.join(esc(x['source_id']+' · '+x['locator']) for x in items)
