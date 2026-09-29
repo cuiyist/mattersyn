@@ -1,3 +1,19 @@
+
+### Verified CdS/polyurethane, TiO2 and Au/silica publication; next accepted additions
+
+The preceding batch was deployed and anonymously verified at 2026-09-29T12:50:22.599721+00:00 (source 54086475a4f04ac633ca3250d26001f3f4282a0f; site 5efed9a77f124a77cf0d02b9bc26c04d4fa8c2d0). It contains 115 contributing primary papers, 1376 canonical records and 416 broad synthesis-structure pairs. The homepage uses three reader metrics and three navigation links; no public preliminary or owner-progress collection is displayed. BaTiO3 particle drawings distinguish measured specimen scopes and align with adjacent evidence.
+
+The next accepted ZnO contribution preserves the complete five-page main, one gel-decomposition route and three supporting vaporization/aging/comparator contexts. The 20 nm Scherrer size remains distinct from unreported morphology or atomic coordinates. Analytical sample conditioning is separated from synthesis, printed pressure scaling remains unresolved and all five source tables retain their measurement or cited context.
+
+The accepted CdSe/polythiophene contribution preserves all two main and eleven matched SI pages, including nanorod synthesis, polymer/intermediate preparations, film variants, source figures and device contexts. Solvent-ratio and source equation inconsistencies remain explicit. Main weight-fraction captions and SI volume-fraction specimens are not conflated. Twenty-five records include eleven direct preparation/product routes and eleven partial structural rows; supporting contexts do not add independent routes.
+
+The accepted Guo WC contribution preserves all two main pages, three source figures, one direct WO3/Mg/ethanol route and eight supporting comparisons. The carbon-coated and carbon-free observations are kept as populations within the same source scope. Filling-series observations and incompletely specified controls do not become invented full recipes. Together these three locally accepted sources add 38 records and thirteen partial recipe-structure rows. Publication remains pending until deployment and anonymous verification. SI and cited full sources are unreviewed for ZnO; cited full sources remain unreviewed for Liu. Optional molecular/morphology/reference-cell refinements stay labelled, no measured-coordinate or calibration admission is implied, and source-figure permission remains unverified.
+
+For later contributions, reuse an unchanged source-bound apparatus illustration across repeat operations where accurate, while retaining exact per-operation conditions in canonical fields and the adjacent reader display. Avoid near-identical artwork solely for repeated supporting contexts. Independent science review and source/sample binding remain required. The twenty published primary papers/hour target remains unmet; progress reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T12:50:22.599721+00:00 (source `54086475a4f04ac633ca3250d26001f3f4282a0f`, site `5efed9a77f124a77cf0d02b9bc26c04d4fa8c2d0`). Its verified website contains 115 primary sources, 1376 canonical records and 416 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 Two source-bound conceptual BaTiO3 drawings now distinguish the mixed air-prepared population from glovebox-prepared nanocubes. The source figure and all measured size scopes are retained. Particle illustrations align with the top of the adjacent evidence column, avoiding a blank area beside long measurement lists. The reader navigation remains Periodic table, Source library and Synthesis dataset; no preliminary or owner-progress collection is displayed. These presentation changes add no contributing-paper or pair credit.
 
 

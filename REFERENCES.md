@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **115 primary source groups** · release `ordinary-batch17-20260929`. Records are not independent experiments.
+Dataset **0.41.2** · **118 primary source groups** · release `ordinary-batch18-20260929`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -96,6 +96,8 @@ Dataset **0.41.2** · **115 primary source groups** · release `ordinary-batch17
 
 - Dana A. Schwartz; Nick S. Norberg; Quyen P. Nguyen; Jason M. Parker; Daniel R. Gamelin (2003). Magnetic Quantum Dots: Synthesis, Spectroscopy, and Magnetism of Co2+- and Ni2+-Doped ZnO Nanocrystals. *Journal of the American Chemical Society*, 125, 13205–13218. [10.1021/ja036811v](https://doi.org/10.1021/ja036811v). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=schwartz2003).
 
+- A. V. Makarov; S. G. Zbezhneva; V. V. Kovalenko; M. N. Rumyantseva (2003). Mass Spectrometric Study of Nanocrystalline ZnO Vaporization. *Inorganic Materials*, 39, 594–598. [10.1023/A:1024049203327](https://doi.org/10.1023/A:1024049203327). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=makarov2003-zno-a1024049203327).
+
 - Helmut Cölfen; Shay Tirosh; Arie Zaban (2003). Nanocrystal Surface Structure Analysis by Analytical Ultracentrifugation. *Langmuir*, 19, 10654–10659. [10.1021/la0347051](https://doi.org/10.1021/la0347051). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=colfen2003-tio2-la0347051).
 
 - Nam Ho Heo; Jong Sam Park; Young Joo Kim; Woo Taik Lim; Sung Wook Jung; Karl Seff (2003). Spatially Ordered Quantum Dot Array of Indium Nanoclusters in Fully Indium-Exchanged Zeolite X. *Journal of Physical Chemistry B*, 107, 1120–1128. [10.1021/jp0219348](https://doi.org/10.1021/jp0219348). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=heo2003).
@@ -103,6 +105,8 @@ Dataset **0.41.2** · **115 primary source groups** · release `ordinary-batch17
 - Andrew Watt; Elizabeth Thomsen; Paul Meredith; Halina Rubinsztein-Dunlop (2004). A new approach to the synthesis of conjugated polymer–nanocrystal composites for heterojunction optoelectronics. *Chemical Communications*, 2334–2335. [10.1039/b406060a](https://doi.org/10.1039/b406060a). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=watt2004-pbs-mehppv-b406060a).
 
 - Sander F. Wuister; Celso de Mello Donegá; Andries Meijerink (2004). Efficient energy transfer between nanocrystalline YAG:Ce and TRITC. *Physical Chemistry Chemical Physics*, 6, 1633–1636. [10.1039/b401299b](https://doi.org/10.1039/b401299b). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wuister2004-yagce-b401299b).
+
+- Jinsong Liu; Toru Tanaka; Kevin Sivula; A. Paul Alivisatos; Jean M. J. Fréchet (2004). Employing End-Functional Polythiophene To Control the Morphology of Nanocrystal–Polymer Composites in Hybrid Solar Cells. *Journal of the American Chemical Society*, 126, 6550–6551. [10.1021/ja0489184](https://doi.org/10.1021/ja0489184). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=liu2004-cdse-polythiophene-ja0489184).
 
 - Hongwei Gu; Rongkun Zheng; XiXiang Zhang; Bing Xu (2004). Facile One-Pot Synthesis of Bifunctional Heterodimers of Nanoparticles: A Conjugate of Quantum Dot and Magnetic Nanoparticles. *Journal of the American Chemical Society*, 126, 5664–5665. [10.1021/ja0496423](https://doi.org/10.1021/ja0496423). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=gu2004).
 
@@ -131,6 +135,8 @@ Dataset **0.41.2** · **115 primary source groups** · release `ordinary-batch17
 - T. Qiu; X. L. Wu; Y. C. Cheng; G. G. Siu; Paul K. Chu (2006). Silver nanocrystal superlattices: Self-assembly and optical emission. *Applied Physics Letters*, 88. [10.1063/1.2192645](https://doi.org/10.1063/1.2192645). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=qiu2006-ag-superlattice).
 
 - Beena Tyagi; Kalpesh Sidhpuria; Basha Shaik; Raksh Vir Jasra (2006). Synthesis of Nanocrystalline Zirconia Using Sol–Gel and Precipitation Techniques. *Industrial & Engineering Chemistry Research*, 45, 8643–8650. [10.1021/ie060519p](https://doi.org/10.1021/ie060519p). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=tyagi2006-zro2-ie060519p).
+
+- Chunli Guo; Yi Liu; Xiaojian Ma; Yitai Qian; Liqiang Xu (2006). Synthesis of Tungsten Carbide Nanocrystal via a Simple Reductive Reaction. *Chemistry Letters*, 35, 1210–1211. [10.1246/cl.2006.1210](https://doi.org/10.1246/cl.2006.1210). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=guo2006-wc-cl20061210).
 
 - Hongyou Fan; Adam Wright; John Gabaldon; Adrian Rodriguez; C. Jeffrey Brinker; Ying-Bing Jiang (2006). Three-Dimensionally Ordered Gold Nanocrystal/Silica Superlattice Thin Films Synthesized via Sol–Gel Self-Assembly. *Advanced Functional Materials*, 16, 891–895. [10.1002/adfm.200500603](https://doi.org/10.1002/adfm.200500603). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=au-silica-adfm200500603).
 

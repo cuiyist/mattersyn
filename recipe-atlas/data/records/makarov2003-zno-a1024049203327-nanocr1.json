@@ -1,0 +1,1072 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "makarov2003-zno-a1024049203327-nanocr1",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Makarov et al. (2003): ZnO(nanocr1): initial nanocrystalline vaporization run",
+  "material": {
+    "formula": "ZnO",
+    "family": "Zinc oxide preparation and vaporization",
+    "elements": [
+      "Zn",
+      "O"
+    ],
+    "components": [
+      "ZnO"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "ZnO(nanocr1): initial nanocrystalline vaporization run",
+  "sources": [
+    {
+      "id": "makarov2003-zno-a1024049203327",
+      "doi": "10.1023/A:1024049203327",
+      "title": "Mass Spectrometric Study of Nanocrystalline ZnO Vaporization",
+      "authors": "A. V. Makarov; S. G. Zbezhneva; V. V. Kovalenko; M. N. Rumyantseva",
+      "year": 2003,
+      "url": "https://doi.org/10.1023/A:1024049203327",
+      "main_status": "Complete five-page main independently source-audited; Figure 1, Tables 1–5, equations 1–12 and 12 references retained; SI and cited full sources unreviewed.",
+      "si_status": "SI not reviewed or used; cited full sources unreviewed.",
+      "reuse_status": "Exact source figure/table crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "makarov2003-zno-a1024049203327",
+    "recipe_family": "makarov2003-zno-a1024049203327",
+    "parent_record_id": "makarov2003-zno-a1024049203327-gel-decomposition",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "ZnO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, zinc hydroxide gel preparation and decomposition"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sample-nanocr1",
+      "name": "ZnO(nanocr1): initial nanocrystalline vaporization run",
+      "formula": "ZnO",
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": null,
+          "minimum": 130,
+          "maximum": 150,
+          "unit": "mg",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Reported nanocrystalline sample loading range; not an exact mass per run.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "No source-specific new synthesis is reconstructed.",
+        "Analytical source scope only."
+      ],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+        }
+      ]
+    },
+    {
+      "id": "platinum-cell",
+      "name": "Platinum Knudsen cell",
+      "formula": "Pt",
+      "role": "analytical apparatus",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Cell construction and material, not a reactant or product constituent."
+      ],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "clean-cell-state",
+      "name": "Condition empty platinum cell output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "load-sample-state",
+      "name": "Load source specimen output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "clean-cell-state"
+      ]
+    },
+    {
+      "id": "condition-state",
+      "name": "Condition loaded analytical sample output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "load-sample-state"
+      ]
+    },
+    {
+      "id": "measure-state",
+      "name": "Measure vapor mass spectrum and temperature dependence output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "condition-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "clean-cell",
+      "action": "heat",
+      "label": "Condition empty platinum cell",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "platinum-cell"
+      ],
+      "outputs": [
+        "clean-cell-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 1550,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Before loading, hold empty cell at 1550 K for 6 h directly in mass spectrometer to remove impurities. This is apparatus cleaning, not ZnO heating or synthesis.",
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+        }
+      ]
+    },
+    {
+      "id": "load-sample",
+      "action": "load",
+      "label": "Load source specimen",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "clean-cell"
+      ],
+      "inputs": [
+        "clean-cell-state",
+        "sample-nanocr1"
+      ],
+      "outputs": [
+        "load-sample-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Load the source specimen. Nanocrystalline loading is 130–150 mg; no microcrystalline loading mass is reported. Cell-hole/cross-section area ratio is 1:700.",
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+        }
+      ]
+    },
+    {
+      "id": "condition",
+      "action": "heat",
+      "label": "Condition loaded analytical sample",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "load-sample"
+      ],
+      "inputs": [
+        "load-sample-state"
+      ],
+      "outputs": [
+        "condition-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "High vacuum; absolute pressure unreported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hold the loaded cell at 450 K for 4 h under high vacuum. Monitor H2O and CO removal; initial measurement H2O+ and CO+ signals do not exceed 40–50 mV. Numerical vacuum pressure is unknown.",
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "action": "characterize",
+      "label": "Measure vapor mass spectrum and temperature dependence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "condition"
+      ],
+      "inputs": [
+        "condition-state"
+      ],
+      "outputs": [
+        "measure-state"
+      ],
+      "parameters": {
+        "ionization_voltage": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "V",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1–2, Experimental and Table 1"
+            }
+          ],
+          "derivation": null
+        },
+        "accelerating_voltage": {
+          "value": 2.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "makarov2003-zno-a1024049203327",
+              "locator": "Main PDF p. 1–2, Experimental and Table 1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use MI-1201 mass spectrometer and platinum Knudsen cell. Table 1 uses 40 V ionization and 2.8 kV accelerating voltage. The study overall range 450–1446 K is analytical, not a synthesis ramp. Oxygen background prevents quantitative Zn/O2 vapor ratio determination.",
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1–2, Experimental and Table 1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "source_sample_label": "ZnO(nanocr1): initial nanocrystalline vaporization run",
+      "batch_id": null,
+      "material_state_id": "measure-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 1, Experimental, Knudsen cell and repeat measurement"
+        }
+      ],
+      "notes": [
+        "Analytical specimen context; no new product preparation or post-run size measurement.",
+        "Metastable/aged equilibrium interpretations are source conclusions, not a refined crystalline phase assignment."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ion-zn",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "relative_ion_signal_zn",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": 100,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative signal",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source normalization Zn+=100; these are ion signals, not mole fractions.",
+        "basis": "Zn+ signal normalized to 100",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 1, ZnO(nanocr1): initial nanocrystalline vaporization run"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1333 K;40 V ionization,2.8 kV acceleration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 1, ZnO(nanocr1): initial nanocrystalline vaporization run"
+        }
+      ]
+    },
+    {
+      "id": "ion-zn2",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "relative_ion_signal_zn_doubly_charged",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": 0.28,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative signal",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source normalization Zn+=100; these are ion signals, not mole fractions.",
+        "basis": "Zn+ signal normalized to 100",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 1, ZnO(nanocr1): initial nanocrystalline vaporization run"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1333 K;40 V ionization,2.8 kV acceleration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 1, ZnO(nanocr1): initial nanocrystalline vaporization run"
+        }
+      ]
+    },
+    {
+      "id": "ion-o2",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "relative_ion_signal_o2",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": 50.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "relative signal",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source normalization Zn+=100; these are ion signals, not mole fractions.",
+        "basis": "Zn+ signal normalized to 100",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 1, ZnO(nanocr1): initial nanocrystalline vaporization run"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1333 K;40 V ionization,2.8 kV acceleration",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 1, ZnO(nanocr1): initial nanocrystalline vaporization run"
+        }
+      ]
+    },
+    {
+      "id": "formal-ratio-1",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "formal_zn_to_o2_ion_current_ratio",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": null,
+        "minimum": 2.0,
+        "maximum": 2.4,
+        "unit": "1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Formal ion-current ratio only; uncontrolled oxygen background prevents a vapor-composition ratio.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1241–1333 K",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 2"
+        }
+      ]
+    },
+    {
+      "id": "formal-ratio-2",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "formal_zn_to_o2_ion_current_ratio",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": 8.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Formal ion-current ratio only; uncontrolled oxygen background prevents a vapor-composition ratio.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; T >1333 K",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 2"
+        }
+      ]
+    },
+    {
+      "id": "formal-ratio-3",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "formal_zn_to_o2_ion_current_ratio",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": 16.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Formal ion-current ratio only; uncontrolled oxygen background prevents a vapor-composition ratio.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1402 K",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 2"
+        }
+      ]
+    },
+    {
+      "id": "formal-ratio-4",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "formal_zn_to_o2_ion_current_ratio",
+      "technique": "Knudsen cell mass spectrometry",
+      "value": {
+        "value": 3.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Formal ion-current ratio only; uncontrolled oxygen background prevents a vapor-composition ratio.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 2, Table 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1441 K",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 2, Table 2"
+        }
+      ]
+    },
+    {
+      "id": "pressure-coefficient-1",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "atomic_zinc_pressure_table_coefficient",
+      "technique": "Mass-spectrometric pressure calculation",
+      "value": {
+        "value": 1.16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Raw table coefficient only. Pressure-column scaling exponent missing/unreadable in supplied PDF; numerical pressure in Pa unresolved. No conversion inferred from fit/plot.",
+        "basis": "Unscaled Table 3 coefficient; p ×10^[unresolved] heading",
+        "raw_text": "1.16",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 3, Table 3"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1241 K. Column heading scale unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 3, Table 3"
+        }
+      ]
+    },
+    {
+      "id": "pressure-coefficient-2",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "atomic_zinc_pressure_table_coefficient",
+      "technique": "Mass-spectrometric pressure calculation",
+      "value": {
+        "value": 4.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Raw table coefficient only. Pressure-column scaling exponent missing/unreadable in supplied PDF; numerical pressure in Pa unresolved. No conversion inferred from fit/plot.",
+        "basis": "Unscaled Table 3 coefficient; p ×10^[unresolved] heading",
+        "raw_text": "4.14",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 3, Table 3"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1282 K. Column heading scale unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 3, Table 3"
+        }
+      ]
+    },
+    {
+      "id": "pressure-coefficient-3",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "atomic_zinc_pressure_table_coefficient",
+      "technique": "Mass-spectrometric pressure calculation",
+      "value": {
+        "value": 14.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Raw table coefficient only. Pressure-column scaling exponent missing/unreadable in supplied PDF; numerical pressure in Pa unresolved. No conversion inferred from fit/plot.",
+        "basis": "Unscaled Table 3 coefficient; p ×10^[unresolved] heading",
+        "raw_text": "14.9",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 3, Table 3"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1333 K. Column heading scale unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 3, Table 3"
+        }
+      ]
+    },
+    {
+      "id": "pressure-coefficient-4",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "atomic_zinc_pressure_table_coefficient",
+      "technique": "Mass-spectrometric pressure calculation",
+      "value": {
+        "value": 55.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Raw table coefficient only. Pressure-column scaling exponent missing/unreadable in supplied PDF; numerical pressure in Pa unresolved. No conversion inferred from fit/plot.",
+        "basis": "Unscaled Table 3 coefficient; p ×10^[unresolved] heading",
+        "raw_text": "55.4",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 3, Table 3"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1363 K. Column heading scale unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 3, Table 3"
+        }
+      ]
+    },
+    {
+      "id": "pressure-coefficient-5",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "atomic_zinc_pressure_table_coefficient",
+      "technique": "Mass-spectrometric pressure calculation",
+      "value": {
+        "value": 125.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Raw table coefficient only. Pressure-column scaling exponent missing/unreadable in supplied PDF; numerical pressure in Pa unresolved. No conversion inferred from fit/plot.",
+        "basis": "Unscaled Table 3 coefficient; p ×10^[unresolved] heading",
+        "raw_text": "125.5",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 3, Table 3"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1402 K. Column heading scale unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 3, Table 3"
+        }
+      ]
+    },
+    {
+      "id": "pressure-coefficient-6",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "atomic_zinc_pressure_table_coefficient",
+      "technique": "Mass-spectrometric pressure calculation",
+      "value": {
+        "value": 189.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Raw table coefficient only. Pressure-column scaling exponent missing/unreadable in supplied PDF; numerical pressure in Pa unresolved. No conversion inferred from fit/plot.",
+        "basis": "Unscaled Table 3 coefficient; p ×10^[unresolved] heading",
+        "raw_text": "189.3",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 3, Table 3"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; 1441 K. Column heading scale unresolved.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 3, Table 3"
+        }
+      ]
+    },
+    {
+      "id": "zno-upper-pressure",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "zno_partial_pressure_upper_limit",
+      "technique": "Knudsen cell mass spectrometric upper-limit evaluation",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 0.00026,
+        "unit": "Pa",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source upper limit; not an exact value. The supplied table inequality glyph is imperfect; direction is explicit in the surrounding prose.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 4, Table 4 and upper/lower-limit explanation"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; Table 4 T=1440 K; enthalpy/dissociation quantities at absolute zero",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 4, Table 4 and upper/lower-limit explanation"
+        }
+      ]
+    },
+    {
+      "id": "sublimation-lower-enthalpy",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "sublimation_enthalpy_lower_limit",
+      "technique": "Third-law thermodynamic evaluation",
+      "value": {
+        "value": null,
+        "minimum": 474,
+        "maximum": null,
+        "unit": "kJ/mol",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source lower limit; not an exact value. The supplied table inequality glyph is imperfect; direction is explicit in the surrounding prose.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 4, Table 4 and upper/lower-limit explanation"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; Table 4 T=1440 K; enthalpy/dissociation quantities at absolute zero",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 4, Table 4 and upper/lower-limit explanation"
+        }
+      ]
+    },
+    {
+      "id": "dissociation-upper-energy",
+      "sample_id": "makarov2003-zno-a1024049203327-nanocr1-product",
+      "property": "dissociation_energy_upper_limit",
+      "technique": "Third-law thermodynamic evaluation",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 250,
+        "unit": "kJ/mol",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source upper limit; not an exact value. The supplied table inequality glyph is imperfect; direction is explicit in the surrounding prose.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "makarov2003-zno-a1024049203327",
+            "locator": "Main PDF p. 4, Table 4 and upper/lower-limit explanation"
+          }
+        ],
+        "derivation": "Source authors calculate pressure from mass-spectral calibration (Eqs2–4); Table 4 enthalpy/dissociation bounds additionally use third-law thermodynamic evaluation and Eq12. No value or missing Table 3 scale recalculated here."
+      },
+      "conditions": "ZnO(nanocr1): initial nanocrystalline vaporization run; Table 4 T=1440 K; enthalpy/dissociation quantities at absolute zero",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "makarov2003-zno-a1024049203327",
+          "locator": "Main PDF p. 4, Table 4 and upper/lower-limit explanation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete five-page main scientific and apparatus audit of accepted R4 passed. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied five-page main, Figure 1, Tables 1–5, equations 1–12 and all 12 numbered references. SI and cited full sources unreviewed.",
+      "The source gives precursor concentrations but not their volumes, mole ratio, hydroxide addition rate, gel aging, isolation/washing, decomposition atmosphere, heating ramp or yield. No quantities or cited-book procedures are supplied by inference.",
+      "Zinc nitrate hydration, reagent purities and the exact solution solvent are not named. Formula Zn(NO3)2 identifies the nominal solute; no hydrate formula is inferred.",
+      "The 20 nm Scherrer value belongs to the prepared nanocrystalline ZnO. No measured crystallographic polymorph, unit cell, particle morphology or atomic coordinates are supplied.",
+      "The one-year-later nanocr2 measurement has no storage environment or new post-storage size measurement. No fresh synthesis, retained 20 nm size, or growth time is inferred from that interval.",
+      "The empty platinum cell cleaning at 1550 K for 6 h precedes sample loading and is analytical apparatus conditioning, not ZnO synthesis. The later 450 K/4 h high-vacuum sample conditioning is characterization preparation.",
+      "Table 3 prints pressure-column headings with missing or unreadable scaling exponent in the supplied PDF rendering/text. Preserve exact coefficients and source image, with conversion to Pa unresolved. Do not derive the missing exponent from curves, fits or expected values.",
+      "Table 4 upper-limit inequality glyphs render poorly; the prose explicitly establishes upper pressure/dissociation limits and lower sublimation-enthalpy limits. Numerical bounds are retained as source limits, not exact measured values.",
+      "Formal Zn+/O2+ current ratios are not the molar Zn/O2 vapor composition: uncontrolled oxygen background prevents that determination. Quantitative reference comparisons and thermochemical inputs remain context, not new preparations.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [
+      "Table 3 pressure scaling exponent is unresolved in the available original PDF; tabulated coefficient values remain unscaled.",
+      "Table 4 uses temperatures distinct from some Table 1 and fit windows (e.g.1440 K versus the1441 K end point); source-specific temperatures remain unreconciled."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1023/A:1024049203327",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=makarov2003-zno-a1024049203327",
+      "relation": "source_review"
+    },
+    {
+      "label": "Complete study context and tabular qualifications",
+      "url": "data/paper-reviews/makarov2003-zno-a1024049203327/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source nanocrystalline preparation, physical batch identity unreported",
+      "url": "data/records/makarov2003-zno-a1024049203327-gel-decomposition.json#/products/0",
+      "relation": "parent_sample"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}
