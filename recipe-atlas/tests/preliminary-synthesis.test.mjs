@@ -110,9 +110,13 @@ test('failed fetch and invalid public shapes never render contributions',async()
   assert.equal(descendants(doc.root).filter(n=>n.tagName==='ARTICLE').length,0);
  }
 });
-test('page has explicit review boundaries and same-origin downloadable data',()=>{
+test('retired public page redirects to the atlas without an app or catalogue',()=>{
  const html=readFileSync(new URL('../static/preliminary-synthesis.html',import.meta.url),'utf8');
- assert.match(html,/Independent scientific audit pending/);assert.match(html,/Accuracy unmeasured/);assert.match(html,/Training excluded/);
- assert.match(html,/href="data\/preliminary-synthesis.json" download="preliminary-synthesis.json"/);
- assert.equal((html.match(/<script/g)||[]).length,1);
+ assert.match(html,/<meta\s+http-equiv="refresh"\s+content="0;url=index\.html">/);
+ assert.match(html,/<link\s+rel="canonical"\s+href="index\.html">/);
+ assert.match(html,/<a\s+href="index\.html">Open the materials synthesis atlas/);
+ assert.doesNotMatch(html,/<script\b|<iframe\b|\bonload\s*=/i);
+ assert.doesNotMatch(html,/preliminary-synthesis\.(?:mjs|css|json)|preliminary-results|preliminary-filters|\bdownload\s*=/i);
+ const catalogue=JSON.parse(readFileSync(new URL('../static/data/preliminary-synthesis.json',import.meta.url),'utf8'));
+ assert.deepEqual(catalogue,{schema:SCHEMA,entries:[]});
 });

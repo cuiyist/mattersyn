@@ -1,3 +1,7 @@
+## 2026-09-29 ordinary contribution integration
+
+Ivanov (2009), DOI10.1134/s0012500809060056, is integrated with seven accepted records and six source-linked recipe/outcome variants; source audit and accepted art bindings are reused unchanged. Build, browser, CI and publication remain pending; no new paper credit is claimed yet. The retired preliminary page no longer contributes to reader totals. Its old template test was corrected to assert redirect and absence of public candidates; all ten focused tests pass. Cölfen TiO2 and Mg-mediated calcite extraction and source reviews continue privately.
+
 # Clarification: the hourly target is actual website contributions
 
 The owner marked the homepage paper counter and clarified that it should increase by about20perhour. That is a publication target; skipped papers cannot increase it. Keep the prior400completed-processing deadline (September29,18:00Chicago) and the public-counter target as distinct metrics. Neither is demonstrated by assessments or draft entries. Retirement of the preliminary lane remains authorized, and sufficient contributions must proceed to ordinary material pages without mislabelling audit status.
