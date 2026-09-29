@@ -49,11 +49,26 @@ class ReaderCollectionTests(unittest.TestCase):
         self.assertFalse(detail['checks']['reference_unit_cell_available'])
 
     def test_unknown_quantity_and_reference_phase_cannot_complete_description(self):
-        row=copy.deepcopy(self.pairs[0]);record=copy.deepcopy(next(r for r in self.records if r['record_id']==row['record_id']))
-        row['product_structure_fields']=[];row['structural_measurements']=[]
-        for material in record['materials']:
-            for quantity in material.get('quantities',{}).values():quantity['status']='not_reported'
-        detail=pair_documentation(row,record,[{'id':'reference','record_ids':[record['record_id']]}])
+        # Keep this missing-charge regression independent of corpus iteration order.
+        # Valid charges can live in a material, stock or operation parameter.
+        evidence=[{'source_id':'source','locator':'Experimental section'}]
+        def quantity(value,unit):
+            return {'value':value,'unit':unit,'status':'reported','evidence':evidence}
+        row={'sample_id':'sample','product_structure_fields':[],'structural_measurements':[]}
+        record={'record_id':'fixture','sources':[{'id':'source'}],
+                'materials':[{'id':'a','stage':'synthesis','quantities':{'mass':quantity(1,'g')}},
+                             {'id':'b','stage':'synthesis','quantities':{}}],
+                'stocks':[{'id':'stock','components':[{'material_id':'b','quantities':{'mass':quantity(2,'g')}}]}],
+                'operations':[{'id':'add','stage':'synthesis','inputs':['b'],'evidence':evidence,
+                               'parameters':{'mass':quantity(2,'g')}},
+                              {'id':'heat','stage':'synthesis','inputs':['a'],'evidence':evidence,
+                               'parameters':{'temperature':quantity(150,'degC'),'duration':quantity(1,'h')}}]}
+        refs=[{'id':'reference','record_ids':['fixture']}]
+        self.assertTrue(pair_documentation(row,record,refs)['checks']['quantified_recipe_and_ordered_conditions'])
+        record['materials'][0]['quantities']['mass']['status']='not_reported'
+        record['stocks'][0]['components'][0]['quantities']['mass']['status']='not_reported'
+        record['operations'][0]['parameters']['mass']['status']='not_reported'
+        detail=pair_documentation(row,record,refs)
         self.assertEqual('partial',detail['category'])
         self.assertFalse(detail['checks']['reported_phase'])
         self.assertFalse(detail['checks']['quantified_recipe_and_ordered_conditions'])
