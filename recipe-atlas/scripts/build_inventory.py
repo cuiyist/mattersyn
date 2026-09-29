@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import Counter
 import json, html, re
 from build_reader_views import shell
-from review_scope import MAIN_SI, MAIN_ONLY, SI_ONLY
+from review_scope import MAIN_SI, MAIN_ONLY, SI_ONLY, MAIN_SELECTED_SI
 from derive_inventory import generate
 from source_coverage import collection_metrics_html
 
@@ -42,6 +42,10 @@ def main():
     assert len(si_only_reviews)==summary.get('formal_full_si_reviews_main_unverified',0)
     assert {r['id'] for r in si_only_reviews}=={p.get('paper_id',p['source_group']) for p in inventory['per_paper'] if p['review_status']=='full_supplied_si_review_main_unverified'}, 'Inventory SI-only review scopes changed'
     assert sum(p['pages_read'] for p in si_only_reviews)==summary.get('formal_full_si_only_review_pages',0)
+    selected_si_reviews = [r for r in reviews if r['review_scope']==MAIN_SELECTED_SI]
+    assert len(selected_si_reviews)==summary.get('formal_main_and_selected_si_reviews',0)
+    assert {r['id'] for r in selected_si_reviews}=={p.get('paper_id',p['source_group']) for p in inventory['per_paper'] if p['review_status']=='full_main_and_selected_si_independently_reviewed'}, 'Inventory selected-SI review scopes changed'
+    assert sum(p['pages_read'] for p in selected_si_reviews)==summary.get('formal_main_and_selected_si_review_pages',0)
     library = read(ROOT/'dist/data/library-index.json')
     assert len(library['papers'])==summary['local_paper_groups_indexed']
     assert library['summary']['sourceDocumentCount']==summary['local_document_files_indexed']
@@ -57,7 +61,7 @@ def main():
         label = m['material_system']+(' · component only' if m['public_hub_component_only'] else '')
         body += '<tr><td>'+link(label,m['material_hub_url'])+'</td><td>'+str(m['direct_synthesis_route_variant_count'])+'</td><td>'+str(m['component_route_contribution_count'])+'</td><td>'+str(m['contextual_control_count'])+'</td></tr>'
     body += '</tbody></table></div><p>Fe–O retains unresolved phase and stoichiometry. Core/shell products remain distinct material systems. A shell’s properties are not relabeled as properties of an isolated component.</p></section>'
-    statuses = {'full_supplied_main_and_matched_si_review':'Complete supplied main + matched SI','full_supplied_main_review_si_unverified':'Complete supplied main; SI unverified','full_supplied_si_review_main_unverified':'Complete supplied SI; main unverified','legacy_main_article_review_si_unverified':'Main article reviewed; SI unverified','selected_recipe_and_figure_review':'Selected recipe and figures','published_numeric_benchmark':'Published experimental series'}
+    statuses = {'full_main_and_selected_si_independently_reviewed':'Complete supplied main + selected matched SI pages; remaining SI unreviewed','full_supplied_main_and_matched_si_review':'Complete supplied main + matched SI','full_supplied_main_review_si_unverified':'Complete supplied main; SI unverified','full_supplied_si_review_main_unverified':'Complete supplied SI; main unverified','legacy_main_article_review_si_unverified':'Main article reviewed; SI unverified','selected_recipe_and_figure_review':'Selected recipe and figures','published_numeric_benchmark':'Published experimental series'}
     body += '<section class="record-section"><h2>Reviewed-collection papers</h2><p>Source scopes and citations are available in the '+link('source library','library.html')+'.</p><div class="table-scroll"><table class="reagent-table inventory-papers"><thead><tr><th>Source and review scope</th><th>Routes</th><th>Controls</th><th>Procedures</th><th>Observations</th><th>Experimental rows</th><th>Experimental series</th></tr></thead><tbody>'
     for p in inventory['per_paper']:
         paper = next((v for v in library['papers'] if v['doi'].lower()==p['doi'].lower()),None)

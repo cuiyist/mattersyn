@@ -1,7 +1,7 @@
 """Aggregate source-level reader hubs; never promote indexed papers to training records."""
 import json,re,hashlib
 from pathlib import Path
-from review_scope import source_review_scope
+from review_scope import source_review_scope, reviewed_page_count
 ROOT=Path(__file__).resolve().parents[1]
 SYMBOLS=set('H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og'.split())
 NAMES={'CdSe/ZnS':'Cadmium selenide / zinc sulfide core/shell','ZnS':'Zinc sulfide · shell-component context','CdSe/ZnSe':'Cadmium selenide / zinc selenide · coated dots and composite films','Si/SiOx':'Surface-oxidized silicon nanocrystal colloids','Si':'Silicon · cores and substrates','Ge/Si':'Germanium quantum dots on silicon','Ge':'Germanium in supported quantum-dot arrays','SiOx':'Silicon oxide surface layer · stoichiometry unresolved','CdSe':'Cadmium selenide','CdS':'Cadmium sulfide','CoFe2O4':'Cobalt ferrite','CoO':'Cobalt(II) oxide','CoO/CoFe2O4':'Cobalt oxide / cobalt ferrite core–shell','ZnO':'Zinc oxide','InP':'Indium phosphide','CsPbBr3':'Caesium lead bromide','PbS':'Lead sulfide','CdSe/CdS':'Cadmium selenide / cadmium sulfide core/shell','Ir':'Iridium','Fe–O':'Iron oxide · phase and stoichiometry unresolved','Fe3O4':'Magnetite','Fe2O3':'Iron(III) oxide'}
@@ -111,7 +111,7 @@ def main():
         if review:
             scope=source_review_scope(review)
             p['reviewStatus']=scope['review_status']
-            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'scope':scope['scope'],'label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages':sum(d['page_count'] for d in review['documents']),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
+            p['fullDocumentReview']={'id':review['paper_id'],'url':'paper-review.html?id='+review['paper_id'],'scope':scope['scope'],'label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages':reviewed_page_count(review),'figures':len(review['figures']),'independent_audit':review.get('independent_audit','pending')}
         p['materials']=sorted({f for f,m in materials.items() if doi in m['paper_dois']})
         # Preserve the automatic indexing result as historical scope metadata;
         # current review and contribution statuses follow the reviewed records.

@@ -3,7 +3,7 @@ from pathlib import Path
 from collections import Counter
 import copy,hashlib,json
 from build_atlas import synthesis_route
-from review_scope import MAIN_SI,MAIN_ONLY,SI_ONLY,source_review_scope
+from review_scope import MAIN_SI,MAIN_ONLY,SI_ONLY,MAIN_SELECTED_SI,source_review_scope,reviewed_page_count
 
 PAPER_DERIVED={'canonical_record_count','synthesis_route_variant_count','contextual_control_count','contextual_observation_count','procedure_count','benchmark_row_count','measurement_entry_count','record_type_counts','canonical_recipe_family_ids','direct_route_material_systems','record_ids','record_urls','experimental_row_count','source_checked_synthesis_structure_rows'}
 CORPUS_SUMMARY={'local_document_files_indexed','local_paper_groups_indexed','paper_candidate_groups_total','candidate_groups_without_local_documents','unique_document_content_hashes'}
@@ -74,7 +74,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs,corpus_source):
     if groups!=set(metadata):raise ValueError('Each source needs independently reviewed scope metadata; no automatic review promotion')
     review_ids=[r['id'] for r in reviews]
     if len(set(review_ids))!=len(review_ids):raise ValueError('Duplicate formal source review')
-    formal_scopes={'full_supplied_main_and_matched_si_review':MAIN_SI,'full_supplied_main_review_si_unverified':MAIN_ONLY,'full_supplied_si_review_main_unverified':SI_ONLY}
+    formal_scopes={'full_main_and_selected_si_independently_reviewed':MAIN_SELECTED_SI,'full_supplied_main_and_matched_si_review':MAIN_SI,'full_supplied_main_review_si_unverified':MAIN_ONLY,'full_supplied_si_review_main_unverified':SI_ONLY}
     formal_metadata=[(p.get('paper_id',sid),sid,p) for sid,p in metadata.items() if p['review_status'] in formal_scopes]
     expected_review_ids={rid for rid,_,_ in formal_metadata}
     if len(expected_review_ids)!=len(formal_metadata):raise ValueError('Ambiguous authored formal review identity')
@@ -86,9 +86,11 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs,corpus_source):
       # Normalize only the known legacy inventory role for validation; retain
       # authored metadata verbatim in the derived inventory. Unknown roles fail.
       scope_documents=[dict(doc,role='si' if doc.get('role')=='supporting_information' else doc.get('role')) for doc in p['documents']]
-      source_review_scope({'review_scope':review['review_scope'],'documents':scope_documents})
+      scope_input={'review_scope':review['review_scope'],'documents':scope_documents}
+      expected_pages=reviewed_page_count(scope_input,inventory=True)
+      if review['review_scope']==MAIN_SELECTED_SI and review.get('selected_si_pages')!=next(d['pages_read'] for d in scope_documents if d['role']=='si'):raise ValueError('Formal selected SI pages differ from authored evidence')
       if review['doi'].casefold()!=p['doi'].casefold():raise ValueError('Formal review DOI differs from authored evidence')
-      if type(review['pages_read']) is not int or review['pages_read']!=sum(d['page_count'] for d in p['documents']):raise ValueError('Formal review page count differs from authored evidence')
+      if type(review['pages_read']) is not int or review['pages_read']!=expected_pages:raise ValueError('Formal review page count differs from authored evidence')
       reviewed_ids=review['record_ids']
       # A formal source review may reference a scoped subset of its canonical records.
       # Never extend that subset automatically to later contextual additions.
@@ -154,6 +156,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs,corpus_source):
       materials.append(row)
     lit=[r for r in records if r['collection']=='reviewed_literature'];bench=[r for r in records if r['collection']=='published_benchmark']
     cc=Counter(categories.values());main_si=[r for r in reviews if r['review_scope']==MAIN_SI];main_only=[r for r in reviews if r['review_scope']==MAIN_ONLY];si_only=[r for r in reviews if r['review_scope']==SI_ONLY]
+    selected_si=[r for r in reviews if r['review_scope']==MAIN_SELECTED_SI]
     corpus=seed['corpus_snapshot']
     intake_dois,primary_dois=checked_library_sources(seed,library,primary,corpus_source)
     direct_formulas=sorted({byid[rid]['material']['formula'] for rid in route_ids})
@@ -165,6 +168,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs,corpus_source):
       'total_canonical_source_groups':len(groups),'formal_full_main_and_matched_si_reviews':len(main_si),'formal_full_review_pages':sum(p['pages_read'] for p in main_si),
       'formal_full_main_reviews_si_unverified':len(main_only),'formal_full_main_only_review_pages':sum(p['pages_read'] for p in main_only),
       'formal_full_si_reviews_main_unverified':len(si_only),'formal_full_si_only_review_pages':sum(p['pages_read'] for p in si_only),
+      'formal_main_and_selected_si_reviews':len(selected_si),'formal_main_and_selected_si_review_pages':sum(p['pages_read'] for p in selected_si),
       'legacy_main_article_reviews_si_unverified':sum(p['review_status']=='legacy_main_article_review_si_unverified' for p in per_paper),
       'legacy_main_pages_inspected':sum(d['page_count'] for p in per_paper if p['review_status']=='legacy_main_article_review_si_unverified' for d in p['documents']),
       'selected_recipe_figure_review_sources':sum(p['review_status']=='selected_recipe_and_figure_review' for p in per_paper),

@@ -1,7 +1,7 @@
 """Publish reviewed coverage ledgers without private source paths or full-text caches."""
 import json, hashlib, re, shutil
 from pathlib import Path
-from review_scope import source_review_scope
+from review_scope import source_review_scope, reviewed_page_count, MAIN_SELECTED_SI
 from asset_display import display_view
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/paper-reviews'
@@ -84,12 +84,9 @@ def validate(c):
         ids={x['id'] for s in c.get('reader_sections',[]) for x in s.get('items',[])}
         if not isinstance(chars.get('reader_item_ids'),list) or not set(chars['reader_item_ids'])<=ids:errors.append('Unresolved characterization reader links')
     elif not isinstance(chars,list):errors.append('Unsupported characterization inventory format')
-    try:source_review_scope(c)
+    try:reviewed_page_count(c)
     except (ValueError,KeyError) as exc:errors.append(str(exc))
     for d in c['documents']:
-        pages=d['pages'];nums=[p['page'] for p in pages]
-        if sorted(nums)!=list(range(1,d['page_count']+1)):errors.append('Incomplete or duplicate page inventory')
-        if not all(p.get('text_read') is True and p.get('visual_review') is True for p in pages):errors.append('Unread or visually unchecked page')
         if not re.fullmatch('[a-f0-9]{64}',d['sha256']):errors.append('Missing source hash')
     items=declared_review_assets(c,errors)
     # Source-private page inventories may retain only a source hash/label.
@@ -115,7 +112,8 @@ def main():
         scope=source_review_scope(c)
         c['review_scope_label']=scope['label']
         write(ROOT/'dist/data/paper-reviews'/p.name,c)
-        index.append({'id':c['paper_id'],'doi':c['doi'],'title':c['title'],'review_scope':scope['scope'],'review_scope_label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages_read':sum(d['page_count'] for d in c['documents']),'figures':len(c['figures']),'tables':len(c.get('tables',[])),'record_ids':sorted({rid for x in c['recipe_inventory'] for rid in x.get('record_ids',[])}),'independent_audit':c.get('independent_audit','pending'),'url':'paper-review.html?id='+c['paper_id']})
-    write(ROOT/'dist/data/paper-review-index.json',{'schema_version':'1.0','papers':index,'scope':'Full supplied-document reading and visual coverage; omitted experimental details and raw-data gaps remain explicit. This status is not an exact-structure training eligibility label.'})
+        index.append({'id':c['paper_id'],'doi':c['doi'],'title':c['title'],'review_scope':scope['scope'],'review_scope_label':scope['label'],'si_status':scope['si_status'],'main_status':scope['main_status'],'pages_read':reviewed_page_count(c),'figures':len(c['figures']),'tables':len(c.get('tables',[])),'record_ids':sorted({rid for x in c['recipe_inventory'] for rid in x.get('record_ids',[])}),'independent_audit':c.get('independent_audit','pending'),'url':'paper-review.html?id='+c['paper_id']})
+        if scope['scope']==MAIN_SELECTED_SI:index[-1]['selected_si_pages']=next(d['pages_read'] for d in c['documents'] if d['role']=='si')
+    write(ROOT/'dist/data/paper-review-index.json',{'schema_version':'1.0','papers':index,'scope':'Declared supplied-document or selected-SI reading and visual coverage; unreviewed pages, omitted experimental details and raw-data gaps remain explicit. This status is not an exact-structure training eligibility label.'})
     print('Validated and published coverage ledgers:',len(index))
 if __name__=='__main__':main()
