@@ -1,0 +1,640 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "choi2006-pbs-aptamer-ja066506k-free-tba",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Choi et al. (2006): Free-aptamer analysis of estimated 430 and 860 nM QD batches",
+  "material": {
+    "formula": "PbS",
+    "family": "Aptamer-capped lead sulfide quantum dots",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Free-aptamer analysis of estimated 430 and 860 nM QD batches",
+  "sources": [
+    {
+      "id": "choi2006-pbs-aptamer-ja066506k",
+      "doi": "10.1021/ja066506k",
+      "title": "Aptamer-Capped Nanocrystal Quantum Dots: A New Method for Label-Free Protein Detection",
+      "authors": "Jong Hyun Choi; Kok Hao Chen; Michael S. Strano",
+      "year": 2006,
+      "url": "https://doi.org/10.1021/ja066506k",
+      "main_status": "Complete two-page main independently source-audited; matched four-page SI also reviewed; cited full sources remain unreviewed.",
+      "si_status": "Complete identity-matched four-page SI independently source-audited, including Figures S1–S6 and twelve printed references; cited full sources remain unreviewed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "choi2006-pbs-aptamer-ja066506k",
+    "recipe_family": "choi2006-pbs-aptamer-ja066506k",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS QD host",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": "Source-defined DNA/aptamer cap; conformation is interpreted, not a measured atomic model",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tba-qd",
+      "name": "TBA-capped PbS QD dispersion",
+      "formula": null,
+      "role": "analytical specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact source synthesis batch overlap unresolved; no precursor charges or measured diameter are inherited into this analytical record."
+      ],
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dilute-state",
+      "name": "Dilute the two analytical aliquots output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "centrifuge-state",
+      "name": "Separate free aptamer for analysis output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "dilute-state"
+      ]
+    },
+    {
+      "id": "measure-state",
+      "name": "Measure supernatant absorbance output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "centrifuge-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "dilute",
+      "action": "dilute",
+      "label": "Dilute the two analytical aliquots",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tba-qd"
+      ],
+      "outputs": [
+        "dilute-state"
+      ],
+      "parameters": {
+        "dilution_factor": {
+          "value": 58,
+          "minimum": null,
+          "maximum": null,
+          "unit": "1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "choi2006-pbs-aptamer-ja066506k",
+              "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Two reported QD batches, estimated at 430 and 860 nM, were each diluted by a factor of 58. Exact separate synthesis charges for the 860 nM batch are not supplied; no twofold precursor recipe is inferred.",
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ]
+    },
+    {
+      "id": "centrifuge",
+      "action": "centrifuge",
+      "label": "Separate free aptamer for analysis",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dilute"
+      ],
+      "inputs": [
+        "dilute-state"
+      ],
+      "outputs": [
+        "centrifuge-state"
+      ],
+      "parameters": {
+        "rotation_speed": {
+          "value": 30000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "choi2006-pbs-aptamer-ja066506k",
+              "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "choi2006-pbs-aptamer-ja066506k",
+              "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Ultracentrifuge at 30000 rpm for 6 h using an Optima L-100 XP and collect the supernatant containing free TBA. Rotor radius and relative centrifugal force are not given.",
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "action": "characterize",
+      "label": "Measure supernatant absorbance",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "centrifuge"
+      ],
+      "inputs": [
+        "centrifuge-state"
+      ],
+      "outputs": [
+        "measure-state"
+      ],
+      "parameters": {
+        "path_length": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "choi2006-pbs-aptamer-ja066506k",
+              "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "dna_peak_wavelength": {
+          "value": 260,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "choi2006-pbs-aptamer-ja066506k",
+              "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure supernatant UV–vis–nIR absorption in a 1 cm path cell using Shimadzu UV-3101PC. Calculate DNA concentration from the peak at 260 nm. Approximately 80% is free TBA in both original QD solutions, with the remainder capping QDs.",
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "choi2006-pbs-aptamer-ja066506k-free-tba-batch-430",
+      "source_sample_label": "Supernatant associated with estimated 430 nM QD batch",
+      "batch_id": null,
+      "material_state_id": "measure-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Free TBA in QD-analysis supernatant",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_applicable",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ],
+      "notes": [
+        "Not a synthesis recipe; the original 5 nm assumption used in concentration estimation is not a measured diameter."
+      ]
+    },
+    {
+      "sample_id": "choi2006-pbs-aptamer-ja066506k-free-tba-batch-860",
+      "source_sample_label": "Supernatant associated with estimated 860 nM QD batch",
+      "batch_id": null,
+      "material_state_id": "measure-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Free TBA in QD-analysis supernatant",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_applicable",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ],
+      "notes": [
+        "Not a synthesis recipe; the original 5 nm assumption used in concentration estimation is not a measured diameter."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "free-430",
+      "sample_id": "choi2006-pbs-aptamer-ja066506k-free-tba-batch-430",
+      "property": "free_aptamer_fraction",
+      "technique": "UV–vis absorption",
+      "value": {
+        "value": 80,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Estimated 430 nM QD batch, after 58-fold dilution and separation",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ]
+    },
+    {
+      "id": "bound-430",
+      "sample_id": "choi2006-pbs-aptamer-ja066506k-free-tba-batch-430",
+      "property": "surface_bound_aptamer_fraction",
+      "technique": "UV–vis absorption",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Approximately 20% reported in main; SI describes the remainder after approximately 80% free TBA.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "Main PDF p. 1, aqueous synthesis and Scheme 1"
+          },
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 1, Synthesis of PbS Quantum Dots Using Thrombin-Binding Aptamer"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Estimated 430 nM QD batch; fraction of total TBA, not mass fraction or surface coverage per area",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "Main PDF p. 1, aqueous synthesis and Scheme 1"
+        },
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 1, Synthesis of PbS Quantum Dots Using Thrombin-Binding Aptamer"
+        }
+      ]
+    },
+    {
+      "id": "free-860",
+      "sample_id": "choi2006-pbs-aptamer-ja066506k-free-tba-batch-860",
+      "property": "free_aptamer_fraction",
+      "technique": "UV–vis absorption",
+      "value": {
+        "value": 80,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Estimated 860 nM QD batch, after 58-fold dilution and separation",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 2, Figure S2, free aptamer measurement"
+        }
+      ]
+    },
+    {
+      "id": "bound-860",
+      "sample_id": "choi2006-pbs-aptamer-ja066506k-free-tba-batch-860",
+      "property": "surface_bound_aptamer_fraction",
+      "technique": "UV–vis absorption",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Approximately 20% reported in main; SI describes the remainder after approximately 80% free TBA.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "Main PDF p. 1, aqueous synthesis and Scheme 1"
+          },
+          {
+            "source_id": "choi2006-pbs-aptamer-ja066506k",
+            "locator": "SI PDF p. 1, Synthesis of PbS Quantum Dots Using Thrombin-Binding Aptamer"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Estimated 860 nM QD batch; fraction of total TBA, not mass fraction or surface coverage per area",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "Main PDF p. 1, aqueous synthesis and Scheme 1"
+        },
+        {
+          "source_id": "choi2006-pbs-aptamer-ja066506k",
+          "locator": "SI PDF p. 1, Synthesis of PbS Quantum Dots Using Thrombin-Binding Aptamer"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete two-page main and matched four-page SI scientific audit of accepted R3 passed. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete two-page main and identity-matched four-page SI, including Scheme 1, Figures 1–2 and S1–S6, 28 main and 12 SI reference entries. Cited full sources unreviewed.",
+      "Synthesis is at room temperature in open air, but numerical temperature, reaction hold time, vessel geometry, addition rate, stirring speed, precursor stock concentrations, isolation/storage protocol and yield are not reported.",
+      "The 280 µL final volume is explicitly TAE. Water pH 6.8–7.0 is a reported alternative with no significant difference, but its exact final volume and separately identified TEM specimen are not supplied.",
+      "TAE is specified as 1× without EDTA at pH 8.0; component concentrations and preparation are not given. Lead-acetate and Na2S hydration are unreported.",
+      "The estimated 430/860 nM particle concentrations assume uniform 5 nm particles. This assumed diameter is not an extra measured particle size. The 3–6 nm TEM range has no formal statistical analysis; exact buffer-versus-water image batch is unresolved.",
+      "Analytical ultracentrifugation, TEM drying, CD dilution and protein assays are separate characterization branches, not QD synthesis/purification instructions.",
+      "No measured atomic coordinates, refined crystal phase/cell or protein/aptamer conformation coordinates are supplied. Mechanistic charge transfer and chair-like quadruplex are author interpretations.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [
+      "Main p.1 explicitly names sodium sulfide; SI p.S1 prints sodium sulfate (Na2S), while SI p.S3 specifies S2−. The SI name/formula conflict is preserved, not silently corrected. Na2S indexes the printed formula and main identity, without resolving the inconsistent SI name or hydration."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/ja066506k",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=choi2006-pbs-aptamer-ja066506k",
+      "relation": "source_review"
+    },
+    {
+      "label": "Study context",
+      "url": "data/paper-reviews/choi2006-pbs-aptamer-ja066506k/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}
