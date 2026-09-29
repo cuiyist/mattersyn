@@ -1,0 +1,313 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wuister2004-yagce-b401299b-photobleaching",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Wuister et al. (2004): UV photobleaching of the conjugate",
+  "material": {
+    "formula": "Y3Al5O12:Ce",
+    "family": "Cerium-doped yttrium aluminium garnet",
+    "elements": [
+      "Y",
+      "Al",
+      "O",
+      "Ce"
+    ],
+    "components": [
+      "Y3Al5O12:Ce"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "UV photobleaching of the conjugate",
+  "sources": [
+    {
+      "id": "wuister2004-yagce-b401299b",
+      "doi": "10.1039/b401299b",
+      "title": "Efficient energy transfer between nanocrystalline YAG:Ce and TRITC",
+      "authors": "Sander F. Wuister; Celso de Mello Donegá; Andries Meijerink",
+      "year": 2004,
+      "url": "https://doi.org/10.1039/b401299b",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI inspected; cited full sources unreviewed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "wuister2004-yagce-b401299b",
+    "recipe_family": "wuister2004-yagce-b401299b",
+    "parent_record_id": "wuister2004-yagce-b401299b-tritc-conjugation",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Y3Al5O12:Ce",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": "Y3Al5O12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "conjugate",
+      "name": "Prepared TRITC–NC YAG:Ce conjugate",
+      "formula": null,
+      "role": "optical-stability test input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Input amount and irradiation sample geometry unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "uv-exposure-state",
+      "name": "Expose the conjugate to UV light output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "uv-exposure",
+      "action": "irradiate",
+      "label": "Expose the conjugate to UV light",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "conjugate"
+      ],
+      "outputs": [
+        "uv-exposure-state"
+      ],
+      "parameters": {
+        "wavelength": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wuister2004-yagce-b401299b",
+              "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+            }
+          ],
+          "derivation": null
+        },
+        "lamp_power": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "W",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Lamp rating, not calibrated incident optical power.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wuister2004-yagce-b401299b",
+              "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 65,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wuister2004-yagce-b401299b",
+              "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Irradiate with300 nm light from a450 W xenon lamp for65 h. Lamp rating is not incident optical power; beam geometry, intensity and sample temperature are unknown.",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wuister2004-yagce-b401299b-photobleaching-product",
+      "source_sample_label": "Partly photobleached TRITC–NC YAG:Ce",
+      "batch_id": null,
+      "material_state_id": "uv-exposure-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "TRITC–NC YAG:Ce after partial dye photodecomposition",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+          }
+        ],
+        "note": "Pink changes to slightly yellow. No measured new phase or nanocrystal size; host YAG:Ce described as photostable."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "Dye partly photobleached; residual TRITC remains",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 4, Photobleaching paragraph and Figure5"
+        }
+      ],
+      "notes": [
+        "Pink changes to slightly yellow. No measured new phase or nanocrystal size; host YAG:Ce described as photostable."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 audit of all four supplied main pages, five figures, one equation and the 25-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied four-page main; no SI or cited full source has been reviewed.",
+      "Ce doping is reported as0.5 mol%; the precise denominator is not separately defined.3 mmol is the combined Y/Ce nitrate charge, not3 mmol of each salt.",
+      "Thermal ramps, cooling schedules, crucible geometry and product yield are unreported. Overnight is retained without inventing hours.",
+      "Sonication duration/power, centrifuge force/time, several-rinse count and many wash volumes are unreported.",
+      "Unknown TRITC positional isomer, counterion and actual surface coverage remain unresolved. Proposed glycine bridging is not a measured molecular geometry.",
+      "No sample-measured atomic coordinates or unit-cell refinement is supplied; illustrative molecular/particle/cell presentation remains pending.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1039/b401299b",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=wuister2004-yagce-b401299b",
+      "relation": "source_review"
+    },
+    {
+      "label": "Controls, instrumentation and energy-transfer interpretation",
+      "url": "data/paper-reviews/wuister2004-yagce-b401299b/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wuister2004-yagce-b401299b-cluster-preparation",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Wuister et al. (2004): Grinding and sonic-bath preparation of clusters",
+  "material": {
+    "formula": "Y3Al5O12:Ce",
+    "family": "Cerium-doped yttrium aluminium garnet",
+    "elements": [
+      "Y",
+      "Al",
+      "O",
+      "Ce"
+    ],
+    "components": [
+      "Y3Al5O12:Ce"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Grinding and sonic-bath preparation of clusters",
+  "sources": [
+    {
+      "id": "wuister2004-yagce-b401299b",
+      "doi": "10.1039/b401299b",
+      "title": "Efficient energy transfer between nanocrystalline YAG:Ce and TRITC",
+      "authors": "Sander F. Wuister; Celso de Mello Donegá; Andries Meijerink",
+      "year": 2004,
+      "url": "https://doi.org/10.1039/b401299b",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI inspected; cited full sources unreviewed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "wuister2004-yagce-b401299b",
+    "recipe_family": "wuister2004-yagce-b401299b",
+    "parent_record_id": "wuister2004-yagce-b401299b-glycine-host",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Y3Al5O12:Ce",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Cluster and microscopy paragraph"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": "Y3Al5O12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Cluster and microscopy paragraph"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "host-powder",
+      "name": "Prepared NC YAG:Ce",
+      "formula": "Y3Al5O12:Ce",
+      "role": "prepared porous-body feed",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source family explicitly refers to prepared NC YAG:Ce; amount and physical batch ID not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Cluster and microscopy paragraph"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "grind-state",
+      "name": "Grind the friable porous body output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sonicate-state",
+      "name": "Break the powder into clusters output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "grind-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "grind",
+      "action": "grind",
+      "label": "Grind the friable porous body",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "host-powder"
+      ],
+      "outputs": [
+        "grind-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grind the highly friable NC YAG:Ce into powder. Grinding tool, time and pressure are unreported.",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Cluster and microscopy paragraph"
+        }
+      ]
+    },
+    {
+      "id": "sonicate",
+      "action": "sonicate",
+      "label": "Break the powder into clusters",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "grind"
+      ],
+      "inputs": [
+        "grind-state"
+      ],
+      "outputs": [
+        "sonicate-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use a sonic bath to break the powder into100–1000 nm clusters. Liquid identity, volume, duration and acoustic power are not reported; no isolated-particle dispersion is asserted.",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Cluster and microscopy paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wuister2004-yagce-b401299b-cluster-preparation-product",
+      "source_sample_label": "Sonic-bath NC YAG:Ce cluster, Figure2",
+      "batch_id": null,
+      "material_state_id": "sonicate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Y3Al5O12:Ce",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Figure2 and cluster discussion"
+          }
+        ],
+        "note": "Cluster scale and constituent nanocrystal scale describe different objects."
+      },
+      "phase": {
+        "value": "Crystalline NC YAG:Ce by HRTEM and selected-area diffraction",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Figure2 and cluster discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Porous interconnected three-dimensional network within clusters",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Figure2 and cluster discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Figure2 and cluster discussion"
+        }
+      ],
+      "notes": [
+        "Cluster scale and constituent nanocrystal scale describe different objects."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cluster-range",
+      "sample_id": "wuister2004-yagce-b401299b-cluster-preparation-product",
+      "property": "aggregate_size_range",
+      "technique": "Source cluster description / TEM context",
+      "value": {
+        "value": null,
+        "minimum": 100,
+        "maximum": 1000,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source cluster size range after sonic waves; no size-distribution statistic or hydrodynamic method reported.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Cluster preparation paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Not the18 nm Scherrer primary domain size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Cluster preparation and Figure2"
+        }
+      ]
+    },
+    {
+      "id": "tem-size",
+      "sample_id": "wuister2004-yagce-b401299b-cluster-preparation-product",
+      "property": "particle_size",
+      "technique": "TEM / HRTEM",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Source states TEM/HR-TEM size consistent with XRD, approximately20 nm; no independently fitted distribution reported.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Figure2 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Constituent nanocrystals; Figure2A has200 nm scale, Figure2B has10 nm scale.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Figure2 discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 audit of all four supplied main pages, five figures, one equation and the 25-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied four-page main; no SI or cited full source has been reviewed.",
+      "Ce doping is reported as0.5 mol%; the precise denominator is not separately defined.3 mmol is the combined Y/Ce nitrate charge, not3 mmol of each salt.",
+      "Thermal ramps, cooling schedules, crucible geometry and product yield are unreported. Overnight is retained without inventing hours.",
+      "Sonication duration/power, centrifuge force/time, several-rinse count and many wash volumes are unreported.",
+      "Unknown TRITC positional isomer, counterion and actual surface coverage remain unresolved. Proposed glycine bridging is not a measured molecular geometry.",
+      "No sample-measured atomic coordinates or unit-cell refinement is supplied; illustrative molecular/particle/cell presentation remains pending.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1039/b401299b",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=wuister2004-yagce-b401299b",
+      "relation": "source_review"
+    },
+    {
+      "label": "Controls, instrumentation and energy-transfer interpretation",
+      "url": "data/paper-reviews/wuister2004-yagce-b401299b/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

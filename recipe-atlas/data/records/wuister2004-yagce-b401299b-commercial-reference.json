@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wuister2004-yagce-b401299b-commercial-reference",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Wuister et al. (2004): Commercial microcrystalline YAG:Ce reference",
+  "material": {
+    "formula": "Y3Al5O12:Ce",
+    "family": "Cerium-doped yttrium aluminium garnet",
+    "elements": [
+      "Y",
+      "Al",
+      "O",
+      "Ce"
+    ],
+    "components": [
+      "Y3Al5O12:Ce"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Commercial microcrystalline YAG:Ce reference",
+  "sources": [
+    {
+      "id": "wuister2004-yagce-b401299b",
+      "doi": "10.1039/b401299b",
+      "title": "Efficient energy transfer between nanocrystalline YAG:Ce and TRITC",
+      "authors": "Sander F. Wuister; Celso de Mello Donegá; Andries Meijerink",
+      "year": 2004,
+      "url": "https://doi.org/10.1039/b401299b",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI inspected; cited full sources unreviewed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "wuister2004-yagce-b401299b",
+    "recipe_family": "wuister2004-yagce-b401299b",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Y3Al5O12:Ce",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, First paragraph and quantum-efficiency discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": "Y3Al5O12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, First paragraph and quantum-efficiency discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "commercial",
+      "name": "Commercial microcrystalline YAG:Ce (Nichia)",
+      "formula": "Y3Al5O12:Ce",
+      "role": "purchased comparison phosphor",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supplier Nichia Co.; particle size, Ce fraction, grade and synthesis not supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, First paragraph and quantum-efficiency discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "compare-reference-state",
+      "name": "Characterize the purchased phosphor output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "compare-reference",
+      "action": "measure",
+      "label": "Characterize the purchased phosphor",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "commercial"
+      ],
+      "outputs": [
+        "compare-reference-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use the commercial microcrystalline Nichia YAG:Ce phosphor as XRD and luminescence quantum-efficiency comparator. No synthesis procedure for this material is supplied.",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, First paragraph and quantum-efficiency discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wuister2004-yagce-b401299b-commercial-reference-product",
+      "source_sample_label": "Microcrystalline YAG:Ce, Nichia comparator",
+      "batch_id": null,
+      "material_state_id": "compare-reference-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "YAG:Ce",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 1–2, Figure1 and comparison discussion"
+          }
+        ],
+        "note": "Purchased reference; no inferred product synthesis or size."
+      },
+      "phase": {
+        "value": "Crystalline YAG comparison pattern",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 1–2, Figure1 and comparison discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 1–2, Figure1 and comparison discussion"
+        }
+      ],
+      "notes": [
+        "Purchased reference; no inferred product synthesis or size."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "reference-qe",
+      "sample_id": "wuister2004-yagce-b401299b-commercial-reference-product",
+      "property": "photoluminescence_quantum_efficiency",
+      "technique": "Relative phosphor comparison",
+      "value": {
+        "value": 70,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source70% for commercial Nichia phosphor; compared with approximately50% for NC product.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Quantum-efficiency discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source comparison at430 nm excitation; method stated accurate within10%,not an individual ±error.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Quantum-efficiency discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 audit of all four supplied main pages, five figures, one equation and the 25-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied four-page main; no SI or cited full source has been reviewed.",
+      "Ce doping is reported as0.5 mol%; the precise denominator is not separately defined.3 mmol is the combined Y/Ce nitrate charge, not3 mmol of each salt.",
+      "Thermal ramps, cooling schedules, crucible geometry and product yield are unreported. Overnight is retained without inventing hours.",
+      "Sonication duration/power, centrifuge force/time, several-rinse count and many wash volumes are unreported.",
+      "Unknown TRITC positional isomer, counterion and actual surface coverage remain unresolved. Proposed glycine bridging is not a measured molecular geometry.",
+      "No sample-measured atomic coordinates or unit-cell refinement is supplied; illustrative molecular/particle/cell presentation remains pending.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1039/b401299b",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=wuister2004-yagce-b401299b",
+      "relation": "source_review"
+    },
+    {
+      "label": "Controls, instrumentation and energy-transfer interpretation",
+      "url": "data/paper-reviews/wuister2004-yagce-b401299b/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

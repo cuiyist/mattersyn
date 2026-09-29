@@ -1,3 +1,14 @@
+## 2026-09-29 — Wuister YAG:Ce contribution accepted, publication pending
+
+Wuister et al. (2004), DOI 10.1039/b401299b, contributes one quantified glycine–nitrate YAG:Ce preparation and seven separately scoped supporting treatment, alternative-fuel, control and purchased-reference records. All four supplied main pages, five source figures, one equation and the 25-entry bibliography were independently reviewed. SI and cited full sources remain unreviewed. The independently corrected TRITC dose is 35 µg; the separate host and glycine charges remain 35 mg. XRD crystallite size, TEM nanocrystals and sonicated cluster dimensions retain their distinct source meanings. Missing treatment conditions and proposed molecular/energy-transfer geometry remain qualified.
+
+The accepted private projection adds eight records, one direct YAG:Ce route and one partial broad recipe–structure row. Source figures, chemical/stock bindings and source-bound apparatus accompany the ordinary Reader. Actual generation, browser, CI and anonymous deployment proof are still required. This retired-preliminary reassessment may add one ordinary contributing paper only after verified publication; it adds zero credit toward the new-400 processing/publication target. No publication or training credit is assigned by acceptance or metadata preparation.
+
+Batch12 is deployed and anonymously verified at 2026-09-29T08:35:49.839809+00:00: 104 ordinary contributing papers, 1,266 canonical records and 377 broad recipe–structure rows. Source 2f7015df46640ac0bfa410dc73bebe8388d6a486; site 195e7e1eacf2817c1227cddb62dea3ba2a979945. Proof SHA256 937a815a847216e872d0ae683d531bf6f3ca2909b7453add7ca50e29c722b55a. Public preliminary synthesis remains retired. The target of 20 published contributing papers per hour remains unachieved; reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T08:35:49.839809+00:00 (source `2f7015df46640ac0bfa410dc73bebe8388d6a486`, site `195e7e1eacf2817c1227cddb62dea3ba2a979945`). Its verified website contains 104 primary sources, 1266 canonical records and 377 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 — TiO2 and CdS/polymer source contributions accepted, publication pending
 
 Liao et al. (2009), DOI 10.1021/jp905720g, contributes seven solvent-preparation routes, including the reported poorly crystalline controls, and two supporting characterization/activity procedures. All six supplied main pages are independently reviewed. Prose/table ordering and numerical differences remain explicit; supporting procedures do not create additional preparation pairs. SI and cited full sources remain unreviewed.

@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wuister2004-yagce-b401299b-rhodamine-control",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Wuister et al. (2004): Rhodamine B conjugation control",
+  "material": {
+    "formula": "Y3Al5O12:Ce",
+    "family": "Cerium-doped yttrium aluminium garnet",
+    "elements": [
+      "Y",
+      "Al",
+      "O",
+      "Ce"
+    ],
+    "components": [
+      "Y3Al5O12:Ce"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Rhodamine B conjugation control",
+  "sources": [
+    {
+      "id": "wuister2004-yagce-b401299b",
+      "doi": "10.1039/b401299b",
+      "title": "Efficient energy transfer between nanocrystalline YAG:Ce and TRITC",
+      "authors": "Sander F. Wuister; Celso de Mello Donegá; Andries Meijerink",
+      "year": 2004,
+      "url": "https://doi.org/10.1039/b401299b",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI inspected; cited full sources unreviewed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "wuister2004-yagce-b401299b",
+    "recipe_family": "wuister2004-yagce-b401299b",
+    "parent_record_id": "wuister2004-yagce-b401299b-glycine-host",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Y3Al5O12:Ce",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": "Y3Al5O12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "host-powder",
+      "name": "NC YAG:Ce control feed",
+      "formula": "Y3Al5O12:Ce",
+      "role": "prepared particle control",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Control charge unreported; do not inherit the 35 mg NC YAG:Ce charge from the conjugation procedure."
+      ],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ]
+    },
+    {
+      "id": "glycine",
+      "name": "Glycine (aminoacetic acid)",
+      "formula": "C2H5NO2",
+      "role": "control bridging reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Control charge and treatment schedule not separately restated."
+      ],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ]
+    },
+    {
+      "id": "rh-b",
+      "name": "Rhodamine B",
+      "formula": null,
+      "role": "dye control without isothiocyanate group",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Control amount, solvent and counterion not specified; no TRITC dose substitution."
+      ],
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "treat-control-state",
+      "name": "Treat with glycine and Rhodamine B output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "treat-control",
+      "action": "mix",
+      "label": "Treat with glycine and Rhodamine B",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "host-powder",
+        "glycine",
+        "rh-b"
+      ],
+      "outputs": [
+        "treat-control-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The source states that treatment of YAG:Ce with glycine and Rhodamine B did not lead to a dye–NC conjugate. Amounts, solvent, order, duration and purification are not separately specified.",
+      "evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wuister2004-yagce-b401299b-rhodamine-control-product",
+      "source_sample_label": "Rhodamine B control with no formed conjugate",
+      "batch_id": null,
+      "material_state_id": "treat-control-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Negative conjugation observation only; no separately measured phase, particle size or complete control recipe."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "No dye–NC YAG:Ce conjugate formed",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wuister2004-yagce-b401299b",
+            "locator": "Main PDF p. 2, Control statement, top right column"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wuister2004-yagce-b401299b",
+          "locator": "Main PDF p. 2, Control statement, top right column"
+        }
+      ],
+      "notes": [
+        "Negative conjugation observation only; no separately measured phase, particle size or complete control recipe."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 audit of all four supplied main pages, five figures, one equation and the 25-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied four-page main; no SI or cited full source has been reviewed.",
+      "Ce doping is reported as0.5 mol%; the precise denominator is not separately defined.3 mmol is the combined Y/Ce nitrate charge, not3 mmol of each salt.",
+      "Thermal ramps, cooling schedules, crucible geometry and product yield are unreported. Overnight is retained without inventing hours.",
+      "Sonication duration/power, centrifuge force/time, several-rinse count and many wash volumes are unreported.",
+      "Unknown TRITC positional isomer, counterion and actual surface coverage remain unresolved. Proposed glycine bridging is not a measured molecular geometry.",
+      "No sample-measured atomic coordinates or unit-cell refinement is supplied; illustrative molecular/particle/cell presentation remains pending.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1039/b401299b",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=wuister2004-yagce-b401299b",
+      "relation": "source_review"
+    },
+    {
+      "label": "Controls, instrumentation and energy-transfer interpretation",
+      "url": "data/paper-reviews/wuister2004-yagce-b401299b/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}
