@@ -1,10 +1,10 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "active_preliminary_first_website_building",
+  "status": "active_ordinary_material_publication_processing_v4",
   "recorded_at": "2026-09-28T23:53:33.560734+00:00",
-  "authorization": "Owner requested a pause for workflow and first-publication quality revision, followed by resumption. Engineering implementation accepted; preliminary source-checked synthesis contributions resume now. Independent scientific audit remains required for gold and training admission.",
+  "authorization": "Owner authorizes continued source-backed processing and ordinary material recipe/structure publication within the existing project scope. Public preliminary synthesis is retired. Routine implementation/publication proceeds without repeated permission requests; scientific, privacy and release checks remain. No paid processing, new source downloads or external source-document transfer.",
   "supersedes_hold": "User requests continued work until explicit pause. Active20-minute continuation; scheduled morning and two-hour reports disabled; historical trials frozen.",
-  "active_run": "Private workflow-v3-20260928/run-state.private.json",
+  "active_run": "Private workflow-v4-20260929/run-state.private.json",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
   "external_document_transfer_allowed": false,
@@ -48,18 +48,16 @@
     "experimental_silver": "Separate partial machine-extracted display with exact model/evidence/schema/privacy checks and independent engineering review; scientific review not performed, accuracy unmeasured and training excluded. Publication requires normal release/CI/anonymous verification.",
     "batch_validation": "One successful complete local batch build. Reuse unchanged scientific audits and exact file-review objects; retest changed or failed dependencies, run the fresh complete publication boundary once, retain exact-commit CI and anonymous deployment verification."
   },
-  "continuation_checkpoint": "Private workflow-v3-20260928/run-state.private.json",
-  "latest_publication_receipt": "research-assets/public-audits/preliminary-publication-events.json",
-  "latest_verified_site_commit": "959ead8c8b8edc1910579d47186f3fba9d2b207e",
+  "continuation_checkpoint": "Private workflow-v4-20260929/run-state.private.json",
+  "latest_publication_receipt": "Anonymous deployment proof SHA256 c6f5809ceebd449b3d96040a406f0ba2963536af27d04dd68ffdb408225ec1d8",
+  "latest_verified_site_commit": "2269d54e89cf54f43b45f34889730edb6782b28e",
   "latest_verified_totals": {
-    "records": 1130,
-    "contributing_sources": 107,
+    "records": 1139,
+    "contributing_sources": 93,
+    "reviewed_contributing_sources": 93,
+    "preliminary_sources": 0,
     "direct_families": 97,
-    "hubs": 109,
-    "routes": 392,
-    "broad_pairs": 313,
-    "reviewed_contributing_sources": 91,
-    "preliminary_sources": 16
+    "broad_pairs": 321
   },
   "latest_publication_event": {
     "event_id": "gold-20260928-iwasaki1998-tio2-a1006660209934",
@@ -231,15 +229,44 @@
     "status": "historical_frozen_result_2_papers_not_active"
   },
   "latest_verified_publication": {
-    "source_commit": "9e68b2fb5332db32c98cdfd0abb74eb3f6855657",
-    "site_commit": "959ead8c8b8edc1910579d47186f3fba9d2b207e",
-    "site_ci_run": 36513125465,
+    "source_commit": "20e3251fe45f0dba95cb2d3987d3c40a24cd3453",
+    "site_commit": "2269d54e89cf54f43b45f34889730edb6782b28e",
+    "site_ci_run": 36520701457,
+    "verified_at": "2026-09-29T04:18:07.747510+00:00",
     "new_papers": 2,
-    "tier": "preliminary",
-    "new_reviewed_records": 0,
-    "new_verified_pairs": 0,
-    "anonymous_checks": 12,
-    "receipt": "research-assets/public-audits/preliminary-publication-events.json"
+    "tier": "ordinary_independently_source_reviewed_presentation_partial",
+    "new_reviewed_records": 9,
+    "new_verified_pairs": 8,
+    "anonymous_checks": 72,
+    "receipt_sha256": "c6f5809ceebd449b3d96040a406f0ba2963536af27d04dd68ffdb408225ec1d8",
+    "events": [
+      {
+        "event_id": "ordinary-2269d54e89cf-ivanov2009-ceo2-s0012500809060056",
+        "source_id": "ivanov2009-ceo2-s0012500809060056",
+        "doi": "10.1134/s0012500809060056",
+        "verified_at": "2026-09-29T04:18:07.747510+00:00",
+        "tier": "independently_source_reviewed_presentation_partial",
+        "source_commit": "20e3251fe45f0dba95cb2d3987d3c40a24cd3453",
+        "site_commit": "2269d54e89cf54f43b45f34889730edb6782b28e",
+        "carried_over_science": true,
+        "new_records": 7,
+        "new_pairs": 6,
+        "training_ready_credit": 0
+      },
+      {
+        "event_id": "ordinary-2269d54e89cf-colfen2003-tio2-la0347051",
+        "source_id": "colfen2003-tio2-la0347051",
+        "doi": "10.1021/la0347051",
+        "verified_at": "2026-09-29T04:18:07.747510+00:00",
+        "tier": "independently_source_reviewed_presentation_partial",
+        "source_commit": "20e3251fe45f0dba95cb2d3987d3c40a24cd3453",
+        "site_commit": "2269d54e89cf54f43b45f34889730edb6782b28e",
+        "carried_over_science": false,
+        "new_records": 2,
+        "new_pairs": 2,
+        "training_ready_credit": 0
+      }
+    ]
   },
   "workflow_revision_hold": {
     "at": "2026-09-28T23:25:09.177250+00:00",
@@ -305,7 +332,7 @@
     "deadline_utc": "2026-09-29T23:00:00Z",
     "completed_definition": "Distinct source-backed skips plus newly deployed regular contributions; drafts and technical holds excluded. Earlier preliminary reassessments reported separately.",
     "public_preliminary_enabled": false,
-    "retirement_deployment": "pending",
+    "retirement_deployment": "deployed_and_anonymously_verified",
     "scheduled_reports_enabled": false,
     "target_published_papers_per_hour": 20,
     "homepage_counter_excludes_skips": true,

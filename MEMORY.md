@@ -1,3 +1,11 @@
+## 2026-09-29 Calcite and zirconia ordinary-reader batch prepared
+
+Two independently source-reviewed contributions are integrated locally for the next ordinary-material release. Nishino, Oaki and Imai (2009), DOI 10.1021/cg800331a, covers all four main pages and the matched two-page SI: six Mg-feed routes, six partial recipe–structure pairs and two supporting substrate/location comparisons. Mg substitution, ACC, unknown deposition duration and missing refined coordinates remain qualified. Tyagi and colleagues (2006), DOI 10.1021/ie060519p, covers the eight-page main paper only, with SI unreviewed: sixteen direct calcination routes and partial structural pairs, plus four uncalcined supporting records. TEM particle size, XRD crystallite size, phase and surface-area observations retain their separate sample/measurement scopes.
+
+Together the ready batch adds28records and22partial recipe–structure pairs, with source figures, source-qualified chemical identities, stock context and stage diagrams retained. Visual enrichment remains explicitly incomplete. These local additions are not yet published and receive zero current publication credit. Public preliminary synthesis is retired; skips, technical holds and drafts do not increase the website paper counter. Twenty actually published papers per hour remains an unachieved target; reports remain on request. Routine implementation/publication in the existing project scope remains authorized, with no paid processing, new downloads or external transfer of source documents.
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T04:18:07.747510+00:00 (source `20e3251fe45f0dba95cb2d3987d3c40a24cd3453`, site `2269d54e89cf54f43b45f34889730edb6782b28e`). Its verified website contains 93 primary sources, 1139 canonical records and 321 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 reader-first batch preparation
 
 The owner reiterated20actuallypublishedpapers/hour and clean, friendly reader pages. Keep concise academic method labels, usable figures and clear sample/measurement distinctions; owner progress, drafts and skips do not belong in the public paper counter. This rate remains a target, not achieved capacity.
