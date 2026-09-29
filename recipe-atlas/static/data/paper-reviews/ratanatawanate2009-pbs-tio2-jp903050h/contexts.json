@@ -1,0 +1,561 @@
+{
+  "schema_version": "mattersyn-source-contexts/1",
+  "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+  "doi": "10.1021/jp903050h",
+  "scope": "All six supplied main pages, eight figures, Table 1, surface-charge equations and 47-entry bibliography. SI and cited full papers unreviewed.",
+  "bibliographic_scope": {
+    "title": "Photocatalytic Activity of PbS Quantum Dot/TiO2 Nanotube Composites",
+    "authors": "Chalita Ratanatawanate; Yuan Tao; Kenneth J. Balkus, Jr.",
+    "journal": "Journal of Physical Chemistry C",
+    "year": 2009,
+    "volume": 113,
+    "issue": 24,
+    "pages": "10755–10760",
+    "received": "2 April 2009",
+    "revised": "8 May 2009",
+    "published_web": "26 May 2009"
+  },
+  "synthesis_routes": [
+    {
+      "record_id": "ratanatawanate2009-tio2-nanotubes",
+      "scope": "Hydrothermal TNT preparation and workup; detailed prior method cited as reference 30."
+    },
+    {
+      "record_id": "ratanatawanate2009-pbs-tio2-both",
+      "scope": "TLA-linked PbS on both inside and outside TNT surfaces; prior method reference 29 cited."
+    },
+    {
+      "record_id": "ratanatawanate2009-pbs-tio2-inside",
+      "scope": "DDAB blocking before TLA/lead/sulfide produces PbS inside TNTs; missing sulfide unit retained."
+    }
+  ],
+  "commercial_comparator": {
+    "record_id": "ratanatawanate2009-p25-comparator",
+    "scope": "Supplied P25; manufacturing recipe absent. No direct synthesis or training pair."
+  },
+  "materials": {
+    "suppliers": {
+      "P25": "Evonik (Degussa Corp)",
+      "thiolactic_acid": "Sigma-Aldrich",
+      "sodium_sulfide_nonahydrate": "Sigma-Aldrich, ACS reagent",
+      "lead_nitrate": "J. T. Baker, ACS reagent",
+      "DDAB": "Alfa Aesar",
+      "all_five_dyes": "Sigma-Aldrich"
+    },
+    "literal_purities": {
+      "thiolactic_acid": "<95%",
+      "sodium_sulfide_nonahydrate": "<98%",
+      "lead_nitrate": "<99%",
+      "DDAB": "99%"
+    },
+    "purification": "All chemicals used without further purification.",
+    "evidence": [
+      {
+        "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+        "locator": "Main PDF p. 2, Materials"
+      }
+    ]
+  },
+  "tables": {
+    "Table 1": {
+      "rows": [
+        {
+          "dye": "Methylene blue",
+          "abbreviation": "MB",
+          "molecular_weight_g_mol": 373.9,
+          "lambda_max_nm": 660,
+          "initial_pH": 6.0
+        },
+        {
+          "dye": "Methylene green",
+          "abbreviation": "MG",
+          "molecular_weight_g_mol": 433.01,
+          "lambda_max_nm": 657,
+          "initial_pH": 5.6
+        },
+        {
+          "dye": "Rhodamine B",
+          "abbreviation": "RH",
+          "molecular_weight_g_mol": 479.01,
+          "lambda_max_nm": 554,
+          "initial_pH": 6.2
+        },
+        {
+          "dye": "Rose bengal",
+          "abbreviation": "RB",
+          "molecular_weight_g_mol": 1017.5,
+          "lambda_max_nm": 549,
+          "initial_pH": 6.5
+        },
+        {
+          "dye": "Indigo carmine",
+          "abbreviation": "IC",
+          "molecular_weight_g_mol": 466.36,
+          "lambda_max_nm": 610,
+          "initial_pH": 5.7
+        }
+      ],
+      "scope": "Literal dye properties and source structural drawings. Molecular masses are not used to infer or correct salt/hydrate identities.",
+      "evidence": [
+        {
+          "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+          "locator": "Main PDF p. 2, Table 1"
+        }
+      ]
+    }
+  },
+  "assay": {
+    "record_id": "ratanatawanate2009-photocatalytic-assays",
+    "catalyst_set": [
+      "P25",
+      "TNTs",
+      "PbS/TNTs",
+      "PbS/TNTs (in)"
+    ],
+    "dye_set": [
+      "Methylene blue",
+      "Methylene green",
+      "Rhodamine B",
+      "Rose bengal",
+      "Indigo carmine"
+    ],
+    "protocol": {
+      "catalyst_mg": 25,
+      "dye_solution_mL": 100,
+      "dye_ppm": 25,
+      "ppm_basis": "Unspecified",
+      "quartz_flask_capacity_mL": 250,
+      "lamp_distance_cm": 15,
+      "lamp_power_W": 450,
+      "lamp": "Water-cooled Hanovia quartz mercury lamp inside dark box",
+      "environment": "Room temperature, atmospheric condition; no invented numerical values",
+      "dark_stirring_h": 1,
+      "withdrawn_aliquot_mL": 5,
+      "separation": "Centrifuge; speed/time unspecified",
+      "analysis": "UV–vis supernatant at Table 1 maximum wavelength"
+    },
+    "blank": "Figures 2–7 show a no-catalyst blank.",
+    "visible_control": {
+      "catalysts": [
+        "TNTs",
+        "PbS/TNTs"
+      ],
+      "dye": "Methylene blue",
+      "vessel": "Ray-sorb flask replaces quartz reactor",
+      "filter": "Wavelengths <600 nm filtered; source compares irradiation >600 nm.",
+      "transmittance_percent": 4,
+      "transmittance_at_nm": 500,
+      "same_protocol": true
+    },
+    "recycling": {
+      "catalysts": [
+        "TNTs",
+        "PbS/TNTs"
+      ],
+      "dye": "Methylene blue",
+      "runs": 3,
+      "readout_irradiation_min": 30,
+      "recovery": "Recover catalyst, wash with DI water, introduce a fresh dye batch; no replenishment amount specified.",
+      "results": "Both decline after first run. Authors report no significant PbS/TNT efficiency loss after the third run; TNT efficiency drops by 12% after 3 cycles, with percent-versus-percentage-point basis not defined. Exact bars are not digitized.",
+      "oxidation_check": "FTIR showed no evidence of PbS oxidation; spectrum not shown.",
+      "appearance": "Recovered PbS/TNTs unchanged in color; TNTs blue after 30 min due to remaining dye. Dried TNT catalyst bleaches after a few hours under room lighting, not a new preparation recipe."
+    },
+    "evidence": [
+      {
+        "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+        "locator": "Main PDF p. 2–5, Photodegradation, Figures 2–8 and Recyclability"
+      }
+    ]
+  },
+  "structure_scope": {
+    "TNT": "Open ends; inner 3–5 nm and outer 8–10 nm; BET 183 m2/g. Anatase assignment references prior work.",
+    "both_surface_PbS": "About 4.3 nm TEM average over 100 counts; 5.6 nm XRD estimate (not shown). Do not conflate estimators or assign them to inside-only specimen.",
+    "inside_only_PbS": "Figure 1d and text assign PbS inside pores. Same-size intention does not establish a separate measured size.",
+    "PbS_loading": "Both types stated to contain 25 wt% PbS based on elemental analysis, reference 29.",
+    "evidence": [
+      {
+        "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+        "locator": "Main PDF p. 2–4, Characteristics and catalyst-comparison discussion"
+      }
+    ]
+  },
+  "prior_and_model_context": {
+    "scope": "Authors quote prior work or interpret energetics; these values are not additional specimen-bound measurements in this main.",
+    "p25_pHpzc": [
+      6.0,
+      6.8
+    ],
+    "p25_pHpzc_refs": [
+      31,
+      32
+    ],
+    "TNT_pHpzc": 3,
+    "TNT_pHpzc_ref": 33,
+    "Galena_zeta_statement": {
+      "value": 4.0,
+      "unit": "Not supplied",
+      "refs": [
+        34,
+        35
+      ],
+      "note": "Source calls this a zeta potential measurement, without unit. Do not silently convert it to pH or mV."
+    },
+    "prior_TNT_bandgap_eV": 3.38,
+    "TNT_bandgap_ref": 43,
+    "corresponding_absorption_nm": 366,
+    "prior_PbS_TNT_absorption_nm": 1104,
+    "prior_PbS_QD_size_nm": 5.6,
+    "nanoparticle_transfer_size_limit_nm": 4.3,
+    "nanoparticle_transfer_reference": 44,
+    "TiO2_nanoparticle_electron_affinity_eV": -3.9,
+    "TNT_electron_affinity_eV": -4.2,
+    "TNT_transfer_maximum_QD_size_nm": 6,
+    "TNT_limit_approximate": true,
+    "external_optimum_PbS_loading_wt_percent": 10,
+    "external_loading_reference": 24,
+    "mercury_lamp_maximum_intensity_wavelength": "<500 nm, source qualitative note",
+    "background": {
+      "bulk_PbS_bandgap_eV": 0.41,
+      "PbS_exciton_Bohr_radius_nm": 20,
+      "anatase_bandgap_eV": 3.2,
+      "solar_fraction_percent": [
+        3,
+        5
+      ],
+      "dye_world_production_tonnes_per_year": 700000.0,
+      "industrial_dye_loss_percent": [
+        10,
+        15
+      ]
+    },
+    "evidence": [
+      {
+        "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+        "locator": "Main PDF p. 1, 2, 4–5, Introduction, characterization and Effect of PbS QDs"
+      }
+    ]
+  },
+  "surface_charge_equations": {
+    "scope": "Qualitative acid–base surface interpretation, not a measured surface-species inventory",
+    "above_pzc": "Ti–OH + OH− ⇌ Ti–O− + H2O",
+    "below_pzc": "Ti–OH + H+ ⇌ Ti–OH2+",
+    "evidence": [
+      {
+        "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+        "locator": "Main PDF p. 3, Surface-charge discussion"
+      }
+    ]
+  },
+  "source_interpretation": [
+    {
+      "topic": "Thiolactic acid links PbS to the nanotube host",
+      "text": "The authors use thiolactic acid to attach PbS to TiO2 nanotubes. The both-surface route uses 0.6 M TLA; outer-surface DDAB blocking followed by 0.3 M TLA directs deposition into the pores. The lower TLA concentration was chosen in an effort to match size; a separate numerical inside-only size is not established.",
+      "evidence": [
+        {
+          "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+          "locator": "Main PDF p. 2–3, Deposition and Figure 1 discussion"
+        }
+      ]
+    },
+    {
+      "topic": "Charge and dye identity govern the assay comparison",
+      "text": "Around pH 6 the TNT surfaces favor cationic-dye adsorption. Figures 2–4 report the order PbS/TNTs > TNTs > PbS/TNTs (in) > P25 for methylene blue, methylene green and rhodamine B. For indigo carmine and rose bengal, Figures 5–6 instead show P25 > PbS/TNTs > PbS/TNTs (in) > TNTs. These are source activity comparisons, not additional syntheses.",
+      "evidence": [
+        {
+          "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+          "locator": "Main PDF p. 3–4, Photocatalytic Activity and Figures 2–6"
+        }
+      ]
+    },
+    {
+      "topic": "Inside-only deposition may restrict access",
+      "text": "The authors propose that PbS in the pores reduces accessible TNT surface and that remaining blocking reagent may also reduce activity. These are proposed explanations; remaining DDAB and pore-blocking fractions are not measured quantitatively in the main.",
+      "evidence": [
+        {
+          "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+          "locator": "Main PDF p. 4, Inside-only catalyst interpretation"
+        }
+      ]
+    },
+    {
+      "topic": "Filtered-light response supports a qualified transfer mechanism",
+      "text": "With a Ray-sorb reactor filtering light below 600 nm, methylene-blue degradation is observed with PbS/TNTs whereas TNTs alone do not catalyze bleaching. Close contact through the linker is proposed to permit electron transfer. Literature energy levels and a size-dependent transfer limit are contextual estimates, not measured band alignment for a identified batch.",
+      "evidence": [
+        {
+          "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+          "locator": "Main PDF p. 4–5, Effect of PbS QDs and Figure 7"
+        }
+      ]
+    },
+    {
+      "topic": "Recycling separates activity from catalyst recovery",
+      "text": "Figure 8 compares three methylene-blue runs at a 30 min readout. The authors discuss incomplete particle recovery, possible corrosion and dye adsorption as explanations for changes. FTIR is said to show no PbS oxidation, but the spectrum is not shown. No exact bar values are digitized.",
+      "evidence": [
+        {
+          "source_id": "ratanatawanate2009-pbs-tio2-jp903050h",
+          "locator": "Main PDF p. 5, Recyclability and Figure 8"
+        }
+      ]
+    }
+  ],
+  "source_conflicts": [
+    {
+      "id": "RT-01",
+      "topic": "P25 figure panel",
+      "source_claims": [
+        "Body text p. 2 says Figure 1c for P25.",
+        "Caption p. 3 assigns P25 a, TNTs b, PbS/TNTs c and inside-only d."
+      ],
+      "handling": "Caption mapping is used; conflicting body locator retained."
+    },
+    {
+      "id": "RT-02",
+      "topic": "Inside-only sulfide unit",
+      "source_claims": [
+        "Inside-only method p. 2 prints 0.5 Na2S solution with no unit.",
+        "Both-surface method separately specifies 0.5 M aqueous Na2S."
+      ],
+      "handling": "No unit is transferred between routes."
+    }
+  ],
+  "references": {
+    "entries": [
+      {
+        "number": 1,
+        "citation": "Bauer, C.; Jacques, P.; Kalt, A. J. Photochem. Photobiol., A 2001, 140, 87.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 2,
+        "citation": "Zainal, Z.; Hui, L. K.; Hussein, M. Z.; Tauﬁq-Yap, Y. H.; Abdullah, A. H.; Ramli, I. J. Hazard. Mater. 2005, 125, 113.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 3,
+        "citation": "Pekakis, P. A.; Xekoukoulotakis, N. P.; Mantzavinos, D. Water Res. 2006, 40, 1276.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 4,
+        "citation": "Senthilkumaar, S.; Porkodi, K.; Gomathi, R.; Geetha Maheswari, A.; Manonmani, N. Dyes Pigm, 2006, 69, 22.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 5,
+        "citation": "Ramya, M.; Anusha, B.; Kalavathy, S. Biodegradation 2008, 19, 283.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 6,
+        "citation": "Assadi, M. M.; Rostami, K.; Shahvali, M.; Azin, M. Desalination 2001, 141, 331.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 7,
+        "citation": "Gad, H. M. H.; El-Hakim, A.; Daifullah, A. M. Adsorpt. Sci. Technol. 2007, 25, 327.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 8,
+        "citation": "Haroun, M.; Idris, A. Desalination 2009, 237, 357.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 9,
+        "citation": "Kim, T. H.; Park, C.; Shin, E. B.; Kim, S. Desalination 2002, 150, 165.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 10,
+        "citation": "Kennedy, M. Am. Dyestuff Rep. 1991, 80, 26.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 11,
+        "citation": "Azbar, N.; Yonar, T.; Kestioglu, K. Chemosphere 2004, 55, 35.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 12,
+        "citation": "Pagga, U.; Taeger, K. Water Res. 1994, 28, 1051.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 13,
+        "citation": "Sarasa, J.; Roche, M. P.; Ormad, M. P.; Gimeno, E.; Puig, A.; Ovelleiro, J. L. Water Res. 1998, 32, 2721.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 14,
+        "citation": "Linsebigler, A. L.; Lu, G.; Yates Jr, J. T. Chem. Re V. 1995, 95, 735.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 15,
+        "citation": "Nosaka, Y.; Nakamura, M.; Hirakawa, T. Phys. Chem. Chem. Phys. 2002, 4, 1088.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 16,
+        "citation": "Jan´czyk, A.; Krakowska, E.; Stochel, G.; Macyk, W. J. Am. Chem. Soc. 2006, 128, 15574.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 17,
+        "citation": "Kubo, W.; Tatsuma, T. Anal. Sci. 2004, 20, 591.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 18,
+        "citation": "Murakami, Y.; Kenji, E.; Nosaka, A. Y.; Nosaka, Y. J. Phys. Chem. B 2006, 110, 16808.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 19,
+        "citation": "Sauer, T.; Cesconeto Neto, G.; Jose, H. J.; Moreira, R. F. P. M. J. Photochem. Photobiol., A 2002, 149, 147.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 20,
+        "citation": "Nogueira, R. F. P.; Jardim, W. F. J. Chem. Educ. 1993, 70, 863.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 21,
+        "citation": "Neppolian, B.; Choi, H. C.; Sakthivel, S.; Arabindoo, B.; Murug- esan, V. Chemosphere 2002, 46, 1173.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 22,
+        "citation": "Kukovecz, A.; Hodos, M.; Ko ´nya, Z.; Kiricsi, I. Chem. Phys. Lett. 2005, 411, 445.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 23,
+        "citation": "Robel, I.; Subramanian, V.; Kuno, M.; Kamat, P. V. J. Am. Chem. Soc. 2006, 128, 2385.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 24,
+        "citation": "Brahimi, R.; Bessekhouad, Y.; Bouguelia, A.; Trari, M. J. Photo- chem. Photobiol., A 2008, 194, 173.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 25,
+        "citation": "Weller, H. AdV. Mater. 1993, 5, 88.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 26,
+        "citation": "Peterson, J. J.; Krauss, T. D. Nano Lett. 2006, 6, 510.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 27,
+        "citation": "Beard, M. C.; Ellingson, R. J. Laser Photonics Re V. 2008, 2, 377.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 28,
+        "citation": "Nozik, A. J. Chem. Phys. Lett. 2008, 457,3 .",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 29,
+        "citation": "Ratanatawanate, C.; Xiong, C.; Balkus Jr, K. J. ACS Nano 2008, 2, 1682.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 30,
+        "citation": "Kasuga, T.; Hiramatsu, M.; Hoson, A.; Sekino, T.; Niihara, K. AdV. Mater. 1999, 11, 1307.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 31,
+        "citation": "Silva, C. G.; Wang, W.; Faria, J. L. J. Photochem. Photobiol., A 2006, 181, 314.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 32,
+        "citation": "Poulios, I.; Tsachpinis, I. J. Chem. Technol. Biotechnol. 1999, 74, 349.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 33,
+        "citation": "Bavykin, D. V.; Milsom, E. V.; Marken, F.; Kim, D. H.; Marsh, D. H.; Riley, D. J.; Walsh, F. C.; El-Abiary, K. H.; Lapkin, A. A. Electrochem. Commun. 2005, 7, 1050.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 34,
+        "citation": "Vergouw, J. M.; Difeo, A.; Xu, Z.; Finch, J. A. Miner. Eng. 1998, 11, 605.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 35,
+        "citation": "Vergouw, J. M.; Difeo, A.; Xu, Z.; Finch, J. A. Miner. Eng. 1998, 11, 159.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 36,
+        "citation": "Legrini, O.; Oliveros, E.; Braun, A. M. Chem. ReV. 1993, 93, 671.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 37,
+        "citation": "Chen, Y.; Wang, K.; Lou, L. J. Photochem. Photobiol., A 2004, 163, 281.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 38,
+        "citation": "Chen, C.; Zhao, W.; Lei, P.; Zhao, J.; Serpone, N. Chem.sEur. J. 2004, 10, 1956.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 39,
+        "citation": "Shin, S. H.; Kim, Y. H.; Jung, S. K.; Suh, K. H.; Kang, S. G.; Jeong, S. K.; Kim, H. G. Korean J. Chem. Eng. 2004, 21, 806.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 40,
+        "citation": "Hu, T. L.; Chenfang, L.; Chiang, K. Y. AdV.E n Viron. Res. 2004, 8, 493.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 41,
+        "citation": "Ellingson, R. J.; Beard, M. C.; Johnson, J. C.; Yu, P.; Micic, O. I.; Nozik, A. J.; Shabaev, A.; Efros, A. L. Nano Lett. 2005, 5, 865.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 42,
+        "citation": "Nozik, A. J. Inorg. Chem. 2005, 44, 6893.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 43,
+        "citation": "Morgado Jr, E.; Marinkovic, B. A.; Jardim, P. M.; de Abreu, M. A. S.; Rizzo, F. C. J. Solid State Chem. 2009, 182, 172.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 44,
+        "citation": "Hyun, B. R.; Zhong, Y. W.; Bartnik, A. C.; Sun, L.; Abrun ˜ a ,H .D . ; Wise, F. W.; Goodreau, J. D.; Matthews, J. R.; Leslie, T. M.; Borrelli, N. F. ACS Nano 2008, 2, 2206.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 45,
+        "citation": "Cahen, D.; Hodes, G.; Gra ´tzel, M.; Guillemoles, J. F.; Riess, I. J. Phys. Chem. B 2000, 104, 2053.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 46,
+        "citation": "Lu, M. D.; Yang, S. M. J. Colloid Interface Sci. 2009, 333, 128.",
+        "full_source_reviewed": false
+      },
+      {
+        "number": 47,
+        "citation": "Wang, C.; Kwon, K. W.; Odlyzko, M. L.; Lee, B. H.; Shim, M. J. Phys. Chem. C 2007, 111, 11734.",
+        "full_source_reviewed": false
+      }
+    ],
+    "scope": "All 47 bibliography entries read; cited full articles remain unreviewed."
+  }
+}
