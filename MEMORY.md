@@ -1,3 +1,16 @@
+## 2026-09-29 — AgMS2 and Cu2-xSe source contributions accepted, publication pending
+
+Hu et al. (1999), DOI 10.1039/a902218j, contributes separate AgGaS2 and AgInS2 preparation routes and six supporting AgGaS2 comparison contexts. Both supplied main pages and two source figures are independently reviewed. Exact figure-specimen temperature remains unresolved within the reported preparation range; qualitative comparison outcomes are not crystalline-phase identities or extra synthesis–structure pairs.
+
+Wang et al. (1998), DOI 10.1039/a806166a, contributes 90 °C and 180 °C Cu2−xSe preparation outcomes. Both supplied main pages and three source figures are independently reviewed. The 180 °C comparison explicitly inherits the common procedure; source images remain linked only to the main 90 °C product. Printed 57.4 nm and 284.60 kV anomalies remain unresolved source conflicts, without silent correction or inferred coordinates.
+
+The accepted batch adds ten canonical records, four direct routes, four partial recipe–structure pairs and three direct material hubs, pending ordinary website publication. SI and cited full papers remain unreviewed for both sources. Missing charges, conditions and source qualifications remain explicit. Scientific review does not imply complete visual presentation, measured atomic coordinates or training readiness. No current-batch publication credit is granted here. Prior-publication proof will be recorded only after actual anonymous verification; it is not prefilled in this draft.
+
+Public preliminary synthesis remains retired. The target of 20 distinct published papers per hour remains unachieved; skipped or unpublished work does not increase the contributing-paper counter. Reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T07:22:58.425356+00:00 (source `0824ed796b5c63eccd278edb0a3200a37128044e`, site `8df907f90ef95c943bfd6e5f28e511c78245ac0c`). Its verified website contains 100 primary sources, 1241 canonical records and 365 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 — Wang and Kim source contributions accepted, publication pending
 
 Wang et al. (2005), DOI 10.1038/nature03968, contributes two quantitative Au/Ag preparation routes and 24 supporting material, condition, property and mechanism contexts. Its four-page main text and four source figures are independently reviewed. The binary SI and cited full papers remain unreviewed. Generic ranges and qualitative examples remain separate from characterized route/sample pairs; missing salt identities, unreported conditions and uncertain sample crosswalks remain explicit.

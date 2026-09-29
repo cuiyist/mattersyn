@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **100 primary source groups** · release `mattersyn-regular-batch10-wang-kim`. Records are not independent experiments.
+Dataset **0.41.2** · **102 primary source groups** · release `batch11-agms2-cu2xse-20260929`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -32,6 +32,8 @@ Dataset **0.41.2** · **100 primary source groups** · release `mattersyn-regula
 
 - Xiaogang Peng; J. Wickham; A. P. Alivisatos (1998). Kinetics of II-VI and III-V Colloidal Semiconductor Nanocrystal Growth: “Focusing” of Size Distributions. *Journal of the American Chemical Society*, 120, 5343–5344. [10.1021/ja9805425](https://doi.org/10.1021/ja9805425). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=peng1998).
 
+- Wenzhong Wang; Ping Yan; Fuyu Liu; Yi Xie; Yan Geng; Yitai Qian (1998). Preparation and characterization of nanocrystalline Cu2−xSe by a novel solvothermal pathway. *Journal of Materials Chemistry*, 8, 2321–2322. [10.1039/a806166a](https://doi.org/10.1039/a806166a). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wang1998-cu2xse-a806166a).
+
 - Yadong Li; Xiangfeng Duan; Hongwei Liao; Yitai Qian (1998). Self-Regulation Synthesis of Nanocrystalline ZnGa2O4 by Hydrothermal Reaction. *Chemistry of Materials*, 10, 17–18. [10.1021/cm970557m](https://doi.org/10.1021/cm970557m). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li1998znga2o4).
 
 - Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu; Jinyun Xing (1999). A Low Temperature Nitridation Route for Nanocrystalline AlN. *Chemistry Letters*, 1239–1240. [10.1246/cl.1999.1239](https://doi.org/10.1246/cl.1999.1239). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lu1999-aln).
@@ -41,6 +43,8 @@ Dataset **0.41.2** · **100 primary source groups** · release `mattersyn-regula
 - J. H. Zhan; Y. Xie; X. G. Yang; W. X. Zhang; Y. T. Qian (1999). Hydrazine-Assisted Low-Temperature Hydrothermal Preparation of Nanocrystalline Jaipurite. [10.1006/jssc.1999.8299](https://doi.org/10.1006/jssc.1999.8299). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhan1999jaipurite).
 
 - R. M. Stiger; S. Gorer; B. Craft; R. M. Penner (1999). Investigations of Electrochemical Silver Nanocrystal Growth on Hydrogen-Terminated Silicon(100). *Langmuir*, 15, 790–798. [10.1021/la980800b](https://doi.org/10.1021/la980800b). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=stiger1999).
+
+- Junqing Hu; Qingyi Lu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu (1999). Solvothermal reaction route to nanocrystalline semiconductors AgMS2 (M = Ga, In). *Chemical Communications*, 1093–1094. [10.1039/a902218j](https://doi.org/10.1039/a902218j). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=hu1999-agms2-a902218j).
 
 - Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu (1999). The Solvothermal Synthesis for Nanocrystalline FeIn2S4 at Low Temperature. *Chemistry Letters*, 481–482. [10.1246/cl.1999.481](https://doi.org/10.1246/cl.1999.481). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lu1999-fein2s4).
 
