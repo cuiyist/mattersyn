@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "wang1999-ag-mcm48-cm990228p-ast",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Wang et al. (1999): AST: thermally formed silver arrays on silica",
+  "material": {
+    "formula": "Ag/SiO2",
+    "family": "Silver arrays on cubic mesoporous silica",
+    "elements": [
+      "Ag",
+      "Si",
+      "O"
+    ],
+    "components": [
+      "Ag",
+      "SiO2"
+    ],
+    "architecture": "composite"
+  },
+  "method": "AST: thermally formed silver arrays on silica",
+  "sources": [
+    {
+      "id": "wang1999-ag-mcm48-cm990228p",
+      "doi": "10.1021/cm990228p",
+      "title": "Self-Organization of Ordered Silver Nanocrystal Arrays on Cubic Mesoporous Silica Surfaces",
+      "authors": "Lian-Zhou Wang; Jian-Lin Shi; Wen-Hua Zhang; Mei-Ling Ruan; Jian Yu; Dong-Sheng Yan",
+      "year": 1999,
+      "url": "https://doi.org/10.1021/cm990228p",
+      "main_status": "Complete three-page main independently source-audited; Figures 1–4, Table 1 and 23 references retained; SI and cited full sources unreviewed.",
+      "si_status": "No SI used or reviewed; cited full sources unreviewed.",
+      "reuse_status": "Exact source figures/table proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "wang1999-ag-mcm48-cm990228p",
+    "recipe_family": "wang1999-ag-mcm48-cm990228p",
+    "parent_record_id": "wang1999-ag-mcm48-cm990228p-as",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ag/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1, Preparation of PS, AS and AST"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": "MCM-48 silica",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1, Preparation of PS, AS and AST"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "as-input",
+      "name": "AS silver-nitrate-loaded silica",
+      "formula": null,
+      "role": "source-defined precursor composite",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Amount is an unspecified part of the prepared AS; tentative Ag+/nitrate complex on MCM-48. No molecular formula is assigned."
+      ],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1, Preparation of PS, AS and AST"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anneal-state",
+      "name": "Form silver arrays output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "anneal",
+      "action": "heat",
+      "label": "Form silver arrays",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "as-input"
+      ],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wang1999-ag-mcm48-cm990228p",
+              "locator": "Main PDF p. 1, Preparation of PS, AS and AST"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "wang1999-ag-mcm48-cm990228p",
+              "locator": "Main PDF p. 1, Preparation of PS, AS and AST"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat part of AS at 300 °C for 2 h to produce AST. Amount treated, ramp and atmosphere are unreported.",
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1, Preparation of PS, AS and AST"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "source_sample_label": "AST",
+      "batch_id": null,
+      "material_state_id": "anneal-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 1–3, AST preparation, Figure 1b, Table 1 and Figures 3–4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Metallic Ag on cubic MCM-48 mesoporous silica",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 1–3, AST preparation, Figure 1b, Table 1 and Figures 3–4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Regular oriented Ag line arrays; square networks also observed",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 1–3, AST preparation, Figure 1b, Table 1 and Figures 3–4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1–3, AST preparation, Figure 1b, Table 1 and Figures 3–4"
+        }
+      ],
+      "notes": [
+        "Color changes from white to black; metallic Ag diffraction peaks emerge. Some larger crystallites are also suggested by XRD, without dimensions.",
+        "Figure 3a–b: array image and selected-area diffraction along [110] of the mesoporous material.",
+        "Figure 4: square Ag networks survive the 200 keV room-temperature TEM observation while some silica pore structure is beam-damaged. This is an analytical stability observation, not a distinct preparation."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bet",
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "property": "specific_surface_area",
+      "technique": "Nitrogen adsorption / BET",
+      "value": {
+        "value": 793,
+        "minimum": null,
+        "maximum": null,
+        "unit": "m2/g",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source-reported pore-structure result; no recalculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 1–2, Nitrogen characterization and Table 1, AST"
+          }
+        ],
+        "derivation": "Authors calculate BET area or BJH pore metrics from nitrogen adsorption-desorption data."
+      },
+      "conditions": "AST; N2 measurement at 77 K; BET linear region P/P0=0.05–0.15",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1–2, Nitrogen characterization and Table 1, AST"
+        }
+      ]
+    },
+    {
+      "id": "pore-volume",
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "property": "pore_volume",
+      "technique": "Nitrogen adsorption / BJH",
+      "value": {
+        "value": 0.646,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm3/g",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source-reported pore-structure result; no recalculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 1–2, Nitrogen characterization and Table 1, AST"
+          }
+        ],
+        "derivation": "Authors calculate BET area or BJH pore metrics from nitrogen adsorption-desorption data."
+      },
+      "conditions": "AST; N2 measurement at 77 K; BET linear region P/P0=0.05–0.15",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1–2, Nitrogen characterization and Table 1, AST"
+        }
+      ]
+    },
+    {
+      "id": "pore-size",
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "property": "pore_size",
+      "technique": "Nitrogen adsorption / BJH",
+      "value": {
+        "value": 24.51,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Source-reported pore-structure result; no recalculation.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 1–2, Nitrogen characterization and Table 1, AST"
+          }
+        ],
+        "derivation": "Authors calculate BET area or BJH pore metrics from nitrogen adsorption-desorption data."
+      },
+      "conditions": "AST; N2 measurement at 77 K; BET linear region P/P0=0.05–0.15",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 1–2, Nitrogen characterization and Table 1, AST"
+        }
+      ]
+    },
+    {
+      "id": "line-width",
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "property": "array_line_width",
+      "technique": "HREM",
+      "value": {
+        "value": 4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 2, Figure 3a and array discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Ag nanocrystalline line-array width; not individual isotropic particle diameter",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 2, Figure 3a and array discussion"
+        }
+      ]
+    },
+    {
+      "id": "line-gap",
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "property": "array_interline_gap",
+      "technique": "HREM",
+      "value": {
+        "value": 1.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 2, Figure 3a and array discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Gap between neighboring Ag array lines",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 2, Figure 3a and array discussion"
+        }
+      ]
+    },
+    {
+      "id": "array-period",
+      "sample_id": "wang1999-ag-mcm48-cm990228p-ast-product",
+      "property": "array_line_spacing",
+      "technique": "Selected-area electron diffraction",
+      "value": {
+        "value": null,
+        "minimum": 5.6,
+        "maximum": 5.8,
+        "unit": "nm",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "Source-calculated line-to-line spacing of Ag nanoarrays; not atomic Ag or silica lattice spacing.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "wang1999-ag-mcm48-cm990228p",
+            "locator": "Main PDF p. 2, Figure 3b and d=Lλ/R calculation"
+          }
+        ],
+        "derivation": "Authors calculate d=Lλ/R from selected-area electron diffraction; no new digitization."
+      },
+      "conditions": "AST Ag nanoarray periodicity",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "wang1999-ag-mcm48-cm990228p",
+          "locator": "Main PDF p. 2, Figure 3b and d=Lλ/R calculation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete three-page main scientific and apparatus audit of accepted R2 passed. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied three-page main, Figures 1–4, Table 1 and all 23 references. SI and cited full sources unreviewed.",
+      "Silica precursor amounts are given as a gel molar composition, not absolute charges. Starting CTAB/NaOH solution concentrations, mixing order, gel temperature, autoclave capacity, wash volumes and 60 °C drying duration are unreported.",
+      "Numerical vacuum, cooling duration, impregnation addition rate and room-temperature drying time are unreported. Three milliliters is the AgNO3/ethanol solution charge, not a separately quantified ethanol volume.",
+      "Only part of AS received the 300 °C treatment; the amount, heating ramp and atmosphere are not given. The 500 °C follow-up duration, ramp, atmosphere and exact specimen fraction are unknown.",
+      "PS, AS and AST are source-labelled successive states, not independently reproduced batches. Cross-record lineage links retain their source scope without copying parent products or inventing repeated preparations.",
+      "Cubic MCM-48 order and [110] directions refer to mesoporous structure. Ag array width, gap and line spacing are not atomic Ag unit-cell parameters. No measured atomic or finite-particle coordinates are supplied.",
+      "The silver-ion/nitrate complex in AS is tentative, not a resolved molecular structure. The source does not quantify the Ag content, size distribution, array fraction or larger-particle dimensions after 500 °C.",
+      "No optical, electronic, catalytic or adsorption-capacity application experiment is supplied beyond the reported nitrogen pore characterization. Proposed assembly forces remain interpretation.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/cm990228p",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and table",
+      "url": "paper-review.html?id=wang1999-ag-mcm48-cm990228p",
+      "relation": "source_review"
+    },
+    {
+      "label": "Study context and Table 1 CSV",
+      "url": "data/paper-reviews/wang1999-ag-mcm48-cm990228p/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "AS intermediate before 300 °C treatment",
+      "url": "data/records/wang1999-ag-mcm48-cm990228p-as.json#/products/0",
+      "relation": "parent_sample"
+    }
+  ],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

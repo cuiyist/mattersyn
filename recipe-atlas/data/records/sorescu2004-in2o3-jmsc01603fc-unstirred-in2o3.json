@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sorescu2004-in2o3-jmsc01603fc-unstirred-in2o3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature",
+  "title": "Sorescu et al. (2004): unstirred Teflon-lined InOOH postannealed at 500 °C",
+  "material": {
+    "formula": "In2O3",
+    "family": "Indium oxide",
+    "elements": [
+      "In",
+      "O"
+    ],
+    "components": [
+      "In2O3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Postannealing of hydrothermal indium oxyhydroxide",
+  "sources": [
+    {
+      "id": "sorescu2004-in2o3-jmsc01603fc",
+      "doi": "10.1023/B:JMSC.0000011529.01603.FC",
+      "title": "Nanocrystalline rhombohedral In2O3 synthesized by hydrothermal and postannealing pathways",
+      "authors": "M. Sorescu; L. Diamandescu; D. Tarabasanu-Mihaila; V. S. Teodorescu",
+      "year": 2004,
+      "url": "https://doi.org/10.1023/B:JMSC.0000011529.01603.FC",
+      "main_status": "All 3 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI located or verified; cited full sources unreviewed.",
+      "reuse_status": "Exact selected source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "sorescu2004-in2o3-jmsc01603fc",
+    "recipe_family": "sorescu2004-in2o3-jmsc01603fc",
+    "parent_record_id": "sorescu2004-in2o3-jmsc01603fc-unstirred-inooh",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "In2O3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 1, Experimental synthesis paragraph"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "Rhombohedral In2O3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 1–2, XRD phase assignments"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "inooh-feed",
+      "name": "Hydrothermal indium oxyhydroxide",
+      "formula": "InOOH",
+      "role": "annealing feed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Prepared in the unstirred Teflon-lined vessel; explicit prior-record lineage. Powder charge is not stated."
+      ],
+      "evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 1, Experimental synthesis paragraph"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "anneal-state",
+      "name": "Anneal the InOOH powder output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "anneal",
+      "action": "heat",
+      "label": "Anneal the InOOH powder",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "inooh-feed"
+      ],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sorescu2004-in2o3-jmsc01603fc",
+              "locator": "Main PDF p. 1, Experimental synthesis paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "sorescu2004-in2o3-jmsc01603fc",
+              "locator": "Main PDF p. 1, Experimental synthesis paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Normal atmosphere; source wording, composition and pressure not quantified",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sorescu2004-in2o3-jmsc01603fc",
+            "locator": "Main PDF p. 1, Experimental synthesis paragraph"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Anneal the hydrothermal unstirred Teflon-lined powder at 500 °C for 1 h in normal atmosphere, using a rapid temperature furnace (CM Furnaces, Bloomfield, NJ). Ramp, cooling, crucible and powder mass are unreported.",
+      "evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 1, Experimental synthesis paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sorescu2004-in2o3-jmsc01603fc-unstirred-in2o3-product",
+      "source_sample_label": "unstirred Teflon-lined postannealed In2O3",
+      "batch_id": null,
+      "material_state_id": "anneal-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "In2O3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sorescu2004-in2o3-jmsc01603fc",
+            "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+          }
+        ],
+        "note": "Phase identity assigned from XRD; no separate elemental assay."
+      },
+      "phase": {
+        "value": "Rhombohedral corundum In2O3; R-3c (167)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sorescu2004-in2o3-jmsc01603fc",
+            "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+          }
+        ],
+        "note": "Second experiment transforms to rhombohedral In2O3 on postannealing; no first-experiment refined cell or TEM assigned here."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No numerical TEM dimensions assigned unless expressly reported for this specimen."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+        }
+      ],
+      "notes": [
+        "Second experiment transforms to rhombohedral In2O3 on postannealing; no first-experiment refined cell or TEM assigned here."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "mean-size",
+      "sample_id": "sorescu2004-in2o3-jmsc01603fc-unstirred-in2o3-product",
+      "property": "crystallite_size",
+      "technique": "XRD / Scherrer size estimate",
+      "value": {
+        "value": 22,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Author reports particle dimensions in the XRD/Scherrer comparison. This is not a counted TEM diameter distribution; estimator statistics and uncertainty are not supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sorescu2004-in2o3-jmsc01603fc",
+            "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "First-experiment Scherrer method is explicit; second-experiment mean/range appears in the continuing XRD comparison.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+        }
+      ]
+    },
+    {
+      "id": "size-range",
+      "sample_id": "sorescu2004-in2o3-jmsc01603fc-unstirred-in2o3-product",
+      "property": "crystallite_size",
+      "technique": "XRD / Scherrer size estimate",
+      "value": {
+        "value": null,
+        "minimum": 19,
+        "maximum": 26,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Author reports particle dimensions in the XRD/Scherrer comparison. This is not a counted TEM diameter distribution; estimator statistics and uncertainty are not supplied.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "sorescu2004-in2o3-jmsc01603fc",
+            "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "First-experiment Scherrer method is explicit; second-experiment mean/range appears in the continuing XRD comparison.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sorescu2004-in2o3-jmsc01603fc",
+          "locator": "Main PDF p. 2, Teflon-lined autoclave postannealing comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete main and apparatus R3 scientific audit passed for all three supplied pages, two figures and ten-reference bibliography. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete three-page supplied main only; SI not located or verified, cited full sources unreviewed.",
+      "Actual solution volume, indium nitrate mass, filling fraction, stirring speed, heating/cooling ramps, reaction pressure, filter specification, wash volume/repetitions and storage are unreported. Vessel capacity is not a liquid charge.",
+      "The second experiment states a 50 mL Teflon-lined autoclave without a stirrer and similar filtration/washing/drying. Its hydrothermal temperature, dwell and concentration are not separately restated; these remain unknown instead of silently inheriting the first experiment.",
+      "The refined lattice constants belong to the first stainless-steel experiment. Reference lattice constants are context, not measured product values. Figure 2 TEM/SAED belongs only to its annealed product.",
+      "XRD/Scherrer size estimates remain separate from qualitative TEM morphology. No particle coordinates, microscopy counting statistics, measured conductivity or other introductory application property is supplied.",
+      "Independent source audit passed; presentation remains pending.",
+      "Identity-only chemical illustrations and apparatus diagrams are explanatory; molecular/coordinate presentation remains pending."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1023/B:JMSC.0000011529.01603.FC",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=sorescu2004-in2o3-jmsc01603fc",
+      "relation": "source_review"
+    },
+    {
+      "label": "Reference cells and analytical context",
+      "url": "data/paper-reviews/sorescu2004-in2o3-jmsc01603fc/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

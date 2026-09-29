@@ -1,4 +1,18 @@
 
+### InOOH/In2O3 and Ag/MCM-48 additions awaiting publication
+
+The preceding ZnO, CdSe/polythiophene and WC batch was deployed and anonymously verified at 2026-09-29T13:51:16.405413+00:00 (source ace20d85c7c06ea7983849fde45221a4c442a4d9; site d6011a77f51b33d7aa855a56a72be7a2dcaf7a78). It contains 118 contributing ordinary primary papers, 1414 canonical records and 429 broad recipe-structure rows.
+
+The accepted Sorescu contribution preserves the complete three-page main and two vessel routes with explicit hydrothermal InOOH to postannealed In2O3 lineage. Four product-stage records retain three direct preparation outcomes; the unstirred hydrothermal precursor is supporting because its concentration, temperature and dwell are not separately stated. Reference cells remain separate from specimen refinements, and TEM/SAED belongs only to the first annealed specimen.
+
+The accepted Wang Ag/MCM-48 contribution preserves the complete three-page main, PS silica and AST silver-array composite preparations, AS intermediate and incomplete thermal comparison. Missing Ag loading, absolute gel charges and treatment conditions remain unknown. Existing Ag and SiO2 component references add no extra direct route or pair credit. Together these two accepted sources add eight records, five direct routes and five partial structural rows. Publication remains pending until deployment and anonymous verification.
+
+SI and cited full sources remain unreviewed for both papers. Molecular/particle/reference-cell refinements stay labelled; no measured-coordinate or training admission is implied. Source-figure permission remains unverified. The twenty published primary papers/hour target remains unmet; progress reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T13:51:16.405413+00:00 (source `ace20d85c7c06ea7983849fde45221a4c442a4d9`, site `d6011a77f51b33d7aa855a56a72be7a2dcaf7a78`). Its verified website contains 118 primary sources, 1414 canonical records and 429 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
+
 ### Verified CdS/polyurethane, TiO2 and Au/silica publication; next accepted additions
 
 The preceding batch was deployed and anonymously verified at 2026-09-29T12:50:22.599721+00:00 (source 54086475a4f04ac633ca3250d26001f3f4282a0f; site 5efed9a77f124a77cf0d02b9bc26c04d4fa8c2d0). It contains 115 contributing primary papers, 1376 canonical records and 416 broad synthesis-structure pairs. The homepage uses three reader metrics and three navigation links; no public preliminary or owner-progress collection is displayed. BaTiO3 particle drawings distinguish measured specimen scopes and align with adjacent evidence.
