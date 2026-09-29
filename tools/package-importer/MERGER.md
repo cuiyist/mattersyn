@@ -27,3 +27,19 @@ Focused synthetic tests:
 $env:MATTERSYN_IMPORTER_PATH = '../private-checkout/tools/package-importer/importer.py'
 python -B -X utf8 -m unittest discover -s tests -v
 ```
+
+New paper reviews may declare a table's `source_data_path` as
+`data/paper-evidence/<paper_id>/<basename>.csv`, with its exact
+`source_data_sha256`. If the accepted payload supplies only the corresponding
+`recipe-atlas/static/data/paper-evidence/...` CSV, the merger also stages the
+same pinned bytes at `recipe-atlas/data/paper-evidence/...`. The static copy is
+retained. Both paths appear explicitly as create-only entries in the output
+file manifest; `evidence_csv_placements` records the source, destination, hash
+and size. An already declared source-side CSV is validated without duplication.
+
+Only the exact paper ID and a single CSV basename are supported by this
+placement step. Missing/unpinned data, differing copies, missing/wrong hashes,
+foreign paper paths and target collisions stop preparation before output is
+created. Existing path, symlink, payload, additive merge and create-only checks
+remain in force. This step preserves accepted table bytes; it does not create
+new table content, certify science, amend rights, or grant publication credit.

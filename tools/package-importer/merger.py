@@ -120,6 +120,53 @@ def inspect_payload(payload: Path, entries: list[dict], helper) -> dict[str, byt
     return listed
 
 
+def place_declared_evidence_csvs(created: dict[str, bytes]) -> tuple[dict[str, bytes], list[dict]]:
+    """Place only a new review's exact, hash-bound CSV; retain static delivery."""
+    result = dict(created)
+    names = {name.casefold(): name for name in result}
+    placements = []
+    for review_path, review_raw in sorted(created.items()):
+        match = re.fullmatch(r"recipe-atlas/data/paper-reviews/([a-z0-9-]+)\.json", review_path)
+        if match is None:
+            continue
+        try:
+            review = json.loads(review_raw.decode("utf-8-sig"))
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise MergeRejected("Invalid new paper review: " + review_path) from exc
+        if not isinstance(review, dict) or not isinstance(review.get("tables", []), list):
+            raise MergeRejected("Invalid new paper table inventory: " + review_path)
+        for table in review.get("tables", []):
+            if not isinstance(table, dict):
+                raise MergeRejected("Invalid new paper table entry: " + review_path)
+            if "source_data_path" not in table:
+                continue
+            source_id = match.group(1)
+            relative = table["source_data_path"]
+            pattern = r"data/paper-evidence/" + re.escape(source_id) + r"/[A-Za-z0-9][A-Za-z0-9._-]*\.csv"
+            if review.get("paper_id") != source_id or not isinstance(relative, str) or not re.fullmatch(pattern, relative):
+                raise MergeRejected("Table CSV must name this exact paper and a plain CSV basename")
+            expected = table.get("source_data_sha256")
+            if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+                raise MergeRejected("Table CSV requires its exact source_data_sha256")
+            target, static = "recipe-atlas/" + relative, "recipe-atlas/static/" + relative
+            for name in (target, static):
+                if name.casefold() in names and names[name.casefold()] != name:
+                    raise MergeRejected("Case-colliding table CSV: " + name)
+                if name in result and sha(result[name]) != expected:
+                    raise MergeRejected("Declared table CSV hash differs: " + name)
+            if target in result:
+                continue
+            if static not in created:
+                raise MergeRejected("Declared table CSV absent from pinned payload: " + relative)
+            # Reuse the bytes already inspected against the payload contract.
+            # Existing merge_plan target/link checks apply to this addition too.
+            result[target] = created[static]
+            names[target.casefold()] = target
+            placements.append({"declaration": review_path, "source": static, "target": target,
+                               "sha256": expected, "bytes": len(created[static])})
+    return result, placements
+
+
 def merge_plan(checkout: Path, payload: Path, contract: dict, output: Path, importer_path: Path) -> dict:
     helper = load_importer(importer_path)
     checkout = checkout.resolve(strict=True)
@@ -161,6 +208,7 @@ def merge_plan(checkout: Path, payload: Path, contract: dict, output: Path, impo
         pinned_hashes[relative] = expected
 
     created = inspect_payload(payload, contract.get("create_files", []), helper)
+    created, evidence_csv_placements = place_declared_evidence_csvs(created)
     target_names = {name.casefold() for name in created}
     merged: dict[str, object] = {}
     operation_log: list[dict] = []
@@ -254,6 +302,7 @@ def merge_plan(checkout: Path, payload: Path, contract: dict, output: Path, impo
         "contract_sha256": sha(json.dumps(contract, ensure_ascii=False, sort_keys=True).encode("utf-8")),
         "package_files": file_manifest, "operations": operation_log, "package_importer_sha256": importer_hash,
         "scope": "Private overlay staging only. Existing aggregates are compare-and-swap candidates; run the repository additive preflight and independent release gates before integration or publication.",
+        "evidence_csv_placements": evidence_csv_placements,
         "publication_approved": False,
     }
     helper.write_bytes(output / "merge-manifest.json", helper.json_bytes(receipt))

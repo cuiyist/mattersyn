@@ -1,0 +1,873 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liao2009-tio2-jp905720g-photocatalysis",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Liao et al. (2009): Phenol photocatalysis procedure and blank",
+  "material": {
+    "formula": "TiO2",
+    "family": "Titanium dioxide",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Phenol photocatalysis procedure and blank",
+  "sources": [
+    {
+      "id": "liao2009-tio2-jp905720g",
+      "doi": "10.1021/jp905720g",
+      "title": "Solvothermal Synthesis of TiO2 Nanocrystal Colloids from Peroxotitanate Complex Solution and Their Photocatalytic Activities",
+      "authors": "Jianhua Liao; Liyi Shi; Shuai Yuan; Yin Zhao; Jianhui Fang",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp905720g",
+      "main_status": "All 6 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No separate matched SI read; targeted local search found only main copies.",
+      "reuse_status": "Selected source crops proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "liao2009-tio2-jp905720g",
+    "recipe_family": "liao2009-tio2-jp905720g-photocatalysis",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Sections2.1–2.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "colloid",
+      "name": "Preformed selected TiO2 colloid",
+      "formula": "TiO2",
+      "role": "catalyst precursor",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Absolute aliquot/material mass unreported; source assay concentrations retained without calculated charges."
+      ],
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "phenol",
+      "name": "Phenol",
+      "formula": "C6H6O",
+      "role": "substrate",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mg/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Absolute aliquot/material mass unreported; source assay concentrations retained without calculated charges."
+      ],
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Deionized water",
+      "formula": "H2O",
+      "role": "assay liquid",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Absolute aliquot/material mass unreported; source assay concentrations retained without calculated charges."
+      ],
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "catalyst-evaporate-state",
+      "name": "Prepare photocatalyst powder output",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "catalyst-dry-state",
+      "name": "Dry the photocatalyst output",
+      "kind": "product",
+      "parent_ids": [
+        "catalyst-evaporate-state"
+      ]
+    },
+    {
+      "id": "assay-load-state",
+      "name": "Load the assay tube output",
+      "kind": "product",
+      "parent_ids": [
+        "catalyst-dry-state"
+      ]
+    },
+    {
+      "id": "dark-stir-state",
+      "name": "Equilibrate in the dark output",
+      "kind": "product",
+      "parent_ids": [
+        "assay-load-state"
+      ]
+    },
+    {
+      "id": "uv-irradiate-state",
+      "name": "Irradiate while stirring output",
+      "kind": "product",
+      "parent_ids": [
+        "dark-stir-state"
+      ]
+    },
+    {
+      "id": "assay-centrifuge-state",
+      "name": "Remove catalyst from aliquots output",
+      "kind": "product",
+      "parent_ids": [
+        "uv-irradiate-state"
+      ]
+    },
+    {
+      "id": "assay-measure-state",
+      "name": "Measure phenol absorbance output",
+      "kind": "product",
+      "parent_ids": [
+        "assay-centrifuge-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "catalyst-evaporate",
+      "action": "dry",
+      "label": "Prepare photocatalyst powder",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid"
+      ],
+      "outputs": [
+        "catalyst-evaporate-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "catalyst-evaporate-state",
+      "description": "Rotary evaporate colloid at45°C; duration and pressure unspecified.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "catalyst-dry",
+      "action": "dry",
+      "label": "Dry the photocatalyst",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [
+        "catalyst-evaporate"
+      ],
+      "inputs": [
+        "catalyst-evaporate-state"
+      ],
+      "outputs": [
+        "catalyst-dry-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 110,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "catalyst-dry-state",
+      "description": "Dry110°C1h in an oven to remove solvent. This extra step belongs to the photocatalysis specimen.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "assay-load",
+      "action": "mix",
+      "label": "Load the assay tube",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [
+        "catalyst-dry"
+      ],
+      "inputs": [
+        "catalyst-dry-state",
+        "phenol",
+        "water"
+      ],
+      "outputs": [
+        "assay-load-state"
+      ],
+      "parameters": {
+        "tube_capacity": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": 75,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        },
+        "catalyst_concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use80mL test tube containing75mL reaction solution: phenol10mg/L andTiO2 1.0g/L. Separate direct-photolysis blank omits TiO2.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "dark-stir",
+      "action": "stir",
+      "label": "Equilibrate in the dark",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [
+        "assay-load"
+      ],
+      "inputs": [
+        "assay-load-state"
+      ],
+      "outputs": [
+        "dark-stir-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Stir in dark for30min before irradiation to saturate adsorption.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "uv-irradiate",
+      "action": "irradiate",
+      "label": "Irradiate while stirring",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [
+        "dark-stir"
+      ],
+      "inputs": [
+        "dark-stir-state"
+      ],
+      "outputs": [
+        "uv-irradiate-state"
+      ],
+      "parameters": {
+        "wavelength": {
+          "value": 365,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        },
+        "lamp_power": {
+          "value": 16,
+          "minimum": null,
+          "maximum": null,
+          "unit": "W",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 3–5, Section3.3; Figure5; Table1"
+            }
+          ],
+          "derivation": null
+        },
+        "sampling_interval": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "UV365nm16W with constant magnetic stirring; six-hour results in Figure5/Table1. Sample every1h; exact aliquot size unknown.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "assay-centrifuge",
+      "action": "centrifuge",
+      "label": "Remove catalyst from aliquots",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [
+        "uv-irradiate"
+      ],
+      "inputs": [
+        "uv-irradiate-state"
+      ],
+      "outputs": [
+        "assay-centrifuge-state"
+      ],
+      "parameters": {
+        "rotation_speed": {
+          "value": 10000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "assay-centrifuge-state",
+      "description": "Centrifuge10000rpm30min before absorbance measurement; no rotor radius orRCF supplied.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    },
+    {
+      "id": "assay-measure",
+      "action": "measure",
+      "label": "Measure phenol absorbance",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-photocatalysis",
+      "optional": false,
+      "depends_on": [
+        "assay-centrifuge"
+      ],
+      "inputs": [
+        "assay-centrifuge-state"
+      ],
+      "outputs": [
+        "assay-measure-state"
+      ],
+      "parameters": {
+        "phenol_wavelength": {
+          "value": 269,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.4"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "UV-2501PC200–400nm; use269nm for phenol, source Eq1 C/C0=A/A0. Blank slight absorbance rise and catechol explanation remain qualitative, not an extracted numerical curve.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "liao2009-tio2-jp905720g-photocatalysis-product",
+      "source_sample_label": "Phenol assay and no-catalyst comparison",
+      "batch_id": null,
+      "material_state_id": "assay-measure-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Supporting specimen preparation or assay; no newly established particle composition."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.4"
+        }
+      ],
+      "notes": [
+        "Exact physical batch identifiers are unreported; source sample/condition association only."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 audit of all six supplied main pages, seven source crops and all 41 bibliography groups passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied six-page main read textually and visually; no distinct identity-matched local SI found in the targeted existing folders. Cited full texts unreviewed. Independent scientific comparison passed; presentation pending.",
+      "Water volume used to make0.2M Ti(SO4)2,3M ammonia dose and preparation from25% commercial stock, and washing volumes are unknown. No inferred solution volume or moles are substituted.",
+      "Aging temperature, ultrasound power, stirring rates, H2O2 addition rate, reflux atmosphere, heating/cooling ramps and pressure are unreported. Ice–water bath is not assigned0°C.",
+      "The source says a Teflon autoclave lined with Teflon and70% fill; its capacity is unknown. The125mL solvent charge is not treated as a complete batch volume or converted to vessel capacity.",
+      "Sample-specific solvent ratios are volume ratios; selected-solvent total125mL is given but separately dispensed component volumes are not stated.",
+      "Pure n-propanol and n-butanol controls are poorly crystalline/aggregated with amorphous floccus-like material; no successful fully crystalline anatase claim or numeric particle size is borrowed from the five water/ethanol products.",
+      "Powder characterization and photocatalysis use prepared powders; the colloid is not silently equated to the110°C-dried catalyst. Exact physical batch identifiers are unreported.",
+      "Table1 SXRD is author-calculated area; SBET is nitrogen-adsorption area. TEM particle size and XRD crystallite size remain distinct. No unit cell refinement, measured coordinates, phase fraction or measured CIF is supplied.",
+      "Figures and Scheme1 retain explicit panel/sample scopes; Scheme1 lengths are not actual crystal dimensions. Source permission remains unverified and complete presentation pending."
+    ],
+    "conflicts": [
+      "Main p.3 lists Scherrer sizes 13.4, 11.0, 10.2, 8.9 and 11.8 nm after discussing Figure2 e–i, whose caption orders ethanol through water. Table1 instead explicitly labels these values TW, TWE4, TWE1, TWE0.25 and TE. Numeric sample assignments here follow the explicit Table1 row labels; the conflicting prose order is retained, not silently resolved.",
+      "Main pp.3 and5 describe the mixed-solvent TEM range as47.0 to9.0nm, while Table1 explicitly reports9.7nm for TWE0.25. The labeled table value remains9.7nm; no replacement by9.0nm.",
+      "Table1 calls DTEM a diameter even for rodlike TW and rectangular TE. Their separate approximate length/width descriptions are preserved and are not substituted for the table metric.",
+      "Main p.3 assigns the TW HRTEM spacings3.4 and4.8Å to(101) and(002), respectively; Figure4a visibly labels0.34nm and an(001) growth arrow. These source labels are retained without crystallographic correction or invented atomic coordinates.",
+      "Main p.5 describes [001] growth as approximately2.7 times[101] but prints G100≈2.7G101. Both notations are retained as source interpretation, not a measured growth-rate result.",
+      "Table1 and p.4 print the calculated-area expression S=6/d*ρ. The literal expression and author-derived status are preserved; no density value, operator correction or recomputation is introduced."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/jp905720g",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Complete main-source review",
+      "url": "paper-review.html?id=liao2009-tio2-jp905720g",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample crosswalk, table and limitations",
+      "url": "data/paper-reviews/liao2009-tio2-jp905720g/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-tw.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-twe4.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-twe1.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-twe025.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-te.html",
+      "relation": "preparation_context"
+    }
+  ]
+}

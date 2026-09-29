@@ -120,6 +120,47 @@ function intuition(host,r,presentation){const items=presentation.intuition||pres
  const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));}
 function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.length)return;const heading=el('h3','Source comparisons','reader-conflict-heading');heading.id='source-disagreements';host.append(heading,el('p','Each account retains its context and source locator. Unresolved discrepancies remain marked; distinct measurement bases are shown separately.','reader-conflict-intro'));for(const pair of pairs){if(!Array.isArray(pair.claims)||pair.claims.length<2){if(pair.context){const note=el('article',undefined,'reader-conflict');note.append(el('h4',pair.topic||pair.field||'Source qualification'),el('p',safeText(pair.context)),link('Complete source qualification →',recordURL(r.record_id)+'#evidence','reader-data-link'));host.append(note);}continue;}const card=el('article',undefined,'reader-conflict');const top=el('div',undefined,'reader-conflict-top');top.append(el('h4',pair.topic||pair.field||'Source disagreement'),badge(pair.status==='preserved_distinct'?'Distinct bases':'Unresolved','reader-conflict-status'));card.append(top);if(pair.context)card.append(el('p',pair.context,'reader-conflict-context'));const claims=el('div',undefined,'reader-conflict-claims');pair.claims.forEach((claim,index)=>{const item=el('section',undefined,'reader-conflict-claim');item.append(el('span',claim.label||`Report ${index+1}`,'reader-conflict-label'),el('p',safeText(claim.statement)||safeText(claim.value)||safeText(claim.claim)||'Claim text not supplied.'));const locator=claim.sourceLocator||claim.source_locator;if(locator)item.append(el('small',safeText(locator),'reader-conflict-locator'));const source=r.sources.find(s=>s.id===(claim.sourceId||claim.source_id));if(source)item.append(link(source.title+' ↗',sourceURL(source),'reader-data-link'));claims.append(item);});card.append(claims);host.append(card);}}
 function dataSwitch(r,active='reader'){const nav=el('nav',undefined,'reader-switch');nav.setAttribute('aria-label','Reader or data view');nav.append(link('Reader',recordURL(r.record_id,'reader'),active==='reader'?'active':''),link('Data and evidence',recordURL(r.record_id,'data'),active==='data'?'active':''),link('Download JSON ↓','data/records/'+r.record_id+'.json'));return nav;}
+export function renderProperties(host,figures,r,presentation={}){
+ const count=figureGallery(host,figures,r,'property',presentation),seen=new Set();
+ // Use the record's measurements once, not their mirrored presentation facts.
+ // Exact duplicate rows may be omitted; different specimens/conditions remain.
+ const explicitPropertyIndices=new Set();
+ for(const fact of (Array.isArray(presentation.propertyFacts)?presentation.propertyFacts:[])){
+  if(!fact||fact.record_id!==r.record_id||fact.source?.data_path!=='data/records/'+r.record_id+'.json')continue;
+  const match=/^\/measurements\/(0|[1-9]\d*)(?:\/value)?$/.exec(fact.source.json_pointer||'');
+  if(!match)continue;
+  const index=Number(match[1]),m=r.measurements?.[index];
+  if(!m||fact.sample_id!==m.sample_id||(fact.measurement_id&&fact.measurement_id!==m.id))continue;
+  explicitPropertyIndices.add(index);
+ }
+ const measurements=(r.measurements||[]).filter((m,index)=>explicitPropertyIndices.has(index)||/absorp|emiss|lumines|raman|magnet|quantum_yield|conduct|band.?gap|lifetime/i.test(m.property)).filter(m=>{const key=JSON.stringify(m);if(seen.has(key))return false;seen.add(key);return true;});
+ function facts(rows){
+  const dl=el('dl',undefined,'reader-product-facts');
+  for(const m of rows){
+   const row=el('div'),q=m.value||{},product=(r.products||[]).find(p=>p.sample_id===m.sample_id);
+   row.append(el('dt',human(m.property)),el('dd',formatQuantity(q)));
+   const sample=safeText(product?.source_sample_label)||m.sample_id;
+   row.append(el('small',[m.technique,sample].filter(Boolean).join(' · ')));
+   const notes=[m.conditions,q.qualifier,q.basis,q.note].map(safeText).filter(Boolean);
+   for(const note of new Set(notes))row.append(el('p',note,'reader-note'));
+   if(q.status&&q.status!=='reported')row.append(el('small','Value status: '+human(q.status)));
+   const evidence=new Map();
+   for(const e of [...(m.evidence||[]),...(q.evidence||[])]){
+    const label=[e.source_id,e.locator].filter(Boolean).join(' · ');
+    if(label)evidence.set(label,label);
+   }
+   for(const label of evidence.values())row.append(el('small',label,'reader-fact-source'));
+   dl.append(row);
+  }
+  return dl;
+ }
+ if(measurements.length){
+  host.append(el('h3','Property results'),facts(measurements.slice(0,4)));
+  if(measurements.length>4)host.append(disclosure('Additional property results ('+(measurements.length-4)+')',facts(measurements.slice(4))));
+ }else if(!count)host.append(el('p','No property result is assigned to this method in the reviewed record. Related source evidence remains available below.','reader-note'));
+ return measurements.length;
+}
+
 async function buildMethod(host,r,presentation){
 
  if(presentation.presentation_status==='pending'){
@@ -134,7 +175,7 @@ async function buildMethod(host,r,presentation){
 
  const structureHost=el('div');sections[2].append(structureHost);const figs=presentation.figures||[];figureGallery(sections[2],figs,r,'structure',presentation);
 
- const count=figureGallery(sections[3],figs,r,'property',presentation);if(!count){const measurements=r.measurements.filter(m=>/absorp|emiss|lumines|raman|magnet|quantum_yield|conduct|band.?gap|lifetime/i.test(m.property));if(measurements.length){const dl=el('dl',undefined,'reader-product-facts');for(const m of measurements.slice(0,4)){const row=el('div');row.append(el('dt',human(m.property)),el('dd',formatQuantity(m.value)),el('small',m.technique+' · '+m.sample_id));dl.append(row);}sections[3].append(dl);}else sections[3].append(el('p','No property result is assigned to this method in the reviewed record. Related source evidence remains available below.','reader-note'));}
+ renderProperties(sections[3],figs,r,presentation);
 
  sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));intuition(sections[4],r,presentation);
 

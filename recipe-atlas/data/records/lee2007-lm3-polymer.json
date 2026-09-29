@@ -1,0 +1,586 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lee2007-lm3-polymer",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Lee et al. (2007): LM 3 ionic conjugated polymer",
+  "material": {
+    "formula": "LM 3",
+    "family": "Ionic conjugated polymer sensitizer",
+    "elements": [
+      "C",
+      "H",
+      "N",
+      "Br",
+      "O"
+    ],
+    "components": [
+      "LM 3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "LM 3 ionic conjugated polymer",
+  "sources": [
+    {
+      "id": "lee2007-cds-polymers-1p2752021",
+      "doi": "10.1063/1.2752021",
+      "title": "Nanocrystalline CdS-water-soluble conjugated-polymers: High performance photoelectrochemical cells",
+      "authors": "Wonjoo Lee; Rajaram S. Mane; Sun-Ki Min; Tae Hyun Yoon; Sung-Hwan Han; Soo-Hyoung Lee",
+      "year": 2007,
+      "url": "https://doi.org/10.1063/1.2752021",
+      "main_status": "Publisher cover plus all three scientific main pages independently source-audited; SI and cited full references remain unreviewed.",
+      "si_status": "No SI supplied or reviewed; cited full methods/articles remain unreviewed.",
+      "reuse_status": "User-requested source figures; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "lee2007-cds-polymers-1p2752021",
+    "recipe_family": "lee2007-cds-polymers-1p2752021",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Poly(2-ethynyl-N-carboxypropylpyridiniumbromide)",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ethynylpyridine",
+      "name": "2-Ethynylpyridine",
+      "formula": "C7H5N",
+      "role": "polymer precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Absolute charge unreported; source specifies 1:1 mole ratio with the alkyl halide."
+      ],
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "alkyl-lm3",
+      "name": "4-bromobutanoic acid identity from Figure 2",
+      "formula": "C4H7BrO2",
+      "role": "functional alkyl-halide precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Figure 2 shows Br(CH2)3A with A=NH2 or COOH. Exact purity, salt form and mass/amount are not separately reported. The displayed molecular name describes that drawn identity."
+      ],
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "polymerization solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "ether",
+      "name": "Diethyl ether",
+      "formula": "C4H10O",
+      "role": "polymer precipitation antisolvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Excess reported, numeric volume unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "polymerize-state",
+      "name": "Polymerize the ionic sensitizer output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "precipitate-state",
+      "name": "Precipitate with excess ether output",
+      "kind": "fraction",
+      "parent_ids": [
+        "polymerize-state"
+      ]
+    },
+    {
+      "id": "filter-state",
+      "name": "Collect the precipitated polymer output",
+      "kind": "fraction",
+      "parent_ids": [
+        "precipitate-state"
+      ]
+    },
+    {
+      "id": "dry-state",
+      "name": "Dry the polymer in air output",
+      "kind": "fraction",
+      "parent_ids": [
+        "filter-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "polymerize",
+      "action": "polymerize",
+      "label": "Polymerize the ionic sensitizer",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ethynylpyridine",
+        "alkyl-lm3",
+        "methanol"
+      ],
+      "outputs": [
+        "polymerize-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2007-cds-polymers-1p2752021",
+              "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2007-cds-polymers-1p2752021",
+              "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Faint red changes to more viscous dark red",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2007-cds-polymers-1p2752021",
+            "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Stir a 1:1 molar mixture of 2-ethynylpyridine and the corresponding alkyl halide in methanol for 24 h at 80 °C. Apparatus, pressure and heating/reflux method are not specified; retain the printed temperature.",
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "precipitate",
+      "action": "precipitate",
+      "label": "Precipitate with excess ether",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "polymerize"
+      ],
+      "inputs": [
+        "polymerize-state",
+        "ether"
+      ],
+      "outputs": [
+        "precipitate-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "precipitate-state",
+      "description": "Pour the resulting polymer solution into excess diethyl ether.",
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "action": "filter",
+      "label": "Collect the precipitated polymer",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "precipitate"
+      ],
+      "inputs": [
+        "precipitate-state"
+      ],
+      "outputs": [
+        "filter-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "filter-state",
+      "description": "Filter the precipitated polymer; filter type, washing and recovery yield are unspecified.",
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "dry",
+      "label": "Dry the polymer in air",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "filter"
+      ],
+      "inputs": [
+        "filter-state"
+      ],
+      "outputs": [
+        "dry-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2007-cds-polymers-1p2752021",
+              "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2007-cds-polymers-1p2752021",
+            "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "dry-state",
+      "description": "Dry in air at 35 °C; duration unreported.",
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lee2007-lm3-polymer-product",
+      "source_sample_label": "LM 3 conjugated polymer",
+      "batch_id": null,
+      "material_state_id": "dry-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Poly(2-ethynyl-N-carboxypropylpyridiniumbromide)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2007-cds-polymers-1p2752021",
+            "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "Carboxylic functional group",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2007-cds-polymers-1p2752021",
+            "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 2–3, Polymer preparation and Figure 2"
+        }
+      ],
+      "notes": [
+        "Supporting polymer preparation, not an additional CdS nanocrystal synthesis pair."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "extinction",
+      "sample_id": "lee2007-lm3-polymer-product",
+      "property": "molar_extinction_coefficient",
+      "technique": "UV–vis",
+      "value": {
+        "value": 6320.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dm3 mol-1 cm-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "lee2007-cds-polymers-1p2752021",
+            "locator": "Main PDF p. 3, Optical discussion and Figure 3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "543 nm; source says polymers in water. Concentration basis is not further defined for the polymer.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 3, Optical discussion and Figure 3"
+        }
+      ]
+    },
+    {
+      "id": "lumo",
+      "sample_id": "lee2007-lm3-polymer-product",
+      "property": "LUMO_energy",
+      "technique": "Cyclic voltammetry and UV–vis",
+      "value": {
+        "value": 3.42,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source positive value reported with normal hydrogen electrode; sign/reference convention is retained without conversion. CV curve not shown.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "lee2007-cds-polymers-1p2752021",
+            "locator": "Main PDF p. 3, Optical discussion and Figure 3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lee2007-cds-polymers-1p2752021",
+          "locator": "Main PDF p. 3, Optical discussion and Figure 3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R4 acceptance of the publisher cover and three scientific main pages, four figures, Table I and all 21 bibliography entries; inherited R2 science and apparatus audit reused. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Full supplied main only: one publisher cover and three scientific pages; SI and cited full texts are unreviewed.",
+      "No measured atomic coordinates, refined cell parameters or physical batch IDs supplied.",
+      "CdS reflux temperature, ITO dimensions/cleaning during deposition, washing and drying are not specified.",
+      "Polymer precursor amounts, solvent volume, molecular weight/dispersity, polymer yield and coating immersion time are unreported.",
+      "Reported quantities/optical energy conventions are retained without recomputing source values.",
+      "Optional molecular, unit-cell and particle presentation remains pending where absent."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1063/1.2752021",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Figures and full scoped review",
+      "url": "paper-review.html?id=lee2007-cds-polymers-1p2752021",
+      "relation": "source_review"
+    },
+    {
+      "label": "Full scoped contexts",
+      "url": "data/paper-reviews/lee2007-cds-polymers-1p2752021/contexts.json",
+      "relation": "supporting_context"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

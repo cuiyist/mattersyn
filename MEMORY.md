@@ -1,3 +1,16 @@
+## 2026-09-29 — TiO2 and CdS/polymer source contributions accepted, publication pending
+
+Liao et al. (2009), DOI 10.1021/jp905720g, contributes seven solvent-preparation routes, including the reported poorly crystalline controls, and two supporting characterization/activity procedures. All six supplied main pages are independently reviewed. Prose/table ordering and numerical differences remain explicit; supporting procedures do not create additional preparation pairs. SI and cited full sources remain unreviewed.
+
+Lee et al. (2007), DOI 10.1063/1.2752021, contributes one bare-CdS film route and five polymer/device supporting records. The supplied main scope is a publisher cover plus three scientific pages, Figures 1–4 and Table I. KOH desorption is an analytical branch, not cell preparation. Optical, adsorption and device properties remain separate from structural evidence; only the bare-film route contributes one partial structural row. SI and cited full sources remain unreviewed.
+
+The source-scoped additions project fifteen records and eight partial recipe–structure rows, pending actual generation and publication. Accepted Reader rendering changes keep canonical property summaries beside property figures, preferring sample labels and retaining conditions and evidence. The independently tested CSV importer places hash-bound, source-scoped table bytes at both canonical and served paths. Those five code/test/documentation files are applied separately from the scientific union after metadata preparation, with their own exact review before one source release preparation.
+
+Batch11 is deployed and anonymously verified at 2026-09-29T07:55:41.267574+00:00 (source 07fb7dd17755552103a176cb06e33de4470d4191, site 2d390c9bace4b1648b7742c08a544f879bf095f1): 102 contributing primary sources, 1,251 records and 369 total recipe–structure pairs (3 more comprehensive and 366 partial). Its two source events remain credited once. Proof SHA256 8362b6a6181a87eb8972bd62b00f427066999328326f78884caee3e245d25c40. No publication or training credit is granted here. Public preliminary synthesis remains retired. The target of 20 distinct published primary papers per hour remains unachieved; reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T07:55:41.267574+00:00 (source `07fb7dd17755552103a176cb06e33de4470d4191`, site `2d390c9bace4b1648b7742c08a544f879bf095f1`). Its verified website contains 102 primary sources, 1251 canonical records and 369 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 — AgMS2 and Cu2-xSe source contributions accepted, publication pending
 
 Hu et al. (1999), DOI 10.1039/a902218j, contributes separate AgGaS2 and AgInS2 preparation routes and six supporting AgGaS2 comparison contexts. Both supplied main pages and two source figures are independently reviewed. Exact figure-specimen temperature remains unresolved within the reported preparation range; qualitative comparison outcomes are not crystalline-phase identities or extra synthesis–structure pairs.

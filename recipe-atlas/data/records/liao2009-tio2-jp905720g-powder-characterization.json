@@ -1,0 +1,431 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liao2009-tio2-jp905720g-powder-characterization",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Liao et al. (2009): Powder characterization preparation",
+  "material": {
+    "formula": "TiO2",
+    "family": "Titanium dioxide",
+    "elements": [
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "TiO2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Powder characterization preparation",
+  "sources": [
+    {
+      "id": "liao2009-tio2-jp905720g",
+      "doi": "10.1021/jp905720g",
+      "title": "Solvothermal Synthesis of TiO2 Nanocrystal Colloids from Peroxotitanate Complex Solution and Their Photocatalytic Activities",
+      "authors": "Jianhua Liao; Liyi Shi; Shuai Yuan; Yin Zhao; Jianhui Fang",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp905720g",
+      "main_status": "All 6 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No separate matched SI read; targeted local search found only main copies.",
+      "reuse_status": "Selected source crops proposed for owner-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "liao2009-tio2-jp905720g",
+    "recipe_family": "liao2009-tio2-jp905720g-powder-characterization",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "TiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Sections2.1–2.4"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "colloid",
+      "name": "Preformed TiO2 colloid",
+      "formula": "TiO2",
+      "role": "characterization input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source sample identity remains that of the separately linked preparation; exact physical batch and aliquot unknown."
+      ],
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "powder-evaporate-state",
+      "name": "Prepare characterization powder output",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "characterize-state",
+      "name": "Characterize the assigned specimen output",
+      "kind": "product",
+      "parent_ids": [
+        "powder-evaporate-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "powder-evaporate",
+      "action": "dry",
+      "label": "Prepare characterization powder",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-powder-characterization",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "colloid"
+      ],
+      "outputs": [
+        "powder-evaporate-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "powder-evaporate-state",
+      "description": "Rotary evaporate the colloid at45°C. Duration, pressure and instrument geometry unspecified.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.3"
+        }
+      ]
+    },
+    {
+      "id": "characterize",
+      "action": "measure",
+      "label": "Characterize the assigned specimen",
+      "stage": "characterization",
+      "branch": "liao2009-tio2-jp905720g-powder-characterization",
+      "optional": false,
+      "depends_on": [
+        "powder-evaporate"
+      ],
+      "inputs": [
+        "powder-evaporate-state"
+      ],
+      "outputs": [
+        "characterize-state"
+      ],
+      "parameters": {
+        "xrd_voltage": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.3"
+            }
+          ],
+          "derivation": null
+        },
+        "xrd_current": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mA",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.3"
+            }
+          ],
+          "derivation": null
+        },
+        "xrd_wavelength": {
+          "value": 0.15418,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.3"
+            }
+          ],
+          "derivation": null
+        },
+        "electron_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.3"
+            }
+          ],
+          "derivation": null
+        },
+        "tem_count": {
+          "value": null,
+          "minimum": 200,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "liao2009-tio2-jp905720g",
+              "locator": "Supplied main PDF p. 2, Section2.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "FTIR4000–400cm−1; XRD at room temperature30kV30mA,CuKα0.15418nm; TEM and HRTEM200kV. Particle estimate uses at least200 TEM particles. Zeta and nitrogen adsorption instruments are specified in source contexts.",
+      "evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "liao2009-tio2-jp905720g-powder-characterization-product",
+      "source_sample_label": "Characterization specimen; assigned source sample",
+      "batch_id": null,
+      "material_state_id": "characterize-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Supporting specimen preparation or assay; no newly established particle composition."
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liao2009-tio2-jp905720g",
+          "locator": "Supplied main PDF p. 2, Section2.3"
+        }
+      ],
+      "notes": [
+        "Exact physical batch identifiers are unreported; source sample/condition association only."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent R2 audit of all six supplied main pages, seven source crops and all 41 bibliography groups passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied six-page main read textually and visually; no distinct identity-matched local SI found in the targeted existing folders. Cited full texts unreviewed. Independent scientific comparison passed; presentation pending.",
+      "Water volume used to make0.2M Ti(SO4)2,3M ammonia dose and preparation from25% commercial stock, and washing volumes are unknown. No inferred solution volume or moles are substituted.",
+      "Aging temperature, ultrasound power, stirring rates, H2O2 addition rate, reflux atmosphere, heating/cooling ramps and pressure are unreported. Ice–water bath is not assigned0°C.",
+      "The source says a Teflon autoclave lined with Teflon and70% fill; its capacity is unknown. The125mL solvent charge is not treated as a complete batch volume or converted to vessel capacity.",
+      "Sample-specific solvent ratios are volume ratios; selected-solvent total125mL is given but separately dispensed component volumes are not stated.",
+      "Pure n-propanol and n-butanol controls are poorly crystalline/aggregated with amorphous floccus-like material; no successful fully crystalline anatase claim or numeric particle size is borrowed from the five water/ethanol products.",
+      "Powder characterization and photocatalysis use prepared powders; the colloid is not silently equated to the110°C-dried catalyst. Exact physical batch identifiers are unreported.",
+      "Table1 SXRD is author-calculated area; SBET is nitrogen-adsorption area. TEM particle size and XRD crystallite size remain distinct. No unit cell refinement, measured coordinates, phase fraction or measured CIF is supplied.",
+      "Figures and Scheme1 retain explicit panel/sample scopes; Scheme1 lengths are not actual crystal dimensions. Source permission remains unverified and complete presentation pending."
+    ],
+    "conflicts": [
+      "Main p.3 lists Scherrer sizes 13.4, 11.0, 10.2, 8.9 and 11.8 nm after discussing Figure2 e–i, whose caption orders ethanol through water. Table1 instead explicitly labels these values TW, TWE4, TWE1, TWE0.25 and TE. Numeric sample assignments here follow the explicit Table1 row labels; the conflicting prose order is retained, not silently resolved.",
+      "Main pp.3 and5 describe the mixed-solvent TEM range as47.0 to9.0nm, while Table1 explicitly reports9.7nm for TWE0.25. The labeled table value remains9.7nm; no replacement by9.0nm.",
+      "Table1 calls DTEM a diameter even for rodlike TW and rectangular TE. Their separate approximate length/width descriptions are preserved and are not substituted for the table metric.",
+      "Main p.3 assigns the TW HRTEM spacings3.4 and4.8Å to(101) and(002), respectively; Figure4a visibly labels0.34nm and an(001) growth arrow. These source labels are retained without crystallographic correction or invented atomic coordinates.",
+      "Main p.5 describes [001] growth as approximately2.7 times[101] but prints G100≈2.7G101. Both notations are retained as source interpretation, not a measured growth-rate result.",
+      "Table1 and p.4 print the calculated-area expression S=6/d*ρ. The literal expression and author-derived status are preserved; no density value, operator correction or recomputation is introduced."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/jp905720g",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Complete main-source review",
+      "url": "paper-review.html?id=liao2009-tio2-jp905720g",
+      "relation": "source_review"
+    },
+    {
+      "label": "Sample crosswalk, table and limitations",
+      "url": "data/paper-reviews/liao2009-tio2-jp905720g/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-tw.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-twe4.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-twe1.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-twe025.html",
+      "relation": "preparation_context"
+    },
+    {
+      "label": "Source sample preparation; exact physical batch unknown",
+      "url": "records/liao2009-tio2-jp905720g-te.html",
+      "relation": "preparation_context"
+    }
+  ]
+}
