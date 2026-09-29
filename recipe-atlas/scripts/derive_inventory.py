@@ -35,7 +35,33 @@ def category(r):
     if kind in ('literature_protocol','protocol_variant'):return 'control'
     raise ValueError('Unclassified inventory record type: '+kind)
 
-def derive(seed,records,hubs,reviews,library,manifest,pairs):
+def checked_library_sources(seed,library,primary,corpus_source):
+    """Frozen intake is immutable; reviewed primary sources may extend its public view."""
+    binding=seed.get('corpus_source_binding',{})
+    if binding.get('canonical_json_sha256')!=hashed(corpus_source):raise ValueError('Corpus snapshot changed: frozen intake content differs')
+    corpus=seed['corpus_snapshot'];source_summary=corpus_source['summary']
+    source_papers=corpus_source['papers']
+    local=[p['doi'].lower() for p in source_papers if p.get('doi') and p['coverage']['localDocumentCount']>0]
+    if len(local)!=len(set(local)):raise ValueError('Corpus snapshot changed: duplicate local intake DOI')
+    checks=[(source_summary['sourceDocumentCount'],corpus['local_document_files_indexed']),
+      (len(source_papers),corpus['paper_candidate_groups_total']),
+      (source_summary['paperCandidateCount'],len(source_papers)),
+      (source_summary['papersWithLocalDocuments'],len(local)),
+      (len(source_papers)-len(local),corpus['candidate_groups_without_local_documents']),
+      (source_summary['uniqueContentHashes'],corpus['unique_document_content_hashes']),
+      (binding.get('local_paper_groups'),len(local)),
+      (binding.get('historical_augmented_library_groups'),corpus['local_paper_groups_indexed'])]
+    if any(a!=b for a,b in checks) or library['summary']!=source_summary:raise ValueError('Corpus snapshot changed: intake metadata differs')
+    dois=[p.get('doi') for p in library['papers']]
+    if any(not isinstance(d,str) or not d for d in dois):raise ValueError('Library source membership has missing DOI')
+    normalized=[d.lower() for d in dois]
+    if len(normalized)!=len(set(normalized)):raise ValueError('Library source membership has duplicate DOI')
+    primary_dois={p['doi'].lower() for p in primary.values()}
+    local=set(local)
+    if set(normalized)!=local|primary_dois:raise ValueError('Library source membership differs from frozen intake plus canonical primary sources')
+    return local,primary_dois
+
+def derive(seed,records,hubs,reviews,library,manifest,pairs,corpus_source):
     if seed.get('schema')!='mattersyn-inventory-evidence/1':raise ValueError('Unknown inventory evidence schema')
     byid={r['record_id']:r for r in records}
     if len(byid)!=len(records):raise ValueError('Duplicate canonical inventory record')
@@ -129,10 +155,12 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs):
     lit=[r for r in records if r['collection']=='reviewed_literature'];bench=[r for r in records if r['collection']=='published_benchmark']
     cc=Counter(categories.values());main_si=[r for r in reviews if r['review_scope']==MAIN_SI];main_only=[r for r in reviews if r['review_scope']==MAIN_ONLY];si_only=[r for r in reviews if r['review_scope']==SI_ONLY]
     corpus=seed['corpus_snapshot']
-    if len(library['papers'])!=corpus['local_paper_groups_indexed'] or library['summary']['sourceDocumentCount']!=corpus['local_document_files_indexed']:raise ValueError('Corpus snapshot changed: review new intake separately')
+    intake_dois,primary_dois=checked_library_sources(seed,library,primary,corpus_source)
     direct_formulas=sorted({byid[rid]['material']['formula'] for rid in route_ids})
     eligibility={task:sum(bool(row['eligibility'].get(task,{}).get('eligible')) for row in manifest['records']) for task in sorted(set().union(*(set(row['eligibility']) for row in manifest['records'])))}
-    summary={**corpus,'canonical_records':len(records),'reviewed_literature_records':len(lit),'reviewed_literature_source_groups':len({r['lineage']['source_group'] for r in lit}),
+    summary={**corpus,'historical_augmented_library_groups':corpus['local_paper_groups_indexed'],
+      'frozen_intake_local_paper_groups':len(intake_dois),'curated_library_additions':len(primary_dois-intake_dois),
+      'local_paper_groups_indexed':len(library['papers']),'canonical_records':len(records),'reviewed_literature_records':len(lit),'reviewed_literature_source_groups':len({r['lineage']['source_group'] for r in lit}),
       'published_benchmark_rows':len(bench),'published_benchmark_source_groups':len({r['lineage']['source_group'] for r in bench}),
       'total_canonical_source_groups':len(groups),'formal_full_main_and_matched_si_reviews':len(main_si),'formal_full_review_pages':sum(p['pages_read'] for p in main_si),
       'formal_full_main_reviews_si_unverified':len(main_only),'formal_full_main_only_review_pages':sum(p['pages_read'] for p in main_only),
@@ -140,7 +168,7 @@ def derive(seed,records,hubs,reviews,library,manifest,pairs):
       'legacy_main_article_reviews_si_unverified':sum(p['review_status']=='legacy_main_article_review_si_unverified' for p in per_paper),
       'legacy_main_pages_inspected':sum(d['page_count'] for p in per_paper if p['review_status']=='legacy_main_article_review_si_unverified' for d in p['documents']),
       'selected_recipe_figure_review_sources':sum(p['review_status']=='selected_recipe_and_figure_review' for p in per_paper),
-      'local_groups_without_canonical_records':corpus['local_paper_groups_indexed']-len(groups),
+      'local_groups_without_canonical_records':len(intake_dois-primary_dois),
       'synthesis_route_variant_records':cc['route'],'contextual_control_variant_records':cc['control'],'shared_preparation_workup_characterization_assay_procedures':cc['procedure'],
       'nonprocedure_literature_records':len(lit)-cc['procedure'],'literature_record_type_counts':dict(sorted(Counter(r['record_type'] for r in lit).items())),
       'canonical_record_type_counts':dict(sorted(Counter(r['record_type'] for r in records).items())),
@@ -172,4 +200,5 @@ def generate(root):
     root=Path(root);dist=root/'dist/data'
     return derive(read(root/'data/inventory-evidence.json'),[read(p) for p in sorted((root/'data/records').glob('*.json'))],
       [read(p) for p in sorted((dist/'materials').glob('*.json'))],read(dist/'paper-review-index.json')['papers'],
-      read(dist/'library-index.json'),read(dist/'dataset-manifest.json'),read(dist/'synthesis-structure-pairs.json'))
+      read(dist/'library-index.json'),read(dist/'dataset-manifest.json'),read(dist/'synthesis-structure-pairs.json'),
+      read(root/'data/corpus/library-source.json'))

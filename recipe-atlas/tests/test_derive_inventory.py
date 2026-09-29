@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 sys.dont_write_bytecode = True
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from derive_inventory import derive,reviewed_seed,MAIN_SI,MAIN_ONLY,SI_ONLY
+from derive_inventory import derive,reviewed_seed,hashed,MAIN_SI,MAIN_ONLY,SI_ONLY
 
 
 def fixture():
@@ -42,8 +42,12 @@ def fixture():
     manifest={'record_count':3,'dataset_version':'test-only','records':[{'record_id':r['record_id'],'eligibility':{'partial_protocol':{'eligible':r['record_type']=='literature_protocol'},'exact_structure_recipe':{'eligible':False}}} for r in records]}
     pairs={'rows':[{'pair_row_id':'route-a::sample','record_id':'route-a','source_group':'paper-a'},
         {'pair_row_id':'route-b::sample','record_id':'route-b','source_group':'paper-b'}]}
+    corpus_source={'papers':[{'doi':'10.fixture/paper-a','coverage':{'localDocumentCount':2}},
+        {'doi':'10.fixture/paper-b','coverage':{'localDocumentCount':1}}],
+        'summary':{'sourceDocumentCount':3,'paperCandidateCount':2,'papersWithLocalDocuments':2,'uniqueContentHashes':3}}
+    seed['corpus_source_binding']={'canonical_json_sha256':hashed(corpus_source),'local_paper_groups':2,'historical_augmented_library_groups':2}
     return dict(seed=seed,records=records,hubs=hubs,reviews=reviews,
-        library={'papers':[{},{}],'summary':{'sourceDocumentCount':3}},manifest=manifest,pairs=pairs)
+        library={'papers':[{'doi':'10.fixture/paper-a'},{'doi':'10.fixture/paper-b'}],'summary':copy.deepcopy(corpus_source['summary'])},manifest=manifest,pairs=pairs,corpus_source=corpus_source)
 
 
 class InventoryDerivationTests(unittest.TestCase):
@@ -172,5 +176,62 @@ class InventoryDerivationTests(unittest.TestCase):
         data=fixture();data['library']['summary']['sourceDocumentCount']+=1
         with self.assertRaisesRegex(ValueError,'Corpus snapshot changed'):derive(**data)
 
+
+
+    def test_curated_primary_addition_extends_library_not_frozen_intake(self):
+        data=fixture();old=derive(**data)
+        for r in data['records']:
+            if r['lineage']['source_group']=='paper-b':r['sources'][0]['doi']='10.fixture/curated-new'
+        data['seed']['per_paper'][1]['doi']='10.fixture/curated-new'
+        data['reviews'][1]['doi']='10.fixture/curated-new'
+        data['library']['papers'].append({'doi':'10.fixture/curated-new'})
+        before=copy.deepcopy(data);result=derive(**data)
+        self.assertEqual(data,before)
+        self.assertEqual(result['summary']['historical_augmented_library_groups'],2)
+        self.assertEqual(result['summary']['frozen_intake_local_paper_groups'],2)
+        self.assertEqual(result['summary']['local_paper_groups_indexed'],3)
+        self.assertEqual(result['summary']['curated_library_additions'],1)
+        self.assertEqual(result['summary']['local_groups_without_canonical_records'],1)
+        self.assertEqual(result['summary']['local_document_files_indexed'],3)
+        self.assertEqual(result['training_eligibility'],old['training_eligibility'])
+        self.assertEqual(result['summary']['source_checked_synthesis_structure_rows'],old['summary']['source_checked_synthesis_structure_rows'])
+
+    def test_extra_missing_wrong_and_duplicate_library_dois_rejected(self):
+        for change in ('extra','missing','wrong','duplicate'):
+            with self.subTest(change=change):
+                data=fixture();papers=data['library']['papers']
+                if change=='extra':papers.append({'doi':'10.fixture/not-canonical'})
+                elif change=='missing':papers.pop()
+                elif change=='wrong':papers[0]['doi']='10.fixture/wrong'
+                else:papers.append({'doi':papers[0]['doi'].upper()})
+                with self.assertRaisesRegex(ValueError,'Library source membership'):derive(**data)
+
+    def test_library_doi_case_is_identity_equivalent(self):
+        data=fixture();before=derive(**data)
+        data['library']['papers'][0]['doi']=data['library']['papers'][0]['doi'].upper()
+        self.assertEqual(derive(**data),before)
+
+    def test_frozen_intake_content_and_missing_binding_fail_closed(self):
+        for change in ('content','binding'):
+            data=fixture()
+            if change=='content':data['corpus_source']['papers'][0]['doi']='10.fixture/new-intake'
+            else:data['seed'].pop('corpus_source_binding')
+            with self.assertRaisesRegex(ValueError,'Corpus snapshot changed'):derive(**data)
+
+    def test_rebinding_hash_cannot_hide_intake_count_or_document_drift(self):
+        for change in ('document','candidate','local','duplicate'):
+            data=fixture();source=data['corpus_source']
+            if change=='document':source['summary']['sourceDocumentCount']+=1
+            elif change=='candidate':source['summary']['paperCandidateCount']+=1
+            elif change=='local':source['papers'][0]['coverage']['localDocumentCount']=0
+            else:source['papers'][1]['doi']=source['papers'][0]['doi']
+            data['seed']['corpus_source_binding']['canonical_json_sha256']=hashed(source)
+            data['library']['summary']=copy.deepcopy(source['summary'])
+            with self.assertRaisesRegex(ValueError,'Corpus snapshot changed'):derive(**data)
+
+    def test_cited_nonprimary_doi_cannot_admit_a_library_addition(self):
+        data=fixture();data['records'][0]['sources'].append({'id':'cited-only','doi':'10.fixture/cited'})
+        data['library']['papers'].append({'doi':'10.fixture/cited'})
+        with self.assertRaisesRegex(ValueError,'Library source membership'):derive(**data)
 
 if __name__=='__main__':unittest.main()
