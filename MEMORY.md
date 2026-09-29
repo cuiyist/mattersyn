@@ -1,4 +1,18 @@
 
+### Zhu TiO2 and Que Nd2O3 additions awaiting publication
+
+The preceding Kim Bi4Ti3O12, Cu7Te4 and aqueous CdSe batch was deployed and anonymously verified at 2026-09-29T15:40:03.681133+00:00 (source ee19a910f096ba4c3ba27bd8660ddcec531be4f7; site 8580fd858c0e3a40f716cbbb183b86c73cd32cf2). It contains 123 contributing ordinary primary papers, 1441 canonical records and 439 broad recipe-structure rows.
+
+Zhu retains all three main pages and six identity-matched SI pages. Twenty-three records separate three quantified powder/film preparations from twenty supporting comparison and analytical contexts. The sol-gel operational glass specimen remains distinct from the unresolved Ti-foil comparison; no comparison thickness is assigned to the procedural glass film. Source indexing, TGA axis/caption and reflectance/absorption conflicts stay explicit. Model dimensions are not measured coordinates.
+
+Que retains the complete four-page main and eight records: one oxide preparation with one structural outcome, six downstream film-temperature contexts and one host photoluminescence comparison. Missing receiver microemulsion charge and mixing ratio remain unknown; the cited upstream host recipe is unavailable, and no equal-charge assumption or extra optical-only pair credit is introduced. No SI or cited full-source review is claimed.
+
+Together these two independently accepted papers add thirty-one records, four direct routes and four partial structural rows; all prior 439 broad rows remain exact. Publication remains pending until deployment and anonymous verification. Source-bound identity-only molecule cards, conceptual equipment and unavailable atomic models remain qualified. Source-figure permission is unverified. The twenty published primary papers/hour target remains unmet; progress reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T15:40:03.681133+00:00 (source `ee19a910f096ba4c3ba27bd8660ddcec531be4f7`, site `8580fd858c0e3a40f716cbbb183b86c73cd32cf2`). Its verified website contains 123 primary sources, 1441 canonical records and 439 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
+
 ### Bi4Ti3O12, Cu7Te4 and aqueous CdSe additions awaiting publication
 
 The preceding InOOH/In2O3 and Ag/MCM-48 batch was deployed and anonymously verified at 2026-09-29T14:54:13.246789+00:00 (source f4e124f078c9d99e2ebc2e7ff70536bcdd1369bb; site a54c794072a062b8252a6143a0227b68cd222c7b). It contains 120 contributing ordinary primary papers, 1422 canonical records and 434 broad recipe-structure rows.
