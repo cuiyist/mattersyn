@@ -177,7 +177,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span','Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
 
- const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
+ const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));if(data?.id)heading.append(link('Preliminary contributions for this material →','preliminary-synthesis.html?hub='+encodeURIComponent(data.id),'reader-data-link'));main.append(heading);
 
  const selector=el('section');selector.append(el('h2','Synthesis methods'));const cards=el('div',undefined,'reader-methods');
 

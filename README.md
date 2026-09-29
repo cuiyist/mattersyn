@@ -15,7 +15,15 @@ reachable again after the repository was made public on 2026-09-24.
 
 ## Scaling workflow
 
-The [adopted workflow](skills/mattersyn-paper-to-site/references/scaling-workflow-v2.md)
+The current [preliminary-first workflow](skills/mattersyn-paper-to-site/references/throughput-workflow-v3.md)
+publishes a source-checked synthesis route and linked structural outcome before
+independent review and visual enrichment. Preliminary contributions are labelled
+not independently audited, accuracy unmeasured and excluded from training-ready
+data. They have separate counts; they do not change gold, calibrated-silver or
+verified-pair admission. The 20-papers/hour objective remains a measured delivery
+target, not an achieved rate. Existing reviewed records and figures are preserved.
+
+The [earlier workflow](skills/mattersyn-paper-to-site/references/scaling-workflow-v2.md)
 separates independently audited **gold**, **calibrated silver**, and an explicitly
 unreviewed **experimental silver display**. Calibrated silver still requires
 held-out 98% / 95% / 90% field thresholds and independent calibration approval.
@@ -34,8 +42,9 @@ Morning and two-hour reports are disabled; progress is on request while quiet
 continuation remains active. Inventory counts and memberships derive from reviewed
 inputs at build time. The calibrated silver Reader/monitor remain disabled pending
 calibration and admission; the separately labelled experimental display has its own
-release path and never changes gold or training eligibility. Use two extraction
-lanes, one independent auditor and one integration/publication owner, with at most
+release path and never changes gold or training eligibility. For preliminary-first work, use three extraction
+lanes and one integration/publication owner; independent audit follows in the
+enrichment queue. Keep at most
 four active agents and five paper claims. Publish ready contributions in batches
 with one shared release check. Reuse unchanged accepted source and apparatus audits
 and exact unchanged gate receipts; rerun only changed or failed checks and their
@@ -105,7 +114,7 @@ Experimental silver only: Wang, L.-Z.; Shi, J.-L.; Zhang, W.-H.; Ruan, M.-L.; Yu
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **91 primary source groups** · release `mattersyn-watt-baum-iwasaki-20260928`. Records are not independent experiments.
+Dataset **0.41.2** · **91 primary source groups** · release `mattersyn-preliminary-batch01-final`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -294,6 +303,20 @@ Dataset **0.41.2** · **91 primary source groups** · release `mattersyn-watt-ba
 These are contextual/upstream references, not extra reviewed synthesis contributions.
 
 - Williamson, E. M.; Tappan, B. A.; Mora-Tamez, L.; Barim, G.; Brutchey, R. L. (2021). Statistical Multi-Objective Optimization of Thiospinel CoNi2S4 Nanocrystal Synthesis via Design of Experiments. [Source](https://doi.org/10.1021/acsnano.1c00502). Review scope remains stated in the linked website records.
+
+## Preliminary synthesis sources
+
+These scoped contributions are source-checked by the extractor, not independently audited. Accuracy is unmeasured; they are excluded from reviewed pair totals and training-ready data.
+
+- [Laser-Power-Induced Multiphonon Resonant Raman Scattering in Laser-Heated CdS Nanocrystal](https://doi.org/10.1021/jp912103t). S. Sahoo and A. K. Arora. J. Phys. Chem. B 2010, 114, 4199–4203. DOI: 10.1021/jp912103t. — Preliminary contribution.
+
+- [Lattice expansion and oxygen non-stoichiometry of nanocrystalline ceria](https://doi.org/10.1039/c0ce00245c). Alexander E. Baranchikov, Olga S. Polezhaeva, Vladimir K. Ivanov and Yuri D. Tretyakov. CrystEngComm 12, 3531–3533 (2010). — Preliminary contribution.
+
+- [Microstructure and magnetic properties of the FeTaCN nanocrystalline thin films](https://doi.org/10.1063/1.1555904). C. Y. Chou, P. C. Kuo, Y. D. Yao, S. C. Chen, A. C. Sun and C. T. Lie. Journal of Applied Physics 93, 7205–7207 (2003). — Preliminary contribution.
+
+- [Oxygen Nonstoichiometry of Nanocrystalline Ceria](https://doi.org/10.1134/s0036023610030034). V. K. Ivanov, A. E. Baranchikov, O. S. Polezhaeva, G. P. Kopitsa and Yu. D. Tret’yakov. Russian Journal of Inorganic Chemistry 55, 325–327 (2010). — Preliminary contribution.
+
+- [Residual stress minimum in nanocrystalline diamond films](https://doi.org/10.1063/1.2339042). M. Vila, M. Amaral, F. J. Oliveira, R. F. Silva, A. J. S. Fernandes and M. R. Soares. Applied Physics Letters 89, 093109 (2006). — Preliminary contribution.
 
 ## Crystal reference models
 

@@ -31,6 +31,17 @@ The first command uses the real unchanged builder and writes `build-seal.private
 | Site boundary | Current unchanged guard runs fully and freshly against a new exact copy using the reviewed allowlist/current policy/current registry. No final policy/content/rights verdict cache is introduced. All candidate files, copied files, inputs and evidence are rechecked after the gate. |
 | Release and credits | Receipt remains unpublished with zero credit. Required site CI, final stage/commit hash verification and anonymous verification remain external, mandatory root gates. |
 
+## Preliminary-first scope
+
+The owner's v3 workflow permits a separate preliminary contribution before an
+independent scientific audit. Bind its actual source-check/projection receipts,
+the engineering acceptance and unchanged gold record checks in the promotion
+review; describe their exact scope. The legacy `science_receipts` field does not
+turn a preliminary source check into independent scientific acceptance. Browser,
+exact-byte, CI, privacy and anonymous-verification requirements still apply.
+Do not fabricate a gold audit to satisfy a receipt name or add preliminary rows
+to verified pairs or training-ready exports.
+
 ## Trust and limits that root must accept before adoption
 
 * The operator owns the source, candidate and promotion directories exclusively during transactions. No portable Python hashing routine prevents a malicious concurrent writer from replacing and restoring bytes between observations. Reparse points, symlinks, multiply linked input/artifact files, same-length changes, ordinary read/copy/gate races and path aliases in manifests are rejected. This is **not** a sandbox, signed attestation, cross-process filesystem lock or defense against a malicious operator.

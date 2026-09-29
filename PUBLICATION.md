@@ -1,5 +1,20 @@
 # MatterSyn publication workflow
 
+## Current preliminary-first instruction
+
+The owner requested a temporary pause on September 28 to revise workflow and
+first-publication quality, then resume toward 20 published primary papers/hour.
+The [v3 workflow](skills/mattersyn-paper-to-site/references/throughput-workflow-v3.md)
+allows a separate preliminary synthesis contribution with a source-checked
+protocol and explicitly linked structural outcome before independent scientific
+review or custom illustrations. It must disclose its limited scope, pending
+independent audit, unmeasured accuracy and training exclusion. Old scalar-only
+experimental notes do not meet this contribution definition. Gold and
+calibrated-silver admission remain unchanged. Count preliminary publications
+separately from reviewed papers and verified pairs; upgrades and extra variants
+do not create new primary-paper credit. All lanes retain exact source evidence,
+public schema/privacy checks, batch release validation and anonymous verification.
+
 Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public at the owner's
 request. The project repository contains code, reviewed records, project memory,
 reusable skills, safe audit summaries and cleaned history. The site repository

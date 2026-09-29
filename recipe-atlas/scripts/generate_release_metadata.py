@@ -74,6 +74,13 @@ def generate(root,snapshot):
     if other:
         refs+=['## Additional contextual sources','','These are contextual/upstream references, not extra reviewed synthesis contributions.','']
         for s in sorted(other.values(),key=lambda s:(s.get('year')or 0,s['title'])):refs+=['- '+citation(s,reviews_by_source.get(s['id'],reviews.get(s['id'],{}))),'']
+    preliminary_path=dist/'data/preliminary-synthesis.json'
+    preliminary=load(preliminary_path)['entries'] if preliminary_path.exists() else []
+    if preliminary:
+        refs+=['## Preliminary synthesis sources','','These scoped contributions are source-checked by the extractor, not independently audited. Accuracy is unmeasured; they are excluded from reviewed pair totals and training-ready data.','']
+        for entry in sorted(preliminary,key=lambda e:(e['title'],e['doi'])):
+            label=entry['title'].replace('\\','\\\\').replace('[','\\[').replace(']','\\]')
+            refs+=['- ['+label+'](https://doi.org/'+entry['doi']+'). '+entry['citation']+' — Preliminary contribution.','']
     registry=load(dist/'assets/crystal-references/registry.json')if (dist/'assets/crystal-references/registry.json').exists()else{'entries':[]};seen=set()
     refs+=['## Crystal reference models','','Reference structures are distinguished from sample-resolved synthesis targets. Provenance and qualifications remain in the website registry.','']
     for entry in registry['entries']:
