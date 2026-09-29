@@ -196,7 +196,10 @@ class Audit:
         sigman_ag_routes = {"sigman2004-auag-la035405m-ag-core"}
         wang_ag_routes = {"wang2005-lss-ag"}
         self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes, "Ag: exactly the reviewed Shah, Qiu, Sigman and Wang core preparations must remain direct synthesis routes")
-        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | stiger_routes, "Ag: retain exactly the reviewed Shah, Qiu, Sigman and Wang core routes plus the supported Stiger contribution")
+        wang_mcm48_routes = {"wang1999-ag-mcm48-cm990228p-ast"}
+        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | stiger_routes | wang_mcm48_routes, "Ag: retain exactly the reviewed direct routes and supported Stiger/Wang MCM-48 component contributions")
+        self.check(set(self.hubs.get("Ag/SiO2", {}).get("direct_record_ids", [])) == wang_mcm48_routes, "Ag/SiO2: retain the separately reviewed Wang MCM-48 AST route")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag/SiO2" for rid in wang_mcm48_routes), "Ag/SiO2: supported composite identity was erased")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
         self.check(self.byid.get("stiger-1999-electrodeposition", {}).get("material", {}).get("formula") == "Ag/Si", "Ag/Si: supported-product identity was erased")
         stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")

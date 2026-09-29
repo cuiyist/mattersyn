@@ -1,3 +1,7 @@
+## 2026-09-29 — Ag composite catalogue check updated
+
+The InOOH/In2O3 and Ag/MCM-48 batch encountered one stale historical Ag membership assertion during its local build. The check now admits exactly the independently reviewed Wang AST contribution as a composite component, while retaining the previous pure-silver direct-route set and adding explicit Ag/SiO2 identity checks. Independent review passed eight positive/negative cases; the focused whole quality check passed 85,188 assertions. Scientific records and source assignments are unchanged. This local correction is not a deployment or additional-paper credit. A fresh successful build is required because the earlier build failed.
+
 
 ### InOOH/In2O3 and Ag/MCM-48 additions awaiting publication
 
