@@ -38,8 +38,25 @@ The DOI field uses a complete, case-insensitive literal identifier match against
 its exact source quote. Letters inside a DOI are not measurement units; this
 metadata rule does not change scientific quantity checks.
 
+Coordinated numeric lists can share one literal unit: `13.6 and 22.5 nm`
+supports both displayed sizes. The bounded parser accepts two to eight numbers
+separated by commas or `and`, preserves each explicit qualifier, and rejects
+mixed units, sentence crossings, intervening words, ambiguous digit grouping
+and range expansion. This establishes a textual number–unit association only;
+the extractor must still check which specimen each number describes.
+
 ## Tests and practical limits
 
 Run `python -m unittest discover -s tools/preliminary -p 'test_*.py'`. Pure schema/anchor tests use the standard library. Three additional synthetic real-PDF checks run when local pypdf is installed and otherwise are explicitly skipped; they grant no source or publication credit. No dependency is downloaded. The public build imports only `preliminary_contract`.
 
 This tooling intentionally does not generate custom figures, molecules, coordinates, audit approvals, or per-paper release scripts. Source interpretation, unresolved sample links and visual evidence still require the extractor's judgment; an independent audit remains deferred and labelled pending.
+
+## Optional private punctuation glyph evidence
+
+The private evidence companion may additionally contain `glyph_normalization: {path, sha256}`. The referenced `mattersyn-private-glyph-normalization/1` document has exactly `schema`, `source_id`, `document_sha256`, `visual_evidence: {path, sha256}` and `pages: [{page, aliases: {raw_code: punctuation}}]`. All paths use the evidence companion directory as their relative base. The public schema is unchanged.
+
+Only the single-character targets `~ ( ) [ ]` are permitted. Each code must be an exact simple-font Differences glyph name in the actual pinned PDF page. Codes with ambiguous prefixes fail closed. Raw pypdf page maps and raw claim quotes remain unchanged; only the internal token-comparison view substitutes verified prefixes, without consuming adjacent scientific digits. Unknown/unverified codes in used quotes fail closed. Each substituted occurrence must fall in an exact visually observed source span; the same code elsewhere on the page is not automatically authorized. Repeated ambiguous claim/observation spans require a longer exact source quote. Glyph substitutions never replace digits, letters, unit strings or signs, and never repair whitespace. The separately described degree-C comparison rule is the sole whitespace exception.
+
+`visual_evidence` pins an existing `mattersyn-private-observed-glyph-evidence/1` author receipt. It binds the same source ID/PDF hash, raw page file hashes, existing page PNG hashes and rendering description, confirmed punctuation mappings, and observed raw quotes with exact page-file offsets and UTF-8 hashes. Observation offsets use UTF-8 text with universal CRLF/CR-to-LF newlines; the page-file pin still hashes all original bytes. Its `normalized_quote` is only the existing NFKC/whitespace normalization of that raw quote; it must not contain glyph substitutions or repaired numbers. The validator checks those dependencies and their consistency. It does not rerender, run an evidence-supplied command, or prove that the author's visual interpretation is correct. Visual meaning remains a factual author check, and independent scientific audit stays pending.
+
+The map, author receipt, raw pages and PNG files join the private validation dependency set and are rechecked by the unchanged merger. They must never enter the public catalog. Sources needing unit typography repair, unsupported glyphs or ambiguous numeric associations remain held. A separate comparison-only rule treats whitespace between the degree symbol and C as equivalent to `°C` for numeric/unit matching. It never modifies raw pages or quotes. It does not join unit exponent spacing or separated magnitude digits, convert temperatures, or equate words such as approximately with punctuation; preserve a source tilde literally in public reported values.

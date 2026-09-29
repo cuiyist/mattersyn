@@ -15,6 +15,8 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT/'recipe-atlas/scripts'))
 from preliminary_contract import (SCHEMA, EVIDENCE_SCHEMA, MAP_SCHEMA, NUMBER, UNITS, _keys, _int, norm, source_id, validate_catalog)
 validate_public = validate_catalog
+import glyph_normalization as glyphs
+from shared_unit_lists import coordinated_quantity_spans
 
 def scientific_fields(e):
     """Required private anchors. Scope/deferred/missing/review fields are editorial metadata."""
@@ -32,8 +34,13 @@ def scientific_fields(e):
         for key in ['kind','reported','technique']:fields[f'/outcome/descriptors/{i}/{key}']=(d[key],[l['page'] for l in d['locators']])
     return fields
 
+def matching_text(text):
+    # Comparison view only; source bytes, page maps and raw quotes are untouched.
+    return re.sub(r'°\s+C(?![A-Za-z])', '°C', norm(text))
+
+
 def _token_in_quote(token, quote):
-    t=norm(token);q=norm(quote)
+    t=matching_text(token);q=matching_text(quote)
     if NUMBER.fullmatch(t): return t in {norm(v) for v in NUMBER.findall(q)}
     if UNITS.fullmatch(t): return t in {norm(v) for v in UNITS.findall(q)}
     return t in q
@@ -46,7 +53,9 @@ _QUANTITY = re.compile(r'(?<![A-Za-z0-9.])(?P<qualifier><=|>=|<|>|≤|≥|~|≈)
 
 def quantity_spans(text):
     # Literal association only: no unit conversion, numerical rounding or interpretation.
-    return {(m['qualifier'] or '',re.sub(r'\s+','',m['number']),re.sub(r'\s+','',m['unit'])) for m in _QUANTITY.finditer(norm(text))}
+    view = matching_text(text)
+    standalone = {(m['qualifier'] or '',re.sub(r'\s+','',m['number']),re.sub(r'\s+','',m['unit'])) for m in _QUANTITY.finditer(view)}
+    return standalone | coordinated_quantity_spans(view, _LITERAL_UNIT)
 
 def reject_long_public_copy(entry, texts):
     def walk(value,pointer=''):
@@ -58,8 +67,8 @@ def reject_long_public_copy(entry, texts):
             raise ValueError('long verbatim public source passage at '+pointer)
     walk(entry)
 
-def validate_claims(entry, ev, texts):
-    required=scientific_fields(entry);covered={p:[] for p in required}
+def validate_claims(entry, ev, texts, *, glyph_context=None):
+    required=scientific_fields(entry);covered={p:[] for p in required};checked_quotes={p:[] for p in required}
     if not isinstance(ev['claims'],list):raise ValueError('claims must be a list')
     for claim in ev['claims']:
         if not _keys(claim,'pointer page quote value_tokens semantic_link_checked'):raise ValueError('claim keys invalid')
@@ -67,6 +76,8 @@ def validate_claims(entry, ev, texts):
         if ptr not in required or not _int(page) or page not in required[ptr][1] or page not in texts:raise ValueError('claim pointer/page not in scientific field locators')
         quote=claim['quote']
         if not isinstance(quote,str) or not 1<=len(quote)<=4000 or not norm(quote) or norm(quote) not in texts[page]:raise ValueError('unmatched exact normalized quote at '+ptr)
+        quote=glyphs.quote(quote,page,glyph_context)
+        checked_quotes[ptr].append(quote)
         if claim['semantic_link_checked'] is not True:raise ValueError('author semantic link check missing at '+ptr)
         tokens=claim['value_tokens']
         if ptr=='/doi':
@@ -77,24 +88,24 @@ def validate_claims(entry, ev, texts):
             covered[ptr].append(entry['doi'])
             continue
         if not isinstance(tokens,list) or len(tokens)>128 or not all(isinstance(t,str) and 0<len(t)<=80 and _token_in_quote(t, quote) for t in tokens):raise ValueError('source-value token not in quote at '+ptr)
-        covered[ptr].extend(norm(t) for t in tokens)
+        covered[ptr].extend(matching_text(t) for t in tokens)
     for ptr,(value,_) in required.items():
         claims=[c for c in ev['claims'] if c['pointer']==ptr]
         if not claims:raise ValueError('missing scientific anchor: '+ptr)
         if ptr=='/doi':continue
-        wanted={norm(t) for t in NUMBER.findall(value)+UNITS.findall(value)}
+        wanted={norm(t) for t in NUMBER.findall(matching_text(value))+UNITS.findall(matching_text(value))}
         if not wanted.issubset(set(covered[ptr])):raise ValueError('numeric/unit token coverage incomplete at '+ptr)
         reported=quantity_spans(value)
-        quoted=set().union(*(quantity_spans(c['quote']) for c in claims))
+        quoted=set().union(*(quantity_spans(q) for q in checked_quotes[ptr]))
         if not reported.issubset(quoted):raise ValueError('literal numeric-unit association missing at '+ptr)
         # Numeric followed by an unknown unit-like word in a quantity field is a hold,
         # not implicit support from an unrelated number elsewhere in the quote.
         if ptr.endswith(('/amount','/reported')):
-            for m in re.finditer(r'(?<![A-Za-z0-9.])'+_NUM+r'\s*((?:[^\W\d_]|°)+)',norm(value)):
+            for m in re.finditer(r'(?<![A-Za-z0-9.])'+_NUM+r'\s*((?:[^\W\d_]|°)+)',matching_text(value)):
                 word=m.group(1)
                 if not UNITS.fullmatch(word) and word.lower() not in {'and','to','or','at','by','with','of','in','as','after','before','for','is','was','reported','approximately'}:
                     raise ValueError('unsupported quantity unit association at '+ptr)
-    reject_long_public_copy(entry,texts)
+    reject_long_public_copy(entry,glyphs.copy_check_texts(texts,glyph_context))
 
 def read_pdf_pages(raw, pages):
     try:
@@ -123,7 +134,7 @@ def validate_private(entry, evidence_path, *, pins_out=None):
         p=Path(value);return p if p.is_absolute() else evidence_path.parent/p
     try:
         raw=load(evidence_path,entry['evidence_fingerprint']);ev=json.loads(raw)
-        if not _keys(ev,'schema source_id document screened_pass identity page_map claims') or ev['schema']!=EVIDENCE_SCHEMA or ev['source_id']!=entry['source_id']:raise ValueError('invalid private evidence identity/keys')
+        if not isinstance(ev,dict) or set(ev) not in [set('schema source_id document screened_pass identity page_map claims'.split()),set('schema source_id document screened_pass identity page_map claims glyph_normalization'.split())] or ev['schema']!=EVIDENCE_SCHEMA or ev['source_id']!=entry['source_id']:raise ValueError('invalid private evidence identity/keys')
         if not _keys(ev['identity'],'doi title checked') or ev['identity'].get('checked') is not True or ev['identity']!={'doi':entry['doi'],'title':entry['title'],'checked':True}:raise ValueError('source identity check missing/mismatched')
         for key in ['document','page_map']:
             if not _keys(ev[key],'path sha256'):raise ValueError(key+' private pin malformed')
@@ -146,7 +157,8 @@ def validate_private(entry, evidence_path, *, pins_out=None):
         if set(texts)!=set(entry['inspected_pages']):raise ValueError('inspected pages must equal pinned page-map pages')
         for page,text in texts.items():
             if not text or actual_pages.get(page)!=text:raise ValueError('page '+str(page)+' text differs from actual PDF extraction; scanned/OCR-only pages require a later supported workflow')
-        validate_claims(entry, ev, texts)
+        glyph_context=glyphs.prepare(ev['glyph_normalization'],entry,pdfraw,texts,resolve,load) if 'glyph_normalization' in ev else None
+        validate_claims(entry, ev, texts, glyph_context=glyph_context)
         for path,digest in pins.items():
             if hashlib.sha256(path.read_bytes()).hexdigest()!=digest:raise ValueError('dependency changed during validation: '+path.name)
     except (OSError,ValueError,TypeError,KeyError,IndexError,subprocess.SubprocessError) as exc:

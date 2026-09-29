@@ -81,6 +81,16 @@ interpretation. Do not fabricate measurements or silently fill blanks. Public
 data uses concise authored summaries; source text, raw quotations, PDFs, page
 renders, detailed audits and credentials stay local.
 
+Use the shared projector's reviewed typography handling before treating a text
+extraction problem as missing evidence. Exact, visually observed PDF punctuation
+glyphs may be decoded through pinned private page/render receipts; degree-C
+spacing is normalized only in the comparison view. Bounded numeric lists may
+share a literal unit, while their specimen assignments still need the author's
+source check. Unsupported symbols, units and legacy identifier syntax remain
+explicit engineering holds. Preserve the known values and source observations;
+do not omit them or change a DOI merely to pass validation. These mechanical
+checks do not constitute independent scientific review.
+
 ## Deferred enrichment
 
 The first page uses a single reusable academic template with precursors,

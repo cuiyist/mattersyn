@@ -114,7 +114,7 @@ Experimental silver only: Wang, L.-Z.; Shi, J.-L.; Zhang, W.-H.; Ruan, M.-L.; Yu
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **91 primary source groups** · release `mattersyn-preliminary-batch02-r2`. Records are not independent experiments.
+Dataset **0.41.2** · **91 primary source groups** · release `mattersyn-preliminary-batch03`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -329,6 +329,10 @@ These scoped contributions are source-checked by the extractor, not independentl
 - [Oxygen Nonstoichiometry of Nanocrystalline Ceria](https://doi.org/10.1134/s0036023610030034). V. K. Ivanov, A. E. Baranchikov, O. S. Polezhaeva, G. P. Kopitsa and Yu. D. Tret’yakov. Russian Journal of Inorganic Chemistry 55, 325–327 (2010). — Preliminary contribution.
 
 - [Residual stress minimum in nanocrystalline diamond films](https://doi.org/10.1063/1.2339042). M. Vila, M. Amaral, F. J. Oliveira, R. F. Silva, A. J. S. Fernandes and M. R. Soares. Applied Physics Letters 89, 093109 (2006). — Preliminary contribution.
+
+- [Superparamagnetic nanocrystalline CuFe2O4](https://doi.org/10.1063/1.372662). S. Roy and J. Ghose. Journal of Applied Physics 87, 6226–6228 (2000). — Preliminary contribution.
+
+- [Temperature dependent structural properties of nanocrystalline SnS structures](https://doi.org/10.1063/1.3277148). M. Devika, N. Koteeswara Reddy, Fernando Patolsky, K. Ramesh and K. R. Gunasekhar. Applied Physics Letters 95, 261907 (2009). — Preliminary contribution.
 
 - [Ultratough nanocrystalline copper with a narrow grain size distribution](https://doi.org/10.1063/1.1779342). Khaled M. Youssef, Ronald O. Scattergood, K. Linga Murty and Carl C. Koch. Applied Physics Letters 85, 929–931 (2004). — Preliminary contribution.
 
