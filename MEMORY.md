@@ -1,3 +1,9 @@
+## 2026-09-29 accepted source additions and publication check correction
+
+The pending three-source batch adds Sigman Au/Ag, Ivanov ceria and Ratanatawanate PbS/TiO2 contributions. Its scientific and sample assignments retain independent acceptance. The first full build passed 170 tests and site/atlas validation, then stopped at historical exact Ag/PbS membership assertions. Those assertions now include only the accepted new routes and component contributions; PbS composite routes remain component-only in the PbS hub. Nine focused negative tests reject omitted old/new contributions, unrelated source injection, benchmark inclusion and direct/component misclassification. A fresh full build is required for the changed check; no publication credit has yet been assigned.
+
+Public control metadata excludes local evidence paths. Two inadvertently copied private path fields were caught and removed before any upload; their private audit receipts and hashes remain intact. Future publication-event projection must emit safe identifiers and hashes only. This correction does not change scientific claims, historical counts or permission status.
+
 ## 2026-09-29 — Ceria, Au/Ag and PbS/TiO2 ordinary-reader batch prepared
 
 Three independently source-reviewed contributions are ready for ordinary material pages. Ivanov et al. (2010), DOI 10.1134/s0036023610010018, contributes nine exact microwave-hydrothermal ceria conditions and six supporting precursor/stability/stabilization contexts. Its five-page main text is reviewed; SI and cited full papers remain unreviewed. TEM sizes, optical bandgaps and hydrodynamic/optical interpretations remain distinct.

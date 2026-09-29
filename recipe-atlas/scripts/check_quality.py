@@ -193,8 +193,9 @@ class Audit:
         silver = self.hubs.get("Ag", {})
         shah_ag_routes = {"shah-2001-ag-" + letter for letter in "abcdefghi"}
         qiu_ag_routes = {"qiu2006-ag-superlattice-150c"}
-        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes, "Ag: exactly nine reviewed Shah experiments and the reviewed Qiu route must remain direct synthesis routes")
-        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | stiger_routes, "Ag: retain exactly the reviewed Shah and Qiu colloidal routes plus the supported Stiger contribution")
+        sigman_ag_routes = {"sigman2004-auag-la035405m-ag-core"}
+        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes, "Ag: exactly the reviewed Shah, Qiu and Sigman core preparations must remain direct synthesis routes")
+        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | stiger_routes, "Ag: retain exactly the reviewed Shah, Qiu and Sigman core routes plus the supported Stiger contribution")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
         self.check(self.byid.get("stiger-1999-electrodeposition", {}).get("material", {}).get("formula") == "Ag/Si", "Ag/Si: supported-product identity was erased")
         stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")
@@ -206,9 +207,10 @@ class Audit:
         basel_direct = {"basel-2020-pbs-hot-injection-80c"}
         yao_assemblies = {f"yao2015-cds-pbs-{n}-cycles" for n in (1, 2, 4, 6, 7)} | {"yao2015-planar-cds-pbs-6-cycles"}
         watt_composite = {"watt2004-pbs-mehppv-one-pot"}
+        ratanatawanate_composites = {"ratanatawanate2009-pbs-tio2-inside", "ratanatawanate2009-pbs-tio2-both"}
         self.check(lead_sulfide.get("component_only") is False and set(lead_sulfide.get("direct_record_ids", [])) == yao_direct | basel_direct, "PbS: only reviewed Yao/Basel isolated-QD preparations are direct routes; glass and device assemblies remain component contributions")
-        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies | basel_direct | watt_composite, "PbS: exact Dantas, Yao, Basel and Watt component memberships required; benchmark and contextual rows remain excluded")
-        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448", "10.1039/b406060a"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
+        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies | basel_direct | watt_composite | ratanatawanate_composites, "PbS: exact Dantas, Yao, Basel, Watt and Ratanatawanate memberships required; benchmark and contextual rows remain excluded")
+        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448", "10.1039/b406060a", "10.1021/jp903050h"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
         watt_hub = self.hubs.get("PbS/MEH-PPV", {})
         polymer_hub = self.hubs.get("MEH-PPV", {})
         self.check(set(watt_hub.get("record_ids", [])) == set(watt_hub.get("direct_record_ids", [])) == watt_composite and watt_hub.get("component_only") is False and set(watt_hub.get("elements", [])) == {"Pb", "S", "C", "H", "O"}, "Watt: exact composite route and declared elemental composition required")
