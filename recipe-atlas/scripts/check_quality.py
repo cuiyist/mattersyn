@@ -194,8 +194,9 @@ class Audit:
         shah_ag_routes = {"shah-2001-ag-" + letter for letter in "abcdefghi"}
         qiu_ag_routes = {"qiu2006-ag-superlattice-150c"}
         sigman_ag_routes = {"sigman2004-auag-la035405m-ag-core"}
-        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes, "Ag: exactly the reviewed Shah, Qiu and Sigman core preparations must remain direct synthesis routes")
-        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | stiger_routes, "Ag: retain exactly the reviewed Shah, Qiu and Sigman core routes plus the supported Stiger contribution")
+        wang_ag_routes = {"wang2005-lss-ag"}
+        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes, "Ag: exactly the reviewed Shah, Qiu, Sigman and Wang core preparations must remain direct synthesis routes")
+        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | stiger_routes, "Ag: retain exactly the reviewed Shah, Qiu, Sigman and Wang core routes plus the supported Stiger contribution")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
         self.check(self.byid.get("stiger-1999-electrodeposition", {}).get("material", {}).get("formula") == "Ag/Si", "Ag/Si: supported-product identity was erased")
         stiger_review = load(self.root / "data/paper-reviews/stiger1999.json")

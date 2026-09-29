@@ -1,3 +1,24 @@
+## 2026-09-29 — Wang and Kim source contributions accepted, publication pending
+
+Wang et al. (2005), DOI 10.1038/nature03968, contributes two quantitative Au/Ag preparation routes and 24 supporting material, condition, property and mechanism contexts. Its four-page main text and four source figures are independently reviewed. The binary SI and cited full papers remain unreviewed. Generic ranges and qualitative examples remain separate from characterized route/sample pairs; missing salt identities, unreported conditions and uncertain sample crosswalks remain explicit.
+
+Kim et al. (2015), DOI 10.1021/cm503756q, contributes six nanoparticle routes (CIS/ZnS, CIGS/ZnS, ZCIS/ZnS and three ZnMgO compositions) plus nine supporting device combinations. Its eight-page main and matching six-page SI, including 14 source crops, are independently reviewed. Shell stages, film versus dispersion properties, reported TEM sample assignments, unknown TMAH concentration and unreported alternative oxide salt charges remain distinct. Device combinations do not create nanoparticle synthesis–structure pairs. Component links do not become standalone syntheses.
+
+The accepted batch adds 41 canonical records, eight direct routes and eight partial recipe–structure pairs, pending ordinary website publication. Source figures, chemical references, 40 stock contexts and 219 source-bound conceptual stage bindings remain available with their limitations. Scientific review does not imply complete visual presentation, measured atom coordinates or training readiness. No current-batch publication credit is granted here.
+
+Public preliminary synthesis remains retired. The target of 20 distinct published papers per hour remains unachieved; skipped or unpublished work does not increase the contributing-paper counter. Reports remain on request.
+
+## 2026-09-29 — Au/Ag, ceria and PbS/TiO2 contributions published
+
+Sigman et al. (2004), DOI 10.1021/la035405m; Ivanov et al. (2010), DOI 10.1134/S0036023610010018; and Ratanatawanate et al. (2009), DOI 10.1021/jp903050h were deployed and anonymously verified at 2026-09-29T06:25:07.679292+00:00. Source commit 39c5ff10d3e58c630ceb3b945ab046d09c25a096 and site commit 5382901111fdf3f68596002693c0995ae3cc96a2 passed the required CI. The release added three distinct papers, 33 records and 14 partial recipe–structure pairs. Live totals are 98 contributing papers, 1,200 records, 100 direct material families, 112 material/component hubs and 357 pairs. All 211 anonymous checks matched the approved artifact. The homepage was also inspected in the browser.
+
+The public homepage retains three clear metrics and three navigation links. Public preliminary pages and owner-only review progress remain retired. Publication preserves source-specific variant assignments, missing conditions, original figures and their stated provenance. Scientific acceptance does not imply complete presentation enrichment or exact-coordinate training readiness. Source CI matched across both platforms; the final full build passed 170 tests. A historical exact-membership check required the newly accepted Ag and PbS contributions to be explicitly added; its rejected build was not published.
+
+Wang (2005), DOI 10.1038/nature03968, and Kim (2015), DOI 10.1021/cm503756q, have passed separate source and transport audits and remain pending website integration/publication. Their expected eight partial pairs and 41 records receive no publication credit yet. Source-first assessment continues on the existing screened collection. The 20 distinct published papers/hour target remains unmet; skips do not raise the homepage count and scheduled progress reports remain disabled.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T06:25:07.679292+00:00 (source `39c5ff10d3e58c630ceb3b945ab046d09c25a096`, site `5382901111fdf3f68596002693c0995ae3cc96a2`). Its verified website contains 98 primary sources, 1200 canonical records and 357 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 accepted source additions and publication check correction
 
 The pending three-source batch adds Sigman Au/Ag, Ivanov ceria and Ratanatawanate PbS/TiO2 contributions. Its scientific and sample assignments retain independent acceptance. The first full build passed 170 tests and site/atlas validation, then stopped at historical exact Ag/PbS membership assertions. Those assertions now include only the accepted new routes and component contributions; PbS composite routes remain component-only in the PbS hub. Nine focused negative tests reject omitted old/new contributions, unrelated source injection, benchmark inclusion and direct/component misclassification. A fresh full build is required for the changed check; no publication credit has yet been assigned.
