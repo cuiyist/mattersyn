@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kim2001-bi4ti3o12-cm0102436-exfoliated",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Kim et al. (2001): Water exfoliation and washed BTO suspension",
+  "material": {
+    "formula": "Bi4Ti3O12",
+    "family": "Aurivillius bismuth titanate and lithium-intercalated intermediate",
+    "elements": [
+      "Bi",
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "Bi4Ti3O12"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Water exfoliation and washed BTO suspension",
+  "sources": [
+    {
+      "id": "kim2001-bi4ti3o12-cm0102436",
+      "doi": "10.1021/cm0102436",
+      "title": "Macromolecular Nanoplatelet of Aurivillius-type Layered Perovskite Oxide, Bi4Ti3O12",
+      "authors": "Jong-Young Kim; In Chung; Jin-Ho Choy; Gyeong-Su Park",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/cm0102436",
+      "main_status": "All three supplied main pages independently source-audited; complete identity-matched eleven-page SI also reviewed. Cited full sources remain unreviewed.",
+      "si_status": "Complete identity-matched eleven-page SI independently source-audited; no separate strict-screen PASS is claimed.",
+      "reuse_status": "Exact source figure/table crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "kim2001-bi4ti3o12-cm0102436",
+    "recipe_family": "kim2001-bi4ti3o12-cm0102436",
+    "parent_record_id": "kim2001-bi4ti3o12-cm0102436-lithiated",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Bi4Ti3O12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "libto-input",
+      "name": "Lithiated bulk BTO",
+      "formula": "Li2Bi4Ti3O12",
+      "role": "source-defined starting specimen",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "No absolute charge or unreported composition/size is inherited."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Deionized water",
+      "formula": "H2O",
+      "role": "exfoliation and suspension medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "water-wash",
+      "name": "Deionized water",
+      "formula": "H2O",
+      "role": "LiOH-removal wash",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "exfoliated-bto",
+      "name": "Exfoliated BTO suspension component",
+      "formula": "Bi4Ti3O12",
+      "role": "source product component in aqueous suspension",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nominal exfoliated product identity; this occurrence is an output component, not a second charged reagent."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–3, Exfoliation, Figures 2–3 and conclusion"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "aqueous-bto",
+      "name": "Exfoliated BTO aqueous suspension",
+      "components": [
+        {
+          "material_id": "exfoliated-bto",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [
+        "add-water",
+        "centrifuge",
+        "water-wash",
+        "redisperse",
+        "sonicate"
+      ],
+      "scope": "Source product suspension after LiBTO water treatment and washing; final BTO concentration unknown. LiBTO precursor is not represented as an unchanged suspension constituent.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–3, Exfoliation, Figures 2–3 and conclusion"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "add-water-state",
+      "name": "Expose LiBTO to water output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "centrifuge-state",
+      "name": "Collect exfoliated material output",
+      "kind": "fraction",
+      "parent_ids": [
+        "add-water-state"
+      ]
+    },
+    {
+      "id": "water-wash-state",
+      "name": "Wash out lithium hydroxide output",
+      "kind": "fraction",
+      "parent_ids": [
+        "centrifuge-state"
+      ]
+    },
+    {
+      "id": "redisperse-state",
+      "name": "Redisperse washed product output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "water-wash-state"
+      ]
+    },
+    {
+      "id": "sonicate-state",
+      "name": "Ultrasound bath dispersion output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "redisperse-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "add-water",
+      "action": "add",
+      "label": "Expose LiBTO to water",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "libto-input",
+        "water"
+      ],
+      "outputs": [
+        "add-water-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add deionized water to LiBTO powder to obtain an exfoliated suspension; volume, addition rate, temperature and contact time are unreported.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "centrifuge",
+      "action": "centrifuge",
+      "label": "Collect exfoliated material",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "add-water"
+      ],
+      "inputs": [
+        "add-water-state"
+      ],
+      "outputs": [
+        "centrifuge-state"
+      ],
+      "parameters": {
+        "speed": {
+          "value": 13000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "centrifuge-state",
+      "description": "Collect by centrifugation at 13,000 rpm for 60 min. Rotor radius and relative centrifugal force are unknown.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "water-wash",
+      "action": "wash",
+      "label": "Wash out lithium hydroxide",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "centrifuge"
+      ],
+      "inputs": [
+        "centrifuge-state",
+        "water-wash"
+      ],
+      "outputs": [
+        "water-wash-state"
+      ],
+      "parameters": {
+        "endpoint_pH": {
+          "value": 7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Supernatant pH 7",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "water-wash-state",
+      "description": "Wash the collected material with deionized water several times until supernatant pH reaches 7; wash volumes and exact repetition count are unspecified.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "redisperse",
+      "action": "disperse",
+      "label": "Redisperse washed product",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "water-wash"
+      ],
+      "inputs": [
+        "water-wash-state",
+        "water"
+      ],
+      "outputs": [
+        "redisperse-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the washed product in water; final concentration and volume are unspecified.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    },
+    {
+      "id": "sonicate",
+      "action": "sonicate",
+      "label": "Ultrasound bath dispersion",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "redisperse"
+      ],
+      "inputs": [
+        "redisperse-state"
+      ],
+      "outputs": [
+        "sonicate-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Irradiate in an ultrasound bath for about 1 h to form a translucent suspension; bath temperature, frequency and power are not supplied.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, Preparation and exfoliation paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-exfoliated-product",
+      "source_sample_label": "Exfoliated BTO nanoplatelets",
+      "batch_id": null,
+      "material_state_id": "sonicate-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Nominal Bi4Ti3O12",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–3, Exfoliation, Figures 2–3 and conclusion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Aurivillius-type BTO layered structure",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–3, Exfoliation, Figures 2–3 and conclusion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Thin nanoplatelets / nanosheets",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–3, Exfoliation, Figures 2–3 and conclusion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–3, Exfoliation, Figures 2–3 and conclusion"
+        }
+      ],
+      "notes": [
+        "AFM and HRTEM are distinct analytical preparations from the exfoliated suspension; same physical aliquot is not asserted.",
+        "Reported lithium removal and hydrogen evolution are source mechanistic interpretation; no gas amount is measured."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "afm-height",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-exfoliated-product",
+      "property": "platelet_thickness",
+      "technique": "AFM",
+      "value": {
+        "value": null,
+        "minimum": 1.5,
+        "maximum": 1.8,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source AFM vertical range, not film thickness.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–2, Figure 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exfoliated BTO deposited on silicon; source Fig.2 specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "afm-lateral",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-exfoliated-product",
+      "property": "platelet_lateral_dimension",
+      "technique": "AFM",
+      "value": {
+        "value": null,
+        "minimum": 50,
+        "maximum": 100,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–2, Figure 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exfoliated BTO deposited on silicon; source Fig.2 specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "afm-average",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-exfoliated-product",
+      "property": "platelet_thickness",
+      "technique": "AFM",
+      "value": {
+        "value": 1.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported 1.6 ± 0.5 nm; meaning of ± statistic is not specified.",
+        "basis": "",
+        "raw_text": "1.6 ± 0.5",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1, AFM discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Exfoliated BTO deposited on silicon; source Fig.2 specimen",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1, AFM discussion"
+        }
+      ]
+    },
+    {
+      "id": "hrtem-upper",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-exfoliated-product",
+      "property": "platelet_thickness",
+      "technique": "HRTEM",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 5,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Strict <5 nm in discussion; conclusion separately says ≤5 nm.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 3, Figure 3 discussion"
+          }
+        ],
+        "derivation": null,
+        "maximum_exclusive": true
+      },
+      "conditions": "PAA/resin-prepared exfoliated BTO, Fig.3",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 3, Figure 3 discussion"
+        }
+      ]
+    },
+    {
+      "id": "hrtem-caption",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-exfoliated-product",
+      "property": "platelet_thickness",
+      "technique": "HRTEM",
+      "value": {
+        "value": 4.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Separate caption value; no averaging with AFM.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 3, Figure 3b caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "PAA/resin-prepared flake; approximately three repeating units",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 3, Figure 3b caption"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete three-page main and identity-matched eleven-page SI R1 scientific audit passed. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied three-page main and identity-matched eleven-page SI, including all figures, crystallographic tables and numbered references/experimental notes. Cited full sources unreviewed.",
+      "Absolute Bi2O3/TiO2 charges, firing duration/ramp/atmosphere and pellet pressure are unreported. This upstream bulk preparation remains supporting context.",
+      "Lithiation is described as 3-mol excess n-BuLi for at least three days: no absolute n-BuLi or BTO charge, hexane volume, solution concentration, reaction temperature or atmosphere is supplied. Vacuum-drying conditions are unknown.",
+      "Water addition volume, exfoliation contact time/temperature, wash volumes/count beyond several, ultrasonic frequency/power and suspension concentration are not supplied. The centrifugation speed is rpm, not relative centrifugal force.",
+      "The main text juxtaposes CTAB (~10^-3 M) / PAA (~2000 molecular weight, 0.1 wt%) with slash notation; whether these are alternatives or a combined formulation is unresolved. HRTEM preparation explicitly uses aqueous 0.1% PAA. No missing mixing ratio or combined-stock composition is invented.",
+      "PC and DMF are stated as EPD suspension media, but Figure S3 and its approximately 850 nm thickness are not assigned to one solvent. Electrode spacing, deposition area, suspension charge/concentration and solvent-exchange method are unreported.",
+      "All SI atomic positions, cell metrics and bond lengths refer to the bulk Li2Bi4Ti3O12 intermediate, not measured coordinates of the exfoliated nanoplatelets or deposited film. No CIF or finite-particle model is claimed in this delivery.",
+      "AFM profile/height values, HRTEM flake thickness and EPD film thickness are separate specimens/scales. Resin section thickness is an analytical cutting setting, not platelet thickness.",
+      "SI Figures S3a/b are nearly black in the supplied PDF render. Source captions/text support qualitative film description and approximate thickness; contours, porosity and new measurements cannot be recovered from these images.",
+      "No ferroelectric, dielectric, optical or electronic performance measurement is reported here. Application statements are cited background/outlook.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [
+      "Main Figure 3 discussion gives <5 nm, its caption approximately 4.8 nm, and the conclusion ≤5 nm. Their distinct source wording is retained without averaging.",
+      "SI p.1 prints a neutron range 10≤θ≤155°, while Figure S2a labels the horizontal axis 2θ. The notation is retained as a source inconsistency, not silently corrected."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/cm0102436",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and tables",
+      "url": "paper-review.html?id=kim2001-bi4ti3o12-cm0102436",
+      "relation": "source_review"
+    },
+    {
+      "label": "Study context and full SI tables",
+      "url": "data/paper-reviews/kim2001-bi4ti3o12-cm0102436/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Lithiated bulk powder before water exfoliation",
+      "url": "data/records/kim2001-bi4ti3o12-cm0102436-lithiated.json#/products/0",
+      "relation": "parent_sample"
+    }
+  ],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

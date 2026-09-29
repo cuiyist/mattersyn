@@ -1,0 +1,656 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kim2001-bi4ti3o12-cm0102436-afm",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Kim et al. (2001): AFM deposition and height-profile acquisition",
+  "material": {
+    "formula": "Bi4Ti3O12",
+    "family": "Aurivillius bismuth titanate and lithium-intercalated intermediate",
+    "elements": [
+      "Bi",
+      "Ti",
+      "O"
+    ],
+    "components": [
+      "Bi4Ti3O12"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "AFM deposition and height-profile acquisition",
+  "sources": [
+    {
+      "id": "kim2001-bi4ti3o12-cm0102436",
+      "doi": "10.1021/cm0102436",
+      "title": "Macromolecular Nanoplatelet of Aurivillius-type Layered Perovskite Oxide, Bi4Ti3O12",
+      "authors": "Jong-Young Kim; In Chung; Jin-Ho Choy; Gyeong-Su Park",
+      "year": 2001,
+      "url": "https://doi.org/10.1021/cm0102436",
+      "main_status": "All three supplied main pages independently source-audited; complete identity-matched eleven-page SI also reviewed. Cited full sources remain unreviewed.",
+      "si_status": "Complete identity-matched eleven-page SI independently source-audited; no separate strict-screen PASS is claimed.",
+      "reuse_status": "Exact source figure/table crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "kim2001-bi4ti3o12-cm0102436",
+    "recipe_family": "kim2001-bi4ti3o12-cm0102436",
+    "parent_record_id": "kim2001-bi4ti3o12-cm0102436-exfoliated",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Bi4Ti3O12",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "bto-input",
+      "name": "Source BTO nanoplatelets",
+      "formula": "Bi4Ti3O12",
+      "role": "source-defined starting specimen",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "No absolute charge or unreported composition/size is inherited."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "silicon",
+      "name": "Silicon substrate",
+      "formula": "Si",
+      "role": "AFM deposition substrate",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dip-state",
+      "name": "Deposit platelets on silicon output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "afm-state",
+      "name": "Acquire AFM topography output",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "dip-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "dip",
+      "action": "dip",
+      "label": "Deposit platelets on silicon",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "bto-input",
+        "silicon"
+      ],
+      "outputs": [
+        "dip-state"
+      ],
+      "parameters": {
+        "suspension_concentration": {
+          "value": 1e-07,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dip silicon substrate into diluted BTO suspension (~10^-7 M). Dip duration, withdrawal rate and drying conditions are unreported.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "afm",
+      "action": "characterize",
+      "label": "Acquire AFM topography",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dip"
+      ],
+      "inputs": [
+        "dip-state"
+      ],
+      "outputs": [
+        "afm-state"
+      ],
+      "parameters": {
+        "scanner_range": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        },
+        "spring_constant": {
+          "value": 0.12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "N/m",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        },
+        "force": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nN",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        },
+        "pixels_x": {
+          "value": 512,
+          "minimum": null,
+          "maximum": null,
+          "unit": "1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        },
+        "pixels_y": {
+          "value": 512,
+          "minimum": null,
+          "maximum": null,
+          "unit": "1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        },
+        "image_side": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kim2001-bi4ti3o12-cm0102436",
+              "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Use Nanoscope AFM with oxide-sharpened Si3N4 tips, 10 µm scanner range, nominal spring constant 0.12 N/m, contact force 0.5 nN and 512 × 512 pixels. Figure 2 covers a 1 × 1 µm area.",
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "source_sample_label": "Figure 2 AFM specimen",
+      "batch_id": null,
+      "material_state_id": "afm-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Bi4Ti3O12",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Nanoplatelets on silicon",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 1–2, Footnote 9 and Figure 2"
+        }
+      ],
+      "notes": [
+        "Supporting analytical specimen; no extra synthesis pair. Profile line readouts are individual cross-sections, not an ensemble distribution."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "line0-height",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "property": "afm_profile_height",
+      "technique": "AFM profile readout",
+      "value": {
+        "value": 15.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 2, Figure 2 lower readout table"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 2 profile line 0; source readout, not ensemble statistic",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 2, Figure 2 lower readout table"
+        }
+      ]
+    },
+    {
+      "id": "line0-distance",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "property": "afm_profile_distance",
+      "technique": "AFM profile readout",
+      "value": {
+        "value": 696,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 2, Figure 2 lower readout table"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 2 profile line 0; source readout, not ensemble statistic",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 2, Figure 2 lower readout table"
+        }
+      ]
+    },
+    {
+      "id": "line0-angle",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "property": "afm_profile_angle",
+      "technique": "AFM profile readout",
+      "value": {
+        "value": 1.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 2, Figure 2 lower readout table"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 2 profile line 0; source readout, not ensemble statistic",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 2, Figure 2 lower readout table"
+        }
+      ]
+    },
+    {
+      "id": "line1-height",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "property": "afm_profile_height",
+      "technique": "AFM profile readout",
+      "value": {
+        "value": 17.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 2, Figure 2 lower readout table"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 2 profile line 1; source readout, not ensemble statistic",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 2, Figure 2 lower readout table"
+        }
+      ]
+    },
+    {
+      "id": "line1-distance",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "property": "afm_profile_distance",
+      "technique": "AFM profile readout",
+      "value": {
+        "value": 443,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Å",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 2, Figure 2 lower readout table"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 2 profile line 1; source readout, not ensemble statistic",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 2, Figure 2 lower readout table"
+        }
+      ]
+    },
+    {
+      "id": "line1-angle",
+      "sample_id": "kim2001-bi4ti3o12-cm0102436-afm-product",
+      "property": "afm_profile_angle",
+      "technique": "AFM profile readout",
+      "value": {
+        "value": 2.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "degree",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "kim2001-bi4ti3o12-cm0102436",
+            "locator": "Main PDF p. 2, Figure 2 lower readout table"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 2 profile line 1; source readout, not ensemble statistic",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2001-bi4ti3o12-cm0102436",
+          "locator": "Main PDF p. 2, Figure 2 lower readout table"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent complete three-page main and identity-matched eleven-page SI R1 scientific audit passed. Cited full references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete supplied three-page main and identity-matched eleven-page SI, including all figures, crystallographic tables and numbered references/experimental notes. Cited full sources unreviewed.",
+      "Absolute Bi2O3/TiO2 charges, firing duration/ramp/atmosphere and pellet pressure are unreported. This upstream bulk preparation remains supporting context.",
+      "Lithiation is described as 3-mol excess n-BuLi for at least three days: no absolute n-BuLi or BTO charge, hexane volume, solution concentration, reaction temperature or atmosphere is supplied. Vacuum-drying conditions are unknown.",
+      "Water addition volume, exfoliation contact time/temperature, wash volumes/count beyond several, ultrasonic frequency/power and suspension concentration are not supplied. The centrifugation speed is rpm, not relative centrifugal force.",
+      "The main text juxtaposes CTAB (~10^-3 M) / PAA (~2000 molecular weight, 0.1 wt%) with slash notation; whether these are alternatives or a combined formulation is unresolved. HRTEM preparation explicitly uses aqueous 0.1% PAA. No missing mixing ratio or combined-stock composition is invented.",
+      "PC and DMF are stated as EPD suspension media, but Figure S3 and its approximately 850 nm thickness are not assigned to one solvent. Electrode spacing, deposition area, suspension charge/concentration and solvent-exchange method are unreported.",
+      "All SI atomic positions, cell metrics and bond lengths refer to the bulk Li2Bi4Ti3O12 intermediate, not measured coordinates of the exfoliated nanoplatelets or deposited film. No CIF or finite-particle model is claimed in this delivery.",
+      "AFM profile/height values, HRTEM flake thickness and EPD film thickness are separate specimens/scales. Resin section thickness is an analytical cutting setting, not platelet thickness.",
+      "SI Figures S3a/b are nearly black in the supplied PDF render. Source captions/text support qualitative film description and approximate thickness; contours, porosity and new measurements cannot be recovered from these images.",
+      "No ferroelectric, dielectric, optical or electronic performance measurement is reported here. Application statements are cited background/outlook.",
+      "Independent source comparison passed; molecular/particle/reference-cell presentation remains pending."
+    ],
+    "conflicts": [
+      "Main Figure 3 discussion gives <5 nm, its caption approximately 4.8 nm, and the conclusion ≤5 nm. Their distinct source wording is retained without averaging.",
+      "SI p.1 prints a neutron range 10≤θ≤155°, while Figure S2a labels the horizontal axis 2θ. The notation is retained as a source inconsistency, not silently corrected."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/cm0102436",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and tables",
+      "url": "paper-review.html?id=kim2001-bi4ti3o12-cm0102436",
+      "relation": "source_review"
+    },
+    {
+      "label": "Study context and full SI tables",
+      "url": "data/paper-reviews/kim2001-bi4ti3o12-cm0102436/contexts.json",
+      "relation": "supporting_context"
+    },
+    {
+      "label": "Exfoliated BTO used for AFM",
+      "url": "data/records/kim2001-bi4ti3o12-cm0102436-exfoliated.json#/products/0",
+      "relation": "parent_sample"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}

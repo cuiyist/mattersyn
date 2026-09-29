@@ -1,3 +1,17 @@
+
+### Bi4Ti3O12, Cu7Te4 and aqueous CdSe additions awaiting publication
+
+The preceding InOOH/In2O3 and Ag/MCM-48 batch was deployed and anonymously verified at 2026-09-29T14:54:13.246789+00:00 (source f4e124f078c9d99e2ebc2e7ff70536bcdd1369bb; site a54c794072a062b8252a6143a0227b68cd222c7b). It contains 120 contributing ordinary primary papers, 1422 canonical records and 434 broad recipe-structure rows.
+
+Kim retains the complete three-page main and identity-matched eleven-page SI. Nine records separate bulk precursor, lithiated intermediate, exfoliated nanoplatelets, stabilization, EPD film and analytical contexts. Three direct outcomes span the two explicitly declared material hubs. Bulk-intermediate atomic-site and bond tables remain distinct from final nanoplatelet coordinates. Dark source SEM quality, CTAB/PAA formulation and PC-versus-DMF film assignment remain qualified.
+
+The complete four-page Cu7Te4 main supplies one direct quantified route and eight incomplete comparison or intermediate contexts; these add only one partial structural row. The complete four-page CdSe main supplies one aqueous room-temperature route and one partial row, with XRD, TEM and optical observations kept distinct. SI for these two sources and all cited full sources remain unreviewed.
+
+Together these three independently accepted papers add nineteen records, five direct routes and five partial structural rows. Publication remains pending until deployment and anonymous verification. Molecular/particle/reference-cell refinements stay labelled; no measured-coordinate or training admission is implied. Source-figure permission remains unverified. The twenty published primary papers/hour target remains unmet; progress reports remain on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T14:54:13.246789+00:00 (source `f4e124f078c9d99e2ebc2e7ff70536bcdd1369bb`, site `a54c794072a062b8252a6143a0227b68cd222c7b`). Its verified website contains 120 primary sources, 1422 canonical records and 434 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 — Ag composite catalogue check updated
 
 The InOOH/In2O3 and Ag/MCM-48 batch encountered one stale historical Ag membership assertion during its local build. The check now admits exactly the independently reviewed Wang AST contribution as a composite component, while retaining the previous pure-silver direct-route set and adding explicit Ag/SiO2 identity checks. Independent review passed eight positive/negative cases; the focused whole quality check passed 85,188 assertions. Scientific records and source assignments are unchanged. This local correction is not a deployment or additional-paper credit. A fresh successful build is required because the earlier build failed.

@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **120 primary source groups** · release `ordinary-20260929-sorescu-ag-mcm48`. Records are not independent experiments.
+Dataset **0.41.2** · **123 primary source groups** · release `batch20-kim-cu7te4-cdse-20260929`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -42,6 +42,8 @@ Dataset **0.41.2** · **120 primary source groups** · release `ordinary-2026092
 
 - H. L. Su; Y. Xie; B. Li; X. M. Liu; Y. T. Qian (1999). A Novel One-Step Solvothermal Route to Nanocrystalline Sn4P3. *Journal of Solid State Chemistry*, 146, 110–113. [10.1006/jssc.1999.8315](https://doi.org/10.1006/jssc.1999.8315). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=sn4p3-1999-jssc19998315).
 
+- B. Li; Y. Xie; J. X. Huang; H. L. Su; Y. T. Qian (1999). A Solvothermal Route to Nanocrystalline Cu7Te4 at Low Temperature. *Journal of Solid State Chemistry*, 146, 47–50. [10.1006/jssc.1999.8303](https://doi.org/10.1006/jssc.1999.8303). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=cu7te4-jssc19998303).
+
 - Paul Wagner; Osamu Terasaki; Stephan Ritsch; Jose Geraldo Nery; Stacey I. Zones; Mark E. Davis; Kenji Hiraga (1999). Electron Diffraction Structure Solution of a Nanocrystalline Zeolite at Atomic Resolution. *The Journal of Physical Chemistry B*, 103, 8245-8250. [10.1021/jp991389j](https://doi.org/10.1021/jp991389j). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wagner1999-ssz48).
 
 - J. H. Zhan; Y. Xie; X. G. Yang; W. X. Zhang; Y. T. Qian (1999). Hydrazine-Assisted Low-Temperature Hydrothermal Preparation of Nanocrystalline Jaipurite. [10.1006/jssc.1999.8299](https://doi.org/10.1006/jssc.1999.8299). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhan1999jaipurite).
@@ -56,11 +58,15 @@ Dataset **0.41.2** · **120 primary source groups** · release `ordinary-2026092
 
 - Yi Xie; Zhengping Qiao; Meng Chen; Yingjie Zhu; Yitai Qian (1999). γ-Irradiation Route to Nanocrystalline Lead Selenide. *Chemistry Letters*, 875–876. [10.1246/cl.1999.875](https://doi.org/10.1246/cl.1999.875). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=xie1999-pbse-gamma).
 
+- Weixin Zhang; Cheng Wang; Lei Zhang; Xiaoming Zhang; Xianming Liu; Kaibin Tang; Yitai Qian (2000). Room Temperature Synthesis of Cubic Nanocrystalline CdSe in Aqueous Solution. *Journal of Solid State Chemistry*, 151, 241–244. [10.1006/jssc.2000.8646](https://doi.org/10.1006/jssc.2000.8646). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhang2000-cdse-jssc20008646).
+
 - X. Peng; L. Manna; W. Yang; J. Wickham; E. Scher; A. Kadavanich; A. P. Alivisatos (2000). Shape control of CdSe nanocrystals. [10.1038/35003535](https://doi.org/10.1038/35003535). Review scope remains stated in the linked website records.
 
 - Bin Li, Yi Xie, Jiaxing Huang, and Yitai Qian (2000). Synthesis, Characterization, and Properties of Nanocrystalline Cu2SnS3. [10.1006/jssc.2000.8772](https://doi.org/10.1006/jssc.2000.8772). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2000cu2sns3).
 
 - T. Igarashi; M. Ihara; T. Kusunoki; K. Ohno; T. Isobe; M. Senna (2001). Characterization of Mn2+ coordination states in ZnS nanocrystal by EPR spectroscopy and related photoluminescence properties. *Journal of Nanoparticle Research*, 3, 51–56. [10.1023/A:1011445009443](https://doi.org/10.1023/A:1011445009443). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=igarashi2001-zns-mn-a1011445009443).
+
+- Jong-Young Kim; In Chung; Jin-Ho Choy; Gyeong-Su Park (2001). Macromolecular Nanoplatelet of Aurivillius-type Layered Perovskite Oxide, Bi4Ti3O12. *Chemistry of Materials*, 13, 2759–2761. [10.1021/cm0102436](https://doi.org/10.1021/cm0102436). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=kim2001-bi4ti3o12-cm0102436).
 
 - Jinke Tang; Kai-Ying Wang; Weilie Zhou (2001). Magnetic properties of nanocrystalline Fe3O4 films. *Journal of Applied Physics*, 89, 7690–7692. [10.1063/1.1358350](https://doi.org/10.1063/1.1358350). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=tang2001-fe3o4-pld).
 
