@@ -15,6 +15,13 @@ separately from reviewed papers and verified pairs; upgrades and extra variants
 do not create new primary-paper credit. All lanes retain exact source evidence,
 public schema/privacy checks, batch release validation and anonymous verification.
 
+Publication order: pass the local build, source CI, browser review and fresh
+public-file boundary, then push the approved site commit to trigger site CI.
+The Pages deploy job depends on `build-and-validate`; a push is not proof of a
+successful deployment. After site CI and deployment succeed, verify the live
+files anonymously and only then record publication credit. These post-push
+checks cannot precede the push that starts them, and none may be bypassed.
+
 Both `cuiyist/mattersyn` and `cuiyist/mattersyn-site` are public at the owner's
 request. The project repository contains code, reviewed records, project memory,
 reusable skills, safe audit summaries and cleaned history. The site repository

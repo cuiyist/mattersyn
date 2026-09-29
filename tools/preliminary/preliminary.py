@@ -90,7 +90,7 @@ def validate_claims(entry, ev, texts):
         # Numeric followed by an unknown unit-like word in a quantity field is a hold,
         # not implicit support from an unrelated number elsewhere in the quote.
         if ptr.endswith(('/amount','/reported')):
-            for m in re.finditer(_NUM+r'\s*((?:[^\W\d_]|°)+)',norm(value)):
+            for m in re.finditer(r'(?<![A-Za-z0-9.])'+_NUM+r'\s*((?:[^\W\d_]|°)+)',norm(value)):
                 word=m.group(1)
                 if not UNITS.fullmatch(word) and word.lower() not in {'and','to','or','at','by','with','of','in','as','after','before','for','is','was','reported','approximately'}:
                     raise ValueError('unsupported quantity unit association at '+ptr)

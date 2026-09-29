@@ -50,6 +50,17 @@ class PublicTests(unittest.TestCase):
         e=entry();e['material']['existing_hub_id']='../secret';self.bad(e)
 
 class AnchorTests(unittest.TestCase):
+    def test_formula_digits_are_not_quantity_units(self):
+        for formula in ['Ti3O5','Fe2O3','LiMn2O4']:
+            with self.subTest(formula=formula):
+                e=entry();e['outcome']['descriptors'][0].update(kind='phase',reported=formula+' secondary phase',technique='XRD');ev,t=evidence(e)
+                p.validate_claims(e,ev,t)
+    def test_unsupported_units_still_reject_after_formula(self):
+        for value in ['Ti3O5; 3 furlong','Ti3O5; 750 mA','Ti3O5; 1sccm']:
+            with self.subTest(value=value):
+                e=entry();e['outcome']['descriptors'][0]['reported']=value;ev,t=evidence(e)
+                with self.assertRaisesRegex(ValueError,'unsupported quantity'):p.validate_claims(e,ev,t)
+
     def test_ampere_literal_and_pulse_context(self):
         e=entry();e['operations'][1]['conditions'][0]={'parameter':'Activation current','reported':'750 A'};ev,t=evidence(e)
         c=next(c for c in ev['claims'] if c['pointer']=='/operations/1/conditions/0/reported')

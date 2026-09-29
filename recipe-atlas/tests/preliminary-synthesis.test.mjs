@@ -42,7 +42,7 @@ test('empty catalogue states no preliminary publication',()=>{
 test('actual public catalogue validates and excludes synthetic fixtures',()=>{
  const raw=JSON.parse(readFileSync(new URL('../static/data/preliminary-synthesis.json',import.meta.url),'utf8'));
  const view=preparePreliminary(raw);
- assert.equal(view.status,raw.entries.length?'ready':'empty');
+ assert.equal(view.status,'ready');
  assert.equal(view.entries.length,raw.entries.length);
  for(const entry of view.entries){
   assert.doesNotMatch(entry.doi,/synthetic-fixture/);
