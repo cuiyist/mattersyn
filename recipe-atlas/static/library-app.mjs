@@ -3,7 +3,7 @@ function node(tag,text,cls){const x=document.createElement(tag);if(text)x.textCo
 function render(){
  const query=$('paper-search').value.trim().toLowerCase(),status=$('paper-status').value;
  const matches=papers.filter(p=>(!query||[p.title,p.doi,...p.materials,...p.candidateMaterialMentions||[]].join(' ').toLowerCase().includes(query))&&(!status||p.reviewStatus===status));
- page=Math.min(page,Math.max(0,Math.ceil(matches.length/pageSize)-1));$('paper-count').textContent=matches.length.toLocaleString()+' matching paper groups';const host=$('paper-results');host.replaceChildren();
+ page=Math.min(page,Math.max(0,Math.ceil(matches.length/pageSize)-1));$('paper-count').textContent=matches.length.toLocaleString()+' matching reviewed paper groups';const host=$('paper-results');host.replaceChildren();
  for(const p of matches.slice(page*pageSize,(page+1)*pageSize)){
   const card=node('article','', 'paper-contribution');card.append(node('span',p.fullDocumentReview?.label|| (p.reviewStatus==='si_only_reviewed'?'Full SI reviewed · main unverified':p.reviewStatus==='main_only_reviewed'?'Full main reviewed · SI unverified':p.reviewStatus==='full_documents_reviewed'?'Full main + matched SI reviewed':p.reviewStatus==='selected_recipes_reviewed'?'Selected recipes reviewed':p.reviewStatus==='published_benchmark'?'Published experimental series':'Indexed · detailed review pending'),'atlas-status'));
   const h=node('h3');const a=node('a',p.title||'Title awaiting verification');a.href='paper.html?id='+p.id;h.append(a);card.append(h);
@@ -12,7 +12,7 @@ function render(){
   else if(p.candidateMaterialMentions?.length)card.append(node('p','Unreviewed title mentions: '+p.candidateMaterialMentions.join(' · ')));
   const links=node('div','','paper-links');const detail=node('a','Inspect source coverage →');detail.href=a.href;const doi=node('a','Publisher source ↗');doi.href=p.doiUrl;links.append(detail,doi);card.append(links);host.append(card);
  }
- if(!matches.length)host.append(node('p','No papers match this search.','atlas-empty'));
+ if(!matches.length)host.append(node('p','No reviewed-collection papers match this search.','atlas-empty'));
  $('paper-page').textContent=`Page ${page+1} of ${Math.max(1,Math.ceil(matches.length/pageSize))}`;$('paper-prev').disabled=page===0;$('paper-next').disabled=(page+1)*pageSize>=matches.length;
 }
 try{

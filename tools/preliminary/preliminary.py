@@ -16,6 +16,7 @@ sys.path.insert(0, str(REPO_ROOT/'recipe-atlas/scripts'))
 from preliminary_contract import (SCHEMA, EVIDENCE_SCHEMA, MAP_SCHEMA, NUMBER, UNITS, _keys, _int, norm, source_id, validate_catalog)
 validate_public = validate_catalog
 import glyph_normalization as glyphs
+import visual_transcription as visual
 from shared_unit_lists import coordinated_quantity_spans
 
 def scientific_fields(e):
@@ -67,7 +68,7 @@ def reject_long_public_copy(entry, texts):
             raise ValueError('long verbatim public source passage at '+pointer)
     walk(entry)
 
-def validate_claims(entry, ev, texts, *, glyph_context=None):
+def validate_claims(entry, ev, texts, *, glyph_context=None, visual_context=None):
     required=scientific_fields(entry);covered={p:[] for p in required};checked_quotes={p:[] for p in required}
     if not isinstance(ev['claims'],list):raise ValueError('claims must be a list')
     for claim in ev['claims']:
@@ -76,7 +77,8 @@ def validate_claims(entry, ev, texts, *, glyph_context=None):
         if ptr not in required or not _int(page) or page not in required[ptr][1] or page not in texts:raise ValueError('claim pointer/page not in scientific field locators')
         quote=claim['quote']
         if not isinstance(quote,str) or not 1<=len(quote)<=4000 or not norm(quote) or norm(quote) not in texts[page]:raise ValueError('unmatched exact normalized quote at '+ptr)
-        quote=glyphs.quote(quote,page,glyph_context)
+        transcribed=visual.quote(quote,page,ptr,visual_context)
+        quote=transcribed if transcribed is not None else glyphs.quote(quote,page,glyph_context)
         checked_quotes[ptr].append(quote)
         if claim['semantic_link_checked'] is not True:raise ValueError('author semantic link check missing at '+ptr)
         tokens=claim['value_tokens']
@@ -105,7 +107,7 @@ def validate_claims(entry, ev, texts, *, glyph_context=None):
                 word=m.group(1)
                 if not UNITS.fullmatch(word) and word.lower() not in {'and','to','or','at','by','with','of','in','as','after','before','for','is','was','reported','approximately'}:
                     raise ValueError('unsupported quantity unit association at '+ptr)
-    reject_long_public_copy(entry,glyphs.copy_check_texts(texts,glyph_context))
+    reject_long_public_copy(entry,visual.copy_check_texts(glyphs.copy_check_texts(texts,glyph_context),visual_context))
 
 def read_pdf_pages(raw, pages):
     try:
@@ -134,7 +136,7 @@ def validate_private(entry, evidence_path, *, pins_out=None):
         p=Path(value);return p if p.is_absolute() else evidence_path.parent/p
     try:
         raw=load(evidence_path,entry['evidence_fingerprint']);ev=json.loads(raw)
-        if not isinstance(ev,dict) or set(ev) not in [set('schema source_id document screened_pass identity page_map claims'.split()),set('schema source_id document screened_pass identity page_map claims glyph_normalization'.split())] or ev['schema']!=EVIDENCE_SCHEMA or ev['source_id']!=entry['source_id']:raise ValueError('invalid private evidence identity/keys')
+        if not isinstance(ev,dict) or set(ev) - {'glyph_normalization','visual_transcription'} != set('schema source_id document screened_pass identity page_map claims'.split()) or ev['schema']!=EVIDENCE_SCHEMA or ev['source_id']!=entry['source_id']:raise ValueError('invalid private evidence identity/keys')
         if not _keys(ev['identity'],'doi title checked') or ev['identity'].get('checked') is not True or ev['identity']!={'doi':entry['doi'],'title':entry['title'],'checked':True}:raise ValueError('source identity check missing/mismatched')
         for key in ['document','page_map']:
             if not _keys(ev[key],'path sha256'):raise ValueError(key+' private pin malformed')
@@ -158,7 +160,8 @@ def validate_private(entry, evidence_path, *, pins_out=None):
         for page,text in texts.items():
             if not text or actual_pages.get(page)!=text:raise ValueError('page '+str(page)+' text differs from actual PDF extraction; scanned/OCR-only pages require a later supported workflow')
         glyph_context=glyphs.prepare(ev['glyph_normalization'],entry,pdfraw,texts,resolve,load) if 'glyph_normalization' in ev else None
-        validate_claims(entry, ev, texts, glyph_context=glyph_context)
+        visual_context=visual.prepare(ev['visual_transcription'],entry,texts,ev['claims'],scientific_fields(entry),resolve,load) if 'visual_transcription' in ev else None
+        validate_claims(entry, ev, texts, glyph_context=glyph_context,visual_context=visual_context)
         for path,digest in pins.items():
             if hashlib.sha256(path.read_bytes()).hexdigest()!=digest:raise ValueError('dependency changed during validation: '+path.name)
     except (OSError,ValueError,TypeError,KeyError,IndexError,subprocess.SubprocessError) as exc:

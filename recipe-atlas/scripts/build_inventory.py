@@ -5,6 +5,7 @@ import json, html, re
 from build_reader_views import shell
 from review_scope import MAIN_SI, MAIN_ONLY, SI_ONLY
 from derive_inventory import generate
+from source_coverage import collection_metrics_html
 
 ROOT = Path(__file__).resolve().parents[1]
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
@@ -48,8 +49,7 @@ def main():
     output = ROOT/'dist/data/inventory-summary.json'
     output.write_text(json.dumps(inventory,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     collection = read(ROOT/'dist/data/reader-collection.json')
-    metrics = [('material_families','Material families'),('contributing_papers','Contributing papers'),('synthesis_structure_pairs','Synthesis recipe–structure pairs')]
-    cards = '<div class="library-summary inventory-metrics">'+''.join('<div><strong>'+format(collection[k],',')+'</strong><span>'+label+'</span></div>' for k,label in metrics)+'</div>'
+    cards = collection_metrics_html(collection)
     body = '<div class="dataset-heading"><span class="eyebrow">PUBLISHED COLLECTION</span><h1>Materials and synthesis inventory</h1><p>Source-linked material systems and synthesis contributions.</p></div>'+cards
     body += '<section class="record-section"><h2>Verified material systems</h2><p>Counts below use direct synthesis targets. Component contributions are cross-links to the same records, not additional recipes.</p><div class="table-scroll"><table class="reagent-table"><thead><tr><th>Material system</th><th>Direct routes / variants</th><th>Component contributions</th><th>Controls</th></tr></thead><tbody>'
     for m in inventory['per_material']:
@@ -58,7 +58,7 @@ def main():
         body += '<tr><td>'+link(label,m['material_hub_url'])+'</td><td>'+str(m['direct_synthesis_route_variant_count'])+'</td><td>'+str(m['component_route_contribution_count'])+'</td><td>'+str(m['contextual_control_count'])+'</td></tr>'
     body += '</tbody></table></div><p>Fe–O retains unresolved phase and stoichiometry. Core/shell products remain distinct material systems. A shell’s properties are not relabeled as properties of an isolated component.</p></section>'
     statuses = {'full_supplied_main_and_matched_si_review':'Complete supplied main + matched SI','full_supplied_main_review_si_unverified':'Complete supplied main; SI unverified','full_supplied_si_review_main_unverified':'Complete supplied SI; main unverified','legacy_main_article_review_si_unverified':'Main article reviewed; SI unverified','selected_recipe_and_figure_review':'Selected recipe and figures','published_numeric_benchmark':'Published experimental series'}
-    body += '<section class="record-section"><h2>Contributing papers</h2><p>Source scopes and citations are available in the '+link('source library','library.html')+'.</p><div class="table-scroll"><table class="reagent-table inventory-papers"><thead><tr><th>Source and review scope</th><th>Routes</th><th>Controls</th><th>Procedures</th><th>Observations</th><th>Experimental rows</th><th>Experimental series</th></tr></thead><tbody>'
+    body += '<section class="record-section"><h2>Reviewed-collection papers</h2><p>Source scopes and citations are available in the '+link('source library','library.html')+'.</p><div class="table-scroll"><table class="reagent-table inventory-papers"><thead><tr><th>Source and review scope</th><th>Routes</th><th>Controls</th><th>Procedures</th><th>Observations</th><th>Experimental rows</th><th>Experimental series</th></tr></thead><tbody>'
     for p in inventory['per_paper']:
         paper = next((v for v in library['papers'] if v['doi'].lower()==p['doi'].lower()),None)
         url = p.get('paper_review_url') or ('paper.html?id='+paper['id'] if paper else 'dataset.html')
@@ -70,7 +70,7 @@ def main():
     # Generated homepage summary is replaced, never accumulated on rebuild.
     home = ROOT/'dist/index.html';text=home.read_text(encoding='utf-8')
     text=re.sub(r'<!--inventory-summary-start-->.*?<!--inventory-summary-end-->','',text,flags=re.S)
-    snippet='<!--inventory-summary-start--><section class="inventory-overview" aria-label="Reviewed collection summary">'+cards+'<p>'+link('Materials and recipes: view the reviewed inventory →','inventory.html')+'</p></section><!--inventory-summary-end-->'
+    snippet='<!--inventory-summary-start--><section class="inventory-overview" aria-label="Website source coverage and reviewed collection">'+cards+'<p>'+link('Materials and recipes: view the reviewed inventory →','inventory.html')+'</p></section><!--inventory-summary-end-->'
     text=text.replace('<div class="element-controls">',snippet+'<div class="element-controls">',1)
     home.write_text(text,encoding='utf-8',newline='\n')
     print(f"Inventory reconciled: {summary['local_paper_groups_indexed']:,} paper groups; {summary['direct_synthesis_target_systems']} direct systems; {summary['synthesis_route_variant_records']} routes; unknown full-corpus totals preserved.")

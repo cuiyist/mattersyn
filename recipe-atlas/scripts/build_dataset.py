@@ -197,7 +197,7 @@ def main():
     dump(public / 'synthesis-structure-pairs.json', structure_outcome_coverage)
     from reader_collection import collection_summary
     reference_registry = json.loads((ROOT/'static/assets/crystal-references/registry.json').read_text(encoding='utf-8'))
-    collection = collection_summary(records, structure_outcome_coverage['rows'], reference_registry['entries'])
+    collection = collection_summary(records, structure_outcome_coverage['rows'], reference_registry['entries'], preliminary)
     report['reader_collection'] = {k:v for k,v in collection.items() if k != 'pairs'}
     dump(public/'reader-collection.json', collection)
     pair_records = {row['record_id']:[] for row in collection['pairs']}

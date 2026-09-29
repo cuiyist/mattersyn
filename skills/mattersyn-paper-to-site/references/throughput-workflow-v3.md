@@ -81,6 +81,20 @@ interpretation. Do not fabricate measurements or silently fill blanks. Public
 data uses concise authored summaries; source text, raw quotations, PDFs, page
 renders, detailed audits and credentials stay local.
 
+Preflight source identity and text readability before drafting a full candidate.
+Prioritize existing pass documents without unresolved font-code strings. This
+changes queue order, not scientific admission; difficult sources remain queued.
+Correct an obvious author serialization error in a new version instead of
+abandoning an otherwise useful source. Preserve failed receipts and count rework.
+
+Where the printed page is readable but its text layer is wrong, the optional
+visual-transcription receipt binds one exact scientific field to its original
+PDF, raw page span, page image and explicit character edits. The extractor must
+actually inspect the image. Keep original text unchanged; never apply global
+digit or unit substitutions. Identity fields cannot use this mechanism. Its
+mechanical validation does not establish visual accuracy or independent
+scientific acceptance; preliminary status and training exclusion remain intact.
+
 Use the shared projector's reviewed typography handling before treating a text
 extraction problem as missing evidence. Exact, visually observed PDF punctuation
 glyphs may be decoded through pinned private page/render receipts; degree-C
@@ -129,3 +143,7 @@ revision and engineering checks, as the owner requested; then continue until a
 new pause. Keep code, memory and reusable policy in GitHub at the next validated
 source transaction. No paid APIs, cloud source processing, external document
 transfer, external paper/model acquisition or GPU purchases are authorized.
+
+## Reader discovery and count clarity
+
+Homepage, source library, inventory and dataset must expose the union of reviewed and preliminary primary papers, with separately labelled tier counts and a direct link to preliminary recipes. Preserve reviewed material-family and verified-pair fields. Source upgrades count once; a preliminary source must not disappear from public discovery merely because its independent audit is pending. Build these totals from records and the validated catalogue, never by manually inserting a number.

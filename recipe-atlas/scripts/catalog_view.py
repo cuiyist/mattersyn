@@ -1,4 +1,5 @@
 """A compact reader catalogue, backed by the unchanged scientific records."""
+from source_coverage import collection_metrics_html
 
 
 def _outcome_text(value):
@@ -12,9 +13,9 @@ def _outcome_text(value):
 
 def structure_coverage_html(report, esc, pair_rows=()):
     if 'reader_collection' not in report:
-        return '<section class="record-section"><h2>Synthesis recipe–structure pairs</h2><p>Pair coverage has not been generated for this build. Unavailable counts are not zero.</p></section>'
+        return '<section class="record-section"><h2>Reviewed synthesis recipe–structure pairs</h2><p>Pair coverage has not been generated for this build. Unavailable counts are not zero.</p></section>'
     collection = report['reader_collection']
-    result = '<section class="record-section" id="pairs"><h2>Synthesis recipe–structure pairs</h2>'
+    result = '<section class="record-section" id="pairs"><h2>Reviewed synthesis recipe–structure pairs</h2>'
     result += '<p>One pair links a documented synthesis recipe or condition variant to an identified product and its structural outcome. Changing a precursor amount or another condition counts as a separate pair when the source reports a separately characterized product. Several measurements of the same record and sample enrich one pair.</p>'
     result += '<p class="pair-footnote"><strong>Information coverage.</strong> (a) ' + str(collection['more_comprehensive_pairs']) + ' pairs have a more comprehensive description: source-backed quantified synthesis inputs, ordered operations with temperature and duration, sample-linked phase, morphology and dimensions, and a reference unit cell. (b) ' + str(collection['partial_pairs']) + ' pairs have one or more of those categories not documented in the linked record. Each row lists its documentation gaps; this is not a claim that the original paper lacks the information. A reference cell is independently sourced and does not establish the measured atomic structure of the product. These categories do not imply a complete laboratory SOP.</p>'
     result += '<p class="pair-footnote">The exact count is of documented recipe/sample pairs. Cross-paper physical-sample deduplication is not complete; these are not necessarily independent batches. Missing source details and conflicting statements remain visible in each record.</p>'
@@ -40,12 +41,11 @@ def silver_catalog_html(catalog_url=None):
 def render(report, manifest, head, header, esc, human, pair_rows=(), silver_catalog_url=None):
     collection = report['reader_collection']
     page_head = head('Synthesis records').replace('</head>', '<link rel="stylesheet" href="silver-reader.css?v=1"></head>')
-    s = page_head + '<body>' + header() + '<main class="dataset-main"><div class="dataset-heading"><span class="eyebrow">MATERIALS SYNTHESIS DATASET</span><h1>Synthesis records</h1><p>Source-linked recipes, product structures and measured properties.</p></div><div class="dataset-summary reader-collection-summary">'
-    for key, label in [('material_families', 'Material families'), ('contributing_papers', 'Contributing papers'), ('synthesis_structure_pairs', 'Synthesis recipe–structure pairs')]:
-        s += '<div><strong>' + str(collection[key]) + '</strong><span>' + label + '</span></div>'
-    s += '</div><p class="coverage-note">Material families are distinct directly synthesized material systems. Component-only pages point to the same underlying records and do not add families or pairs. Papers are counted once by their primary source identifier.</p>'
+    s = page_head + '<body>' + header() + '<main class="dataset-main"><div class="dataset-heading"><span class="eyebrow">MATERIALS SYNTHESIS DATASET</span><h1>Synthesis records</h1><p>Source-linked recipes, product structures and measured properties.</p></div>'
+    s += collection_metrics_html(collection, 'dataset-summary reader-collection-summary')
+    s += '<p class="coverage-note">Reviewed material families are distinct directly synthesized material systems. Component-only pages point to the same records and add no families or pairs. The catalogue below contains reviewed records; preliminary contributions are linked separately.</p>'
     s += structure_coverage_html(report, esc, pair_rows)
-    s += '<section class="record-section"><h2>Explore synthesis and evidence records</h2><p>Recipes, experimental series, supporting procedures and observations share one catalogue. A record with only optical properties is available here but does not count as a recipe–structure pair.</p><div class="dataset-filters"><label>Search<input id="record-search" type="search" placeholder="Material, paper or method"></label><label>Material system<select id="family-filter"><option value="">All materials</option>'
+    s += '<section class="record-section"><h2>Explore reviewed synthesis and evidence records</h2><p>Recipes, experimental series, supporting procedures and observations share one catalogue. A record with only optical properties is available here but does not count as a recipe–structure pair.</p><div class="dataset-filters"><label>Search<input id="record-search" type="search" placeholder="Material, paper or method"></label><label>Material system<select id="family-filter"><option value="">All materials</option>'
     formulas = sorted({r['formula'] for r in manifest['records'] if r['record_type'] != 'procedure'})
     s += ''.join('<option>' + esc(f) + '</option>' for f in formulas)
     s += '</select></label><label>Record type<select id="type-filter"><option value="recipes">Recipes and experimental series</option><option value="pairs">Records with structure pairs</option><option value="procedure">Supporting procedures</option><option value="observation">Contextual observations</option><option value="all">All records</option></select></label></div><p id="record-count" class="record-count" aria-live="polite"></p><div id="catalog-results" class="record-list"></div><div class="catalog-pagination"><button id="page-prev" type="button">← Previous</button><span id="page-label"></span><button id="page-next" type="button">Next →</button></div></section>'

@@ -60,3 +60,53 @@ Only the single-character targets `~ ( ) [ ]` are permitted. Each code must be a
 `visual_evidence` pins an existing `mattersyn-private-observed-glyph-evidence/1` author receipt. It binds the same source ID/PDF hash, raw page file hashes, existing page PNG hashes and rendering description, confirmed punctuation mappings, and observed raw quotes with exact page-file offsets and UTF-8 hashes. Observation offsets use UTF-8 text with universal CRLF/CR-to-LF newlines; the page-file pin still hashes all original bytes. Its `normalized_quote` is only the existing NFKC/whitespace normalization of that raw quote; it must not contain glyph substitutions or repaired numbers. The validator checks those dependencies and their consistency. It does not rerender, run an evidence-supplied command, or prove that the author's visual interpretation is correct. Visual meaning remains a factual author check, and independent scientific audit stays pending.
 
 The map, author receipt, raw pages and PNG files join the private validation dependency set and are rechecked by the unchanged merger. They must never enter the public catalog. Sources needing unit typography repair, unsupported glyphs or ambiguous numeric associations remain held. A separate comparison-only rule treats whitespace between the degree symbol and C as equivalent to `°C` for numeric/unit matching. It never modifies raw pages or quotes. It does not join unit exponent spacing or separated magnitude digits, convert temperatures, or equate words such as approximately with punctuation; preserve a source tilde literally in public reported values.
+
+## Explicit private visual transcription
+
+When text extraction misreads a visible scientific span, an extractor may supply
+an optional `visual_transcription: {path, sha256}` pin in the private evidence
+companion. The pinned JSON is an actual extractor visual-check receipt, not a
+machine-generated claim of scientific accuracy. No per-paper whitelist or global
+search-and-replace is used. The DOI and title are ineligible; source identity
+rules remain unchanged.
+
+The receipt schema is `mattersyn-private-visual-transcription/1`. Its exact keys
+are `schema`, `source_id`, `document_sha256`, `author_visual_checked: true`,
+`independent_scientific_audit: false`, `accuracy: "unmeasured"`,
+`training_ready: false`, `pages`, and `transcriptions`.
+
+Each page has `page`, `raw_text: {path, sha256}` and
+`render: {path, sha256, document_sha256, page, rendering}`. The render must be an
+existing full-page PNG of the pinned PDF and original page; `rendering` records
+how it was produced. The software checks hashes, PNG structure markers and
+source/page declarations. It does not execute the description, rerender the PDF,
+or prove that the image or transcription is semantically correct.
+
+Each transcription row has exactly `pointer`, `page`, `raw_start`, `raw_end`,
+`raw_quote`, `raw_quote_sha256`, `transcribed_quote`,
+`transcribed_quote_sha256`, `edits`, and `author_visual_checked: true`.
+Offsets are character offsets into the UTF-8 raw page file after universal
+CRLF/CR-to-LF newline translation; the file hash still covers original bytes.
+Quote hashes cover the exact declared string encoded as UTF-8. The raw span must
+match both the page and exactly one evidence claim at that pointer/page. Repeated
+ambiguous source spans require a longer exact quote.
+
+An edit has `start`, `end`, `raw`, and `replacement`, with offsets relative to
+`raw_quote`. Edits must be ordered, nonoverlapping and wholly inside that span.
+They must reconstruct `transcribed_quote` exactly, preserving every other
+character. Explicit insertion or deletion is allowed only where the extractor
+actually sees the omitted or spurious character. For example, a visibly verified
+micrometre symbol misread as `m`, or digit one misread as `l`, may be declared.
+This is not permission to infer missing conditions, convert units, paraphrase
+source evidence, or change sample assignments. If visual reading remains
+uncertain, retain a hold.
+
+The raw PDF, page map and evidence quotes are never modified. Only the exact
+approved claim uses the transcribed comparison view; unrelated claims retain
+their previous raw/glyph behavior. All existing numeric tokens, literal quantity
+associations and unsupported-unit checks still run, and long copied transcribed
+body text is checked by the public-copy guard. A visual transcription cannot
+admit an unsupported unit. Its receipt, page and PNG join the dependency hashes
+rechecked during merge. The public catalog and validation-receipt schemas remain
+unchanged: mechanical anchoring is not an independent scientific audit, measured
+accuracy or training eligibility.
