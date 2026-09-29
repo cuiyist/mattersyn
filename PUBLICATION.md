@@ -2,9 +2,9 @@
 
 ## Current instruction: regular material pages only
 
-The owner retired the public preliminary collection and changed the throughput target to papers processed, including source-supported skips and successfully published regular contributions. Follow [processing workflow v4](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md). Preserve private drafts, but do not display them or count them as website contributions. Historical preliminary publication permissions below are superseded. Existing reviewed records, scientific review requirements, exact release checks and historical receipts remain intact.
+The owner retired the public preliminary collection and clarified that the homepage target is about twenty newly published contributing papers per hour. Skips count only toward the separate processing target and never increase the website counter. Follow [processing workflow v4](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md). Preserve private drafts, but do not display them or count them as website contributions. Historical preliminary publication permissions below are superseded. Existing reviewed records, scientific review requirements, exact release checks and historical receipts remain intact.
 
-## Current preliminary-first instruction
+## Historical preliminary-first instruction (superseded)
 
 The owner requested a temporary pause on September 28 to revise workflow and
 first-publication quality, then resume toward 20 published primary papers/hour.

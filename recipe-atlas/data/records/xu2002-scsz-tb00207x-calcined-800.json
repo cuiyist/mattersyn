@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "xu2002-scsz-tb00207x-calcined-800",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Xu et al. (2002): Calcination at 800 °C for 1 h",
+  "material": {
+    "formula": "(Sc2O3)0.08(ZrO2)0.92",
+    "family": "Scandia-stabilized zirconia",
+    "elements": [
+      "Sc",
+      "Zr",
+      "O"
+    ],
+    "components": [
+      "(Sc2O3)0.08(ZrO2)0.92"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Calcination of hydrothermal 8ScSZ",
+  "sources": [
+    {
+      "id": "xu2002-scsz-tb00207x",
+      "doi": "10.1111/j.1151-2916.2002.tb00207.x",
+      "title": "Hydrothermal Synthesis of Weakly Agglomerated Nanocrystalline Scandia-Stabilized Zirconia",
+      "authors": "Gang Xu; Yawen Zhang; Chunsheng Liao; Chunhua Yan",
+      "year": 2002,
+      "url": "https://doi.org/10.1111/j.1151-2916.2002.tb00207.x",
+      "main_status": "All 3 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI found in the checked screened/downloaded folders; cited full methods not reviewed.",
+      "reuse_status": "Selected exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "xu2002-scsz-tb00207x",
+    "recipe_family": "xu2002-scsz-tb00207x",
+    "parent_record_id": "xu2002-scsz-tb00207x-two-step-urea-020",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "8 mol% Sc2O3-stabilized zirconia",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 1, Title, abstract and Experimental Procedure"
+        }
+      ],
+      "note": "Nominal oxide basis: (Sc2O3)0.08(ZrO2)0.92; not 8 mol% scandium cations."
+    },
+    "phase": {
+      "value": "Cubic fluorite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 1, Abstract and Introduction"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "scsz-feed",
+      "name": "Hydrothermal 8ScSZ powder",
+      "formula": "(Sc2O3)0.08(ZrO2)0.92",
+      "role": "calcination feed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "0.05 mol/L total cations and 0.2 mol/L urea; 80 °C for 48 h then 180 °C for 72 h. The source links Figure 6 to this preparation, but physical batch identity and powder charge are not given."
+      ],
+      "evidence": [
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+        },
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "air",
+      "name": "Air",
+      "formula": null,
+      "role": "calcination atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Stagnant air, not a flowing or pressure-controlled gas mixture."
+      ],
+      "evidence": [
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+        },
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "calcine-state",
+      "name": "Calcine in a muffle furnace output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "calcine",
+      "action": "heat",
+      "label": "Calcine in a muffle furnace",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "scsz-feed",
+        "air"
+      ],
+      "outputs": [
+        "calcine-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 800,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "xu2002-scsz-tb00207x",
+              "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+            },
+            {
+              "source_id": "xu2002-scsz-tb00207x",
+              "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "xu2002-scsz-tb00207x",
+              "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+            },
+            {
+              "source_id": "xu2002-scsz-tb00207x",
+              "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Stagnant air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2002-scsz-tb00207x",
+            "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+          },
+          {
+            "source_id": "xu2002-scsz-tb00207x",
+            "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+          }
+        ],
+        "note": "Absolute pressure and detailed gas handling are not reported."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Calcine the prepared powder at 800 °C for 1 h under stagnant air. Ramp, cooling procedure, powder charge and crucible are unreported.",
+      "evidence": [
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+        },
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xu2002-scsz-tb00207x-calcined-800-product",
+      "source_sample_label": "8ScSZ after 800 °C, 1 h",
+      "batch_id": null,
+      "material_state_id": "calcine-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Nominal 8 mol% Sc2O3-stabilized zirconia",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2002-scsz-tb00207x",
+            "locator": "Main PDF p. 1, Experimental Procedure; nominal starting composition"
+          }
+        ],
+        "note": "Nominal oxide composition; no independent chemical-composition analysis is reported."
+      },
+      "phase": {
+        "value": "Pure cubic phase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2002-scsz-tb00207x",
+            "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+          },
+          {
+            "source_id": "xu2002-scsz-tb00207x",
+            "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+          }
+        ],
+        "note": "Phase retained across the reported 600–1200 °C calcination range. Individual crystallite sizes other than the 1200 °C endpoint are graph-only and are not digitized."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No measured surface functionalization or adsorbate coverage."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 1, Experimental Procedure; calcination"
+        },
+        {
+          "source_id": "xu2002-scsz-tb00207x",
+          "locator": "Main PDF p. 3, Calcination paragraph and Figure 6"
+        }
+      ],
+      "notes": [
+        "Phase retained across the reported 600–1200 °C calcination range. Individual crystallite sizes other than the 1200 °C endpoint are graph-only and are not digitized."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent root source and apparatus audit passed for all three supplied main pages, six figures and the 28-reference bibliography. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Full supplied three-page main only; local SI not located or verified and cited full sources unreviewed.",
+      "Stock-solution solvent, stock preparation order, individual nitrate charges, hydration states, heating ramps, pressure, cooling details, filter specification, wash doses/repetitions, drying duration/pressure and storage are not reported.",
+      "The source prints 92 mol% ZrO(NO3)2 and 16 mol% Sc(NO3)3 as nominal feed composition. These are retained literally, not normalized to a sum of 100 or confused with 8 mol% Sc2O3 oxide composition.",
+      "The Figure 3 series uses 80 °C for 24 h then 180 °C for 48 h. It must not inherit the 48 h + 72 h schedule of Figures 1, 2a, 4, 5 and 6.",
+      "Only the 0.05 mol/L cation / 0.2 mol/L urea long-schedule specimen has the text-reported TEM, XRD and BET sizes. No approximate graph coordinates are converted to exact measurements.",
+      "No atomic coordinates, refined unit cell, measured conductivity or sintering-performance dataset is supplied. Molecular/specimen and apparatus graphics are illustrative; presentation pending.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [
+      "At 0.5 mol/L urea, main p. 1 says pure cubic for ≤0.5 mol/L, while the conclusion says <0.5 mol/L. Figure 2a also shows a small nonzero monoclinic point at 0.5 mol/L. Preserve the boundary uncertainty, without an exact digitized fraction.",
+      "The general method gives urea concentrations 0.1–1.5 mol/L; Figure 3 includes 0.5 mol/L cations at a cation:urea ratio of 1:4, which implies a value outside that general range. Retain the explicit cation setting and ratio without silently changing either statement."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1111/j.1151-2916.2002.tb00207.x",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=xu2002-scsz-tb00207x",
+      "relation": "source_review"
+    },
+    {
+      "label": "Concentration, phase and size comparisons",
+      "url": "data/paper-reviews/xu2002-scsz-tb00207x/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

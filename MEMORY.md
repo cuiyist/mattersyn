@@ -1,3 +1,17 @@
+Three original morphology illustrations now distinguish source-linked CdSe teardrops, CdSe/CdS head–tail particles and the specific ScSZ sample with TEM evidence. These are labelled conceptual drawings, not measured contours or coordinates. Source figure content remains available separately. The public navigation remains reader-focused, without preliminary or owner-progress sections.
+
+
+### BaTiO3 and scandia-stabilized zirconia: accepted local additions, publication pending
+
+The BaTiO3 contribution (DOI 10.1021/cm9038768) preserves all three main pages and ten matched SI pages. Air and glovebox preparations remain two direct routes; six separate workup and characterization contexts remain supporting records. Particle-size subsets, uncertain specimen crosswalks and printed source conflicts retain their source qualification.
+
+The ScSZ contribution (DOI 10.1111/j.1151-2916.2002.tb00207.x) preserves all three supplied main pages; SI and cited full sources remain unreviewed. Eighteen records distinguish fourteen hydrothermal variants from four supporting anneals. The long urea series and shorter cation series retain their different schedules. The 0.5 M urea phase-boundary conflict, oxide-versus-cation composition bases, and TEM, Scherrer and BET-derived size distinctions remain explicit. Six source figures and source-specific stage diagrams are retained; complete molecular or measured-coordinate depictions remain pending where absent.
+
+The two independently source-reviewed packages add twenty-six records, sixteen direct routes, eleven partial broad recipe-structure rows and two new material hubs. This local preparation has no publication or training credit. Actual generation, browser review, build, CI and anonymous deployment checks remain required. Public preliminary synthesis remains retired. The target of twenty distinct published primary sources per hour remains unachieved; reporting is on request.
+
+
+The preceding ordinary-material batch was deployed and anonymously verified at 2026-09-29T11:20:35.268670+00:00 (source `b501c15bec028bfc9bc2d0d9c095934c57e6c4b1`, site `40ed609be511fdd76086ee79ee416da7b3eecb30`). Its verified website contains 110 primary sources, 1315 canonical records and 388 broad synthesis–structure pairs, with zero public preliminary entries. This verified prior milestone does not give the current pending contribution publication credit.
+
 ## 2026-09-29 — Batch validation and figure-gallery compatibility corrected
 
 The new Choi PbS preparation has an independent source audit. Three historical exact-membership checks now include that one direct TAE route and DOI, retaining every prior route, component distinction and exclusion of supporting or benchmark records. Sixteen focused relevance regressions include the actual generated batch and adversarial omissions/additions. A shared display alias maps the existing plural `structures` category to the structure gallery; six JavaScript tests preserve existing property and unrelated-category behavior. Figure bytes, sample assignments and scientific records are unchanged.
