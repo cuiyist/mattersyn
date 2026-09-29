@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "alam2012-cdse-cds-ica201110038-cdse-constant-temperature",
+  "revision": 1,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature",
+  "title": "Alam and Maye (2012): CdSe constant-temperature comparison",
+  "material": {
+    "formula": "CdSe",
+    "family": "Cadmium chalcogenide nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "CdSe constant-temperature comparison",
+  "sources": [
+    {
+      "id": "alam2012-cdse-cds-ica201110038",
+      "doi": "10.1016/j.ica.2011.10.038",
+      "title": "Asymmetric quantum dot growth via temperature cycling",
+      "authors": "Rabeka Alam; Mathew M. Maye",
+      "year": 2012,
+      "url": "https://doi.org/10.1016/j.ica.2011.10.038",
+      "main_status": "All 4 supplied main pages independently source-audited; SI and cited references remain unreviewed.",
+      "si_status": "No matching local SI located/read; cited full sources unreviewed.",
+      "reuse_status": "Exact source crops proposed for user-directed display; publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "alam2012-cdse-cds-ica201110038",
+    "recipe_family": "alam2012-cdse-cds-ica201110038-core",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "alam2012-cdse-cds-ica201110038",
+          "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "comparison-feed",
+      "name": "CdSe preparation inputs not separately enumerated",
+      "formula": null,
+      "role": "comparison preparation feed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Exact charges, precursor aliquots and residence time are not separately supplied for this control; not inherited from the cycled batch."
+      ],
+      "evidence": [
+        {
+          "source_id": "alam2012-cdse-cds-ica201110038",
+          "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "constant-growth-state",
+      "name": "Retain the constant-temperature comparison output",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "constant-growth",
+      "action": "other",
+      "label": "Retain the constant-temperature comparison",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "comparison-feed"
+      ],
+      "outputs": [
+        "constant-growth-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 370,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "alam2012-cdse-cds-ica201110038",
+              "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The authors report CdSe made at constant 370 °C yields symmetric rods and a single emission spectrum, rather than the cycled morphology. Exact preparation charges, growth duration and control images are not provided.",
+      "evidence": [
+        {
+          "source_id": "alam2012-cdse-cds-ica201110038",
+          "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "alam2012-cdse-cds-ica201110038-cdse-constant-temperature-product",
+      "source_sample_label": "CdSe constant-370 °C comparison",
+      "batch_id": null,
+      "material_state_id": "constant-growth-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "alam2012-cdse-cds-ica201110038",
+            "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No variant-specific diffraction assigned."
+      },
+      "morphology": {
+        "value": "Symmetric rods, qualitatively reported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "alam2012-cdse-cds-ica201110038",
+            "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Control surface chemistry is not separately specified."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "alam2012-cdse-cds-ica201110038",
+          "locator": "Main PDF p. 4, Paragraph preceding Conclusions"
+        }
+      ],
+      "notes": [
+        "Text-only comparison; no numerical size, phase or separately measured spectrum is supplied. Supporting context, not a reconstructed full synthesis."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent root R2 scientific audit of all four supplied main pages, four figures, equation 1 and the 42-reference bibliography passed. SI and cited references remain unreviewed. Presentation refinements pending; no measured-coordinate admission.",
+    "missing_fields": [
+      "Complete four-page supplied main; local filename search found only identical main copies. SI and cited full methods unreviewed.",
+      "Inert gas identity, absolute pressure, stirring and many transfer/workup times are not reported. Nitrogen is named only for drying.",
+      "The CdSe flask capacity is not stated; the 10 mL four-neck vessel is explicitly a CdSe/CdS shell-growth apparatus.",
+      "No final solution concentration, chemical yield, physical batch identifier or atom-resolved interface/coordinates is supplied.",
+      "TEM ± values are retained without assigning a standard-deviation/standard-error interpretation. At least 100 particles were analyzed.",
+      "The source gives no variant-specific structure for the omitted-extra-TOP large-seed recipe; displayed core data are not duplicated onto it.",
+      "Independent source audit passed; presentation remains pending."
+    ],
+    "conflicts": [
+      "Figure 4 labels the temperature cycle 80–370–80 °C; methods describe cooling from injection to 80 °C, reheating to 370 °C and then room-temperature workup. Preserve the schematic without imposing a final 80 °C hold.",
+      "Figure 4 labels growth <001>, whereas the text discusses <002>. Both source labels are retained as author interpretation without a crystallographic correction."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1016/j.ica.2011.10.038",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source figures and scope",
+      "url": "paper-review.html?id=alam2012-cdse-cds-ica201110038",
+      "relation": "source_review"
+    },
+    {
+      "label": "Optical calibration and growth interpretation",
+      "url": "data/paper-reviews/alam2012-cdse-cds-ica201110038/contexts.json",
+      "relation": "supporting_context"
+    }
+  ]
+}

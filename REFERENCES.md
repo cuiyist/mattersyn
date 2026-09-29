@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **105 primary source groups** · release `20260929-batch13-wuister`. Records are not independent experiments.
+Dataset **0.41.2** · **107 primary source groups** · release `20260929-batch14-alam-bellato`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -158,6 +158,8 @@ Dataset **0.41.2** · **105 primary source groups** · release `20260929-batch13
 
 - Jonghun Lee; Sunghwan Lee; Guanglai Li; Melissa A. Petruska; David C. Paine; Shouheng Sun (2012). A Facile Solution-Phase Approach to Transparent and Conducting ITO Nanocrystal Assemblies. *Journal of the American Chemical Society*, 134, 13410–13414. [10.1021/ja3044807](https://doi.org/10.1021/ja3044807). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lee2012-ja3044807).
 
+- Rabeka Alam; Mathew M. Maye (2012). Asymmetric quantum dot growth via temperature cycling. *Inorganica Chimica Acta*, 380, 114–117. [10.1016/j.ica.2011.10.038](https://doi.org/10.1016/j.ica.2011.10.038). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=alam2012-cdse-cds-ica201110038).
+
 - Amber Nagy; Andrea Steinbrück; Jun Gao; Norman Doggett; Jennifer A. Hollingsworth; Rashi Iyer (2012). Comprehensive Analysis of the Effects of CdSe Quantum Dot Size, Surface Charge, and Functionalization on Primary Human Lung Cells. *ACS Nano*, 6, 4748–4762. [10.1021/nn204886b](https://doi.org/10.1021/nn204886b). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=nagy2012nn204886b).
 
 - Weiwei Zheng; Kedar Singh; Zhenxing Wang; Joshua T. Wright; Johan van Tol; Naresh S. Dalal; Robert W. Meulenberg; Geoffrey F. Strouse (2012). Evidence of a ZnCr2Se4 Spinel Inclusion at the Core of a Cr-Doped ZnSe Quantum Dot. *Journal of the American Chemical Society*, 134, 5577–5585. [10.1021/ja210285p](https://doi.org/10.1021/ja210285p). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zheng2012-ja210285p).
@@ -209,6 +211,8 @@ Dataset **0.41.2** · **105 primary source groups** · release `20260929-batch13
 - Surendra Saini; Pratibha Saini; Krishan Kumar; Mukul Sethi; Priyanka Meena; Aditya Gurjar; Anshu Dandia; Tanya Dhuria; Vijay Parewa (2023). Unlocking the Molecular Behavior of Natural Amine-Targeted Carbon Quantum Dots for the Synthesis of Diverse Pharmacophore Scaffolds via an Unusual Nanoaminocatalytic Route. *ACS Applied Materials & Interfaces*, 15, 49083–49094. [10.1021/acsami.3c08812](https://doi.org/10.1021/acsami.3c08812). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=saini2023).
 
 - Xuerong Song; Yue Qin; Qian Wang; Jiajia Ning (2024). Alloyed Zinc Chalcogenide Magic-Sized Nanoclusters and Their Transformation to Alloyed Quantum Dots. *Inorganic Chemistry*, 63, 17100–17107. [10.1021/acs.inorgchem.4c02738](https://doi.org/10.1021/acs.inorgchem.4c02738). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=song2024zincchalcogenide).
+
+- Fulvio Bellato; Michele Ferri; Dongxu Zhu; Thi-Hong-Hanh Le; Abinaya Annamalai; Martina Rizzo; Irene Martin; Luca Goldoni; Rosaria Brescia; Mirko Prato; Luca De Trizio; Ilka Kriegel; Liberato Manna (2024). Indium Arsenide Quantum Dot Derived Catalyst for Selective CO2 Electrochemical Reduction to Formate. *ACS Energy Letters*, 9, 1097–1102. [10.1021/acsenergylett.4c00295](https://doi.org/10.1021/acsenergylett.4c00295). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=bellato2024-inas-acsenergylett4c00295).
 
 - Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park (2025). High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection. *The Journal of Physical Chemistry C*, 129, 15342–15350. [10.1021/acs.jpcc.5c05144](https://doi.org/10.1021/acs.jpcc.5c05144). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=sasongko2025).
 
