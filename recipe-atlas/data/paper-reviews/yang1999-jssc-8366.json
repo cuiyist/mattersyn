@@ -55,7 +55,7 @@
     "status": "not_located_or_verified",
     "note": "Local filename search in screened_papers, screened_papers_on_hold and downloaded_papers did not locate a matching SI. No claim is made about unsearched locations."
   },
-  "independent_audit": "PASS_WITH_BOUNDED_LINEAGE_NOTE — independent audit checked all eight table rows, figures, XPS phase scope and missingness. Figure 3 remains population context; it does not identify a physical aliquot or repeated feed ratio. SI and cited references remain unreviewed.",
+  "independent_audit": "Independent r8 delta audit passed; scope covers main-text recipe and characterization claims, Reader bindings, and the Figure 3 TEM population linkage. The TEM image remains unassigned to an exact feed ratio or physical batch. SI and cited references remain unverified.",
   "accepted_scientific_audit_sha256": "12eb0fae7d374803c51a28cfebc3ac32e8ea9152c768187eb2bdacf6efe6ecb9",
   "recipe_inventory": [
     {
@@ -257,6 +257,10 @@
         {
           "source_id": "yang1999-jssc-8366",
           "locator": "Main p. 2 (printed p. 388), Table 2, AgNO3 row Ag:Te = 1:1 at 200 °C, 24 h"
+        },
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 2 (printed p. 388), Results paragraph: Ag:Te = 1:1 at 200 °C for 24 h"
         }
       ],
       "status": "reported",
@@ -359,6 +363,10 @@
         {
           "source_id": "yang1999-jssc-8366",
           "locator": "Main p. 2 (printed p. 388), Table 1, CuCl2 row Cu:Te = 2:1"
+        },
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 2 (printed p. 388), Results paragraph: Cu:Te = 2:1 at 160 °C for 8 h"
         }
       ],
       "status": "reported",
@@ -465,6 +473,44 @@
       ],
       "status": "reported",
       "scope": "Named phase/source population Cu2-xTe only; internal evidence group is not a source sample. Exact physical aliquot and recipe-row crosswalk unreported; not a recipe-structure pair."
+    },
+    {
+      "id": "yang1999-tem-method",
+      "label": "Source-reported TEM instrument and accelerating voltage",
+      "record_id": "yang1999-cu2-xte-tem-population",
+      "sample_id": "yang1999-cu2-xte-tem-population-evidence-group",
+      "record_pointer": "/operations/0",
+      "technique": "TEM",
+      "classification": "method",
+      "source_locators": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 1 (printed p. 387), TEM methods"
+        },
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), TEM paragraph and Figure 3 caption"
+        }
+      ],
+      "status": "reported",
+      "linkage_scope": "instrument applies to the TEM method; physical batch/feed-ratio crosswalk is unavailable"
+    },
+    {
+      "id": "yang1999-xps-method",
+      "label": "Source-reported XPS instrument and excitation source",
+      "record_id": "yang1999-cu2-xte-xps-phase-population",
+      "sample_id": "yang1999-cu2-xte-xps-phase-population-evidence-group",
+      "record_pointer": "/operations/0/environment",
+      "technique": "XPS",
+      "classification": "method",
+      "source_locators": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 1 (printed p. 387), XPS methods"
+        }
+      ],
+      "status": "reported",
+      "linkage_scope": "method-level instrumentation; no physical aliquot or recipe-row assignment"
     }
   ],
   "figures": [
@@ -474,17 +520,17 @@
       "page": 2,
       "source_locator": "Main p. 2 (printed p. 388), Figure 1 caption.",
       "crop_path": "source-figure-proposals/figure-1.png",
-      "crop_sha256": "59432915055ae80c109bb66a1022462be20b9b1c10a1bc6a30f521b32a20afb0",
-      "source_render_sha256": "1b11d24dc92ab398449dd502c241e9ac6d7793fee2eb6ac3353fd168694d06d5",
+      "crop_sha256": "c683366c2664429c6d2accc8a2ffbb8a9340a94a9295dfcf127ade65f5189e7a",
+      "source_render_sha256": "06977e54f8bb52d7be6e764812a203518ddad06a35403123136c4f1c8b2fdabe",
       "crop_rect_xyxy_px": [
-        590,
+        610,
         125,
-        1040,
-        845
+        1160,
+        930
       ],
       "dimensions_px": [
-        450,
-        720
+        550,
+        805
       ],
       "record_ids": [
         "yang1999-cu-te-2-1-160c-8h",
@@ -497,7 +543,8 @@
       ],
       "scope_notes": [
         "XRD source figure; not a coordinate or unit-cell asset.",
-        "No table/figure panel is provided for Table 1 row 4."
+        "No table/figure panel is provided for Table 1 row 4.",
+        "Caption fully retained from the verified full-page render."
       ],
       "permission_status": "unverified",
       "public_release_approved": false,
@@ -525,7 +572,7 @@
         }
       ],
       "public_asset": "assets/paper-reviews/yang1999-jssc-8366/figure-1.png",
-      "public_asset_sha256": "59432915055ae80c109bb66a1022462be20b9b1c10a1bc6a30f521b32a20afb0",
+      "public_asset_sha256": "c683366c2664429c6d2accc8a2ffbb8a9340a94a9295dfcf127ade65f5189e7a",
       "copyright_permission_verified": false,
       "display_status": "user_directed_display_permission_unverified"
     },
@@ -601,7 +648,7 @@
         500
       ],
       "record_ids": [
-        "yang1999-cu-te-2-1-160c-8h"
+        "yang1999-cu2-xte-tem-population"
       ],
       "categories": [
         "structure",
@@ -609,7 +656,8 @@
         "morphology"
       ],
       "scope_notes": [
-        "Only this Cu2-xTe population has source-reported TEM morphology/size.",
+        "The TEM paragraph identifies Cu2-xTe powder prepared at 160 °C for 8 h; the Cu:Te feed ratio and physical batch are not repeated.",
+        "Population-level morphology/size context only; not assigned to a condition-row recipe or counted as an additional recipe–structure pair.",
         "The scale bar is 100 nm; do not infer extra dimensions from the image."
       ],
       "permission_status": "unverified",
@@ -617,9 +665,9 @@
       "panel_assignments": [
         {
           "records": [
-            "yang1999-cu-te-2-1-160c-8h"
+            "yang1999-cu2-xte-tem-population"
           ],
-          "linkage": "Text identifies Cu2-xTe powder prepared at 160 °C for 8 h; only Table 1 2:1 row reports pure Cu2-xTe at these conditions. Exact physical batch/molar ratio is not repeated in the TEM caption; bind as source-linked population context, not a batch-verified aliquot."
+          "linkage": "Source reports a Cu2-xTe TEM population at 160 °C for 8 h, but does not report its Cu:Te feed ratio or physical batch identity."
         }
       ],
       "public_asset": "assets/paper-reviews/yang1999-jssc-8366/figure-3.png",
@@ -688,6 +736,36 @@
         }
       ],
       "note": "No lattice parameters, atomic coordinates, CIF/VESTA file or sample-specific coordinate asset are supplied."
+    },
+    {
+      "id": "tem-and-xps-methods",
+      "status": "source_reviewed",
+      "source_locators": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 1 (printed p. 387), TEM methods"
+        },
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 1 (printed p. 387), XPS methods"
+        }
+      ],
+      "note": "TEM imaging used a Hitachi Model H-800 at 200 kV. XPS used a VEGSCALAB MKII spectrometer with non-monochromatized Mg Kα radiation as excitation. These are source-reported method settings; the article does not provide physical-aliquot/table-row crosswalks for the TEM population or phase-level XPS."
+    },
+    {
+      "id": "copper-ratio-and-phase-interpretation",
+      "status": "source_reviewed",
+      "source_locators": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 2 (printed p. 388), Results paragraph: no obvious differences as Cu:Te decreases from 2:1 to 1.5:1 at otherwise unchanged conditions"
+        },
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 2 (printed p. 388), Results discussion of reduction to elemental metal and proposed nonuniform reactant dispersion"
+        }
+      ],
+      "note": "The authors report no obvious differences for Cu:Te 2:1 to 1.5:1 at otherwise unchanged 160 °C/8 h conditions; 1.5:1 is prose context, not a separate Table 1 row. At 1.25:1 they report orthorhombic Cu2.86Te2 with Cu2-xTe; at 1:1 the product is predominantly Cu2.86Te2 with smaller amounts of CuTe, Cu7Te5 and Te. They propose that hydrazine hydrate reduction of metal ions to elemental metal at room temperature may leave reactants unevenly dispersed, contributing to different nonstoichiometric phases. This is the authors' proposed explanation, not an established mechanism."
     }
   ],
   "evidence_conflicts": [
@@ -722,14 +800,15 @@
   "context_data": [],
   "material_evidence_records": {
     "Cu2-xTe": [
-      "yang1999-cu2-xte-xps-phase-population"
+      "yang1999-cu2-xte-xps-phase-population",
+      "yang1999-cu2-xte-tem-population"
     ],
     "Ag7Te4": [
       "yang1999-ag7te4-xps-phase-population"
     ]
   },
   "material_evidence_scope_notes": {
-    "Cu2-xTe": "Phase-level XPS is retained as a separate contextual observation; exact physical aliquot/table-row linkage is unavailable and it does not add a recipe–structure pair.",
+    "Cu2-xTe": "XPS values remain source-named phase-population context, without a physical aliquot or recipe-row crosswalk. TEM morphology and the 5–15 nm range are a separate Cu2-xTe population observation at 160 °C for 8 h; exact Cu:Te feed ratio and physical batch are unreported. Neither observation adds a synthesis route or recipe–structure pair.",
     "Ag7Te4": "Phase-level XPS is retained as a separate contextual observation; exact physical aliquot/table-row linkage is unavailable and it does not add a recipe–structure pair."
   }
 }

@@ -1,0 +1,291 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang1999-cu2-xte-tem-population",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Yang et al. (1999): TEM morphology of a Cu2-xTe population",
+  "material": {
+    "formula": "Cu2-xTe",
+    "family": "Nonstoichiometric copper telluride nanocrystallites",
+    "elements": [
+      "Cu",
+      "Te"
+    ],
+    "components": [
+      "Cu2-xTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Source-reported TEM characterization only; no synthesis-row, feed-ratio or physical-batch assignment.",
+  "sources": [
+    {
+      "id": "yang1999-jssc-8366",
+      "doi": "10.1006/jssc.1999.8366",
+      "title": "Synthesis and Phase Transformation of IB-VIA Nonstoichiometric Nanocrystalline Tellurides by a Hydrothermal-Reduction Process",
+      "authors": "Jian Yang; Shu-Hong Yu; Zhao-Hui Han; YiTai Qian; Yu-Heng Zhang",
+      "year": 1999,
+      "url": "https://doi.org/10.1006/jssc.1999.8366",
+      "main_status": "Complete supplied three-page main article independently source-audited; all pages and relevant figures visually checked.",
+      "si_status": "No matching local SI file found in the searched folders; SI is not verified and no SI content is used.",
+      "reuse_status": "Source-figure display preference applies; exact figure provenance retained; publisher permission remains unverified and separate release approval is pending."
+    }
+  ],
+  "lineage": {
+    "source_group": "yang1999-jssc-8366",
+    "recipe_family": "yang1999-cu2-xte-tem-population-context",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "The authors study phase formation across feed ratios; a distinct pre-specified target for this row is not stated."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "The phase is an observed XRD outcome, not a separately stated intended target."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No source-defined target size.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "No source-defined target morphology."
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "No source-defined target surface state."
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": "No host material."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tem-population",
+      "name": "Source-described Cu2-xTe particle population",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-data",
+      "name": "TEM image and reported particle-size range",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "tem-population"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "tem-characterization",
+      "action": "characterize",
+      "label": "Transmission electron microscopy",
+      "stage": "characterization",
+      "branch": "source-reported Cu2-xTe population context",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tem-population"
+      ],
+      "outputs": [
+        "tem-data"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 kV",
+          "evidence": [
+            {
+              "source_id": "yang1999-jssc-8366",
+              "locator": "Main p. 1 (printed p. 387), TEM methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Hitachi Model H-800 transmission electron microscope",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 1 (printed p. 387), TEM methods"
+          }
+        ],
+        "note": "The source does not identify the physical aliquot or state the Cu:Te feed ratio for the TEM population."
+      },
+      "endpoint": {
+        "value": "TEM image of source-described Cu2-xTe powder population; uniform spherical morphology and 5–15 nm range reported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), TEM paragraph and Figure 3 caption"
+          }
+        ],
+        "note": "Population context only; not a row-specific recipe outcome."
+      },
+      "retained_fraction": null,
+      "description": "The source reports a TEM image and morphology/size range for Cu2-xTe powder prepared at 160 °C for 8 h; the exact feed ratio and physical batch are not identified.",
+      "evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 1 (printed p. 387), TEM methods"
+        },
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), TEM paragraph and Figure 3 caption"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yang1999-cu2-xte-tem-population-evidence-group",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": "tem-population",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu2-xTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), Figure 3 caption"
+          }
+        ],
+        "note": "Source-named TEM population; not a composition inferred from an unreported feed ratio."
+      },
+      "phase": {
+        "value": "Cu2-xTe (pure hexagonal phase)",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), Figure 3 caption"
+          }
+        ],
+        "note": "Figure 3 caption identifies the pure hexagonal Cu2-xTe phase. It does not use the source synonym wessite or identify a feed ratio or physical batch."
+      },
+      "morphology": {
+        "value": "Uniform spherical particles in the source-described Cu2-xTe population.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), TEM paragraph and Figure 3 caption"
+          }
+        ],
+        "note": "Population-level morphology; no exact feed ratio or physical batch is identified."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No surface state is assigned by this TEM observation."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), TEM paragraph and Figure 3 caption"
+        }
+      ],
+      "notes": [
+        "This internal evidence-group key is not an author-supplied sample or batch label.",
+        "The source identifies Cu2-xTe powder prepared at 160 °C for 8 h, but does not repeat the Cu:Te feed ratio or identify the physical TEM aliquot."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "tem-size-range",
+      "sample_id": "yang1999-cu2-xte-tem-population-evidence-group",
+      "property": "particle_size_range",
+      "technique": "TEM",
+      "value": {
+        "value": null,
+        "minimum": 5,
+        "maximum": 15,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported range; no distribution statistic supplied.",
+        "basis": "",
+        "raw_text": "5–15 nm",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), TEM paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Cu2-xTe powder described as prepared at 160 °C for 8 h; exact Cu:Te feed ratio and physical batch are not identified for the TEM population.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), TEM paragraph"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Contextual TEM observation only. The source-reported 160 °C/8 h population, spherical morphology and 5–15 nm range are retained without assigning a Cu:Te ratio, table row or physical batch.",
+    "missing_fields": [
+      "Exact Cu:Te feed ratio for the TEM population.",
+      "Physical TEM batch/aliquot identifier and table-row crosswalk."
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "source_characterization"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary source DOI",
+      "url": "https://doi.org/10.1006/jssc.1999.8366",
+      "relation": "primary_source"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}
