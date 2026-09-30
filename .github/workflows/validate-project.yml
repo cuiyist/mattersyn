@@ -45,8 +45,8 @@ jobs:
         run: python -m unittest discover -s tools/silver -p 'test_*.py' -v
       - name: Test preliminary source projection and additive merge
         run: python -m unittest discover -s tools/preliminary -p 'test_*.py' -v
-      - name: Test preliminary reader scope and rendering
-        run: node --test recipe-atlas/tests/preliminary-synthesis.test.mjs
+      - name: Test retired preliminary display guard
+        run: node --test recipe-atlas/tests/retired-preliminary.test.mjs
       - name: Test browser condition classification
         run: node --test recipe-atlas/tests/protocol-conditions.test.mjs
       - name: Test shared thermal stage illustrations
