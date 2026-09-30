@@ -37,6 +37,10 @@ local. Public status does not mean every old GitHub object or cache is gone: the
 review-cited old raw-source URL returned HTTP 200 anonymously after the repository
 became public on 2026-09-24. Do not claim server-side deletion or cache purging.
 
+## Latest verified deployment
+
+Batch24 (`2200f0269ab98cf743e677bd4b1c7df1e2f23df3`) was anonymously verified at 2026-09-29 23:08:15 UTC: six new papers, 58 records and 21 broad pairs; cumulative site totals are 131 papers, 1,530 records, 128 material families and 464 broad pairs. The measured 6h15m26s release interval equals 0.96 distinct papers/hour including idle time. The 20-paper/hour target remains unmet. The 400-decision cutoff was missed: the private 18:00 Chicago checkpoint was 45/400, and deployment followed at 18:08:15. See `research-assets/workflow-v4-20260929/batch24-release/public-verification.private.json` for the local proof; source PDFs, private receipts and audit evidence remain local.
+
 ## Evidence and image provenance
 
 At the user's explicit direction, selected original source figures remain available

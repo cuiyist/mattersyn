@@ -7,6 +7,7 @@ The contract (`schema_version: mattersyn-declarative-additive-merge/1`) pins eve
 - `create_files`: create-only payload copies with exact source path, target path, SHA-256 and byte count; every payload file must be listed.
 - `add_keys`: add keys at an existing JSON Pointer; key collisions fail.
 - `append_unique`: append list objects using declared `identity_keys`; an existing identity with identical JSON content is a no-op, conflicting content fails.
+- `append_strings_unique`: append string values to an existing string list; existing values are idempotent, while duplicate lists or non-string values fail. Optional `sort_values: true` sorts the result for canonical ID lists whose order is not semantic.
 
 Unsafe/noncanonical paths, symlinks, stale hashes, unlisted files, duplicate targets, malformed pointers, unknown fields, and rights/release-policy targets fail closed. Rights registries and public-release policies require a separate explicit review and are never auto-merged.
 

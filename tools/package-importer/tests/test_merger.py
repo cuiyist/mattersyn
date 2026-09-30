@@ -139,6 +139,32 @@ class AdditiveMergerTests(unittest.TestCase):
         result = self.run_merge(contract)
         self.assertEqual(result["operations"][0]["identical_prior_items"], 1)
 
+    def test_append_strings_unique_is_additive_and_idempotent(self):
+        contract = dict(self.contract)
+        contract["json_operations"] = [
+            self.op("append_strings_unique", "/materials/SiO2/route_ids", ["old", "new"])
+        ]
+        contract["json_operations"][0]["sort_values"] = True
+        result = self.run_merge(contract)
+        merged = json.loads((self.root / "stage/overlay/recipe-atlas/data/materials.json").read_text())
+        self.assertEqual(merged["materials"]["SiO2"]["route_ids"], ["new", "old"])
+        self.assertEqual(result["operations"][0]["appended"], 1)
+        self.assertEqual(result["operations"][0]["identical_prior_items"], 1)
+        self.assertTrue(result["operations"][0]["sort_values"])
+
+    def test_append_strings_unique_rejects_duplicate_or_non_string_values(self):
+        contract = dict(self.contract)
+        contract["json_operations"] = [
+            self.op("append_strings_unique", "/materials/SiO2/route_ids", ["new", "new"])
+        ]
+        with self.assertRaises(merger.MergeRejected):
+            self.run_merge(contract)
+        contract["json_operations"] = [
+            self.op("append_strings_unique", "/materials/SiO2/routes", ["new"])
+        ]
+        with self.assertRaises(merger.MergeRejected):
+            self.run_merge(contract)
+
     def test_bad_pointer_rejected(self):
         contract = dict(self.contract)
         contract["json_operations"] = [self.op("add_keys", "/materials/missing", {"x": 1})]
