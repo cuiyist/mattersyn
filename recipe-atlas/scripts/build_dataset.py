@@ -157,15 +157,6 @@ def catalog_html(report,manifest,pair_rows=()):
 
 
 def main():
-    # Preliminary contributions are validated separately and never enter gold
-    # records, reviewed pair counts or training exports.
-    from preliminary_contract import validate_catalog
-    preliminary = json.loads((ROOT/'dist/data/preliminary-synthesis.json').read_text(encoding='utf-8'))
-    preliminary_errors = validate_catalog(preliminary)
-    if preliminary_errors:
-        raise ValueError('Invalid preliminary catalogue: ' + '; '.join(preliminary_errors))
-    if preliminary['entries']:
-        raise ValueError('Public preliminary publication is retired; keep candidates private until regular integration.')
     records=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT/'data/records').glob('*.json'))]
     errors=[e for r in records for e in validate_record(r)];ids=[r['record_id'] for r in records]
     if len(set(ids))!=len(ids):errors.append('Duplicate record IDs')
@@ -209,7 +200,7 @@ def main():
     dump(public / 'synthesis-structure-pairs.json', structure_outcome_coverage)
     from reader_collection import collection_summary
     reference_registry = json.loads((ROOT/'static/assets/crystal-references/registry.json').read_text(encoding='utf-8'))
-    collection = collection_summary(records, structure_outcome_coverage['rows'], reference_registry['entries'], preliminary)
+    collection = collection_summary(records, structure_outcome_coverage['rows'], reference_registry['entries'])
     report['reader_collection'] = {k:v for k,v in collection.items() if k != 'pairs'}
     dump(public/'reader-collection.json', collection)
     pair_records = {row['record_id']:[] for row in collection['pairs']}

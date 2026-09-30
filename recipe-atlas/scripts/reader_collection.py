@@ -36,7 +36,7 @@ def pair_documentation(row, record, references):
             'qualification': 'Documentation categories only. A reference cell is not a measured sample structure; missing details, source conflicts and task-specific eligibility remain in the source record.'}
 
 
-def collection_summary(records, pair_rows, references, preliminary=None):
+def collection_summary(records, pair_rows, references):
     by_id = {r['record_id']: r for r in records}
     primary = {}
     for r in records:
@@ -55,7 +55,7 @@ def collection_summary(records, pair_rows, references, preliminary=None):
     return {'schema_version': 'mattersyn.reader-collection/1',
             'material_families': len(systems), 'material_family_definition': 'Distinct directly synthesized material systems; component-only cross-links excluded.',
             'material_systems': systems, 'contributing_papers': len(primary),
-            'source_coverage': source_coverage(records, preliminary),
+            'source_coverage': source_coverage(records),
             'synthesis_structure_pairs': len(rows), 'more_comprehensive_pairs': complete,
             'partial_pairs': len(rows) - complete,
             'count_definition': 'One source-supported recipe/condition variant linked to one identified product with structural evidence. Different conditions producing separately characterized samples count separately. Multiple measurements of that same record/sample do not add pairs. Cross-paper physical-sample deduplication is not complete.',

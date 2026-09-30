@@ -31,16 +31,14 @@ The first command uses the real unchanged builder and writes `build-seal.private
 | Site boundary | Current unchanged guard runs fully and freshly against a new exact copy using the reviewed allowlist/current policy/current registry. No final policy/content/rights verdict cache is introduced. All candidate files, copied files, inputs and evidence are rechecked after the gate. |
 | Release and credits | Receipt remains unpublished with zero credit. Required site CI, final stage/commit hash verification and anonymous verification remain external, mandatory root gates. |
 
-## Preliminary-first scope
+## Retired preliminary scope
 
-The owner's v3 workflow permits a separate preliminary contribution before an
-independent scientific audit. Bind its actual source-check/projection receipts,
-the engineering acceptance and unchanged gold record checks in the promotion
-review; describe their exact scope. The legacy `science_receipts` field does not
-turn a preliminary source check into independent scientific acceptance. Browser,
-exact-byte, CI, privacy and anonymous-verification requirements still apply.
-Do not fabricate a gold audit to satisfy a receipt name or add preliminary rows
-to verified pairs or training-ready exports.
+The owner retired public preliminary contributions under workflow v4. A source
+must be integrated into the regular material records before it can appear in the
+website or increase the homepage paper count. Private drafts, screening outcomes
+and holds are not public contributions. This release path does not relax the
+independent scientific, browser, exact-byte, privacy, CI or anonymous-verification
+requirements for regular publication.
 
 ## Trust and limits that root must accept before adoption
 

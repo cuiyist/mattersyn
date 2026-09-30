@@ -27,10 +27,9 @@ The owner’s target is about 20 distinct papers per hour actually deployed to n
 material pages and verified without a login. It remains an unachieved capacity target:
 report only the measured rate from distinct source papers, elapsed time and anonymous
 verification. Multiple recipes from one paper remain separate records while the
-paper contributes only once. **Gold**, calibrated **silver** and experimental silver
-remain separate; calibrated silver requires held-out 98% / 95% / 90% field thresholds
-and independent approval, while uncalibrated experimental display is excluded from
-training-ready data.
+paper contributes only once. **Gold** and calibrated **silver** remain separate;
+calibrated silver requires held-out 98% / 95% / 90% field thresholds and
+independent approval.
 
 - [Screening, extraction and publishing workflow](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md)
 - [Scoped packages and event metrics](tools/workflow/README.md)
@@ -103,7 +102,6 @@ Public citations are generated below from the same dataset snapshot used by the 
 - Jinke Tang; Kai-Ying Wang; Weilie Zhou (2001). *Magnetic properties of nanocrystalline Fe3O4 films*. [DOI 10.1063/1.1358350](https://doi.org/10.1063/1.1358350). Four supplied PDF pages, including the publisher cover and three article pages, independently source-audited; SI and cited references remain unreviewed.
 - Qingyi Lu; Junqing Hu; Kaibin Tang; Yitai Qian; Guien Zhou; Xianming Liu (1999). *The Solvothermal Synthesis for Nanocrystalline FeIn2S4 at Low Temperature*. [DOI 10.1246/cl.1999.481](https://doi.org/10.1246/cl.1999.481). All 2 supplied main pages independently source-audited; SI and cited references remain unreviewed.
 
-Experimental silver only: Wang, L.-Z.; Shi, J.-L.; Zhang, W.-H.; Ruan, M.-L.; Yu, J.; Yan, D.-S. Chem. Mater. 1999, 11, 3015–3017. *Self-Organization of Ordered Silver Nanocrystal Arrays on Cubic Mesoporous Silica Surfaces*. [DOI 10.1021/cm990228p](https://doi.org/10.1021/cm990228p). Partial Ag/MCM-48 evidence from three supplied main-text pages; not independently scientifically reviewed, completeness unassessed, accuracy unmeasured, figures/SI unreviewed and training excluded. Engineering/privacy review passed; this partial evidence adds no reviewed-paper, complete-recipe or verified-pair credit.
 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website

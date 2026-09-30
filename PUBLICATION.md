@@ -2,22 +2,16 @@
 
 ## Current instruction: regular material pages only
 
-The owner retired the public preliminary collection and clarified that the homepage target is about twenty newly published contributing papers per hour. Skips count only toward the separate processing target and never increase the website counter. Follow [processing workflow v4](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md). Preserve private drafts, but do not display them or count them as website contributions. Historical preliminary publication permissions below are superseded. Existing reviewed records, scientific review requirements, exact release checks and historical receipts remain intact.
+The owner retired the public preliminary collection and clarified that the homepage target is about twenty newly published contributing papers per hour. Skips count only toward the separate processing target and never increase the website counter. Follow [processing workflow v4](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md). Preserve private drafts, but do not display them or count them as website contributions. Existing reviewed records, scientific review requirements, exact release checks and historical receipts remain intact.
 
-## Historical preliminary-first instruction (superseded)
+## Retired preliminary display
 
-The owner requested a temporary pause on September 28 to revise workflow and
-first-publication quality, then resume toward 20 published primary papers/hour.
-The [v3 workflow](skills/mattersyn-paper-to-site/references/throughput-workflow-v3.md)
-allows a separate preliminary synthesis contribution with a source-checked
-protocol and explicitly linked structural outcome before independent scientific
-review or custom illustrations. It must disclose its limited scope, pending
-independent audit, unmeasured accuracy and training exclusion. Old scalar-only
-experimental notes do not meet this contribution definition. Gold and
-calibrated-silver admission remain unchanged. Count preliminary publications
-separately from reviewed papers and verified pairs; upgrades and extra variants
-do not create new primary-paper credit. All lanes retain exact source evidence,
-public schema/privacy checks, batch release validation and anonymous verification.
+The experimental preliminary-synthesis display was retired by the owner. Do not
+publish its page, raw JSON or homepage link. Keep historical extraction and review
+receipts private to the research workspace; they are not reviewed website
+contributions and add no paper or pair credit. The former v3 publication allowance
+is superseded. Only sufficiently supported, reviewed contributions belong in the
+regular material pages.
 
 Publication order: pass the local build, source CI, browser review and fresh
 public-file boundary, then push the approved site commit to trigger site CI.
@@ -91,18 +85,10 @@ The September 26 scaling workflow uses a single source commit with generated,
 content-bound controls. Follow [the single-commit guide](tools/publication/SINGLE_COMMIT_RELEASE.md): stage reviewed payloads, prepare the blueprint and manifest together, then bind the committed manifest to clean HEAD outside the repository before export. CI uses that runtime allowlist. This removes the follow-up closure commit without removing exact public-file review or scientific evidence checks.
 
 Calibrated silver contributions require frozen-pipeline calibration and independent
-calibration approval. The owner's September 28 authorization also permits a separate
-experimental display of partial machine-extracted evidence before calibration.
-That display must say machine-extracted, not reviewed and accuracy unmeasured;
-retain explicit input-page and incomplete-recipe scope; pass deterministic evidence
-checks, privacy review and the ordinary release/anonymous-verification gates; and
-withhold rejected claims. It adds no gold, calibrated-silver, completed-paper,
-usable-complete-recipe, verified structure-pair or training-ready credit. Quotes,
-source text and model responses remain private. Experimental display is not
-calibration approval. A scoped
-gold contribution may be presentation-pending; its declared scientific scope
-still needs the consolidated independent audit. Automatic cross-repository
-publishing is not installed by this increment; the existing local handoff remains.
+calibration approval. Experimental preliminary display is not authorized. A scoped
+gold contribution may be presentation-pending; its declared scientific scope still
+needs the consolidated independent audit. Automatic cross-repository publishing is
+not installed by this increment; the existing local handoff remains.
 
 Inventory totals and memberships are generated during the build from canonical
 records, source review metadata and atlas indexes. The authored
@@ -112,12 +98,10 @@ record assignments and component relationships must reconcile before rendering.
 No scientific record or training eligibility is changed by this migration.
 
 The calibrated silver Reader remains hidden until its existing admission gates
-pass. Experimental evidence uses its own schema, page and counts; it must not be
-routed through a fabricated calibration receipt or mixed into reviewed/training
-exports. Its measured accuracy remains unknown and all training weights remain
-zero. Candidate/monitoring projections keep `publication_enabled:false` and cannot
-authorize deployment. Actual source credit requires a successful controlled release
-and anonymous verification; partial evidence does not establish a complete paper.
+pass. Historical experimental evidence remains private and is not included in site
+builds, reviewed counts or training exports. Candidate/monitoring projections keep
+`publication_enabled:false` and cannot authorize deployment. Actual source credit
+requires a successful controlled release and anonymous verification.
 Calibration and independent approval remain necessary for calibrated admission and
 measured accuracy claims. Synthetic tests establish software behavior only.
 
