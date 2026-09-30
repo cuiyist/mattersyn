@@ -98,7 +98,8 @@ def validate(c):
         if not a:errors.append('Missing figure asset: '+str(f.get('id')));continue
         p=(ROOT/'dist'/a).resolve()
         if not p.is_relative_to((ROOT/'dist').resolve()):errors.append('Asset path leaves publication directory: '+a);continue
-        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=f.get('public_asset_sha256'):errors.append('Figure hash mismatch: '+a)
+        expected_hash=f.get('public_asset_sha256') or f.get('display_asset_sha256') or f.get('sha256')
+        if not p.is_file() or hashlib.sha256(p.read_bytes()).hexdigest()!=expected_hash:errors.append('Figure hash mismatch: '+a)
     for item in c['recipe_inventory']:
         for rid in item.get('record_ids',[]):
             if not (ROOT/'data/records'/(rid+'.json')).is_file():errors.append('Unresolved recipe link: '+rid)

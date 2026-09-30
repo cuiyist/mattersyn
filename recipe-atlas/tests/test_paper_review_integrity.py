@@ -1,6 +1,7 @@
 """Regression checks for scientifically consequential variant and coverage boundaries."""
-import copy, json, sys, unittest
+import copy, hashlib, json, sys, tempfile, unittest
 from pathlib import Path
+from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from dataset_lib import eligibility,build_groups,fmt
@@ -14,6 +15,26 @@ def quantities(x):
     elif isinstance(x,list):
         for v in x:yield from quantities(v)
 class ReviewIntegrity(unittest.TestCase):
+    def test_null_public_asset_hash_falls_back_to_source_asset_hash(self):
+        payload=b'validated source figure bytes'
+        digest=hashlib.sha256(payload).hexdigest()
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);asset=root/'dist'/'assets'/'figure.png'
+            asset.parent.mkdir(parents=True);asset.write_bytes(payload)
+            review={
+                'documents':[{'sha256':'a'*64}],
+                'figures':[{
+                    'id':'figure-1','public_asset':'assets/figure.png',
+                    'public_asset_sha256':None,'sha256':digest,
+                }],
+                'recipe_inventory':[],
+            }
+            with patch('build_paper_reviews.ROOT',root), patch('build_paper_reviews.reviewed_page_count',return_value=1):
+                self.assertEqual(validate(review),[])
+                mismatched=copy.deepcopy(review)
+                mismatched['figures'][0]['public_asset_sha256']='0'*64
+                self.assertTrue(any('hash mismatch' in error for error in validate(mismatched)))
+
     def test_text_source_notes_do_not_hide_declared_asset_errors(self):
         c=json.loads((ROOT/'data/paper-reviews/fu2007.json').read_text(encoding='utf-8'))
         c=display_view(c,ROOT,'test-note-private-provenance.json')
