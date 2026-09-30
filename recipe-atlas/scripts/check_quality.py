@@ -197,7 +197,9 @@ class Audit:
         wang_ag_routes = {"wang2005-lss-ag"}
         self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes, "Ag: exactly the reviewed Shah, Qiu, Sigman and Wang core preparations must remain direct synthesis routes")
         wang_mcm48_routes = {"wang1999-ag-mcm48-cm990228p-ast"}
-        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | stiger_routes | wang_mcm48_routes, "Ag: retain exactly the reviewed direct routes and supported Stiger/Wang MCM-48 component contributions")
+        yang_ag_component_routes = {"yang1999-ag-te-1-5-1-180c-12h", "yang1999-ag-te-2-1-180c-12h"}
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag–Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Ag–Te phase products")
+        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | stiger_routes | wang_mcm48_routes | yang_ag_component_routes, "Ag: retain exactly the reviewed direct routes and supported Stiger/Wang MCM-48/Yang Ag–Te component contributions")
         self.check(set(self.hubs.get("Ag/SiO2", {}).get("direct_record_ids", [])) == wang_mcm48_routes, "Ag/SiO2: retain the separately reviewed Wang MCM-48 AST route")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag/SiO2" for rid in wang_mcm48_routes), "Ag/SiO2: supported composite identity was erased")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")
