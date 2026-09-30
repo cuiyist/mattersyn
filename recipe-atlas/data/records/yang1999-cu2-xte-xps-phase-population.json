@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang1999-cu2-xte-xps-phase-population",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Yang et al. (1999): phase-level XPS for Cu2-xTe",
+  "material": {
+    "formula": "Cu2-xTe",
+    "family": "Nonstoichiometric copper telluride nanocrystallites",
+    "elements": [
+      "Cu",
+      "Te"
+    ],
+    "components": [
+      "Cu2-xTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Characterization-only source context; no recipe, condition-row or physical-batch assignment.",
+  "sources": [
+    {
+      "id": "yang1999-jssc-8366",
+      "doi": "10.1006/jssc.1999.8366",
+      "title": "Synthesis and Phase Transformation of IB-VIA Nonstoichiometric Nanocrystalline Tellurides by a Hydrothermal-Reduction Process",
+      "authors": "Jian Yang; Shu-Hong Yu; Zhao-Hui Han; YiTai Qian; Yu-Heng Zhang",
+      "year": 1999,
+      "url": "https://doi.org/10.1006/jssc.1999.8366",
+      "main_status": "Complete supplied three-page main article independently source-audited; all pages and relevant figures visually checked.",
+      "si_status": "No matching local SI file found in the searched folders; SI is not verified and no SI content is used.",
+      "reuse_status": "Source-figure display preference applies; exact figure provenance retained; publisher permission remains unverified and separate release approval is pending."
+    }
+  ],
+  "lineage": {
+    "source_group": "yang1999-jssc-8366",
+    "recipe_family": "yang1999-phase-xps-context",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "The authors study phase formation across feed ratios; a distinct pre-specified target for this row is not stated."
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "The phase is an observed XRD outcome, not a separately stated intended target."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No source-defined target size.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "No source-defined target morphology."
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "No source-defined target surface state."
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": "No host material."
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "phase-population",
+      "name": "Source-named Cu2-xTe phase population; physical aliquot and exact table row unreported",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "xps-data",
+      "name": "XPS characterization data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "phase-population"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "source-xps-characterization",
+      "action": "characterize",
+      "label": "Source-reported XPS measurements",
+      "stage": "characterization",
+      "branch": "phase-only source context",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "phase-population"
+      ],
+      "outputs": [
+        "xps-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Source does not identify exact physical aliquot or recipe row",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "XPS values reported for the named phase",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "note": "Phase-level only; not recipe- or batch-linked."
+      },
+      "retained_fraction": null,
+      "description": "Preserve phase-level XPS without assigning it to a condition row or physical aliquot.",
+      "evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yang1999-cu2-xte-xps-phase-population-evidence-group",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": "phase-population",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Cu2-xTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "note": "Internal evidence-group label for a source-named phase; not an author sample or physical aliquot ID."
+      },
+      "phase": {
+        "value": "Cu2-xTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "note": "Source-reported phase context only."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No morphology is assigned by this XPS observation."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific surface state is assigned."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+        }
+      ],
+      "notes": [
+        "Characterization-only evidence; no recipe row, physical batch or aliquot is identified."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "cu-2p-binding-energy",
+      "sample_id": "yang1999-cu2-xte-xps-phase-population-evidence-group",
+      "property": "Cu 2p binding energy",
+      "technique": "XPS",
+      "value": {
+        "value": 932.75,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "932.75 eV",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Named phase/source population only; physical aliquot and exact table row are not identified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+        }
+      ]
+    },
+    {
+      "id": "te-3d5-2-binding-energy",
+      "sample_id": "yang1999-cu2-xte-xps-phase-population-evidence-group",
+      "property": "Te 3d5/2 binding energy",
+      "technique": "XPS",
+      "value": {
+        "value": 572.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "572.50 eV",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Named phase/source population only; physical aliquot and exact table row are not identified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+        }
+      ]
+    },
+    {
+      "id": "te-mnn-kinetic-energy",
+      "sample_id": "yang1999-cu2-xte-xps-phase-population-evidence-group",
+      "property": "Te MNN Auger kinetic energy",
+      "technique": "XPS",
+      "value": {
+        "value": 491.85,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "491.85 eV",
+        "evidence": [
+          {
+            "source_id": "yang1999-jssc-8366",
+            "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Named phase/source population only; physical aliquot and exact table row are not identified.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang1999-jssc-8366",
+          "locator": "Main p. 3 (printed p. 389), XPS paragraph"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent audit accepted reported phase-level XPS values. Observation is separate from recipe-condition records because exact physical aliquot/table-row linkage is absent.",
+    "missing_fields": [
+      "Physical aliquot/batch identifier and exact condition-row crosswalk are not reported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "source_characterization"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary source DOI",
+      "url": "https://doi.org/10.1006/jssc.1999.8366",
+      "relation": "primary_source"
+    }
+  ],
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation"
+}
