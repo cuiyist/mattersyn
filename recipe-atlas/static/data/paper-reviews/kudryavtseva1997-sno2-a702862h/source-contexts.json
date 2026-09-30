@@ -1,0 +1,83 @@
+{
+  "schema": "mattersyn.source-context.author.v1",
+  "source_id": "kudryavtseva1997-sno2-a702862h",
+  "scope": "Full four-page main article only; Figures 1–9 and 18 references read. No SI or cited-method substitution.",
+  "conflicts": [
+    "Ammonia is called liquid ammonia in the Experimental prose, while Figure 1 labels NH3(aq). The formulation is not resolved and no ammonia concentration is inferred.",
+    "Figure 3 calls as-prepared A amorphous; the Figure 5 annealing-time discussion starts from 4 nm. The latter is retained only in its time-series context, not assigned as the as-prepared SEM/XRD size.",
+    "The 600 °C time series is distinct from the 24 h temperature series; no temperatures or time ticks are converted to invented individual tabulated measurements.",
+    "Source calls its microscopy SEM and names 2000FX JEOL. The method/instrument wording is retained without silently substituting TEM.",
+    "The 50 µm agglomerate size and resistance unit Ω are visually read from the printed page; cached OCR misreads these as mm and V.",
+    "Text summarizes A as 20 nm at 60 h, whereas the two Figure 5 reflection traces differ visually. Textual 20 nm is not a precise value for both reflections.",
+    "Text gives approximately 70 m²/g at 300 °C for both populations. Figure 7 B is visually higher; no plot-derived replacement is made.",
+    "Figure 4 axis says mass loss (%) while curves descend from 100. Only the explicit text water-loss values are extracted; the axis is not repaired."
+  ],
+  "source_interpretations": [
+    {
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF pp. 2–3 / printed 2270–2271, ice-template discussion and Figure 8"
+        }
+      ],
+      "text": "Liquid-nitrogen freezing and ice templating are the authors’ explanation for platelets. Particle-uniformity/heat-stability reasoning invokes Lifshits and Slezov; Figure 8 is theoretical, not a measured distribution."
+    },
+    {
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 4 / printed 2272, electrical discussion and conclusion"
+        }
+      ],
+      "text": "Authors associate the estimated activation energy with literature oxygen vacancies and anticipate gas-sensor benefits. Neither vacancy concentration nor gas-sensing performance is measured here."
+    }
+  ],
+  "missing_fields": [
+    "The supplied main-article scope passed independent source review; missing quantities and sample crosswalk limits below remain unresolved. No publication or exact-coordinate training approval is implied.",
+    "Physical aliquot IDs and SEM/XRD/TG/Auger crosswalk are not reported; links use the named A/B preparation population only.",
+    "No atomic coordinates, complete lattice constants, measured particle-size distribution or gas-sensing response is provided.",
+    "Heating/cooling ramps and specimen masses are unreported. Cited separate cryosol methods were not read to fill gaps.",
+    "SnCl4·5H2O mass, water volume, initial concentration, ammonia amount/concentration/addition duration, stirring rate, centrifuge force/time, wash volumes/count and yield are unreported.",
+    "Alpha-stannic-acid charge, NaOH volume, total stannate volume, resin identity/capacity/total mass/cycle count/separation are unreported. Freeze-drying pressure, duration, exact freezing time/rate and full schedule are absent."
+  ],
+  "equations": [
+    {
+      "label": "Cation-exchange scheme",
+      "printed": "Na2[Sn(OH)6] + Cat–H → SnO2·xH2O + Cat–Na",
+      "scope": "Printed schematic only; Cat is polymeric resin base. Not asserted as a balanced reaction or a resin capacity.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+        }
+      ]
+    },
+    {
+      "label": "Resistance normalization",
+      "printed": "Rr(T) = R(T)/R(263 K) = R/R263",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    },
+    {
+      "label": "Activated resistance",
+      "printed": "R ≈ exp(Ea/kT)",
+      "scope": "Source estimation relation; no independent fit performed.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    }
+  ],
+  "excluded_background": [
+    "Debye length near 3 nm",
+    "Doped oxides stable at 900 °C",
+    "Gas-sensor performance predictions",
+    "Theoretical particle distributions in Figure 8"
+  ]
+}

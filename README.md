@@ -15,45 +15,39 @@ reachable again after the repository was made public on 2026-09-24.
 
 ## Scaling workflow
 
-The current [preliminary-first workflow](skills/mattersyn-paper-to-site/references/throughput-workflow-v3.md)
-publishes a source-checked synthesis route and linked structural outcome before
-independent review and visual enrichment. Preliminary contributions are labelled
-not independently audited, accuracy unmeasured and excluded from training-ready
-data. They have separate counts; they do not change gold, calibrated-silver or
-verified-pair admission. The 20-papers/hour objective remains a measured delivery
-target, not an achieved rate. Existing reviewed records and figures are preserved.
+The current [screened-paper workflow](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md)
+adds source-supported synthesis contributions to the ordinary material pages only
+after the applicable scientific, sample/figure, privacy, build, browser and release
+checks. Papers without enough source evidence for a recipe-linked structural outcome
+are skipped with a documented reason; unavailable files and unresolved identity are
+technical holds. The former public preliminary collection is retired. Drafts, skips,
+holds, corrections and repeated reviews do not increase the homepage paper count.
 
-The [earlier workflow](skills/mattersyn-paper-to-site/references/scaling-workflow-v2.md)
-separates independently audited **gold**, **calibrated silver**, and an explicitly
-unreviewed **experimental silver display**. Calibrated silver still requires
-held-out 98% / 95% / 90% field thresholds and independent calibration approval.
-Experimental display carries partial machine-extracted evidence with accuracy
-unmeasured and training excluded; it earns no complete-paper, complete-recipe,
-gold or verified-pair credit. Publication requires the normal evidence, privacy,
-build, CI and anonymous-access checks. Output-rate targets are not measured results.
+The owner’s target is about 20 distinct papers per hour actually deployed to normal
+material pages and verified without a login. It remains an unachieved capacity target:
+report only the measured rate from distinct source papers, elapsed time and anonymous
+verification. Multiple recipes from one paper remain separate records while the
+paper contributes only once. **Gold**, calibrated **silver** and experimental silver
+remain separate; calibrated silver requires held-out 98% / 95% / 90% field thresholds
+and independent approval, while uncalibrated experimental display is excluded from
+training-ready data.
 
+- [Screening, extraction and publishing workflow](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md)
 - [Scoped packages and event metrics](tools/workflow/README.md)
 - [Local extraction and calibration](tools/silver/README.md)
 - [Silver sampling, error monitoring and stop rules](tools/silver/MONITORING.md)
 - [Separate silver Reader integration](recipe-atlas/scripts/SILVER_READER.md)
 - [Single-commit release preparation](tools/publication/SINGLE_COMMIT_RELEASE.md)
+- [One-build batch release](tools/publication/ONE_BUILD_RELEASE.md)
 
-Morning and two-hour reports are disabled; progress is on request while quiet
-continuation remains active. Inventory counts and memberships derive from reviewed
-inputs at build time. The calibrated silver Reader/monitor remain disabled pending
-calibration and admission; the separately labelled experimental display has its own
-release path and never changes gold or training eligibility. For preliminary-first work, use three extraction
-lanes and one integration/publication owner; independent audit follows in the
-enrichment queue. Keep at most
-four active agents and five paper claims. Publish ready contributions in batches
-with one shared release check. Reuse unchanged accepted source and apparatus audits
-and exact unchanged gate receipts; rerun only changed or failed checks and their
-affected dependencies. Required scientific, privacy, build, browser, CI and anonymous
-verification gates remain in force. Preserve exact private publication proofs
-immediately and batch safe public administrative updates with the next substantive
-transaction. The 20 completed papers/hour and six active author-minutes/paper targets
-are unproven capacity targets; record active author time separately from elapsed
-publication throughput without reducing the scoped scientific work.
+Morning and two-hour reports are disabled; progress is on request, material failure
+or required action. Work is limited to the existing screened-pass collection until
+the owner resumes new intake. Publish ready contributions in batches with one shared
+build and release cycle. Reuse exact unchanged audits and gate receipts, and rerun
+only changed or failed checks and affected dependencies. Never imply continuous work
+between actual runs or trade scientific provenance and privacy checks for a headline
+throughput target. The target and six active-author-minutes-per-paper objective are
+unproven; record elapsed publication throughput separately from active author time.
 
 ## Local workspace organization
 

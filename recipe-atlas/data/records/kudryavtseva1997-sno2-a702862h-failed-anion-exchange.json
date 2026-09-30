@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kudryavtseva1997-sno2-a702862h-failed-anion-exchange",
+  "revision": 1,
+  "record_type": "observation",
+  "title": "Unsuccessful SnCl4 anion-exchange trial",
+  "material": {
+    "formula": "SnO2",
+    "family": "tin dioxide",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Unsuccessful SnCl4 anion-exchange trial",
+  "sources": [
+    {
+      "id": "kudryavtseva1997-sno2-a702862h",
+      "doi": "10.1039/a702862h",
+      "title": "Effect of microstructure on the stability of nanocrystalline tin dioxide ceramics",
+      "authors": "Svetlana M. Kudryavtseva; Alexei A. Vertegel; Sergei V. Kalinin; Nikolai N. Oleynikov; Ludmila I. Ryabova; Leonid L. Meshkov; Sergei N. Nesterenko; Marina N. Rumyantseva; Alexander M. Gaskov",
+      "year": 1997,
+      "url": "https://doi.org/10.1039/a702862h",
+      "main_status": "supplied_main_read_all_four_pages",
+      "si_status": "not_consulted_main_only; no global SI-absence claim",
+      "reuse_status": "publisher_permission_unverified"
+    }
+  ],
+  "lineage": {
+    "source_group": "kudryavtseva1997-sno2-a702862h",
+    "recipe_family": "kudryavtseva1997-sno2-a702862h",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tin-chloride",
+      "name": "Tin(IV) chloride in solution",
+      "formula": "SnCl4",
+      "role": "trial precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Hydrate identity and initial solution preparation are not specified for this failed trial; do not inherit the successful-route hydrate or quantities."
+      ],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+        }
+      ]
+    },
+    {
+      "id": "anion-resin",
+      "name": "Anion-exchange resin; form not explicit for failed trial",
+      "formula": null,
+      "role": "trial ion exchanger",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "The preceding general cryosol-method discussion describes OH-form anion resin, but the failed 0.01 M SnCl4 trial does not explicitly restate the resin form. OH-form is not asserted as a trial-specific condition."
+      ],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "product",
+      "name": "Unintended precipitate",
+      "kind": "fraction",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "attempt-exchange",
+      "action": "attempt_anion_exchange",
+      "label": "Add initial anion-exchanger portions",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "tin-chloride",
+        "anion-resin"
+      ],
+      "outputs": [
+        "product"
+      ],
+      "parameters": {
+        "tin_chloride_concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "precipitate forms after first portions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kudryavtseva1997-sno2-a702862h",
+            "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The first ion-exchanger portions cause precipitation. The desired colloid route fails; no identity or quantitative structure is assigned to this precipitate. The preceding general cryosol-method discussion describes OH-form anion resin, but the failed 0.01 M SnCl4 trial does not explicitly restate the resin form. OH-form is not asserted as a trial-specific condition.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "failed-anion-precipitate",
+      "source_sample_label": "Unsuccessful anion-exchange precipitate",
+      "batch_id": null,
+      "material_state_id": "product",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "Not powder A or B and not a successful synthesis/structure row."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main article and Figures 1–9 independently reviewed; corrected source delta accepted. SI and cited methods not consulted.",
+    "missing_fields": [
+      "The supplied main-article scope passed independent source review; missing quantities and sample crosswalk limits below remain unresolved. No publication or exact-coordinate training approval is implied.",
+      "Physical aliquot IDs and SEM/XRD/TG/Auger crosswalk are not reported; links use the named A/B preparation population only.",
+      "No atomic coordinates, complete lattice constants, measured particle-size distribution or gas-sensing response is provided.",
+      "Heating/cooling ramps and specimen masses are unreported. Cited separate cryosol methods were not read to fill gaps.",
+      "Resin identity, mass, solution volume, pH, time and precipitate identity/structure are unreported.",
+      "Resin ionic form is not explicit for the failed trial; OH-form from the preceding general method is not inherited."
+    ],
+    "conflicts": [
+      "Ammonia is called liquid ammonia in the Experimental prose, while Figure 1 labels NH3(aq). The formulation is not resolved and no ammonia concentration is inferred.",
+      "Figure 3 calls as-prepared A amorphous; the Figure 5 annealing-time discussion starts from 4 nm. The latter is retained only in its time-series context, not assigned as the as-prepared SEM/XRD size.",
+      "The 600 °C time series is distinct from the 24 h temperature series; no temperatures or time ticks are converted to invented individual tabulated measurements.",
+      "Source calls its microscopy SEM and names 2000FX JEOL. The method/instrument wording is retained without silently substituting TEM.",
+      "The 50 µm agglomerate size and resistance unit Ω are visually read from the printed page; cached OCR misreads these as mm and V.",
+      "Text summarizes A as 20 nm at 60 h, whereas the two Figure 5 reflection traces differ visually. Textual 20 nm is not a precise value for both reflections.",
+      "Text gives approximately 70 m²/g at 300 °C for both populations. Figure 7 B is visually higher; no plot-derived replacement is made.",
+      "Figure 4 axis says mass loss (%) while curves descend from 100. Only the explicit text water-loss values are extracted; the axis is not repaired."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_failure"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1039/a702862h",
+      "relation": "primary_source"
+    }
+  ],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}

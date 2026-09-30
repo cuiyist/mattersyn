@@ -1,0 +1,662 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kudryavtseva1997-sno2-a702862h-b-electrical-pellet",
+  "revision": 1,
+  "record_type": "procedure",
+  "title": "Powder B: sintered pellet electrical context",
+  "material": {
+    "formula": "SnO2",
+    "family": "tin dioxide",
+    "elements": [
+      "Sn",
+      "O"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Powder B: sintered pellet electrical context",
+  "sources": [
+    {
+      "id": "kudryavtseva1997-sno2-a702862h",
+      "doi": "10.1039/a702862h",
+      "title": "Effect of microstructure on the stability of nanocrystalline tin dioxide ceramics",
+      "authors": "Svetlana M. Kudryavtseva; Alexei A. Vertegel; Sergei V. Kalinin; Nikolai N. Oleynikov; Ludmila I. Ryabova; Leonid L. Meshkov; Sergei N. Nesterenko; Marina N. Rumyantseva; Alexander M. Gaskov",
+      "year": 1997,
+      "url": "https://doi.org/10.1039/a702862h",
+      "main_status": "supplied_main_read_all_four_pages",
+      "si_status": "not_consulted_main_only; no global SI-absence claim",
+      "reuse_status": "publisher_permission_unverified"
+    }
+  ],
+  "lineage": {
+    "source_group": "kudryavtseva1997-sno2-a702862h",
+    "recipe_family": "kudryavtseva1997-sno2-a702862h",
+    "parent_record_id": "kudryavtseva1997-sno2-a702862h-b-as-prepared",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "SnO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 1 / printed 2269, Experimental and Figure 1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "parent-powder",
+      "name": "Powder B",
+      "formula": "SnO2",
+      "role": "electrical specimen precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver contact layers",
+      "formula": "Ag",
+      "role": "surface electrical contact",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum wires",
+      "formula": "Pt",
+      "role": "alternative pressed-in contact; unsuccessful stable-contact route",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "preannealed",
+      "name": "Powder after 300 °C anneal",
+      "kind": "fraction",
+      "parent_ids": []
+    },
+    {
+      "id": "pellet",
+      "name": "Pressed pellet",
+      "kind": "product",
+      "parent_ids": [
+        "preannealed"
+      ]
+    },
+    {
+      "id": "product",
+      "name": "Sintered electrical pellet",
+      "kind": "product",
+      "parent_ids": [
+        "pellet"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "preanneal",
+      "action": "anneal",
+      "label": "Anneal powder at 300 °C for 24 h",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "parent-powder"
+      ],
+      "outputs": [
+        "preannealed"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kudryavtseva1997-sno2-a702862h",
+            "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+          }
+        ],
+        "note": "The general 24 h powder-annealing protocol specifies air."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prepare the powder used for electrical pellets; do not reuse the 600 °C/60 h specimen.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+        }
+      ]
+    },
+    {
+      "id": "press",
+      "action": "press",
+      "label": "Press at 700 MPa",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "preanneal"
+      ],
+      "inputs": [
+        "preannealed"
+      ],
+      "outputs": [
+        "pellet"
+      ],
+      "parameters": {
+        "pressure": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MPa",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Pellet dimensions, pressure hold time and mass are not reported.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+        }
+      ]
+    },
+    {
+      "id": "sinter",
+      "action": "sinter",
+      "label": "Sinter at 700 °C for 4 h",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "press"
+      ],
+      "inputs": [
+        "pellet"
+      ],
+      "outputs": [
+        "product"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sintering atmosphere is not separately specified.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+        }
+      ]
+    },
+    {
+      "id": "silver-contact",
+      "action": "make_contact",
+      "label": "Apply silver surface contacts",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "sinter"
+      ],
+      "inputs": [
+        "product",
+        "silver"
+      ],
+      "outputs": [],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Silver surface contacts give the reproducible sintered-pellet measurements. Platinum wire contacts and other sample A attempts remain unsuccessful or unstable comparison contexts; their mounting schedule is not invented.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "action": "measure_resistance",
+      "label": "Measure temperature-dependent resistance",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "silver-contact"
+      ],
+      "inputs": [
+        "product"
+      ],
+      "outputs": [],
+      "parameters": {
+        "measurement_temperature": {
+          "value": null,
+          "minimum": 77,
+          "maximum": 300,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, Experimental continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "applied_voltage": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "V",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+            }
+          ],
+          "derivation": null
+        },
+        "stable_voltage_upper_bound": {
+          "value": null,
+          "minimum": null,
+          "maximum": 2,
+          "unit": "V",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+            }
+          ],
+          "derivation": null,
+          "maximum_exclusive": true
+        },
+        "normalization_temperature": {
+          "value": 263,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "kudryavtseva1997-sno2-a702862h",
+              "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 9 shows relative R(T)/R(263 K), because pellet dimensions differ. Room-temperature resistance does not specify an exact Kelvin temperature. No resistivity or conductivity is calculated.",
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sno2-b-electrical-pellet",
+      "source_sample_label": "B, sintered electrical pellet",
+      "batch_id": null,
+      "material_state_id": "product",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "SnO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kudryavtseva1997-sno2-a702862h",
+            "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Electrical assay specimen; not an extra structural synthesis pair.",
+        "No SEM/XRD physical-aliquot crosswalk or crystallite size is assigned to this pellet."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "room-temperature-resistance",
+      "sample_id": "sno2-b-electrical-pellet",
+      "property": "electrical_resistance",
+      "technique": "electrical resistance with silver contacts",
+      "value": {
+        "value": 26000,
+        "minimum": null,
+        "maximum": null,
+        "unit": "Ω",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.6 × 10⁴ Ω",
+        "evidence": [
+          {
+            "source_id": "kudryavtseva1997-sno2-a702862h",
+            "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Room temperature (exact value unreported); source U = 1 V protocol; different pellet dimensions prevent direct resistivity comparison.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    },
+    {
+      "id": "activation-energy",
+      "sample_id": "sno2-b-electrical-pellet",
+      "property": "electrical_activation_energy",
+      "technique": "temperature-dependent electrical resistance",
+      "value": {
+        "value": 130,
+        "minimum": null,
+        "maximum": null,
+        "unit": "meV",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "Author estimate from R ≈ exp(Ea/kT); not a band gap or measured vacancy concentration.",
+        "basis": "",
+        "raw_text": "ca. 130 meV",
+        "evidence": [
+          {
+            "source_id": "kudryavtseva1997-sno2-a702862h",
+            "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "High-temperature activation region of the pellet B plot; fit range and uncertainty absent.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kudryavtseva1997-sno2-a702862h",
+          "locator": "Main PDF p. 2 / printed 2270, electrical specimen protocol; PDF pp. 3–4 / printed 2271–2272, electrical discussion and Figure 9"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete supplied four-page main article and Figures 1–9 independently reviewed; corrected source delta accepted. SI and cited methods not consulted.",
+    "missing_fields": [
+      "The supplied main-article scope passed independent source review; missing quantities and sample crosswalk limits below remain unresolved. No publication or exact-coordinate training approval is implied.",
+      "Physical aliquot IDs and SEM/XRD/TG/Auger crosswalk are not reported; links use the named A/B preparation population only.",
+      "No atomic coordinates, complete lattice constants, measured particle-size distribution or gas-sensing response is provided.",
+      "Heating/cooling ramps and specimen masses are unreported. Cited separate cryosol methods were not read to fill gaps.",
+      "Pellet dimensions, pressure hold time, sintering atmosphere, contact deposition method/thickness, exact room temperature, activation-fit interval and uncertainties are unreported."
+    ],
+    "conflicts": [
+      "Ammonia is called liquid ammonia in the Experimental prose, while Figure 1 labels NH3(aq). The formulation is not resolved and no ammonia concentration is inferred.",
+      "Figure 3 calls as-prepared A amorphous; the Figure 5 annealing-time discussion starts from 4 nm. The latter is retained only in its time-series context, not assigned as the as-prepared SEM/XRD size.",
+      "The 600 °C time series is distinct from the 24 h temperature series; no temperatures or time ticks are converted to invented individual tabulated measurements.",
+      "Source calls its microscopy SEM and names 2000FX JEOL. The method/instrument wording is retained without silently substituting TEM.",
+      "The 50 µm agglomerate size and resistance unit Ω are visually read from the printed page; cached OCR misreads these as mm and V.",
+      "Text summarizes A as 20 nm at 60 h, whereas the two Figure 5 reflection traces differ visually. Textual 20 nm is not a precise value for both reflections.",
+      "Text gives approximately 70 m²/g at 300 °C for both populations. Figure 7 B is visually higher; no plot-derived replacement is made.",
+      "Figure 4 axis says mass loss (%) while curves descend from 100. Only the explicit text water-loss values are extracted; the axis is not repaired."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1039/a702862h",
+      "relation": "primary_source"
+    }
+  ],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}
