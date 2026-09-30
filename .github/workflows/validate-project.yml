@@ -49,6 +49,8 @@ jobs:
         run: node --test recipe-atlas/tests/preliminary-synthesis.test.mjs
       - name: Test browser condition classification
         run: node --test recipe-atlas/tests/protocol-conditions.test.mjs
+      - name: Test shared thermal stage illustrations
+        run: node --test recipe-atlas/tests/generic-thermal-scenes.test.mjs
       - name: Test source-scoped apparatus context
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Test reader specimen and figure isolation
