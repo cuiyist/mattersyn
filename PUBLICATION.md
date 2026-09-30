@@ -33,6 +33,10 @@ became public on 2026-09-24. Do not claim server-side deletion or cache purging.
 
 ## Latest verified deployment
 
+GitHub Pages run #73 (`26df1afe5f16124de95cadfc0d362480d606647d`) was anonymously verified on 2026-09-30. It adds two distinct papers (Kudryavtseva 1997 SnO2 and Venkatesan 2003 Fe3O4), 10 records and 5 broad recipe–structure rows. The live totals are 136 papers, 1,564 records, 132 material families and 480 broad rows. Site CI build-and-validate and deploy both succeeded; each new material route resolved publicly. The preliminary collection is absent from the homepage navigation. The measured interval since run #72 was about 7h08m for two papers (0.28/hour), so the 20-paper/hour target remains unmet. Run #73 took 5m34s for CI and deployment, excluding curation and waiting time.
+
+## Historical verified deployment — batch24
+
 Batch24 (`2200f0269ab98cf743e677bd4b1c7df1e2f23df3`) was anonymously verified at 2026-09-29 23:08:15 UTC: six new papers, 58 records and 21 broad pairs; cumulative site totals are 131 papers, 1,530 records, 128 material families and 464 broad pairs. The measured 6h15m26s release interval equals 0.96 distinct papers/hour including idle time. The 20-paper/hour target remains unmet. The 400-decision cutoff was missed: the private 18:00 Chicago checkpoint was 45/400, and deployment followed at 18:08:15. See `research-assets/workflow-v4-20260929/batch24-release/public-verification.private.json` for the local proof; source PDFs, private receipts and audit evidence remain local.
 
 ## Evidence and image provenance

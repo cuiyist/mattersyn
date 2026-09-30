@@ -1,4 +1,11 @@
-# MatterSyn current verified checkpoint — 2026-09-29
+# MatterSyn current verified checkpoint — 2026-09-30
+
+## Latest verified website release — GitHub Pages run #73
+
+On 2026-09-30, run #73 (`26df1afe5f16124de95cadfc0d362480d606647d`) published the Kudryavtseva et al. (1997) SnO2 contribution and the Venkatesan et al. (2003) Fe3O4 contribution to the regular material pages. Anonymous checks confirmed both routes and the homepage; the site reports 136 contributing papers, 1,564 records, 132 material families and 480 broad recipe–structure rows. The public navigation has no preliminary-synthesis collection. Run #73 passed its build-and-validate and deploy jobs in 5m34s.
+
+The prior Pages run #72 was shown at 07:30 CDT and run #73 at 14:37 CDT; using their displayed start times and recorded run durations, the two-paper release interval was approximately 7h08m (about 0.28 published papers/hour). This is far below the requested 20/hour. The 5m34s workflow duration is deployment overhead only; it does not include source review, preparation or queue delay. Do not claim the target was met.
+
 
 The latest ordinary-material site release is batch24, site commit `2200f0269ab98cf743e677bd4b1c7df1e2f23df3`, anonymously verified at `2026-09-29T23:08:15Z` (18:08:15 America/Chicago). It adds six distinct papers, 58 records and 21 broad recipe–structure rows. Live totals: 131 contributing papers, 1,530 records, 128 material families and 464 broad rows. Public preliminary, experimental-silver and progress pages returned 404; the homepage and material routes returned 200. Full receipt: local `research-assets/workflow-v4-20260929/batch24-release/public-verification.private.json`, SHA-256 `096A665FA4BF474CAC0493C62FEDC074EA3D8CEAB544AC99DA872C885909D6E4`.
 
