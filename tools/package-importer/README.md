@@ -14,6 +14,8 @@ Run `python -B -m unittest discover -s tools/package-importer/tests` from the re
 
 This prototype, operated entirely on local files, turns one independently reviewed paper package into a deterministic, hash-pinned repository overlay. It never applies files to the checkout, starts a website build, publishes, or marks a record training-eligible. The Thomson fixture is intentionally narrow: one new material hub, one source group, one source-reviewed synthesis route, a main-only paper review, 12 source figure/table crops, two authored apparatus diagrams, two authored molecular identities, one stock context, and exact dual-delivery rights rows.
 
+For an existing material hub, `merger.py` also supports `append_strings_unique` to add canonical record IDs to a pinned `record_ids` list. Set `sort_values: true` where the consumer expects sorted IDs. This keeps synthesis routes linked additively without replacing the existing hub object; it does not add contextual assay records as routes.
+
 The importer verifies the frozen package inventory, source PDF and audit receipts; exact reviewed record and final Reader review bytes; target Git commit and every touched base-file hash; DOI/record/material/registry/path collisions; schema and route DAG; source-review scope; the two specifically reviewed operational release-policy additions; chemical and stock bindings; source and site image rights; and protocol-router registration. The canonical record and review are copied byte-for-byte. Aggregates are additive proposals produced against the exact base hashes. Scientific input and evidence files are not rewritten.
 
 ## Run the fixture

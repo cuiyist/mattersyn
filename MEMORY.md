@@ -1,3 +1,10 @@
+# MatterSyn current verified checkpoint — 2026-09-29
+
+The latest ordinary-material site release is batch24, site commit `2200f0269ab98cf743e677bd4b1c7df1e2f23df3`, anonymously verified at `2026-09-29T23:08:15Z` (18:08:15 America/Chicago). It adds six distinct papers, 58 records and 21 broad recipe–structure rows. Live totals: 131 contributing papers, 1,530 records, 128 material families and 464 broad rows. Public preliminary, experimental-silver and progress pages returned 404; the homepage and material routes returned 200. Full receipt: local `research-assets/workflow-v4-20260929/batch24-release/public-verification.private.json`, SHA-256 `096A665FA4BF474CAC0493C62FEDC074EA3D8CEAB544AC99DA872C885909D6E4`.
+
+Measured release-to-release elapsed time was 6h15m26s for six papers (0.96 papers/hour, including idle time); this does not meet the requested 20 published papers/hour. The 400-paper processing target was not met by 18:00 Chicago: the cutoff report recorded 45 completed decisions. Batch24 was verified 8m15s after the deadline. Do not claim either target was achieved.
+
+Current acceleration: deduplicate the screened-pass queue against the live source inventory before opening claims; keep distinct paper extraction and independent audits in parallel; author canonical records and Reader assets in the same paper package; integrate only audited, schema-valid sources; batch the ready contributions into one build and one live-verification cycle. The current five claims are Dhage 2004 SnO2, Yang 1999 tellurides, Xie 1999 CdSe, Qiao 2000 CdS and Kudryavtseva 1997 SnO2. Do not count work until ordinary-site deployment is anonymously verified.
 
 ### Owen, Li and Mukherjee additions awaiting publication
 

@@ -274,6 +274,33 @@ def merge_plan(checkout: Path, payload: Path, contract: dict, output: Path, impo
                     existing[key] = item
                     appended += 1
             operation_log.append({"op": kind, "target": target, "pointer": pointer, "appended": appended, "identical_prior_items": identical, "identity_keys": keys})
+        elif kind == "append_strings_unique":
+            allowed = {"op", "target", "base_sha256", "pointer", "items", "sort_values"}
+            if not {"op", "target", "base_sha256", "pointer", "items"} <= set(operation) or set(operation) - allowed:
+                raise MergeRejected("append_strings_unique operation has unknown or missing fields")
+            items = operation.get("items")
+            if not isinstance(node, list) or not isinstance(items, list) or not all(isinstance(x, str) for x in node + items):
+                raise MergeRejected("append_strings_unique needs a string-list target and string items")
+            sort_values = operation.get("sort_values", False)
+            if not isinstance(sort_values, bool):
+                raise MergeRejected("append_strings_unique sort_values must be a boolean")
+            if len(set(node)) != len(node):
+                raise MergeRejected("Base string list already contains duplicate values")
+            if len(set(items)) != len(items):
+                raise MergeRejected("Incoming string list contains duplicate values")
+            existing = set(node)
+            appended = 0
+            identical = 0
+            for item in items:
+                if item in existing:
+                    identical += 1
+                else:
+                    node.append(item)
+                    existing.add(item)
+                    appended += 1
+            if sort_values:
+                node.sort()
+            operation_log.append({"op": kind, "target": target, "pointer": pointer, "appended": appended, "identical_prior_items": identical, "sort_values": sort_values})
         else:
             raise MergeRejected(f"Unsupported JSON operation: {kind!r}")
 
