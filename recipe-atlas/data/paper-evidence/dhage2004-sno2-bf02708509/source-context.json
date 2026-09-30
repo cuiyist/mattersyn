@@ -1,0 +1,190 @@
+{
+  "source_id": "dhage2004-sno2-bf02708509",
+  "doi": "10.1007/bf02708509",
+  "scope": "Complete two-page main only. Source extraction and independent R2 canonical/Reader/sample mapping audits passed. SI remains unverified; reported reflux-condition conflicts and missing precursor charges remain explicit.",
+  "conflicts": [
+    "Reflux conditions differ by source location: Abstract gives 80–100°C and 4–6 h; Experimental says 70–100°C for 6 h; Figure 1 caption and Conclusion specify 100°C for 4 h. Preserve these locators and do not harmonize silently.",
+    "Exact precursor masses, liquid volumes, NH4OH dose, pH, actual measured-sample starting concentration and oven-drying settings are absent.",
+    "TEM reports about 30 nm mean particle size; XRD Scherrer estimate is 40 nm. These method-specific results are retained in parallel.",
+    "Introductory structure sentence prints space group P42/mmm. This is transcribed as source wording only and is not independently validated or assigned to the experimental specimen.",
+    "No measured atomic coordinates or CIF are supplied.",
+    "The paper gives no formula for the fresh tin hydroxide precipitate in the calcination comparator; formula intentionally left unspecified.",
+    "Comparator precursor and hydrothermal specimen are not linked by a sample identifier; no exact parent-preparation linkage is asserted."
+  ],
+  "reflux_conditions_by_locator": [
+    {
+      "locator": "Main PDF p. 1 / printed 221, Abstract",
+      "temperature": "80–100 °C",
+      "duration": "4–6 h"
+    },
+    {
+      "locator": "Main PDF p. 1 / printed 221, Experimental",
+      "temperature": "around 70–100 °C",
+      "duration": "6 h"
+    },
+    {
+      "locator": "Main PDF p. 2 / printed 222, Figure 1 caption and Conclusion",
+      "temperature": "100 °C",
+      "duration": "4 h"
+    }
+  ],
+  "process_constraint": {
+    "statement": "The authors state solution molarity should be >0.15 M SnO2 to obtain crystallization; below this requires longer times at 100 °C. Actual specimen concentration is unknown.",
+    "locator": "Main PDF p. 2 / printed 222, Results and discussion"
+  },
+  "excluded_background": [
+    "Introductory a = 4.737 Å, c = 3.185 Å and P42/mmm are reference statements, not experimental specimen assignments.",
+    "Potential gas-sensor and varistor uses are proposed applications, not measured property performance."
+  ],
+  "analytical_context": {
+    "locator": "Main PDF p. 1 / printed 221, Experimental",
+    "text": "XRD: Philips PW 1710, 2θ 10°–80° for 5 s in step-scan mode (step size unreported); silicon internal standard and least-squares lattice determination. TEM: JEOL 1200 EX at 100 kV; powder dispersed in amyl acetate on a carbon-coated copper grid. These preparation/assay details are not additional synthesis routes."
+  },
+  "structured_schedule_accounts": [
+    {
+      "id": "abstract-reflux-account",
+      "label": "Abstract account: 80–100 °C for 4–6 h; not a resolved execution",
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": 80,
+          "maximum": 100,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dhage2004-sno2-bf02708509",
+              "locator": "Main PDF p. 1 / printed 221, Abstract"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": 4,
+          "maximum": 6,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dhage2004-sno2-bf02708509",
+              "locator": "Main PDF p. 1 / printed 221, Abstract"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "dhage2004-sno2-bf02708509",
+          "locator": "Main PDF p. 1 / printed 221, Abstract"
+        }
+      ]
+    },
+    {
+      "id": "experimental-reflux-account",
+      "label": "Experimental account: around 70–100 °C for 6 h; characterization crosswalk unknown",
+      "parameters": {
+        "temperature": {
+          "value": null,
+          "minimum": 70,
+          "maximum": 100,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dhage2004-sno2-bf02708509",
+              "locator": "Main PDF p. 1 / printed 221, Experimental"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dhage2004-sno2-bf02708509",
+              "locator": "Main PDF p. 1 / printed 221, Experimental"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "dhage2004-sno2-bf02708509",
+          "locator": "Main PDF p. 1 / printed 221, Experimental"
+        }
+      ]
+    },
+    {
+      "id": "figure1-conclusion-reflux-account",
+      "label": "Figure 1(b) and Conclusion account: 100 °C for 4 h; TEM duration unknown",
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dhage2004-sno2-bf02708509",
+              "locator": "Main PDF p. 2 / printed 222, Figure 1 caption and Conclusion"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "dhage2004-sno2-bf02708509",
+              "locator": "Main PDF p. 2 / printed 222, Figure 1 caption and Conclusion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "dhage2004-sno2-bf02708509",
+          "locator": "Main PDF p. 2 / printed 222, Figure 1 caption and Conclusion"
+        }
+      ]
+    }
+  ],
+  "sample_link_warning": "Figure 1(b) XRD at 100 °C for 4 h and Figure 2 TEM at 100 °C with duration unknown cannot be assigned to a six-hour execution without an aliquot crosswalk. These source accounts are unresolved, not separate proven batches or interchangeable instructions."
+}

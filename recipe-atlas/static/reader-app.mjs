@@ -6,7 +6,7 @@ import {quantityValue} from './quantity-value.mjs';
 
 import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableChemicalModel} from './chemical-viewer.mjs?v=0.41.0';
 
-import {mountProtocol} from './protocol-visuals.mjs?v=0.40.2';
+import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
 import {mountReaderStructures} from './reader-structures.mjs?v=0.41.1';
 
@@ -162,13 +162,6 @@ export function renderProperties(host,figures,r,presentation={}){
 }
 
 async function buildMethod(host,r,presentation){
-
- if(presentation.presentation_status==='pending'){
-  const notice=el('aside',undefined,'reader-note');
-  notice.append(el('strong','Audited source data · presentation in progress'),el('p','Some molecular, unit-cell and morphology illustrations are still being prepared. Available measurements and source figures retain their stated sample scope.'));
-  host.append(notice);
- }
-
  const sections=[section('precursors','01','Precursors'),section('protocol','02','Synthesis protocol'),section('structures','03','Final structures'),section('properties','04','Properties'),section('intuition','05','Chemical intuition')];host.append(...sections);
 
  const protocol=el('div',undefined,'reader-protocol');sections[1].append(protocol);mountProtocol(protocol,r,siteURL('./'),presentation.protocol_art);sections[1].append(link('Full operations, branches and source notes →',recordURL(r.record_id)+'#protocol','reader-data-link'));
