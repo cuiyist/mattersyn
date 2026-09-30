@@ -9,6 +9,12 @@ from functools import lru_cache
 from safe_paths import checked_path, preflight_tree
 
 TEXT={'.json','.jsonl','.html','.js','.mjs','.css','.md','.csv','.txt'}
+RETIRED_PUBLIC_ARTIFACTS=(
+    'preliminary-synthesis.html',
+    'preliminary-synthesis.css',
+    'preliminary-synthesis.mjs',
+    'data/preliminary-synthesis.json',
+)
 def sha(b):return hashlib.sha256(b).hexdigest()
 def save(p,d):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
 @lru_cache(maxsize=1)
@@ -54,6 +60,17 @@ def authored_graphic(kind):
     if kind=='og.png':
         return b'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#f5f8fc"/><rect x="80" y="90" width="88" height="88" rx="22" fill="#2258df"/><text x="101" y="155" fill="white" font-family="Arial,sans-serif" font-size="58" font-weight="700">M</text><text x="80" y="300" font-family="Arial,sans-serif" font-size="86" fill="#13364d" font-weight="600">MatterSyn</text><text x="84" y="385" font-family="Arial,sans-serif" font-size="37" fill="#486174">Materials synthesis and characterization</text><path d="M84 440h1000" stroke="#cbd7e5" stroke-width="2"/><text x="84" y="508" font-family="Arial,sans-serif" font-size="28" fill="#225da5">Recipes, measured outcomes and traceable sources</text></svg>\n'
     return b'<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><rect width="800" height="800" rx="32" fill="#f5f8fc"/><path d="M345 125h110v218c110 45 160 162 109 263-67 130-262 130-329 0-51-101-1-218 110-263z" fill="#e4f4fa" stroke="#29566f" stroke-width="10"/><path d="M242 505c-16 89 30 154 102 177 91 29 174-6 206-82 14-35 15-65 8-95z" fill="#66b8c5" opacity=".75"/><path d="M327 120h146 M347 167h106 M267 725h266" fill="none" stroke="#29566f" stroke-width="10" stroke-linecap="round"/><circle cx="335" cy="576" r="12" fill="white" opacity=".75"/><circle cx="461" cy="616" r="9" fill="white" opacity=".75"/><text x="400" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" fill="#486174">Illustrative reaction vessel</text><text x="400" y="775" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#486174">Apparatus schematic; dimensions are illustrative</text></svg>\n'
+
+def remove_retired_public_artifacts(root):
+    """Keep the retired preliminary collection out of every published build."""
+    removed=[]
+    for rel in RETIRED_PUBLIC_ARTIFACTS:
+        target=checked_path(root,root/rel)
+        if target.is_symlink():raise RuntimeError('Retired public artifact is a symlink')
+        if target.exists():
+            if not target.is_file():raise RuntimeError('Retired public artifact is not a regular file')
+            target.unlink();removed.append(rel)
+    return removed
 
 SCRIPT='''const index=await fetch(new URL('data/source-figure-links.json',import.meta.url)).then(r=>{if(!r.ok)throw Error('Source-link index unavailable');return r.json()});
 const owners=new WeakMap();
@@ -130,8 +147,9 @@ def main():
             target=(root/original).resolve()
             if not target.is_relative_to(root):raise RuntimeError('Out-of-artifact original path')
             if target.is_file():raise RuntimeError('Withheld original unexpectedly present; rebuild from cleared inputs')
-        save(source/'private-build/source-link-transform-report.json',{'changed_files':changed,'held_paths':len(replacements),'generated_cards':len(public),'canonical_records_and_exports_modified':False})
+        retired=remove_retired_public_artifacts(root)
+        save(source/'private-build/source-link-transform-report.json',{'changed_files':changed,'held_paths':len(replacements),'generated_cards':len(public),'retired_public_artifacts_removed':retired,'canonical_records_and_exports_modified':False})
         save(source/'private-build/legacy-original-figure-provenance.json',{'scope':'Private original display objects before publication-only substitution; do not deploy.','objects':private})
-        print(json.dumps({'held_paths':len(replacements),'generated_cards':len(public),'changed_files':len(changed)}))
+        print(json.dumps({'held_paths':len(replacements),'generated_cards':len(public),'changed_files':len(changed),'retired_public_artifacts_removed':len(retired)}))
 
 if __name__=='__main__':main()

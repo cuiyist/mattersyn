@@ -2,7 +2,7 @@ import copy,hashlib,io,json,re,tempfile,unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
-from source_link_artifacts import main,project_display_json,rows,SCRIPT
+from source_link_artifacts import main,project_display_json,rows,SCRIPT,RETIRED_PUBLIC_ARTIFACTS
 
 def restored_asset(path,raw):
     digest=hashlib.sha256(raw).hexdigest()
@@ -65,15 +65,21 @@ class DisplayProjectionTests(unittest.TestCase):
             target=dist/'data/figure.json';payload=(json.dumps(metadata,indent=2)+'\n').replace('\n','\r\n').encode();target.write_bytes(payload)
             coordinate=dist/'assets/reference.cif';coordinate_raw=b'data_fixture\r\n_cell_length_a 4.2\r\n';coordinate.write_bytes(coordinate_raw)
             record=dist/'data/records/example.json';record.parent.mkdir();record_raw=b'{\r\n  "value": 4.2\r\n}\r\n';record.write_bytes(record_raw)
+            for rel in RETIRED_PUBLIC_ARTIFACTS:
+                retired=dist/rel;retired.parent.mkdir(parents=True,exist_ok=True)
+                retired.write_text('{"schema":"retired-fixture","entries":[]}' if rel.endswith('.json') else 'retired synthetic fixture',encoding='utf-8')
             registry=Path(td)/'registry.json';registry.write_text(json.dumps({'assets':[asset]}),encoding='utf-8')
             with patch('sys.argv',['source_link_artifacts.py','--phase','postbuild','--root',str(dist),
                                    '--source-root',str(source),'--registry',str(registry)]),redirect_stdout(io.StringIO()):main()
             self.assertEqual(image.read_bytes(),raw);self.assertEqual(target.read_bytes(),payload)
             self.assertEqual(coordinate.read_bytes(),coordinate_raw);self.assertEqual(record.read_bytes(),record_raw)
+            for rel in RETIRED_PUBLIC_ARTIFACTS:self.assertFalse((dist/rel).exists(),rel)
             self.assertEqual((dist/'source-figure-links.mjs').read_bytes(),SCRIPT.encode('utf-8'))
             self.assertNotIn(b'\r\n',(dist/'data/source-figure-links.json').read_bytes())
             overrides=json.loads((source/'private-build/asset-display-overrides.json').read_text())
             self.assertEqual(overrides['assets'],[])
             self.assertEqual(json.loads((dist/'data/source-figure-links.json').read_text())['assets'],{})
+            report=json.loads((source/'private-build/source-link-transform-report.json').read_text())
+            self.assertEqual(report['retired_public_artifacts_removed'],list(RETIRED_PUBLIC_ARTIFACTS))
 
 if __name__=='__main__':unittest.main()
