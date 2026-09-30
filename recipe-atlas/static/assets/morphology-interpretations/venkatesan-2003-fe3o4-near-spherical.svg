@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-labelledby="title desc">
+  <title id="title">Interpretive schematic of a near-spherical magnetite particle</title>
+  <desc id="desc">One neutral, rounded particle silhouette. It is an authored morphology schematic, not a TEM image, measured surface or size-scaled model.</desc>
+  <defs>
+    <radialGradient id="particle" cx="31%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#f7fbfb"/>
+      <stop offset="0.35" stop-color="#a9c5c4"/>
+      <stop offset="0.8" stop-color="#668987"/>
+      <stop offset="1" stop-color="#3f6262"/>
+    </radialGradient>
+    <filter id="shadow" x="-35%" y="-35%" width="170%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dy="9"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="960" height="480" rx="26" fill="#f8fbfc"/>
+  <circle cx="480" cy="226" r="128" fill="url(#particle)" stroke="#405f5f" stroke-opacity=".32" stroke-width="3" filter="url(#shadow)"/>
+  <ellipse cx="442" cy="181" rx="36" ry="18" fill="#fff" fill-opacity=".43" transform="rotate(-35 442 181)"/>
+  <text x="480" y="441" text-anchor="middle" fill="#526873" font-family="system-ui,sans-serif" font-size="20" letter-spacing=".4">Authored morphology schematic · not to scale</text>
+</svg>
