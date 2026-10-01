@@ -119,6 +119,18 @@ is **in**; bulk, thin-film, CVD, ceramic, sintering, glass or melt wording witho
 wording is **out** and excluded (`excluded.outside_quantum_dot_scope`). Mixed or missing wording
 is kept with `scope_check_required: true` and ranked after all in-scope units. No paper is opened.
 
+### Stage events and live sources (workflow v5)
+
+```powershell
+python -B package_workflow.py log-event <private-ledger.jsonl> --stage claimed --package-id <id>
+python -B package_workflow.py live-sources <site-checkout> --output <private-live-sources.json>
+```
+
+`log-event` appends one validated stage event (timezone-aware time, known stage). `live_verified`
+events are refused here; only `tools/publication/release_batch.py` writes them, after an anonymous
+live check. `live-sources` lists the primary sources already published in a site checkout, for
+`rank --live-sources`.
+
 ### Deep-audit sample (workflow v5)
 
 ```powershell

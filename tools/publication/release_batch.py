@@ -115,11 +115,41 @@ def http_get(url, headers=None, opener=None):
         return subprocess.run(cmd, capture_output=True, check=True).stdout
 
 
+def papers_added_by_last_site_commit(site):
+    """Papers whose records were added by the site's HEAD commit (for re-verifying a pushed release)."""
+    names = run(['git', '-C', site, 'diff', '--name-only', '--diff-filter=A', 'HEAD~1', 'HEAD', '--', 'data/records']).split()
+    out = {}
+    for rel in names:
+        if not rel.endswith('.json'):
+            continue
+        rec = json.loads((Path(site) / rel).read_text(encoding='utf-8'))
+        src = (rec.get('lineage') or {}).get('source_group')
+        if src:
+            out.setdefault(src, []).append(rec['record_id'])
+    return {k: sorted(v) for k, v in out.items()}
+
+
+def site_built_from(site, commit):
+    snap = Path(site) / 'data' / 'release-snapshot.json'
+    return snap.exists() and json.loads(snap.read_text(encoding='utf-8')).get('source_commit') == commit
+
+
 def source_ci_passed(repo_slug, commit, opener=None):
     url = f'https://api.github.com/repos/{repo_slug}/actions/runs?head_sha={commit}&per_page=50'
     runs = json.loads(http_get(url, {'Accept': 'application/vnd.github+json'}, opener)).get('workflow_runs', [])
     mine = [x for x in runs if x.get('name') == CI_WORKFLOW]
     return any(x.get('conclusion') == 'success' for x in mine), [(x.get('status'), x.get('conclusion')) for x in mine]
+
+
+def wait_for_ci(repo_slug, commit, minutes, opener=None, sleep=time.sleep, poll_s=30):
+    """Poll source CI for this commit. Returns (passed, runs). Stops early on a completed failure."""
+    deadline = time.monotonic() + minutes * 60
+    while True:
+        ok, runs = source_ci_passed(repo_slug, commit, opener)
+        finished = runs and all(status == 'completed' for status, _ in runs)
+        if ok or finished or time.monotonic() > deadline:
+            return ok, runs
+        sleep(poll_s)
 
 
 def fetch(url, opener=None):
@@ -172,6 +202,7 @@ def main():
     ap.add_argument('--source-repo', default='cuiyist/mattersyn')
     ap.add_argument('--site-url', default='https://cuiyist.github.io/mattersyn-site/')
     ap.add_argument('--skip-ci-check', action='store_true', help='dry runs only: do not require source CI success')
+    ap.add_argument('--wait-ci', type=float, default=0, metavar='MINUTES', help='wait up to MINUTES for source CI to finish')
     a = ap.parse_args()
     py = sys.executable
     src, site, work = a.source.resolve(), a.site.resolve(), a.work.resolve()
@@ -185,14 +216,12 @@ def main():
             raise SystemExit(f'checkout is not clean: {repo}')
     if work.exists() and any(work.iterdir()):
         raise SystemExit('--work must be new or empty')
-    if a.verify and not a.push:
-        raise SystemExit('--verify needs --push')
     if a.push and a.skip_ci_check:
         raise SystemExit('--skip-ci-check is only for dry runs')
     work.mkdir(parents=True, exist_ok=True)
     commit = git(src, 'rev-parse', 'HEAD')
     if not a.skip_ci_check:
-        ok, seen = source_ci_passed(a.source_repo, commit)
+        ok, seen = wait_for_ci(a.source_repo, commit, a.wait_ci)
         if not ok:
             raise SystemExit(f'source CI has not passed for {commit} (runs: {seen}); push it and wait for CI')
     mark('checks')
@@ -237,25 +266,33 @@ def main():
     if not (added or changed or removed):
         summary['note'] = 'website content unchanged; nothing to publish'
         git(site, 'checkout', '--', '.release-control'); git(site, 'clean', '-fdq', '--', '.release-control')
-        print(json.dumps(summary, indent=1)); (work / 'release-summary.json').write_text(json.dumps(summary, indent=1)); return 0
+        if a.verify and site_built_from(site, commit):
+            # Re-verify a release that was already pushed (e.g. the first live check timed out).
+            added_papers = papers_added_by_last_site_commit(site)
+            summary.update(note='re-verifying the release already pushed for this source commit',
+                           new_papers=sorted(added_papers), new_records=sum(len(v) for v in added_papers.values()))
+        else:
+            print(json.dumps(summary, indent=1)); (work / 'release-summary.json').write_text(json.dumps(summary, indent=1)); return 0
+    elif a.verify and not a.push:
+        raise SystemExit('--verify without --push only re-checks a release that was already pushed')
 
-    if a.push:
+    if a.push and (added or changed or removed):
         git(site, 'add', '-A')
         body = '\n'.join(f'- {p} ({len(added_papers[p])} records)' for p in sorted(added_papers)) or '- no new source papers'
         run(['git', '-C', site, 'commit', '-q', '-m', f'Publish {len(added_papers)} papers ({a.release_id})', '-m',
              f'Built from cuiyist/mattersyn {commit}.\n\n{body}'])
         run(['git', '-C', site, 'push', '-q', 'origin', 'HEAD:main'])
         summary.update(pushed=True, site_commit=git(site, 'rev-parse', 'HEAD')); mark('push')
-        if a.verify:
-            result = verify_live(a.site_url, final, commit)
-            receipt = work / 'live-verification.json'; receipt.write_text(json.dumps(result, indent=1) + '\n')
-            summary['live_verification'] = {k: result.get(k) for k in ('passed', 'checked_files', 'mismatched_files', 'reason')}
-            mark('live_verification')
-            if result['passed'] and a.ledger:
-                with a.ledger.open('a', encoding='utf-8') as f:
-                    for e in ledger_events(added_papers, commit, a.site_url, sha256(receipt), result['verified_at']):
-                        f.write(json.dumps(e) + '\n')
-                summary['ledger_events'] = len(added_papers)
+    if a.verify:
+        result = verify_live(a.site_url, final, commit)
+        receipt = work / 'live-verification.json'; receipt.write_text(json.dumps(result, indent=1) + '\n')
+        summary['live_verification'] = {k: result.get(k) for k in ('passed', 'checked_files', 'mismatched_files', 'reason')}
+        mark('live_verification')
+        if result['passed'] and a.ledger:
+            with a.ledger.open('a', encoding='utf-8') as f:
+                for e in ledger_events(added_papers, commit, a.site_url, sha256(receipt), result['verified_at']):
+                    f.write(json.dumps(e) + '\n')
+            summary['ledger_events'] = len(added_papers)
     summary['stage_seconds'] = times
     (work / 'release-summary.json').write_text(json.dumps(summary, indent=1) + '\n')
     print(json.dumps(summary, indent=1))

@@ -199,6 +199,32 @@ class DeepAuditSampleTests(unittest.TestCase):
             self.assertEqual(first['scientific_sha256'],w.digest(w.science_payload(pkg,Path(d))))
             self.assertTrue(first['quick_audit_still_required'])
 
+class HelperCommandTests(unittest.TestCase):
+    def test_log_event_appends_valid_lines(self):
+        with tempfile.TemporaryDirectory() as d:
+            ledger=Path(d)/'ledger.jsonl'
+            w.log_event(ledger,'claimed','paper-a',at='2026-10-01T00:00:00Z')
+            w.log_event(ledger,'extraction_frozen','paper-a',at='2026-10-01T00:30:00Z')
+            rows=[json.loads(x) for x in ledger.read_text().splitlines()]
+            self.assertEqual([r['stage'] for r in rows],['claimed','extraction_frozen'])
+            result=w.event_metrics(rows,'2026-10-01T00:00:00Z','2026-10-01T01:00:00Z')
+            self.assertEqual(result['new_distinct_source_papers'],0, 'stage events never count as published papers')
+    def test_log_event_rejects_live_unknown_and_naive_time(self):
+        with tempfile.TemporaryDirectory() as d:
+            ledger=Path(d)/'ledger.jsonl'
+            for args in (('live_verified','p'),('published','p'),('claimed',' ')):
+                with self.assertRaises(ValueError): w.log_event(ledger,*args,at='2026-10-01T00:00:00Z')
+            with self.assertRaises(ValueError): w.log_event(ledger,'claimed','p',at='2026-10-01T00:00:00')
+    def test_live_sources_from_site_records(self):
+        with tempfile.TemporaryDirectory() as d:
+            rec=Path(d)/'data'/'records'; rec.mkdir(parents=True)
+            (rec/'a.json').write_text(json.dumps({'record_id':'a','lineage':{'source_group':'paper-a'}}))
+            (rec/'b.json').write_text(json.dumps({'record_id':'b','lineage':{'source_group':'paper-a'}}))
+            (rec/'c.json').write_text(json.dumps({'record_id':'c','lineage':{'source_group':'paper-c'}}))
+            self.assertEqual(w.live_sources(d),['paper-a','paper-c'])
+            ids={'1'*64:{'verified':True,'primary_source_id':'paper-a','role':'main'}}
+            self.assertEqual(w.rank_queue([row()],ids,w.live_sources(d))['excluded']['already_live_verified_source'],1)
+
 def event(eid='e1',source='p1',at='2026-09-26T02:00:00Z',**updates):
     result={'event_id':eid,'at':at,'stage':'live_verified','package_id':source+'-package','primary_source_id':source,
             'source_identity_verified':True,'tier':'gold','record_ids':['r1','r2'],'commit':'a'*40,'url':'https://example.test/material',

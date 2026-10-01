@@ -2,7 +2,8 @@
 
 **Adopted 2026-09-30 at the owner's request.** This is the only active workflow. It replaces
 `processing-workflow-v4.md`, `throughput-workflow-v3.md`, `throughput-workflow.md` and
-`scaling-workflow-v2.md`. Those files are history. Where any other reference disagrees with
+`scaling-workflow-v2.md`. Those files are history. **For the exact commands, roles and failure handling, follow
+[agent-runbook.md](agent-runbook.md).** Where any other reference disagrees with
 this file about scope, pace, staffing, audits or publication cadence, this file wins. Quality
 rules are in [standards.md](standards.md) and still apply in full.
 
@@ -37,7 +38,8 @@ python -B tools/workflow/package_workflow.py rank <screened_pass.jsonl> --scope 
 
 ### 2. Claim
 - Keep every extractor busy: each holds **one active paper plus one claimed next paper**.
-- Claim = one line in the private event ledger (`stage: claimed`, `package_id`, UTC `at`).
+- Claim by creating a claim file, then `package_workflow.py log-event <ledger> --stage claimed --package-id <id>`
+  (see the runbook). Every stage below is logged the same way.
 
 ### 3. Extract: one paper = one package (minimum publishable unit)
 - **Scope:** main-text recipes and **all** variants inside that scope, their product samples
@@ -79,7 +81,7 @@ papers over a rolling 50, stop and tell the owner.** The quick audit is then mis
 ### 6. Integrate (one integrator; batches as papers arrive)
 - Merge accepted packages with `tools/package-importer/merger.py`, then `preflight.py`.
 - One source commit per batch with generated controls (`tools/publication/SINGLE_COMMIT_RELEASE.md`):
-  `prepare_source_release.py --apply`, `git commit`, `check_project_manifest.py --pre-push`, push to `main`.
+  `make_review_receipt.py`, `prepare_source_release.py --apply`, `git commit`, `check_project_manifest.py --pre-push`, push to `main`.
 - Never commit derived aggregates by hand. Never make a separate manifest-closure commit.
 - Never wait for a blocked paper. Publish what is ready.
 
@@ -87,7 +89,7 @@ papers over a rolling 50, stop and tell the owner.** The quick audit is then mis
 ```
 python tools/publication/release_batch.py --source <clean source checkout at pushed main> \
   --site <clean mattersyn-site checkout> --work <new folder outside both> \
-  --release-id <batch id> --reviewer "<quick-audit reviewer(s)>" --push --verify --ledger <private ledger.jsonl>
+  --release-id <batch id> --reviewer "<quick-audit reviewer(s)>" --wait-ci 20 --push --verify --ledger <private ledger.jsonl>
 ```
 It checks that source CI passed for that commit. It then builds the candidate, generates the
 site allowlist, runs the final gated build (which must equal the candidate), stages the site,

@@ -80,7 +80,10 @@ candidate, the final gated build (must equal the candidate), site staging, the s
 commit and push (`--push`), the anonymous live check (`--verify`) and ledger events (`--ledger`).
 Without `--push` it is a dry run. Verified on 2026-09-30: it reproduced the live site for source
 `844c5121` with zero file changes, and reproduced the published Zhang 2011 release byte for byte
-when staged onto the previous site release.
+when staged onto the previous site release. `--wait-ci MINUTES` waits for source CI. Rerunning with
+`--verify` and without `--push` re-checks a release that was already pushed (for example after a Pages
+delay), and logs its ledger events at most once. `tools/publication/make_review_receipt.py` writes the
+exact-change review receipt that `prepare_source_release.py` needs, from the staged changes.
 
 Source and site pushes are separate steps. After the reviewed source commit
 passes the existing local source-boundary and complete-build checks, push that

@@ -56,6 +56,18 @@ class StageTests(unittest.TestCase):
         self.assertEqual(rb.new_papers(self.site, self.dist), {'paper-b': ['b', 'b2']})
 
 
+class SiteHistoryTests(unittest.TestCase):
+    def test_papers_added_by_last_site_commit(self):
+        import subprocess
+        with tempfile.TemporaryDirectory() as d:
+            g=lambda *x: subprocess.run(['git','-C',d,*x],check=True,capture_output=True)
+            g('init','-q'); g('config','user.email','t@example.invalid'); g('config','user.name','t')
+            write(d,'data/records/a.json',record('a','paper-a')); g('add','-A'); g('commit','-qm','one')
+            write(d,'data/records/b.json',record('b','paper-b')); write(d,'data/records/a.json',record('a','paper-a')+' ')
+            write(d,'data/release-snapshot.json',json.dumps({'source_commit':'f'*40})); g('add','-A'); g('commit','-qm','two')
+            self.assertEqual(rb.papers_added_by_last_site_commit(d),{'paper-b':['b']})
+            self.assertTrue(rb.site_built_from(d,'f'*40)); self.assertFalse(rb.site_built_from(d,'0'*40))
+
 class NetworkTests(unittest.TestCase):
     def test_ci_check_requires_named_successful_run(self):
         runs = {'workflow_runs': [{'name': 'Other', 'conclusion': 'success'}, {'name': rb.CI_WORKFLOW, 'status': 'completed', 'conclusion': 'failure'}]}
@@ -64,6 +76,16 @@ class NetworkTests(unittest.TestCase):
         runs['workflow_runs'].append({'name': rb.CI_WORKFLOW, 'status': 'completed', 'conclusion': 'success'})
         ok, _ = rb.source_ci_passed('o/r', 'a' * 40, opener=lambda req, timeout: FakeResponse(json.dumps(runs).encode()))
         self.assertTrue(ok)
+
+    def test_wait_for_ci_polls_until_success_and_stops_on_failure(self):
+        seq=[[{'name': rb.CI_WORKFLOW, 'status': 'in_progress', 'conclusion': None}],
+             [{'name': rb.CI_WORKFLOW, 'status': 'completed', 'conclusion': 'success'}]]
+        calls=[]
+        def opener(req, timeout):
+            calls.append(1); return FakeResponse(json.dumps({'workflow_runs': seq[min(len(calls)-1, 1)]}).encode())
+        self.assertTrue(rb.wait_for_ci('o/r', 'a'*40, 5, opener=opener, sleep=lambda s: None)[0]); self.assertEqual(len(calls), 2)
+        failed=lambda req, timeout: FakeResponse(json.dumps({'workflow_runs': [{'name': rb.CI_WORKFLOW, 'status': 'completed', 'conclusion': 'failure'}]}).encode())
+        self.assertFalse(rb.wait_for_ci('o/r', 'a'*40, 5, opener=failed, sleep=lambda s: None)[0])
 
     def live(self, dist, served):
         def opener(req, timeout):

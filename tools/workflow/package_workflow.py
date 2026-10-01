@@ -354,6 +354,28 @@ def audit_sample(package, root, percent=DEEP_AUDIT_PERCENT):
             'rule':'deep audit iff int(scientific_sha256[:8], 16) % 100 < percent; computed after extraction is frozen',
             'quick_audit_still_required':True}
 
+def log_event(ledger, stage, package_id, at=None, pull_request=None, note=None):
+    """Append one stage event to the private ledger. live_verified is written only by release_batch.py."""
+    if stage not in STAGES: raise ValueError('unknown stage: '+str(stage))
+    if stage=='live_verified': raise ValueError('live_verified events come from tools/publication/release_batch.py')
+    if not isinstance(package_id,str) or not package_id.strip(): raise ValueError('package_id is required')
+    at=at or datetime.now().astimezone().isoformat(timespec='seconds')
+    if datetime.fromisoformat(at.replace('Z','+00:00')).tzinfo is None: raise ValueError('at must include a timezone')
+    event={'event_id':f'{stage}:{package_id}:{at}','at':at,'stage':stage,'package_id':package_id.strip()}
+    if pull_request: event['pull_request']=pull_request
+    if note: event['note']=note
+    with Path(ledger).open('a',encoding='utf-8') as f: f.write(json.dumps(event,ensure_ascii=False)+'\n')
+    return event
+
+def live_sources(site_checkout):
+    """Primary source IDs already published on the site (from built records), for rank --live-sources."""
+    found=set()
+    for path in sorted((Path(site_checkout)/'data'/'records').glob('*.json')):
+        record=load(path); source=(record.get('lineage') or {}).get('source_group')
+        if isinstance(source,str) and source.strip(): found.add(source.strip())
+    if not found: raise ValueError('no published records found under data/records')
+    return sorted(found)
+
 def identities_from_reviews(directory):
     """Reuse explicit current Reader identity receipts; filenames/DOI guesses do not qualify."""
     identities={}; conflicts=set(); skipped=[]
@@ -455,6 +477,8 @@ def main():
     p=commands.add_parser('validate'); p.add_argument('manifest'); p.add_argument('--checkout',required=True); p.add_argument('--base-package'); p.add_argument('--output',required=True)
     p=commands.add_parser('diff'); p.add_argument('before'); p.add_argument('after'); p.add_argument('--output',required=True)
     p=commands.add_parser('rank'); p.add_argument('screened_pass_jsonl'); p.add_argument('--identities'); p.add_argument('--live-sources'); p.add_argument('--scope',choices=['all','quantum-dot'],default='all'); p.add_argument('--output',required=True)
+    p=commands.add_parser('log-event'); p.add_argument('ledger'); p.add_argument('--stage',required=True,choices=sorted(STAGES-{'live_verified'})); p.add_argument('--package-id',required=True); p.add_argument('--at'); p.add_argument('--pull-request'); p.add_argument('--note')
+    p=commands.add_parser('live-sources'); p.add_argument('site_checkout'); p.add_argument('--output',required=True)
     p=commands.add_parser('audit-sample'); p.add_argument('manifest'); p.add_argument('--percent',type=int,default=DEEP_AUDIT_PERCENT); p.add_argument('--output',required=True)
     p=commands.add_parser('metrics'); p.add_argument('events_jsonl'); p.add_argument('--start',required=True); p.add_argument('--end',required=True); p.add_argument('--output',required=True)
     p=commands.add_parser('identity-map'); p.add_argument('review_directory'); p.add_argument('--output',required=True); p.add_argument('--report',required=True)
@@ -467,6 +491,10 @@ def main():
         result=diff_packages(load(args.before),Path(args.before).parent,load(args.after),Path(args.after).parent)
     elif args.command=='rank':
         result=rank_queue(jsonlines(args.screened_pass_jsonl),load(args.identities) if args.identities else {},load(args.live_sources) if args.live_sources else [],None if args.scope=='all' else args.scope)
+    elif args.command=='log-event':
+        print(json.dumps(log_event(args.ledger,args.stage,args.package_id,args.at,args.pull_request,args.note),ensure_ascii=False)); return 0
+    elif args.command=='live-sources':
+        sources=live_sources(args.site_checkout); write_result(args.output,sources); print(json.dumps({'live_sources':len(sources)})); return 0
     elif args.command=='audit-sample': result=audit_sample(load(args.manifest),Path(args.manifest).parent,args.percent)
     elif args.command=='metrics': result=event_metrics(jsonlines(args.events_jsonl),args.start,args.end)
     else:

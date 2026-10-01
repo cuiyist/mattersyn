@@ -13,7 +13,8 @@ add records merely because this skill was invoked.
 
 ## Start here
 
-**Adding papers to the website:** follow [references/workflow-v5.md](references/workflow-v5.md),
+**Adding papers to the website:** run it step by step with [references/agent-runbook.md](references/agent-runbook.md)
+(commands, roles, failure handling). The rules behind it are in [references/workflow-v5.md](references/workflow-v5.md),
 the only active workflow (quantum-dot/colloidal papers only, quick audit + 10% deep audit,
 figures and visuals with each paper, continuous work, one-command release). The older workflow
 files are historical; see the index below.
@@ -38,6 +39,7 @@ files are historical; see the index below.
 
 | Read | When |
 |---|---|
+| [agent-runbook.md](references/agent-runbook.md) | Operating the pipeline: every command, role and failure case |
 | [workflow-v5.md](references/workflow-v5.md) | Always, before adding papers |
 | [standards.md](references/standards.md) | Extraction, page design, figures, validation and publication details |
 | [recipe-and-evidence.md](references/recipe-and-evidence.md) | Creating or changing experimental content |
