@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1616,
-  "group_count": 148,
+  "record_count": 1623,
+  "group_count": 149,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag nanocrystals and superlattice films",
     "Ag2S nanocrystals",
     "Ag2S quantum dots",
+    "Ag2S–Au heterostructures",
     "Aluminum nanocrystals",
     "Aluminum nitride nanocrystals",
     "Ammonia-substitution control context",
@@ -18,7 +19,9 @@
     "Aqueous cadmium selenide nanocrystals",
     "Au colloidal nanocrystal seeds",
     "Au nanocrystals and superlattice films",
+    "Au seed nanocrystals",
     "Au/CdS colloidal metal–semiconductor core/shell nanocrystals",
+    "Au@Ag2S core–shell nanocrystals",
     "Aurivillius bismuth titanate and lithium-intercalated intermediate",
     "Biomass-derived amine-functionalized carbon quantum dots",
     "Bismuth telluride nanocrystals",
@@ -106169,6 +106172,509 @@
         "CdTe"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-ag2s-au-heterodimer",
+      "title": "Yang and Ying (2009): Ag2S–Au heterodimer",
+      "formula": "Ag2S–Au",
+      "family": "Ag2S–Au heterostructures",
+      "method": "Room-temperature Au deposition on Ag2S seeds",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 1,
+      "record_sha256": "1744604a148816f0ed15f069f99cde3d46fcb2d17c7d9f5b39d6dcf02eae7fb5",
+      "recipe_signature": "ea3f56cdab513a6bf3505585123c3705e48e71e863162e3aeaffbbf65a68cd90",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-ag2s-au-heterodimer.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-ag2s-au-heterodimer.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2S",
+        "Au"
+      ],
+      "pair_ids": [
+        "yang2009-ag2s-au-b823320a-ag2s-au-heterodimer::yang2009-ag2s-au-b823320a-ag2s-au-heterodimer-sample"
+      ]
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-ag2s-seed",
+      "title": "Yang and Ying (2009): room-temperature Ag2S nanocrystals",
+      "formula": "Ag2S",
+      "family": "Ag2S nanocrystals",
+      "method": "Ag(I) phase transfer followed by room-temperature sulfur reaction",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 1,
+      "record_sha256": "ac0f128b543b4f8493742522b8d4e114940886159288df44f4b90904e868eba9",
+      "recipe_signature": "b0d9dcae5a0916b22f06a54c22cf732691652a528b811b8fda85a48ee0ae433e",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-ag2s-seed.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-ag2s-seed.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2S"
+      ],
+      "pair_ids": [
+        "yang2009-ag2s-au-b823320a-ag2s-seed::yang2009-ag2s-au-b823320a-ag2s-seed-sample"
+      ]
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-au-ag2s-1-1",
+      "title": "Yang and Ying (2009): Au@Ag2S core–shell, nominal Au:Ag2S synthesis ratio 1:1",
+      "formula": "Au@Ag2S",
+      "family": "Au@Ag2S core–shell nanocrystals",
+      "method": "Ag2S growth on Au seed nanocrystals",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 1,
+      "record_sha256": "a47239239235196d834338b5e2b3f436f63781bf173654a069df8ee1830957dd",
+      "recipe_signature": "eea57601899c79444c18ced880a7bd064badd4796592f2f41c4eaa83a82cb48a",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-au-ag2s-1-1.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-au-ag2s-1-1.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Au",
+        "Ag2S"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-au-ag2s-1-2",
+      "title": "Yang and Ying (2009): Au@Ag2S core–shell, nominal Au:Ag2S synthesis ratio 1:2",
+      "formula": "Au@Ag2S",
+      "family": "Au@Ag2S core–shell nanocrystals",
+      "method": "Ag2S growth on Au seed nanocrystals",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 2,
+      "record_sha256": "5cfc7350c73048e9706022fa94ed48b9087fb4fff9f8fc12a1b4d5b9d75cc385",
+      "recipe_signature": "5f1d46bef03f2ee593e62daf0fe129d3b8d2ffff004e7abc1daed9bb28f0c2e0",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-au-ag2s-1-2.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-au-ag2s-1-2.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Au",
+        "Ag2S"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-au-ag2s-2-1",
+      "title": "Yang and Ying (2009): Au@Ag2S core–shell, nominal Au:Ag2S synthesis ratio 2:1",
+      "formula": "Au@Ag2S",
+      "family": "Au@Ag2S core–shell nanocrystals",
+      "method": "Ag2S growth on Au seed nanocrystals",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 1,
+      "record_sha256": "2483c675fbba9fb5644bb6145f784440b68ed99a790301911622fb2f6e915a4f",
+      "recipe_signature": "5a756782efa42cde7d42c18c65d1eb639102c18ba2210d083460255b8c84a7b8",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-au-ag2s-2-1.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-au-ag2s-2-1.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Au",
+        "Ag2S"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-au-ag2s-typical-unassigned",
+      "title": "Yang and Ying (2009): typical Au@Ag2S core–shell procedure; ratio unassigned",
+      "formula": "Au@Ag2S",
+      "family": "Au@Ag2S core–shell nanocrystals",
+      "method": "Ag2S growth on Au seed nanocrystals",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 1,
+      "record_sha256": "31997268b2a57dcafb9667b338e29546a41a1faa6b8fbf2be06cbafe768294b7",
+      "recipe_signature": "7e3a58b0d7786baee86051b559209dca3144a4f047bd2d8c48c68bf5b0e71564",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-au-ag2s-typical-unassigned.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-au-ag2s-typical-unassigned.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Au",
+        "Ag2S"
+      ],
+      "pair_ids": [
+        "yang2009-ag2s-au-b823320a-au-ag2s-typical-unassigned::yang2009-ag2s-au-b823320a-au-ag2s-typical-unassigned-sample"
+      ]
+    },
+    {
+      "record_id": "yang2009-ag2s-au-b823320a-au-seed-13nm",
+      "title": "Yang and Ying (2009): 13 nm Au seed preparation",
+      "formula": "Au",
+      "family": "Au seed nanocrystals",
+      "method": "Citrate reduction and BSPP-assisted transfer",
+      "record_type": "protocol_variant",
+      "source_year": 2009,
+      "source_doi": "10.1039/b823320a",
+      "revision": 1,
+      "record_sha256": "18f9f001af09f8feb75288312b424c0f6c3b21d2c290137be4469a9254c7e38e",
+      "recipe_signature": "6054df9e3d955e8907da3d614be96e40c3caaad07bcb39b128343f762d3acba8",
+      "group_id": "group-5bd41eec3502",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2009-ag2s-au-b823320a-au-seed-13nm.json",
+      "page_url": "records/yang2009-ag2s-au-b823320a-au-seed-13nm.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "Au"
+      ],
+      "pair_ids": [
+        "yang2009-ag2s-au-b823320a-au-seed-13nm::yang2009-ag2s-au-b823320a-au-seed-13nm-sample"
+      ]
     },
     {
       "record_id": "yao-1998-absorption",
