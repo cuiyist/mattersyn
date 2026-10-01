@@ -102,6 +102,63 @@ def changed_paths(before, after, pointer=''):
         return set().union(*(changed_paths(a,b,pointer+'/'+str(i)) for i,(a,b) in enumerate(zip(before,after))))
     return set() if before==after else {pointer or '/'}
 
+def scoped_audit_reviewer_matches(audit, package_audit):
+    """Accept either receipt spelling, never a conflicting alias or self-review."""
+    reviewer=package_audit.get('reviewer_id');author=package_audit.get('author_id')
+    aliases=[audit[key] for key in ('reviewer_id','auditor_id') if key in audit]
+    return (isinstance(reviewer,str) and bool(reviewer) and isinstance(author,str) and bool(author)
+            and author!=reviewer and audit.get('author_id')==author and bool(aliases)
+            and all(isinstance(name,str) and name==reviewer for name in aliases))
+
+def scoped_audit_decision_accepted(audit):
+    """The private quick-audit receipt uses decision; older receipts use verdict."""
+    decisions=[audit[key] for key in ('verdict','decision') if key in audit]
+    return bool(decisions) and all(value=='ACCEPTED_SCOPED_CONTENT' for value in decisions)
+
+def scoped_context_link_drop_only(before, after, source_id, doi, candidate):
+    """Allow removal of one fictitious formal Reader link, retaining the DOI link byte-for-byte."""
+    old=before.get('context_links');new=after.get('context_links')
+    if not isinstance(old,list) or not isinstance(new,list) or len(old)!=2 or len(new)!=1:
+        return False
+    primary=new[0]
+    if (not isinstance(primary,dict) or primary.get('relation')!='primary_source'
+            or str(primary.get('url','')).lower()!=f'https://doi.org/{doi}'.lower()
+            or old.count(primary)!=1):
+        return False
+    dropped=[link for link in old if link!=primary]
+    if len(dropped)!=1 or dropped[0]!={'label':'Source review',
+                                        'url':f'paper-review.html?id={source_id}',
+                                        'relation':'source_review'}:
+        return False
+    # A real Reader cannot be silently unlinked. The scoped inventory is checked
+    # separately and must truthfully have paper_review_url: null.
+    return not (candidate/'recipe-atlas/data/paper-reviews'/(source_id+'.json')).exists()
+
+def scoped_record_changes_allowed(before, after, source_id, doi, candidate):
+    changes=changed_paths(before,after)
+    allowed={'/revision','/sources/0/main_status','/quality/review_status','/quality/review_scope',
+             '/context_links'}
+    return changes, not (changes-allowed) and ('/context_links' not in changes or
+            scoped_context_link_drop_only(before,after,source_id,doi,candidate))
+
+def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=False):
+    """Accept audited status promotion, including older metadata-only packages.
+
+    A same-revision promotion remains limited to the independently checked
+    imported-unreviewed context-link cleanup.
+    """
+    old_status=before.get('quality',{}).get('review_status')
+    if (old_status not in {'imported_unreviewed','metadata_only'}
+            or after.get('quality',{}).get('review_status')!='source_reviewed'):
+        return False
+    old_revision=before.get('revision');new_revision=after.get('revision')
+    if not isinstance(old_revision,int) or isinstance(old_revision,bool):
+        return False
+    if new_revision==old_revision+1:
+        return True
+    return (old_status=='imported_unreviewed' and new_revision==old_revision
+            and changes_allowed and changes is not None and '/context_links' in changes)
+
 def scoped_review_errors(entry, candidate, records, inventory, validate_record):
     """Private accepted v5 package replaces a *formal* Reader only for its scoped source."""
     errors=[]
@@ -125,8 +182,8 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
             and validation.get('scientific_package_ready_for_existing_integration_gates') is True
             and validation.get('scientific_sha256')==science):
         errors.append('Scoped validation receipt does not bind accepted science')
-    if not (audit.get('verdict')=='ACCEPTED_SCOPED_CONTENT' and audit.get('scientific_sha256')==science
-            and audit.get('reviewer_id')==pa.get('reviewer_id') and pa.get('author_id')!=pa.get('reviewer_id')
+    if not (scoped_audit_decision_accepted(audit) and audit.get('scientific_sha256')==science
+            and scoped_audit_reviewer_matches(audit,pa)
             and pa.get('receipt_id')==paths['audit_receipt_path'].name):
         errors.append('Scoped independent audit receipt missing, unbound or self-reviewed')
     source=package.get('source',{});sid=source.get('primary_source_id');doi=str(source.get('doi') or '').lower()
@@ -152,7 +209,6 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
                 errors.append('Scoped inventory page coverage differs from package or falsely claims full review')
     if not package.get('scope',{}).get('omissions'):
         errors.append('Scoped package has no explicit exclusions')
-    allowed={'/revision','/sources/0/main_status','/quality/review_status','/quality/review_scope'}
     used_deltas=set()
     for declared in package.get('records',[]):
         rid=declared.get('record_id');actual=records.get(rid)
@@ -171,8 +227,8 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
             errors.append('Scoped canonical record primary DOI differs from accepted source: '+rid)
         if not package_record.get('sources') or package_record['sources'][0].get('doi','').lower()!=doi:
             errors.append('Scoped frozen record primary DOI differs from accepted source: '+rid)
-        changes=changed_paths(package_record,actual)
-        if changes-allowed:
+        changes,changes_allowed=scoped_record_changes_allowed(package_record,actual,sid,doi,candidate)
+        if not changes_allowed:
             errors.append('Scoped canonical record changes unaccepted science: '+rid)
         if actual.get('lineage',{}).get('source_group')!=sid:
             errors.append('Scoped canonical record source-group join is invalid: '+rid)
@@ -181,9 +237,7 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
             if actual.get('quality',{}).get('review_status')!='source_reviewed':
                 errors.append('Scoped unchanged package record is not source-reviewed: '+rid)
             continue
-        if not (package_record.get('quality',{}).get('review_status')=='imported_unreviewed'
-                and actual.get('quality',{}).get('review_status')=='source_reviewed'
-                and actual.get('revision')==package_record.get('revision',0)+1):
+        if not valid_scoped_status_promotion(package_record,actual,changes,changes_allowed):
             errors.append('Scoped canonical record review promotion is invalid: '+rid)
         old_hash=sha(frozen_path);new_hash=sha(canonical_path)
         matches=[]

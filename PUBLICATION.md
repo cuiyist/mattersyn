@@ -1,5 +1,9 @@
 # MatterSyn publication workflow
 
+## Most recent verified site and current v5 candidate
+
+Fanfair and Korgel (2005) is the latest anonymously verified contribution, at source `5cc524aecdbb1a69e26c07b30acb0fc46344b516` and site `dd5329499f1a875d817de6462c456afb38c2bcd9`. It brings the live collection to **154 contributing papers, 1,641 canonical records and 556 broad recipe–structure pairs**. The next isolated batch contains Urban et al. (2007) PbTe/Ag2Te and Sahoo and Arora (2010) CdS. Their independent scientific acceptance and combined preflight are not publication credit. Follow the exact source CI, browser, Pages and anonymous-verification steps in workflow v5 before counting either paper. The 20-papers/hour target is not demonstrated.
+
 ## Latest verified site and current source candidate — 2026-10-01
 
 The most recent anonymously verified site release is source commit `645d5158900153165d330eaf55ab7ec4fffb47a7` and site commit `bcf9b029`. It integrated Bhattacharya et al. (2023) and Fafarman et al. (2014) into ordinary material pages. The live counter is **153 distinct contributing papers**, **1,640 canonical records** and **555 broad recipe–structure pairs** at this checkpoint. The private v5 ledger records anonymous live verification by 2026-10-01T19:27:21Z. Selected source figures retain exact provenance and unverified publisher-permission status.

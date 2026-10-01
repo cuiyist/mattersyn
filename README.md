@@ -328,6 +328,10 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - Pascal Rusch; Ann Mary Antony; Meenakshi Pegu; Meysoun Jabrane; Gabriele Saleh; Arghyadeep Garai; Aswin Asaithambi; Simone Lauciello; Sergio Marras; Serena De Negri; Pavlo Solokha; Liberato Manna (2026). Nanocrystal Synthesis Derived Approach to Silver Bismuth Iodide Layered Double Perovskites with Aliphatic Amines: (CnH(2n+1)NH3)4AgBiI8. *Chemistry of Materials*, 38, 900–909. [10.1021/acs.chemmater.5c02845](https://doi.org/10.1021/acs.chemmater.5c02845). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=rusch2026).
 
+- Jeffrey J. Urban; Dmitri V. Talapin; Elena V. Shevchenko; Cherie R. Kagan; Christopher B. Murray (2007). Synergism in binary nanocrystal superlattices leads to enhanced p-type conductivity in self-assembled PbTe/Ag2Te thin films. [10.1038/nmat1826](https://doi.org/10.1038/nmat1826). [Scoped Ag2Te and PbTe/Ag2Te material methods](https://cuiyist.github.io/mattersyn-site/material.html?id=ag2te-403977&method=urban2007-ag2te-5h). Main-text colloid and binary-assembly routes are reviewed; cited upstream PbTe synthesis, device-film branches and SI remain outside this contribution.
+
+- Satyaprakash Sahoo; A. K. Arora (2010). Laser-Power-Induced Multiphonon Resonant Raman Scattering in Laser-Heated CdS Nanocrystal. [10.1021/jp912103t](https://doi.org/10.1021/jp912103t). [As-prepared CdS material method](https://cuiyist.github.io/mattersyn-site/material.html?id=cds-fad408&method=sahoo2010-cds-jp912103t-as-prepared). The aqueous precipitation and as-prepared XRD outcome are reviewed; subsequent Raman laser heating is characterization, not a separately counted synthesis.
+
 ## Additional contextual sources
 
 These are contextual/upstream references, not extra reviewed synthesis contributions.

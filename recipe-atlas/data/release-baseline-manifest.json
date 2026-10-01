@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1641,
-  "group_count": 154,
+  "record_count": 1648,
+  "group_count": 156,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag nanocrystals and superlattice films",
@@ -10,6 +10,7 @@
     "Ag2S nanocrystals",
     "Ag2S quantum dots",
     "Ag2S–Au heterostructures",
+    "Ag2Te colloidal nanocrystals",
     "AgInTe2 colloidal nanocrystals",
     "AgInTe2/ZnS Janus nanocrystals",
     "Aluminum nanocrystals",
@@ -40,6 +41,7 @@
     "Calcite host and Mg-mediated calcium carbonate",
     "Casein-stabilized manganese dioxide quantum dots",
     "Cassiterite tin dioxide colloids",
+    "CdS nanocrystals",
     "CdS nanocrystal–polyurethane hybrid",
     "CdS nanostructures",
     "CdS/PbS nanostructures",
@@ -138,6 +140,7 @@
     "PbS nanocrystals",
     "PbS nanostructures",
     "PbS quantum dots and TiO2 nanotube photocatalysts",
+    "PbTe/Ag2Te binary nanocrystal superlattices",
     "Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals",
     "Polymer-stabilized CdS and related source procedures",
     "Precursor conversion control assay; not an InP product",
@@ -80855,6 +80858,78 @@
       "pair_ids": []
     },
     {
+      "record_id": "sahoo2010-cds-jp912103t-as-prepared",
+      "title": "Sahoo and Arora (2010): aqueous precipitation of wurtzite CdS nanocrystals",
+      "formula": "CdS",
+      "family": "CdS nanocrystals",
+      "method": "Aqueous cadmium-acetate and sodium-sulfide precipitation, followed by water washing and drying",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/jp912103t",
+      "revision": 3,
+      "record_sha256": "0351ee973183f92946d0f83380d304fbf0ba6b9da88a94b2607057a9cd0ea14d",
+      "recipe_signature": "e8ce4e5cb4695b1252ca8ab1c1e75a0e3522551722e06f7c58606b76e76bd462",
+      "group_id": "group-2986d6d623f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/sahoo2010-cds-jp912103t-as-prepared.json",
+      "page_url": "records/sahoo2010-cds-jp912103t-as-prepared.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS"
+      ],
+      "pair_ids": [
+        "sahoo2010-cds-jp912103t-as-prepared::sahoo2010-cds-jp912103t-as-prepared-sample"
+      ]
+    },
+    {
       "record_id": "saini-2023-nat-cqd-biomass-carbonization",
       "title": "Saini et al. (2023): biomass-derived natural amine-targeted carbon quantum dots",
       "formula": "NAT-CQDs",
@@ -96371,6 +96446,440 @@
         "ZrO2"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "urban2007-ag2te-1d",
+      "title": "Urban et al. (2007): Ag2Te nanocrystal aging at one day",
+      "formula": "Ag2Te",
+      "family": "Ag2Te colloidal nanocrystals",
+      "method": "AgNO3–dodecanethiol phase transfer, TOPTe injection and 85 °C aging",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1038/nmat1826",
+      "revision": 2,
+      "record_sha256": "114d7f5e4eebe1ef064c0f1a6ac0b7d9ed68ba222de65991cfa857558b932912",
+      "recipe_signature": "59a95a031ee93bb3742a0df90126c1391ed8aea977ec544df0463c7d03bc0a43",
+      "group_id": "group-73c0588447a0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/urban2007-ag2te-1d.json",
+      "page_url": "records/urban2007-ag2te-1d.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Te"
+      ],
+      "pair_ids": [
+        "urban2007-ag2te-1d::urban2007-ag2te-1d-sample"
+      ]
+    },
+    {
+      "record_id": "urban2007-ag2te-3d",
+      "title": "Urban et al. (2007): Ag2Te nanocrystal aging at approximately 3 days",
+      "formula": "Ag2Te",
+      "family": "Ag2Te colloidal nanocrystals",
+      "method": "AgNO3–dodecanethiol phase transfer, TOPTe injection and 85 °C aging",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1038/nmat1826",
+      "revision": 2,
+      "record_sha256": "74b325167e0103e1cab8167034586be44ec5150e3293cba87db335074587e796",
+      "recipe_signature": "28b81c6e46ac0769087c1abc985922010a414878945cbdb53c05286f899679c4",
+      "group_id": "group-73c0588447a0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": true,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/urban2007-ag2te-3d.json",
+      "page_url": "records/urban2007-ag2te-3d.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Te"
+      ],
+      "pair_ids": [
+        "urban2007-ag2te-3d::urban2007-ag2te-3d-sample"
+      ]
+    },
+    {
+      "record_id": "urban2007-ag2te-5h",
+      "title": "Urban et al. (2007): Ag2Te nanocrystal aging at 5 h",
+      "formula": "Ag2Te",
+      "family": "Ag2Te colloidal nanocrystals",
+      "method": "AgNO3–dodecanethiol phase transfer, TOPTe injection and 85 °C aging",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1038/nmat1826",
+      "revision": 2,
+      "record_sha256": "508dd38153b7d87e15232915a7fdeeb12b7851c3270753ccb0ff4cc6c862e230",
+      "recipe_signature": "1c69a4fcb839b9b957bfde055dfd9977b1f0a75bb2cba4dc57601a35821ef34e",
+      "group_id": "group-73c0588447a0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/urban2007-ag2te-5h.json",
+      "page_url": "records/urban2007-ag2te-5h.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Te"
+      ],
+      "pair_ids": [
+        "urban2007-ag2te-5h::urban2007-ag2te-5h-sample"
+      ]
+    },
+    {
+      "record_id": "urban2007-ag2te-8d",
+      "title": "Urban et al. (2007): Ag2Te nanocrystal aging at at least 8 days",
+      "formula": "Ag2Te",
+      "family": "Ag2Te colloidal nanocrystals",
+      "method": "AgNO3–dodecanethiol phase transfer, TOPTe injection and 85 °C aging",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1038/nmat1826",
+      "revision": 2,
+      "record_sha256": "0136cfb48df3f2a12d80081a52dc30b913212c27db446caa00f793b718d13375",
+      "recipe_signature": "953786abbab37df2078c0ebf44e9f392fb986b55c582e33b83ab052769c45eff",
+      "group_id": "group-73c0588447a0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/urban2007-ag2te-8d.json",
+      "page_url": "records/urban2007-ag2te-8d.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Te"
+      ],
+      "pair_ids": [
+        "urban2007-ag2te-8d::urban2007-ag2te-8d-sample"
+      ]
+    },
+    {
+      "record_id": "urban2007-pbte-ag2te-cuau",
+      "title": "Urban et al. (2007): PbTe/Ag2Te CuAu superlattice",
+      "formula": "PbTe+Ag2Te",
+      "family": "PbTe/Ag2Te binary nanocrystal superlattices",
+      "method": "Slow evaporation of PbTe and Ag2Te colloids at 50 °C",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1038/nmat1826",
+      "revision": 2,
+      "record_sha256": "d0eb852ac81354752395c5df88414382478516c011288feee228decd06fa84fb",
+      "recipe_signature": "7f2820c0186ddfa3fe9b5e8b0d16e6f8c6fb542b78a83f653a3ee2e9e27b337a",
+      "group_id": "group-73c0588447a0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/urban2007-pbte-ag2te-cuau.json",
+      "page_url": "records/urban2007-pbte-ag2te-cuau.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbTe",
+        "Ag2Te"
+      ],
+      "pair_ids": [
+        "urban2007-pbte-ag2te-cuau::urban2007-pbte-ag2te-cuau-sample"
+      ]
+    },
+    {
+      "record_id": "urban2007-pbte-ag2te-nacl",
+      "title": "Urban et al. (2007): PbTe/Ag2Te NaCl superlattice",
+      "formula": "PbTe+Ag2Te",
+      "family": "PbTe/Ag2Te binary nanocrystal superlattices",
+      "method": "Slow evaporation of PbTe and Ag2Te colloids at 50 °C",
+      "record_type": "protocol_variant",
+      "source_year": 2007,
+      "source_doi": "10.1038/nmat1826",
+      "revision": 2,
+      "record_sha256": "a889a04afd9e40a363e7ddd998f4cb44a8401b6ba695838d6198134541a3ea51",
+      "recipe_signature": "7f2820c0186ddfa3fe9b5e8b0d16e6f8c6fb542b78a83f653a3ee2e9e27b337a",
+      "group_id": "group-73c0588447a0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/urban2007-pbte-ag2te-nacl.json",
+      "page_url": "records/urban2007-pbte-ag2te-nacl.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbTe",
+        "Ag2Te"
+      ],
+      "pair_ids": [
+        "urban2007-pbte-ag2te-nacl::urban2007-pbte-ag2te-nacl-sample"
+      ]
     },
     {
       "record_id": "veinot-1997-acylimidazole-3a",

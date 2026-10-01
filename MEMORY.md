@@ -1,5 +1,11 @@
 # MatterSyn current verified checkpoint — 2026-10-01
 
+## Current verified site and v5 release candidate
+
+Fanfair and Korgel (2005), DOI 10.1021/cg0502587, is live on the Bi material page. Source commit `5cc524aecdbb1a69e26c07b30acb0fc46344b516` and site commit `dd5329499f1a875d817de6462c456afb38c2bcd9` passed source and site checks; the exact preview was inspected in a browser and the deployed site was anonymously verified. The verified public inventory at this checkpoint has **154 distinct contributing papers, 1,641 canonical records and 556 broad recipe–structure pairs**. This supersedes the historical 153-paper text below.
+
+Urban et al. (2007), DOI 10.1038/nmat1826, and Sahoo and Arora (2010), DOI 10.1021/jp912103t, form the next isolated candidate. Urban contributes four Ag2Te aging observations and two distinct PbTe/Ag2Te binary assembly outcomes; its mesoscale NaCl-like and CuAu-like labels are not atomic unit-cell claims. Sahoo contributes one as-prepared wurtzite CdS precipitation outcome; the 4 nm Scherrer coherent domain is not a TEM particle diameter, and later laser heating is characterization. Their separate independent source audits, exact status-only promotion receipts, figure provenance, qualified bulk references and combined additive preflight passed. They receive **zero new publication credit** until source CI, exact browser review, Pages deployment and anonymous verification finish. Source figures retain factual unverified publisher-permission status.
+
 ## Latest verified v5 release and current work
 
 Bhattacharya et al. (2023), DOI 10.1021/acs.inorgchem.3c03156, and Fafarman et al. (2014), DOI 10.1021/nn406461p, are live on ordinary material pages. Source commit `645d5158900153165d330eaf55ab7ec4fffb47a7` and site commit `bcf9b029` passed the release gates; the private v5 ledger records anonymous live verification by 2026-10-01T19:27:21Z. The verified public inventory has **153 distinct contributing papers, 1,640 canonical records and 555 broad recipe–structure pairs**. The earlier 151-paper checkpoint below is historical.
