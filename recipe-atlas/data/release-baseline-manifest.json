@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1564,
-  "group_count": 137,
+  "record_count": 1565,
+  "group_count": 138,
   "families": [
     "Ag nanocrystals and superlattice films",
     "Ag2S nanocrystals",
@@ -171,7 +171,8 @@
     "solventless metal sulfide nanocrystals",
     "tin dioxide",
     "triclinic ternary sulfide nanocrystals",
-    "zinc gallate oxide nanocrystals"
+    "zinc gallate oxide nanocrystals",
+    "colloidal HgTe quantum dots"
   ],
   "split_policy": "Connected source/recipe/parent/batch/duplicate components. Development-only below ten groups. Split thresholds are deterministic group hash 80/10/10, not a claim of balanced class coverage.",
   "records": [
@@ -111275,6 +111276,78 @@
         "TiO2"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "oconnor-2005-hgte-ph10-adaptation",
+      "title": "O’Connor 2005: pH 10.0 aqueous 1-thioglycerol-stabilized HgTe quantum dots",
+      "formula": "HgTe",
+      "family": "colloidal HgTe quantum dots",
+      "method": "Aqueous gas-feed adaptation of the cited HgTe method; direct O’Connor 2005 conditions kept separate from Rogach 1999 context.",
+      "record_type": "literature_protocol",
+      "source_year": 2005,
+      "source_doi": "10.1063/1.1928321",
+      "revision": 1,
+      "record_sha256": "50fe9cd63b946d5680abcfce8212c53ef2785397b10e09e16c84c84e5ddd53d5",
+      "recipe_signature": "c40641e68c08464ebd6af3732c3f1112b53fbdb0ebb74a267b444dd888459fd4",
+      "group_id": "group-9c3b90d0e711",
+      "split": "test",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/oconnor-2005-hgte-ph10-adaptation.json",
+      "page_url": "records/oconnor-2005-hgte-ph10-adaptation.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "HgTe"
+      ],
+      "pair_ids": [
+        "oconnor-2005-hgte-ph10-adaptation::oconnor2005-hgte-product"
+      ]
     }
   ]
 }
