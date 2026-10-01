@@ -77,13 +77,19 @@ def review_link_errors(review, records):
                     errors.append(paper+': missing or different source-group join: '+rid)
     return errors
 
-def route_membership_errors(record, materials, route, slug):
+def route_membership_errors(record, materials, route, slug, component_elements=None, symbols=None):
     rid=record['record_id']
     actual={hid for hid,view in materials.items() if rid in view.get('record_ids',[])}
     expected=set()
     if route(record):
         formula=record['material']['formula']
-        expected={slug(f) for f in {formula,*record['material'].get('components',[formula])}}
+        expected={slug(formula)}
+        for component in record['material'].get('components',[formula]):
+            # Match build_atlas.ensure(): descriptive component labels without a
+            # valid element inventory are not standalone material hubs.
+            elements=(component_elements or {}).get(component,re.findall('[A-Z][a-z]?',component))
+            if symbols is None or (elements and set(elements)<=symbols):
+                expected.add(slug(component))
     return [] if actual==expected else [rid+': Reader route membership mismatch; contextual observations are not synthesis routes']
 
 def run(candidate, base, new_ids):
@@ -91,7 +97,7 @@ def run(candidate, base, new_ids):
     root=candidate/'recipe-atlas'; oldroot=base/'recipe-atlas'
     sys.path.insert(0,str(root/'scripts'))
     from dataset_lib import validate_record
-    from build_atlas import synthesis_route, slug
+    from build_atlas import synthesis_route, slug, COMPONENT_ELEMENTS, SYMBOLS
     from build_reader_metadata import validate_reader_view
     from review_scope import source_review_scope
     def checked(path):
@@ -127,7 +133,7 @@ def run(candidate, base, new_ids):
         except ValueError as exc:errors.append(str(exc))
         if view.get('source_id')!=record['lineage']['source_group']:errors.append(rid+': Reader source-group mismatch')
         errors.extend(chemical_errors(record,bindings,registry_ids,sha(current_paths[rid])))
-        errors.extend(route_membership_errors(record,reader['materials'],synthesis_route,slug))
+        errors.extend(route_membership_errors(record,reader['materials'],synthesis_route,slug,COMPONENT_ELEMENTS,SYMBOLS))
         for ref in objects(view):
             rel=ref.get('data_path');digest=ref.get('input_sha256')
             if not isinstance(rel,str) or not digest:continue

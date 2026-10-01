@@ -53,4 +53,12 @@ class PreflightTests(unittest.TestCase):
         del hubs['B']
         self.assertTrue(P.route_membership_errors(self.record,hubs,lambda r:True,lambda s:s))
 
+    def test_descriptive_component_without_valid_elements_is_not_a_hub(self):
+        self.record['material']={'formula':'PbBr4','components':['PbBr4','(PbBr2)2(AMTP)2 intergrowth layer']}
+        hubs={'PbBr4':{'record_ids':['r']}}
+        symbols={'Pb','Br','C','H','N','O'}
+        self.assertEqual([],P.route_membership_errors(self.record,hubs,lambda r:True,lambda s:s,{},symbols))
+        hubs['(PbBr2)2(AMTP)2 intergrowth layer']={'record_ids':['r']}
+        self.assertTrue(P.route_membership_errors(self.record,hubs,lambda r:True,lambda s:s,{},symbols))
+
 if __name__=='__main__':unittest.main()
