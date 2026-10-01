@@ -261,7 +261,29 @@ def diff_packages(before,broot,after,aroot):
             'mechanical_changes_require_build_and_browser_checks':True,
             'note':'No audit is created or accepted by computing this diff.'}
 
-def rank_queue(rows, identities=None, live_sources=()):
+# Quantum-dot / colloidal-nanocrystal scope (owner decision, 2026-09-30). Screening material labels are
+# unnormalized free text, so classification uses explicit wording only and keeps doubtful units visible.
+QD_IN = re.compile(r'quantum[- ]dots?|\bqds?\b|nanocrystals?|colloid|hot[- ]injection|heat[- ]up|nanoplatelets?|'
+                   r'nanorods?|tetrapods?|magic[- ]size|core[/ -]shell|ligand|oleylamine|oleic acid|oleate|'
+                   r'trioctylphosphine|\btopo?\b|octadecene|\bode\b|capped|nanoparticles? (?:dispersion|solution)', re.I)
+QD_COMPOSITION = re.compile(r'\b(?:cd|pb|zn|hg)(?:s|se|te)\b|\bin(?:p|as|sb)\b|\bcu(?:in|ga)?(?:s|se)2\b|\bag(?:in)?(?:s|se)2\b|'
+                            r'\bcspb(?:br|cl|i)3\b|perovskite nano|\bag2(?:s|se)\b|\bcu2-?x?(?:s|se)\b|carbon dots?|'
+                            r'(?:silicon|germanium) (?:nanocrystals?|quantum)', re.I)
+QD_OUT = re.compile(r'thin[- ]films?|chemical vapou?r|\bcvd\b|sputter|epitax|single[- ]crystals?|\bbulk\b|ceramic|'
+                    r'sinter|solid[- ]state reaction|calcin|\bglass(?:es)?\b|melt[- ]quench|ball[- ]mill|wafer|'
+                    r'electrodeposit|monolith|cement|alloy ribbon', re.I)
+
+def quantum_dot_scope(row):
+    """Return ('in'|'ambiguous'|'out', reason) from the screen's own wording; never opens a paper."""
+    text=' '.join(str(row.get(k) or '') for k in ('material','preparation_summary','structure_summary'))
+    colloid=QD_IN.search(text); comp=QD_COMPOSITION.search(text); out=QD_OUT.search(text)
+    if colloid and not out: return 'in', 'colloidal/QD wording: '+colloid.group(0)
+    if comp and not out: return 'in', 'QD composition: '+comp.group(0)
+    if out and not (colloid or comp): return 'out', 'non-colloidal wording: '+out.group(0)
+    if colloid or comp: return 'ambiguous', 'mixed wording: '+(colloid or comp).group(0)+' / '+out.group(0)
+    return 'ambiguous', 'no scope wording in screen summary'
+
+def rank_queue(rows, identities=None, live_sources=(), scope=None):
     """Rank retained screen evidence, never upgrade it to accepted extraction."""
     identities=identities or {}; groups={}; excluded=Counter(); seen=set()
     for row in rows:
@@ -270,6 +292,10 @@ def rank_queue(rows, identities=None, live_sources=()):
         if not SHA.fullmatch(h): excluded['invalid_document_hash']+=1; continue
         if h in seen: excluded['duplicate_document_content']+=1; continue
         seen.add(h)
+        scope_decision=scope_reason=None
+        if scope=='quantum-dot':
+            scope_decision,scope_reason=quantum_dot_scope(row)
+            if scope_decision=='out': excluded['outside_quantum_dot_scope']+=1; continue
         identity=identities.get(h,{})
         verified=identity.get('verified') is True and bool(identity.get('primary_source_id'))
         primary=identity.get('primary_source_id') if verified else None
@@ -288,24 +314,45 @@ def rank_queue(rows, identities=None, live_sources=()):
              'role':role,'queue_index':row.get('queue_index'),
              'preparation_locator':row.get('preparation_locator'), 'structure_locator':row.get('structure_locator'),
              'screen_receipt':row.get('decision_file'), 'priority_score':score,'audit_flags':flags,
-             'complete_recipe_not_established_by_screen':True,'sample_linkage_status':'requires_extraction_and_audit'}
+             'complete_recipe_not_established_by_screen':True,'sample_linkage_status':'requires_extraction_and_audit',
+             'scope_decision':scope_decision,'scope_reason':scope_reason}
         if key not in groups:
             groups[key]={'queue_key':key,'primary_source_id':primary,'family':family,
                          'family_is_normalized':bool(identity.get('family')),'documents':[],
-                         'priority_score':score,'main_si_pairing_required':False}
+                         'priority_score':score,'main_si_pairing_required':False,
+                         'scope_check_required':scope_decision=='ambiguous'}
         groups[key]['documents'].append(doc)
         groups[key]['priority_score']=max(groups[key]['priority_score'],score)
+        if scope_decision=='in': groups[key]['scope_check_required']=False
     values=list(groups.values())
     # Family grouping within the same score band prevents a low-evidence family from
     # outranking a source with both preparation and structural evidence.
-    values.sort(key=lambda r:(-r['priority_score']//10,str(r['family']).casefold(),-r['priority_score'],r['queue_key']))
+    # Clearly in-scope units come before units whose scope still needs a quick human check.
+    values.sort(key=lambda r:(bool(r.get('scope_check_required')),-r['priority_score']//10,str(r['family']).casefold(),-r['priority_score'],r['queue_key']))
     for i,row in enumerate(values,1): row['rank']=i
     return {'schema':'mattersyn-ranked-local-queue/1','ranked_units':values,'excluded':dict(excluded),
             'unique_document_contents':sum(len(r['documents']) for r in values),
             'verified_primary_source_groups':sum(r['primary_source_id'] is not None for r in values),
             'unresolved_document_units':sum(r['primary_source_id'] is None for r in values),
+            'scope':scope or 'all','scope_check_required_units':sum(bool(r.get('scope_check_required')) for r in values),
             'not_training_eligibility':True,'not_a_complete_recipe_assessment':True,
             'family_labels_are_not_silver_popularity_calibration':True}
+
+DEEP_AUDIT_PERCENT = 10
+
+def deep_audit_selected(scientific_sha256, percent=DEEP_AUDIT_PERCENT):
+    """Deterministic sample keyed to the frozen scientific fingerprint: authors cannot pick it
+    without changing the science, and anyone can reproduce the selection."""
+    if not SHA.fullmatch(scientific_sha256 or ''): raise ValueError('scientific_sha256 must be a SHA-256 hex digest')
+    if not 0 < percent <= 100: raise ValueError('percent must be in (0, 100]')
+    return int(scientific_sha256[:8], 16) % 100 < percent
+
+def audit_sample(package, root, percent=DEEP_AUDIT_PERCENT):
+    science=digest(science_payload(package, root))
+    return {'schema':'mattersyn-deep-audit-sample/1','package_id':package.get('package_id'),
+            'scientific_sha256':science,'percent':percent,'deep_audit_required':deep_audit_selected(science,percent),
+            'rule':'deep audit iff int(scientific_sha256[:8], 16) % 100 < percent; computed after extraction is frozen',
+            'quick_audit_still_required':True}
 
 def identities_from_reviews(directory):
     """Reuse explicit current Reader identity receipts; filenames/DOI guesses do not qualify."""
@@ -407,7 +454,8 @@ def main():
     commands=parser.add_subparsers(dest='command',required=True)
     p=commands.add_parser('validate'); p.add_argument('manifest'); p.add_argument('--checkout',required=True); p.add_argument('--base-package'); p.add_argument('--output',required=True)
     p=commands.add_parser('diff'); p.add_argument('before'); p.add_argument('after'); p.add_argument('--output',required=True)
-    p=commands.add_parser('rank'); p.add_argument('screened_pass_jsonl'); p.add_argument('--identities'); p.add_argument('--live-sources'); p.add_argument('--output',required=True)
+    p=commands.add_parser('rank'); p.add_argument('screened_pass_jsonl'); p.add_argument('--identities'); p.add_argument('--live-sources'); p.add_argument('--scope',choices=['all','quantum-dot'],default='all'); p.add_argument('--output',required=True)
+    p=commands.add_parser('audit-sample'); p.add_argument('manifest'); p.add_argument('--percent',type=int,default=DEEP_AUDIT_PERCENT); p.add_argument('--output',required=True)
     p=commands.add_parser('metrics'); p.add_argument('events_jsonl'); p.add_argument('--start',required=True); p.add_argument('--end',required=True); p.add_argument('--output',required=True)
     p=commands.add_parser('identity-map'); p.add_argument('review_directory'); p.add_argument('--output',required=True); p.add_argument('--report',required=True)
     args=parser.parse_args()
@@ -418,7 +466,8 @@ def main():
     elif args.command=='diff':
         result=diff_packages(load(args.before),Path(args.before).parent,load(args.after),Path(args.after).parent)
     elif args.command=='rank':
-        result=rank_queue(jsonlines(args.screened_pass_jsonl),load(args.identities) if args.identities else {},load(args.live_sources) if args.live_sources else [])
+        result=rank_queue(jsonlines(args.screened_pass_jsonl),load(args.identities) if args.identities else {},load(args.live_sources) if args.live_sources else [],None if args.scope=='all' else args.scope)
+    elif args.command=='audit-sample': result=audit_sample(load(args.manifest),Path(args.manifest).parent,args.percent)
     elif args.command=='metrics': result=event_metrics(jsonlines(args.events_jsonl),args.start,args.end)
     else:
         result,report=identities_from_reviews(args.review_directory)
