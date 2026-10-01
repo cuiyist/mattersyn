@@ -72,8 +72,11 @@ class ScopedRouteTests(unittest.TestCase):
         with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
             self.routes()
 
-    def test_scoped_pages_must_be_an_explicit_reviewed_subset(self):
+    def test_scoped_pages_may_touch_every_page_without_claiming_complete_read(self):
         self.row['documents'][0]['pages_read'] = [1, 2, 3, 4, 5, 6]
+        self.flush()
+        self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
+        self.row['documents'][0]['pages_read'] = [1, 2, 3, 4, 5, 6, 7]
         self.flush()
         with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
             self.routes()
@@ -82,6 +85,24 @@ class ScopedRouteTests(unittest.TestCase):
         self.flush()
         with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
             self.routes()
+        self.row['documents'][0]['all_text_read'] = False
+        self.row['documents'][0]['all_visually_reviewed'] = True
+        self.flush()
+        with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+            self.routes()
+        self.row['documents'][0]['all_visually_reviewed'] = False
+        self.row['paper_review_url'] = 'paper-review.html?id=unverified'
+        self.flush()
+        with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+            self.routes()
+
+    def test_independently_audited_scoped_status_aliases(self):
+        for status in ('selected_as_prepared_cds_route_and_figures_independently_audited',
+                       'selected_colloidal_methods_and_figures_independently_audited'):
+            with self.subTest(status=status):
+                self.row['main_status'] = status
+                self.flush()
+                self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
 
     def test_record_identity_and_coverage_are_required(self):
         self.row['record_ids'] = ['other-record']

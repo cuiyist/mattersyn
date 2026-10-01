@@ -151,7 +151,7 @@ def new_paper_routes(dist, papers):
             page_count = scoped_pages.get('page_count')
             pages_read = scoped_pages.get('pages_read')
             selected_main_pages = (scoped_pages.get('role') == 'main' and type(page_count) is int and page_count > 1 and
-                                   isinstance(pages_read, list) and 0 < len(pages_read) < page_count and
+                                   isinstance(pages_read, list) and 0 < len(pages_read) <= page_count and
                                    pages_read == sorted(set(pages_read)) and
                                    all(type(n) is int and 1 <= n <= page_count for n in pages_read) and
                                    scoped_pages.get('all_text_read') is False and
@@ -159,7 +159,9 @@ def new_paper_routes(dist, papers):
             if (row.get('paper_id') != source or row.get('review_status') != 'selected_recipe_and_figure_review' or
                     row.get('main_status') not in {
                         'selected_colloidal_method_and_figure_independently_audited',
-                        'selected_recipe_and_figure_independently_audited'} or
+                        'selected_recipe_and_figure_independently_audited',
+                        'selected_as_prepared_cds_route_and_figures_independently_audited',
+                        'selected_colloidal_methods_and_figures_independently_audited'} or
                     not selected_main_pages or
                     row.get('paper_review_url') not in (None, '') or
                     not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or
