@@ -27,6 +27,7 @@ test('unspecified architecture never gains a heterostructure badge',()=>{
 test('source-described disks get an illustrative planar shape but negated or conflicting morphology does not',()=>{
  assert.equal(classifyMorphology('Disklike; equilateral hexagon shape is predominant'),'platelet');
  assert.equal(classifyMorphology('CuS nanodisks'),'platelet');
+ assert.equal(classifyMorphology('Cubic-shaped dispersed particles'),'cube');
  for(const value of ['No nanodisks observed','Nanodisks were not observed','Nanodisks and spheres','Unknown disklike morphology'])assert.equal(classifyMorphology(value),'neutral',value);
 });
 

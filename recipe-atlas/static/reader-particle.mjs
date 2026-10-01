@@ -35,7 +35,7 @@ export function classifyMorphology(value){
  if(/\b(spher\w*|round)\b/.test(m)&&/\b(cubic|cube\w*)\b/.test(m))return 'neutral';
  if(/\b(?:no|not|without)\b(?:[\s-]+\w+){0,3}[\s-]+(?:spher\w*|round|cub\w*|rods?|nanorods?|islands?|plates?|disklike|nanodisks?|shell\w*|stars?)\b/.test(m))return 'neutral';
  if(/\b(?:spher\w*|cub\w*|rods?|islands?|nanodisks?)\s+(?:(?:were|are)\s+)?(?:not|never)\s+(?:observed|confirmed)/.test(m))return 'neutral';
- const primitiveShapes=[/\b(spher\w*|round)\b/,/\b(cubic shaped|cubes?|cuboidal)\b/,/\b(nanorods?|rods?|nanowires?)\b/,/\b(platelets?|nanoplates?|disklike|nanodisks?)\b/,/\b(star\w*|octapods?)\b/].filter(re=>re.test(m));
+ const primitiveShapes=[/\b(spher\w*|round)\b/,/\b(cubic[ -]shaped|cubes?|cuboidal)\b/,/\b(nanorods?|rods?|nanowires?)\b/,/\b(platelets?|nanoplates?|disklike|nanodisks?)\b/,/\b(star\w*|octapods?)\b/].filter(re=>re.test(m));
  if(primitiveShapes.length>1&&!/assembl|embedded|nanotube|core[\s/–-]+shell/.test(m))return 'neutral';
  if(/nanotubes?/.test(m))return 'nanotube-supported';
  if(/embedded|confined within|polymer microparticles/.test(m))return 'matrix';
@@ -50,7 +50,7 @@ export function classifyMorphology(value){
  if(/platelets?|nanoplates?|sheets?|\bdisklike\b|\bnanodisks?\b/.test(m))return 'platelet';
  if(/ellipsoid|oval|oblate|prolate/.test(m))return 'ellipsoid';
  if(/\b(nanorods?|rods?|nanowires?)\b/.test(m))return 'rod';
- if(/\b(cubes?|cuboidal|cubic shaped)\b/.test(m))return 'cube';
+ if(/\b(cubes?|cuboidal|cubic[ -]shaped)\b/.test(m))return 'cube';
  if(/\b(spherical|spheres?|round)\b/.test(m))return 'sphere';
  if(/irregular|anisotropic/.test(m))return 'irregular';
  return 'neutral';
