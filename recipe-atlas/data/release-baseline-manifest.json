@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1565,
-  "group_count": 138,
+  "record_count": 1566,
+  "group_count": 139,
   "families": [
     "Ag nanocrystals and superlattice films",
     "Ag2S nanocrystals",
@@ -106,6 +106,7 @@
     "Metal oxides",
     "Mn-doped ZnO, surface controls and nanocrystalline films",
     "Molybdenum oxide and sulfide solvothermal products",
+    "N/S-containing carbon quantum dots",
     "Nanocrystalline cobalt monosulfide (Jaipurite; β-CoS)",
     "Nanocrystalline silver telluride",
     "Neodymium oxide and titania/ormosil optical contexts",
@@ -9999,6 +10000,78 @@
         "CsPbBr3"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating",
+      "title": "Chen et al. (2020): citric-acid/glutathione carbon quantum dots by staged heating",
+      "formula": "N/S-CQDs",
+      "family": "N/S-containing carbon quantum dots",
+      "method": "One-pot staged thermal conversion of citric acid monohydrate and glutathione, followed by dialysis",
+      "record_type": "literature_protocol",
+      "source_year": 2020,
+      "source_doi": "10.1039/d0ra03970e",
+      "revision": 2,
+      "record_sha256": "cfd18119ea83ad76b1aaa9054508425494e8ad6172fd05800fb3d87cb04c7276",
+      "recipe_signature": "38907f3512e350b42a505d0a3c0c8c2c04f84e84d5f7e373622566c3129097e3",
+      "group_id": "group-96ed8686270d",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating.json",
+      "page_url": "records/chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "N/S-CQDs"
+      ],
+      "pair_ids": [
+        "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating::pristine-cqds"
+      ]
     },
     {
       "record_id": "choi2006-pbs-aptamer-ja066506k-bsa-interference",

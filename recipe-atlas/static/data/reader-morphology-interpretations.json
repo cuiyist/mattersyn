@@ -3,7 +3,7 @@
   "status": "integrated_curator_display_interpretations",
   "scope": "Source-context-specific display interpretations from reviewed records and linked figures; each entry retains its own source and limitations.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
-  "input_reader_presentation_sha256": "84d1033797e0623d163d299456ddecaf0ae739f1c30d3810263ecce0cf849485",
+  "input_reader_presentation_sha256": "f157c6ab6ec9019b67f2e35a78c6a88116853903afd3d4d3a41f1b9441a1c9a0",
   "entries": {
     "evans-2010-pbse-tem:pbse-tem-spheres": {
       "record_id": "evans-2010-pbse-tem",
@@ -2971,6 +2971,111 @@
       "geometry_parameters": "One near-spherical 2D silhouette only. No dimensions, facets, atom positions, particle count, aggregation, scale or sample/batch relation is inferred.",
       "svg_path": "assets/morphology-interpretations/venkatesan-2003-fe3o4-near-spherical.svg",
       "svg_sha256": "10ed3bcb99c9d030f26a80b042043377a601b34138aac82d3d6f45120a324bf5"
+    },
+    "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating:pristine-cqds": {
+      "record_id": "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating",
+      "sample_id": "pristine-cqds",
+      "shape": "dot-projection",
+      "label": "Pristine CQD TEM dot projections",
+      "status": "curator_interpretation",
+      "basis": "reported_description_and_tem_to_flat_schematic",
+      "rationale": "The authors describe uniform quasispherical CQDs, and Figure 3A shows compact, dispersed TEM dot projections of the pristine product. This flat drawing is a qualitative two-dimensional shorthand, not a measured three-dimensional shape.",
+      "evidence": [
+        {
+          "record_id": "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating",
+          "pointer": "/products/0/morphology/value",
+          "source_id": "chen2020-cqd-d0ra03970e",
+          "locator": "Main PDF p.4 / printed p.26768, Figure 3A and adjacent TEM discussion",
+          "figure_id": "figure-3",
+          "panel": "A"
+        },
+        {
+          "record_id": "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating",
+          "pointer": "/measurements/0/value",
+          "source_id": "chen2020-cqd-d0ra03970e",
+          "locator": "Main PDF p.4 / printed p.26768, Figure 3A and adjacent TEM discussion",
+          "figure_id": "figure-3",
+          "panel": "A"
+        },
+        {
+          "record_id": "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating",
+          "pointer": "/figures/2",
+          "data_path": "data/paper-reviews/chen2020-cqd-d0ra03970e.json",
+          "source_id": "chen2020-cqd-d0ra03970e",
+          "locator": "Main PDF p.4 / printed p.26768, Figure 3A TEM; panel B is the separate CQDs/Pro aggregate",
+          "figure_id": "figure-3",
+          "panel": "A",
+          "public_asset": "assets/paper-reviews/chen2020-cqd-d0ra03970e/figure-3.png",
+          "asset_sha256": "fa197fd194dbacc7a63b1e8e787797ebdd6166cb6a2da50b4d3ff19d6db7b9ac"
+        }
+      ],
+      "limitations": [
+        "Only Figure 3A pristine CQDs are depicted. Figure 3B's protamine-induced CQDs/Pro aggregates are a separate downstream state and are not represented.",
+        "The paper reports a 2.1–2.4 nm TEM diameter range for the pristine dots. This value appears as text only; the drawn symbol diameters, count, spacing and positions are arbitrary and not to scale.",
+        "A two-dimensional TEM projection and the author's quasisphere description do not establish a measured three-dimensional surface, faceting or atomic coordinates. The physical characterization aliquot is unreported.",
+        "The 0.20 nm HRTEM fringe is author-indexed to graphite carbon (100), but the illustration does not imply a unique bulk phase or atomic lattice."
+      ],
+      "source_sha256": "0ef6258d9638b73a3c3c75e2cd117323a79a7f8bf165bfbe296557bc04cd371f",
+      "source_hash_scope": "recipe-atlas/data/records/chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating.json",
+      "recipe_link": "explicit",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Flat qualitative 2D dot symbols only. Symbol count, positions, radii and contours are illustrative; no source-pixel tracing, size calibration, 3D shape, facets or atom positions.",
+      "svg_path": "assets/morphology-interpretations/chen2020-cqd-figure3a-dot-projections.svg",
+      "svg_sha256": "379a4f04f518236240ecad0156dd51aa7292aa7d3f64064b0a158bb8fa8cf3b4",
+      "alt": "Flat illustrative dot projections for pristine CQDs in Figure 3A; the reported 2.1–2.4 nm TEM range is text only and the protamine aggregate in Figure 3B is excluded."
+    },
+    "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot:cs-mno2-2mgml": {
+      "record_id": "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot",
+      "sample_id": "cs-mno2-2mgml",
+      "shape": "dot-projection",
+      "label": "Compact MnO₂ quantum-dot projections",
+      "status": "curator_interpretation",
+      "basis": "curator_visual_interpretation_of_existing_tem",
+      "rationale": "Figure 1B shows dispersed, compact dot-like TEM projections for the 2 mg/mL casein product. The rounded-dot drawing is an interpretive 2D shorthand; the paper does not establish a spherical 3D surface.",
+      "evidence": [
+        {
+          "record_id": "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot",
+          "pointer": "/products/0/morphology/value",
+          "source_id": "zou2022-mno2-casein-acssuschemeng2c02981",
+          "locator": "Main PDF p.3 / printed p.10059, Figure 1B TEM and adjacent text",
+          "figure_id": "figure-1",
+          "panel": "B"
+        },
+        {
+          "record_id": "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot",
+          "pointer": "/measurements/0/value",
+          "source_id": "zou2022-mno2-casein-acssuschemeng2c02981",
+          "locator": "Main PDF p.3 / printed p.10059, Figure 1C size histogram and adjacent text",
+          "figure_id": "figure-1",
+          "panel": "C"
+        },
+        {
+          "record_id": "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot",
+          "pointer": "/figures/1",
+          "data_path": "data/paper-reviews/zou2022-mno2-casein-acssuschemeng2c02981.json",
+          "source_id": "zou2022-mno2-casein-acssuschemeng2c02981",
+          "locator": "Main PDF p.3 / printed p.10059, Figure 1B–C",
+          "figure_id": "figure-1",
+          "panel": "B–C",
+          "public_asset": "assets/paper-reviews/zou2022-mno2-casein-acssuschemeng2c02981/figure-1.png",
+          "asset_sha256": "5c79a156a80f61d0ca60a8e813f526e3a884dabc1bf9b3ac5962da556fd06ff6"
+        }
+      ],
+      "limitations": [
+        "The round symbols represent TEM dot-like projections, not a measured three-dimensional spherical shape, faceting or atomic coordinates.",
+        "The source reports a 1.1–1.6 nm TEM diameter range over 200 particles; the drawing is not to scale and does not encode individual sizes.",
+        "Only Figure 1B–F explicitly belongs to the 2 mg/mL casein product. Figure 1A trace c and Figure 2 are not asserted to be the same physical aliquot."
+      ],
+      "source_sha256": "3fab3e5e27ae1f661146f2301c05ab0e53c821fd4c3933142b737e6d510dca84",
+      "source_hash_scope": "recipe-atlas/data/records/zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot.json",
+      "recipe_link": "explicit",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Flat 2D dot symbols only; size distribution, 3D shape, facets, particle coordinates and physical aliquot joins are not encoded.",
+      "svg_path": "assets/morphology-interpretations/zou2022-mno2-dot-projections.svg",
+      "svg_sha256": "69b559a0faf29962457a2f8db68a84452021ffd4cdfe25733d73ccda56b5d0bf",
+      "alt": "Flat source-informed dot-like projections for the 2 mg/mL casein MnO2 TEM population; not a measured three-dimensional particle shape, size distribution or coordinate model."
     }
   },
   "additional_contexts": {
