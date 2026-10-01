@@ -6,6 +6,8 @@ The most recent anonymously verified site release is source commit `645d51589001
 
 The next candidate is the scoped Fanfair and Korgel (2005) Bi nanocrystal seed route. Its main pages 1–3 and Figure 1 are independently accepted; pages 4–6 concern downstream nanowires and are excluded. The candidate remains unpublished until its source/build, exact browser, Pages and anonymous live gates pass. A source paper can contribute several variants, but it counts once on the homepage.
 
+For a selected-page v5 contribution, the release gate verifies the exact source-linked record page, record data and public scoped inventory entry instead of inventing a complete-paper Reader. The material-page route and shard remain separately checked. A full-paper Reader, when present, remains the primary paper route. The scoped fallback requires a published source DOI, exact record membership, explicitly incomplete main-page coverage and the accepted independent-audit status.
+
 ## Current instruction: workflow v5, regular material pages only
 
 Follow [workflow v5](skills/mattersyn-paper-to-site/references/workflow-v5.md) and its [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md). The owner retired the public preliminary collection and set a target of about twenty newly published contributing papers per hour. This is a target, not demonstrated capacity. Skips and private drafts never increase the website counter. Every paper receives an independent quick audit, and the selected 10% receives a deep audit. Existing scientific, sample/figure, privacy, browser and release checks remain in force. Historical v4 directions do not govern new work.

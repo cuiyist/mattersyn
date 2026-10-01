@@ -122,7 +122,7 @@ def relative_route(route, dist):
 
 
 def new_paper_routes(dist, papers):
-    """Bind each new primary source to its built paper page and backing public data."""
+    """Bind each new source to a formal review or its explicitly scoped record page."""
     if not papers:
         return {}
     index = json.loads((Path(dist) / 'data/paper-review-index.json').read_text(encoding='utf-8'))
@@ -131,8 +131,62 @@ def new_paper_routes(dist, papers):
     for source, ids in sorted(papers.items()):
         matches = [row for row in rows if row.get('id') == source or
                    set(ids).issubset(set(row.get('record_ids', [])))]
-        if len(matches) != 1:
+        if len(matches) > 1:
             raise SystemExit(f'expected one paper review route for new source {source}; found {len(matches)}')
+        if not matches:
+            # A selected method/figure audit need not claim a completed paper review.
+            # Only the exact built inventory row may nominate a record as its route.
+            inventory = 'data/inventory-summary.json'
+            inventory_path = Path(dist) / inventory
+            if not inventory_path.is_file():
+                raise SystemExit(f'scoped inventory missing for new source {source}')
+            scoped = [row for row in json.loads(inventory_path.read_text(encoding='utf-8')).get('per_paper', [])
+                      if row.get('source_group') == source]
+            if len(scoped) != 1:
+                raise SystemExit(f'expected one scoped inventory row for new source {source}; found {len(scoped)}')
+            row = scoped[0]
+            rid_list = row.get('record_ids')
+            documents = row.get('documents')
+            scoped_pages = (documents[0] if isinstance(documents, list) and len(documents) == 1 else {})
+            page_count = scoped_pages.get('page_count')
+            pages_read = scoped_pages.get('pages_read')
+            selected_main_pages = (scoped_pages.get('role') == 'main' and type(page_count) is int and page_count > 1 and
+                                   isinstance(pages_read, list) and 0 < len(pages_read) < page_count and
+                                   pages_read == sorted(set(pages_read)) and
+                                   all(type(n) is int and 1 <= n <= page_count for n in pages_read) and
+                                   scoped_pages.get('all_text_read') is False and
+                                   scoped_pages.get('all_visually_reviewed') is False)
+            if (row.get('paper_id') != source or row.get('review_status') != 'selected_recipe_and_figure_review' or
+                    row.get('main_status') not in {
+                        'selected_colloidal_method_and_figure_independently_audited',
+                        'selected_recipe_and_figure_independently_audited'} or
+                    not selected_main_pages or
+                    row.get('paper_review_url') not in (None, '') or
+                    not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or
+                    not isinstance(rid_list, list) or not rid_list or len(rid_list) != len(set(rid_list)) or
+                    sorted(rid_list) != sorted(ids)):
+                raise SystemExit(f'new source {source} lacks an exact independently audited scoped inventory row')
+            doi = row.get('doi')
+            if not isinstance(doi, str) or not doi.strip():
+                raise SystemExit(f'scoped inventory DOI missing for new source {source}')
+            for rid in ids:
+                record_path = Path(dist) / f'data/records/{rid}.json'
+                if not record_path.is_file():
+                    raise SystemExit(f'scoped record data missing for new source {source}: {rid}')
+                rec = json.loads(record_path.read_text(encoding='utf-8'))
+                if (rec.get('record_id') != rid or (rec.get('lineage') or {}).get('source_group') != source or
+                        not any(s.get('id') == source and s.get('doi') == doi for s in rec.get('sources', []))):
+                    raise SystemExit(f'scoped record identity differs from inventory for {source}: {rid}')
+            evidence = row.get('evidence_locator')
+            if evidence not in {f'data/records/{rid}.json' for rid in ids}:
+                raise SystemExit(f'scoped evidence locator does not name a new source record: {source}')
+            rid = Path(evidence).stem
+            route = (row.get('record_urls') or {}).get(rid)
+            if route != f'records/{rid}.html':
+                raise SystemExit(f'scoped record route differs from its evidence record: {source}')
+            page = relative_route(route, dist)
+            out[source] = {'route': route, 'page': page, 'data': evidence, 'inventory': inventory}
+            continue
         row = matches[0]
         if not set(ids).issubset(set(row.get('record_ids', []))):
             raise SystemExit(f'paper review route omits new records for {source}')
@@ -272,9 +326,13 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
         try:
             page_ok = hashlib.sha256(fetch(route_url, opener)).hexdigest() == sha256(files[binding['page']])
             data_ok = hashlib.sha256(fetch(f"{base}{binding['data']}?v={int(time.time())}", opener)).hexdigest() == sha256(files[binding['data']])
+            inventory = binding.get('inventory')
+            inventory_ok = (not inventory or
+                            hashlib.sha256(fetch(f"{base}{inventory}?v={int(time.time())}", opener)).hexdigest() ==
+                            sha256(files[inventory]))
         except Exception:
             return False
-        return page_ok and data_ok
+        return page_ok and data_ok and inventory_ok
 
     checked_routes, failed_routes = [], []
     for source, binding in sorted((paper_routes or {}).items()):

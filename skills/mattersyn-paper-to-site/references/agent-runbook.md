@@ -224,8 +224,10 @@ python <SRC>/tools/publication/release_batch.py --source <SRC> --site <SITE> --w
   `browser-review.template.json` in the same work directory. No site checkout files are changed.
 - Serve `site-preview` locally (`cd <P>/stages/<batch>/release/site-preview` then
   `python -m http.server 8172`) and open it in a browser. Inspect every route in
-  `required_browser_routes`, including each new paper review and every affected ordinary material
-  page (or the CdSe page), its record links, source figures and responsive layout. Also inspect
+  `required_browser_routes`. A completed supplied-paper Reader uses its paper-review route; an
+  independently audited selected-page contribution without a full Reader uses its exact record
+  route and scoped inventory entry. Check every affected ordinary material page, record links,
+  source figures and responsive layout. Also inspect
   changed shared pages and controls. Save the actual browser review
   by copying `browser-review.template.json` to `browser-review.json`, setting `passed: true`, filling
   `reviewer`, `reviewed_at`, `checked_routes` and notes. Keep the pinned commit, site base, release ID,
@@ -238,7 +240,7 @@ python <SRC>/tools/publication/release_batch.py --source <SRC> --site <SITE> --w
 ```
 - The helper rechecks the candidate and staged-preview hashes, source/site commits, browser receipt,
   source CI and exact staged site bytes before push. It then waits for Pages, checks 40 sampled files,
-  **every new paper's route and review data, and every affected material route and material shard**
+  **every new paper's formal Reader or scoped record and inventory, and every affected material route and material shard**
   anonymously, and logs each new
   `live_verified` event at most once. About 5 minutes plus CI and Pages time.
 - On success, move the batch's packages to `<P>/published/` and delete their claim files.
