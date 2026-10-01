@@ -153,6 +153,78 @@ class QueueTests(unittest.TestCase):
     def test_unverified_identity_never_deduplicates(self):
         ids={h*64:{'verified':False,'primary_source_id':'p'} for h in ['1','2']}; self.assertEqual(len(w.rank_queue([row(),row('2')],ids)['ranked_units']),2)
 
+class QuantumDotScopeTests(unittest.TestCase):
+    """Synthetic screen rows only; wording mirrors unnormalized screening labels."""
+    @staticmethod
+    def srow(h='1',**fields):
+        r=row(h); r.update(fields); return r
+    def scope(self,**kw): return w.quantum_dot_scope(self.srow(**kw))[0]
+    def test_colloidal_wording_in(self):
+        self.assertEqual(self.scope(preparation_summary='hot injection of TOP-Se into Cd oleate in octadecene'),'in')
+    def test_qd_composition_in(self):
+        self.assertEqual(self.scope(material='PbS',preparation_summary='precursor reaction'),'in')
+    def test_bulk_ceramic_out(self):
+        self.assertEqual(self.scope(material='BaTiO3',preparation_summary='solid-state reaction and sintering of ceramic pellets'),'out')
+    def test_thin_film_out(self):
+        self.assertEqual(self.scope(material='TiO2',preparation_summary='CVD thin film growth on a wafer'),'out')
+    def test_mixed_wording_ambiguous(self):
+        self.assertEqual(self.scope(material='CdS',preparation_summary='CdS nanocrystals embedded in a glass matrix'),'ambiguous')
+    def test_no_wording_ambiguous(self):
+        self.assertEqual(self.scope(material='Fe-S',preparation_summary='precursor reaction',structure_summary='XRD'),'ambiguous')
+    def test_rank_scope_excludes_out_and_orders_ambiguous_last(self):
+        a=self.srow('1',material='BaTiO3',preparation_summary='solid-state reaction, ceramic')
+        b=self.srow('2',material='Fe-S',preparation_summary='precursor reaction',structure_summary='XRD')
+        c=self.srow('3',material='CdSe',preparation_summary='hot injection')
+        result=w.rank_queue([a,b,c],scope='quantum-dot')
+        self.assertEqual(result['excluded']['outside_quantum_dot_scope'],1)
+        self.assertEqual([u['documents'][0]['document_sha256'][0] for u in result['ranked_units']],['3','2'])
+        self.assertEqual(result['scope_check_required_units'],1)
+    def test_default_scope_unchanged(self):
+        a=self.srow('1',material='BaTiO3',preparation_summary='solid-state reaction, ceramic')
+        self.assertEqual(len(w.rank_queue([a])['ranked_units']),1)
+
+class DeepAuditSampleTests(unittest.TestCase):
+    def test_deterministic(self):
+        h='ab'*32; self.assertEqual(w.deep_audit_selected(h),w.deep_audit_selected(h))
+    def test_rate_close_to_ten_percent(self):
+        import hashlib
+        hits=sum(w.deep_audit_selected(hashlib.sha256(str(i).encode()).hexdigest()) for i in range(20000))
+        self.assertTrue(1800<hits<2200, hits)
+    def test_rejects_non_digest(self):
+        with self.assertRaises(ValueError): w.deep_audit_selected('not-a-hash')
+    def test_package_sample_uses_frozen_science(self):
+        with tempfile.TemporaryDirectory() as d:
+            pkg=fixture(d); first=w.audit_sample(pkg,Path(d)); again=w.audit_sample(copy.deepcopy(pkg),Path(d))
+            self.assertEqual(first['deep_audit_required'],again['deep_audit_required'])
+            self.assertEqual(first['scientific_sha256'],w.digest(w.science_payload(pkg,Path(d))))
+            self.assertTrue(first['quick_audit_still_required'])
+
+class HelperCommandTests(unittest.TestCase):
+    def test_log_event_appends_valid_lines(self):
+        with tempfile.TemporaryDirectory() as d:
+            ledger=Path(d)/'ledger.jsonl'
+            w.log_event(ledger,'claimed','paper-a',at='2026-10-01T00:00:00Z')
+            w.log_event(ledger,'extraction_frozen','paper-a',at='2026-10-01T00:30:00Z')
+            rows=[json.loads(x) for x in ledger.read_text().splitlines()]
+            self.assertEqual([r['stage'] for r in rows],['claimed','extraction_frozen'])
+            result=w.event_metrics(rows,'2026-10-01T00:00:00Z','2026-10-01T01:00:00Z')
+            self.assertEqual(result['new_distinct_source_papers'],0, 'stage events never count as published papers')
+    def test_log_event_rejects_live_unknown_and_naive_time(self):
+        with tempfile.TemporaryDirectory() as d:
+            ledger=Path(d)/'ledger.jsonl'
+            for args in (('live_verified','p'),('published','p'),('claimed',' ')):
+                with self.assertRaises(ValueError): w.log_event(ledger,*args,at='2026-10-01T00:00:00Z')
+            with self.assertRaises(ValueError): w.log_event(ledger,'claimed','p',at='2026-10-01T00:00:00')
+    def test_live_sources_from_site_records(self):
+        with tempfile.TemporaryDirectory() as d:
+            rec=Path(d)/'data'/'records'; rec.mkdir(parents=True)
+            (rec/'a.json').write_text(json.dumps({'record_id':'a','lineage':{'source_group':'paper-a'}}))
+            (rec/'b.json').write_text(json.dumps({'record_id':'b','lineage':{'source_group':'paper-a'}}))
+            (rec/'c.json').write_text(json.dumps({'record_id':'c','lineage':{'source_group':'paper-c'}}))
+            self.assertEqual(w.live_sources(d),['paper-a','paper-c'])
+            ids={'1'*64:{'verified':True,'primary_source_id':'paper-a','role':'main'}}
+            self.assertEqual(w.rank_queue([row()],ids,w.live_sources(d))['excluded']['already_live_verified_source'],1)
+
 def event(eid='e1',source='p1',at='2026-09-26T02:00:00Z',**updates):
     result={'event_id':eid,'at':at,'stage':'live_verified','package_id':source+'-package','primary_source_id':source,
             'source_identity_verified':True,'tier':'gold','record_ids':['r1','r2'],'commit':'a'*40,'url':'https://example.test/material',

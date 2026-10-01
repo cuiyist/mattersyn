@@ -1,8 +1,8 @@
 # MatterSyn publication workflow
 
-## Current instruction: regular material pages only
+## Current instruction: workflow v5, regular material pages only
 
-The owner retired the public preliminary collection and clarified that the homepage target is about twenty newly published contributing papers per hour. Skips count only toward the separate processing target and never increase the website counter. Follow [processing workflow v4](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md). Preserve private drafts, but do not display them or count them as website contributions. Existing reviewed records, scientific review requirements, exact release checks and historical receipts remain intact.
+Follow [workflow v5](skills/mattersyn-paper-to-site/references/workflow-v5.md) and its [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md). The owner retired the public preliminary collection and set a target of about twenty newly published contributing papers per hour. This is a target, not demonstrated capacity. Skips and private drafts never increase the website counter. Every paper receives an independent quick audit, and the selected 10% receives a deep audit. Existing scientific, sample/figure, privacy, browser and release checks remain in force. Historical v4 directions do not govern new work.
 
 ## Retired preliminary display
 
@@ -32,6 +32,16 @@ review-cited old raw-source URL returned HTTP 200 anonymously after the reposito
 became public on 2026-09-24. Do not claim server-side deletion or cache purging.
 
 ## Latest verified deployment
+
+The Zhang et al. (2011) Cu–Zn–In–S release was anonymously verified at
+2026-09-30T22:48:38Z (site commit `258896d5b7103712aa859f23dc9d363ca2a67590`).
+The public site reports 137 primary source groups, 1,564 records, 132 material
+families and 488 broad recipe–structure rows. This includes one published
+benchmark source group; the reviewed-literature inventory has 136 groups.
+Its local proof is `research-assets/workflow-v4-20260930/zhang-publication-proof.private.json`.
+No workflow-v5 paper has yet been published or counted.
+
+## Earlier verified deployment
 
 GitHub Pages run #73 (`26df1afe5f16124de95cadfc0d362480d606647d`) was anonymously verified on 2026-09-30. It adds two distinct papers (Kudryavtseva 1997 SnO2 and Venkatesan 2003 Fe3O4), 10 records and 5 broad recipe–structure rows. The live totals are 136 papers, 1,564 records, 132 material families and 480 broad rows. Site CI build-and-validate and deploy both succeeded; each new material route resolved publicly. The preliminary collection is absent from the homepage navigation. The measured interval since run #72 was about 7h08m for two papers (0.28/hour), so the 20-paper/hour target remains unmet. Run #73 took 5m34s for CI and deployment, excluding curation and waiting time.
 
@@ -74,6 +84,20 @@ status while retaining the selected figures under the current project preference
 
 ## Build and release
 
+**Workflow-v5 release sequence:** `tools/publication/release_batch.py` prepares an
+isolated, gated site preview from a pushed, CI-passed source commit. It builds a
+candidate, derives the site allowlist, and requires the final gated build to
+match the candidate byte for byte. Review the exact preview in a browser and
+record the pinned review receipt before rerunning the helper with the same work
+path, `--review-receipt`, `--push`, `--verify` and a private ledger. It rechecks
+the reviewed bytes, waits for the Pages deployment and verifies new paper routes
+and backing data anonymously. A later `--verify` run with the same work path
+rechecks an already pushed release without adding duplicate ledger credit. The
+focused helper tests pass; no workflow-v5 live deployment has yet tested the
+complete source-CI/Pages path. The [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md)
+contains the exact commands. `tools/publication/make_review_receipt.py` records
+the staged source changes for `prepare_source_release.py`.
+
 Source and site pushes are separate steps. After the reviewed source commit
 passes the existing local source-boundary and complete-build checks, push that
 exact clean commit to `cuiyist/mattersyn`. This starts validation-only source CI;
@@ -89,10 +113,12 @@ The September 26 scaling workflow uses a single source commit with generated,
 content-bound controls. Follow [the single-commit guide](tools/publication/SINGLE_COMMIT_RELEASE.md): stage reviewed payloads, prepare the blueprint and manifest together, then bind the committed manifest to clean HEAD outside the repository before export. CI uses that runtime allowlist. This removes the follow-up closure commit without removing exact public-file review or scientific evidence checks.
 
 Calibrated silver contributions require frozen-pipeline calibration and independent
-calibration approval. Experimental preliminary display is not authorized. A scoped
-gold contribution may be presentation-pending; its declared scientific scope still
-needs the consolidated independent audit. Automatic cross-repository publishing is
-not installed by this increment; the existing local handoff remains.
+calibration approval. Experimental preliminary display is not authorized. Each gold
+paper needs an independent v5 quick audit, and a deep audit when selected by the
+frozen scientific hash. Figures and authored visuals travel with the paper package;
+any unavailable or uncertain visual evidence must be labelled honestly. The source
+and site releases remain separate, with the exact review and live-verification gates
+described above.
 
 Inventory totals and memberships are generated during the build from canonical
 records, source review metadata and atlas indexes. The authored

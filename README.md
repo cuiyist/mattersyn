@@ -15,13 +15,14 @@ reachable again after the repository was made public on 2026-09-24.
 
 ## Scaling workflow
 
-The current [screened-paper workflow](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md)
-adds source-supported synthesis contributions to the ordinary material pages only
-after the applicable scientific, sample/figure, privacy, build, browser and release
-checks. Papers without enough source evidence for a recipe-linked structural outcome
-are skipped with a documented reason; unavailable files and unresolved identity are
-technical holds. The former public preliminary collection is retired. Drafts, skips,
-holds, corrections and repeated reviews do not increase the homepage paper count.
+The current [workflow v5](skills/mattersyn-paper-to-site/references/workflow-v5.md)
+and its [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md)
+cover quantum-dot and colloidal-nanocrystal papers in the existing screened-pass set.
+Each paper receives an independent quick audit; a reproducible 10% sample receives
+a deep audit. Source-supported recipes, sample-linked outcomes, figures and authored
+visuals are prepared together and published to ordinary material pages only after
+the applicable scientific, privacy, build, browser and release checks. Drafts,
+skips, holds, corrections and repeated reviews do not increase the homepage count.
 
 The owner’s target is about 20 distinct papers per hour actually deployed to normal
 material pages and verified without a login. It remains an unachieved capacity target:
@@ -31,7 +32,8 @@ paper contributes only once. **Gold** and calibrated **silver** remain separate;
 calibrated silver requires held-out 98% / 95% / 90% field thresholds and
 independent approval.
 
-- [Screening, extraction and publishing workflow](skills/mattersyn-paper-to-site/references/processing-workflow-v4.md)
+- [Current screening, extraction and publishing workflow](skills/mattersyn-paper-to-site/references/workflow-v5.md)
+- [Agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md)
 - [Scoped packages and event metrics](tools/workflow/README.md)
 - [Local extraction and calibration](tools/silver/README.md)
 - [Silver sampling, error monitoring and stop rules](tools/silver/MONITORING.md)
@@ -45,8 +47,8 @@ the owner resumes new intake. Publish ready contributions in batches with one sh
 build and release cycle. Reuse exact unchanged audits and gate receipts, and rerun
 only changed or failed checks and affected dependencies. Never imply continuous work
 between actual runs or trade scientific provenance and privacy checks for a headline
-throughput target. The target and six active-author-minutes-per-paper objective are
-unproven; record elapsed publication throughput separately from active author time.
+throughput target. The 20-paper/hour target is unproven; record elapsed publication
+throughput separately from active author time.
 
 ## Local workspace organization
 

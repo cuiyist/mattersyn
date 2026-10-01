@@ -111,6 +111,36 @@ The real pass manifest contains 5,587 file rows / **5,539 unique document hashes
 The first run removed 48 duplicate copies and ranked those documents in under one
 second on the current machine. This is a queue operation, not extraction speed.
 
+### Quantum-dot / colloidal scope (workflow v5)
+
+Add `--scope quantum-dot` to `rank`. Each unit is classified from the screen's own wording
+(material label, preparation and structure summaries): colloidal/QD wording or a QD composition
+is **in**; bulk, thin-film, CVD, ceramic, sintering, glass or melt wording without colloidal
+wording is **out** and excluded (`excluded.outside_quantum_dot_scope`). Mixed or missing wording
+is kept with `scope_check_required: true` and ranked after all in-scope units. No paper is opened.
+
+### Stage events and live sources (workflow v5)
+
+```powershell
+python -B package_workflow.py log-event <private-ledger.jsonl> --stage claimed --package-id <id>
+python -B package_workflow.py live-sources <site-checkout> --output <private-live-sources.json>
+```
+
+`log-event` appends one validated stage event (timezone-aware time, known stage). `live_verified`
+events are refused here; only `tools/publication/release_batch.py` writes them, after an anonymous
+live check. `live-sources` lists the primary sources already published in a site checkout, for
+`rank --live-sources`.
+
+### Deep-audit sample (workflow v5)
+
+```powershell
+python -B package_workflow.py audit-sample <pkg>/package.json --output <private-sample.json>
+```
+
+After extraction is frozen, the package's scientific fingerprint selects about 10% of papers
+for a full deep audit: `int(scientific_sha256[:8], 16) % 100 < 10`. The selection is reproducible
+and cannot be chosen without changing the science. Every paper still gets the quick audit.
+
 ## Metrics from a complete local PR-event ledger
 
 Append observed events to a private JSONL ledger. Each event needs `event_id`,
