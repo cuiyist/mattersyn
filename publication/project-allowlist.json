@@ -1,19 +1,19 @@
 {
   "schema_version": "mattersyn-public-release-allowlist/1",
-  "release_id": "workflow-v5-windows-ci-fix",
+  "release_id": "workflow-v5-zou-batch01",
   "repo": "mattersyn",
-  "source_commit": "392eaecfeaa0ae2fad3e6733ba4acf6f7353e230",
+  "source_commit": "c987a31942f834d7113a532b3d3d739279058c31",
   "source_commit_role": "preparation_base",
   "source_payload_binding": {
     "schema": "mattersyn-source-payload-binding/1",
-    "sha256": "cbf1fd097c2014323c754de2203caff18362539f775200f037a770aeeb446580",
-    "file_count": 9635,
+    "sha256": "91feae25520cd6c1b5d57a2e58173dbc6ef048db662c381fe036759c93ba2aac",
+    "file_count": 9644,
     "excludes": [
       "publication/project-allowlist.json"
     ]
   },
-  "policy_sha256": "1b3a59b62966ae3d3533cc078aed764f337eb9892d926b5f7f3bfaf458e7e9e4",
-  "asset_rights_registry_sha256": "0111167de5d3560f7d034fbd0a9e89cad6572797a6feb06e3a86b562cf9c4472",
+  "policy_sha256": "f323bc942d083faef6d3782ce753073986b88b52bc4de2a0306deb0b820080e5",
+  "asset_rights_registry_sha256": "ff1653f686629c9cfd2af8bb692deca3a6b5aa1a6cdc2b910ddaac4cf8b5a471",
   "review_scope": "Exact staged payload identities. Scientific review remains separately bound to paper content.",
   "files": [
     {
@@ -114,38 +114,44 @@
     },
     {
       "path": "publication/asset-rights-registry.json",
-      "sha256": "0111167de5d3560f7d034fbd0a9e89cad6572797a6feb06e3a86b562cf9c4472",
-      "bytes": 10626185,
+      "sha256": "ff1653f686629c9cfd2af8bb692deca3a6b5aa1a6cdc2b910ddaac4cf8b5a471",
+      "bytes": 10640653,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root exact payload review",
-      "reviewed_at": "2026-09-30T21:13:31Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "audit_summary",
       "source_refs": []
     },
     {
       "path": "publication/build-inputs.json",
-      "sha256": "b897fc5d13120ff300121460e505a377d8f1ae82aa7b0c1b919c1d9393c1c361",
-      "bytes": 2241906,
+      "sha256": "c931829c70eed891025a7764a83f8a54557d55f53dd55169ce496756908c5750",
+      "bytes": 2243996,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
       "reviewer": "deterministic-source-control-generator",
-      "reviewed_at": "2026-10-01T05:48:49.692667+00:00",
+      "reviewed_at": "2026-10-01T06:22:46.054855+00:00",
       "content_class": "audit_summary",
       "source_refs": [],
-      "approval_scope": "Generated exact input identities only; no scientific approval"
+      "approval_scope": "Generated exact input identities only; no scientific approval",
+      "metadata_review": {
+        "before_sha256": "400651746c5ed85e5013bb1dd05d603d4a2f8f89d0ec161ac4125aea8f9af028",
+        "sha256": "bfa150b4ad2c5a3ab85d35d0f5aeba1819f468c4604ba660f2b3432678747ae3",
+        "reviewer": "root-independent-zou-record-count-review",
+        "reviewed_at": "2026-10-01T06:22:33+00:00"
+      }
     },
     {
       "path": "publication/public-release-policy.json",
-      "sha256": "1b3a59b62966ae3d3533cc078aed764f337eb9892d926b5f7f3bfaf458e7e9e4",
+      "sha256": "f323bc942d083faef6d3782ce753073986b88b52bc4de2a0306deb0b820080e5",
       "bytes": 156712,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root exact payload review",
-      "reviewed_at": "2026-09-30T21:13:31Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "audit_summary",
       "source_refs": []
     },
@@ -187,21 +193,15 @@
     },
     {
       "path": "recipe-atlas/data/inventory-evidence.json",
-      "sha256": "adfa89d970235c55dceb565935eeb543b2c445211dea9fe5205ca91be8124a9d",
-      "bytes": 232934,
+      "sha256": "1b80d8ee19a23d0cda647dda16e2da28ebfeb73e2ffe9372a7fa3f71d9ce942f",
+      "bytes": 235182,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root exact source-scope metadata review",
-      "reviewed_at": "2026-09-30T21:40:04Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "site_data",
-      "source_refs": [
-        {
-          "doi": "10.1021/cm201400w",
-          "url": "https://doi.org/10.1021/cm201400w",
-          "locator": "Main article pp. 3357–3361; SI pp. 1–3; source-page coverage, recipe variant and figure/sample scope."
-        }
-      ]
+      "source_refs": []
     },
     {
       "path": "recipe-atlas/data/measurement-display.json",
@@ -2755,6 +2755,18 @@
       "source_refs": []
     },
     {
+      "path": "recipe-atlas/data/paper-reviews/zou2022-mno2-casein-acssuschemeng2c02981.json",
+      "sha256": "ab137a3bacca82000ab2183f925194877ba227412fcfb596a1b819da118af234",
+      "bytes": 23594,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_data",
+      "source_refs": []
+    },
+    {
       "path": "recipe-atlas/data/pilot-source-queue.json",
       "sha256": "411a4e276bcbd6ec46ad3701bc8cc1b04dc975fed47a2a20ba9b5e7b11666788",
       "bytes": 27687,
@@ -2768,21 +2780,15 @@
     },
     {
       "path": "recipe-atlas/data/reader-presentation-reviewed.json",
-      "sha256": "6e27c13bdec8c4321f80883f3bfa94039998e4e177cbdd52d3a99f86ce372cf7",
-      "bytes": 31565593,
+      "sha256": "d23b833dbd5244939904c52ddc9ef3162e716d88ec73064e13e4f1ed633aec9b",
+      "bytes": 31600141,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root exact payload review",
-      "reviewed_at": "2026-09-30T21:13:31Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "site_data",
-      "source_refs": [
-        {
-          "doi": "10.1021/cm201400w",
-          "url": "https://doi.org/10.1021/cm201400w",
-          "locator": "Main article pp. 3357–3361 and Supporting Information pp. 1–3; route and specimen provenance."
-        }
-      ]
+      "source_refs": []
     },
     {
       "path": "recipe-atlas/data/records/alam2012-cdse-cds-ica201110038-cdse-cds-constant-temperature.json",
@@ -26950,22 +26956,28 @@
       "source_refs": []
     },
     {
-      "path": "recipe-atlas/data/release-baseline-manifest.json",
-      "sha256": "f576e035123df41515ab6ff2d1f4f26dc34dd6fb0c52aba2071f026f1060c277",
-      "bytes": 5134918,
+      "path": "recipe-atlas/data/records/zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot.json",
+      "sha256": "3fab3e5e27ae1f661146f2301c05ab0e53c821fd4c3933142b737e6d510dca84",
+      "bytes": 51937,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root verified-record-membership review",
-      "reviewed_at": "2026-09-30T21:48:32Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "site_data",
-      "source_refs": [
-        {
-          "doi": "10.1021/cm201400w",
-          "url": "https://doi.org/10.1021/cm201400w",
-          "locator": "Main pp. 3357–3361 and SI pp. 1–3; ten separately source-reviewed canonical records and their audited route/sample bindings."
-        }
-      ]
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/data/release-baseline-manifest.json",
+      "sha256": "8ce86d8a135023bb266286b769b29debddfdffe22253ce4a204eb85990fda401",
+      "bytes": 5138443,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_data",
+      "source_refs": []
     },
     {
       "path": "recipe-atlas/data/release-notes/source-link-corrections.json",
@@ -27683,21 +27695,15 @@
     },
     {
       "path": "recipe-atlas/static/assets/chemical-registry/bindings.json",
-      "sha256": "5122ae6027017e5c4bc2a3eaebd3da8544bd7774ddb9630ee9a133f9e37cefd5",
-      "bytes": 4253238,
+      "sha256": "159ed8e779246ea4faf370398f4a37eea3e97d5d4d8a6ecc7fc1d70b77582fd6",
+      "bytes": 4253912,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root exact payload review",
-      "reviewed_at": "2026-09-30T21:13:31Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "site_data",
-      "source_refs": [
-        {
-          "doi": "10.1021/cm201400w",
-          "url": "https://doi.org/10.1021/cm201400w",
-          "locator": "Main article pp. 3357–3361 and Supporting Information pp. 1–3; route and specimen provenance."
-        }
-      ]
+      "source_refs": []
     },
     {
       "path": "recipe-atlas/static/assets/chemical-registry/friedfeld2019-products/friedfeld2019-acid-product-symbol.svg",
@@ -36905,45 +36911,39 @@
     },
     {
       "path": "recipe-atlas/static/assets/chemical-registry/product-bindings.json",
-      "sha256": "09c934c72c98a34fa188b5016a08f91724d814a41adfc3bef3676017a8e87e21",
-      "bytes": 8361,
-      "content_class": "site_data",
-      "decision": "allow",
-      "review_status": "approved",
-      "reviewer": "root with separate source, integration and UI delta audits",
-      "reviewed_at": "2026-09-26T16:08:08.708283+00:00",
-      "source_refs": [],
-      "git_mode": "100644"
-    },
-    {
-      "path": "recipe-atlas/static/assets/chemical-registry/product-contexts.json",
-      "sha256": "6d01b427e624290d3b1cd08298f7353a526d4743518b18feeb0449c680215f81",
-      "bytes": 1420070,
-      "content_class": "site_data",
-      "decision": "allow",
-      "review_status": "approved",
-      "reviewer": "root with separate source, integration and UI delta audits",
-      "reviewed_at": "2026-09-26T16:08:08.708283+00:00",
-      "source_refs": [],
-      "git_mode": "100644"
-    },
-    {
-      "path": "recipe-atlas/static/assets/chemical-registry/registry.json",
-      "sha256": "5be0374b71cfbd4b2e0523bc6a138b3adcd026c96b58d8c6243a13ca02e1cb93",
-      "bytes": 4457772,
+      "sha256": "da1f68747c7bbc7b48db7e40a1d9899eba97fc08ff46a2c30fc3f3629e696be5",
+      "bytes": 8477,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "Codex root exact payload review",
-      "reviewed_at": "2026-09-30T21:13:31Z",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "site_data",
-      "source_refs": [
-        {
-          "doi": "10.1021/cm201400w",
-          "url": "https://doi.org/10.1021/cm201400w",
-          "locator": "Main article pp. 3357–3361 and Supporting Information pp. 1–3; route and specimen provenance."
-        }
-      ]
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/chemical-registry/product-contexts.json",
+      "sha256": "4b55b659412110cea650664b488fe218dee0a4b7ca604da070bbc6987e4373cc",
+      "bytes": 1422446,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_data",
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/chemical-registry/registry.json",
+      "sha256": "82c66a978911b49485d972a427be68eb24a5de1cf658fa0a39a82b6b69144fb0",
+      "bytes": 4461592,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_data",
+      "source_refs": []
     },
     {
       "path": "recipe-atlas/static/assets/chemical-registry/sasongko2025-products/sasongko2025-aging-350-product-context.svg",
@@ -59754,6 +59754,42 @@
       "reviewed_at": "2026-09-26T16:08:08.708283+00:00",
       "source_refs": [],
       "git_mode": "100644"
+    },
+    {
+      "path": "recipe-atlas/static/assets/chemical-registry/svg/zou2022-mno2-casein-acssuschemeng2c02981-beta-casein.svg",
+      "sha256": "cc5f0b69e7e239253e00f3c2e75e408cdbdac5de9a7f3d85bb6adde121d65ec1",
+      "bytes": 823,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/chemical-registry/svg/zou2022-mno2-casein-acssuschemeng2c02981-potassium-permanganate.svg",
+      "sha256": "8257ce4d8b22dc2e0b9ce894aec8bd340aa61fddf0884270809f7c75afec65bf",
+      "bytes": 1002,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/chemical-registry/svg/zou2022-mno2-casein-acssuschemeng2c02981-product.svg",
+      "sha256": "54d9f9a7925f5c320e81a243952768e7bafb7911afeed21d63555e24e4de1e26",
+      "bytes": 1075,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
     },
     {
       "path": "recipe-atlas/static/assets/chemical-thumbnails/2-propanol.svg",
@@ -82794,6 +82830,42 @@
       "source_refs": []
     },
     {
+      "path": "recipe-atlas/static/assets/paper-reviews/zou2022-mno2-casein-acssuschemeng2c02981/figure-1.png",
+      "sha256": "5c79a156a80f61d0ca60a8e813f526e3a884dabc1bf9b3ac5962da556fd06ff6",
+      "bytes": 315994,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/paper-reviews/zou2022-mno2-casein-acssuschemeng2c02981/figure-2.png",
+      "sha256": "0c9fb1c43248719655917efbe22a8cc2d67f1e6eb87ab7abc510b9b47ea76c32",
+      "bytes": 239533,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/paper-reviews/zou2022-mno2-casein-acssuschemeng2c02981/scheme-1.png",
+      "sha256": "29ae3747ca639838fa4ae476ac254f4b5f9e03a53cf472e0e75aa4b51747b048",
+      "bytes": 35017,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
+    },
+    {
       "path": "recipe-atlas/static/assets/peng2000-crystal-reference.json",
       "sha256": "29297761bf444d39863bfd70336f4232ae5b357521c14e9c581692cbb079c0d4",
       "bytes": 2196,
@@ -93926,6 +93998,18 @@
       "review_status": "approved",
       "reviewer": "Separate accepted scientific and transport authorities preserved; the exact union engineering receipt must be bound before application. Root controls source changes and release.",
       "reviewed_at": "2026-09-29T15:49:37.228081+00:00",
+      "content_class": "site_asset",
+      "source_refs": []
+    },
+    {
+      "path": "recipe-atlas/static/assets/protocol/zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot-process.svg",
+      "sha256": "865c62929a68a6fddd5559487bc9c7d24efc1e121e37a1a09caa0ca3da789bb9",
+      "bytes": 1879,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "root-independent-zou-source-inventory-and-metadata-review",
+      "reviewed_at": "2026-10-01T06:22:09+00:00",
       "content_class": "site_asset",
       "source_refs": []
     },

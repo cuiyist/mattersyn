@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1564,
-  "group_count": 137,
+  "record_count": 1565,
+  "group_count": 138,
   "families": [
     "Ag nanocrystals and superlattice films",
     "Ag2S nanocrystals",
@@ -27,6 +27,7 @@
     "Cadmium sulfide magic-sized nanocrystals",
     "Cadmium sulfide nanocrystals",
     "Calcite host and Mg-mediated calcium carbonate",
+    "Casein-stabilized manganese dioxide quantum dots",
     "Cassiterite tin dioxide colloids",
     "CdS nanocrystal–polyurethane hybrid",
     "CdS nanostructures",
@@ -111275,6 +111276,78 @@
         "TiO2"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot",
+      "title": "Zou et al. (2022): casein-stabilized MnO2 quantum dots from aqueous permanganate",
+      "formula": "MnO2",
+      "family": "Casein-stabilized manganese dioxide quantum dots",
+      "method": "Aqueous protein-directed permanganate reduction at room temperature",
+      "record_type": "literature_protocol",
+      "source_year": 2022,
+      "source_doi": "10.1021/acssuschemeng.2c02981",
+      "revision": 4,
+      "record_sha256": "c933cafa415f8b1ac32c7a5d96f7566fd1203d4e4bdda294928b0adb88d6c7e7",
+      "recipe_signature": "8ebabe2ce0c103524bc2cea0b2f380c54099f519664f77d56f62b1737db3517f",
+      "group_id": "group-5d3701e60c1a",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot.json",
+      "page_url": "records/zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "MnO2"
+      ],
+      "pair_ids": [
+        "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot::cs-mno2-2mgml"
+      ]
     }
   ]
 }
