@@ -3,7 +3,7 @@
   "status": "integrated_curator_display_interpretations",
   "scope": "Source-context-specific display interpretations from reviewed records and linked figures; each entry retains its own source and limitations.",
   "policy": "These entries authorize schematic display only, never canonical measurement changes, new sample joins, measured coordinates or training eligibility.",
-  "input_reader_presentation_sha256": "4f471c65adce19a170127d6a32997adb0fc5721f28a0afba24a05aedd9bd923f",
+  "input_reader_presentation_sha256": "1a9d26b3890af967cbac45f7fc6fa7cb54e2dd6b9f0bcce87659668af22ed8e8",
   "entries": {
     "evans-2010-pbse-tem:pbse-tem-spheres": {
       "record_id": "evans-2010-pbse-tem",
@@ -3480,6 +3480,94 @@
       "svg_path": "assets/protocol/zhang2012-ag2s-nn301218z-dhla-exchange.svg",
       "svg_sha256": "7b76e73b1ba19549a0fda0fa2845acc0ade481f8eb5f3af6d1e4793eca5fa243",
       "alt": "Flat, illustrative Ag₂S quantum-dot projection with separately labelled source size or surface contexts."
+    },
+    "dierick2014-cuins2-cm502687p-odam:cis-odam-as-synthesized": {
+      "record_id": "dierick2014-cuins2-cm502687p-odam",
+      "sample_id": "cis-odam-as-synthesized",
+      "shape": "faceted-outline",
+      "label": "CIS/ODAm tile projection",
+      "status": "curator_interpretation",
+      "basis": "reported_description_and_TEM_to_flat_schematic",
+      "rationale": "Main Figure 1A and prose report anisotropic tile-shaped NCs with a hexagonal top surface. This flat outline is a source-informed projection, not the paper cartoon or a measured 3D reconstruction.",
+      "evidence": [
+        {
+          "record_id": "dierick2014-cuins2-cm502687p-odam",
+          "pointer": "/products/0/morphology/value",
+          "source_id": "dierick2014-cuins2-cm502687p",
+          "locator": "Main PDF p.3 / printed p.5952, Figure 1A–D and Characterization of As-Synthesized CuInS2 Nanocrystals",
+          "figure_id": "figure-1",
+          "panel": "A"
+        },
+        {
+          "record_id": "dierick2014-cuins2-cm502687p-odam",
+          "pointer": "/figures/0",
+          "data_path": "data/paper-reviews/dierick2014-cuins2-cm502687p.json",
+          "source_id": "dierick2014-cuins2-cm502687p",
+          "locator": "Main PDF p.3 / printed p.5952, Figure 1A–D and Characterization of As-Synthesized CuInS2 Nanocrystals",
+          "figure_id": "figure-1",
+          "panel": "A",
+          "public_asset": "assets/paper-reviews/dierick2014-cuins2-cm502687p/figure-1.png",
+          "asset_sha256": "8ed2deea1584e3f1aa2ec5d08b0865b34311de99ff61b5f928ffa10843fd7458"
+        }
+      ],
+      "limitations": [
+        "Edge 7.6 ± 1.3 nm and height 6.9 ± 0.7 nm are reported as text. SVG dimensions, facet angles and particle count are not scaled to these measurements.",
+        "No 3D facet indexing, individual-particle coordinates or measured atomic lattice is encoded. The Figure 1D XRD is a thin-film phase assignment.",
+        "The physical TEM-to-RBS/XRD aliquot identity is unreported."
+      ],
+      "source_sha256": "8f214a3b3683731f09f550b446f550d1bd253e31972682ccd6b0f8cd130989f9",
+      "source_hash_scope": "recipe-atlas/data/records/dierick2014-cuins2-cm502687p-odam.json",
+      "recipe_link": "explicit",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Flat 2D illustrative symbols only; no scale, particle-size distribution, 3D surface, individual coordinates or measured atomic positions.",
+      "svg_path": "assets/morphology-interpretations/odam-tile-projection.svg",
+      "svg_sha256": "d099de5c4ddf4706c0a75eb13d392dc91e340b664019c83ef81cf2aa984e82a8",
+      "alt": "Flat illustrative tile outlines for the reported CIS/ODAm Figure 1A population; dimensions are text only and no measured 3D reconstruction is shown."
+    },
+    "dierick2014-cuins2-cm502687p-olam:cis-olam-as-synthesized": {
+      "record_id": "dierick2014-cuins2-cm502687p-olam",
+      "sample_id": "cis-olam-as-synthesized",
+      "shape": "dot-projection",
+      "label": "CIS/OLAm TEM projections",
+      "status": "curator_interpretation",
+      "basis": "curator_visual_interpretation_of_SI_TEM",
+      "rationale": "SI Figure S5A visually shows mostly rounded TEM projections. The article supplies no verbal OLAm morphology designation; this flat dot schematic is an interpretive visual only.",
+      "evidence": [
+        {
+          "record_id": "dierick2014-cuins2-cm502687p-olam",
+          "pointer": "/products/0/morphology",
+          "source_id": "dierick2014-cuins2-cm502687p",
+          "locator": "SI PDF p.4, section 5, Figure S5A–D, CIS/OLAm TEM, UV–vis, RBS, and XRD",
+          "figure_id": "figure-s5",
+          "panel": "A"
+        },
+        {
+          "record_id": "dierick2014-cuins2-cm502687p-olam",
+          "pointer": "/figures/1",
+          "data_path": "data/paper-reviews/dierick2014-cuins2-cm502687p.json",
+          "source_id": "dierick2014-cuins2-cm502687p",
+          "locator": "SI PDF p.4, section 5, Figure S5A–D, CIS/OLAm TEM, UV–vis, RBS, and XRD",
+          "figure_id": "figure-s5",
+          "panel": "A",
+          "public_asset": "assets/paper-reviews/dierick2014-cuins2-cm502687p/figure-s5.png",
+          "asset_sha256": "98cedd277b394771640f31daa0b80d5353ecba060ac7b736955ee86b60b64319"
+        }
+      ],
+      "limitations": [
+        "No numerical TEM diameter or distribution is reported for this OLAm product; SVG dot sizes, spacing and count are arbitrary.",
+        "Rounded two-dimensional projections do not establish 3D spheres, faceting, phase, thickness or atomic coordinates.",
+        "Main Figure 1A ODAm tile dimensions and chalcopyrite assignment must not transfer to OLAm Figure S5."
+      ],
+      "source_sha256": "95f9ceb077e9971ad7a0787719cf8fc6c1eaa25a24b8c05aecbc57d92fbdc1b9",
+      "source_hash_scope": "recipe-atlas/data/records/dierick2014-cuins2-cm502687p-olam.json",
+      "recipe_link": "explicit",
+      "measured_atomic_coordinates": false,
+      "same_batch_asserted": false,
+      "geometry_parameters": "Flat 2D illustrative symbols only; no scale, particle-size distribution, 3D surface, individual coordinates or measured atomic positions.",
+      "svg_path": "assets/morphology-interpretations/olam-tem-projections.svg",
+      "svg_sha256": "be53265587b52983979cbc3a5a035b5e8f7440fcedd451f5616b32eefb1c3543",
+      "alt": "Flat illustrative rounded TEM projections for CIS/OLAm Figure S5A; numerical size and 3D shape are unreported."
     }
   },
   "additional_contexts": {
