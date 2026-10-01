@@ -1,5 +1,11 @@
 # MatterSyn current verified checkpoint — 2026-10-01
 
+## Latest verified v5 release — three colloidal papers
+
+Huang et al. (2015, CdSe/9-ACA), Slejko et al. (2017, CdSe colloidal atomic-layer-deposition shells), and Dierick et al. (2014, CuInS2 ligands) are live on ordinary material and source-review pages. Their separately audited contribution adds **three primary papers and 20 canonical records**, bringing the anonymously verified site to **145 contributing papers and 1,602 records**. Source commit `58468006403db75580acd35cdff9902241e0920f` passed Windows and Ubuntu validation plus artifact comparison. Site commit `aa9a318fedbb7703017b7e6e12ebe943c240a47e` passed Pages deployment and anonymous verification of 40 files, all three paper routes and all affected material routes, without mismatches. The private exact-preview browser receipt and live release ledger are under `research-assets/workflow-v5/` and `_tmp/mzr3` locally. Original PDFs, full text, detailed audits and unreviewed drafts remain local; selected figure publisher permission remains unverified. The 20-paper/hour target is not demonstrated capacity.
+
+The next accepted packages are staged privately and have **no** publication credit until their shared Reader, figure, rights, build, browser and live gates pass. The deleted heartbeat and scheduled progress reports remain off; the owner explicitly resumed the website job under workflow v5.
+
 ## Latest verified v5 release — Chen 2014
 
 Chen et al. (2014), DOI 10.1021/jp500270d, is live with six separately bound Cu–Zn–Sn–S composition records. Source commit `65006ee4bcdacc2b36c5cc0adecd38f960c14e58` passed source CI; site commit `2bee87857ae51e7edf91d9982f79aad433b835c7` was anonymously verified on 2026-10-01. The release helper checked forty public files, the new paper review and all six affected material routes with no mismatches. Live totals are **140 contributing papers, 1,572 records, 141 direct material families and 496 broad recipe–structure rows**. The independent review and exact release receipts remain local under `research-assets/workflow-v5-20261001/chen2014-release-batch02`; public source figures retain exact provenance and unverified publisher-permission status. The 20-paper/hour target remains unachieved; count subsequent papers only after deployment and anonymous verification.

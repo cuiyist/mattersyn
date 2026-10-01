@@ -210,3 +210,9 @@ without separate explicit user authorization.
 ## Reuse one successful batch build
 
 The integration owner has adopted the tested [sealed one-build workflow](tools/publication/ONE_BUILD_RELEASE.md). Build and run the complete checks once on clean committed batch inputs. Promote only those identical files after the required science, browser, source-export and exact-head CI evidence is verified; run the public artifact boundary once. A promoted-artifact receipt is not a publication receipt. Site CI and anonymous verification still precede paper credit. Any changed or failed dependency invalidates reuse. Do not create per-paper publishing scripts or rerun a passing unchanged release merely to produce another status report.
+
+## Verified v5 colloidal release — 2026-10-01
+
+The Huang 2015 CdSe/9-ACA, Slejko 2017 CdSe shell-growth and Dierick 2014 CuInS2 batch passed exact source CI and artifact comparison at `58468006403db75580acd35cdff9902241e0920f`. The release helper prepared an isolated site preview, matched candidate and final builds, checked all 14 required routes in a browser, and deployed site commit `aa9a318fedbb7703017b7e6e12ebe943c240a47e`. Anonymous verification passed for 40 sampled files, all three new paper routes and all affected material routes. This credits three distinct papers and 20 canonical records, making 145 live contributing papers and 1,602 records. The private browser receipt, release plan and live ledger remain local; complete source PDFs, text, renders and detailed audit evidence were not deployed. Source-figure publisher permission is still unverified. This is a measured release, not evidence of the 20-papers/hour target.
+
+The current v5 `release_batch.py` deliberately runs both candidate and final full builds and compares their tree hashes. This supersedes the historical one-build intention above for releases using that helper; do not treat an earlier passing build as permission to skip v5's exact-preview gates.
