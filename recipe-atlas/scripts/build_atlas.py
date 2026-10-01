@@ -39,6 +39,7 @@ NAMES['NAT-CQDs']='Biomass-derived amine-functionalized carbon quantum dots'
 NAMES['CdS/PbS']='Cadmium sulfide / lead sulfide heterojunctions · nanorod and planar architectures'
 NAMES['Ag2S']='Silver sulfide nanocrystals'
 NAMES['CuFeS2']='Copper iron sulfide nanocrystals'
+NAMES['HgTe']='Mercury telluride quantum dots'
 
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
