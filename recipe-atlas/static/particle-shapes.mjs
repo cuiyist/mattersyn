@@ -6,13 +6,14 @@
  */
 
 export const PARTICLE_SHAPES = Object.freeze([
-  'sphere', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'ellipsoid', 'platelet', 'lamellar-stack', 'belt', 'star',
+  'sphere', 'dot-projection', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'ellipsoid', 'platelet', 'lamellar-stack', 'belt', 'star',
   'truncated-star', 'irregular', 'truncated-octahedron', 'assembly', 'sphere-assembly', 'wire-assembly', 'matrix',
   'nanotube-supported', 'core-shell', 'islands', 'layered-film', 'neutral',
 ]);
 
 const LABELS = Object.freeze({
   sphere: 'Schematic spherical particle',
+  'dot-projection': 'Schematic rounded 2D TEM projection; 3D shape and size are not inferred',
   'faceted-outline': 'Schematic hexagonally faceted particle outline; thickness and facet indices are unspecified',
   'nested-faceted': 'Schematic nested faceted particle; contour count is illustrative and center remains unresolved',
   cube: 'Schematic cubic particle',
@@ -152,6 +153,7 @@ function body(shape, g) {
       <text x="200" y="153" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="#52615d">?</text>`;
     case 'faceted-outline': return ground(92,254) + `<path d="M151 66H248L294 145L246 226H151L105 146Z" fill="url(#${g}-ball)" stroke="#367f7d" stroke-width="2"/><path d="M154 73H245L273 120" fill="none" stroke="#e0ecd2" stroke-width="3" opacity=".6"/>`;
     case 'sphere': return ground(92,254) + ball(200,145,89) + `<path d="M147 99C161 77 182 69 202 69" fill="none" stroke="#f1f8df" stroke-width="3.5" stroke-linecap="round" opacity=".5"/>`;
+    case 'dot-projection': return `<circle cx="200" cy="155" r="82" fill="#3d8d91" stroke="#205e69" stroke-width="2"/>`;
     case 'cube': return ground(116,260)
       + `<path d="M200 50L302 102L200 160L98 102Z" fill="url(#${g}-top)" stroke="#4e9690" stroke-width="1.3"/>
       <path d="M98 102L200 160V254L98 195Z" fill="url(#${g}-teal)" stroke="#3a7f7d" stroke-width="1.3"/>

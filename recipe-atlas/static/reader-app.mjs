@@ -8,7 +8,7 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableCh
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.1';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.2';
 
 const cache=new Map();
 

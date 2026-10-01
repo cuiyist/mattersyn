@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {componentScopeLabel} from '../static/reader-utils.mjs';
 import {classifyMorphology} from '../static/reader-particle.mjs';
 import {PARTICLE_SHAPES,particleShapeInfo,particleShapeSVG} from '../static/particle-shapes.mjs';
@@ -38,4 +39,22 @@ test('lamellar-stack artwork is explicitly qualitative and carries no measured s
  assert.match(svg,/role="img"/);
  assert.match(svg,/Schematic irregular lamellae/);
  assert.doesNotMatch(svg,/(?:\d+\s?(?:nm|Å)|scale bar)/i);
+});
+
+test('source-bound Yuan CPT dot projections render as flat 2D illustrations for all quantified routes',()=>{
+ const entries=JSON.parse(readFileSync(new URL('../static/data/reader-morphology-interpretations.json',import.meta.url),'utf8')).entries;
+ assert.ok(PARTICLE_SHAPES.includes('dot-projection'));
+ assert.match(particleShapeInfo('dot-projection').ariaLabel,/2D TEM projection.*3D shape and size are not inferred/);
+ const svg=particleShapeSVG('dot-projection');
+ assert.match(svg,/<circle cx="200" cy="155" r="82"/);
+ assert.doesNotMatch(svg,/Morphology illustration unavailable|\d+\s?(?:nm|Å)|scale bar/i);
+ for(const [ratio,panel] of [[0,'a'],[25,'b'],[50,'c'],[75,'d']]){
+  const id=`yuan2026-agbis2-cpt-${ratio}`,entry=entries[`${id}:${id}-sample`];
+  assert.ok(entry,`${ratio}% CPT interpretation`);
+  assert.equal(entry.shape,'dot-projection');
+  assert.equal(entry.status,'curator_interpretation');
+  assert.equal(entry.recipe_link,'explicit');
+  assert.ok(entry.evidence.some(e=>e.record_id===id&&e.figure_id==='figure-2-tem-gisaxs'&&e.panel===panel));
+  assert.ok(entry.limitations.some(note=>/no physical 3D envelope/i.test(note)));
+ }
 });

@@ -164,7 +164,11 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
     errors=[]
     required={'package_path','package_sha256','validation_receipt_path','validation_receipt_sha256',
               'audit_receipt_path','audit_receipt_sha256'}
-    if set(entry)-{'status_delta_receipts'}!=required:return set(),['Scoped acceptance entry fields mismatch']
+    base_keys={'accepted_base_package_path','accepted_base_package_sha256'}
+    supplied_base=bool(set(entry)&base_keys)
+    if (set(entry)-{'status_delta_receipts'}!=required|(base_keys if supplied_base else set())
+            or (supplied_base and not base_keys<=set(entry))):
+        return set(),['Scoped acceptance entry fields mismatch']
     deltas=entry.get('status_delta_receipts',[])
     if not isinstance(deltas,list):return set(),['Scoped status-delta receipts must be an array']
     paths={key:Path(entry[key]).resolve() for key in ('package_path','validation_receipt_path','audit_receipt_path')}
@@ -174,7 +178,21 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
     package=read(paths['package_path']); validation=read(paths['validation_receipt_path']); audit=read(paths['audit_receipt_path'])
     sys.path.insert(0,str(candidate/'tools/workflow'))
     from package_workflow import validate as validate_package
-    result=validate_package(package,paths['package_path'].parent,validate_record)
+    base_package=None; base_root=None
+    if package.get('audit',{}).get('scope')=='scientific_diff':
+        if not supplied_base:
+            return set(),['Scoped scientific diff lacks an exact accepted base package']
+        base_root=Path(entry['accepted_base_package_path']).resolve()
+        if not base_root.is_file() or sha(base_root)!=entry['accepted_base_package_sha256']:
+            return set(),['Scoped accepted base package missing or stale']
+        base_package=read(base_root)
+        if (base_package.get('package_id')!=package.get('package_id')
+                or base_package.get('source',{}).get('doi')!=package.get('source',{}).get('doi')):
+            return set(),['Scoped accepted base package identity differs']
+        base_root=base_root.parent
+    elif supplied_base:
+        return set(),['Scoped non-diff package has unexpected accepted base']
+    result=validate_package(package,paths['package_path'].parent,validate_record,base_package,base_root)
     if not result.get('scientific_package_ready_for_existing_integration_gates') or result.get('errors'):
         errors.append('Scoped package scientific/schema validation failed')
     science=result.get('scientific_sha256');pa=package.get('audit',{})
