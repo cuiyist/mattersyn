@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1640,
-  "group_count": 153,
+  "record_count": 1641,
+  "group_count": 154,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag nanocrystals and superlattice films",
@@ -63,6 +63,7 @@
     "Cobalt–nickel thiospinel nanocrystal synthesis; row-specific phase is not assigned",
     "Cobalt–platinum nanocrystals and source-scoped assemblies",
     "Colloidal Ag2Se nanocrystals",
+    "Colloidal bismuth nanocrystal seeds",
     "Colloidal fullerene-like nickel hydroxychloride; empirical hydration x is unspecified.",
     "Colloidal indium phosphide quantum dots; no refined atomic structure supplied",
     "Colloidal lead selenide quantum dots",
@@ -22923,6 +22924,78 @@
       ],
       "pair_ids": [
         "fafarman2014-ag-nc-films-nn406461p-untreated::fafarman2014-ag-nc-films-nn406461p-untreated-sample"
+      ]
+    },
+    {
+      "record_id": "fanfair2005-bi-cg0502587-bi-seeds",
+      "title": "Fanfair and Korgel (2005): nitrogen-protected Bi nanocrystal seeds",
+      "formula": "Bi",
+      "family": "Colloidal bismuth nanocrystal seeds",
+      "method": "Room-temperature borohydride reduction in dioctyl ether with TOP",
+      "record_type": "literature_protocol",
+      "source_year": 2005,
+      "source_doi": "10.1021/cg0502587",
+      "revision": 2,
+      "record_sha256": "816fd100aceb33e1508cda88d2c1c37d2d138334a28c8f7f6e7e2e4c80f0f088",
+      "recipe_signature": "daa30f7d80629b3136a4ee48d0c18a4c39d637d7e151034e4ec83bda7da45fb7",
+      "group_id": "group-1faa852e4f77",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": true,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/fanfair2005-bi-cg0502587-bi-seeds.json",
+      "page_url": "records/fanfair2005-bi-cg0502587-bi-seeds.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Bi"
+      ],
+      "pair_ids": [
+        "fanfair2005-bi-cg0502587-bi-seeds::fanfair2005-bi-cg0502587-bi-seeds-seed-cohort"
       ]
     },
     {
