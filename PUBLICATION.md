@@ -1,5 +1,11 @@
 # MatterSyn publication workflow
 
+## Latest verified site and current source candidate — 2026-10-01
+
+The most recent anonymously verified site release is source commit `aa60ab4b565cfbc08c4ad329ae96189d14001d3f` and site commit `d29177dceb35e7dab71708c8bba8c2960dbc095d`. It integrated Tan et al. (2006) and Li et al. (1999) into ordinary material pages. The live counter is **151 distinct contributing papers** and **1,630 canonical records** at this checkpoint. The private release helper verified both new paper routes, affected material routes and forty public files at 2026-10-01T18:07:59Z. Selected source figures retain exact provenance and unverified publisher-permission status.
+
+Bhattacharya et al. (2023) AgInTe2/ZnS and Fafarman et al. (2014) colloidal Ag form the next locally preflighted two-paper source candidate. Their ten records and associated Reader, chemical, figure and rights bindings have no publication credit until the source/build, exact browser, Pages and anonymous live gates pass. The scoped Fafarman contribution does not inherit its film-device figures or six film-treatment routes. A source paper can contribute several variants, but it counts once on the homepage.
+
 ## Current instruction: workflow v5, regular material pages only
 
 Follow [workflow v5](skills/mattersyn-paper-to-site/references/workflow-v5.md) and its [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md). The owner retired the public preliminary collection and set a target of about twenty newly published contributing papers per hour. This is a target, not demonstrated capacity. Skips and private drafts never increase the website counter. Every paper receives an independent quick audit, and the selected 10% receives a deep audit. Existing scientific, sample/figure, privacy, browser and release checks remain in force. Historical v4 directions do not govern new work.
@@ -31,7 +37,7 @@ local. Public status does not mean every old GitHub object or cache is gone: the
 review-cited old raw-source URL returned HTTP 200 anonymously after the repository
 became public on 2026-09-24. Do not claim server-side deletion or cache purging.
 
-## Latest verified deployment
+## Earlier verified deployment — Zhang et al. (2011)
 
 The Zhang et al. (2011) Cu–Zn–In–S release was anonymously verified at
 2026-09-30T22:48:38Z (site commit `258896d5b7103712aa859f23dc9d363ca2a67590`).
@@ -39,7 +45,7 @@ The public site reports 137 primary source groups, 1,564 records, 132 material
 families and 488 broad recipe–structure rows. This includes one published
 benchmark source group; the reviewed-literature inventory has 136 groups.
 Its local proof is `research-assets/workflow-v4-20260930/zhang-publication-proof.private.json`.
-No workflow-v5 paper has yet been published or counted.
+This historical checkpoint predates the verified v5 releases described above.
 
 ## Earlier verified deployment
 

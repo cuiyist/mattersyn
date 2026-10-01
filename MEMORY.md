@@ -1,10 +1,14 @@
 # MatterSyn current verified checkpoint — 2026-10-01
 
-## Current v5 release and next independently accepted batch
+## Latest verified v5 publication and current candidate
+
+Tan et al. (2006), DOI 10.1021/jp0616011, and Li et al. (1999), DOI 10.1006/jcis.1998.5879, are live on the ordinary Ag, Ag/Ag2Se and Ag2Se material pages. Source commit `aa60ab4b565cfbc08c4ad329ae96189d14001d3f` passed source CI and site commit `d29177dceb35e7dab71708c8bba8c2960dbc095d` passed deployment. Anonymous verification checked forty public files, both paper reviews and the affected material routes at 2026-10-01T18:07:59Z with no mismatches. The live collection at that checkpoint has **151 contributing papers and 1,630 canonical records**. Selected source figures have exact provenance; publisher permission for display remains unverified.
+
+Bhattacharya et al. (2023), DOI 10.1021/acs.inorgchem.3c03156, and Fafarman et al. (2014), DOI 10.1021/nn406461p, have separate accepted scientific and integration reviews. Their ten records form a locally preflighted **candidate**, with no live paper credit until source CI, browser review, deployment and anonymous verification pass. Bhattacharya's In4Te3 seed, five AgInTe2 timepoints, ZnS seed and Z5/Z10 Janus products stay separate; SI and Figure 6 optical claims are outside the accepted recipe scope. Fafarman contributes one approximately 5 nm colloidal Ag preparation; film routes and film figures are excluded from that specimen. The active [workflow v5](skills/mattersyn-paper-to-site/references/workflow-v5.md) governs this work. The 20-papers/hour target is not yet demonstrated, and scheduled progress reminders remain off.
+
+## Earlier v5 release — Yang and Ying (2009)
 
 Yang and Ying (2009), DOI 10.1039/b823320a, is live on the Ag2S, Au and composite material pages. Source commit `14932403f952df1bc8900ce925ba5199a3050185` and site commit `f701ae04e73b7146a678dd3ef8ccdcc32697a906` passed their release gates; the site helper anonymously verified forty files, the source review and four affected material routes at 2026-10-01T16:41:08Z. This adds one distinct paper and seven records to the preceding live collection. The site therefore has **149 contributing papers and 1,623 canonical records** at this checkpoint. Source figures retain page provenance and unverified publisher-permission status.
-
-Tan et al. (2006), DOI 10.1021/jp0616011, and Li et al. (1999), DOI 10.1006/jcis.1998.5879, have separately accepted scientific/presentation reviews and a distinct bounded composition audit of their frozen additive overlay. Their seven records and two source groups are **pending source/site release**; they gain no live paper credit until deployed and anonymously verified. The private freeze and audit receipts are under `research-assets/workflow-v5/workpapers/`. Workflow v5 remains active; the old 20-minute and morning reminders remain off. The target of 20 live papers/hour is not yet demonstrated.
 
 ## Latest verified v5 release — three colloidal papers
 
