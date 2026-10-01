@@ -527,7 +527,10 @@ def main():
     added, changed, removed = stage_dist(final, preview)
     stage_controls(src, preview, allow, a.sync_gate_tools)
     rc = preview / '.release-control'
-    run([py, preview / 'tools/mattersyn-release/export_release.py', '--source-root', preview,
+    # The site boundary gate executes from the reviewed preview worktree. Suppress
+    # Python bytecode there: an incidental __pycache__ would otherwise enter the
+    # preview tree hash but never be staged into the publish checkout.
+    run([py, '-B', preview / 'tools/mattersyn-release/export_release.py', '--source-root', preview,
          '--destination', work / 'site-stage', '--allowlist', rc / 'site-allowlist.json',
          '--registry', rc / 'asset-rights-registry.json', '--policy', rc / 'site-policy.json',
          '--repo', 'mattersyn-site', '--manifest-out', work / 'site-manifest.json',

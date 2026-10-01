@@ -221,7 +221,7 @@ class ReleaseFlowTests(unittest.TestCase):
                     write(dist, 'data/materials-index.json', json.dumps({'materials': [
                         {'id': 'material-a', 'url': 'material.html?id=material-a'}]}))
                     write(dist, 'data/materials/material-a.json', json.dumps({'id': 'material-a', 'record_ids': ['r1']}))
-                elif args[1].endswith('export_release.py'):
+                elif len(args) > 2 and args[1] == '-B' and args[2].endswith('export_release.py'):
                     write_arg('--manifest-out', '{}')
                     write_arg('--report-out', '{"status":"passed"}')
                     Path(args[args.index('--destination') + 1]).mkdir()
