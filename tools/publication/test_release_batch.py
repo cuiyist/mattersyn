@@ -195,12 +195,19 @@ class ReleaseFlowTests(unittest.TestCase):
 
             def fake_run(cmd, cwd=None):
                 args = [str(x) for x in cmd]
+                def write_arg(flag, value):
+                    # Windows runners may expose the temporary directory through
+                    # both its 8.3 alias and its long path. Write the requested
+                    # absolute output without comparing those spellings.
+                    path = Path(args[args.index(flag) + 1])
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text(value, encoding='utf-8')
                 if args[0] == 'git':
                     return real_run(cmd, cwd)
                 if args[1].endswith('make_runtime_snapshot.py'):
-                    write(root, Path(args[args.index('--output') + 1]).relative_to(root), '{}')
+                    write_arg('--output', '{}')
                 elif args[1].endswith('prepare_allowlist.py'):
-                    write(root, Path(args[args.index('--out') + 1]).relative_to(root), '{}')
+                    write_arg('--out', '{}')
                 elif args[1].endswith('build_release.py'):
                     dist = Path(args[args.index('--output') + 1]) / 'project/recipe-atlas/dist'
                     write(dist, 'index.html', 'new home')
@@ -215,8 +222,8 @@ class ReleaseFlowTests(unittest.TestCase):
                         {'id': 'material-a', 'url': 'material.html?id=material-a'}]}))
                     write(dist, 'data/materials/material-a.json', json.dumps({'id': 'material-a', 'record_ids': ['r1']}))
                 elif args[1].endswith('export_release.py'):
-                    write(root, Path(args[args.index('--manifest-out') + 1]).relative_to(root), '{}')
-                    write(root, Path(args[args.index('--report-out') + 1]).relative_to(root), '{"status":"passed"}')
+                    write_arg('--manifest-out', '{}')
+                    write_arg('--report-out', '{"status":"passed"}')
                     Path(args[args.index('--destination') + 1]).mkdir()
                 else:
                     self.fail(f'unexpected command: {args}')
