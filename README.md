@@ -108,7 +108,7 @@ Public citations are generated below from the same dataset snapshot used by the 
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **140 primary source groups** · release `workflow-v5-chen2014-cuznsns-20261001`. Records are not independent experiments.
+Dataset **0.41.2** · **142 primary source groups** · release `workflow-v5-massasa-zhang-20261001`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -326,6 +326,8 @@ Dataset **0.41.2** · **140 primary source groups** · release `workflow-v5-chen
 
 - Yagnaseni Ghosh; Benjamin D. Mangum; Joanna L. Casson; Darrick J. Williams; Han Htoon; Jennifer A. Hollingsworth (2012). New Insights into the Complexities of Shell Growth and the Strong Influence of Particle Volume in Nonblinking “Giant” Core/Shell Nanocrystal Quantum Dots. *Journal of the American Chemical Society*, 134, 9634–9643. [10.1021/ja212032q](https://doi.org/10.1021/ja212032q). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ghosh2012).
 
+- Yan Zhang; Guosong Hong; Yejun Zhang; Guangcun Chen; Feng Li; Hongjie Dai; Qiangbin Wang (2012). Ag2S Quantum Dot: A Bright and Biocompatible Fluorescent Nanoprobe in the Second Near-Infrared Window. *ACS Nano*, 6, 3695–3702. [10.1021/nn301218z](https://doi.org/10.1021/nn301218z). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhang2012-ag2s-nn301218z).
+
 - Jingwen Li; Xinming Li; Xiujuan Shi; Xuewen He; Wei Wei; Nan Ma; Hong Chen (2013). Highly Sensitive Detection of Caspase-3 Activities via a Nonconjugated Gold Nanoparticle–Quantum Dot Pair Mediated by an Inner-Filter Effect. *ACS Applied Materials & Interfaces*, 5, 9798–9802. [10.1021/am4029735](https://doi.org/10.1021/am4029735). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2013-cdte-au-caspase3-am4029735).
 
 - Jian Zhu; Jinguo Wang; Fujian Lv; Shengxiong Xiao; Colin Nuckolls; Hexing Li (2013). Synthesis and Self-Assembly of Photonic Materials from Nanocrystalline Titania Sheets. *Journal of the American Chemical Society*, 135, 4719–4721. [10.1021/ja401334j](https://doi.org/10.1021/ja401334j). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2013-tio2-ja401334j).
@@ -385,6 +387,8 @@ Dataset **0.41.2** · **140 primary source groups** · release `workflow-v5-chen
 - Xuerong Song; Yue Qin; Qian Wang; Jiajia Ning (2024). Alloyed Zinc Chalcogenide Magic-Sized Nanoclusters and Their Transformation to Alloyed Quantum Dots. *Inorganic Chemistry*, 63, 17100–17107. [10.1021/acs.inorgchem.4c02738](https://doi.org/10.1021/acs.inorgchem.4c02738). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=song2024zincchalcogenide).
 
 - Fulvio Bellato; Michele Ferri; Dongxu Zhu; Thi-Hong-Hanh Le; Abinaya Annamalai; Martina Rizzo; Irene Martin; Luca Goldoni; Rosaria Brescia; Mirko Prato; Luca De Trizio; Ilka Kriegel; Liberato Manna (2024). Indium Arsenide Quantum Dot Derived Catalyst for Selective CO2 Electrochemical Reduction to Formate. *ACS Energy Letters*, 9, 1097–1102. [10.1021/acsenergylett.4c00295](https://doi.org/10.1021/acsenergylett.4c00295). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=bellato2024-inas-acsenergylett4c00295).
+
+- Emma H. Massasa; Lotte T. J. Kortstee; Rachel Lifer; Saar Shaek; Boaz Pokroy; Ivano E. Castelli; Yehonadav Bekenstein (2024). Colloidal Synthesis of (PbBr2)2(AMTP)2PbBr4 a Periodic Perovskite “Heterostructured” Nanocrystal. *Crystal Growth & Design*, 24, 3237–3245. [10.1021/acs.cgd.3c01472](https://doi.org/10.1021/acs.cgd.3c01472). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=massasa2024-cgd3c01472).
 
 - Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park (2025). High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection. *The Journal of Physical Chemistry C*, 129, 15342–15350. [10.1021/acs.jpcc.5c05144](https://doi.org/10.1021/acs.jpcc.5c05144). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=sasongko2025).
 
@@ -525,7 +529,6 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 - [Calcined SSZ-48 partial Si/O framework](https://doi.org/10.1021/jp991389j). source table partial framework.
 
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
-
 <!-- mattersyn-generated-references:end -->
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian. *Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot*. Journal of the American Chemical Society. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Standalone SI source review](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si). Supplied 31-page SI reviewed; main article and publication year unverified in that document.

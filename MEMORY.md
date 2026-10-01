@@ -1,5 +1,9 @@
 # MatterSyn current verified checkpoint — 2026-10-01
 
+## Latest verified v5 release — Chen 2014
+
+Chen et al. (2014), DOI 10.1021/jp500270d, is live with six separately bound Cu–Zn–Sn–S composition records. Source commit `65006ee4bcdacc2b36c5cc0adecd38f960c14e58` passed source CI; site commit `2bee87857ae51e7edf91d9982f79aad433b835c7` was anonymously verified on 2026-10-01. The release helper checked forty public files, the new paper review and all six affected material routes with no mismatches. Live totals are **140 contributing papers, 1,572 records, 141 direct material families and 496 broad recipe–structure rows**. The independent review and exact release receipts remain local under `research-assets/workflow-v5-20261001/chen2014-release-batch02`; public source figures retain exact provenance and unverified publisher-permission status. The 20-paper/hour target remains unachieved; count subsequent papers only after deployment and anonymous verification.
+
 ## Workflow v5 resumed — 2026-10-01
 
 The owner explicitly resumed website construction under [workflow v5](skills/mattersyn-paper-to-site/references/workflow-v5.md). Its `agent-runbook.md` and `standards.md` supersede older pacing, scope, audit, staffing, and reporting directions. The owner's v5 branch was read at commit `06683a6507f61389f4e2a3b66149515b6fe5cd40` and is being integrated into `main` with its release helper corrections. Historical counts and receipts below remain evidence, not current work instructions.
