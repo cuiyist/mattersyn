@@ -1,5 +1,13 @@
 # MatterSyn current verified checkpoint — 2026-09-30
 
+## Workflow change and owner pause — 2026-10-01
+
+The owner directed us to use the new [`workflow-v5-simplify`](https://github.com/cuiyist/mattersyn/tree/workflow-v5-simplify) branch as the workflow authority and to forget the old v4 process. Its `workflow-v5.md`, `agent-runbook.md`, and `standards.md` supersede older pacing, scope, audit, staffing, and reporting directions. The branch was read at commit `06683a6507f61389f4e2a3b66149515b6fe5cd40`; it is not yet merged into `main`. Historical counts and receipts below remain historical evidence, not current work instructions.
+
+The owner's earlier explicit pause still governs: do not resume paper curation or website publication until the owner says to resume. The paused 20-minute continuation automation was deleted, as v5 retires heartbeat runs. No scheduled morning or two-hour reports should be restored. The open HgTe source PR remains unmerged and gives no website publication credit.
+
+The v5 policy can govern the next authorized run, but its new `release_batch.py` must not yet be used as an unattended publication gate. Review found that a changed-site dry run dirties the site checkout; the documented re-verification path cannot reuse a nonempty work directory and may append a conflicting duplicate ledger event; and exact candidate/browser review plus each new paper's live route still require explicit checks. These are workflow-implementation issues to fix and test before the helper drives a live release. Target throughput is not demonstrated capacity.
+
 ## Latest verified website release — GitHub Pages run #73
 
 On 2026-09-30, run #73 (`26df1afe5f16124de95cadfc0d362480d606647d`) published the Kudryavtseva et al. (1997) SnO2 contribution and the Venkatesan et al. (2003) Fe3O4 contribution to the regular material pages. Anonymous checks confirmed both routes and the homepage; the site reports 136 contributing papers, 1,564 records, 132 material families and 480 broad recipe–structure rows. The public navigation has no preliminary-synthesis collection. Run #73 passed its build-and-validate and deploy jobs in 5m34s.

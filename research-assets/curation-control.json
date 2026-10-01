@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "active_ordinary_material_publication_processing_v4",
-  "recorded_at": "2026-09-28T23:53:33.560734+00:00",
-  "authorization": "Owner authorizes continued source-backed processing and ordinary material recipe/structure publication within the existing project scope. Public preliminary synthesis is retired. Routine implementation/publication proceeds without repeated permission requests; scientific, privacy and release checks remain. No paid processing, new source downloads or external source-document transfer.",
-  "supersedes_hold": "User requests continued work until explicit pause. Active20-minute continuation; scheduled morning and two-hour reports disabled; historical trials frozen.",
+  "status": "paused_by_owner",
+  "recorded_at": "2026-10-01T04:57:05+00:00",
+  "authorization": "The owner paused curation and publication. The later request to read and follow the new GitHub workflow changes the governing procedure, but does not explicitly resume paper work. The 20-minute continuation automation was deleted. No paid processing, new source downloads or external source-document transfer.",
+  "supersedes_hold": "The earlier active v4 continuation is superseded by the owner pause and the workflow-v5-simplify branch. Historical trials and counts remain frozen.",
   "active_run": "Private workflow-v4-20260929/run-state.private.json",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -327,9 +327,9 @@
     "target_achieved": false,
     "immutable": true
   },
-  "active_workflow": "processing-v4",
+  "active_workflow": "workflow-v5-simplify",
   "workflow_v4": {
-    "status": "active",
+    "status": "superseded_historical",
     "target_processed_papers_per_hour": 20,
     "target_completed_papers": 400,
     "deadline_local": "2026-09-29T18:00:00-05:00",
@@ -341,5 +341,13 @@
     "target_published_papers_per_hour": 20,
     "homepage_counter_excludes_skips": true,
     "hourly_publication_target_demonstrated": false
+  },
+  "workflow_v5": {
+    "status": "adopted_policy_while_paused",
+    "branch": "workflow-v5-simplify",
+    "read_commit": "06683a6507f61389f4e2a3b66149515b6fe5cd40",
+    "publication_helper_status": "requires dry-run, re-verification, ledger and exact-review fixes before live use",
+    "resume_requires": "new explicit owner instruction",
+    "recurring_continuation": "deleted"
   }
 }
