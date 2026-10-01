@@ -92,7 +92,129 @@ def route_membership_errors(record, materials, route, slug, component_elements=N
                 expected.add(slug(component))
     return [] if actual==expected else [rid+': Reader route membership mismatch; contextual observations are not synthesis routes']
 
-def run(candidate, base, new_ids):
+def changed_paths(before, after, pointer=''):
+    if type(before) is not type(after):return {pointer or '/'}
+    if isinstance(before,dict):
+        return set().union(*(changed_paths(before[k],after[k],pointer+'/'+k) if k in before and k in after else {pointer+'/'+k}
+                             for k in set(before)|set(after)))
+    if isinstance(before,list):
+        if len(before)!=len(after):return {pointer or '/'}
+        return set().union(*(changed_paths(a,b,pointer+'/'+str(i)) for i,(a,b) in enumerate(zip(before,after))))
+    return set() if before==after else {pointer or '/'}
+
+def scoped_review_errors(entry, candidate, records, inventory, validate_record):
+    """Private accepted v5 package replaces a *formal* Reader only for its scoped source."""
+    errors=[]
+    required={'package_path','package_sha256','validation_receipt_path','validation_receipt_sha256',
+              'audit_receipt_path','audit_receipt_sha256'}
+    if set(entry)-{'status_delta_receipts'}!=required:return set(),['Scoped acceptance entry fields mismatch']
+    deltas=entry.get('status_delta_receipts',[])
+    if not isinstance(deltas,list):return set(),['Scoped status-delta receipts must be an array']
+    paths={key:Path(entry[key]).resolve() for key in ('package_path','validation_receipt_path','audit_receipt_path')}
+    for key,path in paths.items():
+        if not path.is_file() or sha(path)!=entry[key.replace('_path','_sha256')]:
+            return set(),['Scoped acceptance missing/stale private '+key]
+    package=read(paths['package_path']); validation=read(paths['validation_receipt_path']); audit=read(paths['audit_receipt_path'])
+    sys.path.insert(0,str(candidate/'tools/workflow'))
+    from package_workflow import validate as validate_package
+    result=validate_package(package,paths['package_path'].parent,validate_record)
+    if not result.get('scientific_package_ready_for_existing_integration_gates') or result.get('errors'):
+        errors.append('Scoped package scientific/schema validation failed')
+    science=result.get('scientific_sha256');pa=package.get('audit',{})
+    if not (validation.get('passed') is True and validation.get('canonical_validator_run') is True
+            and validation.get('scientific_package_ready_for_existing_integration_gates') is True
+            and validation.get('scientific_sha256')==science):
+        errors.append('Scoped validation receipt does not bind accepted science')
+    if not (audit.get('verdict')=='ACCEPTED_SCOPED_CONTENT' and audit.get('scientific_sha256')==science
+            and audit.get('reviewer_id')==pa.get('reviewer_id') and pa.get('author_id')!=pa.get('reviewer_id')
+            and pa.get('receipt_id')==paths['audit_receipt_path'].name):
+        errors.append('Scoped independent audit receipt missing, unbound or self-reviewed')
+    source=package.get('source',{});sid=source.get('primary_source_id');doi=str(source.get('doi') or '').lower()
+    if audit.get('package_id')!=package.get('package_id') or audit.get('package_revision')!=package.get('revision'):
+        errors.append('Scoped audit receipt package identity or revision differs')
+    rows=[p for p in inventory.get('per_paper',[]) if p.get('source_group')==sid]
+    if len(rows)!=1 or rows[0].get('review_status')!='selected_recipe_and_figure_review':
+        errors.append('Scoped inventory evidence missing or incorrectly promoted to formal review')
+        row={}
+    else:row=rows[0]
+    if row.get('doi','').lower()!=doi or row.get('paper_review_url') is not None or not row.get('review_scope'):
+        errors.append('Scoped inventory identity or truthful nonformal review scope missing')
+    if row.get('paper_id')!=sid or row.get('title')!=source.get('title'):
+        errors.append('Scoped inventory paper identity/title differs from accepted source')
+    pdocs=package.get('documents',[]);idocs=row.get('documents',[])
+    if len(pdocs)!=len(idocs):errors.append('Scoped inventory document coverage missing')
+    else:
+        for doc,inv in zip(pdocs,idocs):
+            coverage=doc.get('coverage',{});pages=coverage.get('reviewed_pages',[]);count=coverage.get('page_count')
+            if (doc.get('role')!=inv.get('role') or count!=inv.get('page_count')
+                    or pages!=inv.get('pages_read') or not pages or inv.get('all_text_read') is not False
+                    or inv.get('all_visually_reviewed') is not False):
+                errors.append('Scoped inventory page coverage differs from package or falsely claims full review')
+    if not package.get('scope',{}).get('omissions'):
+        errors.append('Scoped package has no explicit exclusions')
+    allowed={'/revision','/sources/0/main_status','/quality/review_status','/quality/review_scope'}
+    used_deltas=set()
+    for declared in package.get('records',[]):
+        rid=declared.get('record_id');actual=records.get(rid)
+        if not actual:
+            errors.append('Scoped record missing: '+str(rid));continue
+        frozen_path=paths['package_path'].parent/declared['path']
+        package_record=read(frozen_path)
+        canonical_path=candidate/'recipe-atlas/data/records'/(rid+'.json')
+        if not canonical_path.is_file() or read(canonical_path)!=actual:
+            errors.append('Scoped canonical record bytes/object mismatch: '+rid);continue
+        if not record_contract_errors(actual):
+            pass
+        else:
+            errors.append('Scoped canonical record contract failed: '+rid)
+        if not actual.get('sources') or actual['sources'][0].get('doi','').lower()!=doi:
+            errors.append('Scoped canonical record primary DOI differs from accepted source: '+rid)
+        if not package_record.get('sources') or package_record['sources'][0].get('doi','').lower()!=doi:
+            errors.append('Scoped frozen record primary DOI differs from accepted source: '+rid)
+        changes=changed_paths(package_record,actual)
+        if changes-allowed:
+            errors.append('Scoped canonical record changes unaccepted science: '+rid)
+        if actual.get('lineage',{}).get('source_group')!=sid:
+            errors.append('Scoped canonical record source-group join is invalid: '+rid)
+        if not changes:
+            # Routine v5 path: the accepted package already contains the final reviewed record.
+            if actual.get('quality',{}).get('review_status')!='source_reviewed':
+                errors.append('Scoped unchanged package record is not source-reviewed: '+rid)
+            continue
+        if not (package_record.get('quality',{}).get('review_status')=='imported_unreviewed'
+                and actual.get('quality',{}).get('review_status')=='source_reviewed'
+                and actual.get('revision')==package_record.get('revision',0)+1):
+            errors.append('Scoped canonical record review promotion is invalid: '+rid)
+        old_hash=sha(frozen_path);new_hash=sha(canonical_path)
+        matches=[]
+        for index,item in enumerate(deltas):
+            if not isinstance(item,dict) or set(item)!={'path','sha256'}:
+                errors.append('Scoped status-delta receipt entry fields mismatch');continue
+            path=Path(item['path']).resolve()
+            if not path.is_file() or sha(path)!=item['sha256']:
+                errors.append('Scoped status-delta receipt missing or stale');continue
+            receipt=read(path)
+            if receipt.get('old_record_sha256')==old_hash:
+                matches.append((index,receipt))
+        if len(matches)!=1:
+            errors.append('Scoped promoted record lacks one exact pinned status-delta audit: '+rid)
+            continue
+        index,delta=matches[0];used_deltas.add(index)
+        if not (delta.get('schema')=='mattersyn-independent-status-delta-audit/1'
+                and delta.get('verdict')=='ACCEPTED_STATUS_ONLY'
+                and delta.get('paper_id')==sid
+                and delta.get('new_record_sha256')==new_hash
+                and delta.get('accepted_deep_audit_sha256')==entry['audit_receipt_sha256']
+                and delta.get('reviewer_id') and delta.get('author_id')
+                and delta.get('reviewer_id')!=delta.get('author_id')
+                and delta.get('reviewer_id')!=pa.get('author_id')
+                and set(delta.get('changed_pointers',[]))==changes):
+            errors.append('Scoped status-delta audit does not bind exact promoted record: '+rid)
+    if len(used_deltas)!=len(deltas):
+        errors.append('Scoped acceptance contains unused or duplicate status-delta receipts')
+    return {doi},errors
+
+def run(candidate, base, new_ids, scoped_manifest=None):
     started=time.perf_counter();errors=[];inputs={}
     root=candidate/'recipe-atlas'; oldroot=base/'recipe-atlas'
     sys.path.insert(0,str(root/'scripts'))
@@ -116,6 +238,7 @@ def run(candidate, base, new_ids):
         if rid in current_paths and path.read_bytes()!=current_paths[rid].read_bytes():
             errors.append('Prior canonical record changed: '+rid)
     records={rid:checked(path) for rid,path in current_paths.items()}
+    inventory=checked(root/'data/inventory-evidence.json')
     reader=checked(root/'data/reader-presentation-reviewed.json')
     bindings=checked(root/'static/assets/chemical-registry/bindings.json')
     registry=checked(root/'static/assets/chemical-registry/registry.json')
@@ -161,7 +284,20 @@ def run(candidate, base, new_ids):
             if not all(x.get('text_read') is True and x.get('visual_review') is True for x in pages):
                 errors.append(review['paper_id']+': source page reading not complete')
             if not re.fullmatch('[a-f0-9]{64}',document.get('sha256','')):errors.append(review['paper_id']+': missing document digest')
-    if matched!=new_dois:errors.append('Not every new primary source has a reviewed document ledger')
+    scoped_dois=set()
+    if scoped_manifest is not None:
+        scoped=read(scoped_manifest)
+        if scoped.get('schema')!='mattersyn-private-scoped-acceptance/1' or not isinstance(scoped.get('packages'),list):
+            errors.append('Invalid private scoped acceptance manifest')
+        else:
+            for entry in scoped['packages']:
+                try:
+                    accepted,problems=scoped_review_errors(entry,candidate,records,inventory,validate_record)
+                    scoped_dois.update(accepted);errors.extend(problems)
+                except (OSError,ValueError,TypeError,KeyError,ImportError) as exc:
+                    errors.append('Scoped acceptance validation failed: '+str(exc))
+    if matched & scoped_dois:errors.append('Source cannot have both formal and scoped review promotion')
+    if matched|scoped_dois!=new_dois:errors.append('Not every new primary source has a formal or independently accepted scoped document ledger')
     return {'schema':'mattersyn-additive-preflight/1','status':'failed' if errors else 'passed',
             'elapsed_seconds':round(time.perf_counter()-started,3),'new_records':len(new_ids),
             'new_primary_sources':len(new_dois),'prior_records_checked':len(old_paths),
@@ -175,9 +311,12 @@ def main():
     parser.add_argument('--base',required=True,type=Path)
     parser.add_argument('--new-records',required=True,type=Path,help='Private JSON array of accepted new record IDs')
     parser.add_argument('--report',required=True,type=Path,help='Private receipt path; must be outside both checkouts')
+    parser.add_argument('--scoped-acceptance',type=Path,help='Private pinned v5 scoped package, validation and independent-audit receipts')
     args=parser.parse_args();candidate=args.candidate.resolve();base=args.base.resolve();report=args.report.resolve()
     if any(report.is_relative_to(p) for p in (candidate,base)):parser.error('Write the private receipt outside both checkouts')
-    result=run(candidate,base,read(args.new_records))
+    if args.scoped_acceptance and any(args.scoped_acceptance.resolve().is_relative_to(p) for p in (candidate,base)):
+        parser.error('Keep scoped acceptance receipts outside both checkouts')
+    result=run(candidate,base,read(args.new_records),args.scoped_acceptance)
     report.parent.mkdir(parents=True,exist_ok=True)
     report.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     print(json.dumps({k:v for k,v in result.items() if k!='input_sha256'}))

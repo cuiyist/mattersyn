@@ -172,6 +172,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - Ali Ghezelbash; Brian A. Korgel (2005). Nickel Sulfide and Copper Sulfide Nanocrystal Synthesis and Polymorphism. [10.1021/la051196p](https://doi.org/10.1021/la051196p). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ghezelbash2005-main).
 
+- Dayne D. Fanfair; Brian A. Korgel (2005). Bismuth Nanocrystal-Seeded III-V Semiconductor Nanowire Synthesis. [10.1021/cg0502587](https://doi.org/10.1021/cg0502587). [Scoped Bi nanocrystal method](https://cuiyist.github.io/mattersyn-site/material.html?id=bi-6b15df&method=fanfair2005-bi-cg0502587-bi-seeds). Main pages 1–3 and Figure 1 support the Bi seed contribution; downstream nanowire sections and SI are outside this review.
+
 - Jacek Jasieniak; Craig Bullen; Joel van Embden; Paul Mulvaney (2005). Phosphine-Free Synthesis of CdSe Nanocrystals. *The Journal of Physical Chemistry B*, 20665–20668. [10.1021/jp054289o](https://doi.org/10.1021/jp054289o). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=jasieniak2005-cdse-jp054289o).
 
 - Yongan Andrew Yang; Huimeng Wu; Kathryn R. Williams; Y. Charles Cao (2005). Synthesis of CdSe and CdTe Nanocrystals without Precursor Injection. *Angewandte Chemie International Edition*, 44, 6712–6715. [10.1002/anie.200502279](https://doi.org/10.1002/anie.200502279). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yang2005-anie200502279).

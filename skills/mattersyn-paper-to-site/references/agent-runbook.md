@@ -175,6 +175,21 @@ python -B <SRC>/tools/package-importer/preflight.py --candidate <P>/stages/<batc
   --new-records <P>/stages/<batch>/new-record-ids.json --report <P>/receipts/<batch>-preflight.json
 ```
 - `new-record-ids.json` is a JSON array of every record ID in this batch's `package.json` `records` lists.
+- A v5 contribution may review only the relevant main-text pages and figures. Do not
+  turn those pages into a fictitious complete-paper Reader. For such a package,
+  keep an `inventory-evidence.json` row with the exact reviewed page numbers,
+  explicit exclusions and `selected_recipe_and_figure_review` status. Create a
+  **private** scoped-acceptance manifest pinning the frozen accepted package,
+  validation receipt and distinct independent-audit receipt by path and SHA-256;
+  pass it to preflight with `--scoped-acceptance <private manifest>`. Verify the
+  screened-pass source receipt and local document SHA separately. If the accepted
+  package already contains the final `source_reviewed` canonical record, its
+  bytes must match the candidate exactly. If a draft record is promoted after
+  acceptance, add a pinned `status_delta_receipts` array containing an independent
+  status-only audit of the exact old and new record hashes and changed fields.
+  Preflight rejects an unreviewed promotion, false full-page coverage, stale
+  receipts or a source-title mismatch. Neither path waives figure, rights, full
+  build, browser or live-verification checks.
 - A **stale base** error means `main` moved since the contract was written. Regenerate that package's
   `merge-contract.json` against the new base. Science is unchanged, so no new audit is needed.
 - Any other preflight failure: return that package with `changes_requested`, and continue the batch without it.

@@ -1,5 +1,11 @@
 # MatterSyn current verified checkpoint — 2026-10-01
 
+## Latest verified v5 release and current work
+
+Bhattacharya et al. (2023), DOI 10.1021/acs.inorgchem.3c03156, and Fafarman et al. (2014), DOI 10.1021/nn406461p, are live on ordinary material pages. Source commit `645d5158900153165d330eaf55ab7ec4fffb47a7` and site commit `bcf9b029` passed the release gates; the private v5 ledger records anonymous live verification by 2026-10-01T19:27:21Z. The verified public inventory has **153 distinct contributing papers, 1,640 canonical records and 555 broad recipe–structure pairs**. The earlier 151-paper checkpoint below is historical.
+
+The next independently accepted candidate is the scoped Fanfair and Korgel (2005) colloidal Bi seed method. Its main-paper pages 1–3 and Figure 1 are reviewed; downstream nanowire pages 4–6 and SI are outside the contribution. The elemental Bi unit cell is an independently qualified bulk comparison, not measured seed coordinates. A private v5 scoped-acceptance receipt, exact status-delta audit, selected figure provenance, rights rows and negative gate tests support the candidate. It earns **no** paper credit until the source and site release, browser review and anonymous live verification finish. Sahu (2012) is held for overstated full-page review flags; Urban (2007) has accepted corrected scientific content but awaits presentation and integration. Silver remains disabled pending calibration. Progress reports remain on request only.
+
 ## Latest verified v5 publication and current candidate
 
 Tan et al. (2006), DOI 10.1021/jp0616011, and Li et al. (1999), DOI 10.1006/jcis.1998.5879, are live on the ordinary Ag, Ag/Ag2Se and Ag2Se material pages. Source commit `aa60ab4b565cfbc08c4ad329ae96189d14001d3f` passed source CI and site commit `d29177dceb35e7dab71708c8bba8c2960dbc095d` passed deployment. Anonymous verification checked forty public files, both paper reviews and the affected material routes at 2026-10-01T18:07:59Z with no mismatches. The live collection at that checkpoint has **151 contributing papers and 1,630 canonical records**. Selected source figures have exact provenance; publisher permission for display remains unverified.

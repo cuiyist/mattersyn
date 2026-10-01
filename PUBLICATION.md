@@ -2,9 +2,9 @@
 
 ## Latest verified site and current source candidate — 2026-10-01
 
-The most recent anonymously verified site release is source commit `aa60ab4b565cfbc08c4ad329ae96189d14001d3f` and site commit `d29177dceb35e7dab71708c8bba8c2960dbc095d`. It integrated Tan et al. (2006) and Li et al. (1999) into ordinary material pages. The live counter is **151 distinct contributing papers** and **1,630 canonical records** at this checkpoint. The private release helper verified both new paper routes, affected material routes and forty public files at 2026-10-01T18:07:59Z. Selected source figures retain exact provenance and unverified publisher-permission status.
+The most recent anonymously verified site release is source commit `645d5158900153165d330eaf55ab7ec4fffb47a7` and site commit `bcf9b029`. It integrated Bhattacharya et al. (2023) and Fafarman et al. (2014) into ordinary material pages. The live counter is **153 distinct contributing papers**, **1,640 canonical records** and **555 broad recipe–structure pairs** at this checkpoint. The private v5 ledger records anonymous live verification by 2026-10-01T19:27:21Z. Selected source figures retain exact provenance and unverified publisher-permission status.
 
-Bhattacharya et al. (2023) AgInTe2/ZnS and Fafarman et al. (2014) colloidal Ag form the next locally preflighted two-paper source candidate. Their ten records and associated Reader, chemical, figure and rights bindings have no publication credit until the source/build, exact browser, Pages and anonymous live gates pass. The scoped Fafarman contribution does not inherit its film-device figures or six film-treatment routes. A source paper can contribute several variants, but it counts once on the homepage.
+The next candidate is the scoped Fanfair and Korgel (2005) Bi nanocrystal seed route. Its main pages 1–3 and Figure 1 are independently accepted; pages 4–6 concern downstream nanowires and are excluded. The candidate remains unpublished until its source/build, exact browser, Pages and anonymous live gates pass. A source paper can contribute several variants, but it counts once on the homepage.
 
 ## Current instruction: workflow v5, regular material pages only
 
@@ -98,11 +98,20 @@ record the pinned review receipt before rerunning the helper with the same work
 path, `--review-receipt`, `--push`, `--verify` and a private ledger. It rechecks
 the reviewed bytes, waits for the Pages deployment and verifies new paper routes
 and backing data anonymously. A later `--verify` run with the same work path
-rechecks an already pushed release without adding duplicate ledger credit. The
-focused helper tests pass; no workflow-v5 live deployment has yet tested the
-complete source-CI/Pages path. The [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md)
+rechecks an already pushed release without adding duplicate ledger credit. This
+sequence has been exercised in the verified v5 releases above. The [agent runbook](skills/mattersyn-paper-to-site/references/agent-runbook.md)
 contains the exact commands. `tools/publication/make_review_receipt.py` records
 the staged source changes for `prepare_source_release.py`.
+
+Workflow v5 also permits a **truthfully scoped main-text contribution** when its
+accepted package, exact quotes, source-linked samples and figures, independent
+quick audit and sampled deep audit cover the stated method. The public inventory
+must identify the pages reviewed and excluded. A partial six-page read cannot
+be represented as a complete six-page paper review, and no formal full-paper
+Reader is generated from that claim. The private scoped-acceptance receipt binds
+the accepted package, audit and any later status-only promotion to the exact
+canonical bytes before additive preflight. This changes the publication unit,
+not the sample-linkage, rights, browser or live-verification gates.
 
 Source and site pushes are separate steps. After the reviewed source commit
 passes the existing local source-boundary and complete-build checks, push that
