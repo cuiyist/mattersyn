@@ -1,0 +1,2498 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-route",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route",
+  "title": "Millisecond Kinetics of Nanocrystal Cation Exchange Using Microfluidic X-ray Absorption Spectroscopy",
+  "material": {
+    "formula": "Ag2Se",
+    "family": "colloidal semiconductor nanocrystal cation exchange",
+    "elements": [
+      "Ag",
+      "Se"
+    ],
+    "components": [
+      "Ag2Se"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hydrodynamically focused CdSe/Ag+ microfluidic cation exchange with in situ Se K-edge XAS; stopped-flow solution comparisons",
+  "sources": [
+    {
+      "id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+      "doi": "10.1021/jp073474u",
+      "title": "Millisecond Kinetics of Nanocrystal Cation Exchange Using Microfluidic X-ray Absorption Spectroscopy",
+      "authors": "Emory M. Chan; Matthew A. Marcus; Sirine Fakra; Mariam ElNaggar; Richard A. Mathies; A. Paul Alivisatos",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/jp073474u",
+      "main_status": "local original main PDF pp.1–6 reviewed for every described cation-exchange route and outcome",
+      "si_status": "matched local SI pp.1–4 reviewed selectively for main-referred chip context and Figures S2–S3; no upstream CdSe synthesis procedure in SI",
+      "reuse_status": "ACS publisher permission for source figure reuse unverified"
+    }
+  ],
+  "lineage": {
+    "source_group": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+    "recipe_family": "chan2007-cdse-ag2se-microfluidic-jp073474u-exchange",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ag2Se nanocrystals from CdSe nanocrystals",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "tetragonal Ag2Se only for the separate 2.8 mM CdSe/5 mM AgClO4 chip-reacted SI Figure S2 specimen",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Product nanocrystal diameter is not directly measured in this paper.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": "DDA is used to solubilize Ag2Se, but product ligand coverage and binding geometry are not measured."
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-nc",
+      "name": "TOPO-capped CdSe nanocrystals",
+      "formula": "CdSe",
+      "role": "preformed precursor nanocrystal",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Upstream nanocrystal synthesis is cited to Murray et al. (1993), not reported here."
+      ],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "agclo4",
+      "name": "anhydrous silver perchlorate",
+      "formula": "AgClO4",
+      "role": "silver-ion source",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Do not substitute the registry's hydrated AgClO4 form."
+      ],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "dda",
+      "name": "dodecylamine",
+      "formula": "C12H27N",
+      "role": "solubilizing amine and kinetic modifier",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "toluene",
+      "name": "toluene",
+      "formula": "C7H8",
+      "role": "solution solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "methanol",
+      "formula": "CH4O",
+      "role": "co-solvent variant in Ag solution",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "dda-toluene",
+      "name": "DDA in toluene common medium",
+      "components": [
+        {
+          "material_id": "dda",
+          "quantities": {}
+        },
+        {
+          "material_id": "toluene",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "dda_mass_fraction": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 wt %/wt",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        },
+        "dda_molarity": {
+          "value": 232,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "232 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "prepare-dda-stocks"
+      ],
+      "scope": "Main typical chip and Figures 3–5 stocks before on-chip mixing; kinetic Figure 6 varies DDA.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "cdse-stock",
+      "name": "CdSe nanocrystals in DDA/toluene",
+      "components": [
+        {
+          "material_id": "cdse-nc",
+          "quantities": {}
+        },
+        {
+          "material_id": "dda",
+          "quantities": {}
+        },
+        {
+          "material_id": "toluene",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "cdse_ion_equivalent": {
+          "value": 1.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Individual Cd2+ or Se2− concentration, not nanoparticle molarity; before chip mixing.",
+          "basis": "",
+          "raw_text": "1.4 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "prepare-dda-stocks"
+      ],
+      "scope": "Typical Figure 3 and 4 chip/XAS solution and Figure 5 stopped-flow solution; SI S2/S3 uses 2.8 mM instead.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    },
+    {
+      "id": "ag-stock",
+      "name": "AgClO4 in DDA/toluene",
+      "components": [
+        {
+          "material_id": "agclo4",
+          "quantities": {}
+        },
+        {
+          "material_id": "dda",
+          "quantities": {}
+        },
+        {
+          "material_id": "toluene",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "ag_ion": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Typical before on-chip mixing; stopped-flow Figures 4–5 use 6.66–6.67 mM before 1:1 mixing.",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [
+        "prepare-dda-stocks"
+      ],
+      "scope": "Typical chip XAS and DDA-series Ag+ solution. Figure 4 stopped-flow comparison differs.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 4 caption and time traces"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "precursor-cdse",
+      "name": "preformed TOPO-capped CdSe nanocrystals",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "cdse-dispersion",
+      "name": "CdSe nanocrystals dispersed in DDA/toluene",
+      "kind": "mixture",
+      "parent_ids": [
+        "precursor-cdse"
+      ]
+    },
+    {
+      "id": "ag-solution",
+      "name": "anhydrous AgClO4 dissolved in DDA/toluene",
+      "kind": "mixture",
+      "parent_ids": []
+    },
+    {
+      "id": "conditioned-cdse-dispersion",
+      "name": "filtered and helium-sparged CdSe dispersion",
+      "kind": "stock",
+      "parent_ids": [
+        "cdse-dispersion"
+      ]
+    },
+    {
+      "id": "conditioned-ag-solution",
+      "name": "filtered and helium-sparged AgClO4 solution",
+      "kind": "stock",
+      "parent_ids": [
+        "ag-solution"
+      ]
+    },
+    {
+      "id": "chip-xas-reaction",
+      "name": "1.4/5 mM on-chip CdSe/Ag+ stream",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "precursor-cdse"
+      ]
+    },
+    {
+      "id": "chip-xas-product",
+      "name": "on-chip Ag2Se XAS product fraction",
+      "kind": "product",
+      "parent_ids": [
+        "chip-xas-reaction"
+      ]
+    },
+    {
+      "id": "chip-xrd-reaction",
+      "name": "separate 2.8/5 mM chip-reacted SI XRD specimen",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "precursor-cdse"
+      ]
+    },
+    {
+      "id": "chip-xrd-product",
+      "name": "SI Figure S2 tetragonal Ag2Se",
+      "kind": "product",
+      "parent_ids": [
+        "chip-xrd-reaction"
+      ]
+    },
+    {
+      "id": "sf-kinetics",
+      "name": "1.4/6.66–6.67 mM stopped-flow nominal comparison",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "precursor-cdse"
+      ]
+    },
+    {
+      "id": "dda-series",
+      "name": "1.4/5 mM stopped-flow DDA concentration series",
+      "kind": "sample_set",
+      "parent_ids": [
+        "precursor-cdse"
+      ]
+    },
+    {
+      "id": "methanol-series",
+      "name": "2.8/5 mM methanol-volume-fraction series",
+      "kind": "sample_set",
+      "parent_ids": [
+        "precursor-cdse"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-dda-stocks",
+      "action": "dissolve",
+      "label": "Prepare CdSe and AgClO4 in DDA/toluene",
+      "stage": "precursor_preparation",
+      "branch": "typical-5wt",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-nc",
+        "agclo4",
+        "dda",
+        "toluene"
+      ],
+      "outputs": [
+        "cdse-dispersion",
+        "ag-solution"
+      ],
+      "parameters": {
+        "dda_weight_fraction": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 wt %/wt",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        },
+        "dda_molarity": {
+          "value": 232,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "232 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        },
+        "typical_cdse_ion_equivalent": {
+          "value": 1.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.4 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        },
+        "typical_ag_ion": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "TOPO-capped CdSe is an externally prepared cited precursor; this step only disperses it. Concentrations are of individual Cd2+/Se2− ions and Ag+ before chip mixing; preparation temperature is not reported.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "filter-sparge",
+      "action": "filter_sparge",
+      "label": "Filter and helium-sparge both reagent solutions immediately before use",
+      "stage": "precursor_preparation",
+      "branch": "all",
+      "optional": false,
+      "depends_on": [
+        "prepare-dda-stocks"
+      ],
+      "inputs": [
+        "cdse-dispersion",
+        "ag-solution"
+      ],
+      "outputs": [
+        "conditioned-cdse-dispersion",
+        "conditioned-ag-solution"
+      ],
+      "parameters": {
+        "filter_pore": {
+          "value": 0.45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.45 µm",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "PTFE syringe filters; helium sparging prevents channel bubbles. This is solution conditioning, not synthesis of the upstream CdSe nanocrystals.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "chip-xas-exchange",
+      "action": "mix_flow",
+      "label": "Hydrodynamically focus CdSe between Ag+ streams and record Se K-edge XAS",
+      "stage": "synthesis",
+      "branch": "chip-xas-1p4-5",
+      "optional": false,
+      "depends_on": [
+        "filter-sparge"
+      ],
+      "inputs": [
+        "conditioned-cdse-dispersion",
+        "conditioned-ag-solution"
+      ],
+      "outputs": [
+        "chip-xas-reaction",
+        "chip-xas-product"
+      ],
+      "parameters": {
+        "cdse_before_mixing": {
+          "value": 1.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.4 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_before_mixing": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+            }
+          ],
+          "derivation": null
+        },
+        "total_flow": {
+          "value": 36,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "36 µL/min",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+            }
+          ],
+          "derivation": null
+        },
+        "per_inlet_flow": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 µL/min at each inlet",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+            }
+          ],
+          "derivation": null
+        },
+        "diffusive_mixing_estimate": {
+          "value": 14,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ms",
+          "status": "author_derived",
+          "approximate": true,
+          "qualifier": "Estimated Ag+ diffusion, not observed cation-exchange completion time.",
+          "basis": "",
+          "raw_text": "∼14 ms",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+            }
+          ],
+          "derivation": null
+        },
+        "xas_time_resolution": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ms",
+          "status": "author_derived",
+          "approximate": false,
+          "qualifier": "At 52 µm/ms center velocity and 36 µL/min.",
+          "basis": "",
+          "raw_text": "8 ms",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, X-ray Absorption Spectroscopy and Time Resolution"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Ag2Se standard-like Se K-edge by about 100 ms; no distinct intermediate signal within 8 ms and ±5% fitting precision",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Center nanocrystal stream is ~7 µm in the 20 µm-wide, 1.5 mm mixing channel; product is probed at channel positions. XAS uses Se K edge 12.50–12.86 keV. The 4 ms capability at faster flow is apparatus capacity, not a second reported specimen.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, X-ray Absorption Spectroscopy and Time Resolution"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+        }
+      ]
+    },
+    {
+      "id": "chip-si-xrd",
+      "action": "mix_flow",
+      "label": "Separate higher-CdSe chip exchange represented by SI Figure S2 XRD",
+      "stage": "synthesis",
+      "branch": "chip-xrd-2p8-5",
+      "optional": false,
+      "depends_on": [
+        "filter-sparge"
+      ],
+      "inputs": [
+        "cdse-nc",
+        "agclo4",
+        "dda",
+        "toluene"
+      ],
+      "outputs": [
+        "chip-xrd-reaction",
+        "chip-xrd-product"
+      ],
+      "parameters": {
+        "cdse_before_mixing": {
+          "value": 2.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.8 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_before_mixing": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "Only tetragonal Ag2Se diffraction peaks in reacted specimen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SI Figure S2 explicitly identifies a chip-reacted specimen at 2.8/5 mM; do not transfer its XRD phase assignment to the 1.4/5 mM XAS aliquot.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    },
+    {
+      "id": "sf-kinetics",
+      "action": "stopped_flow_mix",
+      "label": "Mix CdSe and AgClO4 1:1 in stopped-flow cell for optical kinetic comparison",
+      "stage": "synthesis",
+      "branch": "stopped-flow-6p66-6p67",
+      "optional": false,
+      "depends_on": [
+        "filter-sparge"
+      ],
+      "inputs": [
+        "conditioned-cdse-dispersion",
+        "conditioned-ag-solution"
+      ],
+      "outputs": [
+        "sf-kinetics"
+      ],
+      "parameters": {
+        "cdse_before_mixing": {
+          "value": 1.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.4 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 4 caption and time traces"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_before_mixing_fig4": {
+          "value": 6.67,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6.67 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 4 caption and time traces"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_before_mixing_fig5": {
+          "value": 6.66,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6.66 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+            }
+          ],
+          "derivation": null
+        },
+        "volume_ratio_cdse_to_ag": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "1:1",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1:1 volumetric ratio",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Stopped-Flow Absorption Experiments"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.4, Figure 4 caption and time traces"
+            }
+          ],
+          "derivation": null
+        },
+        "detection_wavelength": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 nm",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Stopped-Flow Absorption Experiments"
+            }
+          ],
+          "derivation": null
+        },
+        "cell_path": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 mm",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.3, Experimental, Stopped-Flow Absorption Experiments"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 4 caption gives AgClO4 6.67 mM and Figure 5 caption 6.66 mM before 1:1 mix. Treat as nominally comparable captions, without claiming identical aliquots. Distinct from 1.4/5 mM chip-XAS stream.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Stopped-Flow Absorption Experiments"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 4 caption and time traces"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+        }
+      ]
+    },
+    {
+      "id": "sf-dda-series",
+      "action": "stopped_flow_mix",
+      "label": "Vary DDA concentration in 1.4/5 mM stopped-flow exchange",
+      "stage": "synthesis",
+      "branch": "dda-series",
+      "optional": false,
+      "depends_on": [
+        "filter-sparge"
+      ],
+      "inputs": [
+        "cdse-nc",
+        "agclo4",
+        "dda",
+        "toluene"
+      ],
+      "outputs": [
+        "dda-series"
+      ],
+      "parameters": {
+        "cdse_before_mixing": {
+          "value": 1.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.4 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_before_mixing": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        },
+        "dda_low": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        },
+        "dda_intermediate": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        },
+        "dda_high_curve": {
+          "value": 116,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "116 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 6 legend also has 4 and 16 mM DDA curves; all five levels are enumerated in condition options. The 116 mM purple curve is visually labeled, but prose only says further DDA lowers 90% conversion time to ~120 ms, without tying that value uniquely to one higher concentration.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ]
+    },
+    {
+      "id": "methanol-kinetic-series",
+      "action": "mix_observe",
+      "label": "Add 0, 5 or 10 vol% methanol to AgClO4/DDA/toluene",
+      "stage": "synthesis",
+      "branch": "methanol-series",
+      "optional": false,
+      "depends_on": [
+        "filter-sparge"
+      ],
+      "inputs": [
+        "cdse-nc",
+        "agclo4",
+        "dda",
+        "toluene",
+        "methanol"
+      ],
+      "outputs": [
+        "methanol-series"
+      ],
+      "parameters": {
+        "cdse": {
+          "value": 2.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.8 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        },
+        "agclo4": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        },
+        "methanol_low": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "vol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5% vol/vol",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        },
+        "methanol_high": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "vol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10% vol/vol",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Main text refers to SI Figure S3. Its caption specifies 2.8/5 mM; the three plotted volume fractions are separate kinetic curves, and this is not the 1.4/5 mM XAS specimen.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "chip-xas",
+      "label": "Typical 1.4 mM CdSe/5 mM AgClO4; 5 wt% DDA; 36 µL/min chip XAS",
+      "parameters": {},
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "chip-xrd",
+      "label": "Separate 2.8 mM CdSe/5 mM AgClO4 chip product for SI XRD",
+      "parameters": {},
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "sf-fig4",
+      "label": "Figure 4 stopped-flow 1.4/6.67 mM before 1:1 mixing",
+      "parameters": {},
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 4 caption and time traces"
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "sf-fig5",
+      "label": "Figure 5 stopped-flow 1.4/6.66 mM before 1:1 mixing",
+      "parameters": {},
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+        }
+      ],
+      "chemical_material_id": null
+    },
+    {
+      "id": "dda-1",
+      "label": "Figure 6 DDA 1 mM curve with 1.4/5 mM CdSe/AgClO4",
+      "parameters": {
+        "dda": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ],
+      "chemical_material_id": "dda"
+    },
+    {
+      "id": "dda-4",
+      "label": "Figure 6 DDA 4 mM curve with 1.4/5 mM CdSe/AgClO4",
+      "parameters": {
+        "dda": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ],
+      "chemical_material_id": "dda"
+    },
+    {
+      "id": "dda-8",
+      "label": "Figure 6 DDA 8 mM curve with 1.4/5 mM CdSe/AgClO4",
+      "parameters": {
+        "dda": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ],
+      "chemical_material_id": "dda"
+    },
+    {
+      "id": "dda-16",
+      "label": "Figure 6 DDA 16 mM curve with 1.4/5 mM CdSe/AgClO4",
+      "parameters": {
+        "dda": {
+          "value": 16,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "16 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ],
+      "chemical_material_id": "dda"
+    },
+    {
+      "id": "dda-116",
+      "label": "Figure 6 DDA 116 mM curve with 1.4/5 mM CdSe/AgClO4",
+      "parameters": {
+        "dda": {
+          "value": 116,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "116 mM",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ],
+      "chemical_material_id": "dda"
+    },
+    {
+      "id": "methanol-0",
+      "label": "SI Figure S3 methanol 0 vol% with 2.8/5 mM CdSe/AgClO4",
+      "parameters": {
+        "methanol": {
+          "value": 0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "vol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0%",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "chemical_material_id": "methanol"
+    },
+    {
+      "id": "methanol-5",
+      "label": "SI Figure S3 methanol 5 vol% with 2.8/5 mM CdSe/AgClO4",
+      "parameters": {
+        "methanol": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "vol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5%",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "chemical_material_id": "methanol"
+    },
+    {
+      "id": "methanol-10",
+      "label": "SI Figure S3 methanol 10 vol% with 2.8/5 mM CdSe/AgClO4",
+      "parameters": {
+        "methanol": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "vol%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10%",
+          "evidence": [
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+            },
+            {
+              "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+              "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "chemical_material_id": "methanol"
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "source_sample_label": "TOPO-capped CdSe nanocrystals",
+      "batch_id": null,
+      "material_state_id": "precursor-cdse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite CdSe in SI Figure S2 unreacted reference",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "3.6 ± 0.4 nm-diameter nanocrystals",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "TOPO-capped",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "notes": [
+        "Cited upstream preparation is outside this paper's measured route; this is an input, not a newly synthesized product."
+      ]
+    },
+    {
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xas",
+      "source_sample_label": "on-chip CdSe-to-Ag2Se population monitored by µXAS",
+      "batch_id": null,
+      "material_state_id": "chip-xas-product",
+      "parent_sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "composition": {
+        "value": "CdSe changing to Ag2Se",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.2, Experimental, Device Design and Figure 1"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+        }
+      ],
+      "notes": [
+        "XAS supplies composition-like Se K-edge progression, not a powder phase assignment or particle-resolved structure."
+      ]
+    },
+    {
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xrd",
+      "source_sample_label": "SI Figure S2 chip-reacted product, 2.8/5 mM",
+      "batch_id": null,
+      "material_state_id": "chip-xrd-product",
+      "parent_sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "composition": {
+        "value": "Ag2Se",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "tetragonal Ag2Se",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "notes": [
+        "Distinct 2.8 mM CdSe experiment; no same-aliquot link to main Figure 3 XAS."
+      ]
+    },
+    {
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-sf-comparison",
+      "source_sample_label": "Figures 4–5 nominal stopped-flow optical comparison",
+      "batch_id": null,
+      "material_state_id": "sf-kinetics",
+      "parent_sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "composition": {
+        "value": "CdSe-to-Ag2Se optical exchange fraction",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.3, Experimental, Stopped-Flow Absorption Experiments"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Figure 4 caption and time traces"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Stopped-Flow Absorption Experiments"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 4 caption and time traces"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+        }
+      ],
+      "notes": [
+        "6.67 versus 6.66 mM AgClO4 appears in separate captions; no specimen phase measured."
+      ]
+    },
+    {
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-dda-series",
+      "source_sample_label": "Figure 6 five-DDA-concentration stopped-flow sample set",
+      "batch_id": null,
+      "material_state_id": "dda-series",
+      "parent_sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "composition": {
+        "value": "CdSe-to-Ag2Se optical exchange fraction",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ],
+      "notes": [
+        "Individual plotted DDA levels: 1, 4, 8, 16, 116 mM; no phase analysis of each curve."
+      ]
+    },
+    {
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-methanol-series",
+      "source_sample_label": "SI Figure S3 0/5/10 vol% methanol kinetic sample set",
+      "batch_id": null,
+      "material_state_id": "methanol-series",
+      "parent_sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "composition": {
+        "value": "CdSe-to-Ag2Se optical exchange fraction",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ],
+      "notes": [
+        "SI S3 uses 2.8 mM CdSe and 5 mM AgClO4; no phase measurement for each methanol curve."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "precursor-size",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "property": "precursor nanocrystal diameter",
+      "technique": "source-cited particle size",
+      "value": {
+        "value": 3.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "±0.4 nm dispersion; preparation cited to ref.23",
+        "basis": "",
+        "raw_text": "3.6 ± 0.4 nm",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Input CdSe nanocrystals, not exchanged-product size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3, Experimental, Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "chip-conversion",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xas",
+      "property": "exchange progression to Ag2Se reference",
+      "technique": "in situ Se K-edge µXAS linear-combination fit",
+      "value": {
+        "value": 100,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ms",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Time by which reference-like product spectrum develops, not single-particle lifetime.",
+        "basis": "",
+        "raw_text": "100 ms",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "1.4 mM CdSe/5 mM AgClO4 before chip mixing; 5 wt% DDA. No detectable distinct intermediate within 8 ms and ±5% fitting precision.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 3 caption and Se K-edge spectra"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+        }
+      ]
+    },
+    {
+      "id": "chip-intermediate-limit",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xas",
+      "property": "detectable intermediate spectral population",
+      "technique": "Se K-edge µXAS/PCA",
+      "value": {
+        "value": "No significant separate intermediate spectral component at 8 ms resolution and ±5% fitted-composition precision",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Two-component CdSe/Ag2Se reference fit; no full EXAFS bond geometry.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+        }
+      ]
+    },
+    {
+      "id": "chip-xrd-phase",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xrd",
+      "property": "reacted-product powder diffraction phase",
+      "technique": "Co Kα PXRD",
+      "value": {
+        "value": "Only tetragonal Ag2Se peaks; unreacted precursor shows wurtzite CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "SI Figure S2 explicitly says chip-reacted 2.8 mM CdSe/5 mM AgClO4; this phase call belongs only to that specimen.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    },
+    {
+      "id": "sf-rate",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-sf-comparison",
+      "property": "second-order fitted rate constant",
+      "technique": "600 nm stopped-flow absorbance",
+      "value": {
+        "value": 6000,
+        "minimum": null,
+        "maximum": null,
+        "unit": "M⁻¹ s⁻¹",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Fit start time 5 ms; model, not a direct structural measurement.",
+        "basis": "",
+        "raw_text": "6 × 10³ M⁻¹ s⁻¹",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "1.4 mM CdSe/6.66 mM AgClO4 Figure 5 caption before 1:1 mixing; Figure 4 says 6.67 mM. Main body calls resulting Ag+ ~3.33 mM.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Figure 5 caption and second-order fit"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+        }
+      ]
+    },
+    {
+      "id": "sf-characteristic-time",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-sf-comparison",
+      "property": "1−1/e conversion time",
+      "technique": "stopped-flow absorption/kinetic discussion",
+      "value": {
+        "value": 66,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ms",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "66 ms",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Main p.4 narrative at 3.33 mM Ag+ after dilution; nominal 5 wt% DDA.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.4, Results, Time-Resolved µXAS and Figures 3–4"
+        }
+      ]
+    },
+    {
+      "id": "dda-1-t90",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-dda-series",
+      "property": "90% conversion time at 1 mM DDA",
+      "technique": "Figure 6 stopped-flow absorption",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ms",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3 ms",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "1.4 mM CdSe/5 mM AgClO4; DDA concentration stated as 1 mM; source does not separately restate whether plotted DDA is pre- or post-mix.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ]
+    },
+    {
+      "id": "dda-8-t90",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-dda-series",
+      "property": "90% conversion time at 8 mM DDA",
+      "technique": "Figure 6 stopped-flow absorption",
+      "value": {
+        "value": 660,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ms",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "660 ms",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "1.4 mM CdSe/5 mM AgClO4; DDA concentration stated as 8 mM.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ]
+    },
+    {
+      "id": "dda-high-t90",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-dda-series",
+      "property": "90% conversion time after further DDA addition",
+      "technique": "Figure 6 stopped-flow absorption",
+      "value": {
+        "value": 120,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ms",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "Main prose does not assign this exact time to a unique 16 or 116 mM curve.",
+        "basis": "",
+        "raw_text": "∼120 ms",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Further DDA beyond 8 mM; do not assign 120 ms to a single plotted concentration without digitization.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects and Figure 6"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Figure 6 plot, legend and caption"
+        }
+      ]
+    },
+    {
+      "id": "methanol-effect",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-methanol-series",
+      "property": "kinetic effect of 5/10 vol% methanol",
+      "technique": "SI Figure S3 fractional-conversion time traces; apparatus not specified",
+      "value": {
+        "value": "Only a slight increase in exchange rate on adding 5 or 10 vol% methanol",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "2.8 mM CdSe/5 mM AgClO4 in SI caption; 0% control appears in plot; no exact fitted rate constants reported.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.5, Results, Surfactant Effects; main referral to SI Figure S3"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [
+    {
+      "id": "chan-fig1-device",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/source-figures/chan2007/main-figure-1.png",
+      "description": "Figure 1 chip schematic, infrared and SEM device cross-section; not a nanocrystal morphology image.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-fig2-beam",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/source-figures/chan2007/main-figure-2.png",
+      "description": "Figure 2 X-ray beam-path schematic and 45° observation geometry; not an observed particle structure.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-fig3-xas",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xas",
+      "url": "assets/source-figures/chan2007/main-figure-3.png",
+      "description": "Figure 3 Se K-edge XAS of 1.4/5 mM chip reaction; reference spectra and fits; no individual particle geometry.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-fig4-xas",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xas",
+      "url": "assets/source-figures/chan2007/main-figure-4.png",
+      "description": "Figure 4 red XAS fractions at 1.4/5 mM before chip mixing; distinct from green stopped-flow trace.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-fig4-stopped",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-sf-comparison",
+      "url": "assets/source-figures/chan2007/main-figure-4.png",
+      "description": "Figure 4 green stopped-flow trace at caption 1.4/6.67 mM before 1:1 mixing; not same sample as red chip-XAS points.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-fig5-stopped",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-sf-comparison",
+      "url": "assets/source-figures/chan2007/main-figure-5.png",
+      "description": "Figure 5 stopped-flow circles and second-order fit at caption 1.4/6.66 mM; caption differs from Figure 4 rounding.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-fig6-dda",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-dda-series",
+      "url": "assets/source-figures/chan2007/main-figure-6.png",
+      "description": "Figure 6 stopped-flow DDA series legend 1, 4, 8, 16, 116 mM with 1.4/5 mM CdSe/AgClO4; optical curves, not phase or particle images.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-s1-device",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/source-figures/chan2007/si-figure-s1.png",
+      "description": "SI Figure S1 chip fabrication context only; silicon/device process, not CdSe precursor synthesis.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-s2-precursor",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-precursor",
+      "url": "assets/source-figures/chan2007/si-figure-s2.png",
+      "description": "SI Figure S2 top unreacted wurtzite CdSe precursor powder XRD.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-s2-product",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xrd",
+      "url": "assets/source-figures/chan2007/si-figure-s2.png",
+      "description": "SI Figure S2 bottom chip-reacted tetragonal Ag2Se, explicitly 2.8/5 mM; distinct from Figure 3 XAS specimen.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-s3-methanol",
+      "role": "measured_sample",
+      "sample_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-methanol-series",
+      "url": "assets/source-figures/chan2007/si-figure-s3.png",
+      "description": "SI Figure S3 2.8/5 mM methanol 0/5/10 vol% kinetic curves; no individual phase measurement.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-route",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/authored/chan2007/microfluidic-cation-exchange-route.svg",
+      "description": "Original source-based process map separates chip XAS, SI XRD, stopped-flow DDA and methanol branches; no measured structure geometry.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-agclo4-card",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/chemical-registry/svg/chan2007-anhydrous-silver-perchlorate.svg",
+      "description": "Original symbolic anhydrous AgClO4 identity card; no solution coordination geometry is measured.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-ag2se-card",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/chemical-registry/svg/chan2007-tetragonal-ag2se-symbolic.svg",
+      "description": "Original text-only tetragonal Ag2Se symbolic card for SI S2 phase; not a crystal model or measured atom coordinates.",
+      "eligible_as_measured_label": false
+    }
+  ],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main original PDF pp.1–6 and matched SI pp.1–4: typical chip XAS, distinct chip XRD sample, stopped-flow Figures 4–5, all five DDA Figure 6 curves and SI methanol Figure S3; source figures and route visuals. Independent scoped scientific quick audit accepted; selected recipe-and-figure review, not a complete-paper Reader.",
+    "missing_fields": [
+      "Upstream TOPO-capped CdSe nanocrystal synthesis is cited but not stated in this paper.",
+      "No direct product size distribution, morphology image, isolated yield, or full EXAFS bond-distance/coordination result for the main chip-XAS product.",
+      "No exact product phase is established for each stopped-flow, DDA or methanol aliquot.",
+      "Reaction temperature and most individual DDA-series 90%-conversion times are not reported.",
+      "No direct single-particle conversion time is measured; <8 ms single-particle timing is an author hypothesis."
+    ],
+    "conflicts": [
+      "Main Figure 4 stopped-flow caption says 6.67 mM AgClO4 before 1:1 mixing; Figure 5 says 6.66 mM. Both captions are retained; common 3.33 mM post-mix value is approximate.",
+      "Main p.4 body says both microfluidic XAS and stopped-flow observe exchange in 3.33 mM Ag+, whereas Figure 4 assigns the microfluidic trace 5 mM AgClO4 before side-stream mixing. Side-stream diffusion prevents a simple 1:1 chip dilution assignment; preserve both statements without merging conditions.",
+      "SI Figure S2 phase sample is 2.8 mM CdSe/5 mM AgClO4 chip reacted; main Figure 3 XAS uses 1.4/5 mM, so its tetragonal phase cannot be assigned to the same physical aliquot.",
+      "Figure 1d SEM depicts the silicon microchannel cross-section, not a nanocrystal morphology image."
+    ],
+    "requested_tasks": [
+      "product_size",
+      "single_particle_time",
+      "bond_geometry"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": []
+}

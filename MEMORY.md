@@ -1,6 +1,12 @@
 # MatterSyn current verified checkpoint — 2026-10-02
 
-## Saikia live; three-source additive release candidate
+## Naiki, Liu and Jung verified live; next v5 batch in preparation
+
+Naiki et al. (2013), DOI 10.1021/jp305408p; Liu et al. (2008), DOI 10.1021/cg701128b; and Jung et al. (2024), DOI 10.1021/jacs.4c00073, are live on ordinary material pages. Source commit `76138c61f8bee7fa83f9de45a078ca7652bf3326` passed CI. Site commit `5388d79248a03c09708246a837410e144296d9b5` passed the exact-preview browser review, Pages deployment and anonymous verification at 2026-10-02T07:55:03Z. The release helper checked 40 public files, all three paper routes and all 12 affected paper/material associations with no mismatches. The verified site now contains **167 distinct contributing papers and 1,666 canonical records**. Liu's four schematic morphology views are source-bound interpretations of the corresponding specimen figures; they are not measured 3D structures. Selected source figures retain exact provenance and unverified publisher display permission. The 20-papers/hour target remains unachieved.
+
+Yao 2009 and Routzahn 2014 have accepted, separately audited scoped packages and a combined private additive preflight against all 1,666 prior records. Ko 2010 and Chan 2007 are also in private preparation. None of these pending papers earns live credit before the source, rights, build, browser, deployment and anonymous checks pass. Original source documents and detailed audits remain local.
+
+## Prior checkpoint: Saikia live; three-source additive candidate
 
 Saikia et al. (2022), DOI 10.1039/d1nj04039a, passed source CI, exact browser review, Pages deployment and anonymous live verification at 2026-10-02T05:07:48Z. Source commit `31084e3f6ba7d55fe1c4ee97405247a503b89bc1` and site commit `9944edaaee1f1c2dec2d749b0ff06547e79d825d` bring the verified ordinary-material collection to **164 distinct contributing papers and 1,663 canonical records**. The 20-papers/hour goal remains a target, not a measured result.
 

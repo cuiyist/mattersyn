@@ -12,7 +12,7 @@
   "maximum_concurrent_agents_including_root": null,
   "maximum_active_paper_claims": null,
   "daily_report_time": null,
-  "stop_rule": "Respect newer explicit pauses; no false review/calibration claims. Experimental silver display requires evidence/schema/privacy/release checks, unreviewed label and training exclusion. Calibrated silver retains confirmed heldout thresholds and independent calibration review. New arrivals remain separate.",
+  "stop_rule": "Respect newer explicit pauses. Under active workflow v5, every published paper requires an independent quick audit and a sampled deep audit when selected; the experimental preliminary and uncalibrated silver displays are retired. Calibrated silver stays off until held-out 98%/95%/90% field thresholds and independent calibration approval. New arrivals remain separate.",
   "current_measurement_window": null,
   "measurement_checkpoint_utc": null,
   "progress_report_interval_hours": null,
@@ -49,15 +49,15 @@
     "batch_validation": "One successful complete local batch build. Reuse unchanged scientific audits and exact file-review objects; retest changed or failed dependencies, run the fresh complete publication boundary once, retain exact-commit CI and anonymous deployment verification."
   },
   "continuation_checkpoint": "Private workflow-v5-20261001/run-state.private.json",
-  "latest_publication_receipt": "Private research-assets/workflow-v4-20260930/zhang-publication-proof.private.json; site CI success and anonymous checks at 2026-09-30T22:48:38Z",
-  "latest_verified_site_commit": "258896d5b7103712aa859f23dc9d363ca2a67590",
+  "latest_publication_receipt": "Private _tmp/v5-naiki-liu-jung-final/live-verification.json; exact workflow-v5 release passed anonymous checks at 2026-10-02T07:55:03Z",
+  "latest_verified_site_commit": "5388d79248a03c09708246a837410e144296d9b5",
   "latest_verified_totals": {
-    "records": 1564,
-    "contributing_sources": 137,
-    "reviewed_contributing_sources": 136,
+    "records": 1666,
+    "contributing_sources": 167,
+    "reviewed_contributing_sources": 166,
     "preliminary_sources": 0,
-    "direct_families": 132,
-    "broad_pairs": 488
+    "direct_families": 167,
+    "broad_pairs": 663
   },
   "latest_publication_event": {
     "event_id": "gold-20260928-iwasaki1998-tio2-a1006660209934",
@@ -346,13 +346,13 @@
     "status": "active",
     "branch": "workflow-v5-simplify",
     "read_commit": "06683a6507f61389f4e2a3b66149515b6fe5cd40",
-    "publication_helper_status": "real v5 release verified: source CI, exact staged browser review, site boundary, Pages deployment and anonymous source/material routes passed for three Ag-assembly papers",
+    "publication_helper_status": "Workflow-v5 release verified: source CI, exact browser review, site boundary, Pages deployment and anonymous routes passed for Naiki 2013, Liu 2008 and Jung 2024",
     "latest_verified_release": {
-      "source_commit": "75926b047e1960b94a7850c6e05ab237792afb6b",
-      "site_commit": "d7aaa24ccdb381908c349ec2441ae5116b2dd3ed",
-      "contributing_papers": 163,
-      "canonical_records": 1662,
-      "broad_recipe_structure_pairs": 628,
+      "source_commit": "76138c61f8bee7fa83f9de45a078ca7652bf3326",
+      "site_commit": "5388d79248a03c09708246a837410e144296d9b5",
+      "contributing_papers": 167,
+      "canonical_records": 1666,
+      "broad_recipe_structure_pairs": 663,
       "anonymous_verification": true
     },
     "resume_requires": null,

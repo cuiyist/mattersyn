@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1666,
-  "group_count": 167,
+  "record_count": 1670,
+  "group_count": 171,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -195,7 +195,10 @@
     "cobalt-oxide characterization control",
     "colloidal CdSe nanocrystals",
     "colloidal CuInS2 nanocrystals",
+    "colloidal chalcogenide nanocrystal wet gels and aerogels",
     "colloidal copper(I) sulfide nanocrystals",
+    "colloidal semiconductor nanocrystal cation exchange",
+    "colloidal telluride nanocrystals and mixed nanocrystal solids",
     "copper sulfide nanocrystals",
     "copper sulfide nanodisks",
     "copper-antimony-sulfide nanocrystals",
@@ -9621,6 +9624,78 @@
         "CdSe"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-route",
+      "title": "Millisecond Kinetics of Nanocrystal Cation Exchange Using Microfluidic X-ray Absorption Spectroscopy",
+      "formula": "Ag2Se",
+      "family": "colloidal semiconductor nanocrystal cation exchange",
+      "method": "Hydrodynamically focused CdSe/Ag+ microfluidic cation exchange with in situ Se K-edge XAS; stopped-flow solution comparisons",
+      "record_type": "literature_protocol",
+      "source_year": 2007,
+      "source_doi": "10.1021/jp073474u",
+      "revision": 2,
+      "record_sha256": "b37d47099848d8bdd66f77395fc17c505ecc742b7dadad18243385023123516b",
+      "recipe_signature": "ab5eaf8a739049d2338373aa3185847649c1451d37e85a918015a18b26bf4584",
+      "group_id": "group-6bf0e54626d3",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. The available sample coordinates have not been approved as a measured training label. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "measured_label_not_approved",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "measured_label_not_approved",
+              "message": "The available sample coordinates have not been approved as a measured training label."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/chan2007-cdse-ag2se-microfluidic-jp073474u-route.json",
+      "page_url": "records/chan2007-cdse-ag2se-microfluidic-jp073474u-route.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Se"
+      ],
+      "pair_ids": [
+        "chan2007-cdse-ag2se-microfluidic-jp073474u-route::chan2007-cdse-ag2se-microfluidic-jp073474u-chip-xrd"
+      ]
     },
     {
       "record_id": "chemmater2017-cdse-cald-7b01873-au-cds-shell",
@@ -43637,6 +43712,80 @@
         "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-m1",
         "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-m2",
         "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-plasma"
+      ]
+    },
+    {
+      "record_id": "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route",
+      "title": "Carrier Distribution and Dynamics of Nanocrystal Solids Doped with Artificial Atoms",
+      "formula": "Ag2Te/PbTe",
+      "family": "colloidal telluride nanocrystals and mixed nanocrystal solids",
+      "method": "SI-original Ag2Te NC synthesis, externally prepared PbTe NC input, three binary Ag2Te/PbTe formulations, cast and hydrazine-treated transport films",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/nl100571m",
+      "revision": 2,
+      "record_sha256": "08c1c93eb4e2d5437526b0fec21a9deec8a4838340140c251a24a794a19b8353",
+      "recipe_signature": "f2f8f239d8cf1afa58448b761528597101e56675111f90f2100a6e77af9d2375",
+      "group_id": "group-d83530d38512",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/ko2010-ag2te-pbte-artificial-atoms-nl100571m-route.json",
+      "page_url": "records/ko2010-ag2te-pbte-artificial-atoms-nl100571m-route.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Te nanocrystals",
+        "PbTe nanocrystals",
+        "Ag2Te/PbTe mixed NC solids"
+      ],
+      "pair_ids": [
+        "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route::ko2010-ag2te-pbte-artificial-atoms-nl100571m-ag2te-nc",
+        "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route::ko2010-ag2te-pbte-artificial-atoms-nl100571m-mix-001-film",
+        "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route::ko2010-ag2te-pbte-artificial-atoms-nl100571m-mix-01-film",
+        "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route::ko2010-ag2te-pbte-artificial-atoms-nl100571m-mix-1-film",
+        "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route::ko2010-ag2te-pbte-artificial-atoms-nl100571m-pure-ag2te-film",
+        "ko2010-ag2te-pbte-artificial-atoms-nl100571m-route::ko2010-ag2te-pbte-artificial-atoms-nl100571m-pure-pbte-film"
       ]
     },
     {
@@ -79865,6 +80014,73 @@
       "pair_ids": []
     },
     {
+      "record_id": "routzahn2014-single-nc-exchange-nl4044289-route",
+      "title": "Single-Nanocrystal Reaction Trajectories Reveal Sharp Cooperative Transitions",
+      "formula": "Ag2Se/Ag2S",
+      "family": "colloidal semiconductor nanocrystal cation exchange",
+      "method": "SI-described CdSe seed and CdS shell synthesis, ensemble methanolic AgNO3 titration, and immobilized single-nanocrystal Ag+ flow microscopy",
+      "record_type": "literature_protocol",
+      "source_year": 2014,
+      "source_doi": "10.1021/nl4044289",
+      "revision": 2,
+      "record_sha256": "048a89e5d823679c73656f4ff18888b65557e82c93b51b10bb6213135cbf3601",
+      "recipe_signature": "ea88540285da43145127091956e4514edbc255fc5e955aa59b66ee43d085c3ae",
+      "group_id": "group-c6c7e9b02dbf",
+      "split": "test",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/routzahn2014-single-nc-exchange-nl4044289-route.json",
+      "page_url": "records/routzahn2014-single-nc-exchange-nl4044289-route.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [],
+      "pair_ids": [
+        "routzahn2014-single-nc-exchange-nl4044289-route::routzahn2014-single-nc-exchange-nl4044289-cdse-cds-start",
+        "routzahn2014-single-nc-exchange-nl4044289-route::routzahn2014-single-nc-exchange-nl4044289-cdse-seed",
+        "routzahn2014-single-nc-exchange-nl4044289-route::routzahn2014-single-nc-exchange-nl4044289-ensemble-final"
+      ]
+    },
+    {
       "record_id": "rusch2026-bi-oleate",
       "title": "Rusch et al. (2026) · Bismuth oleate stock",
       "formula": "Bi-containing oleate reaction solution",
@@ -110249,6 +110465,78 @@
         "CdS"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "yao2009-ag2se-aerogel-ja900042y-route",
+      "title": "Expanding the Repertoire of Chalcogenide Nanocrystal Networks: Ag2Se Gels and Aerogels by Cation Exchange Reactions",
+      "formula": "Ag2Se",
+      "family": "colloidal chalcogenide nanocrystal wet gels and aerogels",
+      "method": "Cation exchange of monolithic CdSe nanocrystal wet gels followed by solvent exchange and supercritical CO2 drying",
+      "record_type": "literature_protocol",
+      "source_year": 2009,
+      "source_doi": "10.1021/ja900042y",
+      "revision": 2,
+      "record_sha256": "419bf4057f468d81c4450b756c460f732fdaa03e1eb6e42c764ed533f6cd1017",
+      "recipe_signature": "01b2eab7b8894f92a810cc368d279386cc794da4186f90f931c0a1d5d27ed446",
+      "group_id": "group-c35ad78366a9",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yao2009-ag2se-aerogel-ja900042y-route.json",
+      "page_url": "records/yao2009-ag2se-aerogel-ja900042y-route.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag2Se"
+      ],
+      "pair_ids": [
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-ag2se-dry",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-ag2se-wet",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-cdse-dry",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-cdse-wet",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-cuse-dry",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-cuse-wet",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-mua-cdse",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-partial-wet",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-pbse-dry",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-pbse-wet",
+        "yao2009-ag2se-aerogel-ja900042y-route::yao2009-ag2se-aerogel-ja900042y-topo-cdse"
+      ]
     },
     {
       "record_id": "yao2015-cds-nanorods-200c-12h",

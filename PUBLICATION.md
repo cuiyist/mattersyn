@@ -1,6 +1,10 @@
 # MatterSyn publication workflow
 
-## Current verified site and pending batch — 2026-10-02
+## Current verified site — Naiki, Liu and Jung, 2026-10-02
+
+Naiki et al. (2013), Liu et al. (2008) and Jung et al. (2024) are anonymously verified on their ordinary material pages. Source `76138c61f8bee7fa83f9de45a078ca7652bf3326` and site `5388d79248a03c09708246a837410e144296d9b5` passed source CI, exact-preview browser review, Pages deployment and anonymous checks at 2026-10-02T07:55:03Z. The verified homepage counts **167 distinct contributing papers and 1,666 canonical records**. The private workflow-v5 ledger has three new `live_verified` events and the exact release receipt is `_tmp/v5-naiki-liu-jung-final/live-verification.json`. Source figures retain factual unverified publisher-permission status. Yao, Routzahn, Ko and Chan remain private candidates with no publication credit. The 20-paper/hour target is still not demonstrated.
+
+## Prior verified site and now-completed candidate — 2026-10-02
 
 Saikia et al. (2022), DOI 10.1039/d1nj04039a, is live at source `31084e3f6ba7d55fe1c4ee97405247a503b89bc1`, site `9944edaaee1f1c2dec2d749b0ff06547e79d825d`. Anonymous verification at 2026-10-02T05:07:48Z brings the site to **164 contributing papers and 1,663 records**. Naiki et al. (2013), Liu et al. (2008) and Jung et al. (2024) are a separate three-paper source candidate with independently accepted scoped science, figure/sample bindings and source/site asset-delivery metadata. They are not counted as published until the exact source, build, browser, Pages and anonymous live gates pass. Original papers and SI remain local; selected source figures retain exact provenance and unverified publisher display permission.
 
