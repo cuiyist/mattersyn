@@ -167,8 +167,11 @@ def scoped_context_link_drop_only(before, after, source_id, doi, candidate):
 def scoped_record_changes_allowed(before, after, source_id, doi, candidate):
     changes=changed_paths(before,after)
     allowed={'/revision','/sources/0/main_status','/quality/review_status','/quality/review_scope',
-             '/context_links'}
-    return changes, not (changes-allowed) and ('/context_links' not in changes or
+             '/sources/1/si_status','/context_links'}
+    sources=before.get('sources',[])
+    si_source=(isinstance(sources,list) and len(sources)>1 and isinstance(sources[1],dict)
+               and isinstance(sources[1].get('id'),str) and sources[1]['id'].endswith('-si'))
+    return changes, not (changes-allowed) and ('/sources/1/si_status' not in changes or si_source) and ('/context_links' not in changes or
             scoped_context_link_drop_only(before,after,source_id,doi,candidate))
 
 def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=False):
@@ -184,7 +187,7 @@ def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=F
     if not isinstance(old_revision,int) or isinstance(old_revision,bool):
         return False
     if old_status=='source_reviewed':
-        admin={'/revision','/sources/0/main_status','/quality/review_scope'}
+        admin={'/revision','/sources/0/main_status','/sources/1/si_status','/quality/review_scope'}
         return (new_revision==old_revision+1 and changes_allowed
                 and changes is not None and '/revision' in changes
                 and bool(changes&{'/sources/0/main_status','/quality/review_scope'})

@@ -266,6 +266,49 @@ class BoundaryGuardTests(unittest.TestCase):
         asset["source_bindings"][0]["locators"]["document_role"] = "private_render"
         self.assertIsNotNone(user_directed_display_error(asset, "mattersyn-site", path))
 
+    def test_scoped_main_and_si_figure_crops_require_exact_source_and_render_provenance(self):
+        raw = b"reviewed scoped figure crop"
+        for path, locator_id, role in [
+            ("assets/source-figures/tirosh2006/main-figure-1b-sem.png", "main-figure-1b-sem", "main"),
+            ("assets/source-figures/tirosh2006/si-figure-s6.png", "Figure S6", "si"),
+        ]:
+            with self.subTest(path=path):
+                asset = user_directed_review_figure(path, raw, locator_id=locator_id)
+                asset["source_bindings"][0]["locators"].update(document_role=role, source_sha256="b" * 64)
+                asset["source_bindings"][0]["crop"] = {
+                    "asset_sha256": sha256(raw), "render_sha256": "c" * 64,
+                    "crop_box": [10, 20, 110, 120],
+                }
+                asset["provenance_bindings"] = [{"paper_id": "tirosh2006", "doi": "10.1021/cm052401p",
+                                                  "record_ids": ["tirosh-2006-method-a"]}]
+                for repo, target in (("mattersyn-site", path), ("mattersyn", "recipe-atlas/static/" + path)):
+                    self.assertIsNone(user_directed_display_error(asset, repo, target))
+                for mutate in (
+                    lambda a: a["rights"]["user_direction"].update(paper_id="other2006"),
+                    lambda a: a["source_bindings"][0]["locators"].update(id="Figure 2"),
+                    lambda a: a["source_bindings"][0]["locators"].update(document_role="main" if role == "si" else "si"),
+                    lambda a: a["source_bindings"][0]["locators"].pop("source_sha256"),
+                    lambda a: a["source_bindings"][0]["crop"].update(render_sha256="not-a-hash"),
+                    lambda a: a["source_bindings"][0]["crop"].update(asset_sha256="d" * 64),
+                    lambda a: a.update(provenance_bindings=[]),
+                ):
+                    changed = copy.deepcopy(asset)
+                    mutate(changed)
+                    self.assertIsNotNone(user_directed_display_error(changed, "mattersyn-site", path))
+                for denied in (path.replace("figure", "page"), path.replace("source-figures", "page-renders")):
+                    changed = copy.deepcopy(asset)
+                    for delivery in changed["delivery_paths"]:
+                        delivery["path"] = delivery["path"].replace(path, denied)
+                    self.assertIsNotNone(user_directed_display_error(changed, "mattersyn-site", denied))
+                for suffix in ("private", "page", "render", "full"):
+                    denied = path.replace(".png", "-" + suffix + ".png")
+                    changed = copy.deepcopy(asset)
+                    for delivery in changed["delivery_paths"]:
+                        delivery["path"] = delivery["path"].replace(path, denied)
+                    changed["source_bindings"][0]["locators"]["id"] = Path(denied).stem
+                    self.assertEqual(user_directed_display_error(changed, "mattersyn-site", denied),
+                                     "user_directed_display_source_path_ineligible")
+
     def test_cited_scheme_for_reviewed_paper_preserves_exact_bytes_and_rights(self):
         path, raw = "assets/paper-reviews/tirosh2006/scheme-1.png", b"synthetic reviewed reaction scheme"
         asset = user_directed_review_figure(path, raw, locator_id="scheme-1", page=2)

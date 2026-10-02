@@ -59,6 +59,30 @@ class ScopedStatusPromotionTests(unittest.TestCase):
 
 
 class ScopedUrbanGuardTests(unittest.TestCase):
+    def test_scoped_si_status_is_only_an_administrative_change_for_an_si_source(self):
+        before = {"revision": 1, "quality": {"review_status": "source_reviewed",
+                  "review_scope": "main and SI pending"},
+                  "sources": [{"id": "paper-main", "main_status": "reviewed"},
+                              {"id": "paper-si", "si_status": "unreviewed"}]}
+        after = copy.deepcopy(before)
+        after["revision"] = 2
+        after["sources"][1]["si_status"] = "selected_pages_reviewed"
+        after["quality"]["review_scope"] = "main and selected SI pages"
+        with TemporaryDirectory() as temp:
+            changes, allowed = PREFLIGHT.scoped_record_changes_allowed(
+                before, after, "paper-main", "10.1234/paper", Path(temp))
+            self.assertTrue(allowed)
+            self.assertTrue(PREFLIGHT.valid_scoped_status_promotion(
+                before, after, changes, allowed))
+            wrong_source = copy.deepcopy(before)
+            wrong_source["sources"][1]["id"] = "other-main"
+            self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(
+                wrong_source, after, "paper-main", "10.1234/paper", Path(temp))[1])
+            scientific_change = copy.deepcopy(after)
+            scientific_change["structure"] = "unsupported"
+            self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(
+                before, scientific_change, "paper-main", "10.1234/paper", Path(temp))[1])
+
     def test_scoped_audit_paper_id_alias_must_match_package_and_revision(self):
         package = {"package_id": "paper-a", "revision": 2}
         self.assertTrue(PREFLIGHT.scoped_audit_identity_matches(

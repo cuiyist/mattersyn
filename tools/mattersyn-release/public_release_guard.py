@@ -332,7 +332,12 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         # directory and a printed Figure/Table number. Keep those exact crops
         # without loosening the full-document or private-render exclusions.
         legacy = re.fullmatch(r"assets/source-figures/([a-z]+[0-9]{4})/(figure|table)-((?:0?[1-9][0-9]?|s[1-9][0-9]?))(?:-[a-z0-9-]+)?\.(?:png|jpe?g|webp)", site_path)
-        if asset.get("classification") != "source_figure" or not (match or legacy):
+        # Scoped v5 packages name a cropped panel by document role. Accept
+        # only a numbered Figure with a matching main/SI source locator, a
+        # pinned render/crop, and the same first-author/year and DOI checks as
+        # older reviewed crops. This does not admit pages or working renders.
+        scoped = re.fullmatch(r"assets/source-figures/([a-z]+[0-9]{4})/((main|si)-figure-((?:[1-9][0-9]?|s[1-9][0-9]?)[a-z]?)(?:-sem)?)\.(?:png|jpe?g|webp)", site_path)
+        if asset.get("classification") != "source_figure" or not (match or legacy or scoped):
             return "user_directed_display_source_path_ineligible"
         paper_id = direction.get("paper_id")
         if not isinstance(paper_id, str):
@@ -344,10 +349,15 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         else:
             surname = re.match(r"[a-z]+", paper_id)
             year = re.search(r"[0-9]{4}", paper_id)
-            if not surname or not year or surname.group() + year.group() != legacy.group(1):
+            source_dir = legacy.group(1) if legacy else scoped.group(1)
+            if not surname or not year or surname.group() + year.group() != source_dir:
                 return "user_directed_display_source_binding_missing"
-            number = legacy.group(3)
-            expected_id = legacy.group(2).title() + " " + (number.upper() if number.startswith("s") else str(int(number)))
+            if legacy:
+                number = legacy.group(3)
+                expected_ids = {legacy.group(2).title() + " " + (number.upper() if number.startswith("s") else str(int(number)))}
+            else:
+                number = scoped.group(4)
+                expected_ids = {scoped.group(2), "Figure " + (number.upper() if number.startswith("s") else number)}
             provenance = asset.get("provenance_bindings")
             if not isinstance(provenance, list) or not any(
                 isinstance(item, dict) and item.get("paper_id") == paper_id
@@ -363,10 +373,15 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
             if (isinstance(locators, dict)
                     and locators.get("document_role") in {"main", "supporting_information", "si"}
                     and isinstance(locators.get("page"), int) and locators["page"] > 0
-                    and locators.get("id") == expected_id
-                    and (not legacy or (re.fullmatch(r"[0-9a-f]{64}", str(locators.get("source_sha256", "")))
+                    and locators.get("id") in (expected_ids if not match else {expected_id})
+                    and (not scoped or locators.get("document_role") == scoped.group(3))
+                    and (not (legacy or scoped) or (re.fullmatch(r"[0-9a-f]{64}", str(locators.get("source_sha256", "")))
                          and isinstance(binding.get("crop"), dict)
-                         and binding["crop"].get("asset_sha256") == digest))):
+                         and binding["crop"].get("asset_sha256") == digest))
+                    and (not scoped or (re.fullmatch(r"[0-9a-f]{64}", str(binding["crop"].get("render_sha256", "")))
+                         and isinstance(binding["crop"].get("crop_box"), list)
+                         and len(binding["crop"]["crop_box"]) == 4
+                         and all(isinstance(n, int) and n >= 0 for n in binding["crop"]["crop_box"])))):
                 source_matches.append(binding)
         if len(source_matches) != 1 or not re.fullmatch(r"10\.\d{4,9}/\S+", str(direction.get("doi", ""))):
             return "user_directed_display_source_binding_missing"

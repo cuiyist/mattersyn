@@ -2,7 +2,7 @@
 
 ## Papers used in the published website
 
-Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-20261001`. Records are not independent experiments.
+Dataset **0.41.2** · **163 primary source groups** · release `v5-20261002-munechika-1`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -51,6 +51,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 - B. Li; Y. Xie; J. X. Huang; H. L. Su; Y. T. Qian (1999). A Solvothermal Route to Nanocrystalline Cu7Te4 at Low Temperature. *Journal of Solid State Chemistry*, 146, 47–50. [10.1006/jssc.1999.8303](https://doi.org/10.1006/jssc.1999.8303). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=cu7te4-jssc19998303).
 
 - Paul Wagner; Osamu Terasaki; Stephan Ritsch; Jose Geraldo Nery; Stacey I. Zones; Mark E. Davis; Kenji Hiraga (1999). Electron Diffraction Structure Solution of a Nanocrystalline Zeolite at Atomic Resolution. *The Journal of Physical Chemistry B*, 103, 8245-8250. [10.1021/jp991389j](https://doi.org/10.1021/jp991389j). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wagner1999-ssz48).
+
+- S. H. Choi; K. L. Wang; M. S. Leung; G. W. Stupian; N. Presser; S. W. Chung; G. Markovich; S. H. Kim; J. R. Heath (1999). Fabrication of nanometer size photoresist wire patterns with a silver nanocrystal shadowmask. [10.1116/1.581831](https://doi.org/10.1116/1.581831). Review scope remains stated in the linked website records.
 
 - J. H. Zhan; Y. Xie; X. G. Yang; W. X. Zhang; Y. T. Qian (1999). Hydrazine-Assisted Low-Temperature Hydrothermal Preparation of Nanocrystalline Jaipurite. [10.1006/jssc.1999.8299](https://doi.org/10.1006/jssc.1999.8299). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhan1999jaipurite).
 
@@ -152,6 +154,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - Xun Wang; Jing Zhuang; Qing Peng; Yadong Li (2005). A general strategy for nanocrystal synthesis. *Nature*, 437, 121–124. [10.1038/nature03968](https://doi.org/10.1038/nature03968). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wang2005-lss-nature03968).
 
+- Dayne D. Fanfair; Brian A. Korgel (2005). Bismuth Nanocrystal-Seeded III-V Semiconductor Nanowire Synthesis. [10.1021/cg0502587](https://doi.org/10.1021/cg0502587). Review scope remains stated in the linked website records.
+
 - Cynthia A. Stowell and Brian A. Korgel (2005). Iridium Nanocrystal Synthesis and Surface Coating-Dependent Catalytic Activity. *Nano Letters*, 5, 1203–1207. [10.1021/nl050648f](https://doi.org/10.1021/nl050648f). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=stowell2005).
 
 - Ali Ghezelbash; Brian A. Korgel (2005). Nickel Sulfide and Copper Sulfide Nanocrystal Synthesis and Polymorphism. [10.1021/la051196p](https://doi.org/10.1021/la051196p). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ghezelbash2005-main).
@@ -180,6 +184,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - Jianping Ge; Yongxing Hu; Maurizio Biasini; Ward P. Beyermann; Yadong Yin (2007). Superparamagnetic Magnetite Colloidal Nanocrystal Clusters. *Angewandte Chemie International Edition*, 46, 4342–4345. [10.1002/anie.200700197](https://doi.org/10.1002/anie.200700197). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ge2007-magnetite-anie200700197).
 
+- Jeffrey J. Urban; Dmitri V. Talapin; Elena V. Shevchenko; Cherie R. Kagan; Christopher B. Murray (2007). Synergism in binary nanocrystal superlattices leads to enhanced p-type conductivity in self-assembled PbTe/Ag2Te thin films. [10.1038/nmat1826](https://doi.org/10.1038/nmat1826). Review scope remains stated in the linked website records.
+
 - Su Chen; Jia Zhu; Yongfeng Shen; Chunhui Hu; Li Chen (2007). Synthesis of Nanocrystal–Polymer Transparent Hybrids via Polyurethane Matrix Grafted onto Functionalized CdS Nanocrystals. *Langmuir*, 23, 850–854. [10.1021/la062210g](https://doi.org/10.1021/la062210g). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=cds-polyurethane-la062210g).
 
 - Jonathan S. Owen; Jungwon Park; Paul-Emile Trudeau; A. Paul Alivisatos (2008). Reaction Chemistry and Ligand Exchange at Cadmium–Selenide Nanocrystal Surfaces. *Journal of the American Chemical Society*, 130, 12279–12281. [10.1021/ja804414f](https://doi.org/10.1021/ja804414f). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=owen2008-cdse-ja804414f).
@@ -192,6 +198,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - V. K. Ivanov; O. S. Polezhaeva; D. O. Gil’; G. P. Kopitsa; Yu. D. Tret’yakov (2009). Hydrothermal Microwave Synthesis of Nanocrystalline Cerium Dioxide. *Doklady Chemistry*, 426, 131–133. [10.1134/S0012500809060056](https://doi.org/10.1134/S0012500809060056). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ivanov2009-ceo2-s0012500809060056).
 
+- E. Klecha; D. Ingert; M. Walls; M. P. Pileni (2009). Immunity of Coated Self-Ordered Silver Nanocrystals: A New Intrinsic Property Due to the Nanocrystal Ordering. [10.1021/la802989f](https://doi.org/10.1021/la802989f). Review scope remains stated in the linked website records.
+
 - Yuichi Nishino; Yuya Oaki; Hiroaki Imai (2009). Magnesium-Mediated Nanocrystalline Mosaics of Calcite. *Crystal Growth & Design*, 9, 223–226. [10.1021/cg800331a](https://doi.org/10.1021/cg800331a). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=nishino2009-calcite-cg800331a).
 
 - Chalita Ratanatawanate; Yuan Tao; Kenneth J. Balkus, Jr. (2009). Photocatalytic Activity of PbS Quantum Dot/TiO2 Nanotube Composites. *Journal of Physical Chemistry C*, 113, 10755–10760. [10.1021/jp903050h](https://doi.org/10.1021/jp903050h). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ratanatawanate2009-pbs-tio2-jp903050h).
@@ -203,6 +211,10 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 - Jianhua Liao; Liyi Shi; Shuai Yuan; Yin Zhao; Jianhui Fang (2009). Solvothermal Synthesis of TiO2 Nanocrystal Colloids from Peroxotitanate Complex Solution and Their Photocatalytic Activities. *J.Phys.Chem.C*, 113, 18778–18783. [10.1021/jp905720g](https://doi.org/10.1021/jp905720g). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=liao2009-tio2-jp905720g).
 
 - Shi Hu; Xun Wang (2010). Fullerene-like Colloidal Nanocrystal of Nickel Hydroxychloride. *Journal of the American Chemical Society*, 132, 9573–9575. [10.1021/ja103607q](https://doi.org/10.1021/ja103607q). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=hu2010nichydroxychloride).
+
+- E. Klecha; D. Ingert; M. P. Pileni (2010). How the Level of Ordering of 2D Nanocrystal Superlattices Is Controlled by Their Deposition Mode. [10.1021/jz100417s](https://doi.org/10.1021/jz100417s). Review scope remains stated in the linked website records.
+
+- Satyaprakash Sahoo; A. K. Arora (2010). Laser-Power-Induced Multiphonon Resonant Raman Scattering in Laser-Heated CdS Nanocrystal. [10.1021/jp912103t](https://doi.org/10.1021/jp912103t). Review scope remains stated in the linked website records.
 
 - Minghui Deng; Quanxin Zhang; Shuqing Huang; Dongmei Li; Yanhong Luo; Qing Shen; Taro Toyoda; Qingbo Meng (2010). Low-Cost Flexible Nano-Sulfide/Carbon Composite Counter Electrode for Quantum-Dot-Sensitized Solar Cell. [10.1007/s11671-010-9592-3](https://doi.org/10.1007/s11671-010-9592-3). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=deng2010-main).
 
@@ -221,6 +233,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 - Jie Zhang; Renguo Xie; Wensheng Yang (2011). A Simple Route for Highly Luminescent Quaternary Cu-Zn-In-S Nanocrystal Emitters. *Chemistry of Materials*, 23, 3357–3361. [10.1021/cm201400w](https://doi.org/10.1021/cm201400w). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhang2011-cm201400w-cu-zn-in-s).
 
 - Ming Li; Qiaoyi Wang; Xiaodong Shi; Lawrence A. Hornak; Nianqiang Wu (2011). Detection of Mercury(II) by Quantum Dot/DNA/Gold Nanoparticle Ensemble Based Nanosensor Via Nanometal Surface Energy Transfer. *Analytical Chemistry*, 83, 7061–7065. [10.1021/ac2019014](https://doi.org/10.1021/ac2019014). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2011-ac2019014).
+
+- Keiko Munechika; Yeechi Chen; Andreas F. Tillack; Abhishek P. Kulkarni; Ilan Jen-La Plante; Andrea M. Munro; David S. Ginger (2011). Quantum Dot/Plasmonic Nanoparticle Metachromophores with Quantum Yields That Vary with Excitation Wavelength. [10.1021/nl2010127](https://doi.org/10.1021/nl2010127). Review scope remains stated in the linked website records.
 
 - Jonghun Lee; Sunghwan Lee; Guanglai Li; Melissa A. Petruska; David C. Paine; Shouheng Sun (2012). A Facile Solution-Phase Approach to Transparent and Conducting ITO Nanocrystal Assemblies. *Journal of the American Chemical Society*, 134, 13410–13414. [10.1021/ja3044807](https://doi.org/10.1021/ja3044807). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lee2012-ja3044807).
 
@@ -260,6 +274,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - S. Costanzo; G. Simon; J. Richardi; Ph. Colomban; I. Lisiecki (2016). Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals. [10.1021/acs.jpcc.6b07293](https://doi.org/10.1021/acs.jpcc.6b07293). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=costanzo2016co).
 
+- K. Ouhenia-Ouadahi et al. (2016). Tuning the Growth Mode of 3D Silver Nanocrystal Superlattices by Triphenylphosphine. [10.1021/acs.chemmater.6b01374](https://doi.org/10.1021/acs.chemmater.6b01374). Review scope remains stated in the linked website records.
+
 - Calynn E. Morrison; Fudong Wang; Nigam P. Rath; Brian M. Wieliczka; Richard A. Loomis; William E. Buhro (2017). Cadmium Bis(phenyldithiocarbamate) as a Nanocrystal Shell-Growth Precursor. *Inorganic Chemistry*, 56, 12920–12929. [10.1021/acs.inorgchem.7b01711](https://doi.org/10.1021/acs.inorgchem.7b01711). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=morrison2017).
 
 - Igor Nakonechnyi; Michael Sluydts; Yolanda Justo; Jacek Jasieniak; Zeger Hens (2017). Mechanistic Insights in Seeded Growth Synthesis of Colloidal Core/Shell Quantum Dots. *Chemistry of Materials*, 29, 4719-4727. [10.1021/acs.chemmater.7b00354](https://doi.org/10.1021/acs.chemmater.7b00354). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=nakonechnyi2017).
@@ -286,6 +302,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 
 - Yanyan Li; Parth Vashishtha; Zhicong Zhou; Zhi Li; Sunil B. Shivarudraiah; Chao Ma; Junkai Liu; Kam Sing Wong; Haibin Su; Jonathan E. Halpert (2020). Room Temperature Synthesis of Stable, Printable Cs3Cu2X5 (X = I, Br/I, Br, Br/Cl, Cl) Colloidal Nanocrystals with Near-Unity Quantum Yield Green Emitters (X = Cl). [10.1021/acs.chemmater.0c00280](https://doi.org/10.1021/acs.chemmater.0c00280). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2020cs3cu2x5).
 
+- Fangke Lin; Qianqian Qi; Junle Zhang; Wenjun Zhou; Jiahui Zhang; Peng Fu; Xiaomeng Zhang; Xiaoguang Qiao; Minying Liu; Xinchang Pang; Zhe Cui (2021). From Unimolecular Template to Silver Nanocrystal Clusters: An Effective Strategy to Balance Antibacterial Activity and Cytotoxicity. [10.1021/acsami.1c07986](https://doi.org/10.1021/acsami.1c07986). Review scope remains stated in the linked website records.
+
 - Linyuan Lian; Peng Zhang; Xiuwen Zhang; Qi Ye; Wei Qi; Long Zhao; Jianbo Gao; Daoli Zhang; Jianbing Zhang (2021). Realizing Near-Unity Quantum Efficiency of Zero-Dimensional Antimony Halides through Metal Halide Structural Modulation. *ACS Applied Materials & Interfaces*, 13, 58908–58915. [10.1021/acsami.1c18038](https://doi.org/10.1021/acsami.1c18038). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lian2021).
 
 - E. M. Williamson; B. A. Tappan; L. Mora-Tamez; G. Barim; R. L. Brutchey (2021). Statistical Multiobjective Optimization of Thiospinel CoNi2S4 Nanocrystal Synthesis via Design of Experiments. *ACS Nano*, 15, 9422–9433. [10.1021/acsnano.1c00502](https://doi.org/10.1021/acsnano.1c00502). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=williamson2021).
@@ -307,6 +325,8 @@ Dataset **0.41.2** · **153 primary source groups** · release `v5-bhatt-faf-202
 - Fulvio Bellato; Michele Ferri; Dongxu Zhu; Thi-Hong-Hanh Le; Abinaya Annamalai; Martina Rizzo; Irene Martin; Luca Goldoni; Rosaria Brescia; Mirko Prato; Luca De Trizio; Ilka Kriegel; Liberato Manna (2024). Indium Arsenide Quantum Dot Derived Catalyst for Selective CO2 Electrochemical Reduction to Formate. *ACS Energy Letters*, 9, 1097–1102. [10.1021/acsenergylett.4c00295](https://doi.org/10.1021/acsenergylett.4c00295). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=bellato2024-inas-acsenergylett4c00295).
 
 - Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park (2025). High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection. *The Journal of Physical Chemistry C*, 129, 15342–15350. [10.1021/acs.jpcc.5c05144](https://doi.org/10.1021/acs.jpcc.5c05144). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=sasongko2025).
+
+- Lin Yuan; Linlin Gao; Yang Li; Kunyuan Lu; Yang Liu; Jiajing Huo; Long Hu; Qing Zhang; Muhammad Zahir Iqbal; Yang Bai; Zeke Liu; Wanli Ma (2026). Coupling Design in the Direct Synthesis of AgBiS2 Nanocrystal Inks for Efficient and Eco-friendly Photovoltaics. [10.1021/acs.nanolett.5c06337](https://doi.org/10.1021/acs.nanolett.5c06337). Review scope remains stated in the linked website records.
 
 - Pascal Rusch; Ann Mary Antony; Meenakshi Pegu; Meysoun Jabrane; Gabriele Saleh; Arghyadeep Garai; Aswin Asaithambi; Simone Lauciello; Sergio Marras; Serena De Negri; Pavlo Solokha; Liberato Manna (2026). Nanocrystal Synthesis Derived Approach to Silver Bismuth Iodide Layered Double Perovskites with Aliphatic Amines: (CnH(2n+1)NH3)4AgBiI8. *Chemistry of Materials*, 38, 900–909. [10.1021/acs.chemmater.5c02845](https://doi.org/10.1021/acs.chemmater.5c02845). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=rusch2026).
 
@@ -447,5 +467,7 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 - [Monoclinic acanthite external bulk reference](https://doi.org/10.1524/zkri.1958.110.16.136). literature bulk reference.
 
 - [FCC Au external bulk reference](https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular539v1.pdf). constructed lattice reference.
+
+- [Bi rhombohedral bulk comparison (constructed from COD 9008576 and Thoft 1995)](https://www.crystallography.net/cod/9008576.html). locally constructed bulk reference.
 
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
