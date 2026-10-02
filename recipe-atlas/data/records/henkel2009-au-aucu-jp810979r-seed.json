@@ -1,0 +1,900 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "henkel2009-au-aucu-jp810979r-seed",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route",
+  "title": "Henkel et al. (2009): Au seed suspension",
+  "material": {
+    "formula": "Au",
+    "family": "Au colloidal seeds",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "NaBH4 reduction of HAuCl4 in aqueous CTAB",
+  "sources": [
+    {
+      "id": "henkel2009-au-aucu-jp810979r",
+      "doi": "10.1021/jp810979r",
+      "title": "Growth Kinetic of a Rod-Shaped Metal Nanocrystal",
+      "authors": "Andreas Henkel; Olaf Schubert; Anton Plech; Carsten Sönnichsen",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp810979r",
+      "main_status": "Main PDF pp.1–5 and Figures 1–3 independently audited for the Au seed, Au nanorod and Au–Cu nanorod preparations and linked structure and growth results; SI and cited upstream methods excluded.",
+      "si_status": "SI not reviewed; main text refers to SI for SAXS data-processing details and polydispersity.",
+      "reuse_status": "Selected main Figures 1–3 cropped from local PDF; publisher permission for display unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "henkel2009-au-aucu-jp810979r",
+    "recipe_family": "henkel2009-au-aucu-jp810979r",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": 2,
+      "maximum": 4,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": true,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "about 2–4 nm",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Results and Discussion, preformed seed description"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "small seed particles",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Results and Discussion, seed/rod description"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "haucl4",
+      "name": "tetrachloroauric acid solution",
+      "formula": "HAuCl4",
+      "role": "Au precursor",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "stock_volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 µL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "stock_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Hydration state of HAuCl4 not specified."
+      ],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Milli-Q water",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.0 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "ctab",
+      "name": "cetyltrimethylammonium bromide solution",
+      "formula": "CTAB",
+      "role": "surfactant",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "stock_volume": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.0 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "stock_concentration": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "nabh4",
+      "name": "ice-cold sodium borohydride solution",
+      "formula": "NaBH4",
+      "role": "reductant",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "stock_volume": {
+          "value": 0.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.60 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "stock_concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.010 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "haucl4-stock",
+      "name": "0.1 M HAuCl4 solution",
+      "components": [
+        {
+          "material_id": "haucl4",
+          "quantities": {
+            "volume": {
+              "value": 50,
+              "minimum": null,
+              "maximum": null,
+              "unit": "µL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "50 µL",
+              "evidence": [
+                {
+                  "source_id": "henkel2009-au-aucu-jp810979r",
+                  "locator": "Main PDF p.1, Experimental Section"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {
+        "haucl4": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Stock solvent and preparation not stated; only aliquot and concentration are specified.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "ctab-stock",
+      "name": "0.2 M aqueous CTAB",
+      "components": [
+        {
+          "material_id": "ctab",
+          "quantities": {
+            "volume": {
+              "value": 5.0,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "5.0 mL",
+              "evidence": [
+                {
+                  "source_id": "henkel2009-au-aucu-jp810979r",
+                  "locator": "Main PDF p.1, Experimental Section"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {
+        "ctab": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Aqueous CTAB stock, 5.0 mL aliquot.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "nabh4-stock",
+      "name": "0.010 M ice-cold NaBH4",
+      "components": [
+        {
+          "material_id": "nabh4",
+          "quantities": {
+            "volume": {
+              "value": 0.6,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "0.60 mL",
+              "evidence": [
+                {
+                  "source_id": "henkel2009-au-aucu-jp810979r",
+                  "locator": "Main PDF p.1, Experimental Section"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {
+        "nabh4": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.010 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Freshness and solvent not separately specified; described as ice-cold.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "seed-mixture",
+      "name": "Mixed Au/CTAB solution",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "seed-suspension",
+      "name": "Brownish-yellow/yellow Au seed suspension",
+      "kind": "product",
+      "parent_ids": [
+        "seed-mixture"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "combine-seed-solutions",
+      "action": "mix",
+      "label": "Combine Au solution, water and CTAB",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "haucl4",
+        "water",
+        "ctab"
+      ],
+      "outputs": [
+        "seed-mixture"
+      ],
+      "parameters": {
+        "haucl4_volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 µL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "haucl4_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "water_volume": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.0 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "ctab_volume": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.0 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "ctab_concentration": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix 50 µL 0.1 M HAuCl4 and 5.0 mL Milli-Q water with 5.0 mL 0.2 M CTAB.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "reduce-seeds",
+      "action": "reduce",
+      "label": "Add ice-cold NaBH4 while shaking",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "combine-seed-solutions"
+      ],
+      "inputs": [
+        "seed-mixture",
+        "nabh4"
+      ],
+      "outputs": [
+        "seed-suspension"
+      ],
+      "parameters": {
+        "nabh4_volume": {
+          "value": 0.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.60 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "nabh4_concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.010 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "ice-cold NaBH4 aliquot; vigorous shaking",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add during vigorous shaking; suspension becomes brownish-yellow or yellow.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "store-seeds",
+      "action": "store",
+      "label": "Keep seed suspension at 30 °C",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "reduce-seeds"
+      ],
+      "inputs": [
+        "seed-suspension"
+      ],
+      "outputs": [
+        "seed-suspension"
+      ],
+      "parameters": {
+        "storage_temperature": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 °C",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "use_window": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "maximum, not exact storage duration",
+          "basis": "",
+          "raw_text": "within 1 day",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Keep at 30 °C and use within one day; no purification reported.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Seed Synthesis"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-seed-suspension",
+      "source_sample_label": "small gold seeds",
+      "batch_id": null,
+      "material_state_id": "seed-suspension",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.2, Results and Discussion, preformed seed description"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No product-specific diffraction/refinement in this main paper."
+      },
+      "morphology": {
+        "value": "small particles, approximately 2–4 nm",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.2, Results and Discussion, preformed seed description"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "CTAB is present but its exact adsorption geometry is not measured."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Results and Discussion, preformed seed description"
+        }
+      ],
+      "notes": [
+        "The 2–4 nm size is from results prose; no seed-only Figure 1–3 panel exists."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "seed-diameter",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-seed-suspension",
+      "property": "seed diameter",
+      "technique": "author description",
+      "value": {
+        "value": null,
+        "minimum": 2,
+        "maximum": 4,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "about 2–4 nm",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.2, Results and Discussion, preformed seed description"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Results and Discussion, preformed seed description"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Accepted independent deep audit of main PDF pp.1–5, Figures 1–3, three preparation routes and linked SAXS/optical outcomes; SI and cited upstream methods not reviewed.",
+    "missing_fields": [
+      "Growth temperature and atmosphere are not stated; 30 °C belongs to seed storage only.",
+      "No purification, isolation, yield or product atomic coordinates are reported.",
+      "The supplementary SAXS corrections and polydispersity details remain unreviewed.",
+      "Seed size is reported only as about 2–4 nm; no individual particle size distribution or seed-only image supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [
+      "precursor_selection",
+      "size_conditioned_recipe",
+      "partial_protocol"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/jp810979r",
+      "relation": "primary_source"
+    }
+  ]
+}

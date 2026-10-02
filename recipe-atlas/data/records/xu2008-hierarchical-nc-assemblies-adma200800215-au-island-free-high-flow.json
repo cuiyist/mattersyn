@@ -1,0 +1,500 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "xu2008-hierarchical-nc-assemblies-adma200800215-au-island-free-high-flow",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route",
+  "title": "Xu et al. (2008): Au island-free high-evaporation architecture",
+  "material": {
+    "formula": "Au",
+    "family": "hierarchically ordered Au nanocrystal architectures",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Humidity-controlled droplet self-assembly of preformed nanocrystals",
+  "sources": [
+    {
+      "id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+      "doi": "10.1002/adma.200800215",
+      "title": "Combinatorial Hierarchically Ordered 2D Architectures Self-assembled from Nanocrystal Building Blocks",
+      "authors": "Xiangxing Xu; Xun Wang; Amjad Nisar; Xin Liang; Jing Zhuang; Shi Hu; Yuan Zhuang",
+      "year": 2008,
+      "url": "https://doi.org/10.1002/adma.200800215",
+      "main_status": "Independently audited main PDF pp.1–7 and Figures 1–3 for this source-scoped method and product outcome; SI not reviewed.",
+      "si_status": "SI not reviewed; main text contains the source preparation procedures; SI figures are cited only as follow-up.",
+      "reuse_status": "Selected main Figures 1–3 cropped from local article; publisher display permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "xu2008-hierarchical-nc-assemblies-adma200800215",
+    "recipe_family": "xu2008-hierarchical-nc-assemblies-adma200800215-au-island-free-high-flow",
+    "parent_record_id": "xu2008-hierarchical-nc-assemblies-adma200800215-au-nc",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "island-free hierarchical porous architecture at faster evaporation",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nc-au",
+      "name": "preformed Au nanocrystals",
+      "formula": "Au",
+      "role": "seed",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source names chloroform or cyclohexane dispersions; route-specific solvent unresolved.",
+        "Experimental gives example bulk concentrations: Au 40, Ag 20, TiO2 40 mg/mL; no panel-specific charge is assigned."
+      ],
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.6, Experimental, named chemicals and route"
+        }
+      ]
+    },
+    {
+      "id": "carbon-grid",
+      "name": "amorphous-carbon-coated copper grid",
+      "formula": null,
+      "role": "substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.6, Experimental, named chemicals and route"
+        }
+      ]
+    },
+    {
+      "id": "humid-n2",
+      "name": "N2–H2O humid carrier gas",
+      "formula": null,
+      "role": "atmosphere",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.6, Experimental, named chemicals and route"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "reaction-state",
+      "name": "reaction or deposited mixture",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "product-state",
+      "name": "reported product or architecture",
+      "kind": "product",
+      "parent_ids": [
+        "reaction-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "op-1",
+      "action": "process",
+      "label": "Deposit nanocrystal dispersion",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nc-au",
+        "carbon-grid",
+        "humid-n2"
+      ],
+      "outputs": [
+        "reaction-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Transfer dispersion droplet onto an amorphous-carbon-coated copper grid on filter paper; bulk and surface concentration are controlled but the panel-specific values are not reported.",
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.6, Experimental, Preparation of the Hierarchically-ordered Architectures"
+        }
+      ]
+    },
+    {
+      "id": "op-2",
+      "action": "process",
+      "label": "Humid-gas evaporation assembly",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "op-1"
+      ],
+      "inputs": [
+        "reaction-state"
+      ],
+      "outputs": [
+        "product-state"
+      ],
+      "parameters": {
+        "ambient_temperature": {
+          "value": null,
+          "minimum": 10,
+          "maximum": 20,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10–20 °C",
+          "evidence": [
+            {
+              "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+              "locator": "Main PDF p.6, Experimental, Preparation of the Hierarchically-ordered Architectures"
+            }
+          ],
+          "derivation": null
+        },
+        "surface_loading_range": {
+          "value": null,
+          "minimum": 0.005,
+          "maximum": 0.5,
+          "unit": "mg/cm²",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.005–0.5 mg cm−2",
+          "evidence": [
+            {
+              "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+              "locator": "Main PDF p.6, Experimental, Preparation of the Hierarchically-ordered Architectures"
+            }
+          ],
+          "derivation": null
+        },
+        "relative_humidity": {
+          "value": null,
+          "minimum": 85,
+          "maximum": 90,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "85–90%",
+          "evidence": [
+            {
+              "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+              "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2–H2O at reported RH",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+          },
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.6, Experimental, Preparation of the Hierarchically-ordered Architectures"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Flux N2–H2O carrier gas at stated RH over droplet at 10–20 °C; tune flow rate with flowmeter. Absolute flow and exposure time are not given.",
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+        },
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.6, Experimental, Preparation of the Hierarchically-ordered Architectures"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xu2008-au-island-free-high-flow",
+      "source_sample_label": null,
+      "batch_id": null,
+      "material_state_id": "product-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "island-free hierarchical porous architecture at faster evaporation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1f caption and corresponding Results discussion"
+        }
+      ],
+      "notes": [
+        "Paper says increasing solvent evaporation rate suppresses islands; numerical flow change unreported."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "m-1",
+      "sample_id": "xu2008-au-island-free-high-flow",
+      "property": "surface_covering_rate",
+      "technique": "author-calculated Figure 1j bar labels",
+      "value": {
+        "value": 74.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "74.4%",
+        "evidence": [
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.2, Figure 1j, printed panel-linked values"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1j, printed panel-linked values"
+        }
+      ]
+    },
+    {
+      "id": "m-2",
+      "sample_id": "xu2008-au-island-free-high-flow",
+      "property": "tri_layer_covering_rate",
+      "technique": "author-calculated Figure 1j bar labels",
+      "value": {
+        "value": 3.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.9%",
+        "evidence": [
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.2, Figure 1j, printed panel-linked values"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1j, printed panel-linked values"
+        }
+      ]
+    },
+    {
+      "id": "m-3",
+      "sample_id": "xu2008-au-island-free-high-flow",
+      "property": "equivalent_monolayer_covering_rate",
+      "technique": "author-calculated Figure 1j bar labels",
+      "value": {
+        "value": 100.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "100.2%",
+        "evidence": [
+          {
+            "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+            "locator": "Main PDF p.2, Figure 1j, printed panel-linked values"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2008-hierarchical-nc-assemblies-adma200800215",
+          "locator": "Main PDF p.2, Figure 1j, printed panel-linked values"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [
+    {
+      "id": "source-figure",
+      "role": "measured_sample",
+      "sample_id": "xu2008-au-island-free-high-flow",
+      "url": "assets/source-figures/xu2008/main-figure-1.png",
+      "description": "Main Figure 1f: island-free hierarchical porous architecture at faster evaporation; panel-specific input composition/condition limits in record.",
+      "eligible_as_measured_label": false
+    }
+  ],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independently audited scoped main-paper review: PDF pp.1–7, Figures 1–3 and main-text preparation/assembly variants. SI not reviewed; panel-specific unknowns remain unknown.",
+    "missing_fields": [
+      "Panel-specific surface concentration, gas flow rate and assembly duration not reported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Main Figure 1: source characterization",
+      "url": "assets/source-figures/xu2008/main-figure-1.png",
+      "relation": "source_figure"
+    }
+  ]
+}

@@ -1,0 +1,994 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "henkel2009-au-aucu-jp810979r-au-nanorod",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route",
+  "title": "Henkel et al. (2009): Au seeded nanorod growth",
+  "material": {
+    "formula": "Au",
+    "family": "Au and AuCu colloidal nanorods",
+    "elements": [
+      "Au"
+    ],
+    "components": [
+      "Au"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Seeded aqueous CTAB nanorod growth with ascorbic acid",
+  "sources": [
+    {
+      "id": "henkel2009-au-aucu-jp810979r",
+      "doi": "10.1021/jp810979r",
+      "title": "Growth Kinetic of a Rod-Shaped Metal Nanocrystal",
+      "authors": "Andreas Henkel; Olaf Schubert; Anton Plech; Carsten Sönnichsen",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp810979r",
+      "main_status": "Main PDF pp.1–5 and Figures 1–3 independently audited for the Au seed, Au nanorod and Au–Cu nanorod preparations and linked structure and growth results; SI and cited upstream methods excluded.",
+      "si_status": "SI not reviewed; main text refers to SI for SAXS data-processing details and polydispersity.",
+      "reuse_status": "Selected main Figures 1–3 cropped from local PDF; publisher permission for display unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "henkel2009-au-aucu-jp810979r",
+    "recipe_family": "henkel2009-au-aucu-jp810979r",
+    "parent_record_id": "henkel2009-au-aucu-jp810979r-seed",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, nanorod synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "rod-shaped, inferred from SAXS fits",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.3, Results, Figure 2 and cylinder form-factor discussion"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_applicable",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "haucl4",
+      "name": "tetrachloroauric acid",
+      "formula": "HAuCl4",
+      "role": "Au precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "growth_solution_concentration": {
+          "value": 0.0005,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.0 × 10^-4 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Individual stock volume not stated; this is growth-solution concentration, not stock concentration."
+      ],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "ctab",
+      "name": "cetyltrimethylammonium bromide",
+      "formula": "CTAB",
+      "role": "surfactant",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "growth_solution_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.10 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "agno3",
+      "name": "silver nitrate",
+      "formula": "AgNO3",
+      "role": "shape-directing additive",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "growth_solution_concentration": {
+          "value": 4e-05,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4.0 × 10^-5 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "aa",
+      "name": "ascorbic acid",
+      "formula": "C6H8O6",
+      "role": "reducing agent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "growth_solution_concentration": {
+          "value": 0.00055,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.5 × 10^-4 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "seed-stock",
+      "name": "Au seed suspension",
+      "formula": "Au",
+      "role": "seed precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "aliquot_volume": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 µL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Linked to separate same-paper seed route; individual seed batch identity not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Milli-Q water",
+      "formula": "H2O",
+      "role": "aqueous growth medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Setup states a 10 mL growth solution, not a separately itemized water charge."
+      ],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Setup"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "seed-input-state",
+      "name": "Au seed suspension stock",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "growth-solution",
+      "name": "CTAB/metal-ion growth solution",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "reduced-solution",
+      "name": "Ascorbic-acid-treated growth solution",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "growth-solution"
+      ]
+    },
+    {
+      "id": "rod-dispersion",
+      "name": "Au rod dispersion",
+      "kind": "product",
+      "parent_ids": [
+        "reduced-solution",
+        "seed-input-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-au-growth",
+      "action": "mix",
+      "label": "Prepare 10 mL CTAB/Au/Ag growth solution",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "haucl4",
+        "ctab",
+        "agno3",
+        "water"
+      ],
+      "outputs": [
+        "growth-solution"
+      ],
+      "parameters": {
+        "haucl4_concentration": {
+          "value": 0.0005,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.0 × 10^-4 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "ctab_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.10 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "agno3_concentration": {
+          "value": 4e-05,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4.0 × 10^-5 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "setup_growth_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "measurement-run batch volume",
+          "basis": "",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.2, Setup"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prepare specified final-concentration growth solution; individual stock charges not reported.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Synthesis of Au Nanoparticles"
+        }
+      ]
+    },
+    {
+      "id": "reduce-au-growth",
+      "action": "reduce",
+      "label": "Add ascorbic acid",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare-au-growth"
+      ],
+      "inputs": [
+        "growth-solution",
+        "aa"
+      ],
+      "outputs": [
+        "reduced-solution"
+      ],
+      "parameters": {
+        "ascorbic_acid_concentration": {
+          "value": 0.00055,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5.5 × 10^-4 M",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Growth solution changes dark yellow to colorless.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Synthesis of Au Nanoparticles"
+        }
+      ]
+    },
+    {
+      "id": "seed-au-growth",
+      "action": "seed",
+      "label": "Initiate Au rod growth with 12 µL seeds",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "reduce-au-growth"
+      ],
+      "inputs": [
+        "reduced-solution",
+        "seed-stock"
+      ],
+      "outputs": [
+        "rod-dispersion"
+      ],
+      "parameters": {
+        "seed_aliquot": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "12 µL",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "color_change_window": {
+          "value": null,
+          "minimum": 10,
+          "maximum": 20,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10–20 min",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.1, Experimental Section"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Blue or grayish-red color appears within 10–20 min; growth described as completing in 15–30 min on p.2.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Experimental Section, Synthesis of Au Nanoparticles"
+        }
+      ]
+    },
+    {
+      "id": "measure-au-flow",
+      "action": "characterize",
+      "label": "Follow growth by optical and SAXS flow measurements",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "seed-au-growth"
+      ],
+      "inputs": [
+        "rod-dispersion"
+      ],
+      "outputs": [
+        "rod-dispersion"
+      ],
+      "parameters": {
+        "initial_flow_rate": {
+          "value": 3000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3000 µL/min",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.2, Setup"
+            }
+          ],
+          "derivation": null
+        },
+        "initial_flow_duration": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "first 60 s",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.2, Setup"
+            }
+          ],
+          "derivation": null
+        },
+        "later_flow_rate": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL/min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 µL/min",
+          "evidence": [
+            {
+              "source_id": "henkel2009-au-aucu-jp810979r",
+              "locator": "Main PDF p.2, Setup"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Optical spectra precede SAXS capillary in measurement line; no sampling-isolation protocol is reported.",
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Experimental Section, Setup and SAXS"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "source_sample_label": "Au rods in time-resolved SAXS/optical experiment",
+      "batch_id": null,
+      "material_state_id": "rod-dispersion",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.2, Results and Discussion, Figures 1a and 2a,c"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No product-specific diffraction/refinement in this main paper."
+      },
+      "morphology": {
+        "value": "rod-shaped ensemble fitted by cylindrical SAXS form factor",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.2, Results and Discussion, Figures 1a and 2a,c"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "CTAB is present but its exact adsorption geometry is not measured."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.2, Results and Discussion, Figures 1a and 2a,c"
+        }
+      ],
+      "notes": [
+        "Figure 1a, Figure 2a/c and Figure 3a are ensemble time traces of the Au route, not three independent products.",
+        "Early SAXS points are too noisy; one beam-intensity drop required correction and leaves unreliable Figure 3a points."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "au-length-tau",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "property": "length growth-rate decay constant",
+      "technique": "time-resolved SAXS cylinder-model fit",
+      "value": {
+        "value": 6.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "T_L = 6.0 min",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "au-width-tau",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "property": "width growth-rate decay constant",
+      "technique": "time-resolved SAXS cylinder-model fit",
+      "value": {
+        "value": 7.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "T_D = 7.8 min",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "au-initial-length-rate",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "property": "initial length growth rate",
+      "technique": "time-resolved SAXS cylinder-model fit",
+      "value": {
+        "value": 6.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.7 nm/min",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "au-initial-width-rate",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "property": "initial width growth rate",
+      "technique": "time-resolved SAXS cylinder-model fit",
+      "value": {
+        "value": 1.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm/min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.4 nm/min",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.3, Results, exponential fit after Figure 2"
+        }
+      ]
+    },
+    {
+      "id": "au-growth-crossover",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "property": "time of maximum aspect ratio / 1D-to-3D crossover",
+      "technique": "SAXS aspect-ratio time trace",
+      "value": {
+        "value": 8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "min",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "paper pairs 8 min with Au and 12 min with Au–Cu",
+        "basis": "",
+        "raw_text": "8 min",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.1, Abstract and Figure 3a"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Abstract and Figure 3a"
+        }
+      ]
+    },
+    {
+      "id": "au-final-aspect-ratio",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "property": "approximate final aspect ratio",
+      "technique": "SAXS model",
+      "value": {
+        "value": 3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "dimensionless",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "about 3",
+        "evidence": [
+          {
+            "source_id": "henkel2009-au-aucu-jp810979r",
+            "locator": "Main PDF p.1, Introduction summary of both routes"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "henkel2009-au-aucu-jp810979r",
+          "locator": "Main PDF p.1, Introduction summary of both routes"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [
+    {
+      "id": "henkel2009-main-fig1-henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "role": "measured_sample",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "url": "assets/source-figures/henkel2009/main-figure-1.png",
+      "description": "Figure 1a time-resolved SAXS/extinction; SAXS/optical ensemble evidence, not an atomic-coordinate file or TEM image.",
+      "eligible_as_measured_label": true
+    },
+    {
+      "id": "henkel2009-main-fig2-henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "role": "measured_sample",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "url": "assets/source-figures/henkel2009/main-figure-2.png",
+      "description": "Figure 2a,c fitted length/width/volume; SAXS/optical ensemble evidence, not an atomic-coordinate file or TEM image.",
+      "eligible_as_measured_label": true
+    },
+    {
+      "id": "henkel2009-main-fig3-henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "role": "measured_sample",
+      "sample_id": "henkel2009-au-aucu-jp810979r-au-rod-ensemble",
+      "url": "assets/source-figures/henkel2009/main-figure-3.png",
+      "description": "Figure 3a aspect ratio/optical resonance; SAXS/optical ensemble evidence, not an atomic-coordinate file or TEM image.",
+      "eligible_as_measured_label": true
+    }
+  ],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Accepted independent deep audit of main PDF pp.1–5, Figures 1–3, three preparation routes and linked SAXS/optical outcomes; SI and cited upstream methods not reviewed.",
+    "missing_fields": [
+      "Growth temperature and atmosphere are not stated; 30 °C belongs to seed storage only.",
+      "No purification, isolation, yield or product atomic coordinates are reported.",
+      "The supplementary SAXS corrections and polydispersity details remain unreviewed.",
+      "Final mean length and diameter are shown as plotted SAXS fits without a directly printed numeric endpoint; no exact-size training label is assigned from the plot.",
+      "The cylindrical SAXS form factor and Gaussian size distributions are analysis assumptions, not microscopy or atomic coordinates.",
+      "In situ flow-rate settings are measurement conditions, not an additional synthesis condition or a separate recipe variant."
+    ],
+    "conflicts": [
+      "Main p.3 lists relative distributions as 16.5 and 10% 'for the short and long axis, respectively' while referring to σL/L and σD/D in the opposite symbolic order; both numbers are retained only as a printed pair, not assigned to an axis-specific training field."
+    ],
+    "requested_tasks": [
+      "precursor_selection",
+      "size_conditioned_recipe",
+      "partial_protocol"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Source article",
+      "url": "https://doi.org/10.1021/jp810979r",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Same-paper Au seed preparation",
+      "url": "records/henkel2009-au-aucu-jp810979r-seed.html",
+      "relation": "precursor_route"
+    }
+  ]
+}
