@@ -1,5 +1,9 @@
 # MatterSyn publication workflow
 
+## Current verified site — 2026-10-02
+
+Munechika et al. (2011), DOI 10.1021/nl2010127, is anonymously verified on the ordinary CdSe/CdS/ZnS–Ag material page. Source `75926b047e1960b94a7850c6e05ab237792afb6b` and site `d7aaa24ccdb381908c349ec2441ae5116b2dd3ed` passed CI, exact browser review, Pages deployment and anonymous route/file checks. The verified homepage counts **163 distinct source papers, 1,662 records and 628 broad pairs**. The private workflow-v5 ledger and `_tmp/mr1/release-summary.json` pin the live proof. Scope is preformed QD/Ag-nanoprism assembly with named observations; upstream QD syntheses remain unclaimed. Selected source figures retain unverified publisher-permission status. Saikia et al. (2022) is an independently accepted private candidate, with no publication credit until its own site deployment and anonymous verification pass. The 20-paper/hour target is not demonstrated.
+
 ## Most recent verified site and current v5 queue
 
 Lin et al. (2021), Klecha et al. (2009) and Yuan et al. (2026) are live on ordinary material pages. Source `7ed952e484b6d196436ef3f7a31a42a30cc0ebca` and site `3fc2901baf978eba5714468a754df660f5ab2d78` passed source CI, exact browser review, Pages deployment and anonymous verification at 2026-10-02T01:12:26Z. The verified site contains **159 distinct contributing papers, 1,658 canonical records, 162 material families and 577 broad recipe–structure pairs**. The release helper checked forty public files, all three new paper routes and both affected material hubs without mismatches. Selected source figures retain exact provenance; publisher display permission is unverified.

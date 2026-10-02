@@ -18,7 +18,7 @@ Morphology drawings may interpret cited literature and TEM and are labeled as sc
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **163 primary source groups** · release `v5-20261002-munechika-1`. Records are not independent experiments.
+Dataset **0.41.2** · **164 primary source groups** · release `v5-20261002-saikia-1`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -323,6 +323,8 @@ Dataset **0.41.2** · **163 primary source groups** · release `v5-20261002-mune
 - Linyuan Lian; Peng Zhang; Xiuwen Zhang; Qi Ye; Wei Qi; Long Zhao; Jianbo Gao; Daoli Zhang; Jianbing Zhang (2021). Realizing Near-Unity Quantum Efficiency of Zero-Dimensional Antimony Halides through Metal Halide Structural Modulation. *ACS Applied Materials & Interfaces*, 13, 58908–58915. [10.1021/acsami.1c18038](https://doi.org/10.1021/acsami.1c18038). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lian2021).
 
 - E. M. Williamson; B. A. Tappan; L. Mora-Tamez; G. Barim; R. L. Brutchey (2021). Statistical Multiobjective Optimization of Thiospinel CoNi2S4 Nanocrystal Synthesis via Design of Experiments. *ACS Nano*, 15, 9422–9433. [10.1021/acsnano.1c00502](https://doi.org/10.1021/acsnano.1c00502). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=williamson2021).
+
+- Monikankana Saikia; Tonkeswar Das; Binoy K. Saikia (2022). A novel rapid synthesis of highly stable silver nanoparticle/carbon quantum dot nanocomposites derived from low-grade coal feedstock. [10.1039/d1nj04039a](https://doi.org/10.1039/d1nj04039a). Review scope remains stated in the linked website records.
 
 - Wenting Zou; Yan Liu; Renjie Li; Rong Guo (2022). Ingenious Multifunctional MnO2 Quantum Dot Nanozymes with Superior Catechol Oxidase-like Activity for Highly Selective Sensing of Redox-Active Dopamine Based on an Interfacial Passivation Strategy. *ACS Sustainable Chemistry & Engineering*, 10057–10067. [10.1021/acssuschemeng.2c02981](https://doi.org/10.1021/acssuschemeng.2c02981). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zou2022-mno2-casein-acssuschemeng2c02981).
 
