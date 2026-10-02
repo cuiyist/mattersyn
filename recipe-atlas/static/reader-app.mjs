@@ -1,4 +1,5 @@
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
+import {resolveMaterialEntry} from './material-aliases.mjs';
 import {mountWuContext} from './wu2008-reader-context.mjs';
 import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory,componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
 
@@ -188,7 +189,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  const [index,presentations]=await Promise.all([json('data/materials-index.json'),json('data/reader-presentation.json')]);
 
- let material=materialId?index.materials.find(m=>m.id===materialId):null;
+ let material=materialId?resolveMaterialEntry(index.materials,materialId):null;
 
  if(recordId&&!material){
   const candidates=index.materials.filter(m=>(presentations.materials?.[m.id]?.record_ids||[]).includes(recordId));

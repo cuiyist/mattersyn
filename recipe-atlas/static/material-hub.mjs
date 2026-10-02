@@ -1,4 +1,5 @@
 import {quantityValue} from './quantity-value.mjs';
+import {resolveMaterialEntry} from './material-aliases.mjs';
 import {componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
 import {mountMaterialGuide} from './material-guide.mjs?v=0.34.1';
 const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);let id=params.get('id');
@@ -11,7 +12,7 @@ async function paperCards(data){const host=$('material-papers');host.replaceChil
 }
 try{
  const index=await (await fetch('data/materials-index.json',{cache:'no-store'})).json();if(document.body.dataset.material==='CdSe')id=index.materials.find(m=>m.formula==='CdSe')?.id;
- const entry=index.materials.find(m=>m.id===id);if(!entry)throw Error('Material not found. Select a system from the periodic table.');
+ const entry=resolveMaterialEntry(index.materials,id);if(!entry)throw Error('Material not found. Select a system from the periodic table.');
  const displayCategories=await(await fetch('data/measurement-display.json')).json();const structural=(m,r)=>Object.hasOwn(displayCategories.record_structural_measurement_ids||{},r.record_id)?displayCategories.record_structural_measurement_ids[r.record_id].includes(m.id):displayCategories.structural_properties.includes(m.property)||displayCategories.structural_property_fragments.some(part=>m.property.includes(part));
  const response=await fetch('data/materials/'+entry.id+'.json',{cache:'no-store'});if(!response.ok)throw Error('Material details are unavailable');const data=await response.json();
  if(document.body.dataset.material!=='CdSe'){

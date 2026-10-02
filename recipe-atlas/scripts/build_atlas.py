@@ -39,10 +39,25 @@ NAMES['NAT-CQDs']='Biomass-derived amine-functionalized carbon quantum dots'
 NAMES['CdS/PbS']='Cadmium sulfide / lead sulfide heterojunctions · nanorod and planar architectures'
 NAMES['Ag2S']='Silver sulfide nanocrystals'
 NAMES['CuFeS2']='Copper iron sulfide nanocrystals'
+NAMES['CdSe/CdS/ZnS']='Cadmium selenide / cadmium sulfide / zinc sulfide core/shell'
+NAMES['CdSe/ZnS/CdS']='Cadmium selenide / zinc sulfide / cadmium sulfide core/shell'
+
+# Historical material URLs used the source's monolayer counts as if they were
+# formula subscripts. Keep those links resolving to phase-level material hubs.
+MATERIAL_FORMULA_ALIASES={
+    'CdSe/CdS4':'CdSe/CdS',
+    'CdSe/CdS/ZnS/CdS/ZnS':'CdSe/CdS/ZnS',
+    'CdSe/CdS2/ZnS2':'CdSe/CdS/ZnS',
+    'CdSe/CdS3/ZnS':'CdSe/CdS/ZnS',
+    'CdSe/ZnS/CdS3':'CdSe/ZnS/CdS',
+    'CdSe/ZnS4':'CdSe/ZnS',
+    'CdSe/CdS2/ZnS/CdS':'CdSe/CdS/ZnS',
+}
 
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
 def slug(f):return re.sub('[^a-z0-9]+','-',f.lower()).strip('-')+'-'+hashlib.sha256(f.encode()).hexdigest()[:6]
+def material_alias_ids(formula):return sorted(slug(old) for old,new in MATERIAL_FORMULA_ALIASES.items() if new==formula)
 def synthesis_route(r):
     role=r.get('reader_role')
     return (r['collection']=='reviewed_literature' and r['record_type'] in {'literature_protocol','protocol_variant','experiment'}
@@ -80,7 +95,7 @@ def main():
     materials={}
     def ensure(formula,elements):
         if not elements or not set(elements)<=SYMBOLS:return None
-        if formula not in materials:materials[formula]={'id':slug(formula),'formula':formula,'name':NAMES.get(formula,formula+' literature collection'),'elements':list(dict.fromkeys(elements)),'url':'cdse.html' if formula=='CdSe' else 'material.html?id='+slug(formula),'record_ids':set(),'direct_record_ids':set(),'paper_dois':set(),'mentioned_paper_dois':set(),'architectures':set(),'component_architectures':set()}
+        if formula not in materials:materials[formula]={'id':slug(formula),'alias_ids':material_alias_ids(formula),'formula':formula,'name':NAMES.get(formula,formula+' literature collection'),'elements':list(dict.fromkeys(elements)),'url':'cdse.html' if formula=='CdSe' else 'material.html?id='+slug(formula),'record_ids':set(),'direct_record_ids':set(),'paper_dois':set(),'mentioned_paper_dois':set(),'architectures':set(),'component_architectures':set()}
         return materials[formula]
     for r in records:
         f=r['material']['formula'];els=material_elements(r)
@@ -161,7 +176,7 @@ def main():
         m['evidence_records']=[{'record_id':rid,'record_type':byid[rid]['record_type'],'collection':byid[rid]['collection']} for rid in sorted(evidence_ids)]
         m['paper_dois']=sorted(m['paper_dois']);m['mentioned_paper_dois']=sorted(m['mentioned_paper_dois'])
         write(ROOT/'dist/data/materials'/(m['id']+'.json'),m)
-        index.append({k:m[k] for k in ['id','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','component_architectures','publication_status','component_only']})
+        index.append({k:m[k] for k in ['id','alias_ids','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','component_architectures','publication_status','component_only']})
     summary=corpus['summary'];coverage=f"{len(index)} material and component pages with source-linked synthesis contributions. Explore contributing papers in the Source library."
     write(ROOT/'dist/data/materials-index.json',{'schema_version':'1.0','materials':index,'coverage':coverage})
     write(ROOT/'dist/data/library-index.json',{'summary':summary,'papers':library,'local_paper_groups':len(library),'scope':'Paper and supplement matching and material mentions are candidates until independently reviewed. Selected reviewed recipes do not imply full-paper curation.'})
