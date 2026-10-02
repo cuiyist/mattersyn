@@ -1,6 +1,6 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
 import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs';
-import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.4';
+import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
 
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);
 const text=v=>v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
@@ -28,13 +28,25 @@ export function particleGroups(r,presentation={}){
  return groups;
 }
 
-export function classifyMorphology(value){
+export function classifyMorphology(value,recordId=''){
  const m=text(value).toLowerCase();
  if(!m||/\b(unknown|unresolved|unassigned|not determined)\b/.test(m))return 'neutral';
  if(/\b(proposed|damage|not demonstrated|non[ -]spherical)\b/.test(m))return 'neutral';
  if(/\b(spher\w*|round)\b/.test(m)&&/\b(cubic|cube\w*)\b/.test(m))return 'neutral';
  if(/\b(?:no|not|without)\b(?:[\s-]+\w+){0,3}[\s-]+(?:spher\w*|round|cub\w*|rods?|nanorods?|islands?|plates?|disklike|nanodisks?|shell\w*|stars?)\b/.test(m))return 'neutral';
  if(/\b(?:spher\w*|cub\w*|rods?|islands?|nanodisks?)\s+(?:(?:were|are)\s+)?(?:not|never)\s+(?:observed|confirmed)/.test(m))return 'neutral';
+ // This article reports nanocrystal assembly outcomes whose descriptions also
+ // name their constituent rods, plates or islands. Bind the presentation rule
+ // to that audited source instead of changing other papers' morphology labels.
+ if(recordId.startsWith('xu2008-hierarchical-nc-assemblies-adma200800215-')){
+  if(/\bternary porous architecture with tio2\b/.test(m))return 'mixed-rod-dot-assembly';
+  if(/\b(?:2d porous architecture of (?:long|short) tio2 nanorods|two shifted hexagonal layers of short rods|2d short-rod architecture on wafer|orthogonally ordered pores)\b/.test(m))return 'rod-assembly';
+  if(/\bag nanocrystals arranged like petals around hexagonal coo nanoplates\b/.test(m))return 'platelet-dot-assembly';
+  if(/\bporous ag–coo architecture\b/.test(m))return 'porous-hybrid-film';
+  if(/\bporous architecture containing square eu:lavo4 particles\b/.test(m))return 'square-dot-assembly';
+  if(/\bsquare nanocrystals\b/.test(m))return 'square-projection';
+  if(/\b(?:architecture|superlattice|monolayer|bilayer(?:ed)?)\b|\btwo shifted hexagonal layers\b|\bnanocrystals? arranged like petals\b|\borthogonally ordered pores\b/.test(m))return 'assembly';
+ }
  const primitiveShapes=[/\b(spher\w*|round)\b/,/\b(cubic[ -]shaped|cubes?|cuboidal)\b/,/\b(nanorods?|rods?|nanowires?)\b/,/\b(platelets?|nanoplates?|disklike|nanodisks?)\b/,/\b(star\w*|octapods?)\b/].filter(re=>re.test(m));
  if(primitiveShapes.length>1&&!/assembl|embedded|nanotube|core[\s/–-]+shell/.test(m))return 'neutral';
  if(/nanotubes?/.test(m))return 'nanotube-supported';
@@ -66,11 +78,14 @@ export function particleDescriptor(group,interpretations={}){
  // Curated interpretations join only the selected source record and sample.
  // A material formula or another specimen's TEM cannot supply this shape.
  const inferred=interpretations[group.recordId+':'+group.sampleId];
- const shape=inferred?.shape||classifyMorphology(morphology);
+ const shape=inferred?.shape||classifyMorphology(morphology,group.recordId);
  const sourceFact=group.facts.find(f=>f.kind==='morphology'&&knownStatus.has(f.status));
  return {composition:composition||'Composition not assigned',scope:group.label||group.sampleId,
          morphology,shape,inferred,sourceFact,
-         caption:shape==='neutral'?'The source evidence does not yet support a specific morphology illustration for this specimen.':inferred?.rationale||'Schematic interpretation of the source description. Geometry and colors are illustrative; not to scale or an atomic reconstruction.'};
+         caption:shape==='neutral'?'The source evidence does not yet support a specific morphology illustration for this specimen.':inferred?.rationale||(
+          shape==='rod-assembly'?'Schematic rods only; source-reported pore geometry, layer alignment and spacing are not reconstructed. Constituent count and orientation are illustrative.':
+          shape==='porous-hybrid-film'?'Schematic repeated hybrid motifs in a porous film; number, positions and pore geometry are illustrative.':
+          'Schematic interpretation of the source description. Geometry and colors are illustrative; not to scale or an atomic reconstruction.')};
 }
 
 function particleArt(descriptor){

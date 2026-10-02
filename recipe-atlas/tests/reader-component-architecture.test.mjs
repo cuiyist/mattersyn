@@ -33,6 +33,27 @@ test('source-described disks get an illustrative planar shape but negated or con
  for(const value of ['No nanodisks observed','Nanodisks were not observed','Nanodisks and spheres','Unknown disklike morphology'])assert.equal(classifyMorphology(value),'neutral',value);
 });
 
+test('multi-particle architectures cannot be illustrated as an isolated rod, plate or island',()=>{
+ const xu='xu2008-hierarchical-nc-assemblies-adma200800215-au-ag-tio2-long';
+ const assemblies=[
+  'island-free hierarchical porous architecture at faster evaporation',
+  'bilayered superlattice walls with smaller islands in pores',
+ ];
+ for(const value of assemblies)assert.equal(classifyMorphology(value,xu),'assembly',value);
+ assert.equal(classifyMorphology('long TiO2 nanorods'),'rod');
+ assert.equal(classifyMorphology('hexagonal CoO nanoplates'),'platelet');
+ for(const value of ['2D porous architecture of short TiO2 nanorods','two shifted hexagonal layers of short rods','2D short-rod architecture on wafer, Figure 3h feature-size outcome (unquantified)','orthogonally ordered pores with small pores around large ones'])assert.equal(classifyMorphology(value,xu),'rod-assembly',value);
+ assert.equal(classifyMorphology('Ag nanocrystals arranged like petals around hexagonal CoO nanoplates',xu),'platelet-dot-assembly');
+ assert.equal(classifyMorphology('hexagonally ordered porous Ag–CoO architecture assembled from one-pot hybrid building blocks',xu),'porous-hybrid-film');
+ assert.equal(classifyMorphology('binary porous architecture containing square Eu:LaVO4 particles',xu),'square-dot-assembly');
+ assert.equal(classifyMorphology('square nanocrystals',xu),'square-projection');
+ for(const length of ['long','short'])assert.equal(classifyMorphology(`ternary porous architecture with TiO2 ${length} rods`,xu),'mixed-rod-dot-assembly');
+ assert.equal(classifyMorphology('Extended dendritic deposits; no ordered superlattice observed'),'neutral');
+ assert.equal(classifyMorphology('Close-packed QD monolayer with dispersed triangular or truncated triangular Ag nanoprisms'),'neutral');
+ assert.match(particleShapeSVG('mixed-rod-dot-assembly'),/Schematic porous assembly of rods and round nanocrystals/);
+ for(const shape of ['rod-assembly','platelet-dot-assembly','porous-hybrid-film','square-dot-assembly','square-projection'])assert.match(particleShapeSVG(shape),/role="img"/);
+});
+
 test('lamellar-stack artwork is explicitly qualitative and carries no measured scale',()=>{
  assert.ok(PARTICLE_SHAPES.includes('lamellar-stack'));
  assert.match(particleShapeInfo('lamellar-stack').ariaLabel,/number and arrangement are illustrative/);

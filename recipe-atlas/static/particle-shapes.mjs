@@ -7,7 +7,7 @@
 
 export const PARTICLE_SHAPES = Object.freeze([
   'sphere', 'dot-projection', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'bent-rod', 'hexapod', 'multipod', 'nanotube', 'ellipsoid', 'platelet', 'lamellar-stack', 'belt', 'star',
-  'truncated-star', 'irregular', 'truncated-octahedron', 'assembly', 'sphere-assembly', 'wire-assembly', 'matrix',
+  'truncated-star', 'irregular', 'truncated-octahedron', 'assembly', 'mixed-rod-dot-assembly', 'rod-assembly', 'platelet-dot-assembly', 'porous-hybrid-film', 'square-dot-assembly', 'square-projection', 'sphere-assembly', 'wire-assembly', 'matrix',
   'nanotube-supported', 'core-shell', 'islands', 'layered-film', 'neutral',
 ]);
 
@@ -31,6 +31,12 @@ const LABELS = Object.freeze({
   irregular: 'Schematic irregular particle',
   'truncated-octahedron': 'Schematic truncated-octahedral particle',
   assembly: 'Schematic assembly of particles; arrangement is illustrative',
+  'mixed-rod-dot-assembly': 'Schematic porous assembly of rods and round nanocrystals; constituent count and positions are illustrative',
+  'rod-assembly': 'Schematic two-dimensional assembly of separate rods; pores, layers and spacing are illustrative',
+  'platelet-dot-assembly': 'Schematic plate with nearby nanocrystals; plate thickness and dot positions are illustrative',
+  'porous-hybrid-film': 'Schematic porous film of repeated plate-and-dot hybrid motifs; pore positions and count are illustrative',
+  'square-dot-assembly': 'Schematic square projections and round nanocrystals; thickness and arrangement are illustrative',
+  'square-projection': 'Schematic square two-dimensional projection; thickness and 3D shape are not inferred',
   'sphere-assembly': 'Schematic spherical particle assembly; constituent count and arrangement are illustrative',
   'wire-assembly': 'Schematic wire-like particle assembly; constituent count and arrangement are illustrative',
   matrix: 'Schematic particles within a matrix; colors distinguish illustrative regions',
@@ -47,6 +53,23 @@ const LEGENDS = Object.freeze({
     { color: '#c5cec2', label: 'Center unresolved' },
   ],
   assembly: [{ color: '#268b89', label: 'Particles', note: 'Arrangement is illustrative.' }],
+  'mixed-rod-dot-assembly': [
+    { color: '#b79b64', label: 'Rod-like building blocks', note: 'Lengths and positions are illustrative.' },
+    { color: '#268b89', label: 'Round nanocrystal building blocks', note: 'Au and Ag particles are not distinguished by color.' },
+  ],
+  'rod-assembly': [{ color: '#b79b64', label: 'Separate rod-like building blocks', note: 'Number, size and arrangement are illustrative.' }],
+  'platelet-dot-assembly': [
+    { color: '#268b89', label: 'Plate-like building block', note: 'Thickness and faceting are not measured by this drawing.' },
+    { color: '#b79b64', label: 'Nearby nanocrystal building blocks', note: 'Count and attachment sites are illustrative.' },
+  ],
+  'porous-hybrid-film': [
+    { color: '#268b89', label: 'Repeated plate-like hybrid building blocks', note: 'Arrangement and film extent are illustrative.' },
+    { color: '#b79b64', label: 'Nearby nanocrystal building blocks', note: 'Pore and particle counts are not measured by this drawing.' },
+  ],
+  'square-dot-assembly': [
+    { color: '#268b89', label: 'Square projected building blocks', note: '3D shape is not assigned.' },
+    { color: '#b79b64', label: 'Round projected building blocks', note: 'Count and positions are illustrative.' },
+  ],
   'lamellar-stack': [{ color: '#268b89', label: 'Irregular lamellae; count and arrangement are illustrative.' }],
   'sphere-assembly': [{ color: '#268b89', label: 'Constituent particles', note: 'Spherical assembly; constituent count, size, and arrangement are illustrative.' }],
   'wire-assembly': [{ color: '#268b89', label: 'Constituent particles', note: 'Wire-like assembly; constituent count, size, and arrangement are illustrative.' }],
@@ -214,6 +237,47 @@ function body(shape, g) {
     case 'assembly': return ground(125,260)
       + ball(179,91,39) + ball(240,119,43) + ball(128,149,42)
       + ball(186,155,47) + ball(273,180,41) + ball(154,212,42) + ball(219,217,43);
+    case 'mixed-rod-dot-assembly': return ground(130,262)
+      + `<g fill="url(#${g}-gold-cylinder)" stroke="#9b8254" stroke-width="1.5">
+          <rect x="108" y="66" width="27" height="150" rx="13" transform="rotate(-31 122 141)"/>
+          <rect x="259" y="79" width="28" height="143" rx="13" transform="rotate(31 273 150)"/>
+          <rect x="180" y="40" width="26" height="111" rx="13" transform="rotate(43 193 96)"/>
+        </g>`
+      + ball(116,177,15) + ball(155,193,13) + ball(189,212,15)
+      + ball(234,197,14) + ball(294,185,14) + ball(267,105,13)
+      + ball(199,74,12) + ball(137,94,11);
+    case 'rod-assembly': return ground(124,263)
+      + `<g fill="url(#${g}-gold-cylinder)" stroke="#9b8254" stroke-width="1.5">
+          <rect x="106" y="74" width="27" height="111" rx="13" transform="rotate(-26 120 129)"/>
+          <rect x="173" y="54" width="27" height="111" rx="13" transform="rotate(-26 187 109)"/>
+          <rect x="257" y="83" width="27" height="111" rx="13" transform="rotate(-26 271 138)"/>
+          <rect x="129" y="173" width="27" height="84" rx="13" transform="rotate(47 143 215)"/>
+          <rect x="224" y="180" width="27" height="84" rx="13" transform="rotate(47 238 222)"/>
+        </g>`;
+    case 'platelet-dot-assembly': return ground(117,256)
+      + `<polygon points="90,156 143,95 232,104 294,168 247,231 149,229" fill="url(#${g}-top)" stroke="#438681" stroke-width="2"/>`
+      + ball(103,105,14) + ball(180,77,13) + ball(281,118,15)
+      + ball(308,199,14) + ball(191,244,13) + ball(108,221,14);
+    case 'porous-hybrid-film': return ground(126,269)
+      + `<g fill="url(#${g}-top)" stroke="#438681" stroke-width="1.5">
+          <polygon points="65,127 84,99 122,99 143,128 121,156 85,156"/>
+          <polygon points="176,78 196,51 234,51 253,80 232,108 197,108"/>
+          <polygon points="253,179 273,151 311,151 331,181 310,209 274,209"/>
+          <polygon points="111,218 131,190 169,190 189,219 168,248 132,248"/>
+        </g>`
+      + ball(56,113,8) + ball(145,105,8) + ball(91,170,8)
+      + ball(177,55,8) + ball(263,91,8) + ball(221,122,8)
+      + ball(244,166,8) + ball(333,157,8) + ball(292,224,8)
+      + ball(102,198,8) + ball(192,196,8) + ball(152,259,8);
+    case 'square-dot-assembly': return ground(123,257)
+      + `<g fill="url(#${g}-top)" stroke="#438681" stroke-width="2">
+          <rect x="104" y="93" width="82" height="82" rx="4" transform="rotate(-7 145 134)"/>
+          <rect x="218" y="111" width="85" height="85" rx="4" transform="rotate(11 260 153)"/>
+        </g>`
+      + ball(198,73,14) + ball(95,205,13) + ball(200,221,13) + ball(310,215,13);
+    case 'square-projection': return ground(125,247)
+      + `<rect x="114" y="64" width="172" height="172" rx="5" fill="url(#${g}-top)" stroke="#438681" stroke-width="2"/>
+        <path d="M120 79H270" fill="none" stroke="#fff" stroke-width="3" opacity=".5"/>`;
     case 'sphere-assembly': return ground(116,270)
       + ball(202,75,29) + ball(245,91,28) + ball(274,128,29) + ball(274,173,29)
       + ball(249,216,28) + ball(208,235,28) + ball(165,221,29) + ball(132,187,28)
