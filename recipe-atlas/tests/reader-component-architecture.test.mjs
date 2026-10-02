@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {componentScopeLabel} from '../static/reader-utils.mjs';
 import {classifyMorphology} from '../static/reader-particle.mjs';
 import {PARTICLE_SHAPES,particleShapeInfo,particleShapeSVG} from '../static/particle-shapes.mjs';
@@ -57,4 +58,38 @@ test('source-bound Yuan CPT dot projections render as flat 2D illustrations for 
   assert.ok(entry.evidence.some(e=>e.record_id===id&&e.figure_id==='figure-2-tem-gisaxs'&&e.panel===panel));
   assert.ok(entry.limitations.some(note=>/no physical 3D envelope/i.test(note)));
  }
+});
+
+test('Liu specimen drawings are bound to four distinct observed source panels',()=>{
+ const root=new URL('../',import.meta.url);
+ const recordId='liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route';
+ const recordPath=new URL(`data/records/${recordId}.json`,root);
+ const record=JSON.parse(readFileSync(recordPath,'utf8'));
+ const recordHash=createHash('sha256').update(readFileSync(recordPath)).digest('hex');
+ const entries=JSON.parse(readFileSync(new URL('static/data/reader-morphology-interpretations.json',root),'utf8')).entries;
+ const cases=[
+  ['l-agnh','hexapod','liu2008-main-figure-1','a'],
+  ['h-zigzag-rods','bent-rod','liu2008-main-figure-3','a'],
+  ['l-multipods','multipod','liu2008-main-figure-5','a'],
+  ['h-ag2s-nanotube','nanotube','liu2008-si-figure-s2','b'],
+ ];
+ for(const [suffix,shape,figure,panel] of cases){
+  const sampleId=`liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-${suffix}`;
+  const entry=entries[`${recordId}:${sampleId}`];
+  assert.ok(entry,`${suffix} source-bound interpretation`);
+  assert.ok(PARTICLE_SHAPES.includes(shape));
+  assert.equal(entry.shape,shape);
+  assert.equal(entry.source_sha256,recordHash);
+  assert.equal(entry.sample_id,sampleId);
+  assert.equal(entry.measured_atomic_coordinates,false);
+  assert.ok(record.products.some(product=>product.sample_id===sampleId));
+  const evidence=entry.evidence.find(item=>item.figure_id===figure&&item.panel===panel);
+  assert.ok(evidence,`${suffix} panel binding`);
+  const bytes=readFileSync(new URL(`static/${evidence.public_asset}`,root));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),evidence.asset_sha256);
+  assert.match(particleShapeSVG(shape),/role="img"/);
+  assert.ok(entry.limitations.length>=2);
+ }
+ assert.match(entries[`${recordId}:liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-h-ag2s-nanotube`].limitations.join(' '),/not the same physical particle/);
+ assert.match(entries[`${recordId}:liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-l-multipods`].limitations.join(' '),/electron-beam damage/);
 });

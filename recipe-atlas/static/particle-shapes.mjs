@@ -6,7 +6,7 @@
  */
 
 export const PARTICLE_SHAPES = Object.freeze([
-  'sphere', 'dot-projection', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'ellipsoid', 'platelet', 'lamellar-stack', 'belt', 'star',
+  'sphere', 'dot-projection', 'faceted-outline', 'nested-faceted', 'cube', 'rod', 'bent-rod', 'hexapod', 'multipod', 'nanotube', 'ellipsoid', 'platelet', 'lamellar-stack', 'belt', 'star',
   'truncated-star', 'irregular', 'truncated-octahedron', 'assembly', 'sphere-assembly', 'wire-assembly', 'matrix',
   'nanotube-supported', 'core-shell', 'islands', 'layered-film', 'neutral',
 ]);
@@ -18,6 +18,10 @@ const LABELS = Object.freeze({
   'nested-faceted': 'Schematic nested faceted particle; contour count is illustrative and center remains unresolved',
   cube: 'Schematic cubic particle',
   rod: 'Schematic rod-shaped particle',
+  'bent-rod': 'Schematic bent nanorod; one qualitative Z-shaped example, not every source variant',
+  hexapod: 'Schematic six-branch faceted nanohexapod; projected angles and lengths are illustrative',
+  multipod: 'Schematic smooth branched multipod; projected branch count and lengths are illustrative',
+  nanotube: 'Schematic hollow nanotube; diameter, wall thickness and length are illustrative',
   ellipsoid: 'Schematic ellipsoidal particle',
   platelet: 'Schematic thin platelet',
   'lamellar-stack': 'Schematic irregular lamellae; number and arrangement are illustrative',
@@ -164,6 +168,17 @@ function body(shape, g) {
       <ellipse cx="106" cy="152" rx="28" ry="41" fill="url(#${g}-top)" stroke="#4c9690" stroke-width="1.1"/>
       <path d="M126 122H284" stroke="#e6f4d5" stroke-width="2" stroke-linecap="round" opacity=".55"/>
       </g>`;
+    case 'bent-rod': return ground(126,255)
+      + `<path d="M64 191H149L232 105H337" fill="none" stroke="#215f69" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64 187H149L232 101H337" fill="none" stroke="url(#${g}-cylinder)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M75 174H140L228 88H325" fill="none" stroke="#e4f3d7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>`;
+    case 'hexapod': return ground(118,267)
+      + `<g>${Array.from({length:6},(_,i)=>`<g transform="rotate(${i*60} 200 149)"><path d="M184 140L184 59L193 40L207 40L216 59L216 140Z" fill="url(#${g}-teal)" stroke="#2f7378" stroke-width="1.8" stroke-linejoin="round"/><path d="M193 42L200 29L207 42Z" fill="#b8ddbd" stroke="#428483" stroke-width="1"/><path d="M187 69L197 51" stroke="#e3f2d6" stroke-width="2" opacity=".55"/></g>`).join('')}</g>
+      <path d="M174 133L200 118L226 133V164L200 179L174 164Z" fill="url(#${g}-ball)" stroke="#2f7378" stroke-width="1.8"/>`;
+    case 'multipod': return ground(126,263)
+      + `<g transform="rotate(-16 200 151)"><path d="M200 147L200 57M200 147L312 104M200 147L322 180M200 147L196 247M200 147L84 184M200 147L93 86" fill="none" stroke="#266b72" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/><path d="M200 145L200 57M200 145L312 104M200 145L322 180M200 145L196 247M200 145L84 184M200 145L93 86" fill="none" stroke="url(#${g}-cylinder)" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/><circle cx="200" cy="146" r="28" fill="url(#${g}-ball)"/></g>`;
+    case 'nanotube': return ground(135,251)
+      + `<g transform="rotate(-24 200 156)"><path d="M90 113H305C324 113 338 132 338 156S324 199 305 199H90Z" fill="url(#${g}-cylinder)" stroke="#367b7a" stroke-width="1.5"/><ellipse cx="90" cy="156" rx="30" ry="43" fill="#8dc2ae" stroke="#367b7a" stroke-width="1.5"/><ellipse cx="90" cy="156" rx="19" ry="31" fill="#355c5b" stroke="#25505a" stroke-width="1"/><path d="M105 124H299" stroke="#e5f3d8" stroke-width="2" opacity=".5"/><path d="M305 113C324 113 338 132 338 156S324 199 305 199" fill="none" stroke="#c7e2cb" stroke-width="2" opacity=".7"/></g>`;
     case 'ellipsoid': return ground(117,247) + `<g transform="rotate(-24 200 146)"><ellipse cx="200" cy="146" rx="124" ry="63" fill="url(#${g}-ball)" stroke="#3d8380" stroke-width="1.1"/><path d="M113 121C134 100 172 91 213 95" fill="none" stroke="#f0f5d8" stroke-width="2.6" stroke-linecap="round" opacity=".5"/></g>`;
     case 'platelet': return ground(136,241)
       + `<path d="M70 157L124 92L260 80L331 135V156L277 221L141 233L70 178Z" fill="#277479" stroke="#377c7d" stroke-width="1.2"/>
