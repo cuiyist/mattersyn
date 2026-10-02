@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "li1999-ag-dbs-jcis5879-dbs-aged-3mo",
-  "revision": 3,
+  "revision": 4,
   "record_type": "protocol_variant",
   "collection": "reviewed_literature",
   "reader_role": "synthesis_route",
@@ -351,7 +351,9 @@
           "derivation": null
         }
       },
-      "preparation_operation_ids": [],
+      "preparation_operation_ids": [
+        "prepare-reductant-stock"
+      ],
       "scope": "Volume and exact hydrazine-to-silver ratio unreported.",
       "evidence": [
         {
@@ -469,6 +471,81 @@
       ]
     },
     {
+      "id": "prepare-reductant-stock",
+      "action": "prepare_stock",
+      "label": "Provide 1.0 M hydrazine / 0.01 M DBS reductant stock",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hydrazine",
+        "distilled-water",
+        "dbs"
+      ],
+      "outputs": [
+        "reductant-stock-state"
+      ],
+      "parameters": {
+        "hydrazine_concentration": {
+          "value": 1.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "N2H4 (1.0 M)",
+          "evidence": [
+            {
+              "source_id": "li1999-ag-dbs-jcis5879",
+              "locator": "Main PDF p.1 / printed 347, Experimental, silver-ammine and reduction procedure"
+            }
+          ],
+          "derivation": null
+        },
+        "dbs_concentration": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "DBS (0.01 M)",
+          "evidence": [
+            {
+              "source_id": "li1999-ag-dbs-jcis5879",
+              "locator": "Main PDF p.1 / printed 347, Experimental, silver-ammine and reduction procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Stock-preparation conditions are not specified."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The source specifies a 0.01 M DBS solution containing 1.0 M N2H4 as the reductant input. Stock-preparation order, reagent charges, solution volume and holding conditions are unreported.",
+      "evidence": [
+        {
+          "source_id": "li1999-ag-dbs-jcis5879",
+          "locator": "Main PDF p.1 / printed 347, Experimental, silver-ammine and reduction procedure"
+        }
+      ]
+    },
+    {
       "id": "reduce-silver",
       "action": "add_dropwise",
       "label": "Reduce Ag(I) with hydrazine in DBS",
@@ -476,7 +553,8 @@
       "branch": "main",
       "optional": false,
       "depends_on": [
-        "prepare-silver-ammine"
+        "prepare-silver-ammine",
+        "prepare-reductant-stock"
       ],
       "inputs": [
         "silver-ammine-stock-state",
