@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "massasa2024-cgd3c01472-prot-ode",
-  "revision": 2,
+  "revision": 3,
   "record_type": "literature_protocol",
   "title": "Massasa et al. (2024): Protonated AMTP-Br in ODE",
   "material": {
@@ -31,7 +31,7 @@
       "year": 2024,
       "url": "https://doi.org/10.1021/acs.cgd.3c01472",
       "main_status": "Main article p.1–8 visually reviewed; p.9 references not reviewed. All §2.2 syntheses and main Figures 1–6 scoped; no unreviewed figure is treated as an extracted measurement.",
-      "si_status": "Matching 18-page SI exists locally but is outside this screened-pass main-document package; not reviewed or used for recipe values. SI-only size distributions, Table S4 and monolayer analyses remain unextracted.",
+      "si_status": "Matching 18-page SI: only p.18 Table S4 was visually reviewed for protonated Figure 2 timing. Other SI pages, synthesis variants, particle dimensions and monolayer analyses remain outside this correction; no full-SI review is claimed.",
       "reuse_status": "Main article explicitly says CC BY 4.0; exact source crops retain that provenance and require attribution."
     }
   ],
@@ -1105,7 +1105,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Injection after reagents fully dissolve; vessel removed from hot plate after stated dwell for ODE routes.",
+      "description": "Main Methods gives a 0–15 min protonated-ODE family range after injection; SI Table S4 specifies the 120 °C entry as 10 min and the unheated-complexation 150 °C entry as 0–30 s. Figure-level timings and the family range are separate. The vial is removed from the hot plate after the stated dwell.",
       "evidence": [
         {
           "source_id": "massasa2024-cgd3c01472",
@@ -1399,12 +1399,34 @@
             }
           ],
           "derivation": null
+        },
+        "stir_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "SI Table S4 protonated 120 °C row",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "massasa2024-cgd3c01472",
+              "locator": "Supporting Information PDF p.18 / printed S18, Table S4 and red-text footnote"
+            }
+          ],
+          "derivation": null
         }
       },
       "evidence": [
         {
           "source_id": "massasa2024-cgd3c01472",
           "locator": "Main PDF p.3 / printed p.3239, Figure 2 caption"
+        },
+        {
+          "source_id": "massasa2024-cgd3c01472",
+          "locator": "Supporting Information PDF p.18 / printed S18, Table S4 and red-text footnote"
         }
       ]
     },
@@ -1429,12 +1451,34 @@
             }
           ],
           "derivation": null
+        },
+        "stir_time": {
+          "value": null,
+          "minimum": 0,
+          "maximum": 30,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "SI Table S4 black-text unheated-complexation 150 °C entry",
+          "basis": "",
+          "raw_text": "0-30sec",
+          "evidence": [
+            {
+              "source_id": "massasa2024-cgd3c01472",
+              "locator": "Supporting Information PDF p.18 / printed S18, Table S4 and red-text footnote"
+            }
+          ],
+          "derivation": null
         }
       },
       "evidence": [
         {
           "source_id": "massasa2024-cgd3c01472",
           "locator": "Main PDF p.3 / printed p.3239, Figure 2 caption"
+        },
+        {
+          "source_id": "massasa2024-cgd3c01472",
+          "locator": "Supporting Information PDF p.18 / printed S18, Table S4 and red-text footnote"
         }
       ]
     },
@@ -1540,7 +1584,8 @@
       ],
       "notes": [
         "Growth condition 120 °C; no individual physical vial ID or numerical size is stated in main Figure caption.",
-        "Figure's TEM/SAED panel pair is sample-context linked by caption, not asserted to be the same aliquot as separate XRD/optical specimens."
+        "Figure's TEM/SAED panel pair is sample-context linked by caption, not asserted to be the same aliquot as separate XRD/optical specimens.",
+        "SI Table S4 protonated 120 °C row reports 10 min; main Methods §2.2.6 gives the broader 0–15 min ODE family range."
       ]
     },
     {
@@ -1602,7 +1647,8 @@
       ],
       "notes": [
         "Growth condition 150 °C; no individual physical vial ID or numerical size is stated in main Figure caption.",
-        "Figure's TEM/SAED panel pair is sample-context linked by caption, not asserted to be the same aliquot as separate XRD/optical specimens."
+        "Figure's TEM/SAED panel pair is sample-context linked by caption, not asserted to be the same aliquot as separate XRD/optical specimens.",
+        "SI Table S4 black-text 150 °C unheated-complexation entry reports 0–30 s; main Methods §2.2.6 gives a 0–15 min ODE family range. The physical Figure 2d vial is not independently identified by the table."
       ]
     },
     {
@@ -1813,17 +1859,18 @@
   ],
   "quality": {
     "review_status": "source_reviewed",
-    "review_scope": "Main article pp.1–8 methods and linked sample figures reviewed; p.9 references only. Independent r7 base and r9 Figure 5 sample-lineage delta accepted; SI not reviewed.",
+    "review_scope": "Main article pp.1–8 methods and linked sample figures reviewed; p.9 references only. Only SI p.18 Table S4 timing was additionally checked; remaining SI content unreviewed. Earlier r7/r9/r10 audits and the bounded M1/M2 r1 correction were independently accepted. Table S4 temperature-row timings do not identify the physical Figure 2d vial.",
     "missing_fields": [
       "Physical batch and aliquot IDs for cross-figure comparisons",
-      "Numerical particle size distributions are in unreviewed SI",
+      "SI numerical particle dimensions not extracted; only Table S4 timing checked",
       "Injection rate, exact cooling time, and ligand bath dissolution time",
       "Measured nanoparticle atomic coordinates/unique CIF binding"
     ],
     "conflicts": [
       "Figure 2/4 growth temperatures are sample contexts; exact pairings to optional DMSO complexation choices are not all specified.",
       "Main Figure 5 XRD compares deprotonated/protonated route families; the caption does not identify acetone versus ODE, temperature or physical aliquot. It is paper-level route-family evidence, not a measurement of this ODE sample.",
-      "Protonated-route Methods repeat '(110 mg)' after PbBr2; this is treated as duplicated notation for one 110 mg portion, not an additional charge."
+      "Protonated-route Methods repeat '(110 mg)' after PbBr2; this is treated as duplicated notation for one 110 mg portion, not an additional charge.",
+      "Main Methods §2.2.6 gives 0–15 min for the protonated ODE family. SI p.18 Table S4 separately reports 10 min at 120 °C and 0–30 s for the black-text 150 °C unheated-complexation entry; red entries mark separately heated complexation and are outside these Figure 2 records."
     ],
     "requested_tasks": [],
     "experimental_outcome": "reported_product"
