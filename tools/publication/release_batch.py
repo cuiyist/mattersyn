@@ -174,7 +174,10 @@ def new_paper_routes(dist, papers):
                         'selected_colloidal_methods_and_figures_independently_audited',
                         'selected_synthesis_and_figures_independently_audited',
                         'main_synthesis_and_figures_independently_audited',
-                        'scoped_synthesis_and_figures_independently_audited'} or
+                        'scoped_synthesis_and_figures_independently_audited',
+                        'main_screen_hold_scoped_independently_audited',
+                        'all_main_pages_scoped_independently_audited',
+                        'main_pp1_2_scoped_independently_audited'} or
                     not selected_main_pages or
                     row.get('paper_review_url') not in (None, '') or
                     not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or

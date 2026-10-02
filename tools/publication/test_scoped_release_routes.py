@@ -116,11 +116,19 @@ class ScopedRouteTests(unittest.TestCase):
                        'selected_colloidal_methods_and_figures_independently_audited',
                        'selected_synthesis_and_figures_independently_audited',
                        'main_synthesis_and_figures_independently_audited',
-                       'scoped_synthesis_and_figures_independently_audited'):
+                       'scoped_synthesis_and_figures_independently_audited',
+                       'main_screen_hold_scoped_independently_audited',
+                       'all_main_pages_scoped_independently_audited',
+                       'main_pp1_2_scoped_independently_audited'):
             with self.subTest(status=status):
                 self.row['main_status'] = status
                 self.flush()
                 self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
+
+        self.row['main_status'] = 'main_screen_hold'
+        self.flush()
+        with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+            self.routes()
 
     def test_record_identity_and_coverage_are_required(self):
         self.row['record_ids'] = ['other-record']
