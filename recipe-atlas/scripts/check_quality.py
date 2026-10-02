@@ -200,12 +200,18 @@ class Audit:
         fafarman_ag_routes = {"fafarman2014-ag-nc-films-nn406461p-untreated"}
         lin_ag_routes = {"acsami2021-1c07986-ag-nanocrystal-clusters-template-" + str(i) for i in (1, 2, 3, 4)}
         klecha_ag_routes = {"klecha2009-ag-nanocrystal-plasma-la802989f-comparison"}
-        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | tan_ag_routes | li_ag_routes | fafarman_ag_routes | lin_ag_routes | klecha_ag_routes, "Ag: retain exactly the independently reviewed direct Ag synthesis routes")
+        new_ag_routes = {
+            "choi1999-ag-nc-wire-ls-monolayer",
+            "klecha2010-ag-2d-superlattice-jz100417s-matrix",
+            "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix",
+        }
+        reviewed_ag_direct = shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | tan_ag_routes | li_ag_routes | fafarman_ag_routes | lin_ag_routes | klecha_ag_routes | new_ag_routes
+        self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == reviewed_ag_direct, "Ag: retain exactly the independently reviewed direct Ag synthesis routes")
         wang_mcm48_routes = {"wang1999-ag-mcm48-cm990228p-ast"}
         yang_ag_component_routes = {"yang1999-ag-te-1-5-1-180c-12h", "yang1999-ag-te-2-1-180c-12h"}
         tan_ag_component_routes = {"tan2006-ag-ag2se-jp0616011-ag2se-10min", "tan2006-ag-ag2se-jp0616011-ag2se-60min"}
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag–Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Ag–Te phase products")
-        self.check(set(silver.get("record_ids", [])) == shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | tan_ag_routes | li_ag_routes | fafarman_ag_routes | lin_ag_routes | klecha_ag_routes | stiger_routes | wang_mcm48_routes | yang_ag_component_routes | tan_ag_component_routes, "Ag: retain exactly the reviewed direct routes and supported component contributions")
+        self.check(set(silver.get("record_ids", [])) == reviewed_ag_direct | stiger_routes | wang_mcm48_routes | yang_ag_component_routes | tan_ag_component_routes, "Ag: retain exactly the reviewed direct routes and supported component contributions")
         self.check(set(self.hubs.get("Ag/SiO2", {}).get("direct_record_ids", [])) == wang_mcm48_routes, "Ag/SiO2: retain the separately reviewed Wang MCM-48 AST route")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag/SiO2" for rid in wang_mcm48_routes), "Ag/SiO2: supported composite identity was erased")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")

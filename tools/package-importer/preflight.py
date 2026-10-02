@@ -115,6 +115,36 @@ def scoped_audit_decision_accepted(audit):
     decisions=[audit[key] for key in ('verdict','decision') if key in audit]
     return bool(decisions) and all(value=='ACCEPTED_SCOPED_CONTENT' for value in decisions)
 
+def scoped_audit_identity_matches(audit, package):
+    """Some private quick audits name the paper ID rather than the package ID."""
+    aliases=[audit[key] for key in ('package_id','paper_id') if key in audit]
+    return (bool(aliases) and all(value==package.get('package_id') for value in aliases)
+            and audit.get('package_revision')==package.get('revision'))
+
+def scoped_audit_receipt_matches(audit, package_audit, audit_path, package, science):
+    """Allow an auditor's pinned normalization of a legacy accepted quick audit."""
+    original_name=package_audit.get('receipt_id')
+    if original_name==audit_path.name:return True
+    if (audit.get('schema')!='mattersyn-independent-scoped-acceptance-addendum/1'
+            or not isinstance(original_name,str)
+            or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*',original_name)
+            or audit.get('original_audit_receipt')!='receipts/'+original_name
+            or audit.get('package_id')!=package.get('package_id')
+            or audit.get('package_revision')!=package.get('revision')
+            or audit.get('scientific_sha256')!=science):
+        return False
+    original_path=audit_path.parent/original_name
+    if (not original_path.is_file()
+            or sha(original_path)!=audit.get('original_audit_receipt_sha256')):
+        return False
+    original=read(original_path)
+    return (original.get('schema')=='mattersyn-independent-quick-audit/1'
+            and original.get('decision')=='accepted'
+            and original.get('package_id')==package.get('package_id')
+            and original.get('scientific_sha256')==science
+            and scoped_audit_reviewer_matches(original,package_audit)
+            and audit.get('frozen_package_manifest_sha256')==original.get('accepted_package_manifest_sha256'))
+
 def scoped_context_link_drop_only(before, after, source_id, doi, candidate):
     """Allow removal of one fictitious formal Reader link, retaining the DOI link byte-for-byte."""
     old=before.get('context_links');new=after.get('context_links')
@@ -148,11 +178,18 @@ def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=F
     imported-unreviewed context-link cleanup.
     """
     old_status=before.get('quality',{}).get('review_status')
-    if (old_status not in {'imported_unreviewed','metadata_only'}
-            or after.get('quality',{}).get('review_status')!='source_reviewed'):
+    if after.get('quality',{}).get('review_status')!='source_reviewed':
         return False
     old_revision=before.get('revision');new_revision=after.get('revision')
     if not isinstance(old_revision,int) or isinstance(old_revision,bool):
+        return False
+    if old_status=='source_reviewed':
+        admin={'/revision','/sources/0/main_status','/quality/review_scope'}
+        return (new_revision==old_revision+1 and changes_allowed
+                and changes is not None and '/revision' in changes
+                and bool(changes&{'/sources/0/main_status','/quality/review_scope'})
+                and not (changes-admin))
+    if old_status not in {'imported_unreviewed','metadata_only'}:
         return False
     if new_revision==old_revision+1:
         return True
@@ -202,10 +239,10 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
         errors.append('Scoped validation receipt does not bind accepted science')
     if not (scoped_audit_decision_accepted(audit) and audit.get('scientific_sha256')==science
             and scoped_audit_reviewer_matches(audit,pa)
-            and pa.get('receipt_id')==paths['audit_receipt_path'].name):
+            and scoped_audit_receipt_matches(audit,pa,paths['audit_receipt_path'],package,science)):
         errors.append('Scoped independent audit receipt missing, unbound or self-reviewed')
     source=package.get('source',{});sid=source.get('primary_source_id');doi=str(source.get('doi') or '').lower()
-    if audit.get('package_id')!=package.get('package_id') or audit.get('package_revision')!=package.get('revision'):
+    if not scoped_audit_identity_matches(audit,package):
         errors.append('Scoped audit receipt package identity or revision differs')
     rows=[p for p in inventory.get('per_paper',[]) if p.get('source_group')==sid]
     if len(rows)!=1 or rows[0].get('review_status')!='selected_recipe_and_figure_review':

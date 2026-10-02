@@ -233,6 +233,39 @@ class BoundaryGuardTests(unittest.TestCase):
             with self.subTest(repo=repo):
                 self.assertIsNone(user_directed_display_error(asset, repo, target))
 
+    def test_legacy_source_figure_crop_requires_paper_locator_and_crop_hash(self):
+        path, raw = "assets/source-figures/tirosh2006/figure-01.png", b"reviewed figure crop"
+        asset = user_directed_review_figure(path, raw, locator_id="Figure 1", page=3)
+        asset["source_bindings"][0]["locators"]["source_sha256"] = "b" * 64
+        asset["source_bindings"][0]["crop"] = {"asset_sha256": sha256(raw)}
+        asset["provenance_bindings"] = [{"paper_id": "tirosh2006", "doi": "10.1021/cm052401p",
+                                         "record_ids": ["tirosh-2006-method-a"]}]
+        for repo, target in [("mattersyn-site", path), ("mattersyn", "recipe-atlas/static/" + path)]:
+            with self.subTest(repo=repo):
+                self.assertIsNone(user_directed_display_error(asset, repo, target))
+        for label, mutate in [
+            ("wrong directory", lambda a: a["rights"]["user_direction"].update(paper_id="other2006")),
+            ("wrong figure", lambda a: a["source_bindings"][0]["locators"].update(id="Figure 2")),
+            ("wrong crop", lambda a: a["source_bindings"][0]["crop"].update(asset_sha256="c" * 64)),
+            ("missing source", lambda a: a["source_bindings"][0]["locators"].pop("source_sha256")),
+            ("missing provenance", lambda a: a.update(provenance_bindings=[])),
+        ]:
+            with self.subTest(case=label):
+                changed = copy.deepcopy(asset)
+                mutate(changed)
+                self.assertIsNotNone(user_directed_display_error(changed, "mattersyn-site", path))
+
+    def test_legacy_si_table_crop_requires_matching_table_locator(self):
+        path, raw = "assets/source-figures/tirosh2006/table-s1.png", b"reviewed SI table crop"
+        asset = user_directed_review_figure(path, raw, locator_id="Table S1", page=1)
+        asset["source_bindings"][0]["locators"].update(document_role="si", source_sha256="d" * 64)
+        asset["source_bindings"][0]["crop"] = {"asset_sha256": sha256(raw)}
+        asset["provenance_bindings"] = [{"paper_id": "tirosh2006", "doi": "10.1021/cm052401p",
+                                         "record_ids": ["tirosh-2006-method-a"]}]
+        self.assertIsNone(user_directed_display_error(asset, "mattersyn-site", path))
+        asset["source_bindings"][0]["locators"]["document_role"] = "private_render"
+        self.assertIsNotNone(user_directed_display_error(asset, "mattersyn-site", path))
+
     def test_cited_scheme_for_reviewed_paper_preserves_exact_bytes_and_rights(self):
         path, raw = "assets/paper-reviews/tirosh2006/scheme-1.png", b"synthetic reviewed reaction scheme"
         asset = user_directed_review_figure(path, raw, locator_id="scheme-1", page=2)

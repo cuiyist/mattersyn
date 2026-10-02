@@ -328,21 +328,45 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         site_path = path[len(prefix):]
     if direction.get("scope") == "display_source_figures_for_reviewed_papers":
         match = re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(figure|table|scheme)-([a-z0-9-]+)\.(?:png|jpe?g|webp)", site_path)
-        if asset.get("classification") != "source_figure" or not match:
+        # The older reviewed figure inventory also used a first-author/year
+        # directory and a printed Figure/Table number. Keep those exact crops
+        # without loosening the full-document or private-render exclusions.
+        legacy = re.fullmatch(r"assets/source-figures/([a-z]+[0-9]{4})/(figure|table)-((?:0?[1-9][0-9]?|s[1-9][0-9]?))(?:-[a-z0-9-]+)?\.(?:png|jpe?g|webp)", site_path)
+        if asset.get("classification") != "source_figure" or not (match or legacy):
             return "user_directed_display_source_path_ineligible"
         paper_id = direction.get("paper_id")
-        if not isinstance(paper_id, str) or paper_id != match.group(1):
+        if not isinstance(paper_id, str):
             return "user_directed_display_source_binding_missing"
-        expected_id = match.group(2) + "-" + match.group(3)
+        if match:
+            if paper_id != match.group(1):
+                return "user_directed_display_source_binding_missing"
+            expected_id = match.group(2) + "-" + match.group(3)
+        else:
+            surname = re.match(r"[a-z]+", paper_id)
+            year = re.search(r"[0-9]{4}", paper_id)
+            if not surname or not year or surname.group() + year.group() != legacy.group(1):
+                return "user_directed_display_source_binding_missing"
+            number = legacy.group(3)
+            expected_id = legacy.group(2).title() + " " + (number.upper() if number.startswith("s") else str(int(number)))
+            provenance = asset.get("provenance_bindings")
+            if not isinstance(provenance, list) or not any(
+                isinstance(item, dict) and item.get("paper_id") == paper_id
+                and item.get("doi") == direction.get("doi") and item.get("record_ids")
+                for item in provenance
+            ):
+                return "user_directed_display_source_binding_missing"
         source_matches = []
         for binding in bindings:
             if not isinstance(binding, dict) or binding.get("doi") != direction.get("doi"):
                 continue
             locators = binding.get("locators")
             if (isinstance(locators, dict)
-                    and locators.get("document_role") in {"main", "supporting_information"}
+                    and locators.get("document_role") in {"main", "supporting_information", "si"}
                     and isinstance(locators.get("page"), int) and locators["page"] > 0
-                    and locators.get("id") == expected_id):
+                    and locators.get("id") == expected_id
+                    and (not legacy or (re.fullmatch(r"[0-9a-f]{64}", str(locators.get("source_sha256", "")))
+                         and isinstance(binding.get("crop"), dict)
+                         and binding["crop"].get("asset_sha256") == digest))):
                 source_matches.append(binding)
         if len(source_matches) != 1 or not re.fullmatch(r"10\.\d{4,9}/\S+", str(direction.get("doi", ""))):
             return "user_directed_display_source_binding_missing"

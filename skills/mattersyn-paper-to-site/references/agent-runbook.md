@@ -187,6 +187,13 @@ python -B <SRC>/tools/package-importer/preflight.py --candidate <P>/stages/<batc
   bytes must match the candidate exactly. If a draft record is promoted after
   acceptance, add a pinned `status_delta_receipts` array containing an independent
   status-only audit of the exact old and new record hashes and changed fields.
+  A previously `source_reviewed` record may correct stale audit-status prose only
+  with a revision increment and an independent exact-hash status-delta receipt;
+  never use that path to change a chemical, sample, figure or quantity claim.
+  A legacy private quick-audit receipt with different decision wording may be
+  normalized only by its original independent auditor, in an addendum pinning
+  the original receipt and unchanged scientific package hashes. Do not rewrite
+  the original audit or self-normalize it.
   Preflight rejects an unreviewed promotion, false full-page coverage, stale
   receipts or a source-title mismatch. Neither path waives figure, rights, full
   build, browser or live-verification checks.

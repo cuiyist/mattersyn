@@ -1,11 +1,13 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1658,
-  "group_count": 159,
+  "record_count": 1661,
+  "group_count": 162,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
+    "Ag colloidal nanocrystal superlattices",
     "Ag colloidal nanocrystals and 2D assemblies",
+    "Ag colloidal nanocrystals and 2D superlattices",
     "Ag nanocrystals and superlattice films",
     "Ag/Ag2Se colloidal nanocrystal time course",
     "Ag2S nanocrystals",
@@ -158,6 +160,7 @@
     "Semiconductor quantum-dot quantum-well heterostructures",
     "Silver arrays on cubic mesoporous silica",
     "Silver group-III sulfide solvothermal nanocrystals",
+    "Silver nanocrystal wire assemblies",
     "Silver nanocrystals and self-assembled monolayers",
     "Silver telluride phase assemblage",
     "Silver telluride sonochemical nanocrystals",
@@ -12519,6 +12522,73 @@
       ],
       "pair_ids": [
         "chen2020-cqd-d0ra03970e-citric-acid-gsh-staged-heating::pristine-cqds"
+      ]
+    },
+    {
+      "record_id": "choi1999-ag-nc-wire-ls-monolayer",
+      "title": "Choi et al. (1999): Ag nanocrystal wire assembly on a Langmuir trough",
+      "formula": "Ag",
+      "family": "Silver nanocrystal wire assemblies",
+      "method": "Langmuir self-assembly and Langmuir–Schaeffer transfer of preformed Ag nanocrystals",
+      "record_type": "literature_protocol",
+      "source_year": 1999,
+      "source_doi": "10.1116/1.581831",
+      "revision": 2,
+      "record_sha256": "46ab070c11dcb6fe97b0a7ef5537bb76e918aff9fb4bd96b960bf3abf70f9978",
+      "recipe_signature": "390f90115824e5283bac0aa82d5df8ff16bc6587db1a6a604a96f23e976a3e5a",
+      "group_id": "group-2f7d7fb30caa",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/choi1999-ag-nc-wire-ls-monolayer.json",
+      "page_url": "records/choi1999-ag-nc-wire-ls-monolayer.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag"
+      ],
+      "pair_ids": [
+        "choi1999-ag-nc-wire-ls-monolayer::choi1999-ag-wire-monolayer-on-pmma"
       ]
     },
     {
@@ -43375,6 +43445,107 @@
       ]
     },
     {
+      "record_id": "klecha2010-ag-2d-superlattice-jz100417s-matrix",
+      "title": "Klecha et al. (2010): Ag-C10/Ag-C12 colloids, eight solvent assemblies and deposition controls",
+      "formula": "Ag",
+      "family": "Ag colloidal nanocrystals and 2D superlattices",
+      "method": "Reverse-micelle Ag colloid, alkanethiol ligand, solvent exchange, HOPG droplet assembly and plasma/anneal comparisons",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/jz100417s",
+      "revision": 3,
+      "record_sha256": "be23bfc6b64f373fce4d5a0c8c116e1d847586b3d851649aef62c80606d8b0ba",
+      "recipe_signature": "4e42261dd602c626f34c5cc0d4aa4a74e87734c919309948d3ca1a2a9a525939",
+      "group_id": "group-51a7f44a9eca",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/klecha2010-ag-2d-superlattice-jz100417s-matrix.json",
+      "page_url": "records/klecha2010-ag-2d-superlattice-jz100417s-matrix.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag"
+      ],
+      "pair_ids": [
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-colloid",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-decane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-decane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-dodecane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-dodecane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-hexane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-hexane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-bilayer",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-m1",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-m2",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-plasma-bilayer",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-plasma-m1",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c10-octane-plasma-m2",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-colloid",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-decane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-decane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-dodecane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-dodecane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-hexane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-hexane-one-drop",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-hexane-plasma",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-hexane-solvent-redrop",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-annealed",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-assembly",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-bilayer",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-m1",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-m2",
+        "klecha2010-ag-2d-superlattice-jz100417s-matrix::klecha2010-ag-2d-superlattice-jz100417s-c12-octane-plasma"
+      ]
+    },
+    {
       "record_id": "kovacheva2002-2a-battery-composite",
       "title": "Kovacheva et al. (2002): 2A positive-electrode composite and cycling series",
       "formula": "LiMn2O4",
@@ -66245,6 +66416,86 @@
         "Mn:ZnO"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix",
+      "title": "Ouhenia-Ouadahi et al. (2016): Ag NC superlattice assembly, solvent and PPh3 controls",
+      "formula": "Ag",
+      "family": "Ag colloidal nanocrystal superlattices",
+      "method": "Ag NC stock preparation, HOPG and TEM-grid evaporation, liquid-cell observation, acetone wash and PPh3 readdition",
+      "record_type": "literature_protocol",
+      "source_year": 2016,
+      "source_doi": "10.1021/acs.chemmater.6b01374",
+      "revision": 3,
+      "record_sha256": "f64a0b2ac6138584617475010c87aa98406c3232c2110763e865d43ecbd6aa68",
+      "recipe_signature": "0071bdbfc3fc615de45c08d295438caa2331cb10bc9057c0401ada560879eb28",
+      "group_id": "group-639389418888",
+      "split": "test",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix.json",
+      "page_url": "records/ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag"
+      ],
+      "pair_ids": [
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c10-5-colloid",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c10-5-hexane-m1",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c10-5-toluene-m1",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-colloid",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-hexane-m1",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-readd-fig10",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-readd-fig9",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-toluene-m1",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-washed-fig10",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-5-washed-fig9",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-6-colloid",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-6-lcem-hexane",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-c12-6-lcem-hexane-toluene-40-60",
+        "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix::ouhenia-ouadahi2016-ag-superlattices-cm6b01374-figure3-m2"
+      ]
     },
     {
       "record_id": "owen2008-cdse-ja804414f-chloride-core",
