@@ -114,7 +114,9 @@ class ScopedRouteTests(unittest.TestCase):
     def test_independently_audited_scoped_status_aliases(self):
         for status in ('selected_as_prepared_cds_route_and_figures_independently_audited',
                        'selected_colloidal_methods_and_figures_independently_audited',
-                       'selected_synthesis_and_figures_independently_audited'):
+                       'selected_synthesis_and_figures_independently_audited',
+                       'main_synthesis_and_figures_independently_audited',
+                       'scoped_synthesis_and_figures_independently_audited'):
             with self.subTest(status=status):
                 self.row['main_status'] = status
                 self.flush()

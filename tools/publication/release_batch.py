@@ -172,7 +172,9 @@ def new_paper_routes(dist, papers):
                         'selected_recipe_and_figure_independently_audited',
                         'selected_as_prepared_cds_route_and_figures_independently_audited',
                         'selected_colloidal_methods_and_figures_independently_audited',
-                        'selected_synthesis_and_figures_independently_audited'} or
+                        'selected_synthesis_and_figures_independently_audited',
+                        'main_synthesis_and_figures_independently_audited',
+                        'scoped_synthesis_and_figures_independently_audited'} or
                     not selected_main_pages or
                     row.get('paper_review_url') not in (None, '') or
                     not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or
