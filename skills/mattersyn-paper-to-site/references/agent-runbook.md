@@ -134,16 +134,21 @@ Check, in this order, looking at the cited pages and figures only where needed:
 
 | Checklist key (package `audit.checklist`) | What to check |
 |---|---|
-| `document_scope` | Scope and exclusions are stated honestly (e.g. "SI not reviewed") |
-| `recipe_and_variants` | Every recipe and variant inside the stated scope is present; none merged |
-| `quantities_units_conditions` | Every value the quote check did not confirm; every reaction step's temperature, time and atmosphere; units |
-| `chemical_identities` | Each reagent's identity and stock composition matches the source |
-| `sample_structure_links` | Every recipe→sample, sample→structure and figure→sample assignment has evidence |
-| `conflicts_missingness` | Conflicts shown side by side; missing values marked missing, not guessed |
-| `evidence_locators` | Locators resolve to the evidence actually checked |
-| `asset_provenance` | Figure crops, provenance, hashes and rights status are exact |
+| `document_scope` | Scope and exclusions are stated honestly (e.g. "SI not reviewed"). Inventory the in-scope Methods, Results, figure pages and SI sections; check whether exclusions could hide method or sample variants. |
+| `recipe_and_variants` | Every recipe and variant inside the stated scope is present; none merged. Keep a typical or study-wide preparation separate from individually measured samples unless the source links them. Check deposition, purification and assembly branches and omitted, even unquantified, inputs. |
+| `quantities_units_conditions` | Every value the quote check did not confirm; every reaction step's temperature, time and atmosphere; units. Separate observed events (for example, solution clearing) from heater targets, and check all in-scope SI conditions and apparatus. |
+| `chemical_identities` | Each reagent's identity and stock composition matches the source. Inspect rendered molecule-card role, caption and cited provenance when a shared registry entry is reused. |
+| `sample_structure_links` | Every recipe→sample, sample→structure and figure→sample assignment has evidence. Explicitly mark a general-context or unknown edge rather than making it an exact experimental pair. |
+| `conflicts_missingness` | Conflicts shown side by side; missing values marked missing, not guessed. Compare visible figure labels, body text and captions as separate source statements. |
+| `evidence_locators` | Locators resolve to the exact pages and panels actually checked; note which pages and panels support each disputed edge. |
+| `asset_provenance` | Figure crops, provenance, hashes and rights status are exact. Compare rendered particle and apparatus illustrations, captions and legends with the cited specimen; an asset key or hash alone is insufficient. |
 
 - Each item is `passed`, or `not_applicable: <reason of at least 10 words>`.
+- Before acceptance, compare a one-page claim/edge map covering route or variant → input
+  batch → deposition/purification/assembly branch → product sample → structure or property →
+  figure panel. Record the supporting locator for every edge and mark unresolved or
+  study-wide relationships explicitly. This is a private
+  audit aid, not an additional public scientific claim.
 - **Accept:** set `audit.status: accepted`, `reviewer_id` (your ID, different from `author_id`),
   `receipt_id`, and `scientific_sha256` from the validation receipt. Rerun `validate` (new receipt number).
   Log `--stage audit_accepted`.
@@ -160,6 +165,14 @@ package. Record the result in `<P>/receipts/deep-audit-log.jsonl` as one line:
 - Errors found: fix them through `changes_requested` as in §5.
 - **Stop rule:** if more than 5 of the last 50 deep-audited papers had any error, stop all extraction
   and tell the owner. The quick audit is missing too much.
+- Count distinct sampled papers with any error, not the number of findings. Preserve the
+  historical log and timing relative to quick acceptance; corrective re-audits of the
+  same paper are not new samples. During a triggered hold, start no new source claims or
+  package extractions. Already-frozen packages may undergo independent deep audit and
+  controlled corrections; release only the exact independently accepted scientific
+  version and delta. Diagnose the observed error classes and test the revised checklist
+  on a stratified independent sample of frozen work. Do not silently restart intake or
+  reset the historical count.
 
 ## 7. Integrate a batch (integrator)
 

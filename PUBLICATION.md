@@ -1,6 +1,12 @@
 # MatterSyn publication workflow
 
-## Current verified site — Naiki, Liu and Jung, 2026-10-02
+## Current verified site — Henkel and Xu, 2026-10-02
+
+Henkel et al. (2009) and Xu et al. (2008) are live on ordinary material pages. Source commit `ca84c096789204b04f9edb1d4bfb080236402b9b` and site commit `6c62e25fe766906bb1a42255152a3764efba723d` passed source CI, exact-preview browser review, Pages deployment, and anonymous verification at 2026-10-02T15:10:47Z. The release checked 40 public files, both new paper routes, and all 17 affected paper/material route combinations without mismatches. This adds **2 distinct literature papers and 33 canonical records**. The verified inventory has **173 contributing source groups in total (172 literature and 1 benchmark source group), 1,703 records, 178 directly synthesized material systems, and 699 broad recipe–structure rows**. Multiple records from Xu count as one source paper. Source figures have exact provenance and unverified publisher display permission. The Xu morphology illustrations were corrected against the displayed source figures before release.
+
+The workflow-v5 deep-audit stop rule is active: 7 of 9 distinct logged sampled papers had at least one error. New extraction is paused; unpublished packages with open findings remain local. The quick-audit checklist is strengthened and requires independent calibration before renewed intake. This is a quality-control hold, not a claim that 7/9 is the corpus-wide error rate. The requested 20-paper/hour publication rate has not been demonstrated.
+
+## Earlier verified site — Naiki, Liu and Jung, 2026-10-02
 
 Naiki et al. (2013), Liu et al. (2008) and Jung et al. (2024) are anonymously verified on their ordinary material pages. Source `76138c61f8bee7fa83f9de45a078ca7652bf3326` and site `5388d79248a03c09708246a837410e144296d9b5` passed source CI, exact-preview browser review, Pages deployment and anonymous checks at 2026-10-02T07:55:03Z. The verified homepage counts **167 distinct contributing papers and 1,666 canonical records**. The private workflow-v5 ledger has three new `live_verified` events and the exact release receipt is `_tmp/v5-naiki-liu-jung-final/live-verification.json`. Source figures retain factual unverified publisher-permission status. Yao, Routzahn, Ko and Chan remain private candidates with no publication credit. The 20-paper/hour target is still not demonstrated.
 

@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "active_workflow_v5",
-  "recorded_at": "2026-10-01T05:13:39+00:00",
+  "recorded_at": "2026-10-02T15:10:47+00:00",
   "authorization": "The owner explicitly resumed MatterSyn website construction under workflow v5. Use only existing screened-pass quantum-dot and colloidal-nanocrystal sources. The retired 20-minute continuation automation remains deleted; no paid processing, new source downloads or external source-document transfer.",
   "supersedes_hold": "The 2026-10-01 owner resume lifts the prior curation pause. V5 supersedes historical v4 workflow and staffing directions; historical trial measurements remain frozen.",
   "active_run": "Private workflow-v5-20261001/run-state.private.json",
@@ -12,7 +12,7 @@
   "maximum_concurrent_agents_including_root": null,
   "maximum_active_paper_claims": null,
   "daily_report_time": null,
-  "stop_rule": "Respect newer explicit pauses. Under active workflow v5, every published paper requires an independent quick audit and a sampled deep audit when selected; the experimental preliminary and uncalibrated silver displays are retired. Calibrated silver stays off until held-out 98%/95%/90% field thresholds and independent calibration approval. New arrivals remain separate.",
+  "stop_rule": "Workflow-v5 deep-audit hold is active: 7 of 9 distinct logged sampled papers had an error, exceeding the runbook threshold of more than 5 of the last 50. Stop new extraction and source claims; already-frozen packages may undergo independent deep audit and controlled correction, with release only of an exact independently accepted scientific version and delta. Preserve the historical sample log and test revised quick-audit checks independently before renewed intake. Experimental preliminary and uncalibrated silver displays are retired; new arrivals remain separate.",
   "current_measurement_window": null,
   "measurement_checkpoint_utc": null,
   "progress_report_interval_hours": null,
@@ -49,25 +49,23 @@
     "batch_validation": "One successful complete local batch build. Reuse unchanged scientific audits and exact file-review objects; retest changed or failed dependencies, run the fresh complete publication boundary once, retain exact-commit CI and anonymous deployment verification."
   },
   "continuation_checkpoint": "Private workflow-v5-20261001/run-state.private.json",
-  "latest_publication_receipt": "Private _tmp/v5-naiki-liu-jung-final/live-verification.json; exact workflow-v5 release passed anonymous checks at 2026-10-02T07:55:03Z",
-  "latest_verified_site_commit": "5388d79248a03c09708246a837410e144296d9b5",
+  "latest_publication_receipt": "Private n2rel-r3-20261002/live-verification.json; exact workflow-v5 release passed 40 anonymous file checks and all affected paper/material routes at 2026-10-02T15:10:47Z",
+  "latest_verified_site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
   "latest_verified_totals": {
-    "records": 1666,
-    "contributing_sources": 167,
-    "reviewed_contributing_sources": 166,
+    "records": 1703,
+    "contributing_sources": 173,
+    "reviewed_contributing_sources": 172,
     "preliminary_sources": 0,
-    "direct_families": 167,
-    "broad_pairs": 663
+    "direct_families": 178,
+    "broad_pairs": 699
   },
   "latest_publication_event": {
-    "event_id": "gold-20260928-iwasaki1998-tio2-a1006660209934",
-    "doi": "10.1023/A:1006660209934",
-    "verified_at": "2026-09-28T23:24:15.944561+00:00",
-    "site_commit": "44655389dd2239f4d64cd727974593fc74df6f7c",
+    "event_id": "live:xu2008-hierarchical-nc-assemblies-adma200800215:ca84c0967892",
+    "doi": "10.1002/adma.200800215",
+    "verified_at": "2026-10-02T15:10:47+00:00",
+    "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
     "tier": "gold",
-    "presentation": "pending",
-    "new_records": 12,
-    "new_broad_pairs": 9
+    "new_records": 30
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -100,7 +98,7 @@
   },
   "continuation_automation": null,
   "continuation_interval_minutes": 20,
-  "continuation_status": "ACTIVE",
+  "continuation_status": "PAUSED_NEW_EXTRACTION_BY_V5_DEEP_AUDIT_STOP_RULE",
   "experimental_silver_display_authorized": true,
   "experimental_silver_display_status": "partial_evidence_published_and_anonymously_verified_accuracy_unmeasured",
   "experimental_silver_accuracy": "unmeasured",
@@ -119,46 +117,31 @@
   },
   "latest_publication_batch": {
     "source_ids": [
-      "watt2004-pbs-mehppv-b406060a",
-      "baumgardner2010-snse-ja1013745",
-      "iwasaki1998-tio2-a1006660209934"
+      "henkel2009-au-aucu-jp810979r",
+      "xu2008-hierarchical-nc-assemblies-adma200800215"
     ],
     "events": [
       {
-        "event_id": "gold-20260928-watt2004-pbs-mehppv-b406060a",
-        "doi": "10.1039/b406060a",
-        "verified_at": "2026-09-28T23:24:15.944561+00:00",
-        "site_commit": "44655389dd2239f4d64cd727974593fc74df6f7c",
+        "event_id": "live:henkel2009-au-aucu-jp810979r:ca84c0967892",
+        "doi": "10.1021/jp810979r",
+        "verified_at": "2026-10-02T15:10:47+00:00",
+        "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
         "tier": "gold",
-        "presentation": "pending",
-        "new_records": 2,
-        "new_broad_pairs": 1
+        "new_records": 3
       },
       {
-        "event_id": "gold-20260928-baumgardner2010-snse-ja1013745",
-        "doi": "10.1021/ja1013745",
-        "verified_at": "2026-09-28T23:24:15.944561+00:00",
-        "site_commit": "44655389dd2239f4d64cd727974593fc74df6f7c",
+        "event_id": "live:xu2008-hierarchical-nc-assemblies-adma200800215:ca84c0967892",
+        "doi": "10.1002/adma.200800215",
+        "verified_at": "2026-10-02T15:10:47+00:00",
+        "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
         "tier": "gold",
-        "presentation": "pending",
-        "new_records": 11,
-        "new_broad_pairs": 4
-      },
-      {
-        "event_id": "gold-20260928-iwasaki1998-tio2-a1006660209934",
-        "doi": "10.1023/A:1006660209934",
-        "verified_at": "2026-09-28T23:24:15.944561+00:00",
-        "site_commit": "44655389dd2239f4d64cd727974593fc74df6f7c",
-        "tier": "gold",
-        "presentation": "pending",
-        "new_records": 12,
-        "new_broad_pairs": 9
+        "new_records": 30
       }
     ],
-    "new_gold_source_contributions": 3,
-    "new_records": 25,
-    "new_recipe_structure_rows": 14,
-    "receipt": "research-assets/public-audits/watt-baumgardner-iwasaki-publication-20260928.json"
+    "new_gold_source_contributions": 2,
+    "new_records": 33,
+    "new_recipe_structure_rows": 15,
+    "receipt": "Private n2rel-r3-20261002/live-verification.json"
   },
   "latest_experimental_display": {
     "receipt": "research-assets/public-audits/experimental-li2001-display-publication-20260928.json",
