@@ -52,6 +52,11 @@ test('multi-particle architectures cannot be illustrated as an isolated rod, pla
  assert.equal(classifyMorphology('Close-packed QD monolayer with dispersed triangular or truncated triangular Ag nanoprisms'),'neutral');
  assert.match(particleShapeSVG('mixed-rod-dot-assembly'),/Schematic porous assembly of rods and round nanocrystals/);
  for(const shape of ['rod-assembly','platelet-dot-assembly','porous-hybrid-film','square-dot-assembly','square-projection'])assert.match(particleShapeSVG(shape),/role="img"/);
+ for(const shape of ['platelet-dot-assembly','porous-hybrid-film','square-dot-assembly']){
+  const drawing=particleShapeSVG(shape).split('</defs>')[1];
+  assert.match(drawing,/fill="url\(#ms-morph-\d+-gold\)"/,`${shape} dots match the gold legend`);
+  assert.match(drawing,/fill="url\(#ms-morph-\d+-top\)"/,`${shape} plates match the teal legend`);
+ }
 });
 
 test('lamellar-stack artwork is explicitly qualitative and carries no measured scale',()=>{

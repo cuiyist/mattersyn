@@ -170,6 +170,7 @@ function truncatedOctahedron() {
 
 function body(shape, g) {
   const ball = (x,y,r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="url(#${g}-ball)" stroke="#367f7d" stroke-width=".85"/>`;
+  const goldBall = (x,y,r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="url(#${g}-gold)" stroke="#9b8254" stroke-width=".85"/>`;
   const ground = (width = 94, y = 254) => `<ellipse cx="200" cy="${y}" rx="${width}" ry="9" fill="url(#${g}-shadow)"/>`;
   switch (shape) {
     case 'nested-faceted': return ground(108,258)
@@ -256,8 +257,8 @@ function body(shape, g) {
         </g>`;
     case 'platelet-dot-assembly': return ground(117,256)
       + `<polygon points="90,156 143,95 232,104 294,168 247,231 149,229" fill="url(#${g}-top)" stroke="#438681" stroke-width="2"/>`
-      + ball(103,105,14) + ball(180,77,13) + ball(281,118,15)
-      + ball(308,199,14) + ball(191,244,13) + ball(108,221,14);
+      + goldBall(103,105,14) + goldBall(180,77,13) + goldBall(281,118,15)
+      + goldBall(308,199,14) + goldBall(191,244,13) + goldBall(108,221,14);
     case 'porous-hybrid-film': return ground(126,269)
       + `<g fill="url(#${g}-top)" stroke="#438681" stroke-width="1.5">
           <polygon points="65,127 84,99 122,99 143,128 121,156 85,156"/>
@@ -265,16 +266,16 @@ function body(shape, g) {
           <polygon points="253,179 273,151 311,151 331,181 310,209 274,209"/>
           <polygon points="111,218 131,190 169,190 189,219 168,248 132,248"/>
         </g>`
-      + ball(56,113,8) + ball(145,105,8) + ball(91,170,8)
-      + ball(177,55,8) + ball(263,91,8) + ball(221,122,8)
-      + ball(244,166,8) + ball(333,157,8) + ball(292,224,8)
-      + ball(102,198,8) + ball(192,196,8) + ball(152,259,8);
+      + goldBall(56,113,8) + goldBall(145,105,8) + goldBall(91,170,8)
+      + goldBall(177,55,8) + goldBall(263,91,8) + goldBall(221,122,8)
+      + goldBall(244,166,8) + goldBall(333,157,8) + goldBall(292,224,8)
+      + goldBall(102,198,8) + goldBall(192,196,8) + goldBall(152,259,8);
     case 'square-dot-assembly': return ground(123,257)
       + `<g fill="url(#${g}-top)" stroke="#438681" stroke-width="2">
           <rect x="104" y="93" width="82" height="82" rx="4" transform="rotate(-7 145 134)"/>
           <rect x="218" y="111" width="85" height="85" rx="4" transform="rotate(11 260 153)"/>
         </g>`
-      + ball(198,73,14) + ball(95,205,13) + ball(200,221,13) + ball(310,215,13);
+      + goldBall(198,73,14) + goldBall(95,205,13) + goldBall(200,221,13) + goldBall(310,215,13);
     case 'square-projection': return ground(125,247)
       + `<rect x="114" y="64" width="172" height="172" rx="5" fill="url(#${g}-top)" stroke="#438681" stroke-width="2"/>
         <path d="M120 79H270" fill="none" stroke="#fff" stroke-width="3" opacity=".5"/>`;
