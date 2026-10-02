@@ -1,14 +1,15 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1663,
-  "group_count": 164,
+  "record_count": 1666,
+  "group_count": 167,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
     "Ag colloidal nanocrystals and 2D assemblies",
     "Ag colloidal nanocrystals and 2D superlattices",
     "Ag nanocrystals and superlattice films",
+    "Ag nanospheres and QD-coated plasmonic films",
     "Ag/Ag2Se colloidal nanocrystal time course",
     "Ag2S nanocrystals",
     "Ag2S quantum dots",
@@ -204,8 +205,10 @@
     "magnetic oxide nanocrystals",
     "nickel sulfide nanocrystals",
     "optical and calculated reference contexts",
+    "polyol silver nanocrystal rods and nanohexapods",
     "quaternary chalcogenide nanocrystals",
     "silver nanoparticle/carbon quantum dot nanocomposite",
+    "silver/silica nanoparticle with adsorbed quantum dots",
     "solventless metal sulfide nanocrystals",
     "tin dioxide",
     "triclinic ternary sulfide nanocrystals",
@@ -41660,6 +41663,95 @@
       ]
     },
     {
+      "record_id": "jung2024-ag-nanospheres-jacs4c00073-route",
+      "title": "Jung et al. (2024): selected Ag nanospheres, Cu(II) etching and QD/AgNS films",
+      "formula": "Ag + InP/ZnSe/ZnS",
+      "family": "Ag nanospheres and QD-coated plasmonic films",
+      "method": "Aqueous Ag seed growth, selective BDAC flocculation, Cu(II) oxidative etching, PVP exchange and QD film coating",
+      "record_type": "literature_protocol",
+      "source_year": 2024,
+      "source_doi": "10.1021/jacs.4c00073",
+      "revision": 4,
+      "record_sha256": "539a2e9ad83c8a15ce3a1aed427426add6b966270d6486cad042ab96a7e4458b",
+      "recipe_signature": "30c620526285968125e8a0e4bc62d33175be8cb58957c305cf771e126dd4ad6c",
+      "group_id": "group-d7744bb09fdd",
+      "split": "validation",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": true,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. The available sample coordinates have not been approved as a measured training label. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "measured_label_not_approved",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "measured_label_not_approved",
+              "message": "The available sample coordinates have not been approved as a measured training label."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/jung2024-ag-nanospheres-jacs4c00073-route.json",
+      "page_url": "records/jung2024-ag-nanospheres-jacs4c00073-route.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag",
+        "InP",
+        "ZnSe",
+        "ZnS"
+      ],
+      "pair_ids": [
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-ag-seeds",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-agns-cu-460",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-agns-cu-580",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-cu-dose-series",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-cuprous",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-etch-precipitate",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-flocculated-rods",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-grown-ag-mix",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-no-oxygen",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-pvp-agNS",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+        "jung2024-ag-nanospheres-jacs4c00073-route::jung2024-ag-nanospheres-jacs4c00073-selected-ag"
+      ]
+    },
+    {
       "record_id": "kim2001-bi4ti3o12-cm0102436-afm",
       "title": "Kim et al. (2001): AFM deposition and height-profile acquisition",
       "formula": "Bi4Ti3O12",
@@ -54705,6 +54797,77 @@
       "pair_ids": []
     },
     {
+      "record_id": "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route",
+      "title": "Capping Modes in PVP-Directed Silver Nanocrystal Growth: Multi-Twinned Nanorods versus Single-Crystalline Nano-Hexapods",
+      "formula": "Ag / Ag–PVP; Ag2S after aging",
+      "family": "polyol silver nanocrystal rods and nanohexapods",
+      "method": "PVP molecular-weight and co-injection-rate-controlled AgNO3/ethylene glycol polyol growth, with separate week-long extension and air-aging observations",
+      "record_type": "literature_protocol",
+      "source_year": 2008,
+      "source_doi": "10.1021/cg701128b",
+      "revision": 2,
+      "record_sha256": "2c862726d1fc702348890d250d077de72a1f725f8ed27377715d644ad5a6b4e2",
+      "recipe_signature": "62663b6848ad79023bd1f95002c146ba2b696f88878963f3fd5711aecb46d0ae",
+      "group_id": "group-fed61871b61b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route.json",
+      "page_url": "records/liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag nanorods with PVP-H",
+        "AgNH nanocomposite with PVP-L",
+        "Ag2S nanotube after air aging"
+      ],
+      "pair_ids": [
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-h-ag2s-nanotube",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-h-particles",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-h-straight-rods",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-h-zigzag-rods",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-l-agnh",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-l-beam-decayed-ag",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-l-multipods",
+        "liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-route::liu2008-ag-pvp-nanorods-nanohexapods-cg701128b-l-octahedral-seeds"
+      ]
+    },
+    {
       "record_id": "lu1999-aln-580c-1to1",
       "title": "Lu et al. (1999): NH4Cl:Al 1:1 comparison",
       "formula": "AlN",
@@ -63400,6 +63563,80 @@
         "CdSe"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "naiki2013-ag-sio2-qd-jp305408p-route",
+      "title": "Highly Controlled Plasmonic Emission Enhancement from Metal-Semiconductor Quantum Dot Complex Nanostructures",
+      "formula": "Ag/SiO2–CdSe/ZnS",
+      "family": "silver/silica nanoparticle with adsorbed quantum dots",
+      "method": "AgCl colloid reduction to Ag, five-dose TEOS SiO2 sol-gel shells, surface aminosilanization and adsorption of commercial CdSe/ZnS QDs",
+      "record_type": "literature_protocol",
+      "source_year": 2013,
+      "source_doi": "10.1021/jp305408p",
+      "revision": 2,
+      "record_sha256": "1a4b1abcb4c3babd369bede71921a5d6609091f3fb2d9dcdf09195985ec9ed1a",
+      "recipe_signature": "bacfd50d8afc6eaaf29c1e54c0b70747bfac89154818562f2dbf1b2ed3bb3756",
+      "group_id": "group-8ecb21e050fc",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/naiki2013-ag-sio2-qd-jp305408p-route.json",
+      "page_url": "records/naiki2013-ag-sio2-qd-jp305408p-route.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "Ag nanoparticle core",
+        "SiO2 shell",
+        "purchased CdSe/ZnS quantum dots"
+      ],
+      "pair_ids": [
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-np",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-15",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-24",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-31",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-38",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-7",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-qd-15",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-qd-24",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-qd-31",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-qd-38",
+        "naiki2013-ag-sio2-qd-jp305408p-route::naiki2013-ag-sio2-qd-jp305408p-ag-sio2-qd-7"
+      ]
     },
     {
       "record_id": "nakonechnyi-2017-core-stability-cd-oa-1to20",

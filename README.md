@@ -18,7 +18,7 @@ Morphology drawings may interpret cited literature and TEM and are labeled as sc
 <!-- mattersyn-generated-references:start -->
 ## Papers used in the published website
 
-Dataset **0.41.2** · **164 primary source groups** · release `v5-20261002-saikia-1`. Records are not independent experiments.
+Dataset **0.41.2** · **167 primary source groups** · release `v5-20261002-naiki-liu-jung-3`. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -204,6 +204,8 @@ Dataset **0.41.2** · **164 primary source groups** · release `v5-20261002-saik
 
 - Su Chen; Jia Zhu; Yongfeng Shen; Chunhui Hu; Li Chen (2007). Synthesis of Nanocrystal–Polymer Transparent Hybrids via Polyurethane Matrix Grafted onto Functionalized CdS Nanocrystals. *Langmuir*, 23, 850–854. [10.1021/la062210g](https://doi.org/10.1021/la062210g). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=cds-polyurethane-la062210g).
 
+- Xiaohua Liu; Fan Zhang; Rui Huang; Caofeng Pan; Jing Zhu (2008). Capping Modes in PVP-Directed Silver Nanocrystal Growth: Multi-Twinned Nanorods versus Single-Crystalline Nano-Hexapods. [10.1021/cg701128b](https://doi.org/10.1021/cg701128b). Review scope remains stated in the linked website records.
+
 - Jonathan S. Owen; Jungwon Park; Paul-Emile Trudeau; A. Paul Alivisatos (2008). Reaction Chemistry and Ligand Exchange at Cadmium–Selenide Nanocrystal Surfaces. *Journal of the American Chemical Society*, 130, 12279–12281. [10.1021/ja804414f](https://doi.org/10.1021/ja804414f). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=owen2008-cdse-ja804414f).
 
 - Yue Wu, Cyrus Wadia, Wanli Ma, Bryce Sadtler, A. Paul Alivisatos (2008). Synthesis and Photovoltaic Application of Copper(I) Sulfide Nanocrystals. [10.1021/nl801817d](https://doi.org/10.1021/nl801817d). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=wu2008).
@@ -263,6 +265,8 @@ Dataset **0.41.2** · **164 primary source groups** · release `v5-20261002-saik
 - Weiwei Zheng; Kedar Singh; Zhenxing Wang; Joshua T. Wright; Johan van Tol; Naresh S. Dalal; Robert W. Meulenberg; Geoffrey F. Strouse (2012). Evidence of a ZnCr2Se4 Spinel Inclusion at the Core of a Cr-Doped ZnSe Quantum Dot. *Journal of the American Chemical Society*, 134, 5577–5585. [10.1021/ja210285p](https://doi.org/10.1021/ja210285p). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zheng2012-ja210285p).
 
 - Yagnaseni Ghosh; Benjamin D. Mangum; Joanna L. Casson; Darrick J. Williams; Han Htoon; Jennifer A. Hollingsworth (2012). New Insights into the Complexities of Shell Growth and the Strong Influence of Particle Volume in Nonblinking “Giant” Core/Shell Nanocrystal Quantum Dots. *Journal of the American Chemical Society*, 134, 9634–9643. [10.1021/ja212032q](https://doi.org/10.1021/ja212032q). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=ghosh2012).
+
+- Hiroyuki Naiki; Akito Masuhara; Sadahiro Masuo; Tsunenobu Onodera; Hitoshi Kasai; Hidetoshi Oikawa (2013). Highly Controlled Plasmonic Emission Enhancement from Metal-Semiconductor Quantum Dot Complex Nanostructures. [10.1021/jp305408p](https://doi.org/10.1021/jp305408p). Review scope remains stated in the linked website records.
 
 - Jingwen Li; Xinming Li; Xiujuan Shi; Xuewen He; Wei Wei; Nan Ma; Hong Chen (2013). Highly Sensitive Detection of Caspase-3 Activities via a Nonconjugated Gold Nanoparticle–Quantum Dot Pair Mediated by an Inner-Filter Effect. *ACS Applied Materials & Interfaces*, 5, 9798–9802. [10.1021/am4029735](https://doi.org/10.1021/am4029735). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2013-cdte-au-caspase3-am4029735).
 
@@ -342,6 +346,8 @@ Dataset **0.41.2** · **164 primary source groups** · release `v5-20261002-saik
 
 - Fulvio Bellato; Michele Ferri; Dongxu Zhu; Thi-Hong-Hanh Le; Abinaya Annamalai; Martina Rizzo; Irene Martin; Luca Goldoni; Rosaria Brescia; Mirko Prato; Luca De Trizio; Ilka Kriegel; Liberato Manna (2024). Indium Arsenide Quantum Dot Derived Catalyst for Selective CO2 Electrochemical Reduction to Formate. *ACS Energy Letters*, 9, 1097–1102. [10.1021/acsenergylett.4c00295](https://doi.org/10.1021/acsenergylett.4c00295). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=bellato2024-inas-acsenergylett4c00295).
 
+- Yoonjae Jung; Yoonhee Kim; Yeonhee Lee; Jiwoong Son; Mihye Lim; Jwa-Min Nam (2024). Selective Flocculation and H2O2-Free Oxidative Etching-Based Synthesis of Highly Monodisperse Ag Nanospheres for Uniform Quantum Dot Photoluminescence-Enhancing Plasmonic Cavity Applications. [10.1021/jacs.4c00073](https://doi.org/10.1021/jacs.4c00073). Review scope remains stated in the linked website records.
+
 - Nurwarrohman Andre Sasongko; Safira Arta Paramita; Jaeseong Heo; Eugene Park; Sebastian E. Reyes-Lillo; Joonkyung Jang; Myeongkee Park (2025). High-Temperature Photoluminescence Enhancement up to 350 K of Monophase α-FAPbI3 Quantum Dots Synthesized via Tailored Hot Injection. *The Journal of Physical Chemistry C*, 129, 15342–15350. [10.1021/acs.jpcc.5c05144](https://doi.org/10.1021/acs.jpcc.5c05144). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=sasongko2025).
 
 - Lin Yuan; Linlin Gao; Yang Li; Kunyuan Lu; Yang Liu; Jiajing Huo; Long Hu; Qing Zhang; Muhammad Zahir Iqbal; Yang Bai; Zeke Liu; Wanli Ma (2026). Coupling Design in the Direct Synthesis of AgBiS2 Nanocrystal Inks for Efficient and Eco-friendly Photovoltaics. [10.1021/acs.nanolett.5c06337](https://doi.org/10.1021/acs.nanolett.5c06337). Review scope remains stated in the linked website records.
@@ -357,136 +363,6 @@ These are contextual/upstream references, not extra reviewed synthesis contribut
 ## Crystal reference models
 
 Reference structures are distinguished from sample-resolved synthesis targets. Provenance and qualifications remain in the website registry.
-
-- [ZnO wurtzite bulk reference](https://www.crystallography.net/cod/9004178.html). literature bulk reference.
-
-- [FCC iridium bulk reference](https://www.crystallography.net/cod/9008470.html). literature bulk reference.
-
-- [Zinc-blende InP bulk reference](https://www.crystallography.net/cod/1010146.html). literature bulk reference.
-
-- [Orthorhombic CsPbBr3 bulk reference](https://www.crystallography.net/cod/4510745.html). Qualified reference.
-
-- [Rocksalt CoO bulk reference](https://www.crystallography.net/cod/1533087.html). Qualified reference.
-
-- [Partially inverse CoFe2O4 bulk reference](https://www.crystallography.net/cod/1533163.html). Qualified reference.
-
-- [Ideal diamond-Si bulk comparison reference](https://doi.org/10.1021/j100108a019). Qualified reference.
-
-- [Bulk wurtzite CdSe reference · core comparison](https://www.crystallography.net/cod/9016056.html). literature bulk reference.
-
-- [Ideal rock-salt PbSe reference](https://doi.org/10.1021/nl0345116). constructed lattice reference.
-
-- [CeO2 fluorite reference](https://www.crystallography.net/cod/9009008.html). literature bulk reference.
-
-- [Ag face-centered cubic reference](https://www.crystallography.net/cod/9008459.html). literature bulk reference.
-
-- [Ge diamond cubic reference](https://www.crystallography.net/cod/9008567.html). literature bulk reference.
-
-- [FAPbI3 computed pseudo-cubic framework (P1 ordered model) reference](https://github.com/WMD-group/hybrid-perovskites/blob/master/2014_cubic_halides_PBEsol/FAPbI3.cif). computed reference.
-
-- [CdS wurtzite reference](https://www.crystallography.net/cod/9008862.html). literature bulk reference.
-
-- [CdS zinc blende reference](https://www.crystallography.net/cod/9000067.html). literature bulk reference.
-
-- [Pt face-centered cubic reference](https://www.crystallography.net/cod/9008480.html). literature bulk reference.
-
-- [SnO2 cassiterite (rutile type) reference](https://www.crystallography.net/cod/9009082.html). literature bulk reference.
-
-- [ZnAl2O4 normal spinel reference](https://www.crystallography.net/cod/9015620.html). literature bulk reference.
-
-- [PbS rock salt reference](https://www.crystallography.net/cod/9013403.html). literature bulk reference.
-
-- [ZnS zinc blende reference](https://www.crystallography.net/cod/1100043.html). literature bulk reference.
-
-- [ZnS wurtzite reference](https://www.crystallography.net/cod/1100044.html). literature bulk reference.
-
-- [ZnSe zinc blende reference](https://www.crystallography.net/cod/9008857.html). literature bulk reference.
-
-- [ZnSe wurtzite reference](https://www.crystallography.net/cod/9008879.html). literature bulk reference.
-
-- [InAs zinc blende reference](https://www.crystallography.net/cod/9008851.html). literature bulk reference.
-
-- [CsMnCl3 rhombohedral R-3m, hexagonal axes reference](https://www.crystallography.net/cod/2107040.html). literature bulk reference.
-
-- [Si diamond cubic reference](https://www.crystallography.net/cod/9008565.html). literature bulk reference.
-
-- [Constructed zinc-blende CdSe reference](https://researchconnect.buffalo.edu/en/publications/growth-of-cubic-zinc-blende-cdse-by-molecular-beam-epitaxy/). constructed lattice reference.
-
-- [CdTe zinc blende (alternative phase) reference](https://www.crystallography.net/cod/9008840.html). literature bulk reference.
-
-- [ZnTe zinc-blende bulk reference](https://www.crystallography.net/cod/9008858.html). literature bulk reference.
-
-- [HgS metacinnabar (zinc-blende) reference](https://www.crystallography.net/cod/1011368.html). literature bulk reference.
-
-- [HgS cinnabar alternative bulk phase](https://www.crystallography.net/cod/9012082.html). literature bulk reference.
-
-- [Cs4PbBr6 rhombohedral bulk reference](https://www.crystallography.net/cod/1538416.html). literature bulk reference.
-
-- [Co face-centred cubic reference](https://www.crystallography.net/cod/9008466.html). literature bulk reference.
-
-- [Co hexagonal close-packed reference](https://www.crystallography.net/cod/9010967.html). literature bulk reference.
-
-- [CuSbS2 chalcostibite reference](https://www.crystallography.net/cod/9003580.html). literature bulk reference.
-
-- [Cu3SbS4 famatinite reference](https://www.crystallography.net/cod/8104122.html). literature bulk reference.
-
-- [Cu12Sb4S13 tetrahedrite reference](https://www.crystallography.net/cod/2101865.html). literature bulk reference.
-
-- [Cu3SbS3 monoclinic skinnerite reference](https://www.crystallography.net/cod/9004360.html). literature bulk reference.
-
-- [CuS covellite reference](https://www.crystallography.net/cod/9000523.html). literature bulk reference.
-
-- [Cu1.8S rhombohedral digenite reference](https://www.crystallography.net/cod/1536218.html). literature bulk reference.
-
-- [Cu2S high-chalcocite average reference](https://www.crystallography.net/cod/1529746.html). literature bulk reference.
-
-- [Ni3S4 polydymite reference](https://www.crystallography.net/cod/9009863.html). literature bulk reference.
-
-- [Metallic Ni FCC reference](https://www.crystallography.net/cod/9008476.html). literature bulk reference.
-
-- [NiS millerite reference](https://www.crystallography.net/cod/9004078.html). literature bulk reference.
-
-- [ZnGa2O4 bulk spinel reference](https://www.crystallography.net/cod/4001767.html). literature bulk reference.
-
-- [Bi2S3 bismuthinite reference at ambient pressure](https://www.crystallography.net/cod/9007398.html). literature bulk reference.
-
-- [CoNi2S4 neutron-refined spinel reference](https://www.crystallography.net/cod/9009852.html). literature bulk reference.
-
-- [CoS NiAs-type jaipurite reference](https://www.crystallography.net/cod/1011037.html). literature bulk reference.
-
-- [FePt ordered tetragonal alternative reference](https://www.crystallography.net/cod/9004222.html). literature bulk reference.
-
-- [Graphite 2H planar-layer reference](https://www.crystallography.net/cod/9011577.html). literature bulk reference.
-
-- [Cs3Cu2Cl5 Pnma alternative reference](https://www.crystallography.net/cod/7246298.html). literature bulk reference.
-
-- [Cu2SnS3 monoclinic alternative reference](https://www.crystallography.net/cod/1526187.html). literature bulk reference.
-
-- [La2(MoO4)3 monoclinic bulk alternative](https://www.crystallography.net/cod/2107003.html). literature bulk reference.
-
-- [Fe3O4 magnetite bulk comparator](https://www.crystallography.net/cod/9005812.html). literature bulk reference.
-
-- [Fe2O3 hematite bulk comparator](https://www.crystallography.net/cod/9000139.html). literature bulk reference.
-
-- [Fe2O3 maghemite average bulk comparator](https://www.crystallography.net/cod/9006316.html). literature bulk reference.
-
-- [PbI2 layered 2H bulk reference](https://www.crystallography.net/cod/9009114.html). literature bulk reference.
-
-- [FAPbI3 hexagonal non-H average reference](https://www.crystallography.net/cod/4335640.html). literature bulk reference.
-
-- [CsBr CsCl-type bulk reference](https://www.crystallography.net/cod/9008788.html). literature bulk reference.
-
-- [AlOOH boehmite non-H reference](https://www.crystallography.net/cod/9012252.html). literature bulk reference.
-
-- [CdTe wurtzite constructed reference](https://stars.library.ucf.edu/fsec/1898/). constructed reference.
-
-- [Calcined SSZ-48 partial Si/O framework](https://doi.org/10.1021/jp991389j). source table partial framework.
-
-- [Monoclinic acanthite external bulk reference](https://doi.org/10.1524/zkri.1958.110.16.136). literature bulk reference.
-
-- [FCC Au external bulk reference](https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular539v1.pdf). constructed lattice reference.
-
-- [Bi rhombohedral bulk comparison (constructed from COD 9008576 and Thoft 1995)](https://www.crystallography.net/cod/9008576.html). locally constructed bulk reference.
 
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
 

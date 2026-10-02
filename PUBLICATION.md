@@ -1,5 +1,9 @@
 # MatterSyn publication workflow
 
+## Current verified site and pending batch — 2026-10-02
+
+Saikia et al. (2022), DOI 10.1039/d1nj04039a, is live at source `31084e3f6ba7d55fe1c4ee97405247a503b89bc1`, site `9944edaaee1f1c2dec2d749b0ff06547e79d825d`. Anonymous verification at 2026-10-02T05:07:48Z brings the site to **164 contributing papers and 1,663 records**. Naiki et al. (2013), Liu et al. (2008) and Jung et al. (2024) are a separate three-paper source candidate with independently accepted scoped science, figure/sample bindings and source/site asset-delivery metadata. They are not counted as published until the exact source, build, browser, Pages and anonymous live gates pass. Original papers and SI remain local; selected source figures retain exact provenance and unverified publisher display permission.
+
 ## Current verified site — 2026-10-02
 
 Munechika et al. (2011), DOI 10.1021/nl2010127, is anonymously verified on the ordinary CdSe/CdS/ZnS–Ag material page. Source `75926b047e1960b94a7850c6e05ab237792afb6b` and site `d7aaa24ccdb381908c349ec2441ae5116b2dd3ed` passed CI, exact browser review, Pages deployment and anonymous route/file checks. The verified homepage counts **163 distinct source papers, 1,662 records and 628 broad pairs**. The private workflow-v5 ledger and `_tmp/mr1/release-summary.json` pin the live proof. Scope is preformed QD/Ag-nanoprism assembly with named observations; upstream QD syntheses remain unclaimed. Selected source figures retain unverified publisher-permission status. Saikia et al. (2022) is an independently accepted private candidate, with no publication credit until its own site deployment and anonymous verification pass. The 20-paper/hour target is not demonstrated.

@@ -1,0 +1,5378 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jung2024-ag-nanospheres-jacs4c00073-route",
+  "revision": 4,
+  "record_type": "literature_protocol",
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route",
+  "title": "Jung et al. (2024): selected Ag nanospheres, Cu(II) etching and QD/AgNS films",
+  "material": {
+    "formula": "Ag + InP/ZnSe/ZnS",
+    "family": "Ag nanospheres and QD-coated plasmonic films",
+    "elements": [
+      "Ag",
+      "In",
+      "P",
+      "Zn",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "Ag",
+      "InP",
+      "ZnSe",
+      "ZnS"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Aqueous Ag seed growth, selective BDAC flocculation, Cu(II) oxidative etching, PVP exchange and QD film coating",
+  "sources": [
+    {
+      "id": "jung2024-ag-nanospheres-jacs4c00073",
+      "doi": "10.1021/jacs.4c00073",
+      "title": "Selective Flocculation and H2O2-Free Oxidative Etching-Based Synthesis of Highly Monodisperse Ag Nanospheres for Uniform Quantum Dot Photoluminescence-Enhancing Plasmonic Cavity Applications",
+      "authors": "Yoonjae Jung; Yoonhee Kim; Yeonhee Lee; Jiwoong Son; Mihye Lim; Jwa-Min Nam",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/jacs.4c00073",
+      "main_status": "Main PDF pp.1–6 scoped for packaged synthesis, control, structure and QD-film outcomes; independent scoped quick audit accepted.",
+      "si_status": "Local SI pp.1–2 reviewed for methods explicitly deferred by main; SI Figures S1, S6, S8, S10, S12–S13 read only for main-referred outcome attribution.",
+      "reuse_status": "Local source figure crops documented; ACS publisher permission or reuse license unverified."
+    },
+    {
+      "id": "jung2024-ag-nanospheres-jacs4c00073-si",
+      "doi": "10.1021/jacs.4c00073",
+      "title": "Supporting Information for Jung et al. (2024)",
+      "authors": "Yoonjae Jung et al.",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/jacs.4c00073",
+      "main_status": "Paired to main article by title and DOI; SI is not a second independent paper.",
+      "si_status": "SI pp.1–2 and selected Figures S1/S6/S8/S10/S12/S13 reviewed where main directs; other SI analysis not exhaustively reviewed.",
+      "reuse_status": "Selected SI crops requested for display; ACS publisher permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "jung2024-ag-nanospheres-jacs4c00073",
+    "recipe_family": "jung2024-ag-nanospheres-jacs4c00073",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Ag nanospheres and InP/ZnSe/ZnS QD-coated AgNS films",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.1, Abstract"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "single-crystalline fcc and single-twinned Ag nanosphere subpopulations",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, Figure 2c–d FFT and Results"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 43.6,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "43.6 nm",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, AgNS size Results"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "monodisperse spherical AgNPs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, Figures 1–2 and Results"
+        }
+      ],
+      "note": ""
+    },
+    "surface": {
+      "value": "PVP-exchanged AgNSs for film fabrication",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Ligand exchange"
+        }
+      ],
+      "note": ""
+    },
+    "host": {
+      "value": "ITO-coated glass for QD/AgNS film",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "water",
+      "name": "Deionized water",
+      "formula": "H2O",
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "ctac",
+      "name": "Cetyltrimethylammonium chloride",
+      "formula": "C19H42ClN",
+      "role": "surfactant_chloride_source",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "ag-nitrate",
+      "name": "Silver nitrate",
+      "formula": "AgNO3",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "sodium-borohydride",
+      "name": "Sodium borohydride",
+      "formula": "NaBH4",
+      "role": "reducing_agent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "ag-tfa",
+      "name": "Silver trifluoroacetate",
+      "formula": "CF3COOAg",
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "ascorbic-acid",
+      "name": "L-ascorbic acid",
+      "formula": "C6H8O6",
+      "role": "reducing_agent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "bdac",
+      "name": "Benzyldimethylhexadecylammonium chloride",
+      "formula": null,
+      "role": "flocculation_surfactant",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "cu-nitrate",
+      "name": "Copper(II) nitrate hemipentahydrate",
+      "formula": "Cu(NO3)2·2.5H2O",
+      "role": "etching_reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "sds",
+      "name": "Sodium dodecyl sulfate",
+      "formula": "C12H25NaO4S",
+      "role": "ligand_exchange_additive",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "pvp",
+      "name": "Polyvinylpyrrolidone",
+      "formula": "(C6H9NO)n",
+      "role": "stabilizing_ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Average molecular weight 40 kg/mol in SI materials."
+      ],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "tween20",
+      "name": "Polysorbate 20",
+      "formula": null,
+      "role": "chloride_removal_ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "argon",
+      "name": "Argon",
+      "formula": "Ar",
+      "role": "degassing_gas",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study"
+        }
+      ]
+    },
+    {
+      "id": "cuprous-ion",
+      "name": "Cuprous ion source, unspecified",
+      "formula": "Cu+",
+      "role": "control_etching_reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Specific soluble cuprous salt and amount are not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study"
+        }
+      ]
+    },
+    {
+      "id": "acetonitrile",
+      "name": "Acetonitrile",
+      "formula": "C2H3N",
+      "role": "cuprous_control_cosolvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study"
+        }
+      ]
+    },
+    {
+      "id": "ito-glass",
+      "name": "ITO-coated glass substrate",
+      "formula": "In2O3:Sn / glass",
+      "role": "film_substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Chemicals and materials"
+        }
+      ]
+    },
+    {
+      "id": "aptes",
+      "name": "3-Aminopropyltriethoxysilane",
+      "formula": "C9H23NO3Si",
+      "role": "dense_film_substrate_modifier",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "The SI caption identifies an APTES-modified ITO substrate but gives no surface-treatment recipe."
+      ],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.7, Figure S11 caption"
+        }
+      ]
+    },
+    {
+      "id": "acetone",
+      "name": "Acetone",
+      "formula": "C3H6O",
+      "role": "substrate_wash",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication"
+        }
+      ]
+    },
+    {
+      "id": "ethanol",
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "role": "substrate_wash",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication"
+        }
+      ]
+    },
+    {
+      "id": "isopropanol",
+      "name": "Isopropyl alcohol",
+      "formula": "C3H8O",
+      "role": "film_wash",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication"
+        }
+      ]
+    },
+    {
+      "id": "green-qd",
+      "name": "Preformed green InP/ZnSe/ZnS quantum dots",
+      "formula": "InP/ZnSe/ZnS",
+      "role": "quantum_dot_building_block",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Original QD synthesis is cited to SI reference 5, outside this package."
+      ],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication"
+        }
+      ]
+    },
+    {
+      "id": "red-qd",
+      "name": "Preformed red InP/ZnSe/ZnS quantum dots",
+      "formula": "InP/ZnSe/ZnS",
+      "role": "quantum_dot_building_block",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Original QD synthesis is cited to SI reference 6, outside this package."
+      ],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "seed-mixture",
+      "name": "2–3 nm Ag seed mixture",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "grown-ag-mix",
+      "name": "Ag nanocube, right-bipyramid and rod/wire growth mixture",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "seed-mixture"
+      ]
+    },
+    {
+      "id": "flocculated-rods",
+      "name": "BDAC-flocculated Ag rods and wires",
+      "kind": "waste",
+      "parent_ids": [
+        "grown-ag-mix"
+      ]
+    },
+    {
+      "id": "selected-ag-mix",
+      "name": "Ag nanocube and right-bipyramid supernatant",
+      "kind": "fraction",
+      "parent_ids": [
+        "grown-ag-mix"
+      ]
+    },
+    {
+      "id": "selected-ag-stock",
+      "name": "washed 0.95 mL selected Ag particle stock",
+      "kind": "stock",
+      "parent_ids": [
+        "selected-ag-mix"
+      ]
+    },
+    {
+      "id": "etched-ag",
+      "name": "Cu(II)-etched Ag nanospheres before ligand exchange",
+      "kind": "product",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "pvp-ag",
+      "name": "PVP/SDS stabilized Ag nanospheres",
+      "kind": "stock",
+      "parent_ids": [
+        "etched-ag"
+      ]
+    },
+    {
+      "id": "deoxygenated-etch",
+      "name": "Ag particles after argon Cu(II) control",
+      "kind": "product",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "cuprous-etch",
+      "name": "Ag particles after Cu(I) control",
+      "kind": "product",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "tween-ag",
+      "name": "Tween 20-exchanged chloride-depleted Ag input",
+      "kind": "stock",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "chloride-free-etch",
+      "name": "Ag particles after chloride-depleted control",
+      "kind": "product",
+      "parent_ids": [
+        "tween-ag"
+      ]
+    },
+    {
+      "id": "cu-amount-series",
+      "name": "AgNS size tuning through Cu(II) quantity",
+      "kind": "sample_set",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "agns-cu-460",
+      "name": "AgNS size-series specimen with 460 µL Cu(II)",
+      "kind": "product",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "agns-cu-580",
+      "name": "AgNS size-series specimen with 580 µL Cu(II)",
+      "kind": "product",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "ito-ag-film",
+      "name": "AgNS film on ITO, 5.2% coverage",
+      "kind": "product",
+      "parent_ids": [
+        "pvp-ag"
+      ]
+    },
+    {
+      "id": "green-qd-input",
+      "name": "preformed green InP/ZnSe/ZnS QDs",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "red-qd-input",
+      "name": "preformed red InP/ZnSe/ZnS QDs",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "green-qd-ag-film",
+      "name": "green QDs on AgNS/ITO film",
+      "kind": "product",
+      "parent_ids": [
+        "ito-ag-film"
+      ]
+    },
+    {
+      "id": "red-qd-ag-film",
+      "name": "red QDs on AgNS/ITO film",
+      "kind": "product",
+      "parent_ids": [
+        "ito-ag-film"
+      ]
+    },
+    {
+      "id": "green-qd-ito",
+      "name": "green QDs on bare ITO reference",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "red-qd-ito",
+      "name": "red QDs on bare ITO reference",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "unetched-ag-film",
+      "name": "AgNP/ITO film before oxidative etching",
+      "kind": "product",
+      "parent_ids": [
+        "selected-ag-stock"
+      ]
+    },
+    {
+      "id": "green-qd-unetched-film",
+      "name": "green QDs on unetched AgNP/ITO control",
+      "kind": "product",
+      "parent_ids": [
+        "unetched-ag-film"
+      ]
+    },
+    {
+      "id": "dense-agns-film",
+      "name": "15.1% AgNS film on APTES-modified ITO",
+      "kind": "product",
+      "parent_ids": [
+        "pvp-ag"
+      ]
+    },
+    {
+      "id": "green-qd-dense-film",
+      "name": "green QDs on denser AgNS/ITO film",
+      "kind": "product",
+      "parent_ids": [
+        "dense-agns-film"
+      ]
+    },
+    {
+      "id": "etch-precipitate",
+      "name": "solid byproducts after Cu(II) etching",
+      "kind": "waste",
+      "parent_ids": [
+        "etched-ag"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "make-seeds",
+      "action": "seed_reduction",
+      "label": "Reduce AgNO3 to heterogeneous Ag nanoseeds",
+      "stage": "precursor_preparation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ctac",
+        "ag-nitrate",
+        "sodium-borohydride",
+        "water"
+      ],
+      "outputs": [
+        "seed-mixture"
+      ],
+      "parameters": {
+        "ctac_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ctac_concentration": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 mM",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "preheat_temperature": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 ℃",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "preheat_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "stir_rate": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 rpm",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "agno3_volume": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "25 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "agno3_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "interval_before_reductant": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 seconds",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "nabh4_volume": {
+          "value": 450,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "450 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "nabh4_concentration": {
+          "value": 0.02,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.02 M",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "post_addition_stir_time": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "an hour",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, seed paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "30 °C, magnetically stirred; NaBH4 freshly made and ice-cold",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.1, seed paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Preheat 10 mL 0.5 mM CTAC at 30 °C for 10 min while stirring 500 rpm. Add 25 µL 0.1 M AgNO3, wait 20 s, then add 450 µL freshly made ice-cold 0.02 M NaBH4 quickly. Stir at 30 °C for 1 h to hydrolyze unreacted NaBH4.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Synthesis of silver nanospheres, seed paragraph"
+        }
+      ]
+    },
+    {
+      "id": "grow-ag-shapes",
+      "action": "seed_mediated_growth",
+      "label": "Grow mixed Ag nanocrystal morphologies",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "make-seeds"
+      ],
+      "inputs": [
+        "seed-mixture",
+        "water",
+        "ctac",
+        "ag-tfa",
+        "ascorbic-acid"
+      ],
+      "outputs": [
+        "grown-ag-mix"
+      ],
+      "parameters": {
+        "water_volume": {
+          "value": 7.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "7.60 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ctac_volume": {
+          "value": 1.25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.25 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ctac_concentration": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 mM",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "seed_volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_tfa_volume": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_tfa_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 ℃",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "pregrowth_time": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ascorbic_acid_volume": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "ascorbic_acid_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "M",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1 M",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        },
+        "growth_time": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "90 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, growth paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "capped 20 mL glass vial at 60 °C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.1, growth paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sequentially combine water, CTAC, fresh Ag seed solution and silver trifluoroacetate; stir 60 °C for 20 min in closed vial. Add 1 mL 0.1 M ascorbic acid and hold 60 °C for 90 min with cap tightened.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Synthesis of silver nanospheres, growth paragraph"
+        }
+      ]
+    },
+    {
+      "id": "flocculate-rods",
+      "action": "selective_flocculation",
+      "label": "Remove rod/wire byproducts with BDAC",
+      "stage": "fractionation",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "grow-ag-shapes"
+      ],
+      "inputs": [
+        "grown-ag-mix",
+        "bdac"
+      ],
+      "outputs": [
+        "flocculated-rods",
+        "selected-ag-mix"
+      ],
+      "parameters": {
+        "bdac_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, selective flocculation"
+            }
+          ],
+          "derivation": null
+        },
+        "bdac_concentration": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 mM",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, selective flocculation"
+            }
+          ],
+          "derivation": null
+        },
+        "oven_temperature": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 ℃",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, selective flocculation"
+            }
+          ],
+          "derivation": null
+        },
+        "undisturbed_time": {
+          "value": null,
+          "minimum": 15,
+          "maximum": 24,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 to 24 hours",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, selective flocculation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "capped vial, 30 °C oven, undisturbed",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.1, selective flocculation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add BDAC directly; remove stir bar and leave capped vial undisturbed at 30 °C for 15–24 h. The rod/wire-rich flocculate is removed; supernatant contains Ag nanocubes and right bipyramids.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Synthesis of silver nanospheres, selective flocculation"
+        }
+      ]
+    },
+    {
+      "id": "wash-selected-ag",
+      "action": "centrifuge_and_redispersal",
+      "label": "Isolate selected AgNC/bipyramid feed",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "flocculate-rods"
+      ],
+      "inputs": [
+        "selected-ag-mix",
+        "water",
+        "ctac"
+      ],
+      "outputs": [
+        "selected-ag-stock"
+      ],
+      "parameters": {
+        "supernatant_volume": {
+          "value": 11.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "11.5 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "first_force": {
+          "value": 6500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6,500 g",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "first_time": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "wash_water_volume": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "second_force": {
+          "value": 6500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6,500 g",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "second_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "redispersion_volume": {
+          "value": 0.95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.95 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        },
+        "redispersion_ctac": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 mM",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, post-flocculation wash"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Transfer 11.5 mL supernatant and spin 6500 g 15 min; resuspend pellet in 1 mL DI water, spin 6500 g 10 min; disperse pellet in 0.95 mL 0.5 mM CTAC. Source permits 4 °C storage up to one month before etching.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Synthesis of silver nanospheres, post-flocculation wash"
+        }
+      ]
+    },
+    {
+      "id": "etch-ag-spheres",
+      "action": "cu_ii_oxidative_etching",
+      "label": "Etch mixed AgNCs/bipyramids into AgNSs",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "water",
+        "ctac",
+        "cu-nitrate"
+      ],
+      "outputs": [
+        "etched-ag",
+        "etch-precipitate"
+      ],
+      "parameters": {
+        "ag_feed_volume": {
+          "value": 0.95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.95 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "water_volume": {
+          "value": 7.42,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "7.42 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "ctac_volume": {
+          "value": 1.25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.25 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "ctac_concentration": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 mM",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.1, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 ℃",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "preheat_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "cu_nitrate_volume": {
+          "value": 380,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "380 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "cu_nitrate_concentration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mM",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, oxidative etching"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_time": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 hours",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, oxidative etching"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "aqueous, 60 °C, dissolved oxygen present",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, oxidative etching"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix selected 0.95 mL Ag stock, 7.42 mL water and 1.25 mL 100 mM CTAC. Preheat 60 °C 10 min; add 380 µL 5 mM Cu(NO3)2 and react 2 h. Dissolved oxygen is necessary; no deliberate degassing on main branch.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, Synthesis of silver nanospheres, oxidative etching; main pp.2–5 Figures 1–4"
+        }
+      ]
+    },
+    {
+      "id": "stabilize-ag-spheres",
+      "action": "pvp_ligand_exchange_and_workup",
+      "label": "Stabilize, filter, wash and store AgNSs",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "etch-ag-spheres"
+      ],
+      "inputs": [
+        "etched-ag",
+        "sds",
+        "pvp",
+        "water"
+      ],
+      "outputs": [
+        "pvp-ag"
+      ],
+      "parameters": {
+        "sds_addition": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, ligand exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "sds_concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1wt%",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, ligand exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "pvp_addition": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.5 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, ligand exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "pvp_concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10wt%",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, ligand exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "stir_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, ligand exchange"
+            }
+          ],
+          "derivation": null
+        },
+        "filter_pore": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2 μm",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "first_spin_force": {
+          "value": 11000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "11,000 g",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "first_spin_time": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "second_spin_force": {
+          "value": 6500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6,500 g",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "second_spin_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "final_water_volume": {
+          "value": 650,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "650 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "final_sds_volume": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        },
+        "final_pvp_volume": {
+          "value": 250,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "250 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, workup"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "room-temperature PVP/SDS exchange, then 4 °C storage",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, ligand exchange and workup"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Before filtering, add SDS and PVP; stir vigorously at room temperature for 10 min. Filter 0.2 µm, spin 11000 g 15 min, wash in 1 mL water at 6500 g 10 min; redisperse in 650 µL water, 100 µL 1 wt% SDS and 250 µL 10 wt% PVP; store at 4 °C.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Synthesis of silver nanospheres, ligand exchange and workup"
+        }
+      ]
+    },
+    {
+      "id": "etch-no-oxygen",
+      "action": "cu_ii_etching_control",
+      "label": "Control: remove dissolved oxygen",
+      "stage": "synthesis",
+      "branch": "no-oxygen",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "cu-nitrate",
+        "argon"
+      ],
+      "outputs": [
+        "deoxygenated-etch"
+      ],
+      "parameters": {
+        "degassing_cycles": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cycles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 cycles",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "vacuum_sonication_per_cycle": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 minute",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "argon atmosphere after vacuum-sonication cycles",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Mechanistic study"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Degas Ag feed and Cu(NO3)2 solution through 10 cycles of 1 min vacuum sonication and argon replenishment. Start otherwise analogous etch under argon; incomplete rounding is observed. The exact aliquots inherited from the standard reaction are not independently specified for this control.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study; main p.4 Figure 4b; SI p.5 Figure S6c; main p.5 Results"
+        }
+      ]
+    },
+    {
+      "id": "etch-cuprous",
+      "action": "cu_i_etching_control",
+      "label": "Control: replace Cu(II) with Cu(I)",
+      "stage": "synthesis",
+      "branch": "cuprous",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "cuprous-ion",
+        "acetonitrile",
+        "water"
+      ],
+      "outputs": [
+        "cuprous-etch"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "acetonitrile/water mixture with dissolved oxygen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Mechanistic study"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Replace cupric with cuprous ions in an acetonitrile/water mixture because Cu(I) is not soluble in water. Reagent identity, dose and cosolvent ratio are not given; do not reconstruct them from the standard Cu(II) branch.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study; main p.4 Figure 4b; SI p.5 Figure S6d; main p.5 Results"
+        }
+      ]
+    },
+    {
+      "id": "exchange-tween20",
+      "action": "chloride_ligand_exchange",
+      "label": "Control: exchange chloride ligands for Tween 20",
+      "stage": "surface_exchange",
+      "branch": "no-chloride",
+      "optional": false,
+      "depends_on": [
+        "flocculate-rods"
+      ],
+      "inputs": [
+        "selected-ag-mix",
+        "tween20",
+        "water"
+      ],
+      "outputs": [
+        "tween-ag"
+      ],
+      "parameters": {
+        "centrifuge_count": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cycles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "four times",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "high_tween_volume": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "high_tween_concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1wt%",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "high_tween_count": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cycles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "twice",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "low_tween_volume": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "low_tween_concentration": {
+          "value": 0.1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "wt%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.1wt%",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        },
+        "low_tween_count": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cycles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "twice",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Mechanistic study"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "After flocculation, centrifuge supernatant four times, redisperse twice in 1 mL 1 wt% Tween 20 and twice in 1 mL 0.1 wt% Tween 20. Four spin speeds/times are unreported; the precise relation between the four spins and four redispersions is not elaborated.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study; main p.5 chloride control"
+        }
+      ]
+    },
+    {
+      "id": "etch-no-chloride",
+      "action": "chloride_free_control",
+      "label": "Control: attempt etch without chloride",
+      "stage": "synthesis",
+      "branch": "no-chloride",
+      "optional": false,
+      "depends_on": [
+        "exchange-tween20"
+      ],
+      "inputs": [
+        "tween-ag",
+        "cu-nitrate",
+        "water"
+      ],
+      "outputs": [
+        "chloride-free-etch"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cu(II) etching attempted after Tween 20 exchange and without CTAC; no etching reaction observed. Control-specific Cu aliquot and other exact volumes are not independently reported.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.4, Figure 4b; p.5 chloride-control Results"
+        }
+      ]
+    },
+    {
+      "id": "vary-cu-dose",
+      "action": "cu_ii_etching_size_series",
+      "label": "Change Cu(II) amount to tune AgNS size",
+      "stage": "synthesis",
+      "branch": "cu-dose-series",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "cu-nitrate",
+        "ctac",
+        "water"
+      ],
+      "outputs": [
+        "cu-amount-series"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Authors report smaller AgNSs and higher plasmon frequencies with more cupric ions. SI Figure S8b prints 380, 460 and 580 µL addition labels; exact plotted dose–diameter pairs in S8a are not printed, and other reaction settings for 460/580 µL are not independently specified.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, main size-control paragraph; SI Figure S8"
+        }
+      ]
+    },
+    {
+      "id": "etch-cu-460",
+      "action": "cu_ii_etching_variant",
+      "label": "AgNS size-series variant, 460 µL Cu(II)",
+      "stage": "synthesis",
+      "branch": "cu-460",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "cu-nitrate",
+        "ctac",
+        "water"
+      ],
+      "outputs": [
+        "agns-cu-460"
+      ],
+      "parameters": {
+        "cupric_addition_volume": {
+          "value": 460,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "SI labels 'Volume of cupric ions'; variant stock concentration is not separately specified",
+          "raw_text": "460 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.6, Figure S8b label"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SI Figure S8b labels a 460 µL Cu(II)-addition TEM specimen. The figure does not independently state the other step quantities, concentration, temperature or time for this variant; the 380 µL standard recipe is not copied into these missing fields.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.6, Figure S8b 460 µL label"
+        }
+      ]
+    },
+    {
+      "id": "etch-cu-580",
+      "action": "cu_ii_etching_variant",
+      "label": "AgNS size-series variant, 580 µL Cu(II)",
+      "stage": "synthesis",
+      "branch": "cu-580",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "cu-nitrate",
+        "ctac",
+        "water"
+      ],
+      "outputs": [
+        "agns-cu-580"
+      ],
+      "parameters": {
+        "cupric_addition_volume": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "SI labels 'Volume of cupric ions'; variant stock concentration is not separately specified",
+          "raw_text": "580 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.6, Figure S8b label"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SI Figure S8b labels a 580 µL Cu(II)-addition TEM specimen. The figure does not independently state the other step quantities, concentration, temperature or time for this variant.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.6, Figure S8b 580 µL label"
+        }
+      ]
+    },
+    {
+      "id": "form-ito-ag-film",
+      "action": "dry_ag_film",
+      "label": "Deposit PVP AgNS film on cleaned ITO",
+      "stage": "synthesis",
+      "branch": "film",
+      "optional": false,
+      "depends_on": [
+        "stabilize-ag-spheres"
+      ],
+      "inputs": [
+        "pvp-ag",
+        "ito-glass",
+        "acetone",
+        "ethanol",
+        "water",
+        "isopropanol"
+      ],
+      "outputs": [
+        "ito-ag-film"
+      ],
+      "parameters": {
+        "wash_time_each": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "each for 30 minutes",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Film fabrication"
+            }
+          ],
+          "derivation": null
+        },
+        "chamber_diameter": {
+          "value": 9,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "9 mm",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Film fabrication"
+            }
+          ],
+          "derivation": null
+        },
+        "chamber_thickness": {
+          "value": 1.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1.8 mm",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Film fabrication"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_solution_volume": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 μL",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Film fabrication"
+            }
+          ],
+          "derivation": null
+        },
+        "ag_solution_od": {
+          "value": 80,
+          "minimum": null,
+          "maximum": null,
+          "unit": "OD",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "1 cm light path",
+          "raw_text": "optical density = 80",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Film fabrication"
+            }
+          ],
+          "derivation": null
+        },
+        "drying_temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "°C",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 ℃",
+          "evidence": [
+            {
+              "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+              "locator": "SI PDF p.2, Film fabrication"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Sonicate ITO sequentially in acetone, ethanol and DI water (30 min each). Affix 9 mm diameter, 1.8 mm thick sticky chamber; dry 200 µL PVP-AgNS solution (OD 80 at 1 cm) at 60 °C. Remove chamber and wash with DI water, ethanol, isopropanol. Resulting AgNS film coverage is 5.2%.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Film fabrication; main p.5 Figure 5; SI p.6 Figure S10; main p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "coat-green-qd",
+      "action": "spin_coat_qds",
+      "label": "Spin-coat green InP/ZnSe/ZnS QDs",
+      "stage": "synthesis",
+      "branch": "green-film",
+      "optional": false,
+      "depends_on": [
+        "form-ito-ag-film"
+      ],
+      "inputs": [
+        "ito-ag-film",
+        "green-qd"
+      ],
+      "outputs": [
+        "green-qd-ag-film"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spin-coat externally synthesized green InP/ZnSe/ZnS QD solution directly on AgNS/ITO film without surface modification. Speed, time, concentration and dispense volume are not reported.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, QD-film fabrication; p.5 Figure 5c/e"
+        }
+      ]
+    },
+    {
+      "id": "coat-red-qd",
+      "action": "spin_coat_qds",
+      "label": "Spin-coat red InP/ZnSe/ZnS QDs",
+      "stage": "synthesis",
+      "branch": "red-film",
+      "optional": false,
+      "depends_on": [
+        "form-ito-ag-film"
+      ],
+      "inputs": [
+        "ito-ag-film",
+        "red-qd"
+      ],
+      "outputs": [
+        "red-qd-ag-film"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Spin-coat externally synthesized red InP/ZnSe/ZnS QD solution directly on AgNS/ITO film without surface modification. Speed, time, concentration and dispense volume are not reported.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, QD-film fabrication; p.5 Figure 5d/f"
+        }
+      ]
+    },
+    {
+      "id": "bare-ito-references",
+      "action": "spin_coat_qds",
+      "label": "QD-only bare ITO controls",
+      "stage": "synthesis",
+      "branch": "bare-ito-controls",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ito-glass",
+        "green-qd",
+        "red-qd"
+      ],
+      "outputs": [
+        "green-qd-ito",
+        "red-qd-ito"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Separate green- and red-QD coated bare ITO films are compared with AgNS/ITO films; control-specific spin conditions are not reported.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, main p.6 bare-QD comparison; SI p.8 Figure S13"
+        }
+      ]
+    },
+    {
+      "id": "unetched-ag-film-control",
+      "action": "dry_ag_film",
+      "label": "Unetched AgNP-film control",
+      "stage": "synthesis",
+      "branch": "unetched-control",
+      "optional": false,
+      "depends_on": [
+        "wash-selected-ag"
+      ],
+      "inputs": [
+        "selected-ag-stock",
+        "ito-glass",
+        "green-qd"
+      ],
+      "outputs": [
+        "unetched-ag-film",
+        "green-qd-unetched-film"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Film from AgNP solution before oxidative etching is compared for signal variation with green QDs. Control-specific drying and QD-coating settings are not reported; they are not inherited from the AgNS film.",
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, main p.6 unetched AgNP control; SI p.7 Figure S12"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ag-seeds",
+      "source_sample_label": "2–3 nm heterogeneous Ag nanoseeds",
+      "batch_id": null,
+      "material_state_id": "seed-mixture",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.1, seed paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "nanoseed mixture of heterogeneous crystallinities",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.1, seed paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, seed paragraph"
+        }
+      ],
+      "notes": [
+        "Seed size 2–3 nm is source-reported, not an individual-particle distribution."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-grown-ag-mix",
+      "source_sample_label": "AgNC / right-bipyramid / rod-wires as grown",
+      "batch_id": null,
+      "material_state_id": "grown-ag-mix",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-ag-seeds",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Results, AgNC growth and Figure 1b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "mixed cubes, right bipyramids, rods and wires",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Results, AgNC growth and Figure 1b"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, Results, AgNC growth and Figure 1b"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-flocculated-rods",
+      "source_sample_label": "BDAC-flocculated Ag rods and wires",
+      "batch_id": null,
+      "material_state_id": "flocculated-rods",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-grown-ag-mix",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Results, flocculation; SI Figure S1b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "rod/wire-rich flocculate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Results, flocculation; SI Figure S1b"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, Results, flocculation; SI Figure S1b"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "source_sample_label": "AgNC and right-bipyramid selected fraction",
+      "batch_id": null,
+      "material_state_id": "selected-ag-stock",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-grown-ag-mix",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Results and Figure 1b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "Ag nanocubes and right bipyramids after rod/wire removal",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Results and Figure 1b"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, Results and Figure 1b"
+        }
+      ],
+      "notes": [
+        "Main rounds composition to 67% AgNC/33% right bipyramid; SI Figure S1c prints 66.98%/32.02% and does not total 100%. Both are preserved without repair."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "source_sample_label": "AgNS after Cu(II) etch",
+      "batch_id": null,
+      "material_state_id": "etched-ag",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, Results, Figures 1–2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "mixed single-crystalline fcc and single-twinned AgNS subpopulations",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, Figure 2c–d FFT and Results"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "highly uniform spherical Ag nanoparticles",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, Results, Figures 1–2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, Results, Figures 1–2"
+        }
+      ],
+      "notes": [
+        "The 42 and 47 nm modes are assigned to the NC- and bipyramid-derived subpopulations; do not treat these as separate Cu-condition variants."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-pvp-agNS",
+      "source_sample_label": "PVP/SDS-stabilized AgNS stock",
+      "batch_id": null,
+      "material_state_id": "pvp-ag",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Synthesis and ligand exchange"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "monodisperse Ag nanospheres",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Synthesis and ligand exchange"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "PVP/SDS-stabilized",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Ligand exchange and workup"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Synthesis and ligand exchange"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etch-precipitate",
+      "source_sample_label": "Cu(II)-etch solid precipitate",
+      "batch_id": null,
+      "material_state_id": "etch-precipitate",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "composition": {
+        "value": "AgCl + Cu2(OH)3Cl + CuO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4a XRD and p.5 results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "AgCl; Cu2(OH)3Cl; CuO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4a XRD and caption"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "solid etch byproducts",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4a XRD and p.5 results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.4, Figure 4a XRD and p.5 results"
+        }
+      ],
+      "notes": [
+        "These phases describe precipitates, not the metallic AgNS phase."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-no-oxygen",
+      "source_sample_label": "dissolved-oxygen removal control",
+      "batch_id": null,
+      "material_state_id": "deoxygenated-etch",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4b; SI PDF p.5, Figure S6c; main p.5 Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "partially etched, insufficiently rounded Ag particles",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4b; SI PDF p.5, Figure S6c; main p.5 Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.4, Figure 4b; SI PDF p.5, Figure S6c; main p.5 Results"
+        }
+      ],
+      "notes": [
+        "The main Figure 4b extinction trace and SI S6c TEM concern this control; do not assign final AgNS morphology."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-cuprous",
+      "source_sample_label": "Cu(I) replacement control",
+      "batch_id": null,
+      "material_state_id": "cuprous-etch",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4b; SI PDF p.5, Figure S6d; main p.5 Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "partially etched Ag nanoparticles",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4b; SI PDF p.5, Figure S6d; main p.5 Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.4, Figure 4b; SI PDF p.5, Figure S6d; main p.5 Results"
+        }
+      ],
+      "notes": [
+        "Cu(I) source and exact recipe amounts are unspecified; Cu(I) may be reoxidized by dissolved oxygen."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-no-chloride",
+      "source_sample_label": "Tween20 chloride-removal control",
+      "batch_id": null,
+      "material_state_id": "chloride-free-etch",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-tween20-input",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4b chloride control; p.5 Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.4, Figure 4b chloride control; p.5 Results"
+        }
+      ],
+      "notes": [
+        "The absence of reaction is supported by extinction and text; no control-specific TEM morphology is shown in Figure 4b."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-cu-dose-series",
+      "source_sample_label": "Cu(II)-quantity AgNS size series",
+      "batch_id": null,
+      "material_state_id": "cu-amount-series",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, size-control paragraph and SI Figure S8"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "Ag nanospheres become smaller with greater Cu(II) amount",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, size-control paragraph and SI Figure S8"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, size-control paragraph and SI Figure S8"
+        }
+      ],
+      "notes": [
+        "The 380/460/580 µL labels are explicit SI panel labels; exact plotted dose–diameter pairs are not transcribed from the graph."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-agns-cu-460",
+      "source_sample_label": "AgNS TEM specimen, 460 µL Cu(II)",
+      "batch_id": null,
+      "material_state_id": "agns-cu-460",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.6, Figure S8b middle 460 µL panel"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "nanosphere-rich Ag sample in SI Figure S8b",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.6, Figure S8b middle 460 µL panel"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.6, Figure S8b middle 460 µL panel"
+        }
+      ],
+      "notes": [
+        "Other variant-specific etch parameters and exact diameter are not printed in the SI figure."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-agns-cu-580",
+      "source_sample_label": "AgNS TEM specimen, 580 µL Cu(II)",
+      "batch_id": null,
+      "material_state_id": "agns-cu-580",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.6, Figure S8b right 580 µL panel"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "nanosphere-rich Ag sample in SI Figure S8b",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.6, Figure S8b right 580 µL panel"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.6, Figure S8b right 580 µL panel"
+        }
+      ],
+      "notes": [
+        "Other variant-specific etch parameters and exact diameter are not printed in the SI figure."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "source_sample_label": "5.2% AgNS/ITO film",
+      "batch_id": null,
+      "material_state_id": "ito-ag-film",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-pvp-agNS",
+      "composition": {
+        "value": "Ag on ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, AgNS-film fabrication and SI Figure S10a"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "dispersed Ag nanospheres on ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, AgNS-film fabrication and SI Figure S10a"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "PVP-exchanged AgNS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, AgNS-film fabrication"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, AgNS-film fabrication and SI Figure S10a"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-input",
+      "source_sample_label": "preformed green InP/ZnSe/ZnS QDs",
+      "batch_id": null,
+      "material_state_id": "green-qd-input",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP/ZnSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a green-QD diagram and TEM"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "core/shell QDs imaged by TEM",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a green-QD diagram and TEM"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "QD synthesis is cited to an earlier paper; radii in Figure 5a are source-drawn dimensions, not measured from this package's TEM image."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-input",
+      "source_sample_label": "preformed red InP/ZnSe/ZnS QDs",
+      "batch_id": null,
+      "material_state_id": "red-qd-input",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP/ZnSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a red-QD diagram and TEM"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "core/shell QDs imaged by TEM",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a red-QD diagram and TEM"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "QD synthesis is cited to an earlier paper; radii in Figure 5a are source-drawn dimensions, not measured from this package's TEM image."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "source_sample_label": "green InP/ZnSe/ZnS QDs on AgNS/ITO",
+      "batch_id": null,
+      "material_state_id": "green-qd-ag-film",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "composition": {
+        "value": "InP/ZnSe/ZnS + Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a/c/e and p.6 Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "green QD-coated dispersed AgNS film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a/c/e and p.6 Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a/c/e and p.6 Results"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+      "source_sample_label": "red InP/ZnSe/ZnS QDs on AgNS/ITO",
+      "batch_id": null,
+      "material_state_id": "red-qd-ag-film",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "composition": {
+        "value": "InP/ZnSe/ZnS + Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a/d/f and p.6 Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "red QD-coated dispersed AgNS film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a/d/f and p.6 Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a/d/f and p.6 Results"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ito",
+      "source_sample_label": "green QDs on bare ITO reference",
+      "batch_id": null,
+      "material_state_id": "green-qd-ito",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP/ZnSe/ZnS on ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, main p.6 and SI Figure S13"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "QD-only film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, main p.6 and SI Figure S13"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "The bare-ITO control is separate from the AgNS-coated film."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ito",
+      "source_sample_label": "red QDs on bare ITO reference",
+      "batch_id": null,
+      "material_state_id": "red-qd-ito",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP/ZnSe/ZnS on ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, main p.6 and SI Figure S13"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "QD-only film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, main p.6 and SI Figure S13"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": []
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-unetched-film",
+      "source_sample_label": "green QDs on unetched AgNP film",
+      "batch_id": null,
+      "material_state_id": "green-qd-unetched-film",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "InP/ZnSe/ZnS + Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, main p.6 and SI Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "green QD film on unetched AgNP-coated ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, main p.6 and SI Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [],
+      "notes": [
+        "Control-specific preparation settings are unreported."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-dense-agns-film",
+      "source_sample_label": "15.1% AgNS film on APTES-modified ITO",
+      "batch_id": null,
+      "material_state_id": "dense-agns-film",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-pvp-agNS",
+      "composition": {
+        "value": "Ag on APTES-modified ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.7, SI Figure S11a"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "denser AgNS film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.7, SI Figure S11a"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "SI supplies the observed film and substrate identity but no APTES treatment or AgNS deposition recipe for this control."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-dense-film",
+      "source_sample_label": "green QDs on 15.1% AgNS film",
+      "batch_id": null,
+      "material_state_id": "green-qd-dense-film",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-dense-agns-film",
+      "composition": {
+        "value": "InP/ZnSe/ZnS + Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.7, SI Figure S11b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No sample-specific atomic phase measurement is assigned."
+      },
+      "morphology": {
+        "value": "green QD-coated denser AgNS film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.7, SI Figure S11b"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Surface state not independently measured for this specimen."
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [],
+      "notes": [
+        "The main discussion cites this high-coverage comparison; exact control assembly conditions are unreported."
+      ]
+    },
+    {
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-tween20-input",
+      "source_sample_label": "Tween 20-exchanged AgNP input before chloride-free etch",
+      "batch_id": null,
+      "material_state_id": "tween-ag",
+      "parent_sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "composition": {
+        "value": "Ag",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Mechanistic study; p.5 Figure S6a/b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No atomic phase measurement is assigned to the exchanged input."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Figure S6a/b is zeta-potential/Raman input characterization, not input TEM morphology."
+      },
+      "surface": {
+        "value": "Tween 20-exchanged AgNP input",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.2, Mechanistic study; p.5 Figure S6a/b"
+          }
+        ],
+        "note": "Compared with the CTAC-capped input before the no-chloride etch attempt."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.2, Mechanistic study; p.5 Figure S6a/b"
+        }
+      ],
+      "notes": [
+        "The CTAC and Tween 20 conditions in SI Figure S6a/b are pre-etch input comparisons; the final no-reaction result is in main Figure 4b."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "seed-diameter",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ag-seeds",
+      "property": "diameter",
+      "technique": "source-reported seed size",
+      "value": {
+        "value": null,
+        "minimum": 2,
+        "maximum": 3,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2~3 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.1, seed paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.1, seed paragraph"
+        }
+      ]
+    },
+    {
+      "id": "selected-ag-nc-fraction-main",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "property": "ag_nanocube_number_fraction",
+      "technique": "TEM count",
+      "value": {
+        "value": 67,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "67%",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, flocculation Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, flocculation Results"
+        }
+      ]
+    },
+    {
+      "id": "selected-ag-bipyramid-fraction-main",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "property": "right_bipyramid_number_fraction",
+      "technique": "TEM count",
+      "value": {
+        "value": 33,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "33%",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, flocculation Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, flocculation Results"
+        }
+      ]
+    },
+    {
+      "id": "selected-ag-nc-fraction-si",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "property": "ag_nanocube_number_fraction_si_label",
+      "technique": "TEM count",
+      "value": {
+        "value": 66.98,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "66.98",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.3, Figure S1c"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "SI panel states For 1278 particles; differs from main rounded 67/33 pair",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.3, Figure S1c"
+        }
+      ]
+    },
+    {
+      "id": "selected-ag-bipyramid-fraction-si",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "property": "right_bipyramid_number_fraction_si_label",
+      "technique": "TEM count",
+      "value": {
+        "value": 32.02,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "32.02",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.3, Figure S1c"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "SI panel states For 1278 particles; source labels sum to 99.00%",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.3, Figure S1c"
+        }
+      ]
+    },
+    {
+      "id": "agns-yield",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "spherical_synthetic_yield",
+      "technique": "TEM count",
+      "value": {
+        "value": 99.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "99.5%",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, first Results paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "over 4300 AgNPs counted",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, first Results paragraph"
+        }
+      ]
+    },
+    {
+      "id": "agns-count",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "counted_ag_particles",
+      "technique": "TEM count",
+      "value": {
+        "value": "more than 4300 AgNPs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, first Results paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, first Results paragraph"
+        }
+      ]
+    },
+    {
+      "id": "agns-diameter",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "diameter",
+      "technique": "TEM size histogram",
+      "value": {
+        "value": 43.6,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "43.6 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, first Results paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, first Results paragraph"
+        }
+      ]
+    },
+    {
+      "id": "agns-size-deviation",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "diameter_deviation",
+      "technique": "TEM size histogram",
+      "value": {
+        "value": 3.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.7 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, first Results paragraph"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "source calls this deviation; distribution also described as <3.7 nm (8.4%)",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, first Results paragraph"
+        }
+      ]
+    },
+    {
+      "id": "agns-nc-derived-mode",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "single_crystal_diameter_mode",
+      "technique": "Gaussian deconvolution of TEM",
+      "value": {
+        "value": 42,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "42",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, Figure 2e analysis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "assigned to AgNC-derived single-crystalline subpopulation",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, Figure 2e analysis"
+        }
+      ]
+    },
+    {
+      "id": "agns-bipyramid-derived-mode",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "single_twin_diameter_mode",
+      "technique": "Gaussian deconvolution of TEM",
+      "value": {
+        "value": 47,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "47",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.3, Figure 2e analysis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "assigned to bipyramid-derived single-twinned subpopulation",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.3, Figure 2e analysis"
+        }
+      ]
+    },
+    {
+      "id": "pre-etch-lspr-450",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "property": "extinction_peak",
+      "technique": "UV–vis extinction",
+      "value": {
+        "value": 450,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "450 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Figure 1d; p.3 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "mixed AgNC/right-bipyramid selected solution; 450 nm combined modes",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, Figure 1d; p.3 Results"
+        }
+      ]
+    },
+    {
+      "id": "pre-etch-lspr-510",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "property": "extinction_peak",
+      "technique": "UV–vis extinction",
+      "value": {
+        "value": 510,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "510 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Figure 1d; p.3 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "mixed selected solution; assigned right-bipyramid longitudinal mode",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, Figure 1d; p.3 Results"
+        }
+      ]
+    },
+    {
+      "id": "post-etch-lspr",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "property": "extinction_peak",
+      "technique": "UV–vis extinction",
+      "value": {
+        "value": 410,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "410 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.2, Figure 1d; p.3 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "AgNS after Cu(II) etch",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.2, Figure 1d; p.3 Results"
+        }
+      ]
+    },
+    {
+      "id": "ito-ag-coverage",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "property": "surface_coverage",
+      "technique": "SEM",
+      "value": {
+        "value": 5.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5.2%",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, film Results; SI Figure S10a"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, film Results"
+        }
+      ]
+    },
+    {
+      "id": "dense-ag-film-coverage",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-dense-agns-film",
+      "property": "surface_coverage",
+      "technique": "SEM",
+      "value": {
+        "value": 15.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "15.1%",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+            "locator": "SI PDF p.7, Figure S11a caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "APTES-modified ITO control, not standard 5.2% film",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073-si",
+          "locator": "SI PDF p.7, Figure S11a caption"
+        }
+      ]
+    },
+    {
+      "id": "green-pl-enhancement-measured",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "property": "pl_enhancement_vs_bare_ito",
+      "technique": "photoluminescence spectrum",
+      "value": {
+        "value": 1.61,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.61",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5c; p.6 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "410 nm optical excitation; before coverage correction",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5c; p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "red-pl-enhancement-measured",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+      "property": "pl_enhancement_vs_bare_ito",
+      "technique": "photoluminescence spectrum",
+      "value": {
+        "value": 1.82,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.82",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5d; p.6 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "410 nm optical excitation; before coverage correction",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5d; p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "green-pl-ef-corrected",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "property": "coverage_corrected_pl_enhancement_factor",
+      "technique": "author calculation",
+      "value": {
+        "value": 12.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "12.7",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5c; p.6 Results"
+          }
+        ],
+        "derivation": "Authors adjust measured mean enhancement for 5.2% AgNS coverage; SI p.2 equation."
+      },
+      "conditions": "coverage corrected; not directly measured",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5c; p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "red-pl-ef-corrected",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+      "property": "coverage_corrected_pl_enhancement_factor",
+      "technique": "author calculation",
+      "value": {
+        "value": 16.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "16.8",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5d; p.6 Results"
+          }
+        ],
+        "derivation": "Authors adjust measured mean enhancement for 5.2% AgNS coverage; SI p.2 equation."
+      },
+      "conditions": "coverage corrected; not directly measured",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5d; p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "green-agns-pl-variation",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "property": "pl_intensity_spatial_deviation",
+      "technique": "PL map",
+      "value": {
+        "value": 2.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.2",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5e; p.6 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "5 µm × 5 µm area, 473 nm laser",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5e; p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "red-agns-pl-variation",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+      "property": "pl_intensity_spatial_deviation",
+      "technique": "PL map",
+      "value": {
+        "value": 4.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.4",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5f; p.6 Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "5 µm × 5 µm area, 473 nm laser",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5f; p.6 Results"
+        }
+      ]
+    },
+    {
+      "id": "green-bare-pl-variation",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ito",
+      "property": "pl_intensity_spatial_deviation",
+      "technique": "PL map",
+      "value": {
+        "value": 2.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.0",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, bare-QD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "bare ITO control; SI Figure S13",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, bare-QD comparison"
+        }
+      ]
+    },
+    {
+      "id": "red-bare-pl-variation",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ito",
+      "property": "pl_intensity_spatial_deviation",
+      "technique": "PL map",
+      "value": {
+        "value": 2.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.1",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, bare-QD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "bare ITO control; SI Figure S13",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, bare-QD comparison"
+        }
+      ]
+    },
+    {
+      "id": "film-pl-scan-size",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "property": "mapped_area_width",
+      "technique": "PL map",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "µm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 μm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5e caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "5 µm × 5 µm",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5e caption"
+        }
+      ]
+    },
+    {
+      "id": "green-qd-inp-radius",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-input",
+      "property": "source_diagram_inp_boundary_radius",
+      "technique": "Figure 5a source schematic",
+      "value": {
+        "value": 1.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.0 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a green QD diagram"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "authored layer-radius label, not independent TEM measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a green QD diagram"
+        }
+      ]
+    },
+    {
+      "id": "green-qd-znse-radius",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-input",
+      "property": "source_diagram_znse_boundary_radius",
+      "technique": "Figure 5a source schematic",
+      "value": {
+        "value": 2.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.9 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a green QD diagram"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "authored layer-radius label, not independent TEM measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a green QD diagram"
+        }
+      ]
+    },
+    {
+      "id": "green-qd-zns-radius",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-input",
+      "property": "source_diagram_zns_boundary_radius",
+      "technique": "Figure 5a source schematic",
+      "value": {
+        "value": 3.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.3 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a green QD diagram"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "authored layer-radius label, not independent TEM measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a green QD diagram"
+        }
+      ]
+    },
+    {
+      "id": "red-qd-inp-radius",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-input",
+      "property": "source_diagram_inp_boundary_radius",
+      "technique": "Figure 5a source schematic",
+      "value": {
+        "value": 1.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.8 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a red QD diagram"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "authored layer-radius label, not independent TEM measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a red QD diagram"
+        }
+      ]
+    },
+    {
+      "id": "red-qd-znse-radius",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-input",
+      "property": "source_diagram_znse_boundary_radius",
+      "technique": "Figure 5a source schematic",
+      "value": {
+        "value": 3.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.3 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a red QD diagram"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "authored layer-radius label, not independent TEM measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a red QD diagram"
+        }
+      ]
+    },
+    {
+      "id": "red-qd-zns-radius",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-input",
+      "property": "source_diagram_zns_boundary_radius",
+      "technique": "Figure 5a source schematic",
+      "value": {
+        "value": 3.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.8 nm",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5a red QD diagram"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "authored layer-radius label, not independent TEM measurement",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5a red QD diagram"
+        }
+      ]
+    },
+    {
+      "id": "no-chloride-reaction-outcome",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-no-chloride",
+      "property": "etching_outcome",
+      "technique": "UV–vis extinction and author interpretation",
+      "value": {
+        "value": "no oxidative etching reaction observed",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.4, Figure 4b bottom; p.5 chloride-control Results"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.4, Figure 4b bottom; p.5 chloride-control Results"
+        }
+      ]
+    },
+    {
+      "id": "agns-film-optical-response",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "property": "reflection_plasmon_response",
+      "technique": "film reflection spectrum",
+      "value": {
+        "value": "AgNS-film plasmon response resembles the solution response with slight red shift and broadening",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.5, Figure 5b; p.6 film Results"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.5, Figure 5b; p.6 film Results"
+        }
+      ]
+    },
+    {
+      "id": "unetched-film-signal-variation",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-unetched-film",
+      "property": "pl_spatial_variation_vs_etched_film",
+      "technique": "PL spatial map",
+      "value": {
+        "value": "higher signal variation than the etched AgNS-film cohort",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+            "locator": "Main PDF p.6, unetched AgNP control Results; SI Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "jung2024-ag-nanospheres-jacs4c00073",
+          "locator": "Main PDF p.6, unetched AgNP control Results"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [
+    {
+      "id": "jung2024-main-figure-1-selected-ag",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "url": "assets/source-figures/jung2024/main-figure-1.png",
+      "description": "Figure 1b/d: AgNC and right-bipyramid TEM/extinction feed; panel a is authored process schematic and e is calculated optics. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-1-etched-agns",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "url": "assets/source-figures/jung2024/main-figure-1.png",
+      "description": "Figure 1b/c/d: Etched AgNS TEM and experimental spectrum; panels a/e are schematic/model. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-2-selected-ag",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "url": "assets/source-figures/jung2024/main-figure-2.png",
+      "description": "Figure 2c/d precursor insets: AgNC and right-bipyramid TEM/FFT; a/b are geometric schematics, f computed optics. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-2-etched-agns",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "url": "assets/source-figures/jung2024/main-figure-2.png",
+      "description": "Figure 2c/d/e: Representative single-crystal and single-twin AgNS TEM/FFT plus size histogram; f computed spectra. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-3-model",
+      "role": "computed_reference",
+      "sample_id": null,
+      "url": "assets/source-figures/jung2024/main-figure-3.png",
+      "description": "Figure 3a/b: Calculated Ag-Cl-H2O and Cu-Cl-H2O Pourbaix diagrams, not AgNS sample measurements. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-4-etch-precipitate",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etch-precipitate",
+      "url": "assets/source-figures/jung2024/main-figure-4.png",
+      "description": "Figure 4a: Measured powder XRD of etch precipitate with reference sticks; phases must not be assigned to AgNSs. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-4-no-oxygen",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-no-oxygen",
+      "url": "assets/source-figures/jung2024/main-figure-4.png",
+      "description": "Figure 4b top: Experimental extinction-spectrum control; gray/yellow comparison spectra are other states, not this control's endpoint. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-4-cuprous",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-cuprous",
+      "url": "assets/source-figures/jung2024/main-figure-4.png",
+      "description": "Figure 4b middle: Experimental extinction-spectrum control; gray/yellow comparison spectra are other states, not this control's endpoint. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-4-no-chloride",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-no-chloride",
+      "url": "assets/source-figures/jung2024/main-figure-4.png",
+      "description": "Figure 4b bottom: Experimental extinction-spectrum control; gray/yellow comparison spectra are other states, not this control's endpoint. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-5-green-qd-input",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-input",
+      "url": "assets/source-figures/jung2024/main-figure-5.png",
+      "description": "Figure 5a left: Preformed QD TEM alongside authored layer-radius schematic; upstream synthesis is external. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-5-red-qd-input",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-input",
+      "url": "assets/source-figures/jung2024/main-figure-5.png",
+      "description": "Figure 5a right: Preformed QD TEM alongside authored layer-radius schematic; upstream synthesis is external. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-5-ito-ag-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "url": "assets/source-figures/jung2024/main-figure-5.png",
+      "description": "Figure 5b: Measured AgNS/ITO film reflection, distinct from green/red QD absorption curves. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-5-green-qd-ag-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "url": "assets/source-figures/jung2024/main-figure-5.png",
+      "description": "Figure 5c/e: Measured PL comparison and spatial map at its stated wavelength; layer drawing in 5a is not measured film structure. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-main-figure-5-red-qd-ag-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+      "url": "assets/source-figures/jung2024/main-figure-5.png",
+      "description": "Figure 5d/f: Measured PL comparison and spatial map at its stated wavelength; layer drawing in 5a is not measured film structure. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s1-flocculated-rods",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-flocculated-rods",
+      "url": "assets/source-figures/jung2024/si-figure-s1.png",
+      "description": "SI Figure S1b: TEM of removed rods/wires, 500 nm scale; S1a is authored separation schematic. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s1-selected-ag",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "url": "assets/source-figures/jung2024/si-figure-s1.png",
+      "description": "SI Figure S1c: Number-count labels 66.98% and 32.02% for 1278 particles, conflicting with main rounded 67/33 pair. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s2-selected-ag",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-selected-ag",
+      "url": "assets/source-figures/jung2024/si-figure-s2.png",
+      "description": "SI Figure S2a/c: Measured precursor TEM examples; S2b/d are FEM geometries. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s6-no-oxygen",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-no-oxygen",
+      "url": "assets/source-figures/jung2024/si-figure-s6.png",
+      "description": "SI Figure S6c: Control TEM or ligand-exchange measurements, not the standard etched AgNS product. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s6-cuprous",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-cuprous",
+      "url": "assets/source-figures/jung2024/si-figure-s6.png",
+      "description": "SI Figure S6d: Control TEM or ligand-exchange measurements, not the standard etched AgNS product. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s6-exchanged-input",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-tween20-input",
+      "url": "assets/source-figures/jung2024/si-figure-s6.png",
+      "description": "SI Figure S6a/b: Measured zeta-potential and Raman comparison of CTAC-capped and Tween 20-exchanged AgNP inputs before the chloride-free etch attempt. The final no-reaction outcome is in main Figure 4b; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s8-etched-agns",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-etched-agns",
+      "url": "assets/source-figures/jung2024/si-figure-s8.png",
+      "description": "SI Figure S8b 380 µL: Dose-labeled TEM specimen; S8a plots trend without printed exact dose–diameter pairs. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s8-agns-cu-460",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-agns-cu-460",
+      "url": "assets/source-figures/jung2024/si-figure-s8.png",
+      "description": "SI Figure S8b 460 µL: Dose-labeled TEM specimen; S8a plots trend without printed exact dose–diameter pairs. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s8-agns-cu-580",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-agns-cu-580",
+      "url": "assets/source-figures/jung2024/si-figure-s8.png",
+      "description": "SI Figure S8b 580 µL: Dose-labeled TEM specimen; S8a plots trend without printed exact dose–diameter pairs. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s10-ito-ag-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-ito-ag-film",
+      "url": "assets/source-figures/jung2024/si-figure-s10.png",
+      "description": "SI Figure S10a: SEM of standard 5.2%-coverage AgNS/ITO film; inset cross-section is authored. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s10-green-qd-ag-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ag-film",
+      "url": "assets/source-figures/jung2024/si-figure-s10.png",
+      "description": "SI Figure S10b: Measured QD-film PL distribution; SI caption mislabels b/c as c/d, visible panel labels govern. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s10-red-qd-ag-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ag-film",
+      "url": "assets/source-figures/jung2024/si-figure-s10.png",
+      "description": "SI Figure S10c: Measured QD-film PL distribution; SI caption mislabels b/c as c/d, visible panel labels govern. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s11-dense-agns-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-dense-agns-film",
+      "url": "assets/source-figures/jung2024/si-figure-s11.png",
+      "description": "SI Figure S11a: SEM of separate 15.1%-coverage film on APTES-modified ITO. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s11-green-qd-dense-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-dense-film",
+      "url": "assets/source-figures/jung2024/si-figure-s11.png",
+      "description": "SI Figure S11b: Green QD PL comparison for high-coverage control, not standard 5.2% film. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s12-green-qd-unetched-film",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-unetched-film",
+      "url": "assets/source-figures/jung2024/si-figure-s12.png",
+      "description": "SI Figure S12a/b: Measured green-QD PL spatial map/distribution on unetched AgNP-film control. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s13-green-qd-ito",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-green-qd-ito",
+      "url": "assets/source-figures/jung2024/si-figure-s13.png",
+      "description": "SI Figure S13a/b: Bare-ITO QD-only PL spatial control; no Ag particles. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-si-figure-s13-red-qd-ito",
+      "role": "measured_sample",
+      "sample_id": "jung2024-ag-nanospheres-jacs4c00073-red-qd-ito",
+      "url": "assets/source-figures/jung2024/si-figure-s13.png",
+      "description": "SI Figure S13c/d: Bare-ITO QD-only PL spatial control; no Ag particles. Source crop combines measured and/or authored panels as indicated; publisher permission unverified.",
+      "eligible_as_measured_label": false
+    },
+    {
+      "id": "jung2024-ag-fcc-independent-reference",
+      "role": "external_reference",
+      "sample_id": null,
+      "url": "assets/crystal-references/models/ag-fcc-cod-9008459.json",
+      "description": "Existing bulk fcc Ag reference, not refined coordinates of Jung's single-crystal or single-twin AgNS specimens.",
+      "eligible_as_measured_label": false
+    }
+  ],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independent scoped quick audit accepted main PDF pp.1–6 and selected SI pp.1–3,5–8 for the packaged Ag nanosphere, control and QD-film outcomes. Main pp.7–8, SI p.4 and cited upstream green/red QD syntheses remain outside this accepted scope; this is not a complete-paper Reader.",
+    "missing_fields": [
+      "Green/red QD syntheses are cited prior work and not reconstructed; QD spin speed, time, solution concentration and volume are unreported.",
+      "Cu(I) control reagent/quantity and acetonitrile-water ratio are unreported; unetched AgNP-film control conditions are not independently specified.",
+      "AgNS atomic coordinates, exact single-twinned boundary geometry and source-figure reuse permission are unavailable.",
+      "The 460/580 µL size-series variants lack independently reported non-Cu reaction settings; SI Figure S8 plots rather than prints exact dose-to-diameter pairs."
+    ],
+    "conflicts": [
+      "Main p.2 reports 67% AgNC and 33% right bipyramid after flocculation; SI Figure S1c labels 66.98% and 32.02%, which sum to 99.00%. Preserve source statements without normalization.",
+      "SI Figure S10 caption describes green (c) and red (d) PL distributions, but the artwork labels these panels b and c; sample links follow visible panels and note the caption error."
+    ],
+    "requested_tasks": [
+      "precursor_selection",
+      "partial_protocol",
+      "size_conditioned_recipe"
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "DOI",
+      "url": "https://doi.org/10.1021/jacs.4c00073",
+      "relation": "primary_source"
+    }
+  ]
+}

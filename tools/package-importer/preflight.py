@@ -113,7 +113,15 @@ def scoped_audit_reviewer_matches(audit, package_audit):
 def scoped_audit_decision_accepted(audit):
     """The private quick-audit receipt uses decision; older receipts use verdict."""
     decisions=[audit[key] for key in ('verdict','decision') if key in audit]
-    return bool(decisions) and all(value=='ACCEPTED_SCOPED_CONTENT' for value in decisions)
+    if bool(decisions) and all(value=='ACCEPTED_SCOPED_CONTENT' for value in decisions):
+        return True
+    # A signed v5 changed-field receipt recorded the same acceptance in two
+    # serializers. Admit only this exact legacy pair and schema; rejected or
+    # unknown decisions and conflicting reviewer/package/science pins still fail
+    # the independent checks in scoped_review_errors.
+    return (audit.get('schema')=='mattersyn-private-v5-independent-quick-audit-delta/1'
+            and audit.get('verdict')=='ACCEPTED_SCOPED_CONTENT'
+            and audit.get('decision')=='accepted')
 
 def scoped_audit_identity_matches(audit, package):
     """Some private quick audits name the paper ID rather than the package ID."""
@@ -121,7 +129,7 @@ def scoped_audit_identity_matches(audit, package):
     return (bool(aliases) and all(value==package.get('package_id') for value in aliases)
             and audit.get('package_revision')==package.get('revision'))
 
-def scoped_audit_receipt_matches(audit, package_audit, audit_path, package, science):
+def scoped_audit_receipt_matches(audit, package_audit, audit_path, package, science, package_sha=None):
     """Allow an auditor's pinned normalization of a legacy accepted quick audit."""
     original_name=package_audit.get('receipt_id')
     if original_name==audit_path.name:return True
@@ -131,19 +139,32 @@ def scoped_audit_receipt_matches(audit, package_audit, audit_path, package, scie
             or audit.get('original_audit_receipt')!='receipts/'+original_name
             or audit.get('package_id')!=package.get('package_id')
             or audit.get('package_revision')!=package.get('revision')
-            or audit.get('scientific_sha256')!=science):
+            or audit.get('scientific_sha256')!=science
+            or audit.get('frozen_package_manifest_sha256')!=package_sha):
         return False
     original_path=audit_path.parent/original_name
     if (not original_path.is_file()
             or sha(original_path)!=audit.get('original_audit_receipt_sha256')):
         return False
     original=read(original_path)
+    decisions=[original[key] for key in ('decision','verdict') if key in original]
+    identities=[original[key] for key in ('package_id','paper_id') if key in original]
+    manifests=[original[key] for key in ('accepted_package_manifest_sha256','accepted_manifest_sha256')
+               if key in original]
+    # Two historical quick-audit serializers used different field names. The
+    # original auditor's exact-hash addendum may normalize either spelling,
+    # but conflicting aliases, a changed science hash or a different reviewer
+    # remain disqualifying. The immutable original is never rewritten.
     return (original.get('schema')=='mattersyn-independent-quick-audit/1'
-            and original.get('decision')=='accepted'
-            and original.get('package_id')==package.get('package_id')
+            and bool(decisions) and len(set(decisions))==1
+            and decisions[0] in ('accepted','ACCEPTED_SCOPED_CONTENT')
+            and bool(identities) and all(value==package.get('package_id') for value in identities)
+            and ('package_revision' not in original
+                 or original['package_revision']==package.get('revision'))
             and original.get('scientific_sha256')==science
             and scoped_audit_reviewer_matches(original,package_audit)
-            and audit.get('frozen_package_manifest_sha256')==original.get('accepted_package_manifest_sha256'))
+            and bool(manifests)
+            and all(value==audit.get('frozen_package_manifest_sha256') for value in manifests))
 
 def scoped_context_link_drop_only(before, after, source_id, doi, candidate):
     """Allow removal of one fictitious formal Reader link, retaining the DOI link byte-for-byte."""
@@ -164,14 +185,30 @@ def scoped_context_link_drop_only(before, after, source_id, doi, candidate):
     # separately and must truthfully have paper_review_url: null.
     return not (candidate/'recipe-atlas/data/paper-reviews'/(source_id+'.json')).exists()
 
-def scoped_record_changes_allowed(before, after, source_id, doi, candidate):
+def scoped_record_changes_allowed(before, after, source_id, doi, candidate, package=None):
     changes=changed_paths(before,after)
     allowed={'/revision','/sources/0/main_status','/quality/review_status','/quality/review_scope',
-             '/sources/1/si_status','/context_links'}
+             '/sources/0/si_status','/sources/1/si_status','/context_links'}
     sources=before.get('sources',[])
+    after_sources=after.get('sources',[])
     si_source=(isinstance(sources,list) and len(sources)>1 and isinstance(sources[1],dict)
                and isinstance(sources[1].get('id'),str) and sources[1]['id'].endswith('-si'))
-    return changes, not (changes-allowed) and ('/sources/1/si_status' not in changes or si_source) and ('/context_links' not in changes or
+    # Some accepted records keep main and SI status on one primary-source row.
+    # Only allow its SI prose to change when the frozen package explicitly
+    # includes reviewed SI pages for that same source; the independent exact
+    # status-delta audit still binds the old/new record bytes below.
+    single_source_si=(isinstance(sources,list) and len(sources)==1
+                      and isinstance(sources[0],dict)
+                      and sources[0].get('id')==source_id
+                      and str(sources[0].get('doi','')).lower()==doi
+                      and isinstance(sources[0].get('si_status'),str)
+                      and isinstance(after_sources,list) and len(after_sources)==1
+                      and isinstance(after_sources[0],dict)
+                      and isinstance(after_sources[0].get('si_status'),str)
+                      and isinstance(package,dict)
+                      and any(doc.get('role')=='si' and doc.get('coverage',{}).get('reviewed_pages')
+                              for doc in package.get('documents',[]) if isinstance(doc,dict)))
+    return changes, not (changes-allowed) and ('/sources/1/si_status' not in changes or si_source) and ('/sources/0/si_status' not in changes or single_source_si) and ('/context_links' not in changes or
             scoped_context_link_drop_only(before,after,source_id,doi,candidate))
 
 def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=False):
@@ -187,7 +224,7 @@ def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=F
     if not isinstance(old_revision,int) or isinstance(old_revision,bool):
         return False
     if old_status=='source_reviewed':
-        admin={'/revision','/sources/0/main_status','/sources/1/si_status','/quality/review_scope'}
+        admin={'/revision','/sources/0/main_status','/sources/0/si_status','/sources/1/si_status','/quality/review_scope'}
         return (new_revision==old_revision+1 and changes_allowed
                 and changes is not None and '/revision' in changes
                 and bool(changes&{'/sources/0/main_status','/quality/review_scope'})
@@ -242,7 +279,7 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
         errors.append('Scoped validation receipt does not bind accepted science')
     if not (scoped_audit_decision_accepted(audit) and audit.get('scientific_sha256')==science
             and scoped_audit_reviewer_matches(audit,pa)
-            and scoped_audit_receipt_matches(audit,pa,paths['audit_receipt_path'],package,science)):
+            and scoped_audit_receipt_matches(audit,pa,paths['audit_receipt_path'],package,science,entry['package_sha256'])):
         errors.append('Scoped independent audit receipt missing, unbound or self-reviewed')
     source=package.get('source',{});sid=source.get('primary_source_id');doi=str(source.get('doi') or '').lower()
     if not scoped_audit_identity_matches(audit,package):
@@ -285,7 +322,7 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
             errors.append('Scoped canonical record primary DOI differs from accepted source: '+rid)
         if not package_record.get('sources') or package_record['sources'][0].get('doi','').lower()!=doi:
             errors.append('Scoped frozen record primary DOI differs from accepted source: '+rid)
-        changes,changes_allowed=scoped_record_changes_allowed(package_record,actual,sid,doi,candidate)
+        changes,changes_allowed=scoped_record_changes_allowed(package_record,actual,sid,doi,candidate,package)
         if not changes_allowed:
             errors.append('Scoped canonical record changes unaccepted science: '+rid)
         if actual.get('lineage',{}).get('source_group')!=sid:

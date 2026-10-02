@@ -1,4 +1,10 @@
-# MatterSyn current verified checkpoint — 2026-10-01
+# MatterSyn current verified checkpoint — 2026-10-02
+
+## Saikia live; three-source additive release candidate
+
+Saikia et al. (2022), DOI 10.1039/d1nj04039a, passed source CI, exact browser review, Pages deployment and anonymous live verification at 2026-10-02T05:07:48Z. Source commit `31084e3f6ba7d55fe1c4ee97405247a503b89bc1` and site commit `9944edaaee1f1c2dec2d749b0ff06547e79d825d` bring the verified ordinary-material collection to **164 distinct contributing papers and 1,663 canonical records**. The 20-papers/hour goal remains a target, not a measured result.
+
+Naiki et al. (2013), DOI 10.1021/jp305408p; Liu et al. (2008), DOI 10.1021/cg701128b; and Jung et al. (2024), DOI 10.1021/jacs.4c00073, form the next additive three-source candidate. Each has a separate accepted scoped scientific audit, sample/figure and status review, exact source figures, authored illustrations, molecular bindings and independently reviewed delivery-rights metadata. Combined preflight added exactly three canonical records and left all 1,663 prior records and task-eligibility rows unchanged. These three papers receive **no live publication credit** until source CI, candidate build, exact browser review, Pages deployment and anonymous verification succeed. Source-figure display permission from the publishers remains unverified.
 
 ## Current verified site and next audited queue
 

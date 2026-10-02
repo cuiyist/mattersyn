@@ -83,6 +83,33 @@ class ScopedUrbanGuardTests(unittest.TestCase):
             self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(
                 before, scientific_change, "paper-main", "10.1234/paper", Path(temp))[1])
 
+    def test_single_primary_source_si_status_requires_reviewed_si_document(self):
+        before = {"revision": 1, "quality": {"review_status": "metadata_only"},
+                  "sources": [{"id": "paper-main", "doi": "10.1234/paper",
+                               "main_status": "main scoped", "si_status": "SI scoped"}]}
+        after = copy.deepcopy(before)
+        after["revision"] = 2
+        after["quality"]["review_status"] = "source_reviewed"
+        after["sources"][0]["si_status"] = "SI accepted"
+        package = {"documents": [{"role": "si", "coverage": {"reviewed_pages": [1, 2]}}]}
+        with TemporaryDirectory() as temp:
+            args = (before, after, "paper-main", "10.1234/paper", Path(temp))
+            changes, allowed = PREFLIGHT.scoped_record_changes_allowed(*args, package)
+            self.assertTrue(allowed)
+            self.assertIn("/sources/0/si_status", changes)
+            self.assertTrue(PREFLIGHT.valid_scoped_status_promotion(before, after, changes, allowed))
+            self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(*args)[1])
+            self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(
+                *args, {"documents": [{"role": "si", "coverage": {"reviewed_pages": []}}]})[1])
+            wrong = copy.deepcopy(before)
+            wrong["sources"][0]["id"] = "another-paper"
+            self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(
+                wrong, after, "paper-main", "10.1234/paper", Path(temp), package)[1])
+            scientific = copy.deepcopy(after)
+            scientific["operations"] = ["unsupported change"]
+            self.assertFalse(PREFLIGHT.scoped_record_changes_allowed(
+                before, scientific, "paper-main", "10.1234/paper", Path(temp), package)[1])
+
     def test_scoped_audit_paper_id_alias_must_match_package_and_revision(self):
         package = {"package_id": "paper-a", "revision": 2}
         self.assertTrue(PREFLIGHT.scoped_audit_identity_matches(
@@ -116,15 +143,64 @@ class ScopedUrbanGuardTests(unittest.TestCase):
                         "original_audit_receipt_sha256": PREFLIGHT.sha(original_path),
                         "frozen_package_manifest_sha256": "b" * 64}
             self.assertTrue(PREFLIGHT.scoped_audit_receipt_matches(
-                addendum, package_audit, addendum_path, package, science))
+                addendum, package_audit, addendum_path, package, science, "b" * 64))
             self.assertFalse(PREFLIGHT.scoped_audit_receipt_matches(
                 {**addendum, "original_audit_receipt_sha256": "0" * 64},
-                package_audit, addendum_path, package, science))
+                package_audit, addendum_path, package, science, "b" * 64))
+            self.assertFalse(PREFLIGHT.scoped_audit_receipt_matches(
+                addendum, package_audit, addendum_path, package, science, "0" * 64))
             original["decision"] = "changes_requested"
             original_path.write_text(json.dumps(original), encoding="utf-8")
             addendum["original_audit_receipt_sha256"] = PREFLIGHT.sha(original_path)
             self.assertFalse(PREFLIGHT.scoped_audit_receipt_matches(
-                addendum, package_audit, addendum_path, package, science))
+                addendum, package_audit, addendum_path, package, science, "b" * 64))
+
+    def test_normalized_canonical_quick_audit_keeps_identity_and_manifest_pins(self):
+        science = "a" * 64
+        manifest = "b" * 64
+        package = {"package_id": "paper-a", "revision": 1}
+        package_audit = {"author_id": "author", "reviewer_id": "reviewer",
+                         "receipt_id": "paper-a-original.json"}
+        original = {"schema": "mattersyn-independent-quick-audit/1",
+                    "decision": "ACCEPTED_SCOPED_CONTENT", "paper_id": "paper-a",
+                    "scientific_sha256": science, "author_id": "author",
+                    "reviewer_id": "reviewer", "accepted_manifest_sha256": manifest}
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            original_path = root / package_audit["receipt_id"]
+            addendum_path = root / "paper-a-addendum.json"
+            addendum = {"schema": "mattersyn-independent-scoped-acceptance-addendum/1",
+                        "package_id": "paper-a", "package_revision": 1,
+                        "scientific_sha256": science, "author_id": "author",
+                        "reviewer_id": "reviewer",
+                        "original_audit_receipt": "receipts/paper-a-original.json",
+                        "frozen_package_manifest_sha256": manifest}
+
+            def matches(candidate):
+                original_path.write_text(json.dumps(candidate), encoding="utf-8")
+                pinned = {**addendum,
+                          "original_audit_receipt_sha256": PREFLIGHT.sha(original_path)}
+                return PREFLIGHT.scoped_audit_receipt_matches(
+                    pinned, package_audit, addendum_path, package, science, manifest)
+
+            self.assertTrue(matches(original))
+            for changed in (
+                {**original, "decision": "REJECTED"},
+                {**original, "verdict": "REJECTED"},
+                {**original, "package_id": "other-paper"},
+                {**original, "package_revision": 2},
+                {**original, "accepted_package_manifest_sha256": "0" * 64},
+                {**original, "scientific_sha256": "0" * 64},
+                {**original, "reviewer_id": "author"},
+            ):
+                self.assertFalse(matches(changed), changed)
+            original_path.write_text(json.dumps(original), encoding="utf-8")
+            self.assertFalse(PREFLIGHT.scoped_audit_receipt_matches(
+                {**addendum, "original_audit_receipt_sha256": "0" * 64},
+                package_audit, addendum_path, package, science, manifest))
+            self.assertFalse(PREFLIGHT.scoped_audit_receipt_matches(
+                {**addendum, "original_audit_receipt_sha256": PREFLIGHT.sha(original_path)},
+                package_audit, addendum_path, package, science, "0" * 64))
 
     def test_reviewer_aliases_must_agree_and_cannot_self_review(self):
         package_audit = {"author_id": "author", "reviewer_id": "reviewer"}
@@ -146,6 +222,15 @@ class ScopedUrbanGuardTests(unittest.TestCase):
             {"decision": accepted, "verdict": accepted}))
         self.assertFalse(PREFLIGHT.scoped_audit_decision_accepted(
             {"decision": accepted, "verdict": "REJECTED"}))
+        legacy_delta = {"schema": "mattersyn-private-v5-independent-quick-audit-delta/1",
+                        "decision": "accepted", "verdict": accepted}
+        self.assertTrue(PREFLIGHT.scoped_audit_decision_accepted(legacy_delta))
+        self.assertFalse(PREFLIGHT.scoped_audit_decision_accepted(
+            {**legacy_delta, "schema": "unrelated-schema"}))
+        self.assertFalse(PREFLIGHT.scoped_audit_decision_accepted(
+            {**legacy_delta, "verdict": "REJECTED"}))
+        self.assertFalse(PREFLIGHT.scoped_audit_decision_accepted(
+            {**legacy_delta, "decision": "changes_requested"}))
 
     def test_only_exact_fictitious_reader_link_can_be_removed(self):
         source_id = "paper-id"

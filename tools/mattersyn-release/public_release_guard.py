@@ -337,7 +337,11 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         # pinned render/crop, and the same first-author/year and DOI checks as
         # older reviewed crops. This does not admit pages or working renders.
         scoped = re.fullmatch(r"assets/source-figures/([a-z]+[0-9]{4})/((main|si)-figure-((?:[1-9][0-9]?|s[1-9][0-9]?)[a-z]?)(?:-sem)?)\.(?:png|jpe?g|webp)", site_path)
-        if asset.get("classification") != "source_figure" or not (match or legacy or scoped):
+        # Fu et al. (2009) print one unnumbered Ag TEM panel on SI page 4.
+        # Admit this single independently reviewed crop by its immutable
+        # document/render/crop pins; do not generalize the filename grammar.
+        fu_si = site_path == "assets/source-figures/fu2009/si-figure-unnumbered-ag-tem.png"
+        if asset.get("classification") != "source_figure" or not (match or legacy or scoped or fu_si):
             return "user_directed_display_source_path_ineligible"
         paper_id = direction.get("paper_id")
         if not isinstance(paper_id, str):
@@ -349,15 +353,21 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         else:
             surname = re.match(r"[a-z]+", paper_id)
             year = re.search(r"[0-9]{4}", paper_id)
-            source_dir = legacy.group(1) if legacy else scoped.group(1)
+            source_dir = legacy.group(1) if legacy else scoped.group(1) if scoped else "fu2009"
             if not surname or not year or surname.group() + year.group() != source_dir:
                 return "user_directed_display_source_binding_missing"
             if legacy:
                 number = legacy.group(3)
                 expected_ids = {legacy.group(2).title() + " " + (number.upper() if number.startswith("s") else str(int(number)))}
-            else:
+            elif scoped:
                 number = scoped.group(4)
                 expected_ids = {scoped.group(2), "Figure " + (number.upper() if number.startswith("s") else number)}
+            else:
+                if (paper_id != "fu2009-qd-ag-biotin-chemcomm-b816736b"
+                        or direction.get("doi") != "10.1039/b816736b"
+                        or digest != "0a10f305552758ac9ca26a08d781b2dc6ddd880801abc21ee6ad94d3e90a1793"):
+                    return "user_directed_display_source_binding_missing"
+                expected_ids = {"si-figure-unnumbered-ag-tem"}
             provenance = asset.get("provenance_bindings")
             if not isinstance(provenance, list) or not any(
                 isinstance(item, dict) and item.get("paper_id") == paper_id
@@ -373,8 +383,15 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
             if (isinstance(locators, dict)
                     and locators.get("document_role") in {"main", "supporting_information", "si"}
                     and isinstance(locators.get("page"), int) and locators["page"] > 0
-                    and locators.get("id") in (expected_ids if not match else {expected_id})
-                    and (not scoped or locators.get("document_role") == scoped.group(3))
+                     and locators.get("id") in (expected_ids if not match else {expected_id})
+                     and (not scoped or locators.get("document_role") == scoped.group(3))
+                     and (not fu_si or (locators.get("document_role") == "si"
+                         and locators.get("page") == 4
+                         and locators.get("source_sha256") == "3b015713c56170ab602b9398b220d85abe1bc207c011cd054826861453f21033"
+                         and isinstance(binding.get("crop"), dict)
+                         and binding["crop"].get("render_sha256") == "f813589910538969a23f7ab3a21bda304cd325bc01ea5935789dd3eeea589641"
+                         and binding["crop"].get("crop_box") == [340, 440, 1540, 1260]
+                         and binding["crop"].get("asset_sha256") == digest))
                     and (not (legacy or scoped) or (re.fullmatch(r"[0-9a-f]{64}", str(locators.get("source_sha256", "")))
                          and isinstance(binding.get("crop"), dict)
                          and binding["crop"].get("asset_sha256") == digest))
