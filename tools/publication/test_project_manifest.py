@@ -125,6 +125,32 @@ class SourceClosureTests(unittest.TestCase):
         with self.assertRaisesRegex(ManifestError, 'Build blueprint omits build inputs.*new.json'):
             check(self.root, pre_push=True)
 
+    def test_stale_dataset_count_rejected_before_push(self):
+        record = 'recipe-atlas/data/records/example.json'
+        baseline = 'recipe-atlas/data/release-baseline-manifest.json'
+        self.dump(record, {'record_id': 'example'})
+        self.dump(baseline, {'record_count': 1, 'records': [{'record_id': 'example'}]})
+        paths = ['README.md', 'MEMORY.md', 'recipe-atlas/data/record.json', record, baseline]
+        self.dump('publication/build-inputs.json', {
+            'schema': 'mattersyn-build-input-blueprint/1', 'record_count': 0,
+            'input_files': [self.row(path) for path in paths]})
+        self.close()
+        with self.assertRaisesRegex(ManifestError, 'Dataset record count mismatch'):
+            check(self.root, pre_push=True)
+
+    def test_stale_dataset_membership_rejected_before_push(self):
+        record = 'recipe-atlas/data/records/example.json'
+        baseline = 'recipe-atlas/data/release-baseline-manifest.json'
+        self.dump(record, {'record_id': 'example'})
+        self.dump(baseline, {'record_count': 1, 'records': [{'record_id': 'other'}]})
+        paths = ['README.md', 'MEMORY.md', 'recipe-atlas/data/record.json', record, baseline]
+        self.dump('publication/build-inputs.json', {
+            'schema': 'mattersyn-build-input-blueprint/1', 'record_count': 1,
+            'input_files': [self.row(path) for path in paths]})
+        self.close()
+        with self.assertRaisesRegex(ManifestError, 'Dataset baseline record membership differs'):
+            check(self.root, pre_push=True)
+
     def test_blueprint_traversal_rejected(self):
         self.dump('publication/build-inputs.json', {'schema': 'mattersyn-build-input-blueprint/1', 'input_files': [{'path': '../escape.json', 'sha256': '0' * 64}]})
         self.close()

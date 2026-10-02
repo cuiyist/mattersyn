@@ -205,7 +205,19 @@ class Audit:
             "klecha2010-ag-2d-superlattice-jz100417s-matrix",
             "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix",
         }
-        reviewed_ag_direct = shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | tan_ag_routes | li_ag_routes | fafarman_ag_routes | lin_ag_routes | klecha_ag_routes | new_ag_routes
+        xu_prefix = "xu2008-hierarchical-nc-assemblies-adma200800215-"
+        xu_ag_direct = {xu_prefix + name for name in ("ag-nc", "ag-porous-assembly")}
+        xu_ag_components = {xu_prefix + name for name in (
+            "ag-coo-one-pot", "ag-eu-lavo4-mixed", "ag-fe3o4-mixed",
+            "au-ag-fe3o4-mixed", "au-ag-mixed", "au-ag-tio2-long", "au-ag-tio2-short",
+        )}
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag"
+                       and self.byid[rid]["material"].get("architecture") == "single_material"
+                       for rid in xu_ag_direct), "Ag: Xu direct routes must remain Ag nanocrystal products")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("architecture") == "composite"
+                       and "Ag" in self.byid[rid]["material"].get("components", [])
+                       for rid in xu_ag_components), "Ag: Xu composite contributions must retain their Ag component")
+        reviewed_ag_direct = shah_ag_routes | qiu_ag_routes | sigman_ag_routes | wang_ag_routes | tan_ag_routes | li_ag_routes | fafarman_ag_routes | lin_ag_routes | klecha_ag_routes | new_ag_routes | xu_ag_direct
         self.check(silver.get("component_only") is False and set(silver.get("direct_record_ids", [])) == reviewed_ag_direct, "Ag: retain exactly the independently reviewed direct Ag synthesis routes")
         wang_mcm48_routes = {"wang1999-ag-mcm48-cm990228p-ast"}
         yang_ag_component_routes = {"yang1999-ag-te-1-5-1-180c-12h", "yang1999-ag-te-2-1-180c-12h"}
@@ -215,7 +227,7 @@ class Audit:
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag–Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Ag–Te phase products")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "CdSe/CdS/ZnS + Ag" and self.byid.get(rid, {}).get("material", {}).get("architecture") == "heterostructure" for rid in munechika_ag_component_routes), "Ag: Munechika must remain a QD/Ag assembly component, not a direct Ag synthesis route")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag + InP/ZnSe/ZnS" and self.byid.get(rid, {}).get("material", {}).get("architecture") == "heterostructure" and "Ag" in self.byid.get(rid, {}).get("material", {}).get("components", []) for rid in jung_ag_component_routes), "Ag: Jung QD/AgNS film must remain a heterostructure component, not a direct Ag route")
-        self.check(set(silver.get("record_ids", [])) == reviewed_ag_direct | stiger_routes | wang_mcm48_routes | yang_ag_component_routes | tan_ag_component_routes | munechika_ag_component_routes | jung_ag_component_routes, "Ag: retain exactly the reviewed direct routes and supported component contributions")
+        self.check(set(silver.get("record_ids", [])) == reviewed_ag_direct | stiger_routes | wang_mcm48_routes | yang_ag_component_routes | tan_ag_component_routes | munechika_ag_component_routes | jung_ag_component_routes | xu_ag_components, "Ag: retain exactly the reviewed direct routes and supported component contributions")
         self.check(set(self.hubs.get("Ag/SiO2", {}).get("direct_record_ids", [])) == wang_mcm48_routes, "Ag/SiO2: retain the separately reviewed Wang MCM-48 AST route")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag/SiO2" for rid in wang_mcm48_routes), "Ag/SiO2: supported composite identity was erased")
         self.check(set(self.hubs.get("Ag/Si", {}).get("direct_record_ids", [])) == stiger_routes, "Ag/Si: missing reviewed pulsed-electrodeposition route or added unreviewed route")

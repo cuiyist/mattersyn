@@ -80,6 +80,12 @@ papers over a rolling 50, stop and tell the owner.** The quick audit is then mis
 
 ### 6. Integrate (one integrator; batches as papers arrive)
 - Merge accepted packages with `tools/package-importer/merger.py`, then `preflight.py`.
+- After adding records, run `recipe-atlas/scripts/build_dataset.py` in the isolated
+  checkout and copy its generated `dist/data/dataset-manifest.json` bytes to
+  `data/release-baseline-manifest.json`. Verify that every prior record digest and
+  eligibility is unchanged. Set the build blueprint's `record_count` to the
+  canonical file count with an exact `blueprint_metadata_review` receipt. The
+  pre-push manifest check rejects stale counts or baseline membership.
 - One source commit per batch with generated controls (`tools/publication/SINGLE_COMMIT_RELEASE.md`):
   `make_review_receipt.py`, `prepare_source_release.py --apply`, `git commit`, `check_project_manifest.py --pre-push`, push to `main`.
 - Never commit derived aggregates by hand. Never make a separate manifest-closure commit.

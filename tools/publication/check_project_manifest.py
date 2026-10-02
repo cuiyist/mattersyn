@@ -126,6 +126,23 @@ def check(root, manifest='publication/project-allowlist.json', pre_push=False, b
             required.add('README.md')
         if required - input_names:
             fail_paths('Build blueprint omits build inputs', required - input_names)
+        record_prefix = 'recipe-atlas/data/records/'
+        record_paths = {path for path in tracked if path.startswith(record_prefix) and path.endswith('.json')}
+        baseline_path = 'recipe-atlas/data/release-baseline-manifest.json'
+        if record_paths and baseline_path in tracked:
+            baseline = json.loads(member(root, baseline_path).read_bytes())
+            count = len(record_paths)
+            if inputs.get('record_count') != count or baseline.get('record_count') != count:
+                raise ManifestError(
+                    f'Dataset record count mismatch: {count} canonical files, '
+                    f'blueprint {inputs.get("record_count")}, baseline {baseline.get("record_count")}')
+            rows = baseline.get('records')
+            if not isinstance(rows, list):
+                raise ManifestError('Dataset baseline records must be a list')
+            actual_ids = {path[len(record_prefix):-5] for path in record_paths}
+            baseline_ids = [row.get('record_id') for row in rows if isinstance(row, dict)]
+            if len(baseline_ids) != len(rows) or len(set(baseline_ids)) != len(rows) or set(baseline_ids) != actual_ids:
+                raise ManifestError('Dataset baseline record membership differs from canonical files')
         result.update(pre_push=True, blueprint_input_count=len(input_names), gate_scope='Source closure only; boundary export, scientific audit, build and browser checks remain mandatory')
     return result
 
