@@ -121,6 +121,25 @@ def relative_route(route, dist):
     return path
 
 
+def selected_page_scope(documents):
+    """Selected main pages may include one essential, separately scoped SI document."""
+    if not isinstance(documents, list) or len(documents) not in (1, 2):
+        return False
+    roles = [doc.get('role') if isinstance(doc, dict) else None for doc in documents]
+    if roles.count('main') != 1 or any(role not in ('main', 'si') for role in roles) or roles.count('si') > 1:
+        return False
+    for doc in documents:
+        page_count = doc.get('page_count')
+        pages_read = doc.get('pages_read')
+        if not (type(page_count) is int and page_count > 1 and
+                isinstance(pages_read, list) and 0 < len(pages_read) <= page_count and
+                pages_read == sorted(set(pages_read)) and
+                all(type(n) is int and 1 <= n <= page_count for n in pages_read) and
+                doc.get('all_text_read') is False and doc.get('all_visually_reviewed') is False):
+            return False
+    return True
+
+
 def new_paper_routes(dist, papers):
     """Bind each new source to a formal review or its explicitly scoped record page."""
     if not papers:
@@ -146,22 +165,14 @@ def new_paper_routes(dist, papers):
                 raise SystemExit(f'expected one scoped inventory row for new source {source}; found {len(scoped)}')
             row = scoped[0]
             rid_list = row.get('record_ids')
-            documents = row.get('documents')
-            scoped_pages = (documents[0] if isinstance(documents, list) and len(documents) == 1 else {})
-            page_count = scoped_pages.get('page_count')
-            pages_read = scoped_pages.get('pages_read')
-            selected_main_pages = (scoped_pages.get('role') == 'main' and type(page_count) is int and page_count > 1 and
-                                   isinstance(pages_read, list) and 0 < len(pages_read) <= page_count and
-                                   pages_read == sorted(set(pages_read)) and
-                                   all(type(n) is int and 1 <= n <= page_count for n in pages_read) and
-                                   scoped_pages.get('all_text_read') is False and
-                                   scoped_pages.get('all_visually_reviewed') is False)
+            selected_main_pages = selected_page_scope(row.get('documents'))
             if (row.get('paper_id') != source or row.get('review_status') != 'selected_recipe_and_figure_review' or
                     row.get('main_status') not in {
                         'selected_colloidal_method_and_figure_independently_audited',
                         'selected_recipe_and_figure_independently_audited',
                         'selected_as_prepared_cds_route_and_figures_independently_audited',
-                        'selected_colloidal_methods_and_figures_independently_audited'} or
+                        'selected_colloidal_methods_and_figures_independently_audited',
+                        'selected_synthesis_and_figures_independently_audited'} or
                     not selected_main_pages or
                     row.get('paper_review_url') not in (None, '') or
                     not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or

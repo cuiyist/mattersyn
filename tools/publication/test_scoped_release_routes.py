@@ -80,6 +80,21 @@ class ScopedRouteTests(unittest.TestCase):
         self.flush()
         with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
             self.routes()
+
+    def test_selected_main_scope_can_name_essential_si_pages(self):
+        self.row['documents'].append({'role': 'si', 'page_count': 13, 'pages_read': [1, 2, 3, 5, 6, 7],
+                                      'all_text_read': False, 'all_visually_reviewed': False})
+        self.flush()
+        self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
+        self.row['documents'][1]['pages_read'] = [1, 2, 2]
+        self.flush()
+        with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+            self.routes()
+        self.row['documents'][1]['pages_read'] = [1, 2, 3]
+        self.row['documents'][1]['all_text_read'] = True
+        self.flush()
+        with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+            self.routes()
         self.row['documents'][0]['pages_read'] = [1, 2, 3]
         self.row['documents'][0]['all_text_read'] = True
         self.flush()
@@ -98,7 +113,8 @@ class ScopedRouteTests(unittest.TestCase):
 
     def test_independently_audited_scoped_status_aliases(self):
         for status in ('selected_as_prepared_cds_route_and_figures_independently_audited',
-                       'selected_colloidal_methods_and_figures_independently_audited'):
+                       'selected_colloidal_methods_and_figures_independently_audited',
+                       'selected_synthesis_and_figures_independently_audited'):
             with self.subTest(status=status):
                 self.row['main_status'] = status
                 self.flush()
