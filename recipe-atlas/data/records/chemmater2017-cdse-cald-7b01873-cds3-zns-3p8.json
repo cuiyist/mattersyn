@@ -1,15 +1,31 @@
 {
   "schema_version": "1.3.0",
   "record_id": "chemmater2017-cdse-cald-7b01873-cds3-zns-3p8",
-  "revision": 3,
+  "revision": 4,
   "record_type": "protocol_variant",
-  "title": "Slejko et al. (2017): CdSe/CdS3/ZnS four-ML c-ALD shell",
+  "title": "Slejko et al. (2017): CdSe core / CdS (3 ML) / ZnS (1 ML) · c-ALD",
   "material": {
-    "formula": "CdSe/CdS3/ZnS",
+    "formula": "CdSe/CdS/ZnS",
     "family": "CdSe/CdS/ZnS colloidal core/shell nanocrystals",
-    "elements": [],
+    "elements": [
+      "Cd",
+      "Se",
+      "S",
+      "Zn"
+    ],
     "components": [],
-    "architecture": "core_shell"
+    "architecture": "core_shell",
+    "source_notation": "CdSe/CdS3/ZnS",
+    "shell_layers": [
+      {
+        "phase": "CdS",
+        "monolayers": 3
+      },
+      {
+        "phase": "ZnS",
+        "monolayers": 1
+      }
+    ]
   },
   "method": "Room-temperature c-ALD alternating S2- and Cd2+/Zn2+ surface half-reactions",
   "sources": [
@@ -34,7 +50,7 @@
   },
   "intended_target": {
     "composition": {
-      "value": "CdSe/CdS3/ZnS ordered four-monolayer shell",
+      "value": "CdSe core / CdS (3 ML) / ZnS (1 ML)",
       "status": "reported",
       "evidence": [
         {
@@ -42,7 +58,7 @@
           "locator": "Main PDF p.3 / printed p.8113, Results and Figure 1"
         }
       ],
-      "note": ""
+      "note": "Source notation CdSe/CdS3/ZnS; numerals count shell monolayers, not phase stoichiometry."
     },
     "phase": {
       "value": "CdSe/CdS3/ZnS diffraction pattern with source-assigned shell growth shift",
@@ -2370,12 +2386,12 @@
   "products": [
     {
       "sample_id": "cds3-zns-3p8",
-      "source_sample_label": "CdSe/CdS3/ZnS four-ML shell product",
+      "source_sample_label": "CdSe core / CdS (3 ML) / ZnS (1 ML) (source notation CdSe/CdS3/ZnS)",
       "batch_id": null,
       "material_state_id": "layer-4",
       "parent_sample_id": null,
       "composition": {
-        "value": "CdSe/CdS3/ZnS",
+        "value": "CdSe/CdS/ZnS",
         "status": "reported",
         "evidence": [
           {
@@ -2383,7 +2399,7 @@
             "locator": "Main PDF p.3 / printed p.8113, Results, seven shell compositions and Figure 1"
           }
         ],
-        "note": ""
+        "note": "Phase-level composition. Source notation CdSe/CdS3/ZnS means 3 ML CdS, then 1 ML ZnS from the CdSe core outward."
       },
       "phase": {
         "value": "CdSe/CdS3/ZnS diffraction pattern with source-assigned shell growth shift",
@@ -2421,7 +2437,7 @@
         }
       ],
       "notes": [
-        "Four source-named shell monolayers; sequence is ordered from CdSe core outward.",
+        "Shell order, core outward: CdS (3 ML) / ZnS (1 ML).",
         "Only the first core aliquot is quantified; repeated half-reaction step volumes are from the general c-ALD protocol.",
         "Figure 1 band edges are bulk-level schematics, not measured nanoparticle coordinates.",
         "Table 1 #ML=4 PL spectral FWHM is 0.15 eV for the /CdS3/ZnS column; it is an optical size-dispersion proxy, not physical diameter."
