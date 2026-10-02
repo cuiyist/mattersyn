@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:mattersyn:schema:gold-paper-package:1",
-  "title": "MatterSyn scoped additive gold paper package v1",
+  "$id": "urn:mattersyn:schema:gold-paper-package:2",
+  "title": "MatterSyn scoped additive gold paper package v1/v2",
   "description": "Structural validation does not establish scientific acceptance, source permissions or publication approval.",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": "mattersyn-gold-paper-package/1"
+      "enum": ["mattersyn-gold-paper-package/1", "mattersyn-gold-paper-package/2"]
     },
     "package_id": {
       "type": "string",
@@ -309,6 +309,9 @@
         },
         "companion_required": {
           "const": false
+        },
+        "review_scope_kind": {
+          "const": "scoped_independent_audit"
         }
       },
       "required": [
@@ -440,6 +443,16 @@
       "maxItems": 0
     }
   },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": "mattersyn-gold-paper-package/1"}}},
+      "then": {"properties": {"scope": {"not": {"required": ["review_scope_kind"]}}}}
+    },
+    {
+      "if": {"properties": {"schema_version": {"const": "mattersyn-gold-paper-package/2"}}},
+      "then": {"properties": {"scope": {"required": ["review_scope_kind"]}}}
+    }
+  ],
   "required": [
     "schema_version",
     "package_id",

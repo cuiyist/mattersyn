@@ -16,6 +16,8 @@ import sys
 
 sys.dont_write_bytecode = True
 VERSION = 'mattersyn-gold-paper-package/1'
+VERSION_WITH_SCOPE_KIND = 'mattersyn-gold-paper-package/2'
+SCOPED_INDEPENDENT_AUDIT = 'scoped_independent_audit'
 SHA = re.compile(r'^[0-9a-f]{64}$')
 CHECKLIST = ('document_scope', 'recipe_and_variants', 'quantities_units_conditions',
              'chemical_identities', 'sample_structure_links', 'conflicts_missingness',
@@ -112,7 +114,8 @@ def validate(package, root, record_validator=None, base_package=None, base_root=
         if not condition: errors.append(message)
     if not isinstance(package,dict): return {'passed':False,'errors':['package must be an object']}
     need(set(package)==TOP_KEYS, 'top-level fields must exactly match package contract')
-    need(package.get('schema_version')==VERSION,'unsupported package schema')
+    version = package.get('schema_version')
+    need(version in (VERSION, VERSION_WITH_SCOPE_KIND),'unsupported package schema')
     need(bool(package.get('package_id')),'missing package_id')
     need(isinstance(package.get('revision'),int) and package['revision']>0,'revision must be a positive integer')
     source=package.get('source',{})
@@ -140,7 +143,13 @@ def validate(package, root, record_validator=None, base_package=None, base_root=
         need(coverage.get('status')!='not_reviewed' or not pages,'unreviewed document cannot claim reviewed pages')
         need(isinstance(coverage.get('exclusions'),list),'coverage exclusions must be explicit list')
     scope=package.get('scope',{})
-    need(set(scope)=={'unit','omissions','companion_required'},'scope fields mismatch')
+    expected_scope_fields = {'unit','omissions','companion_required'}
+    if version == VERSION_WITH_SCOPE_KIND:
+        expected_scope_fields.add('review_scope_kind')
+    need(set(scope)==expected_scope_fields,'scope fields mismatch')
+    if version == VERSION_WITH_SCOPE_KIND:
+        need(scope.get('review_scope_kind')==SCOPED_INDEPENDENT_AUDIT,
+             'scoped package is not independently audited')
     need(scope.get('unit') in ('main_text','si_standalone','mixed_scoped'),'invalid minimum publishable scope')
     need(scope.get('companion_required') is False,'main/SI pairing is not a package prerequisite')
     need(isinstance(scope.get('omissions'),list),'scope omissions required')
@@ -269,6 +278,11 @@ QD_IN = re.compile(r'quantum[- ]dots?|\bqds?\b|nanocrystals?|colloid|hot[- ]inje
 QD_COMPOSITION = re.compile(r'\b(?:cd|pb|zn|hg)(?:s|se|te)\b|\bin(?:p|as|sb)\b|\bcu(?:in|ga)?(?:s|se)2\b|\bag(?:in)?(?:s|se)2\b|'
                             r'\bcspb(?:br|cl|i)3\b|perovskite nano|\bag2(?:s|se)\b|\bcu2-?x?(?:s|se)\b|carbon dots?|'
                             r'(?:silicon|germanium) (?:nanocrystals?|quantum)', re.I)
+SEMICONDUCTOR_QD_COMPOSITION = re.compile(
+    r'\b(?:cd|pb|zn|hg)(?:s|se|te|o)\b|\bin(?:p|as|sb)\b|'
+    r'\b(?:cu|ag)(?:in|ga|bi|znin)?(?:s|se|te)2?\b|\b(?:ag|cu)2(?:s|se|te)\b|'
+    r'\bcspb(?:br|cl|i)3\b|perovskite nano|carbon dots?|'
+    r'(?:silicon|germanium) (?:nanocrystals?|quantum)', re.I)
 QD_OUT = re.compile(r'thin[- ]films?|chemical vapou?r|\bcvd\b|sputter|epitax|single[- ]crystals?|\bbulk\b|ceramic|'
                     r'sinter|solid[- ]state reaction|calcin|\bglass(?:es)?\b|melt[- ]quench|ball[- ]mill|wafer|'
                     r'electrodeposit|monolith|cement|alloy ribbon', re.I)
@@ -282,6 +296,20 @@ def quantum_dot_scope(row):
     if out and not (colloid or comp): return 'out', 'non-colloidal wording: '+out.group(0)
     if colloid or comp: return 'ambiguous', 'mixed wording: '+(colloid or comp).group(0)+' / '+out.group(0)
     return 'ambiguous', 'no scope wording in screen summary'
+
+
+def semiconductor_qd_priority(row, family):
+    """Conservatively prefer identified semiconductor dots over elemental metal NCs.
+
+    This is queue order only; a screen label never establishes scientific eligibility.
+    Generic 'quantum dot' or 'nanocrystal' wording does not promote Ag/Au/etc.
+    """
+    composition = ' '.join(str(value or '') for value in (family, row.get('material')))
+    context = ' '.join(str(row.get(key) or '') for key in
+                       ('preparation_summary', 'structure_summary'))
+    return bool(SEMICONDUCTOR_QD_COMPOSITION.search(composition) or
+                re.search(r'\bsemiconductor\s+(?:quantum\s+dot|nanocrystal)',
+                          context, re.I))
 
 def rank_queue(rows, identities=None, live_sources=(), scope=None):
     """Rank retained screen evidence, never upgrade it to accepted extraction."""
@@ -320,15 +348,20 @@ def rank_queue(rows, identities=None, live_sources=(), scope=None):
             groups[key]={'queue_key':key,'primary_source_id':primary,'family':family,
                          'family_is_normalized':bool(identity.get('family')),'documents':[],
                          'priority_score':score,'main_si_pairing_required':False,
-                         'scope_check_required':scope_decision=='ambiguous'}
+                         'scope_check_required':scope_decision=='ambiguous',
+                         'semiconductor_qd_priority':False}
         groups[key]['documents'].append(doc)
         groups[key]['priority_score']=max(groups[key]['priority_score'],score)
+        groups[key]['semiconductor_qd_priority'] |= (
+            scope_decision != 'ambiguous' and semiconductor_qd_priority(row,family))
         if scope_decision=='in': groups[key]['scope_check_required']=False
     values=list(groups.values())
     # Family grouping within the same score band prevents a low-evidence family from
     # outranking a source with both preparation and structural evidence.
     # Clearly in-scope units come before units whose scope still needs a quick human check.
-    values.sort(key=lambda r:(bool(r.get('scope_check_required')),-r['priority_score']//10,str(r['family']).casefold(),-r['priority_score'],r['queue_key']))
+    values.sort(key=lambda r:(not r['semiconductor_qd_priority'],bool(r.get('scope_check_required')),
+                              -r['priority_score']//10,str(r['family']).casefold(),
+                              -r['priority_score'],r['queue_key']))
     for i,row in enumerate(values,1): row['rank']=i
     return {'schema':'mattersyn-ranked-local-queue/1','ranked_units':values,'excluded':dict(excluded),
             'unique_document_contents':sum(len(r['documents']) for r in values),

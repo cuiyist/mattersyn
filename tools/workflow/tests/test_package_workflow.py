@@ -41,6 +41,18 @@ class PackageTests(unittest.TestCase):
         r=self.check(); self.assertTrue(r['passed']); self.assertFalse(r['scientific_package_ready_for_existing_integration_gates'])
     def test_accepted_science_can_have_presentation_pending(self):
         accept(self.p,self.root); r=self.check(); self.assertTrue(r['passed']); self.assertTrue(r['scientific_package_ready_for_existing_integration_gates']); self.assertFalse(r['publication_authorized'])
+    def test_v2_scope_kind_is_required_and_scientifically_bound(self):
+        self.p['schema_version']=w.VERSION_WITH_SCOPE_KIND
+        self.assertFalse(self.check()['passed'])
+        self.p['scope']['review_scope_kind']=w.SCOPED_INDEPENDENT_AUDIT
+        accept(self.p,self.root)
+        self.assertTrue(self.check()['passed'])
+        self.p['scope']['review_scope_kind']='unreviewed'
+        self.assertFalse(self.check()['passed'])
+        self.p['scope']['review_scope_kind']=w.SCOPED_INDEPENDENT_AUDIT
+        self.assertTrue(self.check()['passed'])
+        self.p['schema_version']=w.VERSION
+        self.assertFalse(self.check()['passed'])
     def test_accepted_needs_independent_reviewer(self):
         accept(self.p,self.root); self.p['audit']['reviewer_id']='author-a'; self.assertFalse(self.check()['passed'])
     def test_hash_tamper_rejected(self):
@@ -152,6 +164,27 @@ class QueueTests(unittest.TestCase):
         a=row(); a['structure_locator']=None; result=w.rank_queue([a,row('2')]); self.assertEqual(result['ranked_units'][0]['documents'][0]['document_sha256'],'2'*64)
     def test_unverified_identity_never_deduplicates(self):
         ids={h*64:{'verified':False,'primary_source_id':'p'} for h in ['1','2']}; self.assertEqual(len(w.rank_queue([row(),row('2')],ids)['ranked_units']),2)
+    def test_semiconductor_qd_precedes_elemental_metal_even_with_lower_evidence(self):
+        metal=row('1'); metal.update(material='Ag nanocrystals',preparation_summary='colloidal Ag nanocrystal synthesis')
+        semiconductor=row('2'); semiconductor.update(material='CdSe quantum dots',structure_locator=None,
+                                                     structure_summary='')
+        result=w.rank_queue([metal,semiconductor],scope='quantum-dot')
+        self.assertEqual(result['ranked_units'][0]['documents'][0]['document_sha256'],'2'*64)
+        self.assertTrue(result['ranked_units'][0]['semiconductor_qd_priority'])
+        self.assertFalse(result['ranked_units'][1]['semiconductor_qd_priority'])
+    def test_silver_containing_semiconductor_precedes_elemental_ag(self):
+        metal=row('1'); metal.update(material='Ag nanocrystals',preparation_summary='colloidal synthesis')
+        semiconductor=row('2'); semiconductor.update(material='AgInS2/ZnS quantum dots')
+        result=w.rank_queue([metal,semiconductor],scope='quantum-dot')
+        self.assertEqual(result['ranked_units'][0]['documents'][0]['document_sha256'],'2'*64)
+    def test_generic_quantum_dot_wording_does_not_promote_elemental_ag(self):
+        metal=row('1'); metal.update(material='Ag',preparation_summary='Ag quantum dots')
+        self.assertFalse(w.rank_queue([metal],scope='quantum-dot')['ranked_units'][0]['semiconductor_qd_priority'])
+    def test_evidence_order_unchanged_within_semiconductor_class(self):
+        low=row('1'); low.update(material='CdSe quantum dots',structure_locator=None)
+        high=row('2'); high.update(material='PbS quantum dots')
+        result=w.rank_queue([low,high],scope='quantum-dot')
+        self.assertEqual(result['ranked_units'][0]['documents'][0]['document_sha256'],'2'*64)
 
 class QuantumDotScopeTests(unittest.TestCase):
     """Synthetic screen rows only; wording mirrors unnormalized screening labels."""

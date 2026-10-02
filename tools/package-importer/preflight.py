@@ -13,6 +13,23 @@ import sys
 import time
 
 sys.dont_write_bytecode = True
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'publication'))
+from scoped_status import SCOPED_INDEPENDENT_AUDIT, eligible_scoped_status
+
+
+def scoped_review_kind_errors(package, row):
+    """Require a frozen audited kind, or an exact accepted v1 migration."""
+    if not eligible_scoped_status(row):
+        return ['Scoped inventory lacks the accepted review-scope kind']
+    version = package.get('schema_version')
+    if version == 'mattersyn-gold-paper-package/2':
+        return ([] if row.get('review_scope_contract_version') == 2
+                and package.get('scope', {}).get('review_scope_kind') == SCOPED_INDEPENDENT_AUDIT
+                else ['Scoped inventory review kind differs from frozen package'])
+    if version == 'mattersyn-gold-paper-package/1':
+        return ([] if row.get('review_scope_contract_version') == 1
+                else ['Legacy scoped main status was never release-eligible'])
+    return ['Unsupported scoped package version']
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -291,6 +308,7 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
     else:row=rows[0]
     if row.get('doi','').lower()!=doi or row.get('paper_review_url') is not None or not row.get('review_scope'):
         errors.append('Scoped inventory identity or truthful nonformal review scope missing')
+    errors.extend(scoped_review_kind_errors(package,row))
     if row.get('paper_id')!=sid or row.get('title')!=source.get('title'):
         errors.append('Scoped inventory paper identity/title differs from accepted source')
     pdocs=package.get('documents',[]);idocs=row.get('documents',[])

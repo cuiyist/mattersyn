@@ -24,6 +24,7 @@ Standard library only; works on Windows, macOS and Linux.
 from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, random, shutil, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
+from scoped_status import eligible_scoped_status
 
 SITE_CONTROL = {'.git', '.github', '.release-control', 'tools', '.gitattributes'}  # never replaced by the build
 CI_WORKFLOW = 'MatterSyn source and build checks'
@@ -167,17 +168,7 @@ def new_paper_routes(dist, papers):
             rid_list = row.get('record_ids')
             selected_main_pages = selected_page_scope(row.get('documents'))
             if (row.get('paper_id') != source or row.get('review_status') != 'selected_recipe_and_figure_review' or
-                    row.get('main_status') not in {
-                        'selected_colloidal_method_and_figure_independently_audited',
-                        'selected_recipe_and_figure_independently_audited',
-                        'selected_as_prepared_cds_route_and_figures_independently_audited',
-                        'selected_colloidal_methods_and_figures_independently_audited',
-                        'selected_synthesis_and_figures_independently_audited',
-                        'main_synthesis_and_figures_independently_audited',
-                        'scoped_synthesis_and_figures_independently_audited',
-                        'main_screen_hold_scoped_independently_audited',
-                        'all_main_pages_scoped_independently_audited',
-                        'main_pp1_2_scoped_independently_audited'} or
+                    not eligible_scoped_status(row) or
                     not selected_main_pages or
                     row.get('paper_review_url') not in (None, '') or
                     not isinstance(row.get('review_scope'), str) or not row['review_scope'].strip() or

@@ -20,10 +20,11 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from baseline_control import BASELINE, generate as generate_baseline
 
 MANIFEST = 'publication/project-allowlist.json'
 BLUEPRINT = 'publication/build-inputs.json'
-CONTROLS = {MANIFEST, BLUEPRINT}
+CONTROLS = {MANIFEST, BLUEPRINT, BASELINE}
 BINDING_SCHEMA = 'mattersyn-source-payload-binding/1'
 
 
@@ -118,7 +119,7 @@ def review_map(receipt, head):
 
 
 def prepare(root, receipt, release_id, guard, config, now=None):
-    """Return two control byte strings and a plan; make no changes."""
+    """Return baseline, blueprint and allowlist bytes with a read-only plan."""
     root = Path(root).resolve(strict=True)
     if not isinstance(release_id, str) or not release_id.strip():
         raise PreparationError('Release identity is required')
@@ -153,8 +154,11 @@ def prepare(root, receipt, release_id, guard, config, now=None):
     inputs = json.loads(raw[BLUEPRINT])
     if inputs.get('schema') != 'mattersyn-build-input-blueprint/1':
         raise PreparationError('Invalid build blueprint schema')
+    prior_baseline = git(root, 'show', 'HEAD:' + BASELINE)
+    if raw.get(BASELINE) != prior_baseline:
+        raise PreparationError('Dataset baseline is generated; do not stage a manual baseline change')
     old_inputs = json.loads(git(root, 'show', 'HEAD:' + BLUEPRINT))
-    generated_keys = {'input_files', 'release_id', 'updated_at'}
+    generated_keys = {'input_files', 'release_id', 'updated_at', 'record_count'}
     metadata = {k: v for k, v in inputs.items() if k not in generated_keys}
     old_metadata = {k: v for k, v in old_inputs.items() if k not in generated_keys}
     metadata_review = receipt.get('blueprint_metadata_review')
@@ -167,11 +171,17 @@ def prepare(root, receipt, release_id, guard, config, now=None):
             raise PreparationError('Blueprint metadata reviewer identity is missing')
     elif metadata_review is not None:
         raise PreparationError('Unused blueprint metadata review')
-    # Counts and inventory remain authored inputs until their dedicated generator
-    # is adopted; this tool never fabricates new dataset totals.
+    try:
+        baseline = generate_baseline(root, raw, json.loads(prior_baseline),
+                                     inputs.get('approved_record_digests', {}), rows,
+                                     old_inputs.get('approved_record_digests', {}))
+    except (KeyError, TypeError, ValueError) as error:
+        raise PreparationError('Dataset baseline generation failed: ' + str(error)) from error
+    raw[BASELINE] = encoded(baseline)
+    inputs['record_count'] = baseline['record_count']
     inputs.update(release_id=release_id, updated_at=at)
     inputs['input_files'] = [{'path': n, 'sha256': sha(b), 'bytes': len(b)}
-                            for n, b in sorted(raw.items()) if n not in CONTROLS]
+                            for n, b in sorted(raw.items()) if n not in {MANIFEST, BLUEPRINT}]
     raw[BLUEPRINT] = encoded(inputs)
     used = set()
     approved = []
@@ -186,12 +196,12 @@ def prepare(root, receipt, release_id, guard, config, now=None):
         same = former and all(former.get(k) == identity[k] for k in ('sha256', 'bytes'))
         if same and former.get('git_mode', '100644') != identity['git_mode']:
             same = False
-        if name == BLUEPRINT:
+        if name in {BLUEPRINT, BASELINE}:
             row = {**identity, 'decision': 'allow', 'review_status': 'approved',
                    'reviewer': 'deterministic-source-control-generator', 'reviewed_at': at,
                    'content_class': decision['content_class'], 'source_refs': [],
-                   'approval_scope': 'Generated exact input identities only; no scientific approval'}
-            if metadata_review:
+                   'approval_scope': 'Derived source control only; no scientific or eligibility approval'}
+            if name == BLUEPRINT and metadata_review:
                 row['metadata_review'] = {k: metadata_review[k] for k in (
                     'before_sha256', 'sha256', 'reviewer', 'reviewed_at')}
         elif same:
@@ -232,7 +242,7 @@ def prepare(root, receipt, release_id, guard, config, now=None):
                 'asset_rights_registry_sha256': config['asset_rights_registry_sha256'],
                 'review_scope': 'Exact staged payload identities. Scientific review remains separately bound to paper content.',
                 'files': approved}
-    controls = {BLUEPRINT: raw[BLUEPRINT], MANIFEST: encoded(manifest)}
+    controls = {BASELINE: raw[BASELINE], BLUEPRINT: raw[BLUEPRINT], MANIFEST: encoded(manifest)}
     plan = {'schema': 'mattersyn-source-preparation/1', 'base_commit': head,
             'index_tree_before': git(root, 'write-tree').decode().strip(),
             'source_payload_binding': manifest['source_payload_binding'],
