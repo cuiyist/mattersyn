@@ -35,6 +35,9 @@ class PrepareReleaseTests(unittest.TestCase):
         git(self.root, 'config', 'core.autocrlf', 'false')
         self.write('README.md', b'Reviewed notes\n')
         self.write('recipe-atlas/data/record.json', b'{"amount": 1}\n')
+        self.write('recipe-atlas/data/release-baseline-manifest.json', encoded({
+            'schema_version': '1.0.0', 'dataset_version': 'fixture', 'record_count': 0,
+            'group_count': 0, 'families': [], 'split_policy': 'fixture', 'records': []}))
         self.write('publication/public-release-policy.json', b'{}\n')
         self.write('publication/asset-rights-registry.json', b'{"assets": []}\n')
         self.write(BLUEPRINT, encoded({'schema': 'mattersyn-build-input-blueprint/1', 'input_files': []}))
@@ -127,6 +130,31 @@ class PrepareReleaseTests(unittest.TestCase):
         controls, _ = self.plan()
         inputs = json.loads(controls[BLUEPRINT])['input_files']
         self.assertIn('recipe-atlas/data/new.json', {r['path'] for r in inputs})
+
+    def test_baseline_and_record_count_are_one_derived_transaction(self):
+        self.reviewed_edit('recipe-atlas/data/records/example.json', b'{"record_id":"example"}\n')
+        row = {'record_id': 'example', 'record_sha256': 'a' * 64,
+               'eligibility': {'partial_protocol': {'eligible': False}}}
+        generated = {'schema_version': '1.0.0', 'dataset_version': 'fixture',
+                     'record_count': 1, 'group_count': 1, 'families': [],
+                     'split_policy': 'fixture', 'records': [row]}
+        with patch('prepare_source_release.generate_baseline', return_value=generated):
+            controls, plan = self.plan()
+        blueprint = json.loads(controls[BLUEPRINT])
+        self.assertEqual(blueprint['record_count'], 1)
+        self.assertEqual(json.loads(controls['recipe-atlas/data/release-baseline-manifest.json']), generated)
+        baseline_input = next(x for x in blueprint['input_files']
+                              if x['path'] == 'recipe-atlas/data/release-baseline-manifest.json')
+        self.assertEqual(baseline_input['sha256'], sha(controls[baseline_input['path']]))
+        self.assertEqual({x['path'] for x in plan['controls']},
+                         {BLUEPRINT, MANIFEST, baseline_input['path']})
+
+    def test_manual_baseline_edit_is_rejected(self):
+        baseline = 'recipe-atlas/data/release-baseline-manifest.json'
+        self.write(baseline, encoded({'record_count': 999, 'records': []}))
+        git(self.root, 'add', '--', baseline)
+        with self.assertRaisesRegex(PreparationError, 'Dataset baseline is generated'):
+            self.plan()
 
     def test_unstaged_edit_and_untracked_draft_rejected(self):
         self.write('README.md', b'Unstaged\n')
@@ -229,7 +257,7 @@ class PrepareReleaseTests(unittest.TestCase):
 
     def test_blueprint_authorization_fields_are_not_blanket_approved(self):
         before = json.loads((self.root / BLUEPRINT).read_bytes())
-        after = {**before, 'approved_record_digests': {'example': '0' * 64}}
+        after = {**before, 'withheld_input_count': 1}
         self.write(BLUEPRINT, encoded(after))
         git(self.root, 'add', '--', BLUEPRINT)
         with self.assertRaisesRegex(PreparationError, 'authorization metadata requires exact'):
@@ -240,7 +268,7 @@ class PrepareReleaseTests(unittest.TestCase):
             'decision': 'allow', 'review_status': 'approved',
             'reviewer': 'fixture-independent-release-reviewer', 'reviewed_at': '2026-09-26T01:00:00Z'}
         controls, _ = self.plan()
-        self.assertEqual(json.loads(controls[BLUEPRINT])['approved_record_digests'], after['approved_record_digests'])
+        self.assertEqual(json.loads(controls[BLUEPRINT])['withheld_input_count'], 1)
 
 
 if __name__ == '__main__':

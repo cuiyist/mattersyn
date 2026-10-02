@@ -15,8 +15,10 @@ add records merely because this skill was invoked.
 
 **Adding papers to the website:** run it step by step with [references/agent-runbook.md](references/agent-runbook.md)
 (commands, roles, failure handling). The rules behind it are in [references/workflow-v5.md](references/workflow-v5.md),
-the only active workflow (quantum-dot/colloidal papers only, quick audit + 10% deep audit,
-figures and visuals with each paper, continuous work, one-command release). The older workflow
+the only active workflow (quantum-dot/colloidal papers only, blind-completeness quick audit,
+figures and visuals with each paper, one-command release). The 2026-10-02 S1/S2 quality hold
+in the runbook is active: no new source claims or extraction until the original-version blind
+resume test passes and the owner confirms. The older workflow
 files are historical; see the index below.
 
 ## Rules that are never relaxed

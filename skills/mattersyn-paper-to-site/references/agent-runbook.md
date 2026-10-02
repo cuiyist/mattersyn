@@ -36,18 +36,23 @@ python -B -m unittest discover -s <SRC>/tools/workflow/tests      # 30-second se
 
 - If `<SRC>` or `<SITE>` is not clean, stop and tell the owner. Never discard someone else's work.
 - If the owner has said "pause", finish the current step, write the ledger event, and stop.
+- **2026-10-02 quality hold:** start no new extraction or source claim. The nine-paper blind
+  original-version resume test must catch at least 80% of S1/S2 findings, and the owner must
+  confirm resumption. Do not lift the hold by reclassifying old findings. Already-frozen packages
+  may receive controlled correction, independent audit and release.
 - Read [workflow-v5.md](workflow-v5.md) once per session. Do not read the historical workflow files.
 
 ## 2. Roles and how to run them continuously
 
 | Role | Instances | Loop |
 |---|---|---|
-| Extractor | start with 3 (more if available) | §4, forever: one active paper plus one claimed next paper |
-| Auditor | 1 per ~4 extractors | §5 and §6, forever: the oldest package in `ready-for-audit` first |
+| Extractor | after hold: ramp 4, 8, 12, 16 as capacity and quality permit | §4: one active paper plus one claimed next paper |
+| Auditor | after hold: 1 per 2 extractors at 25% deep audits, then 1 per 3 | §5 and §6: blind completeness before package comparison; deep auditor differs from quick auditor |
 | Integrator / releaser | 1 | §7 and §8, forever: whenever `ready-for-integration` is non-empty and no release is running; when idle, extracts |
 
-Run each role as its own continuous agent session. The **auditor must be a different agent instance**
-from the paper's extractor, with a different ID in the package `audit` block. Never pause between
+Run each role as its own continuous agent session only after the hold lifts. The **auditor must be a different agent instance**
+from the paper's extractor, with a different ID in the package `audit` block. A deep auditor must
+also differ from that paper's quick auditor. Never pause between
 loops waiting for a timer. If a queue is empty, do the next role's work.
 
 ## 3. Queue (integrator, once a day or when fewer than 20 units remain)
@@ -118,19 +123,30 @@ python -B <SRC>/tools/workflow/package_workflow.py validate <P>/packages/<id>/pa
 python <SRC>/research-assets/incoming-paper-monitor/validate_quote_spans.py \
   --source-text <private page-marked text of the document> --draft-json <private quote draft for this package> \
   > <P>/receipts/<id>-quotes-1.json
-python -B <SRC>/tools/workflow/package_workflow.py audit-sample <P>/packages/<id>/package.json \
+python -B <SRC>/tools/workflow/package_workflow.py audit-sample <P>/packages/<id>/package.json --percent 25 \
   --output <P>/receipts/<id>-sample.json
 python -B <SRC>/tools/workflow/package_workflow.py log-event <P>/ledger.jsonl --stage extraction_frozen --package-id <id>
 ```
 - Fix every validation error. A quote that does not match its page is either corrected, or listed in the
   package for the auditor to check visually.
 - Receipts are create-only: use `-2`, `-3`, … for reruns.
-- Move the package folder to `<P>/ready-for-audit/` and claim the next paper (4.1).
+- Move the package folder to `<P>/ready-for-audit/`. Use `--percent 25` only for the first
+  40 papers after owner-confirmed resumption; return to 10% only after the required sample
+  has at most one S1/S2 paper. During the current hold, claim no next paper.
 
 ## 5. Quick audit (auditor; every paper)
 
-Open the package, its validation receipt, its quote receipt and its sample receipt. Log `--stage audit_started`.
-Check, in this order, looking at the cited pages and figures only where needed:
+**Before opening the package or its receipts**, read the in-scope Methods/Experimental text and
+figure captions. Write and timestamp a sealed, independent inventory of every input, step,
+variant, product sample and cited panel. This catches omissions that a package-first check cannot.
+Then open the package, its validation receipt, quote receipt and sample receipt. Log
+`--stage audit_started`. Run the source-free checker on the frozen package's exact declared records:
+```
+python -B <SRC>/tools/workflow/check_records.py --package <P>/ready-for-audit/<id>/package.json \
+  --out <P>/receipts/<id>-consistency-flags.json
+```
+Record a source-backed disposition for every non-style flag in the private audit notes before
+acceptance. A checker flag is a question, not an error verdict. Check, in this order:
 
 | Checklist key (package `audit.checklist`) | What to check |
 |---|---|
@@ -160,19 +176,26 @@ Check, in this order, looking at the cited pages and figures only where needed:
 ## 6. Deep audit (auditor; about 10% of papers, as selected by `audit-sample`)
 
 Read every scoped page, table and figure independently, and compare all values and assignments with the
-package. Record the result in `<P>/receipts/deep-audit-log.jsonl` as one line:
-`{"package_id": ..., "at": ..., "errors_found": <n>, "summary": "..."}`.
+package. Record each finding as S1 (recipe-changing value, essential input/variant, sample link or
+false measured claim), S2 (set-point/event, reagent role, contradictory illustration or silently
+resolved conflict), or S3 (caption, locator precision, unit spelling or styling). Append one line
+per distinct sampled paper to `<P>/receipts/deep-audit-log.jsonl`, retaining individual finding
+IDs and severity in a private signed receipt. Keep retrospective pre-v5 audits in a separate log.
 - Errors found: fix them through `changes_requested` as in §5.
-- **Stop rule:** if more than 5 of the last 50 deep-audited papers had any error, stop all extraction
+- **Stop rule:** if more than 5 of the last 50 distinct deep-audited papers had any S1/S2 error, stop all extraction
   and tell the owner. The quick audit is missing too much.
 - Count distinct sampled papers with any error, not the number of findings. Preserve the
-  historical log and timing relative to quick acceptance; corrective re-audits of the
+  historical log and timing relative to quick acceptance; S3 findings are corrected in batches
+  but do not trigger the hold. Corrective re-audits of the
   same paper are not new samples. During a triggered hold, start no new source claims or
   package extractions. Already-frozen packages may undergo independent deep audit and
   controlled corrections; release only the exact independently accepted scientific
   version and delta. Diagnose the observed error classes and test the revised checklist
   on a stratified independent sample of frozen work. Do not silently restart intake or
-  reset the historical count.
+  reset the historical count. The active hold requires a blind re-audit of the ORIGINAL frozen
+  nine packages by an auditor unaware of the known findings. That audit must detect at least 80%
+  of the S1/S2 findings, followed by owner confirmation, before new intake. Deep-audit 25% of
+  the next 40; return to 10% only if at most one sampled paper has an S1/S2 finding.
 
 ## 7. Integrate a batch (integrator)
 
@@ -231,7 +254,7 @@ git push origin HEAD:main
 ```
 Then `git -C <SRC> pull --ff-only` and remove the worktree. Log `--stage merged` for each package.
 
-## 8. Release (integrator; right after each source push)
+## 8. Release (integrator; at least six accepted papers or three hours, whichever comes first)
 
 Prepare the exact candidate first. This leaves `<SITE>` clean and keeps a gated copy at
 `<P>/stages/<batch>/release/site-preview`:
@@ -264,6 +287,9 @@ python <SRC>/tools/publication/release_batch.py --source <SRC> --site <SITE> --w
   anonymously, and logs each new
   `live_verified` event at most once. About 5 minutes plus CI and Pages time.
 - On success, move the batch's packages to `<P>/published/` and delete their claim files.
+- The private ledger is the release history. Do not write per-release prose in MEMORY.md,
+  PUBLICATION.md or curation-control.json; use at most one short daily memory line. Do not make
+  separate reagent-bind or baseline-closure commits.
 
 ## 9. When something fails
 

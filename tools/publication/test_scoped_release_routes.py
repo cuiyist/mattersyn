@@ -29,6 +29,8 @@ class ScopedRouteTests(unittest.TestCase):
         self.row = {'source_group': self.source, 'paper_id': self.source, 'doi': self.doi,
                     'review_status': 'selected_recipe_and_figure_review',
                     'main_status': 'selected_colloidal_method_and_figure_independently_audited',
+                    'review_scope_kind': 'scoped_independent_audit',
+                    'review_scope_contract_version': 1,
                     'review_scope': 'Main pp. 1–3 and Figure 1A/B only; remaining pages unreviewed.',
                     'documents': [{'role': 'main', 'page_count': 6, 'pages_read': [1, 2, 3],
                                    'all_text_read': False, 'all_visually_reviewed': False}],
@@ -126,6 +128,35 @@ class ScopedRouteTests(unittest.TestCase):
                 self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
 
         self.row['main_status'] = 'main_screen_hold'
+        self.flush()
+        with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+            self.routes()
+
+    def test_typed_status_rejects_unreviewed_and_unknown_versions(self):
+        for status in ('selected_method_unreviewed', 'not_independently_audited',
+                       'main_screen_hold', 'new_plausible_audit_wording'):
+            with self.subTest(status=status):
+                self.row['main_status'] = status
+                self.flush()
+                with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+                    self.routes()
+        self.row['main_status'] = 'selected_colloidal_method_and_figure_independently_audited'
+        for kind, version in ((None, 1), ('scoped_independent_audit', None),
+                              ('pending', 1), ('scoped_independent_audit', 3),
+                              ('scoped_independent_audit', True)):
+            with self.subTest(kind=kind, version=version):
+                self.row['review_scope_kind'] = kind
+                self.row['review_scope_contract_version'] = version
+                self.flush()
+                with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+                    self.routes()
+
+    def test_new_frozen_enum_uses_one_canonical_status(self):
+        self.row['review_scope_contract_version'] = 2
+        self.row['main_status'] = 'scoped_independently_audited'
+        self.flush()
+        self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
+        self.row['main_status'] = 'not_independently_audited'
         self.flush()
         with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
             self.routes()

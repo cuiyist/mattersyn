@@ -80,13 +80,18 @@ A deletion requires its own row with `decision: "delete"` and exact previous
 `before_sha256`. Structure/provenance fields remain subject to the current guard;
 a reviewer receipt cannot authorize a PDF, secret, or an unmatched source image.
 
-The blueprint's `input_files`, `release_id`, and `updated_at` are generated. All
-other fields, especially approved record digests, record counts, baseline commit
+The blueprint's `input_files`, `release_id`, `updated_at`, and `record_count` are
+generated in the same transaction as the dataset baseline and source allowlist.
+The baseline retains prior record digests and task eligibility so the final
+builder can independently reject unapproved changes. A prior record correction
+still requires an exact changed-file review and an explicitly approved digest;
+task eligibility changes remain rejected. Do not stage a manual baseline edit.
+All other blueprint fields, especially approved record digests, baseline commit
 and withheld-input count, must stay identical to committed HEAD or carry a
 separate `blueprint_metadata_review` in the review receipt. That block binds the
 old and new canonical-JSON metadata SHA-256 values, an actual reviewer/timestamp,
 `decision: allow`, and `review_status: approved`. Hash metadata after removing
-only the three generated fields. This prevents a manual change to scientific
+only the four generated fields. This prevents a manual change to scientific
 snapshot authorization from being silently approved as a generated control.
 
 ## Content binding and runtime source commit

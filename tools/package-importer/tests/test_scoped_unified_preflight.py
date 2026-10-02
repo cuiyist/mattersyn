@@ -19,6 +19,24 @@ SPEC.loader.exec_module(PREFLIGHT)
 
 
 class ScopedStatusPromotionTests(unittest.TestCase):
+    def test_frozen_scope_kind_requires_exact_v2_or_accepted_v1_migration(self):
+        v1 = {'schema_version': 'mattersyn-gold-paper-package/1', 'scope': {}}
+        v2 = {'schema_version': 'mattersyn-gold-paper-package/2',
+              'scope': {'review_scope_kind': 'scoped_independent_audit'}}
+        old = {'review_scope_kind': 'scoped_independent_audit',
+               'review_scope_contract_version': 1,
+               'main_status': 'selected_colloidal_method_and_figure_independently_audited'}
+        new = {'review_scope_kind': 'scoped_independent_audit',
+               'review_scope_contract_version': 2,
+               'main_status': 'scoped_independently_audited'}
+        self.assertEqual(PREFLIGHT.scoped_review_kind_errors(v1, old), [])
+        self.assertEqual(PREFLIGHT.scoped_review_kind_errors(v2, new), [])
+        self.assertTrue(PREFLIGHT.scoped_review_kind_errors(v1, new))
+        self.assertTrue(PREFLIGHT.scoped_review_kind_errors(v2, old))
+        for status in ('not_independently_audited', 'main_screen_hold', 'unreviewed'):
+            self.assertTrue(PREFLIGHT.scoped_review_kind_errors(v1, {**old, 'main_status': status}))
+        self.assertTrue(PREFLIGHT.scoped_review_kind_errors(v2, {**new, 'review_scope_kind': 'pending'}))
+
     def test_metadata_only_and_imported_unreviewed_accept_incremented_revision(self):
         after = {"revision": 3, "quality": {"review_status": "source_reviewed"}}
         for old_status in ("metadata_only", "imported_unreviewed"):
