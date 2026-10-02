@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "yuan2026-agbis2-cpt-100",
-  "revision": 3,
+  "revision": 4,
   "record_type": "observation",
   "title": "Yuan et al. (2026): 100% CPT AgBiS2 qualitative control (recipe incomplete)",
   "material": {
@@ -237,7 +237,7 @@
       "id": "cpt",
       "name": "3-chloro-1-propanethiol (CPT)",
       "formula": "C3H7ClS",
-      "role": "surface_ligand",
+      "role": "surface_ligand_and_sulfur_source",
       "stage": "synthesis",
       "identity": {
         "pubchem_cid": null,
@@ -259,12 +259,17 @@
         }
       },
       "notes": [
-        "Nominal 100% CPT substitution; exact CPT amount is reported only for the 75% example."
+        "Nominal 100% CPT substitution; exact CPT amount is reported only for the 75% example.",
+        "SI Figure S1b explicitly calls CPT a sulfur source and reports small AgBiS2 NC seeds before DPhTA injection; Figure S1 still describes 100% CPT as a ligand. Seed size, yield and exact CPT dose in this control are unreported."
       ],
       "evidence": [
         {
           "source_id": "yuan2026-agbis2-nl5c06337",
           "locator": "SI PDF p.5, Figure S1 caption and panel d (100% CPT product TEM)"
+        },
+        {
+          "source_id": "yuan2026-agbis2-nl5c06337",
+          "locator": "SI PDF p.5, Figure S1b-c caption (CPT sulfur source; AgBiS2 seeds before DPhTA injection)"
         }
       ]
     },
@@ -347,30 +352,17 @@
         "smiles": null
       },
       "quantities": {},
-      "notes": [],
+      "notes": [
+        "Figure S3a directly includes the 100% CPT tube at Step I and Step II; its caption says 2 mL MeOAc for Step I, conflicting with 3 mL in the general SI Methods. No 100%-specific Step II dose is given."
+      ],
       "evidence": [
         {
           "source_id": "yuan2026-agbis2-nl5c06337",
           "locator": "SI PDF p.2, Experimental Section: Synthesis of DS-AgBiS2 NC inks and purification step I"
-        }
-      ]
-    },
-    {
-      "id": "dmf-dispersion",
-      "name": "N,N-dimethylformamide, final dispersion",
-      "formula": "C3H7NO",
-      "role": "product_dispersion_solvent",
-      "stage": "purification",
-      "identity": {
-        "pubchem_cid": null,
-        "smiles": null
-      },
-      "quantities": {},
-      "notes": [],
-      "evidence": [
+        },
         {
           "source_id": "yuan2026-agbis2-nl5c06337",
-          "locator": "SI PDF p.2, Experimental Section: Synthesis of DS-AgBiS2 NC inks and purification step I"
+          "locator": "SI PDF p.6, Figure S3a caption and 0/25/50/75/100% Step I and Step II tubes"
         }
       ]
     }
@@ -385,7 +377,7 @@
     },
     {
       "id": "dissolved",
-      "name": "Heated precursor, temperature unreported",
+      "name": "Heated CPT-containing precursor with small AgBiS2 NC seeds; temperature unreported",
       "kind": "reaction_batch",
       "parent_ids": [
         "precursor"
@@ -400,11 +392,19 @@
       ]
     },
     {
-      "id": "ink",
-      "name": "Purified product observed in SI Figure S1d",
-      "kind": "product",
+      "id": "post-wash-one",
+      "name": "Step I processed 100% CPT sample; retained fraction unresolved",
+      "kind": "fraction",
       "parent_ids": [
         "reacting"
+      ]
+    },
+    {
+      "id": "ink",
+      "name": "Step II purified 100% CPT product; final dispersion solvent unassigned",
+      "kind": "product",
+      "parent_ids": [
+        "post-wash-one"
       ]
     }
   ],
@@ -507,7 +507,7 @@
     {
       "id": "dissolve",
       "action": "heat",
-      "label": "Heat precursor (temperature unstated)",
+      "label": "Heat precursor; CPT-derived AgBiS2 seeds form",
       "stage": "synthesis",
       "branch": "main",
       "optional": false,
@@ -528,17 +528,26 @@
         "note": ""
       },
       "endpoint": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
-        "note": ""
+        "value": "Small AgBiS2 nanocrystal seeds form before DPhTA injection",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yuan2026-agbis2-nl5c06337",
+            "locator": "SI PDF p.5, Figure S1b-c caption (CPT sulfur source; AgBiS2 seeds before DPhTA injection)"
+          }
+        ],
+        "note": "No seed diameter, temperature, heating duration, or yield is reported for this 100% control."
       },
       "retained_fraction": null,
-      "description": "Heat the 100% CPT precursor; Figure S1b gives no temperature or time.",
+      "description": "Heat the 100% CPT precursor. SI Figure S1b reports CPT acts as a sulfur source and small AgBiS2 NC seeds form before the DPhTA-in-DMF dispersion is injected; temperature, time and seed size are unreported.",
       "evidence": [
         {
           "source_id": "yuan2026-agbis2-nl5c06337",
           "locator": "SI PDF p.5, Figure S1 caption and panel d (100% CPT product TEM)"
+        },
+        {
+          "source_id": "yuan2026-agbis2-nl5c06337",
+          "locator": "SI PDF p.5, Figure S1b-c caption (CPT sulfur source; AgBiS2 seeds before DPhTA injection)"
         }
       ]
     },
@@ -574,11 +583,130 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Inject DPhTA dispersed in DMF; its amount and stock volume are not reported for this Figure S1 control.",
+      "description": "Inject DPhTA dispersed in DMF into the pre-injection AgBiS2 seed-containing heated precursor, as Figure S1c shows; DPhTA amount and injection-stock volume are not reported for this control.",
       "evidence": [
         {
           "source_id": "yuan2026-agbis2-nl5c06337",
           "locator": "SI PDF p.5, Figure S1 caption and panel d (100% CPT product TEM)"
+        },
+        {
+          "source_id": "yuan2026-agbis2-nl5c06337",
+          "locator": "SI PDF p.5, Figure S1b-c caption (CPT sulfur source; AgBiS2 seeds before DPhTA injection)"
+        }
+      ]
+    },
+    {
+      "id": "wash-one",
+      "action": "centrifuge",
+      "label": "Step I methyl-acetate purification",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "inject"
+      ],
+      "inputs": [
+        "reacting",
+        "meoac"
+      ],
+      "outputs": [
+        "post-wash-one"
+      ],
+      "parameters": {
+        "meoac_figure_s3_volume": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Figure S3a caption includes the 100% CPT tube; SI general Methods instead says 3 mL.",
+          "basis": "SI Figure S3a Step I, not a chosen reconciliation of the methods conflict.",
+          "raw_text": "2mL MeOAc",
+          "evidence": [
+            {
+              "source_id": "yuan2026-agbis2-nl5c06337",
+              "locator": "SI PDF p.6, Figure S3a caption and 0/25/50/75/100% Step I and Step II tubes"
+            }
+          ],
+          "derivation": null
+        },
+        "meoac_general_methods_volume": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "General SI Methods statement; not individually assigned to the 100% CPT tube and conflicts with Figure S3a.",
+          "basis": "Alternative source statement retained for comparison, not selected as this control's actual dose.",
+          "raw_text": "3mL MeOAc",
+          "evidence": [
+            {
+              "source_id": "yuan2026-agbis2-nl5c06337",
+              "locator": "SI PDF p.2, Purification of AgBiS2 NC inks (general Methods, 3 mL Step I)"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure S3a labels 100% CPT among Step I centrifuged samples and its caption gives 2 mL MeOAc. General SI Methods separately says 3 mL and 8000 rpm for 5 min; neither that volume nor those settings are independently assigned to this control. The retained fraction is unreported.",
+      "evidence": [
+        {
+          "source_id": "yuan2026-agbis2-nl5c06337",
+          "locator": "SI PDF p.6, Figure S3a caption and 0/25/50/75/100% Step I and Step II tubes"
+        }
+      ]
+    },
+    {
+      "id": "wash-two",
+      "action": "centrifuge",
+      "label": "Step II purified-product separation",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "wash-one"
+      ],
+      "inputs": [
+        "post-wash-one",
+        "meoac"
+      ],
+      "outputs": [
+        "ink"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure S3a labels 100% CPT among the products centrifuged from Step II. The 100%-specific MeOAc volume, centrifuge settings, retained fraction, and final dispersion solvent are unreported; do not copy the generic SI Methods values into this control.",
+      "evidence": [
+        {
+          "source_id": "yuan2026-agbis2-nl5c06337",
+          "locator": "SI PDF p.6, Figure S3a caption and 0/25/50/75/100% Step I and Step II tubes"
         }
       ]
     }
@@ -639,13 +767,17 @@
         {
           "source_id": "yuan2026-agbis2-nl5c06337",
           "locator": "Main PDF p.2, Figure 2 and discussion of TEM sizes, GISAXS, XRD and 100% CPT stability"
+        },
+        {
+          "source_id": "yuan2026-agbis2-nl5c06337",
+          "locator": "SI PDF p.6, Figure S3a caption and 0/25/50/75/100% Step I and Step II tubes"
         }
       ],
       "notes": [
         "100% CPT is a separately shown qualitative control; its exact time/temperature and precursor charges are not stated in Figure S1.",
         "Step I MeOAc volume differs between SI Methods (3 mL) and SI Figure S3 caption (2 mL); assignment to a particular aliquot is unresolved.",
         "Main p.2 reports that full CPT replacement yields NCs but worsens colloidal stability; SI S1d shows purified product.",
-        "This is a source-observed qualitative control, not a quantitatively reproducible complete recipe; the shared 70 °C/20 min and methyl-acetate workup are not assigned to it.",
+        "This remains a source-observed qualitative control, not a complete recipe. Figure S3a directly links it to Step I and Step II purification, but the Step I caption's 2 mL MeOAc conflicts with the general Methods 3 mL, and Step II quantitative conditions are not sample-specific.",
         "This qualitative control is not an eligible recipe–structure pair or training-ready recipe; SI Figure S1 does not provide the essential quantitative synthesis parameters."
       ]
     }
@@ -654,13 +786,14 @@
   "structure_assets": [],
   "quality": {
     "review_status": "source_reviewed",
-    "review_scope": "Selected main pp.1-3 and SI pp.1-3,5-7 qualitative 100% CPT control independently audited. Explicit recipe-pair eligibility withheld because precursor charges, temperature, reaction duration and purification quantities are not source-linked.",
+    "review_scope": "Selected main pp.1-3 and SI pp.1-3,5-7 qualitative 100% CPT control. Prior scoped quick audit and accepted targeted r1/r2 deltas cover Figure S3a Step I/II workup and Figure S1b-c CPT sulfur-source/pre-injection seed state; this is not a full-paper re-audit. Explicit recipe-pair eligibility remains withheld because precursor charges, synthesis temperature and reaction duration are not source-linked.",
     "missing_fields": [
       "No quantitative diameter is given for the 100% CPT product; SI Figure S1d supports qualitative TEM only.",
       "No sample-specific XRD curve for this ratio in SI Figure S4; main text phase statement is study-wide.",
       "Exact DPhTA injection DMF volume is unreported for CPT branch; do not copy the 0% branch 1 mL quantity.",
       "Figure S1 gives no AgI, BiI3, CPT or DPhTA mmol for this 100% control.",
-      "Temperature, reaction hold, and purification quantities are not explicitly bound to the 100% control."
+      "Temperature, reaction hold, Step II purification quantities and final dispersion solvent are not individually reported for the 100% CPT control; Figure S3a supplies only Step I's disputed 2 mL claim.",
+      "SI Figure S1b identifies small pre-injection AgBiS2 seeds but gives no seed diameter, yield or formation kinetics for this 100% CPT control."
     ],
     "conflicts": [
       "SI p.2 Methods reports 3 mL methyl acetate in purification Step I; SI p.6 Figure S3 caption reports 2 mL for Step I. Retain both without choosing."

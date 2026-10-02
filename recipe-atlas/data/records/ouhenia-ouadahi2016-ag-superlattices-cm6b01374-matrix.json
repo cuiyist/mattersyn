@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374-matrix",
-  "revision": 3,
+  "revision": 4,
   "record_type": "literature_protocol",
   "collection": "reviewed_literature",
   "reader_role": "synthesis_route",
@@ -393,7 +393,23 @@
     },
     {
       "id": "c10-5-stock",
-      "name": "C10Ag5nm solvent stock",
+      "name": "C10Ag5nm source-level NC stock family; solvent branch unassigned",
+      "kind": "sample_set",
+      "parent_ids": [
+        "c10-5-washed"
+      ]
+    },
+    {
+      "id": "c10-5-stock-hexane",
+      "name": "C10Ag5nm redispersed in hexane",
+      "kind": "stock",
+      "parent_ids": [
+        "c10-5-washed"
+      ]
+    },
+    {
+      "id": "c10-5-stock-toluene",
+      "name": "C10Ag5nm redispersed in toluene",
       "kind": "stock",
       "parent_ids": [
         "c10-5-washed"
@@ -415,10 +431,34 @@
     },
     {
       "id": "c12-5-stock",
-      "name": "C12Ag5nm solvent stock",
+      "name": "C12Ag5nm source-level NC stock family; solvent branch unassigned",
+      "kind": "sample_set",
+      "parent_ids": [
+        "c12-5-washed"
+      ]
+    },
+    {
+      "id": "c12-5-stock-hexane",
+      "name": "C12Ag5nm redispersed in hexane",
       "kind": "stock",
       "parent_ids": [
         "c12-5-washed"
+      ]
+    },
+    {
+      "id": "c12-5-stock-toluene",
+      "name": "C12Ag5nm redispersed in toluene",
+      "kind": "stock",
+      "parent_ids": [
+        "c12-5-washed"
+      ]
+    },
+    {
+      "id": "c12-5-dry-for-wash",
+      "name": "C12Ag5nm after evaporation of 1 mL hexane dispersion",
+      "kind": "fraction",
+      "parent_ids": [
+        "c12-5-stock-hexane"
       ]
     },
     {
@@ -437,8 +477,24 @@
     },
     {
       "id": "c12-6-stock",
-      "name": "C12Ag6nm solvent stock",
+      "name": "C12Ag6nm source-level NC stock family; solvent branch unassigned",
+      "kind": "sample_set",
+      "parent_ids": [
+        "c12-6-washed"
+      ]
+    },
+    {
+      "id": "c12-6-stock-hexane",
+      "name": "C12Ag6nm redispersed in hexane",
       "kind": "stock",
+      "parent_ids": [
+        "c12-6-washed"
+      ]
+    },
+    {
+      "id": "c12-6-stock-mixed",
+      "name": "C12Ag6nm 40:60 hexane/toluene dispersion",
+      "kind": "mixture",
       "parent_ids": [
         "c12-6-washed"
       ]
@@ -515,10 +571,34 @@
     },
     {
       "id": "c12-5-acetone",
-      "name": "C12Ag5nm acetone-washed stock",
+      "name": "C12Ag5nm acetone-washed precipitate",
+      "kind": "fraction",
+      "parent_ids": [
+        "c12-5-dry-for-wash"
+      ]
+    },
+    {
+      "id": "c12-5-washed-hexane",
+      "name": "Acetone-washed C12Ag5nm redispersed in hexane",
       "kind": "stock",
       "parent_ids": [
-        "c12-5-stock"
+        "c12-5-acetone"
+      ]
+    },
+    {
+      "id": "c12-5-washed-toluene",
+      "name": "Acetone-washed C12Ag5nm redispersed in toluene",
+      "kind": "stock",
+      "parent_ids": [
+        "c12-5-acetone"
+      ]
+    },
+    {
+      "id": "c12-5-dry-before-readd",
+      "name": "Acetone-washed C12Ag5nm after second evaporation",
+      "kind": "fraction",
+      "parent_ids": [
+        "c12-5-washed-hexane"
       ]
     },
     {
@@ -526,7 +606,7 @@
       "name": "C12Ag5nm in PPh3-saturated hexane",
       "kind": "stock",
       "parent_ids": [
-        "c12-5-acetone"
+        "c12-5-dry-before-readd"
       ]
     },
     {
@@ -534,7 +614,7 @@
       "name": "C12Ag5nm washed-fig9",
       "kind": "product",
       "parent_ids": [
-        "c12-5-acetone"
+        "c12-5-washed-hexane"
       ]
     },
     {
@@ -550,7 +630,7 @@
       "name": "C12Ag5nm washed-fig10",
       "kind": "product",
       "parent_ids": [
-        "c12-5-acetone"
+        "c12-5-washed-hexane"
       ]
     },
     {
@@ -729,11 +809,11 @@
     },
     {
       "id": "disperse-c10-5",
-      "action": "disperse",
-      "label": "Redisperse C10Ag5nm",
+      "action": "select_dispersion_branch",
+      "label": "Source-level C10-5 NC context",
       "stage": "workup",
       "branch": "c10-5",
-      "optional": false,
+      "optional": true,
       "depends_on": [
         "precipitate-c10-5"
       ],
@@ -757,11 +837,89 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Disperse precipitate in hexane or toluene as required by assembly branch; solvent volume is unreported.",
+      "description": "Source-level NC identity placeholder, not a physical solvent-free stock or a reagent charge. Use a concrete solvent-specific operation below for preparation; volumes are unreported.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
           "locator": "Main PDF p.2 / printed p.4381, Experimental, synthesis"
+        }
+      ]
+    },
+    {
+      "id": "disperse-c10-5-hexane",
+      "action": "disperse",
+      "label": "Redisperse C10-5 in hexane",
+      "stage": "workup",
+      "branch": "c10-5-hexane",
+      "optional": false,
+      "depends_on": [
+        "precipitate-c10-5"
+      ],
+      "inputs": [
+        "c10-5-washed",
+        "hexane"
+      ],
+      "outputs": [
+        "c10-5-stock-hexane"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained ethanol precipitate in hexane. Solvent volume is unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.2 / printed p.4381, Experimental, Synthesis of Silver NCs"
+        }
+      ]
+    },
+    {
+      "id": "disperse-c10-5-toluene",
+      "action": "disperse",
+      "label": "Redisperse C10-5 in toluene",
+      "stage": "workup",
+      "branch": "c10-5-toluene",
+      "optional": false,
+      "depends_on": [
+        "precipitate-c10-5"
+      ],
+      "inputs": [
+        "c10-5-washed",
+        "toluene"
+      ],
+      "outputs": [
+        "c10-5-stock-toluene"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained ethanol precipitate in toluene. Solvent volume is unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.2 / printed p.4381, Experimental, Synthesis of Silver NCs"
         }
       ]
     },
@@ -931,11 +1089,11 @@
     },
     {
       "id": "disperse-c12-5",
-      "action": "disperse",
-      "label": "Redisperse C12Ag5nm",
+      "action": "select_dispersion_branch",
+      "label": "Source-level C12-5 NC context",
       "stage": "workup",
       "branch": "c12-5",
-      "optional": false,
+      "optional": true,
       "depends_on": [
         "precipitate-c12-5"
       ],
@@ -959,11 +1117,89 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Disperse precipitate in hexane or toluene as required by assembly branch; solvent volume is unreported.",
+      "description": "Source-level NC identity placeholder, not a physical solvent-free stock or a reagent charge. Use a concrete solvent-specific operation below for preparation; volumes are unreported.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
           "locator": "Main PDF p.2 / printed p.4381, Experimental, synthesis"
+        }
+      ]
+    },
+    {
+      "id": "disperse-c12-5-hexane",
+      "action": "disperse",
+      "label": "Redisperse C12-5 in hexane",
+      "stage": "workup",
+      "branch": "c12-5-hexane",
+      "optional": false,
+      "depends_on": [
+        "precipitate-c12-5"
+      ],
+      "inputs": [
+        "c12-5-washed",
+        "hexane"
+      ],
+      "outputs": [
+        "c12-5-stock-hexane"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained ethanol precipitate in hexane. Solvent volume is unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.2 / printed p.4381, Experimental, Synthesis of Silver NCs"
+        }
+      ]
+    },
+    {
+      "id": "disperse-c12-5-toluene",
+      "action": "disperse",
+      "label": "Redisperse C12-5 in toluene",
+      "stage": "workup",
+      "branch": "c12-5-toluene",
+      "optional": false,
+      "depends_on": [
+        "precipitate-c12-5"
+      ],
+      "inputs": [
+        "c12-5-washed",
+        "toluene"
+      ],
+      "outputs": [
+        "c12-5-stock-toluene"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained ethanol precipitate in toluene. Solvent volume is unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.2 / printed p.4381, Experimental, Synthesis of Silver NCs"
         }
       ]
     },
@@ -1133,11 +1369,11 @@
     },
     {
       "id": "disperse-c12-6",
-      "action": "disperse",
-      "label": "Redisperse C12Ag6nm",
+      "action": "select_dispersion_branch",
+      "label": "Source-level C12-6 NC context",
       "stage": "workup",
       "branch": "c12-6",
-      "optional": false,
+      "optional": true,
       "depends_on": [
         "precipitate-c12-6"
       ],
@@ -1161,11 +1397,90 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Disperse precipitate in hexane or toluene as required by assembly branch; solvent volume is unreported.",
+      "description": "Source-level NC identity placeholder, not a physical solvent-free stock or a reagent charge. Use a concrete solvent-specific operation below for preparation; volumes are unreported.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
           "locator": "Main PDF p.2 / printed p.4381, Experimental, synthesis"
+        }
+      ]
+    },
+    {
+      "id": "disperse-c12-6-hexane",
+      "action": "disperse",
+      "label": "Redisperse C12-6 in hexane",
+      "stage": "workup",
+      "branch": "c12-6-hexane",
+      "optional": false,
+      "depends_on": [
+        "precipitate-c12-6"
+      ],
+      "inputs": [
+        "c12-6-washed",
+        "hexane"
+      ],
+      "outputs": [
+        "c12-6-stock-hexane"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained ethanol precipitate in hexane. Solvent volume is unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.2 / printed p.4381, Experimental, Synthesis of Silver NCs"
+        }
+      ]
+    },
+    {
+      "id": "disperse-c12-6-mixed",
+      "action": "disperse",
+      "label": "Redisperse C12Ag6nm for mixture LCEM",
+      "stage": "workup",
+      "branch": "c12-6-mixed",
+      "optional": false,
+      "depends_on": [
+        "precipitate-c12-6"
+      ],
+      "inputs": [
+        "c12-6-washed",
+        "hexane",
+        "toluene"
+      ],
+      "outputs": [
+        "c12-6-stock-mixed"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prepare the source-assigned hexane/toluene 40:60 dispersion for Figure 4 LCEM. Ratio basis and total solvent volume are not reported; no sequential addition is inferred.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.4 / printed p.4383, Results, 40:60 hexane/toluene Figure 4 statement; p.6 / printed p.4385, Figure 4 caption"
         }
       ]
     },
@@ -1177,11 +1492,10 @@
       "branch": "c10-5-hexane",
       "optional": false,
       "depends_on": [
-        "disperse-c10-5"
+        "disperse-c10-5-hexane"
       ],
       "inputs": [
-        "c10-5-stock",
-        "hexane",
+        "c10-5-stock-hexane",
         "hopg",
         "nitrogen"
       ],
@@ -1291,11 +1605,10 @@
       "branch": "c10-5-toluene",
       "optional": false,
       "depends_on": [
-        "disperse-c10-5"
+        "disperse-c10-5-toluene"
       ],
       "inputs": [
-        "c10-5-stock",
-        "toluene",
+        "c10-5-stock-toluene",
         "hopg",
         "nitrogen"
       ],
@@ -1405,11 +1718,10 @@
       "branch": "c12-5-hexane",
       "optional": false,
       "depends_on": [
-        "disperse-c12-5"
+        "disperse-c12-5-hexane"
       ],
       "inputs": [
-        "c12-5-stock",
-        "hexane",
+        "c12-5-stock-hexane",
         "hopg",
         "nitrogen"
       ],
@@ -1519,11 +1831,10 @@
       "branch": "c12-5-toluene",
       "optional": false,
       "depends_on": [
-        "disperse-c12-5"
+        "disperse-c12-5-toluene"
       ],
       "inputs": [
-        "c12-5-stock",
-        "toluene",
+        "c12-5-stock-toluene",
         "hopg",
         "nitrogen"
       ],
@@ -1714,13 +2025,11 @@
       "branch": "c12-6-lcem-hexane-toluene-40-60",
       "optional": false,
       "depends_on": [
-        "disperse-c12-6"
+        "disperse-c12-6-mixed"
       ],
       "inputs": [
-        "c12-6-stock",
-        "hexane",
-        "sin-membrane",
-        "toluene"
+        "c12-6-stock-mixed",
+        "sin-membrane"
       ],
       "outputs": [
         "c12-6-lcem-hexane-toluene-40-60"
@@ -1817,7 +2126,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Load 2×10^-3 mol/L C12Ag6nm dispersion into SiN liquid cell and image by HAADF-STEM. Figure 4 uses hexane/toluene 40:60; Figure 5 uses pure hexane. Beam-induced bubbles may affect observed growth.",
+      "description": "Load the source-assigned branch dispersion into the SiN liquid cell and image by HAADF-STEM. Figure 4 is the 40:60 mixture and Figure 5 is pure hexane; beam-induced bubbles may affect observed growth.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
@@ -1833,11 +2142,10 @@
       "branch": "c12-6-lcem-hexane",
       "optional": false,
       "depends_on": [
-        "disperse-c12-6"
+        "disperse-c12-6-hexane"
       ],
       "inputs": [
-        "c12-6-stock",
-        "hexane",
+        "c12-6-stock-hexane",
         "sin-membrane"
       ],
       "outputs": [
@@ -1925,30 +2233,37 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Load 2×10^-3 mol/L C12Ag6nm dispersion into SiN liquid cell and image by HAADF-STEM. Figure 4 uses hexane/toluene 40:60; Figure 5 uses pure hexane. Beam-induced bubbles may affect observed growth.",
+      "description": "Load the source-assigned branch dispersion into the SiN liquid cell and image by HAADF-STEM. Figure 4 is the 40:60 mixture and Figure 5 is pure hexane; beam-induced bubbles may affect observed growth. The LCEM Methods solvent scope conflicts with the Figure 5 Results and caption; retain the Figure 5 assignment and see the unresolved source conflict.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
           "locator": "Main PDF p.3 / printed p.4382, Experimental, LCEM; Results, Figure 5"
+        },
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.3 / printed p.4382, Experimental, Liquid-Cell Scanning (S)TEM"
+        },
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.5 / printed p.4384, Results, pure-hexane Figure 5 comparison; p.6 / printed p.4385, Figure 5 caption"
         }
       ]
     },
     {
-      "id": "wash-c12-5-pph3",
-      "action": "wash_and_centrifuge",
-      "label": "Remove free PPh3 with acetone",
+      "id": "evaporate-c12-5-before-wash",
+      "action": "evaporate",
+      "label": "Evaporate 1 mL hexane starting stock",
       "stage": "workup",
-      "branch": "c12-5-pph3",
+      "branch": "c12-5-pph3-wash",
       "optional": false,
       "depends_on": [
-        "disperse-c12-5"
+        "disperse-c12-5-hexane"
       ],
       "inputs": [
-        "c12-5-stock",
-        "acetone"
+        "c12-5-stock-hexane"
       ],
       "outputs": [
-        "c12-5-acetone"
+        "c12-5-dry-for-wash"
       ],
       "parameters": {
         "starting_volume": {
@@ -1968,7 +2283,47 @@
             }
           ],
           "derivation": null
-        },
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate 1 mL of silver NC dispersion in hexane before the subsequent wash. Evaporation temperature and duration are unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF pp.2–3 / printed pp.4381–4382, Experimental, PPh3 Removal from the Colloidal Solution"
+        }
+      ]
+    },
+    {
+      "id": "wash-c12-5-pph3",
+      "action": "wash_and_centrifuge",
+      "label": "Remove free PPh3 with acetone",
+      "stage": "workup",
+      "branch": "c12-5-pph3",
+      "optional": false,
+      "depends_on": [
+        "evaporate-c12-5-before-wash"
+      ],
+      "inputs": [
+        "c12-5-dry-for-wash",
+        "acetone"
+      ],
+      "outputs": [
+        "c12-5-acetone"
+      ],
+      "parameters": {
         "acetone_volume": {
           "value": 1,
           "minimum": null,
@@ -2001,11 +2356,132 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Evaporate 1 mL of Ag NCs dispersed in hexane, redisperse in 1 mL acetone and centrifuge; redisperse precipitate in hexane or toluene. No centrifuge settings reported.",
+      "description": "Add 1 mL acetone to the evaporated NCs, centrifuge and retain the precipitate. Centrifuge settings are unreported; redispersion is a separate branch below.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
           "locator": "Main PDF p.3 / printed p.4382, Experimental, PPh3 removal"
+        }
+      ]
+    },
+    {
+      "id": "redisperse-washed-c12-5-hexane",
+      "action": "disperse",
+      "label": "Redisperse acetone-washed C12Ag5nm in hexane",
+      "stage": "workup",
+      "branch": "c12-5-pph3-washed-hexane",
+      "optional": false,
+      "depends_on": [
+        "wash-c12-5-pph3"
+      ],
+      "inputs": [
+        "c12-5-acetone",
+        "hexane"
+      ],
+      "outputs": [
+        "c12-5-washed-hexane"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained acetone-washed precipitate in hexane; volume is unreported. Only the separate measured branch is linked to Figure 9 and Figure 10 outcomes.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF pp.2–3 / printed pp.4381–4382, Experimental, PPh3 Removal from the Colloidal Solution"
+        }
+      ]
+    },
+    {
+      "id": "redisperse-washed-c12-5-toluene",
+      "action": "disperse",
+      "label": "Redisperse acetone-washed C12Ag5nm in toluene",
+      "stage": "workup",
+      "branch": "c12-5-pph3-washed-toluene",
+      "optional": true,
+      "depends_on": [
+        "wash-c12-5-pph3"
+      ],
+      "inputs": [
+        "c12-5-acetone",
+        "toluene"
+      ],
+      "outputs": [
+        "c12-5-washed-toluene"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Redisperse the retained acetone-washed precipitate in toluene; volume is unreported. Only the separate measured branch is linked to Figure 9 and Figure 10 outcomes.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF pp.2–3 / printed pp.4381–4382, Experimental, PPh3 Removal from the Colloidal Solution"
+        }
+      ]
+    },
+    {
+      "id": "evaporate-washed-c12-5-before-readd",
+      "action": "evaporate",
+      "label": "Evaporate washed NC dispersion before PPh3 readdition",
+      "stage": "workup",
+      "branch": "c12-5-pph3-readd",
+      "optional": false,
+      "depends_on": [
+        "redisperse-washed-c12-5-hexane"
+      ],
+      "inputs": [
+        "c12-5-washed-hexane"
+      ],
+      "outputs": [
+        "c12-5-dry-before-readd"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "PPh3-saturated hexane",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+            "locator": "Main PDF p.7 / printed p.4386, Results, PPh3 intervention"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Evaporate the acetone-washed NC solution before readdition. The prior Results paragraph assigns the washed dispersion to hexane; evaporation settings are unreported.",
+      "evidence": [
+        {
+          "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
+          "locator": "Main PDF p.7 / printed p.4386, Results, PPh3 wash/readdition and Figure 9"
         }
       ]
     },
@@ -2017,10 +2493,10 @@
       "branch": "c12-5-pph3",
       "optional": false,
       "depends_on": [
-        "wash-c12-5-pph3"
+        "evaporate-washed-c12-5-before-readd"
       ],
       "inputs": [
-        "c12-5-acetone",
+        "c12-5-dry-before-readd",
         "pph3",
         "hexane"
       ],
@@ -2046,7 +2522,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Evaporate washed NC dispersion then redisperse NCs in PPh3-saturated hexane. Saturation concentration, temperature and dosing details are unreported.",
+      "description": "Redisperse the evaporated washed NCs in PPh3-saturated hexane. Saturation concentration, temperature and dosing details are unreported.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
@@ -2062,11 +2538,10 @@
       "branch": "washed-fig9",
       "optional": false,
       "depends_on": [
-        "wash-c12-5-pph3"
+        "redisperse-washed-c12-5-hexane"
       ],
       "inputs": [
-        "c12-5-acetone",
-        "hexane",
+        "c12-5-washed-hexane",
         "hopg"
       ],
       "outputs": [
@@ -2086,7 +2561,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Deposit the c12-5-acetone dispersion in hexane. Method 1 stated in Results prose. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
+      "description": "Deposit the separately redispersed acetone-washed NC stock. Method 1 stated in Results prose. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
@@ -2106,7 +2581,6 @@
       ],
       "inputs": [
         "c12-5-readd",
-        "hexane",
         "carbon-grid"
       ],
       "outputs": [
@@ -2126,7 +2600,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Deposit the c12-5-readd dispersion in hexane. Method 2 stated in Results prose. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
+      "description": "Deposit the separately prepared PPh3-readdition stock. Method 2 stated in Results prose. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
@@ -2142,11 +2616,10 @@
       "branch": "washed-fig10",
       "optional": false,
       "depends_on": [
-        "wash-c12-5-pph3"
+        "redisperse-washed-c12-5-hexane"
       ],
       "inputs": [
-        "c12-5-acetone",
-        "hexane"
+        "c12-5-washed-hexane"
       ],
       "outputs": [
         "c12-5-washed-fig10"
@@ -2165,7 +2638,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Deposit the c12-5-acetone dispersion in hexane. Method 1 in Results prose versus anticapillary tweezer Method 2 in Figure 10 caption. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
+      "description": "Deposit the separately redispersed acetone-washed NC stock. Method 1 in Results prose versus anticapillary tweezer Method 2 in Figure 10 caption. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
@@ -2184,8 +2657,7 @@
         "readd-c12-5-pph3"
       ],
       "inputs": [
-        "c12-5-readd",
-        "hexane"
+        "c12-5-readd"
       ],
       "outputs": [
         "c12-5-readd-fig10"
@@ -2204,7 +2676,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Deposit the c12-5-readd dispersion in hexane. Method 1 in Results prose versus anticapillary tweezer Method 2 in Figure 10 caption. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
+      "description": "Deposit the separately prepared PPh3-readdition stock. Method 1 in Results prose versus anticapillary tweezer Method 2 in Figure 10 caption. Figure 9A/B are explicitly Method 1; Figure 9C/D prose says Method 2. For Figure 10, p.7 prose says Method 1 while the caption describes anticapillary tweezers (Method 2). Do not inherit a fixed deposition setting for disputed Figure 10 panels.",
       "evidence": [
         {
           "source_id": "ouhenia-ouadahi2016-ag-superlattices-cm6b01374",
@@ -2268,7 +2740,8 @@
         }
       ],
       "notes": [
-        "Starting Ag atomic phase is not established for this exact batch; later nanobeam data address representative C12Ag6nm superlattices."
+        "Starting Ag atomic phase is not established for this exact batch; later nanobeam data address representative C12Ag6nm superlattices.",
+        "This starting-NC identity is a source-level sample set; the solvent-specific redispersed aliquots are separate material states and operations."
       ]
     },
     {
@@ -2324,7 +2797,8 @@
         }
       ],
       "notes": [
-        "Starting Ag atomic phase is not established for this exact batch; later nanobeam data address representative C12Ag6nm superlattices."
+        "Starting Ag atomic phase is not established for this exact batch; later nanobeam data address representative C12Ag6nm superlattices.",
+        "This starting-NC identity is a source-level sample set; the solvent-specific redispersed aliquots are separate material states and operations."
       ]
     },
     {
@@ -2380,7 +2854,8 @@
         }
       ],
       "notes": [
-        "Starting Ag atomic phase is not established for this exact batch; later nanobeam data address representative C12Ag6nm superlattices."
+        "Starting Ag atomic phase is not established for this exact batch; later nanobeam data address representative C12Ag6nm superlattices.",
+        "This starting-NC identity is a source-level sample set; the solvent-specific redispersed aliquots are separate material states and operations."
       ]
     },
     {
@@ -3863,7 +4338,8 @@
       "Figure 3 Results prose says C10Ag5nm in toluene, but Figure 3 caption says 5 nm dodecanethiol-coated (C12) Ag NCs.",
       "Figure 9 wash/readdition comparison uses Method 1 versus stated Method 2, so deposition method is a confounder; Figure 10 prose says Method 1, but its caption describes anticapillary tweezers (Method 2).",
       "Figure 10 Results prose calls EDS area 2 Figure 9C, while Figure 10 image/caption place it in Figure 10C.",
-      "SI Table S1 ligand amount heading is printed as mL for 500/1000, inconsistent with practical interpretation; no correction asserted."
+      "SI Table S1 ligand amount heading is printed as mL for 500/1000, inconsistent with practical interpretation; no correction asserted.",
+      "Unresolved LCEM solvent-scope conflict: Experimental Methods p.3 / printed p.4382 names toluene and a toluene/hexane mixture, whereas Results p.5 / printed p.4384 and the Figure 5 caption p.6 / printed p.4385 assign the Figure 5 C12Ag6nm observation to pure hexane. Figure 5 remains source-linked to hexane; no separate pure-toluene measured outcome is inferred."
     ],
     "requested_tasks": [
       "synthesis_structure_pair"
