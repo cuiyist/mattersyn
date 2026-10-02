@@ -21,9 +21,12 @@ rules are in [standards.md](standards.md) and still apply in full.
 measured result. Report the measured rate from the metrics ledger only.
 
 **Current hold:** no new extraction or source claims. Finish controlled corrections and audits of
-already frozen work. The hold ends only after a blind re-audit of the original nine sampled packages
-finds at least 80% of their S1/S2 issues **and** the owner confirms resumption. The owner separately
-asked to pause after the current papers; a passing test alone does not override that request.
+already frozen work. The first blind test found 4 of 10 known S1/S2 issues (one further issue was
+mentioned only as a scope limit), so it did not meet the 80% threshold. Strengthen and rerun the
+blind completeness audit with a different reviewer. The hold ends only after a blind re-audit of
+the original nine sampled packages finds at least 80% of their S1/S2 issues **and** the owner
+confirms resumption. The owner separately asked to pause after the current papers; a passing test
+alone does not override that request.
 
 ## The pipeline
 
@@ -52,8 +55,10 @@ python -B tools/workflow/package_workflow.py rank <screened_pass.jsonl> --scope 
 ### 3. Extract: one paper = one package (minimum publishable unit)
 - **Scope:** main-text recipes and **all** variants inside that scope, their product samples
   and structure results, page/figure locators, and the source figures and visuals for those
-  samples. SI is read only when the main text points to it for an essential recipe value.
-  Otherwise SI is a later follow-up.
+  samples. SI is read for essential recipe values. An explicitly deferred SI remains a later
+  follow-up, but source-side audit must still check available related SI preparation and figure
+  captions for omitted required inputs, variants and conflicts before a package can claim complete
+  coverage of its selected recipe series.
 - Package format: `tools/workflow/package.schema.json` (`package_id`, documents, records,
   locators, assets, reagent bindings, scope, audit, presentation).
 - **Figures and visuals together:** crop the source figures that support each sample (with
@@ -72,9 +77,12 @@ python -B tools/workflow/package_workflow.py audit-sample <pkg>/package.json --o
 Ledger: `extraction_frozen`.
 
 ### 4. Quick audit (every paper; reviewer ≠ author)
-Before seeing the package, the auditor reads the in-scope Methods/Experimental text and figure
-captions and seals an independent inventory of inputs, steps, variants and samples. Then compare
-that inventory with the frozen package and private validation receipts. Run the advisory
+Before seeing the package, the auditor reads the available main and SI preparation, linked Results,
+and relevant figure/table captions, then seals an independent inventory of setup, inputs, steps,
+variants, purification, samples and panels. Inspect related branches even if the package proposes
+to exclude them, and distinguish a partial contribution from a complete recipe series. Compare
+this source-first inventory with the frozen package and private validation receipts in both
+directions, including exact sample lineage and rendered molecular-card identity. Run the advisory
 `tools/workflow/check_records.py --package <frozen-package.json> --out <private-flags.json>`;
 resolve every non-style flag against the source in private audit notes. A flag is a question,
 never an automatic verdict. Check:

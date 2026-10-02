@@ -136,9 +136,14 @@ python -B <SRC>/tools/workflow/package_workflow.py log-event <P>/ledger.jsonl --
 
 ## 5. Quick audit (auditor; every paper)
 
-**Before opening the package or its receipts**, read the in-scope Methods/Experimental text and
-figure captions. Write and timestamp a sealed, independent inventory of every input, step,
-variant, product sample and cited panel. This catches omissions that a package-first check cannot.
+**Before opening the package or its receipts**, read the available main-paper and SI preparation
+sections, their linked Results, and every relevant figure and table caption. Write and timestamp a
+sealed source-side inventory of vessel preparation, atmosphere, inputs (including unquantified
+ones), stock composition, steps, purification, deposition, post-treatment, variants, product
+samples and cited panels. Record page/section locators and explicitly mark any source pages that
+could not be checked. Inspect preparation and characterization branches outside the proposed
+scope before accepting an exclusion; a package cannot exclude a source-supported variant of its
+claimed recipe series just to make an incomplete series look complete.
 Then open the package, its validation receipt, quote receipt and sample receipt. Log
 `--stage audit_started`. Run the source-free checker on the frozen package's exact declared records:
 ```
@@ -150,7 +155,7 @@ acceptance. A checker flag is a question, not an error verdict. Check, in this o
 
 | Checklist key (package `audit.checklist`) | What to check |
 |---|---|
-| `document_scope` | Scope and exclusions are stated honestly (e.g. "SI not reviewed"). Inventory the in-scope Methods, Results, figure pages and SI sections; check whether exclusions could hide method or sample variants. |
+| `document_scope` | Scope and exclusions are stated honestly (e.g. "SI not reviewed"). Compare the source-first inventory with all available Methods, Results, figure and SI pages. If a related branch is deliberately deferred, keep the contribution explicitly partial and do not claim complete recipe-series coverage. |
 | `recipe_and_variants` | Every recipe and variant inside the stated scope is present; none merged. Keep a typical or study-wide preparation separate from individually measured samples unless the source links them. Check deposition, purification and assembly branches and omitted, even unquantified, inputs. |
 | `quantities_units_conditions` | Every value the quote check did not confirm; every reaction step's temperature, time and atmosphere; units. Separate observed events (for example, solution clearing) from heater targets, and check all in-scope SI conditions and apparatus. |
 | `chemical_identities` | Each reagent's identity and stock composition matches the source. Inspect rendered molecule-card role, caption and cited provenance when a shared registry entry is reused. |
@@ -165,6 +170,13 @@ acceptance. A checker flag is a question, not an error verdict. Check, in this o
   figure panel. Record the supporting locator for every edge and mark unresolved or
   study-wide relationships explicitly. This is a private
   audit aid, not an additional public scientific claim.
+- Perform the comparison in both directions: every source-side item must be mapped to a record or
+  a justified, visible coverage limit, and every package claim must map back to a specific source
+  statement. Treat a typical preparation, study-wide ratio, group average and individually
+  measured specimen as four different kinds of evidence; do not silently turn one into another.
+- Inspect the rendered chemical cards and source figures as well as JSON. Verify the named
+  reagent and role on each reused card, and compare figure-panel labels, body text and captions
+  as separate statements. A byte-valid asset is not proof that its scientific identity is right.
 - **Accept:** set `audit.status: accepted`, `reviewer_id` (your ID, different from `author_id`),
   `receipt_id`, and `scientific_sha256` from the validation receipt. Rerun `validate` (new receipt number).
   Log `--stage audit_accepted`.
