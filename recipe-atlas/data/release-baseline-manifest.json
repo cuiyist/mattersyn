@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1703,
-  "group_count": 173,
+  "record_count": 1715,
+  "group_count": 178,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -27,6 +27,7 @@
     "Anatase titanium dioxide nanocrystallites",
     "Annealed InP film derived from nanocrystals",
     "Aptamer-capped lead sulfide quantum dots",
+    "Aqueous CdTe colloidal nanocrystals",
     "Aqueous cadmium selenide nanocrystals",
     "Aqueous colloidal Ag nanocrystals",
     "Au and AuCu colloidal nanorods",
@@ -43,6 +44,7 @@
     "Cadmium chalcogenide nanocrystals",
     "Cadmium chalcogenide noninjection nanocrystals",
     "Cadmium dithiocarbamate precursor and CdSe/CdS quantum belts",
+    "Cadmium selenide quantum dots",
     "Cadmium selenide source scope",
     "Cadmium sulfide",
     "Cadmium sulfide films and sensitizer/device contexts",
@@ -61,6 +63,7 @@
     "CdSe nanocrystals",
     "CdSe quantum dots",
     "CdSe/CdS quantum dots and electron-acceptor complexes",
+    "CdSe/CdS quantum-dot–poly(ionic liquid) composite",
     "CdSe/CdS/ZnS colloidal core/shell nanocrystals",
     "CdSe–polythiophene composite",
     "CdTe nanocrystals grown on oxidized multiwalled carbon nanotubes",
@@ -191,11 +194,13 @@
     "Ytterbium- and erbium-codoped lanthanum molybdate phosphors",
     "Zero-dimensional organic antimony halides",
     "Zinc oxide preparation and vaporization",
+    "Zinc-treated copper indium sulfide quantum dots",
     "Zirconia and hydroxide precursor states",
     "ZnAl2O4 spinel hydrothermal synthesis",
     "ZnO and separately Co2+- or Ni2+-doped ZnO quantum dots",
     "ZnS colloidal nanocrystals",
     "ZnS quantum dots",
+    "aqueous AgInS2/ZnS quantum dots",
     "cadmium chalcogenide nanocrystals",
     "cesium copper chloride nanocrystals",
     "cobalt ferrite comparator observations",
@@ -121362,6 +121367,879 @@
       "pair_ids": [
         "zou2022-mno2-casein-acssuschemeng2c02981-aqueous-one-pot::cs-mno2-2mgml"
       ]
+    },
+    {
+      "record_id": "knowles2010-cdse-aniline-ja907253s-cdse-core-2p9nm",
+      "title": "Knowles et al. (2010): 2.9 nm CdSe synthesis, aniline exposure, and separate purification comparison",
+      "formula": "CdSe",
+      "family": "Cadmium selenide quantum dots",
+      "method": "Cd-stearate/TOPSe hot injection; para-aniline exposure; source-bounded one/two MeOH comparison",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/ja907253s",
+      "revision": 4,
+      "record_sha256": "d67dd9ffbafe086beb7f7cd0401b6b1b4bb64be6e175113fb7757cc8a82b8ca8",
+      "recipe_signature": "b1a76c656cca46c83658bc4c7ffe9ea5ec0a1fa2823f172970f28f6f925c3a3c",
+      "group_id": "group-caacd903347e",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/knowles2010-cdse-aniline-ja907253s-cdse-core-2p9nm.json",
+      "page_url": "records/knowles2010-cdse-aniline-ja907253s-cdse-core-2p9nm.html",
+      "missing_field_count": 9,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ],
+      "pair_ids": [
+        "knowles2010-cdse-aniline-ja907253s-cdse-core-2p9nm::knowles2010-cdse-aniline-ja907253s-2p9nm-core"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-110c",
+      "title": "So and Konstantatos (2015): 110 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "47cce3f1dd5fd3e83fcc256aa40b6ae5e2701f44dcd6586ad5cdb101b5164fb1",
+      "recipe_signature": "0d0e9c69694ba145834df6e002de40a30bfaa66655344f53a0b403dd9b10a3c0",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-110c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-110c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-110c::cis-znoa-110c"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-130c",
+      "title": "So and Konstantatos (2015): 130 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "ff4771db3875d89e60af5e8dd6ae6a6d697a5568b5b3d852bdc6eec9482feb85",
+      "recipe_signature": "5ef27f0f8fd21b064d0b5444b087aa19e30d1534245ab76d7bf8ed71fadaf14b",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-130c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-130c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-130c::cis-znoa-130c"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-150c",
+      "title": "So and Konstantatos (2015): 150 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "aa368065cd80584e1dcba48714aa974fa8ba797cec516ac3284b9d469f9cb004",
+      "recipe_signature": "a8c6c9cc15f1a6ffb03e7dc1bb597243f132a44cc87a1bcac9ea5dc6ec2351bb",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-150c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-150c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-150c::cis-znoa-150c"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-170c",
+      "title": "So and Konstantatos (2015): 170 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "ab255d2d300fd6fa672245331377addc328cebda05e136e2cae485eb999460bd",
+      "recipe_signature": "84bab02824d929a88d179e5483609470b6d905d86f2e59c4af5181d8de45b43e",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-170c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-170c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-170c::cis-znoa-170c"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-50c",
+      "title": "So and Konstantatos (2015): 50 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "27ff4232d025b461ebaad9cd13fa4da9b35bd9fe858965da373c559b363c4ad2",
+      "recipe_signature": "6c780d13c8f4dca3368e523c0463a04835b8d0a463d73ef1c5ec4ef8bbd42afd",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-50c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-50c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-50c::cis-znoa-50c"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-70c",
+      "title": "So and Konstantatos (2015): 70 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "4e14eebfb4f914856a75189a47ece95f9b2a2dc453d082cf6c28b713d6feee40",
+      "recipe_signature": "42542816bde3ae1d674afb663bce757a81e8fa62ca294318aed213c047f91550",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-70c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-70c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-70c::cis-znoa-70c"
+      ]
+    },
+    {
+      "record_id": "so2015-cuins2-chemmater5b03943-injection-90c",
+      "title": "So and Konstantatos (2015): 90 °C injection CIS nanocrystals with zinc-oleate treatment",
+      "formula": "CuInS2",
+      "family": "Zinc-treated copper indium sulfide quantum dots",
+      "method": "Thiol-free TMS injection followed by isolated-core zinc-oleate treatment",
+      "record_type": "protocol_variant",
+      "source_year": 2015,
+      "source_doi": "10.1021/acs.chemmater.5b03943",
+      "revision": 3,
+      "record_sha256": "327bfa86011c8497ba5d0d5ca01364e0326abc4d6a492c645a6c20f8fed8a237",
+      "recipe_signature": "ee484ab7f21fa5d752d1b09a264877756c8878690553e5048c0fcfc93b877af1",
+      "group_id": "group-7c7d8e9407f0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/so2015-cuins2-chemmater5b03943-injection-90c.json",
+      "page_url": "records/so2015-cuins2-chemmater5b03943-injection-90c.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CuInS2",
+        "Zn treatment"
+      ],
+      "pair_ids": [
+        "so2015-cuins2-chemmater5b03943-injection-90c::cis-znoa-90c"
+      ]
+    },
+    {
+      "record_id": "sun2025-ais-zns-cusensor-acsanm5c02494-ais-core-96c-45min",
+      "title": "Sun et al. (2025): aqueous MPA-stabilized AgInS2 quantum-dot core",
+      "formula": "AgInS2",
+      "family": "aqueous AgInS2/ZnS quantum dots",
+      "method": "Aqueous MPA-stabilized core synthesis",
+      "record_type": "literature_protocol",
+      "source_year": 2025,
+      "source_doi": "10.1021/acsanm.5c02494",
+      "revision": 5,
+      "record_sha256": "5e877ffe70a06cff3868b624af151642480bd8cef1fc0b7e37dd651a0a66f767",
+      "recipe_signature": "e99b4a6af6d5f3b43bf8b3a7af63f03ba003d2e341b5920dad7431d8bdcde12e",
+      "group_id": "group-5a99d8d05c70",
+      "split": "validation",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. The coordinate-bearing sample has no source-reviewed explicit recipe link. The available sample coordinates have not been approved as a measured training label. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "explicit_sample_recipe_link_missing",
+            "measured_label_not_approved",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "explicit_sample_recipe_link_missing",
+              "message": "The coordinate-bearing sample has no source-reviewed explicit recipe link."
+            },
+            {
+              "code": "measured_label_not_approved",
+              "message": "The available sample coordinates have not been approved as a measured training label."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/sun2025-ais-zns-cusensor-acsanm5c02494-ais-core-96c-45min.json",
+      "page_url": "records/sun2025-ais-zns-cusensor-acsanm5c02494-ais-core-96c-45min.html",
+      "missing_field_count": 1,
+      "collection": "reviewed_literature",
+      "components": [
+        "AgInS2"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "sun2025-ais-zns-cusensor-acsanm5c02494-ais-zns-three-additions",
+      "title": "Sun et al. (2025): aqueous AgInS2/ZnS quantum dots, three-step interpretation with repetition ambiguity",
+      "formula": "AgInS2/ZnS",
+      "family": "aqueous AgInS2/ZnS quantum dots",
+      "method": "Sequential aqueous ZnS-precursor additions to an AIS core batch",
+      "record_type": "protocol_variant",
+      "source_year": 2025,
+      "source_doi": "10.1021/acsanm.5c02494",
+      "revision": 7,
+      "record_sha256": "2ba3edffa799ddc3057716cb9ea4ed718c10da429e2f5bc7a5113ae12e2d103b",
+      "recipe_signature": "a04b35dea63dc7ec39c34bf01907fb578d91a66581ce18d675ed5dddcaece912",
+      "group_id": "group-5a99d8d05c70",
+      "split": "validation",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. The coordinate-bearing sample has no source-reviewed explicit recipe link. The available sample coordinates have not been approved as a measured training label. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "explicit_sample_recipe_link_missing",
+            "measured_label_not_approved",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "explicit_sample_recipe_link_missing",
+              "message": "The coordinate-bearing sample has no source-reviewed explicit recipe link."
+            },
+            {
+              "code": "measured_label_not_approved",
+              "message": "The available sample coordinates have not been approved as a measured training label."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/sun2025-ais-zns-cusensor-acsanm5c02494-ais-zns-three-additions.json",
+      "page_url": "records/sun2025-ais-zns-cusensor-acsanm5c02494-ais-zns-three-additions.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "AgInS2 core",
+        "ZnS shell"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "welch2020-qd-ionic-liquid-macromol0c00011-polyil-10wt",
+      "title": "Welch et al. (2020): 10 wt% CdSe/CdS quantum-dot–poly(ionic liquid) composite",
+      "formula": "CdSe/CdS@poly(ionic liquid)",
+      "family": "CdSe/CdS quantum-dot–poly(ionic liquid) composite",
+      "method": "CdSe/CdS SILAR, ligand exchange and UV-initiated colloidal polymerization",
+      "record_type": "literature_protocol",
+      "source_year": 2020,
+      "source_doi": "10.1021/acs.macromol.0c00011",
+      "revision": 4,
+      "record_sha256": "5b44d9845c9d2f6b83ac91c9aa7d2461d73a076c6309b8592867221ba4e57da5",
+      "recipe_signature": "1d848bea5c30d9d2e194af296e0864cc89a672b52e02d0d92c936e84e417995b",
+      "group_id": "group-165401a0d70b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/welch2020-qd-ionic-liquid-macromol0c00011-polyil-10wt.json",
+      "page_url": "records/welch2020-qd-ionic-liquid-macromol0c00011-polyil-10wt.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe",
+        "CdS",
+        "poly(ionic liquid)"
+      ],
+      "pair_ids": [
+        "welch2020-qd-ionic-liquid-macromol0c00011-polyil-10wt::welch2020-qd-ionic-liquid-macromol0c00011-10wt"
+      ]
+    },
+    {
+      "record_id": "zhang2003-cdte-polymer-adma200304521-aqueous-cdte-reflux-series",
+      "title": "Zhang et al. (2003): aqueous CdTe nanocrystal reflux size series",
+      "formula": "CdTe",
+      "family": "Aqueous CdTe colloidal nanocrystals",
+      "method": "Aqueous NaHTe addition to CdCl2/mercaptocarboxylic acid followed by reflux",
+      "record_type": "literature_protocol",
+      "source_year": 2003,
+      "source_doi": "10.1002/adma.200304521",
+      "revision": 3,
+      "record_sha256": "5f589184fbcdb7e9b77c447ab87678c74d8ae23eaa71a4910a61b2a0c73c5469",
+      "recipe_signature": "21ad9c4233dfadd9f3adf5d55d09457b77230fd4d3da31820e7249486feef0d5",
+      "group_id": "group-f859b6d3402d",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhang2003-cdte-polymer-adma200304521-aqueous-cdte-reflux-series.json",
+      "page_url": "records/zhang2003-cdte-polymer-adma200304521-aqueous-cdte-reflux-series.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe"
+      ],
+      "pair_ids": []
     }
   ]
 }
