@@ -20,7 +20,7 @@ Commands are written for PowerShell or bash; the Python is the same on Windows, 
 
 Create the private folders once: `<P>/queue`, `<P>/claims`, `<P>/packages`, `<P>/ready-for-audit`,
 `<P>/ready-for-integration`, `<P>/published`, `<P>/skipped`, `<P>/blocked`, `<P>/receipts`, `<P>/stages`.
-The metrics ledger is the single file `<P>/ledger.jsonl`.
+The release transport ledger remains `<P>/ledger.jsonl`. The new full-audit cohort uses the separate private `full-audit-20261002/ledger.jsonl`, validated by `full_audit_plan.py`; preserve historical events in their original ledgers.
 
 Everything under `<P>` stays local: papers, SI, extracted text, renders, quotes, drafts, audits and receipts.
 Only reviewed data, code and documents go into `<SRC>`/`<SITE>`, through the commands below.
@@ -36,24 +36,24 @@ python -B -m unittest discover -s <SRC>/tools/workflow/tests      # 30-second se
 
 - If `<SRC>` or `<SITE>` is not clean, stop and tell the owner. Never discard someone else's work.
 - If the owner has said "pause", finish the current step, write the ledger event, and stop.
-- **2026-10-02 quality hold:** start no new extraction or source claim. The nine-paper blind
-  original-version resume test must catch at least 80% of S1/S2 findings, and the owner must
-  confirm resumption. Do not lift the hold by reclassifying old findings. Already-frozen packages
-  may receive controlled correction, independent audit and release.
+- **2026-10-02 owner restart:** full independent audits replace the retired quick audit. New QD
+  claims may proceed under the first-40 sampling plan. Keep the failed blind results unchanged.
 - Read [workflow-v5.md](workflow-v5.md) once per session. Do not read the historical workflow files.
 
 ## 2. Roles and how to run them continuously
 
 | Role | Instances | Loop |
 |---|---|---|
-| Extractor | after hold: ramp 4, 8, 12, 16 as capacity and quality permit | §4: one active paper plus one claimed next paper |
-| Auditor | after hold: 1 per 2 extractors at 25% deep audits, then 1 per 3 | §5 and §6: blind completeness before package comparison; deep auditor differs from quick auditor |
-| Integrator / releaser | 1 | §7 and §8, forever: whenever `ready-for-integration` is non-empty and no release is running; when idle, extracts |
+| Extractor | requested four pairs; actual runtime is four agents total | §4: author one frozen contribution at a time |
+| Full auditor | one different agent per paper, after extraction | §5: read scoped sources and compare every claim |
+| Sampled deep auditor | third distinct identity | §6: 25% of first 40; conditional 10% thereafter |
+| Integrator / releaser | one | §7 and §8: merge accepted packages and release six-ready/three-hour batches |
 
-Run each role as its own continuous agent session only after the hold lifts. The **auditor must be a different agent instance**
-from the paper's extractor, with a different ID in the package `audit` block. A deep auditor must
-also differ from that paper's quick auditor. Never pause between
-loops waiting for a timer. If a queue is empty, do the next role's work.
+Run root as integrator with three rotating workers under the current four-agent cap. Do not claim
+nine simultaneous workers. Keep author, full auditor and sampled deep auditor identities distinct
+for each paper. Scale requested pairs 4 → 8 → 12 → 16 only after the quality, collision, backlog,
+queue reporting and machine/agent capacity gates in workflow-v5. Reuse frozen unpublished work
+but identify it as carried-in extraction; an old quick receipt is not full-audit acceptance.
 
 ## 3. Queue (integrator, once a day or when fewer than 20 units remain)
 
@@ -123,41 +123,41 @@ python -B <SRC>/tools/workflow/package_workflow.py validate <P>/packages/<id>/pa
 python <SRC>/research-assets/incoming-paper-monitor/validate_quote_spans.py \
   --source-text <private page-marked text of the document> --draft-json <private quote draft for this package> \
   > <P>/receipts/<id>-quotes-1.json
-python -B <SRC>/tools/workflow/package_workflow.py audit-sample <P>/packages/<id>/package.json --percent 25 \
-  --output <P>/receipts/<id>-sample.json
 python -B <SRC>/tools/workflow/package_workflow.py log-event <P>/ledger.jsonl --stage extraction_frozen --package-id <id>
 ```
 - Fix every validation error. A quote that does not match its page is either corrected, or listed in the
   package for the auditor to check visually.
 - Receipts are create-only: use `-2`, `-3`, … for reruns.
-- Move the package folder to `<P>/ready-for-audit/`. Use `--percent 25` only for the first
-  40 papers after owner-confirmed resumption; return to 10% only after the required sample
-  has at most one S1/S2 paper. During the current hold, claim no next paper.
+- Freeze the scientific package, author identity and source scope in the new cohort ledger. The
+  preregistered ordinal draw selects exactly ten of the first forty, without redrawing for revisions.
+  Do not use the retired content-hash `audit-sample` command for this cohort. Run `check_records.py`
+  and record its exact-package result before dispatching the auditor. Move only the frozen package
+  to `<P>/ready-for-audit/`; unresolved checker flags are resolved during the full audit.
 
-## 5. Quick audit (auditor; every paper)
+## 5. Full independent source audit (different auditor; every paper)
 
-**Before opening the package or its receipts**, read the available main-paper and SI preparation
-sections, their linked Results, and every relevant figure and table caption. Write and timestamp a
-sealed source-side inventory of vessel preparation, atmosphere, inputs (including unquantified
-ones), stock composition, steps, purification, deposition, post-treatment, variants, product
-samples and cited panels. Record page/section locators and explicitly mark any source pages that
-could not be checked. Inspect preparation and characterization branches outside the proposed
-scope before accepting an exclusion; a package cannot exclude a source-supported variant of its
-claimed recipe series just to make an incomplete series look complete.
-Then open the package, its validation receipt, quote receipt and sample receipt. Log
-`--stage audit_started`. Run the source-free checker on the frozen package's exact declared records:
+**Before the auditor begins**, the integrator or extractor runs the source-free checker and
+records the package hash, command exit status, timestamp and exact flag receipt:
 ```
 python -B <SRC>/tools/workflow/check_records.py --package <P>/ready-for-audit/<id>/package.json \
   --out <P>/receipts/<id>-consistency-flags.json
 ```
-Record a source-backed disposition for every non-style flag in the private audit notes before
+**Before opening the package claims or earlier scientific findings**, the different auditor reads
+all scoped source pages, relevant available SI preparation sections, linked Results, figure/table
+captions and visual panels. Write a timestamped source-first inventory of vessel preparation,
+atmosphere, inputs (including unquantified ones), stock composition, steps, purification, deposition,
+post-treatment, variants, product samples and cited panels. Log the exact pages actually read and
+any unavailable pages. Inspect related branches before accepting an exclusion. Then open the frozen
+package and receipts and verify all claims against the source. A quote match does not waive checking.
+
+Record a source-backed disposition for every flag (style-only flags may be explicitly retained with a reason) in the private audit notes before
 acceptance. A checker flag is a question, not an error verdict. Check, in this order:
 
 | Checklist key (package `audit.checklist`) | What to check |
 |---|---|
 | `document_scope` | Scope and exclusions are stated honestly (e.g. "SI not reviewed"). Compare the source-first inventory with all available Methods, Results, figure and SI pages. If a related branch is deliberately deferred, keep the contribution explicitly partial and do not claim complete recipe-series coverage. |
 | `recipe_and_variants` | Every recipe and variant inside the stated scope is present; none merged. Keep a typical or study-wide preparation separate from individually measured samples unless the source links them. Check deposition, purification and assembly branches and omitted, even unquantified, inputs. |
-| `quantities_units_conditions` | Every value the quote check did not confirm; every reaction step's temperature, time and atmosphere; units. Separate observed events (for example, solution clearing) from heater targets, and check all in-scope SI conditions and apparatus. |
+| `quantities_units_conditions` | Every value, including quote-confirmed values; every reaction step's temperature, time and atmosphere; units. Separate observed events (for example, solution clearing) from heater targets, and check all in-scope SI conditions and apparatus. |
 | `chemical_identities` | Each reagent's identity and stock composition matches the source. Inspect rendered molecule-card role, caption and cited provenance when a shared registry entry is reused. |
 | `sample_structure_links` | Every recipe→sample, sample→structure and figure→sample assignment has evidence. Explicitly mark a general-context or unknown edge rather than making it an exact experimental pair. |
 | `conflicts_missingness` | Conflicts shown side by side; missing values marked missing, not guessed. Compare visible figure labels, body text and captions as separate source statements. |
@@ -182,32 +182,28 @@ acceptance. A checker flag is a question, not an error verdict. Check, in this o
   Log `--stage audit_accepted`.
 - **Changes needed:** write the list into `<P>/ready-for-audit/<id>/changes-requested.md`, move the package
   back to `<P>/packages/`, and log `--stage changes_requested`. The original extractor fixes it and refreezes (4.4).
-- If `deep_audit_required` is true in the sample receipt, do §6 **before** accepting.
+- Record full-audit acceptance first. If the fixed cohort ordinal requires a deep audit, a third agent does §6 before integration; do not self-award sampled acceptance.
 - Then move the accepted package to `<P>/ready-for-integration/`.
 
-## 6. Deep audit (auditor; about 10% of papers, as selected by `audit-sample`)
+## 6. Sampled deep audit (third agent; ten of first forty)
 
-Read every scoped page, table and figure independently, and compare all values and assignments with the
-package. Record each finding as S1 (recipe-changing value, essential input/variant, sample link or
-false measured claim), S2 (set-point/event, reagent role, contradictory illustration or silently
-resolved conflict), or S3 (caption, locator precision, unit spelling or styling). Append one line
-per distinct sampled paper to `<P>/receipts/deep-audit-log.jsonl`, retaining individual finding
-IDs and severity in a private signed receipt. Keep retrospective pre-v5 audits in a separate log.
-- Errors found: fix them through `changes_requested` as in §5.
-- **Stop rule:** if more than 5 of the last 50 distinct deep-audited papers had any S1/S2 error, stop all extraction
-  and tell the owner. The quick audit is missing too much.
-- Count distinct sampled papers with any error, not the number of findings. Preserve the
-  historical log and timing relative to quick acceptance; S3 findings are corrected in batches
-  but do not trigger the hold. Corrective re-audits of the
-  same paper are not new samples. During a triggered hold, start no new source claims or
-  package extractions. Already-frozen packages may undergo independent deep audit and
-  controlled corrections; release only the exact independently accepted scientific
-  version and delta. Diagnose the observed error classes and test the revised checklist
-  on a stratified independent sample of frozen work. Do not silently restart intake or
-  reset the historical count. The active hold requires a blind re-audit of the ORIGINAL frozen
-  nine packages by an auditor unaware of the known findings. That audit must detect at least 80%
-  of the S1/S2 findings, followed by owner confirmation, before new intake. Deep-audit 25% of
-  the next 40; return to 10% only if at most one sampled paper has an S1/S2 finding.
+After full acceptance, rerun `check_records.py` on the exact package before dispatch. A third agent,
+different from all scientific authors and the full auditor, independently reads every scoped page,
+table and figure and checks the entire package. Use the preregistered ledger ordinals; no redrawing
+for revisions, skips or holds. This is a check of the accepted full-audit output, not a second extractor.
+
+Classify findings S1 (recipe-changing value, essential input/variant, false sample link or measured
+claim), S2 (set-point/event, reagent role, contradictory illustration or silently resolved conflict),
+or S3 (caption/locator precision, unit spelling or styling). Preserve every original finding and
+first-pass positive outcome after correction. Full-audit findings caught before acceptance and
+third-agent findings that escaped full acceptance have separate stage counts.
+
+The first forty contributions require exactly ten third-agent samples. Reduce 25% to 10% only
+when all ten are completed and at most one distinct sampled paper has S1/S2 findings. At first forty,
+report the measured rate and ledger results. Stop extraction and report if more than five of the last
+fifty distinct sampled papers in this full-audit regime are S1/S2-positive. Corrections may finish;
+no reset or severity reclassification to evade a stop. Preserve historical quick-regime logs and
+failed blind tests separately. The owner has explicitly authorized this stronger regime's restart.
 
 ## 7. Integrate a batch (integrator)
 
@@ -238,10 +234,8 @@ python -B <SRC>/tools/package-importer/preflight.py --candidate <P>/stages/<batc
   A previously `source_reviewed` record may correct stale audit-status prose only
   with a revision increment and an independent exact-hash status-delta receipt;
   never use that path to change a chemical, sample, figure or quantity claim.
-  A legacy private quick-audit receipt with different decision wording may be
-  normalized only by its original independent auditor, in an addendum pinning
-  the original receipt and unchanged scientific package hashes. Do not rewrite
-  the original audit or self-normalize it.
+  Legacy quick-only packages require a new full independent source audit under §5. Keep old
+  receipts as historical evidence; do not normalize them into full-audit acceptance.
   Preflight rejects an unreviewed promotion, false full-page coverage, stale
   receipts or a source-title mismatch. Neither path waives figure, rights, full
   build, browser or live-verification checks.
@@ -315,13 +309,13 @@ python <SRC>/tools/publication/release_batch.py --source <SRC> --site <SITE> --w
 | `<SRC>` or `<SITE>` not clean, or not fast-forward | Stop and report; do not reset or force-push |
 | The owner says pause | Finish the current step, log it, and stop |
 
-## 10. Measuring and reporting (only when the owner asks)
+## 10. Measuring and reporting (on request and after the first forty)
 
 ```
 python -B <SRC>/tools/workflow/package_workflow.py metrics <P>/ledger.jsonl --start <UTC start> --end <UTC end> \
   --output <P>/receipts/metrics-<start>-<end>.json
 ```
-Report: distinct papers published (live-verified) per elapsed hour; papers skipped and held; median time
+Use `full_audit_plan.py` for the new cohort and retain the old command for historical release-transport metrics. Report: distinct papers published (live-verified) per actual elapsed hour; papers skipped and held; median time
 claim → frozen → audit accepted → live; deep-audit error count over the last 50. No progress pages, no
 interval reports and no progress-only releases.
 
@@ -331,7 +325,7 @@ interval reports and no progress-only releases.
 - Put papers, SI, extracted text, renders, private quotes or audit notes in either repository.
 - Edit policies, allowlists or the rights registry to get past a gate; hand-edit generated files
   (`publication/build-inputs.json`, `publication/project-allowlist.json`, hub counts, Reader metadata).
-- Let an extractor audit its own paper, or skip the quick audit.
+- Let an extractor audit its own paper, or skip the full independent audit or required third-agent sample.
 - Turn on the machine-extracted (silver) lane, or any preliminary display, before the owner approves the
   calibration result.
 - Use paid or cloud model processing on paper text, or download new papers, without the owner's approval.
@@ -344,7 +338,7 @@ interval reports and no progress-only releases.
 | Queue | `package_workflow.py live-sources`, `identity-map`, `rank --scope quantum-dot` |
 | Log a stage | `package_workflow.py log-event <ledger> --stage <stage> --package-id <id>` |
 | Validate | `package_workflow.py validate <pkg>/package.json --checkout <SRC> --output <receipt>` |
-| Deep-audit draw | `package_workflow.py audit-sample <pkg>/package.json --output <receipt>` |
+| Deep-audit draw | Fixed cohort seed/ordinal in `full_audit_plan.py`; never redraw on package revisions |
 | Merge | `merger.py`, then `preflight.py` |
 | Commit | `make_review_receipt.py`, `prepare_source_release.py --apply`, `git commit`, `check_project_manifest.py --pre-push` |
 | Release | `release_batch.py ... --wait-ci 20` → browser review of exact `site-preview` → same `--work ... --review-receipt <review> --push --verify --ledger <ledger>` |

@@ -1,5 +1,11 @@
 # MatterSyn publication workflow
 
+**2026-10-02 owner restart:** follow [the full-audit plan](skills/mattersyn-paper-to-site/references/workflow-v5.md), not the historical quick-audit/hold text below. Every paper gets a different full source auditor after extraction and `check_records.py`; a third agent checks ten of the first forty. The original retrospective had S1/S2 findings in 6/8 v5, 1/5 flagged older and 1/5 random older papers (8/18 overall; 10 S1 and 2 S2 findings). The second blind quick test caught 2/12; quick audit is retired. The conditional background re-audit trigger was not met. Runtime capacity is four agents total. QDs first, release at six ready papers or three hours, no policy/allowlist bypasses, separate bind commits or per-release prose notes. The private full-audit ledger retains findings, stage times and verified publications; report after forty. Scheduled reports remain off.
+
+The verified restart baseline is 173 contributing source groups (172 literature and one benchmark), 1,703 records and 699 broad recipe–structure rows. Earlier checkpoints below are historical, not current worker instructions.
+
+---
+
 ## Current verified site — Henkel and Xu, 2026-10-02
 
 Henkel et al. (2009) and Xu et al. (2008) are live on ordinary material pages. Source commit `ca84c096789204b04f9edb1d4bfb080236402b9b` and site commit `6c62e25fe766906bb1a42255152a3764efba723d` passed source CI, exact-preview browser review, Pages deployment, and anonymous verification at 2026-10-02T15:10:47Z. The release checked 40 public files, both new paper routes, and all 17 affected paper/material route combinations without mismatches. This adds **2 distinct literature papers and 33 canonical records**. The verified inventory has **173 contributing source groups in total (172 literature and 1 benchmark source group), 1,703 records, 178 directly synthesized material systems, and 699 broad recipe–structure rows**. Multiple records from Xu count as one source paper. Source figures have exact provenance and unverified publisher display permission. The Xu morphology illustrations were corrected against the displayed source figures before release.

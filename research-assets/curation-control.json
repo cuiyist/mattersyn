@@ -1,18 +1,18 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "workflow_v5_quality_hold_pause_after_current",
-  "recorded_at": "2026-10-02T16:55:42+00:00",
-  "authorization": "The owner explicitly resumed MatterSyn website construction under workflow v5. Use only existing screened-pass quantum-dot and colloidal-nanocrystal sources. The retired 20-minute continuation automation remains deleted; no paid processing, new source downloads or external source-document transfer.",
-  "supersedes_hold": "The 2026-10-01 owner resume lifts the prior curation pause. V5 supersedes historical v4 workflow and staffing directions; historical trial measurements remain frozen.",
-  "active_run": "Private workflow-v5-20261001/run-state.private.json",
+  "status": "full_independent_audit_active",
+  "recorded_at": "2026-10-03T03:31:16.692816+00:00",
+  "authorization": "Owner explicitly resumed under the 2026-10-02 full-audit plan: every paper one extractor and a different full source auditor; quick audit retired; third-agent sampling 25% of first40 with conditional 10% thereafter.",
+  "supersedes_hold": "The latest explicit owner resume starts a stronger full-independent-audit regime. Failed quick tests and prior error logs remain historical, unchanged.",
+  "active_run": "Private full-audit-20261002/ledger.jsonl",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
   "external_document_transfer_allowed": false,
   "source_scope": "Existing screened-pass documents only; new arrivals remain separate.",
-  "maximum_concurrent_agents_including_root": null,
-  "maximum_active_paper_claims": null,
+  "maximum_concurrent_agents_including_root": 4,
+  "maximum_active_paper_claims": 5,
   "daily_report_time": null,
-  "stop_rule": "Workflow-v5 quality hold remains active: 7 of 9 distinct sampled papers have an S1/S2 finding after severity adjudication. Future stop rule counts more than 5 of the last 50 distinct sampled papers with S1/S2, not S3 alone. The first blind original-version test caught 4 of 10 known S1/S2 findings, below the required 80%. No new extraction or claims. Frozen packages may undergo controlled correction and independent review. Resume requires a passing new blind original-version nine-paper test plus owner confirmation. The owner also requested pause after the current papers. Experimental preliminary and uncalibrated silver displays are retired; new arrivals remain separate.",
+  "stop_rule": "Stop extraction and report if more than five of the last fifty distinct sampled papers in the full-audit regime have an S1/S2 finding. Corrections retain original positives; corrective re-audits do not add samples. Preserve older quick-regime logs separately; no reset within this regime.",
   "current_measurement_window": null,
   "measurement_checkpoint_utc": null,
   "progress_report_interval_hours": null,
@@ -48,9 +48,9 @@
     "experimental_silver": "Separate partial machine-extracted display with exact model/evidence/schema/privacy checks and independent engineering review; scientific review not performed, accuracy unmeasured and training excluded. Publication requires normal release/CI/anonymous verification.",
     "batch_validation": "One successful complete local batch build. Reuse unchanged scientific audits and exact file-review objects; retest changed or failed dependencies, run the fresh complete publication boundary once, retain exact-commit CI and anonymous deployment verification."
   },
-  "continuation_checkpoint": "Private workflow-v5-20261001/run-state.private.json",
-  "latest_publication_receipt": "Private n2rel-r3-20261002/live-verification.json; exact workflow-v5 release passed 40 anonymous file checks and all affected paper/material routes at 2026-10-02T15:10:47Z",
-  "latest_verified_site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
+  "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
+  "latest_publication_receipt": "Private _tmp/mu-release/live-verification.json; correction-only release, no new source credit",
+  "latest_verified_site_commit": "15686e4e491e1f03439059a2862e0bcf9322d055",
   "latest_verified_totals": {
     "records": 1703,
     "contributing_sources": 173,
@@ -97,10 +97,10 @@
     "next_interval_start_exclusive": "2026-09-27T13:01:47Z"
   },
   "continuation_automation": null,
-  "continuation_interval_minutes": 20,
-  "continuation_status": "PAUSED_NEW_EXTRACTION_BY_V5_DEEP_AUDIT_STOP_RULE",
-  "experimental_silver_display_authorized": true,
-  "experimental_silver_display_status": "partial_evidence_published_and_anonymously_verified_accuracy_unmeasured",
+  "continuation_interval_minutes": null,
+  "continuation_status": "ACTIVE_FULL_INDEPENDENT_AUDIT_OWNER_RESUMED",
+  "experimental_silver_display_authorized": false,
+  "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
   "experimental_silver_training_ready": false,
   "reporting_mode": "on_request_only",
@@ -310,7 +310,7 @@
     "target_achieved": false,
     "immutable": true
   },
-  "active_workflow": "workflow-v5-simplify",
+  "active_workflow": "workflow-v5-full-independent-audit",
   "workflow_v4": {
     "status": "superseded_historical",
     "target_processed_papers_per_hour": 20,
@@ -326,7 +326,7 @@
     "hourly_publication_target_demonstrated": false
   },
   "workflow_v5": {
-    "status": "active",
+    "status": "superseded_by_full_independent_audit_plan",
     "branch": "workflow-v5-simplify",
     "read_commit": "06683a6507f61389f4e2a3b66149515b6fe5cd40",
     "publication_helper_status": "Workflow-v5 release verified: source CI, exact browser review, site boundary, Pages deployment and anonymous routes passed for Naiki 2013, Liu 2008 and Jung 2024",
@@ -340,5 +340,76 @@
     },
     "resume_requires": null,
     "recurring_continuation": "deleted"
+  },
+  "full_audit_plan": {
+    "owner_instruction_date": "2026-10-02",
+    "workflow_reference": "skills/mattersyn-paper-to-site/references/workflow-v5.md",
+    "quick_audit": "retired",
+    "extractor_and_full_auditor_distinct": true,
+    "sampled_deep_auditor_is_third_distinct_agent": true,
+    "checker_before_every_audit": "tools/workflow/check_records.py",
+    "checker_flags_resolved_before_acceptance": true,
+    "first_cohort_papers": 40,
+    "first_cohort_deep_samples": 10,
+    "initial_deep_sample_fraction": 0.25,
+    "later_deep_sample_fraction": 0.1,
+    "reduction_max_s1_s2_positive_samples": 1,
+    "requested_pair_steps": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "requested_initial_integrators": 1,
+    "actual_concurrent_agent_limit": 4,
+    "actual_execution": "One integrator and three rotating workers; logical queued pairs are not concurrent pairs.",
+    "ramp_requires": {
+      "minimum_deep_audits_in_current_step": 10,
+      "maximum_s1_s2_papers_per_last_ten_deep_audits": 1,
+      "claim_collisions": 0,
+      "maximum_integrator_backlog_batches": 2,
+      "measured_spare_machine_and_agent_capacity": true,
+      "report_qd_and_metal_queue_sizes": true
+    },
+    "release_minimum_ready_papers": 6,
+    "release_max_ready_age_hours": 3,
+    "qd_before_metals": true,
+    "per_release_prose_notes": false,
+    "separate_bind_commits": false,
+    "edit_policies_or_allowlists_to_pass_gate": false,
+    "first40_report_required": true,
+    "scheduled_reports_enabled": false,
+    "retrospective_original_version_s1_s2_papers": {
+      "v5": {
+        "positive": 6,
+        "papers": 8
+      },
+      "flagged_older": {
+        "positive": 1,
+        "papers": 5
+      },
+      "random_older": {
+        "positive": 1,
+        "papers": 5
+      }
+    },
+    "background_reaudit_trigger_met": false,
+    "background_reaudit_authorized": false,
+    "second_blind_test": {
+      "caught_s1_s2_findings": 2,
+      "total_s1_s2_findings": 12,
+      "passed": false
+    },
+    "queue_snapshot": {
+      "kind": "filename_grouped_candidates_not_verified_eligible_papers",
+      "qd": 1709,
+      "metal": 339,
+      "other_colloidal_or_unclassified": 1121,
+      "needs_scope_check": 1359,
+      "remaining_document_units": 5053,
+      "private_receipt": "full-audit-20261002/queue-reconciliation.private.json"
+    },
+    "carry_in_extractions_identified_separately": true,
+    "published_counter_requires_anonymous_verification": true
   }
 }

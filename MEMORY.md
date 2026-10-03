@@ -1,4 +1,10 @@
-# MatterSyn current verified checkpoint — 2026-10-02
+# MatterSyn current workflow — full independent audits
+
+**2026-10-02 owner restart:** follow [the full-audit plan](skills/mattersyn-paper-to-site/references/workflow-v5.md), not the historical quick-audit/hold text below. Every paper gets a different full source auditor after extraction and `check_records.py`; a third agent checks ten of the first forty. The original retrospective had S1/S2 findings in 6/8 v5, 1/5 flagged older and 1/5 random older papers (8/18 overall; 10 S1 and 2 S2 findings). The second blind quick test caught 2/12; quick audit is retired. The conditional background re-audit trigger was not met. Runtime capacity is four agents total. QDs first, release at six ready papers or three hours, no policy/allowlist bypasses, separate bind commits or per-release prose notes. The private full-audit ledger retains findings, stage times and verified publications; report after forty. Scheduled reports remain off.
+
+The verified restart baseline is 173 contributing source groups (172 literature and one benchmark), 1,703 records and 699 broad recipe–structure rows. Earlier checkpoints below are historical, not current worker instructions.
+
+---
 
 ## Naiki, Liu and Jung verified live; next v5 batch in preparation
 

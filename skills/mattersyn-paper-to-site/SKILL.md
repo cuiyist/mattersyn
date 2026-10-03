@@ -15,11 +15,12 @@ add records merely because this skill was invoked.
 
 **Adding papers to the website:** run it step by step with [references/agent-runbook.md](references/agent-runbook.md)
 (commands, roles, failure handling). The rules behind it are in [references/workflow-v5.md](references/workflow-v5.md),
-the only active workflow (quantum-dot/colloidal papers only, blind-completeness quick audit,
-figures and visuals with each paper, one-command release). The 2026-10-02 S1/S2 quality hold
-in the runbook is active: no new source claims or extraction until the original-version blind
-resume test passes and the owner confirms. The older workflow
-files are historical; see the index below.
+the active full-independent-audit workflow. The owner resumed on 2026-10-02: every paper has
+one extractor and a different full source auditor; the quick audit is retired. Run `check_records.py`
+before each audit. A third agent deep-audits 25% of the first 40; only an acceptable ten-paper
+sample permits a reduction to 10%. Use the actual runtime capacity (currently four agents total),
+QD-first queue, and six-ready-paper/three-hour release rule. Earlier workflow files and hold text
+are historical; see the index below.
 
 ## Rules that are never relaxed
 
@@ -50,7 +51,7 @@ files are historical; see the index below.
 | [shared-reader-integration.md](references/shared-reader-integration.md) | Packaging a paper for the shared Reader |
 | [reader-and-training-views.md](references/reader-and-training-views.md) | Reader/Data view or structure-metric changes |
 | [training-dataset.md](references/training-dataset.md) | Training exports |
-| [full-paper-review.md](references/full-paper-review.md) | A deep audit (sampled 10%) or a completeness correction |
+| [full-paper-review.md](references/full-paper-review.md) | Every-paper full source audit, third-agent sampled deep audit, or completeness correction |
 | [corpus-atlas.md](references/corpus-atlas.md), [incoming-corpus.md](references/incoming-corpus.md) | Corpus indexing and screening details |
 | [delivery-and-memory.md](references/delivery-and-memory.md), [mattersyn-project.md](references/mattersyn-project.md) | Hand-off, memory and project context |
 

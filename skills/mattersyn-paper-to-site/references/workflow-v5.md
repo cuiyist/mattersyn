@@ -1,165 +1,41 @@
-# MatterSyn workflow v5: simplified paper-to-website pipeline
+# MatterSyn workflow v5: full independent audit plan
 
-**Adopted 2026-09-30; quality-hold revision authorized 2026-10-02.** This is the only active workflow. It replaces
-`processing-workflow-v4.md`, `throughput-workflow-v3.md`, `throughput-workflow.md` and
-`scaling-workflow-v2.md`. Those files are history. **For the exact commands, roles and failure handling, follow
-[agent-runbook.md](agent-runbook.md).** Where any other reference disagrees with
-this file about scope, pace, staffing, audits or publication cadence, this file wins. Quality
-rules are in [standards.md](standards.md) and still apply in full.
+The owner's 2026-10-02 full-audit restart supersedes the earlier quick-audit workflow and quality hold. The quick audit is retired. Its failed blind-test results and original checklist remain historical evidence; do not revise them or treat them as acceptance under this plan.
 
-## Owner decisions this workflow implements (2026-09-30)
+## Evidence for the restart
 
-1. **Audit:** quick audit of every paper + full deep audit of a 10% sample.
-2. **Counter:** machine-extracted (silver) papers count toward the public paper counter, clearly
-   labelled. The silver lane stays **off** until held-out calibration meets the 98% / 95% / 90% field bands.
-3. **Figures and visuals ship with the paper.** No "presentation later". Reuse existing molecule
-   cards, unit cells and apparatus scenes wherever the chemistry matches.
-4. **Scope: quantum-dot / colloidal-nanocrystal papers only.**
-5. **Agents run continuously.** No heartbeat bursts and no idle waiting.
+The original-version retrospective found S1/S2 errors in 6/8 v5 papers, 1/5 flagged older papers and 1/5 random older papers: 8/18 papers, with 10 S1 and 2 S2 findings. The second blind quick test detected 2/12 findings (16.7%), below 80%. These selected cohorts are not a corpus-wide error-rate estimate. Only 1/5 random older papers was positive, so the owner's conditional background re-audit trigger (at least 3/5) was not met; do not start a corpus re-audit without approval.
 
-**Target:** about 20 newly published papers/hour on the public counter. It is a target, not a
-measured result. Report the measured rate from the metrics ledger only.
+## Paper lifecycle
 
-**Current hold:** no new extraction or source claims. Finish controlled corrections and audits of
-already frozen work. The first blind test found 4 of 10 known S1/S2 issues (one further issue was
-mentioned only as a scope limit), so it did not meet the 80% threshold. Strengthen and rerun the
-blind completeness audit with a different reviewer. The hold ends only after a blind re-audit of
-the original nine sampled packages finds at least 80% of their S1/S2 issues **and** the owner
-confirms resumption. The owner separately asked to pause after the current papers; a passing test
-alone does not override that request.
+1. Prioritize existing screened-pass QD papers, then metal papers. Reconcile primary-source identity and existing live coverage before reserving one exclusive claim. Preserve existing extractions and receipts; do not call reassessment new extraction.
+2. One extractor authors and freezes the contribution. Declare the scoped source pages and exclusions, retain all in-scope variants and sample assignments, and keep unavailable values explicitly missing. Related available SI preparation sections and captions must be checked where needed to assess essential details or omissions. An optional missing morphology or reference unit cell alone is not a skip.
+3. Run `tools/workflow/check_records.py` on the exact frozen package **before every full or sampled deep audit starts**. Record command result, timestamp, package/record hashes and flag receipt. Flags are questions for the auditor, not automatic scientific verdicts. They may remain open at audit start; acceptance requires a source-backed disposition for each flag (style-only flags may be explicitly retained with a reason).
+4. A different agent conducts a **full independent audit of every paper**, reading the scoped source pages and inspecting relevant figures and tables. Write a source-first inventory before comparing the package, then check both source-to-record completeness and record-to-source accuracy. Verify every quantity and condition, including quote-validated values; variants, workup, input identities and stock compositions, lineage, sample/figure assignments, missingness, conflicts and asset interpretation. Record the actual pages inspected and exact accepted scientific hashes. A checker, quote matcher, model agreement or old quick receipt cannot replace this audit.
+5. The preregistered sample gets a **third distinct agent's deep audit**, after full-audit acceptance. Run the checker again first. Preserve original findings and first-pass outcomes through all corrections. Changed science is rechecked by a distinct auditor; untouched accepted claims can reuse exact receipts.
+6. Root alone integrates accepted packages into ordinary material pages and publishes ready batches. Keep source figures with their exact provenance and factual permission status, reusable chemical/phase viewers and stage-specific apparatus. Do not publish drafts, preliminary lanes or misleading reviewed/training-ready labels.
+7. Count a paper once only after its contribution is deployed and anonymously verified. Multiple records or correction releases add no extra source-paper credit.
 
-## The pipeline
+## Sampling and stop rule
 
-```
-queue ──► claim ──► extract (one package) ──► checks ──► quick audit ──► [deep audit if sampled] ──► integrate ──► release batch
-```
+Use the append-only `full_audit_plan.py` cohort ledger. Freeze the cohort seed and baseline before assigning sample ordinals. The first 40 auditable new contributions receive exactly ten preselected slots, one per block of four; corrections do not redraw a slot. Skips, technical holds and previously published sources are separate outcomes and cannot pad this denominator. Reused unpublished extraction is identified as carried-in work.
 
-### 1. Queue (once per day, or when it runs low)
-```
-python -B tools/workflow/package_workflow.py rank <screened_pass.jsonl> --scope quantum-dot \
-  --identities <private-identities.json> --live-sources <private-live-sources.json> --output <private-queue.json>
-```
-- Out-of-scope units are excluded automatically: bulk, thin films, ceramics, CVD, glasses.
-- Units with `scope_check_required: true` come last. Take 10 seconds to decide in or out
-  from the screen summary before claiming. Never open a paper only to decide its scope.
-- Work top-down. The queue already prefers recipe + structure evidence in main text.
-- Within the in-scope queue, identified semiconductor quantum-dot papers precede elemental
-  Ag/Au/Bi/Pt/Pd/Cu and other metal nanocrystals. Keep the existing evidence order within each
-  class; uncertain material labels stay visible and do not get promoted automatically.
+The third-agent sampling rate is 25% for these first 40. Reduce to 10% only after all 40 and all ten required deep audits are complete, with at most one distinct S1/S2-positive sampled paper. Otherwise retain 25% and report the result; do not silently relax sampling.
 
-### 2. Claim
-- Keep every extractor busy: each holds **one active paper plus one claimed next paper**.
-- Claim by creating a claim file, then `package_workflow.py log-event <ledger> --stage claimed --package-id <id>`
-  (see the runbook). Every stage below is logged the same way.
+Stop extraction and report if **more than five of the last 50 distinct sampled papers have an S1/S2 finding**. Multiple findings or corrective re-audits of one paper count once, and a subsequent fix never erases the positive result. The owner's explicit restart begins the full-independent-audit regime; retain prior quick-regime logs separately and never reset this new regime to evade a stop. Corrections already in progress may finish during a stop.
 
-### 3. Extract: one paper = one package (minimum publishable unit)
-- **Scope:** main-text recipes and **all** variants inside that scope, their product samples
-  and structure results, page/figure locators, and the source figures and visuals for those
-  samples. SI is read for essential recipe values. An explicitly deferred SI remains a later
-  follow-up, but source-side audit must still check available related SI preparation and figure
-  captions for omitted required inputs, variants and conflicts before a package can claim complete
-  coverage of its selected recipe series.
-- Package format: `tools/workflow/package.schema.json` (`package_id`, documents, records,
-  locators, assets, reagent bindings, scope, audit, presentation).
-- **Figures and visuals together:** crop the source figures that support each sample (with
-  provenance and rights status as now). Bind molecules and unit cells from the existing
-  registries. A **new** chemical or phase not in the registries means: add it in the same package.
-- **Time box:** if a paper needs more than ~45 minutes of extraction, or an essential value is
-  only in an unavailable document, record `blocked` with the reason and take the next paper.
-- **Skip:** no usable preparation, or no recipe-to-structure link → record a source-supported
-  skip (counts as processed, never as published).
-- Freeze the package, then run:
-```
-python -B tools/workflow/package_workflow.py validate <pkg>/package.json --checkout <source> --output <private-receipt.json>
-python research-assets/incoming-paper-monitor/validate_quote_spans.py ...   # local quote-on-page check (private)
-python -B tools/workflow/package_workflow.py audit-sample <pkg>/package.json --output <private-sample.json>
-```
-Ledger: `extraction_frozen`.
+## Staffing and scaling
 
-### 4. Quick audit (every paper; reviewer ≠ author)
-Before seeing the package, the auditor reads the available main and SI preparation, linked Results,
-and relevant figure/table captions, then seals an independent inventory of setup, inputs, steps,
-variants, purification, samples and panels. Inspect related branches even if the package proposes
-to exclude them, and distinguish a partial contribution from a complete recipe series. Compare
-this source-first inventory with the frozen package and private validation receipts in both
-directions, including exact sample lineage and rendered molecular-card identity. Run the advisory
-`tools/workflow/check_records.py --package <frozen-package.json> --out <private-flags.json>`;
-resolve every non-style flag against the source in private audit notes. A flag is a question,
-never an automatic verdict. Check:
-- every value the quote check could not confirm
-- every recipe→sample and sample→structure assignment, and every figure→sample assignment
-- units, temperatures, times and atmosphere on reaction steps
-- conflicts shown side by side; missing values marked as missing, not guessed
+The requested initial staffing is four extractor-auditor pairs plus one integrator. Each paper has distinct extractor and full-auditor identities; a sampled deep auditor differs from both. The actual session currently permits **four concurrent agents total**, so run one integrator with three rotating workers and record the capacity shortfall. Queued logical pairs are not concurrent agents. Never bypass the runtime cap or imply that nine workers are running.
 
-Fill the eight-item checklist in the package `audit` block. Ledger: `audit_accepted` or `changes_requested`.
+Requested pair steps are 4, 8, 12 and 16. Advance only when the previous step has at least ten deep audits, no more than one S1/S2-positive paper per ten deep audits, no claim collisions, at most two batches in the integrator backlog, and measured spare machine AND agent capacity. Report remaining QD and metal queue sizes at every step, distinguishing provisional filename groups from verified eligible primary papers. Missing capacity or evidence blocks a ramp; it does not waive a scientific requirement.
 
-### 5. Deep audit (when `deep_audit_required: true`)
-A full independent read of the scoped pages and figures, as in the old gold audit. Record any
-finding with severity: S1 is a wrong or missing recipe-changing value, essential input/variant,
-sample/structure link or measured claim; S2 is a set-point/event, chemical identity/role,
-source-figure illustration or silently resolved conflict; S3 is wording, locator precision,
-unit spelling or styling. **Stop new extraction when more than five of the last 50 distinct
-sampled papers have any S1/S2 finding.** Preserve all S3 findings for correction; they do not
-trigger the stop rule. After an owner-confirmed resume, deep-audit 25% of the next 40 papers.
-Return to 10% only if at most one of approximately ten sampled papers has an S1/S2 finding;
-otherwise stop again. Do not reset or reclassify the current hold away.
+## Release and records
 
-### 6. Integrate (one integrator; batches as papers arrive)
-- Merge accepted packages with `tools/package-importer/merger.py`, then `preflight.py`.
-- After adding records, let `prepare_source_release.py` derive the baseline and
-  blueprint `record_count` from the staged canonical records in the same
-  source-preparation step. It rejects a hand-edited baseline and changes to
-  prior record digests or task eligibility without exact review. The independent
-  build and pre-push manifest check verify the generated count and membership.
-- One source commit per batch with generated controls (`tools/publication/SINGLE_COMMIT_RELEASE.md`):
-  `make_review_receipt.py`, `prepare_source_release.py --apply`, `git commit`, `check_project_manifest.py --pre-push`, push to `main`.
-- Never commit derived aggregates by hand. Never make a separate manifest-closure commit.
-- Never wait for a blocked paper. Publish what is ready.
+Release when at least six papers are ready or three hours have elapsed since the first ready paper, whichever happens first. Do not wait for blocked papers. Use one source preparation commit per ready batch, shared components and the existing exact-source CI, build, browser, privacy and anonymous release gates. Reuse unchanged passing checks; repeat only for changed inputs, failures or unresolved concerns. Do not make separate binding commits, per-release prose notes or status-only site releases. The private ledger is release history; at most one short daily workflow memory line is needed.
 
-### 7. Release (prepared candidate, browser review, publish)
-```
-python tools/publication/release_batch.py --source <clean source checkout at pushed main> \
-  --site <clean mattersyn-site checkout> --work <new folder outside both> \
-  --release-id <batch id> --reviewer "<quick-audit reviewer(s)>" --wait-ci 20
-```
-It checks source CI, builds the candidate, generates the site allowlist, runs the final gated
-build (which must equal the candidate), and stages a separate site worktree through the site's
-boundary gate. The live site checkout stays clean. Review that exact preview in a browser and
-complete its `browser-review.template.json` as described in the [agent runbook](agent-runbook.md).
-Only then rerun the helper with the **same** `--work`, adding `--review-receipt <completed review>
---push --verify --ledger <private ledger.jsonl>`. It checks the reviewed bytes again before
-pushing. Finally it verifies every new paper route and backing review data, and every affected
-material page and material shard anonymously, alongside sampled files. It appends at most one
-`live_verified` event per new paper. A timed-out live check
-reuses the same work path with `--verify` alone. **Run this sequence when at least six accepted
-papers are ready or three hours have passed, whichever comes first, and the previous release has
-finished.** A blocked paper never delays an accepted batch. About 5 minutes plus Pages deployment.
+Never edit policies or allowlists to pass a gate. Generated control files must be produced through the normal preparation tools; scientific assets still require their actual provenance and review. Original PDFs/SI, extracted text, page renders, raw quotes, drafts and detailed audits stay local. Only release-cleared data, assets, code, skills, concise memory and references go to the public repositories. Existing local sources only; no paid APIs, cloud document processing, source transfer or new paper/model downloads.
 
-### 8. Measure
-```
-python -B tools/workflow/package_workflow.py metrics <private ledger.jsonl> --start <UTC> --end <UTC> --output <new receipt>
-```
-Report the measured published papers/hour and stage times only when the owner asks.
+After the first 40, report actual distinct live-verified papers per elapsed hour, carried-in work separately, all ten deep-audit outcomes, distinct S1/S2-positive papers and finding types, stage counts, skips/holds, rework, queue sizes and any backlog/capacity limit. Twenty papers per hour remains a target until measured. Scheduled morning, two-hour and twenty-minute reports remain disabled; report when asked, at the requested first-40 checkpoint, or for a stop/material failure.
 
-## Staffing (continuous)
-
-| Role | Count | Notes |
-|---|---|---|
-| Extractor | as many as available (start with 3) | One active paper + one claimed next |
-| Quick auditor | 1 per 2 extractors during 25% deep audits; 1 per 3 after 10% resumes | Blind completeness pass; deep auditor differs from quick auditor |
-| Integrator / releaser | 1 | Integrates, runs `release_batch.py`; extracts when idle |
-
-After the hold lifts, ramp 4 → 8 → 12 → 16 extractors only when the last step has at most one
-S1/S2 paper per ten deep audits, no claim collisions, at most two integration batches waiting,
-and spare machine capacity. Report remaining semiconductor-QD and metal queue sizes at each step.
-Never exceed available agent slots.
-
-## Retired (do not follow, even if an older file says so)
-
-- The public preliminary lane and any experimental-silver display before calibration.
-- Two-hour, morning or interval progress reports; progress-only site releases.
-- Heartbeat or 20-minute continuation runs; pauses between batches.
-- Per-paper releases; separate manifest-closure, "approve baseline" or "bind digest" commits.
-- The 400-papers-by-September-29 deadline and the "500 papers/day" quota language.
-- "Careful complete main/SI reading over speed" as a default. The minimum publishable unit replaces it.
-- The limits of four agents / five claims.
+Operational commands and receipt requirements are in [agent-runbook.md](agent-runbook.md).
