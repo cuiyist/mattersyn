@@ -6,6 +6,8 @@ The verified restart baseline is 173 contributing source groups (172 literature 
 
 **2026-10-03 Chicago checkpoint:** Five restart papers are live (178 source groups, 177 literature papers, 1,715 records and 708 pairs), verified against source `5aa24d33` and site `80153941`; private batch01 proof retains CI and anonymous checks. Two sampled papers have completed deep audits: Sun had S1/S2 findings, now corrected; So had no S1/S2. Chen, Zhong and Rodriguez are independently accepted scientifically but await corrected publication transports. Two additional tasks use exclusive DOI claims and immutable handoffs; only the integrator writes the ledger or releases. The 20-paper historical audit queue is separate; scheduled reports remain off.
 
+**2026-10-04 UTC working checkpoint:** The two owner-approved worker tasks are running with shared exclusive claims and immutable handoffs. Three carried-in papers (Chen, Zhong and Rodriguez; eleven records) plus the accepted Zou retrospective sample correction are staged for publication. The first batch02 source CI identified twelve missing chemical-card captions; these are being completed from existing audited text, without changing chemistry or weakening checks. This candidate has no live credit. The last verified site remains 178 source groups and 1,715 records. The retrospective worker has completed four of twenty full audits, kept separate from the first-40 sample. New worker contributions remain pending until the usual independent audit, integration, deployment and anonymous checks pass.
+
 ---
 
 ## Naiki, Liu and Jung verified live; next v5 batch in preparation
