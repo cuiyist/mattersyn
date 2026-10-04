@@ -5,6 +5,8 @@ import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);
 const text=v=>v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
 const sourceRecord=(context,fallback)=>context.record_id||context.source?.data_path?.match(/(?:^|\/)records\/([^/]+)\.json$/)?.[1]||fallback;
+// Zhong's branched specimens cannot be represented by the straight-rod primitive.
+const pendingZhongBranches=(value,recordId)=>recordId==='zhong2007-cdte-cdse-jp0709407-sequential-growth-series'&&/\bmultiple[- ](?:armed|branched)\s+rods?\b/.test(text(value).toLowerCase());
 
 export function particleGroups(r,presentation={}){
  const groups=new Map();
@@ -30,6 +32,7 @@ export function particleGroups(r,presentation={}){
 
 export function classifyMorphology(value,recordId=''){
  const m=text(value).toLowerCase();
+ if(pendingZhongBranches(value,recordId))return 'neutral';
  if(!m||/\b(unknown|unresolved|unassigned|not determined)\b/.test(m))return 'neutral';
  if(/\b(proposed|damage|not demonstrated|non[ -]spherical)\b/.test(m))return 'neutral';
  if(/\b(spher\w*|round)\b/.test(m)&&/\b(cubic|cube\w*)\b/.test(m))return 'neutral';
@@ -82,7 +85,7 @@ export function particleDescriptor(group,interpretations={}){
  const sourceFact=group.facts.find(f=>f.kind==='morphology'&&knownStatus.has(f.status));
  return {composition:composition||'Composition not assigned',scope:group.label||group.sampleId,
          morphology,shape,inferred,sourceFact,
-         caption:shape==='neutral'?'The source evidence does not yet support a specific morphology illustration for this specimen.':inferred?.rationale||(
+         caption:shape==='neutral'?(pendingZhongBranches(morphology,group.recordId)?'The source reports a branched morphology for this specimen. A matching illustration has not yet been assigned; the source description and figures remain available.':'The source evidence does not yet support a specific morphology illustration for this specimen.'):inferred?.rationale||(
           shape==='rod-assembly'?'Schematic rods only; source-reported pore geometry, layer alignment and spacing are not reconstructed. Constituent count and orientation are illustrative.':
           shape==='porous-hybrid-film'?'Schematic repeated hybrid motifs in a porous film; number, positions and pore geometry are illustrative.':
           'Schematic interpretation of the source description. Geometry and colors are illustrative; not to scale or an atomic reconstruction.')};
