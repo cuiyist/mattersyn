@@ -75,10 +75,13 @@ def no_link(path):
     # Check every existing ancestor as well as the leaf; resolve alone conceals links.
     path = Path(os.path.abspath(path))
     for p in (path, *path.parents):
-        if p.exists() or p.is_symlink():
+        try:
             s = p.lstat()
-            require(not stat.S_ISLNK(s.st_mode) and
-                    not (getattr(s, 'st_file_attributes', 0) & 0x400), 'symlink_or_reparse')
+        except FileNotFoundError:
+            # New output paths may not exist; their existing ancestors still must pass.
+            continue
+        require(not stat.S_ISLNK(s.st_mode) and
+                not (getattr(s, 'st_file_attributes', 0) & 0x400), 'symlink_or_reparse')
     return path
 
 

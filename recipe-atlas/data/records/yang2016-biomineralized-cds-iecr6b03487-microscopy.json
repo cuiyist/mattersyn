@@ -1,0 +1,721 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2016-biomineralized-cds-iecr6b03487-microscopy",
+  "revision": 2,
+  "record_type": "procedure",
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure",
+  "title": "Yang et al. (2016): CdS and CdS/ZnS electron-microscopy contexts",
+  "material": {
+    "formula": "CdS and CdS/ZnS specimens",
+    "family": "Biomineralized CdS quantum dots and post-synthesis processing",
+    "elements": [
+      "Cd",
+      "S",
+      "Zn"
+    ]
+  },
+  "method": "CdS and CdS/ZnS electron-microscopy contexts",
+  "lineage": {
+    "source_group": "yang2016-biomineralized-cds-iecr6b03487",
+    "recipe_family": "yang2016-biomineralized-cds-iecr6b03487",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "sources": [
+    {
+      "id": "yang2016-biomineralized-cds-iecr6b03487",
+      "doi": "10.1021/acs.iecr.6b03487",
+      "title": "Biomineralized CdS Quantum Dot Nanocrystals: Optimizing Synthesis Conditions and Improving Functional Properties by Surface Modification",
+      "authors": "Zhou Yang; Li Lu; Christopher J. Kiely; Bryan W. Berger; Steven McIntosh",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "main_status": "scoped_independently_audited",
+      "si_status": "All 5 matching SI pages read textually and visually by the author; independent full audit gate applies.",
+      "reuse_status": "Source crops preserve provenance; publisher permission and reuse license unverified."
+    }
+  ],
+  "intended_target": {
+    "composition": {
+      "value": "CdS and CdS/ZnS specimens",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "m-core",
+      "name": "CdS-only nanocrystal microscopy specimen",
+      "formula": null,
+      "role": "Before-ZnS source specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "m-shell",
+      "name": "CdS/ZnS nanocrystal microscopy specimen",
+      "formula": null,
+      "role": "After-ZnS source specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "m-grid",
+      "name": "Holey carbon-coated copper TEM grid",
+      "formula": null,
+      "role": "Microscopy support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Cu signals are attributed to the grid; support is not a QD composition claim."
+      ],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-core-grid",
+      "name": "Separate CdS-only grid",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "s-shell-grid",
+      "name": "Separate CdS/ZnS grid",
+      "kind": "sample_set",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-core-grid",
+      "action": "prepare",
+      "label": "Prepare the CdS microscopy grid",
+      "description": "Drop-cast the CdS suspension onto a holey carbon-coated copper grid. Drop volume, solvent and drying conditions are not restated in the microscopy method.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "m-core",
+        "m-grid"
+      ],
+      "outputs": [
+        "s-core-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "prepare-shell-grid",
+      "action": "prepare",
+      "label": "Prepare the CdS/ZnS microscopy grid",
+      "description": "Separately drop-cast the CdS/ZnS suspension onto the same type of support. No shared physical grid or aliquot is inferred.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "m-shell",
+        "m-grid"
+      ],
+      "outputs": [
+        "s-shell-grid"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "measure-stem",
+      "action": "measure",
+      "label": "Image and analyze the separate specimens",
+      "description": "Use an aberration-corrected JEOL ARM 200CF at 200 kV for HAADF-STEM, with a Centurio XEDS system. Particle-size distributions count at least 200 particles per sample.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare-core-grid",
+        "prepare-shell-grid"
+      ],
+      "inputs": [
+        "s-core-grid",
+        "s-shell-grid"
+      ],
+      "outputs": [
+        "s-core-grid",
+        "s-shell-grid"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+              "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+            }
+          ],
+          "derivation": null
+        },
+        "minimum_particle_count": {
+          "value": null,
+          "minimum": 200,
+          "maximum": null,
+          "unit": "particles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+              "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "core",
+      "source_sample_label": "Figure 8 CdS-only specimen",
+      "batch_id": null,
+      "material_state_id": "s-core-grid",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Source reports both wurtzite and zinc-blende CdS in the specimen population; no phase fraction is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Exact bound coverage and speciation are unreported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ],
+      "notes": [
+        "Source-defined specimen context; no unreported physical-batch identity across techniques is assigned."
+      ]
+    },
+    {
+      "sample_id": "shell",
+      "source_sample_label": "Figure 8 post-ZnS specimen",
+      "batch_id": null,
+      "material_state_id": "s-shell-grid",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Source reports both wurtzite and zinc-blende CdS in the specimen population; no phase fraction is supplied.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Exact bound coverage and speciation are unreported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ],
+      "notes": [
+        "Source-defined specimen context; no unreported physical-batch identity across techniques is assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "core-mean",
+      "sample_id": "core",
+      "property": "Mean particle diameter",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": 4.28,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "At least 200 particles per sample; distinct before/after populations.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "core-sd",
+      "sample_id": "core",
+      "property": "Particle-diameter standard deviation",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": 0.68,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Figure histogram explicitly labels S.D.; not standard error.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "core-dispersion",
+      "sample_id": "core",
+      "property": "Source-reported diameter dispersion",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": 16,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "core-xeds",
+      "sample_id": "core",
+      "property": "Individual-particle XEDS interpretation",
+      "technique": "XEDS",
+      "value": {
+        "value": "The source assigns Cd and S to the particle. Copper peaks come from the support grid and the small Si-escape peak from the detector; other visible labels are not promoted to a product formula.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "shell-mean",
+      "sample_id": "shell",
+      "property": "Mean particle diameter",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": 4.79,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "At least 200 particles per sample; distinct before/after populations.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "shell-sd",
+      "sample_id": "shell",
+      "property": "Particle-diameter standard deviation",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": 0.73,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Figure histogram explicitly labels S.D.; not standard error.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "shell-dispersion",
+      "sample_id": "shell",
+      "property": "Source-reported diameter dispersion",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": 15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "shell-xeds",
+      "sample_id": "shell",
+      "property": "Individual-particle XEDS interpretation",
+      "technique": "XEDS",
+      "value": {
+        "value": "The source assigns Cd, Zn and S to the particle. Copper peaks come from the support grid and the small Si-escape peak from the detector; other visible labels are not promoted to a product formula.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    },
+    {
+      "id": "shell-limit",
+      "sample_id": "shell",
+      "property": "Core–shell imaging limit",
+      "technique": "Author structural interpretation",
+      "value": {
+        "value": "The source states that contrast was insufficient to directly image a distinct core–shell boundary. An approximately one-monolayer ZnS coating is inferred from size, composition and optical changes, not directly measured as a resolved thickness.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.7 / printed 11241, Figure 8 and microscopy discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete local 10-page main paper and 5-page SI. Proposed final status gated on exact independent scoped acceptance.",
+    "missing_fields": [
+      "Exact physical-batch joins between growth series, phase transfer, optical and microscopy specimens are not established. Related procedures do not assert a common aliquot.",
+      "Unreported reactor capacity, shaking/stirring speeds, gas flow/pressure, workup volumes and durations, stock concentrations, purified-QD concentrations, isolated yields and storage remain missing.",
+      "No atomic coordinates, measured particle facets, surface coverage or explicit crystal structure model is supplied. Lattice-plane indexing is not a particle-facet assignment.",
+      "Original curves are retained without digitizing unprinted peak positions or intensities."
+    ],
+    "conflicts": [
+      "Main p.7 cites Figure S4 for the CdS-only lattice assignment, whereas SI explicitly assigns S1/Table S1 to CdS-only and S4/Table S2 to post-ZnS material. The explicit SI specimen labels govern these table contexts."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper",
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Shell-growth procedure",
+      "url": "records/yang2016-biomineralized-cds-iecr6b03487-zns-shell.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

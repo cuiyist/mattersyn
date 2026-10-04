@@ -2,7 +2,7 @@
 
 ## Sources represented by reviewed records in this checkout
 
-**201 primary source groups** are represented by **2,099 records in this checkout**. The separately verified live website contains **195 primary source groups and 1,928 records**, verified on 2026-10-04 at 14:41:51 UTC. The six additional source groups are pending deployment and verification; this bibliography does not claim that they are live. Records are not independent experiments.
+**204 primary source groups** are represented by **2,202 records in this checkout**. The separately verified live website contains **201 source groups and 2,099 records**, verified on 2026-10-04 at 17:59:59 UTC. The three additional contributions are pending deployment; this bibliography does not count them as live. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -324,6 +324,8 @@
 
 - Dylan C. Gary; Maxwell W. Terban; Simon J. L. Billinge; Brandi M. Cossairt (2015). Two-Step Nucleation and Growth of InP Quantum Dots via Magic-Sized Cluster Intermediates. [10.1021/acs.chemmater.5b00286](https://doi.org/10.1021/acs.chemmater.5b00286). Review scope remains stated in the linked website records.
 
+- Zhou Yang; Li Lu; Christopher J. Kiely; Bryan W. Berger; Steven McIntosh (2016). Biomineralized CdS Quantum Dot Nanocrystals: Optimizing Synthesis Conditions and Improving Functional Properties by Surface Modification. [10.1021/acs.iecr.6b03487](https://doi.org/10.1021/acs.iecr.6b03487). Review scope remains stated in the linked website records.
+
 - Juwon Park; Sanghwa Jeong; Jiwon Bang; Bomi Kim; Hyunmi Doh; Seungho Cho; Sungjae Hwang; Sungjee Kim (2016). Formation and Stepwise Self-Assembly of Cadmium Chalcogenide Nanocrystals to Colloidal Supra-Quantum Dots and the Superlattices. [10.1021/acs.chemmater.6b01126](https://doi.org/10.1021/acs.chemmater.6b01126). Review scope remains stated in the linked website records.
 
 - S. Costanzo; G. Simon; J. Richardi; Ph. Colomban; I. Lisiecki (2016). Solvent Effects on Cobalt Nanocrystal Synthesis—A Facile Strategy To Control the Size of Co Nanocrystals. [10.1021/acs.jpcc.6b07293](https://doi.org/10.1021/acs.jpcc.6b07293). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=costanzo2016co).
@@ -368,6 +370,8 @@
 
 - Hashini B. Chandrasiri; Eun Byoel Kim; Preston T. Snee (2020). Sterically Encumbered Tris(trialkylsilyl) Phosphine Precursors for Quantum Dot Synthesis. [10.1021/acs.inorgchem.0c02440](https://doi.org/10.1021/acs.inorgchem.0c02440). Review scope remains stated in the linked website records.
 
+- Yan-Fei He; Jian-Wei Chen; Chang-Zhi An; Xiao-Lin Hou; Zi-Tao Zhong; Chao-Qing Li; Wei Chen; Bo Liu; Yuan-Di Zhao (2021). Fluorescence Characteristics of CdTe Quantum Dot Colloids below the Freezing Point. [10.1021/acs.jpcc.1c02085](https://doi.org/10.1021/acs.jpcc.1c02085). Review scope remains stated in the linked website records.
+
 - Fangke Lin; Qianqian Qi; Junle Zhang; Wenjun Zhou; Jiahui Zhang; Peng Fu; Xiaomeng Zhang; Xiaoguang Qiao; Minying Liu; Xinchang Pang; Zhe Cui (2021). From Unimolecular Template to Silver Nanocrystal Clusters: An Effective Strategy to Balance Antibacterial Activity and Cytotoxicity. [10.1021/acsami.1c07986](https://doi.org/10.1021/acsami.1c07986). Review scope remains stated in the linked website records.
 
 - Linyuan Lian; Peng Zhang; Xiuwen Zhang; Qi Ye; Wei Qi; Long Zhao; Jianbo Gao; Daoli Zhang; Jianbing Zhang (2021). Realizing Near-Unity Quantum Efficiency of Zero-Dimensional Antimony Halides through Metal Halide Structural Modulation. *ACS Applied Materials & Interfaces*, 13, 58908–58915. [10.1021/acsami.1c18038](https://doi.org/10.1021/acsami.1c18038). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=lian2021).
@@ -379,6 +383,8 @@
 - Wenting Zou; Yan Liu; Renjie Li; Rong Guo (2022). Ingenious Multifunctional MnO2 Quantum Dot Nanozymes with Superior Catechol Oxidase-like Activity for Highly Selective Sensing of Redox-Active Dopamine Based on an Interfacial Passivation Strategy. *ACS Sustainable Chemistry & Engineering*, 10057–10067. [10.1021/acssuschemeng.2c02981](https://doi.org/10.1021/acssuschemeng.2c02981). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zou2022-mno2-casein-acssuschemeng2c02981).
 
 - Evert Dhaene; Rohan Pokratath; Olivia Aalling-Frederiksen; Kirsten M. Ø. Jensen; Philippe F. Smet; Klaartje De Buysser; Jonathan De Roo (2022). Monoalkyl Phosphinic Acids as Ligands in Nanocrystal Synthesis. *ACS Nano*, 16, 7361-7372. [10.1021/acsnano.1c08966](https://doi.org/10.1021/acsnano.1c08966). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=dhaene2022-main).
+
+- Mahsa Parvizian; Julia Bechter; Jan Huber; Noura Chettata; Jonathan De Roo (2023). An Experimental Introduction to Colloidal Nanocrystals through InP and InP/ZnS Quantum Dots. [10.1021/acs.jchemed.2c01167](https://doi.org/10.1021/acs.jchemed.2c01167). Review scope remains stated in the linked website records.
 
 - Debadrita Bhattacharya; Arin Bhakat; Tushar Debnath (2023). Breaking AgInTe2 Quantum Dot Chain to Fabricate AgInTe2–ZnS Janus Nanocrystals. *Inorganic Chemistry*, 20219–20227. [10.1021/acs.inorgchem.3c03156](https://doi.org/10.1021/acs.inorgchem.3c03156). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=bhattacharya2023-aginte2-zns-ic3c03156).
 

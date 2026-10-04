@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2016-biomineralized-cds-iecr6b03487-solar-blank",
+  "revision": 2,
+  "record_type": "observation",
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation",
+  "title": "Yang et al. (2016): photovoltaic blank-cell comparison",
+  "material": {
+    "formula": "TiO2/FTO/Au",
+    "family": "Biomineralized CdS quantum dots and post-synthesis processing",
+    "elements": [
+      "Ti",
+      "O",
+      "Sn",
+      "F",
+      "Au"
+    ]
+  },
+  "method": "photovoltaic blank-cell comparison",
+  "lineage": {
+    "source_group": "yang2016-biomineralized-cds-iecr6b03487",
+    "recipe_family": "yang2016-biomineralized-cds-iecr6b03487",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "sources": [
+    {
+      "id": "yang2016-biomineralized-cds-iecr6b03487",
+      "doi": "10.1021/acs.iecr.6b03487",
+      "title": "Biomineralized CdS Quantum Dot Nanocrystals: Optimizing Synthesis Conditions and Improving Functional Properties by Surface Modification",
+      "authors": "Zhou Yang; Li Lu; Christopher J. Kiely; Bryan W. Berger; Steven McIntosh",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "main_status": "scoped_independently_audited",
+      "si_status": "All 5 matching SI pages read textually and visually by the author; independent full audit gate applies.",
+      "reuse_status": "Source crops preserve provenance; publisher permission and reuse license unverified."
+    }
+  ],
+  "intended_target": {
+    "composition": {
+      "value": "TiO2/FTO/Au",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "m-blank",
+      "name": "Source-labelled blank photovoltaic cell",
+      "formula": null,
+      "role": "Figure 6 comparison without CdS sensitization",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Blank control is source-labelled. Its independent preparation and equality of every fabrication variable are not fully restated."
+      ],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-blank",
+      "name": "Figure 6 blank-cell context",
+      "kind": "sample_set",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "compare-blank",
+      "action": "compare",
+      "label": "Retain the measured blank context",
+      "description": "Compare the source-labelled blank cell with the CdS-sensitized device under the reported AM 1.5 G, 100 mW/cm² illumination. No separately reconstructed blank fabrication is supplied.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "m-blank"
+      ],
+      "outputs": [
+        "s-blank"
+      ],
+      "parameters": {
+        "irradiance": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW/cm2",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+              "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "blank",
+      "source_sample_label": "Figure 6 blank cell",
+      "batch_id": null,
+      "material_state_id": "s-blank",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Source-labelled blank cell",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No crystal phase or sample coordinates are assigned in the inspected source."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Exact bound coverage and speciation are unreported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+        }
+      ],
+      "notes": [
+        "Source-defined specimen context; no unreported physical-batch identity across techniques is assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "voc",
+      "sample_id": "blank",
+      "property": "Open-circuit voltage",
+      "technique": "Illuminated J–V",
+      "value": {
+        "value": 0.32,
+        "minimum": null,
+        "maximum": null,
+        "unit": "V",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "jsc",
+      "sample_id": "blank",
+      "property": "Short-circuit current density",
+      "technique": "Illuminated J–V",
+      "value": {
+        "value": 0.41,
+        "minimum": null,
+        "maximum": null,
+        "unit": "mA/cm2",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+        }
+      ]
+    },
+    {
+      "id": "ff",
+      "sample_id": "blank",
+      "property": "Fill factor",
+      "technique": "Illuminated J–V",
+      "value": {
+        "value": 41,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.3 / printed 11237, solar-cell fabrication; p.6 / printed 11240, Figure 6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete local 10-page main paper and 5-page SI. Proposed final status gated on exact independent scoped acceptance.",
+    "missing_fields": [
+      "Exact physical-batch joins between growth series, phase transfer, optical and microscopy specimens are not established. Related procedures do not assert a common aliquot.",
+      "Unreported reactor capacity, shaking/stirring speeds, gas flow/pressure, workup volumes and durations, stock concentrations, purified-QD concentrations, isolated yields and storage remain missing.",
+      "No atomic coordinates, measured particle facets, surface coverage or explicit crystal structure model is supplied. Lattice-plane indexing is not a particle-facet assignment.",
+      "Original curves are retained without digitizing unprinted peak positions or intensities.",
+      "Blank-cell efficiency is not reported; it is not independently calculated from rounded source values."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper",
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "relation": "primary_source"
+    },
+    {
+      "label": "CdS-sensitized cell fabrication and response",
+      "url": "records/yang2016-biomineralized-cds-iecr6b03487-solar-cell.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

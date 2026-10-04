@@ -253,6 +253,70 @@ def valid_scoped_status_promotion(before, after, changes=None, changes_allowed=F
     return (old_status=='imported_unreviewed' and new_revision==old_revision
             and changes_allowed and changes is not None and '/context_links' in changes)
 
+def scoped_document_coverage_errors(doc, inventory_doc, audit):
+    """Document reading and formal Reader completeness are different claims.
+
+    False keeps the legacy scoped inventory's non-claim. True is allowed only
+    for a complete, explicitly evidenced main-document read in the already
+    pinned independent audit. It does not promote source scope or training.
+    """
+    coverage = doc.get('coverage', {})
+    pages = coverage.get('reviewed_pages', [])
+    count = coverage.get('page_count')
+    if (type(count) is not int or count < 1 or not isinstance(pages, list)
+            or not pages or any(type(p) is not int or not 1 <= p <= count for p in pages)
+            or pages != sorted(set(pages))
+            or doc.get('role') != inventory_doc.get('role')
+            or count != inventory_doc.get('page_count')
+            or pages != inventory_doc.get('pages_read')):
+        return ['Scoped inventory page coverage differs from package']
+    flags = ('all_text_read', 'all_visually_reviewed')
+    if any(type(inventory_doc.get(key)) is not bool for key in flags):
+        return ['Scoped inventory reading flags must be explicit booleans']
+    if not any(inventory_doc[key] for key in flags):
+        return []
+    # Support only the two explicit evidence shapes already present in pinned
+    # independent receipts. Neither prose nor an unmatched PDF is evidence.
+    error = ['Complete scoped document reading lacks exact independent page evidence']
+    digest = doc.get('sha256')
+    if (doc.get('role') != 'main' or len(pages) != count
+            or not isinstance(digest, str) or len(digest) != 64
+            or any(c not in '0123456789abcdef' for c in digest)
+            or inventory_doc.get('sha256', digest) != digest
+            or not isinstance(audit, dict)):
+        return error
+    evidence_sets = []
+    if 'source' in audit or 'source_pages_read' in audit:
+        source = audit.get('source')
+        read_pages = audit.get('source_pages_read')
+        if (not isinstance(source, dict) or source.get('sha256') != doc['sha256']
+                or not isinstance(read_pages, dict)):
+            return error
+        evidence_sets.append((read_pages.get('main_text'), read_pages.get('main_visual')))
+    if 'source_reading' in audit:
+        reading = audit.get('source_reading')
+        evidence_docs = reading.get('documents') if isinstance(reading, dict) else None
+        if (not isinstance(evidence_docs, list)
+                or any(not isinstance(d, dict) for d in evidence_docs)):
+            return error
+        main_docs = [d for d in evidence_docs if d.get('role') == 'main']
+        if (len(main_docs) != 1 or main_docs[0].get('sha256') != doc['sha256']
+                or type(main_docs[0].get('page_count')) is not int
+                or main_docs[0]['page_count'] != count):
+            return error
+        evidence_sets.append((main_docs[0].get('actual_pages_text_read'),
+                              main_docs[0].get('actual_pages_visually_read')))
+    if not evidence_sets:
+        return error
+    # If both shapes are supplied, every asserted page set must agree.
+    for evidence_set in evidence_sets:
+        for key, evidence in zip(flags, evidence_set):
+            if inventory_doc[key] and (not isinstance(evidence, list)
+                    or any(type(p) is not int for p in evidence) or evidence != pages):
+                return error
+    return []
+
+
 def scoped_review_errors(entry, candidate, records, inventory, validate_record):
     """Private accepted v5 package replaces a *formal* Reader only for its scoped source."""
     errors=[]
@@ -315,11 +379,7 @@ def scoped_review_errors(entry, candidate, records, inventory, validate_record):
     if len(pdocs)!=len(idocs):errors.append('Scoped inventory document coverage missing')
     else:
         for doc,inv in zip(pdocs,idocs):
-            coverage=doc.get('coverage',{});pages=coverage.get('reviewed_pages',[]);count=coverage.get('page_count')
-            if (doc.get('role')!=inv.get('role') or count!=inv.get('page_count')
-                    or pages!=inv.get('pages_read') or not pages or inv.get('all_text_read') is not False
-                    or inv.get('all_visually_reviewed') is not False):
-                errors.append('Scoped inventory page coverage differs from package or falsely claims full review')
+            errors.extend(scoped_document_coverage_errors(doc, inv, audit))
     if not package.get('scope',{}).get('omissions'):
         errors.append('Scoped package has no explicit exclusions')
     used_deltas=set()

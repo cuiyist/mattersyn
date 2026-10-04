@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2016-biomineralized-cds-iecr6b03487-optical-method",
+  "revision": 2,
+  "record_type": "procedure",
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure",
+  "title": "Yang et al. (2016): optical spectroscopy and quantum-yield reference",
+  "material": {
+    "formula": "Optical analysis",
+    "family": "Biomineralized CdS quantum dots and post-synthesis processing",
+    "elements": [
+      "C",
+      "H",
+      "N",
+      "O"
+    ]
+  },
+  "method": "optical spectroscopy and quantum-yield reference",
+  "lineage": {
+    "source_group": "yang2016-biomineralized-cds-iecr6b03487",
+    "recipe_family": "yang2016-biomineralized-cds-iecr6b03487",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "sources": [
+    {
+      "id": "yang2016-biomineralized-cds-iecr6b03487",
+      "doi": "10.1021/acs.iecr.6b03487",
+      "title": "Biomineralized CdS Quantum Dot Nanocrystals: Optimizing Synthesis Conditions and Improving Functional Properties by Surface Modification",
+      "authors": "Zhou Yang; Li Lu; Christopher J. Kiely; Bryan W. Berger; Steven McIntosh",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "main_status": "scoped_independently_audited",
+      "si_status": "All 5 matching SI pages read textually and visually by the author; independent full audit gate applies.",
+      "reuse_status": "Source crops preserve provenance; publisher permission and reuse license unverified."
+    }
+  ],
+  "intended_target": {
+    "composition": {
+      "value": "Optical analysis",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "m-coumarin",
+      "name": "Coumarin 1",
+      "formula": null,
+      "role": "Quantum-yield reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Sigma-Aldrich. Exact solution concentration, reference QY and molecular coordinates are not supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "m-ethanol",
+      "name": "Ethanol",
+      "formula": "C2H6O",
+      "role": "Reference solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "m-colloids",
+      "name": "Source CdS and CdS/ZnS colloids",
+      "formula": null,
+      "role": "Separate optical specimens",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "This is a general analytical method, not a single mixed sample."
+      ],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "stock-qy-reference",
+      "name": "Coumarin 1 in ethanol",
+      "components": [
+        {
+          "material_id": "m-coumarin",
+          "quantities": {}
+        },
+        {
+          "material_id": "m-ethanol",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [
+        "prepare-reference"
+      ],
+      "scope": "Named reference only; concentration, amount and reference-QY number are unreported.",
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "s-reference",
+      "name": "Coumarin 1 / ethanol reference",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "s-analysis",
+      "name": "Separate source optical contexts",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-reference",
+      "action": "prepare",
+      "label": "Retain the Coumarin reference",
+      "description": "Use Coumarin 1 in ethanol as the quantum-yield standard. The paper does not specify the reference concentration or its numerical reference quantum yield.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "m-coumarin",
+        "m-ethanol"
+      ],
+      "outputs": [
+        "s-reference"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    },
+    {
+      "id": "measure-optical",
+      "action": "measure",
+      "label": "Measure absorption and emission",
+      "description": "Collect UV–visible spectra on a Shimadzu UV-2600 and photoluminescence on a QuantaMaster 400 (Photon Technology International). Figure captions specify 350 nm excitation for emission. Optical path length and colloid dilution are unreported.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "prepare-reference"
+      ],
+      "inputs": [
+        "m-colloids",
+        "s-reference"
+      ],
+      "outputs": [
+        "s-analysis"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "method",
+      "source_sample_label": "General optical method",
+      "batch_id": null,
+      "material_state_id": "s-analysis",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Separate colloid analysis contexts",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "No crystal phase or sample coordinates are assigned in the inspected source."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Exact bound coverage and speciation are unreported."
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ],
+      "notes": [
+        "Source-defined specimen context; no unreported physical-batch identity across techniques is assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "excitation",
+      "sample_id": "method",
+      "property": "Figure-caption emission excitation",
+      "technique": "Photoluminescence",
+      "value": {
+        "value": 350,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Caption-defined setting, not a universally assumed setting for every unlabelled instrument run.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "Main Figures 1–5 and 7; SI Figure S2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main Figures 1–5 and 7; SI Figure S2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete local 10-page main paper and 5-page SI. Proposed final status gated on exact independent scoped acceptance.",
+    "missing_fields": [
+      "Exact physical-batch joins between growth series, phase transfer, optical and microscopy specimens are not established. Related procedures do not assert a common aliquot.",
+      "Unreported reactor capacity, shaking/stirring speeds, gas flow/pressure, workup volumes and durations, stock concentrations, purified-QD concentrations, isolated yields and storage remain missing.",
+      "No atomic coordinates, measured particle facets, surface coverage or explicit crystal structure model is supplied. Lattice-plane indexing is not a particle-facet assignment.",
+      "Original curves are retained without digitizing unprinted peak positions or intensities."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper",
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "relation": "primary_source"
+    }
+  ]
+}

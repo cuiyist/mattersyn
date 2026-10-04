@@ -1,0 +1,702 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2016-biomineralized-cds-iecr6b03487-core-zincblende-lattice",
+  "revision": 2,
+  "record_type": "observation",
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation",
+  "title": "Yang et al. (2016): CdS-only zinc-blende lattice indexing",
+  "material": {
+    "formula": "CdS",
+    "family": "Biomineralized CdS quantum dots and post-synthesis processing",
+    "elements": [
+      "Cd",
+      "S"
+    ]
+  },
+  "method": "CdS-only zinc-blende lattice indexing",
+  "lineage": {
+    "source_group": "yang2016-biomineralized-cds-iecr6b03487",
+    "recipe_family": "yang2016-biomineralized-cds-iecr6b03487",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "sources": [
+    {
+      "id": "yang2016-biomineralized-cds-iecr6b03487",
+      "doi": "10.1021/acs.iecr.6b03487",
+      "title": "Biomineralized CdS Quantum Dot Nanocrystals: Optimizing Synthesis Conditions and Improving Functional Properties by Surface Modification",
+      "authors": "Zhou Yang; Li Lu; Christopher J. Kiely; Bryan W. Berger; Steven McIntosh",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "main_status": "scoped_independently_audited",
+      "si_status": "All 5 matching SI pages read textually and visually by the author; independent full audit gate applies.",
+      "reuse_status": "Source crops preserve provenance; publisher permission and reuse license unverified."
+    }
+  ],
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "Main PDF p.2 / printed 11236, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "surface": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "host": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-lattice",
+      "name": "Selected individual-nanocrystal FFT context",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "compare-lattice",
+      "action": "compare",
+      "label": "Compare lattice spacings and angles",
+      "description": "Retain the measured lattice spacings and angles alongside the source reference matches for the selected individual nanocrystal. This is crystallographic indexing, not a measurement of the external particle facets.",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "s-lattice"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Atmosphere/pressure unreported for this stage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "lattice",
+      "source_sample_label": "CdS-only,FigureS1c/d",
+      "batch_id": null,
+      "material_state_id": "s-lattice",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Zinc-blendeCdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Exact bound coverage and speciation are unreported."
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ],
+      "notes": [
+        "Source-defined specimen context; no unreported physical-batch identity across techniques is assigned."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zone",
+      "sample_id": "lattice",
+      "property": "Source-reported projection direction",
+      "technique": "HAADF-STEM / FFT indexing",
+      "value": {
+        "value": "[110]",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "d-measured-1",
+      "sample_id": "lattice",
+      "property": "Measured plane 1 lattice spacing",
+      "technique": "HAADF-STEM / FFT",
+      "value": {
+        "value": 3.45,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "d-reference-1",
+      "sample_id": "lattice",
+      "property": "Reference match for plane 1",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": 3.37,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source matching/reference column; not another measured spacing.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "hkl-1",
+      "sample_id": "lattice",
+      "property": "Source matching plane 1 index",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": "(1-11); minus sign denotes the source overbar.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "d-measured-2",
+      "sample_id": "lattice",
+      "property": "Measured plane 2 lattice spacing",
+      "technique": "HAADF-STEM / FFT",
+      "value": {
+        "value": 3.48,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "d-reference-2",
+      "sample_id": "lattice",
+      "property": "Reference match for plane 2",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": 3.37,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source matching/reference column; not another measured spacing.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "hkl-2",
+      "sample_id": "lattice",
+      "property": "Source matching plane 2 index",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": "(1-1-1); minus sign denotes the source overbar.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "d-measured-3",
+      "sample_id": "lattice",
+      "property": "Measured plane 3 lattice spacing",
+      "technique": "HAADF-STEM / FFT",
+      "value": {
+        "value": 3.06,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "d-reference-3",
+      "sample_id": "lattice",
+      "property": "Reference match for plane 3",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": 2.92,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Source matching/reference column; not another measured spacing.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "hkl-3",
+      "sample_id": "lattice",
+      "property": "Source matching plane 3 index",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": "(002); minus sign denotes the source overbar.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "angle-measured-0",
+      "sample_id": "lattice",
+      "property": "Measured interplanar angle 1,2",
+      "technique": "HAADF-STEM / FFT",
+      "value": {
+        "value": 68.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "angle-reference-0",
+      "sample_id": "lattice",
+      "property": "Reference matching interplanar angle 1,2",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": 70.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reference match, distinct from measured angle.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "angle-measured-1",
+      "sample_id": "lattice",
+      "property": "Measured interplanar angle 2,3",
+      "technique": "HAADF-STEM / FFT",
+      "value": {
+        "value": 57.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "angle-reference-1",
+      "sample_id": "lattice",
+      "property": "Reference matching interplanar angle 2,3",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": 54.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reference match, distinct from measured angle.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "angle-measured-2",
+      "sample_id": "lattice",
+      "property": "Measured interplanar angle 3,1",
+      "technique": "HAADF-STEM / FFT",
+      "value": {
+        "value": 53.9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    },
+    {
+      "id": "angle-reference-2",
+      "sample_id": "lattice",
+      "property": "Reference matching interplanar angle 3,1",
+      "technique": "Source reference indexing",
+      "value": {
+        "value": 54.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "deg",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reference match, distinct from measured angle.",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+            "locator": "SI p.2, Figure S1 and Table S1 right half"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2016-biomineralized-cds-iecr6b03487",
+          "locator": "SI p.2, Figure S1 and Table S1 right half"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Complete local 10-page main paper and 5-page SI. Proposed final status gated on exact independent scoped acceptance.",
+    "missing_fields": [
+      "Exact physical-batch joins between growth series, phase transfer, optical and microscopy specimens are not established. Related procedures do not assert a common aliquot.",
+      "Unreported reactor capacity, shaking/stirring speeds, gas flow/pressure, workup volumes and durations, stock concentrations, purified-QD concentrations, isolated yields and storage remain missing.",
+      "No atomic coordinates, measured particle facets, surface coverage or explicit crystal structure model is supplied. Lattice-plane indexing is not a particle-facet assignment.",
+      "Original curves are retained without digitizing unprinted peak positions or intensities."
+    ],
+    "conflicts": [
+      "Main p.7 cites Figure S4 for the CdS-only lattice assignment, whereas SI explicitly assigns S1/Table S1 to CdS-only and S4/Table S2 to post-ZnS material. The explicit SI specimen labels govern these table contexts."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper",
+      "url": "https://doi.org/10.1021/acs.iecr.6b03487",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Population-level source microscopy context",
+      "url": "records/yang2016-biomineralized-cds-iecr6b03487-microscopy.html",
+      "relation": "related_procedure"
+    }
+  ]
+}
