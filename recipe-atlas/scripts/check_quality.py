@@ -67,6 +67,24 @@ def component_role_matches_architecture(architecture, contribution_role):
     return contribution_role == expected
 
 
+def material_membership_errors(hub, records):
+    """Cross-check the complete hub against eligible canonical records, not builder output."""
+    formula = hub['formula']
+    eligible = [r for r in records
+                if r['collection'] == 'reviewed_literature'
+                and r['quality']['review_status'] == 'source_reviewed'
+                and r['record_type'] in {'literature_protocol', 'protocol_variant', 'experiment'}
+                and any(o['stage'] == 'synthesis' for o in r['operations'])
+                and (r.get('reader_role') == 'synthesis_route'
+                     or (r.get('reader_role') is None and 'precursor_selection' in r['quality']['requested_tasks']))]
+    direct = {r['record_id'] for r in eligible if r['material']['formula'] == formula}
+    contributions = [r for r in eligible if r['record_id'] in direct or formula in r['material'].get('components', [])]
+    expected = {'direct_record_ids': direct, 'record_ids': {r['record_id'] for r in contributions},
+                'paper_dois': {primary_doi(r) for r in contributions}}
+    return [f"{formula}: complete canonical {key} membership mismatch"
+            for key, values in expected.items() if set(hub.get(key, [])) != values]
+
+
 class Audit:
     def __init__(self, root):
         self.root = root.resolve()
@@ -124,6 +142,8 @@ class Audit:
             self.check(bool(route_ids), f"{formula}: public material hub has no reviewed route")
             self.check(hub.get("publication_status") == "verified_synthesis_contribution", f"{formula}: hub lacks verified publication status")
             self.check(not hub.get("mentioned_paper_dois"), f"{formula}: title mentions leaked into material contributions")
+            for error in material_membership_errors(hub, self.byid.values()):
+                self.check(False, error)
             self.check(route_ids == {r["record_id"] for r in hub["records"]}, f"{formula}: route summary IDs disagree")
             direct = set()
             route_dois = set()
@@ -244,9 +264,13 @@ class Audit:
         yao_assemblies = {f"yao2015-cds-pbs-{n}-cycles" for n in (1, 2, 4, 6, 7)} | {"yao2015-planar-cds-pbs-6-cycles"}
         watt_composite = {"watt2004-pbs-mehppv-one-pot"}
         ratanatawanate_composites = {"ratanatawanate2009-pbs-tio2-inside", "ratanatawanate2009-pbs-tio2-both"}
-        self.check(lead_sulfide.get("component_only") is False and set(lead_sulfide.get("direct_record_ids", [])) == yao_direct | basel_direct | choi_direct | mukherjee_direct, "PbS: only reviewed Yao/Basel isolated-QD, Choi TAE and thirteen Mukherjee Table I preparations are direct routes; glass and device assemblies remain component contributions")
-        self.check(set(lead_sulfide.get("record_ids", [])) == dantas_routes | yao_direct | yao_assemblies | basel_direct | watt_composite | ratanatawanate_composites | choi_direct | mukherjee_direct, "PbS: exact Dantas, Yao, Basel, Watt, Ratanatawanate, Choi and Mukherjee memberships required; benchmark and contextual rows remain excluded")
-        self.check(set(lead_sulfide.get("paper_dois", [])) == {"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448", "10.1039/b406060a", "10.1021/jp903050h", "10.1021/ja066506k", "10.1007/bf00264103"}, "PbS: unreviewed or benchmark source added to material synthesis contributions")
+        # These historical regressions retain their required routes and roles.
+        # Complete membership above also checks every later canonical contribution.
+        historical_direct = yao_direct | basel_direct | choi_direct | mukherjee_direct
+        historical_components = dantas_routes | yao_assemblies | watt_composite | ratanatawanate_composites
+        self.check(lead_sulfide.get("component_only") is False and historical_direct <= set(lead_sulfide.get("direct_record_ids", [])) and not historical_components & set(lead_sulfide.get("direct_record_ids", [])), "PbS: historical isolated-QD preparations must remain direct routes; glass and device assemblies remain component contributions")
+        self.check(historical_direct | historical_components <= set(lead_sulfide.get("record_ids", [])), "PbS: historical Dantas, Yao, Basel, Watt, Ratanatawanate, Choi and Mukherjee memberships required")
+        self.check({"10.1021/jp0208743", "10.1021/acsami.5b06857", "10.1021/acsomega.9b04448", "10.1039/b406060a", "10.1021/jp903050h", "10.1021/ja066506k", "10.1007/bf00264103"} <= set(lead_sulfide.get("paper_dois", [])), "PbS: required historical source contributions missing")
         watt_hub = self.hubs.get("PbS/MEH-PPV", {})
         polymer_hub = self.hubs.get("MEH-PPV", {})
         self.check(set(watt_hub.get("record_ids", [])) == set(watt_hub.get("direct_record_ids", [])) == watt_composite and watt_hub.get("component_only") is False and set(watt_hub.get("elements", [])) == {"Pb", "S", "C", "H", "O"}, "Watt: exact composite route and declared elemental composition required")
