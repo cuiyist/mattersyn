@@ -1,0 +1,544 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "xu2007-ac0701233-qd-polymer-qd1-workup",
+  "revision": 3,
+  "record_type": "procedure",
+  "title": "Xu and Bakker (2007): QD1 workup and characterization",
+  "material": {
+    "formula": "CdSe/CdS",
+    "family": "quantum-dot polymer composite",
+    "architecture": "composite",
+    "elements": [
+      "Cd",
+      "Se",
+      "S"
+    ]
+  },
+  "method": "Referenced upstream growth; reported workup",
+  "sources": [
+    {
+      "id": "xu2007-ac0701233-qd-polymer",
+      "doi": "10.1021/ac0701233",
+      "title": "Multicolor Quantum Dot Encoding for Polymeric Particle-Based Optical Ion Sensors",
+      "authors": "Chao Xu; Eric Bakker",
+      "year": 2007,
+      "url": "https://doi.org/10.1021/ac0701233",
+      "main_status": "scoped_independently_audited",
+      "si_status": "No matching SI located in screened-pass or screened-hold folders; main does not declare SI.",
+      "reuse_status": "Source figures copyright ACS2007; permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "xu2007-ac0701233-qd-polymer",
+    "recipe_family": "xu2007-ac0701233-qd-polymer",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No intended numeric size stated",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "upstream-qd",
+      "name": "CdSe/CdS purified quantum dots",
+      "formula": null,
+      "role": "upstream specimen",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "last wash medium",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "chloroform",
+      "name": "Chloroform",
+      "formula": "CHCl3",
+      "role": "redispersion solvent",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen",
+      "formula": "N2",
+      "role": "atmosphere",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "washed",
+      "name": "washed",
+      "kind": "mixture",
+      "parent_ids": [
+        "upstream-qd",
+        "methanol"
+      ]
+    },
+    {
+      "id": "dispersion",
+      "name": "dispersion",
+      "kind": "mixture",
+      "parent_ids": [
+        "washed",
+        "chloroform"
+      ]
+    },
+    {
+      "id": "product",
+      "name": "product",
+      "kind": "product",
+      "parent_ids": [
+        "dispersion",
+        "nitrogen"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "wash",
+      "action": "wash",
+      "label": "Last methanol wash",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "upstream-qd",
+        "methanol"
+      ],
+      "outputs": [
+        "washed"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": "Atmosphere and quantitative temperature not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Earlier growth and purification were referenced, not quantified.",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "disperse",
+      "action": "disperse",
+      "label": "Redisperse purified dots in chloroform",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "wash"
+      ],
+      "inputs": [
+        "washed",
+        "chloroform"
+      ],
+      "outputs": [
+        "dispersion"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": "Atmosphere and quantitative temperature not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    },
+    {
+      "id": "evaporate",
+      "action": "evaporate",
+      "label": "Evaporate under nitrogen",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "disperse"
+      ],
+      "inputs": [
+        "dispersion",
+        "nitrogen"
+      ],
+      "outputs": [
+        "product"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 48,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "48 h",
+          "evidence": [
+            {
+              "source_id": "xu2007-ac0701233-qd-polymer",
+              "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "nitrogen atmosphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": "dry orange QDs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "qd1",
+      "source_sample_label": "QD1",
+      "batch_id": null,
+      "material_state_id": "product",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": "No sample-specific crystal phase assigned in this source."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "TOP/TOPO capping description conflicts",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.3, printed 3718, Synthesis of TOPO-Capped Core-Shell Quantum Dots"
+        }
+      ],
+      "notes": [
+        "Only post-growth workup is reported here; refs29/30 are not inspected. Do not treat this as a complete QD growth route."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "qd1-emission",
+      "sample_id": "qd1",
+      "property": "fluorescence emission maximum",
+      "technique": "fluorescence",
+      "value": {
+        "value": 610,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "610 nm",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.4, printed 3719, Results first paragraph and Figure1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "chloroform; excitation510nm",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.4, printed 3719, Results first paragraph and Figure1"
+        }
+      ]
+    },
+    {
+      "id": "qd1-fwhm",
+      "sample_id": "qd1",
+      "property": "fluorescence full width at half maximum",
+      "technique": "fluorescence",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "30 nm",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.4, printed 3719, Results first paragraph and Figure1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "chloroform; excitation510nm",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.4, printed 3719, Results first paragraph and Figure1"
+        }
+      ]
+    },
+    {
+      "id": "qd1-size",
+      "sample_id": "qd1",
+      "property": "average QD size",
+      "technique": "TEM",
+      "value": {
+        "value": 5.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5.5 nm",
+        "evidence": [
+          {
+            "source_id": "xu2007-ac0701233-qd-polymer",
+            "locator": "Main PDF p.4, printed 3719, Results first paragraph and Figure1"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure1B; not microsphere diameter",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "xu2007-ac0701233-qd-polymer",
+          "locator": "Main PDF p.4, printed 3719, Results first paragraph and Figure1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Independently audited scoped main-text experimental variants, quantities, conflicts and presentation. Cited upstream growth procedures remain unverified; no complete-paper Reader is claimed.",
+    "missing_fields": [
+      "Core/shell growth charges, injection order, temperatures and times are only cited to refs29/30.",
+      "Wash count, solvent amounts, centrifugation and drying temperature not reported."
+    ],
+    "conflicts": [
+      "Methods p.3 heading says TOPO-capped, body says capped with trioctylphosphine (TOP); Results p.4 and Figure1 caption say TOPO. The exact ligand inventory is unresolved; neither description replaces the other."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

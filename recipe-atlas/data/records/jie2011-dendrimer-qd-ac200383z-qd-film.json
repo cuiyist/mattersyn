@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jie2011-dendrimer-qd-ac200383z-qd-film",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Jie et al. (2011): Characterization film of pureCdSe-ZnSQDs",
+  "material": {
+    "formula": "CdSe-ZnS",
+    "family": "Dendrimer/quantum-dot probes and supporting nanomaterials",
+    "elements": [],
+    "components": [
+      "CdSe-ZnS"
+    ],
+    "architecture": "unresolved",
+    "source_notation": "CdSe-ZnS"
+  },
+  "method": "Characterization film of pureCdSe-ZnSQDs",
+  "sources": [
+    {
+      "id": "jie2011-dendrimer-qd-ac200383z",
+      "doi": "10.1021/ac200383z",
+      "title": "Versatile Electrochemiluminescence Assays for Cancer Cells Based on Dendrimer/CdSe-ZnS-Quantum Dot Nanoclusters",
+      "authors": "Guifen Jie; Lei Wang; Jinxin Yuan; Shusheng Zhang",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/ac200383z",
+      "main_status": "Main pp.1-8 text read; preparation and selected characterization figures reviewed. Scoped independent acceptance is a separate exact-hash receipt.",
+      "si_status": "Local SI pp.1-8 text read; relevant preparation/sequence/SEM pages reviewed. Cited upstream papers not inspected.",
+      "reuse_status": "ACS2011 source-figure permission/license not verified."
+    },
+    {
+      "id": "jie2011-dendrimer-qd-ac200383z-si",
+      "doi": "10.1021/ac200383z",
+      "title": "Versatile Electrochemiluminescence Assays for Cancer Cells Based on Dendrimer/CdSe-ZnS-Quantum Dot Nanoclusters Supporting Information",
+      "authors": "Guifen Jie; Lei Wang; Jinxin Yuan; Shusheng Zhang",
+      "year": 2011,
+      "url": "https://doi.org/10.1021/ac200383z",
+      "main_status": "Companion SI to verified main article",
+      "si_status": "Local SI reviewed within declared preparation/figure scope",
+      "reuse_status": "ACS2011 source-figure permission/license not verified."
+    }
+  ],
+  "lineage": {
+    "source_group": "jie2011-dendrimer-qd-ac200383z",
+    "recipe_family": "jie2011-dendrimer-qd-ac200383z",
+    "parent_record_id": "jie2011-dendrimer-qd-ac200383z-mpa-exchange",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe-ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "au-disk",
+      "name": "Gold disk electrode",
+      "formula": "Au",
+      "role": "electrode support",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Modified Au working electrode4mm diameter reported in general ECL detection; no specific polishing roughness inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "qds",
+      "name": "pureCdSe-ZnSQDs characterization dispersion; exactconcentration/ligand state not specified",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "drop-dry-out",
+      "name": "Drop dispersion and dry in air output",
+      "kind": "mixture",
+      "parent_ids": [
+        "qds",
+        "au-disk"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "drop-dry",
+      "action": "drop_dry",
+      "label": "Drop dispersion and dry in air",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qds",
+        "au-disk"
+      ],
+      "outputs": [
+        "drop-dry-out"
+      ],
+      "parameters": {
+        "dispersion_volume": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6",
+          "evidence": [
+            {
+              "source_id": "jie2011-dendrimer-qd-ac200383z",
+              "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "drying_temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "jie2011-dendrimer-qd-ac200383z",
+              "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "drying_duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "jie2011-dendrimer-qd-ac200383z",
+              "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jie2011-dendrimer-qd-ac200383z",
+            "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2011-dendrimer-qd-ac200383z",
+            "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Main p.3 comparativeECLfilms; preparation volume stated,but no exact dispersion batch assigned.",
+      "evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "qd-film",
+      "source_sample_label": "pureCdSe-ZnSQDs ECL film",
+      "batch_id": null,
+      "material_state_id": "drop-dry-out",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe-ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jie2011-dendrimer-qd-ac200383z",
+            "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2011-dendrimer-qd-ac200383z",
+            "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "drop-cast electrode film",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jie2011-dendrimer-qd-ac200383z",
+            "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2011-dendrimer-qd-ac200383z",
+            "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jie2011-dendrimer-qd-ac200383z",
+          "locator": "Main PDF p.3 / printed 3875, Experimental Section and characterization"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main and SI preparation branches and selected material-characterization evidence; no full-paper Reader. Independent acceptance controlled by exact-hash private audit. Analytical cell handling, cell-dose calibration/selectivity and electrochemical mechanism results excluded from synthesis scope.",
+    "missing_fields": [
+      "No phase/unit-cell/atomic coordinates established in inspected source.",
+      "Upstream cited preparations are not independently inspected; only restated details retained."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original article",
+      "url": "https://doi.org/10.1021/ac200383z",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source preparation context: mpa-exchange",
+      "url": "records/jie2011-dendrimer-qd-ac200383z-mpa-exchange.html",
+      "relation": "source_preparation_context"
+    }
+  ]
+}

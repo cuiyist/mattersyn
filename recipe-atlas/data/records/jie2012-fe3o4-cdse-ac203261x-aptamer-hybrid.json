@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "jie2012-fe3o4-cdse-ac203261x-aptamer-hybrid",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Jie and Yuan (2012): thrombin aptamer/s1 hybrid",
+  "material": {
+    "formula": "Unspecified",
+    "family": "magnetic composite QDs and supporting preparations",
+    "architecture": "single_material",
+    "elements": []
+  },
+  "method": "oligonucleotide hybridization",
+  "sources": [
+    {
+      "id": "jie2012-fe3o4-cdse-ac203261x",
+      "doi": "10.1021/ac203261x",
+      "title": "Novel Magnetic Fe3O4@CdSe Composite Quantum Dot-Based Electrochemiluminescence Detection of Thrombin by a Multiple DNA Cycle Amplification Strategy",
+      "authors": "Guifen Jie; Jinxin Yuan",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/ac203261x",
+      "main_status": "selected_recipe_and_figure_review",
+      "si_status": "selected_related_SI_review",
+      "reuse_status": "Copyright 2012 American Chemical Society; permission/license not verified"
+    },
+    {
+      "id": "jie2012-fe3o4-cdse-ac203261x-si",
+      "doi": "10.1021/ac203261x",
+      "title": "Supporting information: Novel Magnetic Fe3O4@CdSe Composite Quantum Dot-Based Electrochemiluminescence Detection of Thrombin by a Multiple DNA Cycle Amplification Strategy",
+      "authors": "Guifen Jie; Jinxin Yuan",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/ac203261x",
+      "main_status": "selected_related_SI_review",
+      "si_status": "selected_related_SI_review",
+      "reuse_status": "Permission/license not verified"
+    }
+  ],
+  "lineage": {
+    "source_group": "jie2012-fe3o4-cdse-ac203261x",
+    "recipe_family": "jie2012-fe3o4-cdse-ac203261x",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "aptamer",
+      "name": "Thrombin aptamer",
+      "formula": null,
+      "role": "hybridization strand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "SI Table S1: 5′-AGT CCG TGG TAG GGC AGG TTG GGG TGA CT-3′"
+      ],
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ]
+    },
+    {
+      "id": "s1",
+      "name": "Complementary target oligonucleotide s1",
+      "formula": null,
+      "role": "hybridization strand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "SI Table S1: 5′-TGAGG AAG TCA CCC CAAC GATCC-3′"
+      ],
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hybridize-state",
+      "name": "Hybridize equal proportions aptamer and s1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "hybridize",
+      "action": "hybridize",
+      "label": "Hybridize equal proportions aptamer and s1",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "aptamer",
+        "s1"
+      ],
+      "outputs": [
+        "hybridize-state"
+      ],
+      "parameters": {
+        "reported_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "parenthetical volume scope unclear: each strand versus mixture",
+          "raw_text": "10 uL",
+          "evidence": [
+            {
+              "source_id": "jie2012-fe3o4-cdse-ac203261x",
+              "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "reported_concentration": {
+          "value": 1e-05,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "equal-proportions parenthetical; no total moles inferred",
+          "raw_text": "1e-05 mol/L",
+          "evidence": [
+            {
+              "source_id": "jie2012-fe3o4-cdse-ac203261x",
+              "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 25,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "25 degC",
+          "evidence": [
+            {
+              "source_id": "jie2012-fe3o4-cdse-ac203261x",
+              "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "jie2012-fe3o4-cdse-ac203261x",
+              "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2012-fe3o4-cdse-ac203261x",
+            "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2012-fe3o4-cdse-ac203261x",
+            "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hybridize equal proportions aptamer and s1",
+      "evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "aptamer-hybrid",
+      "source_sample_label": "Aptamer/s1 hybrid",
+      "batch_id": null,
+      "material_state_id": "hybridize-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Thrombin aptamer and s1 duplex",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "jie2012-fe3o4-cdse-ac203261x",
+            "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2012-fe3o4-cdse-ac203261x",
+            "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+          }
+        ],
+        "note": "No crystal phase assigned in this source."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2012-fe3o4-cdse-ac203261x",
+            "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "jie2012-fe3o4-cdse-ac203261x",
+            "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "jie2012-fe3o4-cdse-ac203261x",
+          "locator": "Main PDF p.2, printed 2812, ECL Detection; continued p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped main/SI preparation: magnetic seed and composite QDs, phase transfer, pure-CdSe comparison context, gold colloid, DNA probes, electrode assembly and imaging labels. No complete-paper Reader.",
+    "missing_fields": [
+      "Solution solvent, unambiguous per-strand volume/concentration basis",
+      "Hybrid purification/verification"
+    ],
+    "conflicts": [
+      "10 uL,1e-5 M follows equal proportions in source; scope is ambiguous and not doubled or halved.",
+      "Main p.5 calls s1 18-base; SI Table S1 sequence has23 letters. Printed identities retained, not shortened."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary source and companion SI",
+      "url": "https://doi.org/10.1021/ac203261x",
+      "relation": "source"
+    }
+  ]
+}
