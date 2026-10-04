@@ -1,0 +1,676 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "dong2013-cdte-ldh-ac400041t-solid-composite",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure",
+  "record_type": "procedure",
+  "title": "Dong et al. (2013): Dried composite for packed column",
+  "material": {
+    "formula": "CdTe/Mg-Al-LDH",
+    "family": "CdTe quantum dots and Mg-Al layered double hydroxides",
+    "elements": [
+      "Cd",
+      "Te",
+      "Mg",
+      "Al",
+      "O",
+      "H",
+      "C",
+      "S"
+    ],
+    "components": [
+      "CdTe",
+      "Mg-Al-LDH"
+    ],
+    "architecture": "composite",
+    "source_notation": "Dried composite for packed column"
+  },
+  "method": "Dried composite for packed column",
+  "sources": [
+    {
+      "id": "dong2013-cdte-ldh-ac400041t",
+      "doi": "10.1021/ac400041t",
+      "title": "Organo-Modified Hydrotalcite-Quantum Dot Nanocomposites as a Novel Chemiluminescence Resonance Energy Transfer Probe",
+      "authors": "Shichao Dong; Fang Liu; Chao Lu",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/ac400041t",
+      "main_status": "Scoped preparation and selected characterization reviewed from main PDF pp.1-6.",
+      "si_status": "Local companion pp.1-14 inspected within preparation/characterization scope.",
+      "reuse_status": "ACS2013 image permission/license not verified."
+    },
+    {
+      "id": "dong2013-cdte-ldh-ac400041t-si",
+      "doi": "10.1021/ac400041t",
+      "title": "Organo-Modified Hydrotalcite-Quantum Dot Nanocomposites as a Novel Chemiluminescence Resonance Energy Transfer Probe Supporting Information",
+      "authors": "Shichao Dong; Fang Liu; Chao Lu",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/ac400041t",
+      "main_status": "Scoped preparation and selected characterization reviewed from main PDF pp.1-6.",
+      "si_status": "Local companion pp.1-14 inspected within preparation/characterization scope.",
+      "reuse_status": "ACS2013 image permission/license not verified."
+    }
+  ],
+  "lineage": {
+    "source_group": "dong2013-cdte-ldh-ac400041t",
+    "recipe_family": "dong2013-cdte-ldh-ac400041t",
+    "parent_record_id": "dong2013-cdte-ldh-ac400041t-qd-dbs-ldh",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/Mg-Al-LDH",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "water",
+      "name": "Deionized water",
+      "formula": "H2O",
+      "role": "sediment rinse",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source states Milli Q deionized water; CO2 exclusion is specified for LDH preparations, not silently inherited to every use."
+      ],
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "qd-input",
+      "name": "CdTe QD dispersion",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "ldh-input",
+      "name": "As-preparedDBS-LDHcolloid",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "mix-out",
+      "name": "Prepare column composite output",
+      "kind": "mixture",
+      "parent_ids": [
+        "qd-input",
+        "ldh-input"
+      ]
+    },
+    {
+      "id": "spin-rinse-out",
+      "name": "Collect and rinse sediment output",
+      "kind": "mixture",
+      "parent_ids": [
+        "mix-out",
+        "water"
+      ]
+    },
+    {
+      "id": "dry-out",
+      "name": "Dry sediment output",
+      "kind": "mixture",
+      "parent_ids": [
+        "spin-rinse-out"
+      ]
+    },
+    {
+      "id": "crush-sieve-out",
+      "name": "Crush and sieve output",
+      "kind": "mixture",
+      "parent_ids": [
+        "dry-out"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "mix",
+      "action": "mix",
+      "label": "Prepare column composite",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qd-input",
+        "ldh-input"
+      ],
+      "outputs": [
+        "mix-out"
+      ],
+      "parameters": {
+        "qd_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "qd_concentration": {
+          "value": 0.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.2",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "ldh_volume": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "room temperature",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Gentle stirring 5 min; distinct from 2+2 mL 10 min dispersion method.",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ]
+    },
+    {
+      "id": "spin-rinse",
+      "action": "spin_rinse",
+      "label": "Collect and rinse sediment",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "mix"
+      ],
+      "inputs": [
+        "mix-out",
+        "water"
+      ],
+      "outputs": [
+        "spin-rinse-out"
+      ],
+      "parameters": {
+        "speed": {
+          "value": 8000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8000",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "repeat_count": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "times",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "source says process was repeated four times; total cycle convention unresolved",
+          "basis": "",
+          "raw_text": "4",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": "spin-rinse-out",
+      "description": "Centrifuge 5 min 8000 rpm then rinse sediment with deionized water. Rotor radius/rinse volume unknown.",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "dry",
+      "label": "Dry sediment",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "spin-rinse"
+      ],
+      "inputs": [
+        "spin-rinse-out"
+      ],
+      "outputs": [
+        "dry-out"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 65,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "65",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "24",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ]
+    },
+    {
+      "id": "crush-sieve",
+      "action": "crush_sieve",
+      "label": "Crush and sieve",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-out"
+      ],
+      "outputs": [
+        "crush-sieve-out"
+      ],
+      "parameters": {
+        "sieve_range": {
+          "value": null,
+          "minimum": 0.45,
+          "maximum": 0.8,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "pass through a0.45-0.80mm mesh sieve",
+          "evidence": [
+            {
+              "source_id": "dong2013-cdte-ldh-ac400041t",
+              "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Retain source sieve wording; not a measured nanoparticle-size distribution or clearly specified retained fraction.",
+      "evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "solid",
+      "source_sample_label": "Dried and sievedDBS-LDH/CdTe composite",
+      "batch_id": null,
+      "material_state_id": "crush-sieve-out",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/Mg-Al-LDH",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "dong2013-cdte-ldh-ac400041t",
+            "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "dong2013-cdte-ldh-ac400041t",
+          "locator": "Main PDF p.5, printed3367, solid composite and packed-column preparation"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main and local supporting-information material preparations, size/loading contexts and selected structural/optical evidence. Analytical chemiluminescence reactions, calibration, oxidation challenges, snow-sample analysis, selectivity and mechanisms are outside this preparation scope; no complete-paper Reader.",
+    "missing_fields": [
+      "No full unit cell or source atomic coordinates supplied.",
+      "IDs identify scoped source contexts, not author-assigned physical batch identities."
+    ],
+    "conflicts": [
+      "Four repeats may mean four additional cycles or four total; source does not resolve the convention."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original article",
+      "url": "https://doi.org/10.1021/ac400041t",
+      "relation": "primary_source"
+    },
+    {
+      "label": "Source preparation context: cdte-qd-series",
+      "url": "records/dong2013-cdte-ldh-ac400041t-cdte-qd-series.html",
+      "relation": "source_preparation_context"
+    },
+    {
+      "label": "Source preparation context: dbs-ldh",
+      "url": "records/dong2013-cdte-ldh-ac400041t-dbs-ldh.html",
+      "relation": "source_preparation_context"
+    }
+  ]
+}
