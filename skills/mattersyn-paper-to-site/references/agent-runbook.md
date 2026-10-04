@@ -27,6 +27,11 @@ Only reviewed data, code and documents go into `<SRC>`/`<SITE>`, through the com
 
 ## 1. Start of every session
 
+For the owner-approved additional worker tasks, use [multi-session-full-audit.md](multi-session-full-audit.md)
+and the assigned private worker protocol. Their isolated checkouts are read-only bases: they must
+not run the shared-checkout pull, install, ledger-write or release commands below. Those commands
+belong to the sole integrator. Existing runtime dependencies are sufficient; no installs are authorized.
+
 ```
 git -C <SRC> pull --ff-only
 git -C <SITE> pull --ff-only
@@ -44,13 +49,14 @@ python -B -m unittest discover -s <SRC>/tools/workflow/tests      # 30-second se
 
 | Role | Instances | Loop |
 |---|---|---|
-| Extractor | requested four pairs; actual runtime is four agents total | §4: author one frozen contribution at a time |
+| Extractor | two pairs per approved worker task, within actual per-session capacity | §4: author one frozen contribution at a time |
 | Full auditor | one different agent per paper, after extraction | §5: read scoped sources and compare every claim |
 | Sampled deep auditor | third distinct identity | §6: 25% of first 40; conditional 10% thereafter |
 | Integrator / releaser | one | §7 and §8: merge accepted packages and release six-ready/three-hour batches |
 
-Run root as integrator with three rotating workers under the current four-agent cap. Do not claim
-nine simultaneous workers. Keep author, full auditor and sampled deep auditor identities distinct
+Run the existing task as sole integrator with its correction/deep-audit workers; the two approved
+worker tasks each use at most four agents including their primary. Count actual active agents,
+not prepared roles. Keep author, full auditor and sampled deep auditor identities distinct
 for each paper. Scale requested pairs 4 → 8 → 12 → 16 only after the quality, collision, backlog,
 queue reporting and machine/agent capacity gates in workflow-v5. Reuse frozen unpublished work
 but identify it as carried-in extraction; an old quick receipt is not full-audit acceptance.

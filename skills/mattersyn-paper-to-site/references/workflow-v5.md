@@ -26,7 +26,7 @@ Stop extraction and report if **more than five of the last 50 distinct sampled p
 
 ## Staffing and scaling
 
-The requested initial staffing is four extractor-auditor pairs plus one integrator. Each paper has distinct extractor and full-auditor identities; a sampled deep auditor differs from both. The actual session currently permits **four concurrent agents total**, so run one integrator with three rotating workers and record the capacity shortfall. Queued logical pairs are not concurrent agents. Never bypass the runtime cap or imply that nine workers are running.
+The owner approved two additional extraction/audit tasks on October 3 Chicago time. Follow [the multi-session arrangement](multi-session-full-audit.md): each worker task may run two extractor-auditor pairs within its actual four-agent session allowance; the existing task alone integrates and publishes. Its remaining workers handle existing corrections, sampled deep audits and the separately authorized retrospective queue. Each paper has distinct extractor and full-auditor identities; a sampled deep auditor differs from both. A created task or prepared role is not proof of an active worker. Measure actual agent and command availability; never bypass a runtime cap.
 
 Requested pair steps are 4, 8, 12 and 16. Advance only when the previous step has at least ten deep audits, no more than one S1/S2-positive paper per ten deep audits, no claim collisions, at most two batches in the integrator backlog, and measured spare machine AND agent capacity. Report remaining QD and metal queue sizes at every step, distinguishing provisional filename groups from verified eligible primary papers. Missing capacity or evidence blocks a ramp; it does not waive a scientific requirement.
 

@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "full_independent_audit_active",
-  "recorded_at": "2026-10-03T03:31:16.692816+00:00",
+  "recorded_at": "2026-10-04T02:19:49.030182+00:00",
   "authorization": "Owner explicitly resumed under the 2026-10-02 full-audit plan: every paper one extractor and a different full source auditor; quick audit retired; third-agent sampling 25% of first40 with conditional 10% thereafter.",
   "supersedes_hold": "The latest explicit owner resume starts a stronger full-independent-audit regime. Failed quick tests and prior error logs remain historical, unchanged.",
   "active_run": "Private full-audit-20261002/ledger.jsonl",
@@ -10,7 +10,7 @@
   "external_document_transfer_allowed": false,
   "source_scope": "Existing screened-pass documents only; new arrivals remain separate.",
   "maximum_concurrent_agents_including_root": 4,
-  "maximum_active_paper_claims": 5,
+  "maximum_active_paper_claims": 2,
   "daily_report_time": null,
   "stop_rule": "Stop extraction and report if more than five of the last fifty distinct sampled papers in the full-audit regime have an S1/S2 finding. Corrections retain original positives; corrective re-audits do not add samples. Preserve older quick-regime logs separately; no reset within this regime.",
   "current_measurement_window": null,
@@ -49,23 +49,28 @@
     "batch_validation": "One successful complete local batch build. Reuse unchanged scientific audits and exact file-review objects; retest changed or failed dependencies, run the fresh complete publication boundary once, retain exact-commit CI and anonymous deployment verification."
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
-  "latest_publication_receipt": "Private _tmp/mu-release/live-verification.json; correction-only release, no new source credit",
-  "latest_verified_site_commit": "15686e4e491e1f03439059a2862e0bcf9322d055",
+  "latest_publication_receipt": "Private full-audit-20261002/integration/batch01-live-publication-proof.private.json",
+  "latest_verified_site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
   "latest_verified_totals": {
-    "records": 1703,
-    "contributing_sources": 173,
-    "reviewed_contributing_sources": 172,
+    "records": 1715,
+    "contributing_sources": 178,
+    "reviewed_contributing_sources": 177,
+    "benchmark_source_groups": 1,
     "preliminary_sources": 0,
-    "direct_families": 178,
-    "broad_pairs": 699
+    "direct_families": 175,
+    "broad_pairs": 708
   },
   "latest_publication_event": {
-    "event_id": "live:xu2008-hierarchical-nc-assemblies-adma200800215:ca84c0967892",
-    "doi": "10.1002/adma.200800215",
-    "verified_at": "2026-10-02T15:10:47+00:00",
-    "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
-    "tier": "gold",
-    "new_records": 30
+    "event_kind": "batch",
+    "verified_at": "2026-10-03T22:24:21+00:00",
+    "event_ids": [
+      "knowles2010-cdse-aniline-ja907253s:live-batch01",
+      "so2015-cuins2-chemmater5b03943:live-batch01",
+      "sun2025-ais-zns-cusensor-acsanm5c02494:live-batch01",
+      "welch2020-qd-ionic-liquid-macromol0c00011:live-batch01",
+      "zhang2003-cdte-polymer-adma200304521:live-batch01"
+    ],
+    "site_commit": "801539410ede465bf413a8e506d9593514abb0b5"
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -117,31 +122,79 @@
   },
   "latest_publication_batch": {
     "source_ids": [
-      "henkel2009-au-aucu-jp810979r",
-      "xu2008-hierarchical-nc-assemblies-adma200800215"
+      "knowles2010-cdse-aniline-ja907253s",
+      "so2015-cuins2-chemmater5b03943",
+      "sun2025-ais-zns-cusensor-acsanm5c02494",
+      "welch2020-qd-ionic-liquid-macromol0c00011",
+      "zhang2003-cdte-polymer-adma200304521"
     ],
     "events": [
       {
-        "event_id": "live:henkel2009-au-aucu-jp810979r:ca84c0967892",
-        "doi": "10.1021/jp810979r",
-        "verified_at": "2026-10-02T15:10:47+00:00",
-        "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
-        "tier": "gold",
-        "new_records": 3
+        "event_id": "knowles2010-cdse-aniline-ja907253s:live-batch01",
+        "primary_source_id": "knowles2010-cdse-aniline-ja907253s",
+        "at": "2026-10-03T22:24:21+00:00",
+        "site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
+        "url": "https://cuiyist.github.io/mattersyn-site/records/knowles2010-cdse-aniline-ja907253s-cdse-core-2p9nm.html",
+        "verification": {
+          "anonymous": true,
+          "passed": true,
+          "receipt_sha256": "e0ee3851fc4c4bbfaebb773d765dfad8cc8548ec6c987e37af39f8119aaf7707"
+        }
       },
       {
-        "event_id": "live:xu2008-hierarchical-nc-assemblies-adma200800215:ca84c0967892",
-        "doi": "10.1002/adma.200800215",
-        "verified_at": "2026-10-02T15:10:47+00:00",
-        "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
-        "tier": "gold",
-        "new_records": 30
+        "event_id": "so2015-cuins2-chemmater5b03943:live-batch01",
+        "primary_source_id": "so2015-cuins2-chemmater5b03943",
+        "at": "2026-10-03T22:24:21+00:00",
+        "site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
+        "url": "https://cuiyist.github.io/mattersyn-site/records/so2015-cuins2-chemmater5b03943-injection-50c.html",
+        "verification": {
+          "anonymous": true,
+          "passed": true,
+          "receipt_sha256": "e0ee3851fc4c4bbfaebb773d765dfad8cc8548ec6c987e37af39f8119aaf7707"
+        }
+      },
+      {
+        "event_id": "sun2025-ais-zns-cusensor-acsanm5c02494:live-batch01",
+        "primary_source_id": "sun2025-ais-zns-cusensor-acsanm5c02494",
+        "at": "2026-10-03T22:24:21+00:00",
+        "site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
+        "url": "https://cuiyist.github.io/mattersyn-site/records/sun2025-ais-zns-cusensor-acsanm5c02494-ais-core-96c-45min.html",
+        "verification": {
+          "anonymous": true,
+          "passed": true,
+          "receipt_sha256": "e0ee3851fc4c4bbfaebb773d765dfad8cc8548ec6c987e37af39f8119aaf7707"
+        }
+      },
+      {
+        "event_id": "welch2020-qd-ionic-liquid-macromol0c00011:live-batch01",
+        "primary_source_id": "welch2020-qd-ionic-liquid-macromol0c00011",
+        "at": "2026-10-03T22:24:21+00:00",
+        "site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
+        "url": "https://cuiyist.github.io/mattersyn-site/records/welch2020-qd-ionic-liquid-macromol0c00011-polyil-10wt.html",
+        "verification": {
+          "anonymous": true,
+          "passed": true,
+          "receipt_sha256": "e0ee3851fc4c4bbfaebb773d765dfad8cc8548ec6c987e37af39f8119aaf7707"
+        }
+      },
+      {
+        "event_id": "zhang2003-cdte-polymer-adma200304521:live-batch01",
+        "primary_source_id": "zhang2003-cdte-polymer-adma200304521",
+        "at": "2026-10-03T22:24:21+00:00",
+        "site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
+        "url": "https://cuiyist.github.io/mattersyn-site/records/zhang2003-cdte-polymer-adma200304521-aqueous-cdte-reflux-series.html",
+        "verification": {
+          "anonymous": true,
+          "passed": true,
+          "receipt_sha256": "e0ee3851fc4c4bbfaebb773d765dfad8cc8548ec6c987e37af39f8119aaf7707"
+        }
       }
     ],
-    "new_gold_source_contributions": 2,
-    "new_records": 33,
-    "new_recipe_structure_rows": 15,
-    "receipt": "Private n2rel-r3-20261002/live-verification.json"
+    "new_gold_source_contributions": 5,
+    "new_records": 12,
+    "new_recipe_structure_rows": 9,
+    "verified_at": "2026-10-03T22:24:21+00:00",
+    "site_commit": "801539410ede465bf413a8e506d9593514abb0b5"
   },
   "latest_experimental_display": {
     "receipt": "research-assets/public-audits/experimental-li2001-display-publication-20260928.json",
@@ -212,48 +265,15 @@
     "status": "historical_frozen_result_2_papers_not_active"
   },
   "latest_verified_publication": {
-    "source_commit": "fca3ba338f0a22c0303961e81600b5be27c61a54",
-    "site_commit": "9ed0766351cd0edbdb8630da326f9dc45a811711",
-    "site_ci_run": 36600020592,
-    "verified_at": "2026-09-29T16:52:48.727289+00:00",
-    "new_papers": 2,
-    "tier": "ordinary_independently_source_reviewed_presentation_partial",
-    "new_reviewed_records": 31,
-    "new_verified_pairs": 4,
-    "anonymous_checks": 179,
-    "receipt_sha256": "f1a19e372362730e6f8bb25d398f67de7fa66d8da7fb3968a0bb3188ef2ade6c",
-    "events": [
-      {
-        "event_id": "ordinary-9ed0766351cd-que2001-nd2o3-s003390100786",
-        "source_id": "que2001-nd2o3-s003390100786",
-        "doi": "10.1007/s003390100786",
-        "verified_at": "2026-09-29T16:52:48.727289+00:00",
-        "tier": "independently_source_reviewed_presentation_partial",
-        "source_commit": "fca3ba338f0a22c0303961e81600b5be27c61a54",
-        "site_commit": "9ed0766351cd0edbdb8630da326f9dc45a811711",
-        "new_records": 8,
-        "new_pairs": 1,
-        "training_ready_credit": 0,
-        "scientific_audit": {
-          "sha256": "2647740b374fce4403cc5387c4c30cc90165b78cd5b8826073df0448158d59db"
-        }
-      },
-      {
-        "event_id": "ordinary-9ed0766351cd-zhu2013-tio2-ja401334j",
-        "source_id": "zhu2013-tio2-ja401334j",
-        "doi": "10.1021/ja401334j",
-        "verified_at": "2026-09-29T16:52:48.727289+00:00",
-        "tier": "independently_source_reviewed_presentation_partial",
-        "source_commit": "fca3ba338f0a22c0303961e81600b5be27c61a54",
-        "site_commit": "9ed0766351cd0edbdb8630da326f9dc45a811711",
-        "new_records": 23,
-        "new_pairs": 3,
-        "training_ready_credit": 0,
-        "scientific_audit": {
-          "sha256": "971a1f95137da3288d4a9131fa4c6dd308721c7e65c2f0ae6bd0093bbd833009"
-        }
-      }
-    ]
+    "source_commit": "5aa24d33ae96d4e4da243e6d771282dd1f2a43d3",
+    "site_commit": "801539410ede465bf413a8e506d9593514abb0b5",
+    "site_ci_run": 37158126343,
+    "source_ci_run": 37155724924,
+    "verified_at": "2026-10-03T22:24:21+00:00",
+    "new_papers": 5,
+    "new_reviewed_records": 12,
+    "new_verified_pairs": 9,
+    "receipt_sha256": "e0ee3851fc4c4bbfaebb773d765dfad8cc8548ec6c987e37af39f8119aaf7707"
   },
   "workflow_revision_hold": {
     "at": "2026-09-28T23:25:09.177250+00:00",
@@ -362,7 +382,7 @@
     ],
     "requested_initial_integrators": 1,
     "actual_concurrent_agent_limit": 4,
-    "actual_execution": "One integrator and three rotating workers; logical queued pairs are not concurrent pairs.",
+    "actual_execution": "Two owner-approved extraction/audit tasks, each up to two pairs within its four-agent allowance; the existing task alone integrates/releases and handles corrections and deep audits. Count real active work separately from assigned roles.",
     "ramp_requires": {
       "minimum_deep_audits_in_current_step": 10,
       "maximum_s1_s2_papers_per_last_ten_deep_audits": 1,
@@ -394,7 +414,7 @@
       }
     },
     "background_reaudit_trigger_met": false,
-    "background_reaudit_authorized": false,
+    "background_reaudit_authorized": true,
     "second_blind_test": {
       "caught_s1_s2_findings": 2,
       "total_s1_s2_findings": 12,
@@ -407,9 +427,118 @@
       "other_colloidal_or_unclassified": 1121,
       "needs_scope_check": 1359,
       "remaining_document_units": 5053,
-      "private_receipt": "full-audit-20261002/queue-reconciliation.private.json"
+      "private_receipt": "full-audit-20261002/queue-reconciliation.private.json",
+      "scope": "Historical restart baseline, not current remaining queue."
     },
     "carry_in_extractions_identified_separately": true,
-    "published_counter_requires_anonymous_verification": true
+    "published_counter_requires_anonymous_verification": true,
+    "actual_concurrent_agent_limit_scope": "per session, subject to actual runtime allowance",
+    "background_reaudit_authorization_scope": "Explicit later owner instruction: 20 published v5 papers without prior deep audits, separate from first40. The earlier random-older conditional trigger remains false; wider corpus re-audit is not authorized."
+  },
+  "concurrent_agent_limit_scope": "per task/session, subject to actual runtime allowance",
+  "active_paper_claim_limit_scope": "per additional extraction/audit task; three carried-in integrator papers retained separately",
+  "maximum_active_new_paper_claims_across_worker_tasks": 4,
+  "multi_session_arrangement": {
+    "authorized_on_chicago": "2026-10-03",
+    "worker_tasks": 2,
+    "requested_extractor_auditor_pairs_per_worker_task": 2,
+    "integrator_tasks": 1,
+    "coordinator": "tools/workflow/session_coordination.py",
+    "reference": "skills/mattersyn-paper-to-site/references/multi-session-full-audit.md",
+    "state_is_private": true,
+    "only_integrator_writes_authoritative_ledgers": true,
+    "only_integrator_publishes": true,
+    "ready_handoff_backlog_limit": 12,
+    "actual_running_agents_must_be_measured": true,
+    "further_ramp_requires_owner_quality_and_capacity_gates": true
+  },
+  "retrospective_full_audit": {
+    "explicitly_authorized": true,
+    "published_v5_sources_without_prior_deep_audit": 20,
+    "dedicated_workers": 1,
+    "separate_from_first40": true,
+    "new_paper_credit": 0
+  },
+  "historical_publication_checkpoints": {
+    "latest_publication_event": {
+      "event_id": "live:xu2008-hierarchical-nc-assemblies-adma200800215:ca84c0967892",
+      "doi": "10.1002/adma.200800215",
+      "verified_at": "2026-10-02T15:10:47+00:00",
+      "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
+      "tier": "gold",
+      "new_records": 30
+    },
+    "latest_publication_batch": {
+      "source_ids": [
+        "henkel2009-au-aucu-jp810979r",
+        "xu2008-hierarchical-nc-assemblies-adma200800215"
+      ],
+      "events": [
+        {
+          "event_id": "live:henkel2009-au-aucu-jp810979r:ca84c0967892",
+          "doi": "10.1021/jp810979r",
+          "verified_at": "2026-10-02T15:10:47+00:00",
+          "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
+          "tier": "gold",
+          "new_records": 3
+        },
+        {
+          "event_id": "live:xu2008-hierarchical-nc-assemblies-adma200800215:ca84c0967892",
+          "doi": "10.1002/adma.200800215",
+          "verified_at": "2026-10-02T15:10:47+00:00",
+          "site_commit": "6c62e25fe766906bb1a42255152a3764efba723d",
+          "tier": "gold",
+          "new_records": 30
+        }
+      ],
+      "new_gold_source_contributions": 2,
+      "new_records": 33,
+      "new_recipe_structure_rows": 15,
+      "receipt": "Private n2rel-r3-20261002/live-verification.json"
+    },
+    "latest_verified_publication": {
+      "source_commit": "fca3ba338f0a22c0303961e81600b5be27c61a54",
+      "site_commit": "9ed0766351cd0edbdb8630da326f9dc45a811711",
+      "site_ci_run": 36600020592,
+      "verified_at": "2026-09-29T16:52:48.727289+00:00",
+      "new_papers": 2,
+      "tier": "ordinary_independently_source_reviewed_presentation_partial",
+      "new_reviewed_records": 31,
+      "new_verified_pairs": 4,
+      "anonymous_checks": 179,
+      "receipt_sha256": "f1a19e372362730e6f8bb25d398f67de7fa66d8da7fb3968a0bb3188ef2ade6c",
+      "events": [
+        {
+          "event_id": "ordinary-9ed0766351cd-que2001-nd2o3-s003390100786",
+          "source_id": "que2001-nd2o3-s003390100786",
+          "doi": "10.1007/s003390100786",
+          "verified_at": "2026-09-29T16:52:48.727289+00:00",
+          "tier": "independently_source_reviewed_presentation_partial",
+          "source_commit": "fca3ba338f0a22c0303961e81600b5be27c61a54",
+          "site_commit": "9ed0766351cd0edbdb8630da326f9dc45a811711",
+          "new_records": 8,
+          "new_pairs": 1,
+          "training_ready_credit": 0,
+          "scientific_audit": {
+            "sha256": "2647740b374fce4403cc5387c4c30cc90165b78cd5b8826073df0448158d59db"
+          }
+        },
+        {
+          "event_id": "ordinary-9ed0766351cd-zhu2013-tio2-ja401334j",
+          "source_id": "zhu2013-tio2-ja401334j",
+          "doi": "10.1021/ja401334j",
+          "verified_at": "2026-09-29T16:52:48.727289+00:00",
+          "tier": "independently_source_reviewed_presentation_partial",
+          "source_commit": "fca3ba338f0a22c0303961e81600b5be27c61a54",
+          "site_commit": "9ed0766351cd0edbdb8630da326f9dc45a811711",
+          "new_records": 23,
+          "new_pairs": 3,
+          "training_ready_credit": 0,
+          "scientific_audit": {
+            "sha256": "971a1f95137da3288d4a9131fa4c6dd308721c7e65c2f0ae6bd0093bbd833009"
+          }
+        }
+      ]
+    }
   }
 }

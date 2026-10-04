@@ -18,7 +18,8 @@ add records merely because this skill was invoked.
 the active full-independent-audit workflow. The owner resumed on 2026-10-02: every paper has
 one extractor and a different full source auditor; the quick audit is retired. Run `check_records.py`
 before each audit. A third agent deep-audits 25% of the first 40; only an acceptable ten-paper
-sample permits a reduction to 10%. Use the actual runtime capacity (currently four agents total),
+sample permits a reduction to 10%. Use actual per-session runtime capacity and the owner's approved
+[two-worker-task arrangement](references/multi-session-full-audit.md),
 QD-first queue, and six-ready-paper/three-hour release rule. Earlier workflow files and hold text
 are historical; see the index below.
 
