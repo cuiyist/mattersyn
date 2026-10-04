@@ -123,7 +123,11 @@ def relative_route(route, dist):
 
 
 def selected_page_scope(documents):
-    """Selected main pages may include one essential, separately scoped SI document."""
+    """Scoped document reading does not imply a formal whole-paper review.
+
+    Independent PDF/page evidence is checked by scoped package preflight.
+    Here, any complete-reading flag must agree with complete page coverage.
+    """
     if not isinstance(documents, list) or len(documents) not in (1, 2):
         return False
     roles = [doc.get('role') if isinstance(doc, dict) else None for doc in documents]
@@ -132,11 +136,15 @@ def selected_page_scope(documents):
     for doc in documents:
         page_count = doc.get('page_count')
         pages_read = doc.get('pages_read')
+        flags = (doc.get('all_text_read'), doc.get('all_visually_reviewed'))
         if not (type(page_count) is int and page_count > 1 and
                 isinstance(pages_read, list) and 0 < len(pages_read) <= page_count and
-                pages_read == sorted(set(pages_read)) and
                 all(type(n) is int and 1 <= n <= page_count for n in pages_read) and
-                doc.get('all_text_read') is False and doc.get('all_visually_reviewed') is False):
+                pages_read == sorted(set(pages_read)) and
+                all(type(flag) is bool for flag in flags)):
+            return False
+        # Sorted unique pages in 1..N cover 1..N exactly iff their count is N.
+        if any(flags) and len(pages_read) != page_count:
             return False
     return True
 

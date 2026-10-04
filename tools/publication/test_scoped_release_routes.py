@@ -190,6 +190,76 @@ class ScopedRouteTests(unittest.TestCase):
         with self.assertRaisesRegex(SystemExit, 'omits new records'):
             self.routes()
 
+    def test_complete_document_flags_preserve_scoped_record_route(self):
+        self.row['documents'][0]['pages_read'] = list(range(1, 7))
+        self.row['review_scope'] = 'All main pages read; scoped preparation audit only; SI excluded.'
+        self.row['review_scope_contract_version'] = 2
+        self.row['main_status'] = 'scoped_independently_audited'
+        for text_read, visual_read in ((True, True), (True, False), (False, True), (False, False)):
+            with self.subTest(text_read=text_read, visual_read=visual_read):
+                self.row['documents'][0].update(all_text_read=text_read, all_visually_reviewed=visual_read)
+                self.flush()
+                self.assertEqual(self.routes()[self.source]['route'], f'records/{self.rid}.html')
+                self.assertEqual(self.routes()[self.source]['inventory'], 'data/inventory-summary.json')
+
+    def test_either_complete_flag_requires_every_page_for_each_document(self):
+        for role in ('main', 'si'):
+            for flags in ((True, False), (False, True), (True, True)):
+                for pages in ([1], [1, 2, 3], [2, 3, 4, 5, 6]):
+                    with self.subTest(role=role, flags=flags, pages=pages):
+                        doc = {'role': role, 'page_count': 6, 'pages_read': pages,
+                               'all_text_read': flags[0], 'all_visually_reviewed': flags[1]}
+                        documents = [doc] if role == 'main' else [self.row['documents'][0], doc]
+                        self.assertFalse(rb.selected_page_scope(documents))
+                doc['pages_read'] = list(range(1, 7))
+                self.assertTrue(rb.selected_page_scope(documents))
+
+    def test_document_flags_and_page_identifiers_are_strictly_typed(self):
+        original = self.row['documents'][0]
+        for key in ('all_text_read', 'all_visually_reviewed'):
+            for value in (None, 0, 1, 'false', 'true', [], {}):
+                with self.subTest(key=key, value=value):
+                    doc = dict(original, pages_read=list(range(1, 7)))
+                    doc[key] = value
+                    self.assertFalse(rb.selected_page_scope([doc]))
+            doc = dict(original)
+            del doc[key]
+            self.assertFalse(rb.selected_page_scope([doc]))
+        for value in (None, True, 1, 0, -1, '6', 6.0):
+            self.assertFalse(rb.selected_page_scope([dict(original, page_count=value)]))
+        for pages in (None, [], (1, 2), '123', [True, 2], [1.0, 2], ['1', 2],
+                      [1, None], [1, {}], [1, []], [0, 1], [-1, 1], [1, 7], [1, 1], [2, 1]):
+            with self.subTest(pages=pages):
+                self.assertFalse(rb.selected_page_scope([dict(original, pages_read=pages)]))
+
+        self.assertFalse(rb.selected_page_scope([dict(original, page_count=10**100, all_text_read=True)]))
+
+    def test_complete_reading_does_not_bypass_scope_or_identity(self):
+        self.row['documents'][0].update(pages_read=list(range(1, 7)), all_text_read=True,
+                                        all_visually_reviewed=True)
+        for key, bad_value in (('main_status', 'not_independently_audited'),
+                               ('review_status', 'formal_paper_review'),
+                               ('review_scope_kind', 'complete_paper_review'),
+                               ('review_scope_contract_version', True),
+                               ('review_scope', ''),
+                               ('paper_review_url', 'paper-review.html?id=unverified'),
+                               ('record_ids', ['other-record']), ('paper_id', 'other-paper')):
+            with self.subTest(key=key):
+                original = self.row[key]
+                self.row[key] = bad_value
+                self.flush()
+                with self.assertRaisesRegex(SystemExit, 'independently audited scoped inventory'):
+                    self.routes()
+                self.row[key] = original
+
+    def test_document_roles_and_count_remain_bounded(self):
+        main = dict(self.row['documents'][0])
+        si = dict(main, role='si')
+        for documents in (None, {}, [], [None], ['main'], [si], [main, main],
+                          [main, si, si], [main, dict(si, role='unknown')], [main, []]):
+            with self.subTest(documents=documents):
+                self.assertFalse(rb.selected_page_scope(documents))
+
     def test_live_verification_requires_scoped_inventory_bytes(self):
         route = self.routes()
         put(self.dist, 'index.html', '<html>Home</html>')
