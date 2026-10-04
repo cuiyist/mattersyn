@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chambrier2015-porphyrin-cdse-5b00892-zn5",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "reader_role": "contextual_observation",
+  "record_type": "observation",
+  "title": "Chambrier et al. (2015): Short-tether porphyrin5 negative binding test",
+  "material": {
+    "formula": "CdSe",
+    "family": "Porphyrin–CdSe assemblies and ligand exchange",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "unresolved",
+    "source_notation": "Short-tether porphyrin5 negative binding test"
+  },
+  "method": "Short-tether porphyrin5 negative binding test",
+  "sources": [
+    {
+      "id": "chambrier2015-porphyrin-cdse-5b00892",
+      "doi": "10.1021/acs.inorgchem.5b00892",
+      "title": "Synthesis of Porphyrin−CdSe Quantum Dot Assemblies: Controlling Ligand Binding by Substituent Effects",
+      "authors": "Isabelle Chambrier; Chiranjib Banerjee; Sonia Remiro-Buenamañana; Yimin Chao; Andrew N. Cammidge; Manfred Bochmann",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.inorgchem.5b00892",
+      "main_status": "source_reviewed",
+      "si_status": "not_reviewed_screening_hold",
+      "reuse_status": "permission_not_verified"
+    }
+  ],
+  "lineage": {
+    "source_group": "chambrier2015-porphyrin-cdse-5b00892",
+    "recipe_family": "chambrier2015-porphyrin-cdse-5b00892",
+    "parent_record_id": "chambrier2015-porphyrin-cdse-5b00892-cdse",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse",
+      "name": "Oleate-capped CdSe quantum dots",
+      "formula": null,
+      "role": "starting particles",
+      "stage": "surface_exchange",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-prepared particle ensemble; no unique molecular formula or atomistic coordinates. Precursor quantities are not re-entered as exchange charges."
+      ],
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ]
+    },
+    {
+      "id": "znp5",
+      "name": "Short-tether tetracarboxyl zinc porphyrin 5",
+      "formula": null,
+      "role": "tetracarboxyl candidate ligand",
+      "stage": "surface_exchange",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Figure 8 source-defined structure with four undecenyloxy arms and short carboxyl anchors; held SI synthesis not reviewed."
+      ],
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ]
+    },
+    {
+      "id": "chloroform",
+      "name": "Chloroform",
+      "formula": "CHCl3",
+      "role": "general exchange solvent",
+      "stage": "surface_exchange",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "General ligand-exchange solvent in main p.3; local explicit solvents preserved."
+      ],
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "test-out",
+      "name": "Add porphyrin5 and examine NMR binding markers output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cdse",
+        "znp5",
+        "chloroform"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "test",
+      "action": "test",
+      "label": "Add porphyrin5 and examine NMR binding markers",
+      "stage": "surface_exchange",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse",
+        "znp5",
+        "chloroform"
+      ],
+      "outputs": [
+        "test-out"
+      ],
+      "parameters": {
+        "porphyrin_equivalents": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "equiv",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10",
+          "evidence": [
+            {
+              "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+              "locator": "Main PDF p.6, printed 7373"
+            }
+          ],
+          "derivation": null
+        },
+        "acid_function_equivalents": {
+          "value": 40,
+          "minimum": null,
+          "maximum": null,
+          "unit": "equiv",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "40",
+          "evidence": [
+            {
+              "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+              "locator": "Main PDF p.6, printed 7373"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Slight aromatic shift without broadening; oleate did not sharpen. No evidence of stable binding by this NMR test.",
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "zn5-test",
+      "source_sample_label": "Porphyrin5/CdSe test mixture",
+      "batch_id": null,
+      "material_state_id": "test-out",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe with porphyrin5; stable adduct not established",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chambrier2015-porphyrin-cdse-5b00892-zn5-binding",
+      "sample_id": "zn5-test",
+      "property": "stable binding",
+      "technique": "1H NMR",
+      "value": {
+        "value": "Not supported by the reported NMR response",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+            "locator": "Main PDF p.6, printed 7373"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.6, printed 7373"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Admitted 13-page main paper only; scoped preparations and comparisons. Locally present screening-held SI excluded. No complete-paper or SI-reviewed claim.",
+    "missing_fields": [
+      "No measured atomic coordinates or complete unit cell reported in the inspected main scope.",
+      "Detailed porphyrin precursor syntheses and SI luminescence/QY methods remain unreviewed because the local SI is screening-held.",
+      "Record/sample IDs distinguish source contexts, not independently established physical batch IDs.",
+      "Exchange temperature, total volume, exact dot amount and addition rate are not supplied for this context unless explicitly listed.",
+      "Unqualified centrifugation steps do not inherit the 1400 rpm used only for the initial CdSe cleanup."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_failure"
+  },
+  "context_links": [
+    {
+      "label": "Original article",
+      "url": "https://doi.org/10.1021/acs.inorgchem.5b00892",
+      "relation": "primary_source"
+    }
+  ]
+}

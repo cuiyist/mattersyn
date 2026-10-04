@@ -1,0 +1,581 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2015-graphene-pbse-jpcc5b07318-pbse-characterization",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Zhang et al. (2015): Representative PbSe material characterization",
+  "material": {
+    "formula": "PbSe",
+    "family": "Colloidal PbSe and graphene hybrid devices",
+    "architecture": "single_material",
+    "elements": [
+      "Pb",
+      "Se"
+    ]
+  },
+  "method": "Representative PbSe material characterization",
+  "sources": [
+    {
+      "id": "zhang2015-graphene-pbse-jpcc5b07318",
+      "doi": "10.1021/acs.jpcc.5b07318",
+      "title": "Multiheterojunction Phototransistors Based on Graphene–PbSe Quantum Dot Hybrids",
+      "authors": "Yating Zhang; Mingxuan Cao; Xiaoxian Song; Jianlong Wang; Yongli Che; Haitao Dai; Xin Ding; Guizhong Zhang; Jianquan Yao",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07318",
+      "main_status": "source_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "permission_not_verified"
+    },
+    {
+      "id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+      "doi": "10.1021/acs.jpcc.5b07318",
+      "title": "Supplementary Materials (publisher companion jp5b07318_si_001)",
+      "authors": "Yating Zhang; Mingxuan Cao; Xiaoxian Song; Jianlong Wang; Yongli Che; Haitao Dai; Xin Ding; Guizhong Zhang; Jianquan Yao",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07318",
+      "main_status": "source_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "permission_not_verified"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2015-graphene-pbse-jpcc5b07318",
+    "recipe_family": "zhang2015-graphene-pbse-jpcc5b07318",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse",
+      "name": "Purified PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "representative PbSe analytical material",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "toluene",
+      "name": "Toluene",
+      "formula": "C7H8",
+      "role": "optical-analysis dispersion solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "optical-state",
+      "name": "Measure absorption and photoluminescence",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "tem-state",
+      "name": "Acquire PbSe TEM images",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "ftir-state",
+      "name": "Acquire PbSe FTIR spectrum",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "optical",
+      "action": "optical",
+      "label": "Measure absorption and photoluminescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse",
+        "toluene"
+      ],
+      "outputs": [
+        "optical-state"
+      ],
+      "parameters": {
+        "pl_excitation": {
+          "value": 532,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "532 nm",
+          "evidence": [
+            {
+              "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+              "locator": "Main PDF p.2, Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Zolix Omni-λ300; PbSe QDs in toluene, continuous-wave532nm PL excitation. Sample concentration, cuvette geometry and exact batch unknown.",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Figure 1"
+        }
+      ]
+    },
+    {
+      "id": "tem",
+      "action": "tem",
+      "label": "Acquire PbSe TEM images",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse"
+      ],
+      "outputs": [
+        "tem-state"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 kV",
+          "evidence": [
+            {
+              "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+              "locator": "Main PDF p.1, Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "FEI TecnaiG2F20; Figure1 inset50nm scale bar. Grid preparation and exact optical/TEM same-batch identity unreported.",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Characterization and Figure 1"
+        }
+      ]
+    },
+    {
+      "id": "ftir",
+      "action": "ftir",
+      "label": "Acquire PbSe FTIR spectrum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse"
+      ],
+      "outputs": [
+        "ftir-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Characterization and Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Characterization and Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "FTIR-650; DOP capping attribution is the authors’ interpretation, not a charged reagent or exact measured molecular model.",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Characterization and Figure 1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "fig1-pbse",
+      "source_sample_label": "Representative Figure1 PbSe characterization",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF pp.1–2, Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF pp.1–2, Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF pp.1–2, Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF pp.1–2, Figure 1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF pp.1–2, Figure 1"
+        }
+      ],
+      "notes": [
+        "Mainp2 uses PbSe in toluene for optical spectra. Its exact synthesis aliquot, isolation branch and physical batch are not stated."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "abs",
+      "sample_id": "fig1-pbse",
+      "property": "Absorption peak",
+      "technique": "Optical absorption, Zolix Omni-λ300",
+      "value": {
+        "value": 1487,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1487 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Characterization"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative PbSe material; optical measurements in toluene; PL excitation cw532nm. Optical-model size and TEM size are separate determinations.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "pl",
+      "sample_id": "fig1-pbse",
+      "property": "Photoluminescence peak",
+      "technique": "PL, Zolix Omni-λ300",
+      "value": {
+        "value": 1525,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1525 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Characterization"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative PbSe material; optical measurements in toluene; PL excitation cw532nm. Optical-model size and TEM size are separate determinations.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "optical-size",
+      "sample_id": "fig1-pbse",
+      "property": "Average optical-model diameter",
+      "technique": "Four-band envelope-function model",
+      "value": {
+        "value": 6.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.3 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Characterization"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative PbSe material; optical measurements in toluene; PL excitation cw532nm. Optical-model size and TEM size are separate determinations.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "tem-size",
+      "sample_id": "fig1-pbse",
+      "property": "Average TEM size",
+      "technique": "TEM, FEI Tecnai G2 F20, 200kV",
+      "value": {
+        "value": 6.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.3 nm",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, Characterization"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative PbSe material; optical measurements in toluene; PL excitation cw532nm. Optical-model size and TEM size are separate determinations.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, Characterization"
+        }
+      ]
+    },
+    {
+      "id": "surface-assignment",
+      "sample_id": "fig1-pbse",
+      "property": "Authors’ FTIR surface-ligand attribution",
+      "technique": "FTIR-650",
+      "value": {
+        "value": "Dioctyl phthalate (DOP), interpreted from FTIR",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, FTIR discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Authors propose reaction byproduct or TOP oxidation during storage; origin/speciation not established and no DOP input is reported. Do not treat the interpretation as a measured molecular structure or executed reagent addition.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, FTIR discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Selected operational PbSe synthesis and isolation alternatives, two three-layer device architectures, graphene analytical preparations and source-linked characterization from all five main and five SI pages. Exact batches, graphene manufacture and unreported settings remain unresolved; no complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identifiers, reagent grades, measured atomic coordinates and unreported operation settings remain unknown.",
+      "Every omitted numeric value stays unreported; listed characterization settings belong only to their named analytical context."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article and supporting information",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07318",
+      "relation": "source"
+    }
+  ]
+}

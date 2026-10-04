@@ -7,6 +7,8 @@ are trust requirements; hashes are not signatures or an OS-level writer lock.
 from __future__ import annotations
 
 import argparse
+import contextlib
+import contextvars
 import hashlib
 import importlib.metadata
 import importlib.util
@@ -31,6 +33,77 @@ CODE = (BUILD, COMPARE, GATE, TRANSFORM, 'tools/mattersyn-release/public_release
 BUILDERS = ('build_dataset.py', 'build_reader_views.py', 'build_evidence_views.py',
             'build_paper_reviews.py', 'build_atlas.py', 'build_inventory.py', 'build_reader_metadata.py')
 HEX64 = re.compile(r'[0-9a-f]{64}\Z')
+
+
+# Optional diagnostic observation only: no filenames, evidence or verdict data.
+_TIMING_LABELS = frozenset(('source_state', 'seal', 'candidate_inventory', 'evidence',
+    'promoted', 'promoted_inventory', 'preview', 'export_stage', 'export_inventory',
+    'route_derivation', 'record_route_derivation', 'checkout', 'checkout_tracked',
+    'checkout_tree', 'validate_opening', 'validate_closing', 'approval_opening',
+    'approval_closing'))
+_STAGE_TIMINGS = contextvars.ContextVar('release_stage_timings', default=None)
+
+
+def configure_stage_timings(enabled=False):
+    # One synchronous command/context. Nothing persists between invocations.
+    _STAGE_TIMINGS.set({'rows': [], 'stack': [], 'dropped': 0} if enabled else None)
+
+
+@contextlib.contextmanager
+def stage_timing(label):
+    recorder = _STAGE_TIMINGS.get()
+    if recorder is None:
+        yield
+        return
+    row = None
+    try:
+        if label not in _TIMING_LABELS or len(recorder['rows']) >= 256:
+            recorder['dropped'] += 1
+        else:
+            started = time.perf_counter_ns()
+            row = {'id': len(recorder['rows']) + 1,
+                   'parent_id': recorder['stack'][-1] if recorder['stack'] else None,
+                   'stage': label, 'outcome': 'incomplete', 'wall_seconds': None}
+            recorder['rows'].append(row)
+            recorder['stack'].append(row['id'])
+    except Exception:
+        # Diagnostics must never replace a validation return value or exception.
+        recorder['dropped'] += 1
+        row = None
+    outcome = 'returned'
+    try:
+        yield
+    except BaseException:
+        outcome = 'raised'
+        raise
+    finally:
+        if row is not None:
+            row['outcome'] = outcome
+            try:
+                elapsed = time.perf_counter_ns() - started
+                if elapsed < 0:
+                    raise ValueError('nonmonotonic diagnostic clock')
+                row['wall_seconds'] = elapsed / 1_000_000_000
+            except Exception:
+                recorder['dropped'] += 1
+            finally:
+                recorder['stack'].pop()
+
+
+def emit_stage_timings():
+    recorder = _STAGE_TIMINGS.get()
+    if recorder is None:
+        return
+    try:
+        # stderr is captured by the operator's existing private run receipt.
+        # This is not build, browser, publication, timing-of-labour or QA evidence.
+        print(json.dumps({'schema': 'mattersyn-release-stage-timings/1',
+            'measurement': 'monotonic_elapsed_wall_seconds_not_agent_labour',
+            'inclusive_spans': True, 'warning': 'Do not sum parent and child spans.',
+            'verdict_effect': 'none', 'dropped_observations': recorder['dropped'],
+            'stages': recorder['rows']}, separators=(',', ':')), file=sys.stderr)
+    except Exception:
+        pass  # Logging failure does not change the release outcome.
 
 
 class Rejected(ValueError):
@@ -216,6 +289,7 @@ def run_env():
     return env
 
 
+@stage_timing('source_state')
 def source_state(source, head):
     source = no_link(source)
     require(Path(git(source, 'rev-parse', '--show-toplevel').decode().strip()).resolve() == source.resolve(),
@@ -368,6 +442,7 @@ def build(source, snapshot_path, out, contract_path, contract_sha):
     return pin(out / 'build-seal.private.json')
 
 
+@stage_timing('seal')
 def verify_seal(source, candidate, seal_sha):
     seal = loads(pinned({'path': str(Path(candidate) / 'build-seal.private.json'), 'sha256': seal_sha}))
     require(seal['schema'] == 'mattersyn-one-build-seal/1' and seal['published'] is False and
@@ -385,8 +460,9 @@ def verify_seal(source, candidate, seal_sha):
     require(check_log(source, candidate, contract['expected_tests']) == seal['checks'], 'build_receipt_drift')
     manifest = loads(pinned(seal['candidate_manifest']))
     comparator(source).validate(manifest)
-    require(rows_map(manifest['files']) == rows_map(inventory(Path(candidate) / 'project/recipe-atlas/dist')),
-            'candidate_inventory_drift')
+    with stage_timing('candidate_inventory'):
+        require(rows_map(manifest['files']) == rows_map(inventory(Path(candidate) / 'project/recipe-atlas/dist')),
+                'candidate_inventory_drift')
     return seal, manifest
 
 
@@ -399,6 +475,7 @@ def boundary_ok(report, repo, count):
             report.get('passed_files') == count, 'boundary_failed_or_incomplete')
 
 
+@stage_timing('evidence')
 def verify_evidence(source, manifest, review):
     require(review.get('schema') == 'mattersyn-one-build-promotion-review/1' and
             review.get('status') == 'REVIEWED_PENDING_FRESH_BOUNDARY' and
@@ -449,6 +526,47 @@ def copy_exact(origin, destination, rows):
         with target.open('xb') as f:
             f.write(raw)
     require(rows_map(inventory(destination)) == rows_map(rows), 'copy_output_drift')
+
+
+def compose_site_preview(site, dist, destination, base_rows, artifact_rows, control_names):
+    """Copy a verified artifact + retained site controls once into a new preview.
+
+    Inventories must come from the caller's opening full verification. This is
+    only construction: callers must retain closing source/site/artifact checks,
+    normal control staging/export, browser approval, Git, CI and live gates.
+    No inventory/content cache survives this call or replaces a closing check.
+    """
+    site, dist = no_link(site), no_link(dist)
+    destination = disjoint_new(destination, [site, dist])
+    base, artifacts = rows_map(base_rows), rows_map(artifact_rows)
+    require(isinstance(control_names, (set, frozenset)) and control_names and
+            all(isinstance(n, str) and path_name(n) == n and '/' not in n
+                for n in control_names), 'invalid_site_controls')
+    controls_folded = {n.casefold() for n in control_names}
+    require(not any(n.split('/')[0].casefold() in controls_folded for n in artifacts),
+            'artifact_contains_site_control')
+    require(not any(n.split('/')[0].casefold() == '.git' for n in base),
+            'git_administration_in_base_inventory')
+    controls = {n: r for n, r in base.items() if n.split('/')[0] in control_names}
+    old_public = {n: r for n, r in base.items() if n.split('/')[0] not in control_names}
+    expected = rows_map(list(controls.values()) + list(artifacts.values()))
+    require(listing(dist) == sorted(artifacts), 'artifact_membership_drift')
+    destination.mkdir()
+    for name, row in sorted(expected.items()):
+        origin = site if name in controls else dist
+        raw = stable_bytes(origin / name)
+        require(digest(raw) == row['sha256'] and len(raw) == row['bytes'], 'copy_input_drift')
+        target = no_link(destination / name)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with target.open('xb') as f:
+            f.write(raw)
+    require(rows_map(inventory(destination)) == expected, 'copy_output_drift')
+    require(listing(dist) == sorted(artifacts), 'artifact_membership_race')
+    added = sorted(set(artifacts) - set(old_public))
+    changed = sorted(n for n in set(artifacts) & set(old_public)
+                     if artifacts[n]['sha256'] != old_public[n]['sha256'])
+    removed = sorted(set(old_public) - set(artifacts))
+    return added, changed, removed
 
 
 def promote(source, candidate, seal_sha, out, review_path, review_sha):
@@ -507,7 +625,11 @@ def main():
     p = commands_parser.add_parser('promote')
     for flag in ('source', 'candidate', 'seal-sha', 'out', 'review', 'review-sha'):
         p.add_argument('--' + flag, required=True)
+    for command in (b, p):
+        command.add_argument('--stage-timings', action='store_true',
+                             help='emit optional private wall-clock diagnostics on stderr')
     a = parser.parse_args()
+    configure_stage_timings(a.stage_timings)
     try:
         if a.action == 'build':
             result = build(a.source, a.snapshot, a.out, a.contract, a.contract_sha)
@@ -517,6 +639,8 @@ def main():
     except (Rejected, ValueError, KeyError, OSError, subprocess.CalledProcessError) as e:
         print(json.dumps({'status': 'REJECTED', 'reason': str(e)}), file=sys.stderr)
         raise SystemExit(1)
+    finally:
+        emit_stage_timings()
 
 
 if __name__ == '__main__':

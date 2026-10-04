@@ -1,0 +1,718 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhang2015-graphene-pbse-jpcc5b07318-graphene-xps",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Zhang et al. (2015): Graphene powder XPS analysis",
+  "material": {
+    "formula": "C",
+    "family": "Colloidal PbSe and graphene hybrid devices",
+    "architecture": "single_material",
+    "elements": [
+      "C"
+    ]
+  },
+  "method": "Graphene powder XPS analysis",
+  "sources": [
+    {
+      "id": "zhang2015-graphene-pbse-jpcc5b07318",
+      "doi": "10.1021/acs.jpcc.5b07318",
+      "title": "Multiheterojunction Phototransistors Based on Graphene–PbSe Quantum Dot Hybrids",
+      "authors": "Yating Zhang; Mingxuan Cao; Xiaoxian Song; Jianlong Wang; Yongli Che; Haitao Dai; Xin Ding; Guizhong Zhang; Jianquan Yao",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07318",
+      "main_status": "source_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "permission_not_verified"
+    },
+    {
+      "id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+      "doi": "10.1021/acs.jpcc.5b07318",
+      "title": "Supplementary Materials (publisher companion jp5b07318_si_001)",
+      "authors": "Yating Zhang; Mingxuan Cao; Xiaoxian Song; Jianlong Wang; Yongli Che; Haitao Dai; Xin Ding; Guizhong Zhang; Jianquan Yao",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07318",
+      "main_status": "source_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "permission_not_verified"
+    }
+  ],
+  "lineage": {
+    "source_group": "zhang2015-graphene-pbse-jpcc5b07318",
+    "recipe_family": "zhang2015-graphene-pbse-jpcc5b07318",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "graphene",
+      "name": "Graphene powder with oxygen-containing residues",
+      "formula": "C",
+      "role": "characterization specimen",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main p1 names The Sixth Element, Inc. in the graphene-oxide supply description. SI p4 explicitly says reduction method and post-treatment are unknown; hydrazine wording does not establish an executable procedure."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "acquire-state",
+      "name": "Acquire wide and narrow C1s XPS scans",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "acquire",
+      "action": "acquire",
+      "label": "Acquire wide and narrow C1s XPS scans",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "graphene"
+      ],
+      "outputs": [
+        "acquire-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Three Gaussian C1s components; fitted assignments and percentages are source-reported, not a complete molecular composition.",
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "xps",
+      "source_sample_label": "Graphene powder XPS analysis",
+      "batch_id": null,
+      "material_state_id": "acquire-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ],
+      "notes": [
+        "Analytical specimen from graphene powder used in hybrids; exact physical linkage among TEM/SEM/XPS pieces is not asserted.",
+        "FTIR measurements included here concern the same source-described graphene powder class; exact identity with the XPS specimen is not asserted."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "a-peak",
+      "sample_id": "xps",
+      "property": "C1s A peak binding energy",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 284.72,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "284.72 eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentA: C–C (C=C). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "a-width",
+      "sample_id": "xps",
+      "property": "C1s A FWHM",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 0.98,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.98 eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentA: C–C (C=C). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "a-area",
+      "sample_id": "xps",
+      "property": "C1s A integrated area",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 16685.09,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cps·eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "16685.09 cps·eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentA: C–C (C=C). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "a-percent",
+      "sample_id": "xps",
+      "property": "C1s A reported component atomic percentage",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 70.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "70.14 %",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentA: C–C (C=C). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "b-peak",
+      "sample_id": "xps",
+      "property": "C1s B peak binding energy",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 286.12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "286.12 eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentB: C–O–C (C–OH). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "b-width",
+      "sample_id": "xps",
+      "property": "C1s B FWHM",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 1.4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.4 eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentB: C–O–C (C–OH). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "b-area",
+      "sample_id": "xps",
+      "property": "C1s B integrated area",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 5254.77,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cps·eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5254.77 cps·eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentB: C–O–C (C–OH). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "b-percent",
+      "sample_id": "xps",
+      "property": "C1s B reported component atomic percentage",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 22.09,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "22.09 %",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentB: C–O–C (C–OH). Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "c-peak",
+      "sample_id": "xps",
+      "property": "C1s C peak binding energy",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 287.72,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "287.72 eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentC: C=O. Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "c-width",
+      "sample_id": "xps",
+      "property": "C1s C FWHM",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 1.83,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1.83 eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentC: C=O. Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "c-area",
+      "sample_id": "xps",
+      "property": "C1s C integrated area",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 1846.36,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cps·eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1846.36 cps·eV",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentC: C=O. Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "c-percent",
+      "sample_id": "xps",
+      "property": "C1s C reported component atomic percentage",
+      "technique": "XPS Gaussian fitting",
+      "value": {
+        "value": 7.76,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7.76 %",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+            "locator": "SI PDF p.4, XPS and Table SI"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "ComponentC: C=O. Percentages are the TableSI C1s components, not bulk elemental C/O percentages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318-si",
+          "locator": "SI PDF p.4, XPS and Table SI"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1548",
+      "sample_id": "xps",
+      "property": "Nonoxygenated ring FTIR peak",
+      "technique": "FTIR-650",
+      "value": {
+        "value": 1548,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1548 cm^-1",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, graphene FTIR discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "General graphene-powder context, not the same exact XPS piece or an elemental composition measurement.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, graphene FTIR discussion"
+        }
+      ]
+    },
+    {
+      "id": "ftir-1108",
+      "sample_id": "xps",
+      "property": "Hydroxyl-carbon FTIR peak",
+      "technique": "FTIR-650",
+      "value": {
+        "value": 1108,
+        "minimum": null,
+        "maximum": null,
+        "unit": "cm^-1",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1108 cm^-1",
+        "evidence": [
+          {
+            "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+            "locator": "Main PDF p.2, graphene FTIR discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "General graphene-powder context, not the same exact XPS piece or an elemental composition measurement.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhang2015-graphene-pbse-jpcc5b07318",
+          "locator": "Main PDF p.2, graphene FTIR discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Selected operational PbSe synthesis and isolation alternatives, two three-layer device architectures, graphene analytical preparations and source-linked characterization from all five main and five SI pages. Exact batches, graphene manufacture and unreported settings remain unresolved; no complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identifiers, reagent grades, measured atomic coordinates and unreported operation settings remain unknown.",
+      "Every omitted numeric value stays unreported; listed characterization settings belong only to their named analytical context."
+    ],
+    "conflicts": [
+      "SI p4 says hydrazine reduction but explicitly states reduction method and post-treatment unknown; no operational hydrazine recipe inferred. SI text calls the XPS plot Figure S2 although its caption is Figure S3."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article and supporting information",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07318",
+      "relation": "source"
+    }
+  ]
+}

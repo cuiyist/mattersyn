@@ -2,7 +2,7 @@
 
 ## Sources represented by reviewed records in this checkout
 
-**204 primary source groups** are represented by **2,202 records in this checkout**. The separately verified live website contains **201 source groups and 2,099 records**, verified on 2026-10-04 at 17:59:59 UTC. The three additional contributions are pending deployment; this bibliography does not count them as live. Records are not independent experiments.
+**208 primary source groups** are represented by **2,273 records in this checkout**. The separately verified live website contains **204 source groups and 2,202 records**, verified on 2026-10-04 at 21:56:30 UTC. Four additional contributions are pending live release; this bibliography does not count them as live. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -314,11 +314,17 @@
 
 - Jianbo Liu; Gui Li; Xiaohai Yang; Kemin Wang; Li Li; Wei Liu; Xing Shi; Yali Guo (2015). Exciton Energy Transfer-Based Quantum Dot Fluorescence Sensing Array: Chemical Noses for Discrimination of Different Nucleobases. [10.1021/ac503819e](https://doi.org/10.1021/ac503819e). Review scope remains stated in the linked website records.
 
+- Yating Zhang; Mingxuan Cao; Xiaoxian Song; Jianlong Wang; Yongli Che; Haitao Dai; Xin Ding; Guizhong Zhang; Jianquan Yao (2015). Multiheterojunction Phototransistors Based on Graphene–PbSe Quantum Dot Hybrids. [10.1021/acs.jpcc.5b07318](https://doi.org/10.1021/acs.jpcc.5b07318). Review scope remains stated in the linked website records.
+
 - Zhiyuan Huang; Xin Li; Benjamin D. Yip; Justin M. Rubalcava; Christopher J. Bardeen; Ming L. Tang (2015). Nanocrystal Size and Quantum Yield in the Upconversion of Green to Violet Light with CdSe and Anthracene Derivatives. *Chemistry of Materials*, 7503–7507. [10.1021/acs.chemmater.5b03731](https://doi.org/10.1021/acs.chemmater.5b03731). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=cm2015-5b03731-cdse-9aca).
 
 - Xudong Yao; Shangjing Liu; Yajing Chang; Guopeng Li; Longfei Mi; Xiaoming Wang; Yang Jiang (2015). PbS Quantum-Dot Depleted Heterojunction Solar Cells Employing CdS Nanorod Arrays as the Electron Acceptor with Enhanced Efficiency. *ACS Applied Materials & Interfaces*, 7, 23117–23123. [10.1021/acsami.5b06857](https://doi.org/10.1021/acsami.5b06857). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=yao2015acsami).
 
 - Jong-Hoon Kim; Chang-Yeol Han; Ki-Heon Lee; Ki-Seok An; Wooseok Song; Jiwan Kim; Min Suk Oh; Young Rag Do; Heesun Yang (2015). Performance Improvement of Quantum Dot-Light-Emitting Diodes Enabled by an Alloyed ZnMgO Nanoparticle Electron Transport Layer. *Chemistry of Materials*, 27, 197–204. [10.1021/cm503756q](https://doi.org/10.1021/cm503756q). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=kim2015-znmgo-cm503756q).
+
+- Xianguang Yang; Dinghua Bao; Baojun Li (2015). Plasmon-Mediated Whispering-Gallery-Mode Emission from Quantum-Dot-Coated Gold Nanosphere. [10.1021/acs.jpcc.5b07475](https://doi.org/10.1021/acs.jpcc.5b07475). Review scope remains stated in the linked website records.
+
+- Isabelle Chambrier; Chiranjib Banerjee; Sonia Remiro-Buenamañana; Yimin Chao; Andrew N. Cammidge; Manfred Bochmann (2015). Synthesis of Porphyrin−CdSe Quantum Dot Assemblies: Controlling Ligand Binding by Substituent Effects. [10.1021/acs.inorgchem.5b00892](https://doi.org/10.1021/acs.inorgchem.5b00892). Review scope remains stated in the linked website records.
 
 - David So; Gerasimos Konstantatos (2015). Thiol-Free Synthesized Copper Indium Sulfide Nanocrystals as Optoelectronic Quantum Dot Solids. [10.1021/acs.chemmater.5b03943](https://doi.org/10.1021/acs.chemmater.5b03943). Review scope remains stated in the linked website records.
 
@@ -401,6 +407,8 @@
 - Emma H. Massasa; Lotte T. J. Kortstee; Rachel Lifer; Saar Shaek; Boaz Pokroy; Ivano E. Castelli; Yehonadav Bekenstein (2024). Colloidal Synthesis of (PbBr2)2(AMTP)2PbBr4 a Periodic Perovskite “Heterostructured” Nanocrystal. *Crystal Growth & Design*, 24, 3237–3245. [10.1021/acs.cgd.3c01472](https://doi.org/10.1021/acs.cgd.3c01472). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=massasa2024-cgd3c01472).
 
 - Fulvio Bellato; Michele Ferri; Dongxu Zhu; Thi-Hong-Hanh Le; Abinaya Annamalai; Martina Rizzo; Irene Martin; Luca Goldoni; Rosaria Brescia; Mirko Prato; Luca De Trizio; Ilka Kriegel; Liberato Manna (2024). Indium Arsenide Quantum Dot Derived Catalyst for Selective CO2 Electrochemical Reduction to Formate. *ACS Energy Letters*, 9, 1097–1102. [10.1021/acsenergylett.4c00295](https://doi.org/10.1021/acsenergylett.4c00295). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=bellato2024-inas-acsenergylett4c00295).
+
+- Eunjae Lee; Yongju Kwon; Anastasia Agnes; Youngjae Ryu; Sungjee Kim (2024). Multiple Roles of Magic-Sized Clusters in Quantum Dot Synthesis. [10.1021/acs.jpcc.3c07189](https://doi.org/10.1021/acs.jpcc.3c07189). Review scope remains stated in the linked website records.
 
 - Yoonjae Jung; Yoonhee Kim; Yeonhee Lee; Jiwoong Son; Mihye Lim; Jwa-Min Nam (2024). Selective Flocculation and H2O2-Free Oxidative Etching-Based Synthesis of Highly Monodisperse Ag Nanospheres for Uniform Quantum Dot Photoluminescence-Enhancing Plasmonic Cavity Applications. [10.1021/jacs.4c00073](https://doi.org/10.1021/jacs.4c00073). Review scope remains stated in the linked website records.
 

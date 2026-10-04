@@ -1,0 +1,537 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2015-qd-gold-wgm-jpcc5b07475-optical-acquisition",
+  "revision": 2,
+  "record_type": "procedure",
+  "title": "Yang et al. (2015): General optical characterization setup",
+  "material": {
+    "formula": "Au/CdSe-ZnS",
+    "elements": [
+      "Au",
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "family": "quantum-dot coated gold nanosphere",
+    "architecture": "composite",
+    "source_notation": "Commercial Au and CdSe-ZnS component identities; no full-particle stoichiometry or resolved atom geometry."
+  },
+  "method": "General optical characterization setup",
+  "sources": [
+    {
+      "id": "yang2015-qd-gold-wgm-jpcc5b07475",
+      "doi": "10.1021/acs.jpcc.5b07475",
+      "title": "Plasmon-Mediated Whispering-Gallery-Mode Emission from Quantum-Dot-Coated Gold Nanosphere",
+      "authors": "Xianguang Yang; Dinghua Bao; Baojun Li",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07475",
+      "main_status": "scoped_independently_audited",
+      "si_status": "Matching supporting information unavailable in searched local corpus; no claim of global absence.",
+      "reuse_status": "Copyright 2015 ACS; source figure reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "yang2015-qd-gold-wgm-jpcc5b07475",
+    "recipe_family": "yang2015-qd-gold-wgm-jpcc5b07475",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au/CdSe-ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No independently stated intended size for this context; measured dimensions remain specimen properties.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-excited-context",
+      "name": "excited context",
+      "kind": "mixture",
+      "parent_ids": [
+        "s-optical-specimen"
+      ]
+    },
+    {
+      "id": "s-filtered-light-data",
+      "name": "filtered light data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "s-excited-context"
+      ]
+    },
+    {
+      "id": "s-spectra-images-data",
+      "name": "spectra images data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "s-filtered-light-data"
+      ]
+    },
+    {
+      "id": "s-optical-specimen",
+      "name": "optical specimen",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "excite",
+      "action": "excite",
+      "label": "Excite coated spheres with the continuous-work laser",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s-optical-specimen"
+      ],
+      "outputs": [
+        "s-excited-context"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 365,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+            },
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": "Atmosphere is not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source CRAIC 20/20 PV micro spectrophotometer; laser power for this general section is not stated.",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ]
+    },
+    {
+      "id": "collect",
+      "action": "collect",
+      "label": "Collect and filter photoluminescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s-excited-context"
+      ],
+      "outputs": [
+        "s-filtered-light-data"
+      ],
+      "parameters": {
+        "objective_magnification": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "x",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+            },
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "numerical_aperture": {
+          "value": 0.95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+            },
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+            }
+          ],
+          "derivation": null
+        },
+        "notch_filter_wavelength": {
+          "value": 365,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+            },
+            {
+              "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+              "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": "Atmosphere is not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Objective, dichroic mirror and notch filter are source-reported optical components; diagram is conceptual, not a scaled optical layout.",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ]
+    },
+    {
+      "id": "split-detect",
+      "action": "split-detect",
+      "label": "Split light for spectrum and image detection",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s-filtered-light-data"
+      ],
+      "outputs": [
+        "s-spectra-images-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": "Atmosphere is not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Beam splitter directs light to a spectrometer and CCD. Polarization controller is in the light path.",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "optical-context",
+      "source_sample_label": "General coated-sphere optical measurement context",
+      "batch_id": null,
+      "material_state_id": "s-optical-specimen",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au with CdSe-ZnS QDs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.2 / printed 25477, Section 3.2 Optical Characterization"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.2 continuation"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "temperature-context",
+      "sample_id": "optical-context",
+      "property": "source emission temperature context",
+      "technique": "source optical context",
+      "value": {
+        "value": "room temperature",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.1 / printed 25476, Abstract"
+          }
+        ],
+        "note": "Qualitative measurement context; no numerical temperature and no synthesis-temperature transfer."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.1 / printed 25476, Abstract"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped contribution based on actual full text and original-page visual reading of main pages 1-6. General preparation, individual optical/size contexts and analytical interpretations are distinct. No formal complete-paper Reader or external-reference coverage is claimed.",
+    "missing_fields": [
+      "Local source scope is the six-page main article; matching SI is unavailable locally. Cited external methods and data are not imported.",
+      "Commercial input surface-ligand structures, solvents and detailed solution compositions are unreported. No acid/base identity, particle atom coordinates or exact stoichiometry is invented.",
+      "Recipe-to-measurement context does not establish an exact shared physical batch; individual figure and specimen assignments retain their source scope.",
+      "Source curves are not digitized; optical spot size, pixel-profile coordinates and particle diameter are distinct quantities.",
+      "Acquisition integration times, exact sample mount/medium and general laser power unreported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

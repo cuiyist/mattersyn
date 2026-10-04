@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "lee2024-msc-inznp-jpcc3c07189-f360-high-long",
+  "revision": 4,
+  "record_type": "literature_protocol",
+  "title": "Lee et al. (2024): F360 0.52 mM prolonged heating",
+  "material": {
+    "formula": "InP:Zn",
+    "elements": [
+      "In",
+      "Zn",
+      "P"
+    ],
+    "family": "zinc-containing indium phosphide",
+    "architecture": "unresolved",
+    "source_notation": "InP:Zn MSC / InZnP QD; exact stoichiometry and sample scope are stated separately."
+  },
+  "method": "F3600.52mM prolonged heating",
+  "sources": [
+    {
+      "id": "lee2024-msc-inznp-jpcc3c07189",
+      "doi": "10.1021/acs.jpcc.3c07189",
+      "title": "Multiple Roles of Magic-Sized Clusters in Quantum Dot Synthesis",
+      "authors": "Eunjae Lee; Yongju Kwon; Anastasia Agnes; Youngjae Ryu; Sungjee Kim",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acs.jpcc.3c07189",
+      "main_status": "scoped_independently_audited",
+      "si_status": "Matched screened-pass SI pages1–18 included in scoped review; cited external references not read.",
+      "reuse_status": "Copyright2024 ACS; source figure reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "lee2024-msc-inznp-jpcc3c07189",
+    "recipe_family": "lee2024-msc-inznp-jpcc3c07189",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP:Zn",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Intended exact size not stated",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "m-mixture",
+      "name": "F360 0.52mM reaction mixture with In(My)3, Zn(St)2 and (TMS)3P",
+      "formula": null,
+      "role": "continued reaction mixture",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "msc_concentration": {
+          "value": 0.52,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2024-msc-inznp-jpcc3c07189",
+              "locator": "SI PDF p.13 / printed S13, Figure S14"
+            }
+          ],
+          "derivation": null
+        },
+        "molecular_precursor_equivalents": {
+          "value": 70,
+          "minimum": null,
+          "maximum": null,
+          "unit": "equiv",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Caption wording retained; no conversion to 35 mM or absolute charges.",
+          "basis": "Source caption: 70 equiv of In(My)3, Zn(St)2, and (TMS)3P relative to the 0.52 mM F360 MSC context; individual allocation and molecular-count basis are not independently described.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2024-msc-inznp-jpcc3c07189",
+              "locator": "SI PDF p.13 / printed S13, Figure S14 caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Prepared-route identity is source specified; no new independent stock charges are assigned.",
+        "Figure S14 explicitly reports 70 equiv of In(My)3, Zn(St)2, and (TMS)3P. This source statement is not silently equated to the 35 mM general method."
+      ],
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        },
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14 caption"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-long-heated",
+      "name": "long heated",
+      "kind": "product",
+      "parent_ids": [
+        "m-mixture"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "continue-heating",
+      "action": "continue-heating",
+      "label": "Continue heating the high-MSC reaction mixture",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "m-mixture"
+      ],
+      "outputs": [
+        "s-long-heated"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2024-msc-inznp-jpcc3c07189",
+              "locator": "SI PDF p.13 / printed S13, Figure S14"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "day",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2024-msc-inznp-jpcc3c07189",
+              "locator": "SI PDF p.13 / printed S13, Figure S14"
+            }
+          ],
+          "derivation": null
+        },
+        "molecular_precursor_equivalents": {
+          "value": 70,
+          "minimum": null,
+          "maximum": null,
+          "unit": "equiv",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Caption wording retained; no conversion to 35 mM or absolute charges.",
+          "basis": "Source caption: 70 equiv of In(My)3, Zn(St)2, and (TMS)3P relative to the 0.52 mM F360 MSC context; individual allocation and molecular-count basis are not independently described.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "lee2024-msc-inznp-jpcc3c07189",
+              "locator": "SI PDF p.13 / printed S13, Figure S14 caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "SI PDF p.13 / printed S13, Figure S14"
+          }
+        ],
+        "note": "Atmosphere is not separately reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "SI PDF p.13 / printed S13, Figure S14"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Continue the source 0.52 mM F360 mixture with 70 equiv of In(My)3, Zn(St)2, and (TMS)3P as captioned in Figure S14, up to five days at 300 °C. This extended endpoint is distinct from the 90 min QD characterization; no exact physical-batch join, absolute precursor charge or conversion of equivalents to 35 mM is established.",
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        },
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14 caption"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "long-treated",
+      "source_sample_label": "Prolonged F360 0.52 mM product context",
+      "batch_id": null,
+      "material_state_id": "s-long-heated",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP:Zn-derived reaction mixture",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "SI PDF p.13 / printed S13, Figure S14"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "SI PDF p.13 / printed S13, Figure S14"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "SI PDF p.13 / printed S13, Figure S14"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "SI PDF p.13 / printed S13, Figure S14"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "SI PDF p.13 / printed S13, Figure S14"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "outcome",
+      "sample_id": "long-treated",
+      "property": "source prolonged-heating observation",
+      "technique": "UV–visible absorption",
+      "value": {
+        "value": "F408 to F393 conversion with little change to QDs according to main prose; spectrum shown.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "lee2024-msc-inznp-jpcc3c07189",
+            "locator": "Main PDF p.6 / printed 1814, Prolonged high-MSC heating interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "lee2024-msc-inznp-jpcc3c07189",
+          "locator": "Main PDF p.6 / printed 1814, Prolonged high-MSC heating interpretation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped review of supplied main pages1–10 and matched screened-pass SI pages1–18. Reported variants, controls, measurements, proposed interpretations and source limitations remain separately qualified. No external references imported.",
+    "missing_fields": [
+      "Only source-reported quantities and printed labels are used; curves are not digitized.",
+      "Exact heating rates, stir speed, vessel capacity, gas identity and isolated yields are not reported unless individually stated.",
+      "Source proposed cluster formulae and mechanism schemes are distinguished from observed specimens; no atom coordinates or faithful particle reconstruction supplied.",
+      "General GPC/MALDI aliquots do not imply complete synthesis batch quantities."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

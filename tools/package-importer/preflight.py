@@ -257,7 +257,7 @@ def scoped_document_coverage_errors(doc, inventory_doc, audit):
     """Document reading and formal Reader completeness are different claims.
 
     False keeps the legacy scoped inventory's non-claim. True is allowed only
-    for a complete, explicitly evidenced main-document read in the already
+    for a complete, explicitly evidenced main or SI document read in the already
     pinned independent audit. It does not promote source scope or training.
     """
     coverage = doc.get('coverage', {})
@@ -279,14 +279,14 @@ def scoped_document_coverage_errors(doc, inventory_doc, audit):
     # independent receipts. Neither prose nor an unmatched PDF is evidence.
     error = ['Complete scoped document reading lacks exact independent page evidence']
     digest = doc.get('sha256')
-    if (doc.get('role') != 'main' or len(pages) != count
+    if (doc.get('role') not in {'main', 'si'} or len(pages) != count
             or not isinstance(digest, str) or len(digest) != 64
             or any(c not in '0123456789abcdef' for c in digest)
             or inventory_doc.get('sha256', digest) != digest
             or not isinstance(audit, dict)):
         return error
     evidence_sets = []
-    if 'source' in audit or 'source_pages_read' in audit:
+    if doc.get('role') == 'main' and ('source' in audit or 'source_pages_read' in audit):
         source = audit.get('source')
         read_pages = audit.get('source_pages_read')
         if (not isinstance(source, dict) or source.get('sha256') != doc['sha256']
@@ -299,13 +299,13 @@ def scoped_document_coverage_errors(doc, inventory_doc, audit):
         if (not isinstance(evidence_docs, list)
                 or any(not isinstance(d, dict) for d in evidence_docs)):
             return error
-        main_docs = [d for d in evidence_docs if d.get('role') == 'main']
-        if (len(main_docs) != 1 or main_docs[0].get('sha256') != doc['sha256']
-                or type(main_docs[0].get('page_count')) is not int
-                or main_docs[0]['page_count'] != count):
+        role_docs = [d for d in evidence_docs if d.get('role') == doc.get('role')]
+        if (len(role_docs) != 1 or role_docs[0].get('sha256') != doc['sha256']
+                or type(role_docs[0].get('page_count')) is not int
+                or role_docs[0]['page_count'] != count):
             return error
-        evidence_sets.append((main_docs[0].get('actual_pages_text_read'),
-                              main_docs[0].get('actual_pages_visually_read')))
+        evidence_sets.append((role_docs[0].get('actual_pages_text_read'),
+                              role_docs[0].get('actual_pages_visually_read')))
     if not evidence_sets:
         return error
     # If both shapes are supplied, every asserted page set must agree.

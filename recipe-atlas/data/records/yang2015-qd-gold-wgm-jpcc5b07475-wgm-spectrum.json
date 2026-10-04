@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yang2015-qd-gold-wgm-jpcc5b07475-wgm-spectrum",
+  "revision": 2,
+  "record_type": "procedure",
+  "title": "Yang et al. (2015): WGM spectrum and QD-solution comparison",
+  "material": {
+    "formula": "Au/CdSe-ZnS",
+    "elements": [
+      "Au",
+      "Cd",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "family": "quantum-dot coated gold nanosphere",
+    "architecture": "composite",
+    "source_notation": "Commercial Au and CdSe-ZnS component identities; no full-particle stoichiometry or resolved atom geometry."
+  },
+  "method": "WGM spectrum and QD-solution comparison",
+  "sources": [
+    {
+      "id": "yang2015-qd-gold-wgm-jpcc5b07475",
+      "doi": "10.1021/acs.jpcc.5b07475",
+      "title": "Plasmon-Mediated Whispering-Gallery-Mode Emission from Quantum-Dot-Coated Gold Nanosphere",
+      "authors": "Xianguang Yang; Dinghua Bao; Baojun Li",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07475",
+      "main_status": "scoped_independently_audited",
+      "si_status": "Matching supporting information unavailable in searched local corpus; no claim of global absence.",
+      "reuse_status": "Copyright 2015 ACS; source figure reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "yang2015-qd-gold-wgm-jpcc5b07475",
+    "recipe_family": "yang2015-qd-gold-wgm-jpcc5b07475",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au/CdSe-ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No independently stated intended size for this context; measured dimensions remain specimen properties.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-wgm-data",
+      "name": "wgm data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "s-wgm-coated",
+        "s-wgm-solution"
+      ]
+    },
+    {
+      "id": "s-wgm-coated",
+      "name": "wgm coated",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "s-wgm-solution",
+      "name": "wgm solution",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "record-spectrum",
+      "action": "record-spectrum",
+      "label": "Record coated-sphere and QD-solution emission spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s-wgm-coated",
+        "s-wgm-solution"
+      ],
+      "outputs": [
+        "s-wgm-data"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": "Atmosphere is not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Liquid-nitrogen-cooled spectrometer is specified. That cooling is an instrument condition, not a sample temperature. Source inset shows -10-degree polarization; no separate universal spectrum-setting power is inferred.",
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "wgm-490",
+      "source_sample_label": "QD-coated nanosphere WGM spectrum context",
+      "batch_id": null,
+      "material_state_id": "s-wgm-coated",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au with CdSe-ZnS QDs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "wgm-solution",
+      "source_sample_label": "Respective QD-solution PL comparison",
+      "batch_id": null,
+      "material_state_id": "s-wgm-solution",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b red dotted curve"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b red dotted curve"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b red dotted curve"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b red dotted curve"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b red dotted curve"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bands",
+      "sample_id": "wgm-490",
+      "property": "narrow WGM band count",
+      "technique": "PL spectrum",
+      "value": {
+        "value": 5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "bands",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3"
+        }
+      ]
+    },
+    {
+      "id": "center",
+      "sample_id": "wgm-490",
+      "property": "reported WGM center wavelength",
+      "technique": "PL spectrum",
+      "value": {
+        "value": 625,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Section 3.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Section 3.5"
+        }
+      ]
+    },
+    {
+      "id": "linewidth",
+      "sample_id": "wgm-490",
+      "property": "reported WGM linewidth",
+      "technique": "PL spectrum",
+      "value": {
+        "value": 7.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Section 3.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Section 3.5"
+        }
+      ]
+    },
+    {
+      "id": "quality-factor",
+      "sample_id": "wgm-490",
+      "property": "author quality factor",
+      "technique": "source calculation",
+      "value": {
+        "value": 80,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Section 3.5"
+          }
+        ],
+        "derivation": "Q = 625 nm / 7.8 nm, rounded by the authors."
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Section 3.5"
+        }
+      ]
+    },
+    {
+      "id": "peak-alignment",
+      "sample_id": "wgm-490",
+      "property": "WGM versus solution peak comparison",
+      "technique": "PL comparison",
+      "value": {
+        "value": "Highest WGM peak matches the peak of solution PL; peak intensity distribution follows the solution emission envelope.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+          },
+          {
+            "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+            "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.3 / printed 25478, Section 3.3 WGM spectra"
+        },
+        {
+          "source_id": "yang2015-qd-gold-wgm-jpcc5b07475",
+          "locator": "Main PDF p.4 / printed 25479, Figure 3b and Section 3.5 spectral quantities"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped contribution based on actual full text and original-page visual reading of main pages 1-6. General preparation, individual optical/size contexts and analytical interpretations are distinct. No formal complete-paper Reader or external-reference coverage is claimed.",
+    "missing_fields": [
+      "Local source scope is the six-page main article; matching SI is unavailable locally. Cited external methods and data are not imported.",
+      "Commercial input surface-ligand structures, solvents and detailed solution compositions are unreported. No acid/base identity, particle atom coordinates or exact stoichiometry is invented.",
+      "Recipe-to-measurement context does not establish an exact shared physical batch; individual figure and specimen assignments retain their source scope.",
+      "Source curves are not digitized; optical spot size, pixel-profile coordinates and particle diameter are distinct quantities.",
+      "No isolated peak wavelengths for the other four narrow bands are printed."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [],
+  "reader_role": "contextual_observation",
+  "collection": "reviewed_literature"
+}
