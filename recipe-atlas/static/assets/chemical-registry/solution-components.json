@@ -18739,6 +18739,323 @@
         "json_pointer": "/stocks/0",
         "input_sha256": "b9f7a14b3e06edb6359e6f0fdf3963fd782429a47020d84c1c003cb9a48a24ab"
       }
+    },
+    {
+      "id": "chen2010-jf101778t-cdte-aqueous-reflux-nahte-stock-definition",
+      "record_id": "chen2010-jf101778t-cdte-aqueous-reflux",
+      "label": "Fresh oxygen-free NaHTe solution",
+      "scope": "NaHTe prepared from NaBH4 and Te; solvent charge, concentration, volume, duration and temperature unreported. Component references only; no solution-speciation or solvent-count model.",
+      "source": {
+        "data_path": "data/records/chen2010-jf101778t-cdte-aqueous-reflux.json",
+        "json_pointer": "/stocks/0",
+        "input_sha256": "1663a8fdb1e14a73a7d580a2b6987c222f9e6fb398a7beb027c82732fe967179"
+      },
+      "binding_approved": true,
+      "components": [
+        {
+          "material_id": "nahte",
+          "registry_id": "chen2010-jf101778t-cdte-nahte-identity",
+          "role": "tellurium precursor solution",
+          "label": "Freshly prepared oxygen-free NaHTe solution",
+          "viewOverrides": {
+            "caption": "The source names freshly prepared oxygen-free NaHTe solution, prepared from NaBH4 and Te powder. This is a source-formula card, not measured dissolved speciation or a molecular geometry.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chen2010-jf101778t-cdte-aqueous-reflux-cadmium-feed-definition",
+      "record_id": "chen2010-jf101778t-cdte-aqueous-reflux",
+      "label": "Nitrogen-saturated aqueous CdCl2 feed with MPA",
+      "scope": "pH11.4 feed; no absolute batch volume or final reaction concentration. Component references only; no solution-speciation or solvent-count model.",
+      "source": {
+        "data_path": "data/records/chen2010-jf101778t-cdte-aqueous-reflux.json",
+        "json_pointer": "/stocks/1",
+        "input_sha256": "1663a8fdb1e14a73a7d580a2b6987c222f9e6fb398a7beb027c82732fe967179"
+      },
+      "binding_approved": true,
+      "components": [
+        {
+          "material_id": "cdcl2",
+          "registry_id": "chen2010-jf101778t-cdte-cdcl2-reference",
+          "role": "cadmium precursor",
+          "label": "Cadmium chloride",
+          "viewOverrides": {
+            "caption": "Formal Cd2+ and two Cl− reference components for source-named CdCl2 (99%). Hydration is not specified. No dissolved coordination or ion distribution is measured.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        },
+        {
+          "material_id": "water",
+          "registry_id": "water",
+          "role": "aqueous synthesis/process medium",
+          "label": "Milli-Q water",
+          "viewOverrides": {
+            "caption": "Water reference molecule for the aqueous CdTe preparation; source Reagents names Milli-Q water. The reference model does not represent a measured solvent cluster.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        },
+        {
+          "material_id": "mpa",
+          "registry_id": "mercaptopropionic-acid",
+          "role": "stabilizing ligand",
+          "label": "3-Mercaptopropyl acid (source name; MPA)",
+          "viewOverrides": {
+            "caption": "Neutral free 3-mercaptopropionic acid reference only. The source writes 3-mercaptopropyl acid (MPA); Fig. 1a explicitly shows HSCH2CH2COOH, supporting this connectivity. Its pH 11.4 solution/surface-bound protonation and geometry are not represented by the neutral conformer.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chen2010-jf101778t-cdte-sa-conjugation-qd-feed",
+      "record_id": "chen2010-jf101778t-cdte-sa-conjugation",
+      "label": "Purified QD solution",
+      "scope": "200uL feed; medium/fraction not specifically identified. Component references only; no solution-speciation or solvent-count model.",
+      "source": {
+        "data_path": "data/records/chen2010-jf101778t-cdte-sa-conjugation.json",
+        "json_pointer": "/stocks/0",
+        "input_sha256": "9ec0f00c74dc55f92548e9c2fb9bc6fc36a03ba968e73b61e6d3df31ca941ead"
+      },
+      "binding_approved": true,
+      "components": [
+        {
+          "material_id": "cdte-qds",
+          "registry_id": "chen2010-jf101778t-cdte-cdte-qds-source-specimen",
+          "role": "nanocrystal conjugation substrate",
+          "label": "Purified water-soluble CdTe QDs",
+          "viewOverrides": {
+            "caption": "Source QD dispersion produced through purification and used for SA coupling. CdTe names the quantum-dot material, not the complete formula of its ligand-coated aqueous specimen. No exact atomic or ligand-shell structure is assigned.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chen2010-jf101778t-cdte-sa-conjugation-sa-feed",
+      "record_id": "chen2010-jf101778t-cdte-sa-conjugation",
+      "label": "SA solution in PBS",
+      "scope": "200uL SA solution in0.01M PBS pH7.4; varying ratios, no fixedSA concentration. Component references only; no solution-speciation or solvent-count model.",
+      "source": {
+        "data_path": "data/records/chen2010-jf101778t-cdte-sa-conjugation.json",
+        "json_pointer": "/stocks/1",
+        "input_sha256": "9ec0f00c74dc55f92548e9c2fb9bc6fc36a03ba968e73b61e6d3df31ca941ead"
+      },
+      "binding_approved": true,
+      "components": [
+        {
+          "material_id": "streptavidin",
+          "registry_id": "chen2010-jf101778t-cdte-streptavidin-identity",
+          "role": "protein coupling partner",
+          "label": "Streptavidin (SA)",
+          "viewOverrides": {
+            "caption": "Streptavidin (SA) is coupled to purified CdTe QDs by the source active-ester procedure. This identity card supplies no sequence, protein coordinates, oligomer geometry or surface coverage.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        },
+        {
+          "material_id": "pbs",
+          "registry_id": "chen2010-jf101778t-cdte-pbs-mixture",
+          "role": "coupling, redispersion and storage medium",
+          "label": "Phosphate-buffered saline (PBS)",
+          "viewOverrides": {
+            "caption": "Phosphate-buffered saline is a source-named medium for QD washing/redispersion and QDs-SA conjugation/storage. Use the concentration and pH reported for each operation; no complete salt formulation is given.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chen2010-jf101778t-cdte-sa-conjugation-edc-feed",
+      "record_id": "chen2010-jf101778t-cdte-sa-conjugation",
+      "label": "Fresh EDC solution",
+      "scope": "20uL addition; solvent not stated. Component references only; no solution-speciation or solvent-count model.",
+      "source": {
+        "data_path": "data/records/chen2010-jf101778t-cdte-sa-conjugation.json",
+        "json_pointer": "/stocks/2",
+        "input_sha256": "9ec0f00c74dc55f92548e9c2fb9bc6fc36a03ba968e73b61e6d3df31ca941ead"
+      },
+      "binding_approved": true,
+      "components": [
+        {
+          "material_id": "edc",
+          "registry_id": "chen2010-jf101778t-cdte-edc-identity",
+          "role": "coupling reagent",
+          "label": "1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC)",
+          "viewOverrides": {
+            "caption": "The source names EDC and freshly prepared EDC solution. It does not identify a hydrochloride or other salt. This name card assigns no counterion, whole-salt formula or molecular coordinates.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "chen2010-jf101778t-cdte-sa-conjugation-nhs-feed",
+      "record_id": "chen2010-jf101778t-cdte-sa-conjugation",
+      "label": "Fresh sulfo-NHS solution",
+      "scope": "30uL addition; solvent not stated. Component references only; no solution-speciation or solvent-count model.",
+      "source": {
+        "data_path": "data/records/chen2010-jf101778t-cdte-sa-conjugation.json",
+        "json_pointer": "/stocks/3",
+        "input_sha256": "9ec0f00c74dc55f92548e9c2fb9bc6fc36a03ba968e73b61e6d3df31ca941ead"
+      },
+      "binding_approved": true,
+      "components": [
+        {
+          "material_id": "sulfo-nhs",
+          "registry_id": "chen2010-jf101778t-cdte-sulfo-nhs-identity",
+          "role": "coupling reagent",
+          "label": "N-Hydroxysulfosuccinimide sodium salt (sulfo-NHS)",
+          "viewOverrides": {
+            "caption": "Reagents explicitly identifies N-hydroxysulfosuccinimide sodium salt (sulfo-NHS). The conjugation uses freshly prepared sulfo-NHS solution. This is a source-name card without molecular coordinates.",
+            "limitations": [
+              "Reference component only, not measured stock structure."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-sequential-growth-series",
+      "id": "zhong2007-cdte-cdse-jp0709407-te-stock",
+      "label": "Te/TOP/ODE injection solution",
+      "scope": "0.065 g Te in 2 mL TOP plus 2 mL source-abbreviated ODE; dissolution conditions and stock speciation unreported.",
+      "sourceRecordSha256": "644ad402a51ef33d05630d359f70c02143eec757949788855c65db9a06a9f0cb",
+      "source": {
+        "data_path": "data/records/zhong2007-cdte-cdse-jp0709407-sequential-growth-series.json",
+        "json_pointer": "/stocks/0",
+        "input_sha256": "644ad402a51ef33d05630d359f70c02143eec757949788855c65db9a06a9f0cb"
+      },
+      "components": [
+        {
+          "material_id": "te",
+          "registry_id": "zhong2007-cdte-cdse-jp0709407-te-reference",
+          "role": "Elemental Te powder,99.9%, stock starting material; dissolved species unassigned",
+          "viewOverrides": {
+            "name": "Tellurium powder",
+            "caption": "Source Te powder, 99.9%; allotrope unspecified. Reference identity only; no source-measured coordinates or solution species.",
+            "limitations": [
+              "Source Te powder, 99.9%; allotrope unspecified.",
+              "Reference depiction does not assign solution speciation or measured sample geometry."
+            ]
+          }
+        },
+        {
+          "material_id": "top-te",
+          "registry_id": "top",
+          "role": "Reported stock component; not assigned solution speciation",
+          "viewOverrides": {
+            "limitations": [
+              "Component reference only; no dissolved complex geometry is reported."
+            ]
+          }
+        },
+        {
+          "material_id": "ode",
+          "registry_id": "zhong2007-cdte-cdse-jp0709407-ode-identity",
+          "role": "Reported stock component; not assigned solution speciation",
+          "viewOverrides": {
+            "limitations": [
+              "Component reference only; no dissolved complex geometry is reported."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-sequential-growth-series",
+      "id": "zhong2007-cdte-cdse-jp0709407-se-stock",
+      "label": "Se/TOP feed stock",
+      "scope": "1 mmol Se in 3 mL TOP; two injections, but per-injection division of this stock is unresolved.",
+      "sourceRecordSha256": "644ad402a51ef33d05630d359f70c02143eec757949788855c65db9a06a9f0cb",
+      "source": {
+        "data_path": "data/records/zhong2007-cdte-cdse-jp0709407-sequential-growth-series.json",
+        "json_pointer": "/stocks/1",
+        "input_sha256": "644ad402a51ef33d05630d359f70c02143eec757949788855c65db9a06a9f0cb"
+      },
+      "components": [
+        {
+          "material_id": "se",
+          "registry_id": "selenium-element",
+          "role": "Reported stock component; not assigned solution speciation",
+          "viewOverrides": {
+            "limitations": [
+              "Component reference only; no dissolved complex geometry is reported."
+            ]
+          }
+        },
+        {
+          "material_id": "top-se",
+          "registry_id": "top",
+          "role": "Reported stock component; not assigned solution speciation",
+          "viewOverrides": {
+            "limitations": [
+              "Component reference only; no dissolved complex geometry is reported."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-pyridine-exchange",
+      "id": "zhong2007-cdte-cdse-jp0709407-device-ink",
+      "label": "Pyridine-treated nanocrystal ink",
+      "scope": "Chloroform:pyridine 9:1 v/v, 100 mg/mL nanocrystal dispersion. Component references do not establish particle surface coverage or solution structure.",
+      "sourceRecordSha256": "fb1a4b962c6eab3f3dc096e250be84fd774853bdd134a5a64529a0082745ed4d",
+      "source": {
+        "data_path": "data/records/zhong2007-cdte-cdse-jp0709407-pyridine-exchange.json",
+        "json_pointer": "/operations/1",
+        "input_sha256": "fb1a4b962c6eab3f3dc096e250be84fd774853bdd134a5a64529a0082745ed4d"
+      },
+      "components": [
+        {
+          "material_id": "snch",
+          "registry_id": "zhong2007-cdte-cdse-jp0709407-snch-identity",
+          "role": "Nanocrystal identity only; exchanged surface coverage unmeasured",
+          "viewOverrides": {
+            "limitations": [
+              "No particle size, surface coverage or dissolved geometry is inferred."
+            ]
+          }
+        },
+        {
+          "material_id": "chloroform",
+          "registry_id": "chloroform",
+          "role": "Redispersion solvent",
+          "viewOverrides": {
+            "limitations": [
+              "No particle size, surface coverage or dissolved geometry is inferred."
+            ]
+          }
+        },
+        {
+          "material_id": "pyridine",
+          "registry_id": "pyridine",
+          "role": "Redispersion cosolvent",
+          "viewOverrides": {
+            "limitations": [
+              "No particle size, surface coverage or dissolved geometry is inferred."
+            ]
+          }
+        }
+      ]
     }
   ]
 }

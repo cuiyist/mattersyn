@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 1715,
-  "group_count": 178,
+  "record_count": 1726,
+  "group_count": 181,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -68,6 +68,7 @@
     "CdSe–polythiophene composite",
     "CdTe nanocrystals grown on oxidized multiwalled carbon nanotubes",
     "CdTe quantum dots and peptide-functionalized gold probes",
+    "CdTe–CdSe branched colloidal nanocrystal heterostructures",
     "Ceria precipitation with triethanolamine",
     "Ceria sols and stabilization contexts",
     "Cerium dioxide nanocrystals",
@@ -152,10 +153,12 @@
     "Nonstoichiometric copper telluride nanocrystallites",
     "Nonstoichiometric copper telluride phase assemblage",
     "Oleic-acid-capped barium titanate nanocrystals",
+    "P3HT–CdTe–CdSe optical films",
     "PEO/PAA polymer-capped Ag nanocrystal clusters",
     "PbS nanocrystals",
     "PbS nanostructures",
     "PbS quantum dots and TiO2 nanotube photocatalysts",
+    "PbTe quantum dots embedded in SiO2",
     "PbTe/Ag2Te binary nanocrystal superlattices",
     "Phosphine-selenide precursor chemistry and CdSe/PbSe nanocrystals",
     "Polymer-stabilized CdS and related source procedures",
@@ -233,6 +236,7 @@
     "optical and calculated reference contexts",
     "polyol silver nanocrystal rods and nanohexapods",
     "quaternary chalcogenide nanocrystals",
+    "semiconductor quantum dots",
     "silver nanoparticle/carbon quantum dot nanocomposite",
     "silver/silica nanoparticle with adsorbed quantum dots",
     "solventless metal sulfide nanocrystals",
@@ -121305,7 +121309,7 @@
       "record_type": "literature_protocol",
       "source_year": 2022,
       "source_doi": "10.1021/acssuschemeng.2c02981",
-      "revision": 4,
+      "revision": 5,
       "record_sha256": "c933cafa415f8b1ac32c7a5d96f7566fd1203d4e4bdda294928b0adb88d6c7e7",
       "recipe_signature": "8ebabe2ce0c103524bc2cea0b2f380c54099f519664f77d56f62b1737db3517f",
       "group_id": "group-5d3701e60c1a",
@@ -122238,6 +122242,792 @@
       "collection": "reviewed_literature",
       "components": [
         "CdTe"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "chen2010-jf101778t-cdte-aqueous-reflux",
+      "title": "Chen et al. (2010): MPA-stabilized aqueous CdTe QDs",
+      "formula": "CdTe",
+      "family": "semiconductor quantum dots",
+      "method": "Aqueous NaHTe addition and reflux; two-stage ultrafiltration",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/jf101778t",
+      "revision": 3,
+      "record_sha256": "e7758062339d04e5918408031ab41751b65b9e813d2f522241cb77f457471a64",
+      "recipe_signature": "8b50f31d5d091cad3623bf0e95182b07ebfdaeacbec1e7cc45a2cd058079e2ea",
+      "group_id": "group-4cf6a0a876c9",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/chen2010-jf101778t-cdte-aqueous-reflux.json",
+      "page_url": "records/chen2010-jf101778t-cdte-aqueous-reflux.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "chen2010-jf101778t-cdte-sa-conjugation",
+      "title": "Chen et al. (2010): CdTe QD–streptavidin conjugation and condition series",
+      "formula": "CdTe",
+      "family": "semiconductor quantum dots",
+      "method": "Active-ester coupling with EDC/sulfo-NHS and ultrafiltration",
+      "record_type": "procedure",
+      "source_year": 2010,
+      "source_doi": "10.1021/jf101778t",
+      "revision": 3,
+      "record_sha256": "4e97a7f4ab0c0c339b6bc9b59e0629e1d50a8fe30f51220267043c1354e39d30",
+      "recipe_signature": "a73a3ef3dd14bf88d69454c34af57cee3edbc5cc950e346648506c1435fdb212",
+      "group_id": "group-4cf6a0a876c9",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/chen2010-jf101778t-cdte-sa-conjugation.json",
+      "page_url": "records/chen2010-jf101778t-cdte-sa-conjugation.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "rodriguez2005-pbte-sio2-1-1887823-11-bilayers",
+      "title": "Rodríguez et al. (2005): 11 PbTe/SiO2 bilayers on Si (100)",
+      "formula": "PbTe",
+      "family": "PbTe quantum dots embedded in SiO2",
+      "method": "Alternating pulsed laser deposition (PLD) of PbTe and plasma enhanced chemical vapor deposition (PECVD) of SiO2",
+      "record_type": "literature_protocol",
+      "source_year": 2005,
+      "source_doi": "10.1063/1.1887823",
+      "revision": 3,
+      "record_sha256": "77388f8ed86a9f8a26216437eb7005dd94f88cf8e922811802fb2776a0061d9a",
+      "recipe_signature": "2bf03bc68c0d923be8710382fe28274d69a61f477ecee303028c509f82168294",
+      "group_id": "group-5e31696c61d7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/rodriguez2005-pbte-sio2-1-1887823-11-bilayers.json",
+      "page_url": "records/rodriguez2005-pbte-sio2-1-1887823-11-bilayers.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbTe",
+        "SiO2"
+      ],
+      "pair_ids": [
+        "rodriguez2005-pbte-sio2-1-1887823-11-bilayers::film-11"
+      ]
+    },
+    {
+      "record_id": "rodriguez2005-pbte-sio2-1-1887823-60-bilayers",
+      "title": "Rodríguez et al. (2005): 60 PbTe/SiO2 bilayers on BK7 for absorption",
+      "formula": "PbTe",
+      "family": "PbTe quantum dots embedded in SiO2",
+      "method": "Alternating pulsed laser deposition (PLD) of PbTe and plasma enhanced chemical vapor deposition (PECVD) of SiO2",
+      "record_type": "literature_protocol",
+      "source_year": 2005,
+      "source_doi": "10.1063/1.1887823",
+      "revision": 3,
+      "record_sha256": "228eb4e32ee315c7179de1a071675cea53a11465a6ed44fe0f12a2eb63cadc79",
+      "recipe_signature": "0709aacf07d1ea4db1b7fd55dedf031276a42acd0f1852702dcfe0c47fc9b28a",
+      "group_id": "group-5e31696c61d7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/rodriguez2005-pbte-sio2-1-1887823-60-bilayers.json",
+      "page_url": "records/rodriguez2005-pbte-sio2-1-1887823-60-bilayers.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbTe",
+        "SiO2"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "rodriguez2005-pbte-sio2-1-1887823-sandwich-series",
+      "title": "Rodríguez et al. (2005): PbTe sandwich specimens at 20, 30 and 40 s PLD",
+      "formula": "PbTe",
+      "family": "PbTe quantum dots embedded in SiO2",
+      "method": "Alternating pulsed laser deposition (PLD) of PbTe and plasma enhanced chemical vapor deposition (PECVD) of SiO2",
+      "record_type": "literature_protocol",
+      "source_year": 2005,
+      "source_doi": "10.1063/1.1887823",
+      "revision": 3,
+      "record_sha256": "d72cc6bd4a47eb9ba388a2b838464f108557fea73987dde4f48c43cebc4b26df",
+      "recipe_signature": "cde050af326972aa591f3eb70157241f1b497fb73e116c8728a4db3f883bd6f2",
+      "group_id": "group-5e31696c61d7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/rodriguez2005-pbte-sio2-1-1887823-sandwich-series.json",
+      "page_url": "records/rodriguez2005-pbte-sio2-1-1887823-sandwich-series.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbTe",
+        "SiO2"
+      ],
+      "pair_ids": [
+        "rodriguez2005-pbte-sio2-1-1887823-sandwich-series::sandwich-30s"
+      ]
+    },
+    {
+      "record_id": "rodriguez2005-pbte-sio2-1-1887823-silica-background",
+      "title": "Rodríguez et al. (2005): SiO2 optical-background reference film",
+      "formula": "SiO2",
+      "family": "supporting silica reference film",
+      "method": "PECVD silica background deposition",
+      "record_type": "procedure",
+      "source_year": 2005,
+      "source_doi": "10.1063/1.1887823",
+      "revision": 3,
+      "record_sha256": "e22a4e2dd0bddabf3b32009e46620aa79923df9807a7e0f47d62ae64f4941fb9",
+      "recipe_signature": "f68d3b0bab87e5bef1443268f0c657944eac2765e0f847836917e2425b64c7ae",
+      "group_id": "group-5e31696c61d7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/rodriguez2005-pbte-sio2-1-1887823-silica-background.json",
+      "page_url": "records/rodriguez2005-pbte-sio2-1-1887823-silica-background.html",
+      "missing_field_count": 3,
+      "collection": "reviewed_literature",
+      "components": [
+        "SiO2"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-hybrid-device-90wt",
+      "title": "Zhong et al. (2007): P3HT/90 wt% nanocrystal photovoltaic device",
+      "formula": "P3HT/CdTe/CdSe device",
+      "family": "CdTe–CdSe nanocrystal photovoltaic devices",
+      "method": "P3HT/90 wt% nanocrystal photovoltaic device",
+      "record_type": "procedure",
+      "source_year": 2007,
+      "source_doi": "10.1021/jp0709407",
+      "revision": 4,
+      "record_sha256": "ba2d05c6abcea0ca128362a89938cacb634042c94be35a41e68ff0b6ac0b792c",
+      "recipe_signature": "7fd22e83cac7c4e68733d9a4497c43cde5f621e823d5029cbbff16d7ff5a48b9",
+      "group_id": "group-40f61f4d0bd7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhong2007-cdte-cdse-jp0709407-hybrid-device-90wt.json",
+      "page_url": "records/zhong2007-cdte-cdse-jp0709407-hybrid-device-90wt.html",
+      "missing_field_count": 1,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe",
+        "CdSe"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-optical-blend-films",
+      "title": "Zhong et al. (2007): P3HT/nanocrystal optical blend comparisons",
+      "formula": "P3HT/CdTe/CdSe",
+      "family": "P3HT–CdTe–CdSe optical films",
+      "method": "P3HT/nanocrystal optical blend comparisons",
+      "record_type": "observation",
+      "source_year": 2007,
+      "source_doi": "10.1021/jp0709407",
+      "revision": 4,
+      "record_sha256": "464917adc50648f5f13680dc3accc6cbcfee65575aa43bce957c6c30a50dcb7d",
+      "recipe_signature": "d120daa47948d9fa14fdbb707492038c9cf67f0dd69687c1e7f989021371ccca",
+      "group_id": "group-40f61f4d0bd7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhong2007-cdte-cdse-jp0709407-optical-blend-films.json",
+      "page_url": "records/zhong2007-cdte-cdse-jp0709407-optical-blend-films.html",
+      "missing_field_count": 1,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe",
+        "CdSe"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-pyridine-exchange",
+      "title": "Zhong et al. (2007): pyridine ligand exchange for device preparation",
+      "formula": "CdTe/CdSe",
+      "family": "CdTe–CdSe branched colloidal nanocrystal heterostructures",
+      "method": "pyridine ligand exchange for device preparation",
+      "record_type": "procedure",
+      "source_year": 2007,
+      "source_doi": "10.1021/jp0709407",
+      "revision": 2,
+      "record_sha256": "854d6360849ec57713ee5fc1f61f45dfe8bfedc30d412f52dd8b67f39aaca8e9",
+      "recipe_signature": "e0b53a258d5a4f49b0a21f4787546a195cd99831d1789aeae4a459fe8bc3609e",
+      "group_id": "group-40f61f4d0bd7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhong2007-cdte-cdse-jp0709407-pyridine-exchange.json",
+      "page_url": "records/zhong2007-cdte-cdse-jp0709407-pyridine-exchange.html",
+      "missing_field_count": 1,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe",
+        "CdSe"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-sequential-growth-series",
+      "title": "Zhong et al. (2007): sequential CdTe seed and CdSe branch growth",
+      "formula": "CdTe/CdSe",
+      "family": "CdTe–CdSe branched colloidal nanocrystal heterostructures",
+      "method": "sequential CdTe seed and CdSe branch growth",
+      "record_type": "literature_protocol",
+      "source_year": 2007,
+      "source_doi": "10.1021/jp0709407",
+      "revision": 4,
+      "record_sha256": "53a2d5a198caa7258a1bea27696b522a50cdcff6ff10faf4e43d35fd9f4b4264",
+      "recipe_signature": "cae583081c81c542506bd8a76fa23d8d6ac687679d164ddbeae36d6b77370ba2",
+      "group_id": "group-40f61f4d0bd7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhong2007-cdte-cdse-jp0709407-sequential-growth-series.json",
+      "page_url": "records/zhong2007-cdte-cdse-jp0709407-sequential-growth-series.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe",
+        "CdSe"
+      ],
+      "pair_ids": [
+        "zhong2007-cdte-cdse-jp0709407-sequential-growth-series::zhong2007-cdte-cdse-jp0709407-first-se",
+        "zhong2007-cdte-cdse-jp0709407-sequential-growth-series::zhong2007-cdte-cdse-jp0709407-second-se",
+        "zhong2007-cdte-cdse-jp0709407-sequential-growth-series::zhong2007-cdte-cdse-jp0709407-seed"
+      ]
+    },
+    {
+      "record_id": "zhong2007-cdte-cdse-jp0709407-single-snch-device",
+      "title": "Zhong et al. (2007): single-component nanocrystal photovoltaic device",
+      "formula": "CdTe/CdSe device",
+      "family": "CdTe–CdSe nanocrystal photovoltaic devices",
+      "method": "single-component nanocrystal photovoltaic device",
+      "record_type": "procedure",
+      "source_year": 2007,
+      "source_doi": "10.1021/jp0709407",
+      "revision": 4,
+      "record_sha256": "7745a68cf7f38c252d00d1b95f117c30dfd993c453c6442fb43487d28cbcbfa7",
+      "recipe_signature": "b9836060a72fdf78da08901d308298b8626006bbe556af1eca576e09068bb700",
+      "group_id": "group-40f61f4d0bd7",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhong2007-cdte-cdse-jp0709407-single-snch-device.json",
+      "page_url": "records/zhong2007-cdte-cdse-jp0709407-single-snch-device.html",
+      "missing_field_count": 2,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe",
+        "CdSe"
       ],
       "pair_ids": []
     }
