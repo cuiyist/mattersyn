@@ -72,6 +72,21 @@ def material_elements(r):
         raise ValueError(f"Reviewed synthesis route {r['record_id']} needs an explicit valid element list for material {formula!r}; it must not disappear from the atlas.")
     return elements
 
+def direct_material_element_index(records):
+    # A declared direct material can resolve its exact component identity even
+    # when the label is an acronym. Collect before linking, independent of order.
+    elements_by_formula={}
+    for record in records:
+        if synthesis_route(record):
+            elements_by_formula.setdefault(record['material']['formula'],set()).update(material_elements(record))
+    return {formula:sorted(elements) for formula,elements in elements_by_formula.items()}
+
+def component_elements(component,direct_elements):
+    elements=COMPONENT_ELEMENTS.get(component,re.findall('[A-Z][a-z]?',component))
+    if not elements or not set(elements)<=SYMBOLS:
+        elements=direct_elements.get(component,[])
+    return elements
+
 def component_contribution_role(architecture):
     if architecture=='phase_mixture':return 'component_of_phase_mixture'
     if architecture in ('core_shell','heterostructure'):return 'component_of_heterostructure'
@@ -90,6 +105,7 @@ def main():
     source=ROOT/'data/corpus/library-source.json'
     corpus=read(source) if source.exists() else {'summary':{},'papers':[]}
     records=[read(p) for p in sorted((ROOT/'data/records').glob('*.json'))]
+    direct_elements=direct_material_element_index(records)
     full_reviews={c['doi'].lower():c for c in [read(p) for p in (ROOT/'data/paper-reviews').glob('*.json')]}
     papers={p['doi'].lower():p for p in corpus['papers'] if p.get('doi') and p['coverage']['localDocumentCount']>0}
     materials={}
@@ -111,7 +127,7 @@ def main():
         if m is None:continue
         m['record_ids'].add(r['record_id']);m['direct_record_ids'].add(r['record_id']);m['architectures'].add(r['material'].get('architecture','single_material'));m['paper_dois'].add(doi)
         for component in r['material'].get('components',[f]):
-            c=ensure(component,COMPONENT_ELEMENTS.get(component,re.findall('[A-Z][a-z]?',component)))
+            c=ensure(component,component_elements(component,direct_elements))
             if c:
                 c['record_ids'].add(r['record_id']);c['paper_dois'].add(doi)
                 if component != f:c['component_architectures'].add(r['material'].get('architecture','single_material'))
