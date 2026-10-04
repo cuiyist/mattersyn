@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "krueger2005-cdse-ac0481912-thiol-c8",
+  "revision": 2,
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Krueger et al. (2005): CdSe8 Octanethiol treatment",
+  "material": {
+    "formula": "CdSe",
+    "family": "Cadmium selenide nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material",
+    "source_notation": "CdSe"
+  },
+  "method": "Alternative surface capping",
+  "sources": [
+    {
+      "id": "krueger2005-cdse-ac0481912",
+      "doi": "10.1021/ac0481912",
+      "title": "Characterization of Nanocrystalline CdSe by Size Exclusion Chromatography",
+      "authors": "Karl M. Krueger; Ali M. Al-Somali; Joshua C. Falkner; Vicki L. Colvin",
+      "year": 2005,
+      "url": "https://doi.org/10.1021/ac0481912",
+      "main_status": "Local main PDF pp.1-5 text read and pp.2-5 visually inspected. Separate exact-hash full-audit receipt establishes independent acceptance.",
+      "si_status": "SI described on p.5 as expanded calibration plot only; absent from candidate group and local filename search; not reviewed. No source download.",
+      "reuse_status": "American Chemical Society 2005; source-figure reuse permission/license not verified."
+    }
+  ],
+  "lineage": {
+    "source_group": "krueger2005-cdse-ac0481912",
+    "recipe_family": "krueger2005-cdse-ac0481912",
+    "parent_record_id": "krueger2005-cdse-ac0481912-thiol-series",
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.2 / printed 3512, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.2 / printed 3512, Experimental Section"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.2 / printed 3512, Experimental Section"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "quantum dots",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.2 / printed 3512, Experimental Section"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "c8",
+      "name": "Octanethiol",
+      "formula": "C8H18S",
+      "role": "alternative surface ligand",
+      "stage": "surface_exchange",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "dose": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "krueger2005-cdse-ac0481912",
+              "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Main PDF p.2 Chemicals: purchased from Aldrich and used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.2 / printed 3512, Experimental Section; Chemicals and preparation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "cdse8-input",
+      "name": "CdSe8 core sample, preparation run not specified",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "capped-c8",
+      "name": "Alternative Octanethiol cap output",
+      "kind": "mixture",
+      "parent_ids": [
+        "cdse8-input",
+        "c8"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "cap-c8",
+      "action": "cap_c8",
+      "label": "Alternative Octanethiol cap",
+      "stage": "surface_exchange",
+      "branch": "c8",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse8-input",
+        "c8"
+      ],
+      "outputs": [
+        "capped-c8"
+      ],
+      "parameters": {
+        "dose": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "krueger2005-cdse-ac0481912",
+              "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "krueger2005-cdse-ac0481912",
+              "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Alternative ligand on same reported CdSe8 core size. Full ligand-specific treatment conditions not restated; do not inherit the typical dodecanethiol dose.",
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [
+    {
+      "id": "c8",
+      "label": "Octanethiol",
+      "chemical_material_id": "c8",
+      "parameters": {
+        "chain_carbon_count": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "carbon atoms",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8",
+          "evidence": [
+            {
+              "source_id": "krueger2005-cdse-ac0481912",
+              "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7; Figure 6"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "sample_id": "CdSe8-c8",
+      "source_sample_label": "Figure 6 D",
+      "batch_id": null,
+      "material_state_id": "capped-c8",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Octanethiol treated",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+        }
+      ],
+      "notes": [
+        "Same 3.56-nm source core size; preparation batch and ligand dose not established."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "krueger2005-cdse-ac0481912-c8-core",
+      "sample_id": "CdSe8-c8",
+      "property": "core diameter used for ligand-length analysis",
+      "technique": "TEM/source context",
+      "value": {
+        "value": 3.56,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.56",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+        }
+      ]
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-c8-length",
+      "sample_id": "CdSe8-c8",
+      "property": "deduced thiol length",
+      "technique": "HPSEC",
+      "value": {
+        "value": 9.7,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "9.7",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Hydrodynamic diameter converted via calibration; core size subtracted. Not a measured molecular coordinate. Figure 6a thiol-comparison chromatograms were monitored at 565 nm; this is an acquisition wavelength, not a new optical peak measurement.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+        }
+      ]
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-c8-stability",
+      "sample_id": "CdSe8-c8",
+      "property": "dispersion stability",
+      "technique": "qualitative",
+      "value": {
+        "value": "good stability",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "krueger2005-cdse-ac0481912",
+            "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "No numerical stability duration supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "krueger2005-cdse-ac0481912",
+          "locator": "Main PDF p.4 / printed 3514, Table 1 and Figures 5-7"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main PDF pp.1-5; all main preparation branches and associated samples/figures extracted. Referenced prior papers and unavailable SI calibration enlargement excluded. Independent acceptance is recorded only in the separate exact-hash full-audit receipt.",
+    "missing_fields": [
+      "No crystallographic phase or atomic coordinates reported in inspected main text.",
+      "No per-sample growth times linking typical preparation to Table 1 CdSe1-CdSe8.",
+      "Related SI calibration enlargement unavailable locally; no new calibration values inferred.",
+      "Source calls alternatives hexanethiol, octanethiol, decanethiol, octadecanethiol and long-chain thiols; terminal linear reference identity is a qualified interpretation consistent with chain labels; no purity/isomer analysis supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original article",
+      "url": "https://doi.org/10.1021/ac0481912",
+      "relation": "primary_source"
+    }
+  ],
+  "collection": "reviewed_literature"
+}

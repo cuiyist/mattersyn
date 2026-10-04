@@ -19056,6 +19056,814 @@
           }
         }
       ]
+    },
+    {
+      "record_id": "krueger2005-cdse-ac0481912-hpsec",
+      "id": "krueger2005-cdse-ac0481912-hpsec-mobile-phase-stock",
+      "label": "0.1 M TOP in toluene",
+      "scope": "Analytical mobile phase, distinct from selenium injection stock",
+      "components": [
+        {
+          "material_id": "top",
+          "registry_id": "top",
+          "role": "mobile-phase additive",
+          "label": "Trioctylphosphine",
+          "viewOverrides": {
+            "caption": "Analytical mobile phase, distinct from selenium injection stock Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        },
+        {
+          "material_id": "toluene",
+          "registry_id": "toluene",
+          "role": "mobile-phase solvent",
+          "label": "Toluene",
+          "viewOverrides": {
+            "caption": "Analytical mobile phase, distinct from selenium injection stock Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        }
+      ],
+      "source_record_sha256": "727d2e9e3a54e8e96a9a2178c407400aba8602c5ec9d73929a11431102a96416"
+    },
+    {
+      "record_id": "krueger2005-cdse-ac0481912-mixed-shapes",
+      "id": "krueger2005-cdse-ac0481912-mixed-shapes-se-feed",
+      "label": "Selenium/TOP stock",
+      "scope": "Four 0.25-mL injections; not asserted that entire stock mass was transferred.",
+      "components": [
+        {
+          "material_id": "se",
+          "registry_id": "selenium-element",
+          "role": "selenium-stock starting material",
+          "label": "Selenium powder",
+          "viewOverrides": {
+            "caption": "Four 0.25-mL injections; not asserted that entire stock mass was transferred. Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        },
+        {
+          "material_id": "top",
+          "registry_id": "top",
+          "role": "selenium-stock and mobile-phase component",
+          "label": "Trioctylphosphine",
+          "viewOverrides": {
+            "caption": "Four 0.25-mL injections; not asserted that entire stock mass was transferred. Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        }
+      ],
+      "source_record_sha256": "b5c1154ed49d8f0e61f07a19fd23c2ddd68fd3378a8f9e4e70afc3c1b826caf9"
+    },
+    {
+      "record_id": "krueger2005-cdse-ac0481912-ode-dots",
+      "id": "krueger2005-cdse-ac0481912-ode-dots-se-feed",
+      "label": "Selenium/TOP/ODE injection stock",
+      "scope": "Stock charge; no measured final volume or concentration.",
+      "components": [
+        {
+          "material_id": "se",
+          "registry_id": "selenium-element",
+          "role": "selenium stock starting material",
+          "label": "Selenium powder",
+          "viewOverrides": {
+            "caption": "Stock charge; no measured final volume or concentration. Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        },
+        {
+          "material_id": "top",
+          "registry_id": "top",
+          "role": "selenium-stock component",
+          "label": "Trioctylphosphine",
+          "viewOverrides": {
+            "caption": "Stock charge; no measured final volume or concentration. Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        },
+        {
+          "material_id": "ode",
+          "registry_id": "1-octadecene",
+          "role": "reaction solvent, selenium-stock solvent and quench medium",
+          "label": "1-Octadecene",
+          "viewOverrides": {
+            "caption": "Stock charge; no measured final volume or concentration. Independent component reference; no measured solution species or stock geometry.",
+            "limitations": [
+              "Component reference only; stock speciation unmeasured."
+            ]
+          }
+        }
+      ],
+      "source_record_sha256": "c5260d8b6a85bed975f990e3f6130c0b7394ebbf1bde60e1d5fcf42c55d4a897"
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cds-growth-cdcl2-stock",
+      "record_id": "jie2007-cds-au-ac062357c-cds-growth",
+      "label": "Cadmium chloride solution",
+      "scope": "Stock preparation is not separately described; 100 mL is the delivered solution volume, not extra water.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-cdcl2-identity",
+          "role": "Cadmium precursor",
+          "viewOverrides": {
+            "name": "Cadmium chloride",
+            "caption": "Stock preparation is not separately described; 100 mL is the delivered solution volume, not extra water.",
+            "limitations": [
+              "Hydration and reagent grade unreported.",
+              "No additional solvent volume inferred from delivered solution volume."
+            ]
+          }
+        },
+        {
+          "registry_id": "water",
+          "role": "Aqueous medium",
+          "viewOverrides": {
+            "name": "Doubly distilled water",
+            "caption": "Stock preparation is not separately described; 100 mL is the delivered solution volume, not extra water.",
+            "limitations": [
+              "Doubly distilled water used throughout; no separate make-up volume reported.",
+              "No additional solvent volume inferred from delivered solution volume."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-cds-growth.json",
+        "json_pointer": "/stocks/0",
+        "input_sha256": "907db5e9e31ce68fed97e8409d7157d8d8914462f526598912d21787ee46abff"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cds-growth-na2s-stock",
+      "record_id": "jie2007-cds-au-ac062357c-cds-growth",
+      "label": "Sodium sulfide feed",
+      "scope": "50 mL delivered solution; stock preparation and hydration unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-na2s-identity",
+          "role": "Sulfide precursor",
+          "viewOverrides": {
+            "name": "Sodium sulfide",
+            "caption": "50 mL delivered solution; stock preparation and hydration unreported.",
+            "limitations": [
+              "Hydration state unreported.",
+              "No additional solvent volume inferred from delivered solution volume."
+            ]
+          }
+        },
+        {
+          "registry_id": "water",
+          "role": "Aqueous medium",
+          "viewOverrides": {
+            "name": "Doubly distilled water",
+            "caption": "50 mL delivered solution; stock preparation and hydration unreported.",
+            "limitations": [
+              "Doubly distilled water used throughout; no separate make-up volume reported.",
+              "No additional solvent volume inferred from delivered solution volume."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-cds-growth.json",
+        "json_pointer": "/stocks/1",
+        "input_sha256": "907db5e9e31ce68fed97e8409d7157d8d8914462f526598912d21787ee46abff"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cds-growth-naoh-formulation",
+      "record_id": "jie2007-cds-au-ac062357c-cds-growth",
+      "label": "NaOH pH-adjustment solution",
+      "scope": "0.5 mol/L NaOH for approximately pH 11. Dose and separate solvent formulation are unreported.",
+      "components": [
+        {
+          "registry_id": "sodium-hydroxide",
+          "role": "pH adjustment",
+          "viewOverrides": {
+            "name": "Sodium hydroxide",
+            "caption": "0.5 mol/L NaOH for approximately pH 11. Dose and separate solvent formulation are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-cds-growth.json",
+        "json_pointer": "/materials/2",
+        "input_sha256": "907db5e9e31ce68fed97e8409d7157d8d8914462f526598912d21787ee46abff"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cds-growth-optical-medium",
+      "record_id": "jie2007-cds-au-ac062357c-cds-growth",
+      "label": "CdS optical medium",
+      "scope": "0.1 mol/L PBS, pH 7.4 for Figure 3. PBS component salts and optical aliquot concentration are not specified.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-pbs-identity",
+          "role": "Optical measurement medium",
+          "viewOverrides": {
+            "name": "Phosphate-buffered saline (PBS)",
+            "caption": "0.1 mol/L PBS, pH 7.4 for Figure 3. PBS component salts and optical aliquot concentration are not specified.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-cds-growth.json",
+        "json_pointer": "/materials/6",
+        "input_sha256": "907db5e9e31ce68fed97e8409d7157d8d8914462f526598912d21787ee46abff"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-au-citrate-gold-feed",
+      "record_id": "jie2007-cds-au-ac062357c-au-citrate",
+      "label": "Gold precursor solution",
+      "scope": "100 mL solution containing 0.01 g HAuCl4·4H2O. A separate solvent amount and solution speciation are not reported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-haucl4-identity",
+          "role": "Gold precursor",
+          "viewOverrides": {
+            "name": "Tetrachloroauric acid tetrahydrate",
+            "caption": "100 mL solution containing 0.01 g HAuCl4·4H2O. A separate solvent amount and solution speciation are not reported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-au-citrate.json",
+        "json_pointer": "/materials/0",
+        "input_sha256": "91dcc29b93ee2d3b036442db0aa055c4159187b5b562399654729e082691ec18"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-au-citrate-citrate-feed",
+      "record_id": "jie2007-cds-au-ac062357c-au-citrate",
+      "label": "Sodium citrate feed",
+      "scope": "3 mL of 1% sodium citrate solution. Percentage basis, citrate form/hydration and separate solvent formulation remain unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-citrate-identity",
+          "role": "Reducing/stabilizing reagent",
+          "viewOverrides": {
+            "name": "Sodium citrate, form unspecified",
+            "caption": "3 mL of 1% sodium citrate solution. Percentage basis, citrate form/hydration and separate solvent formulation remain unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-au-citrate.json",
+        "json_pointer": "/materials/1",
+        "input_sha256": "91dcc29b93ee2d3b036442db0aa055c4159187b5b562399654729e082691ec18"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-biological-inputs-blood-edta-formulation",
+      "record_id": "jie2007-cds-au-ac062357c-biological-inputs",
+      "label": "Blood collection with EDTA",
+      "scope": "Final EDTA concentration 1 mg/mL blood; processed within 2 h in semidarkness. EDTA salt form not specified.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-blood-identity",
+          "role": "LDL source",
+          "viewOverrides": {
+            "name": "Human blood specimen",
+            "caption": "Final EDTA concentration 1 mg/mL blood; processed within 2 h in semidarkness. EDTA salt form not specified.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-edta-identity",
+          "role": "Blood collection additive",
+          "viewOverrides": {
+            "name": "Ethylenediaminetetraacetate (EDTA), form unspecified",
+            "caption": "Final EDTA concentration 1 mg/mL blood; processed within 2 h in semidarkness. EDTA salt form not specified.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-biological-inputs.json",
+        "json_pointer": "/operations/0",
+        "input_sha256": "07814495873b0a2f4917952aa194950f9f8c80889da75abdf48294c7a99f018f"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-biological-inputs-dialysis-formulation",
+      "record_id": "jie2007-cds-au-ac062357c-biological-inputs",
+      "label": "LDL dialysis medium",
+      "scope": "50 mM phosphate buffer pH 7.4 with 0.15 M NaCl and 0.1 mM EDTA; 4 °C, 24 h. Buffer component salts, bath volume and membrane specification unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-phosphate-identity",
+          "role": "Dialysis medium",
+          "viewOverrides": {
+            "name": "Phosphate buffer",
+            "caption": "50 mM phosphate buffer pH 7.4 with 0.15 M NaCl and 0.1 mM EDTA; 4 °C, 24 h. Buffer component salts, bath volume and membrane specification unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "sodium-chloride",
+          "role": "Dialysis medium additive",
+          "viewOverrides": {
+            "name": "Sodium chloride",
+            "caption": "50 mM phosphate buffer pH 7.4 with 0.15 M NaCl and 0.1 mM EDTA; 4 °C, 24 h. Buffer component salts, bath volume and membrane specification unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-edta-identity",
+          "role": "Dialysis medium additive",
+          "viewOverrides": {
+            "name": "Ethylenediaminetetraacetate (EDTA), form unspecified",
+            "caption": "50 mM phosphate buffer pH 7.4 with 0.15 M NaCl and 0.1 mM EDTA; 4 °C, 24 h. Buffer component salts, bath volume and membrane specification unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-biological-inputs.json",
+        "json_pointer": "/operations/3",
+        "input_sha256": "07814495873b0a2f4917952aa194950f9f8c80889da75abdf48294c7a99f018f"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-biological-inputs-prepared-ldl-stock",
+      "record_id": "jie2007-cds-au-ac062357c-biological-inputs",
+      "label": "Prepared LDL stock in PBS",
+      "scope": "After unspecified sterilization, LDL stocks prepared using PBS pH 7.4 and stored at 4 °C. Final LDL concentration and storage duration are unreported; purchased stock is a separate source entry.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-ldl-identity",
+          "role": "Prepared LDL stock component",
+          "viewOverrides": {
+            "name": "Low-density lipoprotein",
+            "caption": "After unspecified sterilization, LDL stocks prepared using PBS pH 7.4 and stored at 4 °C. Final LDL concentration and storage duration are unreported; purchased stock is a separate source entry.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-pbs-identity",
+          "role": "LDL stock medium",
+          "viewOverrides": {
+            "name": "Phosphate-buffered saline",
+            "caption": "After unspecified sterilization, LDL stocks prepared using PBS pH 7.4 and stored at 4 °C. Final LDL concentration and storage duration are unreported; purchased stock is a separate source entry.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-biological-inputs.json",
+        "json_pointer": "/operations/4",
+        "input_sha256": "07814495873b0a2f4917952aa194950f9f8c80889da75abdf48294c7a99f018f"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-biological-inputs-purchased-ldl-stock",
+      "record_id": "jie2007-cds-au-ac062357c-biological-inputs",
+      "label": "Purchased LDL stock",
+      "scope": "Purchased LDL reported as 6.7 mg/mL; solvent and exact allocation relative to locally isolated LDL are unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-ldl-identity",
+          "role": "Purchased LDL stock component",
+          "viewOverrides": {
+            "name": "Low-density lipoprotein",
+            "caption": "Purchased LDL reported as 6.7 mg/mL; solvent and exact allocation relative to locally isolated LDL are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-biological-inputs.json",
+        "json_pointer": "/materials/5",
+        "input_sha256": "07814495873b0a2f4917952aa194950f9f8c80889da75abdf48294c7a99f018f"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-biological-inputs-purchased-apob-stock",
+      "record_id": "jie2007-cds-au-ac062357c-biological-inputs",
+      "label": "Purchased apoB-100 stock",
+      "scope": "Purchased apoB-100 reported as 4.8 mg/mL; solvent and allocation relative to thrombin-generated fragments are unresolved.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-apob-identity",
+          "role": "Binding-protein input",
+          "viewOverrides": {
+            "name": "Apolipoprotein B-100",
+            "caption": "Purchased apoB-100 reported as 4.8 mg/mL; solvent and allocation relative to thrombin-generated fragments are unresolved.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-biological-inputs.json",
+        "json_pointer": "/materials/6",
+        "input_sha256": "07814495873b0a2f4917952aa194950f9f8c80889da75abdf48294c7a99f018f"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-biological-inputs-thrombin-digestion",
+      "record_id": "jie2007-cds-au-ac062357c-biological-inputs",
+      "label": "LDL digestion mixture",
+      "scope": "1 mg LDL; thrombin enzyme/substrate 1:100 w/w; 36 h at room temperature. Digestion solvent, volume, purification and exact loaded fragment identity are unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-ldl-identity",
+          "role": "Digestion substrate",
+          "viewOverrides": {
+            "name": "Low-density lipoprotein",
+            "caption": "1 mg LDL; thrombin enzyme/substrate 1:100 w/w; 36 h at room temperature. Digestion solvent, volume, purification and exact loaded fragment identity are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-thrombin-identity",
+          "role": "Digestion enzyme",
+          "viewOverrides": {
+            "name": "Thrombin",
+            "caption": "1 mg LDL; thrombin enzyme/substrate 1:100 w/w; 36 h at room temperature. Digestion solvent, volume, purification and exact loaded fragment identity are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-biological-inputs.json",
+        "json_pointer": "/operations/5",
+        "input_sha256": "07814495873b0a2f4917952aa194950f9f8c80889da75abdf48294c7a99f018f"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-cleaning-acid",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "Electrochemical cleaning solution",
+      "scope": "0.5 M H2SO4; scan 0.3–1.5 V until reproducible CV. No pH value or solution volume stated.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-sulfuric-identity",
+          "role": "Electrochemical cleaning electrolyte",
+          "viewOverrides": {
+            "name": "Sulfuric acid",
+            "caption": "0.5 M H2SO4; scan 0.3–1.5 V until reproducible CV. No pH value or solution volume stated.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/2",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-cysteamine-solution",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "Deoxygenated cysteamine solution",
+      "scope": "0.02 mol/L deoxygenated aqueous cysteamine; 20 h in darkness at room temperature. Immersion volume is unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-cysteamine-identity",
+          "role": "Surface linker",
+          "viewOverrides": {
+            "name": "Cysteamine",
+            "caption": "0.02 mol/L deoxygenated aqueous cysteamine; 20 h in darkness at room temperature. Immersion volume is unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "water",
+          "role": "Aqueous solvent for cysteamine immersion",
+          "viewOverrides": {
+            "name": "Water",
+            "caption": "0.02 mol/L deoxygenated aqueous cysteamine; 20 h in darkness at room temperature. Immersion volume is unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/3",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-gold-immersion",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "Gold-colloid immersion",
+      "scope": "Prepared Au colloid; 4 °C, 10 h. Immersion volume and colloid concentration are unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-au-colloid-identity",
+          "role": "Amplification layer",
+          "viewOverrides": {
+            "name": "Prepared gold nanoparticle colloid",
+            "caption": "Prepared Au colloid; 4 °C, 10 h. Immersion volume and colloid concentration are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/5",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-cysteine-solution",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "Cysteine immersion solution",
+      "scope": "0.02 mol/L cysteine; 4 °C, 20 h. Immersion volume, solvent formulation and stereochemistry are unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-cysteine-identity",
+          "role": "CdS attachment linker",
+          "viewOverrides": {
+            "name": "Cysteine, stereochemistry unreported",
+            "caption": "0.02 mol/L cysteine; 4 °C, 20 h. Immersion volume, solvent formulation and stereochemistry are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/6",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-cds-loading",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "CdS loading mixture",
+      "scope": "40 µL of 0.05 mM CdS NCs with 20 mg/mL EDC; 4 °C, 10 h. CdS particle-versus-formula-unit molarity basis and separate solvent formulation are unspecified.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-cds-colloid-identity",
+          "role": "ECL-active layer",
+          "viewOverrides": {
+            "name": "Prepared capped CdS NCs",
+            "caption": "40 µL of 0.05 mM CdS NCs with 20 mg/mL EDC; 4 °C, 10 h. CdS particle-versus-formula-unit molarity basis and separate solvent formulation are unspecified.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-edc-identity",
+          "role": "Coupling reagent",
+          "viewOverrides": {
+            "name": "1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide hydrochloride",
+            "caption": "40 µL of 0.05 mM CdS NCs with 20 mg/mL EDC; 4 °C, 10 h. CdS particle-versus-formula-unit molarity basis and separate solvent formulation are unspecified.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/7",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-apob-loading",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "ApoB-100 loading mixture",
+      "scope": "40 µL of 500 µg/mL apoB-100 containing 20 mg/mL EDC and 10 mg/mL NHS; 4 °C, 12 h. Protein input lineage and separate solvent formulation are unresolved.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-apob-identity",
+          "role": "Immobilized protein",
+          "viewOverrides": {
+            "name": "ApoB-100",
+            "caption": "40 µL of 500 µg/mL apoB-100 containing 20 mg/mL EDC and 10 mg/mL NHS; 4 °C, 12 h. Protein input lineage and separate solvent formulation are unresolved.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-edc-identity",
+          "role": "Coupling reagent",
+          "viewOverrides": {
+            "name": "1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide hydrochloride",
+            "caption": "40 µL of 500 µg/mL apoB-100 containing 20 mg/mL EDC and 10 mg/mL NHS; 4 °C, 12 h. Protein input lineage and separate solvent formulation are unresolved.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-nhs-identity",
+          "role": "Coupling additive",
+          "viewOverrides": {
+            "name": "N-Hydroxysuccinimide",
+            "caption": "40 µL of 500 µg/mL apoB-100 containing 20 mg/mL EDC and 10 mg/mL NHS; 4 °C, 12 h. Protein input lineage and separate solvent formulation are unresolved.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/8",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-bsa-blocking",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "BSA blocking solution",
+      "scope": "20 µL of 0.2 wt% BSA; 37 °C, 1 h. Solvent composition and any wash after blocking are unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-bsa-identity",
+          "role": "Blocking protein",
+          "viewOverrides": {
+            "name": "Bovine serum albumin",
+            "caption": "20 µL of 0.2 wt% BSA; 37 °C, 1 h. Solvent composition and any wash after blocking are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/9",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-ldl-analyte",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "LDL analyte contexts",
+      "scope": "Incubation 37 °C for 45 min. Figure 9 trace concentrations: 0, 0.025, 2, 6, 10, 12, 14 ng/mL; zero is unbound baseline. Calibration range extends to 16 ng/mL. Incubation volumes and exact aliquot lineage unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-ldl-identity",
+          "role": "Analyte",
+          "viewOverrides": {
+            "name": "Low-density lipoprotein",
+            "caption": "Incubation 37 °C for 45 min. Figure 9 trace concentrations: 0, 0.025, 2, 6, 10, 12, 14 ng/mL; zero is unbound baseline. Calibration range extends to 16 ng/mL. Incubation volumes and exact aliquot lineage unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/condition_options",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-ecl-electrolyte",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "ECL measurement electrolyte",
+      "scope": "0.1 M PBS pH 7.4 containing 0.1 M K2S2O8 and 0.1 M KCl. Source PBS component salts and individual ion speciation are unreported.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-pbs-identity",
+          "role": "ECL measurement medium",
+          "viewOverrides": {
+            "name": "Phosphate-buffered saline",
+            "caption": "0.1 M PBS pH 7.4 containing 0.1 M K2S2O8 and 0.1 M KCl. Source PBS component salts and individual ion speciation are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-persulfate-identity",
+          "role": "ECL coreactant",
+          "viewOverrides": {
+            "name": "Potassium persulfate",
+            "caption": "0.1 M PBS pH 7.4 containing 0.1 M K2S2O8 and 0.1 M KCl. Source PBS component salts and individual ion speciation are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "potassium-chloride",
+          "role": "Supporting electrolyte",
+          "viewOverrides": {
+            "name": "Potassium chloride",
+            "caption": "0.1 M PBS pH 7.4 containing 0.1 M K2S2O8 and 0.1 M KCl. Source PBS component salts and individual ion speciation are unreported.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/11",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-electrode-cv-eis-electrolyte",
+      "record_id": "jie2007-cds-au-ac062357c-electrode",
+      "label": "CV and EIS characterization electrolyte",
+      "scope": "10 mM PBS pH 7.4, 2.5 mM Fe(CN)6 4-/3- and 0.1 M KCl. Ferri/ferrocyanide ratio/counterions and PBS component salts unreported. Distinct from ECL electrolyte.",
+      "components": [
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-pbs-identity",
+          "role": "CV/EIS characterization medium",
+          "viewOverrides": {
+            "name": "Phosphate-buffered saline",
+            "caption": "10 mM PBS pH 7.4, 2.5 mM Fe(CN)6 4-/3- and 0.1 M KCl. Ferri/ferrocyanide ratio/counterions and PBS component salts unreported. Distinct from ECL electrolyte.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "jie2007-cds-au-ac062357c-redox-probe-identity",
+          "role": "CV/EIS characterization probe",
+          "viewOverrides": {
+            "name": "Ferri/ferrocyanide redox probe",
+            "caption": "10 mM PBS pH 7.4, 2.5 mM Fe(CN)6 4-/3- and 0.1 M KCl. Ferri/ferrocyanide ratio/counterions and PBS component salts unreported. Distinct from ECL electrolyte.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        },
+        {
+          "registry_id": "potassium-chloride",
+          "role": "Supporting electrolyte",
+          "viewOverrides": {
+            "name": "Potassium chloride",
+            "caption": "10 mM PBS pH 7.4, 2.5 mM Fe(CN)6 4-/3- and 0.1 M KCl. Ferri/ferrocyanide ratio/counterions and PBS component salts unreported. Distinct from ECL electrolyte.",
+            "limitations": [
+              "Source-scoped component reference only; no unreported solution proportions, speciation, concentration basis or geometry assigned."
+            ]
+          }
+        }
+      ],
+      "source": {
+        "data_path": "data/records/jie2007-cds-au-ac062357c-electrode.json",
+        "json_pointer": "/operations/12",
+        "input_sha256": "02d9d1c40a221cf09dc6f895fa4c2086ede41bf761405f552e56df5d682b9a21"
+      }
     }
   ]
 }

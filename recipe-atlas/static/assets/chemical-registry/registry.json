@@ -1242,13 +1242,16 @@
       "displayFormula": "N2",
       "iupacName": "molecular nitrogen",
       "sourceUrls": [
-        "https://pubchem.ncbi.nlm.nih.gov/compound/947"
+        "https://pubchem.ncbi.nlm.nih.gov/compound/947",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000"
       ],
       "svgPath": "svg/nitrogen.svg",
       "model2dPath": "models/nitrogen-2d.json",
       "model3dPath": "models/nitrogen-3d.json",
       "functionalGroups": [],
-      "limitations": [],
+      "limitations": [
+        "The 3D distance uses the NIST ground-state 14N2 reference; sample isotope composition and measured atomic coordinates are not asserted."
+      ],
       "provenance": {
         "connectivitySource": "PubChem",
         "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/947/property/MolecularFormula,IUPACName,IsomericSMILES/JSON",
@@ -1258,13 +1261,25 @@
         "sourceLookupStatus": "verified_api_record",
         "smiles": "N#N",
         "depictionSoftware": "RDKit 2026.03.6",
-        "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration."
+        "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration.",
+        "referenceGeometry3d": {
+          "modelPath": "models/nitrogen-3d.json",
+          "modelSha256": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10",
+          "modelType": "Reference-distance-derived diatomic geometry",
+          "sourceUrl": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000",
+          "referenceIsotopologue": "14N2",
+          "referenceElectronicState": "X 1Sigma_g+",
+          "referenceValueAngstrom": 1.097685,
+          "depictionDistanceAngstrom": 1.09768,
+          "referenceEvidenceSha256": "9bda7dc000d26cb4aaeaa840c87c66ea58579947ac8b0cb4b8039217bc8ec575",
+          "scope": "Neutral gas-phase reference with arbitrary orientation; not measured source-sample coordinates or an assertion of sample isotope composition. PubChem provenance describes connectivity/2D identity only."
+        }
       },
-      "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed.",
+      "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed. The rotatable 3D reference uses the NIST ground-state 14N2 distance with arbitrary orientation.",
       "assetHashes": {
         "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
         "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
-        "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
+        "model3dPath": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10"
       }
     },
     {
@@ -19755,7 +19770,8 @@
           "registryId": "nitrogen",
           "old3dSha256": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5",
           "oldDistanceAngstrom": 1.46,
-          "sharedAssetUnchanged": true
+          "sharedAssetUnchanged": true,
+          "scope": "Historical source-specific replacement event. sharedAssetUnchanged describes that earlier event; the old3dSha256 remains the rejected historical asset and is not a current shared-model pin."
         }
       },
       "independentScientificAudit": "pending",
@@ -22668,7 +22684,8 @@
           "registryId": "nitrogen",
           "old3dSha256": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5",
           "oldDistanceAngstrom": 1.46,
-          "sharedAssetUnchanged": true
+          "sharedAssetUnchanged": true,
+          "scope": "Historical source-specific replacement event. sharedAssetUnchanged describes that earlier event; the old3dSha256 remains the rejected historical asset and is not a current shared-model pin."
         },
         "norbergSourceFactsSha256": "1b26d583abde0b61b496a56548c55321099a61b0a0303668ec7bbd2750fbb3a9"
       },
@@ -71365,7 +71382,8 @@
       "displayFormula": "N2",
       "iupacName": "molecular nitrogen",
       "sourceUrls": [
-        "https://doi.org/10.1021/nl0156179"
+        "https://doi.org/10.1021/nl0156179",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000"
       ],
       "svgPath": "svg/nitrogen.svg",
       "model2dPath": "models/nitrogen-2d.json",
@@ -71373,7 +71391,8 @@
       "functionalGroups": [],
       "limitations": [
         "No earlier paper quantities, grade, stock composition or experimental role are inherited.",
-        "Current source-specific charges and uses are retained in the bound record."
+        "Current source-specific charges and uses are retained in the bound record.",
+        "The 3D distance uses the NIST ground-state 14N2 reference; sample isotope composition and measured atomic coordinates are not asserted."
       ],
       "provenance": {
         "identitySource": "Named reagent in the supplied main article",
@@ -71419,14 +71438,27 @@
             "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
             "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
             "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
-          }
+          },
+          "scope": "Historical original reuse snapshot. Its assetHashes identify the pre-correction reused bytes; current displayed 3D bytes and reference provenance are bound by assetHashes and referenceGeometry3d on this entry."
+        },
+        "referenceGeometry3d": {
+          "modelPath": "models/nitrogen-3d.json",
+          "modelSha256": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10",
+          "modelType": "Reference-distance-derived diatomic geometry",
+          "sourceUrl": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000",
+          "referenceIsotopologue": "14N2",
+          "referenceElectronicState": "X 1Sigma_g+",
+          "referenceValueAngstrom": 1.097685,
+          "depictionDistanceAngstrom": 1.09768,
+          "referenceEvidenceSha256": "9bda7dc000d26cb4aaeaa840c87c66ea58579947ac8b0cb4b8039217bc8ec575",
+          "scope": "Neutral gas-phase reference with arbitrary orientation; not measured source-sample coordinates or an assertion of sample isotope composition. PubChem provenance describes connectivity/2D identity only."
         }
       },
       "caption": "Source-qualified reagent identity. Existing reference connectivity/geometry is illustrative, not measured source molecular coordinates or solution speciation.",
       "assetHashes": {
         "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
         "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
-        "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
+        "model3dPath": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10"
       },
       "binding_approved": true,
       "independentScientificAudit": "passed_current_source_review",
@@ -84466,7 +84498,8 @@
       "displayFormula": "N2",
       "iupacName": "molecular nitrogen",
       "sourceUrls": [
-        "https://doi.org/10.1016/j.ica.2011.10.038"
+        "https://doi.org/10.1016/j.ica.2011.10.038",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000"
       ],
       "svgPath": "svg/nitrogen.svg",
       "model2dPath": "models/nitrogen-2d.json",
@@ -84474,7 +84507,8 @@
       "functionalGroups": [],
       "limitations": [
         "Illustrative chemical identity only; no measured molecular or nanoparticle coordinates.",
-        "Source solution and stock composition are specified separately."
+        "Source solution and stock composition are specified separately.",
+        "The 3D distance uses the NIST ground-state 14N2 reference; sample isotope composition and measured atomic coordinates are not asserted."
       ],
       "provenance": {
         "identitySource": "Current main source identity with exact reused reference-asset bytes.",
@@ -84511,13 +84545,25 @@
         "measuredCoordinates": false,
         "independentAudit": "passed_main_scientific_scope",
         "published": false,
-        "sourceScientificAuditSha256": "11ec817cc16f1d304b065742112983c7f789e92d324c6693d531b43ce28b7693"
+        "sourceScientificAuditSha256": "11ec817cc16f1d304b065742112983c7f789e92d324c6693d531b43ce28b7693",
+        "referenceGeometry3d": {
+          "modelPath": "models/nitrogen-3d.json",
+          "modelSha256": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10",
+          "modelType": "Reference-distance-derived diatomic geometry",
+          "sourceUrl": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000",
+          "referenceIsotopologue": "14N2",
+          "referenceElectronicState": "X 1Sigma_g+",
+          "referenceValueAngstrom": 1.097685,
+          "depictionDistanceAngstrom": 1.09768,
+          "referenceEvidenceSha256": "9bda7dc000d26cb4aaeaa840c87c66ea58579947ac8b0cb4b8039217bc8ec575",
+          "scope": "Neutral gas-phase reference with arbitrary orientation; not measured source-sample coordinates or an assertion of sample isotope composition. PubChem provenance describes connectivity/2D identity only."
+        }
       },
       "caption": "Reference identity for Nitrogen. Current-paper quantities, purity and roles belong to the selected record; no other paper’s recipe conditions are inherited.",
       "assetHashes": {
         "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
         "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
-        "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
+        "model3dPath": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10"
       },
       "published": false,
       "eligible_training": false
@@ -89912,14 +89958,16 @@
       "displayFormula": "N2",
       "iupacName": "molecular nitrogen",
       "sourceUrls": [
-        "https://doi.org/10.1021/la062210g"
+        "https://doi.org/10.1021/la062210g",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000"
       ],
       "svgPath": "svg/nitrogen.svg",
       "model2dPath": "models/nitrogen-2d.json",
       "model3dPath": "models/nitrogen-3d.json",
       "functionalGroups": [],
       "limitations": [
-        "Illustrative molecular or ionic identity; not measured solution speciation, reaction intermediate or nanocrystal coordinates."
+        "Illustrative molecular or ionic identity; not measured solution speciation, reaction intermediate or nanocrystal coordinates.",
+        "The 3D distance uses the NIST ground-state 14N2 reference; sample isotope composition and measured atomic coordinates are not asserted."
       ],
       "provenance": {
         "identitySource": "Source-qualified identity using exact reviewed reference asset bytes",
@@ -89966,13 +90014,25 @@
         "measuredCoordinates": false,
         "independentAudit": "passed_main_scientific_scope",
         "published": false,
-        "sourceScientificAuditSha256": "08d09a647c591f8bb9916b7b0c88528c54088ee0575a70937beef7983080b268"
+        "sourceScientificAuditSha256": "08d09a647c591f8bb9916b7b0c88528c54088ee0575a70937beef7983080b268",
+        "referenceGeometry3d": {
+          "modelPath": "models/nitrogen-3d.json",
+          "modelSha256": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10",
+          "modelType": "Reference-distance-derived diatomic geometry",
+          "sourceUrl": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000",
+          "referenceIsotopologue": "14N2",
+          "referenceElectronicState": "X 1Sigma_g+",
+          "referenceValueAngstrom": 1.097685,
+          "depictionDistanceAngstrom": 1.09768,
+          "referenceEvidenceSha256": "9bda7dc000d26cb4aaeaa840c87c66ea58579947ac8b0cb4b8039217bc8ec575",
+          "scope": "Neutral gas-phase reference with arbitrary orientation; not measured source-sample coordinates or an assertion of sample isotope composition. PubChem provenance describes connectivity/2D identity only."
+        }
       },
       "caption": "Nitrogen reference identity. Role, quantity and analytical versus synthesis use are defined by the selected Chen et al. record.",
       "assetHashes": {
         "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
         "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
-        "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
+        "model3dPath": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10"
       },
       "published": false,
       "eligible_training": false
@@ -94182,14 +94242,16 @@
       "displayFormula": "N2",
       "iupacName": "molecular nitrogen",
       "sourceUrls": [
-        "https://doi.org/10.1021/ja0489184"
+        "https://doi.org/10.1021/ja0489184",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000"
       ],
       "svgPath": "svg/nitrogen.svg",
       "model2dPath": "models/nitrogen-2d.json",
       "model3dPath": "models/nitrogen-3d.json",
       "functionalGroups": [],
       "limitations": [
-        "Illustrative identity only; not measured reaction speciation, nanoparticle structure or polymer conformation."
+        "Illustrative identity only; not measured reaction speciation, nanoparticle structure or polymer conformation.",
+        "The 3D distance uses the NIST ground-state 14N2 reference; sample isotope composition and measured atomic coordinates are not asserted."
       ],
       "provenance": {
         "identitySource": "Source-qualified identity using exact reviewed reference assets",
@@ -94241,13 +94303,25 @@
         "measuredCoordinates": false,
         "independentAudit": "passed_main_and_matched_si_scientific_scope",
         "published": false,
-        "sourceScientificAuditSha256": "fa56c6479340c5d2cb1e9619d9ae009b5955a449f4424b19c0ef05a3403b8e3f"
+        "sourceScientificAuditSha256": "fa56c6479340c5d2cb1e9619d9ae009b5955a449f4424b19c0ef05a3403b8e3f",
+        "referenceGeometry3d": {
+          "modelPath": "models/nitrogen-3d.json",
+          "modelSha256": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10",
+          "modelType": "Reference-distance-derived diatomic geometry",
+          "sourceUrl": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000",
+          "referenceIsotopologue": "14N2",
+          "referenceElectronicState": "X 1Sigma_g+",
+          "referenceValueAngstrom": 1.097685,
+          "depictionDistanceAngstrom": 1.09768,
+          "referenceEvidenceSha256": "9bda7dc000d26cb4aaeaa840c87c66ea58579947ac8b0cb4b8039217bc8ec575",
+          "scope": "Neutral gas-phase reference with arbitrary orientation; not measured source-sample coordinates or an assertion of sample isotope composition. PubChem provenance describes connectivity/2D identity only."
+        }
       },
       "caption": "Nitrogen reference identity. Role and quantities are specified in the selected Liu et al. record.",
       "assetHashes": {
         "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
         "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
-        "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
+        "model3dPath": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10"
       },
       "published": false,
       "eligible_training": false
@@ -100360,7 +100434,8 @@
       "depictionKind": "molecule",
       "pubchemCid": 947,
       "sourceUrls": [
-        "https://doi.org/10.1007/s003390100786"
+        "https://doi.org/10.1007/s003390100786",
+        "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000"
       ],
       "svgPath": "svg/nitrogen.svg",
       "model2dPath": "models/nitrogen-2d.json",
@@ -100368,7 +100443,8 @@
       "functionalGroups": [],
       "caption": "Pure nitrogen identity/context only; quantities, specimen and source role remain in each selected record. No measured molecular geometry is asserted.",
       "limitations": [
-        "Presentation pending; source uncertainties retained."
+        "Presentation pending; source uncertainties retained.",
+        "The 3D distance uses the NIST ground-state 14N2 reference; sample isotope composition and measured atomic coordinates are not asserted."
       ],
       "provenance": {
         "identitySource": "Main-article source label or explicitly unresolved identity",
@@ -100406,12 +100482,24 @@
             "source_locator": "Main PDF p. 2, Experimental procedure"
           }
         ],
-        "measuredCoordinates": false
+        "measuredCoordinates": false,
+        "referenceGeometry3d": {
+          "modelPath": "models/nitrogen-3d.json",
+          "modelSha256": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10",
+          "modelType": "Reference-distance-derived diatomic geometry",
+          "sourceUrl": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7727379&Mask=1000",
+          "referenceIsotopologue": "14N2",
+          "referenceElectronicState": "X 1Sigma_g+",
+          "referenceValueAngstrom": 1.097685,
+          "depictionDistanceAngstrom": 1.09768,
+          "referenceEvidenceSha256": "9bda7dc000d26cb4aaeaa840c87c66ea58579947ac8b0cb4b8039217bc8ec575",
+          "scope": "Neutral gas-phase reference with arbitrary orientation; not measured source-sample coordinates or an assertion of sample isotope composition. PubChem provenance describes connectivity/2D identity only."
+        }
       },
       "assetHashes": {
         "svgPath": "a06db13535d979382aa31a8df0d2bcfbb94e13dca78a2d79bca4f27fbcda24be",
         "model2dPath": "05279aca68e28b87358d1c01db3333123a86d352c0a8f98b6c7d1c68314c5ae0",
-        "model3dPath": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5"
+        "model3dPath": "d3ba7c959af18183d4f34d47a33fa8bfa41ee4f7ea06ee9b03e8ed7237663d10"
       },
       "binding_approved": true,
       "independentScientificAudit": "passed_current_source_review",
@@ -106794,11 +106882,6 @@
           },
           {
             "record_id": "chen2014-jp500270d-cuznsns-x005",
-            "material_id": "copper-acetate",
-            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
-          },
-          {
-            "record_id": "chen2014-jp500270d-cuznsns-x000",
             "material_id": "copper-acetate",
             "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
           }
@@ -115402,7 +115485,7 @@
       "model3dPath": null,
       "functionalGroups": [],
       "limitations": [
-        "The existing nitrogen 3D asset is deliberately excluded: its N–N distance is 1.46 angstrom, inconsistent with a molecular nitrogen triple-bond reference."
+        "The historical shared nitrogen 3D asset with SHA-256 8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5 was deliberately excluded because its N–N distance was 1.46 angstrom. This Chen binding remains 2D-only; a corrected shared model does not authorize 3D reuse here."
       ],
       "provenance": {
         "sourceId": "chen2010-jf101778t-cdte",
@@ -115443,7 +115526,8 @@
         "omitted3dAsset": {
           "path": "models/nitrogen-3d.json",
           "sha256": "8a8b1a9de9c0cdb54a609ba9042d7eb05da2835f57f9e4615f66d89ba94bffa5",
-          "reason": "N–N coordinate distance 1.46 angstrom; 3D reuse rejected by author technical check. No shared asset edited."
+          "reason": "N–N coordinate distance 1.46 angstrom; 3D reuse rejected by author technical check. No shared asset edited.",
+          "scope": "Historical rejected bytes and author decision; this entry remains 2D-only and does not acquire the corrected shared model."
         }
       },
       "caption": "N2 reference connectivity for the nitrogen-saturated CdCl2 solution. This 2D drawing supplies no molecular geometry, purge apparatus or gas pressure.",
@@ -116511,6 +116595,1849 @@
       "assetHashes": {
         "svgPath": "4605f3aadf3fe56e62b1564838121667a51df80d2c0893c9db89ef8aa846c979",
         "model2dPath": "81583f43975acb9454ca3d4fbd016a51f1c905d57c4fc26e6451c9708d48d670"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-cdcl2-reference",
+      "name": "Cadmium chloride solution",
+      "formula": "CdCl2",
+      "displayFormula": "CdCl2",
+      "aliases": [],
+      "depictionKind": "ionic_components",
+      "svgPath": "svg/zou2004-cdse-ac049012j-cdcl2-reference.svg",
+      "model2dPath": "models/gu2004-cadmium-chloride-reference-2d.json",
+      "model3dPath": null,
+      "caption": "Formal ionic components; hydration and stock speciation unresolved.",
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "pubchemCid": null,
+      "functionalGroups": [
+        {
+          "label": "Formal metal center",
+          "atomIndices": [
+            0
+          ],
+          "bondIndices": []
+        },
+        {
+          "label": "Chloride ion",
+          "atomIndices": [
+            1
+          ],
+          "bondIndices": []
+        },
+        {
+          "label": "Chloride ion",
+          "atomIndices": [
+            2
+          ],
+          "bondIndices": []
+        }
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "Formal Cd2+ and two Cl− stoichiometric components; no lattice, coordination geometry or dissolved-species distribution is implied.",
+          "limitations": [
+            "Gu prints CdCl2 at 80.5%; hydration and assay basis are unspecified.",
+            "No hydrate shell, isolated linear molecule, mass correction or 3D geometry is assigned."
+          ],
+          "provenance": {
+            "depictionSoftware": "RDKit 2026.03.6",
+            "sourcePaperRole": "Illustration/reference layer; not a new measured source structure",
+            "formulaReference": {
+              "path": "raw/cadmium-chloride-properties.json",
+              "sha256": "aadb838089c9254bc42e2e2838abcccd0287f11b12404f56bbbde5d7726a6312",
+              "cid": 24947
+            },
+            "graphConvention": "Source stoichiometry expressed as formal charged components. PubChem Cl–Cd–Cl connectivity is not reused as the solid/reagent geometry."
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/24947",
+            "https://doi.org/10.1021/ja0496423"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false,
+        "svgReuseCorrection": "Reused formal-component geometry; replaced prior-paper 80.5% footer with current-source 10 mg/mL CdCl2 stock label."
+      },
+      "independentScientificAudit": "pending",
+      "published": false,
+      "eligible_training": false,
+      "assetHashes": {
+        "svgPath": "7dc9e9430521c65a7cfdd1fc2f8c253c0819ca388b5804bbfd7a8c3c34704d4b",
+        "model2dPath": "c6c0d19aa93df1570ce62a00baa0e7082a3cfda62a7a9f0d8255c354cc815c05"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-ammonia-reference",
+      "name": "Ammonia component",
+      "aliases": [],
+      "depictionKind": "molecule",
+      "pubchemCid": 222,
+      "formula": "H3N",
+      "displayFormula": "NH3",
+      "iupacName": "azane",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/ammonia.svg",
+      "model2dPath": "models/ammonia-2d.json",
+      "model3dPath": "models/ammonia-3d.json",
+      "functionalGroups": [
+        {
+          "label": "Ammonia",
+          "atomIndices": [
+            0
+          ],
+          "bondIndices": []
+        }
+      ],
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed.",
+          "limitations": [],
+          "provenance": {
+            "connectivitySource": "PubChem",
+            "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/222/property/MolecularFormula,IUPACName,IsomericSMILES/JSON",
+            "primaryApi2dUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/222/SDF?record_type=2d",
+            "sourcePropertiesSha256": "17b84a6d7d760292ddcf077e6310958b500a85854c5e79a4fb43c64daf979984",
+            "source2dSha256": "e475875412e25ffdfff362553f3aa848ca4b2725dd9be79c65dfeacb982ae77a",
+            "sourceLookupStatus": "verified_api_record",
+            "smiles": "N",
+            "depictionSoftware": "RDKit 2026.03.6",
+            "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration."
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/222"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "caption": "Reference ammonia molecule, not complete 30% reagent speciation.",
+      "assetHashes": {
+        "svgPath": "e1119238184e606719219cc7ab22d0d0e3c8bb46d27c3017fc27e4426a11f4d3",
+        "model2dPath": "aa4f146db61174611df77e83f5634889ec093c9f2e5b3951520c2f3f1c9e6a4f",
+        "model3dPath": "1e4313e440b2d7186b39327cbbebefcaf9d5876eb0b85a7d859d40a354dc6afc"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-water-reference",
+      "name": "Doubly distilled water",
+      "aliases": [],
+      "depictionKind": "molecule",
+      "pubchemCid": 962,
+      "formula": "H2O",
+      "displayFormula": "H2O",
+      "iupacName": "oxidane",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/water.svg",
+      "model2dPath": "models/water-2d.json",
+      "model3dPath": "models/water-3d.json",
+      "functionalGroups": [],
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed.",
+          "limitations": [],
+          "provenance": {
+            "connectivitySource": "PubChem",
+            "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/property/MolecularFormula,IUPACName,IsomericSMILES/JSON",
+            "primaryApi2dUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/SDF?record_type=2d",
+            "sourcePropertiesSha256": "477be2d59db7bee06a3ea82ed1f2c3fd2fe4019b5f948d0a628e60b205ab1b5f",
+            "source2dSha256": "7501729191d6b78523624ef53f18ea6d144fb8cb5c468776d9fd0c2a5c480c1e",
+            "sourceLookupStatus": "verified_api_record",
+            "smiles": "O",
+            "depictionSoftware": "RDKit 2026.03.6",
+            "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration."
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/962"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "caption": "Reference water component.",
+      "assetHashes": {
+        "svgPath": "6671f94fe9a37b70c2778b985a3a7e861fc391da29250d227168fe56fb7e3efa",
+        "model2dPath": "79a53a7d0a15ad6d908288a7b0733d782e7842371fbea0e04ee27e0a223087bb",
+        "model3dPath": "19717051eea4c111a302b4cc41f148e0fcce090a8ad1b93b750c370a157d68b7"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-wash-water-reference",
+      "name": "Water wash",
+      "aliases": [],
+      "depictionKind": "molecule",
+      "pubchemCid": 962,
+      "formula": "H2O",
+      "displayFormula": "H2O",
+      "iupacName": "oxidane",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/water.svg",
+      "model2dPath": "models/water-2d.json",
+      "model3dPath": "models/water-3d.json",
+      "functionalGroups": [],
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed.",
+          "limitations": [],
+          "provenance": {
+            "connectivitySource": "PubChem",
+            "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/property/MolecularFormula,IUPACName,IsomericSMILES/JSON",
+            "primaryApi2dUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/SDF?record_type=2d",
+            "sourcePropertiesSha256": "477be2d59db7bee06a3ea82ed1f2c3fd2fe4019b5f948d0a628e60b205ab1b5f",
+            "source2dSha256": "7501729191d6b78523624ef53f18ea6d144fb8cb5c468776d9fd0c2a5c480c1e",
+            "sourceLookupStatus": "verified_api_record",
+            "smiles": "O",
+            "depictionSoftware": "RDKit 2026.03.6",
+            "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration."
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/962"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "caption": "Reference water component.",
+      "assetHashes": {
+        "svgPath": "6671f94fe9a37b70c2778b985a3a7e861fc391da29250d227168fe56fb7e3efa",
+        "model2dPath": "79a53a7d0a15ad6d908288a7b0733d782e7842371fbea0e04ee27e0a223087bb",
+        "model3dPath": "19717051eea4c111a302b4cc41f148e0fcce090a8ad1b93b750c370a157d68b7"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-rinse-water-reference",
+      "name": "Water rinse",
+      "aliases": [],
+      "depictionKind": "molecule",
+      "pubchemCid": 962,
+      "formula": "H2O",
+      "displayFormula": "H2O",
+      "iupacName": "oxidane",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/water.svg",
+      "model2dPath": "models/water-2d.json",
+      "model3dPath": "models/water-3d.json",
+      "functionalGroups": [],
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed.",
+          "limitations": [],
+          "provenance": {
+            "connectivitySource": "PubChem",
+            "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/property/MolecularFormula,IUPACName,IsomericSMILES/JSON",
+            "primaryApi2dUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/962/SDF?record_type=2d",
+            "sourcePropertiesSha256": "477be2d59db7bee06a3ea82ed1f2c3fd2fe4019b5f948d0a628e60b205ab1b5f",
+            "source2dSha256": "7501729191d6b78523624ef53f18ea6d144fb8cb5c468776d9fd0c2a5c480c1e",
+            "sourceLookupStatus": "verified_api_record",
+            "smiles": "O",
+            "depictionSoftware": "RDKit 2026.03.6",
+            "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration."
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/962"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "caption": "Reference water component.",
+      "assetHashes": {
+        "svgPath": "6671f94fe9a37b70c2778b985a3a7e861fc391da29250d227168fe56fb7e3efa",
+        "model2dPath": "79a53a7d0a15ad6d908288a7b0733d782e7842371fbea0e04ee27e0a223087bb",
+        "model3dPath": "19717051eea4c111a302b4cc41f148e0fcce090a8ad1b93b750c370a157d68b7"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-acetone-reference",
+      "name": "Acetone wash",
+      "aliases": [],
+      "depictionKind": "molecule",
+      "pubchemCid": 180,
+      "formula": "C3H6O",
+      "displayFormula": "C3H6O",
+      "iupacName": "propan-2-one",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/acetone.svg",
+      "model2dPath": "models/acetone-2d.json",
+      "model3dPath": "models/acetone-3d.json",
+      "functionalGroups": [
+        {
+          "label": "Carbonyl group",
+          "atomIndices": [
+            0,
+            1
+          ],
+          "bondIndices": [
+            0
+          ]
+        }
+      ],
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "Free acetone chemical reference. Any conformer is locally computed and illustrative, not measured solution or surface geometry. Amounts, mixtures and applications belong to the individual source record.",
+          "limitations": [
+            "Free acetone chemical reference. Any conformer is locally computed and illustrative, not measured solution or surface geometry. Amounts, mixtures and applications belong to the individual source record."
+          ],
+          "provenance": {
+            "connectivitySource": "PubChem",
+            "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/180/property/MolecularFormula,IUPACName,CanonicalSMILES,IsomericSMILES,Charge/JSON",
+            "primaryApi2dUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/180/SDF?record_type=2d",
+            "sourcePropertiesSha256": "a6154ca80dca0a45e6c4eb59276df7953e4534af37ba055626dba2bca2326d10",
+            "source2dSha256": "cf28189b854c546bc07d0a1021adaca772712ee514eff32c5a3ed05f54d7f5fc",
+            "sourceLookupStatus": "verified_api_record",
+            "sourceLookupUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/acetone/cids/JSON",
+            "sourceLookupSha256": "31de1fa42de48135457389a61122f95d5f7cbac9e269ffe8da894cede3773b66",
+            "depictionSoftware": "RDKit 2026.03.6",
+            "sourceFormula": "C3H6O",
+            "limitations": "Reference connectivity and computed geometry are not experimental particle, solution or surface structures.",
+            "smiles": "CC(C)=O",
+            "computed3d": {
+              "computedBy": "RDKit 2026.03.6",
+              "method": "ETKDGv3 + MMFF94s",
+              "conformerGeneration": {
+                "randomSeed": 20260918,
+                "numThreads": 1,
+                "embeddingStatus": 0,
+                "forceField": "MMFF94s",
+                "minimizationReturnCode": 0,
+                "minimizationStatus": "converged",
+                "energyKcalMol": 1.652257716907038,
+                "energyMeaning": "Local classical conformer energy, not an experimental value, thermodynamic quantity or global minimum."
+              }
+            }
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/180",
+            "https://doi.org/10.1021/j100108a019"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "caption": "Reference acetone component.",
+      "assetHashes": {
+        "svgPath": "755087d49fb697967b9ef49edaabe13fb6b76e45d3d7070f2c0d69695559d30c",
+        "model2dPath": "508e7dacd921fdeb7b2bd4c7697de2f9123e4882979b963629bac64102ad7c0e",
+        "model3dPath": "101962e0ab200e42f094df39474ab31756e9284e42c9b78f124366f79c7e5788"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-ethanol-reference",
+      "name": "Ethanol medium",
+      "aliases": [],
+      "depictionKind": "molecule",
+      "pubchemCid": 702,
+      "formula": "C2H6O",
+      "displayFormula": "C2H6O",
+      "iupacName": "ethanol",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/ethanol.svg",
+      "model2dPath": "models/ethanol-2d.json",
+      "model3dPath": "models/ethanol-3d.json",
+      "functionalGroups": [
+        {
+          "label": "Alcohol group",
+          "atomIndices": [
+            0,
+            1
+          ],
+          "bondIndices": [
+            0
+          ]
+        }
+      ],
+      "limitations": [
+        "Reference only; no measured solution or solid geometry."
+      ],
+      "provenance": {
+        "reuseHistory": {
+          "caption": "RDKit 2D depiction from verified PubChem connectivity. One reference molecule; no solution speciation, surface binding or measured geometry is claimed.",
+          "limitations": [],
+          "provenance": {
+            "connectivitySource": "PubChem",
+            "primaryApiPropertiesUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/702/property/MolecularFormula,IUPACName,IsomericSMILES/JSON",
+            "primaryApi2dUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/702/SDF?record_type=2d",
+            "sourcePropertiesSha256": "c3aa22aad7ecb8627eed5ab64f2d696237ad41ad13f37fa8cd160cd49361e3ef",
+            "source2dSha256": "8560977534a517806321ecbfc5d77563cffcab8eb689d6568c70b29c989fcc84",
+            "sourceLookupStatus": "verified_api_record",
+            "smiles": "CCO",
+            "depictionSoftware": "RDKit 2026.03.6",
+            "limitations": "A chemical reference drawing is not an experimentally observed solution species or surface-bound configuration."
+          },
+          "sourceUrls": [
+            "https://pubchem.ncbi.nlm.nih.gov/compound/702"
+          ]
+        },
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "caption": "Reference ethanol component.",
+      "assetHashes": {
+        "svgPath": "99005fd55e5d61559f2bb12da0adf145fd73c6ca7e29b6dbcd9301ce2fc5badc",
+        "model2dPath": "3db1f76861514ff01614e83a4846e3a03a23b1a6e81f394265035bbbd884695a",
+        "model3dPath": "a10ee1075db9612b6bda649cd745470603d90386d2ad50f00605d802dada760a"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-na2seso3-reference",
+      "name": "Sodium selenosulfite stock",
+      "aliases": [],
+      "formula": "Na2SeSO3",
+      "displayFormula": "Na2SeSO3",
+      "depictionKind": "formula",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/zou2004-cdse-ac049012j-na2seso3-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Formula identity only; stock preparation/speciation unresolved.",
+      "limitations": [
+        "No measured geometry or resolved speciation."
+      ],
+      "provenance": {
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "assetHashes": {
+        "svgPath": "ead53cf6264598ddd6acd640578dbf46f2a49151d5cb437a9ac40c99931de533"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-cdse-colloid-reference",
+      "name": "CdSe colloid in ethanol",
+      "aliases": [],
+      "formula": "CdSe",
+      "displayFormula": "CdSe",
+      "depictionKind": "formula",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/zou2004-cdse-ac049012j-cdse-colloid-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Material identity; phase/surface/concentration unresolved.",
+      "limitations": [
+        "No measured geometry or resolved speciation."
+      ],
+      "provenance": {
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "assetHashes": {
+        "svgPath": "47cc9a780f7470ed52095386f24f9ae3ffd5e5ae8883724491abe4bcd03fd2ec"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-cdse-powder-reference",
+      "name": "CdSe nanocrystal powder",
+      "aliases": [],
+      "formula": "CdSe",
+      "displayFormula": "CdSe",
+      "depictionKind": "formula",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/zou2004-cdse-ac049012j-cdse-powder-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Material identity; no phase or atomic reconstruction.",
+      "limitations": [
+        "No measured geometry or resolved speciation."
+      ],
+      "provenance": {
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "assetHashes": {
+        "svgPath": "ffd771222d4d59226c181755b479b9104a11b71210221a961af96424403b6305"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-pige-reference",
+      "name": "Paraffin-impregnated graphite",
+      "aliases": [],
+      "formula": null,
+      "displayFormula": "material / mixture",
+      "depictionKind": "mixture",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/zou2004-cdse-ac049012j-pige-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Composite substrate; no unique molecule.",
+      "limitations": [
+        "No measured geometry or resolved speciation."
+      ],
+      "provenance": {
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "assetHashes": {
+        "svgPath": "5e06feadebee80fab961af8af943e2b470c0d18de40f8b6d79fe021b229a0d44"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-graphite-reference",
+      "name": "Graphite powder",
+      "aliases": [],
+      "formula": "C",
+      "displayFormula": "C",
+      "depictionKind": "formula",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/zou2004-cdse-ac049012j-graphite-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Solid identity only; no lattice or particle size.",
+      "limitations": [
+        "No measured geometry or resolved speciation."
+      ],
+      "provenance": {
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "assetHashes": {
+        "svgPath": "c86f0468291db8914b653d4a3696fea3d78716981d3a77e7079afa982aea6656"
+      }
+    },
+    {
+      "id": "zou2004-cdse-ac049012j-paraffin-reference",
+      "name": "Solid paraffin mixture",
+      "aliases": [],
+      "formula": null,
+      "displayFormula": "material / mixture",
+      "depictionKind": "mixture",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac049012j"
+      ],
+      "svgPath": "svg/zou2004-cdse-ac049012j-paraffin-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Mixture identity; chain length not specified.",
+      "limitations": [
+        "No measured geometry or resolved speciation."
+      ],
+      "provenance": {
+        "identitySource": "Main PDF p.2, printed 6872, Materials; Main PDF p.2, printed 6872, Modified Electrode Preparations",
+        "sourceDoi": "10.1021/ac049012j",
+        "sourceSha256": "ae97bb76ac70ba758431d4ea61d61997f7fd91362334986a8faf81b8558a139e",
+        "measuredCoordinates": false
+      },
+      "assetHashes": {
+        "svgPath": "63c05b398955e6f847e7ebc8c016dfb4c6dbbe5971cd283d2049bf3f0e17abc9"
+      }
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-decanethiol",
+      "name": "Decanethiol reference",
+      "aliases": [
+        "decanethiol"
+      ],
+      "formula": "C10H22S",
+      "displayFormula": "C10H22S",
+      "depictionKind": "molecule",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac0481912"
+      ],
+      "svgPath": "svg/krueger2005-cdse-ac0481912-decanethiol.svg",
+      "model2dPath": "models/krueger2005-cdse-ac0481912-decanethiol-2d.json",
+      "model3dPath": null,
+      "functionalGroups": [
+        {
+          "label": "Thiol",
+          "atomIndices": [
+            10
+          ],
+          "bondIndices": [
+            9
+          ]
+        }
+      ],
+      "caption": "Qualified terminal straight-chain reference for source long-chain thiol name; isomer and bound geometry are not measured.",
+      "limitations": [
+        "Source names a long-chain thiol and its chain carbon count, but not an explicit isomer analysis. Reference terminal connectivity is qualified; no molecular geometry or surface pose is measured."
+      ],
+      "assetHashes": {
+        "svgPath": "62d84ddd247e40f4234167ea15d1b639388f337036e1043809d1864ff0b1b78c",
+        "model2dPath": "c171d8f5f24c1947fde2ebe504d57ccc4a7b47956130c3a71285aeda26888352"
+      }
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-octadecanethiol",
+      "name": "Octadecanethiol reference",
+      "aliases": [
+        "octadecanethiol"
+      ],
+      "formula": "C18H38S",
+      "displayFormula": "C18H38S",
+      "depictionKind": "molecule",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac0481912"
+      ],
+      "svgPath": "svg/krueger2005-cdse-ac0481912-octadecanethiol.svg",
+      "model2dPath": "models/krueger2005-cdse-ac0481912-octadecanethiol-2d.json",
+      "model3dPath": null,
+      "functionalGroups": [
+        {
+          "label": "Thiol",
+          "atomIndices": [
+            18
+          ],
+          "bondIndices": [
+            17
+          ]
+        }
+      ],
+      "caption": "Qualified terminal straight-chain reference for source long-chain thiol name; isomer and bound geometry are not measured.",
+      "limitations": [
+        "Source names a long-chain thiol and its chain carbon count, but not an explicit isomer analysis. Reference terminal connectivity is qualified; no molecular geometry or surface pose is measured."
+      ],
+      "assetHashes": {
+        "svgPath": "08dac39ca2b3cc2973beb90aab31023759c1d17e277b1d184550b5429ac8bf08",
+        "model2dPath": "082b3261055beacae73543b4d7b3eaac0ba2ec087f3c0303ff5e2e2017b7afda"
+      }
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-tem-grid",
+      "name": "400-mesh ultrathin carbon/Formvar-coated copper grid",
+      "aliases": [],
+      "formula": null,
+      "displayFormula": "400-mesh ultrathin carbon/Formvar-coated copper grid",
+      "depictionKind": "mixture",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac0481912"
+      ],
+      "svgPath": "svg/krueger2005-cdse-ac0481912-tem-grid.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source-qualified material identity; no polymer molecular weight distribution or support geometry inferred.",
+      "limitations": [
+        "Source-named composite or polymer material, not a discrete molecule or measured structural coordinate."
+      ],
+      "assetHashes": {
+        "svgPath": "318ab9a9f8cf64bc7d24ab1556a33a2a880d37e75276b46ba1d65001f99e89ea"
+      }
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-polystyrene-standard",
+      "name": "Easi-Cal polystyrene calibration standards",
+      "aliases": [],
+      "formula": null,
+      "displayFormula": "Easi-Cal polystyrene calibration standards",
+      "depictionKind": "mixture",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac0481912"
+      ],
+      "svgPath": "svg/krueger2005-cdse-ac0481912-polystyrene-standard.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source-qualified material identity; no polymer molecular weight distribution or support geometry inferred.",
+      "limitations": [
+        "Source-named composite or polymer material, not a discrete molecule or measured structural coordinate."
+      ],
+      "assetHashes": {
+        "svgPath": "010b76d901f25efa22f7033df26eac35a417ec42099404369da976dd3cacfe99"
+      }
+    },
+    {
+      "id": "krueger2005-cdse-ac0481912-plgel-column",
+      "name": "Porous cross-linked polystyrene PLgel columns",
+      "aliases": [],
+      "formula": null,
+      "displayFormula": "Porous cross-linked polystyrene PLgel columns",
+      "depictionKind": "mixture",
+      "pubchemCid": null,
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac0481912"
+      ],
+      "svgPath": "svg/krueger2005-cdse-ac0481912-plgel-column.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "caption": "Source-qualified material identity; no polymer molecular weight distribution or support geometry inferred.",
+      "limitations": [
+        "Source-named composite or polymer material, not a discrete molecule or measured structural coordinate."
+      ],
+      "assetHashes": {
+        "svgPath": "4aa3ae4abc915e3d034f65d4042615facabcff5b7e506e75e07115395625b2df"
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-haucl4-identity",
+      "name": "Tetrachloroauric acid tetrahydrate",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "HAuCl4·4H2O",
+      "displayFormula": "HAuCl4·4H2O",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-haucl4-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Shanghai Chemical Reagent Co.; preserve explicit tetrahydrate."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.3 / printed 5576, Preparation of Gold Nanoparticles"
+          }
+        ],
+        "asset_sha256": "f7ade205b7322c1b847419b2efc12a7ed47e3ead3b34d50ab725067970342107",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "f7ade205b7322c1b847419b2efc12a7ed47e3ead3b34d50ab725067970342107"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-citrate-identity",
+      "name": "Sodium citrate, form unspecified",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Sodium citrate, form unspecified",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-citrate-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Sodium stoichiometry and hydration not reported."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.3 / printed 5576, Preparation of Gold Nanoparticles"
+          }
+        ],
+        "asset_sha256": "099ba550e194f91eca0e7d3df9ea3d6aeb8831337ed988e0be8c4a744a006c72",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "099ba550e194f91eca0e7d3df9ea3d6aeb8831337ed988e0be8c4a744a006c72"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-blood-identity",
+      "name": "Human blood specimen",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Human blood specimen",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-blood-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Fasting healthy donors; donor identity not reported."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "474b99224520857cecaac61c6178911586d71078ca63547065553648002304b3",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "474b99224520857cecaac61c6178911586d71078ca63547065553648002304b3"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-edta-identity",
+      "name": "Ethylenediaminetetraacetate (EDTA), form unspecified",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Ethylenediaminetetraacetate (EDTA), form unspecified",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-edta-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Exact salt/protonation not stated."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "ddbde4d7a4cee8d3410d11e6b496e03961d167f65ab68b5ed61666bcd3230406",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "ddbde4d7a4cee8d3410d11e6b496e03961d167f65ab68b5ed61666bcd3230406"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-phosphate-identity",
+      "name": "Phosphate buffer",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Phosphate buffer",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-phosphate-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "0dce39e2ce17ea9447413dbea218cca73c49bb243e2b7495be4b82df7ef04ad9",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "0dce39e2ce17ea9447413dbea218cca73c49bb243e2b7495be4b82df7ef04ad9"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-pbs-identity",
+      "name": "Phosphate-buffered saline",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Phosphate-buffered saline",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-pbs-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "624b497caa95f0c2fba413870b5324faaa9572c742b172a874dbf6e6a905b15b",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "624b497caa95f0c2fba413870b5324faaa9572c742b172a874dbf6e6a905b15b"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-ldl-identity",
+      "name": "Low-density lipoprotein",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Low-density lipoprotein",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-ldl-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Nanjing Huibiao Biological Technology Co. purchased stock and locally isolated LDL are both described; exact later allocation is unreported."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "676c93ddc35f09ab863400142c75cb043ba6775608da776cdaf4e2bed229231a",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "676c93ddc35f09ab863400142c75cb043ba6775608da776cdaf4e2bed229231a"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-apob-identity",
+      "name": "Apolipoprotein B-100",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Apolipoprotein B-100",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-apob-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Nanjing Huibiao Biological Technology Co.; source separately describes fragments from thrombin digestion. Exact preparation used for electrode loading unresolved."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "142517e5d4f89b5b6b0c08e4c9f53fc617a7c6beae9ae7d666b9a14ba90197c4",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "142517e5d4f89b5b6b0c08e4c9f53fc617a7c6beae9ae7d666b9a14ba90197c4"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-thrombin-identity",
+      "name": "Thrombin",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Thrombin",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-thrombin-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "e919ed5fbfb398a25cfedf7b51d87584e2165b66ba13319f63836148a218c802",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "e919ed5fbfb398a25cfedf7b51d87584e2165b66ba13319f63836148a218c802"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cdcl2-identity",
+      "name": "Cadmium chloride",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "CdCl2",
+      "displayFormula": "CdCl2",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-cdcl2-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Hydration and reagent grade unreported."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF pp.3–4 / printed 5576–5577, Preparation of Water-Soluble CdS NCs; continuation p.4"
+          }
+        ],
+        "asset_sha256": "65d1d426aa70681af5ea0504bdc74686c75f9d8dca6b2f29fedb9af370a9bc80",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "65d1d426aa70681af5ea0504bdc74686c75f9d8dca6b2f29fedb9af370a9bc80"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-maa-identity",
+      "name": "Mercaptoacetic acid",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "C2H4O2S",
+      "displayFormula": "C2H4O2S",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-maa-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Condensed reference connectivity; no stereochemistry or 3D geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Concentration/purity unreported; no amount-of-substance conversion."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF pp.3–4 / printed 5576–5577, Preparation of Water-Soluble CdS NCs; continuation p.4"
+          }
+        ],
+        "asset_sha256": "9261c6736b619ce4464a6ad41f471b332744834ba9d3f03e797c657ff8e57b76",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "9261c6736b619ce4464a6ad41f471b332744834ba9d3f03e797c657ff8e57b76"
+      },
+      "caption": "Source-scoped reference identity. Condensed reference connectivity; no stereochemistry or 3D geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-na2s-identity",
+      "name": "Sodium sulfide",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "Na2S",
+      "displayFormula": "Na2S",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-na2s-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Hydration state unreported."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF pp.3–4 / printed 5576–5577, Preparation of Water-Soluble CdS NCs; continuation p.4"
+          }
+        ],
+        "asset_sha256": "5add38be14c37ecd0834c62ef028b4772eccadaac1387fbffc510192a16f0b8b",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "5add38be14c37ecd0834c62ef028b4772eccadaac1387fbffc510192a16f0b8b"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-tem-grid-identity",
+      "name": "Carbon-coated copper grid",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Carbon-coated copper grid",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-tem-grid-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.3 Figure 2 and TEM specimen preparation; p.4 Nanoparticle Characterization"
+          }
+        ],
+        "asset_sha256": "33bb0af0e30abffc60155a1fb473c22c3e6d0f7e0b2cc368aa7a79e958e87762",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "33bb0af0e30abffc60155a1fb473c22c3e6d0f7e0b2cc368aa7a79e958e87762"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-au-disk-identity",
+      "name": "Gold disk electrode",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "Au",
+      "displayFormula": "Au",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-au-disk-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "c9616f079fb88847d31a80ac98631ea63b0359bc61f83e08eb3805205f606093",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "c9616f079fb88847d31a80ac98631ea63b0359bc61f83e08eb3805205f606093"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-alumina-identity",
+      "name": "Alpha-alumina polishing powder",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "Al2O3",
+      "displayFormula": "Al2O3",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-alumina-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "6f3d4fd6b17b12bad9941571403ff088edb799454495dd55737614cacd34e48a",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "6f3d4fd6b17b12bad9941571403ff088edb799454495dd55737614cacd34e48a"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-abrasive-identity",
+      "name": "Fine abrasive paper",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Fine abrasive paper",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-abrasive-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "b6427043783ef395723cdda766afdf0657a86c08745065731f44a39c5175dced",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "b6427043783ef395723cdda766afdf0657a86c08745065731f44a39c5175dced"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cysteamine-identity",
+      "name": "Cysteamine",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "C2H7NS",
+      "displayFormula": "C2H7NS",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-cysteamine-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Condensed reference connectivity; no stereochemistry or 3D geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Aqueous solution is deoxygenated."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "b04ff53bdc5f0a67a2a16c6a750cbc4ec2abffe976896f86f2b4883ea59f7b2b",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "b04ff53bdc5f0a67a2a16c6a750cbc4ec2abffe976896f86f2b4883ea59f7b2b"
+      },
+      "caption": "Source-scoped reference identity. Condensed reference connectivity; no stereochemistry or 3D geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-au-colloid-identity",
+      "name": "Prepared gold nanoparticle colloid",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "Au",
+      "displayFormula": "Au",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-au-colloid-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Linked to Au route; immersion volume and concentration unreported."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "5a3f7ee94a857cb8afed60a1913e56babc67045a8ebb5efb563abaab40182bc6",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "5a3f7ee94a857cb8afed60a1913e56babc67045a8ebb5efb563abaab40182bc6"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cysteine-identity",
+      "name": "Cysteine, stereochemistry unreported",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "C3H7NO2S",
+      "displayFormula": "C3H7NO2S",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-cysteine-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Condensed reference connectivity; no stereochemistry or 3D geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "77dd2ef5759f3a5d6ba04d02a2f6362dabad4302b0b5e4a454fd04e22e7861e3",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "77dd2ef5759f3a5d6ba04d02a2f6362dabad4302b0b5e4a454fd04e22e7861e3"
+      },
+      "caption": "Source-scoped reference identity. Condensed reference connectivity; no stereochemistry or 3D geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-cds-colloid-identity",
+      "name": "Prepared capped CdS NCs",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "CdS",
+      "displayFormula": "CdS",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-cds-colloid-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "bbd6ec3ea07b6adc52fd1f021ab6cfc56f6beeff4a11e431630a5beca4f7721c",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "bbd6ec3ea07b6adc52fd1f021ab6cfc56f6beeff4a11e431630a5beca4f7721c"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-edc-identity",
+      "name": "1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide hydrochloride",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "C8H18ClN3",
+      "displayFormula": "C8H18ClN3",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-edc-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Condensed reference connectivity; no stereochemistry or 3D geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Pierce; separate CdS and apoB-100 loading solutions each contain this stated concentration."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "981ecc6d763a53c123a3a50d2ea573ef5f3adff42257f7ab4ad60b19bb7d37a3",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "981ecc6d763a53c123a3a50d2ea573ef5f3adff42257f7ab4ad60b19bb7d37a3"
+      },
+      "caption": "Source-scoped reference identity. Condensed reference connectivity; no stereochemistry or 3D geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-nhs-identity",
+      "name": "N-Hydroxysuccinimide",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "C4H5NO3",
+      "displayFormula": "C4H5NO3",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-nhs-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Condensed reference connectivity; no stereochemistry or 3D geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Sigma."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "8c806d4994b7228060eebbe1cd0ebe987edab3b5e7371931a5e738ea366cdd65",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "8c806d4994b7228060eebbe1cd0ebe987edab3b5e7371931a5e738ea366cdd65"
+      },
+      "caption": "Source-scoped reference identity. Condensed reference connectivity; no stereochemistry or 3D geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-bsa-identity",
+      "name": "Bovine serum albumin",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Bovine serum albumin",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-bsa-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Sigma."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "c6a3f5409e403e22458ec8dfb7ba7146c0242422684811cad939402f6ad830ee",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "c6a3f5409e403e22458ec8dfb7ba7146c0242422684811cad939402f6ad830ee"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-persulfate-identity",
+      "name": "Potassium persulfate",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "K2S2O8",
+      "displayFormula": "K2S2O8",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-persulfate-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Shanghai Chemical Reagent Co."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.2 / printed 5575, Experimental Section: Reagents"
+          }
+        ],
+        "asset_sha256": "4b1113965d7db83d2ed6ec201b4ffce8c7dc3136652d245ad134136604c5b5ba",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "4b1113965d7db83d2ed6ec201b4ffce8c7dc3136652d245ad134136604c5b5ba"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-redox-probe-identity",
+      "name": "Ferri/ferrocyanide redox probe",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Ferri/ferrocyanide redox probe",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-redox-probe-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred.",
+        "Source Fe(CN)6 4-/3-; salts and relative redox-species proportions unspecified."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.5 Figures 5 and 6 captions; pp.5–7 biosensor characterization discussion"
+          }
+        ],
+        "asset_sha256": "cda8bf0b1f1d5ded4ffe358ed6eb8a7f9e2ad37eb8c1cbf703b32081e056a124",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "cda8bf0b1f1d5ded4ffe358ed6eb8a7f9e2ad37eb8c1cbf703b32081e056a124"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-sce-identity",
+      "name": "Saturated calomel reference electrode",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": null,
+      "displayFormula": "Saturated calomel reference electrode",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-sce-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.3 Apparatus"
+          }
+        ],
+        "asset_sha256": "e03bab97bc04fc3221bcc5650117c47ad07c3dd1ebfd204343402ba730b12344",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "e03bab97bc04fc3221bcc5650117c47ad07c3dd1ebfd204343402ba730b12344"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-pt-identity",
+      "name": "Platinum counter electrode",
+      "aliases": [],
+      "depictionKind": "symbolic_identity",
+      "pubchemCid": null,
+      "formula": "Pt",
+      "displayFormula": "Pt",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-pt-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Symbolic source identity; no molecular or particle geometry assigned",
+        "No purity, current-paper concentration, ion-pair geometry, salt dissociation or surface pose inferred."
+      ],
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.3 Apparatus"
+          }
+        ],
+        "asset_sha256": "40992e6d17b884f036629aef6153d44e96595e72e2b0bf1ff004279d3b3e14b6",
+        "description": "Code-authored source-scoped identity display; not a source image or measured geometry."
+      },
+      "assetHashes": {
+        "svgPath": "40992e6d17b884f036629aef6153d44e96595e72e2b0bf1ff004279d3b3e14b6"
+      },
+      "caption": "Source-scoped reference identity. Symbolic source identity; no molecular or particle geometry assigned."
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-sulfuric-identity",
+      "name": "Sulfuric acid",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "H2SO4",
+      "displayFormula": "H2SO4",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-sulfuric-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Neutral H2SO4 reference identity; this paper reports 0.5 M H2SO4 for electrode cleaning. No protonation/speciation model."
+      ],
+      "caption": "Neutral H2SO4 reference identity; this paper reports 0.5 M H2SO4 for electrode cleaning. No protonation/speciation model.",
+      "assetHashes": {
+        "svgPath": "5ed65ee01f5b7f7e72b67757a7c67f1b64c916c4eb2040e516e9d5180df2af34"
+      },
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF p.4 / printed 5577, Fabrication of the ECL Biosensor"
+          }
+        ],
+        "asset_sha256": "5ed65ee01f5b7f7e72b67757a7c67f1b64c916c4eb2040e516e9d5180df2af34",
+        "description": "Code-authored source-scoped connectivity; no conformer or coordinate model."
+      }
+    },
+    {
+      "id": "jie2007-cds-au-ac062357c-nitrogen-identity",
+      "name": "Nitrogen",
+      "aliases": [],
+      "depictionKind": "molecular_connectivity",
+      "pubchemCid": null,
+      "formula": "N2",
+      "displayFormula": "N2",
+      "sourceUrls": [
+        "https://doi.org/10.1021/ac062357c"
+      ],
+      "svgPath": "svg/jie2007-cds-au-ac062357c-nitrogen-identity.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "functionalGroups": [],
+      "limitations": [
+        "Nitrogen reference connectivity only. No N–N distance, 3D coordinates or measured gas structure assigned."
+      ],
+      "caption": "Nitrogen reference connectivity only. No N–N distance, 3D coordinates or measured gas structure assigned.",
+      "assetHashes": {
+        "svgPath": "768bf6ecccd29d8ee08af949cc6cde24dea0c434b5552c565352561ded8e1f23"
+      },
+      "provenance": {
+        "source_id": "jie2007-cds-au-ac062357c",
+        "source_locator": [
+          {
+            "source_id": "jie2007-cds-au-ac062357c",
+            "locator": "Main PDF pp.3–4 / printed 5576–5577, Preparation of Water-Soluble CdS NCs; continuation p.4"
+          }
+        ],
+        "asset_sha256": "768bf6ecccd29d8ee08af949cc6cde24dea0c434b5552c565352561ded8e1f23",
+        "description": "Code-authored source-scoped connectivity; no conformer or coordinate model."
+      }
+    },
+    {
+      "id": "chen2014-jp500270d-cuznsns-sulfur-element-reference",
+      "name": "Elemental sulfur powder",
+      "formula": "S",
+      "displayFormula": "S",
+      "aliases": [
+        "Elemental sulfur powder"
+      ],
+      "depictionKind": "formula",
+      "svgPath": "svg/chen2014-jp500270d-cuznsns-sulfur-element-reference.svg",
+      "model2dPath": null,
+      "model3dPath": null,
+      "caption": "Chen-reported elemental sulfur powder, Aldrich, 99.5%. Formula identity only; no powder allotrope, dissolved molecular species or measured geometry is assigned.",
+      "limitations": [
+        "No S8 ring, monatomic vapor, crystal lattice or 3D structure is assigned.",
+        "Chen source grade 99.5%; precursor form is powder."
+      ],
+      "sourceUrls": [
+        "https://doi.org/10.1021/jp500270d"
+      ],
+      "pubchemCid": null,
+      "functionalGroups": [],
+      "provenance": {
+        "sourceDoi": "10.1021/jp500270d",
+        "sourceSha256": "47e098ec797835631cff8a6b12b9fd3841acbd9f573cd84a464c86c77acb0aaf",
+        "sourceRecords": [
+          {
+            "record_id": "chen2014-jp500270d-cuznsns-x000",
+            "material_id": "sulfur-powder",
+            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Chemicals and Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
+          },
+          {
+            "record_id": "chen2014-jp500270d-cuznsns-x005",
+            "material_id": "sulfur-powder",
+            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Chemicals and Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
+          },
+          {
+            "record_id": "chen2014-jp500270d-cuznsns-x010",
+            "material_id": "sulfur-powder",
+            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Chemicals and Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
+          },
+          {
+            "record_id": "chen2014-jp500270d-cuznsns-x025",
+            "material_id": "sulfur-powder",
+            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Chemicals and Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
+          },
+          {
+            "record_id": "chen2014-jp500270d-cuznsns-x045",
+            "material_id": "sulfur-powder",
+            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Chemicals and Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
+          },
+          {
+            "record_id": "chen2014-jp500270d-cuznsns-x075",
+            "material_id": "sulfur-powder",
+            "source_locator": "Main PDF p.2 / printed p.11955, Experimental, Chemicals and Synthesis of (Cu2Sn)xZn3(1−x)S3 Nanocrystals"
+          }
+        ],
+        "sourcePaperRole": "Locally authored formula identity card; not measured source structure.",
+        "identitySource": "Chen main PDF p.2 / printed p.11955, Chemicals: sulfur powder (Aldrich, 99.5%).",
+        "representationReuse": {
+          "template_registry_id": "gu2004-sulfur-element-reference",
+          "template_svg_sha256": "27b7915609f59d19fec9252d99411d8cae23220ce40f87d23ae5a1d14e1398ea",
+          "scope": "Formula-card layout reused only; Chen source attribution and 99.5% grade are source-specific. The Gu entry and SVG remain unchanged."
+        }
+      },
+      "independentScientificAudit": "passed_current_source_delta_review",
+      "published": false,
+      "eligible_training": false,
+      "assetHashes": {
+        "svgPath": "3b3b09d84c42208e3f26b3c717067c960c4dbcaa24ba51247c123d585fa092d9"
       }
     }
   ],
