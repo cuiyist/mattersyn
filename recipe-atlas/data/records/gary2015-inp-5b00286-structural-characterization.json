@@ -1,0 +1,1242 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gary2015-inp-5b00286-structural-characterization",
+  "revision": 4,
+  "record_type": "procedure",
+  "title": "Gary et al. (2015): MSC/QD NMR, PDF and XRD sample-class comparison",
+  "material": {
+    "formula": "InP",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "family": "semiconductor quantum dot or magic-sized cluster",
+    "architecture": "single_material"
+  },
+  "method": "MSC/QD NMR, PDF and XRD sample-class comparison",
+  "sources": [
+    {
+      "id": "gary2015-inp-5b00286",
+      "doi": "10.1021/acs.chemmater.5b00286",
+      "title": "Two-Step Nucleation and Growth of InP Quantum Dots via Magic-Sized Cluster Intermediates",
+      "authors": "Dylan C. Gary; Maxwell W. Terban; Simon J. L. Billinge; Brandi M. Cossairt",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.chemmater.5b00286",
+      "main_status": "All ten main pages inspected as text and full-page images.",
+      "si_status": "All ten matching SI pages inspected as text and full-page images.",
+      "reuse_status": "ACS2015 source figures; publisher reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "gary2015-inp-5b00286",
+    "recipe_family": "gary2015-inp-5b00286",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No intended exact size assigned",
+      "raw_text": "",
+      "basis": "",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "sample",
+      "name": "MA/ODPA InP MSC samples for PDF",
+      "formula": "InP",
+      "role": "characterization input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Exact X-ray sample amount unreported",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "kapton",
+      "name": "Kapton capillary",
+      "formula": null,
+      "role": "PDF sample holder",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "analytical-samples",
+      "name": "analytical samples",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "pdf-data",
+      "name": "MSC PDF data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "sample",
+        "kapton"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "pdf-acquisition",
+      "action": "pdf-acquisition",
+      "label": "Acquire X-ray total-scattering data",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "sample",
+        "kapton"
+      ],
+      "outputs": [
+        "pdf-data"
+      ],
+      "parameters": {
+        "xray_energy": {
+          "value": 67.419,
+          "minimum": null,
+          "maximum": null,
+          "unit": "keV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+            }
+          ],
+          "derivation": null
+        },
+        "wavelength": {
+          "value": 0.1839,
+          "minimum": null,
+          "maximum": null,
+          "unit": "angstrom",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+            }
+          ],
+          "derivation": null
+        },
+        "sample_detector_distance": {
+          "value": 204.9599,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8, PDF detector geometry"
+            }
+          ],
+          "derivation": null
+        },
+        "detector_pixels_per_axis": {
+          "value": 2048,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+            }
+          ],
+          "derivation": null
+        },
+        "pixel_side": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+          }
+        ],
+        "note": "Atmosphere not independently stated for this scoped operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "MA/ODPA MSC total-scattering measurements at room temperature. PerkinElmer area detector, Ni/Fit2D calibration, SrXplanar integration and PDFgetX3.2048×2048pixels each200×200µm²; beamlineX17A atNSLS. The separately listed XRD sample classes are not outputs of this PDF acquisition.",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, X-ray PDF measurements and processing, continuedp9"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ma-msc-reference",
+      "source_sample_label": "MA MSCs",
+      "batch_id": null,
+      "material_state_id": "analytical-samples",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "MA MSCs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "notes": [
+        "Analytical source class only; exact synthesis batch or Figure7B mass is not identified."
+      ]
+    },
+    {
+      "sample_id": "odpa-msc-reference",
+      "source_sample_label": "ODPA MSCs",
+      "batch_id": null,
+      "material_state_id": "analytical-samples",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ODPA MSCs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "notes": [
+        "Analytical source class only; exact synthesis batch or Figure7B mass is not identified."
+      ]
+    },
+    {
+      "sample_id": "siph3-qd-reference",
+      "source_sample_label": "QDs from P(SiPh3)3",
+      "batch_id": null,
+      "material_state_id": "analytical-samples",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "QDs from P(SiPh3)3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "notes": [
+        "Analytical source class only; exact synthesis batch or Figure7B mass is not identified."
+      ]
+    },
+    {
+      "sample_id": "ma-qd-reference",
+      "source_sample_label": "QDs from MA MSCs",
+      "batch_id": null,
+      "material_state_id": "analytical-samples",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "QDs from MA MSCs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, FigureS12"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, FigureS12"
+        }
+      ],
+      "notes": [
+        "Analytical source class only; exact synthesis batch or Figure7B mass is not identified."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ma-msc-reference-scherrer",
+      "sample_id": "ma-msc-reference",
+      "property": "Scherrer coherent-domain diameter",
+      "technique": "powder XRD",
+      "value": {
+        "value": 1.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Shape factorK=0.9 using(111)peak; coherence diameter is not TEM size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+        }
+      ]
+    },
+    {
+      "id": "ma-msc-reference-pdf",
+      "sample_id": "ma-msc-reference",
+      "property": "PDF-estimated cluster diameter",
+      "technique": "X-ray pair distribution function",
+      "value": {
+        "value": null,
+        "minimum": 1,
+        "maximum": 2,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source general estimate; no coordinates or unique structural solution.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "odpa-msc-reference-scherrer",
+      "sample_id": "odpa-msc-reference",
+      "property": "Scherrer coherent-domain diameter",
+      "technique": "powder XRD",
+      "value": {
+        "value": 1.1,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Shape factorK=0.9 using(111)peak; coherence diameter is not TEM size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+        }
+      ]
+    },
+    {
+      "id": "odpa-msc-reference-pdf",
+      "sample_id": "odpa-msc-reference",
+      "property": "PDF-estimated cluster diameter",
+      "technique": "X-ray pair distribution function",
+      "value": {
+        "value": null,
+        "minimum": 1,
+        "maximum": 2,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source general estimate; no coordinates or unique structural solution.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "siph3-qd-reference-scherrer",
+      "sample_id": "siph3-qd-reference",
+      "property": "Scherrer coherent-domain diameter",
+      "technique": "powder XRD",
+      "value": {
+        "value": 2.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Shape factorK=0.9 using(111)peak; coherence diameter is not TEM size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+        }
+      ]
+    },
+    {
+      "id": "ma-qd-reference-scherrer",
+      "sample_id": "ma-qd-reference",
+      "property": "Scherrer coherent-domain diameter",
+      "technique": "powder XRD",
+      "value": {
+        "value": 2.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Shape factorK=0.9 using(111)peak; coherence diameter is not TEM size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, FigureS12 continued caption and Scherrer calculation"
+        }
+      ]
+    },
+    {
+      "id": "odpa-nmr-34",
+      "sample_id": "odpa-msc-reference",
+      "property": "31P chemical shift",
+      "technique": "31P NMR",
+      "value": {
+        "value": 34,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "202.4MHz,C6D6; ODPA ligand environment; no MA400mg preparation assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "odpa-nmr-30",
+      "sample_id": "odpa-msc-reference",
+      "property": "31P chemical shift",
+      "technique": "31P NMR",
+      "value": {
+        "value": 30,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "202.4MHz,C6D6; ODPA ligand environment; no MA400mg preparation assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "odpa-nmr-26",
+      "sample_id": "odpa-msc-reference",
+      "property": "31P chemical shift",
+      "technique": "31P NMR",
+      "value": {
+        "value": 26,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "202.4MHz,C6D6; ODPA ligand environment; no MA400mg preparation assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "odpa-nmr-m224",
+      "sample_id": "odpa-msc-reference",
+      "property": "31P chemical shift",
+      "technique": "31P NMR",
+      "value": {
+        "value": -224,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "202.4MHz,C6D6; cluster-core phosphorus assignment; no MA400mg preparation assignment.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "pdf-sharp-range",
+      "sample_id": "ma-msc-reference",
+      "property": "sharp intracluster PDF correlations",
+      "technique": "X-ray PDF",
+      "value": {
+        "value": 12,
+        "minimum": null,
+        "maximum": null,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Both MSC classes show sharp features to about12Å.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "ma-pdf-tail",
+      "sample_id": "ma-msc-reference",
+      "property": "possible longer-distance PDF feature range",
+      "technique": "X-ray PDF",
+      "value": {
+        "value": null,
+        "minimum": 15,
+        "maximum": 17,
+        "unit": "angstrom",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Possible MA features only; not definitive diameter or atomic coordinates.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Figures4B and5; PDF/NMR/XRD comparison"
+        }
+      ]
+    },
+    {
+      "id": "ma-xrd-broad-feature",
+      "sample_id": "ma-msc-reference",
+      "property": "MA-specific broad XRD feature",
+      "technique": "powder XRD",
+      "value": {
+        "value": "The MA-MSC pattern has a broad feature near 20° 2θ that is absent from the ODPA-MSC pattern and both compared QD patterns. The authors suggest amorphous material as a possible explanation; this is not a confirmed phase assignment.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5, XRD comparison of MA and ODPA MSCs and QD reference patterns"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 comparison and caption"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 caption continuation"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5, XRD comparison of MA and ODPA MSCs and QD reference patterns"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 comparison and caption"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 caption continuation"
+        }
+      ]
+    },
+    {
+      "id": "ma-msc-reference-311-observation",
+      "sample_id": "ma-msc-reference",
+      "property": "(311) reflection comparison",
+      "technique": "powder XRD",
+      "value": {
+        "value": "No definitive (311) peak is resolved for MA MSCs. This does not establish absence of every crystalline domain.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 continued caption"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 continued caption"
+        }
+      ]
+    },
+    {
+      "id": "odpa-msc-reference-311-observation",
+      "sample_id": "odpa-msc-reference",
+      "property": "(311) reflection comparison",
+      "technique": "powder XRD",
+      "value": {
+        "value": "No definitive (311) peak is resolved for ODPA MSCs. This does not establish absence of every crystalline domain.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 continued caption"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 continued caption"
+        }
+      ]
+    },
+    {
+      "id": "siph3-qd-reference-311-observation",
+      "sample_id": "siph3-qd-reference",
+      "property": "(311) reflection comparison",
+      "technique": "powder XRD",
+      "value": {
+        "value": "The source reports a well-defined (311) peak for QDs from P(SiPh3)3.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 continued caption"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 continued caption"
+        }
+      ]
+    },
+    {
+      "id": "ma-qd-reference-311-observation",
+      "sample_id": "ma-qd-reference",
+      "property": "(311) reflection comparison",
+      "technique": "powder XRD",
+      "value": {
+        "value": "The source reports a well-defined (311) peak for QDs from MA MSCs.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 continued caption"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 caption: QD versus MSC (311) reflections"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 continued caption"
+        }
+      ]
+    },
+    {
+      "id": "ma-shifted-reflection",
+      "sample_id": "ma-msc-reference",
+      "property": "MA reflection shift comparison",
+      "technique": "powder XRD",
+      "value": {
+        "value": "The source reports a significant reflection-position shift for MA MSCs relative to bulk InP. The main text labels the reflection (220), while the SI caption labels it (200); that label discrepancy remains unresolved.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5, XRD comparison of MA and ODPA MSCs and QD reference patterns"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 comparison and caption"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 caption continuation"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5, XRD comparison of MA and ODPA MSCs and QD reference patterns"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 comparison and caption"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 caption continuation"
+        }
+      ]
+    },
+    {
+      "id": "odpa-reflection-position",
+      "sample_id": "odpa-msc-reference",
+      "property": "ODPA reflection-position comparison",
+      "technique": "powder XRD",
+      "value": {
+        "value": "For the reflection discussed alongside the shifted MA-MSC feature, the main text reports no appreciable shift for ODPA MSCs relative to bulk InP. The main (220) versus SI (200) label discrepancy is preserved.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5, XRD comparison of MA and ODPA MSCs and QD reference patterns"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.6, Figure S12 comparison and caption"
+          },
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.7, Figure S12 caption continuation"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5, XRD comparison of MA and ODPA MSCs and QD reference patterns"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.6, Figure S12 comparison and caption"
+        },
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.7, Figure S12 caption continuation"
+        }
+      ]
+    },
+    {
+      "id": "ligand-core-pdf-comparison",
+      "sample_id": "ma-msc-reference",
+      "property": "Ligand-dependent PDF comparison",
+      "technique": "X-ray pair distribution function",
+      "value": {
+        "value": "The MA- and ODPA-capped MSC radial-distribution functions differ despite similar source-estimated sizes of about 1–2 nm. The authors interpret this difference as suggesting that MSC core structure depends on the ligand set; no unique atomic structure is determined.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5, Figure 5 caption and PDF comparison"
+          }
+        ],
+        "note": "Qualitative source observation; any structural suggestion is attributed to the authors."
+      },
+      "conditions": "Source sample-class comparison only. Analytical samples are not joined to an exact synthesis batch; no phase, atomic coordinates or measured atomic structure is assigned. This observation explicitly compares both MA- and ODPA-MSC classes.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5, Figure 5 caption and PDF comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped review of all ten main and ten matching SI pages. Source-specific preparations, analytical sample classes, outcomes, unresolved conflicts and missing fields are retained.",
+    "missing_fields": [
+      "Cited external syntheses of P(SiMe3)3 and ODPA were not inspected; no unreported upstream conditions imported.",
+      "Isolated MSC mass includes its ligand set; mass is not converted to moles of pure InP.",
+      "Exact physical batch joins between synthesis, NMR, XRD, PDF and optical samples remain unassigned unless explicitly stated.",
+      "Atomic coordinates and sample-specific lattice parameters are not supplied.",
+      "Optical and XRD dimensions are not interchangeable; TEM3.1±0.5nm belongs only to50mg QDs."
+    ],
+    "conflicts": [
+      "Mainp 5 describes shifted(220)reflection while SI FigureS 12 caption calls the comparison(200); keep source labels unresolved.",
+      "SI 73° sharp peak is silicon sample-holder reflection, not sample silicon.",
+      "Bulk InP ICDD PDF 2:00-032-0452 is a reference pattern, not measured atomistic coordinates."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

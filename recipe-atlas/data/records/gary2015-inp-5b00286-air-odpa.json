@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gary2015-inp-5b00286-air-odpa",
+  "revision": 4,
+  "record_type": "procedure",
+  "title": "Gary et al. (2015): ODPA MSC air-exposure stability context",
+  "material": {
+    "formula": "InP",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "family": "semiconductor quantum dot or magic-sized cluster",
+    "architecture": "single_material"
+  },
+  "method": "ODPA MSC air-exposure stability context",
+  "sources": [
+    {
+      "id": "gary2015-inp-5b00286",
+      "doi": "10.1021/acs.chemmater.5b00286",
+      "title": "Two-Step Nucleation and Growth of InP Quantum Dots via Magic-Sized Cluster Intermediates",
+      "authors": "Dylan C. Gary; Maxwell W. Terban; Simon J. L. Billinge; Brandi M. Cossairt",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.chemmater.5b00286",
+      "main_status": "All ten main pages inspected as text and full-page images.",
+      "si_status": "All ten matching SI pages inspected as text and full-page images.",
+      "reuse_status": "ACS2015 source figures; publisher reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "gary2015-inp-5b00286",
+    "recipe_family": "gary2015-inp-5b00286",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No intended exact size assigned",
+      "raw_text": "",
+      "basis": "",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "msc",
+      "name": "ODPA InP MSCs",
+      "formula": "InP",
+      "role": "air-exposure analyte",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Air-exposure amount unreported",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "product",
+      "name": "product",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "msc"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "expose-air",
+      "action": "expose-air",
+      "label": "Expose cluster sample to air",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "msc"
+      ],
+      "outputs": [
+        "product"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 24,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "ODPA spectrum remains unchanged after24h air exposure. Figure3B black trace is described after cooling to room temperature; exact batch equivalence with SI FigureS7 is not independently supplied.",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "air-exposed-msc",
+      "source_sample_label": "air-exposed-msc",
+      "batch_id": null,
+      "material_state_id": "product",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Air-exposed ODPA InP MSCs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ],
+      "notes": [
+        "Optical change observed for MA; optical persistence for ODPA. No quantitative oxidation fraction inferred."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "source-outcome",
+      "sample_id": "air-exposed-msc",
+      "property": "source-reported outcome",
+      "technique": "UV-visible absorption",
+      "value": {
+        "value": "ODPA-MSC spectrum remains unchanged after24h air exposure.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.4 / printed 1435, Air-exposure comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped review of all ten main and ten matching SI pages. Source-specific preparations, analytical sample classes, outcomes, unresolved conflicts and missing fields are retained.",
+    "missing_fields": [
+      "Cited external syntheses of P(SiMe3)3 and ODPA were not inspected; no unreported upstream conditions imported.",
+      "Isolated MSC mass includes its ligand set; mass is not converted to moles of pure InP.",
+      "Exact physical batch joins between synthesis, NMR, XRD, PDF and optical samples remain unassigned unless explicitly stated.",
+      "Atomic coordinates and sample-specific lattice parameters are not supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

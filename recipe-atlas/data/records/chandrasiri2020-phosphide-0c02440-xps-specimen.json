@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chandrasiri2020-phosphide-0c02440-xps-specimen",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure",
+  "record_type": "procedure",
+  "title": "Chandrasiri et al. (2020): XPS specimen preparation",
+  "material": {
+    "formula": "InP and InP/ZnSeS source specimens",
+    "family": "Phosphine precursors and InP, Cd3P2, Zn3P2 preparations",
+    "elements": [
+      "In",
+      "P",
+      "Zn",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "InP and InP/ZnSeS source specimens"
+    ],
+    "architecture": "unresolved",
+    "source_notation": "XPS specimen preparation"
+  },
+  "method": "XPS specimen preparation",
+  "sources": [
+    {
+      "id": "chandrasiri2020-phosphide-0c02440",
+      "doi": "10.1021/acs.inorgchem.0c02440",
+      "title": "Sterically Encumbered Tris(trialkylsilyl) Phosphine Precursors for Quantum Dot Synthesis",
+      "authors": "Hashini B. Chandrasiri; Eun Byoel Kim; Preston T. Snee",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.inorgchem.0c02440",
+      "main_status": "All eight local main pages reviewed as text and visuals.",
+      "si_status": "All eleven paired local SI pages reviewed as text and visuals.",
+      "reuse_status": "ACS2020 figure permission/license not verified."
+    },
+    {
+      "id": "chandrasiri2020-phosphide-0c02440-si",
+      "doi": "10.1021/acs.inorgchem.0c02440",
+      "title": "Sterically Encumbered Tris(trialkylsilyl) Phosphine Precursors for Quantum Dot Synthesis Supporting Information",
+      "authors": "Hashini B. Chandrasiri; Eun Byoel Kim; Preston T. Snee",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.inorgchem.0c02440",
+      "main_status": "All eight local main pages reviewed as text and visuals.",
+      "si_status": "All eleven paired local SI pages reviewed as text and visuals.",
+      "reuse_status": "ACS2020 figure permission/license not verified."
+    }
+  ],
+  "lineage": {
+    "source_group": "chandrasiri2020-phosphide-0c02440",
+    "recipe_family": "chandrasiri2020-phosphide-0c02440",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP and InP/ZnSeS source specimens",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "silicon",
+      "name": "Silicon wafer",
+      "formula": "Si",
+      "role": "XPS specimen support",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "XPS/XRD specimen support, not synthesis input."
+      ],
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "source-specimen",
+      "name": "Reported QD characterization context",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "precipitate-out",
+      "name": "Precipitate characterization QDs output",
+      "kind": "mixture",
+      "parent_ids": [
+        "source-specimen"
+      ]
+    },
+    {
+      "id": "dropcast-out",
+      "name": "Dropcast on a clean silicon wafer output",
+      "kind": "mixture",
+      "parent_ids": [
+        "precipitate-out",
+        "silicon"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "precipitate",
+      "action": "precipitate",
+      "label": "Precipitate characterization QDs",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "source-specimen"
+      ],
+      "outputs": [
+        "precipitate-out"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitation reagent and dose not specified in XPS paragraph.",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ]
+    },
+    {
+      "id": "dropcast",
+      "action": "dropcast",
+      "label": "Dropcast on a clean silicon wafer",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "precipitate"
+      ],
+      "inputs": [
+        "precipitate-out",
+        "silicon"
+      ],
+      "outputs": [
+        "dropcast-out"
+      ],
+      "parameters": {
+        "c1s_reference": {
+          "value": 284.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "eV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "284.6",
+          "evidence": [
+            {
+              "source_id": "chandrasiri2020-phosphide-0c02440",
+              "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "C 1s energy is an instrument reference, not a synthesis condition.",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "specimen",
+      "source_sample_label": "XPS prepared source specimen",
+      "batch_id": null,
+      "material_state_id": "dropcast-out",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP and InP/ZnSeS source specimens",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Experimental Section: precursor, InP, etching, shelling, water transfer and characterization procedures"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Local reported preparations, precursor chemistry, post-treatment and selected source comparison/characterization contexts; no complete-paper Reader or imported cited methods.",
+    "missing_fields": [
+      "No source atomic coordinates or complete unit cell.",
+      "Record IDs index reported contexts, not independently established physical batch IDs.",
+      "No unique synthesis batch linked to every characterized specimen; support is not product atomic structure."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original article",
+      "url": "https://doi.org/10.1021/acs.inorgchem.0c02440",
+      "relation": "primary_source"
+    }
+  ]
+}

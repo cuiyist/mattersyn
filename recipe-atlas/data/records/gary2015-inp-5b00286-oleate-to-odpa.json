@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gary2015-inp-5b00286-oleate-to-odpa",
+  "revision": 4,
+  "record_type": "literature_protocol",
+  "title": "Gary et al. (2015): Oleate-MSC to ODPA-MSC ligand-tracking preparation",
+  "material": {
+    "formula": "InP",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "family": "semiconductor quantum dot or magic-sized cluster",
+    "architecture": "single_material"
+  },
+  "method": "Oleate-MSC to ODPA-MSC ligand-tracking preparation",
+  "sources": [
+    {
+      "id": "gary2015-inp-5b00286",
+      "doi": "10.1021/acs.chemmater.5b00286",
+      "title": "Two-Step Nucleation and Growth of InP Quantum Dots via Magic-Sized Cluster Intermediates",
+      "authors": "Dylan C. Gary; Maxwell W. Terban; Simon J. L. Billinge; Brandi M. Cossairt",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.chemmater.5b00286",
+      "main_status": "All ten main pages inspected as text and full-page images.",
+      "si_status": "All ten matching SI pages inspected as text and full-page images.",
+      "reuse_status": "ACS2015 source figures; publisher reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "gary2015-inp-5b00286",
+    "recipe_family": "gary2015-inp-5b00286",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No intended exact size assigned",
+      "raw_text": "",
+      "basis": "",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "oleate-msc",
+      "name": "Oleate-terminated InP MSCs",
+      "formula": "InP",
+      "role": "cluster precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Mass not reported for this oleate-specific variant",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ]
+    },
+    {
+      "id": "indium-odpa",
+      "name": "Indium octadecylphosphonate",
+      "formula": null,
+      "role": "indium/ligand precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "amount": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "Amount unreported for oleate-tracking run",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "product",
+      "name": "product",
+      "kind": "mixture",
+      "parent_ids": [
+        "oleate-msc",
+        "indium-odpa"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "convert",
+      "action": "convert",
+      "label": "Convert oleate MSCs to ODPA-terminated MSCs",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "oleate-msc",
+        "indium-odpa"
+      ],
+      "outputs": [
+        "product"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "note": "Atmosphere not independently stated for this scoped operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source reports analogous cluster route but no oleate-specific charge, stock volume, injection temperature or timed schedule; none are copied from the quantified MA route.",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "oleate-derived-odpa",
+      "source_sample_label": "oleate-derived-odpa",
+      "batch_id": null,
+      "material_state_id": "product",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ODPA-terminated InP MSCs from oleate clusters",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "predominantly phosphonate ligand set",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "ligand-ratio",
+      "sample_id": "oleate-derived-odpa",
+      "property": "phosphonate-to-carboxylate ligand ratio",
+      "technique": "1H NMR",
+      "value": {
+        "value": 44,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "phosphonate:carboxylate",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.5 / printed 1436, Oleate-MSC to ODPA ligand tracking discussion"
+        }
+      ]
+    },
+    {
+      "id": "carboxylate-fraction",
+      "sample_id": "oleate-derived-odpa",
+      "property": "carboxylate ligand fraction",
+      "technique": "1H NMR",
+      "value": {
+        "value": 2.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.5, FigureS10"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source proton integration, approximate ligand fraction",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.5, FigureS10"
+        }
+      ]
+    },
+    {
+      "id": "phosphonate-fraction",
+      "sample_id": "oleate-derived-odpa",
+      "property": "phosphonate ligand fraction",
+      "technique": "1H NMR",
+      "value": {
+        "value": 97.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "raw_text": "",
+        "basis": "",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.5, FigureS10"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source proton integration, approximate ligand fraction",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.5, FigureS10"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped review of all ten main and ten matching SI pages. Source-specific preparations, analytical sample classes, outcomes, unresolved conflicts and missing fields are retained.",
+    "missing_fields": [
+      "Cited external syntheses of P(SiMe3)3 and ODPA were not inspected; no unreported upstream conditions imported.",
+      "Isolated MSC mass includes its ligand set; mass is not converted to moles of pure InP.",
+      "Exact physical batch joins between synthesis, NMR, XRD, PDF and optical samples remain unassigned unless explicitly stated.",
+      "Atomic coordinates and sample-specific lattice parameters are not supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gary2015-inp-5b00286-odpa-tem-grid",
+  "revision": 4,
+  "record_type": "procedure",
+  "title": "Gary et al. (2015): ODPA-MSC TEM grid and empty-grid comparison",
+  "material": {
+    "formula": "InP",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "family": "semiconductor quantum dot or magic-sized cluster",
+    "architecture": "single_material"
+  },
+  "method": "ODPA-MSC TEM grid and empty-grid comparison",
+  "sources": [
+    {
+      "id": "gary2015-inp-5b00286",
+      "doi": "10.1021/acs.chemmater.5b00286",
+      "title": "Two-Step Nucleation and Growth of InP Quantum Dots via Magic-Sized Cluster Intermediates",
+      "authors": "Dylan C. Gary; Maxwell W. Terban; Simon J. L. Billinge; Brandi M. Cossairt",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.chemmater.5b00286",
+      "main_status": "All ten main pages inspected as text and full-page images.",
+      "si_status": "All ten matching SI pages inspected as text and full-page images.",
+      "reuse_status": "ACS2015 source figures; publisher reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "gary2015-inp-5b00286",
+    "recipe_family": "gary2015-inp-5b00286",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No intended exact size assigned",
+      "raw_text": "",
+      "basis": "",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "odpa-msc",
+      "name": "ODPA InP MSCs",
+      "formula": "InP",
+      "role": "TEM analyte",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "TEM deposition amount unreported",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "SI PDF p.3, FigureS6 grid comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ]
+    },
+    {
+      "id": "grid",
+      "name": "Ultrathin carbon on holey carbon400-mesh TEM grid",
+      "formula": null,
+      "role": "sample support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mesh": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mesh",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "SI PDF p.3, FigureS6 grid comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Ted Pella. Source reports similar dark spots on empty grids; no separate empty-grid image is supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "grid-specimen",
+      "name": "grid specimen",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "odpa-msc",
+        "grid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "grid-deposit",
+      "action": "grid-deposit",
+      "label": "Prepare cluster TEM grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "odpa-msc",
+        "grid"
+      ],
+      "outputs": [
+        "grid-specimen"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": "Atmosphere not independently stated for this scoped operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Exact deposition volume, solvent and drying procedure unreported. TEM cannot resolve nanostructures at high resolution; approximately 1.5 nm dark spots also occur on empty grid and cannot be assigned as MSC diameter.",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "odpa-grid",
+      "source_sample_label": "odpa-grid",
+      "batch_id": null,
+      "material_state_id": "grid-specimen",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ODPA MSC TEM support specimen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ],
+      "notes": [
+        "No reported MSC particle morphology or diameter obtained from these images. Large spots attributed to organic residue."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "source-outcome",
+      "sample_id": "odpa-grid",
+      "property": "source-reported outcome",
+      "technique": "TEM",
+      "value": {
+        "value": "Exact deposition volume, solvent and drying procedure unreported. TEM cannot resolve nanostructures at high resolution; approximately1.5nm dark spots also occur on empty grid and cannot be assigned as MSC diameter.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "SI PDF p.3, FigureS6 grid comparison"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "SI PDF p.3, FigureS6 grid comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped review of all ten main and ten matching SI pages. Source-specific preparations, analytical sample classes, outcomes, unresolved conflicts and missing fields are retained.",
+    "missing_fields": [
+      "Cited external syntheses of P(SiMe3)3 and ODPA were not inspected; no unreported upstream conditions imported.",
+      "Isolated MSC mass includes its ligand set; mass is not converted to moles of pure InP.",
+      "Exact physical batch joins between synthesis, NMR, XRD, PDF and optical samples remain unassigned unless explicitly stated.",
+      "Atomic coordinates and sample-specific lattice parameters are not supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

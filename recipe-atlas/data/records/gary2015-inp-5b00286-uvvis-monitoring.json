@@ -1,0 +1,419 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "gary2015-inp-5b00286-uvvis-monitoring",
+  "revision": 4,
+  "record_type": "procedure",
+  "title": "Gary et al. (2015): Timed reaction aliquot dilution for UV-visible monitoring",
+  "material": {
+    "formula": "InP",
+    "elements": [
+      "In",
+      "P"
+    ],
+    "family": "semiconductor quantum dot or magic-sized cluster",
+    "architecture": "single_material"
+  },
+  "method": "Timed reaction aliquot dilution for UV-visible monitoring",
+  "sources": [
+    {
+      "id": "gary2015-inp-5b00286",
+      "doi": "10.1021/acs.chemmater.5b00286",
+      "title": "Two-Step Nucleation and Growth of InP Quantum Dots via Magic-Sized Cluster Intermediates",
+      "authors": "Dylan C. Gary; Maxwell W. Terban; Simon J. L. Billinge; Brandi M. Cossairt",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.chemmater.5b00286",
+      "main_status": "All ten main pages inspected as text and full-page images.",
+      "si_status": "All ten matching SI pages inspected as text and full-page images.",
+      "reuse_status": "ACS2015 source figures; publisher reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "gary2015-inp-5b00286",
+    "recipe_family": "gary2015-inp-5b00286",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "No intended exact size assigned",
+      "raw_text": "",
+      "basis": "",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hexanes",
+      "name": "Hexanes",
+      "formula": null,
+      "role": "solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+            }
+          ],
+          "derivation": null
+        },
+        "purity": {
+          "value": 98.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.7, Experimental materials"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ]
+    },
+    {
+      "id": "reaction-aliquot",
+      "name": "Reaction aliquot",
+      "formula": "InP",
+      "role": "analytical sample",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dilution-tubes",
+      "name": "dilution tubes",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "hexanes"
+      ]
+    },
+    {
+      "id": "optical-aliquot",
+      "name": "optical aliquot",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "reaction-aliquot",
+        "dilution-tubes"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "prepare-tubes",
+      "action": "prepare-tubes",
+      "label": "Prepare 16 test tubes, each with 6 mL hexanes",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hexanes"
+      ],
+      "outputs": [
+        "dilution-tubes"
+      ],
+      "parameters": {
+        "number_of_tubes": {
+          "value": 16,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": "Atmosphere not independently stated for this scoped operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "6 mL is the amount in each tube, not growth-pot solvent volume.",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ]
+    },
+    {
+      "id": "sample-dilute",
+      "action": "sample-dilute",
+      "label": "Withdraw 50 µL and dilute into a prepared tube",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "reaction-aliquot",
+        "dilution-tubes"
+      ],
+      "outputs": [
+        "optical-aliquot"
+      ],
+      "parameters": {
+        "syringe_capacity": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "µL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "raw_text": "",
+          "basis": "",
+          "evidence": [
+            {
+              "source_id": "gary2015-inp-5b00286",
+              "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": "Atmosphere not independently stated for this scoped operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Timed reaction aliquots; no additive growth dose. Subsequent optical spectrum measured. UV-visible spectra collected on Agilent Cary5000 (general Methods mainp7).",
+      "evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "optical-aliquot",
+      "source_sample_label": "optical-aliquot",
+      "batch_id": null,
+      "material_state_id": "optical-aliquot",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Diluted InP reaction aliquot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": "No exact crystal coordinates or phase assignment inferred from bulk-reference comparison."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "gary2015-inp-5b00286",
+            "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "gary2015-inp-5b00286",
+          "locator": "Main PDF p.8 / printed 1439, UV-vis aliquot monitoring procedure"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Scoped review of all ten main and ten matching SI pages. Source-specific preparations, analytical sample classes, outcomes, unresolved conflicts and missing fields are retained.",
+    "missing_fields": [
+      "Cited external syntheses of P(SiMe3)3 and ODPA were not inspected; no unreported upstream conditions imported.",
+      "Isolated MSC mass includes its ligand set; mass is not converted to moles of pure InP.",
+      "Exact physical batch joins between synthesis, NMR, XRD, PDF and optical samples remain unassigned unless explicitly stated.",
+      "Atomic coordinates and sample-specific lattice parameters are not supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

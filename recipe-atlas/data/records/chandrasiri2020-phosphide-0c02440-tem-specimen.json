@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chandrasiri2020-phosphide-0c02440-tem-specimen",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "reader_role": "supporting_procedure",
+  "record_type": "procedure",
+  "title": "Chandrasiri et al. (2020): TEM specimen preparation",
+  "material": {
+    "formula": "InP and InP/ZnSeS source specimens",
+    "family": "Phosphine precursors and InP, Cd3P2, Zn3P2 preparations",
+    "elements": [
+      "In",
+      "P",
+      "Zn",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "InP and InP/ZnSeS source specimens"
+    ],
+    "architecture": "unresolved",
+    "source_notation": "TEM specimen preparation"
+  },
+  "method": "TEM specimen preparation",
+  "sources": [
+    {
+      "id": "chandrasiri2020-phosphide-0c02440",
+      "doi": "10.1021/acs.inorgchem.0c02440",
+      "title": "Sterically Encumbered Tris(trialkylsilyl) Phosphine Precursors for Quantum Dot Synthesis",
+      "authors": "Hashini B. Chandrasiri; Eun Byoel Kim; Preston T. Snee",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.inorgchem.0c02440",
+      "main_status": "All eight local main pages reviewed as text and visuals.",
+      "si_status": "All eleven paired local SI pages reviewed as text and visuals.",
+      "reuse_status": "ACS2020 figure permission/license not verified."
+    },
+    {
+      "id": "chandrasiri2020-phosphide-0c02440-si",
+      "doi": "10.1021/acs.inorgchem.0c02440",
+      "title": "Sterically Encumbered Tris(trialkylsilyl) Phosphine Precursors for Quantum Dot Synthesis Supporting Information",
+      "authors": "Hashini B. Chandrasiri; Eun Byoel Kim; Preston T. Snee",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acs.inorgchem.0c02440",
+      "main_status": "All eight local main pages reviewed as text and visuals.",
+      "si_status": "All eleven paired local SI pages reviewed as text and visuals.",
+      "reuse_status": "ACS2020 figure permission/license not verified."
+    }
+  ],
+  "lineage": {
+    "source_group": "chandrasiri2020-phosphide-0c02440",
+    "recipe_family": "chandrasiri2020-phosphide-0c02440",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP and InP/ZnSeS source specimens",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "tem-grid",
+      "name": "Carbon-coated copper TEM grid",
+      "formula": null,
+      "role": "TEM support",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Ted Pella300-mesh grid; support geometry not a QD atomic model."
+      ],
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "source-specimen",
+      "name": "Reported QD characterization context",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "dropcast-out",
+      "name": "Dropcast processed solution on TEM grid output",
+      "kind": "mixture",
+      "parent_ids": [
+        "source-specimen",
+        "tem-grid"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "dropcast",
+      "action": "dropcast",
+      "label": "Dropcast processed solution on TEM grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "source-specimen",
+        "tem-grid"
+      ],
+      "outputs": [
+        "dropcast-out"
+      ],
+      "parameters": {
+        "grid_mesh": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mesh",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300",
+          "evidence": [
+            {
+              "source_id": "chandrasiri2020-phosphide-0c02440",
+              "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+            }
+          ],
+          "derivation": null
+        },
+        "electron_energy": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "keV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300",
+          "evidence": [
+            {
+              "source_id": "chandrasiri2020-phosphide-0c02440",
+              "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Carbon-coated copper grid; instrument energy is not a reaction setting.",
+      "evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "specimen",
+      "source_sample_label": "TEM prepared source specimen",
+      "batch_id": null,
+      "material_state_id": "dropcast-out",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP and InP/ZnSeS source specimens",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "chandrasiri2020-phosphide-0c02440",
+            "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "chandrasiri2020-phosphide-0c02440",
+          "locator": "Main PDF p.3, printed 15930, Characterization specimen preparation and instrument settings"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Local reported preparations, precursor chemistry, post-treatment and selected source comparison/characterization contexts; no complete-paper Reader or imported cited methods.",
+    "missing_fields": [
+      "No source atomic coordinates or complete unit cell.",
+      "Record IDs index reported contexts, not independently established physical batch IDs.",
+      "No unique synthesis batch linked to every characterized specimen; support is not product atomic structure."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Original article",
+      "url": "https://doi.org/10.1021/acs.inorgchem.0c02440",
+      "relation": "primary_source"
+    }
+  ]
+}
