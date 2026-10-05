@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "prins2021-superfocusing-nanolett0c04813-topo-pretreatment",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Prins et al. (2021): Separate Trioctylphosphine oxide pretreatment",
+  "material": {
+    "formula": "Trioctylphosphine oxide",
+    "family": "Colloidal semiconductor nanocrystal growth",
+    "architecture": "unresolved",
+    "elements": []
+  },
+  "method": "Separate Trioctylphosphine oxide pretreatment",
+  "sources": [
+    {
+      "id": "prins2021-superfocusing-nanolett0c04813",
+      "doi": "10.1021/acs.nanolett.0c04813",
+      "title": "Extended Nucleation and Superfocusing in Colloidal Semiconductor Nanocrystal Synthesis",
+      "authors": "P. Tim Prins; Federico Montanarella; Kim Dümbgen; Yolanda Justo; Johanna C. van der Bok; Stijn O. M. Hinterding; Jaco J. Geuchies; Jorick Maes; Kim De Nolf; Sander Deelen; Hans Meijer; Thomas Zinn; Andrei V. Petukhov; Freddy T. Rabouw; Celso De Mello Donega; Daniel Vanmaekelbergh; Zeger Hens",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acs.nanolett.0c04813",
+      "main_status": "partially_reviewed",
+      "si_status": "selected_related_SI_review",
+      "reuse_status": "Source citation retained; figure reuse permission requires integrator verification."
+    },
+    {
+      "id": "prins2021-superfocusing-nanolett0c04813-si",
+      "doi": "10.1021/acs.nanolett.0c04813",
+      "title": "Supporting Information for Extended Nucleation and Superfocusing in Colloidal Semiconductor Nanocrystal Synthesis",
+      "authors": "P. Tim Prins; Federico Montanarella; Kim Dümbgen; Yolanda Justo; Johanna C. van der Bok; Stijn O. M. Hinterding; Jaco J. Geuchies; Jorick Maes; Kim De Nolf; Sander Deelen; Hans Meijer; Thomas Zinn; Andrei V. Petukhov; Freddy T. Rabouw; Celso De Mello Donega; Daniel Vanmaekelbergh; Zeger Hens",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acs.nanolett.0c04813",
+      "main_status": "partially_reviewed",
+      "si_status": "selected_related_SI_review",
+      "reuse_status": "Admitted companion SI; standalone reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "prins2021-superfocusing-nanolett0c04813",
+    "recipe_family": "prins2021-superfocusing-nanolett0c04813",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Trioctylphosphine oxide",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "topo",
+      "name": "Trioctylphosphine oxide",
+      "formula": "C24H51OP",
+      "role": "separately degassed reaction medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "S1.1 supplier/grade: Sigma-Aldrich 90%. Chemicals in that subsection were used as received. This provenance is not silently transferred to the separately described S3/S5 routes."
+      ],
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "medium-degas-state",
+      "name": "Degas Trioctylphosphine oxide at 150 °C for 2 h",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "medium-keep-state",
+      "name": "Keep the pretreated medium under inert atmosphere until use",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "medium-degas-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "medium-degas",
+      "action": "medium-degas",
+      "label": "Degas Trioctylphosphine oxide at 150 °C for 2 h",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "topo"
+      ],
+      "outputs": [
+        "medium-degas-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 degC",
+          "evidence": [
+            {
+              "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+              "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+              "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "ODA and TOPO were pretreated separately. No shared pretreatment batch, vessel geometry or vacuum pressure is inferred.",
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+        }
+      ]
+    },
+    {
+      "id": "medium-keep",
+      "action": "medium-keep",
+      "label": "Keep the pretreated medium under inert atmosphere until use",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "medium-degas"
+      ],
+      "inputs": [
+        "medium-degas-state"
+      ],
+      "outputs": [
+        "medium-keep-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "inert atmosphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Storage duration and temperature not specified.",
+      "evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "topo-pretreated",
+      "source_sample_label": "Pretreated Trioctylphosphine oxide",
+      "batch_id": null,
+      "material_state_id": "medium-keep-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Trioctylphosphine oxide",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+            "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "prins2021-superfocusing-nanolett0c04813-si",
+          "locator": "SI PDF p.2, S1.2 Synthesis of CdSe nanocrystals"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped preparations and associated SAXS, microscopy and optical evidence from the complete 10-page main article and 32-page SI. CdSe, PbS and CdS routes, stocks, workup, separate laboratory benchmark, double-injection variants, single-injection controls and partial calibration preparations are distinct. Theoretical curves and reference structures are explicitly separated from measured specimens. No exact unreported batch, graph coordinate or atomic structure is reconstructed; no complete-paper Reader is claimed.",
+    "missing_fields": [
+      "Exact physical batch identifiers and measured atomistic coordinates are not supplied."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and supporting information",
+      "url": "https://doi.org/10.1021/acs.nanolett.0c04813",
+      "relation": "source"
+    }
+  ]
+}

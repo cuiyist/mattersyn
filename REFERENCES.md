@@ -2,7 +2,7 @@
 
 ## Sources represented by reviewed records in this checkout
 
-**212 primary source groups** are represented by **2,414 records in this checkout**. The separately verified live website contains **210 source groups and 2,333 records**, verified on 2026-10-05 at 03:02:40 UTC. Two additional contributions are pending live release; this bibliography does not count them as live. Records are not independent experiments.
+**214 primary source groups** are represented by **2,480 records in this checkout**. The separately verified live website contains **212 source groups and 2,414 records**, verified on 2026-10-05 at 14:43:30 UTC. The two additional contributions await deployment; this bibliography does not count them as live. Records are not independent experiments.
 
 - Haiming Zhu; Nianhui Song; William Rodríguez-Córdoba; Tianquan Lian (year unrecorded). Wave Function Engineering for Efficient Extraction of up to Nineteen Electrons from One CdSe/CdS Quasi-Type II Quantum Dot — supporting information. *Journal of the American Chemical Society*. [10.1021/ja210312s](https://doi.org/10.1021/ja210312s). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=zhu2012-ja210312s-si).
 
@@ -370,6 +370,8 @@
 
 - Voznyy, O.; Levina, L.; Fan, J. Z.; et al. (2019). Machine Learning Accelerates Discovery of Optimal Colloidal Quantum Dot Synthesis. [10.1021/acsnano.9b03864](https://doi.org/10.1021/acsnano.9b03864). Review scope remains stated in the linked website records.
 
+- Evert Dhaene; Jonas Billet; Ellie Bennett; Isabel Van Driessche; Jonathan De Roo (2019). The Trouble with ODE: Polymerization during Nanocrystal Synthesis. [10.1021/acs.nanolett.9b03088](https://doi.org/10.1021/acs.nanolett.9b03088). Review scope remains stated in the linked website records.
+
 - Paul M. Welch; Timothy A. Dreier; Harsha D. Magurudeniya; Matthew G. Frith; Jan Ilavsky; Sönke Seifert; Aunik K. Rahman; Anis Rahman; Amita Joshi Singh; Bryan S. Ringstrand; Christina J. Hanson; Jennifer A. Hollingsworth; Millicent A. Firestone (2020). 3D Volumetric Structural Hierarchy Induced by Colloidal Polymerization of a Quantum-Dot Ionic Liquid Monomer Conjugate. [10.1021/acs.macromol.0c00011](https://doi.org/10.1021/acs.macromol.0c00011). Review scope remains stated in the linked website records.
 
 - Yiping Chen; Zuan Lin; Chenfang Miao; Qianqian Cai; Fenglan Li; Zongfu Zheng; Xinhua Lin; Yanjie Zheng; Shaohuang Weng (2020). A simple fluorescence assay for trypsin through a protamine-induced carbon quantum dot-quenching aggregation platform. *RSC Advances*, 26765–26770. [10.1039/d0ra03970e](https://doi.org/10.1039/d0ra03970e). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=chen2020-cqd-d0ra03970e).
@@ -381,6 +383,8 @@
 - Yanyan Li; Parth Vashishtha; Zhicong Zhou; Zhi Li; Sunil B. Shivarudraiah; Chao Ma; Junkai Liu; Kam Sing Wong; Haibin Su; Jonathan E. Halpert (2020). Room Temperature Synthesis of Stable, Printable Cs3Cu2X5 (X = I, Br/I, Br, Br/Cl, Cl) Colloidal Nanocrystals with Near-Unity Quantum Yield Green Emitters (X = Cl). [10.1021/acs.chemmater.0c00280](https://doi.org/10.1021/acs.chemmater.0c00280). [Source review and scope](https://cuiyist.github.io/mattersyn-site/paper-review.html?id=li2020cs3cu2x5).
 
 - Hashini B. Chandrasiri; Eun Byoel Kim; Preston T. Snee (2020). Sterically Encumbered Tris(trialkylsilyl) Phosphine Precursors for Quantum Dot Synthesis. [10.1021/acs.inorgchem.0c02440](https://doi.org/10.1021/acs.inorgchem.0c02440). Review scope remains stated in the linked website records.
+
+- P. Tim Prins; Federico Montanarella; Kim Dümbgen; Yolanda Justo; Johanna C. van der Bok; Stijn O. M. Hinterding; Jaco J. Geuchies; Jorick Maes; Kim De Nolf; Sander Deelen; Hans Meijer; Thomas Zinn; Andrei V. Petukhov; Freddy T. Rabouw; Celso De Mello Donega; Daniel Vanmaekelbergh; Zeger Hens (2021). Extended Nucleation and Superfocusing in Colloidal Semiconductor Nanocrystal Synthesis. [10.1021/acs.nanolett.0c04813](https://doi.org/10.1021/acs.nanolett.0c04813). Review scope remains stated in the linked website records.
 
 - Yan-Fei He; Jian-Wei Chen; Chang-Zhi An; Xiao-Lin Hou; Zi-Tao Zhong; Chao-Qing Li; Wei Chen; Bo Liu; Yuan-Di Zhao (2021). Fluorescence Characteristics of CdTe Quantum Dot Colloids below the Freezing Point. [10.1021/acs.jpcc.1c02085](https://doi.org/10.1021/acs.jpcc.1c02085). Review scope remains stated in the linked website records.
 
@@ -567,5 +571,7 @@ Reference structures are distinguished from sample-resolved synthesis targets. P
 - [FCC Au external bulk reference](https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular539v1.pdf). constructed lattice reference.
 
 - [Bi rhombohedral bulk comparison (constructed from COD 9008576 and Thoft 1995)](https://www.crystallography.net/cod/9008576.html). locally constructed bulk reference.
+
+- [Qualified ideal zinc-blende CdSe bulk reference](https://doi.org/10.1063/1.101033). constructed lattice reference.
 
 A citation does not grant reuse rights to third-party figures or source text. The separate release boundary gate controls public delivery.
