@@ -1,0 +1,542 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sellers2015-cds-cdse-amide-jpcc5b07504-tcspc-linked",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Sellers et al. (2015): Linked time-correlated single-photon counting",
+  "material": {
+    "formula": "CdS/CdSe",
+    "family": "Covalently coupled CdS/CdSe quantum dots",
+    "architecture": "heterostructure",
+    "elements": [
+      "Cd",
+      "S",
+      "Se"
+    ]
+  },
+  "method": "Linked time-correlated single-photon counting",
+  "sources": [
+    {
+      "id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+      "doi": "10.1021/acs.jpcc.5b07504",
+      "title": "Excited-State Charge Transfer within Covalently Linked Quantum Dot Heterostructures",
+      "authors": "Diane G. Sellers; Amanda A. Button; Justin N. Nasca; Guy E. Wolfe II; Saurabh Chauhan; David F. Watson",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed_screening_hold",
+      "reuse_status": "ACS 2015 rights; figure permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "recipe_family": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "linked",
+      "name": "NHS-CdS plus 4-ATP-CdSe coupling mixture",
+      "formula": null,
+      "role": "aged time-resolved PL specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Syntheses of CdS–CdSe Heterostructures"
+        }
+      ]
+    },
+    {
+      "id": "ludox",
+      "name": "Ludox colloidal silica scattering reference",
+      "formula": null,
+      "role": "instrument-response scattering reference",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Reference suspension composition/concentration not specified; not a reaction reagent."
+      ],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, TCSPC"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "tcspc-irf-state",
+      "name": "Measure the instrument response from Ludox scattering",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "tcspc-acquire-state",
+      "name": "Acquire time-resolved PL with 440 nm excitation",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "tcspc-irf",
+      "action": "tcspc-irf",
+      "label": "Measure the instrument response from Ludox scattering",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ludox"
+      ],
+      "outputs": [
+        "tcspc-irf-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, TCSPC"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, TCSPC"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source reports an approximately 750 ps instrument-response FWHM. Reference charge and concentration are unreported.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, TCSPC"
+        }
+      ]
+    },
+    {
+      "id": "tcspc-acquire",
+      "action": "tcspc-acquire",
+      "label": "Acquire time-resolved PL with 440 nm excitation",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "tcspc-irf"
+      ],
+      "inputs": [
+        "linked"
+      ],
+      "outputs": [
+        "tcspc-acquire-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 440,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "440 nm",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "repetition_rate": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MHz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 MHz",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "pulse_duration": {
+          "value": null,
+          "minimum": 40,
+          "maximum": 90,
+          "unit": "ps",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "40–90 ps",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "pulse_energy": {
+          "value": null,
+          "minimum": 0.07,
+          "maximum": 20,
+          "unit": "mJ",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.07–20 mJ (literal source unit)",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "bins": {
+          "value": 1024,
+          "minimum": null,
+          "maximum": null,
+          "unit": "count",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1024 count",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "bin_width": {
+          "value": 48.8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ps",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "48.8 ps",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "record_span": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ns",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 ns",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, TCSPC"
+            }
+          ],
+          "derivation": null
+        },
+        "emission_wavelength": {
+          "value": 625,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "625 nm",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.9, Figure 8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, TCSPC"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, TCSPC"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Becker & Hickl Tau-130 with PML-16C detector and BDL-440-SMC diode laser; magic-angle detection. Figure 8 selects 625 nm emission. The printed pulse-energy unit mJ is retained without correction. Main p.9 separately calls a 1 µs instrument window in its wraparound discussion; no silent reconciliation with the 50 ns recorded span. The 0.07–20 mJ unit is the source literal pulse-energy range; no unit correction is inferred from plausibility.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, TCSPC"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "tcspc-linked",
+      "source_sample_label": "Linked Figure 8 time-resolved PL comparison",
+      "batch_id": null,
+      "material_state_id": "tcspc-acquire-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.9, Figure 8"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.9, Figure 8"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.9, Figure 8"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.9, Figure 8"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.9, Figure 8"
+        }
+      ],
+      "notes": [
+        "Baseline subtraction removes wraparound contributions before the fastest component is compared. Triexponential fits are shown, but SI-only coefficients/lifetimes are excluded."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "irf-width",
+      "sample_id": "tcspc-linked",
+      "property": "Instrument response FWHM",
+      "technique": "Ludox-scattering IRF",
+      "value": {
+        "value": 750,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ps",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "750 ps",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, TCSPC"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, TCSPC"
+        }
+      ]
+    },
+    {
+      "id": "hole-rate",
+      "sample_id": "tcspc-linked",
+      "property": "Author-estimated hole-transfer rate constant",
+      "technique": "Lifetime-comparison estimate",
+      "value": {
+        "value": 96000000.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "s^-1",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "96000000.0 s^-1",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.9"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Assumes identical competing decay rates and hole transfer as the only added pathway. This is an interpretation-dependent estimate, not an independently measured elementary rate.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.9, Figure 8 and rate estimate"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only scoped synthesis, ligand exchange, coupling, controls and analytical preparation review. All 12 main pages were read as text and images. Locally present supporting information remains held and unreviewed; its additional plots, fit tables and energy-level derivation are excluded. Representative characterization contexts are not exact synthesis-batch assignments. No complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identity, measured atomic coordinates and crystal polymorph are unreported in the admitted source."
+    ],
+    "conflicts": [
+      "The TCSPC pulse energy is printed as 0.07–20 mJ; this potentially unusual unit is retained literally, not normalized to a guessed unit.",
+      "Main p.3 describes a 50 ns recorded span (1024 bins of 48.8 ps), while p.9 refers to a 1 µs instrument window in the wraparound discussion. Both statements remain explicit."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and related supporting-information listing",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "relation": "source"
+    }
+  ]
+}

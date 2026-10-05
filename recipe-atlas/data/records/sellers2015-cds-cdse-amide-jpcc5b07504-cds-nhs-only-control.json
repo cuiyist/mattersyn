@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sellers2015-cds-cdse-amide-jpcc5b07504-cds-nhs-only-control",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Sellers et al. (2015): TGA-CdS plus NHS without DCC control",
+  "material": {
+    "formula": "CdS",
+    "family": "Covalently coupled CdS/CdSe quantum dots",
+    "architecture": "single_material",
+    "elements": [
+      "Cd",
+      "S"
+    ]
+  },
+  "method": "TGA-CdS plus NHS without DCC control",
+  "sources": [
+    {
+      "id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+      "doi": "10.1021/acs.jpcc.5b07504",
+      "title": "Excited-State Charge Transfer within Covalently Linked Quantum Dot Heterostructures",
+      "authors": "Diane G. Sellers; Amanda A. Button; Justin N. Nasca; Guy E. Wolfe II; Saurabh Chauhan; David F. Watson",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed_screening_hold",
+      "reuse_status": "ACS 2015 rights; figure permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "recipe_family": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cds",
+      "name": "TGA-capped CdS quantum dots",
+      "formula": "CdS",
+      "role": "control nanocrystal substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+        }
+      ]
+    },
+    {
+      "id": "nhs",
+      "name": "N-Hydroxysuccinimide",
+      "formula": "C4H5NO3",
+      "role": "excess reagent without DCC",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Excess is qualitative; charge not reported for this control.",
+        "Supplier and grade: Alfa Aesar, 98+%. Source: Main PDF pp.1–2, Materials.",
+        "Main Materials section states reagents and solvents were used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nhs-only-control-state",
+      "name": "Expose TGA-CdS to excess NHS without DCC",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "nhs-only-control",
+      "action": "nhs-only-control",
+      "label": "Expose TGA-CdS to excess NHS without DCC",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cds",
+        "nhs"
+      ],
+      "outputs": [
+        "nhs-only-control-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "This FTIR control is explicitly reported, but control-specific solvent, amounts, timing, temperature and recovery are not supplied. Do not import the DCC-activated route parameters.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cds-nhs-only",
+      "source_sample_label": "NHS-only CdS control",
+      "batch_id": null,
+      "material_state_id": "nhs-only-control-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "unchanged-ftir",
+      "sample_id": "cds-nhs-only",
+      "property": "FTIR response",
+      "technique": "FTIR",
+      "value": {
+        "value": "Unchanged relative to TGA-CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Figure 1b versus 1a; no ester conversion inferred.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Figure 1b and NHS-only control paragraph"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only scoped synthesis, ligand exchange, coupling, controls and analytical preparation review. All 12 main pages were read as text and images. Locally present supporting information remains held and unreviewed; its additional plots, fit tables and energy-level derivation are excluded. Representative characterization contexts are not exact synthesis-batch assignments. No complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identity, measured atomic coordinates and crystal polymorph are unreported in the admitted source."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and related supporting-information listing",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "relation": "source"
+    }
+  ]
+}

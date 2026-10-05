@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sellers2015-cds-cdse-amide-jpcc5b07504-nmr-free-atp",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Sellers et al. (2015): Free 4-ATP NMR comparison",
+  "material": {
+    "formula": "C6H7NS",
+    "family": "Covalently coupled CdS/CdSe quantum dots",
+    "architecture": "unresolved",
+    "elements": []
+  },
+  "method": "Free 4-ATP NMR comparison",
+  "sources": [
+    {
+      "id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+      "doi": "10.1021/acs.jpcc.5b07504",
+      "title": "Excited-State Charge Transfer within Covalently Linked Quantum Dot Heterostructures",
+      "authors": "Diane G. Sellers; Amanda A. Button; Justin N. Nasca; Guy E. Wolfe II; Saurabh Chauhan; David F. Watson",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed_screening_hold",
+      "reuse_status": "ACS 2015 rights; figure permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "recipe_family": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "C6H7NS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "atp",
+      "name": "4-Aminothiophenol",
+      "formula": "C6H7NS",
+      "role": "NMR comparison sample",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Supplier and grade: Alfa Aesar, 97%. Source: Main PDF pp.1–2, Materials.",
+        "Main Materials section states reagents and solvents were used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+        }
+      ]
+    },
+    {
+      "id": "dmso-d6",
+      "name": "Dimethyl sulfoxide-d6",
+      "formula": "C2D6OS",
+      "role": "Figure 2 NMR solvent",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main Materials section states reagents and solvents were used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nmr-acquire-state",
+      "name": "Acquire the free 4-ATP spectrum in DMSO-d6",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "nmr-acquire",
+      "action": "nmr-acquire",
+      "label": "Acquire the free 4-ATP spectrum in DMSO-d6",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "atp",
+        "dmso-d6"
+      ],
+      "outputs": [
+        "nmr-acquire-state"
+      ],
+      "parameters": {
+        "frequency": {
+          "value": 500,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MHz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "500 MHz",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.4, Figure 2 caption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 2 explicitly specifies 500 MHz and DMSO-d6. The common instrument list gives Inova 500 or 400 MHz, but 400 MHz is not assigned to Figure 2. Sample charge, solvent volume, acquisition temperature and number of scans are unreported.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nmr-free-atp",
+      "source_sample_label": "Top free-ligand spectrum in Figure 2",
+      "batch_id": null,
+      "material_state_id": "nmr-acquire-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "C6H7NS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.4, Figure 2; Main PDF p.2, Instrumentation"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "free-atp-ta",
+      "source_sample_label": "Separate free 4-ATP transient-absorption comparison",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Free 4-ATP; no quantum dots",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.7, isolated 4-ATP comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.7, isolated 4-ATP comparison"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.7, isolated 4-ATP comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.7, isolated 4-ATP comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.7, isolated 4-ATP comparison"
+        }
+      ],
+      "notes": [
+        "Separate source analytical context, not the physical Figure 2 NMR tube. Concentration, solvent and independently specified excitation settings are not restated for this comparison."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "shift-0",
+      "sample_id": "nmr-free-atp",
+      "property": "Free aromatic quasi-doublet",
+      "technique": "1H NMR",
+      "value": {
+        "value": 6.53,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "6.53 ppm",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF pp.4–5, NMR discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source-assigned peak position; no fitted line width added.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF pp.4–5, NMR discussion"
+        }
+      ]
+    },
+    {
+      "id": "shift-1",
+      "sample_id": "nmr-free-atp",
+      "property": "Free aromatic quasi-doublet",
+      "technique": "1H NMR",
+      "value": {
+        "value": 7.03,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7.03 ppm",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF pp.4–5, NMR discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source-assigned peak position; no fitted line width added.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF pp.4–5, NMR discussion"
+        }
+      ]
+    },
+    {
+      "id": "disulfide-shift",
+      "sample_id": "nmr-free-atp",
+      "property": "Disulfide aromatic downfield offset",
+      "technique": "1H NMR",
+      "value": {
+        "value": null,
+        "minimum": 0.03,
+        "maximum": 0.08,
+        "unit": "ppm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.03–0.08 ppm",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF pp.4–5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "A minor impurity comparison, not a separately prepared ligand product.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF pp.4–5, NMR discussion"
+        }
+      ]
+    },
+    {
+      "id": "free-atp-ta-band",
+      "sample_id": "free-atp-ta",
+      "property": "Free 4-ATP induced absorption",
+      "technique": "Transient absorption",
+      "value": {
+        "value": "Broad 500–700 nm band centered near 620 nm, long-lived within the observation window",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Source comparison supports a tentative ligand radical-cation assignment; no directly measured chemical structure or fitted lifetime supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.7, isolated 4-ATP comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only scoped synthesis, ligand exchange, coupling, controls and analytical preparation review. All 12 main pages were read as text and images. Locally present supporting information remains held and unreviewed; its additional plots, fit tables and energy-level derivation are excluded. Representative characterization contexts are not exact synthesis-batch assignments. No complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identity, measured atomic coordinates and crystal polymorph are unreported in the admitted source."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and related supporting-information listing",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "relation": "source"
+    }
+  ]
+}

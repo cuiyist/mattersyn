@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sellers2015-cds-cdse-amide-jpcc5b07504-ta-505-linked",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Sellers et al. (2015): 505 nm transient absorption of linked mixture",
+  "material": {
+    "formula": "CdS/CdSe",
+    "family": "Covalently coupled CdS/CdSe quantum dots",
+    "architecture": "heterostructure",
+    "elements": [
+      "Cd",
+      "S",
+      "Se"
+    ]
+  },
+  "method": "505 nm transient absorption of linked mixture",
+  "sources": [
+    {
+      "id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+      "doi": "10.1021/acs.jpcc.5b07504",
+      "title": "Excited-State Charge Transfer within Covalently Linked Quantum Dot Heterostructures",
+      "authors": "Diane G. Sellers; Amanda A. Button; Justin N. Nasca; Guy E. Wolfe II; Saurabh Chauhan; David F. Watson",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed_screening_hold",
+      "reuse_status": "ACS 2015 rights; figure permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "recipe_family": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "linked",
+      "name": "NHS-CdS plus 4-ATP-CdSe coupling mixture",
+      "formula": null,
+      "role": "aged transient-absorption specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Mixtures stirred at room temperature at least 72 h before time-resolved measurements; no exact physical batch identity."
+      ],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Syntheses of CdS–CdSe Heterostructures"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ta-load-state",
+      "name": "Load the dispersion into a four-sided 1 cm quartz cuvette",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "ta-acquire-state",
+      "name": "Acquire pump–probe transient absorption at 505 nm",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ta-load-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "ta-load",
+      "action": "ta-load",
+      "label": "Load the dispersion into a four-sided 1 cm quartz cuvette",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "linked"
+      ],
+      "outputs": [
+        "ta-load-state"
+      ],
+      "parameters": {
+        "path_length": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 cm",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cuvette sample volume and optical density are unreported; no aliquot volume inferred from the cuvette path length.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, transient absorption"
+        }
+      ]
+    },
+    {
+      "id": "ta-acquire",
+      "action": "ta-acquire",
+      "label": "Acquire pump–probe transient absorption at 505 nm",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "ta-load"
+      ],
+      "inputs": [
+        "ta-load-state"
+      ],
+      "outputs": [
+        "ta-acquire-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 505,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "505 nm",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        },
+        "pulse_fluence": {
+          "value": 6.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mJ/cm2",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "±0.6 mJ/cm2",
+          "basis": "",
+          "raw_text": "6.4 ± 0.6 mJ/cm2",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        },
+        "pulse_duration": {
+          "value": null,
+          "minimum": 6,
+          "maximum": 8,
+          "unit": "ns",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6–8 ns",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        },
+        "repetition_rate": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Hz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 Hz",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        },
+        "pump_beam_diameter": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 cm",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        },
+        "probe_lamp_power": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "W",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 W",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        },
+        "pump_probe_angle": {
+          "value": 90,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degree",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "90 degree",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.3, Instrumentation, transient absorption"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Frequency-tripled Nd:YAG/OPO pump; unpulsed Xe probe, bandpass filtering, monochromator and amplified photodiode. Fluence units are source-reported. Probe spectra and fit traces are source evidence; diagrams do not synthesize data.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, transient absorption"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ta-505-linked",
+      "source_sample_label": "Linked TA specimen at 505 nm",
+      "batch_id": null,
+      "material_state_id": "ta-load-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.3, Instrumentation, transient absorption"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.3, Instrumentation, transient absorption"
+        }
+      ],
+      "notes": [
+        "General aged-mixture procedure; wavelength-specific observation context, not an additional isolated synthesis."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "505-comparison",
+      "sample_id": "ta-505-linked",
+      "property": "505 nm mixture comparison",
+      "technique": "Transient absorption",
+      "value": {
+        "value": "Linked and control transient spectra nearly identical",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Main-text report of supplemental spectra; those spectra remain unreviewed.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.8, 505 nm excitation"
+        }
+      ]
+    },
+    {
+      "id": "505-late-band",
+      "sample_id": "ta-505-linked",
+      "property": "Late linked-mixture mean signal comparison",
+      "technique": "Transient absorption",
+      "value": {
+        "value": "At 7.5 µs, mean ΔA over 550–650 nm is threefold lower than for 420 nm and consistent with zero within its standard deviation",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.8"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Reported comparative statistic; no unreported ΔA value supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.8, 505 nm excitation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only scoped synthesis, ligand exchange, coupling, controls and analytical preparation review. All 12 main pages were read as text and images. Locally present supporting information remains held and unreviewed; its additional plots, fit tables and energy-level derivation are excluded. Representative characterization contexts are not exact synthesis-batch assignments. No complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identity, measured atomic coordinates and crystal polymorph are unreported in the admitted source."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and related supporting-information listing",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "relation": "source"
+    }
+  ]
+}

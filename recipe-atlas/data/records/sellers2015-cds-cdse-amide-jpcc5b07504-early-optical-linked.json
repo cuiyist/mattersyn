@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "sellers2015-cds-cdse-amide-jpcc5b07504-early-optical-linked",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Sellers et al. (2015): Linked first-hour optical comparison",
+  "material": {
+    "formula": "CdS/CdSe",
+    "family": "Covalently coupled CdS/CdSe quantum dots",
+    "architecture": "heterostructure",
+    "elements": [
+      "Cd",
+      "S",
+      "Se"
+    ]
+  },
+  "method": "Linked first-hour optical comparison",
+  "sources": [
+    {
+      "id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+      "doi": "10.1021/acs.jpcc.5b07504",
+      "title": "Excited-State Charge Transfer within Covalently Linked Quantum Dot Heterostructures",
+      "authors": "Diane G. Sellers; Amanda A. Button; Justin N. Nasca; Guy E. Wolfe II; Saurabh Chauhan; David F. Watson",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed_screening_hold",
+      "reuse_status": "ACS 2015 rights; figure permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "recipe_family": "sellers2015-cds-cdse-amide-jpcc5b07504",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS/CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.2, Experimental Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "linked",
+      "name": "NHS-CdS plus 4-ATP-CdSe coupling mixture",
+      "formula": null,
+      "role": "freshly mixed optical comparison sample",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "early-absorption-state",
+      "name": "Acquire the mixed-dispersion absorption spectrum",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "early-pl-state",
+      "name": "Monitor steady-state PL during the first hour",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "early-absorption-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "early-absorption",
+      "action": "early-absorption",
+      "label": "Acquire the mixed-dispersion absorption spectrum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "linked"
+      ],
+      "outputs": [
+        "early-absorption-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Representative Figure 5a comparison after mixing. Exact sampling time, concentration adjustment and dilution are not specified for this spectrum; absorption instrument is Agilent 8453 per main p.2.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+        }
+      ]
+    },
+    {
+      "id": "early-pl",
+      "action": "early-pl",
+      "label": "Monitor steady-state PL during the first hour",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "early-absorption"
+      ],
+      "inputs": [
+        "early-absorption-state"
+      ],
+      "outputs": [
+        "early-pl-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 420,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "420 nm",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+            }
+          ],
+          "derivation": null
+        },
+        "observation_window": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 min",
+          "evidence": [
+            {
+              "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+              "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cary Eclipse instrument per common main p.2 method. This early window is separate from the ≥72 h time-resolved sample age; 60 min is not a reaction isolation endpoint.",
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "early-optical-linked",
+      "source_sample_label": "Linked Figure 5 optical specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+        }
+      ],
+      "notes": [
+        "Exact prepared batch not specified; early-time comparison rather than the aged time-resolved specimen."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "trap-quench",
+      "sample_id": "early-optical-linked",
+      "property": "Trap-emission change within one hour",
+      "technique": "Steady-state photoluminescence",
+      "value": {
+        "value": 33,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "33 %",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Linked emission decreases by approximately 33%; control varies by less than 4%. This is not a quantum yield or a direct transfer-rate measurement.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+        }
+      ]
+    },
+    {
+      "id": "exciton-shift",
+      "sample_id": "early-optical-linked",
+      "property": "Absorption first-exciton position upon mixing",
+      "technique": "UV–visible absorption",
+      "value": {
+        "value": "No appreciable shift",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+            "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "sellers2015-cds-cdse-amide-jpcc5b07504",
+          "locator": "Main PDF p.6, Figure 5 and steady-state optical comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only scoped synthesis, ligand exchange, coupling, controls and analytical preparation review. All 12 main pages were read as text and images. Locally present supporting information remains held and unreviewed; its additional plots, fit tables and energy-level derivation are excluded. Representative characterization contexts are not exact synthesis-batch assignments. No complete-paper Reader.",
+    "missing_fields": [
+      "Exact physical batch identity, measured atomic coordinates and crystal polymorph are unreported in the admitted source."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary paper and related supporting-information listing",
+      "url": "https://doi.org/10.1021/acs.jpcc.5b07504",
+      "relation": "source"
+    }
+  ]
+}

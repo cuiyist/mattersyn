@@ -1,0 +1,574 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "schneider2018-cdte-pu-poss-jpcc7b11027-white-backlight",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "title": "Schneider et al. (2018): Actual two-film white display backlight",
+  "material": {
+    "formula": "CdTe/PU/POSS",
+    "elements": [
+      "Cd",
+      "Te",
+      "C",
+      "H",
+      "N",
+      "O",
+      "Si"
+    ],
+    "family": "CdTe quantum-dot polymer display composite",
+    "architecture": "composite",
+    "source_notation": "Named inorganic and polymer components identify material families, not a complete stoichiometric particle, surface or polymer composition."
+  },
+  "method": "Actual two-film white display backlight",
+  "sources": [
+    {
+      "id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+      "doi": "10.1021/acs.jpcc.7b11027",
+      "title": "Aqueous-Based Cadmium Telluride Quantum Dot/Polyurethane/Polyhedral Oligomeric Silsesquioxane Composites for Color Enhancement in Display Backlights",
+      "authors": "Julian Schneider; Tetiana Dudka; Yuan Xiong; Zhenguang Wang; Nikolai Gaponik; Andrey L. Rogach",
+      "year": 2018,
+      "url": "https://doi.org/10.1021/acs.jpcc.7b11027",
+      "main_status": "scoped_independently_audited",
+      "si_status": "Matching local SI exists but strict-screen no_target_recipe has no existing positive resolution; excluded and unread.",
+      "reuse_status": "Copyright2017 ACS; source figure reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "schneider2018-cdte-pu-poss-jpcc7b11027",
+    "recipe_family": "schneider2018-cdte-pu-poss-jpcc7b11027",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/PU/POSS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Independent intended size is not reported; measured sizes remain specimen observations.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "s-white-backlight",
+      "name": "white backlight",
+      "kind": "product",
+      "parent_ids": [
+        "s-green-film",
+        "s-red-film",
+        "s-blue-led"
+      ]
+    },
+    {
+      "id": "s-white-backlight-data",
+      "name": "white backlight data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "s-white-backlight"
+      ]
+    },
+    {
+      "id": "s-green-film",
+      "name": "green film",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "s-red-film",
+      "name": "red film",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "s-blue-led",
+      "name": "blue led",
+      "kind": "sample_set",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "combine-films",
+      "action": "combine-films",
+      "label": "Combine one green and one red CdTe/POSS/PU film with a blue LED panel",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s-green-film",
+        "s-red-film",
+        "s-blue-led"
+      ],
+      "outputs": [
+        "s-white-backlight"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": "Atmosphere not reported for this operation; no transfer from air drying or ambient film storage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Panel from Yicai Lighting Co., Shenzhen. Assembly geometry, film order and spacing unreported.",
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "drive-backlight",
+      "action": "drive-backlight",
+      "label": "Drive the white backlight panel",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "s-white-backlight"
+      ],
+      "outputs": [
+        "s-white-backlight-data"
+      ],
+      "parameters": {
+        "voltage": {
+          "value": 2.9,
+          "minimum": null,
+          "maximum": null,
+          "unit": "V",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+              "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+            }
+          ],
+          "derivation": null
+        },
+        "current": {
+          "value": 12,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mA",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+              "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": "Atmosphere not reported for this operation; no transfer from air drying or ambient film storage."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Actual one green+one red configuration; not automatically the later mixed-film prototype.",
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "white-backlight",
+      "source_sample_label": "Blue LED with one green and one red CdTe/POSS/PU film",
+      "batch_id": null,
+      "material_state_id": "s-white-backlight",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/POSS/PU films plus blueLED",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "green-cie-x",
+      "sample_id": "white-backlight",
+      "property": "Green QD CIE 1931 x coordinate",
+      "technique": "source spectral-to-CIE calculation",
+      "value": {
+        "value": 0.29,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "green-cie-y",
+      "sample_id": "white-backlight",
+      "property": "Green QD CIE 1931 y coordinate",
+      "technique": "source spectral-to-CIE calculation",
+      "value": {
+        "value": 0.68,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "red-cie-x",
+      "sample_id": "white-backlight",
+      "property": "Red QD CIE 1931 x coordinate",
+      "technique": "source spectral-to-CIE calculation",
+      "value": {
+        "value": 0.66,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "red-cie-y",
+      "sample_id": "white-backlight",
+      "property": "Red QD CIE 1931 y coordinate",
+      "technique": "source spectral-to-CIE calculation",
+      "value": {
+        "value": 0.34,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "blue-cie-x",
+      "sample_id": "white-backlight",
+      "property": "Blue LED CIE 1931 x coordinate",
+      "technique": "source spectral-to-CIE calculation",
+      "value": {
+        "value": 0.15,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "blue-cie-y",
+      "sample_id": "white-backlight",
+      "property": "Blue LED CIE 1931 y coordinate",
+      "technique": "source spectral-to-CIE calculation",
+      "value": {
+        "value": 0.03,
+        "minimum": null,
+        "maximum": null,
+        "unit": "",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    },
+    {
+      "id": "ntsc",
+      "sample_id": "white-backlight",
+      "property": "actual device NTSC gamut coverage",
+      "technique": "source color triangle calculation",
+      "value": {
+        "value": 93,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "",
+        "evidence": [
+          {
+            "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+            "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "schneider2018-cdte-pu-poss-jpcc7b11027",
+          "locator": "Main PDF p.6 / printed 13396, Figure4a,b and display-backlight discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Actual source-first text and original-page visual reading of all 8 main pages. Main-only operational TGA synthesis, film preparation, distinct optical and stability specimens, controls and projected device comparison. SI/external sources excluded; formal complete-paper Reader not claimed.",
+    "missing_fields": [
+      "Main article pages1-8 are the eligible source scope. Matching local SI exists but its strict-screen decision is no_target_recipe and no positive source-specific resolution was found; SI remains unread/excluded. External cited methods are not imported.",
+      "General recipe, selected optical specimens and unquantified comparisons retain distinct sample scopes. No exact physical batch or missing growth duration is inferred.",
+      "No source-curve digitization, atom model or unreported chemical/particle/film geometry is reconstructed.",
+      "Reported uncertainty signs are retained without inventing standard-deviation or standard-error meanings."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "reader_role": "synthesis_route",
+  "collection": "reviewed_literature"
+}
