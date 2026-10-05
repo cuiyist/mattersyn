@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "chan2007-cdse-ag2se-microfluidic-jp073474u-route",
-  "revision": 2,
+  "revision": 3,
   "record_type": "literature_protocol",
   "collection": "reviewed_literature",
   "reader_role": "synthesis_route",
@@ -203,6 +203,56 @@
         {
           "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
           "locator": "SI PDF p.4, Figures S2–S3 captions and plots"
+        }
+      ]
+    },
+    {
+      "id": "piranha-chip-cleaner",
+      "name": "Piranha cleaning solution",
+      "formula": null,
+      "role": "device-wall cleaning reagent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Chip-cleaning reagent only; piranha composition, quantity and duration are not specified in the reviewed passage. No nanoparticle reaction-feed role or mixture recipe is inferred."
+      ],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3 / printed 12212, oxide-wall FDTS passivation paragraph before Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "fdts-wall-treatment",
+      "name": "1H,1H,2H,2H-perfluorodecyltrichlorosilane (FDTS)",
+      "formula": null,
+      "role": "device-wall silanization reagent",
+      "stage": "precursor_preparation",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source-named FDTS solution treatment of oxide-coated device walls after piranha cleaning; not an Ag2Se particle ligand or reaction-feed component. Solution composition, concentration, quantity, treatment time and temperature are not specified here."
+      ],
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3 / printed 12212, oxide-wall FDTS passivation paragraph before Reagents and Solutions"
         }
       ]
     }
@@ -471,9 +521,134 @@
       "parent_ids": [
         "precursor-cdse"
       ]
+    },
+    {
+      "id": "assembled-chip",
+      "name": "assembled oxide-coated microfluidic chip before wall cleaning",
+      "kind": "stock",
+      "parent_ids": []
+    },
+    {
+      "id": "piranha-cleaned-chip",
+      "name": "chip with channel-exposed SU-8 removed; buried SU-8 bond retained",
+      "kind": "stock",
+      "parent_ids": [
+        "assembled-chip"
+      ]
+    },
+    {
+      "id": "fdts-passivated-chip",
+      "name": "FDTS-silanized oxide-walled microfluidic chip",
+      "kind": "stock",
+      "parent_ids": [
+        "piranha-cleaned-chip"
+      ]
     }
   ],
   "operations": [
+    {
+      "id": "clean-chip-walls",
+      "action": "clean",
+      "label": "Piranha-clean the assembled chip walls at room temperature",
+      "stage": "precursor_preparation",
+      "branch": "chip-device-preparation",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "assembled-chip",
+        "piranha-chip-cleaner"
+      ],
+      "outputs": [
+        "piranha-cleaned-chip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "room temperature",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+          }
+        ],
+        "note": "Reported for piranha cleaning only; no numerical temperature or atmosphere given."
+      },
+      "endpoint": {
+        "value": "Channel-exposed SU-8 removed; SU-8 sandwiched between wafers remains",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Before FDTS silanization, piranha-clean the assembled microfluidic device at room temperature. This strips SU-8 exposed inside the channel while preserving SU-8 sandwiched between the wafers. The source does not specify the piranha formulation, amount, cleaning duration, rinse or drying procedure here. This prepares the device walls, not the nanoparticle reagent feeds.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3 / printed 12212, oxide-wall FDTS passivation paragraph before Reagents and Solutions"
+        }
+      ]
+    },
+    {
+      "id": "silanize-chip-walls",
+      "action": "silanize",
+      "label": "Silanize the cleaned oxide-coated channel walls with FDTS solution",
+      "stage": "precursor_preparation",
+      "branch": "chip-device-preparation",
+      "optional": false,
+      "depends_on": [
+        "clean-chip-walls"
+      ],
+      "inputs": [
+        "piranha-cleaned-chip",
+        "fdts-wall-treatment"
+      ],
+      "outputs": [
+        "fdts-passivated-chip"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Silanization temperature and atmosphere are not stated in the reviewed passage; do not transfer the cleaning temperature."
+      },
+      "endpoint": {
+        "value": "FDTS-passivated oxide-coated channel walls",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+          },
+          {
+            "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+            "locator": "Main PDF p.3 / printed 12212, oxide-wall FDTS passivation paragraph before Reagents and Solutions"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "After piranha cleaning, silanize the oxide-coated channel walls from a solution of 1H,1H,2H,2H-perfluorodecyltrichlorosilane (FDTS). Together with DDA in the reaction medium, this device-wall passivation prevents nanoparticle deposition. The FDTS solution solvent, concentration, amount, treatment time, temperature, rinse and drying are not specified here; the cited prior protocol is not imported. FDTS is not a measured nanoparticle ligand or an extra CdSe/Ag feed.",
+      "evidence": [
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "SI PDF p.3, Passivation; SI PDF p.1, Figure S1(c), steps 6–7"
+        },
+        {
+          "source_id": "chan2007-cdse-ag2se-microfluidic-jp073474u",
+          "locator": "Main PDF p.3 / printed 12212, oxide-wall FDTS passivation paragraph before Reagents and Solutions"
+        }
+      ]
+    },
     {
       "id": "prepare-dda-stocks",
       "action": "dissolve",
@@ -654,11 +829,13 @@
       "branch": "chip-xas-1p4-5",
       "optional": false,
       "depends_on": [
-        "filter-sparge"
+        "filter-sparge",
+        "silanize-chip-walls"
       ],
       "inputs": [
         "conditioned-cdse-dispersion",
-        "conditioned-ag-solution"
+        "conditioned-ag-solution",
+        "fdts-passivated-chip"
       ],
       "outputs": [
         "chip-xas-reaction",
@@ -820,13 +997,15 @@
       "branch": "chip-xrd-2p8-5",
       "optional": false,
       "depends_on": [
-        "filter-sparge"
+        "filter-sparge",
+        "silanize-chip-walls"
       ],
       "inputs": [
         "cdse-nc",
         "agclo4",
         "dda",
-        "toluene"
+        "toluene",
+        "fdts-passivated-chip"
       ],
       "outputs": [
         "chip-xrd-reaction",
@@ -2469,6 +2648,14 @@
       "url": "assets/chemical-registry/svg/chan2007-tetragonal-ag2se-symbolic.svg",
       "description": "Original text-only tetragonal Ag2Se symbolic card for SI S2 phase; not a crystal model or measured atom coordinates.",
       "eligible_as_measured_label": false
+    },
+    {
+      "id": "chan-chip-preparation-summary",
+      "role": "illustrative",
+      "sample_id": null,
+      "url": "assets/protocol/chan2007-chip-preparation.svg",
+      "description": "MatterSyn-authored text-and-arrow summary of piranha cleaning followed by FDTS solution silanization of the chip walls, grounded in main p.3 and SI pp.1,3 Figure S1(c). Not a device cross-section, measured coating geometry or nanoparticle structure. Existing source Figure S1 crop remains unchanged in the gallery.",
+      "eligible_as_measured_label": false
     }
   ],
   "quality": {
@@ -2479,7 +2666,8 @@
       "No direct product size distribution, morphology image, isolated yield, or full EXAFS bond-distance/coordination result for the main chip-XAS product.",
       "No exact product phase is established for each stopped-flow, DDA or methanol aliquot.",
       "Reaction temperature and most individual DDA-series 90%-conversion times are not reported.",
-      "No direct single-particle conversion time is measured; <8 ms single-particle timing is an author hypothesis."
+      "No direct single-particle conversion time is measured; <8 ms single-particle timing is an author hypothesis.",
+      "Chip preparation: piranha formulation/amount, cleaning time, FDTS solution solvent/concentration/amount, silanization time/temperature and rinse/drying details are not specified in the reviewed main p.3 / SI p.3 passages; cited prior protocol not imported."
     ],
     "conflicts": [
       "Main Figure 4 stopped-flow caption says 6.67 mM AgClO4 before 1:1 mixing; Figure 5 says 6.66 mM. Both captions are retained; common 3.33 mM post-mix value is approximate.",
