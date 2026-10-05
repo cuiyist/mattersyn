@@ -1,0 +1,484 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "peng2021-roomtemp-pbse-acsami1c13723-iodide-ink-air",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Peng et al. (2021): Direct PbSe ink air-storage comparison",
+  "material": {
+    "formula": "PbSe",
+    "family": "Colloidal lead-chalcogenide quantum dots and ZnO/device supporting preparations",
+    "architecture": "single_material",
+    "elements": [
+      "Pb",
+      "Se"
+    ]
+  },
+  "method": "Direct PbSe ink air-storage comparison",
+  "sources": [
+    {
+      "id": "peng2021-roomtemp-pbse-acsami1c13723",
+      "doi": "10.1021/acsami.1c13723",
+      "title": "Room-Temperature Direct Synthesis of PbSe Quantum Dot Inks for High-Detectivity Near-Infrared Photodetectors",
+      "authors": "Mingfa Peng; Yang Liu; Fei Li; Xuekun Hong; Yushen Liu; Zhen Wen; Zeke Liu; Wanli Ma; Xuhui Sun",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsami.1c13723",
+      "main_status": "partially_reviewed",
+      "si_status": "selected_related_SI_review",
+      "reuse_status": "Source citation retained; source-figure reuse permission unverified."
+    },
+    {
+      "id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+      "doi": "10.1021/acsami.1c13723",
+      "title": "Supporting Information for Room-Temperature Direct Synthesis of PbSe Quantum Dot Inks for High-Detectivity Near-Infrared Photodetectors",
+      "authors": "Mingfa Peng; Yang Liu; Fei Li; Xuekun Hong; Yushen Liu; Zhen Wen; Zeke Liu; Wanli Ma; Xuhui Sun",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsami.1c13723",
+      "main_status": "partially_reviewed",
+      "si_status": "selected_related_SI_review",
+      "reuse_status": "Admitted companion SI; standalone reuse permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "peng2021-roomtemp-pbse-acsami1c13723",
+    "recipe_family": "peng2021-roomtemp-pbse-acsami1c13723",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-ink",
+      "name": "Directly synthesized iodide-passivated PbSe ink in DMF",
+      "formula": "PbSe",
+      "role": "air-storage comparison dispersion",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ]
+    },
+    {
+      "id": "air",
+      "name": "Air; source storage environment",
+      "formula": null,
+      "role": "storage atmosphere",
+      "stage": "storage",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "select-ink-state",
+      "name": "Use the directly synthesized PbSe ink comparison dispersion",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "air-store-state",
+      "name": "Store solution in air for two weeks",
+      "kind": "product",
+      "parent_ids": [
+        "select-ink-state"
+      ]
+    },
+    {
+      "id": "absorption-state",
+      "name": "Compare initial and two-week absorption spectra",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "air-store-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "select-ink",
+      "action": "select-ink",
+      "label": "Use the directly synthesized PbSe ink comparison dispersion",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-ink"
+      ],
+      "outputs": [
+        "select-ink-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Related ink route described separately; exact batch and storage concentration unknown.",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ]
+    },
+    {
+      "id": "air-store",
+      "action": "air-store",
+      "label": "Store solution in air for two weeks",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "select-ink"
+      ],
+      "inputs": [
+        "select-ink-state",
+        "air"
+      ],
+      "outputs": [
+        "air-store-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "week",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "Two weeks later",
+          "evidence": [
+            {
+              "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+              "locator": "SI PDF p.4, Figure S2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Two-week comparison appears in graph legend; storage temperature, light and vessel unreported.",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ]
+    },
+    {
+      "id": "absorption",
+      "action": "absorption",
+      "label": "Compare initial and two-week absorption spectra",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "air-store"
+      ],
+      "inputs": [
+        "air-store-state"
+      ],
+      "outputs": [
+        "absorption-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source curves retained. OA control changes markedly while direct-ink traces nearly overlap; no quantitative stability metric invented.",
+      "evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "initial",
+      "source_sample_label": "Initial direct PbSe ink absorption context",
+      "batch_id": null,
+      "material_state_id": "select-ink-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ],
+      "notes": [
+        "Initial comparison trace; exact physical batch unspecified."
+      ]
+    },
+    {
+      "sample_id": "two-weeks",
+      "source_sample_label": "Two-week air-stored comparison",
+      "batch_id": null,
+      "material_state_id": "air-store-state",
+      "parent_sample_id": "initial",
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+            "locator": "SI PDF p.4, Figure S2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "peng2021-roomtemp-pbse-acsami1c13723-si",
+          "locator": "SI PDF p.4, Figure S2"
+        }
+      ],
+      "notes": [
+        "Same comparison series, no quantitative peak or fraction lost digitized."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped PbSe ink and ZnO nanoparticle syntheses, two precursor stocks, ZnO/electrode preparation, PbSe/ZnO device fabrication, four partial ink-concentration variants, pristine-device control and two air-storage contexts. Main 7 and SI 12 pages read in text and images. Representative characterization and device metrics do not establish exact physical batch identity. Missing recipe settings, ambiguous precursor names and conflicting printed values remain explicit; this is not a complete laboratory SOP or full-paper narrative review.",
+    "missing_fields": [
+      "Exact physical batch identifiers, measured atomic coordinates and reagent supplier/grade are not reported in the admitted source.",
+      "Storage temperature, lighting, vessel, concentration and exact batch."
+    ],
+    "conflicts": [
+      "SI FigureS 2a x-axis Energy(eV), but S2b prints Energy(nm) over1.0–1.6. Preserve typo; do not interpret S2b as a nanometer wavelength range."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article and supporting information",
+      "url": "https://doi.org/10.1021/acsami.1c13723",
+      "relation": "source"
+    },
+    {
+      "label": "Direct PbSe ink method; storage batch not identified",
+      "url": "records/peng2021-roomtemp-pbse-acsami1c13723-pbse-ink.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

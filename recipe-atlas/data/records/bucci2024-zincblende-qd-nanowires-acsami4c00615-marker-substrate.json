@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615-marker-substrate",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Bucci et al. (2024): Au orientation markers on Si(111)",
+  "material": {
+    "formula": "Au/Si",
+    "family": "Au-assisted chemical beam epitaxy of III–V quantum-dot nanowires",
+    "architecture": "heterostructure",
+    "elements": [
+      "Si",
+      "Au"
+    ],
+    "components": [
+      "Au",
+      "Si"
+    ]
+  },
+  "method": "Au orientation markers on Si(111)",
+  "sources": [
+    {
+      "id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+      "doi": "10.1021/acsami.4c00615",
+      "title": "Zincblende InAsxP1−x/InP Quantum Dot Nanowires for Telecom Wavelength Emission",
+      "authors": "Giada Bucci; Valentina Zannier; Francesca Rossi; Anna Musiał; Jakub Boniecki; Grzegorz Sęk; Lucia Sorba",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "main_status": "partially_reviewed",
+      "si_status": "not_available",
+      "reuse_status": "Main article declares CC-BY-NC-ND 4.0; public excerpt reuse is not independently cleared."
+    }
+  ],
+  "lineage": {
+    "source_group": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "recipe_family": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au/Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "si-substrate",
+      "name": "Si(111) substrate",
+      "formula": "Si",
+      "role": "single-nanowire optical support",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "au-markers",
+      "name": "Gold marker material",
+      "formula": "Au",
+      "role": "thermally evaporated marker material",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "lithography-state",
+      "name": "Pattern orientation markers by optical lithography",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "gold-evaporation-state",
+      "name": "Deposit gold by thermal evaporation",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "lithography-state"
+      ]
+    },
+    {
+      "id": "liftoff-state",
+      "name": "Lift off to leave the gold orientation markers",
+      "kind": "product",
+      "parent_ids": [
+        "gold-evaporation-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "lithography",
+      "action": "lithography",
+      "label": "Pattern orientation markers by optical lithography",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "si-substrate"
+      ],
+      "outputs": [
+        "lithography-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "MicroWriter ML3 system; resist, developer, exposure settings and marker geometry are unreported.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "gold-evaporation",
+      "action": "gold-evaporation",
+      "label": "Deposit gold by thermal evaporation",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "lithography"
+      ],
+      "inputs": [
+        "lithography-state",
+        "au-markers"
+      ],
+      "outputs": [
+        "gold-evaporation-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Gold film thickness, rate, base pressure and substrate temperature are unreported.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "liftoff",
+      "action": "liftoff",
+      "label": "Lift off to leave the gold orientation markers",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "gold-evaporation"
+      ],
+      "inputs": [
+        "gold-evaporation-state"
+      ],
+      "outputs": [
+        "liftoff-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Lift-off medium, temperature and duration are not supplied.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "marked-si",
+      "source_sample_label": "Au-marker-patterned Si(111) optical substrate",
+      "batch_id": null,
+      "material_state_id": "liftoff-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au/Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped Au catalyst deposition, chemical beam epitaxy growth, composition and growth-interruption controls, catalyst-stop preparations, microscopy specimens and five single-nanowire optical contexts. All nine main pages were read in text and images. Exact physical batch identities, unlisted growth times and individual alloy line pressures remain unknown. Figure specimens are not silently joined to unreported recipes. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identifiers, unreported individual growth times/flows and measured atomic coordinates.",
+      "Resist/developer/lift-off identities and quantities, exposure settings, Au thickness and evaporation settings."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "relation": "source"
+    }
+  ]
+}

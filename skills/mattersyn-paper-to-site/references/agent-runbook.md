@@ -134,11 +134,17 @@ python -B <SRC>/tools/workflow/package_workflow.py log-event <P>/ledger.jsonl --
 - Fix every validation error. A quote that does not match its page is either corrected, or listed in the
   package for the auditor to check visually.
 - Receipts are create-only: use `-2`, `-3`, … for reruns.
-- Freeze the scientific package, author identity and source scope in the new cohort ledger. The
-  preregistered ordinal draw selects exactly ten of the first forty, without redrawing for revisions.
+- Freeze the scientific package, author identity and source scope in an immutable private receipt;
+  immediately submit the first valid freeze to the coordinator/root. Root records it in the cohort
+  ledger and assigns the unchanged preregistered ordinal draw; revisions never redraw a slot.
   Do not use the retired content-hash `audit-sample` command for this cohort. Run `check_records.py`
   and record its exact-package result before dispatching the auditor. Move only the frozen package
   to `<P>/ready-for-audit/`; unresolved checker flags are resolved during the full audit.
+- A future full comparison may start before the central ordinal/admission receipt is available,
+  once the [multi-session prerequisites](multi-session-full-audit.md) are verified. Do not wait for
+  transport polish or further parent permission. This overrides the earlier wait-for-admission
+  instruction for full comparisons only; sampled third audits and all acceptance/release gates
+  remain unchanged.
 
 ## 5. Full independent source audit (different auditor; every paper)
 

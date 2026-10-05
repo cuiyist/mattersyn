@@ -1,0 +1,487 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615-inas-no-gi",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "literature_protocol",
+  "reader_role": "synthesis_route",
+  "title": "Bucci et al. (2024): Direct InAs growth without GI 2",
+  "material": {
+    "formula": "InAs/InP",
+    "family": "Au-assisted chemical beam epitaxy of III–V quantum-dot nanowires",
+    "architecture": "heterostructure",
+    "elements": [
+      "In",
+      "As",
+      "P"
+    ],
+    "components": [
+      "InAs",
+      "InP"
+    ]
+  },
+  "method": "Direct InAs growth without GI 2",
+  "sources": [
+    {
+      "id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+      "doi": "10.1021/acsami.4c00615",
+      "title": "Zincblende InAsxP1−x/InP Quantum Dot Nanowires for Telecom Wavelength Emission",
+      "authors": "Giada Bucci; Valentina Zannier; Francesca Rossi; Anna Musiał; Jakub Boniecki; Grzegorz Sęk; Lucia Sorba",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "main_status": "partially_reviewed",
+      "si_status": "not_available",
+      "reuse_status": "Main article declares CC-BY-NC-ND 4.0; public excerpt reuse is not independently cleared."
+    }
+  ],
+  "lineage": {
+    "source_group": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "recipe_family": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "inp-stem",
+      "name": "Au-catalyzed InP nanowire stem",
+      "formula": "InP",
+      "role": "previously grown InP nanowire stem with Au catalyst",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Prepared by the linked common 60 min InP stem route; no distinct physical batch ID is supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.2–3, Figure 1 and Section 3.1"
+        }
+      ]
+    },
+    {
+      "id": "tmin",
+      "name": "Trimethylindium",
+      "formula": "C3H9In",
+      "role": "gas-phase indium precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "All precursor pressures are measured gas-line pressures used as flux references, not chamber total pressure, gas dose or molar concentration."
+      ],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "tbas",
+      "name": "tert-Butylarsine",
+      "formula": "C4H11As",
+      "role": "gas-phase arsenic precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "All precursor pressures are measured gas-line pressures used as flux references, not chamber total pressure, gas dose or molar concentration."
+      ],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "grow-inas-state",
+      "name": "Grow the pure InAs segment",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "sem-state",
+      "name": "Image the nanowires by SEM",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "grow-inas-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "grow-inas",
+      "action": "grow-inas",
+      "label": "Grow the pure InAs segment",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "inp-stem",
+        "tmin",
+        "tbas"
+      ],
+      "outputs": [
+        "grow-inas-state"
+      ],
+      "parameters": {
+        "tmin_line_pressure": {
+          "value": 0.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.4 Torr",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+            }
+          ],
+          "derivation": null
+        },
+        "tbas_line_pressure": {
+          "value": 0.7,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.7 Torr",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The source does not separately report this control’s segment-growth duration; 10 min from Figure 3a is not inherited. Growth follows directly after the InP stem without GI 2; an exact temperature transition is not separately stated. All precursor pressures are measured gas-line pressures used as flux references, not chamber total pressure, gas dose or molar concentration.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ]
+    },
+    {
+      "id": "sem",
+      "action": "sem",
+      "label": "Image the nanowires by SEM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "grow-inas"
+      ],
+      "inputs": [
+        "grow-inas-state"
+      ],
+      "outputs": [
+        "sem-state"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 kV",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "side_view_tilt": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degree",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "45 degree",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Zeiss Merlin SEM at 5 kV; top views and side views at 45° are described in the common method. ImageJ is used for geometrical analysis. No coating, acquisition dose or exact batch ID is given.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "inas-control",
+      "source_sample_label": "Figure 3b pure-InAs control",
+      "batch_id": null,
+      "material_state_id": "grow-inas-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/InP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "Improved straight InAs growth",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ],
+      "notes": [
+        "This segment-growth control is not assigned to a later Figure 4 or Figure 5 QD specimen."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "straight-outcome",
+      "sample_id": "inas-control",
+      "property": "Straight-growth result",
+      "technique": "SEM",
+      "value": {
+        "value": "Improved straight growth; quantitative yield not supplied",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.4–5, Figure 3 and pure-InAs controls"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped Au catalyst deposition, chemical beam epitaxy growth, composition and growth-interruption controls, catalyst-stop preparations, microscopy specimens and five single-nanowire optical contexts. All nine main pages were read in text and images. Exact physical batch identities, unlisted growth times and individual alloy line pressures remain unknown. Figure specimens are not silently joined to unreported recipes. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identifiers, unreported individual growth times/flows and measured atomic coordinates.",
+      "Exact segment length, physical batch ID, full post-growth sequence and individual control duration except the 10 min baseline."
+    ],
+    "conflicts": [
+      "All precursor pressures are measured gas-line pressures used as flux references, not chamber total pressure, gas dose or molar concentration.",
+      "Higher catalyst In content/contact angle is the authors’ mechanistic explanation, not an independently measured contact-angle value for this specimen."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "relation": "source"
+    },
+    {
+      "label": "Common InP stem growth",
+      "url": "records/bucci2024-zincblende-qd-nanowires-acsami4c00615-inp-stem.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

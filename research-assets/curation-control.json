@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "full_independent_audit_active",
-  "recorded_at": "2026-10-05T17:04:52.153676+00:00",
+  "recorded_at": "2026-10-05T20:50:34.724820+00:00",
   "authorization": "Owner explicitly resumed on 2026-10-04 at 23:19:09 UTC under the 2026-10-02 full-audit plan: every paper one extractor and a different full source auditor; quick audit retired; third-agent sampling remains 25% of first40. Existing sampling and staffing gates remain unchanged; scheduled reports remain off.",
   "supersedes_hold": "The latest explicit owner resume starts a stronger full-independent-audit regime. Failed quick tests and prior error logs remain historical, unchanged.",
   "active_run": "Private full-audit-20261002/ledger.jsonl",
@@ -524,15 +524,17 @@
     }
   ],
   "next_accepted_contribution": {
-    "status": "accepted_source_integrated_pending_build_and_publication",
+    "status": "accepted_source_applied_pending_build_and_publication",
     "source_ids": [
-      "dhaene2019-ode-polymerization-nanolett9b03088",
-      "prins2021-superfocusing-nanolett0c04813"
+      "peng2021-roomtemp-pbse-acsami1c13723",
+      "durmusoglu2020-pbs-taa-acsami0c06694",
+      "guzman2015-cdte-co2-acsami5b05722",
+      "bucci2024-zincblende-qd-nanowires-acsami4c00615"
     ],
-    "records": 66,
-    "direct_routes": 23,
+    "records": 83,
+    "direct_routes": 17,
     "new_paper_credit": 0,
-    "note": "One combined source application preserves every prior record and accepted scientific claim. Final build/browser/CI/deployment/anonymous checks remain."
+    "note": "Four accepted contributions are present in the reviewed checkout. Build, browser, CI, deployment and anonymous verification remain separate gates."
   },
   "active_hour_target": {
     "start": "2026-09-28T22:11:57Z",
@@ -726,9 +728,21 @@
       "conservative_observed_distinct_third_papers": 11,
       "conservative_observed_original_s1_s2_positive_papers": 5,
       "snapshot_at": "2026-10-05T16:55:11+00:00",
-      "total_admitted_current_regime": 43,
-      "regime_full_accepted_papers": 41,
-      "interpretation": "All40 first-cohort sources are independently accepted, integrated and live after actual root closeout. The broader regime has41 live, including Huang41; ordinals42/43 remain outside first40 and pending acceptance/publication. Formal10/4 and supplemental-inclusive11/5 original positives remain unchanged. Retain25% sampling and current staffing."
+      "total_admitted_current_regime": 47,
+      "regime_full_accepted_papers": 45,
+      "interpretation": "Completed first 40 cohort only: formal 10/4 and 11/5 including supplemental Mittag. All 40 are live; the original elapsed-checkpoint rate remains 40/61.603333 hours. Later formal audits are counted separately below; sampling remains 25%."
+    },
+    "current_regime_third_monitor": {
+      "snapshot_at": "2026-10-05T20:50:34.724820+00:00",
+      "formal_distinct_papers": 11,
+      "formal_original_s1_s2_positive_papers": 4,
+      "conservative_observed_distinct_papers": 12,
+      "conservative_observed_original_s1_s2_positive_papers": 5,
+      "includes_post_first40_audits": true,
+      "includes_supplemental_mittag_in_conservative_only": true,
+      "sampling_percent": 25,
+      "stop_required": false,
+      "original_findings_preserved": true
     }
   },
   "concurrent_agent_limit_scope": "per task/session, subject to actual runtime allowance",
@@ -766,7 +780,19 @@
     "remaining_findings_without_live_verified_correction": 74,
     "status": "full_source_audits_complete_corrections_in_progress",
     "sample_relationship": "Separate historical cohort, not first40 or its third-agent sample.",
-    "private_receipt": "v5-retrospective-full-audit-20261003/checkpoint-after-yao2009-all20.private.json"
+    "private_receipt": "v5-retrospective-full-audit-20261003/checkpoint-after-yao2009-all20.private.json",
+    "accepted_corrections_pending_live": [
+      {
+        "finding_id": "LIN21-RETRO-F02",
+        "source": "Lin (2021)",
+        "status": "accepted_applied_pending_publication"
+      },
+      {
+        "finding_id": "DIERICK14-RETRO-F04",
+        "source": "Dierick (2014)",
+        "status": "accepted_applied_pending_publication"
+      }
+    ]
   },
   "historical_publication_checkpoints": {
     "latest_publication_event": {
@@ -882,13 +908,29 @@
     }
   },
   "current_reviewed_checkout": {
-    "records": 2480,
-    "contributing_source_groups": 214,
-    "additional_contributions_pending_live": 0,
-    "additional_records_pending_live": 0,
-    "source_head_at_metadata_preparation": "1c26191efbb2dbf320b483dc4bfc2f46653e280f",
-    "status": "reviewed_checkout_matches_verified_live_totals",
-    "pending_existing_corrections": [],
+    "records": 2563,
+    "contributing_source_groups": 218,
+    "direct_families": 223,
+    "broad_pairs": 824,
+    "additional_contributions_pending_live": 4,
+    "additional_records_pending_live": 83,
+    "source_head_at_metadata_preparation": "5e972df9dbcc79956d81d4ba3074e4726d9c1537",
+    "application_finished_at": "2026-10-05T20:49:15.794528+00:00",
+    "prepared_release_source_commit": null,
+    "published_site_commit": null,
+    "status": "reviewed_checkout_with_four_contributions_pending_live",
+    "pending_existing_corrections": [
+      {
+        "finding_id": "LIN21-RETRO-F02",
+        "source": "Lin (2021)",
+        "status": "accepted_applied_pending_publication"
+      },
+      {
+        "finding_id": "DIERICK14-RETRO-F04",
+        "source": "Dierick (2014)",
+        "status": "accepted_applied_pending_publication"
+      }
+    ],
     "new_paper_credit_for_corrections": 0
   },
   "latest_existing_paper_corrections": {
@@ -901,5 +943,32 @@
       "Huang2015 (9-ACA/DPA)"
     ],
     "scope": "Four accepted scoped corrections anonymously verified separately; original findings and other deferred findings remain unchanged."
+  },
+  "first40_elapsed_checkpoint_rate": {
+    "paper_count": 40,
+    "elapsed_baseline": "2026-10-03T03:18:59Z",
+    "completed_at": "2026-10-05T16:55:11+00:00",
+    "elapsed_seconds": 221772.0,
+    "elapsed_hours": 61.60333333333333,
+    "completed_papers_per_elapsed_checkpoint_hour": 0.6493155132298036,
+    "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
+  },
+  "current_operational_status": {
+    "snapshot_at": "2026-10-05T20:50:34.724820+00:00",
+    "stage_flags": [
+      {
+        "primary_source_id": "mazumdar2015-cds-shape-acsami5b08595",
+        "ordinal": 46,
+        "stage": "full_audit",
+        "full_accepted": false
+      },
+      {
+        "primary_source_id": "heo2017-pbs-perovskite-acsami7b12046",
+        "ordinal": 47,
+        "stage": "full_audit_started",
+        "full_accepted": false
+      }
+    ],
+    "note": "At this saved checkpoint, Heo (ordinal 47) has a recorded active full audit. Root reports that Mazumdar (ordinal 46) requires corrections after its full review; the changes-required result is recorded in the ledger. Mazumdar third-audit work remains source-only, with no candidate comparison. These are saved stage facts, not claims of continuous worker activity."
   }
 }

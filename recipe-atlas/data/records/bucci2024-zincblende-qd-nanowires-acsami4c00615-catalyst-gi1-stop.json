@@ -1,0 +1,539 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615-catalyst-gi1-stop",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Bucci et al. (2024): Stopped catalyst specimen: After GI 1, Figure 2c",
+  "material": {
+    "formula": "Au–In catalyst on InP",
+    "family": "Au-assisted chemical beam epitaxy of III–V quantum-dot nanowires",
+    "architecture": "heterostructure",
+    "elements": [
+      "Au",
+      "In",
+      "P"
+    ],
+    "components": [
+      "Au–In catalyst",
+      "InP"
+    ]
+  },
+  "method": "Stopped catalyst specimen: After GI 1, Figure 2c",
+  "sources": [
+    {
+      "id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+      "doi": "10.1021/acsami.4c00615",
+      "title": "Zincblende InAsxP1−x/InP Quantum Dot Nanowires for Telecom Wavelength Emission",
+      "authors": "Giada Bucci; Valentina Zannier; Francesca Rossi; Anna Musiał; Jakub Boniecki; Grzegorz Sęk; Lucia Sorba",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "main_status": "partially_reviewed",
+      "si_status": "not_available",
+      "reuse_status": "Main article declares CC-BY-NC-ND 4.0; public excerpt reuse is not independently cleared."
+    }
+  ],
+  "lineage": {
+    "source_group": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "recipe_family": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Au–In catalyst on InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "inp-stem",
+      "name": "Au-catalyzed InP nanowire stem",
+      "formula": "InP",
+      "role": "previously grown InP nanowire stem with Au catalyst",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Prepared by the linked common 60 min InP stem route; no distinct physical batch ID is supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.2–3, Figure 1 and Section 3.1"
+        }
+      ]
+    },
+    {
+      "id": "tbp",
+      "name": "tert-Butylphosphine",
+      "formula": "C4H11P",
+      "role": "gas-phase phosphorus precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "All precursor pressures are measured gas-line pressures used as flux references, not chamber total pressure, gas dose or molar concentration.",
+        "tert-Butylphosphine is distinct from tributylphosphine."
+      ],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "gi1-state",
+      "name": "GI 1: interrupt TMIn and adjust TBP at constant temperature",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "cool-no-flux-state",
+      "name": "Cool the stopped sample without any precursor flux",
+      "kind": "product",
+      "parent_ids": [
+        "gi1-state"
+      ]
+    },
+    {
+      "id": "catalyst-edx-tem-state",
+      "name": "Examine the catalyst by TEM and EDX–TEM",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "cool-no-flux-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "gi1",
+      "action": "gi1",
+      "label": "GI 1: interrupt TMIn and adjust TBP at constant temperature",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "inp-stem",
+        "tbp"
+      ],
+      "outputs": [
+        "gi1-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 min and 30 s",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Section 3.1, steps (i)–(v)"
+            }
+          ],
+          "derivation": null
+        },
+        "initial_tbp_line_pressure": {
+          "value": 0.65,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.65 Torr",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Section 3.1, steps (i)–(v)"
+            }
+          ],
+          "derivation": null
+        },
+        "final_tbp_line_pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "Torr",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Section 3.1, steps (i)–(v)"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 390,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "overall substrate-temperature accuracy ±10 °C",
+          "basis": "",
+          "raw_text": "390 degC",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "CBE chamber, TBP flux only",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Common interruption lasts 2 min 30 s. TMIn is off and TBP ramps from 0.65 Torr to the composition-selected, unreported final pressure. The temperature remains at the 390 °C stem condition. No TBAs flow is assigned during the TBP-only interruption. All precursor pressures are measured gas-line pressures used as flux references, not chamber total pressure, gas dose or molar concentration. Substrate temperature is measured by pyrometer and cross-checked with the manipulator thermocouple; overall accuracy is ±10 °C.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ]
+    },
+    {
+      "id": "cool-no-flux",
+      "action": "cool-no-flux",
+      "label": "Cool the stopped sample without any precursor flux",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "gi1"
+      ],
+      "inputs": [
+        "gi1-state"
+      ],
+      "outputs": [
+        "cool-no-flux-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Ultra-high-vacuum CBE chamber; all fluxes off",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling without flux is explicitly used for these stopped catalyst TEM-composition specimens. It is not asserted as a universal cool-down for all optical or grown nanowires. Cooling time/rate and numerical UHV pressure are unreported.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ]
+    },
+    {
+      "id": "catalyst-edx-tem",
+      "action": "catalyst-edx-tem",
+      "label": "Examine the catalyst by TEM and EDX–TEM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "cool-no-flux"
+      ],
+      "inputs": [
+        "cool-no-flux-state"
+      ],
+      "outputs": [
+        "catalyst-edx-tem-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Source catalyst-composition experiment; not the separate SEM-EDX alloy calibration. JEOL JEM-2200FS with in-column Ω filter at 200 kV and high-resolution JEOL JEM-F200 are named in the general TEM method; instrument selection for this exact panel is not specified.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "catalyst",
+      "source_sample_label": "After GI 1, Figure 2c catalyst specimen",
+      "batch_id": null,
+      "material_state_id": "cool-no-flux-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Au–In catalyst on InP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "non-straight catalyst/stem interface",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ],
+      "notes": [
+        "Stopped before alloy growth. Percentage basis of catalyst In content is not explicitly identified as atomic or mass."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "catalyst-in",
+      "sample_id": "catalyst",
+      "property": "Catalyst In content",
+      "technique": "EDX–TEM",
+      "value": {
+        "value": 49,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "±4%; percentage basis unreported",
+        "basis": "",
+        "raw_text": "49 ± 4%",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ]
+    },
+    {
+      "id": "interface-fraction",
+      "sample_id": "catalyst",
+      "property": "Non-straight catalyst/stem interface fraction",
+      "technique": "TEM population comparison",
+      "value": {
+        "value": 98,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "98 %",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF pp.3–4, Figure 2 and Section 3.2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped Au catalyst deposition, chemical beam epitaxy growth, composition and growth-interruption controls, catalyst-stop preparations, microscopy specimens and five single-nanowire optical contexts. All nine main pages were read in text and images. Exact physical batch identities, unlisted growth times and individual alloy line pressures remain unknown. Figure specimens are not silently joined to unreported recipes. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identifiers, unreported individual growth times/flows and measured atomic coordinates.",
+      "Cooling schedule, numerical chamber pressure, catalyst percentage basis and individual instrument acquisition settings."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "relation": "source"
+    },
+    {
+      "label": "Common InP stem growth",
+      "url": "records/bucci2024-zincblende-qd-nanowires-acsami4c00615-inp-stem.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

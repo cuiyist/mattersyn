@@ -45,6 +45,21 @@ corrections in new revisions. Author and auditor must be different agents. Audit
 both source-to-record completeness and every record's source support. Preserve
 original S1/S2 findings after correction. Do not use the retired quick audit.
 
+For future full comparisons, an available central ordinal/admission receipt is not a start
+prerequisite. Within an existing exclusive claim, verify source identity, current `enabled`/`STOP`
+and quality-stop state, the exact immutable package bytes, a successful fresh checker after freeze,
+and an auditor distinct from every scientific author with their own source-first inventory frozen
+before opening claims. Immediately submit the immutable first valid freeze, then emit the actual
+comparison-start receipt to the coordinator/root; retain the real timestamps and exact hashes.
+Do not wait for transport polish or further parent permission. Identity ambiguity, a missing or
+stale checker, or any failed prerequisite keeps the comparison on hold.
+
+Root alone sorts and adopts genuine first-freeze receipts, records later insertion separately from
+actual occurrence, and assigns the unchanged deterministic sampling ordinals. Workers never assign
+a slot or dispatch a third audit. Third audits still require root qualification and full-audit
+acceptance, with their own fresh checker. This replaces earlier wait-for-admission instructions
+for future full comparisons only; acceptance, READY and publication requirements remain unchanged.
+
 ## Collision prevention and throughput
 
 Workers never edit shared canonical checkouts, policies, allowlists, Git settings,

@@ -1,0 +1,620 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615-optical-x88-t2",
+  "revision": 3,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Bucci et al. (2024): Single-QD PL: x = 0.88, 2 nm",
+  "material": {
+    "formula": "InAsxP1−x/InP",
+    "family": "Au-assisted chemical beam epitaxy of III–V quantum-dot nanowires",
+    "architecture": "heterostructure",
+    "elements": [
+      "In",
+      "As",
+      "P"
+    ],
+    "components": [
+      "InAsxP1−x",
+      "InP"
+    ]
+  },
+  "method": "Single-QD PL: x = 0.88, 2 nm",
+  "sources": [
+    {
+      "id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+      "doi": "10.1021/acsami.4c00615",
+      "title": "Zincblende InAsxP1−x/InP Quantum Dot Nanowires for Telecom Wavelength Emission",
+      "authors": "Giada Bucci; Valentina Zannier; Francesca Rossi; Anna Musiał; Jakub Boniecki; Grzegorz Sęk; Lucia Sorba",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "main_status": "partially_reviewed",
+      "si_status": "not_available",
+      "reuse_status": "Main article declares CC-BY-NC-ND 4.0; public excerpt reuse is not independently cleared."
+    }
+  ],
+  "lineage": {
+    "source_group": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "recipe_family": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAsxP1−x/InP",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "qd-nanowire",
+      "name": "Source-selected InAsxP1−x/InP quantum-dot nanowire",
+      "formula": null,
+      "role": "source-selected optical nanowire",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Nominal As content and QD thickness are reported; exact precursor pressures, QD growth time and physical batch ID are not."
+      ],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ]
+    },
+    {
+      "id": "marked-si",
+      "name": "Si(111) substrate patterned with Au markers",
+      "formula": null,
+      "role": "patterned optical specimen support",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ensemble-state",
+      "name": "Pre-characterize as-grown nanowire ensembles",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "transfer-state",
+      "name": "Mechanically transfer selected nanowires onto Au-marked Si(111)",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "micropl-state",
+      "name": "Acquire single-nanowire μ-PL at 4 K",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "transfer-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "ensemble",
+      "action": "ensemble",
+      "label": "Pre-characterize as-grown nanowire ensembles",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "qd-nanowire"
+      ],
+      "outputs": [
+        "ensemble-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The source reports preliminary ensemble PL to guide sample selection but explicitly does not present these ensemble spectra. No spectral values or individual ensemble-to-single-wire batch join are inferred.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "action": "transfer",
+      "label": "Mechanically transfer selected nanowires onto Au-marked Si(111)",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "ensemble"
+      ],
+      "inputs": [
+        "qd-nanowire",
+        "marked-si"
+      ],
+      "outputs": [
+        "transfer-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.3, Materials and Methods"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mechanical transfer method is named without a solvent, contact tool or timing. The transfer is from the nanowire specimen, not from the preceding spectral-data state.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods"
+        }
+      ]
+    },
+    {
+      "id": "micropl",
+      "action": "micropl",
+      "label": "Acquire single-nanowire μ-PL at 4 K",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "transfer"
+      ],
+      "inputs": [
+        "transfer-state"
+      ],
+      "outputs": [
+        "micropl-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "K",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 K",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.6, Figure 5 and optical discussion"
+            }
+          ],
+          "derivation": null
+        },
+        "typical_excitation_wavelength": {
+          "value": 640,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "typical; not separately restated for each plotted trace",
+          "basis": "",
+          "raw_text": "640 nm",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "spectral_resolution": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ueV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 ueV",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "spatial_resolution": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 um",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "objective_working_distance": {
+          "value": 20,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "20 mm",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "objective_na": {
+          "value": 0.4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.4 ratio",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "high_resolution_monochromator_focal_length": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "m",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "for highest-resolution experiments",
+          "basis": "",
+          "raw_text": "1 m",
+          "evidence": [
+            {
+              "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+              "locator": "Main PDF p.3, Materials and Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Near-IR μ-PL with a continuous-wave semiconductor laser, nonresonant above the InP band gap; common method typically uses 640 nm. Long-working-distance objective collects the emission, detected by a nitrogen-cooled InGaAs linear array through a monochromator. Liquid-helium continuous-flow cryostat. Excitation power and integration time for individual traces are not supplied.",
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.3, Materials and Methods; p.6, Figure 5 and optical discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "optical",
+      "source_sample_label": "Figure 5b light blue single-QD spectrum",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs0.88P0.12/InP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ],
+      "notes": [
+        "Distinct optical specimen context with unknown batch identity; no join to a Figure 4 short-tip TEM object or unreported pure-InAs growth choice."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "nominal-x",
+      "sample_id": "optical",
+      "property": "Nominal As fraction x",
+      "technique": "Source specimen assignment",
+      "value": {
+        "value": 0.88,
+        "minimum": null,
+        "maximum": null,
+        "unit": "fraction",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.88 fraction",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ]
+    },
+    {
+      "id": "nominal-thickness",
+      "sample_id": "optical",
+      "property": "Nominal QD thickness",
+      "technique": "Source specimen assignment",
+      "value": {
+        "value": 2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2 nm",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ]
+    },
+    {
+      "id": "linewidth-context",
+      "sample_id": "optical",
+      "property": "Reported single-QD linewidth scale",
+      "technique": "Source qualitative linewidth discussion",
+      "value": {
+        "value": "On the order of hundreds of microelectronvolts",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+            "locator": "Main PDF p.6, Figure 5 and optical discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "General discussion of the presented spectra, not a fitted per-trace linewidth. The source attributes broadening predominantly to spectral diffusion.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "bucci2024-zincblende-qd-nanowires-acsami4c00615",
+          "locator": "Main PDF p.6, Figure 5 and optical discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped Au catalyst deposition, chemical beam epitaxy growth, composition and growth-interruption controls, catalyst-stop preparations, microscopy specimens and five single-nanowire optical contexts. All nine main pages were read in text and images. Exact physical batch identities, unlisted growth times and individual alloy line pressures remain unknown. Figure specimens are not silently joined to unreported recipes. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identifiers, unreported individual growth times/flows and measured atomic coordinates.",
+      "Exact QD growth time and line pressures, excitation power, integration time and numerical peak/linewidth fits."
+    ],
+    "conflicts": [
+      "Several spectral lines can arise from excitonic complexes or excited states according to the authors; their detailed origin is explicitly outside the paper’s scope. No definitive peak-state assignments or graph digitization."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article",
+      "url": "https://doi.org/10.1021/acsami.4c00615",
+      "relation": "source"
+    },
+    {
+      "label": "Au-marked Si(111) support",
+      "url": "records/bucci2024-zincblende-qd-nanowires-acsami4c00615-marker-substrate.html",
+      "relation": "related_procedure"
+    },
+    {
+      "label": "Common growth context, not an exact recipe assignment",
+      "url": "records/bucci2024-zincblende-qd-nanowires-acsami4c00615-qd-nanowire-general.html",
+      "relation": "related_procedure"
+    }
+  ]
+}
