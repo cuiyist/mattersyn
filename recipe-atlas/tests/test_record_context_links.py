@@ -14,6 +14,13 @@ class RecordContextLinks(unittest.TestCase):
         self.assertEqual(record_href('reader.html?record=parent-oxide#protocol'),'parent-oxide.html#protocol')
         self.assertEqual(record_href('reader.html?record=parent-oxide'),'parent-oxide.html')
 
+    def test_legacy_recipe_link_resolves_to_real_record_entrypoint(self):
+        self.assertEqual(record_href('recipe.html?id=parent-oxide#protocol'),'parent-oxide.html#protocol')
+        self.assertEqual(record_href('recipe.html?id=parent-oxide'),'parent-oxide.html')
+        for url in ('recipe.html?id=../outside','recipe.html?id=','recipe.html?id=a&id=b','recipe.html?id=a&unknown=b','recipe.html?record=a','recipe.html?id=%2Foutside','recipe.html?id=a_b','https://example.org/recipe.html?id=a','//example.org/recipe.html?id=a','../recipe.html?id=a','./recipe.html?id=a'):
+            with self.subTest(url=url):
+                self.assertEqual(record_href(url),url)
+
     def test_invalid_or_ambiguous_record_targets_are_not_silently_rewritten(self):
         for url in ('reader.html?record=../outside','reader.html?record=','reader.html?record=a&record=b','reader.html?record=a&unknown=b'):
             with self.subTest(url=url):

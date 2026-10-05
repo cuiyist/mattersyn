@@ -69,9 +69,9 @@ def record_href(url):
     if url.startswith(('records/','assets/','data/')):
         return '../'+url
     parsed=urlsplit(url)
-    if not parsed.scheme and not parsed.netloc and parsed.path=='reader.html':
+    if not parsed.scheme and not parsed.netloc and parsed.path in {'reader.html','recipe.html'}:
         query=parse_qsl(parsed.query,keep_blank_values=True)
-        if len(query)==1 and query[0][0]=='record':
+        if len(query)==1 and query[0][0]=={'reader.html':'record','recipe.html':'id'}[parsed.path]:
             rid=query[0][1]
             if rid and all(c in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in rid):
                 return rid+'.html'+('#'+parsed.fragment if parsed.fragment else '')
