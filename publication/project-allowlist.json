@@ -1,13 +1,13 @@
 {
   "schema_version": "mattersyn-public-release-allowlist/1",
-  "release_id": "full-audit-batch12-20261005",
+  "release_id": "full-audit-continuation-20261005",
   "repo": "mattersyn",
-  "source_commit": "5e972df9dbcc79956d81d4ba3074e4726d9c1537",
+  "source_commit": "33fd2dd9cb80456eada5bc5b0c11cc58fbb53fc9",
   "source_commit_role": "preparation_base",
   "source_payload_binding": {
     "schema": "mattersyn-source-payload-binding/1",
-    "sha256": "fd882fa7d564d43fd0a5776a2262763ad5fa96d230e73fec136a863f71967592",
-    "file_count": 16359,
+    "sha256": "b9607e8a674395978f2becc70e9e25cf1167d92c9105061008e09c25cc887012",
+    "file_count": 16360,
     "excludes": [
       "publication/project-allowlist.json"
     ]
@@ -54,13 +54,13 @@
     },
     {
       "path": "MEMORY.md",
-      "sha256": "cf74cc6dc5538c9691c888293acefae75ec805f42f265c50763a88c0bace1996",
-      "bytes": 741060,
+      "sha256": "9f05789d8723bd60c1372b60347f794f999a030ce0359b12194bed69dfcffac7",
+      "bytes": 740876,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "/root",
-      "reviewed_at": "2026-10-05T20:51:31.246241+00:00",
+      "reviewer": "/root; independent workflow review /root/fullaudit_release_readiness",
+      "reviewed_at": "2026-10-05T23:15:32+00:00",
       "content_class": "memory",
       "source_refs": []
     },
@@ -151,22 +151,16 @@
     },
     {
       "path": "publication/build-inputs.json",
-      "sha256": "cedfc91196257e910512e2a23b0042c5535c233b36018070d27f6437ef36df55",
-      "bytes": 3765493,
+      "sha256": "f671fe511d696ffa48ccf649bd17d368a04d4d18327ddf637f8ed067550fb39e",
+      "bytes": 3765685,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
       "reviewer": "deterministic-source-control-generator",
-      "reviewed_at": "2026-10-05T21:01:32.722009+00:00",
+      "reviewed_at": "2026-10-05T23:16:11.980313+00:00",
       "content_class": "audit_summary",
       "source_refs": [],
-      "approval_scope": "Derived source control only; no scientific or eligibility approval",
-      "metadata_review": {
-        "before_sha256": "95159ba19dcc33997eac996f0130332b53b56e28bc0f178bf802fae7df5a98b5",
-        "sha256": "ef595ce11d392d9b4896e5d0c5223dea973bcf3741884aef3c4694d0ee1c6bb7",
-        "reviewer": "/root/fullaudit_release_readiness",
-        "reviewed_at": "2026-10-05T20:59:57.854639+00:00"
-      }
+      "approval_scope": "Derived source control only; no scientific or eligibility approval"
     },
     {
       "path": "publication/public-release-policy.json",
@@ -44258,7 +44252,7 @@
       "decision": "allow",
       "review_status": "approved",
       "reviewer": "deterministic-source-control-generator",
-      "reviewed_at": "2026-10-05T21:01:32.722009+00:00",
+      "reviewed_at": "2026-10-05T23:16:11.980313+00:00",
       "content_class": "site_data",
       "source_refs": [],
       "approval_scope": "Derived source control only; no scientific or eligibility approval"
@@ -215702,13 +215696,13 @@
     },
     {
       "path": "research-assets/curation-control.json",
-      "sha256": "f02bba3c749e49973db4ea72964973e136a0d8c9cad6adb0cde20da5ce5bd02f",
-      "bytes": 44483,
+      "sha256": "97c38f2a77519deeb982b473c7fe48722f52049f97ec516e84a4892cf6ddcfa4",
+      "bytes": 44675,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "/root",
-      "reviewed_at": "2026-10-05T20:51:31.246241+00:00",
+      "reviewer": "/root; independent workflow review /root/fullaudit_release_readiness",
+      "reviewed_at": "2026-10-05T23:15:32+00:00",
       "content_class": "audit_summary",
       "source_refs": []
     },
@@ -242847,13 +242841,13 @@
     },
     {
       "path": "tools/workflow/full_audit_plan.py",
-      "sha256": "05483d6982d4ff9ad6ba41a0b6ede4770d9fae50558ea97ce7f58879bf3634f5",
-      "bytes": 28482,
+      "sha256": "8804ecaa0a9df2b91f1f83bd891199b8b62491413ed384d47ec72491a8590c81",
+      "bytes": 32098,
       "git_mode": "100644",
       "decision": "allow",
       "review_status": "approved",
-      "reviewer": "/root: owner-term and exact-code review; fullaudit_ledger_engineering: implementation and tests",
-      "reviewed_at": "2026-10-03T03:38:52+00:00",
+      "reviewer": "/root; independent workflow review /root/fullaudit_release_readiness",
+      "reviewed_at": "2026-10-05T23:15:32+00:00",
       "content_class": "authored_code",
       "source_refs": []
     },
@@ -242902,6 +242896,18 @@
       "review_status": "approved",
       "reviewer": "root-code-review-20261002",
       "reviewed_at": "2026-10-02T17:26:43+00:00",
+      "content_class": "authored_code",
+      "source_refs": []
+    },
+    {
+      "path": "tools/workflow/tests/test_full_audit_continuation.py",
+      "sha256": "16b367c5ac33eee0e5be5cc782de6bbb73dc12ac01f7b0b0bea6e886b0aa7e7b",
+      "bytes": 9147,
+      "git_mode": "100644",
+      "decision": "allow",
+      "review_status": "approved",
+      "reviewer": "/root; independent workflow review /root/fullaudit_release_readiness",
+      "reviewed_at": "2026-10-05T23:15:32+00:00",
       "content_class": "authored_code",
       "source_refs": []
     },

@@ -331,6 +331,49 @@ def replay(events):
                 p["sample_required"] = position == selected_slot(c["sampling_seed"], block, width)
             p.update(package_sha256=e["package_sha256"], scoped_pages=e["scoped_pages"],
                      record_ids=ids, frozen_at=e["at"], full_accepted=False, deep_accepted=False, integrated=False)
+        elif stage == "full_audit_continued":
+            # An observed same-reviewer continuation, not a new audit start or
+            # an invented completion/retirement instant for the old candidate.
+            active = p.get("active_audit", {})
+            require(active.get("stage") == "full_audit_started" and
+                    e.get("audit_started_event_id") == active.get("event_id"),
+                    "continuation requires the original active full audit")
+            require(identity(e.get("auditor_id")) == active["auditor_id"] == p.get("auditor_id") and
+                    e["auditor_id"] not in p["scientific_author_ids"],
+                    "continuation must retain the same independent full auditor")
+            require(e.get("superseded_package_sha256") == active.get("package_sha256") and
+                    e.get("superseded_active_audit_sha256") == digest(active),
+                    "exact superseded audit/package/checker snapshot required")
+            require(e.get("package_sha256") == p.get("package_sha256") and
+                    p["package_sha256"] != active["package_sha256"],
+                    "continuation requires a distinct already-frozen successor")
+            freezes = [item for item in c["events"] if item.get("stage") == "extraction_frozen" and
+                       item.get("primary_source_id") == source]
+            frozen = freezes[-1] if freezes else {}
+            require(e.get("successor_freeze_event_id") == frozen.get("event_id") and
+                    frozen.get("package_sha256") == p["package_sha256"] and
+                    frozen.get("at") == p["frozen_at"],
+                    "continuation must bind the latest exact successor freeze")
+            require(e.get("prior_findings_sha256") == digest(p["findings"]) and
+                    not any(key in e for key in ("findings", "accepted", "full_accepted", "deep_accepted")),
+                    "continuation cannot erase findings or assert an audit result")
+            require(e.get("superseded_audit_completed") is False and
+                    "exact_supersession_at" in e and e["exact_supersession_at"] is None,
+                    "incomplete superseded audit and uncaptured transition must remain explicit")
+            require(stamp(active.get("check_before_at", active["at"])) <=
+                    stamp(p["frozen_at"]) < t <= stamp(e["supersession_acknowledged_at"]) <= recorded,
+                    "continuation activity, freeze and acknowledgment chronology is invalid")
+            identity(e.get("timing_qualification"))
+            sha(e.get("continuation_receipt_sha256")); sha(e.get("supersession_receipt_sha256"))
+            check = e.get("check_receipt", {})
+            validate_check(check, p, e["at"], require_resolutions=False)
+            check_id = (check["report_sha256"], check["at"], check["package_sha256"])
+            require(check_id not in checks_used, "fresh check_records.py required for corrected-package continuation")
+            checks_used.add(check_id)
+            p.setdefault("full_audit_continuations", []).append({"event": e,
+                "superseded_active_audit": active, "successor_freeze": frozen})
+            p["active_audit"] = dict(active, package_sha256=p["package_sha256"],
+                check_receipt=check, check_before_at=e["at"], continuation_event_id=eid)
         elif stage in ("full_audit_started", "deep_audit_started"):
             require(not p.get("active_audit"), "paper already has an active audit")
             require("package_sha256" in p, "extraction must be frozen before audit")
@@ -369,7 +412,11 @@ def replay(events):
             require({k: v for k, v in check.items() if k != "source_resolutions"} ==
                     {k: v for k, v in active["check_receipt"].items() if k != "source_resolutions"},
                     "checker metadata changed during audit")
-            validate_check(check, p, active["at"], require_resolutions=e.get("accepted") is True)
+            validate_check(check, p, active.get("check_before_at", active["at"]),
+                           require_resolutions=e.get("accepted") is True)
+            if active.get("continuation_event_id"):
+                require(t >= stamp(active["check_before_at"]),
+                        "cumulative completion precedes observed successor comparison")
             read = pages(e.get("source_pages_read"))
             require(all(doc in read and nums <= read[doc] for doc, nums in pages(p["scoped_pages"]).items()),
                     "auditor did not read all scoped source pages")
