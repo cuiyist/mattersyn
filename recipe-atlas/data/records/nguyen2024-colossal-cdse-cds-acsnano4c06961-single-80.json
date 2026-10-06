@@ -1,0 +1,568 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961-single-80",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Nguyen et al. (2024): Single-particle PL and g2 for 80-ML QDs",
+  "material": {
+    "formula": "CdSe/CdS on Si/SiO2",
+    "family": "Colossal CdSe/CdS core/shell quantum dots and scoped preparations",
+    "architecture": "unresolved"
+  },
+  "method": "Single-particle PL and g2 for 80-ML QDs",
+  "sources": [
+    {
+      "id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+      "doi": "10.1021/acsnano.4c06961",
+      "title": "Colossal Core/Shell CdSe/CdS Quantum Dot Emitters",
+      "authors": "Hao A. Nguyen; Benjamin F. Hammel; David Sharp; Jessica Kline; Griffin Schwartz; Samantha Harvey; Emily Nishiwaki; Soren F. Sandeno; David S. Ginger; Arka Majumdar; Sadegh Yazdi; Gordana Dukovic; Brandi M. Cossairt",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsnano.4c06961",
+      "main_status": "partially_reviewed",
+      "si_status": "missing_local",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+    "recipe_family": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdS on Si/SiO2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-cds",
+      "name": "CdSe/CdS core/shell quantum dots",
+      "formula": "CdSe/CdS",
+      "role": "80-ML isolated-emitter specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    },
+    {
+      "id": "si-sio2",
+      "name": "Silicon/silicon-dioxide substrate",
+      "formula": "Si/SiO2",
+      "role": "single-particle support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "spin-state",
+      "name": "80-ML Si/SiO2 specimen",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "select-state",
+      "name": "Selected 80-ML isolated spot",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "spin-state"
+      ]
+    },
+    {
+      "id": "acquire-state",
+      "name": "80-ML single-emitter PL and g2 data",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "select-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "spin",
+      "action": "spin",
+      "label": "Spin-coat the source-named QDs on Si/SiO2",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-cds",
+        "si-sio2"
+      ],
+      "outputs": [
+        "spin-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The p.11 single-particle method identifies Si/SiO2. Solvent, volume, speed and time are not restated for this substrate; glass-film parameters are not silently transferred.",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "action": "select",
+      "label": "Select an isolated spot from the PL map",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "spin"
+      ],
+      "inputs": [
+        "spin-state"
+      ],
+      "outputs": [
+        "select-state"
+      ],
+      "parameters": {
+        "minimum_pl_count": {
+          "value": 3000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "counts",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "strictly greater than; count-rate unit not stated",
+          "basis": "",
+          "raw_text": "3000 counts",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, spot selection"
+            }
+          ],
+          "derivation": null
+        },
+        "maximum_pl_count": {
+          "value": 50000,
+          "minimum": null,
+          "maximum": null,
+          "unit": "counts",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "strictly less than; count-rate unit not stated",
+          "basis": "",
+          "raw_text": "50000 counts",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, spot selection"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Choose isolated spots with displayed PL count >3000 and <50k; the source does not state a count-rate unit.",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    },
+    {
+      "id": "acquire",
+      "action": "acquire",
+      "label": "Acquire single-particle PL and photon correlations",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "select"
+      ],
+      "inputs": [
+        "select-state"
+      ],
+      "outputs": [
+        "acquire-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 532,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "532 nm",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, single-particle spectroscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "excitation_power": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uW",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "typical; measured before objective",
+          "basis": "",
+          "raw_text": "5 uW",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, single-particle spectroscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "objective_magnification": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "x",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 x",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, single-particle spectroscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "numerical_aperture": {
+          "value": 0.95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.95 ratio",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, single-particle spectroscopy"
+            }
+          ],
+          "derivation": null
+        },
+        "longpass_edge": {
+          "value": 580,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "580 nm",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.11, single-particle spectroscopy"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ambient conditions",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Continuous-wave laser, dry objective, 580-nm long-pass filter and fiber path to spectrometer or a 50:50 splitter/APD pair with TimeHarp260; PL traces collected in parallel.",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "emitter",
+      "source_sample_label": "Representative single CdSe80CdS emitter",
+      "batch_id": null,
+      "material_state_id": "spin-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS on Si/SiO2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "g2",
+      "sample_id": "emitter",
+      "property": "Representative zero-delay correlation",
+      "technique": "Single-particle photon correlation",
+      "value": {
+        "value": 0.14,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.14 ratio",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Printed Figure 9d/f value; source states no background correction.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    },
+    {
+      "id": "trace",
+      "sample_id": "emitter",
+      "property": "Representative PL trace behavior",
+      "technique": "Single-particle PL trace",
+      "value": {
+        "value": "Stable unimodal ON-state trace over many minutes",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.8, Figure 9c–d; pp.9 and 11, single-particle PL and g2"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only source-scoped CdSe core synthesis, direct and stepwise CdS shelling, reported failed controls and post-growth variants, specimen preparation and optical/structural characterization. All fourteen main pages were actually read as text and images. Local Supporting Information is absent; unreported charges, durations and physical batch identities remain unknown. This is a selected synthesis and figure review, not a complete laboratory SOP or full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and all unstated source conditions remain unknown. Local Supporting Information is unavailable.",
+      "Si/SiO2 coating solvent/volume/speed/time, exact batch, spot size, numerical ambient temperature and individual excitation power."
+    ],
+    "conflicts": [
+      "Main p.9 states no spectral filtering or background correction, while p.11 specifies a 580-nm long-pass filter. Both source statements are retained without a silent reconciliation."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.4c06961",
+      "relation": "source"
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961-stem-30",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Nguyen et al. (2024): Atomic-resolution STEM of the 30-ML sample",
+  "material": {
+    "formula": "CdSe/CdS",
+    "family": "Colossal CdSe/CdS core/shell quantum dots and scoped preparations",
+    "architecture": "core_shell"
+  },
+  "method": "Atomic-resolution STEM of the 30-ML sample",
+  "sources": [
+    {
+      "id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+      "doi": "10.1021/acsnano.4c06961",
+      "title": "Colossal Core/Shell CdSe/CdS Quantum Dot Emitters",
+      "authors": "Hao A. Nguyen; Benjamin F. Hammel; David Sharp; Jessica Kline; Griffin Schwartz; Samantha Harvey; Emily Nishiwaki; Soren F. Sandeno; David S. Ginger; Arka Majumdar; Sadegh Yazdi; Gordana Dukovic; Brandi M. Cossairt",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsnano.4c06961",
+      "main_status": "partially_reviewed",
+      "si_status": "missing_local",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+    "recipe_family": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-cds",
+      "name": "CdSe/CdS core/shell quantum dots",
+      "formula": "CdSe/CdS",
+      "role": "30-ML source-named QD specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ]
+    },
+    {
+      "id": "tem-grid-400",
+      "name": "Ultrathin carbon on lacey carbon, 400-mesh copper TEM grid",
+      "formula": "C/Cu",
+      "role": "Ted Pella 01824 ultrathin/lacey carbon 400-mesh Cu support",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "drop-state",
+      "name": "30-ML QD STEM grid",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "dry-state",
+      "name": "Vacuum-dried 30-ML STEM grid",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "drop-state"
+      ]
+    },
+    {
+      "id": "heat-vacuum-state",
+      "name": "Prepared 30-ML atomic-resolution specimen",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "dry-state"
+      ]
+    },
+    {
+      "id": "image-state",
+      "name": "30-ML HAADF-STEM dataset",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "heat-vacuum-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "drop",
+      "action": "drop",
+      "label": "Drop the source-named QD solution onto the grid",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-cds",
+        "tem-grid-400"
+      ],
+      "outputs": [
+        "drop-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drop the source-named QD solution onto the grid",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ]
+    },
+    {
+      "id": "dry",
+      "action": "dry",
+      "label": "Dry the grid under vacuum",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "drop"
+      ],
+      "inputs": [
+        "drop-state"
+      ],
+      "outputs": [
+        "dry-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "Vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry the grid under vacuum",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+        }
+      ]
+    },
+    {
+      "id": "heat-vacuum",
+      "action": "heat-vacuum",
+      "label": "Dry under vacuum at 120 °C overnight",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dry"
+      ],
+      "inputs": [
+        "dry-state"
+      ],
+      "outputs": [
+        "heat-vacuum-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 120,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "120 degC",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "overnight; numerical duration unreported",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dry under vacuum at 120 °C overnight",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "action": "image",
+      "label": "Acquire atomic-resolution HAADF-STEM",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "heat-vacuum"
+      ],
+      "inputs": [
+        "heat-vacuum-state"
+      ],
+      "outputs": [
+        "image-state"
+      ],
+      "parameters": {
+        "accelerating_voltage": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "kV",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 kV",
+          "evidence": [
+            {
+              "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+              "locator": "Main PDF p.10, Measurements, STEM specimen preparation"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Acquire atomic-resolution HAADF-STEM",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "stem",
+      "source_sample_label": "30-ML atomic-resolution STEM specimen",
+      "batch_id": null,
+      "material_state_id": "heat-vacuum-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "Wurtzite-type structure compared with VESTA models",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ],
+      "notes": [
+        "The displayed VESTA models are structural interpretations; no specimen-specific atom coordinates or cell parameters are reported."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "orientation",
+      "sample_id": "stem",
+      "property": "Displayed viewing direction",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": "[0001]",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ]
+    },
+    {
+      "id": "faults",
+      "sample_id": "stem",
+      "property": "Observed stacking-fault comparison",
+      "technique": "HAADF-STEM",
+      "value": {
+        "value": "Stacking-fault evidence observed in the thicker-shell specimen",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Qualitative comparison of the displayed particles; not a universal absence/presence rate.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.6, Figure 5b; p.5, atomic-resolution structure discussion; p.10, STEM method"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only source-scoped CdSe core synthesis, direct and stepwise CdS shelling, reported failed controls and post-growth variants, specimen preparation and optical/structural characterization. All fourteen main pages were actually read as text and images. Local Supporting Information is absent; unreported charges, durations and physical batch identities remain unknown. This is a selected synthesis and figure review, not a complete laboratory SOP or full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and all unstated source conditions remain unknown. Local Supporting Information is unavailable.",
+      "Drop amount and solvent for this STEM method, vacuum pressure, cleaning amount/time and exact imaged-particle batch."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.4c06961",
+      "relation": "source"
+    },
+    {
+      "label": "Source nominal sample context; exact physical batch unknown",
+      "url": "records/nguyen2024-colossal-cdse-cds-acsnano4c06961-direct-30.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

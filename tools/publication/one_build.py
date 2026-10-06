@@ -311,10 +311,10 @@ def source_state(source, head):
             'not_git_root')
     require(git(source, 'rev-parse', 'HEAD').decode().strip() == head, 'source_head_drift')
     require(not git(source, 'status', '--porcelain', '--untracked-files=all').strip(), 'dirty_source')
-    rows = []
-    for entry in git(source, 'ls-tree', '-rz', '--full-tree', 'HEAD').split(b'\0'):
-        if not entry:
-            continue
+    entries = [entry for entry in git(source, 'ls-tree', '-rz', '--full-tree', 'HEAD').split(b'\0')
+               if entry]
+
+    def source_row(entry):
         meta, raw_path = entry.split(b'\t', 1)
         mode, kind, oid = meta.decode().split()
         require(mode in ('100644', '100755') and kind == 'blob', 'unsupported_git_entry')
@@ -323,7 +323,19 @@ def source_state(source, head):
         # Git status alone can miss same-stat or skip-worktree changes.
         require(hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == oid,
                 'working_bytes_differ_from_commit:' + name)
-        rows.append({'path': name, 'sha256': digest(raw), 'bytes': len(raw)})
+        return {'path': name, 'sha256': digest(raw), 'bytes': len(raw)}
+
+    rows = []
+    # Bound outstanding reads and preserve Git-entry error order. The context
+    # joins every submitted worker before success or failure leaves this stage.
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        pending = [pool.submit(source_row, entry) for entry in entries[:4]]
+        next_index = len(pending)
+        while pending:
+            rows.append(pending.pop(0).result())
+            if next_index < len(entries):
+                pending.append(pool.submit(source_row, entries[next_index]))
+                next_index += 1
     mapped = rows_map(rows)
     # Ignored files can enter copytree or shadow imports even while Git is clean.
     for scope in (*COPY_DIRS, 'tools'):

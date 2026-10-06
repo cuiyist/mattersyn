@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961-ligand-context",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Nguyen et al. (2024): Source-reported ODPA coordination evidence",
+  "material": {
+    "formula": "CdSe; CdSe/CdS",
+    "family": "Colossal CdSe/CdS core/shell quantum dots and scoped preparations",
+    "architecture": "unresolved"
+  },
+  "method": "Source-reported ODPA coordination evidence",
+  "sources": [
+    {
+      "id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+      "doi": "10.1021/acsnano.4c06961",
+      "title": "Colossal Core/Shell CdSe/CdS Quantum Dot Emitters",
+      "authors": "Hao A. Nguyen; Benjamin F. Hammel; David Sharp; Jessica Kline; Griffin Schwartz; Samantha Harvey; Emily Nishiwaki; Soren F. Sandeno; David S. Ginger; Arka Majumdar; Sadegh Yazdi; Gordana Dukovic; Brandi M. Cossairt",
+      "year": 2024,
+      "url": "https://doi.org/10.1021/acsnano.4c06961",
+      "main_status": "partially_reviewed",
+      "si_status": "missing_local",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+    "recipe_family": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe; CdSe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdse-core",
+      "name": "Wurtzite CdSe core quantum dots",
+      "formula": "CdSe",
+      "role": "source-reported core specimen class",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ]
+    },
+    {
+      "id": "cdse-cds",
+      "name": "CdSe/CdS core/shell quantum dots",
+      "formula": "CdSe/CdS",
+      "role": "source-reported core/shell specimen class",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ]
+    },
+    {
+      "id": "odpa",
+      "name": "n-Octadecylphosphonic acid",
+      "formula": "C18H39O3P",
+      "role": "surface-coordination identity",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main Materials lists 99% from PCI Synthesis; listed chemicals were used without further purification unless otherwise stated."
+      ],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        },
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.10, Experimental Methods, Materials"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "reported-nmr-state",
+      "name": "Source-reported ODPA-coordination conclusion",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "reported-nmr",
+      "action": "reported-nmr",
+      "label": "Retain the reported 31P NMR conclusion",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdse-core",
+        "cdse-cds",
+        "odpa"
+      ],
+      "outputs": [
+        "reported-nmr-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Main text states that ODPA coordination to cores and core/shell QDs was confirmed by 31P NMR and points to unavailable Figure S21. No acquisition or sample-preparation recipe is invented.",
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "core",
+      "source_sample_label": "ODPA coordination on CdSe",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "core-shell",
+      "source_sample_label": "ODPA coordination on CdSe/CdS",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "coordination-core",
+      "sample_id": "core",
+      "property": "Reported ODPA coordination",
+      "technique": "31P NMR",
+      "value": {
+        "value": "Coordination confirmed by source-reported 31P NMR",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Main-text qualitative conclusion only; Figure S21, solvent, concentration and acquisition settings unavailable.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ]
+    },
+    {
+      "id": "coordination-core-shell",
+      "sample_id": "core-shell",
+      "property": "Reported ODPA coordination",
+      "technique": "31P NMR",
+      "value": {
+        "value": "Coordination confirmed by source-reported 31P NMR",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+            "locator": "Main PDF p.5, ligand-coordination discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Main-text qualitative conclusion only; Figure S21, solvent, concentration and acquisition settings unavailable.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "locator": "Main PDF p.5, ligand-coordination discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Main-only source-scoped CdSe core synthesis, direct and stepwise CdS shelling, reported failed controls and post-growth variants, specimen preparation and optical/structural characterization. All fourteen main pages were actually read as text and images. Local Supporting Information is absent; unreported charges, durations and physical batch identities remain unknown. This is a selected synthesis and figure review, not a complete laboratory SOP or full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and all unstated source conditions remain unknown. Local Supporting Information is unavailable.",
+      "NMR specimen preparation, solvent, field/frequency, acquisition settings and unseen SI spectrum."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.4c06961",
+      "relation": "source"
+    }
+  ]
+}
