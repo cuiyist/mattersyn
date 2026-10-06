@@ -140,7 +140,7 @@ class InventoryTests(unittest.TestCase):
         self.assertEqual(outcome(NEW.inventory,p),('error','Rejected','case_colliding_path'))
 
     def test_synthetic_case_alias_enumeration(self):
-        p=self.fresh();(p/'a').write_bytes(b'x')
+        p=self.fresh();(p/'a').write_bytes(b'x');(p/'A').write_bytes(b'x')
         with mock.patch('os.walk',return_value=[(str(p),[],['a','A'])]):
             a=outcome(OLD.inventory,p);b=outcome(NEW.inventory,p)
         self.assertEqual(a,b);self.assertEqual(b,('error','Rejected','case_colliding_path'))
