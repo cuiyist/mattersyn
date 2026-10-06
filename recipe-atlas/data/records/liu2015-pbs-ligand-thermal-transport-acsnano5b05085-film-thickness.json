@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085-film-thickness",
+  "revision": 3,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Liu et al. (2015): Film thickness: exchanged-film profilometry and OA-film AFM",
+  "material": {
+    "formula": "PbS",
+    "family": "Colloidal PbS nanocrystals and ligand-exchanged solids",
+    "architecture": "single_material"
+  },
+  "method": "Film thickness: exchanged-film profilometry and OA-film AFM",
+  "sources": [
+    {
+      "id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+      "doi": "10.1021/acsnano.5b05085",
+      "title": "Modifying Thermal Transport in Colloidal Nanocrystal Solids with Surface Chemistry",
+      "authors": "Minglu Liu; Yuanyu Ma; Robert Y. Wang",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "recipe_family": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbs",
+      "name": "PbS nanocrystals",
+      "formula": "PbS",
+      "role": "NC solid film specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ]
+    },
+    {
+      "id": "oa",
+      "name": "Oleic acid",
+      "formula": "C18H34O2",
+      "role": "Native-OA branch identity",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main Materials and Equipment: 90%, Sigma-Aldrich, used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        },
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Materials and Equipment"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "scratch-state",
+      "name": "Scratch exchanged NC films with tweezers",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "profilometry-state",
+      "name": "Average profilometry scans at three scratch locations",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "scratch-state"
+      ]
+    },
+    {
+      "id": "afm-oa-state",
+      "name": "Measure the soft native-OA films by AFM",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "scratch",
+      "action": "scratch",
+      "label": "Scratch exchanged NC films with tweezers",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbs"
+      ],
+      "outputs": [
+        "scratch-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Scratch the ligand-exchanged NC film with tweezers to expose a thickness step. This procedure is not assigned to the soft native-OA films.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ]
+    },
+    {
+      "id": "profilometry",
+      "action": "profilometry",
+      "label": "Average profilometry scans at three scratch locations",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "scratch"
+      ],
+      "inputs": [
+        "scratch-state"
+      ],
+      "outputs": [
+        "profilometry-state"
+      ],
+      "parameters": {
+        "number_of_scans": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "scans",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 scans",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Film Thickness Measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure the thickness at the scratch location and average three scans taken at different locations. The reported typical variation among locations is less than 10 nm.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ]
+    },
+    {
+      "id": "afm-oa",
+      "action": "afm-oa",
+      "label": "Measure the soft native-OA films by AFM",
+      "stage": "characterization",
+      "branch": "native-oa",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbs",
+        "oa"
+      ],
+      "outputs": [
+        "afm-oa-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Native-OA NC solids were too soft for profilometry and were measured instead by atomic force microscopy. Digital Instrument Dimension 3000 is listed in Materials and Equipment; AFM settings are not stated.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        },
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Materials and Equipment"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "exchanged-thickness",
+      "source_sample_label": "Ligand-exchanged NC films: scratch/profilometry thickness",
+      "batch_id": null,
+      "material_state_id": "profilometry-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ],
+      "notes": [
+        "General exchanged-film protocol; exact film batch, nominal size and per-specimen thickness are not provided here."
+      ]
+    },
+    {
+      "sample_id": "oa-thickness",
+      "source_sample_label": "Native-OA NC films: AFM thickness",
+      "batch_id": null,
+      "material_state_id": "afm-oa-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "Native OA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ],
+      "notes": [
+        "Do not transfer the exchanged-film scratch/profilometry protocol to the OA branch."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "thickness-variation",
+      "sample_id": "exchanged-thickness",
+      "property": "Typical thickness variation among scratch locations",
+      "technique": "Profilometry",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 10,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Strict upper bound: less than 10 nm; not a measured thickness value.",
+        "basis": "",
+        "raw_text": "less than 10 nm",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Film Thickness Measurement"
+          }
+        ],
+        "derivation": null,
+        "maximum_exclusive": true
+      },
+      "conditions": "Variation among different measured scratch locations, not NC diameter uncertainty.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Film Thickness Measurement"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine admitted main-paper pages were actually read as text and images. This source-scoped extraction covers the typical PbS synthesis, seven ligand exchanges, thermal and XRR film branches, characterization, reported comparisons and explicitly separate model interpretations. SI and cited upstream procedures are not admitted or imported. Unreported settings and exact physical batch joins remain unknown.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source settings remain unknown.",
+      "Per-specimen thicknesses and instrument scan settings are not printed in this methods paragraph."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "relation": "source"
+    }
+  ]
+}

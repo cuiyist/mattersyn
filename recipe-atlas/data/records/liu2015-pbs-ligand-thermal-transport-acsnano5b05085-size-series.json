@@ -1,0 +1,649 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085-size-series",
+  "revision": 3,
+  "collection": "reviewed_literature",
+  "record_type": "observation",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2015): Four reported PbS diameter groups and synthesis-scope limits",
+  "material": {
+    "formula": "PbS",
+    "family": "Colloidal PbS nanocrystals and ligand-exchanged solids",
+    "architecture": "single_material"
+  },
+  "method": "Four reported PbS diameter groups and synthesis-scope limits",
+  "sources": [
+    {
+      "id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+      "doi": "10.1021/acsnano.5b05085",
+      "title": "Modifying Thermal Transport in Colloidal Nanocrystal Solids with Surface Chemistry",
+      "authors": "Minglu Liu; Yuanyu Ma; Robert Y. Wang",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "recipe_family": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbs",
+      "name": "PbS nanocrystals",
+      "formula": "PbS",
+      "role": "Reported nanocrystal size groups",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "oa",
+      "name": "Oleic acid",
+      "formula": "C18H34O2",
+      "role": "Size-control ratio component",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main Materials and Equipment: 90%, Sigma-Aldrich, used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        },
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Materials and Equipment"
+        }
+      ]
+    },
+    {
+      "id": "ode",
+      "name": "1-Octadecene",
+      "formula": "C18H36",
+      "role": "Size-control ratio component",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main Materials and Equipment: 90%, Sigma-Aldrich, used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        },
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Materials and Equipment"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "size-context-state",
+      "name": "Record reported diameter groups and qualitative size control",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "size-context",
+      "action": "size-context",
+      "label": "Record reported diameter groups and qualitative size control",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbs",
+        "oa",
+        "ode"
+      ],
+      "outputs": [
+        "size-context-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The authors varied OA:ODE ratio and report that a higher OA concentration produced larger diameters. Exact ratios for each group are not provided. This operation records source context, not a reproduced experiment.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "diameter-3p3",
+      "source_sample_label": "3.3 +/- 0.3 nm PbS group",
+      "batch_id": null,
+      "material_state_id": "size-context-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "notes": [
+        "Main p.7 reports this diameter and cites unread Figure S5. Exact batch identity and uncertainty definition are not stated.",
+        "The typical approximately 3 nm synthesis is a related method, not a demonstrated exact batch join."
+      ]
+    },
+    {
+      "sample_id": "diameter-4p2",
+      "source_sample_label": "4.2 +/- 0.4 nm PbS group",
+      "batch_id": null,
+      "material_state_id": "size-context-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "notes": [
+        "Main p.7 reports this diameter and cites unread Figure S5. Exact batch identity and uncertainty definition are not stated.",
+        "The typical approximately 3 nm synthesis is a related method, not a demonstrated exact batch join."
+      ]
+    },
+    {
+      "sample_id": "diameter-5p8",
+      "source_sample_label": "5.8 +/- 0.4 nm PbS group",
+      "batch_id": null,
+      "material_state_id": "size-context-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "notes": [
+        "Main p.7 reports this diameter and cites unread Figure S5. Exact batch identity and uncertainty definition are not stated.",
+        "The typical approximately 3 nm synthesis is a related method, not a demonstrated exact batch join."
+      ]
+    },
+    {
+      "sample_id": "diameter-8p2",
+      "source_sample_label": "8.2 +/- 0.7 nm PbS group",
+      "batch_id": null,
+      "material_state_id": "size-context-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ],
+      "notes": [
+        "Main p.7 reports this diameter and cites unread Figure S5. Exact batch identity and uncertainty definition are not stated.",
+        "The typical approximately 3 nm synthesis is a related method, not a demonstrated exact batch join."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "diameter-3p3-diameter",
+      "sample_id": "diameter-3p3",
+      "property": "Reported nanocrystal diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 3.3,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported +/- 0.3 nm; uncertainty definition not stated in admitted main.",
+        "basis": "",
+        "raw_text": "3.3 +/- 0.3 nm",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Main-reported size group; SI images were not read.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "diameter-4p2-diameter",
+      "sample_id": "diameter-4p2",
+      "property": "Reported nanocrystal diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 4.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported +/- 0.4 nm; uncertainty definition not stated in admitted main.",
+        "basis": "",
+        "raw_text": "4.2 +/- 0.4 nm",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Main-reported size group; SI images were not read.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "diameter-5p8-diameter",
+      "sample_id": "diameter-5p8",
+      "property": "Reported nanocrystal diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 5.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported +/- 0.4 nm; uncertainty definition not stated in admitted main.",
+        "basis": "",
+        "raw_text": "5.8 +/- 0.4 nm",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Main-reported size group; SI images were not read.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "diameter-8p2-diameter",
+      "sample_id": "diameter-8p2",
+      "property": "Reported nanocrystal diameter",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 8.2,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "Reported +/- 0.7 nm; uncertainty definition not stated in admitted main.",
+        "basis": "",
+        "raw_text": "8.2 +/- 0.7 nm",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Main-reported size group; SI images were not read.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    },
+    {
+      "id": "size-control",
+      "sample_id": "diameter-3p3",
+      "property": "Direction of size change with OA:ODE ratio",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": "Higher OA concentration relative to ODE gives larger PbS diameters.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.7, Nanocrystal Synthesis"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Statement applies to the reported synthesis series; no numerical ratio or batch-specific recipe is supplied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Nanocrystal Synthesis"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine admitted main-paper pages were actually read as text and images. This source-scoped extraction covers the typical PbS synthesis, seven ligand exchanges, thermal and XRR film branches, characterization, reported comparisons and explicitly separate model interpretations. SI and cited upstream procedures are not admitted or imported. Unreported settings and exact physical batch joins remain unknown.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source settings remain unknown.",
+      "Per-size OA:ODE ratios and associated synthesis charges are not reported.",
+      "Figure S5 measurement details and uncertainty definition are outside admitted source scope."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "relation": "source"
+    },
+    {
+      "label": "Only fully specified typical synthesis",
+      "url": "records/liu2015-pbs-ligand-thermal-transport-acsnano5b05085-typical-synthesis.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

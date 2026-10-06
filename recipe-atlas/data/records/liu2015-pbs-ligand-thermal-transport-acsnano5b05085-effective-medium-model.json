@@ -1,0 +1,651 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085-effective-medium-model",
+  "revision": 3,
+  "collection": "reviewed_literature",
+  "record_type": "observation",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2015): Effective-medium model and parameter sensitivity",
+  "material": {
+    "formula": "PbS",
+    "family": "Colloidal PbS nanocrystals and ligand-exchanged solids",
+    "architecture": "single_material"
+  },
+  "method": "Effective-medium model and parameter sensitivity",
+  "sources": [
+    {
+      "id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+      "doi": "10.1021/acsnano.5b05085",
+      "title": "Modifying Thermal Transport in Colloidal Nanocrystal Solids with Surface Chemistry",
+      "authors": "Minglu Liu; Yuanyu Ma; Robert Y. Wang",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "recipe_family": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbs",
+      "name": "PbS nanocrystals",
+      "formula": "PbS",
+      "role": "Model NC-core material",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    },
+    {
+      "id": "oa",
+      "name": "Oleic acid",
+      "formula": "C18H34O2",
+      "role": "Model ligand-matrix identity for OA fit",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main Materials and Equipment: 90%, Sigma-Aldrich, used as received."
+      ],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        },
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Materials and Equipment"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ema-fit-state",
+      "name": "Describe the source effective-medium model",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "ema-sensitivity-state",
+      "name": "Describe independent parameter sensitivity",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ema-fit-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "ema-fit",
+      "action": "ema-fit",
+      "label": "Describe the source effective-medium model",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbs",
+        "oa"
+      ],
+      "outputs": [
+        "ema-fit-state"
+      ],
+      "parameters": {
+        "core_conductivity_input": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "W/(m K)",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Literature-selected model input, not a measured NC-core result.",
+          "basis": "",
+          "raw_text": "2 W/(m K)",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        },
+        "matrix_conductivity_input": {
+          "value": 0.13,
+          "minimum": null,
+          "maximum": null,
+          "unit": "W/(m K)",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Literature-selected ligand-matrix model input.",
+          "basis": "",
+          "raw_text": "0.13 W/(m K)",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        },
+        "spacing_input": {
+          "value": 2.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Model input; not a particle diameter or present recipe measurement.",
+          "basis": "",
+          "raw_text": "2.5 nm",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        },
+        "interface_conductance_input": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MW/(m^2 K)",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Literature-selected NC-core/ligand interface model input.",
+          "basis": "",
+          "raw_text": "220 MW/(m^2 K)",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hasselman-Johnson effective-medium model of NC cores in a ligand matrix, including interface thermal conductance, fits the OA diameter trend. This records the authors model; no new calculation or unprovided SI implementation is claimed.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    },
+    {
+      "id": "ema-sensitivity",
+      "action": "ema-sensitivity",
+      "label": "Describe independent parameter sensitivity",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "ema-fit"
+      ],
+      "inputs": [
+        "ema-fit-state"
+      ],
+      "outputs": [
+        "ema-sensitivity-state"
+      ],
+      "parameters": {
+        "model_diameter": {
+          "value": 3.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Sensitivity-model diameter.",
+          "basis": "",
+          "raw_text": "3.3 nm",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        },
+        "individual_parameter_factor": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fold",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Each one varied independently while the other two remain fixed.",
+          "basis": "",
+          "raw_text": "5 fold",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        },
+        "matrix_sweep_maximum": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "W/(m K)",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Maximum matrix-conductivity input in the sensitivity sweep.",
+          "basis": "",
+          "raw_text": "0.5 W/(m K)",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Figure 7b changes core conductivity, interface conductance or matrix conductivity separately by a factor of five for 3.3 nm NCs. The source reports different resulting conductivity sensitivities; these are modeled responses, not separate experiments.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "oa-ema-fit",
+      "source_sample_label": "Figure 7a: OA NC-solid effective-medium model",
+      "batch_id": null,
+      "material_state_id": "ema-fit-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ],
+      "notes": [
+        "Model context, not a physical synthesis batch. Numerical inputs are not experimental labels or measured source cell parameters."
+      ]
+    },
+    {
+      "sample_id": "ema-sensitivity",
+      "source_sample_label": "Figure 7b: 3.3 nm model sensitivity",
+      "batch_id": null,
+      "material_state_id": "ema-sensitivity-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ],
+      "notes": [
+        "Author-calculated model results. No present experimental recipe or measured molecular geometry is implied."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "matrix-sensitivity",
+      "sample_id": "ema-sensitivity",
+      "property": "Ligand-matrix conductivity sensitivity",
+      "technique": "Effective-medium model",
+      "value": {
+        "value": 386,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Modeled change in NC-solid conductivity for independent factor-five input variation.",
+        "basis": "",
+        "raw_text": "386 %",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Other two parameters held fixed; not an experimental uncertainty or yield.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    },
+    {
+      "id": "interface-sensitivity",
+      "sample_id": "ema-sensitivity",
+      "property": "Core-ligand interface conductance sensitivity",
+      "technique": "Effective-medium model",
+      "value": {
+        "value": 27,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Modeled change in NC-solid conductivity for independent factor-five input variation.",
+        "basis": "",
+        "raw_text": "27 %",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Other two parameters held fixed; not an experimental uncertainty or yield.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    },
+    {
+      "id": "core-sensitivity",
+      "sample_id": "ema-sensitivity",
+      "property": "NC-core conductivity sensitivity",
+      "technique": "Effective-medium model",
+      "value": {
+        "value": 4,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": false,
+        "qualifier": "Modeled change in NC-solid conductivity for independent factor-five input variation.",
+        "basis": "",
+        "raw_text": "4 %",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Other two parameters held fixed; not an experimental uncertainty or yield.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    },
+    {
+      "id": "hypothetical-interface-change",
+      "sample_id": "ema-sensitivity",
+      "property": "Modeled consequence of a hypothetical factor-four interface change",
+      "technique": "Effective-medium model",
+      "value": {
+        "value": 20,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "author_derived",
+        "approximate": true,
+        "qualifier": "Approximate model-predicted NC-solid conductivity change.",
+        "basis": "",
+        "raw_text": "20 %",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Motivated by literature solid-SAM conductance changes, not a factor-four interface-change experiment performed on these NC solids.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.6, Figure 7 and effective-medium model"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine admitted main-paper pages were actually read as text and images. This source-scoped extraction covers the typical PbS synthesis, seven ligand exchanges, thermal and XRR film branches, characterization, reported comparisons and explicitly separate model interpretations. SI and cited upstream procedures are not admitted or imported. Unreported settings and exact physical batch joins remain unknown.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source settings remain unknown.",
+      "Detailed implementation and further assumptions are in unread SI.",
+      "No modeled parameter is relabeled as a measured sample property or training target."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "relation": "source"
+    }
+  ]
+}

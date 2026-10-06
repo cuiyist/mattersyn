@@ -1,0 +1,799 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085-thermal-measurement",
+  "revision": 3,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Liu et al. (2015): Differential three-omega thermal conductivity measurement",
+  "material": {
+    "formula": "PbS",
+    "family": "Colloidal PbS nanocrystals and ligand-exchanged solids",
+    "architecture": "composite"
+  },
+  "method": "Differential three-omega thermal conductivity measurement",
+  "sources": [
+    {
+      "id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+      "doi": "10.1021/acsnano.5b05085",
+      "title": "Modifying Thermal Transport in Colloidal Nanocrystal Solids with Surface Chemistry",
+      "authors": "Minglu Liu; Yuanyu Ma; Robert Y. Wang",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "main_status": "partially_reviewed",
+      "si_status": "not_reviewed",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "recipe_family": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbs",
+      "name": "PbS nanocrystals",
+      "formula": "PbS",
+      "role": "NC solid film under test",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "si",
+      "name": "Silicon substrate",
+      "formula": "Si",
+      "role": "Substrate",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "al2o3",
+      "name": "Alumina dielectric",
+      "formula": "Al2O3",
+      "role": "Dielectric coating",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "al",
+      "name": "Aluminum heater and thermometer",
+      "formula": "Al",
+      "role": "Heater and thermometer line",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "dielectric-state",
+      "name": "Coat NC films with an alumina dielectric",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "metal-line-state",
+      "name": "Deposit aluminum lines through a shadow mask",
+      "kind": "product",
+      "parent_ids": [
+        "dielectric-state"
+      ]
+    },
+    {
+      "id": "reference-state",
+      "name": "Prepare the matched dielectric-on-Si reference",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "tcr-calibration-state",
+      "name": "Fit line resistance versus calibration temperature",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "metal-line-state",
+        "reference-state"
+      ]
+    },
+    {
+      "id": "three-omega-state",
+      "name": "Drive AC heating and record voltage harmonics",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "metal-line-state",
+        "reference-state",
+        "tcr-calibration-state"
+      ]
+    },
+    {
+      "id": "subtract-reference-state",
+      "name": "Subtract the reference thermal response",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "three-omega-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "dielectric",
+      "action": "dielectric",
+      "label": "Coat NC films with an alumina dielectric",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbs",
+        "si",
+        "al2o3"
+      ],
+      "outputs": [
+        "dielectric-state"
+      ],
+      "parameters": {
+        "dielectric_thickness": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 nm",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Coat the NC film with approximately 150 nm Al2O3. The dielectric deposition method and conditions are not given.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "metal-line",
+      "action": "metal-line",
+      "label": "Deposit aluminum lines through a shadow mask",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "dielectric"
+      ],
+      "inputs": [
+        "dielectric-state",
+        "al"
+      ],
+      "outputs": [
+        "metal-line-state"
+      ],
+      "parameters": {
+        "line_width": {
+          "value": 45,
+          "minimum": null,
+          "maximum": null,
+          "unit": "um",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "45 um",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "line_length": {
+          "value": 2.6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2.6 mm",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "line_thickness": {
+          "value": 150,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "150 nm",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The Al lines act as both heaters and thermometers. Their dimensions are device geometry, not NC dimensions; metal deposition method and rate are not specified.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "action": "reference",
+      "label": "Prepare the matched dielectric-on-Si reference",
+      "stage": "characterization",
+      "branch": "reference",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "si",
+        "al2o3",
+        "al"
+      ],
+      "outputs": [
+        "reference-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "An identically prepared reference contains only dielectric layer and silicon substrate beneath the measurement line, without a nanocrystal film. This branch is distinct from the NC-containing experimental sample.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "tcr-calibration",
+      "action": "tcr-calibration",
+      "label": "Fit line resistance versus calibration temperature",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "metal-line",
+        "reference"
+      ],
+      "inputs": [
+        "metal-line-state",
+        "reference-state"
+      ],
+      "outputs": [
+        "tcr-calibration-state"
+      ],
+      "parameters": {
+        "temperature_point_count": {
+          "value": 5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "points",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 points",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+            }
+          ],
+          "derivation": null
+        },
+        "calibration_temperature_range": {
+          "value": null,
+          "minimum": 15,
+          "maximum": 30,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15-30 degC",
+          "evidence": [
+            {
+              "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+              "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "On a home-built thermal stage, measure three-omega line resistance at five temperatures between 15 and 30 C and obtain TCR from a linear fit. Individual temperatures and fitted coefficient are not supplied.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    },
+    {
+      "id": "three-omega",
+      "action": "three-omega",
+      "label": "Drive AC heating and record voltage harmonics",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "tcr-calibration"
+      ],
+      "inputs": [
+        "metal-line-state",
+        "reference-state",
+        "tcr-calibration-state"
+      ],
+      "outputs": [
+        "three-omega-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Drive AC current through the Al line as heater, and use the third harmonic voltage as thermometer signal. Methods list Keithley 6221 current source and Stanford Research Systems SR830 lock-in for first and third harmonics; current amplitude and frequency are not reported.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        },
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.7, Materials and Equipment"
+        }
+      ]
+    },
+    {
+      "id": "subtract-reference",
+      "action": "subtract-reference",
+      "label": "Subtract the reference thermal response",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "three-omega"
+      ],
+      "inputs": [
+        "three-omega-state"
+      ],
+      "outputs": [
+        "subtract-reference-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Obtain the NC-solid-film thermal response by subtracting the identically prepared reference response from the experimental specimen. Detailed method implementation and benchmarks are in unread SI.",
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "thermal-device",
+      "source_sample_label": "NC-film thermal measurement specimen",
+      "batch_id": null,
+      "material_state_id": "metal-line-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ],
+      "notes": [
+        "Film size/ligand context is assigned separately in comparison records; exact physical film batch is unknown.",
+        "Al2O3 and Al dimensions are measurement-stack dimensions."
+      ]
+    },
+    {
+      "sample_id": "thermal-reference",
+      "source_sample_label": "Reference: dielectric and Si without NC film",
+      "batch_id": null,
+      "material_state_id": "reference-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Al2O3 dielectric on Si with the identically prepared measurement line; no NC film.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ],
+      "notes": [
+        "No NC film in this reference; it is used for differential subtraction."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "thermal-method",
+      "sample_id": "thermal-device",
+      "property": "Reported thermal characterization method",
+      "technique": "Differential three-omega",
+      "value": {
+        "value": "Differential three-omega method for thin films; reference response subtracted and TCR obtained from a five-point linear fit.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+            "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "locator": "Main PDF p.8, Thermal Conductivity Measurement"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All nine admitted main-paper pages were actually read as text and images. This source-scoped extraction covers the typical PbS synthesis, seven ligand exchanges, thermal and XRR film branches, characterization, reported comparisons and explicitly separate model interpretations. SI and cited upstream procedures are not admitted or imported. Unreported settings and exact physical batch joins remain unknown.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source settings remain unknown.",
+      "AC current amplitude, frequency range, fitted TCR, detailed numerical reduction and uncertainty protocol are not given in the admitted main.",
+      "Dielectric and metal deposition methods/rates and actual physical measurement batches are not reported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.5b05085",
+      "relation": "source"
+    }
+  ]
+}

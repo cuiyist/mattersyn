@@ -1,0 +1,558 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-s2-steady-emission",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "observation",
+  "reader_role": "contextual_observation",
+  "title": "Teitelboim and Oron (2016): S2 linear visible and NIR emission",
+  "material": {
+    "formula": "PbSe/CdSe/CdS",
+    "family": "PbSe/CdSe/CdS upconversion heteronanocrystals",
+    "architecture": "heterostructure",
+    "elements": [
+      "Pb",
+      "Se",
+      "Cd",
+      "S"
+    ]
+  },
+  "method": "S2 linear visible and NIR emission",
+  "sources": [
+    {
+      "id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+      "doi": "10.1021/acsnano.5b05329",
+      "title": "Broadband Near-Infrared to Visible Upconversion in Quantum Dot−Quantum Well Heterostructures",
+      "authors": "Ayelet Teitelboim; Dan Oron",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acsnano.5b05329",
+      "main_status": "all_7_pages_source_reviewed",
+      "si_status": "all_10_matching_SI_pages_source_reviewed",
+      "reuse_status": "©2015 American Chemical Society; figure permission unverified."
+    },
+    {
+      "id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+      "doi": "10.1021/acsnano.5b05329",
+      "title": "Supporting Information for: Broadband Near-Infrared to Visible Upconversion in Quantum Dot−Quantum Well Heterostructures",
+      "authors": "Ayelet Teitelboim; Dan Oron",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acsnano.5b05329",
+      "main_status": "matching_main_reviewed",
+      "si_status": "all_10_pages_source_reviewed",
+      "reuse_status": "Source-figure permission unverified."
+    }
+  ],
+  "lineage": {
+    "source_group": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+    "recipe_family": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe/CdSe/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-cdse-cds",
+      "name": "PbSe/CdSe/CdS heteronanocrystals",
+      "formula": null,
+      "role": "source-labeled emission specimen",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ]
+    },
+    {
+      "id": "tetrachloroethylene",
+      "name": "Tetrachloroethylene; NIR spectrum solvent",
+      "formula": "C2Cl4",
+      "role": "NIR spectrum solvent; visible solvent not specified",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+          "locator": "SI p.5 TEM and optical characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "visible-state",
+      "name": "Analysis data: Acquire S2 visible fluorescence",
+      "kind": "analysis_data",
+      "parent_ids": []
+    },
+    {
+      "id": "nir-state",
+      "name": "Analysis data: Acquire S2 NIR fluorescence in tetrachloroethylene",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "visible",
+      "action": "visible",
+      "label": "Acquire S2 visible fluorescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-cdse-cds"
+      ],
+      "outputs": [
+        "visible-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 405,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "405 nm",
+          "evidence": [
+            {
+              "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+              "locator": "Main p.6 Methods / TEM and Optical Characterization"
+            },
+            {
+              "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+              "locator": "SI pp.4–5 TEM and optical characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main p.6 Methods / TEM and Optical Characterization"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+            "locator": "SI pp.4–5 TEM and optical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main p.6 Methods / TEM and Optical Characterization"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+            "locator": "SI pp.4–5 TEM and optical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Fiber-coupled 405 nm LED; orthogonal collection through fiber to USB4000 Ocean Optics. Visible-scan solvent and concentration are not separately specified.",
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        },
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main p.6 Methods / TEM and Optical Characterization"
+        },
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+          "locator": "SI pp.4–5 TEM and optical characterization"
+        }
+      ]
+    },
+    {
+      "id": "nir",
+      "action": "nir",
+      "label": "Acquire S2 NIR fluorescence in tetrachloroethylene",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-cdse-cds",
+        "tetrachloroethylene"
+      ],
+      "outputs": [
+        "nir-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 405,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "405 nm",
+          "evidence": [
+            {
+              "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+              "locator": "Main p.6 Methods / TEM and Optical Characterization"
+            },
+            {
+              "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+              "locator": "SI pp.4–5 TEM and optical characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main p.6 Methods / TEM and Optical Characterization"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+            "locator": "SI pp.4–5 TEM and optical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main p.6 Methods / TEM and Optical Characterization"
+          },
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+            "locator": "SI pp.4–5 TEM and optical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "NIRquest512 spectrometer; NIR sample solvent explicitly tetrachloroethylene in SI. Relative instrument response calibrated using AQ-4303b white-light source.",
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        },
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main p.6 Methods / TEM and Optical Characterization"
+        },
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+          "locator": "SI pp.4–5 TEM and optical characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "sample",
+      "source_sample_label": "S2 steady emission context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe/CdSe/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "visible-peak",
+      "sample_id": "sample",
+      "property": "Reported visible emission peak",
+      "technique": "Fluorescence",
+      "value": {
+        "value": 630,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "630 nm",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "405 nm LED excitation",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ]
+    },
+    {
+      "id": "nir-peak",
+      "sample_id": "sample",
+      "property": "Reported NIR emission position after exchange",
+      "technique": "Fluorescence",
+      "value": {
+        "value": 1260,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "1260 nm",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Broad NIR emission; associated source specimen label, not an independently resolved core size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main pp.5–6 Figure 6b and S2 discussion"
+        }
+      ]
+    },
+    {
+      "id": "secondary-peak",
+      "sample_id": "sample",
+      "property": "Smaller secondary visible peak",
+      "technique": "Fluorescence",
+      "value": {
+        "value": 700,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "700 nm",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+            "locator": "Main p.6 S2 discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Smaller band broadens the 630 nm emission; two-size/etching explanation is an attributed hypothesis.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "locator": "Main p.6 S2 discussion"
+        }
+      ]
+    },
+    {
+      "id": "calibration",
+      "sample_id": "sample",
+      "property": "Relative visible/NIR detector calibration",
+      "technique": "Instrument calibration",
+      "value": {
+        "value": "AQ-4303b white-light source",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+            "locator": "SI p.5 TEM and optical characterization"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329-si",
+          "locator": "SI p.5 TEM and optical characterization"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "All seven main and ten supporting-information pages read as text and actual page images. Source alternatives, sample-specific observations, common procedures and authors’ interpretations are distinguished. Unreported details remain missing; no plot digitization or measured atomistic heterostructure is claimed.",
+    "missing_fields": [
+      "Exact physical batch identifiers and atomistic specimen coordinates are not reported.",
+      "Visible emission solvent, concentration, instrument integration settings and raw calibrated spectra."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary article and matching SI; online 2015, journal year 2016",
+      "url": "https://doi.org/10.1021/acsnano.5b05329",
+      "relation": "source"
+    },
+    {
+      "label": "Source specimen lineage",
+      "url": "records/teitelboim2016-pbse-cdse-cds-acsnano5b05329-s2-lineage.html",
+      "relation": "related_procedure"
+    }
+  ]
+}
