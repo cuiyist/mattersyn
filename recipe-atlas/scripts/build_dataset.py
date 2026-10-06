@@ -64,6 +64,11 @@ def product_reader_note(note,record):
 
 def record_href(url):
     """Keep source URIs unchanged; resolve atlas-root links relative to a record page."""
+    parsed=urlsplit(url)
+    if not parsed.scheme and not parsed.netloc and parsed.path.startswith('/records/') and parsed.path.endswith('/'):
+        rid=parsed.path[len('/records/'):-1]
+        if rid and all(c in 'abcdefghijklmnopqrstuvwxyz0123456789-' for c in rid):
+            return '../records/'+rid+'.html'+('?' + parsed.query if parsed.query else '')+('#'+parsed.fragment if parsed.fragment else '')
     if url.startswith('/') and not url.startswith('//'):
         return '../'+url.lstrip('/')
     if url.startswith(('records/','assets/','data/')):
