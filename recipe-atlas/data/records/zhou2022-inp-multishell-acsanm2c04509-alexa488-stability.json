@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhou2022-inp-multishell-acsanm2c04509-alexa488-stability",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Zhou et al. (2022): Alexa Fluor 488 photobleaching comparison",
+  "material": {
+    "formula": "Alexa Fluor 488-labeled microtubules",
+    "family": "Colloidal InP quantum dots and surface-modified biological imaging probes",
+    "architecture": "unresolved",
+    "elements": []
+  },
+  "method": "Alexa Fluor 488 photobleaching comparison",
+  "sources": [
+    {
+      "id": "zhou2022-inp-multishell-acsanm2c04509",
+      "doi": "10.1021/acsanm.2c04509",
+      "title": "Nonblinking Core–Multishell InP/ZnSe/ZnS Quantum Dot Bioconjugates for Super-resolution Imaging",
+      "authors": "Liangliang Zhou; Bin Yu; Lilin Huang; Huiqun Cao; Danying Lin; Yingying Jing; Faiz Wali; Junle Qu",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acsanm.2c04509",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; permission for public figure excerpts is not established."
+    },
+    {
+      "id": "zhou2022-inp-multishell-acsanm2c04509-si",
+      "doi": "10.1021/acsanm.2c04509",
+      "title": "Nonblinking Core–Multishell InP/ZnSe/ZnS Quantum Dot Bioconjugates for Super-resolution Imaging — Supporting Information",
+      "authors": "Liangliang Zhou; Bin Yu; Lilin Huang; Huiqun Cao; Danying Lin; Yingying Jing; Faiz Wali; Junle Qu",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acsanm.2c04509",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; permission for public figure excerpts is not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "zhou2022-inp-multishell-acsanm2c04509",
+    "recipe_family": "zhou2022-inp-multishell-acsanm2c04509",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Alexa Fluor 488-labeled microtubules",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "alexa488",
+      "name": "Alexa Fluor 488",
+      "formula": null,
+      "role": "commercial control dye",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "No molecular structure or labeling protocol is supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ]
+    },
+    {
+      "id": "bsc1",
+      "name": "BS-C-1 cells",
+      "formula": null,
+      "role": "microtubule cell context",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main source uses BS-C-1 microtubules; SI control does not establish exact cell identity with the QD images."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "image-state",
+      "name": "Compare Alexa-labeled microtubules at 0 and 100 s",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "image",
+      "action": "image",
+      "label": "Compare Alexa-labeled microtubules at 0 and 100 s",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "alexa488",
+        "bsc1"
+      ],
+      "outputs": [
+        "image-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "SI Figure S1e/f show loss of visible microtubule structures by 100 s. Dye dose, antibody linkage, labeling time and laser power are unreported; QD–SA labeling steps are not copied as a dye preparation.",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "alexa-microtubules",
+      "source_sample_label": "SI Figure S1e/f Alexa Fluor 488 comparison",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Alexa Fluor 488-labeled microtubules",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "bleaching",
+      "sample_id": "alexa-microtubules",
+      "property": "Image observation",
+      "technique": "MSIM control image comparison",
+      "value": {
+        "value": "Obvious structural loss at 100 s relative to 0 s",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+            "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509-si",
+          "locator": "SI PDF pp.1–3, Section 1 and Figure S1"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped InP core and InP/ZnSe/ZnS multishell preparation, ligand transfer, streptavidin/chitosan coupling, biological specimen preparation, and distinct source-reported characterization and control contexts. All eleven main and four matching supporting-information pages were read as text and images. Printed ambiguities, unspecified preparation settings, and unknown physical batch joins remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown.",
+      "Dye preparation, concentration, targeting chemistry, illumination power and exact physical cell/batch identity."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsanm.2c04509",
+      "relation": "source"
+    }
+  ]
+}

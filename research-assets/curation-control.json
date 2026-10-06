@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "full_independent_audit_active",
-  "recorded_at": "2026-10-05T23:13:38.158676+00:00",
+  "recorded_at": "2026-10-06T02:27:41.994252+00:00",
   "authorization": "Owner explicitly resumed on 2026-10-04 at 23:19:09 UTC under the 2026-10-02 full-audit plan: every paper one extractor and a different full source auditor; quick audit retired; third-agent sampling remains 25% of first40. Existing sampling and staffing gates remain unchanged; scheduled reports remain off.",
   "supersedes_hold": "The latest explicit owner resume starts a stronger full-independent-audit regime. Failed quick tests and prior error logs remain historical, unchanged.",
   "active_run": "Private full-audit-20261002/ledger.jsonl",
@@ -50,26 +50,25 @@
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
   "latest_publication_receipt": "Root-verified publication checkpoint; detailed evidence retained locally.",
-  "latest_verified_site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0",
+  "latest_verified_site_commit": "04c025e65676789119379be6a7d695517e2b4686",
   "latest_verified_totals": {
-    "records": 2563,
-    "contributing_sources": 218,
-    "reviewed_contributing_sources": 217,
+    "records": 2609,
+    "contributing_sources": 220,
+    "reviewed_contributing_sources": 219,
     "benchmark_source_groups": 1,
     "preliminary_sources": 0,
     "direct_families": 223,
-    "broad_pairs": 824
+    "broad_pairs": 825,
+    "material_hubs": 260
   },
   "latest_publication_event": {
     "event_kind": "batch",
-    "verified_at": "2026-10-05T22:52:06+00:00",
+    "verified_at": "2026-10-06T01:59:57+00:00",
     "event_ids": [
-      "peng2021-roomtemp-pbse-acsami1c13723:batch12-live:da2aeb3fd416",
-      "durmusoglu2020-pbs-taa-acsami0c06694:batch12-live:da2aeb3fd416",
-      "guzman2015-cdte-co2-acsami5b05722:batch12-live:da2aeb3fd416",
-      "bucci2024-zincblende-qd-nanowires-acsami4c00615:batch12-live:da2aeb3fd416"
+      "heo2017-pbs-perovskite-acsami7b12046:batch13-live:04c025e65676",
+      "mazumdar2015-cds-shape-acsami5b08595:batch13-live:04c025e65676"
     ],
-    "site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0"
+    "site_commit": "04c025e65676789119379be6a7d695517e2b4686"
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -121,16 +120,14 @@
   },
   "latest_publication_batch": {
     "source_ids": [
-      "peng2021-roomtemp-pbse-acsami1c13723",
-      "durmusoglu2020-pbs-taa-acsami0c06694",
-      "guzman2015-cdte-co2-acsami5b05722",
-      "bucci2024-zincblende-qd-nanowires-acsami4c00615"
+      "heo2017-pbs-perovskite-acsami7b12046",
+      "mazumdar2015-cds-shape-acsami5b08595"
     ],
-    "new_gold_source_contributions": 4,
-    "new_records": 83,
-    "new_recipe_structure_rows": 11,
-    "verified_at": "2026-10-05T22:52:06+00:00",
-    "site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0"
+    "new_gold_source_contributions": 2,
+    "new_records": 46,
+    "new_recipe_structure_rows": 1,
+    "verified_at": "2026-10-06T01:59:57+00:00",
+    "site_commit": "04c025e65676789119379be6a7d695517e2b4686"
   },
   "latest_experimental_display": {
     "receipt": "research-assets/public-audits/experimental-li2001-display-publication-20260928.json",
@@ -528,12 +525,16 @@
     }
   ],
   "next_accepted_contribution": {
-    "status": "next_batch_not_selected",
-    "source_ids": [],
-    "records": 0,
-    "direct_routes": 0,
+    "status": "accepted_private_source_transaction_prepared",
+    "source_ids": [
+      "mulder2020-inznp-znmgse-acsanm0c00583",
+      "zhou2022-inp-multishell-acsanm2c04509",
+      "paliwal2018-pbs-microwave-acsanm8b01194"
+    ],
+    "records": 106,
+    "direct_routes": 16,
     "new_paper_credit": 0,
-    "note": "The prior four contributions are verified live. Heo and Mazumdar are accepted for integration; a subsequent batch has not been selected in this checkpoint."
+    "note": "Three independently accepted private contributions; exact source application, build and live verification remain separate actual stages."
   },
   "active_hour_target": {
     "start": "2026-09-28T22:11:57Z",
@@ -547,15 +548,15 @@
     "status": "historical_frozen_result_2_papers_not_active"
   },
   "latest_verified_publication": {
-    "source_commit": "33fd2dd9cb80456eada5bc5b0c11cc58fbb53fc9",
-    "site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0",
-    "site_ci_run": 37383836680,
-    "source_ci_run": 37373858187,
-    "verified_at": "2026-10-05T22:52:06+00:00",
-    "new_papers": 4,
-    "new_reviewed_records": 83,
-    "new_verified_pairs": 11,
-    "receipt_sha256": "b45977d9a1b3bcc8622e6cb3aafbfb7381c2e58326622cbe3803c754b1876743"
+    "source_commit": "7f2d4ee1243e37536ee46a4e822099dc11a51a9e",
+    "site_commit": "04c025e65676789119379be6a7d695517e2b4686",
+    "site_ci_run": 37401066086,
+    "source_ci_run": 37394465458,
+    "verified_at": "2026-10-06T01:59:57+00:00",
+    "new_papers": 2,
+    "new_reviewed_records": 46,
+    "new_verified_pairs": 1,
+    "receipt_sha256": "9dd1b1463d3378d21491e321611d3016fd6e77555f6c07129fb07b01703a8105"
   },
   "workflow_revision_hold": {
     "at": "2026-09-28T23:25:09.177250+00:00",
@@ -896,19 +897,24 @@
     }
   },
   "current_reviewed_checkout": {
-    "records": 2563,
-    "contributing_source_groups": 218,
+    "records": 2609,
+    "contributing_source_groups": 220,
     "direct_families": 223,
-    "broad_pairs": 824,
-    "additional_contributions_pending_live": 0,
-    "additional_records_pending_live": 0,
-    "source_head_at_metadata_preparation": "5e972df9dbcc79956d81d4ba3074e4726d9c1537",
-    "application_finished_at": "2026-10-05T20:49:15.794528+00:00",
-    "prepared_release_source_commit": "33fd2dd9cb80456eada5bc5b0c11cc58fbb53fc9",
-    "published_site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0",
-    "status": "reviewed_checkout_verified_live",
+    "material_hubs": 260,
+    "broad_pairs": 825,
+    "source_head_at_metadata_preparation": "7f2d4ee1243e37536ee46a4e822099dc11a51a9e",
+    "prepared_release_source_commit": "7f2d4ee1243e37536ee46a4e822099dc11a51a9e",
+    "published_site_commit": "04c025e65676789119379be6a7d695517e2b4686",
+    "status": "last_verified_live_checkout_with_next_source_transaction_prepared",
+    "additional_contributions_pending_live": 3,
+    "additional_records_pending_live": 106,
+    "proposed_records_after_application": 2715,
+    "proposed_source_groups_after_application": 223,
+    "proposed_material_hubs_after_application": 269,
+    "next_build_family_and_pair_counts": null,
     "pending_existing_corrections": [],
-    "new_paper_credit_for_corrections": 0
+    "new_paper_credit_for_corrections": 0,
+    "qualification": "Verified baseline counts remain separate from the accepted private 106-record transaction. Actual next application/build/publication receipts determine each later state; no future timestamps or publication counts are asserted."
   },
   "latest_existing_paper_corrections": {
     "site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0",
@@ -929,33 +935,40 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-05T23:13:38.158676+00:00",
+    "snapshot_at": "2026-10-06T02:27:41.994252+00:00",
     "stage_flags": [
-      {
-        "primary_source_id": "heo2017-pbs-perovskite-acsami7b12046",
-        "ordinal": 47,
-        "stage": "accepted_for_integration_ownership_acknowledged",
-        "full_accepted": true
-      },
-      {
-        "primary_source_id": "mazumdar2015-cds-shape-acsami5b08595",
-        "ordinal": 46,
-        "stage": "accepted_for_integration_ownership_acknowledged",
-        "full_accepted": true
-      },
       {
         "primary_source_id": "mulder2020-inznp-znmgse-acsanm0c00583",
         "ordinal": 48,
-        "stage": "reported_full_comparison_with_uncaptured_exact_start",
-        "full_accepted": false
+        "stage": "independently_accepted_private_next_source_transaction",
+        "full_accepted": true,
+        "live_verified": false
       },
       {
         "primary_source_id": "zhou2022-inp-multishell-acsanm2c04509",
         "ordinal": 49,
-        "stage": "recorded_full_audit_start",
-        "full_accepted": false
+        "stage": "independently_accepted_private_next_source_transaction",
+        "full_accepted": true,
+        "live_verified": false
+      },
+      {
+        "primary_source_id": "paliwal2018-pbs-microwave-acsanm8b01194",
+        "ordinal": 50,
+        "stage": "independently_accepted_private_next_source_transaction",
+        "full_accepted": true,
+        "live_verified": false
+      },
+      {
+        "primary_source_id": "sharma2025-au-cdte-qcd-acsanm5c03294",
+        "ordinal": 51,
+        "stage": "corrected_scientific_full_audit_accepted_final_delivery_and_third_pending",
+        "full_accepted": true,
+        "live_verified": false,
+        "acceptance_scope": "Corrected R4 scientific package only; final delivery and sampled third remain pending.",
+        "final_delivery_accepted": false,
+        "sampled_third_completed": false
       }
     ],
-    "note": "Heo (ordinal 47) and Mazumdar (46) are accepted for integration and owned by the integrator. Mazumdar’s third audit found zero S1/S2/S3 issues, and its ledger continuation has been adopted with original findings retained. Mulder (48) has reported full-review activity; its exact scientific comparison-start time was not captured. Zhou (49) has a recorded full-audit start. Worker A’s DOI 10.1021/acsanm.8b01194 identity remains provisional. Worker B’s Sharma source, DOI 10.1021/acsanm.5c03294, has verified identity and a completed source inventory, with no frozen package or acceptance recorded here. These are saved stage facts, not continuous-activity claims."
+    "note": "Mulder (ordinal 48), Zhou (49) and Paliwal (50) have independently accepted private contributions, totaling 106 records, prepared for the next source transaction. Their records receive no live credit before the normal release checks pass. Mulder’s exact initial scientific comparison-start time remains unknown and its timing qualification is retained. Sharma (51) has full-audit acceptance for its corrected scientific package; final delivery and the sampled third audit remain pending. These are saved stage facts, not continuous-activity claims."
   }
 }

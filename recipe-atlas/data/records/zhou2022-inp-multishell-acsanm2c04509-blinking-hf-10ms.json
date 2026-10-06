@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "zhou2022-inp-multishell-acsanm2c04509-blinking-hf-10ms",
+  "revision": 3,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Zhou et al. (2022): HF-treated 10 ms exposure",
+  "material": {
+    "formula": "InP/ZnSe/ZnS",
+    "family": "Colloidal InP quantum dots and surface-modified biological imaging probes",
+    "architecture": "core_shell",
+    "elements": [
+      "In",
+      "P",
+      "Zn",
+      "Se",
+      "S"
+    ],
+    "components": [
+      "InP",
+      "ZnSe",
+      "ZnS"
+    ]
+  },
+  "method": "HF-treated 10 ms exposure",
+  "sources": [
+    {
+      "id": "zhou2022-inp-multishell-acsanm2c04509",
+      "doi": "10.1021/acsanm.2c04509",
+      "title": "Nonblinking Core–Multishell InP/ZnSe/ZnS Quantum Dot Bioconjugates for Super-resolution Imaging",
+      "authors": "Liangliang Zhou; Bin Yu; Lilin Huang; Huiqun Cao; Danying Lin; Yingying Jing; Faiz Wali; Junle Qu",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acsanm.2c04509",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; permission for public figure excerpts is not established."
+    },
+    {
+      "id": "zhou2022-inp-multishell-acsanm2c04509-si",
+      "doi": "10.1021/acsanm.2c04509",
+      "title": "Nonblinking Core–Multishell InP/ZnSe/ZnS Quantum Dot Bioconjugates for Super-resolution Imaging — Supporting Information",
+      "authors": "Liangliang Zhou; Bin Yu; Lilin Huang; Huiqun Cao; Danying Lin; Yingying Jing; Faiz Wali; Junle Qu",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acsanm.2c04509",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; permission for public figure excerpts is not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "zhou2022-inp-multishell-acsanm2c04509",
+    "recipe_family": "zhou2022-inp-multishell-acsanm2c04509",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InP/ZnSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "multishell",
+      "name": "InP/ZnSe/ZnS quantum dots",
+      "formula": null,
+      "role": "HF-treated QD specimen",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source controls/sample classes have no exact physical batch identity or complete separate preparation sequence."
+      ],
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "trace-state",
+      "name": "Acquire the fluorescence time trace",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "trace",
+      "action": "trace",
+      "label": "Acquire the fluorescence time trace",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "multishell"
+      ],
+      "outputs": [
+        "trace-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 488,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "488 nm",
+          "evidence": [
+            {
+              "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+              "locator": "Main PDF p.7, Section 3.1, blinking acquisition"
+            }
+          ],
+          "derivation": null
+        },
+        "power_density": {
+          "value": 63.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW/cm2",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "63.2 mW/cm2",
+          "evidence": [
+            {
+              "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+              "locator": "Main PDF p.6, Figure 4f"
+            }
+          ],
+          "derivation": null
+        },
+        "exposure": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ms",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 ms",
+          "evidence": [
+            {
+              "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+              "locator": "Main PDF p.6, Figure 4f"
+            }
+          ],
+          "derivation": null
+        },
+        "objective_magnification": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "x",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Common single-particle method",
+          "basis": "",
+          "raw_text": "100 x",
+          "evidence": [
+            {
+              "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+              "locator": "Main PDF pp.3–4, Section 2.2, Instrumentation and Characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "objective_na": {
+          "value": 1.35,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Common single-particle method",
+          "basis": "",
+          "raw_text": "1.35 ratio",
+          "evidence": [
+            {
+              "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+              "locator": "Main PDF pp.3–4, Section 2.2, Instrumentation and Characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Continuous-wave excitation and sCMOS recording. Exposure and frame rate are separate source settings; absent per-panel quantities are not inferred. Illustration is an instrument/action cue, not a simulated experimental trace. The common method uses a Nikon Si-oil immersion objective, Hamamatsu C5440-20UP sCMOS camera and ET500LP emission filter. The general camera rate is 30 fps; per-panel frame rates are only asserted where explicitly reported.",
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        },
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF pp.3–4, Section 2.2, Instrumentation and Characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "trace",
+      "source_sample_label": "HF-treated 10 ms exposure",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InP/ZnSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ],
+      "notes": [
+        "Representative single-dot trace; solution concentration and substrate immobilization are unreported."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "behavior",
+      "sample_id": "trace",
+      "property": "Blinking observation",
+      "technique": "Single-particle fluorescence",
+      "value": {
+        "value": "Nonblinking source trace with intensity fluctuations",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+            "locator": "Main PDF p.6, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "zhou2022-inp-multishell-acsanm2c04509",
+          "locator": "Main PDF p.6, Figure 4f"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped InP core and InP/ZnSe/ZnS multishell preparation, ligand transfer, streptavidin/chitosan coupling, biological specimen preparation, and distinct source-reported characterization and control contexts. All eleven main and four matching supporting-information pages were read as text and images. Printed ambiguities, unspecified preparation settings, and unknown physical batch joins remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown.",
+      "Control recipe details, immobilization, single-particle concentration and any unreported exposure/power settings."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsanm.2c04509",
+      "relation": "source"
+    },
+    {
+      "label": "General HF-treated recipe, not an asserted control recipe",
+      "url": "records/zhou2022-inp-multishell-acsanm2c04509-multishell.html",
+      "relation": "related_procedure"
+    }
+  ]
+}
