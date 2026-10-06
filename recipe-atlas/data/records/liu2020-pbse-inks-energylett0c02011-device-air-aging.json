@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-device-air-aging",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2020): Device air-aging test",
+  "material": {
+    "formula": "PbSe photovoltaic device",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "unresolved"
+  },
+  "method": "Device air-aging test",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe photovoltaic device",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "absorber in fabricated device",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "store-state",
+      "name": "Store the completed device in ambient air",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "store",
+      "action": "store",
+      "label": "Store the completed device in ambient air",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct"
+      ],
+      "outputs": [
+        "store-state"
+      ],
+      "parameters": {
+        "relative_humidity": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "%",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "humidity around 30%",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+            }
+          ],
+          "derivation": null
+        },
+        "reported_endpoint": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "days",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 days",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011",
+              "locator": "Main PDF p.5, device-stability discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ambient air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Store the completed photovoltaic device for the air-stability test; the 30-day endpoint comes from main Figure 4e discussion. Test temperature and exposure details are not reported.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF pp.6–7, Section 8, Solar cell fabrication"
+        },
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4e and 30-day device-aging discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "aged-device",
+      "source_sample_label": "Figure 4e device-stability series",
+      "batch_id": null,
+      "material_state_id": "store-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe photovoltaic device",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4e"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4e"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4e"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4e"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4e"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "retention",
+      "sample_id": "aged-device",
+      "property": "Text-reported PCE retention after 30 days",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 90,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "around 90% of initial PCE",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4e discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Text claim retained with the plot inconsistency; not a digitized plotted value.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.5, Figure 4e discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown."
+    ],
+    "conflicts": [
+      "Main p.5 says approximately 90% of initial PCE after 30 days, but Figure 4e is normalized to day one and its plotted endpoint lies above 1.2. Both are retained; no corrected percentage is invented."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "Common device preparation before this separate aging test",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-solar-common.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

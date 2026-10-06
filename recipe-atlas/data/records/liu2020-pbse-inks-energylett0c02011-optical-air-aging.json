@@ -1,0 +1,607 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-optical-air-aging",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2020): Pristine and 15-day air-aged optical and DLS specimens",
+  "material": {
+    "formula": "PbSe",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "single_material"
+  },
+  "method": "Pristine and 15-day air-aged optical and DLS specimens",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "optical and DLS specimen class",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "age-state",
+      "name": "Store the direct ink in air",
+      "kind": "product",
+      "parent_ids": []
+    },
+    {
+      "id": "optical-state",
+      "name": "Measure absorption and photoluminescence",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "age-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "age",
+      "action": "age",
+      "label": "Store the direct ink in air",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct"
+      ],
+      "outputs": [
+        "age-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "days",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 days",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011",
+              "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "The concentration, volume, vessel and exact preparation batch for this optical-aging comparison are not reported.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ]
+    },
+    {
+      "id": "optical",
+      "action": "optical",
+      "label": "Measure absorption and photoluminescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "age"
+      ],
+      "inputs": [
+        "age-state"
+      ],
+      "outputs": [
+        "optical-state"
+      ],
+      "parameters": {
+        "excitation_wavelength": {
+          "value": 400,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "400 nm",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "laser_repetition_rate": {
+          "value": 76,
+          "minimum": null,
+          "maximum": null,
+          "unit": "MHz",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "76 MHz",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Apply the common reported optical method: Lambda 750 absorption instrument and Ti:sapphire second harmonic for PL, detected by a cooled Andor iDus 1.7 um array. Measurement concentration and exact batch remain unspecified.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "pristine-optical",
+      "source_sample_label": "Pristine optical specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "aged-optical",
+      "source_sample_label": "15-day air-aged optical specimen",
+      "batch_id": null,
+      "material_state_id": "age-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "pristine-dls",
+      "source_sample_label": "Pristine DLS specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.13, Figure S4"
+        }
+      ],
+      "notes": [
+        "DLS distribution is not a TEM core diameter; the exact specimen join to Figure 2f is not identified."
+      ]
+    },
+    {
+      "sample_id": "aged-dls",
+      "source_sample_label": "Aged DLS specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.13, Figure S4"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.13, Figure S4"
+        }
+      ],
+      "notes": [
+        "The paired DLS plot supports increased hydrodynamic size. No numerical peak is digitized or transferred to a core-size field."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "spectral-change",
+      "sample_id": "aged-optical",
+      "property": "Optical aging observation",
+      "technique": "Absorption and PL comparison",
+      "value": {
+        "value": "Both absorption and PL red-shift, and PL full width at half-maximum decreases; no blue-shift is reported.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 2f and aging discussion"
+        }
+      ]
+    },
+    {
+      "id": "dls-trend",
+      "sample_id": "aged-dls",
+      "property": "Reported DLS size trend",
+      "technique": "DLS",
+      "value": {
+        "value": "Size increases during storage.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, DLS interpretation"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Qualitative interpretation; the separate TEM mean diameter is not applied.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, DLS interpretation"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "BCySA ink used for subsequent characterization; no physical batch assignment",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-direct-bcysa.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import contextvars
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import importlib.metadata
 import importlib.util
@@ -253,10 +254,24 @@ def listing(root):
 
 def inventory(root):
     paths = listing(root)
-    rows = []
-    for name in paths:
+
+    def hash_row(name):
+        # All existing path, link, handle and double-read checks stay unchanged.
         raw = stable_bytes(Path(root) / name)
-        rows.append({'path': name, 'sha256': digest(raw), 'bytes': len(raw)})
+        return {'path': name, 'sha256': digest(raw), 'bytes': len(raw)}
+
+    rows = []
+    # At most four outstanding reads; consume sorted-path futures in order so
+    # static multiple failures have the same first-path exception as serial.
+    # The context joins every submitted worker before success or failure exits.
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        pending = [pool.submit(hash_row, name) for name in paths[:4]]
+        next_index = len(pending)
+        while pending:
+            rows.append(pending.pop(0).result())
+            if next_index < len(paths):
+                pending.append(pool.submit(hash_row, paths[next_index]))
+                next_index += 1
     require(listing(root) == paths, 'directory_membership_race')
     return rows
 

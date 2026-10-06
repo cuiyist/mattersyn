@@ -1,0 +1,633 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-photoelectron-film",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Liu et al. (2020): PbSe films for XPS and UPS",
+  "material": {
+    "formula": "PbSe",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "single_material"
+  },
+  "method": "PbSe films for XPS and UPS",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "photoelectron-spectroscopy film material",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ]
+    },
+    {
+      "id": "silicon",
+      "name": "Silicon substrate",
+      "formula": "Si",
+      "role": "film substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "spin-state",
+      "name": "Spin-coat PbSe onto silicon",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "xps-state",
+      "name": "Measure XPS of the PbSe film",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "spin-state"
+      ]
+    },
+    {
+      "id": "ups-state",
+      "name": "Measure UPS of the PbSe film",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "spin-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "spin",
+      "action": "spin",
+      "label": "Spin-coat PbSe onto silicon",
+      "stage": "synthesis",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct",
+        "silicon"
+      ],
+      "outputs": [
+        "spin-state"
+      ],
+      "parameters": {
+        "film_thickness": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 nm",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Prepare 200 nm PbSe films for UPS/XPS. Spin speed, time, dispersion concentration, aliquot volume and post-treatment are not reported for these specimens.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ]
+    },
+    {
+      "id": "xps",
+      "action": "xps",
+      "label": "Measure XPS of the PbSe film",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "spin"
+      ],
+      "inputs": [
+        "spin-state"
+      ],
+      "outputs": [
+        "xps-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 3a,b"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 3a,b"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Analyze Pb 4f and I 3d signals. Instrument settings are not supplied.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 3a,b"
+        }
+      ]
+    },
+    {
+      "id": "ups",
+      "action": "ups",
+      "label": "Measure UPS of the PbSe film",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "spin"
+      ],
+      "inputs": [
+        "spin-state"
+      ],
+      "outputs": [
+        "ups-state"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Measure the UPS spectrum. Exact specimen identity and acquisition settings are not supplied.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.14, Figure S6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "film",
+      "source_sample_label": "General UPS/XPS film preparation",
+      "batch_id": null,
+      "material_state_id": "spin-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "xps",
+      "source_sample_label": "Representative XPS film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 3a,b"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 3a,b"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 3a,b"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.3–4, Figure 3a,b"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.3–4, Figure 3a,b"
+        }
+      ],
+      "notes": [
+        "Common 200 nm film preparation is reported; exact identity relative to the UPS specimen is unknown."
+      ]
+    },
+    {
+      "sample_id": "ups",
+      "source_sample_label": "Representative UPS film",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.14, Figure S6"
+        }
+      ],
+      "notes": [
+        "Keep UPS energy levels separate from the XPS surface ratio."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "i-pb",
+      "sample_id": "xps",
+      "property": "XPS-derived I/Pb ratio",
+      "technique": "XPS atomic-ratio analysis",
+      "value": {
+        "value": 0.89,
+        "minimum": null,
+        "maximum": null,
+        "unit": "ratio",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "0.89 ratio",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.4, XPS discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.4, XPS discussion"
+        }
+      ]
+    },
+    {
+      "id": "fermi",
+      "sample_id": "ups",
+      "property": "Reported Fermi-level magnitude",
+      "technique": "UPS analysis",
+      "value": {
+        "value": 4.81,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "4.81 eV",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Positive energy magnitudes as printed; no sign convention or extra precision is inferred.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.14, Figure S6"
+        }
+      ]
+    },
+    {
+      "id": "vbm",
+      "sample_id": "ups",
+      "property": "Reported valence-band-maximum magnitude",
+      "technique": "UPS analysis",
+      "value": {
+        "value": 5.53,
+        "minimum": null,
+        "maximum": null,
+        "unit": "eV",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5.53 eV",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.14, Figure S6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Positive energy magnitudes as printed; no sign convention or extra precision is inferred.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.14, Figure S6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "BCySA-derived ink; exact spectroscopy batch unknown",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-direct-bcysa.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

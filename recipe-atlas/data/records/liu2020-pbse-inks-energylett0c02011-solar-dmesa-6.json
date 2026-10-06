@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-solar-dmesa-6",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2020): Solar-cell variant: Source DMeSA; 1,3-dimethylselenourea connectivity in Figure 1b at Pb/Se 6:1",
+  "material": {
+    "formula": "PbSe photovoltaic device",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "unresolved"
+  },
+  "method": "Solar-cell variant: Source DMeSA; 1,3-dimethylselenourea connectivity in Figure 1b at Pb/Se 6:1",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe photovoltaic device",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "variant absorber ink",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Ink precursor identity: Source DMeSA; 1,3-dimethylselenourea connectivity in Figure 1b. Individual precursor charges are not supplied for this comparison."
+      ],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "variant-state",
+      "name": "Identify the reported absorber variant",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "variant",
+      "action": "variant",
+      "label": "Identify the reported absorber variant",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct"
+      ],
+      "outputs": [
+        "variant-state"
+      ],
+      "parameters": {
+        "lead_to_selenium_ratio": {
+          "value": 6,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ratio",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "6:1 Pb/Se molar precursor ratio",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Reported device comparison linked to the common solar-cell method. No separate deposition recipe, exact device batch or graph-digitized PCE is asserted.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "comparison",
+      "source_sample_label": "Figure S8 device population: dmesa-6",
+      "batch_id": null,
+      "material_state_id": "variant-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe photovoltaic device",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ],
+      "notes": [
+        "Error bars are the standard deviation between different devices. This is a device population, not a uniquely identified batch."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "trend",
+      "sample_id": "comparison",
+      "property": "Comparative device outcome",
+      "technique": "Reported solar-cell comparison",
+      "value": {
+        "value": "Pb/Se 6:1 gives the best performance; SA and DMeSA devices perform slightly below BCySA devices.",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Trend only; individual graph values and sample counts are not tabulated.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S8; Main PDF p.5, solar-cell comparison"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown.",
+      "Individual device batch identities, separately quantified variant fabrication runs and tabulated Figure S8 PCE values are not reported."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "Common solar-cell fabrication method",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-solar-common.html",
+      "relation": "related_procedure"
+    },
+    {
+      "label": "Related direct synthesis scope; unknown exact device batch",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-direct-dmesa.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-aged-ink-device",
+  "revision": 2,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2020): Devices fabricated from fresh and aged inks",
+  "material": {
+    "formula": "PbSe photovoltaic device",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "unresolved"
+  },
+  "method": "Devices fabricated from fresh and aged inks",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe photovoltaic device",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "ink aged before device fabrication",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "age-ink-state",
+      "name": "Age the ink in ambient air",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "age-ink",
+      "action": "age-ink",
+      "label": "Age the ink in ambient air",
+      "stage": "storage",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct"
+      ],
+      "outputs": [
+        "age-ink-state"
+      ],
+      "parameters": {
+        "endpoint": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "days",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 days",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011",
+              "locator": "Main PDF p.5, Figure 4f discussion"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ambient air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.2 and 5, ink-aging device discussion"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.2 and 5, ink-aging device discussion"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "This is ink aging before fabrication, separate from aging a finished device. Storage concentration, container and quantitative intermediate ages are not reported in text.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.2 and 5, ink-aging device discussion"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "aged-ink",
+      "source_sample_label": "Fifteen-day ink used for device fabrication",
+      "batch_id": null,
+      "material_state_id": "age-ink-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe QD ink",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4f discussion"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4f discussion"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4f discussion"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4f discussion"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.5, Figure 4f discussion"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "device",
+      "source_sample_label": "Devices made from aged ink",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe photovoltaic device",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4f"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4f"
+        }
+      ],
+      "notes": [
+        "The common fabrication method is related, but no uniquely identified device is linked to the storage state."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "relative-pce",
+      "sample_id": "device",
+      "property": "PCE relative to a fresh-ink device",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 90,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "90% of the PCE for a fresh-ink device",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4f discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "15-day aged ink; distinct from Figure 4e device storage.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.5, Figure 4f discussion"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "Common preparation for devices made from the inks",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-solar-common.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

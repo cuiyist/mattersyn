@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-concentrated-ink",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Liu et al. (2020): Redispersion of purified direct PbSe ink",
+  "material": {
+    "formula": "PbSe",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "single_material"
+  },
+  "method": "Redispersion of purified direct PbSe ink",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "purified quantum-dot solids",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ]
+    },
+    {
+      "id": "dmf",
+      "name": "Dimethylformamide",
+      "formula": "C3H7NO",
+      "role": "redispersion solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "SI p.2 chemical list gives 99.8%, anhydrous. Cost-table supplier/grade statements remain scoped to their own accounting context."
+      ],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        },
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.2, Section 1, Chemical"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "redisperse-state",
+      "name": "Redisperse the purified QDs in DMF",
+      "kind": "product",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "redisperse",
+      "action": "redisperse",
+      "label": "Redisperse the purified QDs in DMF",
+      "stage": "workup",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct",
+        "dmf"
+      ],
+      "outputs": [
+        "redisperse-state"
+      ],
+      "parameters": {
+        "concentration_range": {
+          "value": null,
+          "minimum": 100,
+          "maximum": 1000,
+          "unit": "mg/mL",
+          "status": "reported",
+          "approximate": true,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "approximately 100 to 1000 mg/mL",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011",
+              "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adjust concentration within the reported approximate range. These are not individually specified preparation batches; QD mass and solvent volume are unreported.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ink",
+      "source_sample_label": "Adjustable-concentration direct PbSe ink",
+      "batch_id": null,
+      "material_state_id": "redisperse-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.3, direct-ink redispersion paragraph"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "Direct synthesis and isolation method",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-direct-bcysa.html",
+      "relation": "related_procedure"
+    }
+  ]
+}

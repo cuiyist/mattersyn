@@ -1,0 +1,633 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "liu2020-pbse-inks-energylett0c02011-solar-characterization",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "contextual_observation",
+  "title": "Liu et al. (2020): Photovoltaic characterization and distinct device cohorts",
+  "material": {
+    "formula": "PbSe photovoltaic device",
+    "family": "Colloidal PbSe inks, precursors, adjuncts and devices",
+    "architecture": "unresolved"
+  },
+  "method": "Photovoltaic characterization and distinct device cohorts",
+  "sources": [
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    },
+    {
+      "id": "liu2020-pbse-inks-energylett0c02011-si",
+      "doi": "10.1021/acsenergylett.0c02011",
+      "title": "PbSe Quantum Dot Solar Cells Based on Directly Synthesized Semiconductive Inks — Supporting Information",
+      "authors": "Yang Liu; Fei Li; Guozheng Shi; Zeke Liu; Xiaofang Lin; Yao Shi; Yifan Chen; Xing Meng; You Lv; Wei Deng; Xiangqiang Pan; Wanli Ma",
+      "year": 2020,
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "main_status": "partially_reviewed",
+      "si_status": "reviewed_scoped",
+      "reuse_status": "ACS source; excerpt permission not established."
+    }
+  ],
+  "lineage": {
+    "source_group": "liu2020-pbse-inks-energylett0c02011",
+    "recipe_family": "liu2020-pbse-inks-energylett0c02011",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe photovoltaic device",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "pbse-direct",
+      "name": "Directly synthesized lead-iodide-passivated PbSe quantum dots",
+      "formula": "PbSe",
+      "role": "absorber identity of characterized devices",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4 and solar-cell discussion"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "jv-state",
+      "name": "Measure photovoltaic current–voltage characteristics",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "jv",
+      "action": "jv",
+      "label": "Measure photovoltaic current–voltage characteristics",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "pbse-direct"
+      ],
+      "outputs": [
+        "jv-state"
+      ],
+      "parameters": {
+        "irradiance": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mW/cm2",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 mW/cm2",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "voltage_step": {
+          "value": 0.01,
+          "minimum": null,
+          "maximum": null,
+          "unit": "V",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.01 V",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+            }
+          ],
+          "derivation": null
+        },
+        "dwell_time": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ms",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 ms",
+          "evidence": [
+            {
+              "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+              "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Keithley 2400 under simulated AM 1.5G illumination using a Newport Class AAA 94023A-U simulator; calibrated with an Oriel 91150V reference cell and verified by a NREL-calibrated Hamamatsu S1787-04 diode. SI literally specifies -1 to 0.1 V reverse and 0.1 to -1 V forward sweeps; that range conflicts with the plotted main Figure 4c range.",
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "jv-method",
+      "source_sample_label": "General photovoltaic measurement method",
+      "batch_id": null,
+      "material_state_id": "jv-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe photovoltaic device",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.7, Section 9, Measurement and characterization"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "sample_id": "cohort",
+      "source_sample_label": "Fifty-device PCE distribution",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe photovoltaic device",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4d"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4d"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4d"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF pp.4–5, Figure 4d"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF pp.4–5, Figure 4d"
+        }
+      ],
+      "notes": [
+        "A population-level result, not the champion-device measurement."
+      ]
+    },
+    {
+      "sample_id": "sem",
+      "source_sample_label": "Representative cross-sectional device specimen",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe photovoltaic device",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S7"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "count",
+      "sample_id": "cohort",
+      "property": "Device count",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 50,
+        "minimum": null,
+        "maximum": null,
+        "unit": "devices",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "50 devices",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.4, Figure 4d caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.4, Figure 4d caption"
+        }
+      ]
+    },
+    {
+      "id": "mean",
+      "sample_id": "cohort",
+      "property": "Mean device PCE",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": 9.36,
+        "minimum": null,
+        "maximum": null,
+        "unit": "%",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "9.36 %",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011",
+            "locator": "Main PDF p.5, Figure 4d discussion"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011",
+          "locator": "Main PDF p.5, Figure 4d discussion"
+        }
+      ]
+    },
+    {
+      "id": "sem-au",
+      "sample_id": "sem",
+      "property": "Au cross-sectional thickness",
+      "technique": "SEM image annotation",
+      "value": {
+        "value": 90,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "90 nm",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7 image labels"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative cross-section; not substituted for nominal process thicknesses.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S7 image labels"
+        }
+      ]
+    },
+    {
+      "id": "sem-pbs",
+      "sample_id": "sem",
+      "property": "PbS cross-sectional thickness",
+      "technique": "SEM image annotation",
+      "value": {
+        "value": 37,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "37 nm",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7 image labels"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative cross-section; not substituted for nominal process thicknesses.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S7 image labels"
+        }
+      ]
+    },
+    {
+      "id": "sem-pbse",
+      "sample_id": "sem",
+      "property": "PbSe cross-sectional thickness",
+      "technique": "SEM image annotation",
+      "value": {
+        "value": 230,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "230 nm",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7 image labels"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative cross-section; not substituted for nominal process thicknesses.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S7 image labels"
+        }
+      ]
+    },
+    {
+      "id": "sem-zno",
+      "sample_id": "sem",
+      "property": "ZnO cross-sectional thickness",
+      "technique": "SEM image annotation",
+      "value": {
+        "value": 88,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "88 nm",
+        "evidence": [
+          {
+            "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+            "locator": "SI PDF p.15, Figure S7 image labels"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Representative cross-section; not substituted for nominal process thicknesses.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "liu2020-pbse-inks-energylett0c02011-si",
+          "locator": "SI PDF p.15, Figure S7 image labels"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped direct PbSe inks, selenium-precursor preparation, conventional comparison route, PbS and ZnO adjuncts, device fabrication, and distinct characterization and cost-estimation contexts. All seven main and seventeen SI pages were read as text and images. Unreported conditions and physical batch joins remain unknown; source conflicts remain explicit. This is not a complete laboratory SOP or a full-paper narrative Reader.",
+    "missing_fields": [
+      "Exact physical batch identity and unreported source conditions remain unknown."
+    ],
+    "conflicts": [
+      "SI p.7 explicitly reports sweeps -1 to 0.1 V and back; main Figure 4c is plotted around -0.1 to +0.65 V. The source ranges are not silently repaired."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsenergylett.0c02011",
+      "relation": "source"
+    },
+    {
+      "label": "Common photovoltaic preparation; specimen identities remain unspecified",
+      "url": "records/liu2020-pbse-inks-energylett0c02011-solar-common.html",
+      "relation": "related_procedure"
+    }
+  ]
+}
