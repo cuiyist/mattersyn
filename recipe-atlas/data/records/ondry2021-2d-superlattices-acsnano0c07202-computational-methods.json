@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods",
+  "revision": 2,
+  "record_type": "procedure",
+  "title": "Ondry et al. (2021): Atomistic model construction and electronic-structure calculation",
+  "material": {
+    "formula": "Computed CdSe/CdS/ZnS model families",
+    "family": "Colloidal CdSe/CdS quantum dots and two-dimensional superlattices",
+    "elements": [
+      "Cd",
+      "Zn",
+      "Se",
+      "S"
+    ],
+    "architecture": "unresolved",
+    "source_notation": "Source composition labels; variable copper deficiency and unreported stoichiometries remain explicit."
+  },
+  "method": "Atomistic model construction and electronic-structure calculation",
+  "sources": [
+    {
+      "id": "ondry2021-2d-superlattices-acsnano0c07202",
+      "doi": "10.1021/acsnano.0c07202",
+      "title": "Colloidal Synthesis Path to 2D Crystalline Quantum Dot Superlattices",
+      "authors": "Justin C. Ondry; John P. Philbin; Michael Lostica; Eran Rabani; A. Paul Alivisatos",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsnano.0c07202",
+      "main_status": "All 12 main pages read as text and original-page images by author and independent full auditor; the scoped main-paper contribution was independently accepted after correction. Supporting information was unavailable and receives no review credit.",
+      "si_status": "Related SI not located in bounded local search; no SI review credit. Main text is the sole source document in this package.",
+      "reuse_status": "Copyright 2020 American Chemical Society. Reuse permission not independently verified; source figures retain attribution and original content. No blanket license inferred. "
+    }
+  ],
+  "lineage": {
+    "source_group": "ondry2021-2d-superlattices-acsnano0c07202",
+    "recipe_family": "ondry2021-2d-superlattices-acsnano0c07202",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Computed CdSe/CdS/ZnS model families",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ],
+      "note": "Not reported for this context."
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "Not reported for this context.",
+      "basis": "",
+      "raw_text": "",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ],
+      "note": "Not reported for this context."
+    }
+  },
+  "materials": [
+    {
+      "id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--model",
+      "name": "Faceted wurtzite CdSe/CdS/ZnS computational geometry",
+      "formula": null,
+      "role": "computed_model_input",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "No physical reagent or measured atomic model."
+      ],
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--constructed-model",
+      "name": "constructed model",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--model"
+      ]
+    },
+    {
+      "id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--multi-dot-model",
+      "name": "multi dot model",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--constructed-model"
+      ]
+    },
+    {
+      "id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--relaxed-model",
+      "name": "relaxed model",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--multi-dot-model"
+      ]
+    },
+    {
+      "id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--carrier-models",
+      "name": "carrier models",
+      "kind": "analysis_data",
+      "parent_ids": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--relaxed-model"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "construct",
+      "action": "construct",
+      "label": "Construct faceted core and shell geometry",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--model"
+      ],
+      "outputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--constructed-model"
+      ],
+      "parameters": {
+        "initial_core_diameter": {
+          "value": 1.2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Computational starting CdSe-core diameter, not a measured colloid size.",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+              "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+            }
+          ],
+          "derivation": null
+        },
+        "bond_removal_threshold": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "bonds",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "Atoms with fewer than two bonds are removed, not atoms with exactly two bonds.",
+          "basis": "",
+          "raw_text": "",
+          "evidence": [
+            {
+              "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+              "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Atmosphere not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "retained_fraction": null,
+      "description": "Faceted CdSe cores; add CdSe, CdS or ZnS monolayers using lattice-preserving chalcogenide/metal translations, removing atoms with fewer than2bonds and preserving facets.",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ]
+    },
+    {
+      "id": "assemble-model",
+      "action": "assemble-model",
+      "label": "Construct dimers and trimers",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "construct"
+      ],
+      "inputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--constructed-model"
+      ],
+      "outputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--multi-dot-model"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Atmosphere not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "retained_fraction": null,
+      "description": "Start two CdSe cores separated by an integer lattice translation. Add CdS/ZnS to set size and neck thickness. Restrict added layers to interface for area variation at fixed dot spacing/asymmetric trimers. For spacing variation at fixed neck thickness, split a fused dimer halfway along its bond, add lattice translations and duplicate interface atoms into the gap. Manually check intended structural parameters.",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ]
+    },
+    {
+      "id": "relax",
+      "action": "relax",
+      "label": "Minimize model structure by molecular dynamics",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "assemble-model"
+      ],
+      "inputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--multi-dot-model"
+      ],
+      "outputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--relaxed-model"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Atmosphere not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "retained_fraction": null,
+      "description": "Stillinger–Weber interaction potentials; source prints LAAMPS while reference55 is the LAMMPS software paper. Dangling-bond passivation applied. No temperature/time trajectory is reported here.",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ]
+    },
+    {
+      "id": "solve",
+      "action": "solve",
+      "label": "Calculate single-particle states and display densities",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [
+        "relax"
+      ],
+      "inputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--relaxed-model"
+      ],
+      "outputs": [
+        "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--carrier-models"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Atmosphere not reported for this operation."
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "retained_fraction": null,
+      "description": "Semiempirical pseudopotential and filter-diagonalization methods for electron/hole states; VESTA rendering. In-plane orientational disorder observed experimentally is not included in calculations.",
+      "evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "ondry2021-2d-superlattices-acsnano0c07202-computational-methods--sample",
+      "source_sample_label": "Computed model-method context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS/ZnS computational models",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+            "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+          }
+        ],
+        "note": "Not reported for this context."
+      },
+      "recipe_link": "unresolved",
+      "link_evidence": [
+        {
+          "source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "locator": "Main PDF p.10 / printed p.2260, Computational Methods"
+        }
+      ],
+      "notes": [
+        "Descriptive source context label; no unique physical batch identifier is supplied.",
+        "Computed references, not measured specimens, recipe products or exact-structure training labels."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Entire scoped main-paper contribution: all 12 main pages, methods and Figures 1–6; missing SI explicitly excluded from reading credit. Source discrepancies, modeling and reference values remain qualified.",
+    "missing_fields": [
+      "Matching supporting information was not located in the bounded existing-local-file search. SI figures/tables cited by the main paper have not been independently read.",
+      "No measured atomic coordinates, unprinted curve values, complete physical batch joins or unreported operating values are reconstructed.",
+      "Full coordinate files, pseudopotential details and SI structural parameter tables are unavailable locally."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "not_established"
+  },
+  "context_links": [],
+  "reader_role": "supporting_procedure",
+  "collection": "reviewed_literature"
+}

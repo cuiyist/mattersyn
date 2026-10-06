@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "paused_quality_stop_current_artifacts_saved",
-  "recorded_at": "2026-10-06T18:31:12.387208+00:00",
-  "authorization": "The owner requested finishing the current papers and then pausing. A completed original third audit has now triggered the preserved conservative quality stop. No new claims, extraction, integration or publication may proceed. Only corrections already in progress may finish; after their checkpoint, all workers are paused until the owner's next instruction. Scheduled reports and continuation reminders remain off.",
-  "supersedes_hold": "This pause supersedes previous continuation authorizations; the full-audit rules, original findings and frozen historical results remain unchanged.",
+  "status": "bounded_current_papers_only_until_owner_hard_stop",
+  "recorded_at": "2026-10-06T22:46:42.678402+00:00",
+  "authorization": "The owner explicitly authorized finishing the current four papers and then stopping within90minutes, ending2026-10-06T23:37:10Z. Liu and Teitelboim are now verified live. Only accepted Peveler and Ondry corrections/delivery may proceed before that cutoff. No new intake, claims or extraction. Original quality stop and findings remain preserved; no broader restart is authorized.",
+  "supersedes_hold": "Narrow owner finish authorization only; the existing quality hold remains for all other work and resumes unconditionally at the hard deadline.",
   "active_run": "Private full-audit-20261002/ledger.jsonl",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -50,25 +50,25 @@
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
   "latest_publication_receipt": "Root-verified publication checkpoint; detailed evidence retained locally.",
-  "latest_verified_site_commit": "9158b80ffaac8fbc0210d54d1540c0155fed34d7",
+  "latest_verified_site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f",
   "latest_verified_totals": {
-    "records": 2855,
-    "contributing_sources": 227,
-    "reviewed_contributing_sources": 226,
+    "records": 2902,
+    "contributing_papers": 229,
+    "reviewed_literature_papers": 228,
     "benchmark_source_groups": 1,
-    "preliminary_sources": 0,
-    "direct_families": 234,
-    "broad_pairs": 839,
-    "material_hubs": 271
+    "preliminary_papers": 0,
+    "direct_material_families": 236,
+    "material_hubs": 273,
+    "broad_recipe_structure_pairs": 839
   },
   "latest_publication_event": {
     "event_kind": "batch",
-    "verified_at": "2026-10-06T14:34:03+00:00",
+    "verified_at": "2026-10-06T22:30:01Z",
+    "site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f",
     "event_ids": [
-      "nguyen2024-colossal-cdse-cds-acsnano4c06961:batch16-live:9158b80ffaac",
-      "park2020-bbn-heatup-cdse-cds-acsnano0c04091:batch16-live:9158b80ffaac"
-    ],
-    "site_commit": "9158b80ffaac8fbc0210d54d1540c0155fed34d7"
+      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085:batch17-live:18f773f0144a",
+      "teitelboim2016-pbse-cdse-cds-acsnano5b05329:batch17-live:18f773f0144a"
+    ]
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -101,7 +101,7 @@
   },
   "continuation_automation": null,
   "continuation_interval_minutes": null,
-  "continuation_status": "PAUSED_QUALITY_STOP_AWAITING_OWNER_INSTRUCTION",
+  "continuation_status": "bounded_current_papers_only_then_pause_at_hard_deadline",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
@@ -120,14 +120,14 @@
   },
   "latest_publication_batch": {
     "source_ids": [
-      "nguyen2024-colossal-cdse-cds-acsnano4c06961",
-      "park2020-bbn-heatup-cdse-cds-acsnano0c04091"
+      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+      "teitelboim2016-pbse-cdse-cds-acsnano5b05329"
     ],
     "new_gold_source_contributions": 2,
-    "new_records": 77,
-    "new_recipe_structure_rows": 13,
-    "verified_at": "2026-10-06T14:34:03+00:00",
-    "site_commit": "9158b80ffaac8fbc0210d54d1540c0155fed34d7"
+    "new_records": 47,
+    "new_recipe_structure_rows": 0,
+    "verified_at": "2026-10-06T22:30:01Z",
+    "site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f"
   },
   "latest_experimental_display": {
     "receipt": "research-assets/public-audits/experimental-li2001-display-publication-20260928.json",
@@ -525,15 +525,14 @@
     }
   ],
   "next_accepted_contribution": {
-    "status": "integrated_pending_source_and_publication_checks",
     "source_ids": [
-      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
-      "teitelboim2016-pbse-cdse-cds-acsnano5b05329"
+      "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+      "ondry2021-2d-superlattices-acsnano0c07202"
     ],
-    "records": 47,
-    "direct_routes": 6,
-    "new_paper_credit": 0,
-    "note": "Liu and Teitelboim contributions have accepted science and delivery and were integrated from the application completed at 15:05:03 UTC. Their 47 records include six eligible synthesis routes and add no broad recipe–structure pairs. Normal source and publication checks remain; live credit is zero."
+    "records": 63,
+    "stage": "accepted_corrected_science_and_final_delivery_private_candidate",
+    "live_credit": 0,
+    "note": "Only these remaining current papers may finish release checks before23:37:10Z. Liu and Teitelboim are already live."
   },
   "active_hour_target": {
     "start": "2026-09-28T22:11:57Z",
@@ -547,15 +546,19 @@
     "status": "historical_frozen_result_2_papers_not_active"
   },
   "latest_verified_publication": {
-    "source_commit": "4304631e37968dad011bc9c5820e5ed70f1f0c43",
-    "site_commit": "9158b80ffaac8fbc0210d54d1540c0155fed34d7",
-    "site_ci_run": 37478480515,
-    "source_ci_run": 37459045081,
-    "verified_at": "2026-10-06T14:34:03+00:00",
+    "source_commit": "0cb8d3782271b2d207debb03cb79768b6a45f084",
+    "site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f",
+    "site_ci_run": 37540364247,
+    "source_ci_run": 37491941804,
+    "verified_at": "2026-10-06T22:30:01Z",
     "new_papers": 2,
-    "new_reviewed_records": 77,
-    "new_verified_pairs": 13,
-    "receipt_sha256": "7288ce618024aa456743ba347ff3a7cec0ae255c1adf0bc3538f99d6c77a497b"
+    "new_reviewed_records": 47,
+    "new_verified_pairs": 0,
+    "restart_live_papers": 56,
+    "ledger_live_events": [
+      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085:batch17-live:18f773f0144a",
+      "teitelboim2016-pbse-cdse-cds-acsnano5b05329:batch17-live:18f773f0144a"
+    ]
   },
   "workflow_revision_hold": {
     "at": "2026-09-28T23:25:09.177250+00:00",
@@ -897,31 +900,12 @@
     }
   },
   "current_reviewed_checkout": {
-    "records": 2902,
-    "contributing_source_groups": 229,
-    "direct_families": 236,
-    "material_hubs": 273,
-    "broad_pairs": 839,
-    "source_head_at_metadata_preparation": "0cb8d3782271b2d207debb03cb79768b6a45f084",
-    "prepared_release_source_commit": "0cb8d3782271b2d207debb03cb79768b6a45f084",
-    "published_site_commit": "9158b80ffaac8fbc0210d54d1540c0155fed34d7",
-    "status": "audited_candidate_saved_unpublished_quality_hold",
-    "additional_contributions_pending_live": 2,
-    "additional_records_pending_live": 47,
-    "proposed_records_after_application": null,
-    "proposed_source_groups_after_application": null,
-    "proposed_material_hubs_after_application": null,
-    "next_build_family_and_pair_counts": {
-      "source_commit": "0cb8d3782271b2d207debb03cb79768b6a45f084",
-      "candidate_attempt": "fa17-onebuild-r1",
-      "direct_families": 236,
-      "broad_pairs": 839,
-      "publication_verified": false
-    },
-    "pending_existing_corrections": [],
-    "new_paper_credit_for_corrections": 0,
-    "qualification": "Liu and Teitelboim are independently accepted and saved in source commit 0cb8d3782271b2d207debb03cb79768b6a45f084. Source CI and candidate build/browser checks passed. Promotion was interrupted when the quality stop arose; the candidate was not published. Retain existing evidence without treating it as final release approval.",
-    "note": "Liu and Teitelboim are independently accepted and saved in source commit 0cb8d3782271b2d207debb03cb79768b6a45f084. Source CI and candidate build/browser checks passed. Promotion was interrupted when the quality stop arose; the candidate was not published. Retain existing evidence without treating it as final release approval."
+    "source_base": "e6df08b406286ad179a72a29e9aad4bde3ee8386",
+    "candidate_records": 2965,
+    "unpublished_new_papers": 2,
+    "unpublished_new_records": 63,
+    "publication_credit": 0,
+    "state": "private_candidate_release_preparation"
   },
   "latest_existing_paper_corrections": {
     "site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0",
@@ -942,7 +926,7 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-06T18:31:12.387208+00:00",
+    "snapshot_at": "2026-10-06T22:46:42.678402+00:00",
     "stage_flags": [
       {
         "primary_source_id": "park2020-bbn-heatup-cdse-cds-acsnano0c04091",
@@ -976,42 +960,42 @@
         "primary_source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
         "doi": "10.1021/acsnano.5b05085",
         "ordinal": 56,
-        "stage": "accepted_integrated_candidate_saved_unpublished_quality_hold",
+        "stage": "live_verified",
         "scope": "main_only",
         "integrated": true,
-        "live_verified": false,
+        "live_verified": true,
         "full_accepted": true,
         "final_delivery_accepted": true,
         "records": 21,
-        "live": false
+        "live": true
       },
       {
         "primary_source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
         "doi": "10.1021/acsnano.5b05329",
         "ordinal": 57,
-        "stage": "accepted_integrated_candidate_saved_unpublished_quality_hold",
+        "stage": "live_verified",
         "scope": "main_and_supporting_information",
         "integrated": true,
-        "live_verified": false,
+        "live_verified": true,
         "full_accepted": true,
         "final_delivery_accepted": true,
         "records": 26,
-        "live": false
+        "live": true
       },
       {
         "primary_source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
         "doi": "10.1021/acsnano.5b06433",
         "ordinal": 58,
-        "stage": "original_third_rejected_correction_unverified_paused",
+        "stage": "corrected_science_and_final_delivery_accepted_private_candidate",
         "scope": "main_and_supporting_information",
         "sample_required": true,
         "full_accepted": true,
         "integrated": false,
         "live_verified": false,
-        "note": "Original full independent audit accepted the scoped content with 0/0/0; the later original third audit rejected it with 1 S1/0 S2/0 S3. That false NMR coupling value and duplicated Reader wording are one unresolved finding. Correction is unverified; no integration or publication credit.",
+        "note": "Original third S1 remains in sample history. Corrected R5 full audit and actual fresh-checker third confirmation accepted. Final delivery independently accepted; release gates pending.",
         "full_audit_active": false,
         "third_completed": true,
-        "third_accepted": false,
+        "third_accepted": true,
         "original_third_counts": {
           "S1": 1,
           "S2": 0,
@@ -1020,11 +1004,19 @@
         "live": false,
         "full_audit_completed": true,
         "third_audit_active": false,
-        "publication_eligible": false
+        "publication_eligible": false,
+        "corrected_content_accepted": true,
+        "final_delivery_accepted": true,
+        "private_integrated": true,
+        "current_unresolved_counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 0
+        }
       },
       {
         "primary_source_id": "ondry2021-2d-superlattices-acsnano0c07202",
-        "stage": "corrected_content_accepted_pending_final_delivery_paused",
+        "stage": "corrected_science_and_final_delivery_accepted_private_candidate",
         "original_full_counts": {
           "S1": 1,
           "S2": 1,
@@ -1046,23 +1038,25 @@
           "S2": 0,
           "S3": 0
         },
-        "package_acceptance_metadata": "pending_not_promoted",
-        "final_delivery_accepted": false,
+        "package_acceptance_metadata": "accepted_final_P3",
+        "final_delivery_accepted": true,
         "live_verified": false,
         "publication_eligible": false,
-        "note": "P2 corrected content independently accepted by exact delta review and reuse of the original complete scoped audit. All three original findings resolved; original 1/1/1 retained. Final delivery metadata, READY, integration and publication remain pending under the quality stop.",
+        "note": "Original full1/1/1 preserved. Final P3 scoped content and delivery accepted; private integration is not live credit.",
         "full_accepted": true,
         "records": 27,
         "technical_checks_complete": true,
-        "worker_paused": true
+        "worker_paused": true,
+        "private_integrated": true
       }
     ],
-    "note": "Paused under the owner request and conservative quality stop. Nguyen and Park were anonymously verified earlier; Liu and Teitelboim remain unpublished. Peveler has one unresolved original-third S1. Ondry corrected content is independently accepted with original 1/1/1 retained; final delivery and publication remain pending. No new claims, extraction, integration, publication or scheduled continuation.",
+    "note": "Liu56 and Teitel57 verified live at22:30:01Z. Peveler58 and Ondry59 accepted corrections and final deliveries; private combined63-record integration is not publication credit. Stop by23:37:10Z regardless of completion.",
     "new_claims_allowed": false,
     "new_extraction_allowed": false,
-    "publication_allowed": false,
+    "publication_allowed": true,
     "workers_paused": true,
-    "resume_requires_owner_instruction": true
+    "resume_requires_owner_instruction": true,
+    "publication_scope": "Only remaining accepted Peveler58 and Ondry59 before owner hard stop; quality stop and original findings retained."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -1074,12 +1068,19 @@
     "third_original_receipt_sha256": "5d95211d5fb747db8dfbfa942a4c3b9d4a379e0e0a6c76ca36279415b404a430",
     "publication_credit": 0,
     "ledger_sha256": "2a900d3bfeb7b07a9a8ef0a31ba7d6fde8488bf152eff24e04c9e346864d8244",
-    "remaining_work": [
+    "historical_remaining_work": [
       "Await owner instruction after the quality stop before resuming curation or publication.",
       "Peveler: correct and independently verify the original S1 NMR coupling value (13.2 Hz recorded; source 13.5 Hz). Original third findings remain permanent.",
       "Ondry: preserve independently accepted P2 corrected content and original 1/1/1 findings. Final delivery metadata, READY, integration and publication remain pending; no publication credit.",
       "Liu and Teitelboim: preserve the 47-record accepted candidate and completed source/candidate checks; publication remains pending.",
       "Ullah remains a separate explicit-approval hold; no handoff access or release is authorized by Ondry's approval."
-    ]
+    ],
+    "remaining_work_status": "The retained historical work list predates the bounded owner finish. See current_operational_status for actual current stages; original stop and sample findings remain unchanged."
+  },
+  "hard_stop_control": {
+    "deadline_utc": "2026-10-06T23:37:10Z",
+    "new_long_commands_after_utc": "2026-10-06T23:30:00Z",
+    "stop_even_if_incomplete": true,
+    "resume_requires_owner_instruction": true
   }
 }

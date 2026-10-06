@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-quench-kinetics",
+  "revision": 1,
+  "collection": "reviewed_literature",
+  "record_type": "procedure",
+  "reader_role": "supporting_procedure",
+  "title": "Peveler et al. (2016): Quenching kinetics of CX544",
+  "material": {
+    "formula": "CdSe/ZnS",
+    "family": "Colloidal CdSe/ZnS quantum dots and surface-functionalized sensor materials",
+    "architecture": "core_shell"
+  },
+  "method": "Quenching kinetics of CX544",
+  "sources": [
+    {
+      "id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+      "doi": "10.1021/acsnano.5b06433",
+      "title": "Multichannel Detection and Differentiation of Explosives with a Quantum Dot Array",
+      "authors": "William J. Peveler; Alberto Roldan; Nathan Hollingsworth; Michael J. Porter; Ivan P. Parkin",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acsnano.5b06433",
+      "main_status": "partially_reviewed",
+      "si_status": "partially_reviewed",
+      "reuse_status": "Main PDF expressly states CC-BY; SI rights are recorded independently. Online publication was in 2015; journal volume is 2016."
+    },
+    {
+      "id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+      "doi": "10.1021/acsnano.5b06433",
+      "title": "Multichannel Detection and Differentiation of Explosives with a Quantum Dot Array — Supporting Information",
+      "authors": "William J. Peveler; Alberto Roldan; Nathan Hollingsworth; Michael J. Porter; Ivan P. Parkin",
+      "year": 2016,
+      "url": "https://doi.org/10.1021/acsnano.5b06433",
+      "main_status": "partially_reviewed",
+      "si_status": "partially_reviewed",
+      "reuse_status": "Matching local SI inspected; no separate license statement presumed."
+    }
+  ],
+  "lineage": {
+    "source_group": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+    "recipe_family": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "cdsezns",
+      "name": "CdSe/ZnS quantum-dot dispersion",
+      "formula": "CdSe/ZnS",
+      "role": "CX544 sensor dispersion",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ]
+    },
+    {
+      "id": "tnt",
+      "name": "2,4,6-Trinitrotoluene",
+      "formula": "C7H5N3O6",
+      "role": "Detection analyte",
+      "stage": "characterization",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kinetic-injection-state",
+      "name": "Inject TNT standard and monitor fluorescence",
+      "kind": "analysis_data",
+      "parent_ids": []
+    }
+  ],
+  "operations": [
+    {
+      "id": "kinetic-injection",
+      "action": "kinetic-injection",
+      "label": "Inject TNT standard and monitor fluorescence",
+      "stage": "characterization",
+      "branch": "main",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "cdsezns",
+        "tnt"
+      ],
+      "outputs": [
+        "kinetic-injection-state"
+      ],
+      "parameters": {
+        "injection_volume": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "uL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 uL",
+          "evidence": [
+            {
+              "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+              "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+            }
+          ],
+          "derivation": null
+        },
+        "stock_concentration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mmol/L",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 mmol/L",
+          "evidence": [
+            {
+              "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+              "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "CX544 described as the slowest measured quenching; the other samples were too fast to measure without an auto-injector.",
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "cx544-kinetic",
+      "source_sample_label": "CX544 kinetic example",
+      "batch_id": null,
+      "material_state_id": "kinetic-injection-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [
+    {
+      "id": "approx-completion",
+      "sample_id": "cx544-kinetic",
+      "property": "Time to maximum quenching",
+      "technique": "Source-reported Figure S12 interpretation",
+      "value": {
+        "value": 10,
+        "minimum": null,
+        "maximum": null,
+        "unit": "s",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "10 s",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+            "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433-si",
+          "locator": "SI PDF p.23, Kinetic Curve and Figure S12"
+        }
+      ]
+    },
+    {
+      "id": "main-kinetic-bound",
+      "sample_id": "cx544-kinetic",
+      "property": "Main-text bound for all quenching rates",
+      "technique": "Source-reported observation",
+      "value": {
+        "value": null,
+        "minimum": null,
+        "maximum": 10,
+        "unit": "s",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "<10 s",
+        "evidence": [
+          {
+            "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+            "locator": "Main PDF p.2, System Design and Synthesis"
+          }
+        ],
+        "derivation": null,
+        "maximum_exclusive": true
+      },
+      "conditions": "The main text says all cases are below ten seconds; SI calls the example approximately ten seconds.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+          "locator": "Main PDF p.2, System Design and Synthesis"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Source-scoped preparation, characterization, sensing and computational evidence from the admitted eight-page main article and 26-page SI. Explicit source variants and contradictions are retained. Cited upstream papers are not admitted. Computational ZnS structures are models, not measured nanocrystal phases or coordinates.",
+    "missing_fields": [
+      "Exact physical batch identifiers and unreported source settings remain unknown."
+    ],
+    "conflicts": [
+      "Main text reports all quenching below 10 s; SI describes CX544 maximum quenching after approximately 10 s. Bound and approximation are both retained. Sources: Main PDF p.2, System Design and Synthesis; SI PDF p.23, Kinetic Curve and Figure S12."
+    ],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_partial"
+  },
+  "context_links": [
+    {
+      "label": "Primary source",
+      "url": "https://doi.org/10.1021/acsnano.5b06433",
+      "relation": "source"
+    },
+    {
+      "label": "Prepare CX544",
+      "url": "records/peveler2016-cdse-zns-sensor-array-acsnano5b06433-exchange-cx544.html",
+      "relation": "related_procedure"
+    }
+  ]
+}
