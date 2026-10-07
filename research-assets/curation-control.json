@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "bounded_current_papers_only_until_owner_hard_stop",
-  "recorded_at": "2026-10-06T22:46:42.678402+00:00",
-  "authorization": "The owner explicitly authorized finishing the current four papers and then stopping within90minutes, ending2026-10-06T23:37:10Z. Liu and Teitelboim are now verified live. Only accepted Peveler and Ondry corrections/delivery may proceed before that cutoff. No new intake, claims or extraction. Original quality stop and findings remain preserved; no broader restart is authorized.",
-  "supersedes_hold": "Narrow owner finish authorization only; the existing quality hold remains for all other work and resumes unconditionally at the hard deadline.",
+  "status": "paused_after_authorized_pending_publications",
+  "recorded_at": "2026-10-07T00:11:22.472384+00:00",
+  "authorization": "The owner-authorized four-paper finish is complete and verified live. General curation, extraction, new claims and further publication are paused. Resume requires a new explicit owner instruction; the quality stop and original findings remain unchanged.",
+  "supersedes_hold": "The bounded finish authorization is complete. The existing quality hold remains in force; no automatic resume is authorized.",
   "active_run": "Private full-audit-20261002/ledger.jsonl",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -50,24 +50,24 @@
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
   "latest_publication_receipt": "Root-verified publication checkpoint; detailed evidence retained locally.",
-  "latest_verified_site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f",
+  "latest_verified_site_commit": "99b70f76daee8e574f1d2d8069c1931dc5ddab16",
   "latest_verified_totals": {
-    "records": 2902,
-    "contributing_papers": 229,
-    "reviewed_literature_papers": 228,
+    "records": 2965,
+    "contributing_papers": 231,
+    "reviewed_literature_papers": 230,
     "benchmark_source_groups": 1,
     "preliminary_papers": 0,
-    "direct_material_families": 236,
-    "material_hubs": 273,
-    "broad_recipe_structure_pairs": 839
+    "direct_material_families": 237,
+    "material_hubs": 274,
+    "broad_recipe_structure_pairs": 845
   },
   "latest_publication_event": {
     "event_kind": "batch",
-    "verified_at": "2026-10-06T22:30:01Z",
-    "site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f",
+    "verified_at": "2026-10-07T00:01:32+00:00",
+    "site_commit": "99b70f76daee8e574f1d2d8069c1931dc5ddab16",
     "event_ids": [
-      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085:batch17-live:18f773f0144a",
-      "teitelboim2016-pbse-cdse-cds-acsnano5b05329:batch17-live:18f773f0144a"
+      "peveler2016-cdse-zns-sensor-array-acsnano5b06433:batch18-live:99b70f76daee",
+      "ondry2021-2d-superlattices-acsnano0c07202:batch18-live:99b70f76daee"
     ]
   },
   "latest_morning_checkpoint": {
@@ -101,7 +101,7 @@
   },
   "continuation_automation": null,
   "continuation_interval_minutes": null,
-  "continuation_status": "bounded_current_papers_only_then_pause_at_hard_deadline",
+  "continuation_status": "PAUSED_AWAITING_EXPLICIT_OWNER_INSTRUCTION",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
@@ -120,14 +120,14 @@
   },
   "latest_publication_batch": {
     "source_ids": [
-      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
-      "teitelboim2016-pbse-cdse-cds-acsnano5b05329"
+      "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+      "ondry2021-2d-superlattices-acsnano0c07202"
     ],
     "new_gold_source_contributions": 2,
-    "new_records": 47,
-    "new_recipe_structure_rows": 0,
-    "verified_at": "2026-10-06T22:30:01Z",
-    "site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f"
+    "new_records": 63,
+    "new_recipe_structure_rows": 6,
+    "verified_at": "2026-10-07T00:01:32+00:00",
+    "site_commit": "99b70f76daee8e574f1d2d8069c1931dc5ddab16"
   },
   "latest_experimental_display": {
     "receipt": "research-assets/public-audits/experimental-li2001-display-publication-20260928.json",
@@ -525,14 +525,11 @@
     }
   ],
   "next_accepted_contribution": {
-    "source_ids": [
-      "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
-      "ondry2021-2d-superlattices-acsnano0c07202"
-    ],
-    "records": 63,
-    "stage": "accepted_corrected_science_and_final_delivery_private_candidate",
+    "source_ids": [],
+    "records": 0,
+    "stage": "paused_no_further_authorized_contribution",
     "live_credit": 0,
-    "note": "Only these remaining current papers may finish release checks before23:37:10Z. Liu and Teitelboim are already live."
+    "note": "The four authorized pending contributions are now live. No new work or automatic continuation is authorized; the separate approval hold remains untouched."
   },
   "active_hour_target": {
     "start": "2026-09-28T22:11:57Z",
@@ -546,18 +543,18 @@
     "status": "historical_frozen_result_2_papers_not_active"
   },
   "latest_verified_publication": {
-    "source_commit": "0cb8d3782271b2d207debb03cb79768b6a45f084",
-    "site_commit": "18f773f0144a8ea22dd701854df8658066d7eb1f",
-    "site_ci_run": 37540364247,
-    "source_ci_run": 37491941804,
-    "verified_at": "2026-10-06T22:30:01Z",
+    "source_commit": "ad35d50488c8b2d2ef154bdd4992af06e082ca98",
+    "site_commit": "99b70f76daee8e574f1d2d8069c1931dc5ddab16",
+    "site_ci_run": 37549119346,
+    "source_ci_run": 37544979391,
+    "verified_at": "2026-10-07T00:01:32+00:00",
     "new_papers": 2,
-    "new_reviewed_records": 47,
-    "new_verified_pairs": 0,
-    "restart_live_papers": 56,
+    "new_reviewed_records": 63,
+    "new_verified_pairs": 6,
+    "restart_live_papers": 58,
     "ledger_live_events": [
-      "liu2015-pbs-ligand-thermal-transport-acsnano5b05085:batch17-live:18f773f0144a",
-      "teitelboim2016-pbse-cdse-cds-acsnano5b05329:batch17-live:18f773f0144a"
+      "peveler2016-cdse-zns-sensor-array-acsnano5b06433:batch18-live:99b70f76daee",
+      "ondry2021-2d-superlattices-acsnano0c07202:batch18-live:99b70f76daee"
     ]
   },
   "workflow_revision_hold": {
@@ -900,12 +897,12 @@
     }
   },
   "current_reviewed_checkout": {
-    "source_base": "e6df08b406286ad179a72a29e9aad4bde3ee8386",
+    "source_base": "ad35d50488c8b2d2ef154bdd4992af06e082ca98",
     "candidate_records": 2965,
-    "unpublished_new_papers": 2,
-    "unpublished_new_records": 63,
+    "unpublished_new_papers": 0,
+    "unpublished_new_records": 0,
     "publication_credit": 0,
-    "state": "private_candidate_release_preparation"
+    "state": "verified_published_checkout_curation_paused"
   },
   "latest_existing_paper_corrections": {
     "site_commit": "da2aeb3fd41699e78f1e95fa262c8f590c8e31a0",
@@ -926,7 +923,7 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-06T22:46:42.678402+00:00",
+    "snapshot_at": "2026-10-07T00:11:22.472384+00:00",
     "stage_flags": [
       {
         "primary_source_id": "park2020-bbn-heatup-cdse-cds-acsnano0c04091",
@@ -986,13 +983,13 @@
         "primary_source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
         "doi": "10.1021/acsnano.5b06433",
         "ordinal": 58,
-        "stage": "corrected_science_and_final_delivery_accepted_private_candidate",
+        "stage": "live_verified",
         "scope": "main_and_supporting_information",
         "sample_required": true,
         "full_accepted": true,
-        "integrated": false,
-        "live_verified": false,
-        "note": "Original third S1 remains in sample history. Corrected R5 full audit and actual fresh-checker third confirmation accepted. Final delivery independently accepted; release gates pending.",
+        "integrated": true,
+        "live_verified": true,
+        "note": "Accepted corrected content and final delivery are now verified live. Original findings and scope qualifications remain preserved. No additional publication is authorized during the pause.",
         "full_audit_active": false,
         "third_completed": true,
         "third_accepted": true,
@@ -1001,7 +998,7 @@
           "S2": 0,
           "S3": 0
         },
-        "live": false,
+        "live": true,
         "full_audit_completed": true,
         "third_audit_active": false,
         "publication_eligible": false,
@@ -1016,15 +1013,15 @@
       },
       {
         "primary_source_id": "ondry2021-2d-superlattices-acsnano0c07202",
-        "stage": "corrected_science_and_final_delivery_accepted_private_candidate",
+        "stage": "live_verified",
         "original_full_counts": {
           "S1": 1,
           "S2": 1,
           "S3": 1
         },
         "sample_required": false,
-        "integrated": false,
-        "live": false,
+        "integrated": true,
+        "live": true,
         "doi": "10.1021/acsnano.0c07202",
         "ordinal": 59,
         "scope": "main_only_SI_unavailable",
@@ -1040,9 +1037,9 @@
         },
         "package_acceptance_metadata": "accepted_final_P3",
         "final_delivery_accepted": true,
-        "live_verified": false,
+        "live_verified": true,
         "publication_eligible": false,
-        "note": "Original full1/1/1 preserved. Final P3 scoped content and delivery accepted; private integration is not live credit.",
+        "note": "Accepted corrected content and final delivery are now verified live. Original findings and scope qualifications remain preserved. No additional publication is authorized during the pause.",
         "full_accepted": true,
         "records": 27,
         "technical_checks_complete": true,
@@ -1050,13 +1047,13 @@
         "private_integrated": true
       }
     ],
-    "note": "Liu56 and Teitel57 verified live at22:30:01Z. Peveler58 and Ondry59 accepted corrections and final deliveries; private combined63-record integration is not publication credit. Stop by23:37:10Z regardless of completion.",
+    "note": "All four authorized pending contributions are verified live. General curation and further publication are paused; original quality statistics and the separate approval hold are unchanged.",
     "new_claims_allowed": false,
     "new_extraction_allowed": false,
-    "publication_allowed": true,
+    "publication_allowed": false,
     "workers_paused": true,
     "resume_requires_owner_instruction": true,
-    "publication_scope": "Only remaining accepted Peveler58 and Ondry59 before owner hard stop; quality stop and original findings retained."
+    "publication_scope": "None while paused; resume requires a new explicit owner instruction."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -1078,9 +1075,10 @@
     "remaining_work_status": "The retained historical work list predates the bounded owner finish. See current_operational_status for actual current stages; original stop and sample findings remain unchanged."
   },
   "hard_stop_control": {
-    "deadline_utc": "2026-10-06T23:37:10Z",
-    "new_long_commands_after_utc": "2026-10-06T23:30:00Z",
+    "deadline_utc": "2026-10-07T00:21:57Z",
+    "new_long_commands_after_utc": "2026-10-07T00:11:22.472384+00:00",
     "stop_even_if_incomplete": true,
-    "resume_requires_owner_instruction": true
+    "resume_requires_owner_instruction": true,
+    "status": "paused_after_bounded_completion"
   }
 }
