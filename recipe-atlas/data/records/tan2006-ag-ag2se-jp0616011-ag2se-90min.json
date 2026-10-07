@@ -243,6 +243,48 @@
           "locator": "Main PDF p.1 / printed 15812, Experimental Section, CSe2 precursor and ethanolic stock"
         }
       ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "formula": "H2O",
+      "role": "AgNCSe precipitation medium and wash",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Used upstream for AgNCSe precipitation and several washes; amount and exact wash count unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "tan2006-ag-ag2se-jp0616011",
+          "locator": "Main PDF p.1 / printed 15812, Experimental Section, CSe2 precursor and ethanolic stock"
+        }
+      ]
+    },
+    {
+      "id": "nitrogen",
+      "name": "Nitrogen gas",
+      "formula": "N2",
+      "role": "CSe2 vapor carrier into ethanol",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Carrier gas for vapor trapping; flow rate unreported."
+      ],
+      "evidence": [
+        {
+          "source_id": "tan2006-ag-ag2se-jp0616011",
+          "locator": "Main PDF p.1 / printed 15812, Experimental Section, CSe2 precursor and ethanolic stock"
+        }
+      ]
     }
   ],
   "stocks": [
@@ -385,12 +427,33 @@
         "kncse",
         "agno3",
         "agncse",
-        "ethanol"
+        "ethanol",
+        "water",
+        "nitrogen"
       ],
       "outputs": [
         "cse2-stock"
       ],
-      "parameters": {},
+      "parameters": {
+        "decomposition_temperature": {
+          "value": null,
+          "minimum": 250,
+          "maximum": 300,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "AgNCSe vacuum thermal decomposition range.",
+          "basis": "upstream CSe2 precursor preparation",
+          "raw_text": "250-300 °C",
+          "evidence": [
+            {
+              "source_id": "tan2006-ag-ag2se-jp0616011",
+              "locator": "Main PDF p.1 / printed 15812, Experimental Section, CSe2 precursor and ethanolic stock"
+            }
+          ],
+          "derivation": null
+        }
+      },
       "environment": {
         "value": "AgNCSe thermal decomposition under vacuum; CSe2 carried by N2 into ethanol",
         "status": "reported",
