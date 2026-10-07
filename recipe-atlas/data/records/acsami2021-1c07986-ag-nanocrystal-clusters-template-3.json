@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "acsami2021-1c07986-ag-nanocrystal-clusters-template-3",
-  "revision": 5,
+  "revision": 6,
   "record_type": "literature_protocol",
   "title": "Lin et al. (2021): Ag@Template-3 silver nanocrystal cluster",
   "material": {
@@ -199,12 +199,17 @@
       },
       "quantities": {},
       "notes": [
-        "Absolute mass is unreported; ratio to template AA units is recorded in load operation."
+        "Absolute mass is unreported; ratio to template AA units is recorded in load operation.",
+        "Supplier: Tianjin Dongjulong Chemical Co., Ltd (China); grade not stated for this AgNO3 charge."
       ],
       "evidence": [
         {
           "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
           "locator": "Main PDF p.3 / printed 39808, ratio-labelled precursor addition"
+        },
+        {
+          "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
+          "locator": "Main PDF p.2 / printed 39807, Experimental Section > Materials"
         }
       ]
     },
@@ -220,12 +225,17 @@
       },
       "quantities": {},
       "notes": [
-        "Equimolar to AgNO3; solution concentration and volume unreported."
+        "Equimolar to AgNO3; solution concentration and volume unreported.",
+        "Supplier: Shanghai Aladdin Bio-Chem Technology Co., Ltd (China); stock concentration and dose volume not reported."
       ],
       "evidence": [
         {
           "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
           "locator": "Main PDF p.3 / printed 39808, fresh TBAB/DMF solution"
+        },
+        {
+          "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
+          "locator": "Main PDF p.2 / printed 39807, Experimental Section > Materials"
         }
       ]
     },
@@ -241,17 +251,46 @@
       },
       "quantities": {},
       "notes": [
-        "Wash aliquot volumes unreported."
+        "Wash aliquot volumes unreported.",
+        "Supplier: Shanghai Aladdin Bio-Chem Technology Co., Ltd (China); wash aliquot volume not reported."
       ],
       "evidence": [
         {
           "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
           "locator": "Main PDF p.3 / printed 39808, washed three times"
+        },
+        {
+          "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
+          "locator": "Main PDF p.2 / printed 39807, Experimental Section > Materials"
         }
       ]
     }
   ],
-  "stocks": [],
+  "stocks": [
+    {
+      "id": "tbab-dmf",
+      "name": "Freshly prepared TBAB/DMF reducing feed",
+      "components": [
+        {
+          "material_id": "tbab",
+          "quantities": {}
+        },
+        {
+          "material_id": "dmf",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Fresh TBAB in DMF is reported for this reduction. Stock concentration, carrier volume, preparation time and exact feed dose are not reported. The initial 10 mL DMF polymer-dissolution charge is a separate source statement.",
+      "evidence": [
+        {
+          "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
+          "locator": "Main PDF p.3 / printed 39808, Preparation of Ag@Template Nanoclusters"
+        }
+      ]
+    }
+  ],
   "material_states": [
     {
       "id": "dissolved",
@@ -321,10 +360,15 @@
         "note": ""
       },
       "endpoint": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
-        "note": ""
+        "value": "Polymer completely dissolved before AgNO3 addition",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
+            "locator": "Main PDF p.3 / printed 39808, Preparation of Ag@Template Nanoclusters"
+          }
+        ],
+        "note": "The time to reach this endpoint is not reported; the separate 24 h micelle-dispersion procedure is not transferred to this Ag-cluster preparation."
       },
       "retained_fraction": null,
       "description": "Dissolve 10 mg polymer in 10 mL selected DMF solvent under stirring at room temperature; the Ag-cluster procedure gives no duration for this step. The DMF was dried over CaH2 and distilled under reduced pressure before use (Materials, p.2); pretreatment quantities, duration, temperature and numerical pressure are not reported.",
@@ -409,7 +453,7 @@
       ],
       "inputs": [
         "loaded",
-        "tbab"
+        "tbab-dmf"
       ],
       "outputs": [
         "reduced"
@@ -690,12 +734,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Template-3 precursor ratio conflicts across methods and results",
+      "conditions": "Template-3 precursor ratio conflicts across methods and results; JEOL field-emission-gun TEM, accelerating voltage 120 kV",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
           "locator": "Main PDF p.6 / printed 39811, grain-size paragraph"
+        },
+        {
+          "source_id": "acsami2021-1c07986-ag-nanocrystal-clusters",
+          "locator": "Main PDF p.3 / printed 39808, Characterization"
         }
       ]
     }
