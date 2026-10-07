@@ -1,7 +1,7 @@
 {
   "schema_version": "1.3.0",
   "record_id": "munechika2011-qd-ag-nanoprism-lb-assembly",
-  "revision": 4,
+  "revision": 5,
   "record_type": "literature_protocol",
   "collection": "reviewed_literature",
   "reader_role": "synthesis_route",
@@ -34,7 +34,7 @@
       "year": 2011,
       "url": "https://doi.org/10.1021/nl2010127",
       "main_status": "Main PDF pp.1-4 scoped assembly, five NP observations, Figures 1-2 and Table 1 independently audited and accepted; full-paper review is not claimed.",
-      "si_status": "Local SI PDF pp.1–2 and p.13 used for essential assembly parameters and Ag nanoprism SEM; remaining SI analytical/simulation sections not reviewed.",
+      "si_status": "Local SI pp.1–5, 7–8 and 13–14 supply the scoped assembly, optical-method, model and QY metadata shown here. The original independent quick-audit receipt covered essential SI pp.1–2, 5 and 13–14; it was not a full-paper audit.",
       "reuse_status": "Selected source figure crops requested for display; publisher permission unverified."
     },
     {
@@ -514,7 +514,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Precipitate/resuspend the externally synthesized QDs twice with acetone/toluene to remove excess ligands; disperse in filtered chloroform at about 1–2 µM. Exact solvent aliquots and wash sequence are not specified.",
+      "description": "Precipitate/resuspend QDs synthesized in-house by a previously published method twice with acetone/toluene to remove excess ligands; disperse in 0.2 µm PTFE-filtered chloroform at about 1–2 µM. The cited original QD growth route, solvent aliquots and wash sequence are not reconstructed here.",
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
@@ -577,7 +577,7 @@
         }
       },
       "environment": {
-        "value": "Isopropanol sonication, N2 drying and air plasma",
+        "value": "Isopropanol sonication, N2 drying and air plasma in a Harrick PDC-32G cleaner",
         "status": "reported",
         "evidence": [
           {
@@ -594,7 +594,7 @@
         "note": ""
       },
       "retained_fraction": null,
-      "description": "Sonicate ITO glass in isopropanol for 10 min, dry in an N2 stream, then plasma-clean in air for about 2 min.",
+      "description": "Sonicate ITO glass in isopropanol for 10 min, dry in an N2 stream, then plasma-clean in air for about 2 min with a Harrick PDC-32G cleaner.",
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
@@ -661,7 +661,7 @@
         }
       },
       "environment": {
-        "value": "Home-built Langmuir–Blodgett trough with 18.2 MΩ MilliQ water",
+        "value": "Home-built Langmuir–Blodgett trough (Riegler & Kirstein GmbH named by source) filled with 18.2 MΩ MilliQ water",
         "status": "reported",
         "evidence": [
           {
@@ -899,35 +899,40 @@
           "evidence": [
             {
               "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
-              "locator": "SI PDF p.2, Sample substrate fabrication"
+              "locator": "SI PDF p.2, Optical Microscopy and Spectroscopy"
             }
           ],
           "derivation": null
         }
       },
       "environment": {
-        "value": "Metal-halide lamp illumination before optical acquisition",
+        "value": "Metal-halide epi-fluorescence lamp (Lumen Dynamics X-cite 120) before optical acquisition",
         "status": "reported",
         "evidence": [
           {
             "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
-            "locator": "SI PDF p.2, Sample substrate fabrication"
+            "locator": "SI PDF p.2, Optical Microscopy and Spectroscopy"
           }
         ],
-        "note": ""
+        "note": "Lamp/film illumination geometry and intensity are not quantified."
       },
       "endpoint": {
-        "value": null,
-        "status": "not_reported",
-        "evidence": [],
-        "note": ""
+        "value": "Photoluminescence intensity reached a steady level",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+            "locator": "SI PDF p.2, Optical Microscopy and Spectroscopy"
+          }
+        ],
+        "note": "The source also states 10 min; no separate time-to-steady value is supplied."
       },
       "retained_fraction": null,
-      "description": "Photoanneal the QD film for 10 min under metal-halide lamp illumination before optical study until PL intensity steadies. The SI does not establish whether this happened before or after Ag nanoprism drop-casting; the branches are not ordered relative to each other.",
+      "description": "Photoanneal the QD film for 10 min with the X-cite 120 metal-halide lamp before optical study, until photoluminescence intensity reaches a steady level. The SI does not establish whether this occurred before or after Ag nanoprism drop-casting; the branches remain unordered.",
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
-          "locator": "SI PDF p.2, Sample substrate fabrication"
+          "locator": "SI PDF p.2, Optical Microscopy and Spectroscopy"
         }
       ]
     }
@@ -1398,12 +1403,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, 470/405 nm ratio in Table 1. Confocal 100 ms per 100×100 nm pixel; near-prism intensity uses the highest pixel within a 3×3 ROI and the background averages uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -1430,12 +1443,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, 470/405 nm ratio in Table 1. Confocal 100 ms per 100×100 nm pixel; near-prism intensity uses the highest pixel within a 3×3 ROI and the background averages uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -1462,12 +1483,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, 470/405 nm ratio in Table 1. Confocal 100 ms per 100×100 nm pixel; near-prism intensity uses the highest pixel within a 3×3 ROI and the background averages uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -1494,12 +1523,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, 470/405 nm ratio in Table 1. Confocal 100 ms per 100×100 nm pixel; near-prism intensity uses the highest pixel within a 3×3 ROI and the background averages uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -1526,12 +1563,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, 470/405 nm ratio in Table 1. Confocal 100 ms per 100×100 nm pixel; near-prism intensity uses the highest pixel within a 3×3 ROI and the background averages uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -1558,12 +1603,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived 470/405 nm QY ratio for the same assembly, not a direct QY measurement. TCSPC decay fits use stretched exponentials convolved with wavelength-specific IRFs; NP5 worked calculation is in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1590,12 +1643,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived 470/405 nm QY ratio for the same assembly, not a direct QY measurement. TCSPC decay fits use stretched exponentials convolved with wavelength-specific IRFs; NP5 worked calculation is in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1622,12 +1683,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived 470/405 nm QY ratio for the same assembly, not a direct QY measurement. TCSPC decay fits use stretched exponentials convolved with wavelength-specific IRFs; NP5 worked calculation is in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1654,12 +1723,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived 470/405 nm QY ratio for the same assembly, not a direct QY measurement. TCSPC decay fits use stretched exponentials convolved with wavelength-specific IRFs; NP5 worked calculation is in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1686,12 +1763,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived 470/405 nm QY ratio for the same assembly, not a direct QY measurement. TCSPC decay fits use stretched exponentials convolved with wavelength-specific IRFs; NP5 worked calculation is in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1718,12 +1803,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, Table 1 ratio. PLE images sweep excitation 400–600 nm in 10 nm steps while monitoring emission at 625 nm (SI p.7).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
         }
       ]
     },
@@ -1750,12 +1839,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, Table 1 ratio. PLE images sweep excitation 400–600 nm in 10 nm steps while monitoring emission at 625 nm (SI p.7).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
         }
       ]
     },
@@ -1782,12 +1875,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, Table 1 ratio. PLE images sweep excitation 400–600 nm in 10 nm steps while monitoring emission at 625 nm (SI p.7).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
         }
       ]
     },
@@ -1814,12 +1911,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, Table 1 ratio. PLE images sweep excitation 400–600 nm in 10 nm steps while monitoring emission at 625 nm (SI p.7).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
         }
       ]
     },
@@ -1846,12 +1947,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Same assembly, Table 1 ratio. PLE images sweep excitation 400–600 nm in 10 nm steps while monitoring emission at 625 nm (SI p.7).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
         }
       ]
     },
@@ -1878,12 +1983,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived comparison of QY and excitation enhancement for the same assembly; PLE acquisition uses a 400–600 nm excitation sweep in 10 nm steps at 625 nm emission (SI p.7), and the NP5 QY calculation is explicit in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1910,12 +2023,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived comparison of QY and excitation enhancement for the same assembly; PLE acquisition uses a 400–600 nm excitation sweep in 10 nm steps at 625 nm emission (SI p.7), and the NP5 QY calculation is explicit in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1942,12 +2063,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived comparison of QY and excitation enhancement for the same assembly; PLE acquisition uses a 400–600 nm excitation sweep in 10 nm steps at 625 nm emission (SI p.7), and the NP5 QY calculation is explicit in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -1974,12 +2103,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived comparison of QY and excitation enhancement for the same assembly; PLE acquisition uses a 400–600 nm excitation sweep in 10 nm steps at 625 nm emission (SI p.7), and the NP5 QY calculation is explicit in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -2006,12 +2143,20 @@
         ],
         "derivation": "Authors' QY/combined enhancement calculation from measured decay and excitation terms"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Authors' derived comparison of QY and excitation enhancement for the same assembly; PLE acquisition uses a 400–600 nm excitation sweep in 10 nm steps at 625 nm emission (SI p.7), and the NP5 QY calculation is explicit in SI p.8.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.7, Photoluminescence excitation enhancement factors"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4"
         }
       ]
     },
@@ -2038,12 +2183,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Source-reported lifetime/initial-intensity-derived radiative-rate ratio for the same assembly, not a direct photon-rate measurement. PicoHarp 300 TTTR acquisition used 405/470 nm pulsed lasers with 188/220 ps IRF FWHM; Fluofit 4.2 fits were IRF-convolved (SI pp.2–3).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
         }
       ]
     },
@@ -2070,12 +2223,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Source-reported lifetime/initial-intensity-derived radiative-rate ratio for the same assembly, not a direct photon-rate measurement. PicoHarp 300 TTTR acquisition used 405/470 nm pulsed lasers with 188/220 ps IRF FWHM; Fluofit 4.2 fits were IRF-convolved (SI pp.2–3).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
         }
       ]
     },
@@ -2102,12 +2263,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Source-reported lifetime/initial-intensity-derived radiative-rate ratio for the same assembly, not a direct photon-rate measurement. PicoHarp 300 TTTR acquisition used 405/470 nm pulsed lasers with 188/220 ps IRF FWHM; Fluofit 4.2 fits were IRF-convolved (SI pp.2–3).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
         }
       ]
     },
@@ -2134,12 +2303,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Source-reported lifetime/initial-intensity-derived radiative-rate ratio for the same assembly, not a direct photon-rate measurement. PicoHarp 300 TTTR acquisition used 405/470 nm pulsed lasers with 188/220 ps IRF FWHM; Fluofit 4.2 fits were IRF-convolved (SI pp.2–3).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
         }
       ]
     },
@@ -2166,12 +2343,20 @@
         ],
         "derivation": null
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Source-reported lifetime/initial-intensity-derived radiative-rate ratio for the same assembly, not a direct photon-rate measurement. PicoHarp 300 TTTR acquisition used 405/470 nm pulsed lasers with 188/220 ps IRF FWHM; Fluofit 4.2 fits were IRF-convolved (SI pp.2–3).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
         }
       ]
     },
@@ -2198,12 +2383,16 @@
         ],
         "derivation": "Authors' FDTD model of excitation-weighted radiative rates using SEM digitized prism geometry"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Calculated FDTD ratio, not a measured assembly outcome. Lumerical FDTD Solutions 6.6.5 used 2 nm mesh, 1 µm³ volume, uniform dielectric constant 1 and a model Ag-prism thickness about 8–10 nm adjusted to scattering; thickness was not SEM-measured (SI p.5).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.5, Supporting Information 2, Details of FDTD simulation"
         }
       ]
     },
@@ -2230,12 +2419,16 @@
         ],
         "derivation": "Authors' FDTD model of excitation-weighted radiative rates using SEM digitized prism geometry"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Calculated FDTD ratio, not a measured assembly outcome. Lumerical FDTD Solutions 6.6.5 used 2 nm mesh, 1 µm³ volume, uniform dielectric constant 1 and a model Ag-prism thickness about 8–10 nm adjusted to scattering; thickness was not SEM-measured (SI p.5).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.5, Supporting Information 2, Details of FDTD simulation"
         }
       ]
     },
@@ -2262,12 +2455,16 @@
         ],
         "derivation": "Authors' FDTD model of excitation-weighted radiative rates using SEM digitized prism geometry"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Calculated FDTD ratio, not a measured assembly outcome. Lumerical FDTD Solutions 6.6.5 used 2 nm mesh, 1 µm³ volume, uniform dielectric constant 1 and a model Ag-prism thickness about 8–10 nm adjusted to scattering; thickness was not SEM-measured (SI p.5).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.5, Supporting Information 2, Details of FDTD simulation"
         }
       ]
     },
@@ -2294,12 +2491,16 @@
         ],
         "derivation": "Authors' FDTD model of excitation-weighted radiative rates using SEM digitized prism geometry"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Calculated FDTD ratio, not a measured assembly outcome. Lumerical FDTD Solutions 6.6.5 used 2 nm mesh, 1 µm³ volume, uniform dielectric constant 1 and a model Ag-prism thickness about 8–10 nm adjusted to scattering; thickness was not SEM-measured (SI p.5).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.5, Supporting Information 2, Details of FDTD simulation"
         }
       ]
     },
@@ -2326,12 +2527,16 @@
         ],
         "derivation": "Authors' FDTD model of excitation-weighted radiative rates using SEM digitized prism geometry"
       },
-      "conditions": "Same assembly under 470 nm and 405 nm excitation; Table 1 ratio. Simulated rows are not measured outcomes.",
+      "conditions": "Calculated FDTD ratio, not a measured assembly outcome. Lumerical FDTD Solutions 6.6.5 used 2 nm mesh, 1 µm³ volume, uniform dielectric constant 1 and a model Ag-prism thickness about 8–10 nm adjusted to scattering; thickness was not SEM-measured (SI p.5).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.3 / printed 2727, Table 1 and note a"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.5, Supporting Information 2, Details of FDTD simulation"
         }
       ]
     },
@@ -2358,12 +2563,24 @@
         ],
         "derivation": null
       },
-      "conditions": "QD region near NP5 at 470 nm excitation; stretched-exponential fit.",
+      "conditions": "QD region near NP5 at 470 nm excitation; stretched-exponential fit. PicoHarp 300 TTTR with 405/470 nm pulsed excitation; IRF FWHM 188/220 ps; Fluofit 4.2 stretched-exponential fit convolved with the IRF. Near ROI is 3×3 pixels; background uses uniform away-from-prism pixels (SI pp.2–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.2 / printed 2726, Figure 1 and caption"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -2390,12 +2607,24 @@
         ],
         "derivation": null
       },
-      "conditions": "QD region near NP5 at 405 nm excitation; stretched-exponential fit.",
+      "conditions": "QD region near NP5 at 405 nm excitation; stretched-exponential fit. PicoHarp 300 TTTR with 405/470 nm pulsed excitation; IRF FWHM 188/220 ps; Fluofit 4.2 stretched-exponential fit convolved with the IRF. Near ROI is 3×3 pixels; background uses uniform away-from-prism pixels (SI pp.2–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.2 / printed 2726, Figure 1 and caption"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -2422,12 +2651,24 @@
         ],
         "derivation": null
       },
-      "conditions": "Background QDs away from NP5; authors state either excitation wavelength.",
+      "conditions": "Background QDs away from NP5; authors state either excitation wavelength. PicoHarp 300 TTTR with 405/470 nm pulsed excitation; IRF FWHM 188/220 ps; Fluofit 4.2 stretched-exponential fit convolved with the IRF. Near ROI is 3×3 pixels; background uses uniform away-from-prism pixels (SI pp.2–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.2 / printed 2726, Figure 1 and caption"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.2, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Time-Resolved Photoluminescence and fitting analysis"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -2454,12 +2695,20 @@
         ],
         "derivation": null
       },
-      "conditions": "QD region near NP5 divided by background QDs away from the prism; 405 nm excitation.",
+      "conditions": "QD region near NP5 divided by background QDs away from the prism; 405 nm excitation. Confocal image dwell time was 100 ms per 100×100 nm pixel; near-prism intensity is the highest pixel in a 3×3 ROI and background is the mean of uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.2 / printed 2726, Figure 1d and PL intensity comparison"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -2486,12 +2735,20 @@
         ],
         "derivation": null
       },
-      "conditions": "QD region near NP5 divided by background QDs away from the prism; 470 nm excitation.",
+      "conditions": "QD region near NP5 divided by background QDs away from the prism; 470 nm excitation. Confocal image dwell time was 100 ms per 100×100 nm pixel; near-prism intensity is the highest pixel in a 3×3 ROI and background is the mean of uniform away-from-prism pixels (SI pp.3–4).",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF p.2 / printed 2726, Figure 1d and PL intensity comparison"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.3, Image Analysis for extracting lifetime data"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.4, Image Analysis continuation"
         }
       ]
     },
@@ -2518,12 +2775,16 @@
         ],
         "derivation": null
       },
-      "conditions": "Same QD formulation measured in thin-film form on a cleaned glass slide; not proven to be the NP5 ITO film.",
+      "conditions": "Same QD formulation measured in thin-film form on a cleaned glass slide; not proven to be the NP5 ITO film. Main p.2 calls this an integrating-sphere thin-film QY. SI p.14 names the Hamamatsu C9920-02/C10027 system specifically for the separate toluene-solution absolute-QY measurement; the film's instrument is not identified separately. The solution N2 purge and 6.7/6.8% QYs are not assigned to this film.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
           "locator": "SI PDF p.14, Supporting Information 9"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.14, Supporting Information 9, Absolute quantum yields"
         }
       ]
     },
@@ -2546,16 +2807,24 @@
           {
             "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
             "locator": "Main PDF pp.2–3 / printed 2726–2727, Results and SI calculations"
+          },
+          {
+            "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+            "locator": "SI PDF p.8, Supporting Information 4, Data Analysis for Figure 1"
           }
         ],
         "derivation": "Authors computed from measured decay rates and 3.00% thin-film QY baseline."
       },
-      "conditions": "QD region near NP5, 405 nm excitation; authors calculated QY using measured lifetime and thin-film baseline.",
+      "conditions": "QD region near NP5, 405 nm excitation; authors calculated QY using measured lifetime and thin-film baseline. SI p.8 derives these values from the near-prism lifetime, initial-intensity radiative-rate enhancement and separate thin-film 3.00% QY baseline; this is calculated, not direct single-prism absolute QY.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF pp.2–3 / printed 2726–2727, Results and SI calculations"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4, Data Analysis for Figure 1"
         }
       ]
     },
@@ -2578,16 +2847,24 @@
           {
             "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
             "locator": "Main PDF pp.2–3 / printed 2726–2727, Results and SI calculations"
+          },
+          {
+            "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+            "locator": "SI PDF p.8, Supporting Information 4, Data Analysis for Figure 1"
           }
         ],
         "derivation": "Authors computed from measured decay rates and 3.00% thin-film QY baseline."
       },
-      "conditions": "QD region near NP5, 470 nm excitation; authors calculated QY using measured lifetime and thin-film baseline.",
+      "conditions": "QD region near NP5, 470 nm excitation; authors calculated QY using measured lifetime and thin-film baseline. SI p.8 derives these values from the near-prism lifetime, initial-intensity radiative-rate enhancement and separate thin-film 3.00% QY baseline; this is calculated, not direct single-prism absolute QY.",
       "derives_from": [],
       "evidence": [
         {
           "source_id": "munechika2011-qd-ag-nanoprism-nl2010127",
           "locator": "Main PDF pp.2–3 / printed 2726–2727, Results and SI calculations"
+        },
+        {
+          "source_id": "munechika2011-qd-ag-nanoprism-nl2010127-si",
+          "locator": "SI PDF p.8, Supporting Information 4, Data Analysis for Figure 1"
         }
       ]
     }
@@ -2598,7 +2875,7 @@
       "role": "measured_sample",
       "sample_id": "munechika2011-np5-qd-ag-assembly",
       "url": "assets/source-figures/munechika2011/main-figure-1.png",
-      "description": "Main Figure 1: source SEM of NP5 QD/Ag assembly, 50 nm scale bar, plus optical panels; Figure 1a is an authored source schematic. Publisher permission unverified.",
+      "description": "Main Figure 1 is a mixed five-panel composite: (a) source schematic labels the QD film CdSe/ZnS, shorthand differing from the full CdSe/CdS/ZnS composition in SI p.1; (b) NP5 prism SEM with 50 nm scale; (c) ensemble solution QD absorbance/PL spectra, not a spectrum of the individual NP5 assembly; (d) near-prism confocal PL maps at 405/470 nm; (e) near-prism/background lifetime traces. The whole figure is not an isolated measured-sample label. Publisher permission unverified.",
       "eligible_as_measured_label": false
     },
     {

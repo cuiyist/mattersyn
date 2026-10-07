@@ -119,7 +119,18 @@
         "figure": "Figure 1"
       },
       "scope": "Figure 1a belongs to the no-DBS recovered powder; 1b to recovered DBS-route powder. The XRD crystallite estimates do not describe the fresh colloid's TEM particle size.",
-      "no_same_vial_inference": true
+      "no_same_vial_inference": true,
+      "reported_setup": {
+        "technique": "powder XRD",
+        "instrument": "Rigaku D/Max rA",
+        "radiation": "Cu Kα",
+        "wavelength": {
+          "value": 1.5418,
+          "unit": "Å"
+        },
+        "source_locator": "Main PDF p.1 / printed 347, Experimental, XRD acquisition paragraph",
+        "scope": "Paper-reported acquisition setup; Figure 1a/b powder specimens retain separate sample IDs."
+      }
     },
     {
       "id": "figure-2-tem",
@@ -140,7 +151,22 @@
         "figure": "Figure 2"
       },
       "scope": "Panel a no-DBS 200–600 nm; panel d fresh DBS colloid 10–40 nm; panel e three-month DBS colloid up to ~200 nm. Panels b/c are electron-beam-induced artifacts, not synthesis outputs.",
-      "no_same_vial_inference": true
+      "no_same_vial_inference": true,
+      "reported_setup": {
+        "technique": "TEM",
+        "instrument": "H-800 transmission electron microscope",
+        "accelerating_voltage": {
+          "value": 200,
+          "unit": "kV"
+        },
+        "beam_current": {
+          "value": 15,
+          "unit": "µA"
+        },
+        "specimen_preparation": "Silver particles dispersed on a copper grid; exact dispersion aliquots are not linked across panels.",
+        "source_locator": "Main PDF p.1 / printed 347 and p.2 / printed 348, Experimental continuation; Figure 2 caption",
+        "scope": "Paper-reported characterization setup; does not make beam-modified panels b/c pristine synthesis products."
+      }
     }
   ],
   "figures": [
@@ -150,7 +176,7 @@
       "summary": "Powder XRD, without DBS (a) and recovered DBS-route powder (b)",
       "caption_paraphrase": "Powder XRD, without DBS (a) and recovered DBS-route powder (b)",
       "public_asset": "assets/paper-reviews/li1999-ag-dbs-jcis5879/figure-1-xrd.png",
-      "public_asset_sha256": "322148d2c4d59787c7d85e1302fc551f24b3d67a484dd98a86735476544da1ad",
+      "public_asset_sha256": "6d68af518956d6ba99f835c1a5b1a24ad6782ecb307993fcf8cbcf66fe88d72c",
       "record_ids": [
         "li1999-ag-dbs-jcis5879-no-dbs",
         "li1999-ag-dbs-jcis5879-dbs-fresh"
@@ -176,7 +202,22 @@
       "reviewed": true,
       "text_reviewed": true,
       "visual_reviewed": true,
-      "same_batch_asserted": false
+      "same_batch_asserted": false,
+      "crop_provenance": {
+        "document_role": "main",
+        "source_sha256": "29e66582de184349addc9f43b0f850640066fa4445e5db4baa71170145524dc8",
+        "page": 1,
+        "dpi": 150,
+        "crop_pixels": [
+          655,
+          1065,
+          1210,
+          1507
+        ],
+        "source_render_sha256": "1e2ad35579f9ed2ea1ee89fb3ad19d33f6ce644dfb75c460d535d75dd1e3e42b",
+        "result_sha256": "6d68af518956d6ba99f835c1a5b1a24ad6782ecb307993fcf8cbcf66fe88d72c",
+        "pixel_editing": false
+      }
     },
     {
       "id": "figure-2-tem",
@@ -219,7 +260,8 @@
   "source_notes": [
     "The paper uses the name sodium dodecylbenzene sulfate (DBS); its connectivity/isomer is not independently assigned.",
     "Figure 2b/c electron-beam transformations are characterization artifacts, not new synthesis records.",
-    "The fresh colloid and XRD powder come from the DBS route but are distinct physical specimen states."
+    "The fresh colloid and XRD powder come from the DBS route but are distinct physical specimen states.",
+    "Methods call the wash alcohol; discussion of the DBS-route separated powder calls it absolute alcohol (main p.3 / printed 349). The chemical identity remains unspecified."
   ],
   "evidence_conflicts": [],
   "remaining_gaps": [
