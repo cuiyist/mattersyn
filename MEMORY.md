@@ -3125,3 +3125,6 @@ The Ko (2010) candidate is deferred from the pending third release: its scientif
 
 The first five-paper correction source commit (6f662f6e) passed source closure but its local site candidate failed the chemical-identity coverage gate: nine newly listed Chan (2007) chip-fabrication materials had no chemical/identity bindings. A follow-up source correction reuses exact HF and 2-propanol identities and adds six source-scoped, original material identity tiles for the remaining device materials. These tiles do not claim molecular or atomic coordinates. The factual asset-rights checksum was refreshed with all rules and permissions unchanged. Site publication remains pending full rebuild and checks.
 
+
+Independent review caught a borrowed-context error in that provisional HF mapping: its generic molecular card described 10% HF from a different paper, which Chan did not report. Before publication, the HF mapping was replaced by a Chan-specific source-name tile with concentration, formulation and coordinates explicitly unreported. Seven new chip-material identity tiles now accompany the existing generic 2-propanol depiction; independent recheck and all release gates remain pending.
+
