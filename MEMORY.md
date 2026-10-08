@@ -1,3 +1,11 @@
+# October 8 owner update — two deep auditors and local model
+
+Every sampled Track 1 paper now receives two distinct deep auditors, separate from its extractor and full source auditor. Preserve original findings and one sampled-record denominator; do not count a second auditor as a second paper. The eight missed blind-test defect types now have targeted checks in the fast-track reference. Two fresh, isolated auditors are checking the unchanged ten-paper original-version set; their results are pending, and each must detect at least eight of the nine known findings. A failed result stops Track 1 and is reported. The historical failed test and October 7 stop window remain unchanged.
+
+The owner authorized one larger local model. The official Qwen3-32B Q4_K_M GGUF (19,762,149,024 bytes) has downloaded and passed its published SHA256; actual GPU fit, queued-paper client admission and scientific calibration remain pending. No source documents were transferred. The 4B runner remains installed; machine publication is disabled. Scheduled reports stay off.
+
+The current three-paper candidate has passed source CI, the complete build and desktop/mobile figure review. Publication transport exposed one Yu inventory evidence-link mismatch; its record/DOI and scientific content were unchanged. Repair that administrative link through the normal generated binding. The verified live baseline remains 231 papers and 2,965 records until deployment and anonymous verification succeed.
+
 # October 8 integration checkpoint
 
 PR #8 merged as `fd05be764878479edc2238928ee645803f48610e` after both platform validations and artifact comparison passed. The normal generated file-list transaction repaired the preparation-base binding; permission rules, policy exceptions and scientific gates were unchanged. Track 1 resumed under the owner's explicit instruction; worker A and worker B are active. The three separately accepted Yaman (2017), Yang (2023) and Yu (2018) core contributions passed additive preflight and are integrated locally, adding three records. They remain unpublished until the exact source, build, browser, deployment and anonymous checks pass. The verified live baseline is still 231 contributing papers and 2,965 records.

@@ -1,3 +1,20 @@
+## October 8 owner update — targeted dual deep audits
+
+This update supersedes the earlier one-deep-auditor instruction. For every preregistered sampled paper, obtain two distinct deep source audits, both independent of extraction and the full source audit. Keep their individual findings and deduplicate the same defect for the unchanged one-record sampling denominator. Preserve historical findings and the October 7 numerical stop rule. A repeated blind test uses the unchanged ten original papers, two fresh isolated auditors, sealed expected defects and separate scores. Each auditor must identify at least eight of the nine known defects; a failing result stops Track 1 and must be reported. Do not disclose expected case assignments or answers to auditors.
+
+Check these eight defect classes against source pages and linked artifacts:
+
+1. Bind each reported property to its actual specimen and recipe; an optimized-property specimen is not automatically the generic core route.
+2. Preserve ambiguity in cycle/count statements; never force an exact count from ambiguous wording.
+3. Retain dissolution, color, completion and other source-stated process endpoints, separately from timed holds.
+4. Trace Methods-to-Results sample lineage; controls cannot silently become the main Methods recipe.
+5. Check apparatus stages and phase handling against the source; do not invent an organic phase or solvent handling.
+6. Bind each chemical role to its actual step; a later antisolvent is not necessarily an extraction reagent.
+7. Preserve conflicting procedure and discussion durations side by side; do not join an outcome to an incompatible duration.
+8. Keep storage and workup instructions specific to the stated material/architecture, rather than spreading them across related records.
+
+Exactly one larger official open-weight model download is now authorized: Qwen3-32B Q4_K_M. Verify official file identity, measure actual local GPU fit and synthetic runner safety, and independently approve the model/context-specific paper client before any queued-source request. Do not truncate source packets to fit a context. No paper text leaves the machine. Download or synthetic runner success is not scientific calibration or machine-lane admission.
+
 ## October 8 explicit owner override
 
 The owner requests the normal file-list binding repair and CI-gated merge of PR #8, followed immediately by Track 1 resumption. The completed blind test remains failed (1/9 known findings detected); this specific owner override permits resumption without manufacturing a passing test or editing its checklist. Keep the October 7 sampled-record window, all original findings, 50% third-agent sampling and its numerical stop rule unchanged. Normal generated inventory/digest updates are authorized; release policies, allowlist permission exceptions and scientific acceptance gates must not be weakened. Machine publication is still disabled pending actual calibration.

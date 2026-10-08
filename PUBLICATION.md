@@ -1,3 +1,7 @@
+# October 8 owner update — dual deep review
+
+Continue Track 1 with two different deep auditors for each preregistered sampled paper, distinct from the extractor and full source auditor. Keep one denominator per sampled record and preserve every original S1/S2 finding. Run the frozen original-version blind test with two fresh isolated auditors; each must catch at least eight of nine known defects. If either fails, stop Track 1 and report. This does not weaken the existing sampled-record stop rule, source/scientific checks or release gates. The owner authorized exactly one larger local model download; Qwen3-32B Q4_K_M is downloaded and SHA verified, but GPU fit and scientific calibration are not yet demonstrated. All inference and source documents remain local. Machine publication remains disabled.
+
 # Owner instruction — October 8 resume after PR #8 repair
 
 The owner explicitly instructed: repair PR #8's failed public-source projection through the normal file-list binding, merge after CI passes, then continue Track 1 without further confirmation. This supersedes the blind-test hold for Track 1; it does not change the scientific acceptance gates or erase the failed result. The fresh original-version blind test detected one of nine known findings (11.1%), below the required eight. The same NMR defect was labelled S3 by the fresh auditor; detection was credited by defect identity. Its sealed results and historical original findings remain preserved.
