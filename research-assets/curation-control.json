@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "october8_owner_resume_after_pr8_merge",
-  "recorded_at": "2026-10-08T14:33:49.579940+00:00",
-  "authorization": "Owner October8: repair PR8 normalfilelistbinding,mergeafterCI,thencontinueTrack1withoutconfirmation. Explicitlysupersedesblindhold;noqualitygateorhistoricalresultchange.",
-  "supersedes_hold": "New owner-authorized window; preserve historical findings and controls in history.",
+  "status": "quality_hold_fresh_blind_retest_20261008_failed",
+  "recorded_at": "2026-10-08T19:39:20.418695+00:00",
+  "authorization": "Owner October8: fresh blind retest with two distinct auditors and existing failure stop; subsequent instruction authorizes disk cleanup and GitHub-first durable storage only.",
+  "supersedes_hold": "No curation resume authorized after this failed retest; storage work is independent.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -12,7 +12,7 @@
   "maximum_concurrent_agents_including_root": 4,
   "maximum_active_paper_claims": 2,
   "daily_report_time": null,
-  "stop_rule": "Strictly morethan2 originalS1/S2findingsper100 sampledrecordsoverlast500/allcurrentwindow;if100+records. October8ownerexplicitlyoverridesthecompletedfailedblindtestholdforTrack1;test remainsfailed.",
+  "stop_rule": "Retain the October7 sampled-record window: strictly more than 2 original S1/S2 findings per100 sampledrecords over the last500/allcurrentwindow, evaluated at100+records. Fresh blind retest failure additionally stops Track1; preserve historical results.",
   "current_measurement_window": "fasttrack-20261007",
   "measurement_checkpoint_utc": null,
   "progress_report_interval_hours": null,
@@ -101,7 +101,7 @@
   },
   "continuation_automation": null,
   "continuation_interval_minutes": null,
-  "continuation_status": "ACTIVE_BY_EXPLICIT_OWNER_INSTRUCTION_WITHOUT_SCHEDULED_REMINDERS",
+  "continuation_status": "QUALITY_HOLD_REQUIRES_NEW_OWNER_INSTRUCTION",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
@@ -923,137 +923,21 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-07T00:11:22.472384+00:00",
-    "stage_flags": [
-      {
-        "primary_source_id": "park2020-bbn-heatup-cdse-cds-acsnano0c04091",
-        "ordinal": 54,
-        "records": 38,
-        "stage": "live_verified",
-        "full_accepted": true,
-        "final_delivery_accepted": true,
-        "integrated": true,
-        "live_verified": true,
-        "scope": "Main paper only; narrow three-record delivery normalization independently accepted. Scientific contribution and original audit history remain preserved."
-      },
-      {
-        "primary_source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
-        "ordinal": 55,
-        "records": 39,
-        "stage": "live_verified",
-        "full_accepted": true,
-        "final_delivery_accepted": true,
-        "integrated": true,
-        "live_verified": true
-      },
-      {
-        "primary_source_id": "ullah2025-pbse-surface-acsenergylett4c03326",
-        "ordinal": 53,
-        "stage": "handoff_pending_explicit_owner_approval",
-        "integrated": false,
-        "live_verified": false
-      },
-      {
-        "primary_source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
-        "doi": "10.1021/acsnano.5b05085",
-        "ordinal": 56,
-        "stage": "live_verified",
-        "scope": "main_only",
-        "integrated": true,
-        "live_verified": true,
-        "full_accepted": true,
-        "final_delivery_accepted": true,
-        "records": 21,
-        "live": true
-      },
-      {
-        "primary_source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
-        "doi": "10.1021/acsnano.5b05329",
-        "ordinal": 57,
-        "stage": "live_verified",
-        "scope": "main_and_supporting_information",
-        "integrated": true,
-        "live_verified": true,
-        "full_accepted": true,
-        "final_delivery_accepted": true,
-        "records": 26,
-        "live": true
-      },
-      {
-        "primary_source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
-        "doi": "10.1021/acsnano.5b06433",
-        "ordinal": 58,
-        "stage": "live_verified",
-        "scope": "main_and_supporting_information",
-        "sample_required": true,
-        "full_accepted": true,
-        "integrated": true,
-        "live_verified": true,
-        "note": "Accepted corrected content and final delivery are now verified live. Original findings and scope qualifications remain preserved. No additional publication is authorized during the pause.",
-        "full_audit_active": false,
-        "third_completed": true,
-        "third_accepted": true,
-        "original_third_counts": {
-          "S1": 1,
-          "S2": 0,
-          "S3": 0
-        },
-        "live": true,
-        "full_audit_completed": true,
-        "third_audit_active": false,
-        "publication_eligible": false,
-        "corrected_content_accepted": true,
-        "final_delivery_accepted": true,
-        "private_integrated": true,
-        "current_unresolved_counts": {
-          "S1": 0,
-          "S2": 0,
-          "S3": 0
-        }
-      },
-      {
-        "primary_source_id": "ondry2021-2d-superlattices-acsnano0c07202",
-        "stage": "live_verified",
-        "original_full_counts": {
-          "S1": 1,
-          "S2": 1,
-          "S3": 1
-        },
-        "sample_required": false,
-        "integrated": true,
-        "live": true,
-        "doi": "10.1021/acsnano.0c07202",
-        "ordinal": 59,
-        "scope": "main_only_SI_unavailable",
-        "original_full_accepted": false,
-        "full_audit_completed": true,
-        "full_audit_active": false,
-        "corrected_content_accepted": true,
-        "correction_completed_at": "2026-10-06T18:13:43.674947+00:00",
-        "current_unresolved_counts": {
-          "S1": 0,
-          "S2": 0,
-          "S3": 0
-        },
-        "package_acceptance_metadata": "accepted_final_P3",
-        "final_delivery_accepted": true,
-        "live_verified": true,
-        "publication_eligible": false,
-        "note": "Accepted corrected content and final delivery are now verified live. Original findings and scope qualifications remain preserved. No additional publication is authorized during the pause.",
-        "full_accepted": true,
-        "records": 27,
-        "technical_checks_complete": true,
-        "worker_paused": true,
-        "private_integrated": true
-      }
-    ],
-    "note": "All four authorized pending contributions are verified live. General curation and further publication are paused; original quality statistics and the separate approval hold are unchanged.",
+    "snapshot_at": "2026-10-08T19:39:20.418695+00:00",
+    "stage_flags": {
+      "extraction": false,
+      "paper_audit": false,
+      "integration": false,
+      "paper_publication": false,
+      "storage_cleanup": true
+    },
+    "note": "Two fresh auditors caught4/9 and5/9, each below8/9. Both worker sessions stopped; pending work preserved. Cleanup does not lift the hold.",
     "new_claims_allowed": false,
     "new_extraction_allowed": false,
     "publication_allowed": false,
     "workers_paused": true,
     "resume_requires_owner_instruction": true,
-    "publication_scope": "None while paused; resume requires a new explicit owner instruction."
+    "publication_scope": "Safe administrative memory and storage checkpoint only; no new website contributions."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -1114,7 +998,7 @@
     "source_commit": "595e734739732b1cfc2c89d2cadbf68d2d0974ff",
     "site_commit": "ab52c80b663e9c1a7db9245c28ab531e6904a5b1"
   },
-  "audited_lane_start_condition": "PR8correctedheadallCIpassedandmerged",
+  "audited_lane_start_condition": "New explicit owner instruction following the failed fresh blind retest; all scientific and release gates remain.",
   "machine_lane_publish_enabled": false,
   "blind_test_result": {
     "status": "failed_preserved",
@@ -1123,5 +1007,161 @@
     "recall": 0.1111111111111111,
     "owner_override_date": "2026-10-08",
     "owner_override_scope": "ResumeTrack1afterPR8merge;noresetofsamplewindoworhistoricalfindings"
+  },
+  "historical_october8_owner_resume_control": {
+    "status": "october8_owner_resume_after_pr8_merge",
+    "recorded_at": "2026-10-08T14:33:49.579940+00:00",
+    "authorization": "Owner October8: repair PR8 normalfilelistbinding,mergeafterCI,thencontinueTrack1withoutconfirmation. Explicitlysupersedesblindhold;noqualitygateorhistoricalresultchange.",
+    "supersedes_hold": "New owner-authorized window; preserve historical findings and controls in history.",
+    "continuation_status": "ACTIVE_BY_EXPLICIT_OWNER_INSTRUCTION_WITHOUT_SCHEDULED_REMINDERS",
+    "audited_lane_start_condition": "PR8correctedheadallCIpassedandmerged",
+    "stop_rule": "Strictly morethan2 originalS1/S2findingsper100 sampledrecordsoverlast500/allcurrentwindow;if100+records. October8ownerexplicitlyoverridesthecompletedfailedblindtestholdforTrack1;test remainsfailed.",
+    "current_operational_status": {
+      "snapshot_at": "2026-10-07T00:11:22.472384+00:00",
+      "stage_flags": [
+        {
+          "primary_source_id": "park2020-bbn-heatup-cdse-cds-acsnano0c04091",
+          "ordinal": 54,
+          "records": 38,
+          "stage": "live_verified",
+          "full_accepted": true,
+          "final_delivery_accepted": true,
+          "integrated": true,
+          "live_verified": true,
+          "scope": "Main paper only; narrow three-record delivery normalization independently accepted. Scientific contribution and original audit history remain preserved."
+        },
+        {
+          "primary_source_id": "nguyen2024-colossal-cdse-cds-acsnano4c06961",
+          "ordinal": 55,
+          "records": 39,
+          "stage": "live_verified",
+          "full_accepted": true,
+          "final_delivery_accepted": true,
+          "integrated": true,
+          "live_verified": true
+        },
+        {
+          "primary_source_id": "ullah2025-pbse-surface-acsenergylett4c03326",
+          "ordinal": 53,
+          "stage": "handoff_pending_explicit_owner_approval",
+          "integrated": false,
+          "live_verified": false
+        },
+        {
+          "primary_source_id": "liu2015-pbs-ligand-thermal-transport-acsnano5b05085",
+          "doi": "10.1021/acsnano.5b05085",
+          "ordinal": 56,
+          "stage": "live_verified",
+          "scope": "main_only",
+          "integrated": true,
+          "live_verified": true,
+          "full_accepted": true,
+          "final_delivery_accepted": true,
+          "records": 21,
+          "live": true
+        },
+        {
+          "primary_source_id": "teitelboim2016-pbse-cdse-cds-acsnano5b05329",
+          "doi": "10.1021/acsnano.5b05329",
+          "ordinal": 57,
+          "stage": "live_verified",
+          "scope": "main_and_supporting_information",
+          "integrated": true,
+          "live_verified": true,
+          "full_accepted": true,
+          "final_delivery_accepted": true,
+          "records": 26,
+          "live": true
+        },
+        {
+          "primary_source_id": "peveler2016-cdse-zns-sensor-array-acsnano5b06433",
+          "doi": "10.1021/acsnano.5b06433",
+          "ordinal": 58,
+          "stage": "live_verified",
+          "scope": "main_and_supporting_information",
+          "sample_required": true,
+          "full_accepted": true,
+          "integrated": true,
+          "live_verified": true,
+          "note": "Accepted corrected content and final delivery are now verified live. Original findings and scope qualifications remain preserved. No additional publication is authorized during the pause.",
+          "full_audit_active": false,
+          "third_completed": true,
+          "third_accepted": true,
+          "original_third_counts": {
+            "S1": 1,
+            "S2": 0,
+            "S3": 0
+          },
+          "live": true,
+          "full_audit_completed": true,
+          "third_audit_active": false,
+          "publication_eligible": false,
+          "corrected_content_accepted": true,
+          "final_delivery_accepted": true,
+          "private_integrated": true,
+          "current_unresolved_counts": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          }
+        },
+        {
+          "primary_source_id": "ondry2021-2d-superlattices-acsnano0c07202",
+          "stage": "live_verified",
+          "original_full_counts": {
+            "S1": 1,
+            "S2": 1,
+            "S3": 1
+          },
+          "sample_required": false,
+          "integrated": true,
+          "live": true,
+          "doi": "10.1021/acsnano.0c07202",
+          "ordinal": 59,
+          "scope": "main_only_SI_unavailable",
+          "original_full_accepted": false,
+          "full_audit_completed": true,
+          "full_audit_active": false,
+          "corrected_content_accepted": true,
+          "correction_completed_at": "2026-10-06T18:13:43.674947+00:00",
+          "current_unresolved_counts": {
+            "S1": 0,
+            "S2": 0,
+            "S3": 0
+          },
+          "package_acceptance_metadata": "accepted_final_P3",
+          "final_delivery_accepted": true,
+          "live_verified": true,
+          "publication_eligible": false,
+          "note": "Accepted corrected content and final delivery are now verified live. Original findings and scope qualifications remain preserved. No additional publication is authorized during the pause.",
+          "full_accepted": true,
+          "records": 27,
+          "technical_checks_complete": true,
+          "worker_paused": true,
+          "private_integrated": true
+        }
+      ],
+      "note": "All four authorized pending contributions are verified live. General curation and further publication are paused; original quality statistics and the separate approval hold are unchanged.",
+      "new_claims_allowed": false,
+      "new_extraction_allowed": false,
+      "publication_allowed": false,
+      "workers_paused": true,
+      "resume_requires_owner_instruction": true,
+      "publication_scope": "None while paused; resume requires a new explicit owner instruction."
+    }
+  },
+  "fresh_blind_retest_20261008": {
+    "status": "failed",
+    "known_findings": 9,
+    "auditor_a_caught": 4,
+    "auditor_b_caught": 5,
+    "required_per_auditor": 8,
+    "combined_caught_diagnostic_only": 6,
+    "combined_coverage_is_pass": false,
+    "source_papers": 10,
+    "records": 233,
+    "scoped_pages": 177,
+    "historical_sampling_denominator_preserved": true,
+    "report": "skills/mattersyn-paper-to-site/references/BLIND_RETEST_2026-10-08.md"
   }
 }

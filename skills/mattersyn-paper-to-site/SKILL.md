@@ -11,17 +11,20 @@ MatterSyn website, without presenting an incomplete historical method as a compl
 For a focused edit, do only that edit. Don't rebuild the site, re-extract unchanged papers, or
 add records merely because this skill was invoked.
 
-Latest owner instruction, October 8: repair PR #8 through normal generated file-list binding, merge after CI passes, and resume Track 1 despite the preserved failed blind test. Do not reset historical findings or the new sampling window. Machine publication remains subject to real heldout calibration; scheduled reminders stay off.
+Current October 8 state: Track 1 is on hold after the two fresh blind auditors found 4/9 and 5/9, below the required 8/9 each. Read MEMORY.md and the current curation control before new work; a new owner instruction is required to resume. Preserve historical findings and the sampling window. The owner authorized disk cleanup and GitHub-first durable storage during this hold; scheduled reminders remain off.
 
 ## Start here
 
-**Adding papers to the website:** the owner's October 7 instructions are active. Read
+Read [references/storage-workflow.md](references/storage-workflow.md) before creating working copies. GitHub holds reviewed durable outputs; retain only necessary working checkouts and private essentials locally, reuse bounded staging, and retire verified obsolete generated payloads. Preserve papers, owner folders, unique evidence and pending work.
+
+**Adding papers after an owner-authorized resume:** use the October 7 instructions with the latest amendments. Read
 [references/fasttrack-workflow-20261007.md](references/fasttrack-workflow-20261007.md)
 first, then use [references/agent-runbook.md](references/agent-runbook.md) for the existing
 commands and release mechanics. The fast-track reference replaces older pause, scope,
 sampling, stop and batch instructions. Core synthesis first; explicit pending variants;
-one extractor plus a different full source auditor after `check_records.py`, with a
-third distinct agent on a preregistered 50% sample. QDs first; admit new local arrivals
+one extractor plus a different full source auditor after `check_records.py`, with two
+distinct deep-audit agents on a preregistered 50% sample, both separate from the extractor
+and full source auditor. QDs first; admit new local arrivals
 after DOI deduplication and source screening. Three sessions share exclusive claims;
 this task alone integrates and publishes. Release ten ready papers or after two hours.
 The blind test, local-only drafting/calibration and website engineering proceed in
@@ -50,6 +53,8 @@ counter field; otherwise wait for the owner. Scheduled progress reports remain o
 | Read | When |
 |---|---|
 | [agent-runbook.md](references/agent-runbook.md) | Operating the pipeline: every command, role and failure case |
+| [storage-workflow.md](references/storage-workflow.md) | Before creating working copies or cleaning storage; current owner storage requirements |
+| [BLIND_RETEST_2026-10-08.md](references/BLIND_RETEST_2026-10-08.md) | Current quality-hold result and preserved defect checks |
 | [fasttrack-workflow-20261007.md](references/fasttrack-workflow-20261007.md) | Always, before adding papers; current owner scope, sampling and admission rules |
 | [workflow-v5.md](references/workflow-v5.md) | Historical mechanics where consistent with the October 7 owner instructions |
 | [standards.md](references/standards.md) | Extraction, page design, figures, validation and publication details |

@@ -1,3 +1,11 @@
+# October 8 current publication hold
+
+The fresh original-version blind retest failed: auditors A and B detected 4/9 and 5/9 known findings against an 8/9 minimum each. Track 1 and all paper publication are on hold pending the owner's next instruction. The three integrated new contributions remain unpublished; the live baseline is 231 contributing papers and 2,965 records. The Yu link repair passed exact-source CI, but the successor browser smoke test failed and must not be described as accepted. See the [result and defect checks](skills/mattersyn-paper-to-site/references/BLIND_RETEST_2026-10-08.md).
+
+The owner authorized disk cleanup and GitHub-first storage for durable reviewed outputs. Save safe memory, code, records, skills and audit summaries through the normal file-list transaction. Retire obsolete generated payloads, preserving their small provenance receipts and every original paper, unique private artifact and current pending handoff. Follow [the storage workflow](skills/mattersyn-paper-to-site/references/storage-workflow.md). Cleanup and source checkpoint preservation do not lift the publication hold; public policies, permissions and scientific gates remain unchanged. The [storage checkpoint](skills/mattersyn-paper-to-site/references/STORAGE_CLEANUP_2026-10-08.md) records 212.60 GiB and 2,676,059 files removed, zero original documents removed and 350.58 GiB free on C:. It adds no scientific publication credit.
+
+## Earlier October 8 checkpoint — preserved history
+
 # October 8 owner update — dual deep review
 
 Continue Track 1 with two different deep auditors for each preregistered sampled paper, distinct from the extractor and full source auditor. Keep one denominator per sampled record and preserve every original S1/S2 finding. Run the frozen original-version blind test with two fresh isolated auditors; each must catch at least eight of nine known defects. If either fails, stop Track 1 and report. This does not weaken the existing sampled-record stop rule, source/scientific checks or release gates. The owner authorized exactly one larger local model download; Qwen3-32B Q4_K_M is downloaded and SHA verified, but GPU fit and scientific calibration are not yet demonstrated. All inference and source documents remain local. Machine publication remains disabled.
