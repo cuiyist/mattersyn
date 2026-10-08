@@ -1,9 +1,9 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "quality_hold_fresh_blind_retest_20261008_failed",
-  "recorded_at": "2026-10-08T19:39:20.418695+00:00",
-  "authorization": "Owner October8: fresh blind retest with two distinct auditors and existing failure stop; subsequent instruction authorizes disk cleanup and GitHub-first durable storage only.",
-  "supersedes_hold": "No curation resume authorized after this failed retest; storage work is independent.",
+  "status": "owner_resumed_track1_privacy_clarification_pending",
+  "recorded_at": "2026-10-08T21:02:16.385282+00:00",
+  "authorization": "Owner explicitly resumes Track1, requests two deep auditors per sampled paper and another fresh blind test. One larger model authorization already consumed; no duplicate download.",
+  "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": false,
@@ -101,7 +101,7 @@
   },
   "continuation_automation": null,
   "continuation_interval_minutes": null,
-  "continuation_status": "QUALITY_HOLD_REQUIRES_NEW_OWNER_INSTRUCTION",
+  "continuation_status": "ACTIVE_ACCEPTED_INTEGRATION_NEW_SOURCE_READS_WAIT_PRIVACY_CLARIFICATION",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
@@ -923,21 +923,21 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-08T19:39:20.418695+00:00",
+    "snapshot_at": "2026-10-08T21:02:16.385282+00:00",
     "stage_flags": {
       "extraction": false,
       "paper_audit": false,
-      "integration": false,
-      "paper_publication": false,
-      "storage_cleanup": true
+      "integration": true,
+      "paper_publication": true,
+      "synthetic_local_runner": true
     },
-    "note": "Two fresh auditors caught4/9 and5/9, each below8/9. Both worker sessions stopped; pending work preserved. Cleanup does not lift the hold.",
+    "note": "Existing accepted public contributions may pass normal release gates. No new Codex source-page reading or scientific audits until privacy clarification. Another failed blind test stops Track1.",
     "new_claims_allowed": false,
     "new_extraction_allowed": false,
-    "publication_allowed": false,
-    "workers_paused": true,
-    "resume_requires_owner_instruction": true,
-    "publication_scope": "Safe administrative memory and storage checkpoint only; no new website contributions."
+    "publication_allowed": true,
+    "workers_paused": false,
+    "workers_source_work_paused": true,
+    "publication_scope": "Already independently accepted public contributions; all source, build, browser and release gates remain."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -989,7 +989,8 @@
     "machine_later_full_audit_fraction": 0.1,
     "calibration_status": "NOT_SCORED",
     "development_claims_admitted": 0,
-    "historical_logs_preserved": true
+    "historical_logs_preserved": true,
+    "deep_auditors_per_sampled_paper": 2
   },
   "latest_verified_source_commit": "595e734739732b1cfc2c89d2cadbf68d2d0974ff",
   "historical_72_corrections": {
@@ -998,7 +999,7 @@
     "source_commit": "595e734739732b1cfc2c89d2cadbf68d2d0974ff",
     "site_commit": "ab52c80b663e9c1a7db9245c28ab531e6904a5b1"
   },
-  "audited_lane_start_condition": "New explicit owner instruction following the failed fresh blind retest; all scientific and release gates remain.",
+  "audited_lane_start_condition": "Owner explicitly resumed. New source-page processing awaits clarification of the no-paper-text-leaves-machine constraint; already accepted public integration is authorized.",
   "machine_lane_publish_enabled": false,
   "blind_test_result": {
     "status": "failed_preserved",
@@ -1163,5 +1164,51 @@
     "scoped_pages": 177,
     "historical_sampling_denominator_preserved": true,
     "report": "skills/mattersyn-paper-to-site/references/BLIND_RETEST_2026-10-08.md"
+  },
+  "historical_october8_second_resume_control": {
+    "status": "quality_hold_fresh_blind_retest_20261008_failed",
+    "recorded_at": "2026-10-08T19:39:20.418695+00:00",
+    "authorization": "Owner October8: fresh blind retest with two distinct auditors and existing failure stop; subsequent instruction authorizes disk cleanup and GitHub-first durable storage only.",
+    "supersedes_hold": "No curation resume authorized after this failed retest; storage work is independent.",
+    "continuation_status": "QUALITY_HOLD_REQUIRES_NEW_OWNER_INSTRUCTION",
+    "current_operational_status": {
+      "snapshot_at": "2026-10-08T19:39:20.418695+00:00",
+      "stage_flags": {
+        "extraction": false,
+        "paper_audit": false,
+        "integration": false,
+        "paper_publication": false,
+        "storage_cleanup": true
+      },
+      "note": "Two fresh auditors caught4/9 and5/9, each below8/9. Both worker sessions stopped; pending work preserved. Cleanup does not lift the hold.",
+      "new_claims_allowed": false,
+      "new_extraction_allowed": false,
+      "publication_allowed": false,
+      "workers_paused": true,
+      "resume_requires_owner_instruction": true,
+      "publication_scope": "Safe administrative memory and storage checkpoint only; no new website contributions."
+    },
+    "audited_lane_start_condition": "New explicit owner instruction following the failed fresh blind retest; all scientific and release gates remain."
+  },
+  "source_processing_constraint": {
+    "clarification_pending": true,
+    "new_codex_source_page_reads_allowed": false,
+    "external_api_source_processing_allowed": false,
+    "paper_file_transfer_allowed": false,
+    "existing_accepted_public_integration_allowed": true,
+    "synthetic_local_runner_allowed": true
+  },
+  "next_fresh_blind_retest": {
+    "status": "inputs_frozen_waiting_privacy_clarification",
+    "known_findings": 9,
+    "required_per_auditor": 8,
+    "fresh_auditors": 2,
+    "source_papers": 10,
+    "records": 233,
+    "original_input_files": 1802,
+    "changed_original_input_files": 0,
+    "checklist_changed": false,
+    "historical_results_preserved": true,
+    "union_is_pass": false
   }
 }

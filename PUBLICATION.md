@@ -1,3 +1,13 @@
+# October 8 latest owner resume — dual deep audits and another blind test
+
+The owner explicitly resumed Track 1 after the earlier failed retest and requested another test with fresh auditors. Keep the original 1/9 result and the later 4/9 and 5/9 results as historical failures; neither is the new test. The ten original-version papers, 233 records and 1,802 frozen input files are unchanged. The eight missed error types retain their targeted checks, and each sampled paper requires two distinct deep auditors, separate from the extractor and full source auditor. Preserve the October 7 sampled-record window and its original findings; do not restart its denominator. Another blind-test failure stops Track 1 and is reported.
+
+The owner's requirement that no paper text leave this machine needs clarification about existing Codex source-page audits versus entirely on-device processing. Until answered, new Codex source-page reading, extraction and scientific audits are paused. Metadata reconciliation, synthetic local-runner testing and integration/release of already accepted public contributions can proceed. Worker A and worker B received this boundary explicitly. No additional model download is needed: the one authorized Qwen3-32B Q4_K_M file is already downloaded and SHA verified. Its actual GPU fit and calibration remain pending; machine publication remains disabled.
+
+The accepted Yaman, Yang and Yu contributions are integrated in source but remain unpublished. Their successor browser check exposed a blocked external Google Fonts request. Remove the shared CSS font import and retain the existing fallback stacks and zero-failed-request browser gate; build and review a fresh candidate rather than reuse the failed verdict. The verified live baseline remains 231 papers and 2,965 records until deployment and anonymous verification succeed. Reviewed durable outputs belong in GitHub; use bounded local staging and keep original documents and private evidence local. Scheduled reports and reminders remain disabled.
+
+## Prior October 8 quality hold and cleanup — preserved history
+
 # October 8 current publication hold
 
 The fresh original-version blind retest failed: auditors A and B detected 4/9 and 5/9 known findings against an 8/9 minimum each. Track 1 and all paper publication are on hold pending the owner's next instruction. The three integrated new contributions remain unpublished; the live baseline is 231 contributing papers and 2,965 records. The Yu link repair passed exact-source CI, but the successor browser smoke test failed and must not be described as accepted. See the [result and defect checks](skills/mattersyn-paper-to-site/references/BLIND_RETEST_2026-10-08.md).

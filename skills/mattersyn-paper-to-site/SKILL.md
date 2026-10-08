@@ -11,7 +11,7 @@ MatterSyn website, without presenting an incomplete historical method as a compl
 For a focused edit, do only that edit. Don't rebuild the site, re-extract unchanged papers, or
 add records merely because this skill was invoked.
 
-Current October 8 state: Track 1 is on hold after the two fresh blind auditors found 4/9 and 5/9, below the required 8/9 each. Read MEMORY.md and the current curation control before new work; a new owner instruction is required to resume. Preserve historical findings and the sampling window. The owner authorized disk cleanup and GitHub-first durable storage during this hold; scheduled reminders remain off.
+Current October 8 state: the owner explicitly resumed Track 1 and requested another isolated blind test with fresh auditors. Preserve the historical failed results and sampling window; two different deep auditors are required for each sampled paper. A paper-text privacy clarification is pending: no new Codex source-page reading or scientific audits until answered. Already accepted public integration and synthetic local-runner testing may proceed. Read MEMORY.md and the current curation control before work. Follow the storage workflow; scheduled reminders remain off.
 
 ## Start here
 
