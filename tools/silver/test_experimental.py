@@ -16,6 +16,10 @@ def fixture():
     return dict(draft=draft,pages=pages,identity=identity,receipt=receipt,scope=scope,response=response,draft_sha256=dsha,pages_sha256=psha)
 
 class ExperimentalTests(unittest.TestCase):
+    def test_validator_dependency_pin_is_never_bypassed(self):
+        from unittest import mock
+        with mock.patch.object(E,'VALIDATOR_SHA','0'*64):
+            with self.assertRaisesRegex(ValueError,'Validator dependency changed'):E.project(**fixture())
     def updated(self,args):
         args['receipt']['claims']=len(args['draft']['claims'])
         args['response']['message']['content']=json.dumps({'claims':args['draft']['claims']})

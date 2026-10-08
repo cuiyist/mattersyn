@@ -5,7 +5,7 @@ import argparse,copy,hashlib,json,re
 import silver
 
 SCHEMA='mattersyn-experimental-silver/1'
-VALIDATOR_SHA='43ad5f3296f9ffdc9e3b12a55798b4e7c2613277b2442b1dafcb469b0bfabc2a'
+VALIDATOR_SHA='decd0d824db2361ea590696826bf7cee9f329dfc0e52432ca5607ca3b66ed3bc'
 def require(ok,message):
     if not ok:raise ValueError(message)
 def sha(raw):return hashlib.sha256(raw).hexdigest()

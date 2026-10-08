@@ -16,7 +16,8 @@ VERSION = "mattersyn-silver-monitor/1"
 BANDS = {"high": .98, "medium": .95, "low": .90}
 FIELDS = frozenset({"reaction_temperature", "duration", "precursor_amount", "solvent_volume",
                     "concentration", "particle_diameter", "core_diameter", "shell_thickness",
-                    "hydrodynamic_diameter", "crystallite_size", "phase", "morphology", "precursor_identity"})
+                    "hydrodynamic_diameter", "crystallite_size", "phase", "morphology", "precursor_identity",
+                    "composition", "product_statement"})
 ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.:-]{0,119}$")
 HASH = re.compile(r"^[0-9a-f]{64}$")
 COMMIT = re.compile(r"^(?:[0-9a-f]{40}|[0-9a-f]{64})$")

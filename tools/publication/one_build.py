@@ -290,6 +290,19 @@ def rows_map(rows):
     return result
 
 
+def inventory_difference(previous, current):
+    """Compare complete stable-byte inventories; grants no gate/check reuse."""
+    old, new = rows_map(previous), rows_map(current)
+    return {'schema': 'mattersyn-inventory-difference/1',
+            'previous_inventory_sha256': digest(json.dumps(previous, sort_keys=True, separators=(',', ':')).encode()),
+            'current_inventory_sha256': digest(json.dumps(current, sort_keys=True, separators=(',', ':')).encode()),
+            'added': sorted(set(new)-set(old)), 'removed': sorted(set(old)-set(new)),
+            'changed': sorted(name for name in set(old)&set(new) if old[name] != new[name]),
+            'unchanged': sorted(name for name in set(old)&set(new) if old[name] == new[name]),
+            'semantic_checks_reused': 0, 'boundary_checks_skipped': 0,
+            'scope': 'Diagnostic exact-byte difference only. Every existing full boundary, build, source-rights, browser, CI and anonymous verification gate remains required.'}
+
+
 def git(source, *args):
     return subprocess.check_output(['git', '-C', str(source), *args], env=run_env())
 

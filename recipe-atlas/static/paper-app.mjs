@@ -1,3 +1,4 @@
+import {renderPendingVariants} from './pending-variants.mjs';
 const $=id=>document.getElementById(id),id=new URLSearchParams(location.search).get('id');
 function node(tag,text,cls){const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e;}
 function link(text,url){const a=node('a',text);a.href=url;return a;}
@@ -5,6 +6,7 @@ try{if(!/^paper-[a-f0-9]+$/.test(id||''))throw Error('Select a paper from the so
  $('paper-review').textContent=p.fullDocumentReview?(p.fullDocumentReview.label||'Supplied-document review')+'. Experimental omissions remain explicit.':p.reviewStatus==='selected_recipes_reviewed'?'Selected recipes reviewed; full-paper coverage remains source-specific.':p.reviewStatus==='published_benchmark'?'Published experimental series; the parameter table does not supply complete preparation protocols.':'Indexed automatically. Detailed recipe and figure review is pending.';
  $('paper-title-status').textContent=p.titleVerifiedFromSelectedRecord?'Title checked against a reviewed source record.':'Bibliographic title candidate: '+(p.titleMetadata?.origin||'metadata')+'; '+(p.titleMetadata?.confidence||'unverified')+' confidence.';
  if(p.fullDocumentReview)$('paper-full-review').append(link('Open full review · '+p.fullDocumentReview.pages+' pages · '+p.fullDocumentReview.figures+' original figures →',p.fullDocumentReview.url));
+ renderPendingVariants($('paper-full-review'),p.pending_variants);
  const c=p.coverage;$('paper-coverage').textContent=`Local documents: ${c.localDocumentCount??'not in bulk snapshot'} · Main candidate: ${c.mainDocumentAvailable?'present':'not linked'} · SI candidate: ${c.supportingDocumentAvailable?'present':'not linked'}. Filename grouping is not proof of a matching supplement.`;
  $('paper-extraction').textContent=Object.entries(c.extractionStatusCounts||{}).map(([k,v])=>k.replaceAll('_',' ')+': '+v).join(' · ')+(c.mainSupportingExactDuplicate?' · Main/SI files include an exact-content duplicate.':'')+(c.documentRoleMismatchCount?' · '+c.documentRoleMismatchCount+' document(s) have a filename/heading role mismatch.':'');
  const host=$('paper-records');for(const rid of [...p.reviewedRecordIds,...p.benchmarkRecordIds]){const line=node('p','');line.append(link(rid,'records/'+rid+'.html'));host.append(line);}if(!host.children.length)host.append(node('p','No reviewed training record has been created for this paper yet.'));

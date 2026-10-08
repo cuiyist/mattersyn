@@ -39,6 +39,17 @@ def outcome(fn, root):
 
 
 class InventoryTests(unittest.TestCase):
+    def test_changed_inventory_is_exact_bytes_and_never_a_gate_exemption(self):
+        p=self.fresh();(p/'a').write_bytes(b'old');(p/'remove').write_bytes(b'r')
+        before=NEW.inventory(p);stamp=(p/'a').stat().st_mtime_ns
+        (p/'a').write_bytes(b'new');os.utime(p/'a',ns=(stamp,stamp))
+        (p/'remove').unlink();(p/'added').write_bytes(b'n')
+        report=NEW.inventory_difference(before,NEW.inventory(p))
+        self.assertEqual(report['changed'],['a']);self.assertEqual(report['added'],['added']);self.assertEqual(report['removed'],['remove'])
+        self.assertEqual(report['boundary_checks_skipped'],0);self.assertEqual(report['semantic_checks_reused'],0)
+        bad=[dict(before[0],path='../private')]
+        with self.assertRaises(NEW.Rejected):NEW.inventory_difference(bad,NEW.inventory(p))
+
     def setUp(self):
         temporary = tempfile.TemporaryDirectory(prefix='inventory-unit-')
         self.addCleanup(temporary.cleanup)

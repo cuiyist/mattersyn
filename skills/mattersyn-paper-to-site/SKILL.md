@@ -11,17 +11,23 @@ MatterSyn website, without presenting an incomplete historical method as a compl
 For a focused edit, do only that edit. Don't rebuild the site, re-extract unchanged papers, or
 add records merely because this skill was invoked.
 
+Latest owner instruction, October 8: repair PR #8 through normal generated file-list binding, merge after CI passes, and resume Track 1 despite the preserved failed blind test. Do not reset historical findings or the new sampling window. Machine publication remains subject to real heldout calibration; scheduled reminders stay off.
+
 ## Start here
 
-**Adding papers to the website:** run it step by step with [references/agent-runbook.md](references/agent-runbook.md)
-(commands, roles, failure handling). The rules behind it are in [references/workflow-v5.md](references/workflow-v5.md),
-the active full-independent-audit workflow. The owner resumed on 2026-10-02: every paper has
-one extractor and a different full source auditor; the quick audit is retired. Run `check_records.py`
-before each audit. A third agent deep-audits 25% of the first 40; only an acceptable ten-paper
-sample permits a reduction to 10%. Use actual per-session runtime capacity and the owner's approved
-[two-worker-task arrangement](references/multi-session-full-audit.md),
-QD-first queue, and six-ready-paper/three-hour release rule. Earlier workflow files and hold text
-are historical; see the index below.
+**Adding papers to the website:** the owner's October 7 instructions are active. Read
+[references/fasttrack-workflow-20261007.md](references/fasttrack-workflow-20261007.md)
+first, then use [references/agent-runbook.md](references/agent-runbook.md) for the existing
+commands and release mechanics. The fast-track reference replaces older pause, scope,
+sampling, stop and batch instructions. Core synthesis first; explicit pending variants;
+one extractor plus a different full source auditor after `check_records.py`, with a
+third distinct agent on a preregistered 50% sample. QDs first; admit new local arrivals
+after DOI deduplication and source screening. Three sessions share exclusive claims;
+this task alone integrates and publishes. Release ten ready papers or after two hours.
+The blind test, local-only drafting/calibration and website engineering proceed in
+parallel. Keep historical logs; use the new record-window stop rule. Machine publication
+requires the actual unchanged calibration and independent approval gates for every
+counter field; otherwise wait for the owner. Scheduled progress reports remain off.
 
 ## Rules that are never relaxed
 
@@ -44,7 +50,8 @@ are historical; see the index below.
 | Read | When |
 |---|---|
 | [agent-runbook.md](references/agent-runbook.md) | Operating the pipeline: every command, role and failure case |
-| [workflow-v5.md](references/workflow-v5.md) | Always, before adding papers |
+| [fasttrack-workflow-20261007.md](references/fasttrack-workflow-20261007.md) | Always, before adding papers; current owner scope, sampling and admission rules |
+| [workflow-v5.md](references/workflow-v5.md) | Historical mechanics where consistent with the October 7 owner instructions |
 | [standards.md](references/standards.md) | Extraction, page design, figures, validation and publication details |
 | [recipe-and-evidence.md](references/recipe-and-evidence.md) | Creating or changing experimental content |
 | [structure-descriptor-v0.2.md](references/structure-descriptor-v0.2.md) | Structure fields and pair counting |

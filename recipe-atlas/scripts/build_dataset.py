@@ -5,7 +5,7 @@ from pathlib import Path
 from collections import Counter
 from urllib.parse import urlsplit,parse_qsl
 from dataset_lib import ROOT,SCHEMA,validate_record,eligibility,build_groups,training_view,digest,chemical_signature,fmt
-from review_scope import source_review_scope
+from review_scope import source_review_scope, pending_variants, pending_variants_html
 
 DISPLAY=json.loads((ROOT/'data/measurement-display.json').read_text(encoding='utf-8'))
 PROTOCOL_TYPES={'literature_protocol','protocol_variant','experiment'}
@@ -97,6 +97,7 @@ def render_record(r,meta):
     rid=r['record_id'];src=r['sources'][0];e=meta['eligibility'];p='../'
     s=head(r['title'],p)+'<body data-record-id="'+rid+'">'+header(p)+'<main class="dataset-main record-main"><p class="academic-breadcrumb"><a href="../dataset.html">Synthesis records</a> / '+esc(r['material']['formula'])+' / '+esc(r['method'])+'</p><div class="dataset-heading"><div class="method-label">'+esc(r['method'].upper())+' · '+esc(r['material']['formula'])+'</div><h1>'+esc(r['title'])+'</h1><p>'+esc(src['title'])+'</p><p class="record-citation">'+esc(src['authors'])+' · '+str(src['year'])+' · <a href="'+esc(src['url'])+'" target="_blank" rel="noopener">'+esc(src['doi'])+' ↗</a></p></div>'
     s+='<div class="record-identity"><div><span>Record</span><strong>'+rid+'</strong></div><div><span>Evidence type</span><strong>'+esc(human(r['record_type']))+'</strong></div><div><span>Review</span><strong>'+esc(human(r['quality']['review_status']))+'</strong></div><a class="data-download" href="../data/records/'+rid+'.json" download>Download record JSON ↓</a></div><p class="source-scope">'+esc(r['quality']['review_scope'])+'</p>'
+    s+=pending_variants_html(meta)
     s+='<nav class="record-sections" aria-label="Record sections"><a href="#precursors">Precursors</a><a href="#protocol">Synthesis protocol</a><a href="#structures">Final structures</a><a href="#properties">Properties</a><a href="#intuition">Chemical intuition</a><a href="#evidence">Evidence & training</a></nav>'
     material_cards=[]
     for m in r['materials']:
@@ -163,6 +164,7 @@ def catalog_html(report,manifest,pair_rows=()):
 
 def main():
     records=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((ROOT/'data/records').glob('*.json'))]
+    source_scopes={p['source_group']:pending_variants(p) for p in json.loads((ROOT/'data/inventory-evidence.json').read_text(encoding='utf-8'))['per_paper']}
     errors=[e for r in records for e in validate_record(r)];ids=[r['record_id'] for r in records]
     if len(set(ids))!=len(ids):errors.append('Duplicate record IDs')
     for r in records:
@@ -180,6 +182,7 @@ def main():
     for r in records:
         rid=r['record_id'];ee=eligibility(r, structure_policy);meta={'record_id':rid,'title':r['title'],'formula':r['material']['formula'],'family':r['material']['family'],'method':r['method'],'record_type':r['record_type'],'source_year':r['sources'][0]['year'],'source_doi':r['sources'][0]['doi'],'revision':r['revision'],'record_sha256':digest(r),'recipe_signature':chemical_signature(r),'group_id':groups[rid],'split':assign[groups[rid]],'eligibility':ee,'record_url':'data/records/'+rid+'.json','page_url':'records/'+rid+'.html','missing_field_count':len(r['quality']['missing_fields'])};items.append(meta)
         meta['collection']=r.get('collection','reviewed_literature')
+        if source_scopes.get(r['lineage']['source_group']):meta['pending_variants']=source_scopes[r['lineage']['source_group']]
         meta['components']=r['material'].get('components',[r['material']['formula']])
         copy_verified_record(ROOT/'data/records'/(rid+'.json'),public/'records'/(rid+'.json'),r)
         (pages/(rid+'.html')).write_text(render_record(r,meta),encoding='utf-8',newline='\n')

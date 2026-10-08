@@ -1,9 +1,20 @@
 """Regression checks against silently promoting main-only reading to main + SI."""
 import unittest
-from review_scope import MAIN_ONLY, MAIN_SI, SI_ONLY, source_review_scope
+from review_scope import MAIN_ONLY, MAIN_SI, SI_ONLY, source_review_scope, pending_variants, pending_variants_html
 
 
 class ReviewScopeTests(unittest.TestCase):
+    def test_pending_variants_are_explicit_located_scope_metadata(self):
+        import copy
+        row={'id':'variant-b','label':'Synthetic <variant> B','source_locators':['Main PDF p.2, Table 1']}
+        scope={'pending_variants':[row]};before=copy.deepcopy(scope)
+        self.assertEqual(pending_variants(scope),[row]);self.assertEqual(scope,before)
+        self.assertIn('other variants pending',pending_variants_html(scope))
+        self.assertIn('&lt;variant&gt;',pending_variants_html(scope))
+        self.assertEqual(pending_variants({'remaining_gaps':['Variants not extracted']}),[])
+        for bad in [dict(row,source_locators=[]),dict(row,training_ready=True),dict(row,source_locators=['C:/private/source.pdf'])]:
+            with self.assertRaises(ValueError):pending_variants({'pending_variants':[bad]})
+
     def test_main_only_stays_si_unverified(self):
         result = source_review_scope({'review_scope':MAIN_ONLY,'documents':[{'role':'main'}]})
         self.assertEqual(result['review_status'],'main_only_reviewed')

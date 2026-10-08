@@ -27,6 +27,7 @@ FIELDS = {
     "crystallite_size": ("length", {"XRD"}),
     "phase": (None, {"XRD", "SAED", "electron diffraction"}),
     "morphology": (None, {"TEM", "SEM"}), "precursor_identity": (None, None),
+    "composition": (None, None), "product_statement": (None, None),
 }
 # unit -> dimension, canonical unit, multiplier, additive offset
 UNITS = {
