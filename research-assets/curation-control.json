@@ -1,8 +1,8 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "owner_resumed_track1_privacy_clarification_pending",
-  "recorded_at": "2026-10-08T21:02:16.385282+00:00",
-  "authorization": "Owner explicitly resumes Track1, requests two deep auditors per sampled paper and another fresh blind test. One larger model authorization already consumed; no duplicate download.",
+  "status": "owner_resumed_track1_full_audit_dual_deep",
+  "recorded_at": "2026-10-08T23:14:05.821136+00:00",
+  "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
   "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
   "paid_processing_allowed": false,
@@ -12,7 +12,7 @@
   "maximum_concurrent_agents_including_root": 4,
   "maximum_active_paper_claims": 2,
   "daily_report_time": null,
-  "stop_rule": "Retain the October7 sampled-record window: strictly more than 2 original S1/S2 findings per100 sampledrecords over the last500/allcurrentwindow, evaluated at100+records. Fresh blind retest failure additionally stops Track1; preserve historical results.",
+  "stop_rule": "Strictly more than 1 original adjudicated S1/S2 finding per100 sampledrecords over last500 or allcurrentwindow; evaluate at100+records. Third blind repeat is measurement-only and does not stop Track1.",
   "current_measurement_window": "fasttrack-20261007",
   "measurement_checkpoint_utc": null,
   "progress_report_interval_hours": null,
@@ -50,25 +50,24 @@
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
   "latest_publication_receipt": "Root-verified publication checkpoint; detailed evidence retained locally.",
-  "latest_verified_site_commit": "ab52c80b663e9c1a7db9245c28ab531e6904a5b1",
+  "latest_verified_site_commit": "1e9aa947f29e4b90d3582bbc8336ff1964bd7008",
   "latest_verified_totals": {
-    "records": 2965,
-    "contributing_papers": 231,
-    "reviewed_literature_papers": 230,
+    "records": 2968,
+    "contributing_papers": 234,
+    "reviewed_literature_papers": 233,
     "benchmark_source_groups": 1,
     "preliminary_papers": 0,
-    "direct_material_families": 237,
-    "material_hubs": 274,
-    "broad_recipe_structure_pairs": 845
+    "direct_material_families": 239,
+    "material_hubs": 276,
+    "broad_recipe_structure_pairs": 848
   },
   "latest_publication_event": {
     "event_kind": "batch",
-    "verified_at": "2026-10-07T00:01:32+00:00",
-    "site_commit": "99b70f76daee8e574f1d2d8069c1931dc5ddab16",
-    "event_ids": [
-      "peveler2016-cdse-zns-sensor-array-acsnano5b06433:batch18-live:99b70f76daee",
-      "ondry2021-2d-superlattices-acsnano0c07202:batch18-live:99b70f76daee"
-    ]
+    "verified_at": "2026-10-08T23:09:02+00:00",
+    "site_commit": "1e9aa947f29e4b90d3582bbc8336ff1964bd7008",
+    "new_papers": 3,
+    "new_records": 3,
+    "anonymous_changed_files_verified": 115
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -101,7 +100,7 @@
   },
   "continuation_automation": null,
   "continuation_interval_minutes": null,
-  "continuation_status": "ACTIVE_ACCEPTED_INTEGRATION_NEW_SOURCE_READS_WAIT_PRIVACY_CLARIFICATION",
+  "continuation_status": "ACTIVE_TRACK1_OWNER_RESUMED_SCHEDULED_REPORTS_DISABLED",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
@@ -1190,14 +1189,7 @@
     },
     "audited_lane_start_condition": "New explicit owner instruction following the failed fresh blind retest; all scientific and release gates remain."
   },
-  "source_processing_constraint": {
-    "clarification_pending": true,
-    "new_codex_source_page_reads_allowed": false,
-    "external_api_source_processing_allowed": false,
-    "paper_file_transfer_allowed": false,
-    "existing_accepted_public_integration_allowed": true,
-    "synthetic_local_runner_allowed": true
-  },
+  "source_processing_constraint": "Owner permits necessary scoped source-page images and short excerpts for Codex audits. Entire local-model source, prompt, output and truth lane remains on device; no full-source uploads.",
   "next_fresh_blind_retest": {
     "status": "inputs_frozen_waiting_privacy_clarification",
     "known_findings": 9,
@@ -1210,5 +1202,16 @@
     "checklist_changed": false,
     "historical_results_preserved": true,
     "union_is_pass": false
-  }
+  },
+  "deep_auditors_per_sampled_paper": 2,
+  "sampling_rate": 0.5,
+  "reactor_line_reference": "skills/mattersyn-paper-to-site/references/reactor-lines-20261008.md",
+  "reactor_line_scope": "New audited papers only; no backfill of published papers, frozen model schema change or counter change.",
+  "local_development_scope": {
+    "papers": 15,
+    "heldout_allowed": false,
+    "machine_publication_allowed": false,
+    "owner_report_review_required": true
+  },
+  "blind_repeat_status": "incomplete_measurement_only_historical_failed_results_retained"
 }

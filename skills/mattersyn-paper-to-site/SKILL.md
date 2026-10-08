@@ -13,6 +13,8 @@ add records merely because this skill was invoked.
 
 Current October 8 state: the owner explicitly resumed Track 1 and requested another isolated blind test with fresh auditors. Preserve the historical failed results and sampling window; two different deep auditors are required for each sampled paper. A paper-text privacy clarification is pending: no new Codex source-page reading or scientific audits until answered. Already accepted public integration and synthetic local-runner testing may proceed. Read MEMORY.md and the current curation control before work. Follow the storage workflow; scheduled reminders remain off.
 
+Latest owner amendment, October 8: third blind repeat is measurement-only; Track 1 uses two independent deep auditors on its 50% sample and the same October 7 record window, stopping strictly above one original S1/S2 finding per 100 sampled records after 100 records. New audited papers follow references/reactor-lines-20261008.md without changing schema or frozen local-model prompts. Local model work is limited to the frozen 15 development papers; no heldout inference or machine publication before the owner has seen the report and authorizes a later scope. Earlier conflicting instructions remain historical.
+
 ## Start here
 
 Read [references/storage-workflow.md](references/storage-workflow.md) before creating working copies. GitHub holds reviewed durable outputs; retain only necessary working checkouts and private essentials locally, reuse bounded staging, and retire verified obsolete generated payloads. Preserve papers, owner folders, unique evidence and pending work.

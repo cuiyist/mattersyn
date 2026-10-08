@@ -22,8 +22,15 @@ class RecordWindowTests(unittest.TestCase):
     def test_no_evaluation_below_100_and_strict_threshold(self):
         report = m.monitor([event(1, 99, 3)], 'resume')
         self.assertFalse(report['evaluated']); self.assertFalse(report['stop_required'])
-        self.assertFalse(m.monitor([event(1, 100, 2)], 'resume')['stop_required'])
-        self.assertTrue(m.monitor([event(1, 100, 3)], 'resume')['stop_required'])
+        boundary = m.monitor([event(1, 100, 1)], 'resume')
+        self.assertTrue(boundary['evaluated'])
+        self.assertEqual(boundary['threshold_per_100'], 1)
+        self.assertFalse(boundary['stop_required'])
+        self.assertTrue(m.monitor([event(1, 100, 2)], 'resume')['stop_required'])
+
+    def test_strict_threshold_scales_with_record_denominator(self):
+        self.assertFalse(m.monitor([event(1, 200, 2)], 'resume')['stop_required'])
+        self.assertTrue(m.monitor([event(1, 200, 3)], 'resume')['stop_required'])
 
     def test_empty_is_unmeasured_not_zero_error(self):
         report = m.monitor([], 'resume')

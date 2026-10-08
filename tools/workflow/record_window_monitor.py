@@ -11,7 +11,7 @@ SCHEMA = 'mattersyn-record-window-monitor/1'
 HASH = re.compile(r'^[a-f0-9]{64}$')
 WINDOW_SIZE = 500
 MIN_RECORDS = 100
-THRESHOLD_PER_100 = 2
+THRESHOLD_PER_100 = 1
 
 
 def require(condition, message):
