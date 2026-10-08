@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 2965,
-  "group_count": 231,
+  "record_count": 2968,
+  "group_count": 234,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -75,6 +75,7 @@
     "CdSe nanocrystal synthesis and surface-reaction chemistry",
     "CdSe nanocrystals",
     "CdSe quantum dots",
+    "CdSe quantum-dot-sensitized titania films",
     "CdSe/CdS quantum dots and electron-acceptor complexes",
     "CdSe/CdS quantum-dot–poly(ionic liquid) composite",
     "CdSe/CdS/PbS cation-exchange heterostructures",
@@ -239,6 +240,7 @@
     "Surface-functionalized II–VI quantum dots",
     "Surface-functionalized semiconductor nanocrystals",
     "Surface-oxidized silicon colloids",
+    "Suspensible cubic-phase CdS nanocrystals",
     "TBAI-only device architecture comparison",
     "Ternary alloyed zinc chalcogenide MSC series",
     "Ternary alloyed zinc chalcogenide conversion",
@@ -300,6 +302,7 @@
     "molecular precursor reference context",
     "nickel sulfide nanocrystals",
     "optical and calculated reference contexts",
+    "perovskite/lead-sulfide quantum-dot heterostructures",
     "phosphonic-acid ligand reference",
     "polyol silver nanocrystal rods and nanohexapods",
     "quantum-dot coated gold nanosphere",
@@ -210167,6 +210170,222 @@
         "CdSe/ZnS"
       ],
       "pair_ids": []
+    },
+    {
+      "record_id": "yaman2017-cdse-silica-p25-acsomega7b00839-primary-silica-route",
+      "title": "Yaman et al. (2017): CdSe–silica sensitization of mesoporous P25, primary 5 mL route",
+      "formula": "CdSe–SiO2–TiO2",
+      "family": "CdSe quantum-dot-sensitized titania films",
+      "method": "Molten-salt-assisted self-assembly followed by gas conversion",
+      "record_type": "literature_protocol",
+      "source_year": 2017,
+      "source_doi": "10.1021/acsomega.7b00839",
+      "revision": 2,
+      "record_sha256": "cd2d583474f9b00b25f3252facc4b64f3a9e6ee416aefa0e6017a653cd0c5e17",
+      "recipe_signature": "dd2b7e3a5dafb475e7ece0398d122396d4f19fe03a8e6ee42c6fcbfabfcb0062",
+      "group_id": "group-ec76869932ea",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yaman2017-cdse-silica-p25-acsomega7b00839-primary-silica-route.json",
+      "page_url": "records/yaman2017-cdse-silica-p25-acsomega7b00839-primary-silica-route.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe–SiO2–TiO2"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "yang2023-cspbbr3-pbs-acsphotonics3c01099-pb-s-1-1",
+      "title": "Yang et al.(2023): room-temperature CsPbBr3-PbS heterostructure, Pb/S1:1 core route",
+      "formula": "CsPbBr3-PbS",
+      "family": "perovskite/lead-sulfide quantum-dot heterostructures",
+      "method": "Room-temperature in-situ sulfur treatment of amine-free CsPbBr3 QDs",
+      "record_type": "literature_protocol",
+      "source_year": 2023,
+      "source_doi": "10.1021/acsphotonics.3c01099",
+      "revision": 2,
+      "record_sha256": "f0751565617381ccb3f30acdd1888b89589cc41e122d52d3439a43d9bb6591ed",
+      "recipe_signature": "6332186a6d11c828220bf7eb8c968cd8743454d274ce233aa591068922abdc39",
+      "group_id": "group-d7fb85426b1b",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2023-cspbbr3-pbs-acsphotonics3c01099-pb-s-1-1.json",
+      "page_url": "records/yang2023-cspbbr3-pbs-acsphotonics3c01099-pb-s-1-1.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CsPbBr3",
+        "PbS"
+      ],
+      "pair_ids": [
+        "yang2023-cspbbr3-pbs-acsphotonics3c01099-pb-s-1-1::yang2023-cspbbr3-pbs-acsphotonics3c01099-pb-s-1-1--figure1cd-specimen"
+      ]
+    },
+    {
+      "record_id": "yu2018-cds-nanocrystals-acssuschemeng8b00398-core",
+      "title": "Yu et al. (2018): suspensible cubic CdS nanocrystals",
+      "formula": "CdS",
+      "family": "Suspensible cubic-phase CdS nanocrystals",
+      "method": "Aqueous precipitation in sulfur-rich Na2S/Na2SO3 solution",
+      "record_type": "literature_protocol",
+      "source_year": 2018,
+      "source_doi": "10.1021/acssuschemeng.8b00398",
+      "revision": 1,
+      "record_sha256": "416898c4037a137748c21ae9abc8dbade79c87228f51a0d7af22e2c056be2714",
+      "recipe_signature": "8e988ab03249280e5b86f99881a839c9527d68cf1108bede3cae00734fbffe9f",
+      "group_id": "group-014635607490",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": true,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": true,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yu2018-cds-nanocrystals-acssuschemeng8b00398-core.json",
+      "page_url": "records/yu2018-cds-nanocrystals-acssuschemeng8b00398-core.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS"
+      ],
+      "pair_ids": [
+        "yu2018-cds-nanocrystals-acssuschemeng8b00398-core::yu2018-cds-nanocrystals-acssuschemeng8b00398-core-characterization-isolate",
+        "yu2018-cds-nanocrystals-acssuschemeng8b00398-core::yu2018-cds-nanocrystals-acssuschemeng8b00398-core-suspension"
+      ]
     }
   ]
 }
