@@ -26,3 +26,12 @@ export function figureMatchesCategory(figure,category){
  const categories=[figure.category,...(Array.isArray(figure.categories)?figure.categories:[])].map(normalize);
  return categories.includes(wanted)||(wanted==='structure'&&categories.includes('composition'));
 }
+
+// Select only from the current record's published figure objects. Categories and
+// specimen bindings stay unchanged; this gallery does not classify measurements.
+export function sourceFigureRows(figures,unplacedOnly=false){
+ const rows=Array.isArray(figures)?figures:[],key=f=>JSON.stringify([f.source_id||'',f.id]);
+ const placed=new Set(unplacedOnly?rows.filter(f=>['structure','property','precursor'].some(category=>figureMatchesCategory(f,category))).map(key):[]);
+ const unique=new Map();for(const f of rows)if(!placed.has(key(f)))unique.set(key(f),f);
+ return [...unique.values()];
+}

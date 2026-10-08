@@ -55,6 +55,8 @@ jobs:
         run: node --test recipe-atlas/tests/yu1998-scene-scope.test.mjs
       - name: Test reader specimen and figure isolation
         run: node --test recipe-atlas/tests/reader-revision.test.mjs
+      - name: Test reviewed source figure access
+        run: node --test recipe-atlas/tests/reader-source-figures.test.mjs recipe-atlas/tests/reader-figure-category.test.mjs
       - name: Test separate silver cards and field masking
         run: node --test recipe-atlas/tests/silver-reader.test.mjs
       - name: Test explicit pending-variant scope notices
