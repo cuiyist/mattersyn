@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {BADGE, prepareCatalog, renderCatalog, safeHttpsUrl, mountSilverReader} from '../static/silver-reader.mjs';
+import {BADGE, prepareCatalog, renderCatalog, safeHttpsUrl, mountSilverReader, qualifiedMachinePaperDois} from '../static/silver-reader.mjs';
 
 // Entirely synthetic software fixtures. None are source evidence or measured calibration results.
 const HASH = 'a'.repeat(64);
@@ -30,6 +30,35 @@ function catalog(entries = [entry()]) {
     report_url:'https://example.org/report', calibrations:[{calibration_sha256:HASH,
       independently_reviewed:true, metrics:[metric()]}]};
 }
+
+function coreCatalog() {
+  const fields = [['composition','composition','ZnO',null],['reaction_temperature','temperature',270,'°C'],
+    ['duration','duration',30,'min'],['product_statement','product','ZnO nanocrystals',null],
+    ['precursor_identity','precursor','Zinc acetate',null],['precursor_amount','precursor',1,'mmol']]
+    .map(([name,slot_id,value,unit])=>field({field:name,slot_id,value,unit}));
+  const data=catalog([entry({fields})]);data.entries[0].source.url='https://doi.org/10.9999/SYNTHETIC-A';
+  data.calibrations[0].metrics=fields.map(row=>metric(row.field));return data;
+}
+
+test('machine paper counter requires every core field, bound precursor amount and unique unmasked primary DOI',()=>{
+  const data=coreCatalog();const view=prepareCatalog(data);
+  assert.deepEqual(qualifiedMachinePaperDois(view),['10.9999/synthetic-a']);
+  assert.deepEqual(qualifiedMachinePaperDois(view,{excludedPrimaryDois:['10.9999/SYNTHETIC-A']}),[]);
+  const duplicate=structuredClone(data.entries[0]);duplicate.candidate.source_id='another-identity-same-paper';
+  data.entries.push(duplicate);assert.equal(qualifiedMachinePaperDois(prepareCatalog(data)).length,1);
+  for(const name of ['composition','reaction_temperature','duration','product_statement','precursor_identity','precursor_amount']) {
+    const masked=coreCatalog();masked.entries[0].candidate.fields.find(row=>row.field===name).training_masked=true;
+    assert.deepEqual(qualifiedMachinePaperDois(prepareCatalog(masked)),[],name+' must be unmasked');
+  }
+  const unbound=coreCatalog();unbound.entries[0].candidate.fields.find(row=>row.field==='precursor_amount').slot_id='unrelated';
+  assert.deepEqual(qualifiedMachinePaperDois(prepareCatalog(unbound)),[]);
+  const invalid=coreCatalog();invalid.entries[0].source.url='https://doi.org/10.9999/%INVALID';
+  assert.deepEqual(qualifiedMachinePaperDois(prepareCatalog(invalid)),[]);
+  const noDoi=coreCatalog();noDoi.entries[0].source.url='https://example.org/paper';
+  assert.deepEqual(qualifiedMachinePaperDois(prepareCatalog(noDoi)),[]);
+  const mixedSamples=coreCatalog();mixedSamples.entries[0].candidate.fields[0].sample_id='different-sample';
+  assert.deepEqual(qualifiedMachinePaperDois(prepareCatalog(mixedSamples)),[]);
+});
 
 class Node {
   constructor(tag, doc) { this.tagName = tag; this.ownerDocument = doc; this.children = []; this._text = ''; }

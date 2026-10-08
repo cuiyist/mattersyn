@@ -6,6 +6,40 @@ MAIN_ONLY = 'supplied_main_only_si_unverified'
 SI_ONLY = 'supplied_si_only_main_unverified'
 
 
+def pending_variants(scope):
+    """Explicit public coverage metadata; never infer pending recipes from gaps."""
+    import re
+    rows = scope.get('pending_variants', [])
+    if not isinstance(rows, list):
+        raise ValueError('pending_variants must be a list')
+    seen, result = set(), []
+    private = re.compile(r'[A-Za-z]:[\\/]|file:|\\\\|/(?:Users|home|tmp|research-assets)/', re.I)
+    def text(value, maximum):
+        return isinstance(value, str) and bool(value.strip()) and len(value) <= maximum and not private.search(value) and not any(ord(c) < 32 for c in value)
+    for row in rows:
+        if not isinstance(row, dict) or set(row) != {'id', 'label', 'source_locators'}:
+            raise ValueError('pending variant keys must be id, label and source_locators')
+        locators = row['source_locators']
+        if (not text(row['id'], 120) or not text(row['label'], 600) or row['id'] in seen
+                or not isinstance(locators, list) or not locators or len(locators) > 32
+                or not all(text(locator, 600) for locator in locators) or len(set(locators)) != len(locators)):
+            raise ValueError('pending variant needs a unique identity, label and explicit public source locators')
+        seen.add(row['id'])
+        result.append({'id': row['id'], 'label': row['label'], 'source_locators': list(locators)})
+    return result
+
+
+def pending_variants_html(scope):
+    from html import escape
+    rows = pending_variants(scope)
+    if not rows:
+        return ''
+    return ('<aside class="record-notice pending-variants"><strong>Core synthesis scope · other variants pending</strong>'
+            '<p>Only the published core scope is covered by the linked audit. Pending variants have not been independently audited or included in training.</p><ul>'
+            + ''.join('<li>' + escape(row['label']) + '<small>Source: ' + escape('; '.join(row['source_locators'])) + '</small></li>' for row in rows)
+            + '</ul></aside>')
+
+
 def source_review_scope(review):
     scope = review.get('review_scope')
     roles = {doc['role'] for doc in review['documents']}

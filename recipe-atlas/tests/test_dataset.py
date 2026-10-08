@@ -15,6 +15,25 @@ from build_dataset import render_record, record_href
 
 
 class RecordNavigationTests(unittest.TestCase):
+    def test_machine_collections_cannot_spoof_audited_training(self):
+        for collection in ('machine_extracted','silver','experimental_silver','unknown'):
+            r=fixture();r['collection']=collection;r['quality']['review_status']='source_reviewed'
+            self.assertTrue(all(not cell['eligible'] for cell in eligibility(r).values()))
+            for task in eligibility(r):
+                with self.assertRaisesRegex(ValueError,'not eligible'):training_view(r,task)
+
+    def test_missing_collection_does_not_imply_audited_training(self):
+        r=fixture();r.pop('collection')
+        self.assertTrue(all(not cell['eligible'] for cell in eligibility(r).values()))
+
+    def test_explicit_pending_scope_is_visible_on_record_without_promoting_review(self):
+        r=fixture();before=copy.deepcopy(r)
+        meta={'eligibility':eligibility(r),'group_id':'synthetic','split':'development','record_sha256':'fixture',
+              'pending_variants':[{'id':'variant-b','label':'Synthetic pending variant B','source_locators':['Main PDF p.2, Table 1']}]}
+        page=render_record(r,meta)
+        self.assertIn('Core synthesis scope · other variants pending',page)
+        self.assertIn('Main PDF p.2, Table 1',page);self.assertEqual(r,before)
+
     def test_atlas_paths_resolve_from_nested_record_pages(self):
         for target in ['records/precursor.html', 'assets/structure.json', 'data/records/source.json']:
             self.assertEqual('../'+target, record_href(target))
@@ -27,6 +46,7 @@ def fixture(record_id='test-a'):
     src = source('synthetic-source', '10.0000/synthetic-test', 'Synthetic unit-test fixture', 'Test fixture', 2000)
     evidence = ev(src['id'], 'Synthetic fixture, protocol and sample A')
     r = record(record_id, 'Synthetic fixture', 'ZnO', 'test', 'aqueous synthesis', src, 'Synthetic fixture')
+    r['collection']='reviewed_literature'  # Explicit synthetic collection; never inferred by admission.
     r['quality']['experimental_outcome'] = 'reported_product'
     r['quality']['missing_fields'] = ['No exact sample coordinates']
     r['materials'] = [

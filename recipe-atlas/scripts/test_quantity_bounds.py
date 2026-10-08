@@ -6,6 +6,7 @@ from dataset_lib import validate_record,fmt,training_view,chemical_signature
 class QuantityBounds(unittest.TestCase):
  def make(self,q):
   r=record('bounds-test','Bound test','CdSe','test','test',source('s','10.0/test','test','test',2000),'p1')
+  r['collection']='reviewed_literature'  # Explicit synthetic scope required by training admission.
   r['schema_version']='1.3.0';r['operations']=[operation('inject','inject','Inject',ev('s','p1'),[],[],parameters={'duration':q})]
   return r
  def test_strict_upper_bound_roundtrip(self):

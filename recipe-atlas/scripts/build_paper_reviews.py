@@ -1,7 +1,7 @@
 """Publish reviewed coverage ledgers without private source paths or full-text caches."""
 import json, hashlib, re, shutil
 from pathlib import Path
-from review_scope import source_review_scope, reviewed_page_count, MAIN_SELECTED_SI
+from review_scope import source_review_scope, reviewed_page_count, MAIN_SELECTED_SI, pending_variants
 from asset_display import display_view
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/paper-reviews'
@@ -79,6 +79,8 @@ def declared_review_assets(c, errors):
 
 def validate(c):
     errors=[]
+    try:pending_variants(c)
+    except ValueError as exc:errors.append(str(exc))
     chars=c.get('characterization_inventory',[])
     if isinstance(chars,dict):
         ids={x['id'] for s in c.get('reader_sections',[]) for x in s.get('items',[])}

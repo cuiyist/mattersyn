@@ -1,7 +1,7 @@
 """Aggregate source-level reader hubs; never promote indexed papers to training records."""
 import json,re,hashlib
 from pathlib import Path
-from review_scope import source_review_scope, reviewed_page_count
+from review_scope import source_review_scope, reviewed_page_count, pending_variants
 ROOT=Path(__file__).resolve().parents[1]
 SYMBOLS=set('H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe Cs Ba La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn Fr Ra Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og'.split())
 NAMES={'CdSe/ZnS':'Cadmium selenide / zinc sulfide core/shell','ZnS':'Zinc sulfide · shell-component context','CdSe/ZnSe':'Cadmium selenide / zinc selenide · coated dots and composite films','Si/SiOx':'Surface-oxidized silicon nanocrystal colloids','Si':'Silicon · cores and substrates','Ge/Si':'Germanium quantum dots on silicon','Ge':'Germanium in supported quantum-dot arrays','SiOx':'Silicon oxide surface layer · stoichiometry unresolved','CdSe':'Cadmium selenide','CdS':'Cadmium sulfide','CoFe2O4':'Cobalt ferrite','CoO':'Cobalt(II) oxide','CoO/CoFe2O4':'Cobalt oxide / cobalt ferrite core–shell','ZnO':'Zinc oxide','InP':'Indium phosphide','CsPbBr3':'Caesium lead bromide','PbS':'Lead sulfide','CdSe/CdS':'Cadmium selenide / cadmium sulfide core/shell','Ir':'Iridium','Fe–O':'Iron oxide · phase and stoichiometry unresolved','Fe3O4':'Magnetite','Fe2O3':'Iron(III) oxide'}
@@ -105,6 +105,8 @@ def main():
     source=ROOT/'data/corpus/library-source.json'
     corpus=read(source) if source.exists() else {'summary':{},'papers':[]}
     records=[read(p) for p in sorted((ROOT/'data/records').glob('*.json'))]
+    scope_by_source={p['source_group']:p for p in read(ROOT/'data/inventory-evidence.json')['per_paper']}
+    pending_by_doi={p['doi'].lower():pending_variants(p) for p in scope_by_source.values()}
     direct_elements=direct_material_element_index(records)
     full_reviews={c['doi'].lower():c for c in [read(p) for p in (ROOT/'data/paper-reviews').glob('*.json')]}
     papers={p['doi'].lower():p for p in corpus['papers'] if p.get('doi') and p['coverage']['localDocumentCount']>0}
@@ -138,6 +140,8 @@ def main():
         p['reviewedRecordIds']=list(dict.fromkeys(p.get('reviewedRecordIds',[])));p['benchmarkRecordIds']=list(dict.fromkeys(p.get('benchmarkRecordIds',[])))
         p['reviewStatus']='selected_recipes_reviewed' if p['reviewedRecordIds'] else 'published_benchmark' if p['benchmarkRecordIds'] else 'indexed_awaiting_review'
         review=full_reviews.get(doi)
+        pending=pending_variants(review) if review and 'pending_variants' in review else pending_by_doi.get(doi,[])
+        if pending:p['pending_variants']=pending
         p['fullDocumentReview']=None
         if review:
             scope=source_review_scope(review)
@@ -152,6 +156,7 @@ def main():
         p['candidateMaterialMentions']=sorted({x['formula'] for x in p.get('materialTitleMentions',[])})
         write(ROOT/'dist/data/papers'/(p['id']+'.json'),p)
         library.append({k:p.get(k) for k in ['id','doi','doiUrl','title','year','coverage','materials','candidateMaterialMentions','reviewStatus','reviewedRecordIds','benchmarkRecordIds','titleMetadata','fullDocumentReview']})
+        if p.get('pending_variants'):library[-1]['pending_variants']=p['pending_variants']
     index=[]
     for f,m in materials.items():
         def reader_order(rid):
@@ -175,6 +180,8 @@ def main():
             contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
         m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
+        for row in m['records']:
+            if papers[row['doi'].lower()].get('pending_variants'):row['pending_variants']=papers[row['doi'].lower()]['pending_variants']
         m['experimental_series']=[{'record_id':r['record_id'],'title':r['title'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','scope':'Published recipe parameters and optical outcomes; row-specific particle structure and complete preparation are not supplied.'} for r in records if r['collection']=='published_benchmark' and r['material']['formula']==f]
         # Supporting evidence is explicitly curated per material, never inferred
         # from a paper title or promoted into a synthesis route.

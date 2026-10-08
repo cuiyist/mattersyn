@@ -116,6 +116,9 @@ def synthesis_precursors(r):
     return [m for m in r['materials'] if m['role'] in roles and m['stage']=='synthesis']
 
 def eligibility(r, structure_policy=None):
+    if r.get('collection') not in ('reviewed_literature', 'published_benchmark'):
+        return {task:{'eligible':False,'reason':'Machine-extracted or unknown collections require separate admission and never enter audited training exports.'}
+                for task in ('precursor_selection','partial_protocol','size_conditioned_recipe','success_prediction','optical_outcome','exact_structure_recipe')}
     reviewed=r['quality']['review_status']=='source_reviewed';duplicate=r['lineage']['duplicate_of'] is not None
     precursors=synthesis_precursors(r)
     explicit={p['sample_id'] for p in r['products'] if p['recipe_link']=='explicit'}

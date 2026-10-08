@@ -106,6 +106,25 @@ class NetworkTests(unittest.TestCase):
             result = self.live(dist, served)
             self.assertFalse(result['passed']); self.assertEqual(result['mismatched_files'], ['a.html'])
 
+    def test_changed_files_are_mandatory_beyond_existing_global_sample(self):
+        with tempfile.TemporaryDirectory() as t:
+            dist=Path(t);snap=json.dumps({'source_commit':'c'*40}).encode()
+            write(dist,'data/release-snapshot.json',snap);write(dist,'index.html','home')
+            write(dist,'data/dataset-manifest.json','{}');write(dist,'styles.css','new')
+            served={name:path.read_bytes() for name,path in rb.tree_files(dist).items()}
+            def opener(req,timeout):
+                return FakeResponse(served[req.full_url.split('/site/',1)[1].split('?',1)[0]])
+            args={'sample':0,'timeout_s':0,'opener':opener,'sleep':lambda _:None,'changed_paths':['styles.css']}
+            report=rb.verify_live('https://example.test/site/',dist,'c'*40,**args)
+            self.assertTrue(report['passed']);self.assertEqual(report['checked_changed_files'],['styles.css'])
+            self.assertEqual(report['checked_files'],4) # all global files retained even sample=0
+            served['styles.css']=b'old'
+            report=rb.verify_live('https://example.test/site/',dist,'c'*40,**args)
+            self.assertFalse(report['passed']);self.assertIn('styles.css',report['mismatched_files'])
+            for invalid in [['../private'],['missing'],['styles.css','styles.css']]:
+                args['changed_paths']=invalid
+                self.assertFalse(rb.verify_live('https://example.test/site/',dist,'c'*40,**args)['passed'])
+
     def test_live_check_times_out_on_old_snapshot(self):
         with tempfile.TemporaryDirectory() as t:
             dist = Path(t); write(dist, 'index.html', 'home')

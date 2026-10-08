@@ -18,14 +18,31 @@ def composite(rid='composite'):
     return record(rid,'CdTe/Mg-Al-LDH',['Cd','Te','Mg','Al','O','H','N'],['CdTe','Mg-Al-LDH'])
 
 class ComponentElementResolution(unittest.TestCase):
-    def capture(self,records):
+    def capture(self,records,pending=None):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);folder=root/'data/records';folder.mkdir(parents=True)
+            scope={'source_group':'fixture-source','doi':'10.fixture/component'}
+            if pending is not None:scope['pending_variants']=pending
+            (root/'data/inventory-evidence.json').write_text(json.dumps({'per_paper':[scope]}),encoding='utf-8')
             for r in records:(folder/(r['record_id']+'.json')).write_text(json.dumps(r),encoding='utf-8')
             outputs={}
             with patch.object(build_atlas,'ROOT',root),patch.object(build_atlas,'write',lambda p,v:outputs.__setitem__(p.name,copy.deepcopy(v))),contextlib.redirect_stdout(io.StringIO()):
                 build_atlas.main()
             return outputs
+
+    def test_pending_scope_propagates_without_promoting_a_formal_paper_review(self):
+        records=[host()];before=copy.deepcopy(records)
+        pending=[{'id':'variant-b','label':'Additional variant B','source_locators':['Main PDF p.2, Table 1']}]
+        outputs=self.capture(records,pending)
+        paper=outputs['library-index.json']['papers'][0]
+        method=outputs[build_atlas.slug('Mg-Al-LDH')+'.json']['records'][0]
+        self.assertEqual(pending,paper['pending_variants']);self.assertEqual(pending,method['pending_variants'])
+        self.assertIsNone(paper['fullDocumentReview']);self.assertEqual('selected_recipes_reviewed',paper['reviewStatus'])
+        self.assertEqual(records,before)
+
+    def test_pending_scope_without_locators_fails_before_atlas_publication(self):
+        with self.assertRaisesRegex(ValueError,'explicit public source locators'):
+            self.capture([host()],[{'id':'variant-b','label':'Additional variant B','source_locators':[]}])
 
     def test_two_dong_composite_memberships_resolve(self):
         records=[host('nitrate-ldh'),composite('qd-dbs-ldh'),composite('qd-no3-ldh')]

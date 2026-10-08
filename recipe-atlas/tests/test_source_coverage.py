@@ -46,10 +46,17 @@ class SourceCoverageTests(unittest.TestCase):
     def test_empty_regular_collection_is_zero(self):
         self.assertEqual(0, source_coverage([])['total_contributing_papers'])
 
+    def test_machine_sources_cannot_inflate_audited_count(self):
+        row=record();row['collection']='machine_extracted'
+        with self.assertRaisesRegex(ValueError,'cannot contribute'):source_coverage([row])
+
     def test_collection_cards_explain_paper_level_count(self):
         collection = collection_summary([record()], [], [])
         page = collection_metrics_html(collection)
-        self.assertIn('<strong>1</strong><span>Contributing papers</span>', page)
+        self.assertIn('1 + <b data-machine-papers>0</b>', page)
+        self.assertIn('Audited + machine-extracted papers',page)
+        self.assertIn('do not imply an independently audited complete paper', page)
+        self.assertEqual(['10.9999/paper-a'],collection['source_coverage']['audited_primary_dois'])
         self.assertNotIn('preliminary', page.lower())
         self.assertIn('Each contributing primary paper counts once', page)
 

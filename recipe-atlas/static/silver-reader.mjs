@@ -5,8 +5,8 @@ const CANDIDATE_SCHEMA = 'mattersyn-silver/0.1/public-candidate';
 const THRESHOLDS = {high: .98, medium: .95, low: .90};
 const FIELDS = new Set(['reaction_temperature', 'duration', 'precursor_amount', 'solvent_volume',
   'concentration', 'particle_diameter', 'core_diameter', 'shell_thickness', 'hydrodynamic_diameter',
-  'crystallite_size', 'phase', 'morphology', 'precursor_identity']);
-const TEXT_FIELDS = new Set(['phase', 'morphology', 'precursor_identity']);
+  'crystallite_size', 'phase', 'morphology', 'precursor_identity', 'composition', 'product_statement']);
+const TEXT_FIELDS = new Set(['phase', 'morphology', 'precursor_identity', 'composition', 'product_statement']);
 const HASH = /^[a-f0-9]{64}$/;
 const PRIVATE_PATH = /(?:(?<![A-Za-z])[A-Za-z]:[\\/]|\\\\|file:\/\/|\/Users\/|\/home\/|\/tmp\/)/i;
 const DEPENDENCE = 'Field-instance bounds assume independent instances. Variants and supporting information from one paper can be correlated. The source-cluster bound is a sensitivity check, not a dependence-adjusted accuracy guarantee.';
@@ -14,6 +14,34 @@ const clean = (value, max = 500) => typeof value === 'string' && value.length > 
 const human = value => value.replaceAll('_', ' ');
 const probability = value => Number.isFinite(value) && value >= 0 && value <= 1;
 const count = value => Number.isSafeInteger(value) && value >= 0;
+
+function primaryDoi(source) {
+  let doi = source?.doi;
+  if (doi === undefined) {
+    const url = safeHttpsUrl(source?.url);
+    if (url) {
+      const parsed = new URL(url);
+      if (['doi.org', 'dx.doi.org'].includes(parsed.hostname)) {
+        try {doi = decodeURIComponent(parsed.pathname.slice(1));} catch {return null;}
+      }
+    }
+  }
+  return typeof doi === 'string' && /^10\.\d{4,9}\/[^\s?#]+$/i.test(doi) ? doi.toLowerCase() : null;
+}
+
+export function qualifiedMachinePaperDois(view, {excludedPrimaryDois = []} = {}) {
+  const excluded = new Set(excludedPrimaryDois.map(doi => primaryDoi({doi})).filter(Boolean));
+  const qualified = new Set();
+  for (const record of view?.records || []) {
+    if (!record.primary_doi || excluded.has(record.primary_doi)) continue;
+    const fields = record.fields.filter(field => field.training_masked === false && field.state === 'accepted_auto_checked');
+    const core = ['composition', 'reaction_temperature', 'duration', 'product_statement'];
+    const boundPrecursor = fields.some(identity => identity.field === 'precursor_identity'
+      && fields.some(amount => amount.field === 'precursor_amount' && amount.slot_id === identity.slot_id));
+    if (boundPrecursor && core.every(name => fields.some(field => field.field === name))) qualified.add(record.primary_doi);
+  }
+  return [...qualified].sort();
+}
 
 export function safeHttpsUrl(value) {
   if (typeof value !== 'string' || /[\u0000-\u0020\u007f]/.test(value)) return null;
@@ -65,7 +93,7 @@ function fieldView(field, band, metrics) {
     && metric.instance_precision_lower95 >= THRESHOLDS[band];
   const locators = Array.isArray(field.locators) ? field.locators.filter(x => clean(x?.document_id, 120) && Number.isSafeInteger(x.page) && x.page > 0)
     .map(x => ({document_id: x.document_id, page: x.page})) : [];
-  const typed = TEXT_FIELDS.has(field.field) ? !!clean(field.value, 200) && field.unit === null
+  const typed = TEXT_FIELDS.has(field.field) ? !!clean(field.value, 120) && field.unit === null
     : Number.isFinite(field.value) && !!clean(field.unit, 25);
   const accepted = calibrated && field.state === 'accepted_auto_checked' && field.training_masked === false
     && probability(field.training_weight) && field.training_weight > 0 && typed && locators.length > 0
@@ -91,7 +119,8 @@ export function prepareCatalog(catalog) {
       || !clean(candidate.source_id, 120) || !clean(candidate.family_id, 120) || !(candidate.band in THRESHOLDS)
       || !HASH.test(candidate.calibration_sha256 || '') || !Array.isArray(candidate.fields) || !source
       || !clean(source.title, 1000) || !clean(source.citation, 2000) || !safeHttpsUrl(source.url)) continue;
-    const binding = JSON.stringify([candidate.family_id, candidate.band, candidate.calibration_sha256, source.title, source.citation, source.url]);
+    const doi = primaryDoi(source);
+    const binding = JSON.stringify([candidate.family_id, candidate.band, candidate.calibration_sha256, source.title, source.citation, source.url, doi]);
     if (sourceBindings.has(candidate.source_id) && sourceBindings.get(candidate.source_id) !== binding) rejectedSources.add(candidate.source_id);
     sourceBindings.set(candidate.source_id, binding);
     for (const raw of candidate.fields) {
@@ -100,7 +129,7 @@ export function prepareCatalog(catalog) {
       const key = JSON.stringify([candidate.source_id, field.recipe_id, field.sample_id]);
       if (!grouped.has(key)) grouped.set(key, {key, source_id: candidate.source_id, family_id: candidate.family_id,
         band: candidate.band, calibration_sha256: candidate.calibration_sha256, title: source.title,
-        citation: source.citation, source_url: safeHttpsUrl(source.url), recipe_id: field.recipe_id,
+        citation: source.citation, source_url: safeHttpsUrl(source.url), primary_doi: doi, recipe_id: field.recipe_id,
         sample_id: field.sample_id, fields: new Map(), duplicate_fields: new Set()});
       const record = grouped.get(key), fieldKey = JSON.stringify([field.slot_id, field.field]);
       if (record.fields.has(fieldKey) && JSON.stringify(record.fields.get(fieldKey)) !== JSON.stringify(field)) record.duplicate_fields.add(fieldKey);
@@ -139,10 +168,10 @@ function sourceLink(doc, text, href) {
 
 const percent = value => (value * 100).toFixed(2) + '%';
 
-export function renderCatalog(host, view, {hideEmpty = false} = {}) {
+export function renderCatalog(host, view, {hideEmpty = false, hiddenByFilter = false} = {}) {
   const doc = host.ownerDocument;
   host.replaceChildren();
-  host.hidden = hideEmpty && !view.records.length;
+  host.hidden = hiddenByFilter || hideEmpty && !view.records.length;
   if (host.hidden) return;
   host.className = 'record-section silver-reader';
   host.append(element(doc, 'h2', 'Machine-extracted records'));
@@ -210,6 +239,8 @@ export async function mountSilverReader(host, {url, fetcher = globalThis.fetch, 
   try {
     const response = await fetcher(url);
     if (!response.ok) throw new Error('Silver catalogue unavailable');
-    renderCatalog(host, prepareCatalog(await response.json()), {hideEmpty});
+    const view=prepareCatalog(await response.json());
+    renderCatalog(host, view, {hideEmpty});
+    return view;
   } catch { renderCatalog(host, prepareCatalog(null), {hideEmpty}); }
 }

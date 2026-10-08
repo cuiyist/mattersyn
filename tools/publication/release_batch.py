@@ -309,7 +309,7 @@ def fetch(url, opener=None):
 
 
 def verify_live(site_url, dist, source_commit, paper_routes=None, material_routes=None,
-                sample=40, timeout_s=1800, poll_s=20, opener=None, sleep=time.sleep):
+                sample=40, timeout_s=1800, poll_s=20, opener=None, sleep=time.sleep, changed_paths=None):
     base = site_url.rstrip('/') + '/'
     deadline = time.monotonic() + timeout_s
     while True:
@@ -323,6 +323,10 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
             return {'passed': False, 'reason': 'live release-snapshot never showed the source commit', 'anonymous': True}
         sleep(poll_s)
     files = tree_files(dist)
+    changed_paths = [] if changed_paths is None else changed_paths
+    if (not isinstance(changed_paths, list) or not all(isinstance(name,str) and name in files for name in changed_paths)
+            or len(set(changed_paths)) != len(changed_paths)):
+        return {'passed':False,'reason':'changed-file inventory does not name unique built files','anonymous':True}
     must = [p for p in ('index.html', 'data/dataset-manifest.json', 'data/release-snapshot.json') if p in files]
     if material_routes:
         if 'data/materials-index.json' not in files:
@@ -330,7 +334,8 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
         must.append('data/materials-index.json')
     rest = sorted(set(files) - set(must)); random.Random(source_commit).shuffle(rest)
     checked, mismatched = [], []
-    for rel in must + rest[:max(0, sample - len(must))]:
+    probes = list(dict.fromkeys(must + rest[:max(0, sample - len(must))] + sorted(changed_paths)))
+    for rel in probes:
         try:
             live = hashlib.sha256(fetch(f'{base}{rel}?v={int(time.time())}', opener)).hexdigest()
             (checked if live == sha256(files[rel]) else mismatched).append(rel)
@@ -361,6 +366,7 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
             (checked_materials if check_route(binding) else failed_materials).append(label)
     return {'passed': not mismatched and not failed_routes and not failed_materials and bool(checked), 'anonymous': True,
             'checked_files': len(checked), 'mismatched_files': mismatched,
+            'checked_changed_files': sorted(set(changed_paths)&set(checked)),
             'checked_paper_routes': checked_routes, 'failed_paper_routes': failed_routes,
             'checked_material_routes': checked_materials, 'failed_material_routes': failed_materials,
             'source_commit': source_commit, 'verified_at': now(), 'site_url': base}
@@ -550,7 +556,8 @@ def main():
             if (pushed.get('source_commit') != commit or git(site, 'rev-parse', 'HEAD') != pushed.get('site_commit') or
                     not site_built_from(site, commit)):
                 raise SystemExit('site checkout no longer matches the pushed release')
-        result = verify_live(a.site_url, final, commit, plan['paper_routes'], plan['material_routes'])
+        result = verify_live(a.site_url, final, commit, plan['paper_routes'], plan['material_routes'],
+                             changed_paths=sorted(set(plan['files_added'])|set(plan['files_changed'])))
         receipt = work / 'live-verification.json'
         write_json(receipt, result)
         summary['live_verification'] = {k: result.get(k) for k in
