@@ -16,11 +16,17 @@ export function referenceForRecord(original,recordId,roleLabels={}){
  return ref.bindingScopes?.[recordId]?{...ref,scope:ref.bindingScopes[recordId],phaseScope:ref.bindingScopes[recordId],sample_context_note:null}:ref;
 }
 export function scopeKind(ref){
- const kind=[ref.sourceType,ref.referenceType,ref.name,ref.description].filter(Boolean).join(' ');
- if(/partial/i.test(kind))return 'Partial structure reference';
- if(/comput|DFT|PBE/i.test(kind))return 'Computed reference';
- if(/construct|ideal_reference|ideal reference/i.test(kind))return 'Constructed reference';
- return 'Bulk reference';
+ // Explicit reference metadata outranks descriptive prose. A negative mention
+ // of sample reconstruction does not turn a literature cell into a constructed one.
+ const classify=value=>{
+  const kind=value.replaceAll('_',' ');
+  if(/\bpartial\b/i.test(kind))return 'Partial structure reference';
+  if(/\b(?:computed|computational|DFT|PBE)\b/i.test(kind))return 'Computed reference';
+  if(/\bconstructed\b|\bideal reference\b/i.test(kind))return 'Constructed reference';
+  if(/\b(?:literature|independent) bulk\b/i.test(kind))return 'Bulk reference';
+  return null;
+ };
+ return classify([ref.sourceType,ref.referenceType].filter(Boolean).join(' '))||classify([ref.name,ref.description].filter(Boolean).join(' '))||'Bulk reference';
 }
 export function referenceCellVectors(model){
  const supplied=model.cellVectors??model.latticeVectors;
@@ -86,8 +92,8 @@ async function drawReference(host,ref,finite=false){
  if(phaseScope)details.append(el('p',phaseScope));if(ref.scope&&ref.scope!==phaseScope)details.append(el('p',ref.scope));host.append(details);
  if(!window.$3Dmol){view.textContent='The interactive viewer could not load. The structure download is available.';return;}
  const model=await(await fetch(siteURL('assets/crystal-references/'+(finite?ref.finiteModelPath:ref.modelPath)))).json();if(!view.isConnected)return;
- const viewer=$3Dmol.createViewer(view,{backgroundColor:'#f7fafc'});let extent=1;
- function draw(n=1){viewer.clear();extent=n;if(finite){drawFiniteReference(viewer,model);caption.textContent=ref.finiteCaption||'Illustrative finite particle · reference lattice cropped to a declared envelope.';return;}
+ const viewer=$3Dmol.createViewer(view,{backgroundColor:'#f7fafc'}),initialView=viewer.getView();let extent=1;
+ function draw(n=1){viewer.clear();viewer.setView(initialView);extent=n;if(finite){drawFiniteReference(viewer,model);caption.textContent=ref.finiteCaption||'Illustrative finite particle · reference lattice cropped to a declared envelope.';return;}
   const v=referenceCellVectors(model),point=(i,j,k)=>({x:i*v[0][0]+j*v[1][0]+k*v[2][0],y:i*v[0][1]+j*v[1][1]+k*v[2][1],z:i*v[0][2]+j*v[1][2]+k*v[2][2]});const aa=[];
   for(let i=0;i<n;i++)for(let j=0;j<n;j++)for(let k=0;k<n;k++){const off=point(i,j,k);for(const a of model.atoms)aa.push({serial:aa.length,elem:a.element??a.elem,x:a.x+off.x,y:a.y+off.y,z:a.z+off.z,properties:{...a.properties,display_occupancy:Object.hasOwn(a,'occupancy')?a.occupancy:1,components:a.components}});}
   viewer.addModel().addAtoms(aa);viewer.setStyle({},{sphere:{radius:.32,colorfunc:a=>colors[a.elem]||'#8497aa'}});
@@ -135,6 +141,7 @@ export async function mountReaderStructures(host,r,presentation={}){
   if(key==='cell'&&r.lineage.source_group==='lian2021'){const {mountLianBulk,eligibleBulkContexts}=await import('./lian2021-bulk-viewer.mjs');if(eligibleBulkContexts(r).length){await mountLianBulk(panel,r);return;}}
   availability??=fetch(siteURL('assets/crystal-references/unit-cell-availability.json')).then(response=>response.ok?response.json():{record_exceptions:{}});
   const exception=(await availability).record_exceptions?.[r.record_id];
+  if(exception?.kind==='not_applicable_nonperiodic'){panel.classList.add('reader-structure-not-applicable');panel.append(el('h3','Unit-cell coordinates not reported'),el('p',exception.note,'reader-note'));for(const evidence of exception.evidence||[]){const citation=el('p',undefined,'reader-note');citation.append(el('small',evidence.source_id+' · '+evidence.locator));panel.append(citation);}panel.append(link('Inspect structure evidence →',recordURL(r.record_id)+'#structures','reader-data-link'));return;}
   panel.append(el('h3','Unit-cell coordinates unresolved'),el('p',exception?.note||'The source characterization is retained below. A suitable phase-specific coordinate model has not been verified for this specimen.','reader-note'),link('Inspect structure evidence →',recordURL(r.record_id)+'#structures','reader-data-link'));
   for(const ref of exception?.reference_links||[])panel.append(link(ref.label||'Reference source ↗',ref.url||ref));
   }catch(error){panel.append(el('p','This structure view could not load. The complete evidence record remains available.','reader-note'));console.error(error);}
