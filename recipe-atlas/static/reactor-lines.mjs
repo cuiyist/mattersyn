@@ -9,10 +9,48 @@ const exact=(x,keys)=>object(x)&&Object.keys(x).length===keys.length&&keys.every
 const label=key=>key.replaceAll('_',' ').replace(/^./,c=>c.toUpperCase());
 const node=(tag,value,cls)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n;};
 
+// A separate display adapter accepts only the explicit appended attributes
+// format. It retains original values, basis and every supplied citation; it
+// never rewrites the record or relaxes the canonical reactor_line validator.
+function readReactorAttributes(note,marker){
+ const canonical=/(^|\n)(?:reactor_line[ \t]*=[ \t]*|(?=[ \t]*\{\s*"reactor_line"\s*:))/.exec(note);
+ const prose=note.slice(0,canonical?Math.min(marker.index,canonical.index):marker.index);
+ try{
+  if(canonical)throw Error();
+  const raw=JSON.parse(note.slice(marker.index+marker[0].length));
+  const schlenk=Object.hasOwn(raw||{},'Schlenk_line')?'Schlenk_line':'schlenk_line';
+  if(!exact(raw,['reactor_line_id',...CATEGORIES.map(k=>k==='schlenk_line'?schlenk:k)]))throw Error();
+  const line={};
+  for(const key of ['reactor_line_id',...CATEGORIES]){
+   const f=raw[key==='schlenk_line'?schlenk:key];
+   const direct=Object.hasOwn(f||{},'source_id')||Object.hasOwn(f||{},'source_locator');
+   const array=Object.hasOwn(f||{},'evidence');
+   if(!exact(f,['value','status','basis',...(direct?['source_id','source_locator']:[]),...(array?['evidence']:[])])||(!direct&&!array)||!text(f.basis))throw Error();
+   const supplied=direct&&text(f.source_id)&&text(f.source_locator);
+   if(direct&&!supplied&&!(f.source_id===null&&f.source_locator===null))throw Error();
+   if(array&&(!Array.isArray(f.evidence)||!f.evidence.every(e=>exact(e,['source_id','locator'])&&text(e.source_id)&&text(e.locator))))throw Error();
+   if(direct&&array&&(!supplied||!f.evidence.some(e=>e.source_id===f.source_id&&e.locator===f.source_locator)))throw Error();
+   const evidence=array?f.evidence:supplied?[{source_id:f.source_id,locator:f.source_locator}]:[];
+   if(f.status==='not_reported'){
+    if(!(f.value===null||f.value==='not reported'))throw Error();
+   }else if(key==='reactor_line_id'){
+    if(f.status!=='author_derived'||!text(f.value)||f.value==='not reported'||!evidence.length)throw Error();
+   }else{
+    const validValue=['schlenk_line','glovebox','stirring'].includes(key)?typeof f.value==='boolean'||text(f.value):text(f.value);
+    if(f.status!=='reported'||!validValue||f.value==='not reported'||!evidence.length)throw Error();
+   }
+   line[key]={...f,evidence};
+  }
+  return {prose,line,valid:true,attributes:true};
+ }catch{return {prose,line:null,valid:false,attributes:true};}
+}
+
 // Only explicit appended metadata marks a new audited note. Ordinary old notes
 // and arbitrary JSON keep their original rendering; stored data is never edited.
 export function readReactorLineNote(note){
  if(typeof note!=='string')return null;
+ const attributes=/(^|\n)Reactor attributes:[ \t]*/.exec(note);
+ if(attributes)return readReactorAttributes(note,attributes);
  const marker=/(^|\n)(?:reactor_line[ \t]*=[ \t]*|(?=[ \t]*\{\s*"reactor_line"\s*:))/.exec(note);
  if(!marker)return null;
  const prose=note.slice(0,marker.index),raw=note.slice(marker.index+marker[0].length);
@@ -52,7 +90,10 @@ function evidenceRow(parent,evidence,record){
   parent.append(n);
  }
 }
-function sourceBound(line,record){return CATEGORIES.every(key=>line[key].status==='not_reported'||source(record,line[key].source_id));}
+function sourceBound(line,record,attributes=false){
+ if(attributes)return ['reactor_line_id',...CATEGORIES].every(key=>line[key].evidence.every(e=>source(record,e.source_id)));
+ return CATEGORIES.every(key=>line[key].status==='not_reported'||source(record,line[key].source_id));
+}
 function numberText(q){
  const v=quantityValue(q);if(v===null)return 'not reported';
  return `${q.approximate?'≈':''}${v}${q.unit?' '+q.unit:''}${q.qualifier?' · '+q.qualifier:''}${q.basis?' · '+q.basis:''}`;
@@ -101,22 +142,28 @@ export function createReactorLineDetails(operation,record,format=numberText){
  if(env.value!==null&&env.value!==undefined&&env.value!=='')section.append(node('p','Environment: '+String(env.value)));
  if(parsed.prose)section.append(node('p',parsed.prose,'record-note'));
  evidenceRow(section,env.evidence,record);
- if(!parsed.valid||!sourceBound(parsed.line,record)){
+ if(!parsed.valid||!sourceBound(parsed.line,record,parsed.attributes)){
   section.append(node('p','Reactor details unavailable: structured source metadata is invalid.','record-note'));return section;
  }
  const grid=node('dl',undefined,'protocol-condition-grid');
- if(parsed.line.reactor_line_id!==null){const row=node('div');row.append(node('dt','Local reactor line'),node('dd',parsed.line.reactor_line_id));grid.append(row);}
+ if(parsed.attributes){
+  const f=parsed.line.reactor_line_id,row=node('div'),value=node('dd',f.status==='not_reported'?'not reported':f.value);
+  value.append(node('small','Basis: '+f.basis));evidenceRow(value,f.evidence,record);
+  row.append(node('dt',f.status==='author_derived'?'Local reactor line (author-derived)':'Local reactor line'),value);grid.append(row);
+ }else if(parsed.line.reactor_line_id!==null){const row=node('div');row.append(node('dt','Local reactor line'),node('dd',parsed.line.reactor_line_id));grid.append(row);}
  for(const key of FIELDS){
   const row=node('div');let display,evidence;
   if(NUMBERS.includes(key))({value:display,evidence}=numericField(operation.parameters?.[key],record,format));
-  else{const f=parsed.line[key];display=f.status==='not_reported'?'not reported':typeof f.value==='boolean'?(f.value?'yes':'no'):f.value;evidence=f.status==='reported'?[f]:[];}
-  const value=node('dd',display);evidenceRow(value,evidence,record);row.append(node('dt',label(key)),value);grid.append(row);
+  else{const f=parsed.line[key];display=f.status==='not_reported'?'not reported':typeof f.value==='boolean'?(f.value?'yes':'no'):f.value;evidence=parsed.attributes?f.evidence:f.status==='reported'?[f]:[];}
+  const value=node('dd',display);
+  if(parsed.attributes&&!NUMBERS.includes(key))value.append(node('small','Basis: '+parsed.line[key].basis));
+  evidenceRow(value,evidence,record);row.append(node('dt',label(key)),value);grid.append(row);
  }
  section.append(grid);return section;
 }
 
 export function reactorLineCaption(operation,record,caption){
  const parsed=readReactorLineNote(operation?.environment?.note);if(!parsed)return caption;
- if(!parsed.valid||!sourceBound(parsed.line,record))return caption+' Conceptual vessel: vessel type could not be verified from the reactor metadata.';
+ if(!parsed.valid||!sourceBound(parsed.line,record,parsed.attributes))return caption+' Conceptual vessel: vessel type could not be verified from the reactor metadata.';
  return parsed.line.vessel_type.status==='not_reported'?caption+' Conceptual vessel: vessel type is not reported; no apparatus identity is inferred.':caption;
 }
