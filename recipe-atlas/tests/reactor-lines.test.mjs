@@ -188,3 +188,122 @@ test('actual generic pressure keeps source-bound zero and range while honest unk
  }
  const text=renderedText(operation(line(),{pressure:{...quantity(null,'kPa'),status:'not_reported',evidence:[]}}));assert.match(text,/not reported/);assert.doesNotMatch(text,/Reactor quantity unavailable|0 kPa/);
 });
+
+const attributeMissing=()=>({value:null,status:'not_reported',basis:'Fixture missing basis',evidence:[]});
+const attributeReported=value=>({value,status:'reported',basis:'Fixture reported basis',evidence:[{source_id:'fixture-main',locator:'Fixture attributes page 2'}]});
+function attributes(overrides={}){return {reactor_line_id:attributeMissing(),...Object.fromEntries(keys.map(k=>[k,attributeMissing()])),...overrides};}
+function attributeOperation(metadata=attributes(),parameters={}){
+ const op=operation(line(),parameters);op.environment.note='Original fixture narrative.\nReactor attributes: '+JSON.stringify(metadata);return op;
+}
+
+test('explicit attribute notes render both Schlenk spellings and all three provenance shapes without mutation',()=>dom(()=>{
+ for(const alias of ['schlenk_line','Schlenk_line'])for(const shape of ['direct','array','both']){
+  const metadata=attributes({vessel_type:attributeReported('fixture vessel'),schlenk_line:attributeReported(false)});
+  if(alias==='Schlenk_line'){metadata.Schlenk_line=metadata.schlenk_line;delete metadata.schlenk_line;}
+  const f=metadata.vessel_type;
+  if(shape!=='array'){f.source_id='fixture-main';f.source_locator='Fixture attributes page 2';}
+  if(shape==='direct')delete f.evidence;
+  const op=attributeOperation(metadata),before=JSON.stringify(op),parsed=readReactorLineNote(op.environment.note);
+  assert.equal(parsed.valid,true);assert.equal(parsed.attributes,true);assert.equal(parsed.line.vessel_type.value,'fixture vessel');
+  assert.equal(parsed.line.vessel_type.basis,f.basis);assert.equal(parsed.line.schlenk_line.value,false);
+  const details=createReactorLineDetails(op,record());assert.match(details.textContent,/Schlenk line no/);
+  assert.match(details.textContent,/Basis: Fixture reported basis/);assert.match(details.textContent,/Fixture attributes page 2/);
+  assert.doesNotMatch(details.textContent,/Reactor attributes:|"source_id"|"status"/);
+  assert.equal(JSON.stringify(op),before);assert.equal(reactorLineCaption(op,record(),'Fixture caption.'),'Fixture caption.');
+ }
+}));
+
+test('attribute details preserve every citation and basis, including missing fields and a labelled derived ID',()=>dom(()=>{
+ const a={source_id:'fixture-main',locator:'Fixture first locator'},b={source_id:'fixture-si',locator:'Fixture second locator'};
+ const metadata=attributes({
+  reactor_line_id:{value:'fixture-local',status:'author_derived',basis:'Fixture local bookkeeping',evidence:[a]},
+  vessel_type:{...attributeReported('fixture vessel'),source_id:a.source_id,source_locator:a.locator,evidence:[a,b]},
+  glovebox:{value:'not reported',status:'not_reported',basis:'Fixture absence reviewed',evidence:[b]},
+  atmosphere:{value:null,status:'not_reported',basis:'Fixture null retained',source_id:b.source_id,source_locator:b.locator}
+ });
+ const r=record();r.sources.push({id:'fixture-si',url:'https://example.invalid/fixture-si'});
+ const op=attributeOperation(metadata),before=JSON.stringify(op),details=createReactorLineDetails(op,r);
+ assert.match(details.textContent,/Local reactor line \(author-derived\) fixture-local/);
+ for(const basis of ['Fixture local bookkeeping','Fixture absence reviewed','Fixture null retained'])assert.ok(details.textContent.includes('Basis: '+basis));
+ assert.equal(flatten(details).filter(n=>n.tagName==='A').length,6); // original environment + all five attribute citations
+ assert.equal(flatten(details).filter(n=>n.tagName==='A'&&n.href.endsWith('/fixture-si')).length,3);
+ assert.equal(readReactorLineNote(op.environment.note).line.atmosphere.value,null);
+ assert.equal(JSON.stringify(op),before);assert.doesNotMatch(details.textContent,/glovebox yes|Atmosphere Ar/);
+}));
+
+test('missing attribute values remain missing and no local identifier or vessel is inferred',()=>dom(()=>{
+ const metadata=attributes(),op=attributeOperation(metadata),details=createReactorLineDetails(op,record());
+ assert.equal((details.textContent.match(/not reported/g)||[]).length,16);
+ assert.equal(flatten(details).filter(n=>n.tagName==='A').length,1);
+ assert.doesNotMatch(details.textContent,/author-derived|three-neck flask|vacuum/);
+ assert.match(reactorLineCaption(op,record(),'Fixture caption.'),/vessel type is not reported/);
+}));
+
+test('attribute parser rejects conflicting values, unknown shapes, incomplete provenance and derived categorical facts',()=>{
+ const bad=[
+  {...attributes(),unknown:attributeMissing()},
+  attributes({Schlenk_line:attributeMissing()}),
+  attributes({stirring:{...attributeMissing(),value:false}}),
+  attributes({vessel_type:{...attributeReported('fixture'),status:'author_derived'}}),
+  attributes({reactor_line_id:{...attributeReported('fixture-id'),status:'reported'}}),
+  attributes({vessel_type:{...attributeReported('fixture'),basis:''}}),
+  attributes({vessel_type:{...attributeReported('fixture'),basis:null}}),
+  attributes({vessel_type:{...attributeReported('fixture'),value:7}}),
+  attributes({vessel_type:{...attributeReported('fixture'),value:'not reported'}}),
+  attributes({vessel_type:{...attributeReported('fixture'),evidence:[]}}),
+  attributes({vessel_type:{...attributeReported('fixture'),extra:'unknown'}}),
+  attributes({vessel_type:{...attributeReported('fixture'),source_id:'fixture-main'}}),
+  attributes({vessel_type:{...attributeReported('fixture'),source_id:'fixture-main',source_locator:'Conflicting locator'}}),
+  attributes({vessel_type:{...attributeReported('fixture'),source_id:null,source_locator:null}}),
+  attributes({vessel_type:{...attributeReported('fixture'),evidence:[{source_id:'fixture-main',locator:'',extra:'unknown'}]}}),
+  attributes({vessel_type:{...attributeReported('fixture'),evidence:[{source_id:'fixture-main',locator:'Fixture locator',extra:'unknown'}]}})
+ ];
+ for(const metadata of bad)assert.equal(readReactorLineNote(attributeOperation(metadata).environment.note).valid,false);
+});
+
+test('every supplied attribute citation must bind to a known source, even for missing or derived fields',()=>dom(()=>{
+ for(const key of ['vessel_type','glovebox','reactor_line_id']){
+  const f=key==='vessel_type'?attributeReported('UNBOUND_FIXTURE_VALUE'):key==='reactor_line_id'?{...attributeMissing(),status:'author_derived',value:'UNBOUND_FIXTURE_ID'}:attributeMissing();
+  f.evidence=[{source_id:'missing-source',locator:'Fixture unknown source'}];
+  const op=attributeOperation(attributes({[key]:f})),details=createReactorLineDetails(op,record());
+  assert.match(details.textContent,/structured source metadata is invalid/);assert.doesNotMatch(details.textContent,/UNBOUND_FIXTURE|Fixture unknown source/);
+  assert.match(reactorLineCaption(op,record(),'Fixture caption.'),/could not be verified/);
+ }
+}));
+
+test('malformed attributes and competing explicit metadata do not leak JSON into the environment',()=>dom(()=>{
+ for(const note of ['Preserved prose.\nReactor attributes: {broken','Preserved prose.\nreactor_line='+JSON.stringify(line())+'\nReactor attributes: '+JSON.stringify(attributes())]){
+  const op=attributeOperation();op.environment.value=null;op.environment.note=note;
+  assert.equal(readReactorLineNote(note).valid,false);assert.equal(reactorEnvironmentText(op.environment),'Preserved prose.');
+  const details=createReactorLineDetails(op,record());assert.match(details.textContent,/metadata is invalid/);
+  assert.doesNotMatch(details.textContent,/\{broken|"reactor_line_id"|Reactor attributes:|reactor_line=/);
+ }
+ assert.equal(readReactorLineNote('Old prose mentions Reactor attributes: without an appended line.'),null);
+}));
+
+test('actual protocol mount handles attribute notes and preserves existing numeric safeguards',()=>{
+ const op=attributeOperation(attributes({atmosphere:attributeReported('fixture atmosphere')}),{pressure:{...quantity(1051,'kPa'),evidence:[]},reaction_volume:quantity(0)});
+ const text=renderedText(op);
+ for(const value of ['Original fixture environment','Original fixture narrative.','fixture atmosphere','Fixture attributes page 2','0 mL'])assert.ok(text.includes(value),value);
+ assert.match(text,/source binding or value invalid/);assert.doesNotMatch(text,/1051 kPa|Reactor attributes:|"basis"/);
+});
+
+test('condition grid CSS overrides global flex rows with full-width wrapping labels, values and citations',()=>{
+ const css=readFileSync(new URL('../static/styles.css',import.meta.url),'utf8');
+ assert.match(css,/\.protocol-condition-grid>div\{display:block;min-width:0\}/);
+ assert.match(css,/\.protocol-condition-grid dt,\.protocol-condition-grid dd\{[^}]*width:100%;[^}]*text-align:left;[^}]*overflow-wrap:anywhere;[^}]*word-break:normal/);
+ assert.match(css,/\.protocol-condition-grid dd>small\{display:block;/);
+});
+
+test('author-derived local ID requires its own nonempty source-located evidence in either provenance shape',()=>dom(()=>{
+ for(const provenance of [{evidence:[]},{source_id:null,source_locator:null}]){
+  const metadata=attributes({reactor_line_id:{value:'UNBOUND_DERIVED_FIXTURE_ID',status:'author_derived',basis:'Fixture local bookkeeping',...provenance}});
+  const op=attributeOperation(metadata),before=JSON.stringify(op),parsed=readReactorLineNote(op.environment.note);
+  assert.equal(parsed.valid,false);
+  const details=createReactorLineDetails(op,record());assert.match(details.textContent,/structured source metadata is invalid/);
+  assert.doesNotMatch(details.textContent,/UNBOUND_DERIVED_FIXTURE_ID|author-derived/);
+  assert.match(reactorLineCaption(op,record(),'Fixture caption.'),/could not be verified/);
+  assert.doesNotMatch(renderedText(op),/UNBOUND_DERIVED_FIXTURE_ID/);
+  assert.equal(JSON.stringify(op),before);
+ }
+}));

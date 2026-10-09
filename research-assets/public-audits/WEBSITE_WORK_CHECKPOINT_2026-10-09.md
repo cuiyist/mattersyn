@@ -29,3 +29,13 @@ Publication still requires final visual acceptance, the exact public-file bounda
 Track 1 remains authorized. The local-model hold does not pause accepted audited contributions. Scheduled morning reports, two-hour checks and continuation reminders remain disabled. The requested twenty-papers-per-hour publication rate has not been demonstrated.
 
 This checkpoint preserves the pending batch honestly. Full papers, SI, source text, private audit evidence, machine drafts and credentials are excluded from this public report.
+
+## Visual review update — October 9, 19:10 UTC
+
+The six replacement material-shell captures completed successfully. Their replacement receipt is distinct from the preserved original capture failure. The accepted source, science and build remain unchanged.
+
+Actual visual inspection found a presentation defect: the new paper packets store reactor attributes in an explicit structured note format that the existing reader does not recognize. Several environment cards therefore display raw JSON in tall narrow columns; mobile condition labels also wrap character by character. The candidate failed visual acceptance and has not been deployed. Three reviewers preserved their actual overview/native inspection coverage and rejection findings; no complete readability pass is claimed.
+
+A shared reader repair is in preparation. It will display the existing reactor fields and source locators as readable details, preserve missing values and the underlying audited records, and fix the condition-card layout. It changes neither the scientific audits nor the local-model prompt/schema. The revised candidate will require tests, CI and a new browser review through the normal release path. The live inventory remains 234 contributing sources and 2,968 records.
+
+Worker A has reconciled the current Lin handoff. Worker B has reconciled the Sun and Vercelli handoffs and reports that all twenty assigned historical full audits are complete. Their accepted packages still need integrator custody/release work; these statements do not add published-paper or current sampled-record credit.
