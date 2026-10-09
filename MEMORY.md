@@ -1,3 +1,11 @@
+## October 8, 2026: reactor viewer repair and actual development diagnostic
+
+The lightweight step reactor viewer is independently accepted in the engineering branch, pending CI-gated merge and its next normal website release. It uses the current schema, displays each source locator, marks missing fields not reported, hides invalid numeric values across generic and specialized condition displays, and leaves published untagged records unchanged. No source, independent-audit, rights, schema, counter or release gate was changed.
+
+The [actual local-model development diagnostic](skills/mattersyn-paper-to-site/references/LOCAL_MODEL_DEV15_DIAGNOSTIC_2026-10-08.md) retained fifteen development papers and thirty pass attempts: five paper packets exceeded the unchanged request budget and ten lacked fully bound source scopes. No generation completed, all 150 field/pass slots stayed masked, and accuracy remains unmeasured. The completed diagnostic rate is zero papers per GPU-hour over 128.4405636 reserved seconds. All 32 held-out papers and machine publication remain untouched. Subsequent count-only assembly shows full packet requests exceed even a conservative 32K bound; source-authorized core-recipe page selections and local certified scoring references are required.
+
+The original October 7 stop-rule window has five sampled records and zero original S1/S2 findings after the two-record Yang 2012 addition. It remains below the 100-record evaluation minimum; the stricter greater-than-one-per-100 rule and all original S3 findings are retained without resetting the denominator. Yaman 2017, Yang 2023 and Yu 2018 remain verified live at 234 contributing source groups and 2,968 records. The fresh blind-test comparisons remain permission-held, with no current score claimed.
+
 ## Owner instructions, October 8, 2026
 
 The latest owner instructions supersede the earlier blind-test stop and two-per-100 rules. The third blind repeat is measurement-only; keep separate scores and historical results. Retain the deterministic 50% sample with two distinct independent deep source auditors. Continue the same October 7 record window without resetting findings: minimum 100 records, exact last 500, and a stop only above one original adjudicated S1/S2 finding per 100 records. Ordering, grouped-defect deduplication and corrections remain unchanged.
