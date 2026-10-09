@@ -19,3 +19,9 @@ The 15-row roster, failed cases and 150 field/pass slots remain in the report. T
 Next work is to bind the remaining original audit scope authorities, establish explicit primary-synthesis page selections and certify local scoring references. Any successor must preserve frozen paper membership, held-out separation, extraction prompt, schema, pass rules and truthful failure denominators. All paper text, extracted candidates, prompts, responses, detailed receipts and reference truth remain on this machine. Only this aggregate report is suitable for public memory.
 
 The diagnostic passed its runtime safety closure and released the exact owned GPU reservation. It grants no calibration, unmasking, training or machine-publication approval. Held-out inference and machine publication remain disabled pending the owner's review and a later explicit instruction.
+
+## Context-sizing follow-up
+
+The owner permits a context increase for these same fifteen development papers only, to the smallest size fitting all fifteen and at most 32,768 tokens if GPU memory allows. Exact local tokenization of five existing packets measured 14,739–22,834 tokens including the existing reserves. These measurements prove that 8,192 is insufficient for those packets; they do not establish the minimum for all fifteen. UTF-8 byte counts must not be presented as actual token counts.
+
+The current runner remains at 8,192. Metadata recovery identifies six directly bound input candidates, three exact normalization candidates and six unresolved input selections; normalization candidates are not generation admission. No larger-context GPU fit or development-run peak is claimed. The earlier source-free GPU check recorded peak memory_used of 22,266 MiB (21.74 GiB). Frozen prompt, schema, reference split and pass rules are unchanged. Held-out inference and machine publication remain disabled.

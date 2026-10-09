@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 2968,
-  "group_count": 234,
+  "record_count": 2975,
+  "group_count": 238,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -69,6 +69,8 @@
     "CdS nanocrystal–polyurethane hybrid",
     "CdS nanostructures",
     "CdS quantum dot / polystyrene assemblies",
+    "CdS quantum-dot-sensitized TiO2 nanotube arrays",
+    "CdS quantum-dot-sensitized TiO2 photoanode",
     "CdS/PbS nanostructures",
     "CdSe colloidal nanocrystal seeds",
     "CdSe cores and CdSe/CdS giant quantum dots",
@@ -279,9 +281,11 @@
     "colloidal copper(I) sulfide nanocrystals",
     "colloidal semiconductor nanocrystal cation exchange",
     "colloidal telluride nanocrystals and mixed nanocrystal solids",
+    "composite counter-electrode film",
     "copper sulfide nanocrystals",
     "copper sulfide nanodisks",
     "copper-antimony-sulfide nanocrystals",
+    "core-shell quantum dots",
     "dye-containing polymer optode control",
     "hierarchically ordered Ag nanocrystal architectures",
     "hierarchically ordered Ag–CoO nanocrystal architectures",
@@ -294,8 +298,10 @@
     "hierarchically ordered Au–TiO2 nanocrystal architectures",
     "hierarchically ordered TiO2 nanocrystal architectures",
     "layered silver-bismuth halide hybrid materials",
+    "lead sulfide nanoparticles",
     "lead-halide perovskite composites",
     "lead-halide perovskite nanocrystals",
+    "low molecular weight heparin-bile acid conjugate",
     "magic-sized semiconductor cluster",
     "magnetic composite QDs and supporting preparations",
     "magnetic oxide nanocrystals",
@@ -308,6 +314,7 @@
     "quantum-dot coated gold nanosphere",
     "quantum-dot polymer composite",
     "quantum-dot silica assembly and supporting procedures",
+    "quantum-dot-loaded polymer-bile acid micelles",
     "quaternary chalcogenide nanocrystals",
     "semiconductor analytical context",
     "semiconductor nanocrystal",
@@ -210385,6 +210392,508 @@
       "pair_ids": [
         "yu2018-cds-nanocrystals-acssuschemeng8b00398-core::yu2018-cds-nanocrystals-acssuschemeng8b00398-core-characterization-isolate",
         "yu2018-cds-nanocrystals-acssuschemeng8b00398-core::yu2018-cds-nanocrystals-acssuschemeng8b00398-core-suspension"
+      ]
+    },
+    {
+      "record_id": "khatun2012-qd-lhd-am301048m-cdte-cdse",
+      "title": "Khatun et al. (2012): near-IR CdTe/CdSe quantum dots",
+      "formula": "CdTe/CdSe",
+      "family": "core-shell quantum dots",
+      "method": "Khatun et al. (2012): near-IR CdTe/CdSe quantum dots",
+      "record_type": "literature_protocol",
+      "source_year": 2012,
+      "source_doi": "10.1021/am301048m",
+      "revision": 4,
+      "record_sha256": "53d277d3cdaf2478d9934915032ab8ee893adbd78187eb1a30c68af841040d73",
+      "recipe_signature": "6bd20015a9260a6d8bf21ee7b064db4c56ffd96f5c86b18046be94206e5c4974",
+      "group_id": "group-8f140b6545a8",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/khatun2012-qd-lhd-am301048m-cdte-cdse.json",
+      "page_url": "records/khatun2012-qd-lhd-am301048m-cdte-cdse.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe/CdSe"
+      ],
+      "pair_ids": [
+        "khatun2012-qd-lhd-am301048m-cdte-cdse::khatun2012-qd-lhd-am301048m-cdte-cdse--qd-prepared"
+      ]
+    },
+    {
+      "record_id": "khatun2012-qd-lhd-am301048m-lhd",
+      "title": "Khatun et al. (2012): LMWH-DOCA conjugate preparation",
+      "formula": "LMWH-DOCA",
+      "family": "low molecular weight heparin-bile acid conjugate",
+      "method": "Khatun et al. (2012): LMWH-DOCA conjugate preparation",
+      "record_type": "literature_protocol",
+      "source_year": 2012,
+      "source_doi": "10.1021/am301048m",
+      "revision": 4,
+      "record_sha256": "11fb0b21b67fd8d8b88c8fca946fc1a0daee1996c68eb1b5ef9eaa52ba636b8f",
+      "recipe_signature": "1d9d87919ed5133aa62241b0e8cb06239349b3b0e9716c26c70e69c06170e268",
+      "group_id": "group-8f140b6545a8",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/khatun2012-qd-lhd-am301048m-lhd.json",
+      "page_url": "records/khatun2012-qd-lhd-am301048m-lhd.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "LMWH-DOCA"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "khatun2012-qd-lhd-am301048m-q-lhd-0p5",
+      "title": "Khatun et al. (2012): primary Q-LHD/0.5 micelles",
+      "formula": "CdTe/CdSe-LMWH-DOCA",
+      "family": "quantum-dot-loaded polymer-bile acid micelles",
+      "method": "Khatun et al. (2012): primary Q-LHD/0.5 micelles",
+      "record_type": "literature_protocol",
+      "source_year": 2012,
+      "source_doi": "10.1021/am301048m",
+      "revision": 4,
+      "record_sha256": "8418707e9820699a5b9532c2faacb5fc8869efe7f0e12fe73b5fdc50ac3bca78",
+      "recipe_signature": "4f333dc3a4888a0ba905313967b33da9cfefa659cba62f65f11b46730dbf1af1",
+      "group_id": "group-8f140b6545a8",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/khatun2012-qd-lhd-am301048m-q-lhd-0p5.json",
+      "page_url": "records/khatun2012-qd-lhd-am301048m-q-lhd-0p5.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdTe/CdSe-LMWH-DOCA"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "xie2010-cds-tnta-am100605a-sonication-15cycles",
+      "title": "Xie et al.(2010):15-cycle sonication-CdS/TNTAs core route",
+      "formula": "CdS/TiO2",
+      "family": "CdS quantum-dot-sensitized TiO2 nanotube arrays",
+      "method": "Sonication-assisted sequential chemical bath deposition on anodized and crystallized TiO2 nanotube arrays",
+      "record_type": "literature_protocol",
+      "source_year": 2010,
+      "source_doi": "10.1021/am100605a",
+      "revision": 4,
+      "record_sha256": "3d262100971fc7532d9d89ceecfb4eb7d56e08689219b2594837221cf4ef9b85",
+      "recipe_signature": "00e689669d66aa0643cb037c1c2ccc004cecc89896ae9e520a2ceb08dddd383f",
+      "group_id": "group-7ae61d0a08e0",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/xie2010-cds-tnta-am100605a-sonication-15cycles.json",
+      "page_url": "records/xie2010-cds-tnta-am100605a-sonication-15cycles.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "TiO2"
+      ],
+      "pair_ids": [
+        "xie2010-cds-tnta-am100605a-sonication-15cycles::xie2010-cds-tnta-am100605a-sonication-15cycles--figure1-substrate",
+        "xie2010-cds-tnta-am100605a-sonication-15cycles::xie2010-cds-tnta-am100605a-sonication-15cycles--figure3-s2-specimen"
+      ]
+    },
+    {
+      "record_id": "yang2012-pbs-cb-am301787q-pbs-powder",
+      "title": "Yang et al. (2012): solvothermal PbS powder",
+      "formula": "PbS",
+      "family": "lead sulfide nanoparticles",
+      "method": "Yang et al. (2012): solvothermal PbS powder",
+      "record_type": "literature_protocol",
+      "source_year": 2012,
+      "source_doi": "10.1021/am301787q",
+      "revision": 4,
+      "record_sha256": "0ea79abc4cabf5055de6c9debfcb15e64988a829347c60af729f947be14d950e",
+      "recipe_signature": "afe0a634c94a7973da478593ec72beaa66f59ed7d7885e185ae7bca78fcba1b9",
+      "group_id": "group-d2e556cb9546",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2012-pbs-cb-am301787q-pbs-powder.json",
+      "page_url": "records/yang2012-pbs-cb-am301787q-pbs-powder.html",
+      "missing_field_count": 5,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbS"
+      ],
+      "pair_ids": []
+    },
+    {
+      "record_id": "yang2012-pbs-cb-am301787q-sample-c-ce",
+      "title": "Yang et al. (2012): Sample C 10:1 PbS/carbon-black counter electrode",
+      "formula": "PbS/CB/PVDF on FTO",
+      "family": "composite counter-electrode film",
+      "method": "Yang et al. (2012): Sample C 10:1 PbS/carbon-black counter electrode",
+      "record_type": "literature_protocol",
+      "source_year": 2012,
+      "source_doi": "10.1021/am301787q",
+      "revision": 4,
+      "record_sha256": "9560f6d8b1c65d76abcdb10d93240e504483538e82d19bf2e24e79b4bd46c8f9",
+      "recipe_signature": "b2bc055ca8ceac4a1c6047611d58a21f853d9c8c63b5a48b0e557a4c52571e41",
+      "group_id": "group-d2e556cb9546",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/yang2012-pbs-cb-am301787q-sample-c-ce.json",
+      "page_url": "records/yang2012-pbs-cb-am301787q-sample-c-ce.html",
+      "missing_field_count": 7,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbS/CB/PVDF on FTO"
+      ],
+      "pair_ids": [
+        "yang2012-pbs-cb-am301787q-sample-c-ce::yang2012-pbs-cb-am301787q-sample-c-ce--characterized-film"
+      ]
+    },
+    {
+      "record_id": "zhu2011-microwave-cds-tio2-am200520q-electrode4",
+      "title": "Zhu et al. (2011): microwave-deposited CdS/TiO2 electrode 4",
+      "formula": "CdS/TiO2",
+      "family": "CdS quantum-dot-sensitized TiO2 photoanode",
+      "method": "Microwave assisted chemical bath deposition on a screen-printed TiO2 bilayer electrode",
+      "record_type": "literature_protocol",
+      "source_year": 2011,
+      "source_doi": "10.1021/am200520q",
+      "revision": 3,
+      "record_sha256": "a3cceb23789c5142cf7f5a17d0ef24b17e7593156ff4a2e0a64dd9ca3fa28b51",
+      "recipe_signature": "9c25d3d71c811f5c981e352c65feb9d8d9407de85f28e98011ccd1fb9ecab4f4",
+      "group_id": "group-698a509ca4e1",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/zhu2011-microwave-cds-tio2-am200520q-electrode4.json",
+      "page_url": "records/zhu2011-microwave-cds-tio2-am200520q-electrode4.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdS",
+        "TiO2"
+      ],
+      "pair_ids": [
+        "zhu2011-microwave-cds-tio2-am200520q-electrode4::zhu2011-microwave-cds-tio2-am200520q-electrode4--characterized-electrode4",
+        "zhu2011-microwave-cds-tio2-am200520q-electrode4::zhu2011-microwave-cds-tio2-am200520q-electrode4--substrate-figure1"
       ]
     }
   ]
