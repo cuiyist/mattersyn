@@ -1,6 +1,7 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
 import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs';
 import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
+import {scopedProductArt} from './reader-scoped-product-art.mjs';
 
 const knownStatus=new Set(['reported','author_derived','calculated','inherited']);
 const text=v=>v===null||v===undefined?'':typeof v==='object'?JSON.stringify(v):String(v);
@@ -93,6 +94,10 @@ export function particleDescriptor(group,interpretations={}){
 
 function particleArt(descriptor){
  const host=el('div',undefined,'reader-product-illustration');
+ if(descriptor.inferred?.inline_art_id){
+  const markup=scopedProductArt(descriptor.inferred.inline_art_id);if(!markup)throw Error('Scoped product illustration ID is not registered');
+  host.innerHTML=markup;return host;
+ }
  if(descriptor.inferred?.svg_path){
   const image=el('img');image.src=siteURL(descriptor.inferred.svg_path);image.alt=descriptor.inferred.alt||descriptor.inferred.label||'Source-based interpretation of particle morphology';image.loading='lazy';image.style.width='100%';image.style.height='auto';host.append(image);return host;
  }
@@ -119,7 +124,7 @@ export async function mountParticleContext(panel,r,presentation={}){
   // specimen-specific interpretation may supply their morphology drawing.
   if(presentation.presentation_status==='pending'&&!d.inferred)d.shape='neutral';
   const caption=d.shape==='neutral'&&presentation.presentation_status==='pending'?'A morphology illustration has not yet been assigned to this specimen. Its available source-reported observations are retained below.':d.caption;
-  copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',caption,'reader-note'));
+  copy.append(badge(d.shape==='neutral'?'Reported product information':d.inferred?.display_kind==='composition_schematic'?'Conceptual product':d.inferred?'Inferred morphology':'Morphology illustration','reference'),el('h3',d.inferred?.label||d.composition),el('p',d.scope,'reader-note'),el('p',caption,'reader-note'));
   if(d.inferred)copy.append(el('p','Interpretive schematic · dimensions, interfaces and atomic positions are not reconstructed.','reader-note'));
   const basis=disclosure('Illustration basis and limitations');
   if(d.morphology)basis.append(el('p','Source description: '+d.morphology));

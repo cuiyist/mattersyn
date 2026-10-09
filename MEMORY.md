@@ -3231,3 +3231,38 @@ The source-free Qwen3-32B 32,768-context load-only probe fitted the RTX 5090 wit
 The four accepted papers supply seven records and passed source CI and the sealed build. Six Xie views have explicit fresh replacements, with original failure evidence retained. Actual visual review rejected the candidate: structured Reactor attributes notes appear as raw JSON in narrow environment cards, and mobile labels wrap character by character. A display-only shared-reader/CSS repair is being prepared on fix/reactor-attribute-display-20261009. The science and existing independent audits are unchanged. Current verified site totals remain 234 contributing sources and 2,968 records; pending work adds zero publication credit.
 
 Worker A reconciled Lin P6. Worker B reports all twenty assigned historical full audits complete and reconciled Sun R7/T5 and Vercelli R9/T2. Integrator custody and normal release work remain pending. No audit, sampled-record or publication credit is added by administrative reconciliation. The owner-approved scoped Codex source evidence permission supersedes earlier permission-held notes. Preserve 50% dual-deep sampling and the existing October 7 record denominator, strict one-per-100 rule and 100-record minimum. Local-model work stays on this machine. Reminders and scheduled reports remain disabled. No uninterrupted background work or achieved twenty-paper/hour rate is claimed.
+
+
+## Owner standing rules — October 9, 2026
+
+The owner requires immediate normal-path publication of the accepted Khatun (2012), Xie (2010), Yang (2012) and Zhu (2011) batch. The batch remains unpublished until qualified unit-cell displays, figures, complete local build/source/browser checks and normal deployment/anonymous verification pass. Waiting-batch display defects take priority. Existing scientific, privacy, sampled stop and release gates are unchanged.
+
+A quiet 30-minute queue wake-up is active using `mattersyn-github-review-watch`; morning and two-hour progress reports remain disabled. Continue accepted/claimed work; park individual blocked or over-two-hour tasks with reasons, except finish waiting-batch display defects. Record owner questions in `waiting_on_owner` and keep `status`, `current_task` and `next_step` current at least hourly and before a pause.
+
+Run only the six ready Qwen3-32B development inputs at 32,768 context, then add the other nine when ready. Frozen prompt, schema, split, scorer and pass rules remain unchanged; no heldout run or machine publication. The prior 32K load-only probe peaked at 28,355 MiB; actual generation capacity and per-field accuracy remain unmeasured.
+
+
+## October 9 standing-rule checkpoint: accepted work and local diagnostics
+
+The four-paper, seven-record batch remains unpublished until its real display checks and normal release pass. Qualified bulk component cells, seven explicitly scoped inline product illustrations, reference labels, citation layout, Reset/Home camera and legend fixes have distinct engineering acceptance. Feature-branch local build and visual validation precede push; CI must pass before merge. No policy, permission, scientific gate or release check is weakened.
+
+Kim (am3029766) corrected content has full independent audit and two distinct deep-auditor acceptances. The original oleic-acid role S2 remains counted once. The existing sampled window now contains nine unique records and two original S1/S2 findings; the 100-record minimum has not been reached. The denominator and prior log are unchanged.
+
+The actual six-ready 32K local attempt failed before generation requests. Two passes failed and ten were not attempted. Whole-GPU peak was 28,461 MiB; healthy idle 8K restoration and exact reservation release were verified. Accuracy remains unmeasured and every training field masked. Park the runtime guard defect while the audited website work continues. Nine additional source inputs and exact independently certified development truth mappings remain pending. See the appended development context report for the measured result.
+
+
+## October 9 visual QA checkpoint, 22:00 UTC hour
+
+Actual seven-record overlay QA passed the first five desktop records, including source figures, composition illustrations, qualified unit cells and exact native-canvas rotation/Reset/Home checks. The run stopped at a test assumption requiring more than two SVG shapes in the PbS powder illustration; that composition drawing has a background and a labelled product tile. A narrow exact-illustration assertion is being independently reviewed. All failed runs are retained. No public source bytes, scientific findings, gates, live counts or publication status changed.
+
+The prior Home mismatch was a browser focus outline in a screenshot: direct native-canvas images and camera states match exactly after repeated Home and Reset. The comparison now retains full DOM captures and checks the entire native canvas without cropping or pixel tolerance. The four papers remain unpublished pending the actual all-seven check, full local build/browser validation and normal CI/release path. The minimal owned-handle repair for the six-ready local 32K retry has independent engineering acceptance; retry is not yet executed. The prior failed local result remains unchanged. The quiet 30-minute continuation is active; morning and two-hour reports remain disabled.
+
+
+## October 9 accepted-paper display review completed
+
+The actual seven-record desktop/mobile display overlay passed all 633 assertions with no page, request or external-network errors. ROOT manually reviewed all 42 primary-product, unit-cell and Data-view screenshots. Figures, scoped composition illustrations, qualified parallel unit cells and the explicit unassigned LHD cell display are visible and readable. Earlier failed checks remain preserved. This is display acceptance only: complete local native build, operations/gallery checks, normal feature CI/merge, source/site release and anonymous verification are still required before these four papers receive publication credit. The six-ready local 32K retry remains unexecuted; its earlier failed attempt and privacy/calibration limits remain unchanged.
+
+
+## October 9 local development retry and release continuation
+
+The six-ready Qwen3-32B 32K retry partially completed three A/B passes; one failed and eight ready-subset slots were not attempted. One paper completed both passes. Produced values by composition/precursor amount/temperature/time/product statement are 3/0/3/2/0; correctness remains unmeasured and every machine field masked. Peak whole-GPU memory was 28,549 MiB. Restoration is blocked by an active local job; the exact reservation remains retained while a separate source-free owned-job recovery is prepared. No held-out work, machine publication or new live paper credit. The actual failure and aggregate receipts are preserved in the private runner attempt; the safe aggregate report is appended to the public context report. CPU preparation of the four accepted papers continues. A comment-only derivative removes the upstream archive path from the new anatase public CIF, preserving all scientific tokens, model bytes and the locally retained original; it must pass independent review and all existing release gates.

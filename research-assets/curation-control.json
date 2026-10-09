@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "owner_resumed_track1_full_audit_dual_deep",
-  "recorded_at": "2026-10-09T02:05:36.116048+00:00",
+  "status": "active_CPU_release_model_recovery_parked",
+  "recorded_at": "2026-10-09T22:41:52.936154+00:00",
   "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
   "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
@@ -98,15 +98,15 @@
     ],
     "next_interval_start_exclusive": "2026-09-27T13:01:47Z"
   },
-  "continuation_automation": null,
-  "continuation_interval_minutes": null,
-  "continuation_status": "ACTIVE_TRACK1_OWNER_RESUMED_SCHEDULED_REPORTS_DISABLED",
+  "continuation_automation": "mattersyn-github-review-watch",
+  "continuation_interval_minutes": 30,
+  "continuation_status": "ACTIVE_QUIET_QUEUE_CONTINUATION",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
   "experimental_silver_training_ready": false,
   "reporting_mode": "on_request_only",
-  "morning_report_status": "PAUSED",
+  "morning_report_status": "DISABLED",
   "experimental_silver_publication_credit": 0,
   "experimental_silver_completed_paper_credit": 0,
   "experimental_silver_verified_pair_credit": 0,
@@ -922,21 +922,21 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-08T21:02:16.385282+00:00",
+    "snapshot_at": "2026-10-09T22:41:52.936154+00:00",
     "stage_flags": {
-      "extraction": false,
-      "paper_audit": false,
+      "extraction": true,
+      "paper_audit": true,
       "integration": true,
       "paper_publication": true,
-      "synthetic_local_runner": true
+      "local_development_preparation": true
     },
-    "note": "Existing accepted public contributions may pass normal release gates. No new Codex source-page reading or scientific audits until privacy clarification. Another failed blind test stops Track1.",
-    "new_claims_allowed": false,
-    "new_extraction_allowed": false,
+    "new_claims_allowed": true,
+    "new_extraction_allowed": true,
     "publication_allowed": true,
     "workers_paused": false,
-    "workers_source_work_paused": true,
-    "publication_scope": "Already independently accepted public contributions; all source, build, browser and release gates remain."
+    "workers_source_work_paused": false,
+    "publication_scope": "Independently accepted audited contributions only, with all scientific, sample/figure, privacy, source, visual, release, CI, deployment and anonymous verification gates unchanged. Machine publication remains disabled.",
+    "note": "Root is preparing the four-paper CPU release; independent technical reviewers handle the narrow CIF derivative and a separate worker diagnoses owned model-job closure. No new paper claims, held-out requests, machine publication or live paper credit."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -1216,17 +1216,44 @@
       "current": 8192,
       "maximum": 32768,
       "selected_for_all_fifteen": null,
-      "actual_packets_counted": 5,
-      "maximum_count_with_reserves": 22834,
+      "actual_packets_counted": 6,
+      "maximum_count_with_reserves": 25295,
       "larger_context_gpu_fit_verified": false,
-      "frozen_prompt_schema_split_and_pass_rules_unchanged": true
+      "frozen_prompt_schema_split_and_pass_rules_unchanged": true,
+      "requested_ready_six": 32768,
+      "larger_context_gpu_load_fit_verified": true,
+      "larger_context_generation_fit_verified": false,
+      "load_probe_peak_gpu_memory_mib": 28461,
+      "load_probe_context": 32768
+    },
+    "current_stage": "Actual six-ready 32K attempt failed before generation at a runtime guard. Two pass slots failed; ten not attempted. Original arguments restored to healthy idle 8K, exact reservation released. Nine source inputs and six certified truth mappings remain pending; no heldout or machine publication.",
+    "latest_development_attempt": {
+      "context": 32768,
+      "ready_papers": 6,
+      "passes_planned": 12,
+      "completed_passes": 0,
+      "failed_passes": 2,
+      "not_attempted_passes": 10,
+      "generation_requests": 0,
+      "values_produced_per_field": 0,
+      "correct_values_status": "N/A_NOT_MEASURED",
+      "training_masked_share": 1.0,
+      "papers_per_gpu_hour": 0.0,
+      "gpu_reserved_wall_seconds": 346.45111449994147,
+      "peak_memory_used_mib": 28461,
+      "minimum_memory_free_mib": 3727,
+      "memory_samples": 566,
+      "restored_original_context": 8192,
+      "reservation_released": true,
+      "heldout_operations": 0,
+      "publication_enabled": false
     }
   },
   "blind_repeat_status": "incomplete_measurement_only_historical_failed_results_retained",
   "audited_record_sampling_checkpoint": {
     "window": "fasttrack-20261007",
-    "unique_sampled_records": 8,
-    "original_s1_s2_findings": 1,
+    "unique_sampled_records": 9,
+    "original_s1_s2_findings": 2,
     "minimum_records_for_evaluation": 100,
     "threshold_per_100": 1,
     "evaluated": false,
@@ -1236,8 +1263,110 @@
   "pending_audited_batch": {
     "papers": 4,
     "records": 7,
-    "stage": "additive_integrity_passed_normal_release_pending",
+    "stage": "seven_record_display_overlay_passed_full_local_build_pending",
     "published": false,
     "counts_in_live_homepage": false
+  },
+  "historical_october9_pre_standing_control": {
+    "status": "owner_resumed_track1_full_audit_dual_deep",
+    "recorded_at": "2026-10-09T02:05:36.116048+00:00",
+    "continuation_automation": null,
+    "continuation_interval_minutes": null,
+    "continuation_status": "ACTIVE_TRACK1_OWNER_RESUMED_SCHEDULED_REPORTS_DISABLED",
+    "current_operational_status": {
+      "snapshot_at": "2026-10-08T21:02:16.385282+00:00",
+      "stage_flags": {
+        "extraction": false,
+        "paper_audit": false,
+        "integration": true,
+        "paper_publication": true,
+        "synthetic_local_runner": true
+      },
+      "note": "Existing accepted public contributions may pass normal release gates. No new Codex source-page reading or scientific audits until privacy clarification. Another failed blind test stops Track1.",
+      "new_claims_allowed": false,
+      "new_extraction_allowed": false,
+      "publication_allowed": true,
+      "workers_paused": false,
+      "workers_source_work_paused": true,
+      "publication_scope": "Already independently accepted public contributions; all source, build, browser and release gates remain."
+    },
+    "local_development_scope": {
+      "papers": 15,
+      "heldout_allowed": false,
+      "machine_publication_allowed": false,
+      "owner_report_review_required": true,
+      "context_decision": {
+        "current": 8192,
+        "maximum": 32768,
+        "selected_for_all_fifteen": null,
+        "actual_packets_counted": 6,
+        "maximum_count_with_reserves": 25295,
+        "larger_context_gpu_fit_verified": false,
+        "frozen_prompt_schema_split_and_pass_rules_unchanged": true,
+        "requested_ready_six": 32768,
+        "larger_context_gpu_load_fit_verified": true,
+        "larger_context_generation_fit_verified": false,
+        "load_probe_peak_gpu_memory_mib": 28355,
+        "load_probe_context": 32768
+      },
+      "current_stage": "Six ready inputs; source-free capacity/runner proposal pending review and actual generation. Nine inputs pending. No heldout or machine publication."
+    },
+    "pending_audited_batch": {
+      "papers": 4,
+      "records": 7,
+      "stage": "qualified_unit_cell_display_binding_and_exact_caption_assertion_pending",
+      "published": false,
+      "counts_in_live_homepage": false
+    }
+  },
+  "current_task": "Finish independently reviewed comment-only anatase privacy derivative, normal source preparation and complete CPU build for four accepted papers. The six-ready local 32K retry partially generated but failed; safe owned-runner drain/restoration is being diagnosed without new source generation.",
+  "next_step": "Finish full local source/build/browser checks after the model runner is safely idle/restored, then CI-gated feature merge and normal site deployment/anonymous verification. Preserve the partial model results and continue accepted source transports while the local task is blocked.",
+  "waiting_on_owner": [],
+  "owner_standing_rules_20261009": {
+    "recorded_at": "2026-10-09T20:29:00.698309+00:00",
+    "accepted_papers_to_release": [
+      "Khatun 2012",
+      "Xie 2010",
+      "Yang 2012",
+      "Zhu 2011"
+    ],
+    "continue_while_accepted_or_claimed_work_waits": true,
+    "automatic_wake_minutes": 30,
+    "automatic_progress_report": false,
+    "individual_blocker_action": "Park with reason and continue other lanes; never waive a gate.",
+    "global_stop_conditions": [
+      "Sampled-record stop rule fires",
+      "A step would delete data or send paper text off the machine; existing explicitly approved scoped Codex audit evidence permission is unchanged",
+      "A published record is wrong and cannot be corrected"
+    ],
+    "owner_questions": "Append question, paused scope, continuing scope and time asked to waiting_on_owner; push through normal file-list binding and continue authorized work.",
+    "visual_release_rule": "Figures, visuals and applicable source-qualified unit-cell structures ship with each paper. No hidden or broken display. Preflight a newly used field on one test record before the batch; a waiting-batch display defect takes priority.",
+    "prepush_rule": "Complete build, source checks and visual check locally before pushing; do not use main CI to discover successive defects.",
+    "task_time_limit_hours": 2,
+    "time_limit_exception": "Finish a display defect on a waiting batch.",
+    "status_update_maximum_minutes": 60,
+    "status_update_before_pause": true,
+    "quality_stop_privacy_and_release_gates_changed": false
+  },
+  "parked_local_development": {
+    "parked_at": "2026-10-09T21:20:58.152775+00:00",
+    "reason": "The 32K retry issued four requests: three passes completed, one failed and eight ready-subset pass slots were not attempted. Original-argument restoration was rejected because an active local job remains. The exact claim is retained; source-free drain/restore diagnosis is in progress. No additional generation is admitted.",
+    "what_continues": "CPU source preparation, complete native build, accepted paper transport and display/privacy engineering. Full GPU browser QA waits for verified model-job closure.",
+    "heldout_and_machine_publication_paused": true,
+    "prior_failed_attempts_preserved": true,
+    "context": 32768,
+    "root_reservation_released": false,
+    "restored_8192_verified": false,
+    "field_values_produced": {
+      "composition": 3,
+      "precursor_amount": 0,
+      "reaction_temperature": 3,
+      "duration": 2,
+      "product_statement": 0
+    },
+    "correctness_status": "N/A_NOT_MEASURED",
+    "training_share_masked": 1.0,
+    "heldout_operations": 0,
+    "source_scope_holds": 9
   }
 }
