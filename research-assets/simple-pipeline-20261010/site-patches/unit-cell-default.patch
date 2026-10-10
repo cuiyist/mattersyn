@@ -1,21 +1,30 @@
 diff --git a/recipe-atlas/static/crystal-defaults.mjs b/recipe-atlas/static/crystal-defaults.mjs
 new file mode 100644
-index 00000000..a3b240d3
+index 00000000..4d43c7c6
 --- /dev/null
 +++ b/recipe-atlas/static/crystal-defaults.mjs
-@@ -0,0 +1,45 @@
+@@ -0,0 +1,55 @@
 +// Unit cells for routes that have no hand-bound reference: use the library's bulk
 +// reference for the same composition (or for each component of a composite).
 +// A default is a comparison aid only; it is never a statement about the paper's sample.
++// If the paper names a phase and the library has no cell of that phase, nothing is shown.
 +const CUSTOM_VIEWER_SOURCES=new Set(['heo2003','lian2021','heath1996','evans2010']);
-+const PHASE_GROUPS=[
-+ [/zinc.?blende|sphalerite/i,/F\s*-4\s*3\s*m/],
-+ [/wurtzite/i,/P\s*63\s*m\s*c/],
-+ [/rock.?salt|halite|galena/i,/F\s*m\s*-3\s*m/],
-+ [/anatase/i,/I\s*41\/a\s*m\s*d/],
-+ [/rutile/i,/P\s*42\/m\s*n\s*m/],
-+ [/face.centred|face.centered|\bfcc\b/i,/F\s*m\s*-3\s*m/],
-+ [/\bhcp\b|hexagonal close/i,/P\s*63\/m\s*m\s*c/]
++const group=entry=>entry.prototypeSpaceGroupNumber||entry.spaceGroupNumber||0;
++const inRange=(lo,hi)=>entry=>group(entry)>=lo&&group(entry)<=hi;
++const symbol=pattern=>entry=>pattern.test(entry.spaceGroup||'');
++const named=pattern=>entry=>pattern.test([entry.name,entry.phaseName].filter(Boolean).join(' '));
++const either=(...tests)=>entry=>tests.some(test=>test(entry));
++// [words a paper may use for a phase, test a library entry must pass]
++const PHASE_TESTS=[
++ [/zinc.?blende|sphalerite/i,either(symbol(/F\s*-4\s*3\s*m/),named(/zinc.?blende|sphalerite/i))],
++ [/wurtzite/i,either(symbol(/P\s*63\s*m\s*c/),named(/wurtzite/i))],
++ [/rock.?salt|halite|galena/i,either(named(/rock.?salt/i),entry=>group(entry)===225&&!/face.cent|\bfcc\b/i.test(entry.name||''))],
++ [/face.cent(?:e?red)|\bfcc\b/i,inRange(225,225)],[/\bhcp\b|hexagonal close/i,inRange(194,194)],[/\bbcc\b|body.cent(?:e?red)/i,inRange(229,229)],
++ [/anatase/i,named(/anatase/i)],[/rutile/i,named(/rutile/i)],[/brookite/i,named(/brookite/i)],[/chalcopyrite/i,named(/chalcopyrite/i)],
++ [/spinel/i,named(/spinel/i)],[/calcite/i,named(/calcite/i)],[/aragonite/i,named(/aragonite/i)],[/baddeleyite/i,named(/baddeleyite/i)],
++ [/bixbyite/i,named(/bixbyite/i)],[/perovskite/i,named(/perovskite/i)],
++ [/\bcubic\b/i,inRange(195,230)],[/tetragonal/i,inRange(75,142)],[/orthorhombic/i,inRange(16,74)],[/\bhexagonal\b/i,inRange(168,194)],
++ [/trigonal|rhombohedral/i,inRange(143,167)],[/monoclinic/i,inRange(3,15)],[/triclinic/i,inRange(1,2)]
 +];
 +const tidy=value=>String(value||'').replace(/\s+/g,'');
 +export function compositionParts(r){
@@ -31,6 +40,8 @@ index 00000000..a3b240d3
 + if(!r||CUSTOM_VIEWER_SOURCES.has(r.lineage?.source_group))return [];
 + if(excluded.some(x=>tidy(x.formula)===tidy(r.material?.formula)))return [];
 + const parts=compositionParts(r),phases=reportedPhases(r),chosen=[];
++ // Only phase words this table understands count as a stated phase.
++ const tests=PHASE_TESTS.filter(([words])=>phases.some(phase=>words.test(phase))).map(([,test])=>test);
 + for(const part of parts){
 +  const seen=new Set(),bulk=[];
 +  for(const entry of entries){
@@ -39,10 +50,9 @@ index 00000000..a3b240d3
 +   if(/partial|comput|dft/i.test([entry.sourceType,entry.referenceType].join(' ')))continue;
 +   const key=entry.cifSha256||entry.cifPath;if(seen.has(key))continue;seen.add(key);bulk.push(entry);
 +  }
-+  const wanted=PHASE_GROUPS.filter(([name])=>phases.some(phase=>name.test(phase))).map(([,group])=>group);
-+  const matching=bulk.filter(entry=>wanted.some(group=>group.test(entry.spaceGroup||'')));
-+  for(const entry of matching.length?matching:bulk){
-+   const scope='Bulk reference shown because the composition matches'+(matching.length?' and the paper reports this phase':'; the phase of the product is not matched')+'. It is not a structure of the synthesized sample: size, surface, defects and interfaces are not represented.';
++  const shown=tests.length?bulk.filter(entry=>tests.some(test=>test(entry))):bulk;
++  for(const entry of shown){
++   const scope='Bulk reference shown because the composition matches'+(tests.length?' and the paper reports this phase':'; the paper does not state the phase, so every bulk form in the library is shown')+'. It is not a structure of the synthesized sample: size, surface, defects and interfaces are not represented.';
 +   chosen.push({...entry,displayPolicy:'independent_reference',sample_context_ids:undefined,sampleContextIdsByRecord:undefined,bindingScopes:undefined,finiteModelPath:undefined,
 +    roleByRecord:{[r.record_id]:parts.length>1?'Component reference':'Reference by composition'},scope,phaseScope:scope,description:scope,sample_context_note:null,defaultByComposition:true});
 +  }
