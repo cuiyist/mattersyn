@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 2984,
-  "group_count": 243,
+  "record_count": 2985,
+  "group_count": 244,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -329,6 +329,7 @@
     "semiconductor quantum dot or magic-sized cluster",
     "semiconductor quantum dots",
     "semiconductor_heterostructure",
+    "semiconductor_nanocrystal",
     "silver nanoparticle/carbon quantum dot nanocomposite",
     "silver/silica nanoparticle with adsorbed quantum dots",
     "solvent-selection context",
@@ -157417,7 +157418,7 @@
       "source_doi": "10.1021/acs.inorgchem.5b00892",
       "revision": 2,
       "record_sha256": "30161bd5afd82f678debd9dbd3825701fe20782a756ba83c6caca6d845a74035",
-      "recipe_signature": "e8de7b5c6d737ba23f66e686b768297442f7d1ef3acee1e1bfbfff9d808f2956",
+      "recipe_signature": "89d9cf792fa76f5405a019188d85e5384edbb7b64295064c30e6bff356e3a7e2",
       "group_id": "group-d5bb47cdc9e6",
       "split": "train",
       "eligibility": {
@@ -211552,6 +211553,76 @@
       "pair_ids": [
         "vercelli2012-cdse-perylene-am300590a-perca4::solid"
       ]
+    },
+    {
+      "record_id": "wu2005-cdse-hh-cm050799j-typical-hh",
+      "title": "Typical HH/HDA-capped CdSe nanocrystal preparation",
+      "formula": "CdSe",
+      "family": "semiconductor_nanocrystal",
+      "method": "Hot injection of Se in TOP into cadmium stearate / HH / HDA / octadecane",
+      "record_type": "literature_protocol",
+      "source_year": 2005,
+      "source_doi": "10.1021/cm050799j",
+      "revision": 2,
+      "record_sha256": "753a29271849841d55b51597067f7e3beda01b203a9348887de51d07637d9c1d",
+      "recipe_signature": "2a66f850ff91c2863899f4c7b2881111293be5837d8b6d8a71e923adeb739cd4",
+      "group_id": "group-9c2f814337db",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "Reviewed synthesis precursors are identified."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/wu2005-cdse-hh-cm050799j-typical-hh.json",
+      "page_url": "records/wu2005-cdse-hh-cm050799j-typical-hh.html",
+      "missing_field_count": 6,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe"
+      ],
+      "pair_ids": []
     }
   ]
 }

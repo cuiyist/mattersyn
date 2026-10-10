@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "active_accepted_batch_display_correction",
-  "recorded_at": "2026-10-10T02:52:24.167467+00:00",
+  "status": "active_ready_cdse_and_legacy_batch_other_qualification_holds",
+  "recorded_at": "2026-10-10T14:29:55.925457+00:00",
   "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
   "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
@@ -49,25 +49,35 @@
     "batch_validation": "One successful complete local batch build. Reuse unchanged scientific audits and exact file-review objects; retest changed or failed dependencies, run the fresh complete publication boundary once, retain exact-commit CI and anonymous deployment verification."
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
-  "latest_publication_receipt": "Four-paper source c8603fefdd09 and site 13f195778d14 verified live on 2026-10-09 at 19:15:05 America/Chicago; exact CI run 38007859611 succeeded and 243 changed files passed anonymous verification. Detailed evidence is retained locally.",
-  "latest_verified_site_commit": "13f195778d1498ce95158be040e90b487f6d9659",
+  "latest_publication_receipt": "Five-paper source32d/site d458, exact Pages38049855320 and normal/all256changed anonymous files verified at2026-10-10T11:59:46UTC; five unique events. Detailed receipts local.",
+  "latest_verified_site_commit": "d45860912b0454412642a3a266fe5dba7a0dc8f7",
   "latest_verified_totals": {
-    "records": 2975,
-    "contributing_papers": 238,
-    "reviewed_literature_papers": 237,
+    "records": 2984,
+    "contributing_papers": 243,
+    "reviewed_literature_papers": 242,
     "benchmark_source_groups": 1,
     "preliminary_papers": 0,
-    "direct_material_families": 243,
-    "material_hubs": 280,
-    "broad_recipe_structure_pairs": 854
+    "direct_material_families": 246,
+    "material_hubs": 283,
+    "broad_recipe_structure_pairs": 864
   },
   "latest_publication_event": {
     "event_kind": "batch",
-    "verified_at": "2026-10-09T19:15:05-05:00",
-    "site_commit": "13f195778d1498ce95158be040e90b487f6d9659",
-    "new_papers": 4,
-    "new_records": 7,
-    "anonymous_changed_files_verified": 243
+    "verified_at": "2026-10-10T11:59:46+00:00",
+    "source_commit": "32d7bfa5f9bd8955d278963a942709ef7fc210c6",
+    "site_commit": "d45860912b0454412642a3a266fe5dba7a0dc8f7",
+    "distinct_new_papers": 5,
+    "new_records": 9,
+    "new_broad_pairs": 10,
+    "source_papers": [
+      "kim2013-cdse-cds-zno-am301960h",
+      "kim2013-pbs-ionic-liquid-am3029766",
+      "sun2018-cdte-platelets-acsnano8b06468",
+      "vercelli2012-cdse-perylene-am300590a",
+      "lin2011-chitosan-qd-am100982p"
+    ],
+    "anonymous_verified": true,
+    "site_ci_run": 38049855320
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -536,6 +546,24 @@
       "new_recipe_structure_rows": 6,
       "verified_at": "2026-10-09T19:15:05-05:00",
       "site_commit": "13f195778d1498ce95158be040e90b487f6d9659"
+    },
+    {
+      "event_kind": "batch",
+      "verified_at": "2026-10-10T11:59:46+00:00",
+      "source_commit": "32d7bfa5f9bd8955d278963a942709ef7fc210c6",
+      "site_commit": "d45860912b0454412642a3a266fe5dba7a0dc8f7",
+      "distinct_new_papers": 5,
+      "new_records": 9,
+      "new_broad_pairs": 10,
+      "source_papers": [
+        "kim2013-cdse-cds-zno-am301960h",
+        "kim2013-pbs-ionic-liquid-am3029766",
+        "sun2018-cdte-platelets-acsnano8b06468",
+        "vercelli2012-cdse-perylene-am300590a",
+        "lin2011-chitosan-qd-am100982p"
+      ],
+      "anonymous_verified": true,
+      "site_ci_run": 38049855320
     }
   ],
   "next_accepted_contribution": {
@@ -1009,7 +1037,7 @@
     "historical_logs_preserved": true,
     "deep_auditors_per_sampled_paper": 2
   },
-  "latest_verified_source_commit": "c8603fefdd09035bb7b8ee2d5455056f729c9edc",
+  "latest_verified_source_commit": "32d7bfa5f9bd8955d278963a942709ef7fc210c6",
   "historical_72_corrections": {
     "status": "live_verified",
     "new_paper_credit": 0,
@@ -1267,16 +1295,17 @@
       "publication_enabled": false
     }
   },
-  "blind_repeat_status": "incomplete_measurement_only_historical_failed_results_retained",
+  "blind_repeat_status": "Third measurement sealed: E3/9,F1/9,union4/9; below8/9. Track1 continues under explicit owner instruction; earlier results retained.",
   "audited_record_sampling_checkpoint": {
     "window": "fasttrack-20261007",
-    "unique_sampled_records": 9,
-    "original_s1_s2_findings": 2,
+    "unique_sampled_records": 10,
+    "original_s1_s2_findings": 4,
     "minimum_records_for_evaluation": 100,
     "threshold_per_100": 1,
     "evaluated": false,
     "denominator_reset": false,
-    "corrections_erase_original_findings": false
+    "corrections_erase_original_findings": false,
+    "includes_pre_acceptance_full_and_deep_findings": true
   },
   "pending_audited_batch": {
     "papers": 4,
@@ -1337,9 +1366,28 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Four requested papers remain live; independently accepted Kim particle and reactor display correction is locally prepared; fresh complete build, source and actual browser review are next. Six-paper Qwen32768 diagnostic is parked with failed telemetry coverage and unmeasured correctness; no held-out or machine publication.",
-  "next_step": "Finish focused and complete local display checks, bind the actual clean feature commit and successful CI, merge through the normal path, then publish and anonymously verify the two accepted Kim contributions; continue the next accepted batch. Keep all stop/privacy/release rules and sampling denominator unchanged.",
-  "waiting_on_owner": [],
+  "current_task": "Prepare Wu2005 cm050799j core and three independently accepted legacy corrections from the exact live base. AM qualified-binding approval and Song qualified-reference admission remain held. Next ordinal15 extraction proceeds with a different full auditor and two deep auditors reserved.",
+  "next_step": "Complete fresh local native build/source/browser/Root visual checks before Source push, exact CI and normal site deployment. No new live credit until anonymous verification.",
+  "waiting_on_owner": [
+    {
+      "question_id": "older-ullah-claim-metadata-disclosure",
+      "question": "Worker A already has a pending permission request for sharing older Ullah claim paths/hashes; automatic approval review rejected that metadata disclosure outside the current handoff scope. No indirect lookup or duplicate request is made.",
+      "what_is_paused": "Older claim metadata disclosure and Worker A taking a third claim",
+      "what_continues": "Current scoped audits, accepted-paper release, and a prospective Worker B claim only under unchanged limits",
+      "time_asked": "2026-10-10T13:43:44.288673+00:00",
+      "permission_status": "pending in existing Worker A request"
+    },
+    {
+      "question_id": "shen2013-two-qualified-reference-binding-fields",
+      "question": "Approve only qualified_entry_semantic_sha256 and record_ids in each of the two already independently source-reviewed CdSe/ZnS comparison entries in recipe-atlas/scripts/crystal_reference_pins.json, including the accepted Shen2013 record. Automatic approval review rejected the mutation and private proposal because it treated them as scientific gate inputs requiring explicit permission. No asset, reference ID, qualifier, policy, allowlist rule or checker changes are proposed.",
+      "what_is_paused": "Shen2013 qualified-reference binding and the current combined source publication; no pin mutation or indirect workaround",
+      "what_continues": "Other source-scoped extraction, independent audits, accepted Song2013 transport readiness and nonmutating browser review",
+      "time_asked": "2026-10-10T13:55:43.683364+00:00",
+      "approval_requested_asynchronously": true,
+      "status": "waiting_on_owner",
+      "public_push_status": "queued for normal substantive source binding; clean unpublished source retained"
+    }
+  ],
   "owner_standing_rules_20261009": {
     "recorded_at": "2026-10-09T20:29:00.698309+00:00",
     "accepted_papers_to_release": [
@@ -1404,5 +1452,22 @@
     "heldout_papers_run": 0,
     "result_receipt_sha256": "9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd",
     "status": "parked; generation completed but strict whole-attempt coverage failed"
+  },
+  "updated_at": "2026-10-10T14:29:55.925457+00:00",
+  "last_verified_publication": {
+    "source_commit": "32d7bfa5f9bd8955d278963a942709ef7fc210c6",
+    "site_commit": "d45860912b0454412642a3a266fe5dba7a0dc8f7",
+    "verified_at": "2026-10-10T11:59:46+00:00",
+    "milestone_sha256": "9ec80fd39bfb38f86200c9088b1061871e18301f14189714de596f219713c3a0",
+    "new_distinct_papers": 5,
+    "verified_totals": {
+      "canonical_records": 2984,
+      "reviewed_literature_source_groups": 242,
+      "published_benchmark_source_groups": 1,
+      "total_canonical_source_groups": 243,
+      "direct_synthesis_target_systems": 246,
+      "public_material_hubs": 283,
+      "source_checked_synthesis_structure_rows": 864
+    }
   }
 }

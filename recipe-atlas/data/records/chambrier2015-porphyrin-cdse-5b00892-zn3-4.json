@@ -244,6 +244,27 @@
           "locator": "Main PDF p.10, printed 7377, Experimental Procedures materials paragraph"
         }
       ]
+    },
+    {
+      "id": "methanol",
+      "name": "Methanol",
+      "formula": "CH4O",
+      "role": "source-referenced isolation flocculant",
+      "stage": "workup",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Main p.5 refers the isolation of conjugates 3/4 to the procedure for 2, where methanol flocculation and centrifugation are explicit. The solvent is inherited by that source cross-reference rather than directly restated for 3/4. Methanol is not substituted for the explicitly reported acetone wash. No methanol volume, centrifuge speed or centrifuge duration is supplied for these variants."
+      ],
+      "evidence": [
+        {
+          "source_id": "chambrier2015-porphyrin-cdse-5b00892",
+          "locator": "Main PDF p.5, printed 7372"
+        }
+      ]
     }
   ],
   "stocks": [],
@@ -378,7 +399,7 @@
     {
       "id": "zn3-recover",
       "action": "recover",
-      "label": "Porphyrin 3: Isolate, extensively wash with acetone and dry",
+      "label": "Porphyrin 3: Isolate by the referenced procedure, then wash with acetone and dry",
       "stage": "workup",
       "branch": "zn3",
       "optional": false,
@@ -387,6 +408,7 @@
       ],
       "inputs": [
         "zn3-exchange-out",
+        "methanol",
         "acetone"
       ],
       "outputs": [
@@ -453,7 +475,7 @@
         "note": ""
       },
       "retained_fraction": "zn3-recover-out",
-      "description": "Main p.5 explicitly says acetone and references the isolation of2, whose paragraph uses methanol; preserve acetone for these variants.",
+      "description": "Isolate by the procedure referenced to porphyrin 2 on main p.5: transfer to a centrifuge tube, add methanol to flocculate the nanoparticles, and centrifuge. Extensively wash the isolated conjugate with the explicitly specified acetone, then dry before the separate CDCl3 analysis. The methanol flocculation/centrifugation procedure is inherited by the source cross-reference and is not directly restated for 3/4; no solvent volume, centrifuge speed, centrifuge duration or washing count is inferred.",
       "evidence": [
         {
           "source_id": "chambrier2015-porphyrin-cdse-5b00892",
@@ -581,7 +603,7 @@
     {
       "id": "zn4-recover",
       "action": "recover",
-      "label": "Porphyrin 4: Isolate, extensively wash with acetone and dry",
+      "label": "Porphyrin 4: Isolate by the referenced procedure, then wash with acetone and dry",
       "stage": "workup",
       "branch": "zn4",
       "optional": false,
@@ -590,6 +612,7 @@
       ],
       "inputs": [
         "zn4-exchange-out",
+        "methanol",
         "acetone"
       ],
       "outputs": [
@@ -656,7 +679,7 @@
         "note": ""
       },
       "retained_fraction": "zn4-recover-out",
-      "description": "Main p.5 explicitly says acetone and references the isolation of2, whose paragraph uses methanol; preserve acetone for these variants.",
+      "description": "Isolate by the procedure referenced to porphyrin 2 on main p.5: transfer to a centrifuge tube, add methanol to flocculate the nanoparticles, and centrifuge. Extensively wash the isolated conjugate with the explicitly specified acetone, then dry before the separate CDCl3 analysis. The methanol flocculation/centrifugation procedure is inherited by the source cross-reference and is not directly restated for 3/4; no solvent volume, centrifuge speed, centrifuge duration or washing count is inferred.",
       "evidence": [
         {
           "source_id": "chambrier2015-porphyrin-cdse-5b00892",
@@ -967,8 +990,7 @@
       "Unqualified centrifugation steps do not inherit the 1400 rpm used only for the initial CdSe cleanup."
     ],
     "conflicts": [
-      "Main p.5 explicitly reports porphyrin:oleate4:1 for3 and8:1 for4. Values and ratio orientation are preserved as printed.",
-      "Main p.5 describes acetone washing for3/4 by reference to2, while2 paragraph describes methanol washes; no solvent substitution imposed."
+      "Main p.5 explicitly reports porphyrin:oleate4:1 for3 and8:1 for4. Values and ratio orientation are preserved as printed."
     ],
     "requested_tasks": [],
     "experimental_outcome": "reported_product"
