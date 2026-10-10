@@ -1,13 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {scopeKind} from '../static/reader-structures.mjs';
 import {particleGroups,particleDescriptor,mountParticleContext} from '../static/reader-particle.mjs';
 import {scopedProductArt,scopedProductArtIds} from '../static/reader-scoped-product-art.mjs';
 import {drawFiniteReference} from '../static/finite-crystal-reference.mjs';
 
-// Invented fixtures and public code only. No record/source/model files or HTTP.
-const expectedArtIds=['ready-four-qd-core-shell','ready-four-lhd-composition','ready-four-qlhd-composition','ready-four-xie-composition','ready-four-zhu-composition','ready-four-pbs-powder-composition','ready-four-samplec-composition'];
+// Public reviewed record/binding metadata and invented fixtures only. No private source papers, model inputs, or HTTP.
+const priorArtIds=['ready-four-qd-core-shell','ready-four-lhd-composition','ready-four-qlhd-composition','ready-four-xie-composition','ready-four-zhu-composition','ready-four-pbs-powder-composition','ready-four-samplec-composition'];
+const acceptedNewArtIds=['b-kim-core-array','b-kim-fig1-cds','b-kim-fig1-cdse','b-kim-fig1-zno','b-kim-fig2-cds','b-kim-fig2-cdse','n3-lin-spherical-matrix','n3-sun-rectangular-platelet','pbs-kim-fig1b-rounded-projection'];
+const expectedArtIds=[...priorArtIds,...acceptedNewArtIds];
 const freeze=x=>{if(x&&typeof x==='object'){Object.values(x).forEach(freeze);Object.freeze(x);}return x;};
 
 test('explicit reference types outrank negative reconstruction prose',()=>{
@@ -27,9 +30,31 @@ test('explicit reference types outrank negative reconstruction prose',()=>{
  ])assert.equal(scopeKind(metadata),expected,JSON.stringify(metadata));
 });
 
-test('seven fixed inline drawings are accessible and contain no external or executable content',()=>{
+test('all accepted inline drawings bind one reviewed specimen and contain no executable content',()=>{
+ assert.equal(priorArtIds.length,7);
+ assert.equal(acceptedNewArtIds.length,9);
  assert.deepEqual([...scopedProductArtIds].sort(),[...expectedArtIds].sort());
- for(const id of expectedArtIds){const svg=scopedProductArt(id);assert.match(svg,/^<svg\b/);assert.match(svg,/role="img"/);assert.match(svg,/<title>[^<]+<\/title>/);assert.match(svg,/<desc>[^<]+<\/desc>/);assert.match(svg,/<(?:rect|circle|path|ellipse)\b/);assert.doesNotMatch(svg.replace('xmlns="http://www.w3.org/2000/svg"',''),/<(?:script|foreignObject|image|use|a)\b|\son\w+\s*=|\bhref\s*=|javascript:|https?:\/\//i);assert.match(svg,/no measured coordinates|not reconstructed|not assigned|not reported/i);}
+ const morphology=JSON.parse(readFileSync(new URL('../static/data/reader-morphology-interpretations.json',import.meta.url),'utf8'));
+ const bound=Object.entries(morphology.entries).filter(([,entry])=>Boolean(entry?.inline_art_id));
+ assert.deepEqual(bound.map(([,entry])=>entry.inline_art_id).sort(),[...expectedArtIds].sort());
+ for(const [key,entry] of bound){
+  const id=entry.inline_art_id;
+  assert.equal(key,`${entry.record_id}:${entry.sample_id}`,id);
+  assert.equal(entry.measured_atomic_coordinates,false,id);
+  assert.equal(entry.eligible_training,false,id);
+  assert.ok(Array.isArray(entry.evidence)&&entry.evidence.length>0,id);
+  assert.ok(Array.isArray(entry.limitations)&&entry.limitations.length>0,id);
+  assert.match(entry.source_hash_scope,/^(?:dist\/)?data\/records\/[a-z0-9-]+\.json$/,id);
+  const recordBytes=readFileSync(new URL(`../${entry.source_hash_scope.replace(/^dist\//,'')}`,import.meta.url));
+  assert.equal(createHash('sha256').update(recordBytes).digest('hex'),entry.source_sha256,id);
+  const record=JSON.parse(recordBytes.toString('utf8'));
+  assert.equal(record.record_id,entry.record_id,id);
+  assert.ok(record.products.some(product=>product.sample_id===entry.sample_id),id);
+  const svg=scopedProductArt(id);
+  assert.match(svg,/^<svg\b/);assert.match(svg,/role="img"/);assert.match(svg,/<title>[^<]+<\/title>/);assert.match(svg,/<desc>[^<]+<\/desc>/);assert.match(svg,/<(?:rect|circle|path|ellipse)\b/);
+  assert.doesNotMatch(svg.replace('xmlns="http://www.w3.org/2000/svg"',''),/<(?:script|foreignObject|image|use|a)\b|\son\w+\s*=|\bhref\s*=|javascript:|https?:\/\//i);
+  assert.match(svg,/no measured coordinates|no measured geometry|not reconstructed|not assigned|not reported/i);
+ }
  assert.equal(scopedProductArt('unregistered-fixture'),null);assert.equal(scopedProductArt('__proto__'),null);assert.equal(scopedProductArt('constructor'),null);
 });
 
