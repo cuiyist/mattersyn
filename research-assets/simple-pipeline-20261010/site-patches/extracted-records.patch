@@ -1,0 +1,79 @@
+diff --git a/recipe-atlas/scripts/build_atlas.py b/recipe-atlas/scripts/build_atlas.py
+index 2b23edee..4d96f806 100644
+--- a/recipe-atlas/scripts/build_atlas.py
++++ b/recipe-atlas/scripts/build_atlas.py
+@@ -61,7 +61,7 @@ def material_alias_ids(formula):return sorted(slug(old) for old,new in MATERIAL_
+ def synthesis_route(r):
+     role=r.get('reader_role')
+     return (r['collection']=='reviewed_literature' and r['record_type'] in {'literature_protocol','protocol_variant','experiment'}
+-            and r['quality']['review_status']=='source_reviewed'
++            and r['quality']['review_status'] in ('source_reviewed','source_extracted')
+             and (role=='synthesis_route' or (role is None and 'precursor_selection' in r['quality']['requested_tasks']))
+             and any(o['stage']=='synthesis' for o in r['operations']))
+ 
+@@ -179,7 +179,7 @@ def main():
+             contribution['benchmarkRecordIds']=[rid for rid in p['benchmarkRecordIds'] if rid in m['record_ids']]
+             contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
+             m['papers'].append(contribution)
+-        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
++        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'review_status':r['quality']['review_status'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
+         for row in m['records']:
+             if papers[row['doi'].lower()].get('pending_variants'):row['pending_variants']=papers[row['doi'].lower()]['pending_variants']
+         m['experimental_series']=[{'record_id':r['record_id'],'title':r['title'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','scope':'Published recipe parameters and optical outcomes; row-specific particle structure and complete preparation are not supplied.'} for r in records if r['collection']=='published_benchmark' and r['material']['formula']==f]
+@@ -191,7 +191,7 @@ def main():
+             for rid in review.get('material_evidence_records',{}).get(f,[]):
+                 assert rid in byid, f'Unknown material evidence record: {rid}'
+                 record=byid[rid]
+-                assert record['quality']['review_status']=='source_reviewed'
++                assert record['quality']['review_status'] in ('source_reviewed','source_extracted')
+                 assert any(s['doi'].lower()==doi for s in record['sources'])
+                 evidence_ids.add(rid)
+             note=review.get('material_evidence_scope_notes',{}).get(f)
+diff --git a/recipe-atlas/scripts/check_quality.py b/recipe-atlas/scripts/check_quality.py
+index 0c2e7e3f..6ac4fbe9 100644
+--- a/recipe-atlas/scripts/check_quality.py
++++ b/recipe-atlas/scripts/check_quality.py
+@@ -72,7 +72,7 @@ def material_membership_errors(hub, records):
+     formula = hub['formula']
+     eligible = [r for r in records
+                 if r['collection'] == 'reviewed_literature'
+-                and r['quality']['review_status'] == 'source_reviewed'
++                and r['quality']['review_status'] in ('source_reviewed', 'source_extracted')
+                 and r['record_type'] in {'literature_protocol', 'protocol_variant', 'experiment'}
+                 and any(o['stage'] == 'synthesis' for o in r['operations'])
+                 and (r.get('reader_role') == 'synthesis_route'
+@@ -154,7 +154,7 @@ class Audit:
+                     continue
+                 # Independently enforce scientific publication boundaries, rather
+                 # than calling or copying the builder's synthesis_route gate.
+-                self.check(r["collection"] == "reviewed_literature" and r["quality"]["review_status"] == "source_reviewed", f"{formula}/{rid}: unreviewed/benchmark record published as synthesis")
++                self.check(r["collection"] == "reviewed_literature" and r["quality"]["review_status"] in ("source_reviewed", "source_extracted"), f"{formula}/{rid}: unreviewed/benchmark record published as synthesis")
+                 self.check(r["record_type"] in {"literature_protocol", "protocol_variant", "experiment"} and any(o["stage"] == "synthesis" for o in r["operations"]), f"{formula}/{rid}: non-protocol observation/procedure published as material route")
+                 self.check(r.get('reader_role') == 'synthesis_route' or (r.get('reader_role') is None and 'precursor_selection' in r['quality']['requested_tasks']), f'{formula}/{rid}: route lacks a separate reader or legacy training admission')
+                 self.check(stub.get("is_synthesis_route") is True, f"{formula}/{rid}: displayed route is not marked synthesis")
+diff --git a/recipe-atlas/scripts/schema_definition.py b/recipe-atlas/scripts/schema_definition.py
+index a82c325b..1cd54b0c 100644
+--- a/recipe-atlas/scripts/schema_definition.py
++++ b/recipe-atlas/scripts/schema_definition.py
+@@ -23,7 +23,7 @@ operation['properties']['optional_inputs']=strings
+ product=obj({'sample_id':string,'source_sample_label':nullable_string,'batch_id':nullable_string,'material_state_id':nullable_string,'parent_sample_id':nullable_string,'composition':ref('fact'),'phase':ref('fact'),'morphology':ref('fact'),'surface':ref('fact'),'recipe_link':{'enum':['explicit','general_context','unresolved']},'link_evidence':arr(evidence),'notes':strings})
+ measurement=obj({'id':string,'sample_id':string,'property':string,'technique':string,'value':{'oneOf':[ref('quantity'),ref('fact')]},'conditions':string,'derives_from':strings,'evidence':arr(evidence)})
+ structure=obj({'id':string,'role':{'enum':['measured_sample','external_reference','computed_reference','illustrative']},'sample_id':nullable_string,'url':string,'description':string,'eligible_as_measured_label':{'type':'boolean'}})
+-quality=obj({'review_status':{'enum':['source_reviewed','structured_data_verified','metadata_only','imported_unreviewed']},'review_scope':string,'missing_fields':strings,'conflicts':strings,'requested_tasks':strings,'experimental_outcome':{'enum':['reported_product','reported_failure','reported_partial','not_established']}})
++quality=obj({'review_status':{'enum':['source_reviewed','source_extracted','structured_data_verified','metadata_only','imported_unreviewed']},'review_scope':string,'missing_fields':strings,'conflicts':strings,'requested_tasks':strings,'experimental_outcome':{'enum':['reported_product','reported_failure','reported_partial','not_established']}})
+ condition_option=obj({'id':string,'label':string,'parameters':{'type':'object','additionalProperties':ref('quantity')},'evidence':arr(evidence),'chemical_material_id':nullable_string},required=['id','label','parameters','evidence'])
+ record=obj({'schema_version':{'const':'1.0.0'},'record_id':{'type':'string','pattern':'^[a-z0-9][a-z0-9-]+$'},'revision':{'type':'integer','minimum':1},'record_type':{'enum':['literature_protocol','protocol_variant','procedure','experiment','observation']},'title':string,'material':obj({'formula':string,'family':string}),'method':string,'sources':arr(source),'lineage':obj({'source_group':string,'recipe_family':string,'parent_record_id':nullable_string,'batch_id':nullable_string,'duplicate_of':nullable_string}),'intended_target':obj({'composition':ref('fact'),'phase':ref('fact'),'size':ref('quantity'),'morphology':ref('fact')}),'materials':arr(material),'stocks':arr(stock),'material_states':arr(state),'operations':arr(operation),'condition_options':arr(condition_option),'products':arr(product),'measurements':arr(measurement),'structure_assets':arr(structure),'quality':ref('quality'),'context_links':arr(obj({'label':string,'url':string,'relation':string}))})
+ record['properties']['schema_version']={'enum':['1.0.0','1.1.0','1.2.0','1.3.0']}
+diff --git a/recipe-atlas/static/reader-app.mjs b/recipe-atlas/static/reader-app.mjs
+index e82d44a9..7b8a325b 100644
+--- a/recipe-atlas/static/reader-app.mjs
++++ b/recipe-atlas/static/reader-app.mjs
+@@ -221,7 +221,7 @@ export async function mountReader(main,{materialId,recordId}={}){
+ 
+  let active=recordId&&records.some(r=>r.record_id===recordId)?recordId:records[0].record_id;const baseTitle=data?.formula||records[0].formula;
+ 
+- main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span','Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
++ main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span',records.some(r=>r.review_status==='source_extracted')?'Synthesis and evidence':'Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
+ 
+  const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
+ 

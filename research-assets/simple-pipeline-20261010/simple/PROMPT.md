@@ -5,6 +5,9 @@ Read the text and return ONE JSON object and nothing else:
 {
  "doi": "the paper's DOI if it appears in the text, else empty",
  "title": "the paper's title if it appears, else empty",
+ "authors": "the authors as printed, if they appear, else empty",
+ "year": "the publication year if it appears, else empty",
+ "journal": "the journal name if it appears, else empty",
  "pairs": [
   {
    "product": "the product as the paper names it, with its sample label if it has one",
@@ -30,7 +33,7 @@ Read the text and return ONE JSON object and nothing else:
      {"name": "cadmium oxide", "role": "metal source | anion source | ligand | solvent | reductant | other", "amount": 0.4, "unit": "mmol", "quote": "..."}
     ],
     "steps": [
-     {"action": "heat", "description": "what is done, in a few words", "temperature": 250, "temperature_unit": "°C", "time": null, "time_unit": null, "quote": "..."}
+     {"action": "heat", "description": "what is done, in a few words", "uses": ["names from the chemicals list that enter in this step"], "temperature": 250, "temperature_unit": "°C", "time": null, "time_unit": null, "quote": "..."}
     ]
    }
   }
@@ -44,6 +47,6 @@ Rules:
 4. reaction_temperature and reaction_time are for the step in which the particles nucleate or grow. Every other temperature and time goes on its own step.
 5. One pair per distinct product that has its own recipe or recipe variation (for example each size in a size series). Do not make pairs for commercial materials, devices or measurements.
 6. List the chemicals with amounts as written. Use a separate entry for each chemical. If no amount is given, use null.
-7. List the steps in the order performed, including purification. Use short action words: dissolve, degas, heat, inject, hold, cool, add, precipitate, centrifuge, wash, redisperse, dry, anneal.
+7. List the steps in the order performed, including purification. In "uses", name only chemicals the text says are added or used in that step, spelled as in your chemicals list; leave it empty if the text does not say. Use short action words: dissolve, degas, heat, inject, hold, cool, add, precipitate, centrifuge, wash, redisperse, dry, anneal.
 8. If the paper prepares the material "according to" another paper and gives no details, return the pair with what is stated and null for the rest.
-9. If the text contains no synthesis, return {"doi": "", "title": "", "pairs": []}.
+9. If the text contains no synthesis, return {"doi": "", "title": "", "authors": "", "year": "", "journal": "", "pairs": []}.

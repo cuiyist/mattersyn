@@ -19,6 +19,7 @@ Then publish the `site` folder. That is all a release is.
 |---|---|
 | `mattersyn_simple.py` | The pipeline (about 520 lines, standard-library Python; PyMuPDF only if you feed it PDFs) |
 | `PROMPT.md` | The reading instructions and the pair format. A local model or an agent uses the same text |
+| `to_site.py` | Converter from checked pair files to the inputs of the existing site (see below) |
 
 ## What each step does
 
@@ -55,6 +56,33 @@ python mattersyn_simple.py score   pairs15 --records records.jsonl
 
 Run `extract` with `--passes 0`. It only prepares each paper's text. The agent then follows `PROMPT.md` and saves its answer as `work/<name>.passA.json` (a second agent may save `passB.json`). `check` and `build` are unchanged.
 
+## Into the existing site (`to_site.py`)
+
+`build` above writes plain pages. To show the papers in the existing MatterSyn Reader, with molecule cards, step diagrams, unit cells and figures like the current papers, use the converter. It needs the site-code change in `site-patches/extracted-records.patch` applied first.
+
+```
+python to_site.py records pairs --repo <mattersyn checkout>        # one site record per pair, plus the per-paper inventory entry
+<run the site build once; it stops at the Reader metadata stage>
+python to_site.py sync pairs --repo <mattersyn checkout> --dist <that build's dist folder>
+<regenerate the file lists with the project's tools, then build and release as usual>
+```
+
+What `sync` writes for each paper:
+
+- a diagram for every step, and the binding file that attaches them;
+- the figures, sorted into structure and property, with their captions;
+- the Reader entry, and the material page's list of routes taken from the build;
+- links from each chemical to the site's molecule library. A chemical the library does not know gets a plain name card, with no structure drawn;
+- the record baseline rows, copied from the build.
+
+Unit cells come from the composition default in `site-patches/`; the converter does not bind them.
+
+**How the records are marked.** Review status `source_extracted`, shown on the record page as "source extracted". They carry no "machine-extracted, not reviewed" badge, and they are not marked as reviewed. A page that includes such a record is headed "Synthesis and evidence" instead of "Reviewed synthesis and evidence". They stay out of the audited training exports and the audited pair table; `pairs.json` is the data for machines.
+
+**Tested.** One made-up paper went through `records`, `sync` and the complete site build (13 stages, 206 tests, all site checks) and was opened in the Reader: precursors with molecule drawings, three steps with diagrams and conditions, a zinc-blende CdSe unit cell, and structure and property figures, with no console errors.
+
+**Not tested.** A real paper; several pairs from one paper; a material the site has never seen; the release gate, rights register and allowlist, which the project's own tools regenerate; the JavaScript tests.
+
 ## What this leaves out, on purpose
 
 Audit chains, receipts and hashes, per-paper hand-made drawings, per-step reactor blocks, sampling windows, storage caps and release gates. The quality control is the automatic check, plus reading a random sample.
@@ -64,4 +92,3 @@ Audit chains, receipts and hashes, per-paper hand-made drawings, per-step reacto
 - It does not catch a correct number attached to the wrong sample when both passes make the same mistake.
 - It drops values more readily than it keeps them, so some real data is lost.
 - It was tested on a made-up paper with a stand-in model server, its scoring on one real audited record with planted errors, and its figure finder on a made-up two-column PDF. **It has not yet run on a real paper with a real model**, and real journal layouts will trip the figure finder in ways the test did not.
-- `build` writes plain pages. Showing these papers in the existing MatterSyn Reader needs a converter into the site's record format and a change to the site code, which are not written yet.

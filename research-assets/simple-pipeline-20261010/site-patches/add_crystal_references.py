@@ -21,6 +21,13 @@ NOTES = ['Fractional sites are expanded using the symmetry operations of the ori
          'A periodic unit cell is not a complete finite nanocrystal. No particle cut, dopant substitution, surface termination or ligand decoration is generated.']
 
 
+def dump_like(path, data):
+    """Write JSON in the style the file already has (line endings, final newline), so only real changes show up."""
+    raw = Path(path).read_bytes() if Path(path).is_file() else b'\n'
+    text = json.dumps(data, ensure_ascii=False, indent=2) + ('\n' if raw.endswith(b'\n') else '')
+    Path(path).write_bytes(text.replace('\n', '\r\n').encode('utf-8') if b'\r\n' in raw else text.encode('utf-8'))
+
+
 def number(text):
     """'4.0862(3)' -> 4.0862 ; '1/3' -> 0.3333"""
     text = str(text).strip().split('(')[0]
@@ -179,8 +186,7 @@ def add_entries(repo, cif_dir, chosen, retrieved):
                                 'record_ids': [], 'reference_type': 'literature_bulk_reference', 'display_policy': 'independent_reference', 'default_for_sample': False, 'source_url': url})
         have.add(cid)
         print(f'added {cid}: {len(atoms)} atoms {counts(atoms)}  {info["space_group"]} (#{info["space_group_number"]})')
-    registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
-    pins_path.write_text(json.dumps(pins, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
+    dump_like(registry_path, registry); dump_like(pins_path, pins)
 
 
 def verify(repo):

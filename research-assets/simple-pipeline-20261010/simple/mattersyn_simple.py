@@ -143,6 +143,7 @@ def cmd_extract(a):
         keep = select_pages(pages, a.budget)
         text = '\n\n'.join(f'[page {i + 1}]\n{pages[i]}' for i in keep)
         (out / f'{stem}.text.txt').write_text(text, encoding='utf-8')
+        (out / f'{stem}.pages.json').write_text(json.dumps({'page_count': len(pages), 'pages_read': [i + 1 for i in keep]}), encoding='utf-8')
         if a.passes == 0:
             print(f'{stem}: text ready (pages {[i + 1 for i in keep]})')
         user = text + ('\n\n/no_think' if 'qwen3' in a.model.lower() else '')
@@ -272,8 +273,15 @@ def step_fact(step, key):
     return {'value': step.get(key), 'unit': step.get(key + '_unit'), 'quote': step.get('quote')}
 
 
+def page_finder(paper_text):
+    """Return a function giving the PDF page a quote is on (the text carries [page N] markers)."""
+    blocks = re.split(r'\[page (\d+)\]\n', paper_text)
+    pages = [(int(blocks[i]), squash(blocks[i + 1])) for i in range(1, len(blocks) - 1, 2)]
+    return lambda quote: next((n for n, text in pages if squash(quote) in text), None)
+
+
 def check_paper(paper_text, passA, passB, stats):
-    paper = squash(paper_text)
+    paper = squash(paper_text); page_of = page_finder(paper_text)
     two = passB is not None
     final = []
     for p, q in match_pairs(passA.get('pairs') or [], (passB or {}).get('pairs') or []):
@@ -288,7 +296,9 @@ def check_paper(paper_text, passA, passB, stats):
             stats['values'] += 1
             if why: stats['dropped: ' + why] += 1; return None
             stats['kept'] += 1
-            return {k: fact[k] for k in ('value', 'unit', 'quote') if fact.get(k) not in (None, '')}
+            out = {k: fact[k] for k in ('value', 'unit', 'quote') if fact.get(k) not in (None, '')}
+            if page_of(fact['quote']): out['page'] = page_of(fact['quote'])
+            return out
 
         for group, fields in (('structure', STRUCTURE_FIELDS), ('recipe', RECIPE_FIELDS)):
             for f in fields:
@@ -303,7 +313,7 @@ def check_paper(paper_text, passA, passB, stats):
                 stats['dropped: quote not in paper'] += 1; continue
             if two and other is None:
                 stats['dropped: passes disagree'] += 1; continue
-            item = {'name': name, 'role': c.get('role') or '', 'quote': c['quote']}
+            item = {'name': name, 'role': c.get('role') or '', 'quote': c['quote'], 'page': page_of(c['quote'])}
             amount = {'value': c.get('amount'), 'unit': c.get('unit'), 'quote': c.get('quote')}
             o_amount = {'value': (other or {}).get('amount'), 'unit': (other or {}).get('unit')}
             if c.get('amount') is not None:
@@ -319,7 +329,8 @@ def check_paper(paper_text, passA, passB, stats):
             stats['values'] += 1
             if len(squash(s.get('quote') or '')) < 8 or squash(s['quote']) not in paper:
                 stats['dropped: quote not in paper'] += 1; continue
-            item = {'action': s.get('action') or '', 'description': s.get('description') or '', 'quote': s['quote']}
+            item = {'action': s.get('action') or '', 'description': s.get('description') or '', 'quote': s['quote'], 'page': page_of(s['quote']),
+                    'uses': [u for u in s.get('uses') or [] if isinstance(u, str)]}
             twin = next((o for o in o_steps if squash(o.get('action', '')) == squash(item['action']) and
                          all(o.get(k) is None and s.get(k) is None or
                              facts_agree(k, step_fact(s, k), step_fact(o, k)) for k in ('temperature', 'time') if s.get(k) is not None or o.get(k) is not None)), None)
@@ -351,9 +362,11 @@ def cmd_check(a):
         pairs = check_paper(text_file.read_text(encoding='utf-8'), passes[0], passes[1] if len(passes) > 1 else None, stats)
         meta = json.loads((work / f'{stem}.meta.json').read_text(encoding='utf-8')) if (work / f'{stem}.meta.json').exists() else {}
         figures = json.loads((work / f'{stem}.figures.json').read_text(encoding='utf-8')) if (work / f'{stem}.figures.json').exists() else meta.get('figures') or []
-        doc = {'id': stem, 'doi': meta.get('doi') or passes[0].get('doi') or '', 'title': meta.get('title') or passes[0].get('title') or '',
+        cite = lambda k: meta.get(k) or passes[0].get(k) or ''
+        doc = {'id': stem, 'doi': cite('doi'), 'title': cite('title'), 'authors': cite('authors'), 'year': cite('year'), 'journal': cite('journal'),
                'check': 'two passes agree, quotes found' if len(passes) > 1 else 'one pass, quotes found',
-               'values_kept': stats['kept'], 'values_extracted': stats['values'], 'figures': figures, 'pairs': pairs}
+               'values_kept': stats['kept'], 'values_extracted': stats['values'], 'figures': figures, 'pairs': pairs,
+               **(json.loads((work / f'{stem}.pages.json').read_text(encoding='utf-8')) if (work / f'{stem}.pages.json').exists() else {})}
         (out / f'{stem}.pairs.json').write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding='utf-8')
         total.update(stats); total['pairs'] += len(pairs)
         print(f'{stem}: {len(pairs)} pairs, kept {stats["kept"]} of {stats["values"]} values')

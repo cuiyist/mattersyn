@@ -34,3 +34,20 @@ python site-patches/add_crystal_references.py --repo . --cif-dir site-patches/cr
 The second command writes the 27 CIF files and model files, and appends the entries to `registry.json` and `crystal_reference_pins.json`. Then regenerate `publication/build-inputs.json`, the allowlist and the rights register with the project's own tools, since they list every file by checksum.
 
 `python site-patches/add_crystal_references.py --verify .` rebuilds the cells already in the library and compares them with the stored models.
+
+## Extracted records in the Reader (2026-10-10)
+
+**Problem.** The Reader, the material pages and the final quality check accept only records marked `source_reviewed`, so a paper read by the local model could not appear at all.
+
+**Change** (`extracted-records.patch`, 7 lines in 4 files).
+
+- `schema_definition.py`: a new review status, `source_extracted`.
+- `build_atlas.py` and `check_quality.py`: records with that status count as synthesis routes.
+- `build_atlas.py`: each route on a material page carries its review status.
+- `reader-app.mjs`: a page that includes an extracted record is headed "Synthesis and evidence".
+
+Not changed: training eligibility, the audited pair table and the paper counts still require `source_reviewed`.
+
+**Tested.** With the converter in `simple/to_site.py`, a made-up extracted paper passed the complete site build and rendered in the Reader. The JavaScript tests were not run.
+
+**To apply.** `git apply site-patches/extracted-records.patch`. The schema file has mixed line endings; the patch changes one line of it and leaves the rest byte-identical.
