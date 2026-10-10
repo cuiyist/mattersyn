@@ -1,0 +1,86 @@
+diff --git a/recipe-atlas/static/crystal-defaults.mjs b/recipe-atlas/static/crystal-defaults.mjs
+new file mode 100644
+index 00000000..a3b240d3
+--- /dev/null
++++ b/recipe-atlas/static/crystal-defaults.mjs
+@@ -0,0 +1,45 @@
++// Unit cells for routes that have no hand-bound reference: use the library's bulk
++// reference for the same composition (or for each component of a composite).
++// A default is a comparison aid only; it is never a statement about the paper's sample.
++const CUSTOM_VIEWER_SOURCES=new Set(['heo2003','lian2021','heath1996','evans2010']);
++const PHASE_GROUPS=[
++ [/zinc.?blende|sphalerite/i,/F\s*-4\s*3\s*m/],
++ [/wurtzite/i,/P\s*63\s*m\s*c/],
++ [/rock.?salt|halite|galena/i,/F\s*m\s*-3\s*m/],
++ [/anatase/i,/I\s*41\/a\s*m\s*d/],
++ [/rutile/i,/P\s*42\/m\s*n\s*m/],
++ [/face.centred|face.centered|\bfcc\b/i,/F\s*m\s*-3\s*m/],
++ [/\bhcp\b|hexagonal close/i,/P\s*63\/m\s*m\s*c/]
++];
++const tidy=value=>String(value||'').replace(/\s+/g,'');
++export function compositionParts(r){
++ const material=r?.material||{},listed=Array.isArray(material.components)&&material.components.length?material.components:String(material.formula||'').split(/[\/@]/);
++ // "InP:Zn" is a doped host; the host cell is the useful comparison.
++ return [...new Set(listed.map(part=>tidy(String(part).split(':')[0])).filter(Boolean))];
++}
++export function reportedPhases(r){
++ const facts=[...(r?.products||[]).map(p=>p?.phase?.value),r?.intended_target?.phase?.value];
++ return facts.filter(value=>typeof value==='string'&&value.trim());
++}
++export function defaultCrystalReferences(entries,r,excluded=[]){
++ if(!r||CUSTOM_VIEWER_SOURCES.has(r.lineage?.source_group))return [];
++ if(excluded.some(x=>tidy(x.formula)===tidy(r.material?.formula)))return [];
++ const parts=compositionParts(r),phases=reportedPhases(r),chosen=[];
++ for(const part of parts){
++  const seen=new Set(),bulk=[];
++  for(const entry of entries){
++   // Any periodic reference cell in the library qualifies; partial, computed and measured-sample models do not.
++   if(tidy(entry.formula)!==part||!entry.modelPath||entry.referenceOnly===false||entry.measuredSampleStructure===true)continue;
++   if(/partial|comput|dft/i.test([entry.sourceType,entry.referenceType].join(' ')))continue;
++   const key=entry.cifSha256||entry.cifPath;if(seen.has(key))continue;seen.add(key);bulk.push(entry);
++  }
++  const wanted=PHASE_GROUPS.filter(([name])=>phases.some(phase=>name.test(phase))).map(([,group])=>group);
++  const matching=bulk.filter(entry=>wanted.some(group=>group.test(entry.spaceGroup||'')));
++  for(const entry of matching.length?matching:bulk){
++   const scope='Bulk reference shown because the composition matches'+(matching.length?' and the paper reports this phase':'; the phase of the product is not matched')+'. It is not a structure of the synthesized sample: size, surface, defects and interfaces are not represented.';
++   chosen.push({...entry,displayPolicy:'independent_reference',sample_context_ids:undefined,sampleContextIdsByRecord:undefined,bindingScopes:undefined,finiteModelPath:undefined,
++    roleByRecord:{[r.record_id]:parts.length>1?'Component reference':'Reference by composition'},scope,phaseScope:scope,description:scope,sample_context_note:null,defaultByComposition:true});
++  }
++ }
++ return chosen;
++}
+diff --git a/recipe-atlas/static/crystal-viewer.mjs b/recipe-atlas/static/crystal-viewer.mjs
+index bf8c1f7d..10568018 100644
+--- a/recipe-atlas/static/crystal-viewer.mjs
++++ b/recipe-atlas/static/crystal-viewer.mjs
+@@ -33,7 +33,7 @@ async function productIdentity(host,r){
+ }
+ const colors={Cd:'#d9af67',Se:'#689db3',O:'#ce6374',Zn:'#6c96ba',In:'#91a3c6',P:'#d4a457',Cs:'#9983bd',Pb:'#6b91aa',Br:'#b78654',Co:'#789baa',Fe:'#c48c59',Ir:'#7993a7',X:'#9575b0'};
+ export async function mountCrystalReferences(host,r){
+- if(!host)return;host.replaceChildren();if(await mountHeoAverage(host,r))return;if((await mountEvansSpecies9(host,r)).mounted)return;await productIdentity(host,r);if(eligibleBulkContexts(r).length){if(!document.querySelector('link[data-lian-bulk-css]')){const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./lian2021-bulk-viewer.css',import.meta.url);css.dataset.lianBulkCss='true';document.head.append(css);}await mountLianBulk(host,r);}registryPromise??=fetch(new URL('assets/crystal-references/registry.json',import.meta.url),{cache:'no-store'}).then(r=>r.json());const data=await registryPromise;const entries=data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id));if(!entries.length){if(r.lineage?.source_group==='heath1996')host.append(el('h3','Atomic structure data'),el('p','The supplied article reports microscopy and crystallinity evidence but provides no atomic coordinates or measured CIF. A verified Ge reference structure is not available in the current local collection; no downloadable sample structure is inferred from the lattice mismatch.','guide-notice'));return;}
++ if(!host)return;host.replaceChildren();if(await mountHeoAverage(host,r))return;if((await mountEvansSpecies9(host,r)).mounted)return;await productIdentity(host,r);if(eligibleBulkContexts(r).length){if(!document.querySelector('link[data-lian-bulk-css]')){const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./lian2021-bulk-viewer.css',import.meta.url);css.dataset.lianBulkCss='true';document.head.append(css);}await mountLianBulk(host,r);}registryPromise??=fetch(new URL('assets/crystal-references/registry.json',import.meta.url),{cache:'no-store'}).then(r=>r.json());const data=await registryPromise;let entries=data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id));if(!entries.length){const {defaultCrystalReferences}=await import('./crystal-defaults.mjs');entries=defaultCrystalReferences(data.entries,r,data.excluded_materials);}if(!entries.length){if(r.lineage?.source_group==='heath1996')host.append(el('h3','Atomic structure data'),el('p','The supplied article reports microscopy and crystallinity evidence but provides no atomic coordinates or measured CIF. A verified Ge reference structure is not available in the current local collection; no downloadable sample structure is inferred from the lattice mismatch.','guide-notice'));return;}
+  const referenceHost=el('div');host.append(referenceHost);const {mountReaderStructures}=await import('./reader-structures.mjs?v=0.41.3');await mountReaderStructures(referenceHost,r);return;
+  host.append(el('h3','Reference crystal structures'),el('p','Independent or explicitly constructed bulk references for comparison. The unit cell and extended lattice are illustrative references, not atom-by-atom reconstructions of the synthesized nanocrystal.','guide-notice'));const grid=el('div',undefined,'crystal-reference-grid');host.append(grid);
+  for(const ref of entries){const card=el('article',undefined,'crystal-reference-card'),view=el('div',undefined,'crystal-reference-view');view.tabIndex=0;view.setAttribute('aria-label',ref.name+' interactive crystal viewer');card.append(el('h4',ref.name),view,el('small',ref.scope||ref.description));const downloads=el('div',undefined,'protocol-controls');for(const [label,url] of [['Download reference CIF ↓',new URL('assets/crystal-references/'+ref.cifPath,import.meta.url)],['Structure source ↗',ref.sourceUrl]]){const a=el('a',label);a.href=url;downloads.append(a);}card.append(downloads);grid.append(card);
+diff --git a/recipe-atlas/static/reader-structures.mjs b/recipe-atlas/static/reader-structures.mjs
+index a82efcdb..d25082f5 100644
+--- a/recipe-atlas/static/reader-structures.mjs
++++ b/recipe-atlas/static/reader-structures.mjs
+@@ -3,13 +3,16 @@ import {mountParticleContext} from './reader-particle.mjs?v=0.41.3';
+ import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
+ import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.41.0';
+ import {drawFiniteReference} from './finite-crystal-reference.mjs';
++import {defaultCrystalReferences} from './crystal-defaults.mjs';
+ let registry,roles,availability;
+ const colors=atomColors;
+ export async function crystalReferences(r){
+  registry??=fetch(siteURL('assets/crystal-references/registry.json'),{cache:'no-store'}).then(r=>r.json());
+  roles??=fetch(siteURL('assets/crystal-references/component-roles.json'),{cache:'no-store'}).then(r=>r.ok?r.json():{entries:{}});
+  const [data,labels]=await Promise.all([registry,roles]);
+- return data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id)).map(original=>referenceForRecord(original,r.record_id,labels.entries?.[original.id]));
++ const bound=data.entries.filter(x=>(x.record_ids||[]).includes(r.record_id)).map(original=>referenceForRecord(original,r.record_id,labels.entries?.[original.id]));
++ // Routes without a hand-bound reference still get the bulk cell for their composition.
++ return bound.length?bound:defaultCrystalReferences(data.entries,r,data.excluded_materials);
+ }
+ export function referenceForRecord(original,recordId,roleLabels={}){
+  const ref={...original,sample_context_ids:Object.hasOwn(original,'sampleContextIdsByRecord')?(original.sampleContextIdsByRecord?.[recordId]||[]):original.sample_context_ids,roleByRecord:{...original.roleByRecord,...roleLabels}};
