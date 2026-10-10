@@ -23,14 +23,19 @@ function readReactorAttributes(note,marker){
   const line={};
   for(const key of ['reactor_line_id',...CATEGORIES]){
    const f=raw[key==='schlenk_line'?schlenk:key];
-   const direct=Object.hasOwn(f||{},'source_id')||Object.hasOwn(f||{},'source_locator');
+   // Explicit attributes dialect accepts exactly one reviewed locator spelling.
+   const hasLocator=Object.hasOwn(f||{},'locator');
+   const hasSourceLocator=Object.hasOwn(f||{},'source_locator');
+   const direct=Object.hasOwn(f||{},'source_id')||hasLocator||hasSourceLocator;
+   if(direct&&(!Object.hasOwn(f||{},'source_id')||hasLocator===hasSourceLocator))throw Error();
+   const locatorKey=hasLocator?'locator':'source_locator';
    const array=Object.hasOwn(f||{},'evidence');
-   if(!exact(f,['value','status','basis',...(direct?['source_id','source_locator']:[]),...(array?['evidence']:[])])||(!direct&&!array)||!text(f.basis))throw Error();
-   const supplied=direct&&text(f.source_id)&&text(f.source_locator);
-   if(direct&&!supplied&&!(f.source_id===null&&f.source_locator===null))throw Error();
+   if(!exact(f,['value','status','basis',...(direct?['source_id',locatorKey]:[]),...(array?['evidence']:[])])||(!direct&&!array)||!text(f.basis))throw Error();
+   const supplied=direct&&text(f.source_id)&&text(f[locatorKey]);
+   if(direct&&!supplied&&!(f.source_id===null&&f[locatorKey]===null))throw Error();
    if(array&&(!Array.isArray(f.evidence)||!f.evidence.every(e=>exact(e,['source_id','locator'])&&text(e.source_id)&&text(e.locator))))throw Error();
-   if(direct&&array&&(!supplied||!f.evidence.some(e=>e.source_id===f.source_id&&e.locator===f.source_locator)))throw Error();
-   const evidence=array?f.evidence:supplied?[{source_id:f.source_id,locator:f.source_locator}]:[];
+   if(direct&&array&&(!supplied||!f.evidence.some(e=>e.source_id===f.source_id&&e.locator===f[locatorKey])))throw Error();
+   const evidence=array?f.evidence:supplied?[{source_id:f.source_id,locator:f[locatorKey]}]:[];
    if(f.status==='not_reported'){
     if(!(f.value===null||f.value==='not reported'))throw Error();
    }else if(key==='reactor_line_id'){
