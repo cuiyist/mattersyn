@@ -16,6 +16,13 @@ const cache=new Map();
 
 function json(path){if(!cache.has(path))cache.set(path,fetch(siteURL(path),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unavailable '+path);return r.json();}));return cache.get(path);}
 
+export async function reviewedProtocolArt(r){
+ if(typeof r?.record_id!=='string')return null;
+ const presentations=await json('data/reader-presentation.json'),binding=presentations?.records?.[r.record_id]?.protocol_art;
+ if(!binding||binding.record_id!==r.record_id||!Array.isArray(binding.bindings)||!binding.bindings.every(item=>item&&typeof item==='object'))return null;
+ return binding;
+}
+
 export function formatQuantity(q){if(!q)return 'Not reported';const v=quantityValue(q),unit=({degC:'°C',uL:'µL',umol:'µmol',angstrom:'Å',um:'µm',uM:'µM',volume_parts:'volume parts',mass_percent:'wt%',volume_percent:'vol%'})[q.unit]||q.unit||'';if(v===null)return q.raw_text||q.qualifier||'Not reported';return (q.approximate?'≈':'')+v+(unit?' '+unit:'')+(['inferred','estimated','assumed'].includes(q.status)?' ('+q.status+')':'');}
 
 function quantities(rows,compact=true,record=null){const dl=el('dl');for(const [key,q] of rows){const div=el('div');const separator=key.indexOf(':');const operationIndex=separator>=0?(record?.operations||[]).findIndex(o=>o.id===key.slice(0,separator)):-1;const label=operationIndex>=0?'Step '+(operationIndex+1)+' · '+human(key.slice(separator+1)):human(key);div.append(el('dt',label),el('dd',formatQuantity(q)));if(!compact&&q.qualifier&&quantityValue(q)!==null)div.append(el('small',q.qualifier));if(!compact&&q.basis)div.append(el('small',q.basis));dl.append(div);}return dl;}

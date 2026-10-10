@@ -351,3 +351,60 @@ test('either attribute locator alias still requires a known source at display ti
   assert.equal(JSON.stringify(op),before);
  }
 }));
+
+
+// Invented rich scoped metadata fixtures; no production records or source I/O.
+const scopedAbsent=()=>({value:'not reported',status:'not_reported',source_id:'fixture-main',locator:'Fixture scoped page 5',absence_scope:'Not stated in the fixture passage.'});
+const scopedMetadata=(overrides={})=>({reactor_line:{reactor_line_id:scopedAbsent(),...Object.fromEntries(keys.map(k=>[k,scopedAbsent()])),...overrides}});
+const scopedOperation=metadata=>({...operation(),environment:{value:null,evidence:[],note:'Fixture scoped prose.\nReactor-line metadata (structured JSON): '+JSON.stringify(metadata)}});
+const scopedLocal=()=>({value:'fixture-local-tube',status:'local_metadata',source_id:'fixture-main',locator:'Fixture scoped page 5',assignment:'Author-assigned fixture bookkeeping, not a source laboratory identifier.',continuity_status:'source_supported',continuity_basis:'Fixture passage names the same tube for these two stages.'});
+const scopedVerbatim=()=>({value:'other (verbatim)',status:'reported',source_id:'fixture-main',locator:'Fixture scoped page 6',qualifier:'Qualitative condition only; no apparatus or pressure inferred.',verbatim:'fixture reduced pressure'});
+
+test('rich scoped metadata renders local identity and verbatim qualifiers without changing source values',()=>dom(()=>{
+ const op=scopedOperation(scopedMetadata({reactor_line_id:scopedLocal(),atmosphere:scopedVerbatim(),stirring:{...reported(true),qualifier:'Fixture mixing statement.'}}));
+ const before=JSON.stringify(op),parsed=readReactorLineNote(op.environment.note);
+ assert.equal(parsed.valid,true);assert.equal(parsed.scopedRich,true);
+ assert.equal(parsed.line.reactor_line_id.status,'local_metadata');assert.equal(parsed.line.atmosphere.value,'other (verbatim)');
+ const details=createReactorLineDetails(op,record());
+ for(const value of ['Local reactor line (local metadata)','fixture-local-tube','Author-assigned fixture bookkeeping','Fixture passage names the same tube','source_supported','other (verbatim)','fixture reduced pressure','Qualitative condition only','Fixture mixing statement.','Fixture scoped page 5','Fixture scoped page 6'])assert.ok(details.textContent.includes(value),value);
+ assert.doesNotMatch(details.textContent,/metadata is invalid|author-derived|"reactor_line"/);
+ assert.equal(flatten(details).filter(n=>n.tagName==='DT').length,16);
+ assert.equal(JSON.stringify(op),before);
+}));
+
+test('original scoped missingness and reported fields retain their original dialect and validation',()=>dom(()=>{
+ const good=scopedOperation(scopedMetadata({vessel_type:reported('fixture flask')})),before=JSON.stringify(good);
+ const parsed=readReactorLineNote(good.environment.note);assert.equal(parsed.valid,true);assert.equal(parsed.scoped,true);assert.equal(parsed.scopedRich,undefined);
+ assert.doesNotMatch(createReactorLineDetails(good,record()).textContent,/metadata is invalid/);assert.equal(JSON.stringify(good),before);
+ const bad=scopedOperation(scopedMetadata({vessel_type:{...scopedAbsent(),extra:'unexpected'}}));assert.equal(readReactorLineNote(bad.environment.note).valid,false);
+}));
+
+test('rich scoped dialect rejects missing, extra, inconsistent and ambiguous metadata',()=>{
+ const invalid=[
+  {reactor_line_id:{...scopedLocal(),extra:'unexpected'}},
+  {reactor_line_id:{...scopedLocal(),continuity_status:'inferred'}},
+  {reactor_line_id:{...scopedLocal(),assignment:''}},
+  {reactor_line_id:{...scopedLocal(),status:'reported'}},
+  {atmosphere:{...scopedVerbatim(),source_locator:'Duplicate citation spelling'}},
+  {atmosphere:{...scopedVerbatim(),verbatim:''}},
+  {atmosphere:{...scopedVerbatim(),qualifier:''}},
+  {atmosphere:{...scopedVerbatim(),value:'a different value'}},
+  {atmosphere:{...scopedVerbatim(),status:'author_derived'}},
+  {atmosphere:{...scopedVerbatim(),locator:null}},
+  {vessel_type:{...scopedAbsent(),value:'a reported-looking vessel'}},
+  {vessel_type:{...scopedAbsent(),extra:'unexpected'}}
+ ];
+ const {verbatim,...missingVerbatim}=scopedVerbatim();invalid.push({atmosphere:missingVerbatim});
+ const {continuity_basis,...missingBasis}=scopedLocal();invalid.push({reactor_line_id:missingBasis});
+ for(const change of invalid)assert.equal(readReactorLineNote(scopedOperation(scopedMetadata(change)).environment.note).valid,false);
+ const missing=scopedMetadata({atmosphere:scopedVerbatim()});delete missing.reactor_line.cooling_method;assert.equal(readReactorLineNote(scopedOperation(missing).environment.note).valid,false);
+ for(const prefix of ['reactor_line='+JSON.stringify(line())+'\n','Reactor attributes: '+JSON.stringify(attributes())+'\n'])assert.equal(readReactorLineNote(prefix+scopedOperation(scopedMetadata({atmosphere:scopedVerbatim()})).environment.note).valid,false);
+});
+
+test('rich scoped details bind every citation and preserve original objects including unresolved sources',()=>dom(()=>{
+ for(const key of ['reactor_line_id','atmosphere','cooling_method']){
+  const metadata=scopedMetadata({reactor_line_id:scopedLocal(),atmosphere:scopedVerbatim()});metadata.reactor_line[key].source_id='unknown-fixture-source';
+  const op=scopedOperation(metadata),before=JSON.stringify(op);assert.equal(readReactorLineNote(op.environment.note).valid,true);
+  const details=createReactorLineDetails(op,record());assert.match(details.textContent,/metadata is invalid/);assert.doesNotMatch(details.textContent,/fixture-local-tube|fixture reduced pressure/);assert.equal(JSON.stringify(op),before);
+ }
+}));

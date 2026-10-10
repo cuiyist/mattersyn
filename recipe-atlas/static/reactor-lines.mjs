@@ -75,12 +75,46 @@ function readScopedReactorLine(note,marker){
  }catch{return {prose,line:null,valid:false,scoped:true};}
 }
 
+// The separately recognized rich scoped dialect preserves verbatim categories
+// and explicitly labelled local bookkeeping. The original scoped missingness,
+// attributes and canonical parsers keep their exact validation rules.
+function readRichScopedReactorLine(note,marker){
+ const competing=/(^|\n)(?:Reactor attributes:[ \t]*|reactor_line[ \t]*=[ \t]*|(?=[ \t]*\{\s*"reactor_line"\s*:))/.exec(note);
+ const prose=note.slice(0,competing?Math.min(marker.index,competing.index):marker.index);
+ try{
+  if(competing)throw Error();
+  const raw=JSON.parse(note.slice(marker.index+marker[0].length));
+  if(!exact(raw,['reactor_line'])||!exact(raw.reactor_line,['reactor_line_id',...CATEGORIES]))throw Error();
+  const line=raw.reactor_line;let rich=false;
+  for(const key of ['reactor_line_id',...CATEGORIES]){
+   const f=line[key];
+   if(!text(f?.source_id)||!text(f?.locator))throw Error();
+   if(f.status==='not_reported'){
+    if(!exact(f,['value','status','source_id','locator','absence_scope'])||f.value!=='not reported'||!text(f.absence_scope))throw Error();
+   }else if(key==='reactor_line_id'){
+    if(!exact(f,['value','status','source_id','locator','assignment','continuity_status','continuity_basis'])||f.status!=='local_metadata'||!text(f.value)||f.value==='not reported'||!text(f.assignment)||f.continuity_status!=='source_supported'||!text(f.continuity_basis))throw Error();
+    rich=true;
+   }else{
+    const qualifier=Object.hasOwn(f,'qualifier'),verbatim=Object.hasOwn(f,'verbatim');
+    if(!exact(f,['value','status','source_id','locator',...(qualifier?['qualifier']:[]),...(verbatim?['verbatim']:[])]))throw Error();
+    const validValue=['schlenk_line','glovebox','stirring'].includes(key)?typeof f.value==='boolean'||text(f.value):text(f.value);
+    if(f.status!=='reported'||!validValue||f.value==='not reported'||(qualifier&&!text(f.qualifier)))throw Error();
+    if(verbatim&&(!qualifier||f.value!=='other (verbatim)'||!text(f.verbatim)))throw Error();
+    if(f.value==='other (verbatim)'&&!verbatim)throw Error();
+    rich||=qualifier||verbatim;
+   }
+  }
+  if(!rich)throw Error();
+  return {prose,line,valid:true,scoped:true,scopedRich:true};
+ }catch{return {prose,line:null,valid:false,scoped:true,scopedRich:true};}
+}
+
 // Only explicit appended metadata marks a new audited note. Ordinary old notes
 // and arbitrary JSON keep their original rendering; stored data is never edited.
 export function readReactorLineNote(note){
  if(typeof note!=='string')return null;
  const scoped=/(^|\n)Reactor-line metadata \(structured JSON\):[ \t]*/.exec(note);
- if(scoped)return readScopedReactorLine(note,scoped);
+ if(scoped){const parsed=readScopedReactorLine(note,scoped);return parsed.valid?parsed:readRichScopedReactorLine(note,scoped);}
  const attributes=/(^|\n)Reactor attributes:[ \t]*/.exec(note);
  if(attributes)return readReactorAttributes(note,attributes);
  const marker=/(^|\n)(?:reactor_line[ \t]*=[ \t]*|(?=[ \t]*\{\s*"reactor_line"\s*:))/.exec(note);
@@ -179,7 +213,11 @@ export function createReactorLineDetails(operation,record,format=numberText){
   section.append(node('p','Reactor details unavailable: structured source metadata is invalid.','record-note'));return section;
  }
  const grid=node('dl',undefined,'protocol-condition-grid');
- if(parsed.scoped){
+ if(parsed.scopedRich&&parsed.line.reactor_line_id.status==='local_metadata'){
+  const f=parsed.line.reactor_line_id,row=node('div'),value=node('dd',f.value);
+  value.append(node('small','Assignment: '+f.assignment),node('small','Continuity status: '+f.continuity_status),node('small','Continuity basis: '+f.continuity_basis));evidenceRow(value,[f],record);
+  row.append(node('dt','Local reactor line (local metadata)'),value);grid.append(row);
+ }else if(parsed.scoped){
   const f=parsed.line.reactor_line_id,row=node('div'),value=node('dd','not reported');
   value.append(node('small','Absence scope: '+f.absence_scope));evidenceRow(value,[f],record,'Scope citation: ');
   row.append(node('dt','Local reactor line'),value);grid.append(row);
@@ -194,6 +232,9 @@ export function createReactorLineDetails(operation,record,format=numberText){
   else{const f=parsed.line[key];display=f.status==='not_reported'?'not reported':typeof f.value==='boolean'?(f.value?'yes':'no'):f.value;evidence=parsed.attributes?f.evidence:parsed.scoped||f.status==='reported'?[f]:[];}
   const value=node('dd',display);
   if(parsed.attributes&&!NUMBERS.includes(key))value.append(node('small','Basis: '+parsed.line[key].basis));
+  if(parsed.scopedRich&&!NUMBERS.includes(key)){
+   const f=parsed.line[key];if(f.verbatim)value.append(node('small','Verbatim: '+f.verbatim));if(f.qualifier)value.append(node('small','Qualifier: '+f.qualifier));
+  }
   const scopedAbsence=parsed.scoped&&!NUMBERS.includes(key)&&parsed.line[key].status==='not_reported';
   if(scopedAbsence)value.append(node('small','Absence scope: '+parsed.line[key].absence_scope));
   evidenceRow(value,evidence,record,scopedAbsence?'Scope citation: ':'');row.append(node('dt',label(key)),value);grid.append(row);
