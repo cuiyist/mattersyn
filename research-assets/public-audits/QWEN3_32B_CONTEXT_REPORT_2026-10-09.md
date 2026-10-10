@@ -76,3 +76,24 @@ Restoration to the original 8,192 configuration was rejected by the existing act
 Nine development source inputs remain held. No held-out paper or truth was read, and no machine contribution was published. Paper text, prompts, responses and detailed evidence remain local.
 
 Partial restoration/failure receipt SHA256: `646ec313497379301fcede00a3492d59a62a1adbf90944a1c5b69b41126a0b0f`. Aggregate-only result SHA256: `1234563101b2912aa996c5d3a94ab6bf041ba1aa7f77514c164353a826969b23`.
+
+
+## Six-ready development retry, October 10, 00:00–00:20 UTC
+
+The owner-authorized six ready papers completed both frozen A/B passes at **32,768 context**, thinking off, schema-constrained output and all 65 GPU layers. Twelve passes completed, zero generation passes failed. The other nine development papers remain held for complete source-input certification; their eighteen pass slots remain unattempted. No held-out papers or scoring-reference bodies were read.
+
+| Field | Values produced | Mechanically valid | Values correct | Active pass slots | Share masked |
+| --- | ---: | ---: | --- | ---: | ---: |
+| Composition | 10 | 10 | N/A: not scored | 12 | 100% |
+| Precursor amount | 6 | 6 | N/A: not scored | 12 | 100% |
+| Reaction temperature | 8 | 8 | N/A: not scored | 12 | 100% |
+| Reaction time | 2 | 2 | N/A: not scored | 12 | 100% |
+| Product statement | 4 | 4 | N/A: not scored | 12 | 100% |
+
+These counts are values across two passes, not distinct papers or accuracy estimates. Certified truth mappings are absent; mechanical source-span acceptance and pass agreement do not establish correctness. All 150 field/pass slots across the fifteen-paper roster remain masked; machine publication and calibration remain disabled.
+
+The sampled whole-GPU peak was **28,604 MiB (27.93 GiB)**, with at least **3,584 MiB** free in the observed samples. The reserved interval lasted **1,195.5352093 seconds (0.3320931 GPU-hours)**, including startup, generation and restoration. Six completed two-pass papers divided by that interval gives **18.07 papers per GPU-hour**, provisional diagnostic arithmetic only. It is neither verified scientific throughput nor website-publication speed.
+
+The unchanged whole-attempt coverage check **failed**: one consecutive elapsed-time sampling gap was **2.147749 seconds**, above the two-second bound. It occurred before the first generation request and overlapped none of the twelve generation intervals. All generation intervals were bracketed, but that does not waive the whole-attempt rule. The scheduling or clock cause is unrecorded. Two fixed HTTP-error telemetry events remain preserved separately. The actual receipt confirms safe restoration to the original 8,192-token healthy idle runner, sampler closure and exact reservation release. This test is parked, with no second retry or weakened guard; audited website work continues.
+
+Actual aggregate SHA256: `94429566ac4b1ef7a3aa106a2ae00ebba9754ec6099484e6c246f79258c25e01`. Actual run receipt SHA256: `68b7809a467e2e7b97540d35270212259e42588f234ce4a6622259551e9084ab`. Source-free result review SHA256: `9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd`. Earlier partial and failed runs remain unchanged. The smallest context for all fifteen remains undetermined.

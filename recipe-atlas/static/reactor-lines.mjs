@@ -45,10 +45,37 @@ function readReactorAttributes(note,marker){
  }catch{return {prose,line:null,valid:false,attributes:true};}
 }
 
+// A separately tagged scoped-missingness dialect preserves reviewed absence
+// provenance without converting it to a reported value or inventing a line ID.
+// Its shape is intentionally independent of canonical and attributes metadata.
+function readScopedReactorLine(note,marker){
+ const competing=/(^|\n)(?:Reactor attributes:[ \t]*|reactor_line[ \t]*=[ \t]*|(?=[ \t]*\{\s*"reactor_line"\s*:))/.exec(note);
+ const prose=note.slice(0,competing?Math.min(marker.index,competing.index):marker.index);
+ try{
+  if(competing)throw Error();
+  const raw=JSON.parse(note.slice(marker.index+marker[0].length));
+  if(!exact(raw,['reactor_line'])||!exact(raw.reactor_line,['reactor_line_id',...CATEGORIES]))throw Error();
+  const line=raw.reactor_line;
+  for(const key of ['reactor_line_id',...CATEGORIES]){
+   const f=line[key];
+   if(f?.status==='not_reported'){
+    if(!exact(f,['value','status','source_id','locator','absence_scope'])||f.value!=='not reported'||!text(f.absence_scope)||!text(f.source_id)||!text(f.locator))throw Error();
+   }else{
+    if(key==='reactor_line_id'||!exact(f,['value','status','source_id','locator']))throw Error();
+    const validValue=['schlenk_line','glovebox','stirring'].includes(key)?typeof f.value==='boolean'||text(f.value):text(f.value);
+    if(f.status!=='reported'||!validValue||f.value==='not reported'||!text(f.source_id)||!text(f.locator))throw Error();
+   }
+  }
+  return {prose,line,valid:true,scoped:true};
+ }catch{return {prose,line:null,valid:false,scoped:true};}
+}
+
 // Only explicit appended metadata marks a new audited note. Ordinary old notes
 // and arbitrary JSON keep their original rendering; stored data is never edited.
 export function readReactorLineNote(note){
  if(typeof note!=='string')return null;
+ const scoped=/(^|\n)Reactor-line metadata \(structured JSON\):[ \t]*/.exec(note);
+ if(scoped)return readScopedReactorLine(note,scoped);
  const attributes=/(^|\n)Reactor attributes:[ \t]*/.exec(note);
  if(attributes)return readReactorAttributes(note,attributes);
  const marker=/(^|\n)(?:reactor_line[ \t]*=[ \t]*|(?=[ \t]*\{\s*"reactor_line"\s*:))/.exec(note);
@@ -78,11 +105,11 @@ export function reactorEnvironmentText(environment){
 }
 
 function source(record,id){return (record?.sources||[]).find(s=>s.id===id);}
-function evidenceRow(parent,evidence,record){
+function evidenceRow(parent,evidence,record,prefix=''){
  if(!Array.isArray(evidence))return;
  for(const e of evidence||[]){
   if(!text(e?.source_id)||!text(e?.locator))continue;
-  const display=e.source_id+' · '+e.locator,s=source(record,e.source_id),n=node('small');
+  const display=prefix+e.source_id+' · '+e.locator,s=source(record,e.source_id),n=node('small');
   // Use only an existing citation URL, never construct a guessed page URL.
   if(typeof s?.url==='string'&&/^https?:\/\//i.test(s.url)){
    const a=node('a',display);a.href=s.url;n.append(a);
@@ -90,7 +117,8 @@ function evidenceRow(parent,evidence,record){
   parent.append(n);
  }
 }
-function sourceBound(line,record,attributes=false){
+function sourceBound(line,record,attributes=false,scoped=false){
+ if(scoped)return ['reactor_line_id',...CATEGORIES].every(key=>source(record,line[key].source_id));
  if(attributes)return ['reactor_line_id',...CATEGORIES].every(key=>line[key].evidence.every(e=>source(record,e.source_id)));
  return CATEGORIES.every(key=>line[key].status==='not_reported'||source(record,line[key].source_id));
 }
@@ -142,11 +170,15 @@ export function createReactorLineDetails(operation,record,format=numberText){
  if(env.value!==null&&env.value!==undefined&&env.value!=='')section.append(node('p','Environment: '+String(env.value)));
  if(parsed.prose)section.append(node('p',parsed.prose,'record-note'));
  evidenceRow(section,env.evidence,record);
- if(!parsed.valid||!sourceBound(parsed.line,record,parsed.attributes)){
+ if(!parsed.valid||!sourceBound(parsed.line,record,parsed.attributes,parsed.scoped)){
   section.append(node('p','Reactor details unavailable: structured source metadata is invalid.','record-note'));return section;
  }
  const grid=node('dl',undefined,'protocol-condition-grid');
- if(parsed.attributes){
+ if(parsed.scoped){
+  const f=parsed.line.reactor_line_id,row=node('div'),value=node('dd','not reported');
+  value.append(node('small','Absence scope: '+f.absence_scope));evidenceRow(value,[f],record,'Scope citation: ');
+  row.append(node('dt','Local reactor line'),value);grid.append(row);
+ }else if(parsed.attributes){
   const f=parsed.line.reactor_line_id,row=node('div'),value=node('dd',f.status==='not_reported'?'not reported':f.value);
   value.append(node('small','Basis: '+f.basis));evidenceRow(value,f.evidence,record);
   row.append(node('dt',f.status==='author_derived'?'Local reactor line (author-derived)':'Local reactor line'),value);grid.append(row);
@@ -154,16 +186,18 @@ export function createReactorLineDetails(operation,record,format=numberText){
  for(const key of FIELDS){
   const row=node('div');let display,evidence;
   if(NUMBERS.includes(key))({value:display,evidence}=numericField(operation.parameters?.[key],record,format));
-  else{const f=parsed.line[key];display=f.status==='not_reported'?'not reported':typeof f.value==='boolean'?(f.value?'yes':'no'):f.value;evidence=parsed.attributes?f.evidence:f.status==='reported'?[f]:[];}
+  else{const f=parsed.line[key];display=f.status==='not_reported'?'not reported':typeof f.value==='boolean'?(f.value?'yes':'no'):f.value;evidence=parsed.attributes?f.evidence:parsed.scoped||f.status==='reported'?[f]:[];}
   const value=node('dd',display);
   if(parsed.attributes&&!NUMBERS.includes(key))value.append(node('small','Basis: '+parsed.line[key].basis));
-  evidenceRow(value,evidence,record);row.append(node('dt',label(key)),value);grid.append(row);
+  const scopedAbsence=parsed.scoped&&!NUMBERS.includes(key)&&parsed.line[key].status==='not_reported';
+  if(scopedAbsence)value.append(node('small','Absence scope: '+parsed.line[key].absence_scope));
+  evidenceRow(value,evidence,record,scopedAbsence?'Scope citation: ':'');row.append(node('dt',label(key)),value);grid.append(row);
  }
  section.append(grid);return section;
 }
 
 export function reactorLineCaption(operation,record,caption){
  const parsed=readReactorLineNote(operation?.environment?.note);if(!parsed)return caption;
- if(!parsed.valid||!sourceBound(parsed.line,record,parsed.attributes))return caption+' Conceptual vessel: vessel type could not be verified from the reactor metadata.';
+ if(!parsed.valid||!sourceBound(parsed.line,record,parsed.attributes,parsed.scoped))return caption+' Conceptual vessel: vessel type could not be verified from the reactor metadata.';
  return parsed.line.vessel_type.status==='not_reported'?caption+' Conceptual vessel: vessel type is not reported; no apparatus identity is inferred.':caption;
 }
