@@ -307,3 +307,47 @@ test('author-derived local ID requires its own nonempty source-located evidence 
   assert.equal(JSON.stringify(op),before);
  }
 }));
+
+
+// Invented fixtures for the explicit attributes locator alias; no production I/O.
+test('direct attribute citations accept either single locator spelling and retain source values without mutation',()=>dom(()=>{
+ for(const locatorKey of ['locator','source_locator']){
+  const citation={value:'fixture alias vessel',status:'reported',basis:'Fixture alias basis',source_id:'fixture-main',[locatorKey]:'Fixture alias page 4'};
+  const metadata=attributes({vessel_type:citation,atmosphere:{value:'not reported',status:'not_reported',basis:'Fixture missing atmosphere',source_id:null,[locatorKey]:null}});
+  const op=attributeOperation(metadata),before=JSON.stringify(op),parsed=readReactorLineNote(op.environment.note);
+  assert.equal(parsed.valid,true);assert.equal(parsed.attributes,true);
+  assert.equal(parsed.line.vessel_type[locatorKey],citation[locatorKey]);
+  assert.equal(parsed.line.vessel_type.value,citation.value);assert.equal(parsed.line.vessel_type.basis,citation.basis);
+  assert.deepEqual(parsed.line.vessel_type.evidence,[{source_id:'fixture-main',locator:'Fixture alias page 4'}]);
+  const details=createReactorLineDetails(op,record());
+  for(const value of ['fixture alias vessel','Fixture alias basis','Fixture alias page 4','not reported'])assert.ok(details.textContent.includes(value),value);
+  assert.doesNotMatch(details.textContent,/metadata is invalid|Reactor attributes:|"source_id"/);
+  assert.equal(JSON.stringify(op),before);
+ }
+}));
+
+test('direct attribute citations reject both or neither locator aliases, orphan aliases and extra or conflicting fields',()=>{
+ const citation={value:'fixture alias vessel',status:'reported',basis:'Fixture alias basis',source_id:'fixture-main',locator:'Fixture alias page 4'};
+ const {locator,...withoutLocator}=citation,{source_id,...withoutSource}=citation;
+ const invalid=[
+  {...citation,source_locator:locator},
+  {...citation,source_locator:'Conflicting fixture locator'},
+  withoutLocator,withoutSource,
+  {...citation,extra:'unexpected'},
+  {...citation,locator:''},
+  {...citation,source_id:null},
+  {...citation,evidence:[{source_id:'fixture-main',locator:'Different fixture locator'}]}
+ ];
+ for(const field of invalid)assert.equal(readReactorLineNote(attributeOperation(attributes({vessel_type:field})).environment.note).valid,false);
+});
+
+test('either attribute locator alias still requires a known source at display time and leaves the source operation intact',()=>dom(()=>{
+ for(const locatorKey of ['locator','source_locator']){
+  const field={value:'UNBOUND_ALIAS_FIXTURE_VESSEL',status:'reported',basis:'Fixture alias basis',source_id:'missing-source',[locatorKey]:'Fixture alias page 4'};
+  const op=attributeOperation(attributes({vessel_type:field})),before=JSON.stringify(op);
+  assert.equal(readReactorLineNote(op.environment.note).valid,true);
+  const details=createReactorLineDetails(op,record());
+  assert.match(details.textContent,/metadata is invalid/);assert.doesNotMatch(details.textContent,/UNBOUND_ALIAS_FIXTURE_VESSEL/);
+  assert.equal(JSON.stringify(op),before);
+ }
+}));

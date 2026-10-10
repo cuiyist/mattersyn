@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "dataset_version": "0.41.2",
-  "record_count": 2975,
-  "group_count": 238,
+  "record_count": 2977,
+  "group_count": 240,
   "families": [
     "9-ACA-functionalized CdSe nanocrystals",
     "Ag colloidal nanocrystal superlattices",
@@ -299,6 +299,7 @@
     "hierarchically ordered TiO2 nanocrystal architectures",
     "layered silver-bismuth halide hybrid materials",
     "lead sulfide nanoparticles",
+    "lead sulfide quantum dots",
     "lead-halide perovskite composites",
     "lead-halide perovskite nanocrystals",
     "low molecular weight heparin-bile acid conjugate",
@@ -321,6 +322,7 @@
     "semiconductor quantum dot",
     "semiconductor quantum dot or magic-sized cluster",
     "semiconductor quantum dots",
+    "semiconductor_heterostructure",
     "silver nanoparticle/carbon quantum dot nanocomposite",
     "silver/silica nanoparticle with adsorbed quantum dots",
     "solvent-selection context",
@@ -210894,6 +210896,153 @@
       "pair_ids": [
         "zhu2011-microwave-cds-tio2-am200520q-electrode4::zhu2011-microwave-cds-tio2-am200520q-electrode4--characterized-electrode4",
         "zhu2011-microwave-cds-tio2-am200520q-electrode4::zhu2011-microwave-cds-tio2-am200520q-electrode4--substrate-figure1"
+      ]
+    },
+    {
+      "record_id": "kim2013-cdse-cds-zno-am301960h-array",
+      "title": "Grow CdSe/CdS sensitizers on ZnO nanowire arrays",
+      "formula": "CdSe/CdS/ZnO",
+      "family": "semiconductor_heterostructure",
+      "method": "ZnO solution growth followed by CdS SILAR and CdSe chemical bath deposition",
+      "record_type": "literature_protocol",
+      "source_year": 2013,
+      "source_doi": "10.1021/am301960h",
+      "revision": 2,
+      "record_sha256": "6de30431a195b525fae2ea0c24841937558f0371aff540929a513ea6947a7fd4",
+      "recipe_signature": "ed3943e6ce1297b65d7d784c81ec91be581bc8817d66519eea0a24255dba70f6",
+      "group_id": "group-8e21a49e8f4f",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/kim2013-cdse-cds-zno-am301960h-array.json",
+      "page_url": "records/kim2013-cdse-cds-zno-am301960h-array.html",
+      "missing_field_count": 4,
+      "collection": "reviewed_literature",
+      "components": [
+        "CdSe/CdS/ZnO"
+      ],
+      "pair_ids": [
+        "kim2013-cdse-cds-zno-am301960h-array::core-array",
+        "kim2013-cdse-cds-zno-am301960h-array::fig1-cds",
+        "kim2013-cdse-cds-zno-am301960h-array::fig1-cdse",
+        "kim2013-cdse-cds-zno-am301960h-array::fig1-zno"
+      ]
+    },
+    {
+      "record_id": "kim2013-pbs-ionic-liquid-am3029766-pbs-qd",
+      "title": "Kim et al. (2013): PbS quantum dots by rapid sulfur-precursor injection",
+      "formula": "PbS",
+      "family": "lead sulfide quantum dots",
+      "method": "Rapid injection of sulfur precursor into a prepared lead-precursor mixture",
+      "record_type": "literature_protocol",
+      "source_year": 2013,
+      "source_doi": "10.1021/am3029766",
+      "revision": 3,
+      "record_sha256": "ac98a289fb519b92f2b867684b17c89eba240008d24af071b7992645f7017e44",
+      "recipe_signature": "e7db31d6c1ccc6bf644ad4b6e1a47e37660a599a123687d6b63fc5a2bc9f1b5d",
+      "group_id": "group-ca821a860ae9",
+      "split": "train",
+      "eligibility": {
+        "precursor_selection": {
+          "eligible": false,
+          "reason": "No identified synthesis precursor set."
+        },
+        "partial_protocol": {
+          "eligible": false,
+          "reason": "Preserve missing fields; this is literature protocol supervision, not a complete SOP."
+        },
+        "size_conditioned_recipe": {
+          "eligible": false,
+          "reason": "Requires an explicitly linked quantitative diameter; author-derived size remains labeled."
+        },
+        "success_prediction": {
+          "eligible": false,
+          "reason": "Literature and heterogeneous historical failure markers do not establish a calibrated success model."
+        },
+        "optical_outcome": {
+          "eligible": false,
+          "reason": "Published numeric optical benchmark with explicit row linkage. Failure placeholders are excluded from continuous targets."
+        },
+        "exact_structure_recipe": {
+          "eligible": false,
+          "reason": "Exact structure–recipe training has not been requested for this record. No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate. No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established.",
+          "reason_codes": [
+            "task_not_requested",
+            "no_sample_coordinate_asset",
+            "audited_task_profile_missing"
+          ],
+          "reasons": [
+            {
+              "code": "task_not_requested",
+              "message": "Exact structure–recipe training has not been requested for this record."
+            },
+            {
+              "code": "no_sample_coordinate_asset",
+              "message": "No canonical measured-sample coordinate asset is recorded; phase/size observations and reference viewers are separate."
+            },
+            {
+              "code": "audited_task_profile_missing",
+              "message": "No independently audited completeness profile defines this task’s required recipe fields. Completeness is unassessed, not established."
+            }
+          ],
+          "profile_id": null,
+          "selected_asset_ids": []
+        }
+      },
+      "record_url": "data/records/kim2013-pbs-ionic-liquid-am3029766-pbs-qd.json",
+      "page_url": "records/kim2013-pbs-ionic-liquid-am3029766-pbs-qd.html",
+      "missing_field_count": 8,
+      "collection": "reviewed_literature",
+      "components": [
+        "PbS"
+      ],
+      "pair_ids": [
+        "kim2013-pbs-ionic-liquid-am3029766-pbs-qd::kim2013-pbs-ionic-liquid-am3029766-pbs-qd--prepared-qds"
       ]
     }
   ]

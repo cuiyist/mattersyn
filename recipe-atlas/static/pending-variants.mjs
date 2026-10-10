@@ -22,6 +22,6 @@ export function renderPendingVariants(host, rows) {
   const notice=doc.createElement('aside'); notice.className='record-notice pending-variants';
   notice.append(node('strong', PENDING_BADGE), node('p', 'Only the published core scope is covered by the linked audit. Pending variants have not been independently audited or included in training.'));
   const list=doc.createElement('ul');
-  for (const row of pending) { const item=node('li',row.label); item.append(node('small','Source: '+row.source_locators.join('; '))); list.append(item); }
+  for (const row of pending) { const item=node('li',row.label); item.append(node('small',' Source: '+row.source_locators.join('; '))); list.append(item); }
   notice.append(list); host.append(notice); return notice;
 }

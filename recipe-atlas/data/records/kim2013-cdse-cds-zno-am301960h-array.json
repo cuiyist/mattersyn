@@ -1,0 +1,3369 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kim2013-cdse-cds-zno-am301960h-array",
+  "revision": 2,
+  "record_type": "literature_protocol",
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route",
+  "title": "Grow CdSe/CdS sensitizers on ZnO nanowire arrays",
+  "material": {
+    "formula": "CdSe/CdS/ZnO",
+    "family": "semiconductor_heterostructure",
+    "architecture": "heterostructure",
+    "elements": [
+      "Cd",
+      "Se",
+      "S",
+      "Zn",
+      "O"
+    ],
+    "source_notation": "CdSe/CdS/ZnO nanowire arrays"
+  },
+  "method": "ZnO solution growth followed by CdS SILAR and CdSe chemical bath deposition",
+  "sources": [
+    {
+      "id": "kim2013-cdse-cds-zno-am301960h",
+      "doi": "10.1021/am301960h",
+      "title": "Hybrid-Type Quantum-Dot Cosensitized ZnO Nanowire Solar Cell with Enhanced Visible-Light Harvesting",
+      "authors": "Heejin Kim; Hyuncheol Jeong; Tae Kyu An; Chan Eon Park; Kijung Yong",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/am301960h",
+      "main_status": "partially_reviewed",
+      "si_status": "not_available",
+      "reuse_status": "permission_not_established"
+    }
+  ],
+  "lineage": {
+    "source_group": "kim2013-cdse-cds-zno-am301960h",
+    "recipe_family": "kim2013-cdse-cds-zno-am301960h",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe/CdS/ZnO on ITO",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "CdSe/CdS sensitized ZnO nanowire array",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "ito-glass",
+      "name": "Indium tin oxide coated glass substrate",
+      "formula": null,
+      "role": "substrate",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "sheet_resistance": {
+          "value": 8,
+          "minimum": null,
+          "maximum": null,
+          "unit": "ohm/square",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "8 Ω/sq.",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [
+        "Source states ITO (TEC, 8 ohm/square); no atomic model or cleaning procedure is supplied."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "zno-buffer",
+      "name": "Zinc oxide buffer film",
+      "formula": "ZnO",
+      "role": "sputtered ZnO seed/buffer layer",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "50 nm sputtered buffer on ITO; phase and sputtering atmosphere/power/time not reported."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "zinc-nitrate-hexahydrate",
+      "name": "Zinc nitrate hexahydrate",
+      "formula": "Zn(NO3)2·6H2O",
+      "role": "Zn precursor for nanowire growth",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source explicitly specifies hexahydrate; hydration must not be dropped."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "ammonium-hydroxide",
+      "name": "Ammonium hydroxide solution",
+      "formula": "NH4OH",
+      "role": "solution additive for ZnO and CdSe baths",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Commercial solution, Sigma-Aldrich. Concentration and purity not reported; formula is nominal reagent identity, not solution speciation."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "formula": "H2O",
+      "role": "bath solvent and rinse medium",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Water grade is operation-specific: deionized water is stated for ZnO and CdSe solvent charges and the first SILAR rinse; the aqueous sulfide bath and second water rinse do not state a further water grade."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "cadmium-sulfate",
+      "name": "Cadmium sulfate",
+      "formula": "CdSO4",
+      "role": "Cd precursor for CdS SILAR",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Hydration and purity not specified. Do not assign a hydrate."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "sodium-sulfide",
+      "name": "Sodium sulfide",
+      "formula": "Na2S",
+      "role": "S precursor for CdS SILAR",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Hydration and purity not specified. Do not assign a hydrate."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "cadmium-acetate-dihydrate",
+      "name": "Cadmium acetate dihydrate",
+      "formula": "Cd(CH3COO)2·2H2O",
+      "role": "Cd precursor for CdSe CBD",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source explicitly specifies dihydrate."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "sodium-selenosulfate",
+      "name": "Sodium selenosulfate",
+      "formula": "Na2SeSO3",
+      "role": "Se precursor for CdSe CBD",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [
+        "Source names formula Na2SeSO3; no stock synthesis, concentration, or purity stated."
+      ],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "id": "zno-bath",
+      "name": "ZnO nanowire growth bath",
+      "components": [
+        {
+          "material_id": "zinc-nitrate-hexahydrate",
+          "quantities": {
+            "amount": {
+              "value": 10,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "10 mmol",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "ammonium-hydroxide",
+          "quantities": {
+            "volume": {
+              "value": 2,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "2 mL",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "water",
+          "quantities": {
+            "volume": {
+              "value": 100,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "Deionized water charge, not final reaction volume",
+              "raw_text": "100 mL",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Source-stated bath formulation; total final volume, preparation vessel, storage and bath age not reported. Component solvent volume is not a measured total reaction volume.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "cd-bath",
+      "name": "Cadmium sulfate SILAR bath",
+      "components": [
+        {
+          "material_id": "cadmium-sulfate",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "cadmium_sulfate": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Reported CdSO4 bath concentration; solvent and bath volume are not explicitly stated for this first dip",
+          "raw_text": "200 mM",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Source-stated bath formulation; total final volume, preparation vessel, storage and bath age not reported. Component solvent volume is not a measured total reaction volume.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "s-bath",
+      "name": "Aqueous sodium sulfide SILAR bath",
+      "components": [
+        {
+          "material_id": "sodium-sulfide",
+          "quantities": {}
+        },
+        {
+          "material_id": "water",
+          "quantities": {}
+        }
+      ],
+      "concentrations": {
+        "sodium_sulfide": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 mM",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "preparation_operation_ids": [],
+      "scope": "Source-stated bath formulation; total final volume, preparation vessel, storage and bath age not reported. Component solvent volume is not a measured total reaction volume.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "cdse-bath",
+      "name": "CdSe chemical bath deposition solution",
+      "components": [
+        {
+          "material_id": "cadmium-acetate-dihydrate",
+          "quantities": {
+            "amount": {
+              "value": 0.5,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "0.5 mmol",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "sodium-selenosulfate",
+          "quantities": {
+            "amount": {
+              "value": 0.25,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mmol",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "0.25 mmol",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "ammonium-hydroxide",
+          "quantities": {
+            "volume": {
+              "value": 150,
+              "minimum": null,
+              "maximum": null,
+              "unit": "uL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "",
+              "raw_text": "150 μL",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        },
+        {
+          "material_id": "water",
+          "quantities": {
+            "volume": {
+              "value": 20,
+              "minimum": null,
+              "maximum": null,
+              "unit": "mL",
+              "status": "reported",
+              "approximate": false,
+              "qualifier": "",
+              "basis": "Deionized water charge, not final reaction volume",
+              "raw_text": "20 mL",
+              "evidence": [
+                {
+                  "source_id": "kim2013-cdse-cds-zno-am301960h",
+                  "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+                }
+              ],
+              "derivation": null
+            }
+          }
+        }
+      ],
+      "concentrations": {},
+      "preparation_operation_ids": [],
+      "scope": "Source-stated bath formulation; total final volume, preparation vessel, storage and bath age not reported. Component solvent volume is not a measured total reaction volume.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    }
+  ],
+  "material_states": [
+    {
+      "id": "sputter-state",
+      "name": "Sputter ZnO buffer on ITO output",
+      "kind": "sample_set",
+      "parent_ids": []
+    },
+    {
+      "id": "grow-zno-state",
+      "name": "Grow the selected ZnO array output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "sputter-state"
+      ]
+    },
+    {
+      "id": "calcine-state",
+      "name": "Calcine ZnO nanowire arrays output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "grow-zno-state"
+      ]
+    },
+    {
+      "id": "cd-dip-state",
+      "name": "Expose to cadmium sulfate output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "calcine-state"
+      ]
+    },
+    {
+      "id": "first-rinse-state",
+      "name": "Rinse with deionized water output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "cd-dip-state"
+      ]
+    },
+    {
+      "id": "s-dip-state",
+      "name": "Expose to sodium sulfide output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "first-rinse-state"
+      ]
+    },
+    {
+      "id": "second-rinse-state",
+      "name": "Rinse with water output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "s-dip-state"
+      ]
+    },
+    {
+      "id": "repeat-silar-state",
+      "name": "Complete 10 total SILAR cycles output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "second-rinse-state"
+      ]
+    },
+    {
+      "id": "cdse-cbd-state",
+      "name": "Deposit CdSe by chemical bath output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "repeat-silar-state"
+      ]
+    },
+    {
+      "id": "anneal-state",
+      "name": "Anneal the sensitized array output",
+      "kind": "sample_set",
+      "parent_ids": [
+        "cdse-cbd-state"
+      ]
+    },
+    {
+      "id": "vacuum-dry-state",
+      "name": "CdSe/CdS/ZnO array after annealing and overnight vacuum drying, before polymer infiltration",
+      "kind": "sample_set",
+      "parent_ids": [
+        "anneal-state"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "sputter",
+      "action": "sputter",
+      "label": "Sputter ZnO buffer on ITO",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "ito-glass",
+        "zno-buffer"
+      ],
+      "outputs": [
+        "sputter-state"
+      ],
+      "parameters": {
+        "buffer_thickness": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "nm",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 nm",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "room temperature",
+          "basis": "",
+          "raw_text": "room temperature; numerical value not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Room temperature; atmosphere not reported",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+          }
+        ],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "sputter-state",
+      "description": "Sputter a 50 nm ZnO buffer film onto the ITO glass at room temperature. Numerical temperature, atmosphere, sputter source, power, time and cleaning are not reported.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "grow-zno",
+      "action": "grow-zno",
+      "label": "Grow the selected ZnO array",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "sputter"
+      ],
+      "inputs": [
+        "sputter-state",
+        "zno-bath"
+      ],
+      "outputs": [
+        "grow-zno-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "95 degC",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Figure 1 selected ZnO growth; not the full duration range or device specimen",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"other (verbatim): immersed\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "grow-zno-state",
+      "description": "Immerse the buffered substrate in the stated ZnO bath at 95 °C. Use the 1 h growth condition explicitly assigned to Figure 1a and shared across Figure 1. The general 30 min to about 2 h range and 75 min device comparison are separate pending conditions.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        },
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ]
+    },
+    {
+      "id": "calcine",
+      "action": "calcine",
+      "label": "Calcine ZnO nanowire arrays",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "grow-zno"
+      ],
+      "inputs": [
+        "grow-zno-state"
+      ],
+      "outputs": [
+        "calcine-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 degC",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "calcine-state",
+      "description": "Calcine the ZnO arrays at 200 °C for 30 min before sensitization. Furnace, atmosphere, ramp and cooling are not reported.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "cd-dip",
+      "action": "cd-dip",
+      "label": "Expose to cadmium sulfate",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "calcine"
+      ],
+      "inputs": [
+        "calcine-state",
+        "cd-bath"
+      ],
+      "outputs": [
+        "cd-dip-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"other (verbatim): dipped\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "cd-dip-state",
+      "description": "Dip the array in 200 mM CdSO4 for 30 s as the first part of one SILAR cycle. Solvent, bath volume and immersion apparatus are not explicitly reported.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "first-rinse",
+      "action": "first-rinse",
+      "label": "Rinse with deionized water",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "cd-dip"
+      ],
+      "inputs": [
+        "cd-dip-state",
+        "water"
+      ],
+      "outputs": [
+        "first-rinse-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"other (verbatim): rinsed\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "first-rinse-state",
+      "description": "Rinse with deionized water for 30 s. Rinse volume, method and temperature are not reported.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "s-dip",
+      "action": "s-dip",
+      "label": "Expose to sodium sulfide",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "first-rinse"
+      ],
+      "inputs": [
+        "first-rinse-state",
+        "s-bath"
+      ],
+      "outputs": [
+        "s-dip-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"other (verbatim): dipped\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "s-dip-state",
+      "description": "Dip for an additional 30 s into the 200 mM aqueous Na2S solution. This completes the second precursor exposure within one SILAR cycle.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "second-rinse",
+      "action": "second-rinse",
+      "label": "Rinse with water",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "s-dip"
+      ],
+      "inputs": [
+        "s-dip-state",
+        "water"
+      ],
+      "outputs": [
+        "second-rinse-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "s",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 s",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"other (verbatim): rinsed\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "second-rinse-state",
+      "description": "Rinse with water for 30 s to complete one SILAR cycle. The source calls this rinse water; no additional grade or volume is assigned.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "repeat-silar",
+      "action": "repeat-silar",
+      "label": "Complete 10 total SILAR cycles",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "second-rinse"
+      ],
+      "inputs": [
+        "second-rinse-state",
+        "cd-bath",
+        "s-bath",
+        "water"
+      ],
+      "outputs": [
+        "repeat-silar-state"
+      ],
+      "parameters": {
+        "total_cycles": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "cycles",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "Total cycles; four exposures of 30 s each per cycle",
+          "raw_text": "10 cycles",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "repeat-silar-state",
+      "description": "Repeat the four-part CdSO4 dip, first rinse, Na2S dip and second rinse sequence to a total of 10 cycles, as stated in the method and Figure 1b caption. This count includes the first cycle above; it is not 10 additional cycles. Bath reuse or vessel continuity is not specified.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        },
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ]
+    },
+    {
+      "id": "cdse-cbd",
+      "action": "cdse-cbd",
+      "label": "Deposit CdSe by chemical bath",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "repeat-silar"
+      ],
+      "inputs": [
+        "repeat-silar-state",
+        "cdse-bath"
+      ],
+      "outputs": [
+        "cdse-cbd-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "3 h",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": 95,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "95 degC",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"other (verbatim): immersed\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "cdse-cbd-state",
+      "description": "Immerse CdS/ZnO arrays in the stated cadmium acetate dihydrate, sodium selenosulfate and ammonium hydroxide bath in 20 mL deionized water for 3 h at 95 °C. Total final bath volume, stirring, atmosphere and bath heater are not reported.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "anneal",
+      "action": "anneal",
+      "label": "Anneal the sensitized array",
+      "stage": "synthesis",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "cdse-cbd"
+      ],
+      "inputs": [
+        "cdse-cbd-state"
+      ],
+      "outputs": [
+        "anneal-state"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 200,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "200 degC",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "anneal-state",
+      "description": "Anneal the samples at 200 °C for 1 h after CdSe deposition. No atmosphere, furnace type, ramp or cooling procedure is stated.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    },
+    {
+      "id": "vacuum-dry",
+      "action": "vacuum-dry",
+      "label": "Dry under vacuum overnight",
+      "stage": "workup",
+      "branch": "primary",
+      "optional": false,
+      "depends_on": [
+        "anneal"
+      ],
+      "inputs": [
+        "anneal-state"
+      ],
+      "outputs": [
+        "vacuum-dry-state"
+      ],
+      "parameters": {
+        "duration": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "overnight",
+          "basis": "",
+          "raw_text": "overnight; numerical duration not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "temperature": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "vessel_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "fill_fraction": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "fraction",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "reaction_volume": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "heating_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC/min",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "stirring_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "rpm",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "addition_rate": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        },
+        "pressure": {
+          "value": null,
+          "minimum": null,
+          "maximum": null,
+          "unit": "",
+          "status": "not_reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "not reported",
+          "evidence": [
+            {
+              "source_id": "kim2013-cdse-cds-zno-am301960h",
+              "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Vacuum",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+          }
+        ],
+        "note": "Source-scoped apparatus and handling. Vessel type and physical vessel continuity are not reported.\n\nReactor-line metadata (structured JSON): {\"reactor_line\":{\"vessel_type\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"atmosphere\":{\"value\":\"vacuum\",\"status\":\"reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\"},\"schlenk_line\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"glovebox\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"heating_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"stirring\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"addition_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"cooling_method\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"},\"reactor_line_id\":{\"value\":\"not reported\",\"status\":\"not_reported\",\"source_id\":\"kim2013-cdse-cds-zno-am301960h\",\"locator\":\"Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays\",\"absence_scope\":\"Selected core Experimental Section, main PDF p.2; no physical vessel identity or continuity inferred.\"}}}"
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": "vacuum-dry-state",
+      "description": "Dry in vacuum overnight before the deferred P3HT deposition. Overnight is preserved as a qualitative duration; temperature, pressure and drying apparatus are not reported.",
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "core-array",
+      "source_sample_label": "Core CdSe/CdS/ZnO array before polymer infiltration",
+      "batch_id": null,
+      "material_state_id": "vacuum-dry-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS/ZnO on ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+          }
+        ],
+        "note": "No phase name assigned; indexed FFT labels are not expanded into an inferred polymorph."
+      },
+      "morphology": {
+        "value": "Quantum-dot-sensitized ZnO nanowire array",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Experimental Section, Fabrication of CdSe/CdS/ZnO Heterojunction Nanowire Arrays"
+        }
+      ],
+      "notes": [
+        "General preparation product; no exact physical batch ID reported. The annealing/drying sequence is reported before P3HT deposition; no separate figure is explicitly timed to each post-treatment stage."
+      ]
+    },
+    {
+      "sample_id": "fig1-zno",
+      "source_sample_label": "Figure 1a bare ZnO array",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "ZnO on buffered ITO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": "No phase name assigned; indexed FFT labels are not expanded into an inferred polymorph."
+      },
+      "morphology": {
+        "value": "Nanowire array",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ],
+      "notes": [
+        "Source caption: 1 h growth at 95 °C; all ZnO nanowires in Figure 1 grown under same conditions. Source does not identify the exact moment relative to calcination."
+      ]
+    },
+    {
+      "sample_id": "fig1-cds",
+      "source_sample_label": "Figure 1b CdS/ZnO array",
+      "batch_id": null,
+      "material_state_id": "repeat-silar-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": "No phase name assigned; indexed FFT labels are not expanded into an inferred polymorph."
+      },
+      "morphology": {
+        "value": "CdS coated ZnO nanowires",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ],
+      "notes": [
+        "Explicit 10 CdS SILAR cycles; intermediate prior to CdSe deposition."
+      ]
+    },
+    {
+      "sample_id": "fig1-cdse",
+      "source_sample_label": "Figure 1c CdSe/CdS/ZnO array",
+      "batch_id": null,
+      "material_state_id": "cdse-cbd-state",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS/ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": "No phase name assigned; indexed FFT labels are not expanded into an inferred polymorph."
+      },
+      "morphology": {
+        "value": "Rough and bumpy sensitized nanowires",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ],
+      "notes": [
+        "Caption explicitly states 3 h CdSe CBD. Figure 1 shares ZnO growth conditions. Exact image timing relative to final annealing/drying is not stated."
+      ]
+    },
+    {
+      "sample_id": "fig2-cds",
+      "source_sample_label": "Figure 2a,b CdS/ZnO TEM context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS/ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": "No phase name assigned; indexed FFT labels are not expanded into an inferred polymorph."
+      },
+      "morphology": {
+        "value": "Polycrystalline CdS shell on ZnO nanowire",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+        }
+      ],
+      "notes": [
+        "Structural discussion explicitly states 10 SILAR cycles; exact physical identity with Figure 1b is unreported."
+      ]
+    },
+    {
+      "sample_id": "fig2-cdse",
+      "source_sample_label": "Figure 2c–i CdSe/CdS/ZnO structural context",
+      "batch_id": null,
+      "material_state_id": null,
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe/CdS/ZnO",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": "No phase name assigned; indexed FFT labels are not expanded into an inferred polymorph."
+      },
+      "morphology": {
+        "value": "CdSe nanoparticles on ZnO/CdS surface",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "general_context",
+      "link_evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+        }
+      ],
+      "notes": [
+        "Figure 2 provides class-level structural evidence; exact growth schedule and physical-batch identity with Figure 1c are not independently stated. EELS mapping is separate from atom-resolved coordinates."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "zno-length",
+      "sample_id": "fig1-zno",
+      "property": "Bare ZnO nanowire length",
+      "technique": "SEM",
+      "value": {
+        "value": 800,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "800 nm",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Figure 1a only; not final heterostructure length or 75 min device sample.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ]
+    },
+    {
+      "id": "zno-diameter",
+      "sample_id": "fig1-zno",
+      "property": "Bare ZnO nanowire diameter",
+      "technique": "SEM",
+      "value": {
+        "value": null,
+        "minimum": 80,
+        "maximum": 100,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "80–100 nm",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Bare ZnO Figure 1a only; not CdSe particle size.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.2 (printed 269), Figure 1a–c caption and adjacent fabrication Results"
+        }
+      ]
+    },
+    {
+      "id": "cds-shell-sem",
+      "sample_id": "fig1-cds",
+      "property": "CdS shell thickness",
+      "technique": "SEM-associated source discussion",
+      "value": {
+        "value": 9,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": true,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "~9 nm",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), opening Results continuation describing Figure 1b–c"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source discusses Figure 1b after 10 SILAR cycles.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), opening Results continuation describing Figure 1b–c"
+        }
+      ]
+    },
+    {
+      "id": "cds-shell-tem",
+      "sample_id": "fig2-cds",
+      "property": "CdS shell thickness",
+      "technique": "HRTEM",
+      "value": {
+        "value": null,
+        "minimum": 8,
+        "maximum": 9,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "8–9 nm",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "Source Figure 2a,b context after 10 SILAR cycles; not CdSe particle diameter.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+        }
+      ]
+    },
+    {
+      "id": "cds-crystallinity",
+      "sample_id": "fig2-cds",
+      "property": "CdS crystallinity",
+      "technique": "HRTEM and FFT",
+      "value": {
+        "value": "Polycrystalline CdS shell on crystalline ZnO nanowire",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Source qualitative assignment; no polymorph or lattice constant inferred.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+        }
+      ]
+    },
+    {
+      "id": "cdse-location",
+      "sample_id": "fig2-cdse",
+      "property": "CdSe deposition morphology",
+      "technique": "TEM and HRTEM",
+      "value": {
+        "value": "CdSe nanoparticles deposited randomly on the ZnO/CdS surface",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Figure 2c,d; no CdSe particle diameter reported in selected pages.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+        }
+      ]
+    },
+    {
+      "id": "elemental-map",
+      "sample_id": "fig2-cdse",
+      "property": "Elemental spatial distribution",
+      "technique": "EELS elemental mapping",
+      "value": {
+        "value": "Zn along the core; Cd, S and Se along the shell region",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kim2013-cdse-cds-zno-am301960h",
+            "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+          }
+        ],
+        "note": ""
+      },
+      "conditions": "Figure 2e–i: Zn, Cd, S, Se and overlay. No quantitative stoichiometry or atomistic reconstruction.",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "kim2013-cdse-cds-zno-am301960h",
+          "locator": "Main PDF p.3 (printed 270), structural Results and Figure 2a–i caption"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_reviewed",
+    "review_scope": "Selected Figure 1c CdSe/CdS/ZnO nanowire array preparation and essential ZnO/CdS stages. Figure 1a uses 1 h ZnO growth and caption states all its ZnO arrays share conditions. General method reports 30 min to about 2 h; that range is not a selected-run duration. Figure 2 structural evidence remains a separately labelled source context unless the text supplies a specific condition. Polymer/device branches and other variants remain pending.",
+    "missing_fields": [
+      "Ammonium hydroxide solution concentration/purity; CdSO4 and Na2S hydrate identities; bath volumes except solvent charges; CdSO4 bath solvent; all vessel types/volumes and physical vessel continuity.",
+      "Growth/rinse atmosphere, heating hardware/rates, stirring, immersion rates, cooling, rinse volumes, final drying numeric time/temperature/pressure and yield.",
+      "Exact physical batch links between Figures 1 and 2; final figure timing relative to post-treatment; CdSe particle diameter and named polymorph; measured atomic coordinates.",
+      "SI not supplied; upstream reference 4 not reconstructed. Core procedure is stated in the main Experimental Section."
+    ],
+    "conflicts": [
+      "Figure 1 uses 1 h ZnO growth; the device comparison on main PDF p.4 uses 75 min. They are different sample contexts, not an unresolved numerical substitution."
+    ],
+    "requested_tasks": [
+      "Different-agent full source audit required; root determines any sampled deep audits."
+    ],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": []
+}

@@ -36,7 +36,7 @@ def pending_variants_html(scope):
         return ''
     return ('<aside class="record-notice pending-variants"><strong>Core synthesis scope · other variants pending</strong>'
             '<p>Only the published core scope is covered by the linked audit. Pending variants have not been independently audited or included in training.</p><ul>'
-            + ''.join('<li>' + escape(row['label']) + '<small>Source: ' + escape('; '.join(row['source_locators'])) + '</small></li>' for row in rows)
+            + ''.join('<li>' + escape(row['label']) + '<small> Source: ' + escape('; '.join(row['source_locators'])) + '</small></li>' for row in rows)
             + '</ul></aside>')
 
 
