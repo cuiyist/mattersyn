@@ -1,3 +1,9 @@
+## Owner-requested pause — October 10, 2026
+
+The owner paused the job temporarily. All extraction, scientific/deep audits, local-model generation, engineering, integration and Site publication are paused until a new explicit owner resume instruction. The 30-minute queue automation is PAUSED; morning and two-hour reports remain disabled. Pause instructions were delivered to the two existing worker sessions. Pending private evidence and frozen claim states are preserved. Only saving this requested Source report and memory checkpoint is authorized.
+
+See the [pause progress report](research-assets/public-audits/PAUSE_REPORT_2026-10-10.md). The verified website remains at **243 literature papers, 244 total source groups, 2,985 records and 864 broad recipe–structure rows**. The latest scientific publication is Wu (2005) at Source `5f567a5c` and Site `334aa56c`; the later Source-only checkpoint `dd115734` passed [CI 38088288918](https://github.com/cuiyist/mattersyn/actions/runs/38088288918) and added no paper credit. The am402547e extraction remains scientifically unaccepted and storage-blocked. The original sampled window is unchanged at 12 records and four S1/S2 findings; the 100-record minimum is not met.
+
 ## Current owner instructions — October 9 standing rules (checkpoint updated October 10)
 
 The latest owner instructions supersede the earlier blind-test stop and two-per-100 rules. The third blind repeat is measurement-only; keep separate scores and historical results. Retain the deterministic 50% sample with two distinct independent deep source auditors. Continue the same October 7 record window without resetting findings: minimum 100 records, exact last 500, and a stop only above one original adjudicated S1/S2 finding per 100 records. Ordering, grouped-defect deduplication and corrections remain unchanged.

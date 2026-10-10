@@ -1,3 +1,9 @@
+## Owner-requested pause — October 10, 2026
+
+The owner paused the job temporarily. All extraction, scientific/deep audits, local-model generation, engineering, integration and Site publication are paused until a new explicit owner resume instruction. The 30-minute queue automation is PAUSED; morning and two-hour reports remain disabled. Pause instructions were delivered to the two existing worker sessions. Pending private evidence and frozen claim states are preserved. Only saving this requested Source report and memory checkpoint is authorized.
+
+See the [pause progress report](research-assets/public-audits/PAUSE_REPORT_2026-10-10.md). The verified website remains at **243 literature papers, 244 total source groups, 2,985 records and 864 broad recipe–structure rows**. The latest scientific publication is Wu (2005) at Source `5f567a5c` and Site `334aa56c`; the later Source-only checkpoint `dd115734` passed [CI 38088288918](https://github.com/cuiyist/mattersyn/actions/runs/38088288918) and added no paper credit. The am402547e extraction remains scientifically unaccepted and storage-blocked. The original sampled window is unchanged at 12 records and four S1/S2 findings; the 100-record minimum is not met.
+
 ## Current checkpoint — October 10, 2026
 
 Wu (2005), cm050799j, is deployed and anonymously verified at Source `5f567a5c3704ebe75fe512eaed10b92292f8499e` and Site `334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e`; [Pages run 38081185650](https://github.com/cuiyist/mattersyn-site/actions/runs/38081185650) passed. The actual closeout adds **one literature paper and one record**, corrects **three legacy records with zero new-paper credit**, and adds **zero broad recipe–structure rows**. The live inventory is **243 literature sources, 244 total source groups, 2,985 records and 864 broad recipe–structure rows**. Closeout evidence SHA256: `aa3e2ceddeea9a0793a93585da25a215b3ab93a3de1e4ac46ad0ecb2a5553646`.

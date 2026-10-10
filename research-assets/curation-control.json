@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "active_control_preservation_am402547e_storage_blocked",
-  "recorded_at": "2026-10-10T20:51:18.647427+00:00",
+  "status": "paused_owner_request",
+  "recorded_at": "2026-10-10T22:29:45.211418+00:00",
   "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
   "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
@@ -109,13 +109,13 @@
   },
   "continuation_automation": "mattersyn-github-review-watch",
   "continuation_interval_minutes": 30,
-  "continuation_status": "ACTIVE_QUIET_QUEUE_CONTINUATION",
+  "continuation_status": "PAUSED_OWNER_REQUEST",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
   "experimental_silver_training_ready": false,
-  "reporting_mode": "on_request_only",
-  "morning_report_status": "DISABLED",
+  "reporting_mode": "owner_request_only",
+  "morning_report_status": "PAUSED",
   "experimental_silver_publication_credit": 0,
   "experimental_silver_completed_paper_credit": 0,
   "experimental_silver_verified_pair_credit": 0,
@@ -966,21 +966,21 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-09T22:41:52.936154+00:00",
+    "snapshot_at": "2026-10-10T22:29:45.211418+00:00",
     "stage_flags": {
-      "extraction": true,
-      "paper_audit": true,
-      "integration": true,
-      "paper_publication": true,
-      "local_development_preparation": true
+      "extraction": false,
+      "paper_audit": false,
+      "integration": false,
+      "paper_publication": false,
+      "local_development_preparation": false
     },
-    "new_claims_allowed": true,
-    "new_extraction_allowed": true,
-    "publication_allowed": true,
-    "workers_paused": false,
-    "workers_source_work_paused": false,
+    "new_claims_allowed": false,
+    "new_extraction_allowed": false,
+    "publication_allowed": false,
+    "workers_paused": true,
+    "workers_source_work_paused": true,
     "publication_scope": "Independently accepted audited contributions only, with all scientific, sample/figure, privacy, source, visual, release, CI, deployment and anonymous verification gates unchanged. Machine publication remains disabled.",
-    "note": "Root is preparing the four-paper CPU release; independent technical reviewers handle the narrow CIF derivative and a separate worker diagnoses owned model-job closure. No new paper claims, held-out requests, machine publication or live paper credit."
+    "note": "Latest owner pause overrides earlier continue rules. Explicit pause instructions delivered to existing Worker A and Worker B. Only the requested Source report/checkpoint save is authorized; no scientific, claim, model or Site action follows."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -1365,8 +1365,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "am402547e extraction is frozen and unchanged; Root confirmed the display-preflight generated-copy storage failure. The distinct source auditor read scoped pages 1-8 but its source-first inventory is unsealed. No candidate scientific comparison, independent acceptance or actual browser validation completed. Root is preserving public-safe workflow and owner questions through the normal Source path.",
-  "next_step": "Preserve all bytes and gates. Seek the narrowly bounded generated-duplicate recovery authorization and operational worker-message authorization recorded in waiting_on_owner; continue unaffected read-only engineering and reviewed Source memory/control work. Do not retry rejected commands, reset the family cap or paper deadline, reassign a frozen claim, or count this draft as published.",
+  "current_task": "Owner-requested temporary pause of all scientific curation, model, engineering, integration and Site publication work. Saving only the requested safe progress report and pause memory checkpoint.",
+  "next_step": "Wait for a new explicit owner resume instruction. Preserve pending evidence, frozen claims, unresolved owner questions, historical findings and the unchanged sampled-record window. Do not perform cleanup or resume from a scheduled wake-up.",
   "waiting_on_owner": [
     {
       "question_id": "older-ullah-claim-metadata-disclosure",
@@ -1563,5 +1563,51 @@
     "recorded_at": "2026-10-10T20:51:18.647427+00:00",
     "on_disk_family_confirmed": true,
     "external_inclusive_total_basis": "agent observed only; not independently Root-confirmed"
+  },
+  "owner_pause": {
+    "requested_date": "2026-10-10",
+    "recorded_at": "2026-10-10T22:29:45.211418+00:00",
+    "scope": "All four tracks and Worker A/B queue",
+    "resume_requires_new_owner_instruction": true,
+    "source_checkpoint_report_only_authorized": true,
+    "automatic_continuation_status": "PAUSED",
+    "automatic_continuation_id": "mattersyn-github-review-watch",
+    "worker_pause_messages_delivered": true,
+    "pending_evidence_and_claims_preserved": true,
+    "report": "research-assets/public-audits/PAUSE_REPORT_2026-10-10.md"
+  },
+  "last_verified_source_maintenance": {
+    "source_commit": "dd11573497f8a88b863735be30b3a1172cbeae83",
+    "source_ci_run_id": 38088288918,
+    "source_ci_url": "https://github.com/cuiyist/mattersyn/actions/runs/38088288918",
+    "source_ci_conclusion": "success",
+    "source_ci_completed_at": "2026-10-10T21:47:26Z",
+    "local_build_stages_passed": 13,
+    "local_tests_passed": 207,
+    "local_source_export_files_passed": 19937,
+    "representative_visual_checks_passed": 218,
+    "native_http_public_paths_verified": 120,
+    "site_deployment": false,
+    "new_paper_credit": 0
+  },
+  "latest_active_source_checkpoint": {
+    "doi": "10.1021/am402547e",
+    "primary_source_id": "chang2013-cuins2-cds-am402547e",
+    "paper_ordinal": 16,
+    "deep_sample_selected": false,
+    "status": "frozen_extraction_storage_blocked_source_inventory_unsealed",
+    "claim_state": "frozen_no_operational_park_transition",
+    "package_sha256": "e682886a5887442c2d83c399f46b0682223647475f05ba62e588b1bb7070c7b0",
+    "checker_records": 1,
+    "checker_sources": 1,
+    "checker_flags": 0,
+    "checker_is_scientific_acceptance": false,
+    "independent_scientific_acceptance": false,
+    "browser_visual_acceptance": false,
+    "new_paper_credit": 0,
+    "new_sampled_records": 0,
+    "original_deadline_utc": "2026-10-10T22:03:47.816516Z",
+    "deadline_reset": false,
+    "owner_pause_supersedes_further_work": true
   }
 }

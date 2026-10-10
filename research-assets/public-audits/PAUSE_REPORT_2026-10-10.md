@@ -1,0 +1,25 @@
+# MatterSyn pause checkpoint — October 10, 2026
+
+The owner has paused the job. Extraction, scientific and deep audits, model generation, engineering, integration and Site publication remain paused. Only the requested safe GitHub report and checkpoint are authorized. Resume requires a new explicit owner instruction.
+
+The verified live inventory is **243 literature sources, 244 total source groups, 2,985 records and 864 broad recipe–structure rows**. These are deployed contributions, not draft or integration counts.
+
+| Checkpoint | Actual result |
+| --- | --- |
+| Wu (2005), DOI 10.1021/cm050799j | Verified at 19:59:15 UTC: one new literature paper, one new record, zero new broad rows. |
+| Three legacy corrections | Chambrier’s Zn3-4 record and Mazumdar’s CdS160/CdS240 device records were corrected with zero new-paper credit. |
+| Published Source / Site | Source `5f567a5c3704ebe75fe512eaed10b92292f8499e`; Site `334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e`. [Pages run 38081185650](https://github.com/cuiyist/mattersyn-site/actions/runs/38081185650) passed; deployment was anonymously verified. |
+| Source-only maintenance | [Source `dd11573497f8a88b863735be30b3a1172cbeae83`](https://github.com/cuiyist/mattersyn/commit/dd11573497f8a88b863735be30b3a1172cbeae83) saved five reviewed documents and two normal generated controls. [CI run 38088288918](https://github.com/cuiyist/mattersyn/actions/runs/38088288918) passed Windows, Ubuntu and cross-platform comparison. |
+| Maintenance validation | One complete local build passed 13 stages and 207 tests; the 19,937-file Source export passed. The representative pre-push visual check passed 218 checks and 120 exact HTTP byte paths; Root personally viewed all four fresh desktop/mobile Reader/Data captures. Earlier failed visual receipts remain retained. This documentation transaction changed no Site commit and added no paper or record credit. |
+
+The previously accepted Khatun (2012), Xie (2010), Yang (2012) and Zhu (2011) contributions are already live. They are not new credit in this checkpoint.
+
+**Pending work remains pending.** DOI 10.1021/am402547e is an unchanged frozen extraction, admission ordinal 16 and unsampled. Its postfreeze native check found one record, one source and zero flags; that is not scientific acceptance. The independent source-first inventory is unsealed, the full independent source audit remains pending; it was not selected for deep sampling, and the material family exceeds its unchanged storage cap. No claim transition or capacity release occurred. Its original deadline was not reset. Generated-duplicate recovery and bounded worker operational messages remain separate pending owner questions; no cleanup or previously rejected park/capacity/next-paper messages were executed. Separate explicit pause instructions were delivered to both workers under the latest owner request. Song and Shen remain on qualified-reference admission/binding holds. Foos also retains pending independent correction closure and stale transport. Their preserved scientific evidence supplies no new live contribution or automatic admission.
+
+**Sampling and measurements are preserved.** The original October 7 window contains **12 unique sampled records and four original adjudicated S1/S2 findings**. Evaluation is unavailable below the unchanged 100-record minimum. Once evaluable, the rule uses the exact last 500 and stops only strictly above one original S1/S2 finding per 100 sampled records. Corrections never erase findings or reset the denominator; Wu adds no sampled-window credit. Earlier counter aliases remain historical.
+
+The [third original-version blind measurement](https://github.com/cuiyist/mattersyn/blob/dd11573497f8a88b863735be30b3a1172cbeae83/research-assets/public-audits/BLIND_REPEAT_3_RESULT_2026-10-10.md) found E 3/9, F 1/9 and a deduplicated union of 4/9. Neither auditor met 8/9. This is measurement-only, separate from the sampled-record stop window and model calibration; prior results remain retained.
+
+The six-ready local-only Qwen3-32B diagnostic completed twelve A/B generations at 32,768 context with thinking disabled. All machine fields remain masked and correctness is **N/A**, because certified truth bindings are absent. Strict whole-attempt telemetry coverage failed its unchanged guard. Nine development input bindings remain pending. No held-out papers were run and no machine fields were published. The frozen prompt, schema, split and pass rules remain unchanged; the parked attempt is not authorized to rerun.
+
+The pre-pause control snapshot contained stale active labels after a technical approval service prevented its update. Root has now recorded the explicit paused control. The GitHub review-watch automation is confirmed paused; the morning automation was already paused. No continuous-work duration or twenty-papers-per-hour rate is claimed. All original artifacts, findings, unresolved permissions and scientific, privacy, rights, build, CI and release gates remain preserved. Work resumes only on a new owner instruction.
