@@ -44,6 +44,37 @@ def squash(s):
     return re.sub(r'\s+', '', re.sub(r'-\s*\n\s*', '', clean(s))).lower()
 
 
+def letters(s):
+    """Letters and digits only, lower case. PDF line-break hyphens, odd spaces, degree signs and ligatures then no longer matter."""
+    return ''.join(ch for ch in clean(s).lower() if ch.isalnum())
+
+
+def find_quote(quote, paper_letters):
+    """Where the quote sits in the paper (index into letters(paper)), or -1.
+    A quote shortened with '...' is found if its parts appear in order, close together."""
+    parts = [x for x in (letters(part) for part in re.split(r'\.{3,}|\u2026', clean(quote))) if len(x) >= 6]
+    if sum(map(len, parts)) < 8: return -1
+    start = paper_letters.find(parts[0])
+    while start != -1:
+        pos = start + len(parts[0])
+        for part in parts[1:]:
+            nxt = paper_letters.find(part, pos, pos + 1500 + len(part))
+            if nxt == -1: break
+            pos = nxt + len(part)
+        else:
+            return start
+        start = paper_letters.find(parts[0], start + 1)
+    return -1
+
+
+def nearness(quote, matcher):
+    """Share of the quote that appears as one unbroken run in the paper: tells a small wording slip from an invented quote."""
+    q = letters(quote)
+    if len(q) < 8: return 0.0
+    matcher.set_seq1(q)
+    return matcher.find_longest_match(0, len(q), 0, len(matcher.b)).size / len(q)
+
+
 def numbers_in(s):
     s = clean(s)
     out = [float(x.replace(',', '')) for x in re.findall(r'(?<![\w.])\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+\.\d+|\d+', s)]
@@ -160,14 +191,32 @@ def cmd_extract(a):
 
 # ---------- figures ----------
 CAPTION = re.compile(r'^\s*(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s*(?:[.:|]|\n)', re.I)
-STRUCTURE_WORDS = (r'\bTEM\b|HRTEM|STEM\b|\bSEM\b|\bAFM\b|XRD|diffract|SAED|SAXS|\bEDS\b|\bEDX\b|\bXPS\b|Raman|FT-?IR|\bNMR\b|'
+STRUCTURE_WORDS = (r'\bTEM\b|HRTEM|STEM\b|\bSEM\b|\bAFM\b|XRD|diffract|SAED|SAXS|\bEDS\b|\bEDX\b|\bXPS\b|Raman|FT-?IR|'
                    r'size distribution|histogram|lattice|crystal structure|unit cell|morpholog|micrograph|elemental map')
 PROPERTY_WORDS = (r'absor|UV-?vis|photoluminescen|\bPL\b|emission|fluorescen|quantum yield|lifetime|decay|J-?V\b|current|EQE|IPCE|'
                   r'photocurrent|voltamm|impedance|magneti|conductiv|band ?gap|efficienc|catalytic|photocatal|sensing|transmittance|reflectance')
 
 
-def figure_categories(caption):
+NOT_THE_PRODUCT = r'kinetic|reaction progress|conversion (?:of|versus|vs)|mechanism|speciation|\bNMR\b|precursor (?:conversion|decomposition)|schematic|illustration of'
+IMAGING_WORDS = r'\bTEM\b|HRTEM|STEM\b|\bSEM\b|\bAFM\b|XRD|diffract|SAED|SAXS|micrograph'
+LABEL_PROMPT = ('You label one figure caption from a paper on nanomaterial synthesis. Answer with JSON only: {"shows": "structure" | "property" | "both" | "other"}.\n'
+                'structure: what the synthesized material is. Microscopy images, diffraction patterns, size distributions, composition or surface analysis of the product.\n'
+                'property: how the synthesized material behaves. Optical spectra of the product, quantum yield, lifetimes, electrical, magnetic, catalytic or device measurements.\n'
+                'both: the caption has panels of each kind.\n'
+                'other: schemes, reaction mechanisms, reaction kinetics, precursor or solution chemistry, calculations, photographs of equipment.')
+
+
+def figure_categories(caption, ask=None):
+    """Label a figure from its caption. With a local model (ask), the model decides; the keyword rule is the fallback."""
+    if ask:
+        try:
+            shows = str(parse_json(ask(caption)).get('shows', '')).lower()
+            if shows in ('structure', 'property', 'other'): return [shows]
+            if shows == 'both': return ['structure', 'property']
+        except Exception:
+            pass
     cats = [name for name, words in (('structure', STRUCTURE_WORDS), ('property', PROPERTY_WORDS)) if re.search(words, caption, re.I)]
+    if re.search(NOT_THE_PRODUCT, caption, re.I) and not re.search(IMAGING_WORDS, caption, re.I): return ['other']
     return cats or ['other']
 
 
@@ -184,13 +233,14 @@ def find_figures(pdf_path):
             graphics = [fitz.Rect(i['bbox']) for i in page.get_image_info()] + [fitz.Rect(d['rect']) for d in page.get_drawings()]
             graphics = [g for g in graphics if g.width > 3 and g.height > 3 and g.get_area() < 0.9 * W * H]
             body = [fitz.Rect(b[:4]) for b in blocks if len(b[4].split()) >= 15 and not CAPTION.match(b[4])]
+            captions = [fitz.Rect(b[:4]) for b in blocks if CAPTION.match(b[4])]
             for b in blocks:
                 m = CAPTION.match(b[4])
                 if not m: continue
                 cap = fitz.Rect(b[:4])
                 wide = cap.width > 0.55 * W or cap.x0 < 0.45 * W < 0.55 * W < cap.x1
                 x0, x1 = (0, W) if wide else (0, W / 2) if (cap.x0 + cap.x1) / 2 < W / 2 else (W / 2, W)
-                in_col = [r for r in body if min(r.x1, x1) - max(r.x0, x0) > 0.5 * r.width]
+                in_col = [r for r in body + [c for c in captions if c != cap] if min(r.x1, x1) - max(r.x0, x0) > 0.5 * r.width]
                 top = max([r.y1 for r in in_col if r.y1 <= cap.y0 + 1], default=0)
                 bottom = min([r.y0 for r in in_col if r.y0 >= cap.y1 - 1], default=H)
                 for region in (fitz.Rect(x0, top, x1, cap.y0), fitz.Rect(x0, cap.y1, x1, bottom)):  # figure above, else below
@@ -214,11 +264,16 @@ def cmd_figures(a):
     except ImportError:
         import fitz
     out = Path(a.out); (out / 'figures').mkdir(parents=True, exist_ok=True)
+    ask = None
+    if a.model:  # captions are labelled by the local model; the server must be on this machine
+        host = urllib.request.urlparse(a.base_url).hostname
+        if host not in ('localhost', '127.0.0.1', '::1'): sys.exit(f'{a.base_url} is not on this machine.')
+        ask = lambda caption: call_model(a.base_url, a.model, LABEL_PROMPT, caption + ('\n\n/no_think' if 'qwen3' in a.model.lower() else ''), 0.0, 1, max_tokens=60, timeout=300)
     for pdf in a.papers:
         stem, rows, seen = Path(pdf).stem, [], set()
         with fitz.open(pdf) as doc:
             for page_no, label, caption, clip in find_figures(pdf):
-                cats = figure_categories(caption)
+                cats = figure_categories(caption, ask)
                 if label in seen or (cats == ['other'] and not a.all): continue
                 seen.add(label)
                 name = f'{stem}-{label.lower().replace(" ", "-")}.png'
@@ -233,8 +288,8 @@ def fact_problem(field, fact, paper):
     """Why a value cannot be trusted, or None. A missing value is fine: it is simply not reported."""
     if not isinstance(fact, dict) or fact.get('value') in (None, '', 'not reported'): return 'empty'
     q = fact.get('quote') or ''
-    if len(squash(q)) < 8: return 'no quote'
-    if squash(q) not in paper: return 'quote not in paper'
+    if len(letters(q)) < 8: return 'no quote'
+    if find_quote(q, paper) == -1: return 'quote not in paper'
     if field in NUMERIC or isinstance(fact['value'], (int, float)):
         v = fact['value']
         if not isinstance(v, (int, float)) or isinstance(v, bool): return 'not a number'
@@ -276,12 +331,19 @@ def step_fact(step, key):
 def page_finder(paper_text):
     """Return a function giving the PDF page a quote is on (the text carries [page N] markers)."""
     blocks = re.split(r'\[page (\d+)\]\n', paper_text)
-    pages = [(int(blocks[i]), squash(blocks[i + 1])) for i in range(1, len(blocks) - 1, 2)]
-    return lambda quote: next((n for n, text in pages if squash(quote) in text), None)
+    pages = [(int(blocks[i]), letters(blocks[i + 1])) for i in range(1, len(blocks) - 1, 2)]
+    return lambda quote: next((n for n, text in pages if find_quote(quote, text) != -1), None)
 
 
 def check_paper(paper_text, passA, passB, stats):
-    paper = squash(paper_text); page_of = page_finder(paper_text)
+    import difflib
+    paper = letters(paper_text); page_of = page_finder(paper_text)
+    matcher = difflib.SequenceMatcher(None, autojunk=False); matcher.set_seq2(paper)
+
+    def missed(quote):  # count a rejected quote by how close it came
+        stats['dropped: quote not in paper'] += 1
+        share = nearness(quote or '', matcher)
+        stats['  of which: wording nearly matches the paper' if share >= 0.85 else '  of which: partly found in the paper' if share >= 0.4 else '  of which: not found in the paper'] += 1
     two = passB is not None
     final = []
     for p, q in match_pairs(passA.get('pairs') or [], (passB or {}).get('pairs') or []):
@@ -294,6 +356,7 @@ def check_paper(paper_text, passA, passB, stats):
             if why is None and two and not facts_agree(field, fact, other): why = 'passes disagree'
             if why == 'empty': return None
             stats['values'] += 1
+            if why == 'quote not in paper': missed(fact.get('quote')); return None
             if why: stats['dropped: ' + why] += 1; return None
             stats['kept'] += 1
             out = {k: fact[k] for k in ('value', 'unit', 'quote') if fact.get(k) not in (None, '')}
@@ -309,8 +372,8 @@ def check_paper(paper_text, passA, passB, stats):
             name = c.get('name') or ''
             other = others.get(squash(name)) or next((o for o in others.values() if same_text(name, o.get('name', ''))), None)
             stats['values'] += 1
-            if len(squash(c.get('quote') or '')) < 8 or squash(c['quote']) not in paper:
-                stats['dropped: quote not in paper'] += 1; continue
+            if find_quote(c.get('quote') or '', paper) == -1:
+                missed(c.get('quote')); continue
             if two and other is None:
                 stats['dropped: passes disagree'] += 1; continue
             item = {'name': name, 'role': c.get('role') or '', 'quote': c['quote'], 'page': page_of(c['quote'])}
@@ -327,8 +390,8 @@ def check_paper(paper_text, passA, passB, stats):
         o_steps = ((q or {}).get('recipe') or {}).get('steps') or []
         for s in (p.get('recipe') or {}).get('steps') or []:
             stats['values'] += 1
-            if len(squash(s.get('quote') or '')) < 8 or squash(s['quote']) not in paper:
-                stats['dropped: quote not in paper'] += 1; continue
+            if find_quote(s.get('quote') or '', paper) == -1:
+                missed(s.get('quote')); continue
             item = {'action': s.get('action') or '', 'description': s.get('description') or '', 'quote': s['quote'], 'page': page_of(s['quote']),
                     'uses': [u for u in s.get('uses') or [] if isinstance(u, str)]}
             twin = next((o for o in o_steps if squash(o.get('action', '')) == squash(item['action']) and
@@ -405,36 +468,40 @@ def audited_index(records_path):
 def cmd_score(a):
     import collections
     idx = audited_index(a.records)
-    got, hit, missing = collections.Counter(), collections.Counter(), []
+    got, hit, missing, unmatched = collections.Counter(), collections.Counter(), [], []
     for f in sorted(Path(a.pairs).glob('*.json')):
         doc = json.loads(f.read_text(encoding='utf-8'))
         ref = idx.get((doc.get('doi') or '').lower())
         if ref is None:
             missing.append(f.name); continue
 
-        def count(kind, ok):
+        def count(kind, ok, item=None):
             got[kind] += 1; hit[kind] += bool(ok)
+            if not ok and item is not None: unmatched.append({'paper': doc.get('id'), 'doi': doc.get('doi'), 'field': kind, **{k: item.get(k) for k in ('name', 'value', 'amount', 'unit', 'temperature', 'time', 'quote', 'page') if item.get(k) is not None}})
         for p in doc.get('pairs') or []:
             st, rc = p.get('structure') or {}, p.get('recipe') or {}
-            if st.get('composition'): count('composition', any(squash(st['composition']['value']) in x or x in squash(st['composition']['value']) for x in ref['formula']))
-            if st.get('size'): count('size', any(same_number(to_canonical(st['size']['value'], st['size'].get('unit'), 'size'), x) for x in ref['size']))
+            if st.get('composition'): count('composition', any(squash(st['composition']['value']) in x or x in squash(st['composition']['value']) for x in ref['formula']), st['composition'])
+            if st.get('size'): count('size', any(same_number(to_canonical(st['size']['value'], st['size'].get('unit'), 'size'), x) for x in ref['size']), st['size'])
             for k in ('absorption_peak', 'emission_peak'):
-                if st.get(k): count('optical peak', any(same_number(st[k]['value'], x, 0.005) for x in ref['peak']))
+                if st.get(k): count('optical peak', any(same_number(st[k]['value'], x, 0.005) for x in ref['peak']), st[k])
             temps = [rc['reaction_temperature']] if rc.get('reaction_temperature') else []
             times = [rc['reaction_time']] if rc.get('reaction_time') else []
             for s in rc.get('steps') or []:
-                if s.get('temperature') is not None: temps.append({'value': s['temperature'], 'unit': s.get('temperature_unit')})
-                if s.get('time') is not None: times.append({'value': s['time'], 'unit': s.get('time_unit')})
-            for t in temps: count('temperature', any(abs((to_canonical(t['value'], t.get('unit'), 'temperature') or 1e9) - x) <= 1 for x in ref['temperature']))
-            for t in times: count('time', any(same_number(to_canonical(t['value'], t.get('unit'), 'time'), x) for x in ref['time']))
+                if s.get('temperature') is not None: temps.append({'value': s['temperature'], 'unit': s.get('temperature_unit'), 'quote': s.get('quote'), 'page': s.get('page')})
+                if s.get('time') is not None: times.append({'value': s['time'], 'unit': s.get('time_unit'), 'quote': s.get('quote'), 'page': s.get('page')})
+            for t in temps: count('temperature', any(abs((to_canonical(t['value'], t.get('unit'), 'temperature') or 1e9) - x) <= 1 for x in ref['temperature']), t)
+            for t in times: count('time', any(same_number(to_canonical(t['value'], t.get('unit'), 'time'), x) for x in ref['time']), t)
             for c in rc.get('chemicals') or []:
-                count('chemical name', any(same_text(c['name'], n) for n in ref['name']))
+                count('chemical name', any(same_text(c['name'], n) for n in ref['name']), c)
                 if c.get('amount') is not None:
-                    count('chemical amount', any(same_number(c['amount'], v, 0.01) and squash(c.get('unit') or '') == u for v, u in ref['amount']))
+                    count('chemical amount', any(same_number(c['amount'], v, 0.01) and squash(c.get('unit') or '') == u for v, u in ref['amount']), c)
     print(f'{"field":18s} {"extracted":>9s} {"in audited record":>18s} {"share":>7s}')
     for k in ('composition', 'chemical name', 'chemical amount', 'temperature', 'time', 'size', 'optical peak'):
         if got[k]: print(f'{k:18s} {got[k]:9d} {hit[k]:18d} {100 * hit[k] / got[k]:6.0f}%')
     if missing: print(f'\nNo audited record for: {", ".join(missing)}')
+    if a.details:
+        Path(a.details).write_text(json.dumps(unmatched, ensure_ascii=False, indent=1), encoding='utf-8')
+        print(f'\n{len(unmatched)} values without a match written to {a.details} (contains quoted paper text: keep it on this machine)')
     print('\nA value "in the audited record" matches a value of the same kind that auditors recorded for that paper.'
           '\nIt does not prove the value is attached to the right product; read a sample by eye as well.')
 
@@ -522,9 +589,10 @@ def main():
     e.add_argument('--passes', type=int, default=2, choices=(0, 1, 2)); e.add_argument('--budget', type=int, default=40000)
     e.add_argument('--redo', action='store_true'); e.add_argument('--allow-remote', action='store_true'); e.set_defaults(fn=cmd_extract)
     f = sub.add_parser('figures'); f.add_argument('papers', nargs='+'); f.add_argument('--out', default='work')
+    f.add_argument('--model', help='label captions with this local model instead of keywords'); f.add_argument('--base-url', default='http://127.0.0.1:8080/v1')
     f.add_argument('--dpi', type=int, default=200); f.add_argument('--all', action='store_true', help='also keep schemes and other figures'); f.set_defaults(fn=cmd_figures)
     c = sub.add_parser('check'); c.add_argument('work'); c.add_argument('--out', default='pairs'); c.set_defaults(fn=cmd_check)
-    s = sub.add_parser('score'); s.add_argument('pairs'); s.add_argument('--records', required=True); s.set_defaults(fn=cmd_score)
+    s = sub.add_parser('score'); s.add_argument('pairs'); s.add_argument('--records', required=True); s.add_argument('--details', help='write the values that did not match to this local file'); s.set_defaults(fn=cmd_score)
     b = sub.add_parser('build'); b.add_argument('pairs'); b.add_argument('--out', default='site')
     b.add_argument('--label', default='Machine-extracted, automatically checked'); b.add_argument('--quotes', action='store_true'); b.set_defaults(fn=cmd_build)
     a = ap.parse_args(); a.fn(a)

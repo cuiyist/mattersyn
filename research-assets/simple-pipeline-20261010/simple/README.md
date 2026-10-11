@@ -24,13 +24,14 @@ Then publish the `site` folder. That is all a release is.
 ## What each step does
 
 1. **extract.** Picks the pages that describe the synthesis and the product, sends them to a local model, and asks for the pairs twice. It refuses any server that is not on this machine.
-2. **figures.** Finds each figure and its caption in the PDF, crops it, and labels it *structure* (TEM, XRD, SEM, …) or *property* (absorption, emission, device curves, …) from the caption. Schemes and other figures are skipped unless you pass `--all`. No model is used.
+2. **figures.** Finds each figure and its caption in the PDF, crops it, and labels it *structure* (TEM, XRD, SEM, …) or *property* (absorption, emission, device curves, …) from the caption. Schemes, mechanisms, kinetics and other figures are skipped unless you pass `--all`. A crop stops at the neighbouring figure's caption. Labels come from caption keywords, or from the local model if you pass `--model`.
 3. **check.** Keeps a value only if all three hold:
-   - its quote is found word for word in the paper;
+   - its quote is found in the paper, letter for letter and digit for digit (line-break hyphens, spacing, symbols and ligatures are ignored; a quote shortened with "..." is accepted if its parts appear in order);
    - the number is in that quote, in a sensible range;
    - both passes agree.
 
    Anything else becomes "not reported". Nothing is corrected by hand and nothing waits for a decision.
+   For rejected quotes the summary says how close each came: nearly matching, partly found, or not found.
 4. **build.** Writes a searchable table of pairs, one page per paper with its structure and property figures, the structure, chemicals, steps and a temperature profile drawn from the data, and `pairs.json` for download and training. Quotes stay on the machine unless you pass `--quotes`.
 
 ## The pair format
@@ -49,7 +50,7 @@ python mattersyn_simple.py score   pairs15 --records records.jsonl
 
 - `records.jsonl` is the site's own data file (`data/records.jsonl`).
 - `check` needs each paper's DOI. The model usually finds it in the text; otherwise put `{"doi": "10.xxxx/..."}` in `work15/<name>.meta.json`.
-- `score` prints, per field, how many extracted values match what the auditors recorded for that paper. It cannot tell whether a value is attached to the right product, so read ten pages by eye as well.
+- `score` prints, per field, how many extracted values match what the auditors recorded for that paper. With `--details file.json` it also saves the values that did not match, so they can be looked up in the paper; that file contains quoted paper text and stays on the machine. It cannot tell whether a value is attached to the right product, so read ten pages by eye as well.
 - Start the model server with a 32,768-token context and thinking off.
 
 ## If an agent does the reading
