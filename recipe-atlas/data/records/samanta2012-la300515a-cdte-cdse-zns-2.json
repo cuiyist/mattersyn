@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "samanta2012-la300515a-cdte-cdse-zns-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Anirban Samanta (2012): CdTe/CdSe/ZnS",
+  "material": {
+    "formula": "CdTe/CdSe/ZnS",
+    "family": "CdTe/CdSe/ZnS nanocrystals",
+    "elements": [
+      "Cd",
+      "Te",
+      "Se",
+      "Zn",
+      "S"
+    ],
+    "components": [
+      "CdTe",
+      "CdSe",
+      "ZnS"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "SILAR",
+  "sources": [
+    {
+      "id": "samanta2012-la300515a",
+      "doi": "10.1021/la300515a",
+      "title": "Aqueous Synthesis of Glutathione-Capped CdTe/CdS/ZnS and CdTe/CdSe/ZnS Core/Shell/Shell Nanocrystal Heterostructures",
+      "authors": "Anirban Samanta, Zhengtao Deng, and Yan Liu",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/la300515a",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "samanta2012-la300515a",
+    "recipe_family": "samanta2012-la300515a-cdte-cdse-zns-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe/CdSe/ZnS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "samanta2012-la300515a-cdte-cdse-zns-2--cd-no3-24h2o",
+      "name": "Cd(NO3)2·4H2O",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "samanta2012-la300515a-cdte-cdse-zns-2--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "samanta2012-la300515a-cdte-cdse-zns-2--after-s02-dissolve",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s01-dissolve",
+        "samanta2012-la300515a-cdte-cdse-zns-2--cd-no3-24h2o"
+      ]
+    },
+    {
+      "id": "samanta2012-la300515a-cdte-cdse-zns-2--after-s03-precipitate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s02-dissolve"
+      ]
+    },
+    {
+      "id": "samanta2012-la300515a-cdte-cdse-zns-2--after-s04-resuspend",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s03-precipitate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve Se powder in NaBH4 solution under N2",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2012-la300515a",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve Se powder in NaBH4 solution under N2",
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve Cd(NO3)2 and GSH in degassed water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s01-dissolve",
+        "samanta2012-la300515a-cdte-cdse-zns-2--cd-no3-24h2o"
+      ],
+      "outputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s02-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2012-la300515a",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve Cd(NO3)2 and GSH in degassed water",
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate nanocrystals with 2-propanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dissolve"
+      ],
+      "inputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s02-dissolve"
+      ],
+      "outputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s03-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate nanocrystals with 2-propanol",
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s04-resuspend",
+      "action": "resuspend",
+      "label": "Resuspend precipitate in nanopure water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-precipitate"
+      ],
+      "inputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s03-precipitate"
+      ],
+      "outputs": [
+        "samanta2012-la300515a-cdte-cdse-zns-2--after-s04-resuspend"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2012-la300515a",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Resuspend precipitate in nanopure water",
+      "evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "samanta2012-la300515a-cdte-cdse-zns-2--product",
+      "source_sample_label": "CdTe/CdSe/ZnS",
+      "batch_id": null,
+      "material_state_id": "samanta2012-la300515a-cdte-cdse-zns-2--after-s04-resuspend",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe/CdSe/ZnS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2012-la300515a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2012-la300515a",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "glutathione",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "samanta2012-la300515a",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "samanta2012-la300515a",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: 250 mL three-necked, round-bottomed flask (Main PDF p.2).",
+        "Reaction temperature: 90 degC (Main PDF p.3).",
+        "Reaction time: 20 min (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of Cd(NO3)2·4H2O not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
