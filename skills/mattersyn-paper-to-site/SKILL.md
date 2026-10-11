@@ -90,3 +90,5 @@ counter field; otherwise wait for the owner. Scheduled progress reports remain o
 **Historical, do not follow:** `processing-workflow-v4.md`, `throughput-workflow-v3.md`,
 `throughput-workflow.md`, `scaling-workflow-v2.md`. Heartbeat/continuation and staffing limits
 in `incoming-corpus.md` are also superseded by workflow-v5.
+
+Owner authorization, 2026-10-11 (Root observed the first reply at 16:23 UTC, minute precision): Batch06 may launch now and all later simple-pipeline local model/controller launches are explicitly authorized; the pending Batch06 hold is resolved with its refusal history retained. This documentation update does not claim a PID/start or publication credit, resume the audited lane, change its four questions/denominator, or permit bypassing a fresh automatic refusal.
