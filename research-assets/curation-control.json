@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "simple_pipeline_active_audit_lane_paused_batch06_launch_blocked",
-  "recorded_at": "2026-10-11T12:47:35.261072+00:00",
+  "recorded_at": "2026-10-11T13:22:36.991640+00:00",
   "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
   "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
   "active_run": "Private simple-website-20261010 checkpoint; public report research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
@@ -2081,8 +2081,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Batch05 waiting display correction applied: exact chemical names and verified aliases; 30 machine-only bindings corrected, all 3269 canonical records preserved. Fresh complete source/build/browser checks before any push.",
-  "next_step": "Prepare the cohesive Batch05 correction commit; run fresh complete checks and actual desktop/phone visuals, then ordinary Source CI/merge and normal Site release. Refused Batch06 launch remains omitted with no retry.",
+  "current_task": "Batch05 R2 CI failed two stale neutral-component-title assertions on both OSs. The focused correction passes all 167 existing JavaScript tests; normal fresh Source binding, full checks and publication remain pending.",
+  "next_step": "Bind the test correction normally on the same Batch05 branch, run all existing JavaScript suites before complete local checks, then exact-head CI and normal Site release. Batch06 refused launch remains omitted without retry; audited lane stays paused.",
   "waiting_on_owner": [
     {
       "question_id": "older-ullah-claim-metadata-disclosure",
@@ -5129,7 +5129,7 @@
       "note": "Drive-space change includes concurrent activity; logical removed bytes are the exact file sum."
     },
     "batch05": {
-      "status": "integrated_awaiting_complete_checks",
+      "status": "integrated_ci_failure_corrected_awaiting_fresh_checks",
       "selected_papers": 50,
       "identity_supported_papers": 47,
       "identity_holds": 3,
@@ -5238,7 +5238,27 @@
       "existing_canonical_records_byte_identical": true,
       "assets_registered": true,
       "new_assets": 497,
-      "asset_exact_path_rules_added": 0
+      "asset_exact_path_rules_added": 0,
+      "ci_failure_r2": {
+        "run_id": 38142224825,
+        "source_commit": "e9855e25bd01a794be03f272d06ced74cfc6fc61",
+        "ubuntu": "failure",
+        "windows": "failure",
+        "compare_artifacts": "skipped",
+        "failed_step": "Test reviewed source figure access",
+        "cause": "Two stale test assertions expected inherited core/shell or component suffixes on neutral source_extracted composite titles.",
+        "new_paper_credit": 0,
+        "merge_performed": false,
+        "preserved": true
+      },
+      "local_javascript_correction": {
+        "tests": 167,
+        "passed": 167,
+        "failed": 0,
+        "skipped": 0,
+        "runtime_or_records_changed": false,
+        "local_parity": "Run the existing full JavaScript test set before unchanged source/boundary/snapshot/complete-build checks."
+      }
     },
     "batch06": {
       "status": "launch_blocked_by_automatic_approval_review",
