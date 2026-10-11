@@ -1,4 +1,12 @@
-## Simple pipeline checkpoint — October 11, CI correction pending
+## Batch 05 R4 figure repair preparation
+
+2026-10-11T14:39:37.628854+00:00: fixed the two caption-layout cases and recovered eight crops for JR/Shao. All actual crops were inspected; 95 synthetic tests passed, canonical records unchanged. Batch 05 remains unpublished pending fresh Source/CI/Site/browser gates. Batch 06 extraction is still blocked by automatic approval and must not be retried or indirectly launched. Audit lane remains paused.
+
+## Simple pipeline checkpoint — October 11, caption repair
+
+At 2026-10-11T14:29:22.463923+00:00, Source R3 CI and PR #18 are complete. The normal Batch05 candidate passed complete build and boundary checks, but Root's 79-route preview inspection found empty figure extractions for JR2008 and Shao2010. Repair those caption-layout cases and regenerate only their figures locally before normal release; if still unshippable, leave the papers out. This attempt has no Site push or new-paper credit. Verified live totals remain 372 source groups and 128 simple-lane additions. All audited-lane questions and history stay paused; the refused Batch06 generation is not retried or bypassed.
+
+## Historical simple checkpoint — October 11, CI correction pending
 
 At 2026-10-11T13:22:36.991640+00:00, Batch05's R2 Source CI failed two stale JavaScript title assertions on both operating systems; no merge or publication occurred. The test correction now passes all 167 existing JavaScript tests locally and keeps neutral machine-component titles and audited titles distinct. Run those suites before fresh full Source/build checks, then exact-head CI and the normal Site release. Batch05 remains 39 papers, 55 records and 221 crops with zero new live credit. The verified simple additions remain 128 papers and the live homepage 372 source groups at Site f3137b4e. The audited lane and all original questions remain paused. Batch06's auto-review-refused generation is omitted without retry or workaround. See the single job report for retained failures and storage holds.
 
