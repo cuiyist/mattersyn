@@ -218,7 +218,7 @@ def cmd_extract(a):
 # ---------- figures ----------
 CAPTION = re.compile(r'^\s*(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s*(?:[.:|]|\n)', re.I)
 # A caption with no punctuation after the number must continue with a capital or a bracket ("Figure 2 shows ..." is body text).
-CAPTION_PLAIN = re.compile(r'^\s*(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s+(?=[A-Z(|])')
+CAPTION_PLAIN = re.compile(r'^\s*((?i:Figure|Fig\.?|Scheme|Chart))\s*(S?\d+)\s+(?=[A-Z(|])')
 STRUCTURE_WORDS = (r'\bTEM\b|HRTEM|STEM\b|\bSEM\b|\bAFM\b|XRD|diffract|SAED|SAXS|\bEDS\b|\bEDX\b|\bXPS\b|Raman|FT-?IR|'
                    r'size distribution|histogram|lattice|crystal structure|unit cell|morpholog|micrograph|elemental map')
 PROPERTY_WORDS = (r'absor|UV-?vis|photoluminescen|\bPL\b|emission|fluorescen|quantum yield|lifetime|decay|J-?V\b|current|EQE|IPCE|'
@@ -250,6 +250,38 @@ def figure_categories(caption, ask=None):
     return cats or ['other']
 
 
+def figure_text_blocks(page):
+    """Keep block geometry, restoring a detached top-left figure label to reading order."""
+    blocks = [b for b in page.get_text('blocks') if b[6] == 0 and b[4].strip()]
+    reordered = {}
+    label_only = re.compile(r'(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s*[.:|]?', re.I)
+    for block in page.get_text('dict')['blocks']:
+        if block.get('type') != 0: continue
+        bbox = block['bbox']
+        candidates = []
+        for line in block.get('lines', []):
+            text = ''.join(span.get('text', '') for span in line.get('spans', [])).strip()
+            # Some PDFs emit a caption title before its separate label, even
+            # though the label occupies the physical top-left of that block.
+            if (label_only.fullmatch(text) and abs(line['bbox'][1] - bbox[1]) <= 1
+                    and abs(line['bbox'][0] - bbox[0]) <= 1):
+                candidates.append(text)
+        if len(candidates) == 1:
+            reordered[tuple(round(v, 3) for v in bbox)] = candidates[0]
+    result = []
+    for block in blocks:
+        label = reordered.get(tuple(round(v, 3) for v in block[:4]))
+        lines = block[4].splitlines()
+        matches = [i for i, line in enumerate(lines) if label and line.strip() == label]
+        if (not (CAPTION.match(block[4]) or CAPTION_PLAIN.match(block[4]))
+                and len(matches) == 1 and matches[0] > 0 and len(lines) > 2):
+            index = matches[0]
+            text = '\n'.join([lines[index], *lines[:index], *lines[index + 1:]])
+            block = (*block[:4], text, *block[5:])
+        result.append(block)
+    return result
+
+
 def find_figures(pdf_path):
     """Yield (page number, label, caption, clip rectangle) for each figure whose caption and graphics are found."""
     try:
@@ -259,7 +291,7 @@ def find_figures(pdf_path):
     with fitz.open(pdf_path) as doc:
         for page in doc:
             W, H = page.rect.width, page.rect.height
-            blocks = [b for b in page.get_text('blocks') if b[6] == 0 and b[4].strip()]
+            blocks = figure_text_blocks(page)
             graphics = [fitz.Rect(i['bbox']) for i in page.get_image_info()] + [fitz.Rect(d['rect']) for d in page.get_drawings()]
             graphics = [g for g in graphics if g.width > 3 and g.height > 3 and g.get_area() < 0.9 * W * H]
             body = [fitz.Rect(b[:4]) for b in blocks if len(b[4].split()) >= 15 and not CAPTION.match(b[4])]
