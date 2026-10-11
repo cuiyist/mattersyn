@@ -3344,7 +3344,7 @@ The mixed local Source eff4eb196ee9 is retained as failed, unpushed evidence: it
 
 ## Latest verified simple-pipeline publication
 
-simple-batch04-20261011 is deployed and anonymously verified at 2026-10-11T11:55:05+00:00, Source `28133151f968c8e2e71f7a355da579cbf1f8baf9`, Site `f3137b4e98846684c2114828de3f63bc014e0c7d`. This verified batch adds 43 distinct source-extracted primary papers, 85 records and 242 source crops. Live coverage is 244 audited + 128 machine extracted = 372 papers; 3,214 records; 292 direct material families. The built site is 1,341,834,607 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
+simple-batch05-caption-repair-r4-20261011 is deployed and anonymously verified at 2026-10-11T15:42:48+00:00, Source `3df0f9b15183f58054b4db28bff9f1e7a47f8c96`, Site `6817a4a523d82e91a46afc6279ae6e5cffbcc6dc`. This verified batch adds 39 distinct source-extracted primary papers, 55 records and 229 source crops. Live coverage is 244 audited + 167 machine extracted = 411 papers; 3,269 records; 309 direct material families. The built site is 1,421,685,200 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
 
 ## Batch05 checked, Batch06 launch refused — 2026-10-11T11:59:58+00:00
 
