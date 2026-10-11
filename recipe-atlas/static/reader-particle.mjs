@@ -1,5 +1,5 @@
 // Source-bound morphology illustrations; never measured coordinates or training labels.
-import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs';
+import {el,link,badge,recordURL,disclosure,siteURL} from './reader-utils.mjs?v=0.41.5';
 import {particleShapeSVG,particleShapeInfo} from './particle-shapes.mjs?v=0.40.5';
 import {scopedProductArt} from './reader-scoped-product-art.mjs';
 

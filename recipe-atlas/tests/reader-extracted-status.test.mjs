@@ -12,7 +12,7 @@ class Element{
 }
 const priorDocument=globalThis.document;
 globalThis.document={body:{dataset:{}},createElement:tag=>new Element(tag)};
-const {methodBadges}=await import('../static/reader-app.mjs');
+const {methodBadges,interpretationFallback}=await import('../static/reader-app.mjs');
 globalThis.document=priorDocument;
 const record=status=>({record_id:'fixture',method:'synthetic_method',sources:[{year:2020,authors:'Fixture Author'}],quality:{review_status:status}});
 const withDOM=callback=>{
@@ -21,32 +21,29 @@ const withDOM=callback=>{
  try{return callback();}finally{globalThis.document=prior;}
 };
 
-test('dynamic method header keeps an explicit extraction notice after initial markup is replaced',()=>withDOM(()=>{
- const host=new Element('div');host.textContent='Initial static machine notice';
+test('neutral method header retains citation and canonical extraction status',()=>withDOM(()=>{
  const r=record('source_extracted'),before=JSON.stringify(r);
- host.replaceChildren(methodBadges(r,{method_label:'Synthesis as described in the source'}));
- assert.match(host.textContent,/Synthesis as described in the source/);
+ const host=new Element('div');host.textContent='Stale extraction notice';
+ host.replaceChildren(methodBadges(r,{method_label:'Source synthesis'}));
+ assert.match(host.textContent,/Source synthesis/);
  assert.match(host.textContent,/2020 · Fixture Author et al\./);
- assert.match(host.textContent,/Machine extracted · Not independently audited/);
- assert.equal(host.children[0].children.length,3);
+ assert.doesNotMatch(host.textContent,/machine extracted|source extracted|not independently audited/i);
+ assert.equal(host.children[0].children.length,2);
  assert.equal(JSON.stringify(r),before);
- const app=readFileSync(new URL('../static/reader-app.mjs',import.meta.url),'utf8');
- assert.match(app,/methodInfo\.replaceChildren\(\);const badges=methodBadges\(r,presentation\);methodInfo\.append\(badges/);
 }));
-test('switching methods never leaves an extracted badge on an audited or unknown record',()=>withDOM(()=>{
+test('switching methods uses neutral badges without claiming a review',()=>withDOM(()=>{
  const host=new Element('div');
- for(const [status,count] of [['source_extracted',3],['source_reviewed',2],['source_extracted',3],['pending',2],[undefined,2]]){
-  const r=record(status);host.replaceChildren(methodBadges(r));
-  assert.equal(host.children[0].children.length,count);
-  assert.equal(host.textContent.includes('Not independently audited'),status==='source_extracted');
-  assert.match(host.textContent,/synthetic method/);
+ for(const status of ['source_extracted','source_reviewed','pending',undefined]){
+  const r=record(status),before=JSON.stringify(r);host.replaceChildren(methodBadges(r));
+  assert.equal(host.children[0].children.length,2);
+  assert.doesNotMatch(host.textContent,/extracted|audited|reviewed/i);
+  assert.equal(JSON.stringify(r),before);
  }
 }));
-test('extraction badge uses canonical quality status rather than unrelated metadata',()=>withDOM(()=>{
- const r=record('source_reviewed');r.review_status='source_extracted';
- assert.doesNotMatch(methodBadges(r).textContent,/Machine extracted/);
- r.quality.review_status='source_extracted';r.review_status='source_reviewed';
- assert.match(methodBadges(r).textContent,/Machine extracted/);
+test('metadata never overrides canonical status or creates a review badge',()=>withDOM(()=>{
+ const r=record('source_extracted');r.review_status='source_reviewed';
+ assert.doesNotMatch(methodBadges(r).textContent,/reviewed|audited|extracted/i);
+ assert.equal(r.quality.review_status,'source_extracted');
 }));
 
 const entries=[{id:'core',formula:'CdSe',name:'Bulk wurtzite CdSe reference · core comparison',spaceGroupNumber:186,modelPath:'models/core.json',cifPath:'core.cif',referenceOnly:true},
@@ -72,5 +69,20 @@ test('audited and other non-extracted component default titles retain their core
    assert.deepEqual(refs.map(ref=>ref.name),entries.map(ref=>ref.name));
    assert.equal(JSON.stringify({r,entries}),before);
   }
+ }
+});
+
+
+test('source-extracted interpretation fallback makes no implicit review claim',()=>{
+ const r=record('source_extracted'),before=JSON.stringify(r);
+ assert.equal(interpretationFallback(r),'Further interpretation is available in the original source.');
+ assert.doesNotMatch(interpretationFallback(r),/review|audit|extract/i);
+ assert.equal(JSON.stringify(r),before);
+});
+test('audited interpretation fallback remains unchanged',()=>{
+ for(const status of ['source_reviewed','audited',undefined]){
+  const r=record(status),before=JSON.stringify(r);
+  assert.equal(interpretationFallback(r),'Interpretation is available with the original source and complete review.');
+  assert.equal(JSON.stringify(r),before);
  }
 });

@@ -4,7 +4,7 @@ import ast
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.41.4'
+VERSION = '0.41.5'
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -21,10 +21,11 @@ class ReaderCacheVersionTests(unittest.TestCase):
 
     def test_structure_defaults_and_styles_are_reachable_at_current_version(self):
         expected = {
-            'reader-app.mjs': ('reader-structures.mjs', 'reader.css'),
+            'reader-app.mjs': ('reader-structures.mjs', 'reader.css', 'reader-utils.mjs', 'figure-captions.mjs'),
             'reader-structures.mjs': ('reader-particle.mjs', 'crystal-defaults.mjs'),
             'crystal-viewer.mjs': ('reader-structures.mjs', 'crystal-defaults.mjs'),
-            'material-guide.mjs': ('reader-app.mjs', 'crystal-viewer.mjs'),
+            'material-guide.mjs': ('reader-app.mjs', 'crystal-viewer.mjs', 'source-evidence.mjs'),
+            'paper-review.mjs': ('source-evidence.mjs',),
             'material-hub.mjs': ('material-guide.mjs',),
         }
         for parent, children in expected.items():
@@ -46,6 +47,15 @@ class ReaderCacheVersionTests(unittest.TestCase):
         exec(compile(ast.Module(body=[function], type_ignores=[]), '<synthetic-shell>', 'exec'), namespace)
         self.assertIn('material-hub.mjs?v=' + VERSION, namespace['shell']('Synthetic', '<p>Fixture</p>', 'material-hub.mjs'))
         self.assertIn('library.mjs?v=0.33.0-r2', namespace['shell']('Synthetic', '<p>Fixture</p>', 'library.mjs'))
+        for script in ('paper-review.mjs', 'evidence-gallery.mjs'):
+            self.assertIn(script+'?v='+VERSION, namespace['shell']('Synthetic', '<p>Fixture</p>', script))
+
+    def test_archive_builder_passes_plain_gallery_identity_to_shared_shell(self):
+        tree = ast.parse(self.read('scripts/build_evidence_views.py'))
+        gallery_calls = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == 'shell' and len(node.args) == 3 and isinstance(node.args[2], ast.Constant)]
+        self.assertGreaterEqual(len(gallery_calls), 2)
+        for call in gallery_calls:
+            self.assertEqual('evidence-gallery.mjs', call.args[2].value)
 
     def test_loading_text_does_not_call_source_extracted_materials_reviewed(self):
         for rel in ('templates/material-reader.html', 'static/reader-app.mjs'):

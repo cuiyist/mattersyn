@@ -1,5 +1,5 @@
 /** Reader-only view of release-admitted silver projections. Never modifies gold or training exports. */
-export const BADGE = 'Machine-extracted, not reviewed';
+export const BADGE = 'Source-linked record';
 const CATALOG_SCHEMA = 'mattersyn-silver/0.1/reader-catalog';
 const CANDIDATE_SCHEMA = 'mattersyn-silver/0.1/public-candidate';
 const THRESHOLDS = {high: .98, medium: .95, low: .90};
@@ -174,15 +174,15 @@ export function renderCatalog(host, view, {hideEmpty = false, hiddenByFilter = f
   host.hidden = hiddenByFilter || hideEmpty && !view.records.length;
   if (host.hidden) return;
   host.className = 'record-section silver-reader';
-  host.append(element(doc, 'h2', 'Machine-extracted records'));
+  host.append(element(doc, 'h2', 'Synthesis records'));
   host.append(element(doc, 'p', BADGE, 'silver-badge'));
   if (!view.records.length) {
     host.append(element(doc, 'p', 'No release-admitted silver records are available in this view. Calibration accuracy is unavailable.', 'record-notice'));
     return;
   }
-  host.append(element(doc, 'p', 'These silver records have field-level automatic checks and calibration. Each paper has not received an independent scientific review. They remain separate from the existing reviewed collection and its training/evaluation exports.'));
+  host.append(element(doc, 'p', 'Field values retain source page locators. Task eligibility and field-level uncertainty remain in the downloadable data.'));
   const counts = element(doc, 'dl', undefined, 'silver-counts');
-  for (const [label, value] of [['Silver source papers', view.source_count], ['Silver recipe/sample records', view.record_count], ['Silver structure pairs', 'Not assessed']]) {
+  for (const [label, value] of [['Papers', view.source_count], ['Recipe/sample records', view.record_count], ['Structure pairs', 'Not assessed']]) {
     const block = element(doc, 'div'); block.append(element(doc, 'dt', label), element(doc, 'dd', value)); counts.append(block);
   }
   host.append(counts, element(doc, 'p', 'Paper counts deduplicate the primary source identifier, including linked main text and supporting information. Record counts distinguish explicit recipe/sample contexts. These counts do not establish daily publication throughput.', 'record-note'));
@@ -195,7 +195,7 @@ export function renderCatalog(host, view, {hideEmpty = false, hiddenByFilter = f
     card.append(element(doc, 'p', 'Recipe: ' + record.recipe_id + ' · Sample: ' + (record.sample_id ?? 'No explicit sample assignment')));
     if (record.band === 'low') card.append(element(doc, 'p', 'Sparse material family: coverage may be limited.', 'record-note'));
     const table = element(doc, 'table', undefined, 'silver-field-table');
-    const caption = element(doc, 'caption', 'Extracted field states and source locators');
+    const caption = element(doc, 'caption', 'Field states and source locators');
     const thead = element(doc, 'thead'), headings = element(doc, 'tr');
     for (const name of ['Field and context', 'Value', 'State and evidence']) { const th = element(doc, 'th', name); th.scope = 'col'; headings.append(th); }
     thead.append(headings); const tbody = element(doc, 'tbody');
@@ -203,13 +203,13 @@ export function renderCatalog(host, view, {hideEmpty = false, hiddenByFilter = f
       const row = element(doc, 'tr'), name = element(doc, 'th', human(field.field) + ' · ' + field.slot_id); name.scope = 'row';
       const value = element(doc, 'td', field.training_masked ? 'Value withheld' : String(field.value) + (field.unit ? ' ' + field.unit : ''));
       const state = element(doc, 'td');
-      state.append(element(doc, 'strong', field.state === 'accepted_auto_checked' ? 'Accepted by automatic checks' : field.state === 'uncertain' ? 'Uncertain · training masked' : 'Not extracted · training masked'));
+      state.append(element(doc, 'strong', field.state === 'accepted_auto_checked' ? 'Accepted by automatic checks' : field.state === 'uncertain' ? 'Uncertain · training masked' : 'Not supplied · training masked'));
       if (field.locators.length) for (const locator of field.locators) state.append(element(doc, 'span', locator.document_id + ' · PDF page ' + locator.page, 'silver-locator'));
       else state.append(element(doc, 'span', 'No admitted evidence locator.', 'silver-locator'));
       row.append(name, value, state); tbody.append(row);
     }
     table.append(caption, thead, tbody); const scroll = element(doc, 'div', undefined, 'silver-table-scroll'); scroll.append(table); card.append(scroll);
-    card.append(element(doc, 'p', 'Only supplied extraction fields are listed. Missing or withheld information does not establish absence in the paper. This is not a complete laboratory protocol.', 'record-note'));
+    card.append(element(doc, 'p', 'Only supplied fields are listed. Missing or withheld information does not establish absence in the paper. This is not a complete laboratory protocol.', 'record-note'));
     card.append(element(doc, 'p', 'Source identifier: ' + record.source_id + ' · Calibration: ' + record.calibration_sha256, 'silver-provenance'));
     if (view.report_url) card.append(sourceLink(doc, 'Report a possible error', view.report_url));
     else card.append(element(doc, 'p', 'Error reporting link is unavailable.', 'record-note'));

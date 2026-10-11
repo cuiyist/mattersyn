@@ -1,8 +1,9 @@
+import {appendFigureCaptions,figureCaptionTexts} from './figure-captions.mjs?v=0.41.5';
 import {installReaderHashNavigation,applyReaderFragment} from './reader-navigation.mjs';
 import {renderPendingVariants,PENDING_BADGE,pendingVariants} from './pending-variants.mjs';
 import {resolveMaterialEntry} from './material-aliases.mjs';
 import {mountWuContext} from './wu2008-reader-context.mjs';
-import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory,sourceFigureRows,componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
+import {el,link,button,badge,section,disclosure,siteURL,recordURL,human,isEquipment,shortMethod,sourceURL,figureMatchesCategory,sourceFigureRows,componentScopeLabel} from './reader-utils.mjs?v=0.41.5';
 
 import {quantityValue} from './quantity-value.mjs';
 
@@ -10,7 +11,7 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableCh
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.4';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.5';
 
 const cache=new Map();
 
@@ -35,12 +36,11 @@ const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 export function methodBadges(r,presentation={}){
  const badges=el('div',undefined,'reader-badges');
  badges.append(badge(presentation.method_label||shortMethod(r.method)),badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));
- if(r.quality?.review_status==='source_extracted')badges.append(badge('Machine extracted · Not independently audited','scope'));
  return badges;
 }
 
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.4');style.dataset.readerCss='true';document.head.append(style);}
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.5');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
@@ -115,7 +115,16 @@ async function precursors(host,r,presentation={}){
 
 let figureDialog;
 
-function enlargeFigure(f){if(f.display_kind==='source_link'){if(!figureDialog){figureDialog=el('dialog',undefined,'reader-figure-dialog');document.body.append(figureDialog);}const header=el('header');header.append(el('h2',f.title||f.id),button('Close ×',()=>figureDialog.close()));figureDialog.replaceChildren(header,el('p',f.display_note||'Original figure withheld. Consult the source.','reader-note'),link('Read the source figure ↗',f.source_url),el('p',f.summary||''));if(!figureDialog.open)figureDialog.showModal();return;}if(!figureDialog){figureDialog=el('dialog',undefined,'reader-figure-dialog');document.body.append(figureDialog);}const header=el('header');header.append(el('h2',f.title||f.id),button('Close ×',()=>figureDialog.close()));const img=el('img');img.src=siteURL(f.public_asset||f.asset);img.alt=f.summary||f.title||f.id;figureDialog.replaceChildren(header,img,el('p',f.summary||'','reader-note'));if(!figureDialog.open)figureDialog.showModal();}
+function enlargeFigure(f){
+ if(!figureDialog){figureDialog=el('dialog',undefined,'reader-figure-dialog');document.body.append(figureDialog);}
+ const header=el('header');header.append(el('h2',f.title||f.id),button('Close ×',()=>figureDialog.close()));
+ figureDialog.replaceChildren(header);
+ if(f.display_kind==='source_link')figureDialog.append(el('p',f.display_note||'Original figure withheld. Consult the source.','reader-note'),link('Read the source figure ↗',f.source_url));
+ else{const img=el('img');img.src=siteURL(f.public_asset||f.asset);img.alt=figureCaptionTexts(f)[0]||f.title||f.id;figureDialog.append(img);}
+ appendFigureCaptions(figureDialog,f,el);
+ const loc=f.source_locator||f.locator;if(loc)figureDialog.append(el('small',typeof loc==='string'?loc:[loc.document_role,loc.page?'PDF p. '+loc.page:'',loc.figure].filter(Boolean).join(' · ')));
+ if(!figureDialog.open)figureDialog.showModal();
+}
 
 function reviewURL(r,p={},anchor=''){const base=p.data_links?.full_review||recordURL(r.record_id)+'#evidence';return base+(base.startsWith('paper-review.html')?anchor:'');}
 
@@ -129,13 +138,14 @@ export function figureGallery(host,figures,r,category,presentation={}){
 
  function render(i){const f=rows[i];for(const [n,b] of [...tabs.children].entries())b.setAttribute('aria-selected',String(n===i));const figure=el('figure',undefined,'reader-figure'),img=el('img',undefined,'reader-figure-image');img.loading='lazy';img.src=siteURL(f.public_asset||f.asset);img.alt=f.display_kind==='source_link'?'Source-link card; original figure withheld':f.title||f.id;img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label',(f.display_kind==='source_link'?'Open source reference for ':'Enlarge ')+img.alt);img.onclick=()=>enlargeFigure(f);img.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();enlargeFigure(f);}};
 
-  const caption=el('figcaption',undefined,'reader-figure-caption');caption.append(el('h3',f.title||f.id));if(f.display_kind==='source_link')caption.append(el('p',f.display_note,'reader-note'),link('Read the source figure ↗',f.source_url));if(f.summary&&f.summary!==f.title){const first=f.summary.match(/^.*?[.!?](?=\s+[A-Z]|$)/s)?.[0]?.trim();if(first&&first.length<=300)caption.append(el('p',first));caption.append(disclosure('Caption and source qualifications',el('p',f.summary)));}caption.append(badge(f.scope_label||f.scope||'Source figure · specimen scope retained','scope'));if(f.scope_note)caption.append(el('p',f.scope_note,'reader-note'));const source=f.source_id||r.lineage.source_group;const loc=f.source_locator||f.locator||'';if(loc){const locationText=typeof loc==='string'?loc:[loc.document_role,loc.page?'PDF p. '+loc.page:'',loc.figure].filter(Boolean).join(' · ');caption.append(el('small',locationText));}caption.append(link('Full figure evidence →',reviewURL(r,presentation,category==='source'?'#figures':'#source-'+(category==='property'?'properties':category==='precursor'?'precursors':'structures')),'reader-data-link'));figure.append(img,caption);display.replaceChildren(figure);
+  const caption=el('figcaption',undefined,'reader-figure-caption');caption.append(el('h3',f.title||f.id));if(f.display_kind==='source_link')caption.append(el('p',f.display_note,'reader-note'),link('Read the source figure ↗',f.source_url));appendFigureCaptions(caption,f,el);caption.append(badge(f.scope_label||f.scope||'Source figure · specimen scope retained','scope'));if(f.scope_note)caption.append(el('p',f.scope_note,'reader-note'));const source=f.source_id||r.lineage.source_group;const loc=f.source_locator||f.locator||'';if(loc){const locationText=typeof loc==='string'?loc:[loc.document_role,loc.page?'PDF p. '+loc.page:'',loc.figure].filter(Boolean).join(' · ');caption.append(el('small',locationText));}caption.append(link('Full figure evidence →',reviewURL(r,presentation,category==='source'?'#figures':'#source-'+(category==='property'?'properties':category==='precursor'?'precursors':'structures')),'reader-data-link'));figure.append(img,caption);display.replaceChildren(figure);
 
  }rows.forEach((f,i)=>{const b=button(f.title||f.id,()=>render(i));b.setAttribute('role','tab');tabs.append(b);});render(0);return rows.length;
 
 }
 
-function intuition(host,r,presentation){const items=presentation.intuition||presentation.chemical_intuition||[];if(!items.length){host.append(el('p','Interpretation is available with the original source and complete review.','reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return;}
+export function interpretationFallback(r){return r.quality?.review_status==='source_extracted'?'Further interpretation is available in the original source.':'Interpretation is available with the original source and complete review.';}
+function intuition(host,r,presentation){const items=presentation.intuition||presentation.chemical_intuition||[];if(!items.length){host.append(el('p',interpretationFallback(r),'reader-note'),link('Source discussion →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));return;}
  const grid=el('div',undefined,'reader-intuition');for(const item of items.slice(0,3)){const card=el('article');if(item.title)card.append(el('h3',item.title));card.append(el('p',item.summary||item.text||''),el('small',human(item.claim_type||'Source interpretation')),link('Evidence →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));grid.append(card);}host.append(grid);if(items.length>3)host.append(link('All interpretations and references →',reviewURL(r,presentation,'#source-intuition'),'reader-data-link'));}
 function sourceDisagreements(host,pairs,r){if(!Array.isArray(pairs)||!pairs.length)return;const heading=el('h3','Source comparisons','reader-conflict-heading');heading.id='source-disagreements';host.append(heading,el('p','Each account retains its context and source locator. Unresolved discrepancies remain marked; distinct measurement bases are shown separately.','reader-conflict-intro'));for(const pair of pairs){if(!Array.isArray(pair.claims)||pair.claims.length<2){if(pair.context){const note=el('article',undefined,'reader-conflict');note.append(el('h4',pair.topic||pair.field||'Source qualification'),el('p',safeText(pair.context)),link('Complete source qualification →',recordURL(r.record_id)+'#evidence','reader-data-link'));host.append(note);}continue;}const card=el('article',undefined,'reader-conflict');const top=el('div',undefined,'reader-conflict-top');top.append(el('h4',pair.topic||pair.field||'Source disagreement'),badge(pair.status==='preserved_distinct'?'Distinct bases':'Unresolved','reader-conflict-status'));card.append(top);if(pair.context)card.append(el('p',pair.context,'reader-conflict-context'));const claims=el('div',undefined,'reader-conflict-claims');pair.claims.forEach((claim,index)=>{const item=el('section',undefined,'reader-conflict-claim');item.append(el('span',claim.label||`Report ${index+1}`,'reader-conflict-label'),el('p',safeText(claim.statement)||safeText(claim.value)||safeText(claim.claim)||'Claim text not supplied.'));const locator=claim.sourceLocator||claim.source_locator;if(locator)item.append(el('small',safeText(locator),'reader-conflict-locator'));const source=r.sources.find(s=>s.id===(claim.sourceId||claim.source_id));if(source)item.append(link(source.title+' ↗',sourceURL(source),'reader-data-link'));claims.append(item);});card.append(claims);host.append(card);}}
 function dataSwitch(r,active='reader'){const nav=el('nav',undefined,'reader-switch');nav.setAttribute('aria-label','Reader or data view');nav.append(link('Reader',recordURL(r.record_id,'reader'),active==='reader'?'active':''),link('Data and evidence',recordURL(r.record_id,'data'),active==='data'?'active':''),link('Download JSON ↓','data/records/'+r.record_id+'.json'));return nav;}
@@ -176,7 +186,7 @@ export function renderProperties(host,figures,r,presentation={}){
  if(measurements.length){
   host.append(el('h3','Property results'),facts(measurements.slice(0,4)));
   if(measurements.length>4)host.append(disclosure('Additional property results ('+(measurements.length-4)+')',facts(measurements.slice(4))));
- }else if(!count)host.append(el('p','No property result is assigned to this method in the reviewed record. Related source evidence remains available below.','reader-note'));
+ }else if(!count)host.append(el('p','No property result is assigned to this method in the record. Related source evidence remains available below.','reader-note'));
  return measurements.length;
 }
 
@@ -191,7 +201,7 @@ async function buildMethod(host,r,presentation){
 
  sections[3].append(link('Complete measurements and source evidence →',recordURL(r.record_id)+'#properties','reader-data-link'));intuition(sections[4],r,presentation);
 
- const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+(source.year??'Year unverified')),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link('Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
+ const sources=section('sources','06','Sources');for(const source of r.sources){const card=el('div',undefined,'reader-citation');card.append(el('strong',source.title),el('p',source.authors+' · '+(source.year??'Year unverified')),link((source.doi||'Source')+' ↗',sourceURL(source)),document.createTextNode(' · '),link(r.quality?.review_status==='source_extracted'?'Source details →':'Source review →',source.id===r.lineage.source_group?reviewURL(r,presentation):sourceURL(source)));sources.append(card);}sourceDisagreements(sources,presentation.conflictPairs,r);host.append(sources);
  if(/^data\/paper-reviews\/[a-z0-9-]+\/[a-z0-9-]+\.json$/.test(presentation.data_links?.contexts||''))sources.append(link('Download additional source contexts ↓',presentation.data_links.contexts,'reader-data-link'));
  const additionalFigures=sourceFigureRows(figs,true);if(additionalFigures.length){sources.append(el('h3','Additional source figures'),el('p','These figures retain their original specimen and context qualifications.','reader-note'));figureGallery(sources,additionalFigures,r,'source',presentation);}
  mountWuContext(host,sections,sources,r,presentation);
@@ -223,15 +233,15 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  const records=(data?.records||[]).filter(r=>r.is_synthesis_route&&r.collection==='reviewed_literature');
 
- if(recordId&&!records.some(r=>r.record_id===recordId)){const r=await json('data/records/'+recordId+'.json'),manifest=await json('data/dataset-manifest.json');const meta={record_id:recordId,title:r.title,method:r.method,formula:r.material.formula,year:r.sources[0].year};const scoped=manifest.records.find(row=>row.record_id===recordId);if(scoped?.pending_variants)meta.pending_variants=scoped.pending_variants;records.unshift(meta);}
+ if(recordId&&!records.some(r=>r.record_id===recordId)){const r=await json('data/records/'+recordId+'.json'),manifest=await json('data/dataset-manifest.json');const meta={record_id:recordId,title:r.title,method:r.method,formula:r.material.formula,year:r.sources[0].year,review_status:r.quality?.review_status};const scoped=manifest.records.find(row=>row.record_id===recordId);if(scoped?.pending_variants)meta.pending_variants=scoped.pending_variants;records.unshift(meta);}
 
- if(!records.length)throw Error('No reviewed synthesis method is available.');
+ if(!records.length)throw Error('No synthesis method is available.');
 
  let active=recordId&&records.some(r=>r.record_id===recordId)?recordId:records[0].record_id;const baseTitle=data?.formula||records[0].formula;
 
  main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span',records.some(r=>r.review_status==='source_extracted')?'Synthesis and evidence':'Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
 
- const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
+ const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
 
  const selector=el('section');selector.append(el('h2','Synthesis methods'));const cards=el('div',undefined,'reader-methods');
 

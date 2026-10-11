@@ -172,7 +172,7 @@ def main():
         m['route_records']=len(related)
         m['publication_status']='verified_synthesis_contribution' if m['reviewed_records'] else 'source_extracted_contribution'
         m['component_only']=not bool(m['direct_record_ids'])
-        m['scope_note']=component_scope_note(m['component_architectures']) if m['component_only'] else 'Each method retains its source-extracted or independently audited review status. Unreviewed title matches are excluded from this page.'
+        m['scope_note']=component_scope_note(m['component_architectures']) if m['component_only'] else 'Each method retains source locators and missing information. Title-only matches are excluded from this page.'
         if f == 'CoFe2O4' and not m['component_only']:
             m['scope_note']='This page combines direct standalone CoFe2O4 Method-A routes with a separately scoped CoFe2O4 shell contribution in the CoO/CoFe2O4 composite. Shell structure and property observations remain attached to that composite sample and are not relabeled as results for the standalone nanocrystals.'
         m['benchmark_records']=sum(r['collection']=='published_benchmark' for r in related);m['paper_count']=len(m['paper_dois'])

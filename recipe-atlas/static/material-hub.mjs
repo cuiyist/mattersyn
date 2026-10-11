@@ -1,13 +1,13 @@
 import {quantityValue} from './quantity-value.mjs';
 import {resolveMaterialEntry} from './material-aliases.mjs';
-import {componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
-import {mountMaterialGuide} from './material-guide.mjs?v=0.41.4';
+import {componentScopeLabel} from './reader-utils.mjs?v=0.41.5';
+import {mountMaterialGuide} from './material-guide.mjs?v=0.41.5';
 const $=id=>document.getElementById(id);const params=new URLSearchParams(location.search);let id=params.get('id');
 function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}
 function link(text,url){const a=node('a',text);a.href=url;return a;}
 function q(value){if(!('unit' in value))return value.value===null?'Not reported':String(value.value);if(value.status==='not_reported'||quantityValue(value)===null)return 'Not reported';return (value.approximate?'≈':'')+(quantityValue(value))+' '+value.unit;}
 async function paperCards(data){const host=$('material-papers');host.replaceChildren();const ordered=[...data.papers].sort((a,b)=>b.reviewedRecordIds.length-a.reviewedRecordIds.length);let shown=0;
- function batch(){for(const p of ordered.slice(shown,shown+20)){const c=node('article','','paper-contribution');c.append(node('span',p.fullDocumentReview?.label||(p.reviewStatus==='selected_recipes_reviewed'?'Selected recipe contribution reviewed':p.reviewStatus==='source_extracted'?'Source extracted':p.reviewStatus==='published_benchmark'?'Published benchmark · numeric outcomes':'Indexed literature · recipe contribution unverified'),'atlas-status'));const h=node('h3');h.append(link(p.title||p.doi,'paper.html?id='+p.id));c.append(h,node('p',p.doi+' · '+(p.year||'Year unverified')));const links=node('div','','paper-links');if(p.fullDocumentReview)links.append(link((p.fullDocumentReview.label||'Source document review')+' · original figures →',p.fullDocumentReview.url));links.append(link('Inspect source and review status →','paper.html?id='+p.id),link('Publisher ↗',p.doiUrl));c.append(links);host.append(c);}shown+=20;$('more-papers').hidden=shown>=ordered.length;}
+ function batch(){for(const p of ordered.slice(shown,shown+20)){const c=node('article','','paper-contribution');c.append(node('span',p.fullDocumentReview?.label||(p.reviewStatus==='selected_recipes_reviewed'?'Selected recipe contribution reviewed':p.reviewStatus==='source_extracted'?'Synthesis contribution':p.reviewStatus==='published_benchmark'?'Published benchmark · numeric outcomes':'Indexed literature · recipe contribution unverified'),'atlas-status'));const h=node('h3');h.append(link(p.title||p.doi,'paper.html?id='+p.id));c.append(h,node('p',p.doi+' · '+(p.year||'Year unverified')));const links=node('div','','paper-links');if(p.fullDocumentReview)links.append(link((p.fullDocumentReview.label||'Source document review')+' · original figures →',p.fullDocumentReview.url));links.append(link('Inspect source and review status →','paper.html?id='+p.id),link('Publisher ↗',p.doiUrl));c.append(links);host.append(c);}shown+=20;$('more-papers').hidden=shown>=ordered.length;}
  $('more-papers').addEventListener('click',batch);batch();$('paper-contribution-count').textContent=data.papers.length+' source-linked synthesis contributions. Each retains its review status; title-only matches are excluded.';
 }
 try{
