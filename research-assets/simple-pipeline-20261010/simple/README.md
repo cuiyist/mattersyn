@@ -38,6 +38,14 @@ Then publish the `site` folder. That is all a release is.
 
 One file per paper. Each pair has a product, its structure (composition, architecture, phase, shape, ligand, size, optical peaks, quantum yield) and its recipe (method, reactor, atmosphere, reaction temperature and time, chemicals with amounts, steps in order). Every value carries its quote. A value the paper does not state is absent and shows as "not reported". The full template is in `PROMPT.md`.
 
+## Result of the first test (15 development papers, Qwen3-32B, 2026-10-11)
+
+- **Speed:** 25 minutes for 15 papers, two passes each, no failures: about 36 papers an hour on one RTX 5090.
+- **Kept:** 298 of 475 extracted values (63%). Of the 86 rejected quotes, 3 were not in the paper at all; the rest were reworded or stitched together.
+- **Correct:** 224 of the 232 scored values (97%), after the 34 that did not match the audited records were looked up in the papers: 26 were right, 3 were real values on the wrong product or step, 4 were wrong, 1 could not be decided.
+- **By field:** composition 15/15, chemical name 75/77, amount 47/48, temperature 42/43, time 27/28, size 7/7, optical peak 11/14.
+- **Caveat:** a value that matched the audited record was not checked for being on the right product, and 15 papers is a small sample.
+
 ## First test: is the local model good enough?
 
 Run it on papers that already have audited answers, then compare. The 15 development papers are the obvious set.
@@ -78,11 +86,13 @@ What `sync` writes for each paper:
 
 Unit cells come from the composition default in `site-patches/`; the converter does not bind them.
 
+**Held back.** Absorption and emission peaks and quantum yield are not written to the site unless you pass `--include-optical`: in the 15-paper test 3 of 14 optical peaks were wrong. A paper whose DOI is already on the site as a reviewed paper is skipped.
+
 **How the records are marked.** Review status `source_extracted`, shown on the record page as "source extracted". They carry no "machine-extracted, not reviewed" badge, and they are not marked as reviewed. A page that includes such a record is headed "Synthesis and evidence" instead of "Reviewed synthesis and evidence". They stay out of the audited training exports and the audited pair table; `pairs.json` is the data for machines.
 
-**Tested.** One made-up paper went through `records`, `sync` and the complete site build (13 stages, 206 tests, all site checks) and was opened in the Reader: precursors with molecule drawings, three steps with diagrams and conditions, a zinc-blende CdSe unit cell, and structure and property figures, with no console errors.
+**Tested.** Two made-up papers went through `records`, `sync` and the complete site build (13 stages, 206 tests, all site checks) and were opened in the Reader with no console errors. Between them they cover: a single-material product, a core/shell product with component unit cells, a material the site had never seen, two products from one paper, a chemical the molecule library does not know, and structure and property figures.
 
-**Not tested.** A real paper; several pairs from one paper; a material the site has never seen; the release gate, rights register and allowlist, which the project's own tools regenerate; the JavaScript tests.
+**Not tested.** A real paper through the converter; the release gate, rights register and allowlist, which the project's own tools regenerate; the JavaScript tests.
 
 ## What this leaves out, on purpose
 

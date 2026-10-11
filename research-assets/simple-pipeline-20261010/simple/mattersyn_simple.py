@@ -113,6 +113,20 @@ def same_text(a, b):
 
 
 # ---------- reading papers ----------
+DOI = re.compile(r'10\.\d{4,9}/[^\s"<>,;]+')
+
+
+def tidy_doi(text):
+    m = DOI.search(str(text or ''))
+    return m.group(0).rstrip('.)]') if m else ''
+
+
+def doi_guess(pages, stem):
+    """A DOI printed on the first pages, else one spelled in the file name."""
+    printed = next((tidy_doi(p) for p in pages[:2] if tidy_doi(p)), '')
+    return printed or tidy_doi(stem.replace('_', '/', 1))
+
+
 def load_pages(path):
     path = Path(path)
     if path.suffix.lower() == '.pdf':
@@ -174,7 +188,7 @@ def cmd_extract(a):
         keep = select_pages(pages, a.budget)
         text = '\n\n'.join(f'[page {i + 1}]\n{pages[i]}' for i in keep)
         (out / f'{stem}.text.txt').write_text(text, encoding='utf-8')
-        (out / f'{stem}.pages.json').write_text(json.dumps({'page_count': len(pages), 'pages_read': [i + 1 for i in keep]}), encoding='utf-8')
+        (out / f'{stem}.pages.json').write_text(json.dumps({'page_count': len(pages), 'pages_read': [i + 1 for i in keep], 'doi_in_pdf': doi_guess(pages, stem)}), encoding='utf-8')
         if a.passes == 0:
             print(f'{stem}: text ready (pages {[i + 1 for i in keep]})')
         user = text + ('\n\n/no_think' if 'qwen3' in a.model.lower() else '')
@@ -191,6 +205,8 @@ def cmd_extract(a):
 
 # ---------- figures ----------
 CAPTION = re.compile(r'^\s*(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s*(?:[.:|]|\n)', re.I)
+# A caption with no punctuation after the number must continue with a capital or a bracket ("Figure 2 shows ..." is body text).
+CAPTION_PLAIN = re.compile(r'^\s*(Figure|Fig\.?|Scheme|Chart)\s*(S?\d+)\s+(?=[A-Z(|])')
 STRUCTURE_WORDS = (r'\bTEM\b|HRTEM|STEM\b|\bSEM\b|\bAFM\b|XRD|diffract|SAED|SAXS|\bEDS\b|\bEDX\b|\bXPS\b|Raman|FT-?IR|'
                    r'size distribution|histogram|lattice|crystal structure|unit cell|morpholog|micrograph|elemental map')
 PROPERTY_WORDS = (r'absor|UV-?vis|photoluminescen|\bPL\b|emission|fluorescen|quantum yield|lifetime|decay|J-?V\b|current|EQE|IPCE|'
@@ -211,8 +227,10 @@ def figure_categories(caption, ask=None):
     if ask:
         try:
             shows = str(parse_json(ask(caption)).get('shows', '')).lower()
-            if shows in ('structure', 'property', 'other'): return [shows]
-            if shows == 'both': return ['structure', 'property']
+            said = {'structure': ['structure'], 'property': ['property'], 'both': ['structure', 'property'], 'other': []}.get(shows)
+            if said is not None:  # a panel the model missed is often named by a keyword, so take both views together
+                words = [c for c in figure_categories(caption) if c != 'other']
+                return [c for c in ('structure', 'property') if c in said or c in words] or ['other']
         except Exception:
             pass
     cats = [name for name, words in (('structure', STRUCTURE_WORDS), ('property', PROPERTY_WORDS)) if re.search(words, caption, re.I)]
@@ -235,8 +253,9 @@ def find_figures(pdf_path):
             body = [fitz.Rect(b[:4]) for b in blocks if len(b[4].split()) >= 15 and not CAPTION.match(b[4])]
             captions = [fitz.Rect(b[:4]) for b in blocks if CAPTION.match(b[4])]
             for b in blocks:
-                m = CAPTION.match(b[4])
+                m = CAPTION.match(b[4]) or CAPTION_PLAIN.match(b[4])
                 if not m: continue
+                certain = bool(CAPTION.match(b[4]))
                 cap = fitz.Rect(b[:4])
                 wide = cap.width > 0.55 * W or cap.x0 < 0.45 * W < 0.55 * W < cap.x1
                 x0, x1 = (0, W) if wide else (0, W / 2) if (cap.x0 + cap.x1) / 2 < W / 2 else (W / 2, W)
@@ -254,7 +273,7 @@ def find_figures(pdf_path):
                     clip = (clip + (-4, -4, 4, 4)) & page.rect
                     if clip.width >= 60 and clip.height >= 60:
                         label = ('Figure' if m.group(1).lower().startswith('fig') else m.group(1).capitalize()) + ' ' + m.group(2).upper()
-                        yield page.number + 1, label, ' '.join(b[4].split())[:1500], clip
+                        yield page.number + 1, label, ' '.join(b[4].split())[:1500], clip, certain
                         break
 
 
@@ -272,7 +291,9 @@ def cmd_figures(a):
     for pdf in a.papers:
         stem, rows, seen = Path(pdf).stem, [], set()
         with fitz.open(pdf) as doc:
-            for page_no, label, caption, clip in find_figures(pdf):
+            found = list(find_figures(pdf))
+            # captions with punctuation first; the plainer form only for figures not found that way
+            for page_no, label, caption, clip, certain in sorted(found, key=lambda f: not f[4]):
                 cats = figure_categories(caption, ask)
                 if label in seen or (cats == ['other'] and not a.all): continue
                 seen.add(label)
@@ -426,10 +447,12 @@ def cmd_check(a):
         meta = json.loads((work / f'{stem}.meta.json').read_text(encoding='utf-8')) if (work / f'{stem}.meta.json').exists() else {}
         figures = json.loads((work / f'{stem}.figures.json').read_text(encoding='utf-8')) if (work / f'{stem}.figures.json').exists() else meta.get('figures') or []
         cite = lambda k: meta.get(k) or passes[0].get(k) or ''
-        doc = {'id': stem, 'doi': cite('doi'), 'title': cite('title'), 'authors': cite('authors'), 'year': cite('year'), 'journal': cite('journal'),
+        pages_info = json.loads((work / f'{stem}.pages.json').read_text(encoding='utf-8')) if (work / f'{stem}.pages.json').exists() else {}
+        doi = tidy_doi(meta.get('doi')) or pages_info.get('doi_in_pdf') or tidy_doi(passes[0].get('doi')) or tidy_doi(stem.replace('_', '/', 1))
+        doc = {'id': stem, 'doi': doi, 'title': cite('title'), 'authors': cite('authors'), 'year': cite('year'), 'journal': cite('journal'),
                'check': 'two passes agree, quotes found' if len(passes) > 1 else 'one pass, quotes found',
                'values_kept': stats['kept'], 'values_extracted': stats['values'], 'figures': figures, 'pairs': pairs,
-               **(json.loads((work / f'{stem}.pages.json').read_text(encoding='utf-8')) if (work / f'{stem}.pages.json').exists() else {})}
+               **{k: v for k, v in pages_info.items() if k != 'doi_in_pdf'}}
         (out / f'{stem}.pairs.json').write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding='utf-8')
         total.update(stats); total['pairs'] += len(pairs)
         print(f'{stem}: {len(pairs)} pairs, kept {stats["kept"]} of {stats["values"]} values')

@@ -49,4 +49,5 @@ Rules:
 6. List the chemicals with amounts as written. Use a separate entry for each chemical. If no amount is given, use null.
 7. List the steps in the order performed, including purification. In "uses", name only chemicals the text says are added or used in that step, spelled as in your chemicals list; leave it empty if the text does not say. Use short action words: dissolve, degas, heat, inject, hold, cool, add, precipitate, centrifuge, wash, redisperse, dry, anneal.
 8. If the paper prepares the material "according to" another paper and gives no details, return the pair with what is stated and null for the rest.
-9. If the text contains no synthesis, return {"doi": "", "title": "", "authors": "", "year": "", "journal": "", "pairs": []}.
+9. absorption_peak and emission_peak are peaks in the spectra of this product itself, stated as a wavelength. Do not use excitation wavelengths, laser lines, detector ranges, or peaks of another sample, a precursor or a reference material.
+10. If the text contains no synthesis, return {"doi": "", "title": "", "authors": "", "year": "", "journal": "", "pairs": []}.

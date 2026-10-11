@@ -43,6 +43,17 @@ def unit_name(unit):
     return UNITS.get(unit.lower().replace(' ', ''), unit)
 
 
+def formula_from(text):
+    """The formula inside a composition phrase; the phrase itself if no formula is found."""
+    for token in str(text).replace(',', ' ').split():
+        token = token.strip('.;()[]')
+        bare = re.sub(r'[\d.()x\u2212\-/@:+δ]', '', token)
+        solo = token in ('Au', 'Ag', 'Pt', 'Pd', 'Si', 'Ge', 'Cu', 'Ni', 'Co', 'Fe', 'Bi', 'Sn', 'Te', 'Se', 'Ru', 'Rh', 'Ir')  # elements made as nanocrystals; not words like "In" or "As"
+        if bare and re.fullmatch(rf'(?:(?:{ELEMENT})(?![a-z]))+', bare) and (len(elements_of(token)) > 1 or solo or token == str(text).strip()):
+            return token
+    return str(text).strip()
+
+
 def first_upper(text):
     return text[:1].upper() + text[1:]
 
@@ -53,8 +64,8 @@ def elements_of(formula):
 
 
 class Builder:
-    def __init__(self, doc):
-        self.doc = doc
+    def __init__(self, doc, include_optical=False):
+        self.doc = doc; self.include_optical = include_optical
         first = slug(re.split(r'[,;]| and ', doc.get('authors') or '')[0].split()[-1] if doc.get('authors') else '', 20)
         year = str(doc.get('year') or '')[:4]
         tail = slug((doc.get('doi') or doc['id']).split('/')[-1], 30)
@@ -83,7 +94,7 @@ class Builder:
 
     def record(self, pair, index):
         st, rc = pair.get('structure') or {}, pair.get('recipe') or {}
-        composition = str((st.get('composition') or {}).get('value') or pair.get('product') or 'unspecified')
+        composition = formula_from((st.get('composition') or {}).get('value') or pair.get('product') or 'unspecified')
         rid = f'{self.source_id}-{slug(pair.get("product") or composition, 40)}-{index}'
         ident = lambda name: f'{rid}--{slug(name, 40)}'
         materials, by_name = [], {}
@@ -135,10 +146,10 @@ class Builder:
                                  'value': self.quantity(st['size']['value'], st['size'].get('unit') or 'nm', st['size'].get('page')), 'conditions': '', 'derives_from': [], 'evidence': self.evidence(st['size'].get('page'))})
         for key, prop, technique, default_unit in (('absorption_peak', 'absorption_peak', 'UV-vis absorption spectroscopy', 'nm'), ('emission_peak', 'photoluminescence_peak', 'photoluminescence spectroscopy', 'nm'),
                                                    ('plqy', 'photoluminescence_quantum_yield', 'photoluminescence spectroscopy', '%')):
-            if st.get(key):
+            if st.get(key) and self.include_optical:
                 measurements.append({'id': f'{rid}--{slug(prop)}', 'sample_id': sample, 'property': prop, 'technique': technique,
                                      'value': self.quantity(st[key]['value'], st[key].get('unit') or default_unit, st[key].get('page')), 'conditions': '', 'derives_from': [], 'evidence': self.evidence(st[key].get('page'))})
-        missing = [name.replace('_', ' ') for group, names in ((st, ('phase', 'shape', 'ligand', 'size', 'absorption_peak', 'emission_peak', 'plqy')), (rc, ('reactor', 'atmosphere', 'reaction_temperature', 'reaction_time'))) for name in names if not group.get(name)]
+        missing = [name.replace('_', ' ') for group, names in ((st, ('phase', 'shape', 'ligand', 'size') + (('absorption_peak', 'emission_peak', 'plqy') if self.include_optical else ())), (rc, ('reactor', 'atmosphere', 'reaction_temperature', 'reaction_time'))) for name in names if not group.get(name)]
         missing += [f'amount of {c["name"]}' for c in rc.get('chemicals') or [] if c.get('amount') is None]
         size = st.get('size') or {}
         components = [x for x in re.split(r'[/@]', composition) if x.strip()]
@@ -163,9 +174,9 @@ class Builder:
                 'context_links': [], 'collection': 'reviewed_literature', 'reader_role': 'synthesis_route'}
 
 
-def records_of(doc):
+def records_of(doc, include_optical=False):
     """(builder, [records]) for the pairs that describe a synthesis."""
-    builder = Builder(doc)
+    builder = Builder(doc, include_optical)
     usable = [(n, p) for n, p in enumerate(doc.get('pairs') or [], 1) if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
     return builder, [builder.record(p, n) for n, p in usable]
 
@@ -194,6 +205,10 @@ def step_svg(op, reactor):
     return svg, caption
 
 
+CHEMICAL_KINDS = {'molecule', 'formula', 'identity', 'identity_only', 'symbolic_identity', 'ionic', 'ionic_components', 'ionic_identity', 'connectivity',
+                  'molecular_connectivity', 'molecular', 'abbreviated_connectivity', 'single_atom', 'element', 'solid', 'polymer', 'reference_2d'}
+
+
 def name_keys(name):
     """Forms of a chemical name used for matching: as written, and without a bracketed abbreviation."""
     full = re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', str(name)).lower()).strip(' .,;')
@@ -216,6 +231,8 @@ def bind_chemicals(atlas, records, doi_url, new_assets):
         rid = record['record_id']; bound = {}
         for m in record['materials']:
             hits = [e for key in name_keys(m['name']) for e in index.get(key, [])]
+            # an entry made for one paper's specimen, mixture or sample context is not a general chemical
+            hits = [e for e in hits if e.get('pubchemCid') or not re.search(r'(19|20)\d\d', e['id']) or e.get('depictionKind') in CHEMICAL_KINDS]
             if hits:
                 bound[m['id']] = sorted(hits, key=rank)[0]['id']; matched += 1; continue
             eid = 'name-card-' + slug(m['name'], 60)
@@ -248,8 +265,8 @@ def cmd_sync(a):
     side_path = atlas / 'data/reader-presentation-reviewed.json'; side = json.loads(side_path.read_text(encoding='utf-8-sig'))
     new_assets = []
     for f in sorted(pairs_dir.glob('*.pairs.json')):
-        doc = json.loads(f.read_text(encoding='utf-8')); builder, records = records_of(doc)
-        if not records: continue
+        doc = json.loads(f.read_text(encoding='utf-8')); builder, records = records_of(doc, a.include_optical)
+        if not records or not (atlas / 'data/records' / f'{records[0]["record_id"]}.json').is_file(): continue
         sid = builder.source_id
         reactors = [((p.get('recipe') or {}).get('reactor') or {}).get('value') for p in doc.get('pairs') or [] if (p.get('recipe') or {}).get('steps') or (p.get('recipe') or {}).get('chemicals')]
         figures = []
@@ -352,11 +369,12 @@ def cmd_records(a):
     validator = jsonschema.Draft202012Validator(SCHEMA)
     written = 0
     inventory_path = repo / 'recipe-atlas/data/inventory-evidence.json'; inventory = json.loads(inventory_path.read_text(encoding='utf-8'))
+    on_site = {p['doi'].lower() for p in inventory['per_paper'] if p.get('doi') and p.get('review_status') != 'source_extracted'}
     for f in sorted(Path(a.pairs).glob('*.pairs.json')):
-        doc = json.loads(f.read_text(encoding='utf-8')); builder = Builder(doc); ids = []
-        for n, pair in enumerate(doc.get('pairs') or [], 1):
-            if not ((pair.get('recipe') or {}).get('steps') or (pair.get('recipe') or {}).get('chemicals')): continue  # nothing to show as a synthesis
-            record = builder.record(pair, n)
+        doc = json.loads(f.read_text(encoding='utf-8')); builder, records = records_of(doc, a.include_optical); ids = []
+        if (doc.get('doi') or '').lower() in on_site:
+            print(f'{doc["id"]}: {doc["doi"]} is already on the site as a reviewed paper; skipped'); continue
+        for record in records:
             errors = sorted(validator.iter_errors(record), key=lambda e: list(e.path))
             if errors:
                 print(f'{record["record_id"]}: NOT WRITTEN, {len(errors)} schema errors; first: {"/".join(map(str, errors[0].path))}: {errors[0].message[:160]}'); continue
@@ -375,9 +393,11 @@ def cmd_records(a):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest='cmd', required=True)
-    r = sub.add_parser('records'); r.add_argument('pairs'); r.add_argument('--repo', required=True); r.add_argument('--replace', action='store_true'); r.set_defaults(fn=cmd_records)
+    r = sub.add_parser('records'); r.add_argument('pairs'); r.add_argument('--repo', required=True); r.add_argument('--replace', action='store_true')
+    r.add_argument('--include-optical', action='store_true', help='also write absorption and emission peaks and quantum yield (held back by default)'); r.set_defaults(fn=cmd_records)
     s = sub.add_parser('sync'); s.add_argument('pairs'); s.add_argument('--repo', required=True)
-    s.add_argument('--dist', help='dist folder of a site build attempt; its material pages decide which routes each material lists'); s.set_defaults(fn=cmd_sync)
+    s.add_argument('--dist', help='dist folder of a site build attempt; its material pages decide which routes each material lists')
+    s.add_argument('--include-optical', action='store_true'); s.set_defaults(fn=cmd_sync)
     a = ap.parse_args(); a.fn(a)
 
 
