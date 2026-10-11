@@ -1,5 +1,5 @@
 import {chemicalRegistry,chemicalEntry,openChemical} from './chemical-viewer.mjs?v=0.34.1';
-import {el,button,isEquipment,recordURL,link} from './reader-utils.mjs?v=0.41.5';
+import {el,button,isEquipment,recordURL,link} from './reader-utils.mjs?v=0.41.6';
 let equipmentDialog;
 export function showEquipment(material){
  if(!equipmentDialog){equipmentDialog=el('dialog',undefined,'reader-equipment-dialog');document.body.append(equipmentDialog);}

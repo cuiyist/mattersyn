@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "F.U. Hassan (2019): ZnO-PbS NC",
+  "material": {
+    "formula": "ZnO-PbS",
+    "family": "ZnO-PbS nanocrystals",
+    "elements": [
+      "Zn",
+      "O",
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "ZnO",
+      "PbS"
+    ],
+    "architecture": "unresolved"
+  },
+  "method": "P-SILAR",
+  "sources": [
+    {
+      "id": "hassan2019-j-materresbull-2019-110588",
+      "doi": "10.1016/j.materresbull.2019.110588",
+      "title": "Modified p-SILAR for enhanced deposition of PbS and CdS QDs on TiO2 and ZnO NPs for improved photocatalytic and photovoltaic performance",
+      "authors": "F.U. Hassan, M.A. Basit, M.A. Abbas, E.S. Jung, J.H. Bang, T.J. Park",
+      "year": 2019,
+      "url": "https://doi.org/10.1016/j.materresbull.2019.110588",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hassan2019-j-materresbull-2019-110588",
+    "recipe_family": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol",
+      "name": "Methanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--de-ionized-water",
+      "name": "De-ionized water",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol"
+      ]
+    },
+    {
+      "id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s02-centrifuge",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s01-add",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol"
+      ]
+    },
+    {
+      "id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s03-add",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s02-centrifuge",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--de-ionized-water"
+      ]
+    },
+    {
+      "id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s04-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s03-add",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--de-ionized-water"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Add Pb(NO3)2 solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol"
+      ],
+      "outputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s01-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add Pb(NO3)2 solution",
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge for 4 min at 6000 rpm",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s01-add",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol"
+      ],
+      "outputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s02-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 min",
+          "evidence": [
+            {
+              "source_id": "hassan2019-j-materresbull-2019-110588",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge for 4 min at 6000 rpm",
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "Add sodium sulphide solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-centrifuge"
+      ],
+      "inputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s02-centrifuge",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--de-ionized-water"
+      ],
+      "outputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s03-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add sodium sulphide solution",
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge for 4 min at 6000 rpm",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-add"
+      ],
+      "inputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s03-add",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--methanol",
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--de-ionized-water"
+      ],
+      "outputs": [
+        "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s04-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 4,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "4 min",
+          "evidence": [
+            {
+              "source_id": "hassan2019-j-materresbull-2019-110588",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge for 4 min at 6000 rpm",
+      "evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--product",
+      "source_sample_label": "ZnO-PbS NC",
+      "batch_id": null,
+      "material_state_id": "hassan2019-j-materresbull-2019-110588-zno-pbs-nc-2--after-s04-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hassan2019-j-materresbull-2019-110588",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hassan2019-j-materresbull-2019-110588",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: centrifuge tube (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Methanol not reported in the extracted text.",
+      "Amount of De-ionized water not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
