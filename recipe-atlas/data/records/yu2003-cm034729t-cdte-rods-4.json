@@ -1,0 +1,379 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "yu2003-cm034729t-cdte-rods-4",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yu (2003): CdTe rods",
+  "material": {
+    "formula": "CdTe",
+    "family": "CdTe nanocrystals",
+    "elements": [
+      "Cd",
+      "Te"
+    ],
+    "components": [
+      "CdTe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "yu2003-cm034729t",
+      "doi": "10.1021/cm034729t",
+      "title": "Formation and Stability of CdTe Nanocrystals",
+      "authors": "Yu, W. W.; Qu, L.; Guo, W.; Peng, X.",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/cm034729t",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "yu2003-cm034729t",
+    "recipe_family": "yu2003-cm034729t-cdte-rods-4",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdTe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5.8 nm",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.5"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "rod",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "yu2003-cm034729t-cdte-rods-4--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "yu2003-cm034729t-cdte-rods-4--after-s02-inject",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "yu2003-cm034729t-cdte-rods-4--after-s01-heat"
+      ]
+    },
+    {
+      "id": "yu2003-cm034729t-cdte-rods-4--after-s03-cool",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "yu2003-cm034729t-cdte-rods-4--after-s02-inject"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heating CdO and OA in ODE",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "yu2003-cm034729t-cdte-rods-4--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 300,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "300 °C",
+          "evidence": [
+            {
+              "source_id": "yu2003-cm034729t",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heating CdO and OA in ODE",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Injecting Te solution into hot solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "yu2003-cm034729t-cdte-rods-4--after-s01-heat"
+      ],
+      "outputs": [
+        "yu2003-cm034729t-cdte-rods-4--after-s02-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Injecting Te solution into hot solution",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cooling to 260 °C for growth",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-inject"
+      ],
+      "inputs": [
+        "yu2003-cm034729t-cdte-rods-4--after-s02-inject"
+      ],
+      "outputs": [
+        "yu2003-cm034729t-cdte-rods-4--after-s03-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 260,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "260 °C",
+          "evidence": [
+            {
+              "source_id": "yu2003-cm034729t",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cooling to 260 °C for growth",
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "yu2003-cm034729t-cdte-rods-4--product",
+      "source_sample_label": "CdTe rods",
+      "batch_id": null,
+      "material_state_id": "yu2003-cm034729t-cdte-rods-4--after-s03-cool",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdTe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2003-cm034729t",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2003-cm034729t",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "rod",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "yu2003-cm034729t",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: three-neck flask (Main PDF p.2).",
+        "Reaction temperature: 300 degC (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "yu2003-cm034729t-cdte-rods-4--size",
+      "sample_id": "yu2003-cm034729t-cdte-rods-4--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5.8 nm",
+        "evidence": [
+          {
+            "source_id": "yu2003-cm034729t",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "yu2003-cm034729t",
+          "locator": "Main PDF p.5"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

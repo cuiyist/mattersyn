@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "keeble2009-jp9044429-cds-meh-ppv-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "David J. Keeble (2009): CdS:MEH-PPV",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Heat-up",
+  "sources": [
+    {
+      "id": "keeble2009-jp9044429",
+      "doi": "10.1021/jp9044429",
+      "title": "Paramagnetic Point Defects and Charge Carriers in PbS and CdS Nanocrystal Polymer Composites",
+      "authors": "David J. Keeble, Elizabeth A. Thomsen, Alexandros Stavrinadis, Ifor D.W. Samuel, Jason M. Smith, and Andrew A.R. Watt",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp9044429",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "keeble2009-jp9044429",
+    "recipe_family": "keeble2009-jp9044429-cds-meh-ppv-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "zinc blende",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "keeble2009-jp9044429-cds-meh-ppv-1--cadmium-acetate-hydrate",
+      "name": "cadmium acetate hydrate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 0.3,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.3 g",
+          "evidence": [
+            {
+              "source_id": "keeble2009-jp9044429",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "keeble2009-jp9044429-cds-meh-ppv-1--meh-ppv",
+      "name": "MEH-PPV",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "keeble2009-jp9044429-cds-meh-ppv-1--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--cadmium-acetate-hydrate",
+        "keeble2009-jp9044429-cds-meh-ppv-1--meh-ppv"
+      ]
+    },
+    {
+      "id": "keeble2009-jp9044429-cds-meh-ppv-1--after-s02-dissolve",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "keeble2009-jp9044429-cds-meh-ppv-1--after-s03-precipitate",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s02-dissolve"
+      ]
+    },
+    {
+      "id": "keeble2009-jp9044429-cds-meh-ppv-1--after-s04-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s03-precipitate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve lead acetate trihydrate and MEH-PPV in DMSO/DCB",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--cadmium-acetate-hydrate",
+        "keeble2009-jp9044429-cds-meh-ppv-1--meh-ppv"
+      ],
+      "outputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "keeble2009-jp9044429",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve lead acetate trihydrate and MEH-PPV in DMSO/DCB",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve sulfur in DCB",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s01-dissolve"
+      ],
+      "outputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s02-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "keeble2009-jp9044429",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve sulfur in DCB",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate composite with methanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-dissolve"
+      ],
+      "inputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s02-dissolve"
+      ],
+      "outputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s03-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate composite with methanol",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge composite",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-precipitate"
+      ],
+      "inputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s03-precipitate"
+      ],
+      "outputs": [
+        "keeble2009-jp9044429-cds-meh-ppv-1--after-s04-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge composite",
+      "evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "keeble2009-jp9044429-cds-meh-ppv-1--product",
+      "source_sample_label": "CdS:MEH-PPV",
+      "batch_id": null,
+      "material_state_id": "keeble2009-jp9044429-cds-meh-ppv-1--after-s04-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "keeble2009-jp9044429",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "zinc blende",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "keeble2009-jp9044429",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "keeble2009-jp9044429",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "keeble2009-jp9044429",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "keeble2009-jp9044429",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: 12 mL anhydrous solution of dimethylsulfoxide (DMSO) and dichlorobenzene (DCB) (Main PDF p.2).",
+        "Reaction temperature: 160 degC (Main PDF p.2).",
+        "Reaction time: 1 h (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Amount of MEH-PPV not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

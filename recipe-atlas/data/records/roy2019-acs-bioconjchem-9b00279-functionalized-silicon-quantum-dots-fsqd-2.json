@@ -1,0 +1,347 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Debiprasad Roy (2019): Functionalized Silicon Quantum Dots (FSQDs)",
+  "material": {
+    "formula": "Functionalized Silicon Quantum Dots (FSQDs)",
+    "family": "Functionalized Silicon Quantum Dots (FSQDs) nanocrystals",
+    "elements": [
+      "F",
+      "S",
+      "Ds"
+    ],
+    "components": [
+      "Functionalized Silicon Quantum Dots (FSQDs)"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "EDC coupling",
+  "sources": [
+    {
+      "id": "roy2019-acs-bioconjchem-9b00279",
+      "doi": "10.1021/acs.bioconjchem.9b00279",
+      "title": "Designed Synthesis of Dual Emitting Silicon Quantum Dot for Cell Imaging: Direct Labeling of Alpha 2-HS-Glycoprotein",
+      "authors": "Debiprasad Roy, Chandrani Fouzder, Alpana Mukhuty, Sumana Pal, Maloy Kr. Mondal, Rakesh Kundu, and Pranesh Chowdhury",
+      "year": 2019,
+      "url": "https://doi.org/10.1021/acs.bioconjchem.9b00279",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "roy2019-acs-bioconjchem-9b00279",
+    "recipe_family": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "semicrystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "roy2019-acs-bioconjchem-9b00279",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--silicon-quantum-dots-sqds",
+      "name": "Silicon Quantum Dots (SQDs)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "roy2019-acs-bioconjchem-9b00279",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s02-heat",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s01-mix"
+      ]
+    },
+    {
+      "id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s03-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s02-heat",
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--silicon-quantum-dots-sqds"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mix EDC and AHSG solutions to maintain the designed mole ratio",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mix EDC and AHSG solutions to maintain the designed mole ratio",
+      "evidence": [
+        {
+          "source_id": "roy2019-acs-bioconjchem-9b00279",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s02-heat",
+      "action": "heat",
+      "label": "Heat the reaction mixture at 50 °C for 30 min",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s01-mix"
+      ],
+      "outputs": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s02-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 50,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "50 °C",
+          "evidence": [
+            {
+              "source_id": "roy2019-acs-bioconjchem-9b00279",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat the reaction mixture at 50 °C for 30 min",
+      "evidence": [
+        {
+          "source_id": "roy2019-acs-bioconjchem-9b00279",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "Add SQDs solution to the reaction mixture",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-heat"
+      ],
+      "inputs": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s02-heat",
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--silicon-quantum-dots-sqds"
+      ],
+      "outputs": [
+        "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s03-add"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "roy2019-acs-bioconjchem-9b00279",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add SQDs solution to the reaction mixture",
+      "evidence": [
+        {
+          "source_id": "roy2019-acs-bioconjchem-9b00279",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--product",
+      "source_sample_label": "Functionalized Silicon Quantum Dots (FSQDs)",
+      "batch_id": null,
+      "material_state_id": "roy2019-acs-bioconjchem-9b00279-functionalized-silicon-quantum-dots-fsqd-2--after-s03-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "semicrystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "roy2019-acs-bioconjchem-9b00279",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "roy2019-acs-bioconjchem-9b00279",
+          "locator": "Main PDF p.8"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 50 degC (Main PDF p.8)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of Silicon Quantum Dots (SQDs) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

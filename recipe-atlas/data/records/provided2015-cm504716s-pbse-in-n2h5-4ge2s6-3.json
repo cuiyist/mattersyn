@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "not provided (2015): PbSe-in-(N2H5)4Ge2S6",
+  "material": {
+    "formula": "PbSe",
+    "family": "PbSe nanocrystals",
+    "elements": [
+      "Pb",
+      "Se"
+    ],
+    "components": [
+      "PbSe"
+    ],
+    "architecture": "composite"
+  },
+  "method": "Ligand exchange",
+  "sources": [
+    {
+      "id": "provided2015-cm504716s",
+      "doi": "10.1021/cm504716s",
+      "title": "Ligand Exchange of PbSe Nanocrystal Superlattices with Inorganic Molecular Clusters",
+      "authors": "not provided",
+      "year": 2015,
+      "url": "https://doi.org/10.1021/cm504716s",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "provided2015-cm504716s",
+    "recipe_family": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "rock-salt",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 7.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "7 nm",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s01-dissolve",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s01-dissolve"
+      ]
+    },
+    {
+      "id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s03-wait",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s02-add"
+      ]
+    },
+    {
+      "id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s04-remove",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s03-wait"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-dissolve",
+      "action": "dissolve",
+      "label": "Dissolve the ChaM in formamide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s01-dissolve"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Dissolve the ChaM in formamide",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Add the ChaM solution to the subphase",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-dissolve"
+      ],
+      "inputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s01-dissolve"
+      ],
+      "outputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Add the ChaM solution to the subphase",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-wait",
+      "action": "wait",
+      "label": "Wait for ∼15 min to ensure complete ligand exchange",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s02-add"
+      ],
+      "outputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s03-wait"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "provided2015-cm504716s",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Wait for ∼15 min to ensure complete ligand exchange",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-remove",
+      "action": "remove",
+      "label": "Remove the liquid in the well using a micropipettor",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-wait"
+      ],
+      "inputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s03-wait"
+      ],
+      "outputs": [
+        "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s04-remove"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Remove the liquid in the well using a micropipettor",
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--product",
+      "source_sample_label": "PbSe-in-(N2H5)4Ge2S6",
+      "batch_id": null,
+      "material_state_id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--after-s04-remove",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "rock-salt",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: Teﬂon well (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--size",
+      "sample_id": "provided2015-cm504716s-pbse-in-n2h5-4ge2s6-3--product",
+      "property": "optically_derived_size",
+      "technique": "optical sizing",
+      "value": {
+        "value": 7.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "7 nm",
+        "evidence": [
+          {
+            "source_id": "provided2015-cm504716s",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "provided2015-cm504716s",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Ligand not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

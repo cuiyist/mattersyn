@@ -1,4 +1,12 @@
-## Current simple-pipeline continuation — captions required
+## Current simple-pipeline continuation — captions live
+
+Batch 6 was deployed and anonymously verified at 2026-10-11T21:29:20+00:00: Source `87dd84a16767bd02841f3bc1c2c87fee797992bb`, Site `7bd17fb86b8cc68cfea7b797a82d4755d228c1a3`; 34 new papers, 42 records and 204 crops. Live totals are 445 papers and 1,190 displayed recipe–structure pairs. Full descriptive public captions now cover all 1,231 applicable figures from Batches 1–6, beneath the figure and in the enlarged view, with exact page/figure locators. Original captions and quoted payloads remain private. Desktop/phone preview and all 59 required routes passed; anonymous verification checked 624 files including all 588 changed files.
+
+Paper list: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), 201 verified simple-lane papers / 326 records. Data stays `source_extracted`; six training exports remain audited-only. The audited lane, historical findings, denominator and questions remain paused.
+
+Continue Batch 7's completed additive preparation: 36 papers / 54 records / 216 crops, all captions bound and applied after final Reader sync and bibliography correction. No later nonempty sync. Complete normal Source/CI/Site/browser/anonymous gates before any new credit. Batch 9 generation and Batch 8 caption generation use the existing owned local server; Batch 10 launch waits for actual predecessor completion and idle capacity. Older dated pending statements below are history.
+
+## Historical caption-preparation checkpoint
 
 2026-10-11T20:02:40.433920+00:00: Published zero-paper UI engineering is anonymously verified (Site `2e5ddaf840f941ed113c7f308c7ea9e575522811`, verify 19:54:08 UTC). Live paper totals remain 411; the live combined display-pair total is 1,148. Batch 6 has 34 papers / 42 records / 204 crops locally integrated, unpublished; finish its normal release. Batch 8 controller 26244 uses owned local Qwen server 32512; Batch 7 is locally complete and its caption generation is active.
 
@@ -3362,7 +3370,7 @@ The mixed local Source eff4eb196ee9 is retained as failed, unpushed evidence: it
 
 ## Latest verified simple-pipeline publication
 
-simple-batch05-caption-repair-r4-20261011 is deployed and anonymously verified at 2026-10-11T15:42:48+00:00, Source `3df0f9b15183f58054b4db28bff9f1e7a47f8c96`, Site `6817a4a523d82e91a46afc6279ae6e5cffbcc6dc`. This verified batch adds 39 distinct source-extracted primary papers, 55 records and 229 source crops. Live coverage is 244 audited + 167 machine extracted = 411 papers; 3,269 records; 309 direct material families. The built site is 1,421,685,200 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
+simple-batch06-20261011 is deployed and anonymously verified at 2026-10-11T21:29:20+00:00, Source `87dd84a16767bd02841f3bc1c2c87fee797992bb`, Site `7bd17fb86b8cc68cfea7b797a82d4755d228c1a3`. This verified batch adds 34 distinct source-extracted primary papers, 42 records and 204 source crops. Live coverage is 244 audited + 201 machine extracted = 445 papers; 3,311 records; 314 direct material families. The built site is 1,474,043,687 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
 
 ## Batch05 checked, Batch06 launch refused — 2026-10-11T11:59:58+00:00
 
