@@ -10,7 +10,7 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableCh
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.3';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.4';
 
 const cache=new Map();
 
@@ -32,7 +32,7 @@ const shortSourceAuthor=authors=>{const first=String(authors||'').split(/[,;]/)[
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.0');style.dataset.readerCss='true';document.head.append(style);}
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.4');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
@@ -195,7 +195,7 @@ async function buildMethod(host,r,presentation){
 
 export async function mountReader(main,{materialId,recordId}={}){
 
- installStyle();installReaderHashNavigation();main.className='reader-main';main.replaceChildren(el('div','Loading reviewed material…','reader-loading'));
+ installStyle();installReaderHashNavigation();main.className='reader-main';main.replaceChildren(el('div','Loading material…','reader-loading'));
 
  const [index,presentations]=await Promise.all([json('data/materials-index.json'),json('data/reader-presentation.json')]);
 

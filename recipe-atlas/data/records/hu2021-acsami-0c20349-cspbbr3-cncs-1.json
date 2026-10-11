@@ -1,0 +1,373 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "hu2021-acsami-0c20349-cspbbr3-cncs-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Huicheng Hu (2021): CsPbBr3 CNCs",
+  "material": {
+    "formula": "CsPbBr3",
+    "family": "CsPbBr3 nanocrystals",
+    "elements": [
+      "Cs",
+      "Pb",
+      "Br"
+    ],
+    "components": [
+      "CsPbBr3"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Reprecipitation",
+  "sources": [
+    {
+      "id": "hu2021-acsami-0c20349",
+      "doi": "10.1021/acsami.0c20349",
+      "title": "Highly Stable CsPbBr3 Colloidal Nanocrystal Clusters as Photocatalysts in Polar Solvents",
+      "authors": "Huicheng Hu, Min Chen, Nan Yao, Linzhong Wu, Qixuan Zhong, Bin Song, Muhan Cao, Qiao Zhang",
+      "year": 2021,
+      "url": "https://doi.org/10.1021/acsami.0c20349",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "hu2021-acsami-0c20349",
+    "recipe_family": "hu2021-acsami-0c20349-cspbbr3-cncs-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CsPbBr3",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "orthorhombic",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 84.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "84.5 nm",
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--isopropanol",
+      "name": "isopropanol",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 5.0,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "5 mL",
+          "evidence": [
+            {
+              "source_id": "hu2021-acsami-0c20349",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s01-inject",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--isopropanol"
+      ]
+    },
+    {
+      "id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s02-stir",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s01-inject",
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--isopropanol"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-inject",
+      "action": "inject",
+      "label": "Inject precursor solution into isopropanol",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--isopropanol"
+      ],
+      "outputs": [
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s01-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject precursor solution into isopropanol",
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-stir",
+      "action": "stir",
+      "label": "Stir the solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-inject"
+      ],
+      "inputs": [
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s01-inject",
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--isopropanol"
+      ],
+      "outputs": [
+        "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s02-stir"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 30,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "30 min",
+          "evidence": [
+            {
+              "source_id": "hu2021-acsami-0c20349",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Stir the solution",
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--product",
+      "source_sample_label": "CsPbBr3 CNCs",
+      "batch_id": null,
+      "material_state_id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--after-s02-stir",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CsPbBr3",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "orthorhombic",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "PVP",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reaction time: 30 min (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--size",
+      "sample_id": "hu2021-acsami-0c20349-cspbbr3-cncs-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 84.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "84.5 nm",
+        "evidence": [
+          {
+            "source_id": "hu2021-acsami-0c20349",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "hu2021-acsami-0c20349",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

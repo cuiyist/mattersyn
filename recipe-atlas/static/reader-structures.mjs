@@ -1,9 +1,9 @@
 import {mountFigureMorphology} from './reader-figure-morphology.mjs?v=0.41.0';
-import {mountParticleContext} from './reader-particle.mjs?v=0.41.3';
+import {mountParticleContext} from './reader-particle.mjs?v=0.41.4';
 import {el,button,link,badge,siteURL,disclosure,recordURL} from './reader-utils.mjs';
 import {elementLegend,atomColors} from './chemical-viewer.mjs?v=0.41.0';
 import {drawFiniteReference} from './finite-crystal-reference.mjs';
-import {defaultCrystalReferences} from './crystal-defaults.mjs';
+import {defaultCrystalReferences} from './crystal-defaults.mjs?v=0.41.4';
 let registry,roles,availability;
 const colors=atomColors;
 export async function crystalReferences(r){

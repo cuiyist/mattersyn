@@ -15,15 +15,15 @@ function render(){
  for(const symbol of selected){const b=document.createElement('button');b.className='element-chip';b.textContent=symbol+' ×';b.setAttribute('aria-label','Remove '+symbol);b.addEventListener('click',()=>{selected.delete(symbol);render();});selection.append(b);}
  for(const [symbol,b] of tiles)b.setAttribute('aria-pressed',String(selected.has(symbol)));
  const query=$('material-search').value.trim().toLowerCase(),scope=$('material-scope').value,exact=$('exact-elements').checked;
- const matches=materials.filter(m=>[...selected].every(s=>m.elements.includes(s))&&(!exact||!selected.size||m.elements.length===selected.size)&&(!query||`${m.formula} ${m.name}`.toLowerCase().includes(query))&&(scope==='all'||routes(m)>0));
+ const matches=materials.filter(m=>[...selected].every(s=>m.elements.includes(s))&&(!exact||!selected.size||m.elements.length===selected.size)&&(!query||`${m.formula} ${m.name}`.toLowerCase().includes(query))&&(scope==='all'||m.reviewed_records>0));
  matches.sort((a,b)=>(routes(b)>0)-(routes(a)>0)||(b.benchmark_records>0)-(a.benchmark_records>0)||routes(b)-routes(a)||a.formula.localeCompare(b.formula));
  const host=$('material-results');host.replaceChildren();$('material-count').textContent=matches.length+' material / component pages'+(selected.size?' containing '+[...selected].join(' + '):' in the collection');
  for(const m of matches.slice(0,60)){
-  const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=m.source_extracted_records?(m.reviewed_records?'Audited and source-extracted synthesis':'Source-extracted synthesis'):m.reviewed_records?'Reviewed synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
+  const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=m.source_extracted_records?(m.reviewed_records?'Audited and source-extracted synthesis':'Source-extracted synthesis'):m.reviewed_records?'Source-linked synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
   const h=document.createElement('h3');h.textContent=m.formula;const p=document.createElement('p');p.textContent=m.component_only?componentScopeLabel(m):m.name;const meta=document.createElement('div');meta.className='entry-meta';meta.textContent=`${m.paper_count} source contributions · ${routes(m)} methods / variants`;
   const a=document.createElement('a');a.href=m.url;a.textContent='Open material →';card.append(status,h,p,meta,a);host.append(card);
  }
- if(!matches.length){const p=document.createElement('p');p.className='atlas-empty';p.textContent='No reviewed synthesis page matches this selection yet. Papers awaiting review remain in the Source library. This does not establish that synthesis methods do not exist.';host.append(p);}
+ if(!matches.length){const p=document.createElement('p');p.className='atlas-empty';p.textContent='No published synthesis page matches this selection yet. Papers awaiting review remain in the Source library. This does not establish that synthesis methods do not exist.';host.append(p);}
  if(matches.length>60){const p=document.createElement('p');p.className='atlas-footnote';p.textContent='Showing the first 60 systems. Select additional elements or search a formula to narrow the collection.';host.append(p);}
  const url=new URL(location.href);selected.size?url.searchParams.set('elements',[...selected].join(',')):url.searchParams.delete('elements');history.replaceState(null,'',url.pathname+url.search);
 }

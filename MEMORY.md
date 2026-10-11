@@ -4,6 +4,8 @@ The owner starts a separate local two-pass simple-pipeline website job. The audi
 
 Follow the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md) and current status. Owner authorizes necessary script/site fixes, ordinary merges/deployments, exact file-list/allowlist/rights refreshes and deletion of reconstructible build copies. Autoapproval rejections are recorded and left out, never bypassed. No forcepush, repository settings changes, or audited record rewrites.
 
+Part A is deployed at Site `030073dfc70b254a0f0d60c62702a210301b073e` after Source PR #13 and successful Pages run 38109850772. Anonymous verification checked 4,699 files with zero mismatches; the engineering release adds zero papers. Part B completed the same 15 development papers: 328 of 516 values retained, zero failed passes, 26.0253 extraction minutes. Keep the current prompt. Batch 1 is still in preparation; no extracted paper has publication credit yet. Subsequent batches overlap local generation with integration. Detailed measured results and fixes belong in the single job report.
+
 ## Owner-requested pause — October 10, 2026
 
 The owner paused the job temporarily. All extraction, scientific/deep audits, local-model generation, engineering, integration and Site publication are paused until a new explicit owner resume instruction. The 30-minute queue automation is PAUSED; morning and two-hour reports remain disabled. Pause instructions were delivered to the two existing worker sessions. Pending private evidence and frozen claim states are preserved. Only saving this requested Source report and memory checkpoint is authorized.

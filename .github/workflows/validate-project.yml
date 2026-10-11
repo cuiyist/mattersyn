@@ -43,6 +43,8 @@ jobs:
         run: python -m unittest discover -s tools/workflow/tests -v
       - name: Test local extraction and silver admission boundaries
         run: python -m unittest discover -s tools/silver -p 'test_*.py' -v
+      - name: Test the local simple-pipeline engineering package
+        run: python -B tools/simple-pipeline/check_simple_pipeline.py
       - name: Test preliminary source projection and additive merge
         run: python -m unittest discover -s tools/preliminary -p 'test_*.py' -v
       - name: Test retired preliminary display guard
