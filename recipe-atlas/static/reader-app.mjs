@@ -32,6 +32,14 @@ const shortSourceAuthor=authors=>{const first=String(authors||'').split(/[,;]/)[
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
+export function methodBadges(r,presentation={}){
+ const badges=el('div',undefined,'reader-badges');
+ badges.append(badge(presentation.method_label||shortMethod(r.method)),badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));
+ if(r.quality?.review_status==='source_extracted')badges.append(badge('Machine extracted · Not independently audited','scope'));
+ return badges;
+}
+
+
 function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.4');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
@@ -231,7 +239,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  const methodInfo=el('div',undefined,'reader-method-info'),nav=el('nav',undefined,'reader-nav');nav.setAttribute('aria-label','Reader sections');for(const [id,title] of [['precursors','Precursors'],['protocol','Synthesis protocol'],['structures','Final structures'],['properties','Properties'],['intuition','Chemical intuition'],['sources','Sources']])nav.append(link(title,'#'+id));const body=el('div');main.append(methodInfo,nav,body);let generation=0;
 
- async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=el('div',undefined,'reader-badges');badges.append(badge((presentation.method_label||shortMethod(r.method))),badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));renderPendingVariants(methodInfo,records.find(meta=>meta.record_id===rid)?.pending_variants);if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);await buildMethod(content,r,presentation);if(turn!==generation)return;document.title=baseTitle+' · '+(presentation.method_label||shortMethod(r.method))+' | MatterSyn';const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
+ async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=methodBadges(r,presentation);methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));renderPendingVariants(methodInfo,records.find(meta=>meta.record_id===rid)?.pending_variants);if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);await buildMethod(content,r,presentation);if(turn!==generation)return;document.title=baseTitle+' · '+(presentation.method_label||shortMethod(r.method))+' | MatterSyn';const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
 
  if(data?.experimental_series?.length){
   const series=el('section',undefined,'reader-section');series.id='experimental-series';series.append(el('h2','Experimental series'),el('p','Published recipe parameters and optical measurements from an additional source. These rows are part of this material collection; they do not establish row-specific particle structures or complete preparation protocols.','reader-note'));

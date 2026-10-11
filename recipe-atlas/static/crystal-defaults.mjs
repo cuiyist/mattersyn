@@ -54,7 +54,11 @@ export function defaultCrystalReferences(entries,r,excluded=[]){
   const shown=phases.length?bulk.filter(entry=>phaseTests.some(tests=>tests.length&&tests.every(test=>test(entry)))):bulk;
   for(const entry of shown){
    const scope='Bulk reference shown because the composition matches'+(phases.length?' and the paper reports this phase':'; the paper does not state the phase, so every bulk form in the library is shown')+'. It is not a structure of the synthesized sample: size, surface, defects and interfaces are not represented.';
-   chosen.push({...entry,displayPolicy:'independent_reference',sample_context_ids:undefined,sampleContextIdsByRecord:undefined,bindingScopes:undefined,finiteModelPath:undefined,
+   // A reused library title may mention another record's core/shell role.
+   // Keep roles neutral only for unreviewed, unresolved component defaults.
+   const name=r.quality?.review_status==='source_extracted'&&r.material?.architecture==='unresolved'&&parts.length>1
+    ?String(entry.name||'').replace(/\b(?:core|shell)\s+comparison\b/ig,'component comparison'):entry.name;
+   chosen.push({...entry,name,displayPolicy:'independent_reference',sample_context_ids:undefined,sampleContextIdsByRecord:undefined,bindingScopes:undefined,finiteModelPath:undefined,
     roleByRecord:{[r.record_id]:parts.length>1?'Component reference':'Reference by composition'},scope,phaseScope:scope,description:scope,sample_context_note:null,defaultByComposition:true});
   }
  }
