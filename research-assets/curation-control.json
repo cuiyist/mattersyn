@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "simple_pipeline_active_audit_lane_paused",
-  "recorded_at": "2026-10-11T18:34:42.241559+00:00",
+  "status": "active_simple_pipeline_audited_lane_paused",
+  "recorded_at": "2026-10-11T20:02:40.433920+00:00",
   "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
   "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
   "active_run": "Private simple-website-20261010 checkpoint; public report research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
@@ -1995,8 +1995,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Refresh the exact chemical-viewer digest pins for the five corrected existing source_extracted records, then finish the neutral full-caption engineering release. Batch 7 and the two local caption backfills continue; Batch 6 awaits integration.",
-  "next_step": "Normal exact Source preparation, complete checks and visual inspection, followed by exact-head CI and Site anonymous verification; then integrate and publish Batch 6.",
+  "current_task": "Finish normal Batch 6 source and site release with complete caption backfill; Batch 8 generation and Batch 7 captions continue locally.",
+  "next_step": "Fresh exact source file-list binding, one cohesive commit, complete local/source checks, CI, normal browser and anonymous publication verification.",
   "machine_extracted_paper_list": {
     "path": "research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md",
     "sha256": "a440579fef701d0f7f65a7744cc25481d8d1c8633f2dc1075c35240940b8998a",
@@ -2139,7 +2139,7 @@
     "result_receipt_sha256": "9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd",
     "status": "parked; generation completed but strict whole-attempt coverage failed"
   },
-  "updated_at": "2026-10-11T18:34:42.241559+00:00",
+  "updated_at": "2026-10-11T19:59:41+00:00",
   "last_verified_publication": {
     "source_commit": "5f567a5c3704ebe75fe512eaed10b92292f8499e",
     "site_commit": "334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e",
@@ -2514,7 +2514,7 @@
     "new_simple_papers_published": 167,
     "public_report": "research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
     "status": "active",
-    "latest_status_at": "2026-10-11T15:44:27+00:00",
+    "latest_status_at": "2026-10-11T19:59:41+00:00",
     "publication_events": [
       {
         "event_id": "source_extracted:simple-batch01-20261011:2bf52eb2931a3ff0eb508b605fe4a081250bf7b0",
@@ -6072,7 +6072,80 @@
       "generation_papers": 48,
       "identity_holds_count": 2
     },
-    "updated_at": "2026-10-11T14:39:37.628854+00:00"
+    "updated_at": "2026-10-11T19:59:41+00:00",
+    "engineering_publication_events": [
+      {
+        "event_id": "engineering:simple-neutral-display-20261011:032fec83c44d6fc25c344359995432b83aa50a76",
+        "status": "deployed_anonymously_verified",
+        "source_commit": "032fec83c44d6fc25c344359995432b83aa50a76",
+        "site_commit": "2e5ddaf840f941ed113c7f308c7ea9e575522811",
+        "release_id": "simple-neutral-display-20261011",
+        "verified_at": "2026-10-11T19:54:08+00:00",
+        "pushed_at": "2026-10-11T19:47:00+00:00",
+        "site_url": "https://cuiyist.github.io/mattersyn-site/",
+        "live_receipt_sha256": "647f74bd3ad7e0b302fdc21e204058d7ce61ae2d93c6714b9863f1634024dd79",
+        "anonymous_checked_files": 3668,
+        "anonymous_mismatched_files": 0,
+        "built_site_bytes": 1423128107,
+        "built_site_files": 28417,
+        "new_source_groups": 0,
+        "new_records": 0,
+        "new_figures": 0,
+        "papers": [],
+        "counter_totals": {
+          "records": 3269,
+          "contributing_papers": 411,
+          "audited_contributing_papers": 244,
+          "source_extracted_contributing_papers": 167,
+          "direct_material_families": 307,
+          "material_hubs": 351,
+          "recipe_structure_pairs": 1148,
+          "more_comprehensive_pairs": 6,
+          "partial_pairs": 1142,
+          "canonical_source_groups": 411
+        },
+        "training_ready": false,
+        "scientific_audit_asserted": false,
+        "kind": "zero_paper_engineering_publication",
+        "source_merge_commit": "09b9a236757d2690417849a9641bd840dbb75512",
+        "paper_credit": 0,
+        "caption_snapshot": {
+          "unique_figures": 18,
+          "reader_instances": 50,
+          "record_instances": 32,
+          "source_gallery_instances": 18,
+          "later_backfill_included": false
+        },
+        "caption_snapshot_sha256": "ccae89f9b294d4ef5cfb51acd17b4522e2699938cb38b69cb5347cb0bab0ec40",
+        "source_pr": "https://github.com/cuiyist/mattersyn/pull/22",
+        "source_ci_run": "https://github.com/cuiyist/mattersyn/actions/runs/38165382551"
+      }
+    ],
+    "latest_engineering_event": "engineering:simple-neutral-display-20261011:032fec83c44d6fc25c344359995432b83aa50a76",
+    "operational_milestones": [
+      {
+        "event_id": "processing:batch06:post-caption-metadata:20261011",
+        "recorded_at": "2026-10-11T20:02:40.433920+00:00",
+        "publication_credit": 0,
+        "stage": "integrated_locally_unpublished",
+        "papers": 34,
+        "records": 42,
+        "figures": 204,
+        "rare_papers_read": 10,
+        "deleted_value_objects": 34,
+        "deleted_coupled_units": 6,
+        "citation_papers_corrected": 4,
+        "old_records_byte_preserved": 3269,
+        "existing_unique_captions_ready": 1021,
+        "existing_unique_figures": 1027,
+        "new_retained_unique_captions_ready": 203,
+        "new_retained_unique_figures": 204,
+        "captions_are_public_paraphrases": true,
+        "scientific_audit_asserted": false,
+        "local_batch08_controller_pid": 26244,
+        "local_model_server_pid": 32512
+      }
+    ]
   },
   "paused_audited_lane_checkpoint": {
     "status": "paused",
@@ -6085,20 +6158,50 @@
     "denominator_reset": false
   },
   "latest_engineering_publication": {
+    "event_id": "engineering:simple-neutral-display-20261011:032fec83c44d6fc25c344359995432b83aa50a76",
     "status": "deployed_anonymously_verified",
-    "source_pr": 13,
-    "source_merge_commit": "8c2bdd4ec7fb2c3505b58408177b114453b53e7d",
-    "prepared_source_commit": "27bd172b177f6a6694072f6be3f0b2948eb551fb",
-    "source_ci_run": 38109023795,
-    "site_commit": "030073dfc70b254a0f0d60c62702a210301b073e",
-    "pages_run": 38109850772,
-    "pages_completed_at": "2026-10-11T03:58:25Z",
-    "anonymous_verified_at": "2026-10-11T04:05:00Z",
-    "anonymous_checked_files": 4699,
+    "source_commit": "032fec83c44d6fc25c344359995432b83aa50a76",
+    "site_commit": "2e5ddaf840f941ed113c7f308c7ea9e575522811",
+    "release_id": "simple-neutral-display-20261011",
+    "verified_at": "2026-10-11T19:54:08+00:00",
+    "pushed_at": "2026-10-11T19:47:00+00:00",
+    "site_url": "https://cuiyist.github.io/mattersyn-site/",
+    "live_receipt_sha256": "647f74bd3ad7e0b302fdc21e204058d7ce61ae2d93c6714b9863f1634024dd79",
+    "anonymous_checked_files": 3668,
     "anonymous_mismatched_files": 0,
-    "built_site_bytes": 1058028840,
-    "new_papers": 0,
-    "new_records": 0
+    "built_site_bytes": 1423128107,
+    "built_site_files": 28417,
+    "new_source_groups": 0,
+    "new_records": 0,
+    "new_figures": 0,
+    "papers": [],
+    "counter_totals": {
+      "records": 3269,
+      "contributing_papers": 411,
+      "audited_contributing_papers": 244,
+      "source_extracted_contributing_papers": 167,
+      "direct_material_families": 307,
+      "material_hubs": 351,
+      "recipe_structure_pairs": 1148,
+      "more_comprehensive_pairs": 6,
+      "partial_pairs": 1142,
+      "canonical_source_groups": 411
+    },
+    "training_ready": false,
+    "scientific_audit_asserted": false,
+    "kind": "zero_paper_engineering_publication",
+    "source_merge_commit": "09b9a236757d2690417849a9641bd840dbb75512",
+    "paper_credit": 0,
+    "caption_snapshot": {
+      "unique_figures": 18,
+      "reader_instances": 50,
+      "record_instances": 32,
+      "source_gallery_instances": 18,
+      "later_backfill_included": false
+    },
+    "caption_snapshot_sha256": "ccae89f9b294d4ef5cfb51acd17b4522e2699938cb38b69cb5347cb0bab0ec40",
+    "source_pr": "https://github.com/cuiyist/mattersyn/pull/22",
+    "source_ci_run": "https://github.com/cuiyist/mattersyn/actions/runs/38165382551"
   },
   "verified_publication_checkpoint_history": [
     {
@@ -8956,5 +9059,36 @@
     "audited_bindings_unchanged": true,
     "new_paper_credit": 0,
     "fresh_build_browser_and_release_pending": true
+  },
+  "engineering_publication_history": [
+    {
+      "status": "deployed_anonymously_verified",
+      "source_pr": 13,
+      "source_merge_commit": "8c2bdd4ec7fb2c3505b58408177b114453b53e7d",
+      "prepared_source_commit": "27bd172b177f6a6694072f6be3f0b2948eb551fb",
+      "source_ci_run": 38109023795,
+      "site_commit": "030073dfc70b254a0f0d60c62702a210301b073e",
+      "pages_run": 38109850772,
+      "pages_completed_at": "2026-10-11T03:58:25Z",
+      "anonymous_verified_at": "2026-10-11T04:05:00Z",
+      "anonymous_checked_files": 4699,
+      "anonymous_mismatched_files": 0,
+      "built_site_bytes": 1058028840,
+      "new_papers": 0,
+      "new_records": 0
+    }
+  ],
+  "updated_at_utc": "2026-10-11T20:18:33.720606+00:00",
+  "pending_figure_caption_delivery": {
+    "observed_at_utc": "2026-10-11T20:18:33.720606+00:00",
+    "status": "locally_applied_not_yet_published",
+    "existing_figures": 1027,
+    "new_batch06_figures": 204,
+    "figures_with_public_captions": 1231,
+    "manual_completion_figures": 7,
+    "manual_completion_reader_instances": 17,
+    "canonical_records_changed_by_caption_apply": 0,
+    "crop_bytes_changed": 0,
+    "independent_scientific_audit_asserted": false
   }
 }

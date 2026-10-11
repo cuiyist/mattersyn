@@ -1,3 +1,17 @@
+## Current simple-pipeline continuation — captions required
+
+2026-10-11T20:02:40.433920+00:00: Published zero-paper UI engineering is anonymously verified (Site `2e5ddaf840f941ed113c7f308c7ea9e575522811`, verify 19:54:08 UTC). Live paper totals remain 411; the live combined display-pair total is 1,148. Batch 6 has 34 papers / 42 records / 204 crops locally integrated, unpublished; finish its normal release. Batch 8 controller 26244 uses owned local Qwen server 32512; Batch 7 is locally complete and its caption generation is active.
+
+Owner figure instruction: show the complete public caption beneath each figure and in the enlarged view, retain its source/page/figure locator, and update the caption when the selected figure changes. Use validated public paraphrases; keep raw original captions and quoted model payloads local. Current pending backfill covers all 1,027 existing and 204 retained Batch 6 figures (1,231 total). Seven previously omitted captions were completed by one scoped reader with unchanged validation; no rejected model output was relabelled successful. This backfill remains unpublished until the normal Batch 6 release. No further nonempty sync after caption/citation apply.
+
+Paper-level machine list: [MACHINE_EXTRACTED_PAPERS.md](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md); add only actual verified live papers. Data status remains `source_extracted`; the six training exports remain audited-only. The audited lane and all historical findings/questions/denominator are unchanged. Older blocked or unpublished checkpoint statements below are dated history, superseded by this continuation.
+
+## Verified zero-paper Reader engineering milestone
+
+Verified UI-only deployment at 2026-10-11T19:54:08+00:00, Source `032fec83c44d6fc25c344359995432b83aa50a76` (merge `09b9a236757d2690417849a9641bd840dbb75512`), Site `2e5ddaf840f941ed113c7f308c7ea9e575522811`; zero new paper credit. Live display is 411 papers (244 audited + 167 machine extracted) and 1,148 pairs (864 + 284), with 3,269 canonical records. Only the pinned 18 captions / 50 presentation instances (32 record + 18 source-gallery entries) shipped; later backfill remains separate. Proceed with the completed Batch 6 simple-pipeline integration and authorized later local batches. The audited lane and existing paper ledger remain unchanged. Details: [SIMPLE_PIPELINE_REPORT.md](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md).
+
+<!-- end verified zero-paper Reader engineering milestone -->
+
 ## Current simple-pipeline work — October 11 owner amendment
 
 Batch 6 and every later simple-pipeline local model/controller launch are explicitly authorized. The audited lane and its four questions, sampled denominator and historical failures remain paused and unchanged. Read the [published machine-paper list](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md) for the 167 anonymously verified machine papers and their exact record/batch identities. The one engineering change for neutral Reader wording and combined display-pair counts is being prepared; it adds no papers and is not deployed yet. Keep data status `source_extracted`, unmeasured accuracy and audited-only training exports.

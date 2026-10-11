@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "nl034206k (n.d.): CdSe quantum dot microspheres (QDMS)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "nl034206k",
+      "doi": "10.1021/nl034206k",
+      "title": "Microcavity Lasing from Block Peptide Hierarchically Assembled Quantum Dot Spherical Resonators",
+      "authors": "Jennifer N. Cha; Michael H. Bartl; Michael S. Wong; Alois Popitsch; Timothy J. Deming; Galen D. Stucky",
+      "year": 2003,
+      "url": "https://doi.org/10.1021/nl034206k",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "nl034206k",
+    "recipe_family": "nl034206k-cdse-quantum-dot-microspheres-qdms-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdSe",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--core-shell-cdse-cds-qds",
+      "name": "core-shell CdSe/CdS QDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--diblock-copolypeptide-poly-l-lysine200-l",
+      "name": "diblock copolypeptide poly-(L-lysine200-L-cysteine30)24",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--colloidal-silica-snowtex-0",
+      "name": "colloidal silica (Snowtex 0)",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--core-shell-cdse-cds-qds",
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--diblock-copolypeptide-poly-l-lysine200-l"
+      ]
+    },
+    {
+      "id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s02-add",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s01-mix",
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--colloidal-silica-snowtex-0"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing QD solution with diblock copolypeptide solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--core-shell-cdse-cds-qds",
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--diblock-copolypeptide-poly-l-lysine200-l"
+      ],
+      "outputs": [
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s01-mix"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing QD solution with diblock copolypeptide solution",
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Adding colloidal silica to the polypeptide QD solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s01-mix",
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--colloidal-silica-snowtex-0"
+      ],
+      "outputs": [
+        "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s02-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding colloidal silica to the polypeptide QD solution",
+      "evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--product",
+      "source_sample_label": "CdSe quantum dot microspheres (QDMS)",
+      "batch_id": null,
+      "material_state_id": "nl034206k-cdse-quantum-dot-microspheres-qdms-1--after-s02-add",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdSe",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nl034206k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nl034206k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "citrate",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "nl034206k",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "nl034206k",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of core-shell CdSe/CdS QDs not reported in the extracted text.",
+      "Amount of diblock copolypeptide poly-(L-lysine200-L-cysteine30)24 not reported in the extracted text.",
+      "Amount of colloidal silica (Snowtex 0) not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

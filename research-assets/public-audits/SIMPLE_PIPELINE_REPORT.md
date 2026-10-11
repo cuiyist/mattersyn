@@ -733,3 +733,29 @@ The normal engineering Source preparation retained two failures: the five owner-
 ### Exact chemical-viewer metadata refresh
 
 2026-10-11T18:34:42.241559+00:00: the second complete local candidate passed the Python tests, site and atlas checks, then the complete quality check found only five stale chemical-viewer canonical digest pins after the earlier bibliographic corrections. Refresh exactly those five source_extracted record hashes. All chemical identity/state maps, 3,264 other record pins, canonical records and registry/depiction assets remain unchanged; seven focused guard tests passed. No gate or policy is edited. Preserve both failed candidates; publication and new-paper credit remain zero until the normal release succeeds.
+
+## Verified zero-paper Reader engineering milestone
+
+The neutral Reader engineering release was deployed and anonymously verified at 2026-10-11T19:54:08+00:00: 3,668 files checked, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/032fec83c44d6fc25c344359995432b83aa50a76), [ordinary merge](https://github.com/cuiyist/mattersyn/commit/09b9a236757d2690417849a9641bd840dbb75512) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/2e5ddaf840f941ed113c7f308c7ea9e575522811). This is an engineering milestone with **zero new papers and zero new records**; the latest Batch 5 paper event and the distinct-paper ledger are unchanged.
+
+Actual built display: 244 audited + 167 machine extracted = **411 papers**, 3,269 canonical records and **1,148 displayed pairs** (864 audited pairs + 284 machine record rows). The audited pair artifact and audited-only training exports retain their previous scope. Display labels are neutral; underlying machine records remain source_extracted and are not independently audited.
+
+This deployment includes only the pinned caption snapshot: **18 unique figures / 50 Reader presentation instances** (32 record entries + 18 source-gallery entries). The later completed caption backfill is a separate private handoff and is not claimed as deployed here. Final site size: 1,423,128,107 bytes / 28,417 files. The audited lane, original findings, stop-rule denominator and owner questions remain paused and unchanged. No throughput or uninterrupted background activity is asserted.
+
+<!-- end verified zero-paper Reader engineering milestone -->
+
+## Batch 6 current preparation
+
+2026-10-11T20:02:40.433920+00:00: 34 candidate papers, 42 ordinary records and 204 figures are integrated locally, with zero new publication credit. The one-reader rare-material read covered 10 papers and deleted 34 incorrect scientific objects plus six coupled units; originals and common-pair facts remain unchanged. Four retained papers had bibliography-only corrections from DOI authority; all 3,269 existing canonical records remain byte-identical.
+
+The completed local caption snapshots, unchanged-validator recovery and one bounded missing-subset retry provide 1,021/1,027 existing B1–5 captions and 203/204 captions for the final retained Batch 6 figures. These public paraphrases and exact locators are applied locally; seven omitted semantic captions retain the authored locator fallback. Original rejected packets remain private and unchanged. The retry accepted eight existing and four pending figures; three pending retry figures belong to retained Batch 6 papers. No raw original captions, pass files or quoted pairs enter this report or GitHub.
+
+Batch 8 launched locally at 19:41:31 UTC with 45 supported inputs and five identity holds, independently of the UI deployment. Batch 7 has 47 successful two-pass papers, 74 checked private pairs, 278 crops, zero failed passes and three identity holds; it is not published. Its local caption run is active. The audited lane, questions and sampled denominator remain paused. The earlier UI checkpoint helper failed because it compared a normal eight-field summary with the full anonymous receipt; a private shape-only adapter corrected the comparison, preserving all normal receipts and gates.
+
+Choice: local reading proceeds independently of the UI publication, as instructed; the former private launcher's unnecessary UI dependency was removed while all actual ownership/input/slot guards remain. The public control update was delayed during the pinned UI Source freeze; that delay implies neither inactivity nor uninterrupted background work. Next: fresh asset registration and unchanged complete build, source, CI, browser, publication and anonymous verification.
+
+### Final caption preparation — 2026-10-11T20:18:33.720606+00:00
+
+The pending Batch 6 transaction now carries descriptive public captions for all 1,231 applicable figures: 1,027 from Batches 1–5 and 204 retained Batch 6 crops. A scoped reader authored the seven remaining paraphrases and they passed the unchanged validator; normal apply filled 17 empty Reader instances, changed zero canonical records and changed zero crop bytes. Rejected model packets and retry results remain recorded. This is presentation work, not scientific audit, and is not yet live.
+
+PowerShell argument replay converted the saved ISO timestamp to a local culture date, causing a normal asset-guard rejection. Replaying the identical JSON argument strings through Python succeeded: 401 assets checked, 385 exact registry additions, zero new path rules; only the registry checksum changed in the policy. The guard and actual permission status were unchanged. The prior source preparation is retained; the final seven captions require fresh ordinary file-list binding in the same uncommitted transaction. No extra bind commit or publication credit is added.
