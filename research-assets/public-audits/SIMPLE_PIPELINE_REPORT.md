@@ -729,3 +729,7 @@ The normal engineering Source preparation retained two failures: the five owner-
 ### Full-caption engineering build correction
 
 2026-10-11T18:17:26.260839+00:00: the complete local candidate ran 245 Python tests and found one stale display assertion expecting the audited-only 864 rows. The corrected regression expects 864 unchanged audited rows plus 284 source_extracted record rows, 1,148 display pairs; it additionally verifies that extracted IDs do not enter audited broad rows and appear exactly once in the display. Existing broad, strict and training assertions are retained. Its zero comprehensive count is the deliberate empty reference fixture; the actual registry produces six, all audited. The first failed build is preserved. No production metric, policy or allowlist rule changes, new paper credit or deployment are claimed.
+
+### Exact chemical-viewer metadata refresh
+
+2026-10-11T18:34:42.241559+00:00: the second complete local candidate passed the Python tests, site and atlas checks, then the complete quality check found only five stale chemical-viewer canonical digest pins after the earlier bibliographic corrections. Refresh exactly those five source_extracted record hashes. All chemical identity/state maps, 3,264 other record pins, canonical records and registry/depiction assets remain unchanged; seven focused guard tests passed. No gate or policy is edited. Preserve both failed candidates; publication and new-paper credit remain zero until the normal release succeeds.
