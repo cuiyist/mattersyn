@@ -1,5 +1,5 @@
 import {elements} from './periodic-data.mjs';
-import {componentScopeLabel} from './reader-utils.mjs?v=0.40.1';
+import {componentScopeLabel} from './reader-utils.mjs?v=0.41.5';
 const $=id=>document.getElementById(id),selected=new Set(),tiles=new Map();let materials=[];
 const params=new URLSearchParams(location.search);
 const routes=m=>m.route_records??m.reviewed_records;
@@ -19,7 +19,7 @@ function render(){
  matches.sort((a,b)=>(routes(b)>0)-(routes(a)>0)||(b.benchmark_records>0)-(a.benchmark_records>0)||routes(b)-routes(a)||a.formula.localeCompare(b.formula));
  const host=$('material-results');host.replaceChildren();$('material-count').textContent=matches.length+' material / component pages'+(selected.size?' containing '+[...selected].join(' + '):' in the collection');
  for(const m of matches.slice(0,60)){
-  const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=m.source_extracted_records?(m.reviewed_records?'Audited and source-extracted synthesis':'Source-extracted synthesis'):m.reviewed_records?'Source-linked synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
+  const card=document.createElement('article');card.className='material-entry';const status=document.createElement('span');status.className='atlas-status';status.textContent=(m.source_extracted_records||m.reviewed_records)?'Source-linked synthesis records':m.benchmark_records?'Published benchmark':'Indexed literature · awaiting review';
   const h=document.createElement('h3');h.textContent=m.formula;const p=document.createElement('p');p.textContent=m.component_only?componentScopeLabel(m):m.name;const meta=document.createElement('div');meta.className='entry-meta';meta.textContent=`${m.paper_count} source contributions · ${routes(m)} methods / variants`;
   const a=document.createElement('a');a.href=m.url;a.textContent='Open material →';card.append(status,h,p,meta,a);host.append(card);
  }

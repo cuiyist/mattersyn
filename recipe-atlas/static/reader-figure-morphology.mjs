@@ -1,5 +1,5 @@
 // Figure-level interpretations stay separate from recipe/sample outcome data.
-import {el,link,disclosure,siteURL} from './reader-utils.mjs';
+import {el,link,disclosure,siteURL} from './reader-utils.mjs?v=0.41.5';
 import {particleShapeSVG,PARTICLE_SHAPES} from './particle-shapes.mjs?v=0.40.3';
 
 export function figureMorphologyContexts(entries,record,presentation={}){

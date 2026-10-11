@@ -11,7 +11,13 @@ MatterSyn website, without presenting an incomplete historical method as a compl
 For a focused edit, do only that edit. Don't rebuild the site, re-extract unchanged papers, or
 add records merely because this skill was invoked.
 
-## Active job — October 10 evening simple pipeline
+## Active job — October 11 owner amendment
+
+The separate simple-pipeline job is active, including explicitly authorized Batch 6 and all later local model/controller launches. The audited lane stays **PAUSED**; its four questions, historical results and sampled denominator are unchanged. Live papers remain `source_extracted` in data, accuracy is unmeasured, and training-ready exports remain audited-only. Reader wording is being made neutral without changing status or adding a review claim. A combined display count includes existing audited pairs and eligible extracted record pairs; the audited pair artifact is unchanged. These display changes require the ordinary full build, source/rights checks, CI, browser and anonymous deployment verification and are not deployed yet. Use one engineering merge/deployment; it earns zero paper credit. Local two-pass generation continues in parallel. Keep all three `check` predicates, local/private payload boundaries and normal release checks unchanged. Rare products receive only the authorized one-reader deletion-only reading; common products are not reviewed.
+
+Follow [PUBLICATION.md](../../PUBLICATION.md), [the single report](../../research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), [the exact machine-paper list](../../research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md), MEMORY.md and current control. Update the DOI list only after a batch's normal anonymous verification; never count drafts or holds.
+
+## Historical simple-pipeline start — October 10 evening
 
 The separate local simple-pipeline website job is active. The audited lane remains **PAUSED**, with its claims, original sampled denominator, historical failures, stop rules and waiting-owner questions unchanged. Follow [the current simple package README](../../tools/simple-pipeline/README.md), [PUBLICATION.md](../../PUBLICATION.md), the single [job report](../../research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md), MEMORY.md and current curation control. The owner’s October 10 evening instruction replaces prior pilot directions for this job; it does not resume the audited lane.
 

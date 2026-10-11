@@ -1,3 +1,7 @@
+## Current simple-pipeline work — October 11 owner amendment
+
+Batch 6 and every later simple-pipeline local model/controller launch are explicitly authorized. The audited lane and its four questions, sampled denominator and historical failures remain paused and unchanged. Read the [published machine-paper list](research-assets/public-audits/MACHINE_EXTRACTED_PAPERS.md) for the 167 anonymously verified machine papers and their exact record/batch identities. The one engineering change for neutral Reader wording and combined display-pair counts is being prepared; it adds no papers and is not deployed yet. Keep data status `source_extracted`, unmeasured accuracy and audited-only training exports.
+
 ## Batch 05 R4 figure repair preparation
 
 2026-10-11T14:39:37.628854+00:00: fixed the two caption-layout cases and recovered eight crops for JR/Shao. All actual crops were inspected; 95 synthetic tests passed, canonical records unchanged. Batch 05 remains unpublished pending fresh Source/CI/Site/browser gates. Batch 06 extraction is still blocked by automatic approval and must not be retried or indirectly launched. Audit lane remains paused.

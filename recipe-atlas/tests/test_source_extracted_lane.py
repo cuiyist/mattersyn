@@ -29,8 +29,9 @@ class SourceExtractedLaneTests(unittest.TestCase):
         counts=source_coverage([fixture('machine-b','10.9999/B')])
         page=collection_metrics_html({'source_coverage':counts,'material_families':1,'synthesis_structure_pairs':0})
         self.assertIn('data-source-extracted-papers="1"',page)
-        self.assertIn('>1</b>',page)
-        self.assertIn('not independently audited',page)
+        self.assertIn('>1</strong><span>Papers</span>',page)
+        self.assertNotIn('not independently audited',page)
+        self.assertNotIn('Audited + machine-extracted papers',page)
     def test_extracted_records_remain_ineligible_for_every_training_task(self):
         self.assertFalse(any(v['eligible'] for v in eligibility(fixture('machine-b','10.9999/B')).values()))
     def test_tiny_atlas_has_disjoint_status_membership_and_counts(self):

@@ -26,6 +26,12 @@ SIZE_PROPERTY = {'tem': ('diameter', 'TEM'), 'hrtem': ('diameter', 'HRTEM'), 'st
 ELEMENT = r'A[cglmrstu]|B[aehikr]?|C[adeflmorsu]?|D[sy]|E[rsu]|F[emr]?|G[ade]|H[efgos]?|I[nr]?|Kr?|L[airu]|M[gnot]|N[abdeiop]?|Os?|P[abdmortu]?|R[abehnu]|S[bcegimnr]?|T[abcehilm]|U|V|W|Xe|Yb?|Z[nr]'
 
 
+def public_figure_caption(figure):
+    """An explicit public paraphrase only; raw captions and quotes stay local."""
+    caption = figure.get('public_caption')
+    return {'public_caption': caption.strip()} if isinstance(caption, str) and caption.strip() else {}
+
+
 def dump_like(path, data):
     """Write JSON in the style the file already has (line endings, final newline), so only real changes show up."""
     raw = Path(path).read_bytes() if Path(path).is_file() else b'\n'
@@ -361,10 +367,11 @@ def cmd_sync(a):
             scope = 'Figure from the paper, placed by its caption. It is not matched to a specific sample of this record.'
             figures.append({'id': f'{sid}-{slug(fig.get("figure") or name)}', 'source_id': sid, 'public_asset': f'assets/paper-reviews/{sid}/{name}', 'public_asset_sha256': sha_file(target),
                             'category': cats[0], 'categories': cats, 'title': fig.get('figure') or name, 'caption': f'{fig.get("figure") or "Source figure"}; cited main article, PDF page {fig.get("page") or "not reported"}. Automatic caption-based category: {" and ".join(cats)}. Paper-level evidence; no sample match is asserted.', 'summary': scope, 'scope': scope, 'sample_scope': scope,
+                            **public_figure_caption(fig),
                             'source_locator': {'document_role': 'main', 'page': fig.get('page'), 'figure': fig.get('figure') or ''}, 'record_links': [r['record_id'] for r in records], 'sample_links': [],
                             'sample_links_by_record': {r['record_id']: [] for r in records}, 'selected_evidence_only': True, 'same_batch_asserted': False, 'copyright_permission_verified': False,
                             'provenance': {'render_tool': 'PyMuPDF automatic PDF figure-region crop', 'pdf_page': fig.get('page'), 'asset_sha256': sha_file(target), 'resampled': False,
-                                           'crop_includes': 'Automatically selected figure-region graphics and nearby labels; the original caption remains in the private working files.', 'license_statement': 'permission_not_established', 'source_pixels_redrawn': False,
+                                           'crop_includes': 'Automatically selected figure-region graphics and nearby labels; raw caption text remains in the private working files; only an explicitly supplied public caption is displayed.', 'license_statement': 'permission_not_established', 'source_pixels_redrawn': False,
                                            **{k: fig[k] for k in ('source_pdf_sha256', 'render_dpi', 'page_size_pdf_points', 'crop_box_pdf_points', 'pixel_size') if k in fig}}})
             new_assets.append(target)
         if figures: side['figures_by_source'][sid] = figures

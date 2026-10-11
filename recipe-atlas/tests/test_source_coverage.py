@@ -53,9 +53,9 @@ class SourceCoverageTests(unittest.TestCase):
     def test_collection_cards_explain_paper_level_count(self):
         collection = collection_summary([record()], [], [])
         page = collection_metrics_html(collection)
-        self.assertIn('1 + <b data-machine-papers>0</b>', page)
-        self.assertIn('Audited + machine-extracted papers',page)
-        self.assertIn('do not imply an independently audited complete paper', page)
+        self.assertIn('>1</strong><span>Papers</span>', page)
+        self.assertNotIn('Audited + machine-extracted papers',page)
+        self.assertIn('Source locators, individual source scopes and missing information', page)
         self.assertEqual(['10.9999/paper-a'],collection['source_coverage']['audited_primary_dois'])
         self.assertNotIn('preliminary', page.lower())
         self.assertIn('Each contributing primary paper counts once', page)

@@ -1,4 +1,4 @@
-import {mountSourceSections} from './source-evidence.mjs?v=0.33.0-r1';
+import {mountSourceSections} from './source-evidence.mjs?v=0.41.5';
 import {renderPendingVariants} from './pending-variants.mjs';
 const $=id=>document.getElementById(id);
 function node(tag,text,cls){const x=document.createElement(tag);if(text!==undefined)x.textContent=text;if(cls)x.className=cls;return x;}

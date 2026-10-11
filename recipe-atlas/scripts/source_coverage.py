@@ -38,30 +38,28 @@ def source_coverage(records):
 
 def coverage_note_html(coverage):
     return ('<p class="coverage-note">Each contributing primary paper counts once, '
-            'irrespective of its number of recipes. Individual source scopes and '
-            'missing information are retained with the published records. '
-            'Audited counts cover the published source scopes, including core or partial reviews; '
-            'they do not imply an independently audited complete paper. Machine-extracted counts '
-            'are source-extracted synthesis routes checked for source quotations, numbers and two-pass agreement; they exclude papers already in the audited count and are not independently audited.</p>')
+            'irrespective of its number of recipes. Source locators, individual source '
+            'scopes and missing information remain with the published records.</p>')
 
 
 def collection_metrics_html(collection, css_class='library-summary inventory-metrics'):
-    """Shared index/dataset/inventory cards for the regular published collection."""
+    """Shared visitor counts; internal curation metadata remains separate."""
     coverage = collection['source_coverage']
     metrics = [(collection['material_families'], 'Material families'),
                (collection['synthesis_structure_pairs'], 'Recipe–structure pairs')]
-    cards = '<div class="' + escape(css_class, quote=True) + '">'
     import json
-    cards += ('<div><strong data-audited-papers="' + str(coverage['reviewed_contributing_papers'])
-              + '" data-audited-primary-dois="' + escape(json.dumps(coverage['audited_primary_dois']), quote=True) + '">'
-              + f"{coverage['reviewed_contributing_papers']:,} + "
-              + ('<b data-machine-papers data-source-extracted-papers="' + str(coverage['machine_extracted_contributing_papers']) + '" data-source-extracted-dois="' + escape(json.dumps(coverage.get('source_extracted_primary_dois', [])), quote=True) + '">' + str(coverage['machine_extracted_contributing_papers']) + '</b>' if coverage['machine_extracted_contributing_papers'] else '<b data-machine-papers>0</b>') + '</strong><span>Audited + machine-extracted papers</span></div>')
+    cards = '<div class="' + escape(css_class, quote=True) + '">'
+    cards += ('<div><strong data-paper-total data-audited-papers="'
+              + str(coverage['reviewed_contributing_papers'])
+              + '" data-audited-primary-dois="' + escape(json.dumps(coverage['audited_primary_dois']), quote=True)
+              + '" data-source-extracted-papers="' + str(coverage['machine_extracted_contributing_papers'])
+              + '" data-source-extracted-dois="' + escape(json.dumps(coverage.get('source_extracted_primary_dois', [])), quote=True)
+              + '">' + f"{coverage['total_contributing_papers']:,}" + '</strong><span>Papers</span></div>')
     cards += ''.join(f'<div><strong>{value:,}</strong><span>{label}</span></div>' for value, label in metrics)
     return cards + '</div>' + coverage_note_html(coverage)
 
 
 def source_metrics_html(collection):
-    """Library overview; the searchable reviewed list remains a separate collection."""
     coverage = collection['source_coverage']
-    cards = '<div class="library-summary"><div><strong>' + str(coverage['total_contributing_papers']) + '</strong><span>Contributing papers</span></div></div>'
+    cards = '<div class="library-summary"><div><strong>' + str(coverage['total_contributing_papers']) + '</strong><span>Papers</span></div></div>'
     return cards + coverage_note_html(coverage)

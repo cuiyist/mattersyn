@@ -84,8 +84,8 @@ test('separates silver from reviewed/benchmark manifests and never emits structu
   assert.equal('eligibility' in view.records[0], false);
   assert.deepEqual(input, before, 'the input records must remain immutable');
   const root = host(); renderCatalog(root, view);
-  assert.match(root.textContent, /Machine-extracted, not reviewed/);
-  assert.match(root.textContent, /Silver structure pairs Not assessed/);
+  assert.match(root.textContent, /Source-linked record/);
+  assert.match(root.textContent, /Structure pairs Not assessed/);
 });
 
 test('requires a bound independently reviewed passing calibration, not model agreement', () => {

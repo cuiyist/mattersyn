@@ -439,10 +439,27 @@ class StructureRecipeMetricsTests(unittest.TestCase):
         self.assertEqual(0,strict['counts']['sample_coordinate_assets'])
         self.assertEqual(1,strict['counts']['molecular_structure_assets'])
         from reader_collection import collection_summary
+        audited_rows_before=copy.deepcopy(broad['rows'])
         collection=collection_summary(records,broad['rows'],[])
+        extracted_ids={r['record_id'] for r in records
+                       if r.get('quality',{}).get('review_status')=='source_extracted'}
+        display_pairs=broad['counts']['recipe_structure_rows']+len(extracted_ids)
+        self.assertEqual(audited_rows_before,broad['rows'])
+        self.assertFalse(any(row['record_id'] in extracted_ids for row in broad['rows']))
+        self.assertEqual(broad['counts']['recipe_structure_rows'],collection['audited_synthesis_structure_pairs'])
+        self.assertEqual(len(extracted_ids),collection['source_extracted_record_pairs'])
+        self.assertEqual(display_pairs,collection['synthesis_structure_pairs'])
+        self.assertCountEqual(extracted_ids,[row['record_id'] for row in collection['pairs']
+                                           if row.get('review_status')=='source_extracted'])
+        # This fixture deliberately supplies no reference cells; no row can
+        # meet the reference-unit-cell documentation category in this context.
+        self.assertEqual(0,collection['more_comprehensive_pairs'])
+        self.assertEqual(display_pairs,collection['partial_pairs'])
+        self.assertTrue(all(not row['documentation']['checks']['reference_unit_cell_available']
+                            for row in collection['pairs']))
         page=structure_coverage_html({'reader_collection':collection},html.escape,collection['pairs'])
-        self.assertIn(f"Browse all {broad['counts']['recipe_structure_rows']} pairs",page)
-        self.assertEqual(broad['counts']['recipe_structure_rows'],page.count('<tr><td><a href="records/'))
+        self.assertIn(f"Browse all {display_pairs} pairs",page)
+        self.assertEqual(display_pairs,page.count('<tr><td><a href="records/'))
         self.assertNotIn('voznyy2019',page)
         descriptor_rows={row['source_group']:row['structure_descriptor_v02'] for row in broad['rows'] if row['source_group'] in {'dabbousi1997','fu2007','saha2019'}}
         self.assertEqual({'dabbousi1997','fu2007','saha2019'},set(descriptor_rows))
