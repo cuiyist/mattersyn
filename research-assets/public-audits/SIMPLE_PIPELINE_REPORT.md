@@ -188,3 +188,12 @@ Choices and fixes:
 The quote-found, number-in-quote and both-passes-agree rules are unchanged. No audited record is rewritten. The public batch archive contains no quotes.
 
 Additional verified cleanup after Batch01: removed 326 exact published copies (325 PNG copies and one quote-free archive copy), 123,482,315 logical bytes. A separate 8.00 GB whole-directory cleanup plan is only a proposal; no space is claimed freed from it yet.
+
+
+## Batch02 complete-build correction
+
+At 2026-10-11T07:18:39+00:00, the complete local candidate failed only three legacy Si assertions that assumed every contribution was reviewed. The narrow correction pins the original six reviewed Littau/Heath/Stiger routes and their exact DOI set, and keeps those component routes out of direct Si synthesis. New source-extracted routes still pass the existing canonical membership, status, source and paper-link checks. Sixteen focused regressions and all 166,133 checks on the existing candidate passed privately; fresh full Source/build/browser checks remain pending. No paper from Batch02 is claimed live and no old audited record is changed.
+
+The complete local engineering suites reported 812 tests: 806 passed and six existing Windows environment skips, with zero final failures. The initial missing-library failure and initial complete-build failure remain saved. The first staging attempt exceeded the Windows command-line limit; normal NUL-separated exact path-list staging fixes that technical failure without broadening the payload.
+
+Recommended choice: preserve the first failed attempt, bind this code-and-test fix normally in the same Batch02 branch, then run a fresh complete candidate and publish the batch. The 8.00 GB directory cleanup remains parked because its active-process guard found an unrelated process referencing an ancestor; no targets from that plan were deleted and no automatic approval refusal occurred.

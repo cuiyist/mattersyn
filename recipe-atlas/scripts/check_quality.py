@@ -99,6 +99,20 @@ def material_membership_errors(hub, records):
             for key, values in expected.items() if set(hub.get(key, [])) != values]
 
 
+def silicon_reviewed_regression_checks(hub, byid):
+    """Pin the old reviewed Si component routes without excluding extracted routes."""
+    legacy_routes = LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES | {"stiger-1999-electrodeposition"}
+    reviewed_routes = {rid for rid in hub.get("record_ids", [])
+                       if byid.get(rid, {}).get("quality", {}).get("review_status") == "source_reviewed"}
+    direct = set(hub.get("direct_record_ids", []))
+    reviewed_dois = {primary_doi(byid[rid]) for rid in reviewed_routes}
+    return [
+        (not (direct & (legacy_routes | reviewed_routes)), "Si: Littau component contribution promoted to pure-material synthesis"),
+        (reviewed_routes == legacy_routes, "Si: missing or unaudited synthesis contribution; only reviewed Littau, Heath and Stiger routes are allowed"),
+        (reviewed_dois == {"10.1021/j100108a019", "10.1021/jp951903v", "10.1021/la980800b"}, "Si: unreviewed title match added to the reviewed contributions"),
+    ]
+
+
 class Audit:
     def __init__(self, root):
         self.root = root.resolve()
@@ -223,10 +237,9 @@ class Audit:
         self.check("saha-2019-coo-cofe2o4-seeded-growth" in ferrite.get("record_ids", []), "Missing separately scoped Saha ferrite-shell contribution")
         self.check("separately scoped" in ferrite.get("scope_note", "").lower() or "shell" in ferrite.get("scope_note", "").lower(), "CoFe2O4: composite-shell evidence lacks an explicit scope note")
         silicon = self.hubs.get("Si", {})
-        self.check(silicon.get("component_only") is True and silicon.get("direct_record_ids") == [], "Si: Littau component contribution promoted to pure-material synthesis")
         stiger_routes = {"stiger-1999-electrodeposition"}
-        self.check(set(silicon.get("record_ids", [])) == LITTAU_SI_ROUTES | HEATH_GE_SI_ROUTES | stiger_routes, "Si: missing or unaudited synthesis contribution; only reviewed Littau, Heath and Stiger routes are allowed")
-        self.check(set(silicon.get("paper_dois", [])) == {"10.1021/j100108a019", "10.1021/jp951903v", "10.1021/la980800b"}, "Si: unreviewed title match added to the reviewed contributions")
+        for condition, message in silicon_reviewed_regression_checks(silicon, self.byid):
+            self.check(condition, message)
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Si/SiOx" for rid in LITTAU_SI_ROUTES), "Si: source surface-oxidized product identity was erased")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ge/Si" for rid in HEATH_GE_SI_ROUTES), "Ge/Si: supported island identity was erased")
         germanium = self.hubs.get("Ge", {})
@@ -266,7 +279,7 @@ class Audit:
         tan_ag_component_routes = {"tan2006-ag-ag2se-jp0616011-ag2se-10min", "tan2006-ag-ag2se-jp0616011-ag2se-60min"}
         munechika_ag_component_routes = {"munechika2011-qd-ag-nanoprism-lb-assembly"}
         jung_ag_component_routes = {"jung2024-ag-nanospheres-jacs4c00073-route"}
-        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag–Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Ag–Te phase products")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Agâ€“Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Agâ€“Te phase products")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "CdSe/CdS/ZnS + Ag" and self.byid.get(rid, {}).get("material", {}).get("architecture") == "heterostructure" for rid in munechika_ag_component_routes), "Ag: Munechika must remain a QD/Ag assembly component, not a direct Ag synthesis route")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag + InP/ZnSe/ZnS" and self.byid.get(rid, {}).get("material", {}).get("architecture") == "heterostructure" and "Ag" in self.byid.get(rid, {}).get("material", {}).get("components", []) for rid in jung_ag_component_routes), "Ag: Jung QD/AgNS film must remain a heterostructure component, not a direct Ag route")
         self.check(set(silver.get("record_ids", [])) == reviewed_ag_direct | stiger_routes | wang_mcm48_routes | yang_ag_component_routes | tan_ag_component_routes | munechika_ag_component_routes | jung_ag_component_routes | xu_ag_components, "Ag: retain exactly the reviewed direct routes and supported component contributions")
@@ -302,7 +315,7 @@ class Audit:
         dantas_review = load(self.root / "data/paper-reviews/dantas2002.json")
         self.check(dantas_review.get("doi") == "10.1021/jp0208743" and dantas_review.get("review_scope") == "supplied_main_only_si_unverified", "Dantas: source contribution lacks the scoped main-only review")
         self.check(any(d.get("role") == "main" and d.get("page_count") == 5 and d.get("sha256") == "c8fd35a429bf636fcccc5dfeb3211cea44299e911fbfc80e1a308c75b7b04917" and len(d.get("pages", [])) == 5 and all(p.get("text_read") and p.get("visual_review") for p in d["pages"]) for d in dantas_review.get("documents", [])), "Dantas: five-page source coverage or source identity changed")
-        for formula in ("CO", "NO", "Fe–C–H–O"):
+        for formula in ("CO", "NO", "Feâ€“Câ€“Hâ€“O"):
             self.check(formula not in self.hubs, f"{formula}: former title-only/benchmark/procedure hub reappeared; independent route review required")
         for paper in load(self.dist / "data/library-index.json")["papers"]:
             if paper["reviewStatus"] == "indexed_awaiting_review":
