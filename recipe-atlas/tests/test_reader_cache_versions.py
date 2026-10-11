@@ -4,7 +4,7 @@ import ast
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.41.5'
+VERSION = '0.41.6'
 
 
 class ReaderCacheVersionTests(unittest.TestCase):
@@ -25,7 +25,7 @@ class ReaderCacheVersionTests(unittest.TestCase):
             'reader-structures.mjs': ('reader-particle.mjs', 'crystal-defaults.mjs'),
             'crystal-viewer.mjs': ('reader-structures.mjs', 'crystal-defaults.mjs'),
             'material-guide.mjs': ('reader-app.mjs', 'crystal-viewer.mjs', 'source-evidence.mjs'),
-            'paper-review.mjs': ('source-evidence.mjs',),
+            'paper-review.mjs': ('source-evidence.mjs', 'figure-captions.mjs'),
             'material-hub.mjs': ('material-guide.mjs',),
         }
         for parent, children in expected.items():

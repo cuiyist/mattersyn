@@ -1,0 +1,726 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "al2006-pssa-200622106-sample-c-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "B. L. Liang et al. (2006): Sample C",
+  "material": {
+    "formula": "InAs/GaAs",
+    "family": "InAs/GaAs nanocrystals",
+    "elements": [
+      "In",
+      "As",
+      "Ga"
+    ],
+    "components": [
+      "InAs",
+      "GaAs"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Solid molecular beam epitaxy",
+  "sources": [
+    {
+      "id": "al2006-pssa-200622106",
+      "doi": "10.1002/pssa.200622106",
+      "title": "Growth and characterization of bilayer InAs/GaAs quantum dot structures",
+      "authors": "B. L. Liang; Zh. M. Wang; Yu. I. Mazur; V. V. Strelchuck; G. J. Salamo",
+      "year": 2006,
+      "url": "https://doi.org/10.1002/pssa.200622106",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "al2006-pssa-200622106",
+    "recipe_family": "al2006-pssa-200622106-sample-c-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "InAs/GaAs",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": 62.8,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "62.8 nm",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "quantum dot",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--inas",
+      "name": "InAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--gaas",
+      "name": "GaAs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s01-degas",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s02-remove-oxide",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-pssa-200622106-sample-c-3--after-s01-degas"
+      ]
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s03-grow",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-pssa-200622106-sample-c-3--after-s02-remove-oxide"
+      ]
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s04-grow",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-pssa-200622106-sample-c-3--after-s03-grow"
+      ]
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s05-grow",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-pssa-200622106-sample-c-3--after-s04-grow"
+      ]
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s06-grow",
+      "name": "mixture after step 6",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "al2006-pssa-200622106-sample-c-3--after-s05-grow"
+      ]
+    },
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--after-s07-grow",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "al2006-pssa-200622106-sample-c-3--after-s06-grow"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-degas",
+      "action": "degas",
+      "label": "Thermal degassing",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s01-degas"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 350,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "350 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Thermal degassing",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-remove-oxide",
+      "action": "remove oxide",
+      "label": "Removal of native oxide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-degas"
+      ],
+      "inputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s01-degas"
+      ],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s02-remove-oxide"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 610,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "610 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Removal of native oxide",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-grow",
+      "action": "grow",
+      "label": "Grow GaAs buffer layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-remove-oxide"
+      ],
+      "inputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s02-remove-oxide"
+      ],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s03-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 600,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "600 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs buffer layer",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-grow",
+      "action": "grow",
+      "label": "Grow seed layer QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-grow"
+      ],
+      "inputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s03-grow"
+      ],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s04-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 530,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "530 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow seed layer QDs",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s05-grow",
+      "action": "grow",
+      "label": "Grow GaAs spacer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-grow"
+      ],
+      "inputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s04-grow"
+      ],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s05-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 530,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "530 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs spacer",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s06-grow",
+      "action": "grow",
+      "label": "Grow top layer QDs",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-grow"
+      ],
+      "inputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s05-grow"
+      ],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s06-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 530,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "530 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow top layer QDs",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    },
+    {
+      "id": "s07-grow",
+      "action": "grow",
+      "label": "Grow GaAs cap layer",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s06-grow"
+      ],
+      "inputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s06-grow"
+      ],
+      "outputs": [
+        "al2006-pssa-200622106-sample-c-3--after-s07-grow"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 530,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "530 °C",
+          "evidence": [
+            {
+              "source_id": "al2006-pssa-200622106",
+              "locator": "Main PDF p.6"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "As4",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow GaAs cap layer",
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "al2006-pssa-200622106-sample-c-3--product",
+      "source_sample_label": "Sample C",
+      "batch_id": null,
+      "material_state_id": "al2006-pssa-200622106-sample-c-3--after-s07-grow",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "InAs/GaAs",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": "quantum dot",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ],
+      "notes": [
+        "Reactor: Riber 32 (Main PDF p.2).",
+        "Reaction temperature: 530 degC (Main PDF p.6)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "al2006-pssa-200622106-sample-c-3--size",
+      "sample_id": "al2006-pssa-200622106-sample-c-3--product",
+      "property": "particle_size",
+      "technique": "not reported",
+      "value": {
+        "value": 62.8,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "62.8 nm",
+        "evidence": [
+          {
+            "source_id": "al2006-pssa-200622106",
+            "locator": "Main PDF p.6"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "al2006-pssa-200622106",
+          "locator": "Main PDF p.6"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of InAs not reported in the extracted text.",
+      "Amount of GaAs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
