@@ -67,7 +67,11 @@ def tree_files(root, skip_top=()):
 
 def tree_digest(root, skip_top=()):
     """Stable digest of file names and bytes; directories and file times do not matter."""
-    rows = {name: sha256(path) for name, path in tree_files(root, skip_top).items()}
+    files = tree_files(root, skip_top)
+    # Map preserves the original file order and propagates hash/read failures.
+    # Only independent file reads run concurrently; every digest call reads all files.
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        rows = dict(zip(files, executor.map(sha256, files.values())))
     return hashlib.sha256(json.dumps(rows, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
 
 

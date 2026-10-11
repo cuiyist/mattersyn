@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Yolanda Justo (2014): PbS/CdS core/shell QDs (from PbSCl QDs)",
+  "material": {
+    "formula": "PbS/CdS",
+    "family": "PbS/CdS nanocrystals",
+    "elements": [
+      "Pb",
+      "S",
+      "Cd"
+    ],
+    "components": [
+      "PbS",
+      "CdS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Cation exchange",
+  "sources": [
+    {
+      "id": "justo2014-nn5037812",
+      "doi": "10.1021/nn5037812",
+      "title": "Less Is More. Cation Exchange and the Chemistry of the Nanocrystal Surface",
+      "authors": "Yolanda Justo, Laxmi Kishore Sagar, Stijn Flamee, Qiang Zhao, Andre Vantomme, Zeger Hens",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nn5037812",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "justo2014-nn5037812",
+    "recipe_family": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "justo2014-nn5037812",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate",
+      "name": "cadmium oleate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "justo2014-nn5037812",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s01-add",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate"
+      ]
+    },
+    {
+      "id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s02-quench",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s01-add",
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate"
+      ]
+    },
+    {
+      "id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s03-purify",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s02-quench",
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-add",
+      "action": "add",
+      "label": "Adding cadmium oleate to the PbS QD suspension",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate"
+      ],
+      "outputs": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s01-add"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "justo2014-nn5037812",
+              "locator": "Main PDF p.8"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding cadmium oleate to the PbS QD suspension",
+      "evidence": [
+        {
+          "source_id": "justo2014-nn5037812",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s02-quench",
+      "action": "quench",
+      "label": "Quenching the reaction",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-add"
+      ],
+      "inputs": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s01-add",
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate"
+      ],
+      "outputs": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s02-quench"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Quenching the reaction",
+      "evidence": [
+        {
+          "source_id": "justo2014-nn5037812",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s03-purify",
+      "action": "purify",
+      "label": "Purifying the product",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-quench"
+      ],
+      "inputs": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s02-quench",
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--cadmium-oleate"
+      ],
+      "outputs": [
+        "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s03-purify"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Purifying the product",
+      "evidence": [
+        {
+          "source_id": "justo2014-nn5037812",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--product",
+      "source_sample_label": "PbS/CdS core/shell QDs (from PbSCl QDs)",
+      "batch_id": null,
+      "material_state_id": "justo2014-nn5037812-pbs-cds-core-shell-qds-from-pbscl-qds-3--after-s03-purify",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "justo2014-nn5037812",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "justo2014-nn5037812",
+          "locator": "Main PDF p.8"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 100 degC (Main PDF p.8)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of cadmium oleate not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
