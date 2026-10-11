@@ -279,7 +279,7 @@ class Audit:
         tan_ag_component_routes = {"tan2006-ag-ag2se-jp0616011-ag2se-10min", "tan2006-ag-ag2se-jp0616011-ag2se-60min"}
         munechika_ag_component_routes = {"munechika2011-qd-ag-nanoprism-lb-assembly"}
         jung_ag_component_routes = {"jung2024-ag-nanospheres-jacs4c00073-route"}
-        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Agâ€“Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Agâ€“Te phase products")
+        self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag–Te phase mixture" for rid in yang_ag_component_routes), "Ag: Yang component routes must remain the two explicitly mixed Ag–Te phase products")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "CdSe/CdS/ZnS + Ag" and self.byid.get(rid, {}).get("material", {}).get("architecture") == "heterostructure" for rid in munechika_ag_component_routes), "Ag: Munechika must remain a QD/Ag assembly component, not a direct Ag synthesis route")
         self.check(all(self.byid.get(rid, {}).get("material", {}).get("formula") == "Ag + InP/ZnSe/ZnS" and self.byid.get(rid, {}).get("material", {}).get("architecture") == "heterostructure" and "Ag" in self.byid.get(rid, {}).get("material", {}).get("components", []) for rid in jung_ag_component_routes), "Ag: Jung QD/AgNS film must remain a heterostructure component, not a direct Ag route")
         self.check(set(silver.get("record_ids", [])) == reviewed_ag_direct | stiger_routes | wang_mcm48_routes | yang_ag_component_routes | tan_ag_component_routes | munechika_ag_component_routes | jung_ag_component_routes | xu_ag_components, "Ag: retain exactly the reviewed direct routes and supported component contributions")
@@ -315,7 +315,7 @@ class Audit:
         dantas_review = load(self.root / "data/paper-reviews/dantas2002.json")
         self.check(dantas_review.get("doi") == "10.1021/jp0208743" and dantas_review.get("review_scope") == "supplied_main_only_si_unverified", "Dantas: source contribution lacks the scoped main-only review")
         self.check(any(d.get("role") == "main" and d.get("page_count") == 5 and d.get("sha256") == "c8fd35a429bf636fcccc5dfeb3211cea44299e911fbfc80e1a308c75b7b04917" and len(d.get("pages", [])) == 5 and all(p.get("text_read") and p.get("visual_review") for p in d["pages"]) for d in dantas_review.get("documents", [])), "Dantas: five-page source coverage or source identity changed")
-        for formula in ("CO", "NO", "Feâ€“Câ€“Hâ€“O"):
+        for formula in ("CO", "NO", "Fe–C–H–O"):
             self.check(formula not in self.hubs, f"{formula}: former title-only/benchmark/procedure hub reappeared; independent route review required")
         for paper in load(self.dist / "data/library-index.json")["papers"]:
             if paper["reviewStatus"] == "indexed_awaiting_review":

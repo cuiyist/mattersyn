@@ -3341,3 +3341,6 @@ Audit lane stays paused. Batch01 is deployed and anonymously verified: 13 new pa
 
 
 Batch02 complete-build checkpoint 2026-10-11T07:18:39+00:00: the first full candidate failed three legacy reviewed-only Si assertions. A narrow status-aware regression fix preserves the six old reviewed routes, exact DOIs and component protections; private candidate checks 166,133 passed and 16 focused regressions passed. Fresh normal full checks, browser, exact CI and publication remain pending. No new live credit. Batch03 extraction continues; audit lane and its denominator stay paused/unchanged. The 8.00 GB directory cleanup is parked after an active-process guard failure before deletion.
+
+
+2026-10-11T07:32:47+00:00: Root fixed a Windows default-decoder mojibake introduced while applying the Si gate patch. Original UTF-8 bytes and all unrelated quality blocks are restored, proven by inverse replacement against the pre-fix commit. Current checker passes all166133 checks on the R2 candidate; a new exact Source binding/full R3 build remains pending. Both failures are preserved, with no publication credit or audited-record edits.
