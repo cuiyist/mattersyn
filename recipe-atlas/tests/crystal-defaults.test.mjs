@@ -41,3 +41,59 @@ test('unknown nonempty mixture components never expand to all bulk cells',()=>{
 test('reported mixture still takes precedence over an intended different phase',()=>{
  assert.deepEqual(defaultCrystalReferences([tetragonal,monoclinic],zirconia('97% tetragonal; 3% monoclinic','cubic')).map(e=>e.id),['zro2-tetragonal','zro2-monoclinic']);
 });
+
+
+const titleEntries=[entry('title-core','CdSe','Bulk wurtzite CdSe reference · core comparison',186),
+ entry('title-shell','CdS','Bulk wurtzite CdS reference · shell comparison',186)];
+const titleRecord=(status,architecture)=>({...rec(null),quality:{review_status:status},
+ material:{formula:'CdSe/CdS',components:['CdSe','CdS'],...(architecture?{architecture}:{})}});
+
+test('machine-extracted composite defaults never inherit unspecified core/shell title roles',()=>{
+ for(const architecture of [undefined,'unresolved','single_material','core_shell','core_multishell','composite']){
+  const refs=defaultCrystalReferences(titleEntries,titleRecord('source_extracted',architecture));
+  assert.deepEqual(refs.map(ref=>ref.name),['Bulk wurtzite CdSe reference','Bulk wurtzite CdS reference']);
+  assert.ok(refs.every(ref=>ref.roleByRecord['synthetic-r']==='Component reference'));
+ }
+});
+
+test('audited, pending and unspecified-status defaults retain original library titles',()=>{
+ for(const status of ['reviewed','independently_audited','pending',undefined])
+  assert.deepEqual(defaultCrystalReferences(titleEntries,titleRecord(status,'unresolved')).map(ref=>ref.name),titleEntries.map(ref=>ref.name));
+});
+
+test('single-composition defaults keep their title scope unchanged',()=>{
+ const r={...titleRecord('source_extracted','single_material'),material:{formula:'CdSe'}};
+ assert.equal(defaultCrystalReferences(titleEntries,r)[0].name,titleEntries[0].name);
+});
+
+test('neutral-title cleanup removes only a trailing role comparison suffix',()=>{
+ const record=titleRecord('source_extracted');
+ for(const separator of [' · ',': ',' — ',' – ',' - ',' ']){
+  const refs=defaultCrystalReferences([entry('suffix','CdSe','CdSe independent bulk reference'+separator+'core comparison',186)],record);
+  assert.equal(refs[0].name,'CdSe independent bulk reference');
+ }
+ const unchanged='CdSe core comparison bulk reference';
+ assert.equal(defaultCrystalReferences([entry('middle','CdSe',unchanged,186)],record)[0].name,unchanged);
+});
+
+test('neutral titles retain phase filtering, cell/provenance pins and immutable inputs',()=>{
+ const refs=titleEntries.map(ref=>Object.freeze({...ref,cifSha256:'synthetic-cif-pin',sourceUrl:'https://example.invalid/bulk',
+  modelSha256:'synthetic-model-pin',description:'Independent bulk reference provenance.'}));
+ const record=Object.freeze({...titleRecord('source_extracted','core_shell'),products:[{phase:{value:'wurtzite'}}]});
+ const before=JSON.stringify({refs,record});
+ const result=defaultCrystalReferences(refs,record);
+ assert.equal(result.length,2);
+ for(let i=0;i<result.length;i++)for(const field of ['id','formula','spaceGroupNumber','cifPath','cifSha256','modelPath','modelSha256','sourceUrl'])
+  assert.equal(result[i][field],refs[i][field],field);
+ assert.ok(result.every(ref=>ref.phaseScope.includes('paper reports this phase')&&ref.phaseScope.includes('not a structure')));
+ assert.equal(JSON.stringify({refs,record}),before);
+ assert.deepEqual(defaultCrystalReferences(refs,{...record,products:[{phase:{value:'unknown phase'}}]}),[]);
+});
+
+test('ordinary core/shell library assets remain unchanged for their audited contexts',()=>{
+ const entries=titleEntries.map(ref=>({...ref,record_ids:['audited-core-shell'],componentRole:ref.formula==='CdSe'?'Core reference':'Shell reference'}));
+ const before=JSON.stringify(entries);
+ const result=defaultCrystalReferences(entries,titleRecord('reviewed','core_shell'));
+ assert.deepEqual(result.map(ref=>ref.name),entries.map(ref=>ref.name));
+ assert.equal(JSON.stringify(entries),before);
+});

@@ -234,6 +234,63 @@ Recorded source ci run: [38127860470](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/jp1044282 | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2010-jp1044282-f280-1.html) |
 | 10.1021/jacs.9b06932 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2019-jacs-9b06932-cdse-cds-dot-platelet-2d-nanocrystals-1.html) |
 
+
+### simple-batch04-20261011
+
+Anonymous verification passed at 2026-10-11T11:55:05+00:00: 931 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/28133151f968c8e2e71f7a355da579cbf1f8baf9) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/f3137b4e98846684c2114828de3f63bc014e0c7d). This batch contains 43 source groups, 85 records and 242 source figure crops; 43 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,341,834,607 bytes / 27,695 files.
+
+Live counter: **244 audited + 128 machine extracted = 372 papers**, 3,214 canonical records, 292 direct material families, 334 material/component pages and 864 displayed recipe–structure pairs (6 more comprehensive; 858 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [17](https://github.com/cuiyist/mattersyn/pull/17).
+
+Recorded source ci run: [38133780425](https://github.com/cuiyist/mattersyn/actions/runs/38133780425).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/la102983c | 4 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2010-la102983c-c11-functionalized-si-ncs-1.html) |
+| 10.1021/nn103303q | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2011-nn103303q-pbse-nc-film-1.html) |
+| 10.1021/nn204601n | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2012-nn204601n-znse-zns-nrs-1.html) |
+| 10.1021/nn301405j | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2012-nn301405j-alkylselenide-capped-pbse-qds-1.html) |
+| 10.1021/nn3024255 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2012-nn3024255-cdse-cds-dot-in-plate-ncs-sample-p4-1.html) |
+| 10.1021/nl304753n | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2013-nl304753n-sulfide-exchanged-alumina-infilled-6-3-n-1.html) |
+| 10.1021/nn403893b | 3 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn403893b-cdte-cdse-3-nm-1-ml-1.html) |
+| 10.1021/nn500414u | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn500414u-sp1-qd1-1.html) |
+| 10.1021/nn504679k | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2014-nn504679k-pbse-qd-films-treated-with-2da-1.html) |
+| 10.1021/la100249t | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/amelia2010-la100249t-cds-nanocrystals-precursor-thioglycerol-1.html) |
+| 10.1021/nl101079u | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/bui2010-nl101079u-cdse-zns-core-shell-streptavidin-conjuga-1.html) |
+| 10.1021/la991498p | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/carnes2000-la991498p-nc-zno-1.html) |
+| 10.1021/nl025767z | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2002-nl025767z-cdse-qd-doped-micelles-1.html) |
+| 10.1021/nn502442g | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/crisp2014-nn502442g-cdte-tetrapod-nanocrystals-1.html) |
+| 10.1021/nl102705p | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/evers2010-nl102705p-pbse-nanocrystals-11-0-nm-effective-diam-1.html) |
+| 10.1021/nn402931y | 3 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/groeneveld2013-nn402931y-znse-nanocrystals-3-7-nm-diameter-1.html) |
+| 10.1021/nn901008r | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/hanrath2009-nn901008r-pbse-nanocrystals-1.html) |
+| 10.1021/nn2033117 | 3 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/ihly2011-nn2033117-pbs-qd-film-5-0-0-6-nm-1.html) |
+| 10.1021/la3027573 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/jaiswal2012-la3027573-hgs-q-dots-2.html) |
+| 10.1021/la202892h | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/jin2012-la202892h-cdse-qds-with-sulfonate-ligands-1.html) |
+| 10.1021/nn5037812 | 3 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/justo2014-nn5037812-pbscl-qds-1.html) |
+| 10.1021/nn505375n | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2.html) |
+| 10.1021/la903415n | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/ko2010-la903415n-cdse-nanocrystal-chains-1.html) |
+| 10.1021/nl100483v | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/kung2010-nl100483v-nc-cdse-nanowires-60-nm-200-nm-1.html) |
+| 10.1021/nl801629f | 9 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lees2008-nl801629f-core-cdse-qd-1-1.html) |
+| 10.1021/nl300524j | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/liang2012-nl300524j-pbte-nanocrystal-coated-glass-fibers-1.html) |
+| 10.1021/nl101284k | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/mayer2010-nl101284k-oleate-capped-pbse-ncs-3-1-nm-diameter-1.html) |
+| 10.1021/nn800737a | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/mcdaniel2009-nn800737a-fe3o4-cds-nanocrystal-heterostructures-1.html) |
+| 10.1021/nn201988w | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/miszta2011-nn201988w-cu2-xse-core-cu2s-pods-octapod-1.html) |
+| 10.1038/nmat1505 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/mokari2005-nmat1505-cdseau-nbts-504-nm-rods-1.html) |
+| 10.1021/nn900863a | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/moreels2009-nn900863a-pbs-qdots-3-6-nm-1.html) |
+| 10.1021/nn2007817 | 5 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/murray2011-nn2007817-pbte-nanocrystals-a-1.html) |
+| 10.1021/nn9004507 | 4 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/narayanaswamy2009-nn9004507-inp-zns-core-shell-quantum-dots-1-8-nm-1.html) |
+| 10.1021/mz300427d | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/negele2012-mz300427d-polyfluorene-cdse-cds-quantum-dot-hybrid-2.html) |
+| 10.1021/nn900138d | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/nn900138d-cdse-cds-zns-core-shell-shell-qds-1.html) |
+| 10.1021/jp984833b | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/rogach1999-jp984833b-cdse-nanoparticles-2-mercaptoethanol-sta-1.html) |
+| 10.1021/nn301182h | 3 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/ruberu2012-nn301182h-cds1xsex-nanodots-1.html) |
+| 10.1021/jz400181m | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/santra2013-jz400181m-cuins2-qds-1.html) |
+| 10.1021/nl061054v | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/schill2006-nl061054v-cds-cdse-cds-quantum-dot-quantum-well-he-1.html) |
+| 10.1021/nn303130d | 2 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/segets2012-nn303130d-pbs-small-qds-1.html) |
+| 10.1021/nl0155126 | 2 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/talapin2001-nl0155126-cdse-nanocrystals-1.html) |
+| 10.1021/nn5018654 | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/weidman2014-nn5018654-pbs-nanocrystals-24-1-pb-s-precursor-rat-1.html) |
+| 10.1021/nn2001118 | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/yarema2011-nn2001118-ag2se-nanocrystals-2-0-nm-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -417,3 +474,84 @@ Single-reader rare-material checks covered 14 papers and removed 63 scientific o
 Choice: retain the existing ordinary route predicate and report five-field completeness separately, rather than inventing an additional admission gate. A private preparation helper incorrectly expected 329 normalized DOI papers; actual verified Batch03 inventory has 328 normalized DOIs and 329 source groups. That redundant private assertion was removed; all normal inventory, hash and release checks remain.
 
 Small release-tool change: hash the same complete tree with at most eight threads, preserving file exclusions, sorted paths, digest bytes and failure propagation. Eight synthetic tests passed for equality, coverage, exclusions, order, concurrency and errors. No gate or file was omitted and no production speedup is claimed from these tests.
+
+## Batch04 verified milestone
+
+Batch04 is deployed and anonymously verified at 2026-10-11T11:55:05+00:00, from Source `28133151f968c8e2e71f7a355da579cbf1f8baf9` and Site `f3137b4e98846684c2114828de3f63bc014e0c7d`. The verified final artifacts contain 43 distinct newly contributing primary papers, 85 records and 242 source crops; built site size is 1,341,834,607 bytes. The earlier preparation and failed-build entries are retained as historical results; this milestone supersedes their unpublished status.
+
+The selected cohort has 50 distinct papers: 43 deployed and 7 omitted or held. The omissions comprise 2 identity holds, 2 failures after one redo, and 3 papers with no retained eligible route. There were 48 supported identities and 46 successful two-pass papers. Before rare reading, the automatic check considered 2,121 values, kept 1,342, and retained 97 pairs.
+
+One-reader rare-material checks covered 14 papers and removed 71 field/path entries (63 scientific value objects, 1 wrong page locators and 7 coupled unit fields), with zero replacement facts. These deletion counts are not an independent audit or a post-reading accuracy score. Common-material papers were not audited. New records remain source extracted, not independently audited or training eligible.
+
+| Stage | Actual UTC timestamp |
+| --- | --- |
+| Extraction start | 2026-10-11T08:09:23.100874+00:00 |
+| Extraction finish | 2026-10-11T10:07:33.263735+00:00 |
+| Figures/check final handoff | 2026-10-11T10:09:14.459042+00:00 |
+| Site push | 2026-10-11T11:46:35+00:00 |
+| Anonymous verification | 2026-10-11T11:55:05+00:00 |
+
+Extraction elapsed 118.169381 minutes; figures/check metadata records 1.686588 minutes. Cohort extraction-start to verified publication elapsed 225.698319 minutes, or 11.431188 newly published primary papers per elapsed wall-clock hour. This interval includes release preparation/waiting and makes no claim of uninterrupted agent work or achieved 20-paper/hour capacity.
+
+| Paper left out | Metadata reason |
+| --- | --- |
+| 10.1021/la960426k | identity_hold |
+| 10.1021/nl015651n | no_route_eligible_record |
+| 10.1021/nl900534m | no_route_eligible_record |
+| 10.1021/nn3057356 | invalid_or_failed_pass_after_one_redo |
+| 10.1021/ph5002704 | invalid_or_failed_pass_after_one_redo |
+| 10.1023/a_1008650027769 | identity_hold |
+| 10.1038/nnano.2008.360 | no_route_eligible_record |
+
+The existing batch choices, source-preparation failures and engineering fixes remain recorded above as actual history. The quote-found, number-in-quote and both-passes-agree rules and all normal release gates remain in force. The audited lane, original findings, denominator, sampling/stop rules and every owner question remain paused and unchanged.
+
+
+## Batch05 checked handoff and Batch06 launch block
+
+At 2026-10-11T11:37:46.244732+00:00, Batch05 extraction, figures and check are complete with controller and check exit codes zero. These are local checker results before final rare-material reading and ordinary route selection. Batch05 has **zero newly published papers**; its final conversion/record/crop counts are not yet determined. The original quoted training files remain private and preserved.
+
+| Metadata | Actual count |
+| --- | ---: |
+| Selected cohort | 50 |
+| Identity-supported inputs | 47 |
+| Successful final two-pass papers | 47 |
+| Checked pair files | 47 |
+| Nonempty checked papers | 44 |
+| Checked pairs before rare reading | 65 |
+| Values assessed before rare reading | 1642 |
+| Values kept before rare reading | 1054 |
+| Checked crops, including zero-pair papers | 271 |
+| Crops on nonempty checked papers | 255 |
+
+One original pass failed, the allowed single redo succeeded, and all 94 final A/B pass files are valid. There were 96 pass executions including that redo: 95 succeeded and one failed. No paper was left out for a persistent extraction failure. Three technical DOI identity holds remain: `10.1039/a809779h`, `10.1088/1361-6528_28_4_045701` and `10.1002/(sici)1521-4095(199906)11_8_643__aid-adma643_3.0.co;2-i`. Three generated papers retained no checked pairs: `10.1007/s11671-008-9133-5`, `10.1021/am404355m` and `10.1103/physrevb.66.075316`. These outcomes do not assert that the papers lack synthesis. Final identity diagnostics show zero metadata conflicts.
+
+| Stage | Actual UTC timestamp |
+| --- | --- |
+| Extraction start | 2026-10-11T10:12:03.233177+00:00 |
+| Extraction finish | 2026-10-11T11:29:48.202258+00:00 |
+| Figures/check finish | 2026-10-11T11:31:09.223215+00:00 |
+
+Extraction elapsed 77.749485 minutes; figures/check elapsed 1.350349 minutes; the combined interval was 79.099834 minutes. The observed two-pass extraction rate was 36.270337 papers per elapsed hour, or 35.651149 through the full extraction/figures/check interval. Neither is publication throughput, an accuracy score or papers per GPU-hour. Sampled GPU-wide peak usage was 29,768 MiB with at least 2,420 MiB free; the measurement is not attributable solely to Qwen. No controlled same-paper CUDA/Vulkan speed or accuracy comparison was run.
+
+Batch04 subsequently passed normal deployment and anonymous verification at 2026-10-11T11:55:05Z. The verified Batch01–Batch04 credit is 128 new machine-extracted papers, and the homepage contains 372 source groups. Batch05 remains unpublished and contributes zero additional paper credit.
+
+**Blocked action:** automatic approval review rejected the Batch06 local model/controller launch, citing the earlier test-only website pause. This records the review reason, not a new owner pause or absence of current owner authorization. The launch is omitted; no retry, alternate launch or workaround was attempted. Existing Batch04 publication and completed Batch05 handling continue. A narrow asynchronous permission request for this refused launch is recorded in curation-control.json. It does not block the completed Batch05 work.
+
+The inherited Batch05 private handoff sentence saying Batch06 was not authorized is historical template wording; it is not used as the current owner's intent. The current simple-pipeline instruction remains the active scope, with audited work paused. All original audit findings, sampled denominator/stop rules and owner questions remain unchanged. No release gate, extraction predicate or policy was changed for this report.
+
+
+
+## Batch05 final rare-reading selection — publication pending
+
+Final deletion-only consolidation completed at 2026-10-11T12:04:37.223722+00:00. The 50-paper cohort now has **39 papers, 55 ordinary source-extracted records and 221 source crops selected for integration**. They have not yet been deployed or anonymously verified; Batch05 still earns zero publication credit. The latest verified total remains Batch01–Batch04's 128 machine-extracted additions and 372 homepage source groups. The built-site size and publication rate for Batch05 will be recorded only after the normal completed build and live verification.
+
+One scoped reader per rare paper covered 19 papers. The three disjoint groups removed 78 paths: 72 scientific value objects, one wrong page locator and five coupled unit fields, with zero replacement facts. Original quoted training pairs, original checker/figure metadata and common-product pairs are preserved. This is deletion-only reading, not an independent audit or a measured accuracy result. The original automatic check remains 1,054 of 1,642 values kept in 65 pairs; those historical counts precede deletions and route selection.
+
+Eleven cohort papers are held or omitted: three technical identity holds, three with no checked pairs, and five with no retained ordinary route under the existing converter. The five route omissions are `10.1002/adma.200602373`, `10.1002/polb.10754`, `10.1038/s41565-021-00871-x`, `10.1039/b100968k`, `10.1039/c0nr00232a`. Two additional noneligible variants were left out of otherwise retained papers. These are pipeline outcomes, not findings that the original papers contain no synthesis. Five-field completeness remains informational: eight eligible records across seven papers; no new admission gate was added.
+
+Two small Root code changes accompany preparation. Exact-change receipt construction now uses an ordered map with at most eight concurrent readers of the same fresh HEAD/index Git blobs; byte/mode/hash pins, exclusions, coverage, ordering, exception propagation and all gates are unchanged. Root ran 11 focused tests successfully. For machine-extracted composite default bulk references only, inherited trailing core/shell comparison wording is removed from the reference title so it cannot assign an interface role; existing audited records are unchanged. Root ran 20 focused JavaScript tests successfully. The initial Git patch application failed on CRLF representation; the same small change was applied manually, without weakening any check. These tests demonstrate their stated protections, not a production speedup or scientific accuracy gain.
+
+The audited lane, its original findings and denominator, all historical failed results and every owner question remain paused and unchanged. The specifically refused Batch06 local model/controller launch remains parked with no retry or indirect workaround. Completed Batch05 integration and the unchanged local/source/browser/CI/publication path continue. No raw source quotes or training payloads are included in this report.
+
+
+At 2026-10-11T12:12:16+00:00, normal conversion and asset registration have completed locally for these 39 papers, 55 records and 221 crops. All 3,214 prior canonical records remain byte identical. The quote-free 39-paper archive contains zero quote-bearing or unknown fields and zero local paths. The applied asset result matches the inspected dry run except its apply flag: 506 assets checked, 497 additions and zero new exact path rules. Only the rights-registry checksum changed in the release policy; every permission and gate remains unchanged. Build, browser, CI and publication are still pending and no Batch05 paper credit is added.
