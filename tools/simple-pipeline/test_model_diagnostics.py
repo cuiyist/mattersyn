@@ -41,7 +41,7 @@ class ModelDiagnosticTest(unittest.TestCase):
     def test_generation_configuration_unchanged(self):
         _, request = self.call(self.response('{"pairs": []}'))
         body = json.loads(request.data)
-        self.assertEqual(body['max_tokens'], 10240)
+        self.assertEqual(body['max_tokens'], 12288)
         self.assertEqual(body['response_format'], {'type': 'json_object'})
         self.assertEqual(body['temperature'], 0)
         self.assertEqual(body['seed'], 1)

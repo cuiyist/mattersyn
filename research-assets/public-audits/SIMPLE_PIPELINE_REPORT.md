@@ -141,3 +141,50 @@ At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 
 Recommended choice: save this verified publication checkpoint on the next substantive batch branch now, then merge it with that batch; this keeps the GitHub record current without a status-only website deployment.
 
 Additional Part A cleanup removed 12 verified rebuildable child targets: 85,754 files and 3,879,530,160 logical bytes. Observed free space increased 4,105,388,032 bytes, including concurrent allocation. Original papers, quoted training files, receipts, active batches and working checkouts were preserved.
+
+## Simple-pipeline preparation checkpoints
+
+### batch02
+
+Preparation only: 36 retained papers, 68 ordinary route records and 252 available figure crops. This checkpoint adds zero live paper credit. Publication requires the normal release and passed anonymous verification. New records remain source extracted, not independently audited or training eligible.
+
+Final extraction handoff: 48 successful two-pass papers.
+
+Extraction wall-clock minutes: 118.4057. No publication-rate claim follows from this duration.
+
+Identity holds: 10.1021/j100054a032.
+
+| Paper left out | Metadata reason |
+| --- | --- |
+| 10.1021/ja805655b | invalid_or_failed_pass_after_one_redo |
+| 10.1021/acsnano.5b01154 | no_route_eligible_record |
+| 10.1021/am4038068 | no_route_eligible_record |
+| 10.1021/am504057y | no_route_eligible_record |
+| 10.1021/cm010291q | no_route_eligible_record |
+| 10.1021/ja0173167 | no_usable_pairs |
+| 10.1021/ja068351m | no_usable_pairs |
+| 10.1021/ja103956p | no_usable_pairs |
+| 10.1021/ja2029415 | no_route_eligible_record |
+| 10.1021/ja206303g | no_usable_pairs |
+| 10.1021/ja301285x | no_usable_pairs |
+| 10.1021/ja308200f | no_route_eligible_record |
+| 10.1021/ja410165f | no_route_eligible_record |
+
+## Batch02 processing and changes
+
+Preparation only; this batch has not yet added live papers. Selected 50 screened local papers: 49 confirmed identities, 48 successful two-pass papers after one permitted redo. Automatic check: 2,045 values considered, 1,249 retained and 91 checked pairs. Normal route conversion retains 36 papers, 68 records and 252 crops. Extraction took 118.4057 wall-clock minutes; figures and check took 2.7578 minutes. These are extraction measurements, not a published-paper rate.
+
+The 15 rare-material papers received one scoped reading each. Corrected private copies removed 88 field/path entries (86 validated value objects reported by the readers), with no replacement facts. Wrong route/product/step bindings, component versus whole-product sizes/phases, unsupported vessel/method claims and incorrectly typed optical statements were removed. The automatic check totals above describe the original checked outputs; they do not claim post-reading accuracy. All 36 papers remain source extracted and excluded from reviewed/training-ready counts.
+
+Choices and fixes:
+
+- Keep the existing prompt: the fresh development run cleared the owner's threshold.
+- Raise only future extraction response capacity from 10,240 to 12,288 tokens: saved failures reached the former output limit, and the measured representative input plus the new output reserve fits 32,768. The omitted Batch02 paper is not given another retry.
+- Use two local paper workers: an actual load test found two 32,768-token slots fully on the RTX5090 through the installed Vulkan backend, with q8_0 K/V cache. Load-only peak was 28,800 MiB and minimum free memory 3,388 MiB. Changed cache precision can change outputs; no accuracy or throughput gain is claimed.
+- Keep extraction A/B calls sequential within each paper and preserve the single-redo reservation across restart. Serial directory creation fixes a measured Windows snapshot-directory race without serializing model requests or weakening admission. Synthetic tests cover both contention and permanent technical holds.
+- Preserve ISO timestamps as strings when loading private PowerShell JSON arguments; automatic date conversion had lost precision/format. The capacity helper also recognizes the recorded completed handoff and the actual RTX5090 Vulkan cache evidence, retaining exact PID, ownership, cache, context, full GPU and memory checks. Its first rejected load restored the original server. No automatic approval refusal occurred.
+- Use an ordinary copied crop when the local filesystem refuses a hard link. Original quoted text, pass and pair files remain private and intact.
+
+The quote-found, number-in-quote and both-passes-agree rules are unchanged. No audited record is rewritten. The public batch archive contains no quotes.
+
+Additional verified cleanup after Batch01: removed 326 exact published copies (325 PNG copies and one quote-free archive copy), 123,482,315 logical bytes. A separate 8.00 GB whole-directory cleanup plan is only a proposal; no space is claimed freed from it yet.

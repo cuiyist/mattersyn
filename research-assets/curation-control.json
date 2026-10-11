@@ -1,7 +1,7 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "simple_pipeline_active_audit_lane_paused",
-  "recorded_at": "2026-10-11T06:09:34+00:00",
+  "recorded_at": "2026-10-11T06:47:08+00:00",
   "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
   "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
   "active_run": "Private simple-website-20261010 checkpoint; public report research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
@@ -1596,8 +1596,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Batch01 is deployed and anonymously verified. Continue final Batch02 local extraction and figures, then integrate its eligible records; the audited lane remains paused.",
-  "next_step": "After Batch02 final handoff, attempt the prepared two-slot local GPU load; keep the exact single-slot fallback if it does not fit. Build Batch02 while extracting the next disjoint batch.",
+  "current_task": "Batch02 corrected source-extracted projection (36 papers, 68 records, 252 crops) is undergoing complete local build/source/browser checks before CI and normal publication; Batch03 continues local generation. Audit lane paused.",
+  "next_step": "Complete Batch02 checks and one batch merge/deployment; anonymously verify before counting its papers; continue Batch03 and remove only verified public or regenerable copies.",
   "waiting_on_owner": [
     {
       "question_id": "older-ullah-claim-metadata-disclosure",
@@ -1863,17 +1863,104 @@
       "site_commit": "2a6d0edd2f9db48d3651608105e854f76aa920ce"
     },
     "batch02": {
-      "status": "extract original",
+      "status": "integration_prepared_not_published",
       "last_observed_at": "2026-10-11T06:02:59.461951+00:00",
       "two_pass_complete": 47,
       "selected": 50,
       "identity_supported": 49,
-      "new_live_paper_credit": 0
+      "new_live_paper_credit": 0,
+      "batch_key": "batch02",
+      "new_live_papers": 0,
+      "independent_audit_asserted": false,
+      "training_ready": false,
+      "processing_finished_at": "2026-10-11T06:21:59.092408+00:00",
+      "cohort_papers": 50,
+      "generation_papers": 49,
+      "successful_two_pass_papers": 48,
+      "pair_files": 48,
+      "figures_found": 333,
+      "checked_pairs": 91,
+      "kept_values": 1249,
+      "assessed_values": 2045,
+      "extract_pass_executions": 100,
+      "extract_wall_minutes": 118.4057,
+      "identity_holds": [
+        "10.1021/j100054a032"
+      ],
+      "left_out": [
+        {
+          "doi": "10.1021/ja805655b",
+          "reason": "invalid_or_failed_pass_after_one_redo"
+        },
+        {
+          "doi": "10.1021/acsnano.5b01154",
+          "reason": "no_route_eligible_record"
+        },
+        {
+          "doi": "10.1021/am4038068",
+          "reason": "no_route_eligible_record"
+        },
+        {
+          "doi": "10.1021/am504057y",
+          "reason": "no_route_eligible_record"
+        },
+        {
+          "doi": "10.1021/cm010291q",
+          "reason": "no_route_eligible_record"
+        },
+        {
+          "doi": "10.1021/ja0173167",
+          "reason": "no_usable_pairs"
+        },
+        {
+          "doi": "10.1021/ja068351m",
+          "reason": "no_usable_pairs"
+        },
+        {
+          "doi": "10.1021/ja103956p",
+          "reason": "no_usable_pairs"
+        },
+        {
+          "doi": "10.1021/ja2029415",
+          "reason": "no_route_eligible_record"
+        },
+        {
+          "doi": "10.1021/ja206303g",
+          "reason": "no_usable_pairs"
+        },
+        {
+          "doi": "10.1021/ja301285x",
+          "reason": "no_usable_pairs"
+        },
+        {
+          "doi": "10.1021/ja308200f",
+          "reason": "no_route_eligible_record"
+        },
+        {
+          "doi": "10.1021/ja410165f",
+          "reason": "no_route_eligible_record"
+        }
+      ],
+      "conversion_papers": 36,
+      "conversion_records": 68,
+      "conversion_figures": 252,
+      "rare_material_records": 26,
+      "assets_checked": 535,
+      "new_assets": 530,
+      "new_exact_path_rules": 0,
+      "rare_reading": {
+        "papers": 15,
+        "path_deletions": 88,
+        "validated_objects_deleted_reported_by_workers": 86,
+        "additions": 0,
+        "common_papers_audited": 0,
+        "scientific_audit_asserted": false
+      }
     },
     "new_simple_papers_published": 13,
     "public_report": "research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
     "status": "active",
-    "latest_status_at": "2026-10-11T06:09:34+00:00",
+    "latest_status_at": "2026-10-11T06:47:08+00:00",
     "publication_events": [
       {
         "event_id": "source_extracted:simple-batch01-20261011:2bf52eb2931a3ff0eb508b605fe4a081250bf7b0",
@@ -2117,7 +2204,112 @@
         "paper_credit": 13
       }
     ],
-    "latest_verified_event": "source_extracted:simple-batch01-20261011:2bf52eb2931a3ff0eb508b605fe4a081250bf7b0"
+    "latest_verified_event": "source_extracted:simple-batch01-20261011:2bf52eb2931a3ff0eb508b605fe4a081250bf7b0",
+    "preparation_checkpoints": {
+      "batch02": {
+        "batch_key": "batch02",
+        "status": "integration_prepared_not_published",
+        "new_live_papers": 0,
+        "independent_audit_asserted": false,
+        "training_ready": false,
+        "processing_finished_at": "2026-10-11T06:21:59.092408+00:00",
+        "cohort_papers": 50,
+        "generation_papers": 49,
+        "successful_two_pass_papers": 48,
+        "pair_files": 48,
+        "figures_found": 333,
+        "checked_pairs": 91,
+        "kept_values": 1249,
+        "assessed_values": 2045,
+        "extract_pass_executions": 100,
+        "extract_wall_minutes": 118.4057,
+        "identity_holds": [
+          "10.1021/j100054a032"
+        ],
+        "left_out": [
+          {
+            "doi": "10.1021/ja805655b",
+            "reason": "invalid_or_failed_pass_after_one_redo"
+          },
+          {
+            "doi": "10.1021/acsnano.5b01154",
+            "reason": "no_route_eligible_record"
+          },
+          {
+            "doi": "10.1021/am4038068",
+            "reason": "no_route_eligible_record"
+          },
+          {
+            "doi": "10.1021/am504057y",
+            "reason": "no_route_eligible_record"
+          },
+          {
+            "doi": "10.1021/cm010291q",
+            "reason": "no_route_eligible_record"
+          },
+          {
+            "doi": "10.1021/ja0173167",
+            "reason": "no_usable_pairs"
+          },
+          {
+            "doi": "10.1021/ja068351m",
+            "reason": "no_usable_pairs"
+          },
+          {
+            "doi": "10.1021/ja103956p",
+            "reason": "no_usable_pairs"
+          },
+          {
+            "doi": "10.1021/ja2029415",
+            "reason": "no_route_eligible_record"
+          },
+          {
+            "doi": "10.1021/ja206303g",
+            "reason": "no_usable_pairs"
+          },
+          {
+            "doi": "10.1021/ja301285x",
+            "reason": "no_usable_pairs"
+          },
+          {
+            "doi": "10.1021/ja308200f",
+            "reason": "no_route_eligible_record"
+          },
+          {
+            "doi": "10.1021/ja410165f",
+            "reason": "no_route_eligible_record"
+          }
+        ],
+        "conversion_papers": 36,
+        "conversion_records": 68,
+        "conversion_figures": 252,
+        "rare_material_records": 26,
+        "assets_checked": 535,
+        "new_assets": 530,
+        "new_exact_path_rules": 0
+      }
+    },
+    "batch03": {
+      "status": "local_two_worker_extraction_active",
+      "started_at": "2026-10-11T06:33:03Z",
+      "papers": 45,
+      "context_per_slot": 32768,
+      "parallel_slots": 2,
+      "output_cap": 12288,
+      "new_live_credit": 0
+    },
+    "local_model_capacity": {
+      "gpu": "RTX 5090",
+      "backend": "Vulkan0",
+      "parallel_slots": 2,
+      "context_per_slot": 32768,
+      "cache_k": "q8_0",
+      "cache_v": "q8_0",
+      "load_observed_peak_mib": 28800,
+      "load_observed_minimum_free_mib": 3388,
+      "fit_load_test_passed": true,
+      "speedup_proven": false
+    }
   },
   "paused_audited_lane_checkpoint": {
     "status": "paused",

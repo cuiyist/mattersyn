@@ -160,7 +160,7 @@ def select_pages(pages, budget=40000):
 
 
 # ---------- extraction with a local model ----------
-def call_model(base_url, model, system, user, temperature, seed, max_tokens=10240, timeout=1800):
+def call_model(base_url, model, system, user, temperature, seed, max_tokens=12288, timeout=1800):
     body = {'model': model, 'temperature': temperature, 'seed': seed, 'max_tokens': max_tokens,
             'response_format': {'type': 'json_object'},
             'messages': [{'role': 'system', 'content': system}, {'role': 'user', 'content': user}]}

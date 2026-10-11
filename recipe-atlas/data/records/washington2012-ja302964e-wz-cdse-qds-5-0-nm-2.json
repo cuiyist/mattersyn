@@ -1,0 +1,532 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Aaron L. Washington (2012): WZ CdSe QDs (5.0 nm)",
+  "material": {
+    "formula": "CdSe",
+    "family": "CdSe nanocrystals",
+    "elements": [
+      "Cd",
+      "Se"
+    ],
+    "components": [
+      "CdSe"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Hot injection",
+  "sources": [
+    {
+      "id": "washington2012-ja302964e",
+      "doi": "10.1021/ja302964e",
+      "title": "Ostwald’s Rule of Stages and Its Role in CdSe Quantum Dot Crystallization",
+      "authors": "Aaron L. Washington, II, Megan E. Foley, Soshan Cheong, Lieth Quﬀa, Christopher J. Breshike, John Watt, Richard D. Tilley, and Geoﬀrey F. Strouse",
+      "year": 2012,
+      "url": "https://doi.org/10.1021/ja302964e",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "washington2012-ja302964e",
+    "recipe_family": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 5.0,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "5 nm",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--cadmium-stearate",
+      "name": "Cadmium stearate",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 mM",
+          "evidence": [
+            {
+              "source_id": "washington2012-ja302964e",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--trioctylphosphine-selenide",
+      "name": "trioctylphosphine selenide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s01-heat",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--cadmium-stearate",
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--trioctylphosphine-selenide"
+      ]
+    },
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s02-inject",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s01-heat",
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--trioctylphosphine-selenide"
+      ]
+    },
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s03-cool",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s02-inject"
+      ]
+    },
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s04-precipitate",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s03-cool"
+      ]
+    },
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s05-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s04-precipitate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-heat",
+      "action": "heat",
+      "label": "Heat to 220 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--cadmium-stearate",
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--trioctylphosphine-selenide"
+      ],
+      "outputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s01-heat"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 220,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "220 °C",
+          "evidence": [
+            {
+              "source_id": "washington2012-ja302964e",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Heat to 220 °C",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-inject",
+      "action": "inject",
+      "label": "Hot injection of TOP-Se",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-heat"
+      ],
+      "inputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s01-heat",
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--trioctylphosphine-selenide"
+      ],
+      "outputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s02-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Hot injection of TOP-Se",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-cool",
+      "action": "cool",
+      "label": "Cool to 60 °C",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-inject"
+      ],
+      "inputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s02-inject"
+      ],
+      "outputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s03-cool"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 60,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "60 °C",
+          "evidence": [
+            {
+              "source_id": "washington2012-ja302964e",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Cool to 60 °C",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-precipitate",
+      "action": "precipitate",
+      "label": "Precipitate with methanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-cool"
+      ],
+      "inputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s03-cool"
+      ],
+      "outputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s04-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitate with methanol",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuge and re-dissolve in toluene",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-precipitate"
+      ],
+      "inputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s04-precipitate"
+      ],
+      "outputs": [
+        "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s05-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuge and re-dissolve in toluene",
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--product",
+      "source_sample_label": "WZ CdSe QDs (5.0 nm)",
+      "batch_id": null,
+      "material_state_id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--after-s05-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "washington2012-ja302964e",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "washington2012-ja302964e",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "hexadecylamine",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "washington2012-ja302964e",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reaction temperature: 220 degC (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--size",
+      "sample_id": "washington2012-ja302964e-wz-cdse-qds-5-0-nm-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 5.0,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "5 nm",
+        "evidence": [
+          {
+            "source_id": "washington2012-ja302964e",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "washington2012-ja302964e",
+          "locator": "Main PDF p.4"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of trioctylphosphine selenide not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

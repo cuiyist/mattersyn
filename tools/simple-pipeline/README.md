@@ -157,6 +157,15 @@ Private text/pass/pair files are retained for training. This package deletes non
 
 ## Focused regression tests
 
+The optional `run_local_simple_batch_two_workers.py` coordinator runs at most two
+disjoint papers at once. Each paper still runs pass A and pass B in order, with
+one persisted redo allowance; failed or incomplete pairs are omitted. It holds
+an exclusive batch lock and serializes Windows directory creation, while model
+requests remain concurrent. Use two 32,768-token server slots only after a local
+GPU fit check. The response cap is 12,288 tokens; the prompt, schema and three
+`check` predicates are unchanged. Capacity and extraction counts do not establish
+accuracy or a publication rate.
+
 ```powershell
 python -B tools/simple-pipeline/check_simple_pipeline.py
 ```

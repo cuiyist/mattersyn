@@ -3333,3 +3333,8 @@ The mixed local Source eff4eb196ee9 is retained as failed, unpushed evidence: it
 ## Latest verified simple-pipeline publication
 
 simple-batch01-20261011 is deployed and anonymously verified at 2026-10-11T06:06:36+00:00, Source `2bf52eb2931a3ff0eb508b605fe4a081250bf7b0`, Site `2a6d0edd2f9db48d3651608105e854f76aa920ce`. This verified batch adds 13 distinct source-extracted primary papers, 20 records and 65 source crops. Live coverage is 244 audited + 13 machine extracted = 257 papers; 3,005 records; 252 direct material families. The built site is 1,084,521,926 bytes. New records are not independently audited or training eligible. The audit lane remains paused with its original findings, denominator and owner questions unchanged. See the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md). This checkpoint asserts no uninterrupted work or unmeasured throughput.
+
+
+### 2026-10-11 simple Batch02 preparation
+
+Audit lane stays paused. Batch01 is deployed and anonymously verified: 13 new papers, 20 records, 65 crops; public total is 244 audited + 13 machine extracted. Batch02's completed local extraction and one-reading rare deletions retain 36 papers/68 ordinary records/252 crops for the normal release, with zero additional live credit before anonymous verification. Original quotes and passes stay private. Batch03 runs disjoint two-worker local Qwen extraction with two verified 32,768-token GPU slots; future response cap 12,288, all three check rules unchanged. The measured Windows directory-creation race is fixed for future coordinators only. One report remains research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md; audit logs, questions and stop-window denominator are untouched.
