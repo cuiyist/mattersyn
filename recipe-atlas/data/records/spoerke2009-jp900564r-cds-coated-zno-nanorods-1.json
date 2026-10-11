@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Erik D. Spoerke (2009): CdS-coated ZnO nanorods",
+  "material": {
+    "formula": "CdS",
+    "family": "CdS nanocrystals",
+    "elements": [
+      "Cd",
+      "S"
+    ],
+    "components": [
+      "CdS"
+    ],
+    "architecture": "heterostructure"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "spoerke2009-jp900564r",
+      "doi": "10.1021/jp900564r",
+      "title": "Nanocrystal Layer Deposition: Surface-Mediated Templating of Cadmium Sulfide Nanocrystals on Zinc Oxide Architectures",
+      "authors": "Erik D. Spoerke, Matthew T. Lloyd, Yun-ju Lee, Timothy N. Lambert, Bonnie B. McKenzie, Ying-Bing Jiang, Dana C. Olson, Thomas L. Sounart, Julia W. P. Hsu, and James A. Voigt",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/jp900564r",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "spoerke2009-jp900564r",
+    "recipe_family": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "wurtzite",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanorod",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--thioacetamide",
+      "name": "thioacetamide",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "concentration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mM",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 mM",
+          "evidence": [
+            {
+              "source_id": "spoerke2009-jp900564r",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s01-incubate",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--thioacetamide"
+      ]
+    },
+    {
+      "id": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s02-rinse",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s01-incubate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-incubate",
+      "action": "incubate",
+      "label": "Incubate ZnO-coated surfaces in aqueous solution of Cd(NO3)2 and thioacetamide",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--thioacetamide"
+      ],
+      "outputs": [
+        "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s01-incubate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "spoerke2009-jp900564r",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Incubate ZnO-coated surfaces in aqueous solution of Cd(NO3)2 and thioacetamide",
+      "evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-rinse",
+      "action": "rinse",
+      "label": "Rinse samples with deionized water",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-incubate"
+      ],
+      "inputs": [
+        "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s01-incubate"
+      ],
+      "outputs": [
+        "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s02-rinse"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "air",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "spoerke2009-jp900564r",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Rinse samples with deionized water",
+      "evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--product",
+      "source_sample_label": "CdS-coated ZnO nanorods",
+      "batch_id": null,
+      "material_state_id": "spoerke2009-jp900564r-cds-coated-zno-nanorods-1--after-s02-rinse",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "spoerke2009-jp900564r",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "wurtzite",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "spoerke2009-jp900564r",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanorod",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "spoerke2009-jp900564r",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "spoerke2009-jp900564r",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "spoerke2009-jp900564r",
+          "locator": "Main PDF p.2"
+        }
+      ],
+      "notes": [
+        "Reactor: aqueous solution (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Size not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}
