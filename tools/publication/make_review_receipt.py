@@ -14,6 +14,7 @@ only records who reviewed which exact bytes; it never approves scientific conten
 from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, subprocess, sys
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 
 CONTROLS = {'publication/project-allowlist.json', 'publication/build-inputs.json'}
 
@@ -33,21 +34,25 @@ def build_receipt(root, reviewer, at=None):
     root = Path(root).resolve()
     head = git(root, 'rev-parse', 'HEAD').decode().strip()
     at = at or dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
-    rows = []
-    for line in git(root, 'diff', '--cached', '--name-status', '--no-renames').decode().splitlines():
+    lines = git(root, 'diff', '--cached', '--name-status', '--no-renames').decode().splitlines()
+
+    def make_row(line):
         status, path = line.split('\t', 1)
         if path in CONTROLS:
-            continue
+            return None
         before = blob(root, f'HEAD:{path}')
         before_sha = hashlib.sha256(before).hexdigest() if before is not None else None
         common = {'path': path, 'before_sha256': before_sha, 'review_status': 'approved', 'reviewer': reviewer,
                   'reviewed_at': at, 'source_refs': []}
         if status.startswith('D'):
-            rows.append({**common, 'decision': 'delete'})
-            continue
+            return {**common, 'decision': 'delete'}
         staged = blob(root, f':{path}')
         mode = git(root, 'ls-files', '-s', '--', path).decode().split()[0]
-        rows.append({**common, 'decision': 'allow', 'sha256': hashlib.sha256(staged).hexdigest(), 'bytes': len(staged), 'git_mode': mode})
+        return {**common, 'decision': 'allow', 'sha256': hashlib.sha256(staged).hexdigest(), 'bytes': len(staged), 'git_mode': mode}
+    # Each file still reads and hashes its HEAD/index blobs afresh. Ordered map
+    # preserves receipt order and propagates the first input-order exception.
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        rows = [row for row in executor.map(make_row, lines) if row is not None]
     if not rows:
         raise SystemExit('nothing staged: git add the reviewed changes first')
     return {'schema': 'mattersyn-reviewed-source-changes/1', 'base_commit': head, 'files': rows}

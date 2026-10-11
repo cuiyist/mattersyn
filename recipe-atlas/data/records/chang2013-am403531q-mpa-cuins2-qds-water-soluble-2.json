@@ -1,0 +1,639 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Chia-Chan Chang (2013): MPA(CuInS2) QDs (water-soluble)",
+  "material": {
+    "formula": "CuInS2",
+    "family": "CuInS2 nanocrystals",
+    "elements": [
+      "Cu",
+      "In",
+      "S"
+    ],
+    "components": [
+      "CuInS2"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "chang2013-am403531q",
+      "doi": "10.1021/am403531q",
+      "title": "Synthesis of Eco-Friendly CuInS2 Quantum Dot-Sensitized Solar Cells by a Combined Ex Situ/in Situ Growth Approach",
+      "authors": "Chia-Chan Chang, Jem-Kun Chen, Chih-Ping Chen, Cheng-Hsien Yang, Jia-Yaw Chang",
+      "year": 2013,
+      "url": "https://doi.org/10.1021/am403531q",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "chang2013-am403531q",
+    "recipe_family": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "CuInS2",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 2.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "2.5 nm",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "sphere",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--cuins2-qds",
+      "name": "CuInS2 QDs",
+      "formula": null,
+      "role": "reagent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--hexane",
+      "name": "hexane",
+      "formula": null,
+      "role": "solvent",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "volume": {
+          "value": 0.5,
+          "minimum": null,
+          "maximum": null,
+          "unit": "mL",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.5 mL",
+          "evidence": [
+            {
+              "source_id": "chang2013-am403531q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s01-mix",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--cuins2-qds"
+      ]
+    },
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s02-add",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s01-mix",
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--hexane"
+      ]
+    },
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s03-add",
+      "name": "mixture after step 3",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s02-add"
+      ]
+    },
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s04-centrifuge",
+      "name": "mixture after step 4",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s03-add"
+      ]
+    },
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s05-filter",
+      "name": "mixture after step 5",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s04-centrifuge"
+      ]
+    },
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s06-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s05-filter"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-mix",
+      "action": "mix",
+      "label": "Mixing CuInS2 QDs with OA ligand",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--cuins2-qds"
+      ],
+      "outputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s01-mix"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 h",
+          "evidence": [
+            {
+              "source_id": "chang2013-am403531q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Mixing CuInS2 QDs with OA ligand",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s02-add",
+      "action": "add",
+      "label": "Adding hexane and sonication",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-mix"
+      ],
+      "inputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s01-mix",
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--hexane"
+      ],
+      "outputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s02-add"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "chang2013-am403531q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding hexane and sonication",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s03-add",
+      "action": "add",
+      "label": "Adding aqueous solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-add"
+      ],
+      "inputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s02-add"
+      ],
+      "outputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s03-add"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "none",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.2"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Adding aqueous solution",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s04-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuging to separate phases",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s03-add"
+      ],
+      "inputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s03-add"
+      ],
+      "outputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s04-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 15,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "15 min",
+          "evidence": [
+            {
+              "source_id": "chang2013-am403531q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuging to separate phases",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s05-filter",
+      "action": "filter",
+      "label": "Filtering to remove aggregated QDs",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s04-centrifuge"
+      ],
+      "inputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s04-centrifuge"
+      ],
+      "outputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s05-filter"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Filtering to remove aggregated QDs",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    },
+    {
+      "id": "s06-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuging to isolate excess ligand",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s05-filter"
+      ],
+      "inputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s05-filter"
+      ],
+      "outputs": [
+        "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s06-centrifuge"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 10,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "10 min",
+          "evidence": [
+            {
+              "source_id": "chang2013-am403531q",
+              "locator": "Main PDF p.2"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuging to isolate excess ligand",
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.2"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--product",
+      "source_sample_label": "MPA(CuInS2) QDs (water-soluble)",
+      "batch_id": null,
+      "material_state_id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--after-s06-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "CuInS2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "sphere",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "MPA",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.5"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "notes": [
+        "Reactor: none (Main PDF p.2)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--size",
+      "sample_id": "chang2013-am403531q-mpa-cuins2-qds-water-soluble-2--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 2.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "2.5 nm",
+        "evidence": [
+          {
+            "source_id": "chang2013-am403531q",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "chang2013-am403531q",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text.",
+      "Amount of CuInS2 QDs not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

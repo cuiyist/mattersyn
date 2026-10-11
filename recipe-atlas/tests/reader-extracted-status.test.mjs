@@ -52,17 +52,25 @@ test('extraction badge uses canonical quality status rather than unrelated metad
 const entries=[{id:'core',formula:'CdSe',name:'Bulk wurtzite CdSe reference · core comparison',spaceGroupNumber:186,modelPath:'models/core.json',cifPath:'core.cif',referenceOnly:true},
  {id:'shell',formula:'ZnS',name:'Bulk ZnS reference · shell comparison',spaceGroupNumber:216,modelPath:'models/shell.json',cifPath:'shell.cif',referenceOnly:true}];
 const componentRecord=(status,architecture)=>({...record(status),material:{formula:'CdSe–ZnS',components:['CdSe','ZnS'],architecture},products:[]});
-test('unresolved extracted component defaults have neutral titles without altering library objects',()=>{
- const r=componentRecord('source_extracted','unresolved'),before=JSON.stringify({r,entries});
- const refs=defaultCrystalReferences(entries,r);
- assert.equal(refs.length,2);
- assert.ok(refs.every(ref=>ref.name.endsWith('component comparison')));
- assert.ok(refs.every(ref=>ref.roleByRecord.fixture==='Component reference'));
- assert.deepEqual(refs.map(ref=>ref.modelPath),entries.map(ref=>ref.modelPath));
- assert.equal(JSON.stringify({r,entries}),before);
+test('extracted component default titles are neutral for every architecture without altering library objects',()=>{
+ for(const architecture of [undefined,'unresolved','single_material','core_shell','core_multishell','composite']){
+  const r=componentRecord('source_extracted',architecture),before=JSON.stringify({r,entries});
+  const refs=defaultCrystalReferences(entries,r);
+  assert.equal(refs.length,2);
+  assert.deepEqual(refs.map(ref=>ref.name),['Bulk wurtzite CdSe reference','Bulk ZnS reference']);
+  assert.ok(refs.every(ref=>ref.roleByRecord.fixture==='Component reference'));
+  assert.deepEqual(refs.map(({id,formula,spaceGroupNumber,modelPath,cifPath,referenceOnly})=>({id,formula,spaceGroupNumber,modelPath,cifPath,referenceOnly})),
+   entries.map(({id,formula,spaceGroupNumber,modelPath,cifPath,referenceOnly})=>({id,formula,spaceGroupNumber,modelPath,cifPath,referenceOnly})));
+  assert.equal(JSON.stringify({r,entries}),before);
+ }
 });
-test('audited and explicitly assigned architecture titles stay unchanged',()=>{
- for(const [status,architecture] of [['source_reviewed','unresolved'],['source_extracted','core_shell'],['source_extracted','composite'],[undefined,'unresolved']]){
-  assert.deepEqual(defaultCrystalReferences(entries,componentRecord(status,architecture)).map(ref=>ref.name),entries.map(ref=>ref.name));
+test('audited and other non-extracted component default titles retain their core and shell suffixes',()=>{
+ for(const status of ['source_reviewed','audited','pending',undefined]){
+  for(const architecture of [undefined,'unresolved','core_shell','core_multishell','composite']){
+   const r=componentRecord(status,architecture),before=JSON.stringify({r,entries});
+   const refs=defaultCrystalReferences(entries,r);
+   assert.deepEqual(refs.map(ref=>ref.name),entries.map(ref=>ref.name));
+   assert.equal(JSON.stringify({r,entries}),before);
+  }
  }
 });

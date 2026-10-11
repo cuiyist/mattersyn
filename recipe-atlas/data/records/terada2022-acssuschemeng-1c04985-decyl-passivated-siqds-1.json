@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Shiho Terada (2022): decyl-passivated SiQDs",
+  "material": {
+    "formula": "Si",
+    "family": "Si nanocrystals",
+    "elements": [
+      "Si"
+    ],
+    "components": [
+      "Si"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Chemical synthesis",
+  "sources": [
+    {
+      "id": "terada2022-acssuschemeng-1c04985",
+      "doi": "10.1021/acssuschemeng.1c04985",
+      "title": "Orange−Red Si Quantum Dot LEDs from Recycled Rice Husks",
+      "authors": "Shiho Terada, Honoka Ueda, Taisei Ono, and Ken-ichi Saitow",
+      "year": 2022,
+      "url": "https://doi.org/10.1021/acssuschemeng.1c04985",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "terada2022-acssuschemeng-1c04985",
+    "recipe_family": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "Si",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": 3.5,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "3.5 nm",
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.9"
+        }
+      ],
+      "derivation": null
+    },
+    "morphology": {
+      "value": "nanoparticle",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.1"
+        }
+      ],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s01-wash",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s02-pyrolysis",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s01-wash"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-wash",
+      "action": "wash",
+      "label": "RHs were washed with a 10 wt % HCl solution at 100−110 °C for 2 h to remove inorganic impurities.",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s01-wash"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 100,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "100 °C",
+          "evidence": [
+            {
+              "source_id": "terada2022-acssuschemeng-1c04985",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "terada2022-acssuschemeng-1c04985",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "RHs were washed with a 10 wt % HCl solution at 100−110 °C for 2 h to remove inorganic impurities.",
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    },
+    {
+      "id": "s02-pyrolysis",
+      "action": "pyrolysis",
+      "label": "RHs were pyrolyzed at 700 °C for 2 h in oxygen ambient (100%) to obtain SiO2 powder.",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-wash"
+      ],
+      "inputs": [
+        "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s01-wash"
+      ],
+      "outputs": [
+        "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s02-pyrolysis"
+      ],
+      "parameters": {
+        "temperature": {
+          "value": 700,
+          "minimum": null,
+          "maximum": null,
+          "unit": "degC",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "700 °C",
+          "evidence": [
+            {
+              "source_id": "terada2022-acssuschemeng-1c04985",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        },
+        "duration": {
+          "value": 2,
+          "minimum": null,
+          "maximum": null,
+          "unit": "h",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "2 h",
+          "evidence": [
+            {
+              "source_id": "terada2022-acssuschemeng-1c04985",
+              "locator": "Main PDF p.3"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "Ar",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "terada2022-acssuschemeng-1c04985",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "RHs were pyrolyzed at 700 °C for 2 h in oxygen ambient (100%) to obtain SiO2 powder.",
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.3"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--product",
+      "source_sample_label": "decyl-passivated SiQDs",
+      "batch_id": null,
+      "material_state_id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--after-s02-pyrolysis",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "Si",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "terada2022-acssuschemeng-1c04985",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "terada2022-acssuschemeng-1c04985",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": "nanoparticle",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "terada2022-acssuschemeng-1c04985",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "surface": {
+        "value": "decyl",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "terada2022-acssuschemeng-1c04985",
+            "locator": "Main PDF p.1"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": [
+        "Reactor: reaction vessel purged with Ar gas (Main PDF p.3).",
+        "Reaction temperature: 650 degC (Main PDF p.3).",
+        "Reaction time: 2 h (Main PDF p.3)."
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--size",
+      "sample_id": "terada2022-acssuschemeng-1c04985-decyl-passivated-siqds-1--product",
+      "property": "diameter",
+      "technique": "TEM",
+      "value": {
+        "value": 3.5,
+        "minimum": null,
+        "maximum": null,
+        "unit": "nm",
+        "status": "reported",
+        "approximate": false,
+        "qualifier": "",
+        "basis": "",
+        "raw_text": "3.5 nm",
+        "evidence": [
+          {
+            "source_id": "terada2022-acssuschemeng-1c04985",
+            "locator": "Main PDF p.9"
+          }
+        ],
+        "derivation": null
+      },
+      "conditions": "",
+      "derives_from": [],
+      "evidence": [
+        {
+          "source_id": "terada2022-acssuschemeng-1c04985",
+          "locator": "Main PDF p.9"
+        }
+      ]
+    }
+  ],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

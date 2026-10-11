@@ -228,13 +228,39 @@ CHEMICAL_KINDS = {'molecule', 'formula', 'identity', 'identity_only', 'symbolic_
 
 
 def name_keys(name):
-    """Forms of a chemical name used for matching: as written, and without a bracketed abbreviation."""
-    full = re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', str(name)).lower()).strip(' .,;')
-    bare = re.sub(r'\s*\([^)]*\)\s*', ' ', full).strip()
-    return list(dict.fromkeys(k for k in (full, bare) if k))
+    """Exact normalized names only: preserve groups, oxidation states and qualifications."""
+    written = unicodedata.normalize('NFKC', str(name)).strip(' .,;')
+    full = re.sub(r'\s+', ' ', written.lower()).strip(' .,;')
+    full = re.sub(r'\s*([()])\s*', r'\1', full)
+    return [full] if full else []
 
 
-def bind_chemicals(atlas, records, doi_url, new_assets):
+def chemical_match(index, name, rank, preferred_id=None):
+    """Keep a safe existing match; an optional token needs two explicit aliases of the same entry."""
+    def acceptable(entry):
+        return entry.get('pubchemCid') or not re.search(r'(19|20)\d\d', entry['id']) or entry.get('depictionKind') in CHEMICAL_KINDS
+    groups = [[e for e in index.get(key, []) if acceptable(e)] for key in name_keys(name)]
+    written = unicodedata.normalize('NFKC', str(name)).strip(' .,;')
+    terminal = re.search(r'\s+\(([A-Z][A-Za-z0-9-]{1,12})\)$', written)
+    if terminal:
+        prefix = name_keys(written[:terminal.start()])
+        token = name_keys(terminal.group(1))
+        if prefix and token:
+            token_ids = {e['id'] for e in index.get(token[0], []) if acceptable(e)}
+            groups.append([e for e in index.get(prefix[0], []) if acceptable(e) and e['id'] in token_ids])
+    first = None
+    for hits in groups:
+        if hits:
+            if preferred_id is not None:
+                preferred = next((e for e in hits if e['id'] == preferred_id), None)
+                if preferred:
+                    return preferred
+            if first is None:
+                first = sorted(hits, key=rank)[0]
+    return first
+
+
+def bind_chemicals(atlas, records, doi_url, new_assets, only_material_ids=None):
     """Link each chemical to the site's molecule library. A name the library does not know gets a plain
     name card: no structure is drawn for it."""
     base = atlas / 'static/assets/chemical-registry'
@@ -246,13 +272,14 @@ def bind_chemicals(atlas, records, doi_url, new_assets):
     rank = lambda e: (e.get('depictionKind') != 'molecule' or not e.get('model3dPath'), not e.get('pubchemCid'), bool(re.search(r'(19|20)\d\d', e['id'])), len(e['id']))
     known = {e['id'] for e in registry['entries']}; matched = cards = 0
     for record in records:
-        rid = record['record_id']; bound = {}
+        rid = record['record_id']; bound = dict(bindings['recordBindings'].get(rid, {})) if only_material_ids is not None else {}
         for m in record['materials']:
-            hits = [e for key in name_keys(m['name']) for e in index.get(key, [])]
+            if only_material_ids is not None and m['id'] not in only_material_ids:
+                continue
             # an entry made for one paper's specimen, mixture or sample context is not a general chemical
-            hits = [e for e in hits if e.get('pubchemCid') or not re.search(r'(19|20)\d\d', e['id']) or e.get('depictionKind') in CHEMICAL_KINDS]
-            if hits:
-                bound[m['id']] = sorted(hits, key=rank)[0]['id']; matched += 1; continue
+            hit = chemical_match(index, m['name'], rank, bindings['recordBindings'].get(rid, {}).get(m['id']))
+            if hit:
+                bound[m['id']] = hit['id']; matched += 1; continue
             eid = 'name-card-' + slug(m['name'], 60)
             if eid not in known:
                 caption = 'Name as printed in the paper. The chemical is not in the molecule library, so no formula or structure is shown.'
