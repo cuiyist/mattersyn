@@ -1,3 +1,9 @@
+## Current owner instruction — October 10 evening simple pipeline
+
+The owner starts a separate local two-pass simple-pipeline website job. The audited lane, its pending claims, sampled denominator and open questions remain paused. New ordinary-page records remain `source_extracted`, never reviewed; audited records are unchanged. The new owner instruction supersedes old pilot and machine-lane admission directions for this job only. Keep all PDFs, page text and quoted pass/pair payloads local. Publish source locators, registered figure crops and quoteless pair exports through active release checks. Batch20 first, then about50; retry failed two-pass extraction once and omit persistent failures. Rare materials receive one scoped reading; common materials do not. Part A is a zero-paper unit-cell engineering release. Part B repeats the same development15 with current prompt; no heldout generation. A quiet30-minute continuation is active; morning and twohour reports remain off.
+
+Follow the single [job report](research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md) and current status. Owner authorizes necessary script/site fixes, ordinary merges/deployments, exact file-list/allowlist/rights refreshes and deletion of reconstructible build copies. Autoapproval rejections are recorded and left out, never bypassed. No forcepush, repository settings changes, or audited record rewrites.
+
 ## Owner-requested pause — October 10, 2026
 
 The owner paused the job temporarily. All extraction, scientific/deep audits, local-model generation, engineering, integration and Site publication are paused until a new explicit owner resume instruction. The 30-minute queue automation is PAUSED; morning and two-hour reports remain disabled. Pause instructions were delivered to the two existing worker sessions. Pending private evidence and frozen claim states are preserved. Only saving this requested Source report and memory checkpoint is authorized.

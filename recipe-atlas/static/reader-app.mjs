@@ -221,7 +221,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  let active=recordId&&records.some(r=>r.record_id===recordId)?recordId:records[0].record_id;const baseTitle=data?.formula||records[0].formula;
 
- main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span','Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
+ main.replaceChildren();const toolbar=el('div',undefined,'reader-view-toolbar');toolbar.append(link('Periodic table / '+baseTitle,'index.html','reader-breadcrumb'),el('span',records.some(r=>r.review_status==='source_extracted')?'Synthesis and evidence':'Reviewed synthesis and evidence','reader-version'));main.append(toolbar);
 
  const heading=el('header',undefined,'reader-heading');heading.append(el('h1',baseTitle),el('p',data?.name||'Reviewed synthesis and material evidence'));const componentLabel=componentScopeLabel(data);if(componentLabel)heading.append(badge(componentLabel,'scope'));main.append(heading);
 

@@ -10,7 +10,9 @@ def main():
     for m in idx:
         v=read(DIST/'data/materials'/(m['id']+'.json'))
         assert set(v['record_ids'])<=canonical
-        assert m['reviewed_records']==sum(r['record_type']!='procedure' and r['collection']=='reviewed_literature' for r in v['records'])
+        assert m['reviewed_records']==sum(r['record_type']!='procedure' and r['collection']=='reviewed_literature' and r['review_status']=='source_reviewed' for r in v['records'])
+        assert m.get('route_records',len(v['records']))==len(v['records'])
+        assert m.get('source_extracted_records',0)==sum(r.get('review_status')=='source_extracted' for r in v['records'])
         for p in v['papers']:assert (DIST/'data/papers'/(p['id']+'.json')).exists()
     core='nakonechnyi-2017-zb-cdse-cds-seeded-growth'
     for f in ['CdSe','CdS']:

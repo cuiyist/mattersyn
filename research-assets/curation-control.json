@@ -1,12 +1,12 @@
 {
   "schema": "mattersyn-curation-control/1",
-  "status": "paused_owner_request",
-  "recorded_at": "2026-10-10T22:29:45.211418+00:00",
+  "status": "simple_pipeline_active_audit_lane_paused",
+  "recorded_at": "2026-10-11T02:56:57.543102+00:00",
   "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
   "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
   "active_run": "Private fasttrack-20261007/ledger.jsonl",
   "paid_processing_allowed": false,
-  "new_source_downloads_allowed": false,
+  "new_source_downloads_allowed": true,
   "external_document_transfer_allowed": false,
   "source_scope": "QD-priority local documents including new arrivals only after DOI deduplication and source screening; core synthesis first, SI only where primary methods refer.",
   "maximum_concurrent_agents_including_root": 4,
@@ -109,7 +109,7 @@
   },
   "continuation_automation": "mattersyn-github-review-watch",
   "continuation_interval_minutes": 30,
-  "continuation_status": "PAUSED_OWNER_REQUEST",
+  "continuation_status": "ACTIVE_SIMPLE_PIPELINE",
   "experimental_silver_display_authorized": false,
   "experimental_silver_display_status": "retired_historical_collection",
   "experimental_silver_accuracy": "unmeasured",
@@ -1365,8 +1365,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Owner-requested temporary pause of all scientific curation, model, engineering, integration and Site publication work. Saving only the requested safe progress report and pause memory checkpoint.",
-  "next_step": "Wait for a new explicit owner resume instruction. Preserve pending evidence, frozen claims, unresolved owner questions, historical findings and the unchanged sampled-record window. Do not perform cleanup or resume from a scheduled wake-up.",
+  "current_task": "Part A mixed-phase display fix and complete release checks; Part B finished; batch 1 Qwen extraction active",
+  "next_step": "Merge and deploy Part A after local visual and CI checks; integrate the first two-pass extracted batch",
   "waiting_on_owner": [
     {
       "question_id": "older-ullah-claim-metadata-disclosure",
@@ -1470,7 +1470,7 @@
     "result_receipt_sha256": "9a4e26a112197d8976482a6f9d843509f982b85a86b85bd49c4aa25b4776d4cd",
     "status": "parked; generation completed but strict whole-attempt coverage failed"
   },
-  "updated_at": "2026-10-10T20:51:18.647427+00:00",
+  "updated_at": "2026-10-11T03:25:34+00:00",
   "last_verified_publication": {
     "source_commit": "5f567a5c3704ebe75fe512eaed10b92292f8499e",
     "site_commit": "334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e",
@@ -1609,5 +1609,33 @@
     "original_deadline_utc": "2026-10-10T22:03:47.816516Z",
     "deadline_reset": false,
     "owner_pause_supersedes_further_work": true
+  },
+  "simple_pipeline": {
+    "owner_instruction": "2026-10-10 evening",
+    "status": "active",
+    "branch_read_only": "simple-pipeline-20261010",
+    "code_revision": "f7c98ede",
+    "report": "research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
+    "audit_lane": "paused; existing audited records and rules unchanged",
+    "review_status": "source_extracted",
+    "counter_rule": "only distinct ordinary-page contributions deployed and anonymously verified",
+    "batch1_papers": 20,
+    "later_batch_papers": 50,
+    "two_pass_required": true,
+    "quote_rules": [
+      "quote found in paper",
+      "number in quote",
+      "both passes agree"
+    ],
+    "local_training_files_retained": true,
+    "heldout_generation": false,
+    "automatic_wake_minutes": 30,
+    "started_at": "2026-10-11T02:56:57.543102+00:00",
+    "choices": [
+      {
+        "choice": "Keep optical fields out of converted site records",
+        "reason": "Default converter masks them after the development test found optical-field errors."
+      }
+    ]
   }
 }

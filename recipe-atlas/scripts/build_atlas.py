@@ -61,7 +61,7 @@ def material_alias_ids(formula):return sorted(slug(old) for old,new in MATERIAL_
 def synthesis_route(r):
     role=r.get('reader_role')
     return (r['collection']=='reviewed_literature' and r['record_type'] in {'literature_protocol','protocol_variant','experiment'}
-            and r['quality']['review_status']=='source_reviewed'
+            and r['quality']['review_status'] in ('source_reviewed','source_extracted')
             and (role=='synthesis_route' or (role is None and 'precursor_selection' in r['quality']['requested_tasks']))
             and any(o['stage']=='synthesis' for o in r['operations']))
 
@@ -121,7 +121,9 @@ def main():
         if doi not in papers:papers[doi]={'id':'paper-'+hashlib.sha256(doi.encode()).hexdigest()[:20],'doi':doi,'doiUrl':primary['url'],'title':primary['title'],'year':primary['year'],'documentIds':[],'coverage':{'localDocumentCount':None,'mainDocumentAvailable':True,'supportingDocumentAvailable':None,'extractionStatusCounts':{}},'materialTitleMentions':[],'titleComponentSystems':[]}
         papers[doi]['title']=primary['title'];papers[doi]['year']=primary['year'];papers[doi]['titleVerifiedFromSelectedRecord']=True
         papers[doi].setdefault('reviewedRecordIds',[])
-        if r['collection']=='reviewed_literature':papers[doi]['reviewedRecordIds'].append(r['record_id'])
+        if r['collection']=='reviewed_literature' and r['quality']['review_status']=='source_reviewed':papers[doi]['reviewedRecordIds'].append(r['record_id'])
+        papers[doi].setdefault('extractedRecordIds',[])
+        if r['quality']['review_status']=='source_extracted':papers[doi]['extractedRecordIds'].append(r['record_id'])
         papers[doi].setdefault('benchmarkRecordIds',[])
         if r['collection']=='published_benchmark':papers[doi]['benchmarkRecordIds'].append(r['record_id'])
         if not synthesis_route(r):continue
@@ -138,7 +140,8 @@ def main():
     byid={r['record_id']:r for r in records};library=[]
     for doi,p in papers.items():
         p['reviewedRecordIds']=list(dict.fromkeys(p.get('reviewedRecordIds',[])));p['benchmarkRecordIds']=list(dict.fromkeys(p.get('benchmarkRecordIds',[])))
-        p['reviewStatus']='selected_recipes_reviewed' if p['reviewedRecordIds'] else 'published_benchmark' if p['benchmarkRecordIds'] else 'indexed_awaiting_review'
+        p['extractedRecordIds']=list(dict.fromkeys(p.get('extractedRecordIds',[])))
+        p['reviewStatus']='selected_recipes_reviewed' if p['reviewedRecordIds'] else 'source_extracted' if p['extractedRecordIds'] else 'published_benchmark' if p['benchmarkRecordIds'] else 'indexed_awaiting_review'
         review=full_reviews.get(doi)
         pending=pending_variants(review) if review and 'pending_variants' in review else pending_by_doi.get(doi,[])
         if pending:p['pending_variants']=pending
@@ -151,11 +154,11 @@ def main():
         # Preserve the automatic indexing result as historical scope metadata;
         # current review and contribution statuses follow the reviewed records.
         p['indexingStageStatus']={k:p[k] for k in ['recipeCurationStatus','materialContributionStatus'] if k in p}
-        p['recipeCurationStatus']='source_reviewed_records' if p['reviewedRecordIds'] else 'published_benchmark' if p['benchmarkRecordIds'] else 'not_curated_by_this_pipeline'
-        p['materialContributionStatus']='verified_synthesis_contribution' if p['materials'] and p['reviewedRecordIds'] else 'no_verified_synthesis_contribution'
+        p['recipeCurationStatus']='source_reviewed_records' if p['reviewedRecordIds'] else 'source_extracted_records' if p['extractedRecordIds'] else 'published_benchmark' if p['benchmarkRecordIds'] else 'not_curated_by_this_pipeline'
+        p['materialContributionStatus']='verified_synthesis_contribution' if p['materials'] and p['reviewedRecordIds'] else 'source_extracted_contribution' if p['materials'] and p['extractedRecordIds'] else 'no_verified_synthesis_contribution'
         p['candidateMaterialMentions']=sorted({x['formula'] for x in p.get('materialTitleMentions',[])})
         write(ROOT/'dist/data/papers'/(p['id']+'.json'),p)
-        library.append({k:p.get(k) for k in ['id','doi','doiUrl','title','year','coverage','materials','candidateMaterialMentions','reviewStatus','reviewedRecordIds','benchmarkRecordIds','titleMetadata','fullDocumentReview']})
+        library.append({k:p.get(k) for k in ['id','doi','doiUrl','title','year','coverage','materials','candidateMaterialMentions','reviewStatus','reviewedRecordIds','extractedRecordIds','benchmarkRecordIds','titleMetadata','fullDocumentReview']})
         if p.get('pending_variants'):library[-1]['pending_variants']=p['pending_variants']
     index=[]
     for f,m in materials.items():
@@ -164,10 +167,12 @@ def main():
             ordered=[x for item in review.get('recipe_inventory',[]) for x in item.get('record_ids',[])]
             return (rid not in m['direct_record_ids'],rec['sources'][0].get('year') or 9999,ordered.index(rid) if rid in ordered else 9999,rid)
         related=[byid[x] for x in sorted(m['record_ids'],key=reader_order)];m['record_ids']=sorted(m['record_ids']);m['direct_record_ids']=sorted(m['direct_record_ids']);m['architectures']=sorted(m['architectures']);m['component_architectures']=sorted(m['component_architectures'])
-        m['reviewed_records']=sum(synthesis_route(r) for r in related)
-        m['publication_status']='verified_synthesis_contribution'
+        m['reviewed_records']=sum(r['quality']['review_status']=='source_reviewed' for r in related)
+        m['source_extracted_records']=sum(r['quality']['review_status']=='source_extracted' for r in related)
+        m['route_records']=len(related)
+        m['publication_status']='verified_synthesis_contribution' if m['reviewed_records'] else 'source_extracted_contribution'
         m['component_only']=not bool(m['direct_record_ids'])
-        m['scope_note']=component_scope_note(m['component_architectures']) if m['component_only'] else 'Each method is supported by a source-reviewed synthesis record. Unreviewed title matches are excluded from this page.'
+        m['scope_note']=component_scope_note(m['component_architectures']) if m['component_only'] else 'Each method retains its source-extracted or independently audited review status. Unreviewed title matches are excluded from this page.'
         if f == 'CoFe2O4' and not m['component_only']:
             m['scope_note']='This page combines direct standalone CoFe2O4 Method-A routes with a separately scoped CoFe2O4 shell contribution in the CoO/CoFe2O4 composite. Shell structure and property observations remain attached to that composite sample and are not relabeled as results for the standalone nanocrystals.'
         m['benchmark_records']=sum(r['collection']=='published_benchmark' for r in related);m['paper_count']=len(m['paper_dois'])
@@ -176,10 +181,11 @@ def main():
             if p['doi'] not in m['paper_dois']:continue
             contribution=dict(p)
             contribution['reviewedRecordIds']=[rid for rid in p['reviewedRecordIds'] if rid in m['record_ids']]
+            contribution['extractedRecordIds']=[rid for rid in p['extractedRecordIds'] if rid in m['record_ids']]
             contribution['benchmarkRecordIds']=[rid for rid in p['benchmarkRecordIds'] if rid in m['record_ids']]
-            contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
+            contribution['reviewStatus']=p['reviewStatus'] if p['fullDocumentReview'] else 'selected_recipes_reviewed' if contribution['reviewedRecordIds'] else 'source_extracted' if contribution['extractedRecordIds'] else 'published_benchmark' if contribution['benchmarkRecordIds'] else 'indexed_awaiting_review'
             m['papers'].append(contribution)
-        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
+        m['records']=[{'record_id':r['record_id'],'title':r['title'],'formula':r['material']['formula'],'method':r['method'],'record_type':r['record_type'],'is_synthesis_route':synthesis_route(r),'collection':r['collection'],'review_status':r['quality']['review_status'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','architecture':r['material'].get('architecture','single_material'),'contribution_role':'direct_material' if r['record_id'] in m['direct_record_ids'] else component_contribution_role(r['material'].get('architecture','single_material'))} for r in related]
         for row in m['records']:
             if papers[row['doi'].lower()].get('pending_variants'):row['pending_variants']=papers[row['doi'].lower()]['pending_variants']
         m['experimental_series']=[{'record_id':r['record_id'],'title':r['title'],'doi':r['sources'][0]['doi'],'year':r['sources'][0]['year'],'page_url':'records/'+r['record_id']+'.html','scope':'Published recipe parameters and optical outcomes; row-specific particle structure and complete preparation are not supplied.'} for r in records if r['collection']=='published_benchmark' and r['material']['formula']==f]
@@ -191,7 +197,7 @@ def main():
             for rid in review.get('material_evidence_records',{}).get(f,[]):
                 assert rid in byid, f'Unknown material evidence record: {rid}'
                 record=byid[rid]
-                assert record['quality']['review_status']=='source_reviewed'
+                assert record['quality']['review_status'] in ('source_reviewed','source_extracted')
                 assert any(s['doi'].lower()==doi for s in record['sources'])
                 evidence_ids.add(rid)
             note=review.get('material_evidence_scope_notes',{}).get(f)
@@ -199,7 +205,7 @@ def main():
         m['evidence_records']=[{'record_id':rid,'record_type':byid[rid]['record_type'],'collection':byid[rid]['collection']} for rid in sorted(evidence_ids)]
         m['paper_dois']=sorted(m['paper_dois']);m['mentioned_paper_dois']=sorted(m['mentioned_paper_dois'])
         write(ROOT/'dist/data/materials'/(m['id']+'.json'),m)
-        index.append({k:m[k] for k in ['id','alias_ids','formula','name','elements','url','reviewed_records','benchmark_records','paper_count','architectures','component_architectures','publication_status','component_only']})
+        index.append({k:m[k] for k in ['id','alias_ids','formula','name','elements','url','reviewed_records','source_extracted_records','route_records','benchmark_records','paper_count','architectures','component_architectures','publication_status','component_only']})
     summary=corpus['summary'];coverage=f"{len(index)} material and component pages with source-linked synthesis contributions. Explore contributing papers in the Source library."
     write(ROOT/'dist/data/materials-index.json',{'schema_version':'1.0','materials':index,'coverage':coverage})
     write(ROOT/'dist/data/library-index.json',{'summary':summary,'papers':library,'local_paper_groups':len(library),'scope':'Paper and supplement matching and material mentions are candidates until independently reviewed. Selected reviewed recipes do not imply full-paper curation.'})

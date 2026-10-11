@@ -5,9 +5,10 @@ if (host) {
   if (view?.available) for (const count of document.querySelectorAll('[data-machine-papers]')) {
     // Audited DOI bindings are emitted from the same regular collection as this counter.
     // A missing/malformed binding never permits a possibly duplicate paper count.
-    try {const excludedPrimaryDois=JSON.parse(count.parentElement.dataset.auditedPrimaryDois);
-      if(Array.isArray(excludedPrimaryDois))count.textContent=String(qualifiedMachinePaperDois(view,{excludedPrimaryDois}).length);
-    } catch {count.textContent='0';}
+    try {const extractedBase=Number(count.dataset.sourceExtractedPapers||0);
+      const audited=JSON.parse(count.parentElement.dataset.auditedPrimaryDois),extracted=JSON.parse(count.dataset.sourceExtractedDois||'[]');
+      if(Array.isArray(audited)&&Array.isArray(extracted))count.textContent=String(extractedBase+qualifiedMachinePaperDois(view,{excludedPrimaryDois:[...audited,...extracted]}).length);
+    } catch {count.textContent=String(Number(count.dataset.sourceExtractedPapers||0));}
   }
   const filter=document.getElementById('review-filter');
   if (filter && view) filter.addEventListener('change',()=>renderCatalog(host,view,{hideEmpty:true,hiddenByFilter:filter.value==='audited'}));

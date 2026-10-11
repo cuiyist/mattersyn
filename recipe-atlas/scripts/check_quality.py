@@ -72,7 +72,7 @@ def material_membership_errors(hub, records):
     formula = hub['formula']
     eligible = [r for r in records
                 if r['collection'] == 'reviewed_literature'
-                and r['quality']['review_status'] == 'source_reviewed'
+                and r['quality']['review_status'] in ('source_reviewed', 'source_extracted')
                 and r['record_type'] in {'literature_protocol', 'protocol_variant', 'experiment'}
                 and any(o['stage'] == 'synthesis' for o in r['operations'])
                 and (r.get('reader_role') == 'synthesis_route'
@@ -154,7 +154,7 @@ class Audit:
                     continue
                 # Independently enforce scientific publication boundaries, rather
                 # than calling or copying the builder's synthesis_route gate.
-                self.check(r["collection"] == "reviewed_literature" and r["quality"]["review_status"] == "source_reviewed", f"{formula}/{rid}: unreviewed/benchmark record published as synthesis")
+                self.check(r["collection"] == "reviewed_literature" and r["quality"]["review_status"] in ("source_reviewed", "source_extracted"), f"{formula}/{rid}: unreviewed/benchmark record published as synthesis")
                 self.check(r["record_type"] in {"literature_protocol", "protocol_variant", "experiment"} and any(o["stage"] == "synthesis" for o in r["operations"]), f"{formula}/{rid}: non-protocol observation/procedure published as material route")
                 self.check(r.get('reader_role') == 'synthesis_route' or (r.get('reader_role') is None and 'precursor_selection' in r['quality']['requested_tasks']), f'{formula}/{rid}: route lacks a separate reader or legacy training admission')
                 self.check(stub.get("is_synthesis_route") is True, f"{formula}/{rid}: displayed route is not marked synthesis")
@@ -188,11 +188,19 @@ class Audit:
                     self.check('explicitly named heterostructures' not in scope_note and 'does not establish a within-particle arrangement' in scope_note, f"{formula}: product component scope overstates particle architecture")
             self.check(set(d.lower() for d in hub["paper_dois"]) == route_dois, f"{formula}: source list not tied to canonical routes")
             for paper in hub["papers"]:
-                linked = set(paper.get("reviewedRecordIds", []))
+                reviewed_linked=set(paper.get("reviewedRecordIds", [])); extracted_linked=set(paper.get("extractedRecordIds", []))
+                linked=reviewed_linked | extracted_linked
+                self.check(not reviewed_linked & extracted_linked, f"{formula}/{paper['id']}: extracted records relabeled reviewed")
+                self.check(all(self.byid[rid]['quality']['review_status']=='source_reviewed' for rid in reviewed_linked if rid in self.byid), f"{formula}/{paper['id']}: reviewed links require source review")
+                self.check(all(self.byid[rid]['quality']['review_status']=='source_extracted' for rid in extracted_linked if rid in self.byid), f"{formula}/{paper['id']}: extracted links require source-extracted status")
                 expected = {rid for rid in route_ids if primary_doi(self.byid[rid]) == paper["doi"].lower()}
                 self.check(bool(linked) and linked == expected, f"{formula}/{paper['id']}: paper list includes unrelated or missing route links")
                 self.check(not paper.get("benchmarkRecordIds"), f"{formula}: benchmark paper row presented as curated synthesis")
-            self.check(hub["reviewed_records"] == len(route_ids) == summary["reviewed_records"], f"{formula}: reviewed-route count mismatch")
+            reviewed_count=sum(self.byid[rid]['quality']['review_status']=='source_reviewed' for rid in route_ids)
+            extracted_count=len(route_ids)-reviewed_count
+            self.check(hub["reviewed_records"]==reviewed_count==summary["reviewed_records"], f"{formula}: reviewed-route count mismatch")
+            self.check(hub.get("source_extracted_records",0)==extracted_count==summary.get("source_extracted_records",0), f"{formula}: extracted-route count mismatch")
+            self.check(hub.get("route_records",len(route_ids))==len(route_ids)==summary.get("route_records",len(route_ids)), f"{formula}: published-route count mismatch")
             self.check(len(hub["papers"]) == len(route_dois) == hub["paper_count"], f"{formula}: paper contribution count mismatch")
         # Concrete regressions established by the independently reviewed sources.
         ferrite = self.hubs.get("CoFe2O4", {})
