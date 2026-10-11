@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Iwan Moreels (2009): PbS Qdots (3.6 nm)",
+  "material": {
+    "formula": "PbS",
+    "family": "PbS nanocrystals",
+    "elements": [
+      "Pb",
+      "S"
+    ],
+    "components": [
+      "PbS"
+    ],
+    "architecture": "single_material"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "moreels2009-nn900863a",
+      "doi": "10.1021/nn900863a",
+      "title": "Size-Dependent Optical Properties of Colloidal PbS Quantum Dots",
+      "authors": "Iwan Moreels, Karel Lambert, Dries Smeets, David De Muynck, Tom Nollet, Jose C. Martins, Frank Vanhaecke, Andre Vantomme, Christophe Delerue, Guy Allan, and Zeger Hens",
+      "year": 2009,
+      "url": "https://doi.org/10.1021/nn900863a",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "moreels2009-nn900863a",
+    "recipe_family": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "phase": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [
+    {
+      "id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--pbcl2",
+      "name": "PbCl2",
+      "formula": null,
+      "role": "metal_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 0.56,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.56 g",
+          "evidence": [
+            {
+              "source_id": "moreels2009-nn900863a",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "moreels2009-nn900863a",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--s",
+      "name": "S",
+      "formula": null,
+      "role": "chalcogen_precursor",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {
+        "mass": {
+          "value": 0.16,
+          "minimum": null,
+          "maximum": null,
+          "unit": "g",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "0.16 g",
+          "evidence": [
+            {
+              "source_id": "moreels2009-nn900863a",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "moreels2009-nn900863a",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--ola",
+      "name": "OLA",
+      "formula": null,
+      "role": "ligand",
+      "stage": "synthesis",
+      "identity": {
+        "pubchem_cid": null,
+        "smiles": null
+      },
+      "quantities": {},
+      "notes": [],
+      "evidence": [
+        {
+          "source_id": "moreels2009-nn900863a",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    }
+  ],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s01-inject",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--s",
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--ola"
+      ]
+    },
+    {
+      "id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s02-hold",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s01-inject"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-inject",
+      "action": "inject",
+      "label": "Inject S stock solution",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--s",
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--ola"
+      ],
+      "outputs": [
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s01-inject"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "moreels2009-nn900863a",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Inject S stock solution",
+      "evidence": [
+        {
+          "source_id": "moreels2009-nn900863a",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    },
+    {
+      "id": "s02-hold",
+      "action": "hold",
+      "label": "Grow nanocrystals",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-inject"
+      ],
+      "inputs": [
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s01-inject"
+      ],
+      "outputs": [
+        "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s02-hold"
+      ],
+      "parameters": {
+        "duration": {
+          "value": 1,
+          "minimum": null,
+          "maximum": null,
+          "unit": "min",
+          "status": "reported",
+          "approximate": false,
+          "qualifier": "",
+          "basis": "",
+          "raw_text": "1 min",
+          "evidence": [
+            {
+              "source_id": "moreels2009-nn900863a",
+              "locator": "Main PDF p.7"
+            }
+          ],
+          "derivation": null
+        }
+      },
+      "environment": {
+        "value": "N2",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "moreels2009-nn900863a",
+            "locator": "Main PDF p.7"
+          }
+        ],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Grow nanocrystals",
+      "evidence": [
+        {
+          "source_id": "moreels2009-nn900863a",
+          "locator": "Main PDF p.7"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--product",
+      "source_sample_label": "PbS Qdots (3.6 nm)",
+      "batch_id": null,
+      "material_state_id": "moreels2009-nn900863a-pbs-qdots-3-6-nm-1--after-s02-hold",
+      "parent_sample_id": null,
+      "composition": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "phase": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": "oleic acid",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "moreels2009-nn900863a",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "moreels2009-nn900863a",
+          "locator": "Main PDF p.7"
+        }
+      ],
+      "notes": [
+        "Reactor: three-neck flask (Main PDF p.7).",
+        "Reaction temperature: 150 degC (Main PDF p.7).",
+        "Reaction time: 1 min (Main PDF p.7)."
+      ]
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Phase not reported in the extracted text.",
+      "Shape not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Amount of OLA not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

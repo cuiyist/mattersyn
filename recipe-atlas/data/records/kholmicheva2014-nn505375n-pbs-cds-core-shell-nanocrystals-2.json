@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.3.0",
+  "record_id": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2",
+  "revision": 1,
+  "record_type": "literature_protocol",
+  "title": "Natalia Kholmicheva (2014): PbS/CdS core/shell nanocrystals",
+  "material": {
+    "formula": "PbS/CdS",
+    "family": "PbS/CdS nanocrystals",
+    "elements": [
+      "Pb",
+      "S",
+      "Cd"
+    ],
+    "components": [
+      "PbS",
+      "CdS"
+    ],
+    "architecture": "core_shell"
+  },
+  "method": "Synthesis as described in the source",
+  "sources": [
+    {
+      "id": "kholmicheva2014-nn505375n",
+      "doi": "10.1021/nn505375n",
+      "title": "Plasmonic Nanocrystal Solar Cells Utilizing Strongly Confined Radiation",
+      "authors": "Natalia Kholmicheva, Pavel Moroz, Upendra Rijal, Ebin Bastola, Prakash Uprety, Geethika Liyanage, Anton Razgoniaev, Alexis D. Ostrowski, and Mikhail Zamkov",
+      "year": 2014,
+      "url": "https://doi.org/10.1021/nn505375n",
+      "main_status": "main text read by the extraction pipeline",
+      "si_status": "supporting information not read",
+      "reuse_status": "bibliographic citation and extracted values only"
+    }
+  ],
+  "lineage": {
+    "source_group": "kholmicheva2014-nn505375n",
+    "recipe_family": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2",
+    "parent_record_id": null,
+    "batch_id": null,
+    "duplicate_of": null
+  },
+  "intended_target": {
+    "composition": {
+      "value": "PbS/CdS",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kholmicheva2014-nn505375n",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "note": ""
+    },
+    "phase": {
+      "value": "crystalline",
+      "status": "reported",
+      "evidence": [
+        {
+          "source_id": "kholmicheva2014-nn505375n",
+          "locator": "Main PDF p.4"
+        }
+      ],
+      "note": ""
+    },
+    "size": {
+      "value": null,
+      "minimum": null,
+      "maximum": null,
+      "unit": "nm",
+      "status": "not_reported",
+      "approximate": false,
+      "qualifier": "",
+      "basis": "",
+      "raw_text": "not reported",
+      "evidence": [],
+      "derivation": null
+    },
+    "morphology": {
+      "value": null,
+      "status": "not_reported",
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "materials": [],
+  "stocks": [],
+  "material_states": [
+    {
+      "id": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s01-cool",
+      "name": "mixture after step 1",
+      "kind": "reaction_batch",
+      "parent_ids": []
+    },
+    {
+      "id": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s02-precipitate",
+      "name": "mixture after step 2",
+      "kind": "reaction_batch",
+      "parent_ids": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s01-cool"
+      ]
+    },
+    {
+      "id": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s03-centrifuge",
+      "name": "product as isolated",
+      "kind": "product",
+      "parent_ids": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s02-precipitate"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "id": "s01-cool",
+      "action": "cool",
+      "label": "Placed into a cold water bath",
+      "stage": "synthesis",
+      "branch": "",
+      "optional": false,
+      "depends_on": [],
+      "inputs": [],
+      "outputs": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s01-cool"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Placed into a cold water bath",
+      "evidence": [
+        {
+          "source_id": "kholmicheva2014-nn505375n",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s02-precipitate",
+      "action": "precipitate",
+      "label": "Precipitated with ethanol",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s01-cool"
+      ],
+      "inputs": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s01-cool"
+      ],
+      "outputs": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s02-precipitate"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Precipitated with ethanol",
+      "evidence": [
+        {
+          "source_id": "kholmicheva2014-nn505375n",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    },
+    {
+      "id": "s03-centrifuge",
+      "action": "centrifuge",
+      "label": "Centrifuged",
+      "stage": "workup",
+      "branch": "",
+      "optional": false,
+      "depends_on": [
+        "s02-precipitate"
+      ],
+      "inputs": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s02-precipitate"
+      ],
+      "outputs": [
+        "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s03-centrifuge"
+      ],
+      "parameters": {},
+      "environment": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "endpoint": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "retained_fraction": null,
+      "description": "Centrifuged",
+      "evidence": [
+        {
+          "source_id": "kholmicheva2014-nn505375n",
+          "locator": "Main PDF p.8"
+        }
+      ]
+    }
+  ],
+  "condition_options": [],
+  "products": [
+    {
+      "sample_id": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--product",
+      "source_sample_label": "PbS/CdS core/shell nanocrystals",
+      "batch_id": null,
+      "material_state_id": "kholmicheva2014-nn505375n-pbs-cds-core-shell-nanocrystals-2--after-s03-centrifuge",
+      "parent_sample_id": null,
+      "composition": {
+        "value": "PbS/CdS",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kholmicheva2014-nn505375n",
+            "locator": "Main PDF p.3"
+          }
+        ],
+        "note": ""
+      },
+      "phase": {
+        "value": "crystalline",
+        "status": "reported",
+        "evidence": [
+          {
+            "source_id": "kholmicheva2014-nn505375n",
+            "locator": "Main PDF p.4"
+          }
+        ],
+        "note": ""
+      },
+      "morphology": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "surface": {
+        "value": null,
+        "status": "not_reported",
+        "evidence": [],
+        "note": ""
+      },
+      "recipe_link": "explicit",
+      "link_evidence": [
+        {
+          "source_id": "kholmicheva2014-nn505375n",
+          "locator": "Main PDF p.3"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "measurements": [],
+  "structure_assets": [],
+  "quality": {
+    "review_status": "source_extracted",
+    "review_scope": "Extracted from the paper by the MatterSyn pipeline. Each value is tied to a quote found in the paper and was produced by two separate local-model extraction passes that agree. It has not been independently audited.",
+    "missing_fields": [
+      "Shape not reported in the extracted text.",
+      "Ligand not reported in the extracted text.",
+      "Size not reported in the extracted text.",
+      "Reactor not reported in the extracted text.",
+      "Atmosphere not reported in the extracted text.",
+      "Reaction temperature not reported in the extracted text.",
+      "Reaction time not reported in the extracted text."
+    ],
+    "conflicts": [],
+    "requested_tasks": [],
+    "experimental_outcome": "reported_product"
+  },
+  "context_links": [],
+  "collection": "reviewed_literature",
+  "reader_role": "synthesis_route"
+}

@@ -184,6 +184,56 @@ Recorded source ci run: [38122536953](https://github.com/cuiyist/mattersyn/actio
 | 10.1021/cm049476y | 1 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2004-cm049476y-pbse-semiconductor-nanocrystals-3-5-nm-1.html) |
 | 10.1021/ja504310w | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhongxh-ecust-edu-cn2014-ja504310w-cis-z-qds-1.html) |
 
+
+### simple-batch03-20261011
+
+Anonymous verification passed at 2026-10-11T10:06:46+00:00: 740 files, zero mismatches. [Source commit](https://github.com/cuiyist/mattersyn/commit/2bf0ae47a4249b3c9ffe507631643bd0a93f93a2) and [Site commit](https://github.com/cuiyist/mattersyn-site/commit/bdd0cfc92e8abe761cc0d87074e5b7b69e335517). This batch contains 36 source groups, 56 records and 239 source figure crops; 36 distinct newly contributing primary papers after DOI deduplication. Every new contribution remains machine extracted and not independently audited. The final built site is 1,251,142,322 bytes / 26,846 files.
+
+Live counter: **244 audited + 85 machine extracted = 329 papers**, 3,129 canonical records, 278 direct material families, 317 material/component pages and 864 displayed recipe–structure pairs (6 more comprehensive; 858 partial). These display counts do not establish extraction accuracy, measured atomic coordinates or training eligibility.
+
+Recorded source pr: [16](https://github.com/cuiyist/mattersyn/pull/16).
+
+Recorded source ci run: [38127860470](https://github.com/cuiyist/mattersyn/actions/runs/38127860470).
+
+| Primary DOI | Records | Figure crops | Public page |
+| --- | ---: | ---: | --- |
+| 10.1021/jp036497r | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/achermann2003-jp036497r-octylamine-capped-cdse-nqds-1.html) |
+| 10.1021/jp0278364 | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2003-jp0278364-cdse-cds-core-shell-nanocrystals-1.html) |
+| 10.1021/ja807874e | 5 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/al2009-ja807874e-znte-cds-tetrapods-1.html) |
+| 10.1021/jacs.6c03275 | 1 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/ban2026-jacs-6c03275-inas-cqds-with-excitonic-features-at-180-1.html) |
+| 10.1021/jp050424l | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/biju2005-jp050424l-cdse-qd-clusters-1.html) |
+| 10.1021/jacs.5b04765 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2015-jacs-5b04765-qd1-mc-1.html) |
+| 10.1021/jacs.5c23366 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/chen2026-jacs-5c23366-insb-qds-7-1-nm-1.html) |
+| 10.1021/jp406369a | 1 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/cordones2014-jp406369a-pbsesnse2-nanocomposite-1.html) |
+| 10.1021/jp072516b | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/dagtepe2007-jp072516b-magic-sized-cdte-qds-1.html) |
+| 10.1021/jp802254n | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/dagtepe2008-jp802254n-magic-sized-cdte-quantum-dots-1.html) |
+| 10.1021/jp502356d | 2 | 9 | [Open](https://cuiyist.github.io/mattersyn-site/records/ding2014-jp502356d-pbs-qds-excitonic-peak-at-740-nm-1.html) |
+| 10.1021/jp808091d | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/guijarro2009-jp808091d-cdse-qds-direct-adsorption-1.html) |
+| 10.1021/jp210949v | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/guo2012-jp210949v-cdse-5-2cds-1.html) |
+| 10.1021/jp053103i | 2 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/houtepen2005-jp053103i-cdse-quantum-dots-2-9-nm-1.html) |
+| 10.1021/jp0039520 | 1 | 18 | [Open](https://cuiyist.github.io/mattersyn-site/records/jp0039520-ag2s-nanocrystals-1.html) |
+| 10.1021/jp5051904 | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/jumabekov2014-jp5051904-pbs-gsh-qds-1.html) |
+| 10.1021/jp0708906 | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/kloper2007-jp0708906-cdte-nqds-with-4-0-nm-diameter-1.html) |
+| 10.1021/jp308706b | 2 | 4 | [Open](https://cuiyist.github.io/mattersyn-site/records/lei2013-jp308706b-pbse-qd-clusters-qda-diameter-5-0-0-3-nm-1.html) |
+| 10.1021/ja906503w | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/luther2009-ja906503w-pbs-nanorods-1.html) |
+| 10.1021/jp210720v | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/milekhin2012-jp210720v-cds-nc-array-cd440ag-1.html) |
+| 10.1021/jp107043z | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/morfa2010-jp107043z-zno-thin-films-1.html) |
+| 10.1021/jp0535285 | 2 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/norberg2005-jp0535285-zno-nanocrystals-capped-with-dda-1.html) |
+| 10.1021/jp071979e | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/osovsky2007-jp071979e-cdte-nqds-1.html) |
+| 10.1021/jp900252e | 1 | 12 | [Open](https://cuiyist.github.io/mattersyn-site/records/ouyang2009-jp900252e-cds-qds-myristic-acid-240-c-120-min-1.html) |
+| 10.1021/jp108165g | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/pijpers2010-jp108165g-pbse-qds-5-5-nm-coupled-to-sno2-mesoporo-1.html) |
+| 10.1021/jp308500r | 3 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/silva2013-jp308500r-cdse-bare-core-msqds-sample-s0-1.html) |
+| 10.1021/jp900564r | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/spoerke2009-jp900564r-cds-coated-zno-nanorods-1.html) |
+| 10.1021/jp208879f | 1 | 10 | [Open](https://cuiyist.github.io/mattersyn-site/records/text2012-jp208879f-t-nt-cdse-taa-n2-1.html) |
+| 10.1021/jp054774j | 1 | 5 | [Open](https://cuiyist.github.io/mattersyn-site/records/venugopal2006-jp054774j-ldh-cdse-composite-mcdse-mldh-1-100-1.html) |
+| 10.1021/jp0566313 | 2 | 10 | [Open](https://cuiyist.github.io/mattersyn-site/records/wang2006-jp0566313-zno-nanocrystals-from-zinc-ketoacidoxima-1.html) |
+| 10.1021/ja9005767 | 3 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/xie2009-ja9005767-cuins2-nanocrystals-1.html) |
+| 10.1021/jp903199y | 1 | 8 | [Open](https://cuiyist.github.io/mattersyn-site/records/yu2009-jp903199y-oa-capped-cds-ncs-1.html) |
+| 10.1021/jp504755a | 1 | 6 | [Open](https://cuiyist.github.io/mattersyn-site/records/zane2014-jp504755a-cdse-cds-zns-quantum-dots-qds-with-40-qu-1.html) |
+| 10.1021/jp711778u | 3 | 3 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2008-jp711778u-znte-quasi-spheres-1.html) |
+| 10.1021/jp1044282 | 3 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2010-jp1044282-f280-1.html) |
+| 10.1021/jacs.9b06932 | 1 | 7 | [Open](https://cuiyist.github.io/mattersyn-site/records/zhang2019-jacs-9b06932-cdse-cds-dot-platelet-2d-nanocrystals-1.html) |
+
 ## Latest continuation checkpoint
 
 At 2026-10-11T06:09:34+00:00, Batch01 is live and anonymously verified; Batch02 remains in local processing with 47/49 two-pass-complete papers at its last saved checkpoint. These are processing counts, not additional published papers. The audited lane stays paused.
@@ -304,3 +354,66 @@ Post-Batch02 cleanup completed: 1,009 exact published duplicate files removed, 3
 The exact staging helper initially omitted the generated release baseline manifest. Added only that actual derived path through its existing --extra-path argument; no checklist, policy or release predicate was altered.
 
 The normal source preparer rejected treating the derived baseline as a manually approved payload. Preserved that failed attempt and the dependency-generated copy privately, restored only the regenerable baseline to HEAD, and let prepare_source_release regenerate and bind it normally. No approval was fabricated and no gate changed.
+
+## Batch03 verified milestone
+
+Batch03 is deployed and anonymously verified at 2026-10-11T10:06:46+00:00, from Source `2bf0ae47a4249b3c9ffe507631643bd0a93f93a2` and Site `bdd0cfc92e8abe761cc0d87074e5b7b69e335517`. The verified final artifacts contain 36 distinct newly contributing primary papers, 56 records and 239 source crops; built site size is 1,251,142,322 bytes. The earlier preparation and failed-build entries are retained as historical results; this milestone supersedes their unpublished status.
+
+The selected cohort has 50 distinct papers: 36 deployed and 14 omitted or held. There were 45 supported identities and 43 successful two-pass papers. Before rare reading, the automatic check considered 1,426 values, kept 944, and retained 63 pairs.
+
+One-reader rare-material checks covered 4 papers and removed 27 field/path entries (20 scientific value objects, 4 wrong page locators and 2 coupled unit fields), with zero replacement facts. These deletion counts are not an independent audit or a post-reading accuracy score. Common-material papers were not audited. New records remain source extracted, not independently audited or training eligible.
+
+| Stage | Actual UTC timestamp |
+| --- | --- |
+| Extraction start | 2026-10-11T06:33:03.848740+00:00 |
+| Extraction finish | 2026-10-11T08:04:21.970455+00:00 |
+| Figures/check final handoff | 2026-10-11T08:06:06.137648+00:00 |
+| Site push | 2026-10-11T10:00:23+00:00 |
+| Anonymous verification | 2026-10-11T10:06:46+00:00 |
+
+Extraction elapsed 91.302029 minutes; figures/check metadata records 1.7361 minutes. Cohort extraction-start to verified publication elapsed 213.702521 minutes, or 10.107508 newly published primary papers per elapsed wall-clock hour. This interval includes release preparation/waiting and makes no claim of uninterrupted agent work or achieved 20-paper/hour capacity.
+
+| Paper left out | Metadata reason |
+| --- | --- |
+| 10.1021/ja9074425 | no_usable_pairs |
+| 10.1021/ja970754m | identity_hold |
+| 10.1021/jacs.3c08897 | invalid_or_failed_pass_after_one_redo |
+| 10.1021/jp0103880 | no_route_eligible_record |
+| 10.1021/jp1084668 | no_route_eligible_record |
+| 10.1021/jp300509f | invalid_or_failed_pass_after_one_redo |
+| 10.1021/jp506043n | no_route_eligible_record |
+| 10.1021/jp508769f | no_usable_pairs |
+| 10.1021/jp710173q | no_route_eligible_record |
+| 10.1021/jp809171f | no_usable_pairs |
+| 10.1021/jp9530562 | identity_hold |
+| 10.1021/jp953719f | identity_hold |
+| 10.1021/jp971487+ | identity_hold |
+| 10.1021/jp982397n | identity_hold |
+
+The existing batch choices, source-preparation failures and engineering fixes remain recorded above as actual history. The quote-found, number-in-quote and both-passes-agree rules and all normal release gates remain in force. The audited lane, original findings, denominator, sampling/stop rules and every owner question remain paused and unchanged.
+
+
+## Batch04 preparation and Batch05 backend choice
+
+At 2026-10-11T10:19:18+00:00, Batch04 has completed local extraction and checking: 46 successful two-pass papers, 97 checked pairs, 1,342 of 2,121 values retained and 251 crops. Two papers failed again after the permitted redo; two further papers have identity holds. These are pre-reading checker counts with no publication credit. The rare-material pass is deletion-only, one reader per assigned paper; common records remain unreviewed. Batch05 started locally at 2026-10-11T10:12Z with 47 supported identities and three holds.
+
+Choice: use the official same-version CUDA backend at the completed Batch04 idle boundary, preserving the exact model, two 32,768-token slots, q8 K/V and output settings. Load, health and capacity checks passed on the RTX 5090; sampled load-only GPU-wide peak was 29,656 MiB with at least 2,532 MiB free. No inference ran during that fit check. CUDA production throughput and accuracy are not yet measured.
+
+Engineering change: tree digests now hash the unchanged complete file inventory with eight independent readers. Every file is hashed afresh; digest representation, exclusions, error propagation and every release check remain unchanged. All eight focused synthetic regressions passed. No production speedup is claimed.
+
+Storage: the expanded 14,557,671,270-byte exact-file cleanup proposal remains parked because an unrelated active process references the Desktop ancestor. No files from that proposal were removed, and no foreign process was stopped. The earlier verified 357,324,929-byte cleanup remains the only new completed cleanup.
+
+
+## Batch04 integrated preparation
+
+At 2026-10-11T10:30:44+00:00, Batch04 has 43 distinct paper contributions, 85 ordinary recipe records and 242 crops integrated locally. It has zero new publication credit until the normal complete build, source, browser, CI, deployment and anonymous checks pass. All 3,129 existing canonical records are byte identical; new records retain `source_extracted`, with no reviewed or calibrated claim. The quote-free archive contains no quoted text, unknown private fields or local paths.
+
+The 50-paper cohort had 48 supported identities and 46 valid two-pass extractions. Extraction took 118.1912 minutes; figures/check took 1.6866 minutes. The original checker kept 1,342 of 2,121 values in 97 pairs. These are checker results before rare reading and route selection, not accuracy or published throughput.
+
+Seven papers are left out: two unresolved DOI identities (`10.1021/la960426k`, `10.1023/a_1008650027769`), two repeated pass failures (`10.1021/nn3057356`, `10.1021/ph5002704`), and three without an ordinary eligible route after the existing converter checks (`10.1021/nl015651n`, `10.1021/nl900534m`, `10.1038/nnano.2008.360`). Technical holds are not claims that synthesis is absent. Four additional noneligible variants were omitted from otherwise retained papers; original pair ordinals and training files remain preserved.
+
+Single-reader rare-material checks covered 14 papers and removed 63 scientific objects, one wrong page locator and seven coupled units, across 71 paths, without replacement facts. Deletions cover wrong product/step/property bindings, parent-only sizes or optical peaks, generalized synthesis durations, unsupported vessels or phases, and stock/variant assignments. Common-material pairs were unchanged and were not scientifically reviewed. One reader count was mechanically reconciled to its exact proposed paths; the proposal itself was unchanged.
+
+Choice: retain the existing ordinary route predicate and report five-field completeness separately, rather than inventing an additional admission gate. A private preparation helper incorrectly expected 329 normalized DOI papers; actual verified Batch03 inventory has 328 normalized DOIs and 329 source groups. That redundant private assertion was removed; all normal inventory, hash and release checks remain.
+
+Small release-tool change: hash the same complete tree with at most eight threads, preserving file exclusions, sorted paths, digest bytes and failure propagation. Eight synthetic tests passed for equality, coverage, exclusions, order, concurrency and errors. No gate or file was omitted and no production speedup is claimed from these tests.
