@@ -555,3 +555,16 @@ The audited lane, its original findings and denominator, all historical failed r
 
 
 At 2026-10-11T12:12:16+00:00, normal conversion and asset registration have completed locally for these 39 papers, 55 records and 221 crops. All 3,214 prior canonical records remain byte identical. The quote-free 39-paper archive contains zero quote-bearing or unknown fields and zero local paths. The applied asset result matches the inspected dry run except its apply flag: 506 assets checked, 497 additions and zero new exact path rules. Only the rights-registry checksum changed in the release policy; every permission and gate remains unchanged. Build, browser, CI and publication are still pending and no Batch05 paper credit is added.
+
+
+## Batch05 waiting-display correction
+
+At 2026-10-11T12:47:35.261072+00:00, the complete R1 local Source boundary and build passed at Source `58712516d1ac75246df476a6c043bda7eb7887e7`, but Root's actual desktop visual check failed: the Cd(ClO4)2 card opened the unrelated Cd(acac)2 reference. That failed observation and all R1 proofs are retained. No R1 Source push or Batch05 publication occurred.
+
+The converter stripped every parenthesized chemical group, causing distinct salts, polymers and tris reagents to collide. The small fix preserves exact normalized names and explicit aliases. A terminal abbreviation resolves only when both its full-name prefix and token explicitly identify the same registry entry; safe existing bindings are retained. Ten focused tests pass, including salt/polymer/tris collisions, oxidation/hydrate qualifications, abbreviation identity, safe-binding retention and immutable canonical records. The quote, number and two-pass agreement rules are unchanged.
+
+Root corrected 30 demonstrably mismatched display bindings in 25 machine-extracted records: six bindings in five waiting Batch05 records and 24 bindings in 20 already-live machine records. All 3,269 canonical record files, every audited binding, every record-state binding, unrelated bindings and prior registry entries remain unchanged. Fourteen truthful name cards were added where an exact asset was unavailable; no molecular graph or formula was inferred. The 868 safe bindings and 71 unresolved legacy spellings were retained. These mechanical display corrections add zero paper credit and are not a scientific error-rate measurement.
+
+Normal asset registration refreshed 698 distinct exact asset paths, added 14 registry rows and 0 exact path rules. Existing rights remain unchanged, including unverified source-figure publisher permission; the policy refresh is limited to its registry checksum.
+
+Choice: fix the concrete display collisions and use truthful name cards for unmatched names, preserving recipe values and existing audited content. A cohesive correction commit on the same Batch05 branch keeps the eventual ordinary batch merge reversible. Fresh complete checks and desktop/phone visuals precede any push. Batch05 remains 39 papers, 55 records and 221 crops pending publication, with zero credit; Batch06's refused launch remains omitted with no workaround.
