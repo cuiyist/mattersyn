@@ -52,6 +52,20 @@ def primary_doi(record):
     return (source or {}).get("doi", "").lower()
 
 
+def hub_publication_status_matches(hub, records):
+    """Keep extracted-only hubs distinct, using canonical route statuses."""
+    byid = {r['record_id']: r for r in records}
+    route_ids = set(hub.get('record_ids', []))
+    if not route_ids or not route_ids <= set(byid):
+        return False
+    statuses = {byid[rid].get('quality', {}).get('review_status') for rid in route_ids}
+    if not statuses <= {'source_reviewed', 'source_extracted'}:
+        return False
+    expected = ('verified_synthesis_contribution' if 'source_reviewed' in statuses
+                else 'source_extracted_contribution')
+    return hub.get('publication_status') == expected
+
+
 def component_role_matches_architecture(architecture, contribution_role):
     if architecture in (None, 'single_material'):
         return False
@@ -140,7 +154,7 @@ class Audit:
             self.hubs[formula] = hub
             route_ids = set(hub["record_ids"])
             self.check(bool(route_ids), f"{formula}: public material hub has no reviewed route")
-            self.check(hub.get("publication_status") == "verified_synthesis_contribution", f"{formula}: hub lacks verified publication status")
+            self.check(hub_publication_status_matches(hub, self.byid.values()), f"{formula}: hub publication status disagrees with canonical route review statuses")
             self.check(not hub.get("mentioned_paper_dois"), f"{formula}: title mentions leaked into material contributions")
             for error in material_membership_errors(hub, self.byid.values()):
                 self.check(False, error)

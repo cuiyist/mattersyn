@@ -4,7 +4,7 @@ Owner instruction: October 10, 2026, evening. This report records only measured 
 
 ## Part A
 
-In progress: both supplied patches and 27 COD reference cells are applied. All 152 JavaScript tests pass, including 14 default-cell regressions; five status/counter and 21 release-route regressions pass. The first complete candidate build passed all 13 stages, 212 Python tests and 162,707 quality checks. It contained 25,177 files and 1,058,028,840 bytes. A browser check found that an explicitly quantified tetragonal/monoclinic mixture hid both cells. This selection defect is corrected; the fresh complete build, browser validation, source CI, merge and anonymous deployment remain pending. This engineering release adds zero papers.
+Completed: both supplied patches and 27 COD reference cells are deployed. [Source PR #13](https://github.com/cuiyist/mattersyn/pull/13) merged as `8c2bdd4ec7fb2c3505b58408177b114453b53e7d`; the exact prepared source is `27bd172b177f6a6694072f6be3f0b2948eb551fb`. [Source CI 38109023795](https://github.com/cuiyist/mattersyn/actions/runs/38109023795) passed. Site commit `030073dfc70b254a0f0d60c62702a210301b073e` [deployed successfully](https://github.com/cuiyist/mattersyn-site/actions/runs/38109850772) at 2026-10-11 03:58:25 UTC. Anonymous verification passed at 04:05 UTC: 4,699 files checked, zero mismatches. The built site is 1,058,028,840 bytes. This engineering release adds **zero papers and zero records**. The mixed tetragonal/monoclinic display defect was fixed before release. The size contingency is not triggered: this deployment succeeded.
 
 ## Part B
 
@@ -56,4 +56,50 @@ These are DOI-level matches against recorded values, not an independent determin
 
 ## Batches
 
-No simple-pipeline batch has been deployed yet. Batch 1 contains 20 screened papers: generation is running on 18 supported identities; two papers are held for unresolved DOI identity, not classified as lacking a recipe. Eight trusted metadata DOI overrides and ten printed PDF DOIs support the generated cohort. Selection and extraction add no public paper credit.
+No simple-pipeline paper batch has been deployed yet. Batch 1 selected 20 screened papers, with 18 supported identities and two unresolved identity holds. Extraction and one retry per failed paper took 52.9375 wall-clock minutes across 44 pass executions. Four papers remain excluded after the permitted retry: three persistent model/JSON failures and one malformed pair-entry failure. These are technical failures, not evidence that their sources lack synthesis.
+
+`check` processed 18 papers, saw 587 values and retained 362 values in 24 pairs from 14 papers. Its three predicates remain unchanged. Conversion retains 13 papers, 20 route-eligible records and 65 figure crops. One paper and three additional pairs produced no ordinary synthesis route and remain private. Optional five-field completeness is reported separately and is not a new admission gate. All new records retain `source_extracted`; integration is pending publication and adds zero live paper credit so far.
+
+The owner-authorized rare-material read is complete for five papers: four corrected, one unchanged. It made 27 deletion operations; no replacement facts were added. Originals and retained quote/check data remain local. This is a limited single-reader check, not an independent audit. The next 49 identity-supported papers are generating locally while this batch is prepared; two subsequent cohorts have metadata prepared. No common-material review or audited-lane work has resumed.
+
+| Rare paper DOI | Deletion operations | Main correction scope |
+| --- | ---: | --- |
+| 10.1007/s00396-009-2037-9 | 8 | Product/step assignments, unsupported morphology and vessel identity |
+| 10.1021/acs.chemmater.4c00011 | 4 | Ambient conditions used as vessel identity; zero-Rb variant inputs |
+| 10.1002/smll.200600298 | 3 | Injection method and size assigned to the wrong component product |
+| 10.1002/adfm.200600955 | 12 | Other host-matrix branch, core size assigned to a composite, temperature range reduced to a scalar; six numeric values removed |
+| 10.1021/acs.chemmater.3c02503 | 0 | Retained fields unchanged after the scoped read |
+
+| Paper left out | Reason |
+| --- | --- |
+| 10.1007/bf03218647 | DOI identity unresolved |
+| 10.1007/s12034-007-0022-9 | DOI identity unresolved |
+| 10.1002/adfm.200700683 | Persistent model/JSON failure after one retry |
+| 10.1002/pssa.200824446 | Persistent output-length/JSON failure after one retry |
+| 10.1021/acs.nanolett.8b00861 | Persistent output-length/JSON failure after one retry |
+| 10.1007/s10904-009-9278-4 | Persistent malformed pair entry after one retry |
+| 10.1016/j.cplett.2020.137454 | Checked output produced no ordinary synthesis operation |
+
+Three other non-route pairs are retained privately rather than converted: DOI 10.1021/acs.chemmater.5c00408, 10.1021/acs.chemmater.9b03709 and 10.1021/acsami.1c06627. Each paper still has an eligible route in this batch. These omissions do not increase public totals.
+
+## Current engineering and storage
+
+- Refresh the connected Reader module/CSS cache versions to 0.41.4 and use the neutral loading label; no record values change.
+- Use at most eight workers for independent anonymous file GET/hash probes; preserve every probe, mandatory route check, mismatch and deterministic result order.
+- Register exact source-extracted crop/diagram paths and provenance, with user-directed display and permission not established; do not claim independent audit or publisher permission.
+- Set production extraction response capacity to 10,240 tokens and retain payload-free JSON failure diagnostics; the prompt and three check predicates are unchanged.
+- Public pair exports use a known-field projection, retain numeric values/page locators and figure provenance pins, and drop quote-bearing fields and private paths; six focused privacy regressions pass.
+- Reject non-object pair entries explicitly instead of crashing the batch checker; continue with other papers and keep failed output private.
+- Preserve variable stoichiometry and Unicode formula separators; do not interpret NC/QD abbreviations as chemical formulas. Five synthetic formula regressions pass.
+- Split explicitly separated component formulas for parallel reference-cell display while retaining stoichiometric minus signs. Compound punctuation alone does not assert a core–shell architecture; reported architecture remains authoritative. Six synthetic component regressions pass.
+- The complete installed simple-pipeline engineering suite passes 55 synthetic tests, with no skipped tests; this measures software behavior, not extraction accuracy.
+- Use neutral published-material labels and keep the audited filter restricted to records actually reviewed; extracted records retain their separate label.
+- Add PyMuPDF 1.28.2 to the build dependency lock for synthetic-PDF pipeline tests. CI uses generated fixtures and no source papers.
+- Recommended choice: retain the current prompt and raise only production response capacity to 10,240 tokens after observed length-truncated JSON; keep the context, thinking setting and check predicates unchanged.
+- Fixed the dynamic Reader losing its extraction notice after replacing the initial page header. It now keeps “Machine extracted · Not independently audited” for canonical `source_extracted` records, including method changes. Unresolved extracted component defaults use neutral comparison titles; audited and explicitly assigned core/shell displays are unchanged.
+- Extended the material-hub status check only to recognize extracted-only hubs. It derives the required status from canonical route records, rejects falsely reviewed extracted hubs, and retains all membership, privacy, figure and training checks. Three status regressions pass; the corrected check passes all 163,498 checks on the waiting candidate.
+- Corrected the local Source export's Windows path prefix; the subsequent boundary check passed all 20,217 files. The malformed-path generated copy was moved outside the checkout, with no source data deleted.
+
+Two additional verified public copies from Part A were removed: 42,975 files / 1,978,677,064 logical bytes. Observed free space increased 2,013,970,432 bytes, including concurrent allocation. Five uncertain cleanup targets were left intact. All papers, quoted training files, receipts and working checkouts were preserved.
+
+Cleanup removed 32 historical generated targets containing 70,339 files and 1,415,166,126 logical bytes only after exact public Git verification. Observed C-drive free space rose 1,610,690,560 bytes; that observation includes concurrent allocation. No papers, private evidence, current run or working checkouts were removed. No automatic approval rejection occurred. Private target paths remain local.

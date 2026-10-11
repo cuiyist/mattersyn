@@ -23,6 +23,7 @@ Standard library only; works on Windows, macOS and Linux.
 """
 from __future__ import annotations
 import argparse, datetime as dt, hashlib, json, random, shutil, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from scoped_status import eligible_scoped_status
 
@@ -358,12 +359,18 @@ def verify_live(site_url, dist, source_commit, paper_routes=None, material_route
     rest = sorted(set(files) - set(must)); random.Random(source_commit).shuffle(rest)
     checked, mismatched = [], []
     probes = list(dict.fromkeys(must + rest[:max(0, sample - len(must))] + sorted(changed_paths)))
-    for rel in probes:
+    def check_file(rel):
         try:
             live = hashlib.sha256(fetch(f'{base}{rel}?v={int(time.time())}', opener)).hexdigest()
-            (checked if live == sha256(files[rel]) else mismatched).append(rel)
+            return rel, live == sha256(files[rel])
         except Exception:
-            mismatched.append(rel)
+            return rel, False
+    # Every existing probe is still mandatory. Independent anonymous GET/hash
+    # checks use at most eight workers; map yields the original probe order so
+    # slow requests and failures cannot change deterministic receipt ordering.
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        for rel, matches in executor.map(check_file, probes):
+            (checked if matches else mismatched).append(rel)
     def check_route(binding):
         route = binding['route']
         route_url = urllib.parse.urljoin(base, route)

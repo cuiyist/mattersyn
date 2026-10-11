@@ -1,19 +1,19 @@
 {
   "schema": "mattersyn-curation-control/1",
   "status": "simple_pipeline_active_audit_lane_paused",
-  "recorded_at": "2026-10-11T02:56:57.543102+00:00",
-  "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
-  "supersedes_hold": "Latest explicit owner instruction supersedes the prior blind-test hold for Track1; preserve all failed results and the October7 sampling window.",
-  "active_run": "Private fasttrack-20261007/ledger.jsonl",
+  "recorded_at": "2026-10-11T05:04:21+00:00",
+  "authorization": "Owner October 10 evening: continue the separate source_extracted simple-pipeline website job; the audited lane and its open questions remain paused. Use local two-pass extraction, unchanged quote/number/agreement checks and normal release tools.",
+  "supersedes_hold": "October 10 evening authorizes only the separate source_extracted simple-pipeline job. The audited lane, original findings, denominator and open owner questions stay paused.",
+  "active_run": "Private simple-website-20261010 checkpoint; public report research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
   "paid_processing_allowed": false,
   "new_source_downloads_allowed": true,
   "external_document_transfer_allowed": false,
-  "source_scope": "QD-priority local documents including new arrivals only after DOI deduplication and source screening; core synthesis first, SI only where primary methods refer.",
+  "source_scope": "Next screened-queue papers with existing local main-text PDFs and no existing site contribution, after DOI identity deduplication. No repeat source-reading screening or common-material audits. Rare-material one-reader correction is the owner-authorized simple-lane scope.",
   "maximum_concurrent_agents_including_root": 4,
   "maximum_active_paper_claims": 2,
   "daily_report_time": null,
-  "stop_rule": "Strictly more than 1 original adjudicated S1/S2 finding per100 sampledrecords over last500 or allcurrentwindow; evaluate at100+records. Third blind repeat is measurement-only and does not stop Track1.",
-  "current_measurement_window": "fasttrack-20261007",
+  "stop_rule": "Simple lane: leave out an individual failed paper or refused action, record it, and continue; no audited-lane sampling or accuracy stop rule applies to source_extracted records. The audited stop rule and original denominator are preserved in paused_audited_lane_checkpoint and the unchanged nested audit ledger/checkpoint.",
+  "current_measurement_window": "simple-website-20261010; actual deployment events only, no inferred throughput",
   "measurement_checkpoint_utc": null,
   "progress_report_interval_hours": null,
   "progress_automation": null,
@@ -50,7 +50,7 @@
   },
   "continuation_checkpoint": "Private full-audit-20261002/ledger.jsonl",
   "latest_publication_receipt": "Wu2005 Source5f567a5c3704ebe75fe512eaed10b92292f8499e/Site334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e, Pages38081185650, native40files plus all50changed public-byte verification passed; actual closeout2026-10-10T19:59:15.143256Z adds one paper, one record and one unique live event, with three legacy record corrections and zero new broad pairs. Closeout SHA256 aa3e2ceddeea9a0793a93585da25a215b3ab93a3de1e4ac46ad0ecb2a5553646; detailed receipts local.",
-  "latest_verified_site_commit": "334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e",
+  "latest_verified_site_commit": "030073dfc70b254a0f0d60c62702a210301b073e",
   "latest_verified_totals": {
     "records": 2985,
     "contributing_papers": 244,
@@ -62,21 +62,23 @@
     "broad_recipe_structure_pairs": 864
   },
   "latest_publication_event": {
-    "event_kind": "batch",
-    "verified_at": "2026-10-10T19:59:15.143256+00:00",
-    "source_commit": "5f567a5c3704ebe75fe512eaed10b92292f8499e",
-    "site_commit": "334aa56ccff3a6c29f4d133fe934ff27ac0a3f9e",
-    "distinct_new_papers": 1,
-    "new_records": 1,
-    "new_broad_pairs": 0,
-    "legacy_corrected_records": 3,
-    "legacy_new_paper_credit": 0,
-    "source_papers": [
-      "wu2005-cdse-hh-cm050799j"
-    ],
-    "anonymous_verified": true,
-    "site_ci_run": 38081185650,
-    "closeout_sha256": "aa3e2ceddeea9a0793a93585da25a215b3ab93a3de1e4ac46ad0ecb2a5553646"
+    "event": "simple-unit-cells-20261010",
+    "status": "deployed_anonymously_verified",
+    "source_pr": 13,
+    "source_merge_commit": "8c2bdd4ec7fb2c3505b58408177b114453b53e7d",
+    "prepared_source_commit": "27bd172b177f6a6694072f6be3f0b2948eb551fb",
+    "source_ci_run": 38109023795,
+    "site_commit": "030073dfc70b254a0f0d60c62702a210301b073e",
+    "pages_run": 38109850772,
+    "pages_completed_at": "2026-10-11T03:58:25Z",
+    "anonymous_verified_at": "2026-10-11T04:05:00Z",
+    "anonymous_checked_files": 4699,
+    "anonymous_mismatched_files": 0,
+    "built_site_bytes": 1058028840,
+    "new_papers": 0,
+    "new_records": 0,
+    "paper_credit": 0,
+    "record_credit": 0
   },
   "latest_morning_checkpoint": {
     "receipt": "research-assets/public-audits/morning-checkpoint-20260927.json",
@@ -966,21 +968,21 @@
     "time_basis": "Wall-clock interval from the earliest preserved workflow/checker checkpoint (2026-10-03T03:18:59Z) through the last actual anonymous verification. This baseline is not a verified owner-resume timestamp; the interval includes waiting, corrections and release work and is not active labor time or a throughput forecast."
   },
   "current_operational_status": {
-    "snapshot_at": "2026-10-10T22:29:45.211418+00:00",
+    "snapshot_at": "2026-10-11T04:12:54+00:00",
     "stage_flags": {
-      "extraction": false,
+      "extraction": true,
       "paper_audit": false,
-      "integration": false,
-      "paper_publication": false,
+      "integration": true,
+      "paper_publication": true,
       "local_development_preparation": false
     },
-    "new_claims_allowed": false,
-    "new_extraction_allowed": false,
-    "publication_allowed": false,
-    "workers_paused": true,
-    "workers_source_work_paused": true,
-    "publication_scope": "Independently accepted audited contributions only, with all scientific, sample/figure, privacy, source, visual, release, CI, deployment and anonymous verification gates unchanged. Machine publication remains disabled.",
-    "note": "Latest owner pause overrides earlier continue rules. Explicit pause instructions delivered to existing Worker A and Worker B. Only the requested Source report/checkpoint save is authorized; no scientific, claim, model or Site action follows."
+    "new_claims_allowed": true,
+    "new_extraction_allowed": true,
+    "publication_allowed": true,
+    "workers_paused": false,
+    "workers_source_work_paused": false,
+    "publication_scope": "Only the separate source_extracted simple lane is active; no independently reviewed labels, audited-record rewriting or automatic training admission. Full normal release checks remain required.",
+    "note": "Latest simple-pipeline owner instruction supersedes the earlier general pause for this lane only; the audit lane stays paused."
   },
   "quality_hold_checkpoint": {
     "at": "2026-10-06T18:31:12.387208+00:00",
@@ -1365,8 +1367,8 @@
       "counts_in_live_homepage": false
     }
   },
-  "current_task": "Part A mixed-phase display fix and complete release checks; Part B finished; batch 1 Qwen extraction active",
-  "next_step": "Merge and deploy Part A after local visual and CI checks; integrate the first two-pass extracted batch",
+  "current_task": "Fix the waiting batch extraction-status display and canonical hub status recognition, then complete Source/build/browser checks and publish 13 papers, 20 records and 65 crops through the normal release path. Batch 2 local generation continues.",
+  "next_step": "Finish the corrected complete candidate, desktop/phone review, exact-head CI, one batch merge, normal Site deployment and anonymous verification; continue the next local batch.",
   "waiting_on_owner": [
     {
       "question_id": "older-ullah-claim-metadata-disclosure",
@@ -1612,30 +1614,52 @@
   },
   "simple_pipeline": {
     "owner_instruction": "2026-10-10 evening",
-    "status": "active",
-    "branch_read_only": "simple-pipeline-20261010",
-    "code_revision": "f7c98ede",
-    "report": "research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md",
-    "audit_lane": "paused; existing audited records and rules unchanged",
-    "review_status": "source_extracted",
-    "counter_rule": "only distinct ordinary-page contributions deployed and anonymously verified",
-    "batch1_papers": 20,
-    "later_batch_papers": 50,
-    "two_pass_required": true,
-    "quote_rules": [
-      "quote found in paper",
-      "number in quote",
-      "both passes agree"
-    ],
-    "local_training_files_retained": true,
-    "heldout_generation": false,
-    "automatic_wake_minutes": 30,
-    "started_at": "2026-10-11T02:56:57.543102+00:00",
-    "choices": [
-      {
-        "choice": "Keep optical fields out of converted site records",
-        "reason": "Default converter masks them after the development test found optical-field errors."
-      }
-    ]
+    "audit_lane": "paused",
+    "part_a": "deployed_and_anonymously_verified",
+    "part_b": "passed_328_kept_zero_failed_passes",
+    "batch01": {
+      "selected_papers": 20,
+      "identity_supported": 18,
+      "identity_holds": 2,
+      "persistent_extraction_failures": 4,
+      "checked_papers": 14,
+      "conversion_papers": 13,
+      "conversion_records": 20,
+      "conversion_figures": 65,
+      "new_live_papers": 0,
+      "status": "waiting_batch_display_and_status_fixes_applied_final_checks_pending"
+    },
+    "batch02": {
+      "identity_supported": 49,
+      "status": "local_two_pass_generation_active"
+    },
+    "new_simple_papers_published": 0,
+    "public_report": "research-assets/public-audits/SIMPLE_PIPELINE_REPORT.md"
+  },
+  "paused_audited_lane_checkpoint": {
+    "status": "paused",
+    "authorization": "Latest October8 owner: continue Track1 full source audits, 50% dual-deep sampling, blind repeat measurement-only; development15 local-only; new audited reactor lines. Preserve earlier findings and October7 denominator.",
+    "source_scope": "QD-priority local documents including new arrivals only after DOI deduplication and source screening; core synthesis first, SI only where primary methods refer.",
+    "active_run": "Private fasttrack-20261007/ledger.jsonl",
+    "stop_rule": "Strictly more than 1 original adjudicated S1/S2 finding per100 sampledrecords over last500 or allcurrentwindow; evaluate at100+records. Third blind repeat is measurement-only and does not stop Track1.",
+    "measurement_window": "fasttrack-20261007",
+    "nested_audit_sections_and_owner_questions_preserved": true,
+    "denominator_reset": false
+  },
+  "latest_engineering_publication": {
+    "status": "deployed_anonymously_verified",
+    "source_pr": 13,
+    "source_merge_commit": "8c2bdd4ec7fb2c3505b58408177b114453b53e7d",
+    "prepared_source_commit": "27bd172b177f6a6694072f6be3f0b2948eb551fb",
+    "source_ci_run": 38109023795,
+    "site_commit": "030073dfc70b254a0f0d60c62702a210301b073e",
+    "pages_run": 38109850772,
+    "pages_completed_at": "2026-10-11T03:58:25Z",
+    "anonymous_verified_at": "2026-10-11T04:05:00Z",
+    "anonymous_checked_files": 4699,
+    "anonymous_mismatched_files": 0,
+    "built_site_bytes": 1058028840,
+    "new_papers": 0,
+    "new_records": 0
   }
 }

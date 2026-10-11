@@ -326,8 +326,27 @@ def user_directed_display_error(asset: dict[str, Any], repo: str, path: str) -> 
         if not path.startswith(prefix):
             return "user_directed_display_source_path_ineligible"
         site_path = path[len(prefix):]
-    if direction.get("scope") == "display_source_figures_for_reviewed_papers":
-        match = re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(figure|table|scheme)-([a-z0-9-]+)\.(?:png|jpe?g|webp)", site_path)
+    extracted_scope = direction.get("scope") == "display_source_figures_for_source_extracted_papers"
+    if extracted_scope:
+        if (not re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(figure|table|scheme|chart)-(s?[1-9][0-9]*[a-z]?)\.(?:png|jpe?g|webp)", site_path)
+                or asset.get("record_status") != "source_extracted"):
+            return "user_directed_display_extracted_scope_ineligible"
+        provenance = asset.get("provenance_bindings")
+        if not isinstance(provenance, list) or not any(
+                isinstance(item, dict) and item.get("paper_id") == direction.get("paper_id")
+                and item.get("doi") == direction.get("doi") and item.get("record_ids")
+                and item.get("review_status") == "source_extracted" for item in provenance):
+            return "user_directed_display_source_binding_missing"
+        if not isinstance(bindings, list) or not any(
+                isinstance(item, dict) and item.get("doi") == direction.get("doi")
+                and isinstance(item.get("locators"), dict) and item["locators"].get("document_role") == "main"
+                and type(item["locators"].get("page")) is int and item["locators"]["page"] > 0
+                and isinstance(item.get("crop"), dict) and item["crop"].get("asset_sha256") == digest
+                for item in bindings):
+            return "user_directed_display_source_binding_missing"
+    if extracted_scope or direction.get("scope") == "display_source_figures_for_reviewed_papers":
+        kinds = "figure|table|scheme|chart" if extracted_scope else "figure|table|scheme"
+        match = re.fullmatch(r"assets/paper-reviews/([a-z0-9][a-z0-9_-]*)/(" + kinds + r")-([a-z0-9-]+)\.(?:png|jpe?g|webp)", site_path)
         # The older reviewed figure inventory also used a first-author/year
         # directory and a printed Figure/Table number. Keep those exact crops
         # without loosening the full-document or private-render exclusions.

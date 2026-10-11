@@ -10,7 +10,7 @@ import {chemicalRegistry,chemicalEntry,chemicalImage,openChemical,hasRotatableCh
 
 import {mountProtocol} from './protocol-visuals.mjs?v=0.40.3';
 
-import {mountReaderStructures} from './reader-structures.mjs?v=0.41.3';
+import {mountReaderStructures} from './reader-structures.mjs?v=0.41.4';
 
 const cache=new Map();
 
@@ -32,7 +32,15 @@ const shortSourceAuthor=authors=>{const first=String(authors||'').split(/[,;]/)[
 
 const safeText=v=>typeof v==='string'?v:v?.text||v?.value||v?.note||'';
 
-function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.0');style.dataset.readerCss='true';document.head.append(style);}
+export function methodBadges(r,presentation={}){
+ const badges=el('div',undefined,'reader-badges');
+ badges.append(badge(presentation.method_label||shortMethod(r.method)),badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));
+ if(r.quality?.review_status==='source_extracted')badges.append(badge('Machine extracted · Not independently audited','scope'));
+ return badges;
+}
+
+
+function installStyle(){if(document.querySelector('link[data-reader-css]'))return;const style=el('link');style.rel='stylesheet';style.href=siteURL('reader.css?v=0.41.4');style.dataset.readerCss='true';document.head.append(style);}
 async function precursors(host,r,presentation={}){
 
  const [data,thumbs,stockBindings]=await Promise.all([chemicalRegistry(),json('data/chemical-thumbnail-map.json'),json('data/reader-stock-bindings.json')]);if(!host.isConnected)return;function cardImage(entry){const img=chemicalImage(entry),item=thumbs.entries[entry.id];if(item?.thumbnail_path)img.src=siteURL(item.thumbnail_path);return img;}const chemicals=r.materials.filter(m=>!isEquipment(m)),grid=el('div',undefined,'reader-chemicals');
@@ -195,7 +203,7 @@ async function buildMethod(host,r,presentation){
 
 export async function mountReader(main,{materialId,recordId}={}){
 
- installStyle();installReaderHashNavigation();main.className='reader-main';main.replaceChildren(el('div','Loading reviewed material…','reader-loading'));
+ installStyle();installReaderHashNavigation();main.className='reader-main';main.replaceChildren(el('div','Loading material…','reader-loading'));
 
  const [index,presentations]=await Promise.all([json('data/materials-index.json'),json('data/reader-presentation.json')]);
 
@@ -231,7 +239,7 @@ export async function mountReader(main,{materialId,recordId}={}){
 
  const methodInfo=el('div',undefined,'reader-method-info'),nav=el('nav',undefined,'reader-nav');nav.setAttribute('aria-label','Reader sections');for(const [id,title] of [['precursors','Precursors'],['protocol','Synthesis protocol'],['structures','Final structures'],['properties','Properties'],['intuition','Chemical intuition'],['sources','Sources']])nav.append(link(title,'#'+id));const body=el('div');main.append(methodInfo,nav,body);let generation=0;
 
- async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=el('div',undefined,'reader-badges');badges.append(badge((presentation.method_label||shortMethod(r.method))),badge((r.sources[0].year??'Year unverified')+' · '+shortSourceAuthor(r.sources[0].authors),'scope'));methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));renderPendingVariants(methodInfo,records.find(meta=>meta.record_id===rid)?.pending_variants);if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);await buildMethod(content,r,presentation);if(turn!==generation)return;document.title=baseTitle+' · '+(presentation.method_label||shortMethod(r.method))+' | MatterSyn';const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
+ async function select(rid){delete main.dataset.readerReady;const turn=++generation;active=rid;for(const c of cards.children)c.setAttribute('aria-pressed',String(c.dataset.recordId===rid));const r=await json('data/records/'+rid+'.json');if(turn!==generation)return;const presentation=presentations.records?.[rid]||{};methodInfo.replaceChildren();const badges=methodBadges(r,presentation);methodInfo.append(badges,el('p',r.sources[0].title,'reader-citation'),dataSwitch(r));renderPendingVariants(methodInfo,records.find(meta=>meta.record_id===rid)?.pending_variants);if(data?.component_only||data&&data.formula!==r.material.formula)methodInfo.append(el('p','This method produces '+r.material.formula+'. Evidence describes the named product and its components.','reader-note'));body.replaceChildren();const content=el('div');body.append(content);await buildMethod(content,r,presentation);if(turn!==generation)return;document.title=baseTitle+' · '+(presentation.method_label||shortMethod(r.method))+' | MatterSyn';const url=new URL(location.href);url.searchParams.set('method',rid);history.replaceState(null,'',url);main.dataset.readerReady=rid;await applyReaderFragment(main);}
 
  if(data?.experimental_series?.length){
   const series=el('section',undefined,'reader-section');series.id='experimental-series';series.append(el('h2','Experimental series'),el('p','Published recipe parameters and optical measurements from an additional source. These rows are part of this material collection; they do not establish row-specific particle structures or complete preparation protocols.','reader-note'));
