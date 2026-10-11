@@ -15,3 +15,29 @@ test('reported product phase takes precedence over a different intended target',
 test('unreported product uses stated intended target conservatively',()=>{assert.deepEqual(defaultCrystalReferences([ordered,fcc],rec(null,'fcc')).map(e=>e.id),['fcc'])});
 test('composites without a phase retain parallel component bulk references',()=>{const r=rec(null);r.material={formula:'CdSe/CdS',components:['CdSe','CdS']};const refs=defaultCrystalReferences([entry('core','CdSe','CdSe wurtzite',186),entry('shell','CdS','CdS wurtzite',186)],r);assert.equal(refs.length,2);assert.ok(refs.every(e=>e.roleByRecord['synthetic-r']==='Component reference'))});
 test('explicitly excluded compositions and custom viewers remain unchanged',()=>{assert.deepEqual(defaultCrystalReferences([ordered],rec(null),[{formula:'CoPt3'}]),[]);const r=rec(null);r.lineage.source_group='heo2003';assert.deepEqual(defaultCrystalReferences([ordered],r),[])});
+
+const zirconia=(phase,target)=>({...rec(phase,target),material:{formula:'ZrO2'}});
+const tetragonal=entry('zro2-tetragonal','ZrO2','ZrO2 tetragonal bulk reference',137);
+const monoclinic=entry('zro2-monoclinic','ZrO2','ZrO2 monoclinic bulk reference',14);
+test('separately stated mixed product phases show their bulk cells in parallel',()=>{
+ const refs=defaultCrystalReferences([tetragonal,monoclinic],zirconia('97% tetragonal; 3% monoclinic (XRD peak-area fractions)'));
+ assert.deepEqual(refs.map(e=>e.id),['zro2-tetragonal','zro2-monoclinic']);
+ assert.ok(refs.every(e=>e.scope.includes('not a structure of the synthesized sample')));
+});
+test('a missing cell for one stated mixture component does not hide the available component',()=>{
+ assert.deepEqual(defaultCrystalReferences([tetragonal],zirconia('97% tetragonal; 3% monoclinic')).map(e=>e.id),['zro2-tetragonal']);
+});
+test('mixed-phase components preserve their own conjunctive qualifiers',()=>{
+ const tet=entry('copt-tetragonal','CoPt3','CoPt3 tetragonal bulk reference',123);
+ assert.deepEqual(defaultCrystalReferences([ordered,fcc,tet],rec('90% chemically disordered cubic fcc; 10% tetragonal')).map(e=>e.id),['fcc','copt-tetragonal']);
+});
+test('a semicolon between compatible qualifiers does not admit ordered primitive cubic',()=>{
+ assert.deepEqual(defaultCrystalReferences([ordered],rec('fcc; cubic')),[]);
+ assert.deepEqual(defaultCrystalReferences([ordered,fcc],rec('fcc; cubic')).map(e=>e.id),['fcc']);
+});
+test('unknown nonempty mixture components never expand to all bulk cells',()=>{
+ assert.deepEqual(defaultCrystalReferences([tetragonal,monoclinic],zirconia('unknown alpha phase; unknown beta phase')),[]);
+});
+test('reported mixture still takes precedence over an intended different phase',()=>{
+ assert.deepEqual(defaultCrystalReferences([tetragonal,monoclinic],zirconia('97% tetragonal; 3% monoclinic','cubic')).map(e=>e.id),['zro2-tetragonal','zro2-monoclinic']);
+});

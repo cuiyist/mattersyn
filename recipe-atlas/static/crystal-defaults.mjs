@@ -36,8 +36,13 @@ export function defaultCrystalReferences(entries,r,excluded=[]){
  if(excluded.some(x=>tidy(x.formula)===tidy(r.material?.formula)))return [];
  const parts=compositionParts(r),phases=reportedPhases(r),chosen=[];
  // A nonempty phase that is not understood must not be described as unreported.
- // Recognized qualifiers in the same phase statement all constrain the reference.
- const phaseTests=phases.map(phase=>PHASE_TESTS.filter(([words])=>words.test(phase)).map(([,test])=>test));
+ // Separate phase fractions only when every clause explicitly starts with a percentage.
+ // Other separators may join compatible qualifiers; those remain conjunctive.
+ const phaseTests=phases.flatMap(phase=>{
+  const components=phase.split(/\s*;\s*/).filter(Boolean);
+  return components.length>1&&components.every(component=>/^\s*\d+(?:\.\d+)?\s*%/.test(component))?components:[phase];
+ })
+  .map(phase=>PHASE_TESTS.filter(([words])=>words.test(phase)).map(([,test])=>test));
  for(const part of parts){
   const seen=new Set(),bulk=[];
   for(const entry of entries){
